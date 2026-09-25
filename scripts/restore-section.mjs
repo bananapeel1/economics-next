@@ -14,6 +14,8 @@
 import { supabase } from './_db.mjs';
 import { readFileSync } from 'node:fs';
 import { CONTENT_TABLES, readSection } from './snapshot-section.mjs';
+import { validateLive, printFindings } from './_content-write.mjs';
+import { sameJson } from '../lib/content-gate.mjs';
 
 const args = process.argv.slice(2);
 const file = args.find((a) => !a.startsWith('--'));
@@ -77,6 +79,12 @@ if (!confirm) {
   process.exit(0);
 }
 
+// A restore is the undo for a publish, so it is the second sanctioned write of `data` (the first is
+// publish-section.mjs). The client guard in _db.mjs is lifted for this loop only, behind --confirm.
+// It is not gated on the validator: a snapshot is a state students already had, and refusing to go
+// back to it during an incident is worse than the debt it carries. The validator runs afterwards
+// and reports, so the debt is seen rather than silently reinstated.
+process.env.REVVY_ALLOW_RAW_WRITE = '1';
 for (const { table, want } of plan) {
   const { error } = await supabase.from(table).update({ data: want }).eq('section_id', sectionId);
   if (error) {
@@ -85,5 +93,15 @@ for (const { table, want } of plan) {
   }
   console.log(`  restored ${table}`);
 }
+delete process.env.REVVY_ALLOW_RAW_WRITE;
 
-console.log(`\n${sectionId}: ${changed} table(s) restored from ${snap.label || file}`);
+const after = await readSection(sectionId);
+const wrong = plan.filter(({ table, want }) => !sameJson(after[table], want)).map((p) => p.table);
+if (wrong.length) {
+  console.error(`FAILED: live row still differs from the snapshot on ${wrong.join(', ')}`);
+  process.exit(1);
+}
+console.log(`\n${sectionId}: ${changed} table(s) restored from ${snap.label || file}; read back and matching`);
+const { findings } = await validateLive(sectionId);
+console.log('validator over the restored section:');
+printFindings(findings);

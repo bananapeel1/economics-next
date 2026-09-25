@@ -1,0 +1,20 @@
+{
+  "note": "A pin to a question about a different chapter. The guard must NOTE it and must NOT fail on it: an author's pin can be right while the vocabulary misses, so failing here would punish correct content and get the guard switched off. Identical to clean.json except that chapter 1's quiz pin points at chapter 2's question.",
+  "sections": [
+    {
+      "slug": "fixture-mispinned",
+      "content": [
+        { "title": "Economies of Scale", "quizIndices": [1],
+          "sections": [{ "id": "a", "title": "Internal economies of scale", "body": "x" }] },
+        { "title": "Diseconomies of Scale", "quizIndices": [0],
+          "sections": [{ "id": "b", "title": "Coordination and communication", "body": "x" }] }
+      ],
+      "quiz": [
+        { "question": "Internal economies of scale arise when:" },
+        { "question": "Coordination problems in a large firm are an example of:" }
+      ],
+      "practice": [],
+      "diagrams": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "note": "The control. Packet 12.1, E003. Every tariff is in lib/ial-marking.js for its subject, every specItems id is in audit/raw/spec-items.json, and the section carries an evaluative question. `npm run spec-coverage -- --fixture <this>` must exit 0. Without a fixture that PASSES, three fixtures that fail prove only that the guard fails on something.",
+  "sections": [
+    {
+      "slug": "fixture-clean",
+      "subject": "economics",
+      "topic": "1.3.5",
+      "title": "Market Failure (fixture)",
+      "items": [
+        { "command": "Define", "marks": 2, "question": "Define the term 'public good'.", "kind": "written", "ao": ["AO1"], "stimulusRef": null, "specItems": ["ECON-1.3.5-3a-2"] },
+        { "command": "Explain", "marks": 4, "question": "Explain why a public good may not be provided by the private sector.", "kind": "written", "ao": ["AO1", "AO2"], "stimulusRef": null, "specItems": ["ECON-1.3.5-3b"] },
+        { "command": "Draw", "marks": 4, "question": "Draw a diagram, using marginal analysis, to show the welfare loss from an external cost of production.", "kind": "draw", "ao": ["AO1", "AO2"], "stimulusRef": null, "specItems": ["ECON-1.3.5-2d-2"] },
+        { "command": "Evaluate", "marks": 20, "question": "Evaluate the view that indirect taxation is the best way to correct a negative externality of production.", "kind": "written", "ao": ["AO1", "AO2", "AO3", "AO4"], "stimulusRef": null, "specItems": ["ECON-1.3.5-2c-3"] }
+      ]
+    }
+  ]
+}

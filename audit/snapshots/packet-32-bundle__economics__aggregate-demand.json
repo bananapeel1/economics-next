@@ -1,0 +1,2567 @@
+{
+ "section_id": "aggregate-demand",
+ "subject": "economics",
+ "label": "packet-32-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "aggregate-demand:block:41e358a5",
+    "title": "The Characteristics of Aggregate Demand",
+    "sections": [
+     {
+      "id": "aggregate-demand:sub:what-aggregate-demand-is",
+      "title": "What Aggregate Demand Is",
+      "keyIdea": "Aggregate demand is the total planned spending on a country’s own output at each price level, over a period of time.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The specification opens at 2.3.2 · 1a with **the concept of AD**, and three words in that sentence are doing work. **Total** means every buyer added together, not one market. **Planned** means intended at that price level, which is not the same as what is actually bought. **Over a period** means AD is a flow: so much spending a year, never a stock sitting somewhere."
+       },
+       {
+        "type": "paragraph",
+        "text": "The fourth phrase is the one students drop: **on a country’s own output**. Spending by residents on goods made abroad is demand for somebody else’s output, so it is taken back out. That single fact is why the identity in the next chapter ends in a subtraction rather than an addition."
+       },
+       {
+        "type": "paragraph",
+        "text": "Everything in this topic is one of two questions. Either the price level has changed, and spending moves along a curve; or one of the four groups of buyers has changed its plans at an unchanged price level, and the whole curve moves. The five sub-topics after this one are the second question asked four times over."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧮",
+       "text": "A middle-income open economy with total planned spending of $1,000bn a year is describing a FLOW: that is what buyers intend to spend over twelve months, not what the country owns."
+      },
+      "misconception": "Students treat aggregate demand as the amount actually bought, so a fall in AD sounds like a fall in output that has already happened. AD is planned spending at each price level. What is actually produced and sold depends on aggregate supply meeting those plans, which is the next topic.",
+      "examMatters": "Appendix 6 defines Define as requiring knowledge and understanding only — the meaning of a term, concept or phrase. So a definition of AD needs the meaning and nothing else: no diagram, no example, no list of the components unless the question asks for them.",
+      "recall": {
+       "id": "aggregate-demand:sub:what-aggregate-demand-is:recall",
+       "type": "classify",
+       "prompt": "A statistician is compiling this year’s aggregate demand. Sort each item by whether it belongs in the figure:",
+       "groups": [
+        {
+         "name": "In the figure",
+         "items": [
+          "Orders placed with home producers for delivery this year",
+          "A government contract signed and paid this year"
+         ],
+         "why": "Both are intended spending, this period, on output produced in this country — which is every word of the definition satisfied at once."
+        },
+        {
+         "name": "Not in it",
+         "items": [
+          "The total value of factories and machines the country owns",
+          "Orders placed with producers abroad",
+          "A purchase the firm has decided to make the year after next"
+         ],
+         "why": "Each fails one word of it: the first is a STOCK rather than a flow, the second buys another country’s output, and the third falls in a different PERIOD. Aggregate demand is not damaged by any of them; they simply are not it."
+        }
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:the-four-components",
+      "title": "The Four Components",
+      "keyIdea": "AD = C + I + G + (X − M). Four groups of buyers, and imports are subtracted because that spending buys another country’s output.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "2.3.2 · 1b writes the identity out: **C + I + G + (X − M)**. Each letter is a group of buyers, not a kind of good. **C** is household spending on goods and services; **I** is firms spending on capital goods; **G** is government spending on goods and services; **X − M** is exports minus imports."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**C · Consumption** — $640bn, 64% of the $1,000bn total.",
+         "**I · Investment** — $180bn, 18% of the $1,000bn total.",
+         "**G · Government expenditure** — $220bn, 22% of the $1,000bn total.",
+         "**X − M · Net trade balance** — −$40bn, −4% of the $1,000bn total."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The shares decide how much a given shock matters. Consumption is much the largest and also the STEADIEST: households smooth spending across good years and bad. Investment is the smallest of the three positive components and by far the most volatile, because a firm can postpone a machine and a household cannot postpone eating."
+       },
+       {
+        "type": "paragraph",
+        "text": "Net trade is negative here, at −$40bn. That is normal: this economy buys more from abroad than it sells, so the fourth term subtracts. The four still add to $1,000bn."
+       }
+      ],
+      "realExample": {
+       "emoji": "⚖️",
+       "text": "Two economies can both have AD of $1,000bn and behave completely differently: one where exports are a quarter of it will be shaken by a foreign downturn, and one where they are a twentieth will not."
+      },
+      "misconception": "The most common single error on this topic is writing that consumption is the most volatile component because it is the largest. Size and volatility are different properties. C is the largest and the most stable; I is the smallest of C, I and G and the most volatile.",
+      "examMatters": "Appendix 6 defines Calculate as assessing quantitative skills through a calculation involving several stages, and advises students to show workings. Finding a missing term in the identity is exactly that kind of calculation: write the subtraction down rather than doing it in your head.",
+      "recall": {
+       "id": "aggregate-demand:sub:the-four-components:recall",
+       "type": "classify",
+       "prompt": "Sort each piece of spending into the component of AD it is counted in — C, I or G:",
+       "groups": [
+        {
+         "name": "C",
+         "items": [
+          "A family pays a plumber to fit a new boiler",
+          "A household here buys a television made abroad"
+         ],
+         "why": "Both are households buying for their own use, which is consumption whoever made the item — and the second is the one to watch: an imported television is counted in C and then taken out again as part of M, so on balance it adds nothing to demand for this country’s output."
+        },
+        {
+         "name": "I",
+         "items": [
+          "A bakery buys an extra oven",
+          "A developer builds a warehouse it will rent out"
+         ],
+         "why": "Both are firms buying capital that will be used to produce in future periods, which is investment."
+        },
+        {
+         "name": "G",
+         "items": [
+          "A ministry pays the salaries of nurses it employs",
+          "A city buys buses for its transport service"
+         ],
+         "why": "Both are the government buying goods and services rather than handing money over, which is the G in the identity."
+        }
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:the-ad-curve",
+      "title": "The AD Curve",
+      "keyIdea": "The AD curve slopes downward for three separate reasons, and none of them is the reason a single market’s demand curve slopes downward.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The second half of 2.3.2 · 1b is **the AD curve**: planned spending on the horizontal axis, the price level on the vertical. A student who explains its downward slope by saying \"things are cheaper so people buy more\" has given the answer for ONE market, where buyers switch to a substitute. There is no substitute for a whole economy’s output."
+       },
+       {
+        "type": "flow",
+        "resultType": "neutral",
+        "steps": [
+         {
+          "title": "The wealth effect",
+          "subtitle": "A lower price level makes a given stock of money savings worth more, so households can buy more with what they already hold."
+         },
+         {
+          "title": "The interest-rate effect",
+          "subtitle": "At a lower price level the same transactions need less money, so the demand for money falls and MARKET interest rates fall with it — which makes borrowing-financed spending cheaper."
+         },
+         {
+          "title": "The trade effect",
+          "subtitle": "Home-produced goods are now cheaper relative to foreign ones, so exports rise and imports fall, and (X − M) rises."
+         }
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "All three run from the price level to a component, which is what makes them reasons for the SHAPE of the curve rather than reasons for it to move."
+       }
+      ],
+      "realExample": {
+       "emoji": "💱",
+       "text": "If an economy’s prices fall while its trading partners’ prices do not, its exports become better value abroad at an unchanged exchange rate. That is the trade effect, and it happens with no policy decision behind it."
+      },
+      "misconception": "The interest-rate effect is regularly written as \"the central bank raises interest rates\". It is not a policy decision at all: it is the market rate moving because the demand for money has moved with the price level. A central bank CHOOSING to raise its policy rate is a change at an unchanged price level, which shifts AD left. The two belong on opposite sides of the next chapter’s distinction.",
+      "examMatters": "Appendix 6 defines Explain as requiring a two-stage chain of reasoning for a reason or an impact: from the price level to the mechanism, and from the mechanism to the component.",
+      "recall": {
+       "id": "aggregate-demand:sub:the-ad-curve:recall",
+       "type": "match",
+       "prompt": "The price level falls. Match each consequence to the effect that produces it:",
+       "pairs": [
+        {
+         "left": "A retired household living on its savings can afford a longer holiday",
+         "right": "The wealth effect",
+         "why": "Nobody earned anything and nobody borrowed: what changed is what the money the household already held will buy, which is the wealth channel."
+        },
+        {
+         "left": "A workshop finds a loan cheaper although the central bank has announced nothing",
+         "right": "The interest-rate effect",
+         "why": "No decision was taken, so this cannot be policy. Lower prices mean less money is needed to do the same business, and the market rate falls on its own."
+        },
+        {
+         "left": "A shipyard abroad places a larger order at an unchanged exchange rate",
+         "right": "The trade effect",
+         "why": "This one reaches the fourth component rather than the first — and note the exchange rate did not move, so it is the home price level that made the order better value."
+        }
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:movement-or-shift",
+      "title": "Movement Along, or a Shift",
+      "keyIdea": "Ask one question: did the PRICE LEVEL change? If it did, the economy moved along AD. If anything else changed, the whole curve moved.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "2.3.2 · 1c is the distinction between a movement along and a shift of the AD curve, and it is the leaf most heavily tested in this topic because every later chapter depends on it. The test has one step. The price level is on an axis, so a change in it is a change in POSITION on the curve. Everything else is off the axes, so a change in it is a change in the CURVE."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is why the three reasons in the last chapter are not shifts. Each of them starts at the price level, which is already on the diagram. A shift starts somewhere else: a tax cut, a fall in business confidence, a foreign recession, a decision about government spending."
+       },
+       {
+        "type": "paragraph",
+        "text": "Getting it wrong costs twice: a shift drawn for a price-level change contradicts your own words, and a movement drawn for a component change leaves nothing on the page to explain the cause."
+       }
+      ],
+      "realExample": {
+       "emoji": "🎚️",
+       "text": "Two events, one economy: the general price level falls by two per cent, and a tax cut leaves households with more to spend. The first is a slide down a fixed curve; the second is a new curve to the right of the old one, at every price level."
+      },
+      "misconception": "\"AD falls\" and \"AD shifts left\" are used as if they were the same sentence. They are not. AD can fall because the price level rose, which is a movement UP and to the left along a curve that has not moved. Say which one you mean, and the diagram will agree with you.",
+      "examMatters": "Appendix 6 defines Draw as requiring students to construct an accurately labelled diagram, and says the type may be stated or left to the student to decide. A shift needs the second curve labelled and the CAUSE named beside it; a diagram showing a shift with no cause is half an answer.",
+      "recall": {
+       "id": "aggregate-demand:sub:movement-or-shift:recall",
+       "type": "classify",
+       "prompt": "Sort each event by what it does to the AD diagram:",
+       "groups": [
+        {
+         "name": "Movement along AD",
+         "items": [
+          "Inflation of four per cent and no other news",
+          "Prices fall across the board and money already held goes further"
+         ],
+         "why": "Both of these are the general price level and nothing else, and that is on an axis — so the economy changes its position on a curve that has not moved."
+        },
+        {
+         "name": "Shift of AD",
+         "items": [
+          "A central bank announces a higher policy rate",
+          "A trading partner enters a recession",
+          "Income tax is cut"
+         ],
+         "why": "None of these three is the price level: an announcement, a foreign downturn and a tax change each alter a component at every price level, so the whole curve moves."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "AD is total PLANNED spending on a country’s own output, at each price level, over a period.",
+     "C + I + G + (X − M): C is the largest and steadiest, I the smallest and most volatile.",
+     "The price level changes, you move ALONG the curve. Anything else changes, the curve moves."
+    ],
+    "diagramId": "aggregate-demand:diagram:ea189dbe",
+    "quizIndices": [
+     4,
+     3,
+     5,
+     6,
+     7
+    ],
+    "practiceIndices": [
+     1,
+     0
+    ]
+   },
+   {
+    "id": "aggregate-demand:block:6f1a3acd",
+    "title": "Consumption (C)",
+    "sections": [
+     {
+      "id": "aggregate-demand:sub:disposable-income",
+      "title": "Disposable Income",
+      "keyIdea": "Disposable income is income after direct taxes are taken off and benefits are added on: what a household actually has to spend or save.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "2.3.2 · 2a lists six influences on consumption and puts **disposable income** first, because it is the one the other five modify. It is income after tax and benefits, which is what there is to spend at all — not what an employer pays, which is gross, and not what is earned, because a household with no earnings can still have disposable income from transfers."
+       },
+       {
+        "type": "paragraph",
+        "text": "In this economy households have $800bn of it and spend $640bn. The link runs one way: more disposable income, more consumption, and therefore a larger C in the identity and a rightward shift of AD."
+       },
+       {
+        "type": "paragraph",
+        "text": "It does not run one-for-one. Some of any extra goes unspent, which is the next few chapters’ subject. What matters here is the DIRECTION and the size of the component it moves: C is 64% of AD, so anything that moves disposable income moves the largest thing on the board."
+       }
+      ],
+      "realExample": {
+       "emoji": "💼",
+       "text": "A cut in the lowest band of income tax raises disposable income without raising anybody’s pay, and a rise in the rate lowers it without anybody taking a pay cut. The employer never notices; C does."
+      },
+      "misconception": "Students use \"income\" and \"disposable income\" interchangeably and then cannot explain why a tax change alters consumption. If gross pay is fixed and the tax rate falls, gross income has not moved at all — only the disposable figure has, and it is the disposable figure that is spent.",
+      "examMatters": "Appendix 6 defines Analyse as requiring a chain of reasoning and focusing on depth rather than breadth, and says explicitly that it does not include evaluation. Listing all six influences is breadth; taking one from the tax change to the shift in AD is depth.",
+      "recall": {
+       "id": "aggregate-demand:sub:disposable-income:recall",
+       "type": "fillin",
+       "prompt": "A worker is paid the same gross wage this year as last, and the direct tax rate is cut. Apply the leaf:",
+       "template": [
+        "Of the two income figures on the worker’s payslip, the larger one this year is the ___ figure",
+        "The employer’s wage bill is ___",
+        "Consumption rises, so the AD curve shifts to the ___"
+       ],
+       "answers": [
+        "disposable",
+        "unchanged",
+        "right"
+       ],
+       "hints": [
+        "the kind of income that is measured after tax and benefits",
+        "what happens to a figure that did not move",
+        "the direction a curve moves when a component increases"
+       ],
+       "distractors": [
+        "gross",
+        "larger",
+        "left"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:interest-rates-and-consumption",
+      "title": "Interest Rates and Consumption",
+      "keyIdea": "A higher interest rate raises what borrowers pay and raises what savers are offered, so it cuts consumption twice over.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The second influence, **interest rates**, works on households through two channels at once. Borrowers face a higher cost on what they already owe and on anything new; savers are offered a better reward for not spending. Both point the same way, which is why this influence is strong."
+       },
+       {
+        "type": "paragraph",
+        "text": "Put the arithmetic on it. Households in this economy owe $600bn. At 5% that costs $30bn a year in interest; at 8% it costs $48bn. The difference, $18bn, is money that was being spent and now is not."
+       },
+       {
+        "type": "paragraph",
+        "text": "Run it through the identity: C falls from $640bn to $622bn, and with I, G, X and M unchanged AD falls from $1,000bn to $982bn. The curve moves left at every price level, because nothing about the price level has changed."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏠",
+       "text": "Where most household debt is borrowing against property at a rate that resets, a rise in rates reaches spending within months. Where it is mostly fixed for years, the same rise reaches only new borrowers, and the effect is slower and smaller."
+      },
+      "misconception": "Students treat the interest rate as acting only on new borrowing. Most of the effect is on debt that already exists: the households paying $18bn more are not taking out new loans, they are servicing old ones, and that money leaves consumption whether or not anybody borrows again.",
+      "examMatters": "Appendix 6 defines Calculate as a calculation involving several stages, based on given data, and advises showing workings. \"Several stages\" is the point: the interest bill at each rate, the difference, and then the new AD — three lines, each of which can be read.",
+      "recall": {
+       "id": "aggregate-demand:sub:interest-rates-and-consumption:recall",
+       "type": "fillin",
+       "prompt": "Households owe $600bn. The rate goes from 5% to 10%. Work it through:",
+       "template": [
+        "At 10% the annual interest bill is ___",
+        "The bill has risen by ___ against the 5% case",
+        "That money leaves the ___ component of aggregate demand"
+       ],
+       "answers": [
+        "$60bn",
+        "$30bn",
+        "consumption"
+       ],
+       "hints": [
+        "the debt multiplied by the new rate",
+        "the difference between the two interest bills",
+        "the component households are responsible for"
+       ],
+       "distractors": [
+        "$48bn",
+        "$12bn",
+        "investment"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:consumer-confidence",
+      "title": "Consumer Confidence",
+      "keyIdea": "Confidence is what households expect their income and their job to be worth next year, and it moves spending before any income has changed at all.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**consumer confidence** is what households expect their income and job to be worth next year. It is the only influence on this list that can move consumption with nothing measurable having happened yet — the same pay, the same tax, the same rate, and less spending."
+       },
+       {
+        "type": "paragraph",
+        "text": "It works through the purchases a household can postpone. Nobody delays eating; plenty of people delay replacing a car, moving house, or booking a holiday. Those are large, infrequent purchases, so a small shift in how secure people feel produces a large shift in what is bought this quarter."
+       },
+       {
+        "type": "paragraph",
+        "text": "Because it is an expectation, it can also reverse quickly, and it feeds on itself: households that stop buying cause the redundancies that justify the fear. That is a chain worth writing out in an answer, because it explains why confidence shocks are sharp rather than gradual."
+       }
+      ],
+      "realExample": {
+       "emoji": "📰",
+       "text": "News that a large regional employer is closing changes nobody’s pay on the day it is announced, and the showrooms nearby are emptier the following weekend."
+      },
+      "misconception": "Confidence is written as if it were a component of AD in its own right. It is not: it acts THROUGH consumption, and in the next chapter it appears again as business confidence acting through investment. In both cases the diagram shows C or I moving, not confidence.",
+      "examMatters": "Appendix 6 defines Examine as requiring evaluation as well as analysis, with a brief assessment of the arguments or evidence. Here the assessment is usually about size: confidence moves postponable spending, so it matters more in an economy where a large share of consumption is postponable.",
+      "recall": {
+       "id": "aggregate-demand:sub:consumer-confidence:recall",
+       "type": "classify",
+       "prompt": "Confidence falls sharply. Sort these purchases by how much they are likely to fall:",
+       "groups": [
+        {
+         "name": "Falls a lot",
+         "items": [
+          "Replacing a car that still works",
+          "Booking a long holiday abroad",
+          "Moving to a larger house"
+         ],
+         "why": "Each of these can be put off for a year at no real cost, and postponable spending is where a change in expectations shows up."
+        },
+        {
+         "name": "Barely falls",
+         "items": [
+          "Weekly groceries",
+          "Electricity for the home"
+         ],
+         "why": "These are bought every week whatever anybody expects, so there is very little for a confidence shock to remove."
+        }
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:welfare-payments",
+      "title": "The Level of Welfare Payments",
+      "keyIdea": "Welfare payments are transfers to households with little or no earned income, and a dollar of them raises consumption by more than a dollar given to a high-income household.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The fourth influence is **the level of welfare payments**: transfers to households with little or no earned income. They are part of disposable income, so they belong on this list rather than in the government chapter — and that catches out more students than any other point in this topic."
+       },
+       {
+        "type": "paragraph",
+        "text": "Why they matter more than their size suggests: they go to households near the bottom of the income distribution, and those households spend nearly all of any extra they receive because they have unmet needs and little saving. The same money paid to households with high incomes would be largely saved."
+       },
+       {
+        "type": "paragraph",
+        "text": "So a government can raise consumption more by raising welfare payments than by cutting taxes on high earners, dollar for dollar. That is an analysis point, and it is also the standard evaluation point against it: the money has to come from somewhere, and the taxes or borrowing that fund it have effects of their own."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧾",
+       "text": "A rise in payments to households out of work reaches spending almost immediately, because the households receiving it were already choosing which necessities to go without."
+      },
+      "misconception": "Welfare payments are counted in G. They are not. G is government spending ON GOODS AND SERVICES — the salaries of teachers, the concrete in a road. A transfer hands money to a household and buys nothing; it becomes demand only when the household spends it, and then it is C. Counting it in both places counts it twice.",
+      "examMatters": "Appendix 6 defines Explain as requiring a two-stage chain of reasoning for a reason or an impact. The two stages here are that the payment reaches households who spend most of what they get, and that their spending is C, which shifts AD right.",
+      "recall": {
+       "id": "aggregate-demand:sub:welfare-payments:recall",
+       "type": "fillin",
+       "prompt": "A government pays an extra $1bn, once to households out of work and once as a tax cut for high earners. Compare:",
+       "template": [
+        "The payment out of work adds more to consumption because those households ___ most of what they receive",
+        "The transfer itself is not part of G, because G counts spending on goods and ___",
+        "Until it is spent, the transfer has bought ___"
+       ],
+       "answers": [
+        "spend",
+        "services",
+        "nothing"
+       ],
+       "hints": [
+        "what a household does with money it needs immediately",
+        "the second half of the phrase after goods",
+        "how much output a transfer buys on the day it is paid"
+       ],
+       "distractors": [
+        "save",
+        "assets",
+        "capital"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:wealth-effects",
+      "title": "Wealth Effects",
+      "keyIdea": "Wealth is what a household owns, not what it earns, and a rise in the value of what it owns raises spending with income unchanged.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**wealth effects** are the fifth influence: what households already own, as distinct from what they earn. Property and shares are the two that matter, because they are the two most households hold and the two whose prices move a long way."
+       },
+       {
+        "type": "paragraph",
+        "text": "Two mechanisms, and they are separate. A household that feels richer chooses to save less of its income, so consumption rises directly. And a household whose property is worth more can borrow against it on better terms, so consumption rises again through credit."
+       },
+       {
+        "type": "paragraph",
+        "text": "Both work in reverse, which is what makes asset-price falls so damaging to AD. Note also that this is not the same as the wealth effect behind the AD curve’s slope: that one is caused by the price level, and belongs to a movement along. This one is caused by asset prices, and shifts the curve."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏡",
+       "text": "A sustained rise in house prices in a city raises the spending of the families who already own there, and lowers the spending of the families still saving a deposit. The net effect depends on which group is larger."
+      },
+      "misconception": "Wealth and income are used as if they were one thing, so students write that a house-price rise \"increases people’s income\". It does not increase income by a dollar. It increases what they own, and it changes how much of their unchanged income they choose to spend.",
+      "examMatters": "Appendix 6 defines Discuss as requiring a recognition of different viewpoints and a critical assessment of the evidence. A wealth-effect question is a good one for that: the owners gain and the savers lose, and which effect dominates is genuinely arguable.",
+      "recall": {
+       "id": "aggregate-demand:sub:wealth-effects:recall",
+       "type": "fillin",
+       "prompt": "Share prices rise sharply. Nobody’s pay changes. Apply the leaf:",
+       "template": [
+        "Households that hold shares are richer, so what has risen is their ___ and not their income",
+        "They choose to save a smaller share of an unchanged income, so ___ rises",
+        "Because the cause is an asset price and not the price level, the curve ___"
+       ],
+       "answers": [
+        "wealth",
+        "consumption",
+        "shifts"
+       ],
+       "hints": [
+        "the stock of what a household owns",
+        "the component households are responsible for",
+        "what a curve does when the cause is off the axes"
+       ],
+       "distractors": [
+        "earnings",
+        "saving",
+        "steepens"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:availability-of-credit",
+      "title": "Availability of Credit",
+      "keyIdea": "Availability is whether a bank will lend at all. That is a different question from the interest rate, which is what lending costs.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The sixth and last influence on consumption is the **availability of credit** — whether banks will lend at all, as distinct from the price. Banks decide how much deposit they require, how much income they will lend against, and how carefully they check. None of those is a price."
+       },
+       {
+        "type": "paragraph",
+        "text": "The distinction has real consequences. Rates can be low and lending still unavailable, because a bank rebuilding its own balance sheet turns down borrowers it would have accepted a year earlier. Consumption then falls even though borrowing has never been cheaper, and a student who has only learned the interest-rate channel cannot explain it."
+       },
+       {
+        "type": "paragraph",
+        "text": "It works on the same postponable purchases as confidence does, because those are the ones bought on credit. Tighter lending criteria therefore hit the same parts of consumption that a confidence shock hits, which is why the two so often arrive together."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏦",
+       "text": "A bank that raises its minimum deposit from a tenth of a property’s value to a fifth has not changed its interest rate at all, and has removed a large group of buyers from the market."
+      },
+      "misconception": "Availability and interest rates are merged into \"credit conditions\", and then only the price half is explained. They are separate influences and the specification lists them separately. The sharpest way to show you know: describe a case where the rate falls and consumption falls with it, because lending has been rationed.",
+      "examMatters": "Appendix 6 defines Analyse as requiring a chain of reasoning with depth rather than breadth, and says any relevant data provided needs to be interpreted. If a question gives you both a rate and a lending figure, Analyse asks you to read the two against each other rather than quote them.",
+      "recall": {
+       "id": "aggregate-demand:sub:availability-of-credit:recall",
+       "type": "classify",
+       "prompt": "A bank makes each of these changes. Sort them into availability of credit or interest rates:",
+       "groups": [
+        {
+         "name": "Availability of credit",
+         "items": [
+          "Applicants without a permanent contract are turned away",
+          "The longest term on offer is cut from twenty years to ten",
+          "Every application now needs two years of accounts"
+         ],
+         "why": "None of these changes the price of borrowing: they change who is allowed to borrow and on what terms, which is the availability influence."
+        },
+        {
+         "name": "Interest rates",
+         "items": [
+          "The same loan now carries one percentage point more"
+         ],
+         "why": "This one changes what the borrowing costs and nothing else, which is the price influence and a separate line on the specification."
+        }
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:saving-and-consumption",
+      "title": "Saving and Consumption",
+      "keyIdea": "Disposable income has exactly two uses. Whatever is not consumed is saved, so saving is the residual and the two always add to disposable income.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "2.3.2 · 2b is **the relationship between savings and consumption**, and the relationship is an identity rather than a correlation: $800bn of disposable income, $640bn consumed, $160bn saved. Nothing else can happen to it."
+       },
+       {
+        "type": "paragraph",
+        "text": "That has a consequence students find surprising: every influence on consumption in this chapter is automatically an influence on saving, pointing the other way. A rise in interest rates cuts consumption AND raises saving, and those are not two facts. They are one fact stated twice."
+       },
+       {
+        "type": "paragraph",
+        "text": "Saving does not disappear, either. It is the funds that firms borrow to invest, which is the next block. So a change in the split between C and S moves two components of AD, and they can move in opposite directions."
+       }
+      ],
+      "realExample": {
+       "emoji": "🪙",
+       "text": "A household that decides to put aside a larger share of an unchanged income has, by that single decision, reduced its consumption by exactly the amount it has added to its saving."
+      },
+      "misconception": "Students write that people \"save what is left over after spending\", which makes saving passive and hides the point. The specification’s relationship runs both ways: a decision about how much to save IS a decision about how much to consume, because the two have to add to disposable income.",
+      "examMatters": "Appendix 6 defines Define as requiring the meaning of a term, concept or phrase, with knowledge and understanding only. If a question asks for saving, the meaning is the part of disposable income not spent on consumption — not \"money in a bank account\", which describes where it goes.",
+      "recall": {
+       "id": "aggregate-demand:sub:saving-and-consumption:recall",
+       "type": "fillin",
+       "prompt": "A household has $500 of disposable income each week and saves $80 of it. Apply the relationship:",
+       "template": [
+        "Its weekly consumption is ___",
+        "It decides to save $20 more out of the same income, so its consumption falls by ___",
+        "Whatever it does, consumption and saving must add to ___"
+       ],
+       "answers": [
+        "$420",
+        "$20",
+        "$500"
+       ],
+       "hints": [
+        "the income with the saving taken off",
+        "the amount the saving went up by",
+        "the income the household started with"
+       ],
+       "distractors": [
+        "$580",
+        "$80"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:the-savings-ratio",
+      "title": "The Savings Ratio",
+      "keyIdea": "The savings ratio is saving expressed as a percentage of disposable income.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "2.3.2 · 2c asks for the definition of the **savings ratio**, and it is one line: saving divided by disposable income, written as a percentage. In this economy that is $160bn over $800bn, which is 20%."
+       },
+       {
+        "type": "paragraph",
+        "text": "Two things the definition fixes. The denominator is DISPOSABLE income, not total income and not output, so a question that gives you gross pay has given you the wrong number. And it is a ratio of flows over a period: saving this year against income this year, not the stock of savings a household has built up."
+       },
+       {
+        "type": "paragraph",
+        "text": "Because consumption is the residual, the ratio also tells you the consumption side without a second calculation. A savings ratio of 20% is the same statement as consumption of 80% of disposable income, and the two must add to a hundred."
+       }
+      ],
+      "realExample": {
+       "emoji": "📊",
+       "text": "Two economies with the same disposable income can have savings ratios ten percentage points apart, and the one with the lower ratio has the larger C and therefore the larger AD, with every other component the same."
+      },
+      "misconception": "The ratio is calculated on the wrong base: students divide saving by GDP, or by gross income before tax. Both give a smaller number than the definition asks for. The denominator is what households actually had available — disposable income.",
+      "examMatters": "Appendix 6 defines Calculate as assessing quantitative skills through a calculation based on given data, and advises showing workings. On a two-mark ratio the workings are the mark: write the division out with both figures before you write the percentage.",
+      "recall": {
+       "id": "aggregate-demand:sub:the-savings-ratio:recall",
+       "type": "fillin",
+       "prompt": "An economy has $500bn available to households after tax, and they save $60bn of it. Work out the ratio:",
+       "template": [
+        "The savings ratio is ___",
+        "The share of that $500bn which is consumed is ___",
+        "Consumption is therefore ___"
+       ],
+       "answers": [
+        "12%",
+        "88%",
+        "$440bn"
+       ],
+       "hints": [
+        "the saving divided by the income, as a percentage",
+        "what is left when the ratio is taken from a hundred",
+        "that share applied to the income"
+       ],
+       "distractors": [
+        "8.3%",
+        "80%",
+        "$560bn"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:changes-in-the-savings-ratio",
+      "title": "Changes in the Savings Ratio",
+      "keyIdea": "A change in the savings ratio is a change in consumption with disposable income unchanged, so it shifts AD — and it changes the funds available to lend at the same time.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "2.3.2 · 2d asks for the **causes and effects** of changes in the ratio. The causes are this chapter's influences read from the saving side: expectations of future income, interest rates, consumer confidence, wealth, welfare payments and how easily credit can be had if it is needed."
+       },
+       {
+        "type": "paragraph",
+        "text": "The effect on AD is arithmetic. Hold disposable income at $800bn and raise the ratio from 20% to 25%: saving goes to $200bn, consumption falls to $600bn, and AD falls from $1,000bn to $960bn — a fall of 4% — with nothing else in the identity moving."
+       },
+       {
+        "type": "paragraph",
+        "text": "The other effect points the other way and is the evaluation. Higher saving is a larger pool of funds for banks to lend, which can raise investment. So a rising savings ratio cuts one component of AD and can raise another, and which dominates is a real question rather than a rehearsed answer."
+       }
+      ],
+      "realExample": {
+       "emoji": "⚠️",
+       "text": "Households that expect harder times ahead save more out of the same income. Every one of them is behaving sensibly, and together they reduce the demand that would have kept the harder times away."
+      },
+      "misconception": "Students treat a rising savings ratio as straightforwardly bad for the economy. In the short run it lowers C and therefore AD; in the longer run the same saving is what funds investment and the capital stock. The specification asks for causes AND effects, and the effects are genuinely two-sided.",
+      "examMatters": "Appendix 6 defines Evaluate as requiring multi-stage chains of reasoning, a recognition of different viewpoints and a critical assessment of the evidence, so that informed judgements may be made. A savings-ratio question is the clearest place in this topic to show that: one chain down through C, one chain up through the funds available to lend.",
+      "recall": {
+       "id": "aggregate-demand:sub:changes-in-the-savings-ratio:recall",
+       "type": "fillin",
+       "prompt": "Disposable income stays at $800bn and the savings ratio falls from 20% to 15%. Work it through:",
+       "template": [
+        "Saving is now ___",
+        "Consumption is now ___",
+        "With the other three components unchanged, aggregate demand has risen by ___"
+       ],
+       "answers": [
+        "$120bn",
+        "$680bn",
+        "$40bn"
+       ],
+       "hints": [
+        "the income multiplied by the new ratio",
+        "the income with that saving taken off",
+        "the amount consumption went up by"
+       ],
+       "distractors": [
+        "$200bn",
+        "$600bn"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Six influences on consumption, and disposable income is the one the other five modify.",
+     "Interest rates are the PRICE of credit; availability is whether there is any. They can move apart.",
+     "Saving is the residual: Yd = C + S, and the savings ratio is S over Yd — 20% here."
+    ],
+    "diagramId": "aggregate-demand:diagram:5015d5e3",
+    "quizIndices": [
+     12,
+     8,
+     9,
+     10,
+     11,
+     13
+    ],
+    "practiceIndices": [
+     7,
+     2,
+     3
+    ]
+   },
+   {
+    "id": "aggregate-demand:block:cd4a00fe",
+    "title": "Investment (I)",
+    "sections": [
+     {
+      "id": "aggregate-demand:sub:gross-and-net-investment",
+      "title": "Gross and Net Investment",
+      "keyIdea": "Gross investment is everything firms spend on capital goods. Net investment is what is left after replacing what wore out, and it decides next year’s capacity.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "2.3.2 · 3a is **the distinction between gross investment and net investment**, and the whole leaf is a subtraction. Gross investment is the total spent on capital goods in a period. Depreciation is the part of the capital stock used up over the same period. Net investment is gross minus depreciation."
+       },
+       {
+        "type": "paragraph",
+        "text": "In this economy gross investment is $180bn and depreciation is $120bn, so net investment is $60bn and the capital stock is larger at the end of the year than at the start. It is the $180bn that enters AD, because that is the spending; it is the $60bn that decides future capacity."
+       },
+       {
+        "type": "paragraph",
+        "text": "Now drop gross investment to $110bn with depreciation unchanged. Net investment is −$10bn — negative. Firms are still spending $110bn, AD still counts every dollar of it, and the country is producing with less capital than it had. That is why both figures are on the specification."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏭",
+       "text": "A textile firm replacing eight worn looms and adding two has made a gross investment in ten machines and a net investment in two. Only the two change what it can make next year."
+      },
+      "misconception": "Investment is written as buying shares or putting money in a bank. In economics it means spending on CAPITAL GOODS — machines, buildings, vehicles, equipment. Buying a share transfers the ownership of an asset that already exists and adds nothing to the capital stock, so it is not part of I.",
+      "examMatters": "Appendix 6 defines Define as requiring the meaning of a term with knowledge and understanding only. Net investment has a precise meaning and it needs the word depreciation in it; \"investment that adds to the capital stock\" describes the effect and leaves out the calculation.",
+      "recall": {
+       "id": "aggregate-demand:sub:gross-and-net-investment:recall",
+       "type": "fillin",
+       "prompt": "An economy spends $90bn on capital goods in a year in which $105bn of capital wears out. Apply the leaf:",
+       "template": [
+        "Net investment is ___",
+        "The capital stock at the end of the year is ___ than at the start",
+        "The figure that enters aggregate demand is ___"
+       ],
+       "answers": [
+        "−$15bn",
+        "smaller",
+        "$90bn"
+       ],
+       "hints": [
+        "the spending with the wearing-out taken off",
+        "the direction a negative net figure points",
+        "the spending itself, before anything is taken off"
+       ],
+       "distractors": [
+        "$15bn",
+        "larger",
+        "$105bn"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:the-rate-of-economic-growth",
+      "title": "The Rate of Economic Growth",
+      "keyIdea": "Firms invest for demand they expect to exist, so the rate at which the economy is growing is itself a reason to invest.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "2.3.2 · 3b lists five influences on investment and puts **the rate of economic growth** first. It is how fast the demand a new machine would serve is itself growing. A machine bought today produces for years, so what matters is not today’s sales but the trend they sit on."
+       },
+       {
+        "type": "paragraph",
+        "text": "The link is capacity. A firm running its existing plant with room to spare can meet more orders without buying anything. A firm running near its limit cannot, so growth that continues forces the decision. That is why investment responds to the RATE of growth and not simply to the level of output."
+       },
+       {
+        "type": "paragraph",
+        "text": "It also explains the volatility noticed in the first block. Output can keep rising while its rate of increase slows, and firms that were buying capacity for a faster trend stop buying. Investment can fall in a year when the economy is still growing."
+       }
+      ],
+      "realExample": {
+       "emoji": "📈",
+       "text": "A component maker with two production lines running at four fifths of capacity will not order a third until it expects demand that the two cannot meet. The order comes from the forecast, not from this month’s sales."
+      },
+      "misconception": "Students write that investment rises whenever output rises. It rises when output is expected to rise ENOUGH to need capacity that does not exist yet. A firm with spare capacity can serve a great deal more demand without spending a dollar on capital.",
+      "examMatters": "Appendix 6 defines Analyse as requiring a chain of reasoning, focusing on depth rather than breadth, and says it does not include evaluation. The chain here is growth, to expected demand beyond current capacity, to the order for new plant, to I and AD — and it stops there.",
+      "recall": {
+       "id": "aggregate-demand:sub:the-rate-of-economic-growth:recall",
+       "type": "classify",
+       "prompt": "Sort each firm by whether the news is likely to make it order new plant:",
+       "groups": [
+        {
+         "name": "Orders new plant",
+         "items": [
+          "Running at ninety-five per cent of capacity, and demand is expected to keep rising",
+          "Turning away orders it has no line to fill"
+         ],
+         "why": "Both are at the limit of what existing capital can do, so more demand cannot be served without buying capacity."
+        },
+        {
+         "name": "Does not",
+         "items": [
+          "Running at sixty per cent of capacity, and demand is expected to rise a little",
+          "Growing, but expecting growth to be slower next year than the plant already ordered will cover"
+         ],
+         "why": "Both can serve more demand with the capital they already have, which is why output can rise without investment rising."
+        }
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:interest-rates-and-investment",
+      "title": "Interest Rates and Investment",
+      "keyIdea": "A firm invests when the expected rate of return beats the interest rate, so raising the rate removes projects from the bottom of the list.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The second influence, **interest rates**, is what borrowing the money for the machine costs, or what lending it out would earn. The test is a comparison: the expected return on the project against the cost of the money, and it holds whether the firm borrows or uses its own funds, because using its own funds means giving up the interest it could have earned."
+       },
+       {
+        "type": "paragraph",
+        "text": "Take a machine costing $500 that is expected to add $40 a year. Its rate of return is $40 over $500, or 8%. At an interest rate of 6% the interest on $500 is $30 a year and the project earns $40, so it goes ahead."
+       },
+       {
+        "type": "paragraph",
+        "text": "At 10% the interest is $50 against the same $40, and it does not. Nothing about the machine changed. Every project in the economy faces the same comparison, so a rise in rates removes the least profitable ones and I falls."
+       }
+      ],
+      "realExample": {
+       "emoji": "⚙️",
+       "text": "A workshop weighing a machine against leaving the money on deposit is making the same comparison as a workshop weighing it against a loan. The interest rate is on both sides of the decision."
+      },
+      "misconception": "Students think the interest rate only matters to firms that borrow. It is the opportunity cost of the funds either way: a firm with cash that invests is giving up interest, and when that interest is high enough, holding the cash is the better return.",
+      "examMatters": "Appendix 6 defines Calculate as a calculation involving several stages and advises showing workings. A rate-of-return comparison is two stages: the return as a percentage of the outlay, and then that percentage set against the interest rate. Write both.",
+      "recall": {
+       "id": "aggregate-demand:sub:interest-rates-and-investment:recall",
+       "type": "fillin",
+       "prompt": "A project costs $800 and is expected to add $56 a year. The interest rate is 8%. Decide it:",
+       "template": [
+        "The expected rate of return is ___",
+        "The annual interest on $800 at 8% is ___",
+        "So the project ___ go ahead"
+       ],
+       "answers": [
+        "7%",
+        "$64",
+        "does not"
+       ],
+       "hints": [
+        "the yearly gain as a percentage of the outlay",
+        "the outlay multiplied by the rate",
+        "the verdict when the return is below the rate"
+       ],
+       "distractors": [
+        "14%",
+        "$56",
+        "does"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:business-confidence-and-expectations",
+      "title": "Business Confidence and Expectations",
+      "keyIdea": "A project’s return is expected, never known, so what firms believe about the future is one of the influences the specification names — and it can overrule the arithmetic.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The third influence is **business confidence and expectations**: what firms expect demand to be over the life of the asset. Look back at the last chapter. Every figure in it was expected. The $40 a year is a forecast, and if the firm doubts it, the 8% is not a rate of return but a hope."
+       },
+       {
+        "type": "paragraph",
+        "text": "So confidence does not act beside the calculation, it acts INSIDE it. A firm that halves its expected return has halved the rate it compares with the interest rate, and the project fails the test at an interest rate that would have passed it yesterday."
+       },
+       {
+        "type": "paragraph",
+        "text": "This is why investment is the most volatile component. Expectations can change in a week, capital spending can be postponed in a week, and unlike consumption there is no floor of necessity underneath it — a firm can buy no machines at all this year and still open tomorrow."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔮",
+       "text": "Two firms in the same industry, with the same order books and facing the same interest rate, will invest differently if one expects the next three years to be better than the last three and the other does not."
+      },
+      "misconception": "Confidence gets treated as a vague extra to mention at the end. It is not vague and it is not an extra: it determines the expected return, which is one half of the comparison that decides the project. Say WHICH number it moves and the point becomes analysis instead of assertion.",
+      "examMatters": "Appendix 6 defines Examine as requiring analysis and evaluation, with a brief assessment of the arguments or evidence. Confidence is the standard place to find that assessment: the arithmetic of a project looks precise, and every figure in it is a forecast.",
+      "recall": {
+       "id": "aggregate-demand:sub:business-confidence-and-expectations:recall",
+       "type": "fillin",
+       "prompt": "The $500 machine was expected to add $40 a year. The firm now expects half that. The interest rate is 6%:",
+       "template": [
+        "The expected return is now ___ a year",
+        "As a rate of return on the outlay that is ___",
+        "Against an interest rate of 6%, the project now ___"
+       ],
+       "answers": [
+        "$20",
+        "4%",
+        "fails"
+       ],
+       "hints": [
+        "half of the original yearly figure",
+        "that yearly figure as a percentage of the outlay",
+        "the verdict when the return falls below the rate"
+       ],
+       "distractors": [
+        "$40",
+        "8%",
+        "passes"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:availability-of-credit-for-firms",
+      "title": "Availability of Credit",
+      "keyIdea": "A project can pass the return test and still not happen, because no bank will lend for it. Availability is a separate influence from price.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The fourth influence is the **availability of credit** — whether a bank will lend for the project at any price. It is the same distinction made for households two chapters ago, and it bites harder on firms because the sums are larger and the security is worth less if the project fails."
+       },
+       {
+        "type": "paragraph",
+        "text": "A bank rationing credit does not do it by raising its rate to everyone. It tightens the conditions: more of the firm’s own money in the project, shorter terms, security it can sell. A small firm with an 8% project and no property to pledge is turned down at a rate that a large firm is accepted at."
+       },
+       {
+        "type": "paragraph",
+        "text": "The consequence for AD is that investment can stay flat through a fall in interest rates. Cheaper money that nobody will lend does not buy a machine, and an answer that only knows the price channel has to call that a puzzle."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧾",
+       "text": "A bank that will now lend only half a project’s cost instead of three quarters has not changed its rate. It has required the firm to find the other half, and the firms that cannot do not invest."
+      },
+      "misconception": "Students reach for \"interest rates are low so investment will rise\" as an automatic step. It is a conditional step: cheap credit raises investment only if credit is available. The specification lists availability separately from the rate precisely because they can move in opposite directions.",
+      "examMatters": "Appendix 6 defines Explain as requiring a two-stage chain of reasoning for a reason or an impact. Two stages here: the bank tightens what it requires, so projects that pass the return test are not funded, so I falls at an unchanged interest rate.",
+      "recall": {
+       "id": "aggregate-demand:sub:availability-of-credit-for-firms:recall",
+       "type": "classify",
+       "prompt": "A small firm with a profitable project is refused funding. Sort the reasons into availability or price:",
+       "groups": [
+        {
+         "name": "Availability",
+         "items": [
+          "The bank now wants half the cost put up by the firm",
+          "The firm has no property it can pledge as security",
+          "The bank has stopped lending to firms in this industry"
+         ],
+         "why": "Each of these is a condition rather than a price: the money is not on offer to this firm at any rate, which is why the specification lists availability separately."
+        },
+        {
+         "name": "Price",
+         "items": [
+          "The loan would now cost two percentage points more"
+         ],
+         "why": "Here the money is available and the question is only what it costs, which is the interest-rate influence."
+        }
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:tax-on-company-profits",
+      "title": "Tax on Company Profits",
+      "keyIdea": "The return a firm compares with the interest rate is the return it KEEPS, so a tax on profits lowers the rate of return on every project at once.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The fifth and last influence on 3b is **tax on company profits**: what share of the return the firm keeps. Return to the machine. It earns $40 a year before tax, which was 8% on $500."
+       },
+       {
+        "type": "paragraph",
+        "text": "With a profit tax of 20% the firm keeps $32, and the rate of return it can actually compare with the interest rate is 6.4%. Raise the tax to 40% and the kept return is $24, a rate of 4.8%."
+       },
+       {
+        "type": "paragraph",
+        "text": "Set those against an interest rate of 6%. At the lower tax 6.4% beats it and the project goes ahead; at the higher tax 4.8% does not, and it does not. The machine, the demand and the interest rate are all unchanged, and the investment stops."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏢",
+       "text": "A firm choosing between two countries for a new plant, with identical costs and identical expected sales, is choosing between two after-tax rates of return. That is the whole decision."
+      },
+      "misconception": "The tax gets treated as a cost like any other, so students say it \"reduces profit\" and stop. The point is sharper: it reduces the rate of return the firm can set against the interest rate, which is what decides whether the project happens at all.",
+      "examMatters": "Appendix 6 defines Analyse as requiring a chain of reasoning with any relevant data interpreted, and focusing on depth rather than breadth. If a question gives a tax rate and a rate of return, the analysis IS the after-tax figure: Analyse asks for the step to be done, not named.",
+      "recall": {
+       "id": "aggregate-demand:sub:tax-on-company-profits:recall",
+       "type": "fillin",
+       "prompt": "A project costs $1,000 and earns $90 a year before tax. The profit tax is 30%:",
+       "template": [
+        "The firm keeps ___ a year",
+        "The rate of return it can compare with the interest rate is ___",
+        "At an interest rate of 7% the project ___"
+       ],
+       "answers": [
+        "$63",
+        "6.3%",
+        "fails"
+       ],
+       "hints": [
+        "the yearly figure with the tax share removed",
+        "what the firm keeps as a percentage of the outlay",
+        "the verdict when the kept return is below the rate"
+       ],
+       "distractors": [
+        "$27",
+        "9%",
+        "passes"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:tax-relief-and-subsidies",
+      "title": "Tax Relief and Subsidies",
+      "keyIdea": "Both cut what the firm pays for the asset rather than what it earns from it, so both raise the rate of return by shrinking the denominator.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "2.3.2 · 3c is **government policy to promote investment**, and it names three tools. Two of them work on the cost side. **Tax relief** means letting the outlay be set against taxable profit, so the state bears part of the cost. **Subsidies** mean paying part of the price of the asset directly."
+       },
+       {
+        "type": "paragraph",
+        "text": "Keep the last chapter's figures, so the comparison is like with like: after the 20% profit tax the firm keeps $32 a year, which on a $500 machine is 6.4%. A subsidy of $50 leaves it paying $450, and the same $32 is now 7.1%."
+       },
+       {
+        "type": "paragraph",
+        "text": "Tax relief reaches the same place by a different road: the outlay is set against taxable profit, so the state bears 20% of it — $100 here, twice what the subsidy was worth — and the effective cost is $400, a return of 8%. Projects sitting just below the interest rate now clear it, so I rises and AD shifts right."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛠️",
+       "text": "A government that wants more machines bought this year can pay part of the price or allow the whole price against tax. Both leave the firm out of pocket by less, and both cost the government revenue."
+      },
+      "misconception": "Students treat a subsidy as simply \"free money for firms\" and stop before the mechanism. It changes a specific number: the outlay the kept return is divided by. Neither tool makes a bad project good — a machine earning $32 a year still earns $32. What they do is move projects that were sitting just below the interest rate over the line.",
+      "examMatters": "Appendix 6 defines Examine as requiring evaluation as well as analysis, with a brief assessment of the arguments. The assessment here writes itself: both tools cost revenue, and some of the projects they subsidise would have gone ahead anyway.",
+      "recall": {
+       "id": "aggregate-demand:sub:tax-relief-and-subsidies:recall",
+       "type": "fillin",
+       "prompt": "A machine costs $600 and earns $48 a year. A subsidy of $150 is offered:",
+       "template": [
+        "The firm now pays ___ for the machine",
+        "Its rate of return becomes ___",
+        "The policy worked on what the asset ___, not on what it earns"
+       ],
+       "answers": [
+        "$450",
+        "10.7%",
+        "costs"
+       ],
+       "hints": [
+        "the price with the subsidy taken off",
+        "the yearly gain over the price the firm actually paid",
+        "the side of the comparison a subsidy changes"
+       ],
+       "distractors": [
+        "$750",
+        "8%"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:lower-corporation-tax",
+      "title": "Reducing the Rate of Corporation Tax",
+      "keyIdea": "Cutting the tax on company profits raises the kept return on every project at once, rather than on the projects a government has chosen.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The third tool in 3c is **reductions on the rate of corporation tax** — leaving a larger share of every return in the firm. It is the mirror of the fifth influence in the last chapter, run backwards, and the arithmetic is the same arithmetic."
+       },
+       {
+        "type": "paragraph",
+        "text": "The machine earns $40 before tax. At 20% the firm keeps $32, a return of 6.4%. Cut the rate to 15% and it keeps $34, a return of 6.8%. Every project in the economy moves up by the same proportion."
+       },
+       {
+        "type": "paragraph",
+        "text": "That breadth is the difference from the other two tools. A subsidy reaches the assets a government chose to subsidise; a rate cut reaches every firm with taxable profit, including the ones that were investing anyway. It is the blunter instrument, and the more expensive one."
+       }
+      ],
+      "realExample": {
+       "emoji": "📉",
+       "text": "A cut of five percentage points in the profit tax raises the kept return on a project that was already going ahead by exactly as much as on one that was marginal. Only the marginal one changes behaviour."
+      },
+      "misconception": "A tax cut is written as if it were certain to raise investment. It raises the kept return, which raises investment only where the return was close to the interest rate. Firms with no taxable profit — which includes most firms in a downturn — get nothing from it at all.",
+      "examMatters": "Appendix 6 defines Discuss as requiring a recognition of different viewpoints and a critical assessment of the evidence, supported by chains of reasoning. A corporation-tax question is one of the clearest: the same policy is a cost-effective incentive and an expensive windfall, and which it is depends on how many projects were marginal.",
+      "recall": {
+       "id": "aggregate-demand:sub:lower-corporation-tax:recall",
+       "type": "classify",
+       "prompt": "The profit tax is cut from 30% to 20%. Sort each firm by whether its behaviour changes:",
+       "groups": [
+        {
+         "name": "Behaviour changes",
+         "items": [
+          "A firm whose kept return was just below the interest rate",
+          "A firm with a project it shelved last year for being marginal"
+         ],
+         "why": "Both were close to the line, so a rise in what they keep is enough to move the project from rejected to accepted."
+        },
+        {
+         "name": "Behaviour does not",
+         "items": [
+          "A firm whose project was going ahead anyway",
+          "A firm making a loss, so it pays no profit tax at all"
+         ],
+         "why": "One was already investing and simply keeps more; the other has no taxable profit for a lower rate to act on, so a cut reaches neither decision."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Gross investment minus depreciation is net investment, and net investment can be negative.",
+     "Every influence works on one comparison: the expected return KEPT, against the interest rate.",
+     "Relief and subsidies cut what the asset costs; a lower profit tax raises what the return is worth."
+    ],
+    "diagramId": "aggregate-demand:diagram:ac97ae70",
+    "quizIndices": [
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "practiceIndices": [
+     4
+    ]
+   },
+   {
+    "id": "aggregate-demand:block:9564c167",
+    "title": "Government Expenditure (G)",
+    "sections": [
+     {
+      "id": "aggregate-demand:sub:fiscal-policy",
+      "title": "Fiscal Policy",
+      "keyIdea": "Fiscal policy is a deliberate decision about government spending and taxation, and it is the only influence on G that somebody chooses in a budget.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "2.3.2 · 4a lists four **influences on government expenditure** and the first is **fiscal policy**: a deliberate decision about spending and taxation. G is the one component of AD a government can move directly, which is why it is the component policy reaches for."
+       },
+       {
+        "type": "paragraph",
+        "text": "Take G from $220bn to $260bn. With C, I, X and M unchanged, AD goes from $1,000bn to $1,040bn: a rise of 4% at every price level, so the curve shifts right rather than the economy sliding along it."
+       },
+       {
+        "type": "paragraph",
+        "text": "The tax side of the same decision reaches AD by a longer road. A tax cut raises disposable income, and households then decide how much of it to spend, so it arrives as C and only partly. Spending directly is the more certain route and the more visible one."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚧",
+       "text": "A decision to build a road adds the whole contract to G in the year it is spent. A tax cut of the same size adds to AD only the part households choose to spend rather than save."
+      },
+      "misconception": "A rise in G of $40bn raises AD by more than $40bn, because the money is spent again by whoever receives it. That further effect is called the multiplier and it belongs to topic 2.3.4, national income — it is not part of 2.3.2 and this section deliberately does not teach it. Here, the identity is the whole answer.",
+      "examMatters": "Appendix 6 defines Explain as requiring a two-stage chain of reasoning for a reason or an impact. Two stages: the government raises its own spending on goods and services, so G in the identity is larger, so AD is larger at every price level.",
+      "recall": {
+       "id": "aggregate-demand:sub:fiscal-policy:recall",
+       "type": "fillin",
+       "prompt": "Government spending on goods and services goes from $220bn to $260bn, with every other component unchanged:",
+       "template": [
+        "Aggregate demand rises by ___",
+        "At the old price level the quantity demanded is larger, so the curve moves to the ___",
+        "A tax cut of the same size would add ___ to aggregate demand, because households save part of it"
+       ],
+       "answers": [
+        "$40bn",
+        "right",
+        "less"
+       ],
+       "hints": [
+        "the amount the third term went up by",
+        "the direction of an increase",
+        "the comparison when only part of the money is spent"
+       ],
+       "distractors": [
+        "$480bn",
+        "left",
+        "more"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:the-level-of-economic-activity",
+      "title": "The Level of Economic Activity",
+      "keyIdea": "Some government spending moves with the economy on its own: a downturn raises what is paid out and lowers what is taken in, with nothing decided.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The second influence is **the level of economic activity** — what output and employment are doing, which moves some spending with no decision at all. It is the only one of the four that is not a choice, and that makes it the one students leave out."
+       },
+       {
+        "type": "paragraph",
+        "text": "The mechanism is direct. When output falls and unemployment rises, more households qualify for payments and more claim them, so spending rises. At the same time incomes and profits are smaller, so tax receipts fall. Take this economy into a downturn and G rises by $25bn, to $245bn, with no minister deciding anything."
+       },
+       {
+        "type": "paragraph",
+        "text": "The effect on AD is to soften the fall. Spending rises exactly when private spending is falling, which is why it works in the opposite direction to the cycle. Read the other way: in a boom the payments fall away and receipts rise, so the same mechanism restrains AD without a decision either."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔁",
+       "text": "A factory closure raises payments to the households that worked there and lowers the tax they were paying, in the same quarter. Both happen because the rules already exist, not because anything was announced."
+      },
+      "misconception": "Students describe this as the government \"responding to the downturn\", which makes it sound like fiscal policy. It is not a response and nobody chose it: the rules were written in advance and the spending follows the economy. A choice can be reversed in a budget; this cannot, without changing the rules.",
+      "examMatters": "Appendix 6 defines Analyse as requiring a chain of reasoning with depth rather than breadth, and any relevant data interpreted. The chain is output falls, so claims rise and receipts fall, so G rises without a decision, so AD falls by less than it otherwise would.",
+      "recall": {
+       "id": "aggregate-demand:sub:the-level-of-economic-activity:recall",
+       "type": "classify",
+       "prompt": "Sort each change in government spending by whether somebody decided it:",
+       "groups": [
+        {
+         "name": "Decided",
+         "items": [
+          "A budget raises the schools programme by a fifth",
+          "A minister announces a new rail line"
+         ],
+         "why": "Both required somebody to choose and could be reversed by a later choice, which is what makes them fiscal policy."
+        },
+        {
+         "name": "Not decided",
+         "items": [
+          "Payments to households out of work rise as a factory closes",
+          "Tax receipts fall because profits are lower this year"
+         ],
+         "why": "Neither was announced: the rules already existed and the spending and receipts followed the economy on their own."
+        }
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:correction-of-market-failures",
+      "title": "Correction of Market Failures",
+      "keyIdea": "Governments spend on the things a market left to itself provides too little of, and that spending is part of G whatever its purpose.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The third influence is the **correction of market failures** — spending on what the market provides too little of. Markets under-provide goods whose benefits reach people who did not pay for them, and goods nobody can be excluded from using. Defence, public health, basic research and flood protection are the standard cases."
+       },
+       {
+        "type": "paragraph",
+        "text": "For this topic the reason does not change the accounting. A government buying vaccines to correct a market failure adds exactly the same amount to G as a government buying them for any other reason. The correction is WHY the spending happens; AD only records THAT it happened."
+       },
+       {
+        "type": "paragraph",
+        "text": "What it does change is how much of G can be cut. Spending tied to a failure the market cannot fix is hard to remove without the failure returning, so this part of G is stickier than the parts driven by politics or by the cycle."
+       }
+      ],
+      "realExample": {
+       "emoji": "💉",
+       "text": "A vaccination programme benefits people who never attend it, because they are less likely to meet an infected neighbour. Each buyer pays the whole price and receives only part of the benefit, so fewer are bought privately than are worth buying — and the shortfall is what the government purchase closes."
+      },
+      "misconception": "Students import the whole of the market-failure topic here and write two paragraphs on externalities. This leaf asks only why market failure is an INFLUENCE on the size of G. Name the failure, say what the government therefore buys, and put the purchase into the identity.",
+      "examMatters": "Appendix 6 defines Explain as requiring a two-stage chain of reasoning when it asks for a reason or an impact. The chain here is short: name the specific failure in the case in front of you, then say what the government therefore buys and what that does to G.",
+      "recall": {
+       "id": "aggregate-demand:sub:correction-of-market-failures:recall",
+       "type": "classify",
+       "prompt": "A government is deciding what to buy. Sort each case by what it does to G:",
+       "groups": [
+        {
+         "name": "G rises",
+         "items": [
+          "A coastline has no flood barrier because no seller can charge the people it would protect",
+          "Vaccination is bought privately by far fewer people than would benefit from it"
+         ],
+         "why": "In both cases the market on its own leaves a gap between what is bought and what is worth buying, and closing that gap is a purchase of goods or services — so it enters G."
+        },
+        {
+         "name": "G does not rise",
+         "items": [
+          "A market is already supplying as much of a good as the economy wants",
+          "The government decides the shortfall is not large enough to be worth the spending"
+         ],
+         "why": "Neither of these is a gap the government has decided to close, so nothing is bought and the identity does not move. The influence is on the SIZE of G, which is the leaf; naming the kind of failure is Unit 1’s."
+        }
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:political-priorities",
+      "title": "Political Priorities",
+      "keyIdea": "The same total of government spending can be split completely differently by two governments, and the split is decided politically rather than economically.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The fourth influence is **political priorities**: what the government of the day has chosen to be for. Two governments facing identical economies, identical tax receipts and identical market failures will still spend differently, because they were elected to do different things."
+       },
+       {
+        "type": "paragraph",
+        "text": "Most of what this influence moves is the COMPOSITION of G rather than its total: more on transport and less on defence, more on schools and less on subsidies. For AD that can be neutral — the identity counts the total — while mattering a great deal to who benefits and to what the economy can produce later."
+       },
+       {
+        "type": "paragraph",
+        "text": "It also sets the direction of the other three. A government committed to a smaller state will use fiscal policy differently, treat the automatic rise in a downturn as a problem to be corrected, and take a narrower view of which failures are worth correcting. That is why the specification lists it last: it conditions the rest."
+       }
+      ],
+      "realExample": {
+       "emoji": "🗳️",
+       "text": "A newly elected government that shifts spending from military procurement to rural clinics may leave G unchanged to the dollar, and change what the country looks like in ten years."
+      },
+      "misconception": "This influence is dismissed as \"politics, not economics\" and skipped. It is on the specification, and it has an economic consequence that can be stated precisely: it determines the composition of G, which determines what the spending builds, even where it leaves the total and therefore AD unchanged.",
+      "examMatters": "Appendix 6 defines Evaluate as requiring multi-stage chains of reasoning and a recognition of different viewpoints so that informed judgements may be made. Different viewpoints is not decoration on this leaf: the disagreement about what a government should spend on is the leaf itself.",
+      "recall": {
+       "id": "aggregate-demand:sub:political-priorities:recall",
+       "type": "fillin",
+       "prompt": "A new government moves $30bn of spending from defence procurement to rural clinics, and changes the total by nothing:",
+       "template": [
+        "G in the identity is ___",
+        "Aggregate demand this year is therefore ___",
+        "What has changed is the ___ of government spending rather than its size"
+       ],
+       "answers": [
+        "unchanged",
+        "unchanged too",
+        "composition"
+       ],
+       "hints": [
+        "what happens to a total that did not move",
+        "the same verdict, applied to the whole identity",
+        "the word for how a total is divided up"
+       ],
+       "distractors": [
+        "larger",
+        "smaller",
+        "level"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "G is the component a government moves directly; fiscal policy is the decision to move it.",
+     "The level of economic activity moves G with nobody deciding anything at all.",
+     "Market failure and political priorities decide what G buys, not how much."
+    ],
+    "diagramId": "aggregate-demand:diagram:709247b8",
+    "quizIndices": [
+     19,
+     20,
+     21
+    ],
+    "practiceIndices": [
+     5
+    ]
+   },
+   {
+    "id": "aggregate-demand:block:1fbd1fff",
+    "title": "The Net Trade Balance (X − M)",
+    "sections": [
+     {
+      "id": "aggregate-demand:sub:real-income-and-imports",
+      "title": "Real Income at Home",
+      "keyIdea": "Higher real income at home is spent on everything, including goods made abroad, so imports rise and the net trade balance falls.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "2.3.2 · 5a asks for **the impact on the net trade balance of changes in** five things, and the first is **real income**: higher real income at home is spent partly on imports. Households do not buy only home-produced goods with extra income, so part of every rise leaks abroad."
+       },
+       {
+        "type": "paragraph",
+        "text": "Put a figure on it. If an extra $100bn of spending takes about $25bn of it abroad, imports go from $300bn to $325bn and the net trade balance from −$40bn to −$65bn. Exports have not moved: foreign buyers do not care what this economy’s income is doing."
+       },
+       {
+        "type": "paragraph",
+        "text": "That asymmetry is the point of the leaf. Domestic income moves M and leaves X alone; the third influence in this chapter does the opposite. Notice too that the fall in (X − M) works against the rise in C, so a boom at home partly exports its own demand."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛒",
+       "text": "A country whose households grow richer buys more of everything — and if the cars, phones and machinery it buys are made elsewhere, a large part of the new spending never reaches its own producers."
+      },
+      "misconception": "Students write that a rise in domestic income \"worsens the trade balance and therefore reduces AD\". It reduces the (X − M) term, but the same rise in income has raised C by more. The identity is a sum: look at all four components before saying which way AD went.",
+      "examMatters": "Appendix 6 defines Calculate as a calculation involving several stages based on given data, with workings shown. Finding a new net trade balance from a change in imports is exactly that: the new M, then the subtraction, then the comparison with the old figure.",
+      "recall": {
+       "id": "aggregate-demand:sub:real-income-and-imports:recall",
+       "type": "fillin",
+       "prompt": "Exports are $200bn and imports $230bn. Domestic real income rises and imports go up by $20bn:",
+       "template": [
+        "The net trade balance was ___",
+        "It is now ___",
+        "Exports are ___, because foreign buyers do not observe this economy’s income"
+       ],
+       "answers": [
+        "−$30bn",
+        "−$50bn",
+        "unchanged"
+       ],
+       "hints": [
+        "exports with imports taken off, before the rise",
+        "the same subtraction with the larger import figure",
+        "what happens to a figure nothing has acted on"
+       ],
+       "distractors": [
+        "$30bn",
+        "−$10bn",
+        "higher"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:the-exchange-rate",
+      "title": "The Exchange Rate",
+      "keyIdea": "A weaker home currency makes exports cheaper abroad and imports dearer at home, and the arithmetic is a division you can do on one line.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The second influence is **the exchange rate**: what a home price is worth abroad and a foreign price is worth at home. Quote it as units of home currency per dollar. Suppose it moves from 4 to 5 units per dollar — more units for a dollar means each unit is worth less, which is a depreciation."
+       },
+       {
+        "type": "paragraph",
+        "text": "An export priced at 800 units at home cost a foreign buyer $200 before and $160 after: cheaper abroad, with no change in the home price. An import priced at $100 cost 400 units before and 500 after: dearer at home, with no change in the foreign price."
+       },
+       {
+        "type": "paragraph",
+        "text": "So a depreciation pushes X up and M down, and the net trade balance improves. The size of the improvement depends on how much buyers respond, which is a topic in Unit 4; for 2.3.2 the direction and the per-unit arithmetic are what the leaf asks for."
+       }
+      ],
+      "realExample": {
+       "emoji": "✈️",
+       "text": "An exporter whose price list is unchanged in its own currency becomes cheaper in every market it sells to, overnight, because the currency moved. It has done nothing and it has just cut its foreign prices."
+      },
+      "misconception": "Going from 4 to 5 units per dollar is written as a 25% fall in the currency. It is a 25% rise in the QUOTE and a 20% fall in the CURRENCY: one unit was worth $0.25 and is now worth $0.20. Work in what a unit is worth, not in how many of them a dollar buys.",
+      "examMatters": "Appendix 6 defines Explain as requiring a two-stage chain of reasoning for a reason or an impact. Two stages on this leaf: the currency falls, so the home price converts into a lower foreign price, so foreign buyers order more and X rises.",
+      "recall": {
+       "id": "aggregate-demand:sub:the-exchange-rate:recall",
+       "type": "fillin",
+       "prompt": "The rate moves from 8 units per dollar to 10. A good is priced at 2,400 units at home and an import at $50 abroad:",
+       "template": [
+        "The export now costs a foreign buyer ___",
+        "The import now costs ___ units at home",
+        "One unit was worth $0.125 and is now worth $0.10, so the currency has fallen by ___"
+       ],
+       "answers": [
+        "$240",
+        "500",
+        "20%"
+       ],
+       "hints": [
+        "the home price divided by the new quote",
+        "the dollar price multiplied by the new quote",
+        "the fall in what one unit is worth, as a percentage"
+       ],
+       "distractors": [
+        "$300",
+        "400",
+        "25%"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:the-state-of-the-global-economy",
+      "title": "The State of the Global Economy",
+      "keyIdea": "Exports are somebody else’s consumption, so the real income of the countries that buy them decides how much they buy.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The third influence is **the state of the global economy** — the real income of the countries that buy the exports. Everything the first chapter of this block said about domestic income applies abroad: when partner economies grow, their households and firms buy more of everything, and some of that is this economy’s exports."
+       },
+       {
+        "type": "paragraph",
+        "text": "It is the mirror image and it is worth saying so. Domestic real income moves M and leaves X alone. Foreign real income moves X and leaves M alone. A student who can state that pair has the whole leaf, and can work out which way the net trade balance goes in either case without memorising it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Concentration matters as much as the average. An economy selling to four buyers is exposed to those four; an economy selling to forty is not. That is why the same global downturn hits two exporters very differently, and it is the evaluation point on this leaf."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌏",
+       "text": "A slowdown in one large regional economy takes a measurable amount off the exports of every smaller economy that supplies its factories, before any of them has changed a single price."
+      },
+      "misconception": "A global downturn is treated as one shock hitting everybody equally. Its effect on an economy depends on whether it is exposed to it: an economy whose exports mostly go to a growing partner can be almost untouched by a recession elsewhere.",
+      "examMatters": "Appendix 6 defines Discuss as requiring reference to context where appropriate, and a critical assessment of the evidence. Context is the whole of this leaf: an export figure means nothing until you know which economies the exports go to.",
+      "recall": {
+       "id": "aggregate-demand:sub:the-state-of-the-global-economy:recall",
+       "type": "classify",
+       "prompt": "Sort each event by which side of the trade balance it acts on first:",
+       "groups": [
+        {
+         "name": "Acts on exports",
+         "items": [
+          "The two economies that buy most of this country’s output enter a recession",
+          "A large trading partner grows faster than expected"
+         ],
+         "why": "Exports are foreign buyers’ spending, so what moves them is the real income of the countries doing the buying."
+        },
+        {
+         "name": "Acts on imports",
+         "items": [
+          "Households here become richer and buy more of everything",
+          "A rise in domestic real income raises spending on foreign cars"
+         ],
+         "why": "Imports are residents’ spending on foreign output, so what moves them is the real income of the residents."
+        }
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:degree-of-protectionism",
+      "title": "The Degree of Protectionism",
+      "keyIdea": "Tariffs and quotas at home cut imports, and tariffs and quotas abroad cut exports — so protectionism can move both sides of the balance at once.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The fourth influence is the **degree of protectionism**: tariffs and quotas, at home on imports and abroad on the exports. Take a tariff first. A 25% tariff on an import priced at $100 makes it $125 to a buyer at home. Some buyers switch to home-produced substitutes, M falls, and (X − M) rises."
+       },
+       {
+        "type": "paragraph",
+        "text": "A quota reaches the same place by a different route: instead of raising the price it caps the quantity, so imports fall because they are not allowed in rather than because they are dear. Either way, M is smaller than it would have been."
+       },
+       {
+        "type": "paragraph",
+        "text": "Now the other side. The same tools exist abroad, and trading partners use them — often in response. A tariff on this economy’s exports raises their price to foreign buyers exactly as a home tariff raises import prices here, so X falls. Protectionism that started as a way to improve the balance can end with both terms smaller."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚢",
+       "text": "A duty imposed on imported steel raises the cost of every product made from steel in the importing country, including the ones it exports. The protection and the damage arrive in the same shipment."
+      },
+      "misconception": "Protectionism is treated as a one-way improvement in the trade balance. It cuts imports; whether it improves (X − M) depends on what happens to exports. A student who writes only the import half has answered half a leaf, and the specification's word is \"degree\", which points at both directions.",
+      "examMatters": "Appendix 6 defines Examine as requiring analysis and evaluation, with a brief assessment of the arguments or evidence. The assessment on this leaf is almost always the same: the import effect is immediate and certain, the export effect depends on how partners respond.",
+      "recall": {
+       "id": "aggregate-demand:sub:degree-of-protectionism:recall",
+       "type": "fillin",
+       "prompt": "An import is priced at $200 abroad. A tariff of 15% is imposed at home, and the partner responds with the same tariff on this country’s exports:",
+       "template": [
+        "The import now costs a buyer here ___",
+        "Imports fall, so on that account the net trade balance ___",
+        "The partner’s tariff makes this country’s exports dearer abroad, so ___ falls"
+       ],
+       "answers": [
+        "$230",
+        "improves",
+        "X"
+       ],
+       "hints": [
+        "the price with the tariff added on",
+        "the direction when the subtracted term gets smaller",
+        "the letter for the term the partner’s tariff acts on"
+       ],
+       "distractors": [
+        "$170",
+        "worsens",
+        "M"
+       ]
+      }
+     },
+     {
+      "id": "aggregate-demand:sub:non-price-factors",
+      "title": "Non-Price Factors",
+      "keyIdea": "Quality, design, reliability and delivery decide sales at an unchanged price, so an economy can improve its net trade balance without its currency or its prices moving at all.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The fifth influence is **non-price factors**: quality, design, reliability and delivery, which decide sales at an unchanged price. Everything else in this chapter works through price. This one does not, which is why the specification names it separately and why it is the hardest for students to write about."
+       },
+       {
+        "type": "paragraph",
+        "text": "Put two exporters side by side at the same price. One delivers in three weeks and replaces a faulty unit without argument; the other delivers in ten and does not. Buyers choose the first, and no exchange rate, tariff or income figure explains the choice. X rises for one economy and falls for the other."
+       },
+       {
+        "type": "paragraph",
+        "text": "It is also the only influence on this list a firm controls itself, and the only one that is slow. A currency moves in a day; a reputation for reliability takes years and is not lost in a day either. That makes non-price competitiveness the durable form, and the expensive one to build."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔩",
+       "text": "A component supplier that has never missed a delivery keeps its foreign customers through a period when a cheaper rival is available, because a stopped production line costs more than the saving."
+      },
+      "misconception": "Students answer every trade question with the exchange rate, because it has arithmetic in it. An economy can lose export share while its currency weakens, if what it sells is slower, less reliable or worse designed than the alternative — and it can gain share with a strong currency for the opposite reason.",
+      "examMatters": "Appendix 6 defines Evaluate as requiring a critical assessment of the evidence so that informed judgements may be made. Price data on its own cannot settle a question about competitiveness, and saying why not is the judgement this leaf is asking for.",
+      "recall": {
+       "id": "aggregate-demand:sub:non-price-factors:recall",
+       "type": "classify",
+       "prompt": "Two exporters charge exactly the same price. Sort what would still move orders between them:",
+       "groups": [
+        {
+         "name": "Non-price factors",
+         "items": [
+          "One has never missed a promised shipping date",
+          "One answers a complaint the same day",
+          "One updates its design every two years"
+         ],
+         "why": "None of these is a price, and each of them can decide an order between two suppliers charging the same amount."
+        },
+        {
+         "name": "Not a non-price factor",
+         "items": [
+          "One country’s currency weakens against the buyer’s"
+         ],
+         "why": "A currency move changes what the buyer pays, so it belongs to the exchange-rate influence rather than this one."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Domestic real income moves M and leaves X alone; foreign real income moves X and leaves M alone.",
+     "A depreciation makes exports cheaper abroad and imports dearer at home.",
+     "Protectionism cuts both sides if partners respond; non-price factors need no price change."
+    ],
+    "diagramId": "aggregate-demand:diagram:c655a8c4",
+    "quizIndices": [
+     23,
+     22,
+     24
+    ],
+    "practiceIndices": [
+     6
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "The Characteristics of Aggregate Demand",
+    "meta": "4 leaves",
+    "keyIdea": "The concept of AD, the identity, the curve and the distinction that every later chapter depends on.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Aggregate demand</strong> — total planned spending on a country’s own output at each price level, over a period."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>The identity</strong> — AD = C + I + G + (X − M). Here $640bn + $180bn + $220bn + ($260bn − $300bn) = $1,000bn."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Movement along AD</strong> — a change in the PRICE LEVEL, which is on an axis, so the position on the curve changes."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Shift of AD</strong> — a change in anything else, so the curve itself moves at every price level."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "The curve slopes down for three reasons, all starting at the price level: the wealth effect on money already held, the interest-rate effect through the demand for money on to MARKET rates, and the trade effect on (X − M)."
+       },
+       {
+        "type": "mechanism",
+        "text": "Shares of the $1,000bn: C 64%, I 18%, G 22%, (X − M) −4%. Largest is not the same property as most volatile."
+       },
+       {
+        "type": "link",
+        "text": "A central bank CHOOSING to raise its policy rate is not the interest-rate effect: it is a change at an unchanged price level, so it shifts AD left."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Planned spending, on a country’s OWN output, over a period.",
+     "C is the largest and steadiest; I is the smallest of the three and the most volatile.",
+     "Price level changed? Movement. Anything else changed? Shift."
+    ]
+   },
+   {
+    "title": "Consumption (C)",
+    "meta": "9 leaves",
+    "keyIdea": "Six influences on consumption, and the identity that turns every one of them into a statement about saving.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Disposable income</strong> — income after direct tax and after benefits: $800bn here."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Saving</strong> — the part of disposable income not consumed. $800bn − $640bn = $160bn."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Savings ratio</strong> — saving as a percentage of disposable income: 20%."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>The six influences</strong> — disposable income, interest rates, consumer confidence, level of welfare payments, wealth effects, availability of credit."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Interest rates act twice: on the cost of debt and the reward for saving. Households owing $600bn pay $30bn at 5% and $48bn at 8% — $18bn out of consumption."
+       },
+       {
+        "type": "mechanism",
+        "text": "Availability of credit is whether a bank will lend; interest rates are what lending costs. They can move in opposite directions."
+       },
+       {
+        "type": "mechanism",
+        "text": "Ratio to 25% on unchanged income: S $200bn, C $600bn, AD $960bn."
+       },
+       {
+        "type": "link",
+        "text": "Welfare payments belong to consumption, not to G: a transfer buys nothing until the household spends it."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Disposable income is the influence the other five modify.",
+     "Price of credit and availability of credit are two separate influences.",
+     "Yd = C + S, so every statement about one is a statement about the other."
+    ]
+   },
+   {
+    "title": "Investment (I)",
+    "meta": "9 leaves",
+    "keyIdea": "Gross against net investment, five influences and three policy tools — and all of them meet in one comparison.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Gross investment</strong> — all spending on capital goods: $180bn. This is what enters AD."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Depreciation</strong> — the capital used up over the period: $120bn."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Net investment</strong> — gross minus depreciation: $60bn, and it can be negative."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>The five influences</strong> — the rate of economic growth, interest rates, business confidence and expectations, availability of credit, tax on company profits."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>The three policy tools</strong> — tax relief, subsidies, reductions on the rate of corporation tax."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "One project carries the chapter: $500 for $40 a year is 8% before tax. It beats 6% and fails 10%."
+       },
+       {
+        "type": "mechanism",
+        "text": "Tax on profits cuts what is KEPT: at 20% the return is 6.4%; at 40% it is 4.8%."
+       },
+       {
+        "type": "mechanism",
+        "text": "Subsidy and relief cut what is PAID, both priced on the SAME kept $32: $50 off gives 7.1%, relief worth $100 gives 8%."
+       },
+       {
+        "type": "link",
+        "text": "Confidence is not an extra to mention at the end: it sets the expected return, which is one half of the comparison."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Gross enters AD; net decides next year’s capacity and can be negative.",
+     "Every influence acts on the expected return KEPT, or on the interest rate it is compared with.",
+     "Subsidies and relief change the outlay; a lower profit tax changes the return."
+    ]
+   },
+   {
+    "title": "Government Expenditure (G)",
+    "meta": "4 leaves",
+    "keyIdea": "Four influences on G, and only one of them is not somebody’s decision.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Government expenditure (G)</strong> — government spending on goods and services. Transfers are not part of it."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Fiscal policy</strong> — a deliberate decision about spending and taxation."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>The level of economic activity</strong> — what output and employment are doing, which moves some spending with no decision at all."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Correction of market failures</strong> — spending on what the market provides too little of."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Political priorities</strong> — what the government of the day has chosen to be for."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "G from $220bn to $260bn takes AD from $1,000bn to $1,040bn: a rise of 4% at every price level."
+       },
+       {
+        "type": "mechanism",
+        "text": "A downturn raises payments and lowers receipts with no decision: G to $245bn on its own, working against the cycle."
+       },
+       {
+        "type": "link",
+        "text": "Political priorities mostly move the COMPOSITION of G, which can leave AD unchanged and still change what the economy can produce later."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "G is the component a government moves directly.",
+     "The level of economic activity moves G with nobody deciding anything.",
+     "A tax cut of the same size adds less to AD, because part of it is saved."
+    ]
+   },
+   {
+    "title": "The Net Trade Balance (X − M)",
+    "meta": "5 leaves",
+    "keyIdea": "Five influences on (X − M), and a pair of mirror images that makes four of them one idea.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Net trade balance</strong> — exports minus imports: $260bn − $300bn = −$40bn."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Depreciation of a currency</strong> — a fall in what one unit of it is worth in foreign currency."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Tariff</strong> — a tax on an imported good, paid by the buyer in the importing country."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Non-price factors</strong> — quality, design, reliability and delivery, which decide sales at an unchanged price."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Domestic real income moves M and leaves X alone: $100bn more spending takes $25bn abroad, so (X − M) goes from −$40bn to −$65bn. Foreign real income does the mirror image."
+       },
+       {
+        "type": "mechanism",
+        "text": "Exchange rate 4 to 5 units per dollar: an export at 800 units falls from $200 to $160 abroad; an import at $100 rises from 400 to 500 units at home."
+       },
+       {
+        "type": "mechanism",
+        "text": "A 25% tariff takes an import from $100 to $125 at home. The same tool abroad acts on X."
+       },
+       {
+        "type": "link",
+        "text": "That quote moving is a 25% rise in the quote and a 20% fall in the currency. Work in what a unit is worth."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Domestic income moves M; foreign income moves X.",
+     "A depreciation makes exports cheaper abroad and imports dearer at home.",
+     "Protectionism can shrink both terms, and non-price factors move trade with no price change."
+    ]
+   }
+  ],
+  "quiz": [
+   {
+    "id": "aggregate-demand:quiz:c1e3c39c",
+    "question": "Aggregate demand is best described as:",
+    "options": [
+     "the total output an economy is able to produce with its current resources",
+     "total planned spending on a country’s output at each price level",
+     "the total amount of money held by households and firms",
+     "the total value of goods sold in an economy last year"
+    ],
+    "explanation": "AD is planned spending, measured at each price level and over a period. What an economy can produce is aggregate supply; a total of money held is a stock rather than a flow; and what was actually sold is an outcome, not a plan.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-demand:quiz:a638cb40",
+    "question": "In the identity AD = C + I + G + (X − M), imports are subtracted because:",
+    "options": [
+     "imports reduce the money available to spend at home",
+     "imports are taxed and the tax is not part of demand",
+     "imports are counted again inside consumption",
+     "imports are spending on another country’s output"
+    ],
+    "explanation": "AD measures demand for a country’s own output. Spending on imports is already inside C, I or G, and it buys output made elsewhere, so it is taken back out to leave demand for what this country produces.",
+    "correctIndex": 3
+   },
+   {
+    "id": "aggregate-demand:quiz:e97557c3",
+    "question": "Which change causes a movement ALONG the aggregate demand curve rather than a shift?",
+    "options": [
+     "a cut in the rate of income tax",
+     "a rise in the general price level",
+     "a fall in business confidence",
+     "a recession in a major trading partner"
+    ],
+    "explanation": "The price level is on an axis of the diagram, so a change in it moves the economy to a different point on the same curve. A tax change, a confidence change and a foreign downturn all alter a component at every price level, which moves the curve itself.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-demand:quiz:f3792724",
+    "question": "Which of the following is NOT part of aggregate demand as the specification defines it?",
+    "options": [
+     "spending by firms on new machinery",
+     "spending by a government on the wages of its own staff",
+     "a household’s purchase of a good produced overseas",
+     "spending by foreign buyers on goods made in this country"
+    ],
+    "explanation": "AD is demand for a country’s own output. Machinery is I, public-sector wages are G and foreign purchases of home output are X. A purchase of a good produced overseas adds to C and is then removed again as an import, so it contributes nothing on balance.",
+    "correctIndex": 2
+   },
+   {
+    "id": "aggregate-demand:quiz:e7fd215b",
+    "question": "An economy has C of $700bn, I of $150bn, G of $200bn, exports of $180bn and imports of $230bn. Aggregate demand is:",
+    "options": [
+     "$1,460bn",
+     "$1,230bn",
+     "$1,100bn",
+     "$1,000bn"
+    ],
+    "explanation": "The fourth term is exports minus imports, which is $180bn − $230bn = −$50bn. Adding gives $700bn + $150bn + $200bn − $50bn = $1,000bn. Adding the two trade figures instead of subtracting them gives a much larger and wrong total.",
+    "correctIndex": 3
+   },
+   {
+    "id": "aggregate-demand:quiz:5c5bf4f3",
+    "question": "Which statement about the components of AD is correct?",
+    "options": [
+     "investment is the largest component and the most volatile",
+     "consumption is the largest component and the most volatile",
+     "consumption is the largest component and the most stable",
+     "government expenditure is the largest component and the most stable"
+    ],
+    "explanation": "Size and volatility are different properties and both have to be right. Consumption is much the largest component because households buy most of what an economy produces, and it is the steadiest because households smooth spending. Investment is the most volatile: capital spending can be postponed for a year and eating cannot.",
+    "correctIndex": 2
+   },
+   {
+    "id": "aggregate-demand:quiz:0cba8b51",
+    "question": "The interest-rate effect behind the downward slope of the AD curve refers to:",
+    "options": [
+     "a central bank cutting its policy rate to support demand",
+     "market rates falling because a lower price level reduces the demand for money",
+     "banks competing for savers by offering higher rates",
+     "governments borrowing more and pushing rates up"
+    ],
+    "explanation": "It is a market mechanism set off by the price level, not a decision. Lower prices mean the same transactions need less money, so the demand for money falls and market rates fall with it. A central bank choosing a rate is a change at an unchanged price level, which shifts the curve instead.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-demand:quiz:80c8ade3",
+    "question": "A government announces a large increase in spending on infrastructure. On an AD diagram this is shown as:",
+    "options": [
+     "a movement up along the existing AD curve",
+     "a movement down along the existing AD curve",
+     "a steepening of the AD curve",
+     "a rightward shift of the AD curve"
+    ],
+    "explanation": "Government spending is a component, not an axis, so a change in it alters planned spending at every price level. That is a shift, and because the component has risen the new curve lies to the right of the old one.",
+    "correctIndex": 3
+   },
+   {
+    "id": "aggregate-demand:quiz:fc0eab7d",
+    "question": "Disposable income is:",
+    "options": [
+     "income after direct taxes, including benefits received",
+     "income before any tax has been deducted from it",
+     "income remaining after every household purchase has taken place",
+     "the part of income that is saved rather than being spent"
+    ],
+    "explanation": "Disposable income is what a household actually has available to spend or save: earnings and other income, less direct taxes, plus transfers received. Income before tax is gross income, and what is left after spending is saving.",
+    "correctIndex": 0
+   },
+   {
+    "id": "aggregate-demand:quiz:c8fdeb1a",
+    "question": "Households owe $400bn. The interest rate rises from 4% to 7%. The extra annual interest bill is:",
+    "options": [
+     "$28bn",
+     "$16bn",
+     "$12bn",
+     "$3bn"
+    ],
+    "explanation": "4% of $400bn is $16bn and 7% of $400bn is $28bn, so the bill rises by $12bn. The two individual bills are both plausible-looking figures, and the three percentage points on their own are not an amount of money at all.",
+    "correctIndex": 2
+   },
+   {
+    "id": "aggregate-demand:quiz:22156ca9",
+    "question": "Which of these is an example of the AVAILABILITY of credit changing rather than its price?",
+    "options": [
+     "a bank increasing the minimum deposit it requires from buyers",
+     "a bank raising the interest rate on personal loans",
+     "a central bank raising its policy rate",
+     "a rise in the rate offered on savings accounts"
+    ],
+    "explanation": "Availability is about whether a bank will lend and on what conditions; price is about what the borrowing costs. A larger required deposit removes borrowers without changing any rate, which is why the specification lists the two influences separately.",
+    "correctIndex": 0
+   },
+   {
+    "id": "aggregate-demand:quiz:946dfb92",
+    "question": "A rise in house prices increases consumption mainly because:",
+    "options": [
+     "households earn more income from their houses",
+     "households feel wealthier and can borrow against the higher value",
+     "houses become cheaper for first-time buyers",
+     "construction firms take on more workers and pay out more in wages each month"
+    ],
+    "explanation": "The wealth effect works on what households own rather than what they earn: nobody’s income rises, but owners save less of an unchanged income and can borrow on better terms. Higher prices make buying harder, not cheaper, and construction employment is a separate channel.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-demand:quiz:5d69735c",
+    "question": "An economy has disposable income of $600bn and consumption of $480bn. Its savings ratio is:",
+    "options": [
+     "25%",
+     "80%",
+     "12%",
+     "20%"
+    ],
+    "explanation": "Saving is $600bn − $480bn = $120bn, and $120bn over $600bn is 20%. Dividing saving by consumption instead of by income gives 25%, and 80% is the consumption share rather than the savings ratio.",
+    "correctIndex": 3
+   },
+   {
+    "id": "aggregate-demand:quiz:98ceb3e7",
+    "question": "Welfare payments raise consumption by more than an equal-sized tax cut for high earners because:",
+    "options": [
+     "welfare payments are counted as government spending on goods",
+     "welfare payments are not taxed and tax cuts are",
+     "low-income households spend a larger share of what they receive",
+     "high earners are fewer in number"
+    ],
+    "explanation": "Households with low incomes have unmet needs and little saving, so nearly all of an extra payment is spent; households with high incomes save much of a windfall. A transfer is not government spending on goods and services, so it is not part of G at all.",
+    "correctIndex": 2
+   },
+   {
+    "id": "aggregate-demand:quiz:17929577",
+    "question": "Gross investment in an economy is $140bn and depreciation is $160bn. It follows that:",
+    "options": [
+     "net investment is positive and the capital stock is growing",
+     "gross investment must have been recorded incorrectly",
+     "net investment is negative and the capital stock is shrinking",
+     "aggregate demand includes only the net figure"
+    ],
+    "explanation": "Net investment is $140bn − $160bn = −$20bn, so more capital wore out than was bought and the stock is smaller at the end of the year. The figure that enters AD is the gross one, because that is the spending that took place.",
+    "correctIndex": 2
+   },
+   {
+    "id": "aggregate-demand:quiz:1bfac4c4",
+    "question": "In economics, \"investment\" means:",
+    "options": [
+     "buying shares and bonds in the hope of a return",
+     "placing money in an interest-bearing account",
+     "any purchase made in the hope of reselling it later at a higher price",
+     "spending by firms on capital goods such as plant and equipment"
+    ],
+    "explanation": "Investment is spending that adds to the stock of capital used to produce. Buying a share transfers ownership of an asset that already exists and adds nothing to the capital stock, which is why financial purchases are not part of I.",
+    "correctIndex": 3
+   },
+   {
+    "id": "aggregate-demand:quiz:f507d853",
+    "question": "A project costs $2,000 and is expected to earn $160 a year. It will go ahead if the interest rate is:",
+    "options": [
+     "9%",
+     "8%",
+     "12%",
+     "7%"
+    ],
+    "explanation": "The expected rate of return is $160 over $2,000, which is 8%. The project clears an interest rate below that figure and fails at or above it, so only the lowest of the four rates makes it worth doing.",
+    "correctIndex": 3
+   },
+   {
+    "id": "aggregate-demand:quiz:620e7d78",
+    "question": "A fall in business confidence reduces investment because it:",
+    "options": [
+     "lowers the expected return a project is judged against",
+     "raises the interest rate firms must pay on new loans",
+     "increases the tax firms pay on their profits",
+     "reduces the amount of capital that wears out each year"
+    ],
+    "explanation": "Every figure in a project appraisal is a forecast. A firm that lowers what it expects a machine to earn has lowered the rate of return it compares with the interest rate, so the project can fail a test it would have passed with no change in rates or taxes.",
+    "correctIndex": 0
+   },
+   {
+    "id": "aggregate-demand:quiz:07817c07",
+    "question": "A machine costs $500 and earns $40 a year. A subsidy of $100 raises its rate of return to:",
+    "options": [
+     "10%",
+     "8%",
+     "12.5%",
+     "6.7%"
+    ],
+    "explanation": "The subsidy changes what the firm pays, not what the asset earns: $500 − $100 = $400, and $40 over $400 is 10%. Without the subsidy the return is 8%, and a subsidy cannot alter the $40 the machine brings in.",
+    "correctIndex": 0
+   },
+   {
+    "id": "aggregate-demand:quiz:908e9de4",
+    "question": "Which of these is part of government expenditure (G) in the AD identity?",
+    "options": [
+     "the salaries of teachers employed by the state",
+     "unemployment benefit paid to households that are out of work",
+     "a state retirement pension",
+     "interest paid on government debt"
+    ],
+    "explanation": "G counts government spending on goods and services. Employing a teacher buys a service and belongs in G. Benefits, pensions and debt interest are transfers: they hand money over without buying anything, and they enter demand only when the recipient spends them.",
+    "correctIndex": 0
+   },
+   {
+    "id": "aggregate-demand:quiz:7d80558c",
+    "question": "Government spending rises during a downturn even when no new policy is announced because:",
+    "options": [
+     "ministers always increase spending in difficult years",
+     "the government must spend more to keep interest rates down",
+     "more households qualify for existing payments as employment falls",
+     "prices are higher so the same services cost more"
+    ],
+    "explanation": "The rules already exist, so the spending follows the economy without anybody deciding. As employment falls more households become eligible for payments and tax receipts fall at the same time, which is why this influence is the level of economic activity rather than fiscal policy.",
+    "correctIndex": 2
+   },
+   {
+    "id": "aggregate-demand:quiz:384a1bdf",
+    "question": "Government spending rises from $180bn to $210bn with every other component unchanged. Aggregate demand:",
+    "options": [
+     "rises by $30bn only at the current price level",
+     "rises by $30bn at every price level",
+     "falls by $30bn because taxes must rise",
+     "is unchanged because G is a transfer"
+    ],
+    "explanation": "A component has risen by $30bn, so planned spending is higher at every price level and the whole curve moves right by that amount. A change confined to one price level would be a movement along the curve, which is caused only by the price level itself.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-demand:quiz:e8487e49",
+    "question": "A rise in real income in an economy, with everything else unchanged, will:",
+    "options": [
+     "raise imports and leave exports unchanged",
+     "raise exports and leave imports unchanged",
+     "raise both exports and imports equally",
+     "leave the net trade balance unchanged"
+    ],
+    "explanation": "Residents with more to spend buy more of everything, and part of that is produced abroad, so imports rise. Foreign buyers do not observe this economy’s income, so exports are untouched and the net trade balance falls.",
+    "correctIndex": 0
+   },
+   {
+    "id": "aggregate-demand:quiz:74a3f0e4",
+    "question": "The currency moves from 5 units per dollar to 4 units per dollar. This means:",
+    "options": [
+     "the currency has depreciated and exports are cheaper abroad",
+     "the currency has appreciated and exports are dearer abroad",
+     "the currency has depreciated and imports are dearer at home",
+     "the currency is unchanged in value because the quote fell"
+    ],
+    "explanation": "Fewer units for a dollar means each unit buys more, so the currency is worth more: one unit goes from $0.20 to $0.25. A home price therefore converts into a higher foreign price, which makes exports dearer abroad and imports cheaper at home.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-demand:quiz:b953e0ac",
+    "question": "A country imposes tariffs on imports and its trading partners impose tariffs on its exports in response. The likely result is:",
+    "options": [
+     "both X and M fall, and which is larger decides the balance",
+     "the balance improves, because imports certainly fall",
+     "imports rise, because home producers cannot meet the demand",
+     "exports rise, because home firms are now more competitive"
+    ],
+    "explanation": "A tariff at home raises import prices and cuts M, which on its own improves the balance. A tariff abroad raises the price of this country’s exports to foreign buyers and cuts X. Both terms shrink, and which of the two falls further decides what happens to the difference — imports falling is only half of it.",
+    "correctIndex": 0
+   }
+  ],
+  "practice": [
+   {
+    "id": "aggregate-demand:practice:99c73692",
+    "command": "Define",
+    "marks": 2,
+    "question": "Define the term ‘aggregate demand’. (2 marks)",
+    "guidance": "Two marks means two separate things to say, and the second must not be a rewording of the first. Settle first what KIND of quantity this is, because everything else follows from that choice.\nAggregate demand is the total planned spending on a country’s own output (1 mark), measured at each price level over a period of time (1 mark). An answer that says \"the total demand in an economy\" has restated the words of the term without giving either of them, and one that says \"everything that is bought\" describes an outcome rather than a plan."
+   },
+   {
+    "id": "aggregate-demand:practice:453db60e",
+    "command": "Draw",
+    "marks": 4,
+    "question": "Draw an aggregate demand diagram to show the effect of a fall in consumer confidence. (4 marks)",
+    "guidance": "Decide before you draw whether confidence is on one of your axes. It is not, so this is a shift and not a movement, and the diagram has to show two curves rather than two points on one.\nAxes labelled price level and real output (1 mark); an original downward-sloping curve labelled AD₁ (1 mark); a second curve to the LEFT of it labelled AD₂ (1 mark); and the new, lower level of real output read off at an unchanged price level (1 mark). Naming the component that moved — consumption — beside the arrow costs you nothing and makes the diagram answer the question rather than illustrate the topic."
+   },
+   {
+    "id": "aggregate-demand:practice:1486e2ca",
+    "command": "Calculate",
+    "marks": 4,
+    "question": "An economy has disposable income of $900bn and a savings ratio of 18%. Investment is $200bn, government expenditure is $250bn, exports are $300bn and imports are $360bn. Calculate aggregate demand. (4 marks)",
+    "guidance": "This is three short steps rather than one long one, and each of them can be written on its own line. Work out what is saved, then what is left to be consumed, then put the identity together.\nSaving is 18% of $900bn = $162bn (1 mark). Consumption is $900bn − $162bn = $738bn (1 mark). The net trade balance is $300bn − $360bn = −$60bn (1 mark). Aggregate demand is $738bn + $200bn + $250bn − $60bn = $1,128bn (1 mark). Adding the trade figures rather than subtracting them is the error that costs the last two steps."
+   },
+   {
+    "id": "aggregate-demand:practice:00e831f3",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain how a rise in interest rates is likely to affect consumption. (4 marks)",
+    "guidance": "Explain asks for a chain rather than a list, and the chain here has two links. Choose ONE of the two channels and follow it properly rather than naming both and developing neither.\nThe first link is the effect on households: a higher rate raises the interest paid on existing and new borrowing, and raises the reward for saving (1 mark), with development showing that this leaves less available to spend (1 mark). The second link takes it to the component: consumption falls (1 mark), so aggregate demand is lower at every price level and the curve shifts left (1 mark). An answer that stops at \"borrowing is dearer\" has given one link of two."
+   },
+   {
+    "id": "aggregate-demand:practice:0a380144",
+    "command": "Analyse",
+    "marks": 6,
+    "question": "Analyse two factors that might cause a fall in investment in an economy. (6 marks)",
+    "guidance": "Two factors, and depth rather than breadth: each one needs to arrive at investment through a stated mechanism, not merely be named. Pick two that work differently from each other so the second chain is not the first one again.\nFor each factor, build the chain: identify it (1 mark), explain how it changes either the expected return or the cost of funds (1 mark), and take it to lower investment and therefore lower aggregate demand (1 mark). A rise in interest rates and a fall in business confidence make a good pair because one moves the rate the project is compared with and the other moves the return itself. Note that Appendix 6 says Analyse does not include evaluation, so a conclusion about which factor matters more is outside what this command word asks for."
+   },
+   {
+    "id": "aggregate-demand:practice:54f9ee69",
+    "command": "Examine",
+    "marks": 8,
+    "question": "Examine the likely effects on aggregate demand of an increase in government expenditure on infrastructure. (8 marks)",
+    "guidance": "Examine wants a developed chain AND a brief assessment of it, so plan two parts before you write. The chain is the straightforward half; the assessment is where most answers are thin, and it does not have to be long.\nBuild the chain first: infrastructure is a purchase of goods and services rather than a transfer, so government expenditure itself rises — $220bn to $260bn, which is 4% added to AD — and this is fiscal policy, a deliberate budget decision rather than the automatic movement that the level of economic activity produces. A labelled diagram helps. Then assess it: whether the government can actually start projects quickly, whether political priorities would have directed the money elsewhere, whether it is funded by borrowing or by taxation that reduces household spending instead, and whether the same money spent on correcting a market failure would do more. A short, supported judgement about which of those matters most is what separates this from an Analyse."
+   },
+   {
+    "id": "aggregate-demand:practice:e0988928",
+    "command": "Discuss",
+    "marks": 14,
+    "question": "Discuss the impact of a depreciation of a country’s currency on its aggregate demand. (14 marks)",
+    "guidance": "Discuss asks for more than one point of view and a critical look at what the evidence can actually show. Before you start, decide which components of the identity a currency movement touches, because it is more than one.\nThe main chain: a weaker currency makes exports cheaper to foreign buyers and imports dearer at home, so X tends to rise, M tends to fall and the net trade balance improves, shifting AD right. Develop it with the per-unit arithmetic rather than asserting it. Then bring in the other side: the size of the trade response depends on how much buyers actually switch, which the question gives you no way to measure, and on whether this economy's exporters have the spare capacity to fill larger orders at all. A country whose exports are mainly commodities priced in dollars will see a very different result from one exporting manufactures. Reach a conclusion that says under what conditions the effect is large."
+   },
+   {
+    "id": "aggregate-demand:practice:d9a8da1d",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Evaluate the view that a rising savings ratio is always bad for an economy’s aggregate demand. (20 marks)",
+    "guidance": "The word doing the work in this question is \"always\", and an answer that argues only one side has not engaged with it. Plan two developed chains that point in opposite directions, and decide in advance what would make one of them dominate.\nThe first chain is the one the question expects: disposable income is either consumed or saved, so a higher savings ratio means lower consumption on an unchanged income, a smaller C and an AD curve further to the left. Support it with the arithmetic and take it through to output and employment. The second chain runs the other way: saving is the source of funds that banks lend, so a higher savings ratio can lower the cost and raise the availability of credit for firms, raising investment and therefore AD. Then judge between them, and the judgement should turn on conditions rather than preference — how far interest rates can still fall, whether firms are willing to borrow at all, and over what time period the question is being asked. A short run answer and a long run answer to this question can honestly differ."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "aggregate-demand:flashcard:627f080a",
+    "front": "What is aggregate demand?",
+    "back": "Total planned spending on a country’s own output at each price level, over a period of time."
+   },
+   {
+    "id": "aggregate-demand:flashcard:6be6ff88",
+    "front": "Write the AD identity.",
+    "back": "AD = C + I + G + (X − M). Here $640bn + $180bn + $220bn + ($260bn − $300bn) = $1,000bn."
+   },
+   {
+    "id": "aggregate-demand:flashcard:d612d245",
+    "front": "Why are imports subtracted in the identity?",
+    "back": "Because spending on imports buys another country’s output. It is already inside C, I or G, so it is removed to leave demand for home output."
+   },
+   {
+    "id": "aggregate-demand:flashcard:401cbce2",
+    "front": "Which component is the largest, and which the most volatile?",
+    "back": "Consumption is much the largest and the most stable. Investment is the smallest of C, I and G and by far the most volatile."
+   },
+   {
+    "id": "aggregate-demand:flashcard:795ced24",
+    "front": "Why does the AD curve slope downward?",
+    "back": "Three effects, all starting at the price level: the wealth effect on money already held, the interest-rate effect through the demand for money on to market rates, and the trade effect on (X − M)."
+   },
+   {
+    "id": "aggregate-demand:flashcard:a5621d54",
+    "front": "Movement along AD, or a shift?",
+    "back": "Price level changed → movement along. Anything else changed → shift of the whole curve at every price level."
+   },
+   {
+    "id": "aggregate-demand:flashcard:85e2a925",
+    "front": "What is disposable income?",
+    "back": "Income after direct taxes are deducted and benefits received are added: what a household actually has to spend or save."
+   },
+   {
+    "id": "aggregate-demand:flashcard:a4b1611c",
+    "front": "Name the six influences on consumption.",
+    "back": "disposable income, interest rates, consumer confidence, level of welfare payments, wealth effects, availability of credit."
+   },
+   {
+    "id": "aggregate-demand:flashcard:329c7a60",
+    "front": "How do interest rates affect consumption?",
+    "back": "Twice over: they raise the cost of existing and new borrowing, and they raise the reward for saving. Both reduce spending."
+   },
+   {
+    "id": "aggregate-demand:flashcard:49b80e48",
+    "front": "Why do welfare payments raise consumption more than an equal tax cut for high earners?",
+    "back": "They reach households with unmet needs and little saving, who spend nearly all of what they receive."
+   },
+   {
+    "id": "aggregate-demand:flashcard:6a8dc9b1",
+    "front": "Are welfare payments part of G?",
+    "back": "No. G is government spending on goods and services. A transfer buys nothing; it becomes demand only when the household spends it, and then it is C."
+   },
+   {
+    "id": "aggregate-demand:flashcard:1f017cda",
+    "front": "What is a wealth effect?",
+    "back": "A change in spending caused by a change in the value of what households own — property or shares — rather than by a change in what they earn."
+   },
+   {
+    "id": "aggregate-demand:flashcard:d4e06d71",
+    "front": "Availability of credit, or interest rates?",
+    "back": "Availability is whether a bank will lend and on what conditions. Interest rates are what the lending costs. They can move in opposite directions."
+   },
+   {
+    "id": "aggregate-demand:flashcard:11baa7f7",
+    "front": "State the relationship between saving and consumption.",
+    "back": "Disposable income has two uses only: Yd = C + S. Saving is the residual, so a decision about one is a decision about the other."
+   },
+   {
+    "id": "aggregate-demand:flashcard:d09b0e8d",
+    "front": "Define the savings ratio.",
+    "back": "Saving as a percentage of disposable income: $160bn ÷ $800bn = 20% here."
+   },
+   {
+    "id": "aggregate-demand:flashcard:566fabf7",
+    "front": "What happens to AD if the savings ratio rises with income unchanged?",
+    "back": "Consumption falls and AD falls with it: at 25%, C is $600bn and AD is $960bn."
+   },
+   {
+    "id": "aggregate-demand:flashcard:d10c79aa",
+    "front": "Gross investment, depreciation, net investment.",
+    "back": "Gross is all spending on capital goods ($180bn); depreciation is the capital used up ($120bn); net is the difference ($60bn) and can be negative."
+   },
+   {
+    "id": "aggregate-demand:flashcard:02a09245",
+    "front": "Which investment figure enters AD?",
+    "back": "The gross figure, because that is the spending that took place. The net figure decides future productive capacity."
+   },
+   {
+    "id": "aggregate-demand:flashcard:4cb1a557",
+    "front": "Does buying shares count as investment?",
+    "back": "No. Investment in economics is spending on capital goods. Buying a share transfers an asset that already exists and adds nothing to the capital stock."
+   },
+   {
+    "id": "aggregate-demand:flashcard:714f053d",
+    "front": "Name the five influences on investment.",
+    "back": "the rate of economic growth, interest rates, business confidence and expectations, availability of credit, tax on company profits."
+   },
+   {
+    "id": "aggregate-demand:flashcard:75e2e6b1",
+    "front": "What is the test a firm applies to a project?",
+    "back": "The expected rate of return it KEEPS, against the interest rate. $500 for $40 a year is 8%: it clears 6% and fails 10%."
+   },
+   {
+    "id": "aggregate-demand:flashcard:954740b5",
+    "front": "Name the three policy tools for promoting investment.",
+    "back": "tax relief, subsidies, reductions on the rate of corporation tax."
+   },
+   {
+    "id": "aggregate-demand:flashcard:092abcb4",
+    "front": "How do subsidies and tax relief differ from a lower profit tax?",
+    "back": "Subsidies and relief cut what the asset COSTS; a lower profit tax raises what the return is WORTH. Both raise the rate of return, from different sides."
+   },
+   {
+    "id": "aggregate-demand:flashcard:c04d9485",
+    "front": "Name the four influences on government expenditure.",
+    "back": "fiscal policy, the level of economic activity, correction of market failures, political priorities."
+   },
+   {
+    "id": "aggregate-demand:flashcard:6380fafd",
+    "front": "Which influence on G is not a decision?",
+    "back": "The level of economic activity. A downturn raises payments and lowers receipts because the rules already exist — G to $245bn here, with nothing announced."
+   },
+   {
+    "id": "aggregate-demand:flashcard:daea117a",
+    "front": "Name the five influences on the net trade balance.",
+    "back": "real income, the exchange rate, the state of the global economy, degree of protectionism, non-price factors."
+   },
+   {
+    "id": "aggregate-demand:flashcard:1091987c",
+    "front": "Domestic real income and foreign real income: which moves what?",
+    "back": "Domestic real income moves M and leaves X alone. Foreign real income moves X and leaves M alone."
+   },
+   {
+    "id": "aggregate-demand:flashcard:ad263fe5",
+    "front": "What does a depreciation do to exports and imports?",
+    "back": "Exports become cheaper abroad and imports dearer at home. At 4 to 5 units per dollar, an export at 800 units falls from $200 to $160 abroad."
+   },
+   {
+    "id": "aggregate-demand:flashcard:5989a288",
+    "front": "How is the size of a depreciation measured?",
+    "back": "By the fall in what one unit is worth, not the rise in the quote. 4 to 5 units per dollar is a 25% rise in the quote and a 20% fall in the currency."
+   },
+   {
+    "id": "aggregate-demand:flashcard:5a47e54c",
+    "front": "What are non-price factors?",
+    "back": "Quality, design, reliability and delivery, which decide sales at an unchanged price — the only influence on trade a firm controls itself, and the slowest to build."
+   }
+  ],
+  "mistakes": [
+   {
+    "id": "aggregate-demand:mistake:4b2caa6a",
+    "title": "Saying consumption is the most volatile component",
+    "looks_like": "Writing that consumption is both the largest component of AD and the most volatile, because it is the biggest so it must move the most.",
+    "why": "Size and volatility are different properties of the same component. Consumption is much the largest because households buy most of what an economy produces, and it is the STEADIEST, because households smooth their spending across good years and bad. Investment is the smallest of the three positive components and by far the most volatile: a firm can buy no machines at all this year and still open tomorrow, and nobody can postpone eating.",
+    "fix": "Say which property you mean. C is the largest and the most stable; I is the most volatile."
+   },
+   {
+    "id": "aggregate-demand:mistake:1eae6e00",
+    "title": "Treating the interest-rate effect as a central bank decision",
+    "looks_like": "Explaining the downward slope of the AD curve by saying that when prices rise, the central bank raises interest rates, so spending falls.",
+    "why": "That is a policy decision taken at an unchanged price level, which SHIFTS the AD curve rather than explaining its shape. The interest-rate effect is a market mechanism: a lower price level means the same transactions need less money, so the demand for money falls and market rates fall with it. Confusing the two puts a shift into an explanation of a movement, which is the exact distinction the chapter exists to teach.",
+    "fix": "The effect behind the slope is the market rate moving because the price level moved. A central bank choosing a rate is a shift."
+   },
+   {
+    "id": "aggregate-demand:mistake:e6a2c0d5",
+    "title": "Putting welfare payments into G",
+    "looks_like": "Adding unemployment benefit, pensions and other transfers to government expenditure when calculating or describing AD.",
+    "why": "G is government spending ON GOODS AND SERVICES: the salary of a nurse the state employs, the concrete in a road. A transfer hands money to a household and buys nothing, so it is not demand at the moment it is paid. It becomes demand when the household spends it — and then it is consumption. Counting it in G as well counts the same money twice, which is why the specification lists welfare payments under influences on C.",
+    "fix": "Ask what the government BOUGHT. If nothing was bought, it is a transfer and belongs in the consumption chapter."
+   },
+   {
+    "id": "aggregate-demand:mistake:82be0c4a",
+    "title": "Writing \"AD falls\" when you mean \"AD shifts left\"",
+    "looks_like": "Using the two phrases interchangeably, so an answer describes a leftward shift while the diagram shows a movement up the curve, or the reverse.",
+    "why": "They are different events with different causes. AD can fall because the price level rose, which is a movement along a curve that has not moved at all. AD shifts left when a component falls at every price level. Written beside a diagram showing a shift, \"AD falls\" describes a different event from the one drawn, and the whole of 2.3.2 · 1c is that difference.",
+    "fix": "Name the cause in the same sentence. \"The price level rose, so the economy moved up along AD\" and \"confidence fell, so AD shifted left\" are both unambiguous."
+   },
+   {
+    "id": "aggregate-demand:mistake:f8c9c9dd",
+    "title": "Calling a share purchase investment",
+    "looks_like": "Writing that investment rises when households buy more shares, or that a rising stock market is an increase in I.",
+    "why": "Investment in economics is spending on CAPITAL GOODS — plant, equipment, buildings, vehicles — that adds to what the economy can produce. Buying a share transfers ownership of an asset that already exists from one person to another; the capital stock is exactly the same afterwards. Only the new capital goods count in I, and only they appear in the AD identity.",
+    "fix": "Ask whether anything new was produced. If ownership merely changed hands, it is not investment."
+   },
+   {
+    "id": "aggregate-demand:mistake:fdaa749f",
+    "title": "Reading an exchange-rate move off the quote",
+    "looks_like": "Seeing the rate go from 4 to 5 units per dollar and calling it a 25% fall in the currency.",
+    "why": "The quote rose by 25% and the currency fell by 20%, and those are different numbers because they are reciprocals of each other. One unit was worth $0.25 and is now worth $0.20, which is the fall a foreign buyer actually experiences. A calculation question that asks for the size of a depreciation is asking for the second figure.",
+    "fix": "Convert to what one unit is worth before taking a percentage, and say which direction you are quoting in."
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "aggregate-demand:diagram:ea189dbe",
+    "title": "The AD Curve, and What Moves It",
+    "description": "IAL 2.3.2 · 1b-2 and 1c: the AD curve, and the distinction between a movement along it and a shift of it. Both views are drawn from the same identity, C + I + G + (X − M) = $1,000bn.",
+    "checklist": [
+     "Real output on the horizontal axis, the price level on the vertical axis, both labelled.",
+     "One downward-sloping AD curve, labelled AD.",
+     "For a movement: two points on the SAME curve, with dashed lines to both axes.",
+     "For a shift: a second curve labelled AD₂, and the output read at an UNCHANGED price level.",
+     "The component that moved named beside the shift — a shift with no cause is half an answer."
+    ],
+    "scenarios": [
+     {
+      "label": "Movement along AD",
+      "svg": "<svg width=\"440\" height=\"320\" viewBox=\"0 0 440 320\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"22\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">A movement ALONG the AD curve</text><text x=\"20\" y=\"40\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">The price level changes and nothing else does,</text><text x=\"20.01\" y=\"54\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">so the economy slides down its own curve.</text><line x1=\"62\" y1=\"84\" x2=\"62\" y2=\"246\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"62\" y1=\"246\" x2=\"414\" y2=\"246\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"58\" y=\"74\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">Price level</text><text x=\"414\" y=\"266\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">Real output</text><line x1=\"96.2\" y1=\"104.83\" x2=\"301.4\" y2=\"233.17\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><line x1=\"62\" y1=\"130.5\" x2=\"137.24\" y2=\"130.5\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"137.24\" y1=\"130.5\" x2=\"137.24\" y2=\"246\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"62\" y1=\"207.5\" x2=\"260.36\" y2=\"207.5\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"260.36\" y1=\"207.5\" x2=\"260.36\" y2=\"246\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"137.24\" cy=\"130.5\" r=\"4.5\" fill=\"#f59e0b\"/><circle cx=\"260.36\" cy=\"207.5\" r=\"4.5\" fill=\"#059669\"/><text x=\"145.24\" y=\"120.5\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">964 at 106</text><text x=\"268.36\" y=\"197.5\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">1,036 at 94</text><text x=\"104.2\" y=\"96.83\" fill=\"#3b82f6\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">AD</text><text x=\"20\" y=\"288\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">One curve, two points: $72bn more output</text><text x=\"20.01\" y=\"302\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">demanded at the lower price level.</text></svg>"
+     },
+     {
+      "label": "Shift of AD",
+      "svg": "<svg width=\"440\" height=\"320\" viewBox=\"0 0 440 320\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"22\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">A SHIFT of the AD curve</text><text x=\"20\" y=\"40\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">One component changes at an unchanged price</text><text x=\"20.01\" y=\"54\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">level, so the whole curve moves.</text><line x1=\"62\" y1=\"84\" x2=\"62\" y2=\"246\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"62\" y1=\"246\" x2=\"414\" y2=\"246\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"58\" y=\"74\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">Price level</text><text x=\"414\" y=\"266\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">Real output</text><line x1=\"96.2\" y1=\"104.83\" x2=\"301.4\" y2=\"233.17\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><line x1=\"164.6\" y1=\"104.83\" x2=\"369.8\" y2=\"233.17\" stroke=\"#059669\" stroke-width=\"2.5\"/><line x1=\"62\" y1=\"169\" x2=\"198.8\" y2=\"169\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"198.8\" y1=\"169\" x2=\"198.8\" y2=\"246\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"62\" y1=\"169\" x2=\"267.2\" y2=\"169\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"267.2\" y1=\"169\" x2=\"267.2\" y2=\"246\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"198.8\" cy=\"169\" r=\"4.5\" fill=\"#3b82f6\"/><circle cx=\"267.2\" cy=\"169\" r=\"4.5\" fill=\"#059669\"/><text x=\"190.8\" y=\"183\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">1,000</text><text x=\"275.2\" y=\"159\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">1,040</text><text x=\"104.2\" y=\"96.83\" fill=\"#3b82f6\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">AD₁</text><text x=\"172.6\" y=\"96.83\" fill=\"#059669\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">AD₂</text><text x=\"20\" y=\"288\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">G rises by $40bn: at price level 100, $40bn</text><text x=\"20.01\" y=\"302\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">more is demanded. The cause is named, not</text><text x=\"20.02\" y=\"316\" fill=\"#7a8299\" font-size=\"12\" font-weight=\"400\" text-anchor=\"start\">drawn.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "aggregate-demand:diagram:5015d5e3",
+    "kind": "table",
+    "title": "Consumption, Saving and the Savings Ratio",
+    "description": "IAL 2.3.2 · 2b-2d: the relationship between savings and consumption, the definition of the savings ratio, and the effect of a change in it.",
+    "scenarios": [
+     {
+      "label": "Income, spending and saving",
+      "svg": "<svg width=\"440\" height=\"274\" viewBox=\"0 0 440 274\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"28\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">Disposable income splits into consumption and</text><text x=\"20.01\" y=\"43\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">saving</text><line x1=\"20\" y1=\"82\" x2=\"420\" y2=\"82\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"20\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Savings ratio</text><text x=\"142.75\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Yd</text><text x=\"216.5\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">C</text><text x=\"290.25\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">S</text><text x=\"364\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">AD</text><text x=\"20\" y=\"102\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">15%</text><text x=\"142.75\" y=\"102\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$800bn</text><text x=\"216.5\" y=\"102\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$680bn</text><text x=\"290.25\" y=\"102\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$120bn</text><text x=\"364\" y=\"102\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$1,040bn</text><line x1=\"20\" y1=\"110\" x2=\"420\" y2=\"110\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">20%</text><text x=\"142.75\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$800bn</text><text x=\"216.5\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$640bn</text><text x=\"290.25\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$160bn</text><text x=\"364\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$1,000bn</text><line x1=\"20\" y1=\"138\" x2=\"420\" y2=\"138\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"158\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">25%</text><text x=\"142.75\" y=\"158\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$800bn</text><text x=\"216.5\" y=\"158\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$600bn</text><text x=\"290.25\" y=\"158\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$200bn</text><text x=\"364\" y=\"158\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$960bn</text><line x1=\"20\" y1=\"166\" x2=\"420\" y2=\"166\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"190\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Yd is disposable income, C is consumption, S is saving.</text><text x=\"20.01\" y=\"205\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Income does not change down the table; the SPLIT does.</text><text x=\"20.02\" y=\"220\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Saving is what is left, so a savings ratio of 25% is the</text><text x=\"20.03\" y=\"235\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">same statement as consumption of $600bn — and AD is that</text><text x=\"20.04\" y=\"250\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">consumption put back into C + I + G + (X − M) with the</text><text x=\"20.05\" y=\"265\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">other three unchanged.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "aggregate-demand:diagram:ac97ae70",
+    "kind": "table",
+    "title": "Gross and Net Investment",
+    "description": "IAL 2.3.2 · 3a: the distinction between gross investment and net investment, with depreciation as the difference.",
+    "scenarios": [
+     {
+      "label": "Gross, depreciation, net",
+      "svg": "<svg width=\"440\" height=\"260\" viewBox=\"0 0 440 260\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"28\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">Gross investment, depreciation and net</text><text x=\"20.01\" y=\"43\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">investment</text><line x1=\"20\" y1=\"82\" x2=\"420\" y2=\"82\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"20\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\"></text><text x=\"100.75\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Gross I</text><text x=\"167.5\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Depreciation</text><text x=\"269.25\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Net I</text><text x=\"329\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Capital stock</text><text x=\"20\" y=\"102\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Now</text><text x=\"100.75\" y=\"102\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$180bn</text><text x=\"167.5\" y=\"102\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$120bn</text><text x=\"269.25\" y=\"102\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$60bn</text><text x=\"329\" y=\"102\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">grows</text><line x1=\"20\" y1=\"110\" x2=\"420\" y2=\"110\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Weak year</text><text x=\"100.75\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$110bn</text><text x=\"167.5\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$120bn</text><text x=\"269.25\" y=\"130\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">−$10bn</text><text x=\"329\" y=\"130\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">shrinks</text><line x1=\"20\" y1=\"138\" x2=\"420\" y2=\"138\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"162\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Gross investment is everything firms spend on capital</text><text x=\"20.01\" y=\"177\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">goods. Depreciation is the capital used up over the same</text><text x=\"20.02\" y=\"192\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">period — not a part of that spending, as the second row</text><text x=\"20.03\" y=\"207\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">shows. Net investment is the difference, and it is the</text><text x=\"20.04\" y=\"222\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">number that says whether the country can produce more</text><text x=\"20.05\" y=\"237\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">next year than this year. In the second row the firms are</text><text x=\"20.06\" y=\"252\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">still spending $110bn and the capital stock is falling.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "aggregate-demand:diagram:709247b8",
+    "kind": "table",
+    "title": "Influences on Government Expenditure",
+    "description": "IAL 2.3.2 · 4a: fiscal policy, the level of economic activity, correction of market failures and political priorities.",
+    "scenarios": [
+     {
+      "label": "The four influences",
+      "svg": "<svg width=\"440\" height=\"316\" viewBox=\"0 0 440 316\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"28\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">What moves government expenditure</text><line x1=\"20\" y1=\"82\" x2=\"420\" y2=\"82\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"20\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Influence</text><text x=\"196\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Chosen, or not</text><text x=\"20\" y=\"102\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Fiscal policy</text><text x=\"196\" y=\"102\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Chosen: a budget decision</text><line x1=\"20\" y1=\"110\" x2=\"420\" y2=\"110\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Economic activity</text><text x=\"196\" y=\"130\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Not chosen: G moves on its own</text><line x1=\"20\" y1=\"138\" x2=\"420\" y2=\"138\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"158\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Market failure</text><text x=\"196\" y=\"158\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Chosen: fills a provision gap</text><line x1=\"20\" y1=\"166\" x2=\"420\" y2=\"166\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"186\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Political priorities</text><text x=\"196\" y=\"186\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Chosen: what a government is for</text><line x1=\"20\" y1=\"194\" x2=\"420\" y2=\"194\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"218\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">The second row is the one students miss, and it is the</text><text x=\"20.01\" y=\"233\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">only one that moves G with nobody deciding anything: when</text><text x=\"20.02\" y=\"248\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">output and employment fall, payments to households</text><text x=\"20.03\" y=\"263\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">without work rise and tax receipts fall, so G rises on</text><text x=\"20.04\" y=\"278\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">its own — here by $25bn, taking G to $245bn. The other</text><text x=\"20.05\" y=\"293\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">three are choices, and a choice can be reversed in a</text><text x=\"20.06\" y=\"308\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">budget.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "aggregate-demand:diagram:c655a8c4",
+    "kind": "table",
+    "title": "The Net Trade Balance",
+    "description": "IAL 2.3.2 · 5a: the impact on the net trade balance of changes in real income, the exchange rate, the state of the global economy, the degree of protectionism and non-price factors.",
+    "scenarios": [
+     {
+      "label": "The five influences",
+      "svg": "<svg width=\"440\" height=\"344\" viewBox=\"0 0 440 344\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"20\" y=\"28\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">What moves the net trade balance</text><line x1=\"20\" y1=\"82\" x2=\"420\" y2=\"82\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"20\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">What changes</text><text x=\"253.67\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">X</text><text x=\"319.33\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">M</text><text x=\"385\" y=\"74\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">X − M</text><text x=\"20\" y=\"102\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Real income at home rises</text><text x=\"253.67\" y=\"102\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">same</text><text x=\"319.33\" y=\"102\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">rises</text><text x=\"385\" y=\"102\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">falls</text><line x1=\"20\" y1=\"110\" x2=\"420\" y2=\"110\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"130\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">The home currency depreciates</text><text x=\"253.67\" y=\"130\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">rises</text><text x=\"319.33\" y=\"130\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">falls</text><text x=\"385\" y=\"130\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">rises</text><line x1=\"20\" y1=\"138\" x2=\"420\" y2=\"138\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"158\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Partner economies slow down</text><text x=\"253.67\" y=\"158\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">falls</text><text x=\"319.33\" y=\"158\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">same</text><text x=\"385\" y=\"158\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">falls</text><line x1=\"20\" y1=\"166\" x2=\"420\" y2=\"166\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"186\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Tariffs rise, at home</text><text x=\"253.67\" y=\"186\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">same</text><text x=\"319.33\" y=\"186\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">falls</text><text x=\"385\" y=\"186\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">rises</text><line x1=\"20\" y1=\"194\" x2=\"420\" y2=\"194\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"214\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">Quality and design improve</text><text x=\"253.67\" y=\"214\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">rises</text><text x=\"319.33\" y=\"214\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">falls</text><text x=\"385\" y=\"214\" fill=\"#059669\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">rises</text><line x1=\"20\" y1=\"222\" x2=\"420\" y2=\"222\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"20\" y=\"246\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Two of these are arithmetic rather than direction. Real</text><text x=\"20.01\" y=\"261\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">income: an extra $100bn of spending at home takes about</text><text x=\"20.02\" y=\"276\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">$25bn of it abroad, so M goes to $325bn and X − M from</text><text x=\"20.03\" y=\"291\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">−$40bn to −$65bn. Tariffs: 25% added to an import priced</text><text x=\"20.04\" y=\"306\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">at $100 makes it $125 to a buyer at home. Tariffs abroad</text><text x=\"20.05\" y=\"321\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">work the same way on X, which is why protectionism can</text><text x=\"20.06\" y=\"336\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">cut both sides.</text></svg>"
+     }
+    ]
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "From an interest-rate rise to a smaller aggregate demand",
+     "steps": [
+      "The central bank raises its policy rate, and market rates follow it up.",
+      "Households owing $600bn see their annual interest bill go from $30bn to $48bn, so $18bn leaves consumption.",
+      "Firms comparing a 8% project against a higher rate find the marginal ones no longer clear it, so investment falls too.",
+      "Both C and I are smaller at every price level, so the curve shifts left rather than the economy sliding along it."
+     ],
+     "result": "Nothing about the price level changed, which is why this is a shift. Two components moved, not one — and the same rate did both."
+    },
+    {
+     "title": "From a depreciation to a better net trade balance",
+     "steps": [
+      "The currency falls from 4 to 5 units per dollar, so one unit is worth $0.20 instead of $0.25.",
+      "An export priced at 800 units at home now costs a foreign buyer $160 rather than $200, with the home price untouched.",
+      "An import priced at $100 abroad now costs 500 units at home rather than 400.",
+      "Foreign buyers order more and residents buy fewer imported goods, so X rises, M falls and (X − M) improves."
+     ],
+     "result": "The exporter cut its foreign prices without changing its price list. How MUCH X and M respond is a Unit 4 question; for 2.3.2 the direction and the per-unit arithmetic are the answer."
+    },
+    {
+     "title": "From a savings-ratio rise to two opposite effects",
+     "steps": [
+      "Households expect harder times and decide to save 25% of disposable income rather than 20%.",
+      "Disposable income is unchanged at $800bn, so saving goes to $200bn and consumption falls to $600bn.",
+      "AD falls from $1,000bn to $960bn — and whether output and employment follow it down depends on aggregate supply, which is the next topic.",
+      "The same saving is a larger pool of funds for banks to lend, so the cost and availability of credit for firms can improve and investment can rise."
+     ],
+     "result": "One decision, two effects, pointing opposite ways — which is why \"a higher savings ratio is bad for the economy\" is an assertion rather than an answer."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "How much does a shift in AD actually matter?",
+     "content": "The identity tells you the direction and the first-round size of a change, and no more than that. Measured against the $1,000bn total, $40bn is $40bn whichever component it comes from — the identity is a sum, and a dollar of G is a dollar of C. What differs is how LIKELY a change that size is: $40bn is 22.2% of this economy's investment and 6.3% of its consumption, so it is an ordinary year for I and an extraordinary one for C. Two other things decide whether a shift matters: how quickly the spending can actually happen, since an infrastructure programme announced today is concrete poured over several years; and what aggregate supply looks like where the new curve meets it, which is the next topic and decides whether the extra demand becomes output or prices."
+    },
+    {
+     "title": "When does a policy aimed at investment work?",
+     "content": "All three tools in 2.3.2 · 3c work by raising the return the firm KEEPS against the interest rate it is compared with. None of them makes a bad project good — the machine still earns what it earns; what they do is move projects that were sitting just below the line over it, which is exactly why the size of the effect depends on how many were sitting there. A subsidy or tax relief reaches the specific assets a government chose; a cut in the profit tax reaches every firm with taxable profit, including those already investing and excluding those making a loss. And none of them helps where the obstacle was never the return: a firm refused credit because it has nothing to pledge is not helped by a better return on a project no bank will fund."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,30 @@
+A/B — does the spec-heading test catch the codes packet 13.1 shipped?
+Run against the SHIPPED test. The note at the foot records what the first version of the
+test — a shape check alone — did on the same four sabotages, and why it was not enough.
+
+A · control: the corrected registry
+ℹ pass 13
+ℹ fail 0
+
+B · each of the three codes put back, one at a time
+  ped.mjs  1.3.2 -> 1.2.4
+       AssertionError [ERR_ASSERTION]: ped: "1.2.4" is not an IAL section number
+     FAILS (caught)
+  multiplier.mjs  2.3.4 -> 2.4.2
+       AssertionError [ERR_ASSERTION]: multiplier: "2.4.2" is not an IAL section number
+     FAILS (caught)
+  breakeven.mjs  2.3.2 -> 2.3.1
+       AssertionError [ERR_ASSERTION]: breakeven: the business specification does not use "margin of safety" anywhere under 2.3.1
+     FAILS (caught)
+  arr.mjs  3.3.3 -> 3.3.1
+       AssertionError [ERR_ASSERTION]: arr: the business specification does not use "rate of return" anywhere under 3.3.1
+     FAILS (caught)
+
+A · restored
+ℹ pass 13
+ℹ fail 0
+
+Note: the first version of this test asserted only the SHAPE of the code (middle digit 3,
+unit digit matching) and a heading with that number existing. It failed ped and multiplier
+and PASSED breakeven at 2.3.1 — a real heading, the wrong section. That miss is why each
+template now names a phrase the specification uses under its own heading.

@@ -1,0 +1,30 @@
+=== BUILD ===
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+=== TEST ===
+ℹ tests 240
+ℹ suites 0
+ℹ pass 240
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2194.720167
+=== VALIDATE ===
+
+> economics-next@0.1.0 validate
+> node audit/scripts/validate-content.mjs
+
+=== EXPOSURE ===
+    signed out  0
+    signed in   0
+  UNWRITTEN (content debt — nothing in the section matches that chapter):
+    0
+=== RECALLS ===
+recalls answerable by scrolling up: 335 of 739 (45%) AT fillin 0.70 · classify 0.75 · reorder 0.75 · match 0.75
+  3 section(s) at 100%, 4 clean
+
+no section is worse than the baseline.

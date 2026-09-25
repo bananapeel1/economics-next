@@ -1,0 +1,22 @@
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+7 of 43 sections carry a drill
+
+  WBS11 1.3.1  meeting-customer-needs           percentage-change-business
+  WBS12 2.3.2  financial-planning               breakeven
+  WBS13 3.3.3  decision-making-techniques       arr, payback
+  WEC11 1.3.2  consumer-behaviour-demand        ped
+  WEC12 2.3.1  measures-economic-performance    index-numbers
+  WEC12 2.3.4  national-income                  multiplier
+  WEC12 2.3.5  economic-growth                  percentage-change-economics
+
+36 without, by unit — packet 13.3's target:
+  WBS11  4  the-market, marketing-mix-strategy, managing-people, entrepreneurs-leaders
+  WBS12  4  planning-raising-finance, managing-finance, resource-management, external-influences
+  WBS13  5  business-objectives-strategy, business-growth, influences-business-decisions, assessing-competitiveness, managing-change
+  WBS14  4  globalisation, global-markets-expansion, global-marketing, global-industries-mncs
+  WEC11  5  introductory-concepts, supply, price-determination, market-failure, government-intervention
+  WEC12  3  aggregate-demand, aggregate-supply, macroeconomic-objectives-policies
+  WEC13  5  types-sizes-businesses, revenue-costs-profits, market-structures-contestability, labour-markets, government-intervention-firms
+  WEC14  6  causes-effects-globalisation, trade-global-economy, balance-payments-exchange-rates, poverty-inequality, role-state-macroeconomy, growth-development

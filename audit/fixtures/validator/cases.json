@@ -1,0 +1,1794 @@
+{
+ "note": "Golden set for lib/content-validator.mjs. One 'fail' case per rule that must produce that rule, and 'pass' cases that must not. Shapes are the live content shapes (see audit/content-sections/*.json). The tariffs and command words come from audit/raw/tariff-census.json, parsed from the specifications; the reorder and fill-in cases mirror the March per-recall verdicts in audit/raw/content-audits.json. lib/content-validator.test.mjs asserts every rule in RULES has at least one fail case here and that no pass case fires it.",
+ "ctx": {
+  "sectionId": "fixture",
+  "subject": "economics",
+  "unitCode": "WEC11",
+  "number": "1.3.2"
+ },
+ "base": {
+  "content": [
+   {
+    "title": "Rational decision making",
+    "quizIndices": [
+     1
+    ],
+    "practiceIndices": [
+     0
+    ],
+    "takeaway": [
+     "Consumers aim to maximise utility",
+     "Firms aim to maximise profit",
+     "Real people often do neither"
+    ],
+    "sections": [
+     {
+      "id": "rational-choice",
+      "title": "Rational choice",
+      "keyIdea": "Consumers are assumed to compare marginal benefit with marginal cost and choose the option with the greatest net gain.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The assumption of rationality says consumers aim to maximise **utility** and firms aim to maximise profit."
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Identify the options",
+         "Compare marginal benefit and marginal cost",
+         "Choose the greatest net benefit"
+        ],
+        "result": "Utility is maximised",
+        "resultType": "good"
+       }
+      ],
+      "realExample": {
+       "emoji": "🛒",
+       "text": "A shopper in Kuala Lumpur comparing two phone plans weighs the extra data against the extra monthly cost before choosing."
+      },
+      "misconception": "Students often write that rational means selfish. It means consistent: choosing the option with the greatest net benefit. Write: rational consumers weigh marginal benefit against marginal cost.",
+      "examMatters": "A 4-mark Explain needs the assumption stated and one reason consumers may not meet it.",
+      "recall": {
+       "type": "reorder",
+       "prompt": "Put the rational decision-making process in order, from first step to last:",
+       "correctOrder": [
+        "Identify all available options",
+        "Compare marginal benefit against marginal cost for the next unit",
+        "Choose whichever option leaves the largest surplus"
+       ],
+       "why": [
+        "You cannot compare what you have not listed",
+        "Marginal benefit against marginal cost is the comparison a rational agent makes",
+        "The largest surplus is what maximising net gain means"
+       ]
+      }
+     },
+     {
+      "id": "why-not-rational",
+      "title": "Why consumers may not maximise utility",
+      "keyIdea": "Herding, habit, inertia, weak computation, the need to feel valued and framing all pull consumers away from the rational choice.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Herding is following other people. Habitual behaviour repeats past choices. Inertia is not switching even when a better option exists. Framing means the same choice looks different when presented differently."
+       }
+      ],
+      "realExample": {
+       "emoji": "☕",
+       "text": "Singapore commuters keep the same kopi order for years even when a cheaper stall opens next door: habit and inertia, not calculation."
+      },
+      "misconception": "Students think inertia means laziness. It means the cost of switching, including effort, is felt more than the gain. Write: inertia keeps consumers on a worse deal because switching feels costly.",
+      "examMatters": "Name the behaviour and explain why it stops utility being maximised.",
+      "recall": {
+       "type": "fillin",
+       "prompt": "Complete the chain:",
+       "template": [
+        "Total ___ is overall satisfaction",
+        "→ The extra satisfaction from one more unit ___ as more is consumed",
+        "→ So the demand curve slopes ___"
+       ],
+       "answers": [
+        "utility",
+        "diminishes",
+        "downward"
+       ],
+       "hints": [
+        "satisfaction, overall",
+        "falls",
+        "the slope's direction"
+       ],
+       "distractors": [
+        "welfare",
+        "value"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "title": "The demand curve",
+    "quizIndices": [
+     0,
+     2
+    ],
+    "practiceIndices": [
+     1
+    ],
+    "takeaway": [
+     "Price changes move along the curve",
+     "Other factors shift it",
+     "Diminishing marginal utility explains the slope"
+    ],
+    "sections": [
+     {
+      "id": "movement-vs-shift",
+      "title": "Movements and shifts",
+      "keyIdea": "A change in the good's own price moves along the demand curve; a change in any other factor shifts the whole curve.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Own price causes a **movement**. Income, tastes, substitutes and complements cause a **shift**."
+       }
+      ],
+      "realExample": {
+       "emoji": "📱",
+       "text": "When Hong Kong incomes rose in 2023, demand for premium phones shifted right at every price."
+      },
+      "misconception": "Students say a price rise shifts demand left. It causes a movement along the curve. Write: a shift needs a non-price factor.",
+      "examMatters": "The distinction is worth a mark on its own in a 4-mark Explain.",
+      "recall": {
+       "type": "reorder",
+       "prompt": "Order the steps when incomes rise, from cause to effect:",
+       "correctOrder": [
+        "Real incomes rise",
+        "Demand for normal goods shifts right",
+        "Equilibrium price and quantity rise"
+       ],
+       "why": [
+        "A rise in real income is the trigger",
+        "A normal good is one whose demand rises with income, so its demand curve shifts right",
+        "A rightward shift raises both equilibrium price and quantity"
+       ]
+      }
+     },
+     {
+      "id": "elasticity",
+      "title": "Price elasticity of demand",
+      "keyIdea": "PED measures how much quantity demanded responds to a change in price.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "PED is the percentage change in quantity demanded divided by the percentage change in price."
+       }
+      ],
+      "realExample": {
+       "emoji": "⛽",
+       "text": "Fuel demand in Pakistan changed little when prices rose sharply in 2022, a sign of inelastic demand."
+      },
+      "misconception": "Students treat PED as positive. It is negative for normal goods; the sign is conventionally dropped. Write: PED = %ΔQd ÷ %ΔP.",
+      "examMatters": "Show the formula and interpret the number.",
+      "recall": {
+       "type": "fillin",
+       "prompt": "Complete:",
+       "template": [
+        "A price rise of 10% cuts quantity demanded by 25%, so demand here is price ___",
+        "→ and total revenue will therefore ___"
+       ],
+       "answers": [
+        "elastic",
+        "fall"
+       ],
+       "hints": [
+        "the response is more than proportionate",
+        "which way does revenue move"
+       ],
+       "distractors": [
+        "inelastic",
+        "rise"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "title": "Income and cross elasticity",
+    "quizIndices": [
+     4
+    ],
+    "takeaway": [
+     "YED sign tells normal from inferior",
+     "XED sign tells substitutes from complements",
+     "Both are ratios of percentage changes"
+    ],
+    "sections": [
+     {
+      "id": "yed",
+      "title": "Income elasticity",
+      "keyIdea": "YED measures how quantity demanded responds to a change in income; positive for normal goods, negative for inferior goods.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A positive YED marks a normal good; a negative YED marks an inferior good."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚌",
+       "text": "Bus travel in Jakarta fell as incomes rose and riders switched to motorbikes: an inferior good."
+      },
+      "misconception": "Students call inferior goods low quality. Inferior describes the income response, not the product. Write: demand falls as income rises.",
+      "examMatters": "State the sign and what it implies.",
+      "recall": {
+       "type": "reorder",
+       "prompt": "Order the reasoning from cause to effect:",
+       "correctOrder": [
+        "Incomes rise",
+        "Consumers switch away from inferior goods",
+        "Demand for those goods falls"
+       ],
+       "why": [
+        "A rise in income is the trigger",
+        "An inferior good is one consumers trade up from as they can afford better",
+        "Fewer buyers means demand for those goods falls"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "title": "Elasticity and revenue",
+    "quizIndices": [
+     3
+    ],
+    "takeaway": [
+     "Inelastic demand: raise price, raise revenue",
+     "Elastic demand: cut price, raise revenue",
+     "Unit elastic: revenue unchanged"
+    ],
+    "sections": [
+     {
+      "id": "ped-revenue",
+      "title": "PED and total revenue",
+      "keyIdea": "When demand is price inelastic a price rise raises total revenue; when it is elastic a price rise lowers it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Total revenue is price times quantity. The direction it moves after a price change depends on PED."
+       }
+      ],
+      "realExample": {
+       "emoji": "🎟️",
+       "text": "Ticket prices for a sold-out K-pop tour rose 20% and revenue rose, because demand was inelastic."
+      },
+      "misconception": "Students think higher prices always mean more revenue. Only with inelastic demand. Write: compare the percentage changes.",
+      "examMatters": "A calculation with the formula earns the quantitative marks.",
+      "recall": {
+       "type": "fillin",
+       "prompt": "Complete:",
+       "template": [
+        "A cinema raises ticket prices and its total revenue falls, so demand for its tickets must be price ___"
+       ],
+       "answers": [
+        "elastic"
+       ],
+       "hints": [
+        "revenue moved the opposite way to price"
+       ],
+       "distractors": [
+        "inelastic",
+        "unitary"
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "notes": [],
+  "quiz": [
+   {
+    "id": "q1",
+    "question": "Which of these is a reason a consumer may not maximise utility?",
+    "options": [
+     "Inertia",
+     "A lower price",
+     "Higher income",
+     "A larger population"
+    ],
+    "correctIndex": 0,
+    "explanation": "Inertia keeps a consumer on an existing choice even when a better one exists."
+   },
+   {
+    "id": "q2",
+    "question": "A rise in the price of a good causes:",
+    "options": [
+     "A shift of the demand curve left",
+     "A movement along the demand curve",
+     "A shift of the demand curve right",
+     "No change in quantity demanded"
+    ],
+    "correctIndex": 1,
+    "explanation": "Own price changes cause movements; other factors cause shifts."
+   },
+   {
+    "id": "q3",
+    "question": "Which factor shifts the demand curve for a normal good to the right?",
+    "options": [
+     "A fall in its own price",
+     "A rise in real income",
+     "A rise in its own price",
+     "A fall in the price of a complement's substitute"
+    ],
+    "correctIndex": 1,
+    "explanation": "Income is a non-price factor, so it shifts the curve."
+   },
+   {
+    "id": "q4",
+    "question": "A good with a negative income elasticity of demand is:",
+    "options": [
+     "A luxury",
+     "A necessity",
+     "An inferior good",
+     "A complement"
+    ],
+    "correctIndex": 2,
+    "explanation": "Demand falls as income rises."
+   },
+   {
+    "id": "q5",
+    "question": "If PED is 0.4 and price rises by 10%, quantity demanded falls by:",
+    "options": [
+     "10%",
+     "40%",
+     "0.4%",
+     "4%"
+    ],
+    "correctIndex": 3,
+    "explanation": "0.4 × 10% = 4%."
+   },
+   {
+    "id": "q6",
+    "question": "Which describes diminishing marginal utility?",
+    "options": [
+     "Each extra unit adds less satisfaction",
+     "Each extra unit adds more satisfaction",
+     "Total utility falls from the first unit",
+     "Price rises with each unit"
+    ],
+    "correctIndex": 0,
+    "explanation": "Extra satisfaction falls as consumption rises."
+   },
+   {
+    "id": "q7",
+    "question": "A positive cross elasticity of demand between two goods means they are:",
+    "options": [
+     "Complements",
+     "Substitutes",
+     "Inferior goods",
+     "Unrelated"
+    ],
+    "correctIndex": 1,
+    "explanation": "A rise in one price raises demand for the other."
+   },
+   {
+    "id": "q8",
+    "question": "Which is most likely to have price inelastic demand?",
+    "options": [
+     "A branded soft drink",
+     "A holiday abroad",
+     "Insulin",
+     "A restaurant meal"
+    ],
+    "correctIndex": 2,
+    "explanation": "Few substitutes and a small share of spending."
+   },
+   {
+    "id": "q9",
+    "question": "A complement to a good is one whose:",
+    "options": [
+     "Price rise raises demand for the good",
+     "Price rise lowers demand for it",
+     "Demand is unaffected by it",
+     "Income elasticity is negative"
+    ],
+    "correctIndex": 1,
+    "explanation": "A rise in a complement's price lowers demand for the good."
+   },
+   {
+    "id": "q10",
+    "question": "Ceteris paribus means:",
+    "options": [
+     "Prices always rise over time",
+     "Demand is unlimited",
+     "Supply is fixed by law",
+     "Other things being equal"
+    ],
+    "correctIndex": 3,
+    "explanation": "Hold everything else constant."
+   },
+   {
+    "id": "q11",
+    "question": "Which of these is a substitute for tea?",
+    "options": [
+     "Milk",
+     "Sugar",
+     "Coffee",
+     "A kettle"
+    ],
+    "correctIndex": 2,
+    "explanation": "Coffee can replace tea."
+   },
+   {
+    "id": "q12",
+    "question": "Which term means the overall satisfaction gained from all units of a good consumed?",
+    "options": [
+     "Satisfaction from the last unit",
+     "Overall satisfaction from all units",
+     "Price per unit",
+     "The demand curve's slope"
+    ],
+    "correctIndex": 1,
+    "explanation": "Total utility sums all units."
+   },
+   {
+    "id": "q13",
+    "question": "Which term means the extra satisfaction from one more unit?",
+    "options": [
+     "Overall satisfaction from all units",
+     "Total spending on the good",
+     "Average satisfaction per unit",
+     "Satisfaction from the last unit"
+    ],
+    "correctIndex": 3,
+    "explanation": "The extra satisfaction from one more unit."
+   },
+   {
+    "id": "q14",
+    "question": "A normal good has a YED that is:",
+    "options": [
+     "Negative",
+     "Zero",
+     "Positive",
+     "Infinite"
+    ],
+    "correctIndex": 2,
+    "explanation": "Demand rises with income."
+   },
+   {
+    "id": "q15",
+    "question": "Habitual behaviour means consumers:",
+    "options": [
+     "Compute every option",
+     "Repeat past choices",
+     "Always switch brands",
+     "Ignore prices entirely"
+    ],
+    "correctIndex": 1,
+    "explanation": "Repeating past choices without re-evaluating."
+   },
+   {
+    "id": "q16",
+    "question": "Herding describes consumers who:",
+    "options": [
+     "Follow what other people do",
+     "Buy only the necessities",
+     "Maximise their own utility",
+     "Avoid every well-known brand"
+    ],
+    "correctIndex": 0,
+    "explanation": "Following what others do."
+   },
+   {
+    "id": "q17",
+    "question": "Framing refers to:",
+    "options": [
+     "Follow other people's choices",
+     "Buy only necessities",
+     "Maximise utility",
+     "Avoid all brands"
+    ],
+    "correctIndex": 1,
+    "explanation": "Presentation changes the perceived choice."
+   },
+   {
+    "id": "q18",
+    "question": "Perfectly inelastic demand has a PED of:",
+    "options": [
+     "Infinity",
+     "One",
+     "Zero",
+     "Minus one"
+    ],
+    "correctIndex": 2,
+    "explanation": "Quantity does not respond to price."
+   },
+   {
+    "id": "q19",
+    "question": "A fall in the price of a substitute will:",
+    "options": [
+     "Shift demand for the good left",
+     "Shift demand for the good right",
+     "Move along the demand curve",
+     "Raise the good's price"
+    ],
+    "correctIndex": 0,
+    "explanation": "Consumers switch to the cheaper substitute."
+   },
+   {
+    "id": "q20",
+    "question": "Advertising that succeeds will:",
+    "options": [
+     "Move along the demand curve",
+     "Shift the demand curve right",
+     "Shift the supply curve left",
+     "Lower the price"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tastes change; demand shifts."
+   }
+  ],
+  "practice": [
+   {
+    "id": "p1",
+    "command": "Define",
+    "marks": 2,
+    "question": "Define the term 'utility'. (2 marks)",
+    "guidance": "Two marks means two separate things to say, so plan both before writing.\nSatisfaction from consuming a good (1). Measured per unit at the margin (1)."
+   },
+   {
+    "id": "p2",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain one reason consumers may not maximise utility. (4 marks)",
+    "guidance": "Pick one reason and develop it rather than listing several; the marks are in the chain, not the count.\nIdentify a reason (1), explain the mechanism (2), apply to a context (1)."
+   }
+  ],
+  "flashcards": [],
+  "diagrams": [
+   {
+    "id": "d1",
+    "title": "The demand curve"
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "From a rise in incomes to falling demand for an inferior good",
+     "steps": [
+      "Incomes rise",
+      "Consumers switch away from inferior goods",
+      "Demand for those goods falls"
+     ]
+    }
+   ],
+   "evaluation": []
+  },
+  "mistakes": []
+ },
+ "cases": [
+  {
+   "rule": "schema.block",
+   "fail": {
+    "content": [
+     {
+      "title": "",
+      "sections": [],
+      "takeaway": []
+     }
+    ]
+   }
+  },
+  {
+   "rule": "schema.subsection",
+   "fail": {
+    "content": [
+     {
+      "title": "B",
+      "takeaway": [
+       "a",
+       "b",
+       "c"
+      ],
+      "sections": [
+       {
+        "id": "x",
+        "title": "",
+        "keyIdea": "",
+        "body": []
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "rule": "schema.body-type",
+   "fail": {
+    "content.0.sections.0.body.0.type": "table"
+   }
+  },
+  {
+   "rule": "schema.flow",
+   "fail": {
+    "content.0.sections.0.body.1.steps": [
+     "only one"
+    ]
+   }
+  },
+  {
+   "rule": "schema.lengths",
+   "fail": {
+    "content.0.sections.0.keyIdea": "This key idea is far too long because it keeps going and going well past the one hundred and eighty character limit that the renderer was designed around, which is the whole point of the limit."
+   }
+  },
+  {
+   "rule": "schema.fields",
+   "fail": {
+    "content.0.sections.0.misconception": ""
+   }
+  },
+  {
+   "rule": "quiz.options",
+   "fail": {
+    "quiz.0.options": [
+     "Inertia",
+     "A lower price"
+    ]
+   }
+  },
+  {
+   "rule": "quiz.index",
+   "fail": {
+    "quiz.0.correctIndex": 7
+   }
+  },
+  {
+   "rule": "quiz.dup-options",
+   "fail": {
+    "quiz.0.options": [
+     "Inertia",
+     "Inertia",
+     "Higher income",
+     "A larger population"
+    ]
+   }
+  },
+  {
+   "rule": "quiz.essay-stem",
+   "fail": {
+    "quiz.0.question": "Evaluate the view that consumers are rational."
+   }
+  },
+  {
+   "rule": "quiz.long-correct",
+   "fail": {
+    "quiz.0.options": [
+     "Inertia, which is the tendency to stay with an existing choice even when a demonstrably better alternative is available at lower cost",
+     "Price",
+     "Income",
+     "Population"
+    ]
+   }
+  },
+  {
+   "rule": "quiz.hedged",
+   "fail": {
+    "quiz.0.options": [
+     "Consumers may sometimes show inertia",
+     "Consumers always compute perfectly",
+     "Prices never affect choice",
+     "Income is only ever irrelevant"
+    ]
+   }
+  },
+  {
+   "rule": "quiz.near-dup",
+   "fail": {
+    "quiz.1.question": "Which of these is a reason a consumer may not maximise utility?"
+   }
+  },
+  {
+   "rule": "quiz.histogram",
+   "fail": {
+    "quiz.*.correctIndex": 1
+   }
+  },
+  {
+   "rule": "quiz.letter-in-explanation",
+   "fail": {
+    "quiz.0.explanation": "Inertia (A) is correct; a lower price (B) would raise quantity demanded."
+   }
+  },
+  {
+   "rule": "reorder.count",
+   "fail": {
+    "content.0.sections.0.recall": {
+     "type": "reorder",
+     "prompt": "Order from cause to effect:",
+     "shuffled": [
+      1,
+      0
+     ],
+     "correctOrder": [
+      "Identify options",
+      "Choose"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "reorder.criterion",
+   "fail": {
+    "content.0.sections.0.recall.prompt": "Put these in the right order:"
+   }
+  },
+  {
+   "rule": "reorder.criterion",
+   "fail": {
+    "content.0.sections.0.recall.prompt": "Order these business plan steps logically:"
+   }
+  },
+  {
+   "rule": "reorder.criterion",
+   "fail": {
+    "content.0.sections.0.recall.prompt": "Put these supply shift factors in order of explanation:"
+   }
+  },
+  {
+   "rule": "reorder.criterion",
+   "pass": {
+    "content.0.sections.0.recall.prompt": "Put the recruitment process in the right order:"
+   }
+  },
+  {
+   "rule": "reorder.criterion",
+   "pass": {
+    "content.0.sections.0.recall.prompt": "Order these assets from most to least liquid:"
+   }
+  },
+  {
+   "rule": "reorder.source",
+   "fail": {
+    "content.0.sections.0.recall.correctOrder": [
+     "Rent rewards land",
+     "Wages reward labour",
+     "Interest rewards capital"
+    ]
+   }
+  },
+  {
+   "rule": "reorder.lead",
+   "fail": {
+    "content.0.sections.0.recall.correctOrder": [
+     "Management: plans the work",
+     "Management: monitors the work",
+     "Leadership: inspires the team"
+    ]
+   }
+  },
+  {
+   "rule": "fillin.blanks",
+   "fail": {
+    "content.0.sections.1.recall.answers": [
+     "utility",
+     "diminishes"
+    ]
+   }
+  },
+  {
+   "rule": "fillin.dup-answers",
+   "fail": {
+    "content.0.sections.1.recall.answers": [
+     "utility",
+     "utility",
+     "downward"
+    ]
+   }
+  },
+  {
+   "rule": "fillin.token",
+   "fail": {
+    "content.0.sections.1.recall.answers": [
+     "utility",
+     "diminishes",
+     "rises, falls"
+    ]
+   }
+  },
+  {
+   "rule": "fillin.hint",
+   "fail": {
+    "content.0.sections.1.recall.hints": [
+     "ut_____",
+     "falls",
+     "the slope's direction"
+    ]
+   }
+  },
+  {
+   "rule": "pins.range",
+   "fail": {
+    "content.0.quizIndices": [
+     42
+    ]
+   }
+  },
+  {
+   "rule": "pins.reuse",
+   "fail": {
+    "content.1.quizIndices": [
+     1
+    ]
+   }
+  },
+  {
+   "rule": "pins.identity",
+   "fail": {
+    "content.0.quizIndices": [
+     0
+    ],
+    "content.1.quizIndices": [
+     1
+    ],
+    "content.2.quizIndices": [
+     2
+    ],
+    "content.3.quizIndices": [
+     3
+    ]
+   }
+  },
+  {
+   "rule": "pins.diagram",
+   "fail": {
+    "content.0.diagramRef": "Aggregate Demand Curve"
+   }
+  },
+  {
+   "rule": "pins.diagram",
+   "pass": {
+    "content.1.diagramRef": "demand curve"
+   }
+  },
+  {
+   "rule": "diagram.table-kind",
+   "fail": {
+    "diagrams.0.svg": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\">Row 0</text><text x=\"260\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\">Value 0</text><text x=\"10\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\">Row 1</text><text x=\"260\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\">Value 1</text><text x=\"10\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\">Row 2</text><text x=\"260\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\">Value 2</text><text x=\"10\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\">Row 3</text><text x=\"260\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\">Value 3</text></svg>"
+   }
+  },
+  {
+   "rule": "diagram.table-kind",
+   "pass": {
+    "diagrams.0.svg": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"60\" width=\"40\" height=\"100\" fill=\"#3b82f6\"/><rect x=\"90\" y=\"30\" width=\"40\" height=\"130\" fill=\"#3b82f6\"/><rect x=\"160\" y=\"110\" width=\"40\" height=\"50\" fill=\"#3b82f6\"/><text x=\"20\" y=\"175\" fill=\"#e8ecf5\" font-size=\"9\">Alpha</text><text x=\"90\" y=\"175\" fill=\"#e8ecf5\" font-size=\"9\">Beta</text><text x=\"160\" y=\"175\" fill=\"#e8ecf5\" font-size=\"9\">Gamma</text><text x=\"20\" y=\"52\" fill=\"#e8ecf5\" font-size=\"9\">100</text><text x=\"88\" y=\"22\" fill=\"#e8ecf5\" font-size=\"9\">130</text><text x=\"162\" y=\"102\" fill=\"#e8ecf5\" font-size=\"9\">50</text><text x=\"20\" y=\"20\" fill=\"#e8ecf5\" font-size=\"11\">Employees, thousands</text></svg>"
+   }
+  },
+  {
+   "rule": "diagram.table-checklist",
+   "fail": {
+    "diagrams.0.kind": "table",
+    "diagrams.0.svg": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\">Row 0</text><text x=\"260\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\">Value 0</text><text x=\"10\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\">Row 1</text><text x=\"260\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\">Value 1</text><text x=\"10\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\">Row 2</text><text x=\"260\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\">Value 2</text><text x=\"10\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\">Row 3</text><text x=\"260\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\">Value 3</text></svg>",
+    "diagrams.0.checklist": [
+     "Each row states who owns it"
+    ]
+   }
+  },
+  {
+   "rule": "diagram.table-legible",
+   "fail": {
+    "diagrams.0.kind": "table",
+    "diagrams.0.svg": "<svg viewBox=\"0 0 1000 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\">Row 0</text><text x=\"260\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\">Value 0</text><text x=\"10\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\">Row 1</text><text x=\"260\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\">Value 1</text><text x=\"10\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\">Row 2</text><text x=\"260\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\">Value 2</text><text x=\"10\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\">Row 3</text><text x=\"260\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\">Value 3</text></svg>"
+   }
+  },
+  {
+   "rule": "diagram.table-legible",
+   "pass": {
+    "diagrams.0.kind": "table",
+    "diagrams.0.svg": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" fill=\"#e8ecf5\" font-size=\"12\">Row 0</text><text x=\"260\" y=\"20\" fill=\"#e8ecf5\" font-size=\"12\">Value 0</text><text x=\"10\" y=\"60\" fill=\"#e8ecf5\" font-size=\"12\">Row 1</text><text x=\"260\" y=\"60\" fill=\"#e8ecf5\" font-size=\"12\">Value 1</text><text x=\"10\" y=\"100\" fill=\"#e8ecf5\" font-size=\"12\">Row 2</text><text x=\"260\" y=\"100\" fill=\"#e8ecf5\" font-size=\"12\">Value 2</text><text x=\"10\" y=\"140\" fill=\"#e8ecf5\" font-size=\"12\">Row 3</text><text x=\"260\" y=\"140\" fill=\"#e8ecf5\" font-size=\"12\">Value 3</text></svg>"
+   }
+  },
+  {
+   "rule": "diagram.table-kind",
+   "pass": {
+    "diagrams.0.svg": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 0</text><text x=\"260\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 0</text><text x=\"10\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 1</text><text x=\"260\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 1</text><text x=\"10\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 2</text><text x=\"260\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 2</text></svg>"
+   }
+  },
+  {
+   "rule": "diagram.table-checklist",
+   "pass": {
+    "diagrams.0.svg": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 0</text><text x=\"260\" y=\"20\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 0</text><text x=\"10\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 1</text><text x=\"260\" y=\"60\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 1</text><text x=\"10\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 2</text><text x=\"260\" y=\"100\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 2</text><text x=\"10\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Row 3</text><text x=\"260\" y=\"140\" fill=\"#e8ecf5\" font-size=\"9\" text-anchor=\"start\">Value 3</text></svg>",
+    "diagrams.0.checklist": [
+     "Axes labelled"
+    ]
+   }
+  },
+  {
+   "rule": "diagram.table-legible",
+   "pass": {
+    "diagrams.0.kind": "table",
+    "diagrams.0.svg": "<svg viewBox=\"0 0 500 200\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"20\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Row 0</text><text x=\"260\" y=\"20\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Value 0</text><text x=\"10\" y=\"60\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Row 1</text><text x=\"260\" y=\"60\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Value 1</text><text x=\"10\" y=\"100\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Row 2</text><text x=\"260\" y=\"100\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Value 2</text><text x=\"10\" y=\"140\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Row 3</text><text x=\"260\" y=\"140\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"start\">Value 3</text></svg>"
+   }
+  },
+  {
+   "rule": "practice.no-command",
+   "fail": {
+    "practice.0": {
+     "id": "p1",
+     "marks": 2,
+     "question": "Define the term 'utility'. (2 marks)",
+     "guidance": "…"
+    }
+   }
+  },
+  {
+   "rule": "practice.command",
+   "fail": {
+    "practice.0.command": "Outline"
+   }
+  },
+  {
+   "rule": "practice.command",
+   "fail": {
+    "practice.0.command": "Assess",
+    "practice.0.marks": 10
+   }
+  },
+  {
+   "rule": "practice.tariff",
+   "fail": {
+    "practice.0.marks": 4
+   }
+  },
+  {
+   "rule": "practice.tariff",
+   "pass": {
+    "practice.0.command": "Calculate",
+    "practice.0.marks": 4
+   }
+  },
+  {
+   "rule": "practice.tariff",
+   "fail": {
+    "ctx.subject": "business",
+    "practice.0.command": "Assess",
+    "practice.0.marks": 12
+   }
+  },
+  {
+   "rule": "practice.tariff",
+   "pass": {
+    "ctx.subject": "business",
+    "ctx.unitCode": "WBS13",
+    "practice.0.command": "Assess",
+    "practice.0.marks": 12
+   }
+  },
+  {
+   "rule": "practice.levels",
+   "fail": {
+    "practice.1.command": "Examine",
+    "practice.1.marks": 8,
+    "practice.1.guidance": "Point one (1 mark). Point two (1 mark). Point three (2 marks)."
+   }
+  },
+  {
+   "rule": "practice.opening",
+   "fail": {
+    "practice.0.guidance": "Satisfaction from consuming a good (1). Measured per unit at the margin (1)."
+   }
+  },
+  {
+   "rule": "practice.opening",
+   "fail": {
+    "practice.1.guidance": "Identify a reason (1), explain the mechanism (2).\nThen apply it to a context (1)."
+   }
+  },
+  {
+   "rule": "practice.opening",
+   "pass": {
+    "practice.0.guidance": "Say what the term means, then say what follows from it.\nSatisfaction from consuming a good (1). Measured per unit at the margin (1)."
+   }
+  },
+  {
+   "rule": "section.no-recall",
+   "fail": {
+    "content.*.sections.*.recall": null
+   }
+  },
+  {
+   "rule": "depth.blocks",
+   "fail": {
+    "content": "@first2"
+   }
+  },
+  {
+   "rule": "depth.recalls",
+   "fail": {
+    "content.0.sections.0.recall": null,
+    "content.0.sections.1.recall": null,
+    "content.1.sections.0.recall": null,
+    "content.1.sections.1.recall": null
+   }
+  },
+  {
+   "rule": "depth.quiz",
+   "fail": {
+    "quiz": "@first4"
+   }
+  },
+  {
+   "rule": "step.words",
+   "fail": {
+    "content.0.sections.0.body.0.text": "@words400"
+   }
+  },
+  {
+   "rule": "claim.uncited",
+   "fail": {
+    "content.0.sections.0.examMatters": "Examiners reward a clear definition and penalise a missing example."
+   }
+  },
+  {
+   "rule": "claim.uncited",
+   "pass": {
+    "content.0.sections.0.examMatters": "Examiners reward a clear definition (WEC11 Jan 2023 mark scheme, Q1a)."
+   }
+  },
+  {
+   "rule": "locale.institution",
+   "fail": {
+    "content.0.sections.0.realExample.text": "When the NHS raised prescription charges, demand barely changed."
+   }
+  },
+  {
+   "rule": "locale.uk",
+   "fail": {
+    "content.*.sections.*.realExample.text": "After Brexit the UK saw prices rise. UK government data show it. In the UK, demand fell."
+   }
+  },
+  {
+   "rule": "locale.currency",
+   "fail": {
+    "content.0.sections.0.realExample.text": "A £10 phone plan against a RM 40 plan."
+   }
+  },
+  {
+   "rule": "terms.off-spec",
+   "fail": {
+    "content.0.sections.0.body.0.text": "This is a merit good, so there is a deadweight loss."
+   }
+  },
+  {
+   "rule": "terms.later-unit",
+   "fail": {
+    "ctx.laterUnitTerms": [
+     "perfect competition"
+    ],
+    "content.0.sections.0.body.0.text": "Under perfect competition firms are price takers."
+   }
+  },
+  {
+   "rule": "terms.later-unit",
+   "pass": {
+    "ctx.laterUnitTerms": [
+     "perfect competition"
+    ],
+    "ctx.unitCode": "WEC13",
+    "content.0.sections.0.body.0.text": "Under perfect competition firms are price takers."
+   }
+  },
+  {
+   "rule": "spec.uncovered",
+   "fail": {
+    "ctx.specItems": [
+     {
+      "id": "ECON-1.3.2-1b-3",
+      "kind": "leaf",
+      "wording": "inertia",
+      "source": "x"
+     },
+     {
+      "id": "ECON-1.3.2-9z",
+      "kind": "leaf",
+      "wording": "composite indicators of development",
+      "source": "x"
+     }
+    ]
+   }
+  },
+  {
+   "rule": "spec.coverage",
+   "fail": {
+    "ctx.specItems": [
+     {
+      "id": "ECON-1.3.2-1b-3",
+      "kind": "leaf",
+      "wording": "inertia",
+      "source": "x"
+     }
+    ]
+   }
+  },
+  {
+   "rule": "quant.unit",
+   "fail": {
+    "ctx.quantTemplates": [
+     {
+      "unit": "WEC12"
+     }
+    ]
+   }
+  },
+  {
+   "rule": "quant.unit",
+   "pass": {
+    "ctx.quantTemplates": [
+     {
+      "unit": "WEC11"
+     }
+    ]
+   }
+  },
+  {
+   "rule": "flow.separator",
+   "fail": {
+    "content.0.sections.0.body.1.steps": [
+     "Identify — list every option",
+     "Compare",
+     "Choose"
+    ]
+   }
+  },
+  {
+   "rule": "section.counts",
+   "fail": {}
+  },
+  {
+   "rule": "quiz.explanation-option",
+   "fail": {
+    "quiz.0.options": [
+     "Inertia",
+     "A lower price for the good",
+     "Higher income",
+     "A larger population"
+    ],
+    "quiz.0.explanation": "A lower price for the good raises quantity demanded along the curve."
+   }
+  },
+  {
+   "rule": "quiz.explanation-option",
+   "pass": {
+    "quiz.0.options": [
+     "Inertia",
+     "A lower price for the good",
+     "Higher income",
+     "A larger population"
+    ],
+    "quiz.0.explanation": "Inertia keeps a consumer where they are; a lower price for the good would not."
+   }
+  },
+  {
+   "rule": "depth.notes-titles",
+   "fail": {
+    "notes": [
+     {
+      "title": "Branding and differentiation",
+      "blocks": []
+     }
+    ]
+   }
+  },
+  {
+   "rule": "depth.notes-titles",
+   "pass": {
+    "notes": [
+     {
+      "title": "Rational decision making",
+      "blocks": []
+     }
+    ]
+   }
+  },
+  {
+   "rule": "locale.uk",
+   "pass": {
+    "content.0.sections.0.realExample.text": "After Brexit prices rose in the UK, one of several markets; the base fixture's other examples are in Kuala Lumpur, Singapore, Hong Kong, Pakistan and Jakarta."
+   }
+  },
+  {
+   "rule": "fillin.token",
+   "pass": {
+    "content.0.sections.1.recall.answers": [
+     "utility",
+     "diminishes",
+     "next best alternative"
+    ]
+   }
+  },
+  {
+   "rule": "schema.recall-type",
+   "fail": {
+    "content.0.sections.0.recall.type": "dragdrop"
+   }
+  },
+  {
+   "rule": "recall.why",
+   "fail": {
+    "content.0.sections.0.recall.why": null
+   }
+  },
+  {
+   "rule": "recall.why",
+   "fail": {
+    "content.0.sections.0.recall.why": [
+     "only one line"
+    ]
+   }
+  },
+  {
+   "rule": "fillin.distractors",
+   "fail": {
+    "content.0.sections.1.recall.distractors": null
+   }
+  },
+  {
+   "rule": "fillin.distractors",
+   "fail": {
+    "content.0.sections.1.recall.distractors": [
+     "welfare",
+     "Utility"
+    ]
+   }
+  },
+  {
+   "rule": "fillin.distractors",
+   "pass": {
+    "content.0.sections.1.recall.distractors": [
+     "welfare",
+     "value",
+     "surplus"
+    ]
+   }
+  },
+  {
+   "rule": "fillin.leak",
+   "fail": {
+    "content.0.sections.1.recall.template": [
+     "Total utility is overall satisfaction: ___",
+     "→ Marginal utility ___ as more is consumed",
+     "→ So the demand curve slopes ___"
+    ]
+   }
+  },
+  {
+   "rule": "fillin.leak",
+   "pass": {
+    "content.0.sections.1.recall.template": [
+     "Total ___ is overall satisfaction",
+     "→ Marginal ___ as more is consumed",
+     "→ So the demand curve slopes ___"
+    ],
+    "content.0.sections.1.recall.answers": [
+     "utility",
+     "diminishes",
+     "downward"
+    ]
+   }
+  },
+  {
+   "rule": "match.count",
+   "fail": {
+    "content.0.sections.0.recall": {
+     "type": "match",
+     "prompt": "Match each source of finance to the use it suits best:",
+     "pairs": [
+      {
+       "left": "Overdraft",
+       "right": "A short-term cash gap",
+       "why": "w"
+      },
+      {
+       "left": "Loan",
+       "right": "Buying a van",
+       "why": "w"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "rule": "match.unique",
+   "fail": {
+    "content.0.sections.0.recall": {
+     "type": "match",
+     "prompt": "Match each source of finance to the use it suits best:",
+     "pairs": [
+      {
+       "left": "Overdraft",
+       "right": "A short-term cash gap",
+       "why": "w"
+      },
+      {
+       "left": "Loan",
+       "right": "Buying a van",
+       "why": "w"
+      },
+      {
+       "left": "Shares",
+       "right": "Buying a van",
+       "why": "w"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "rule": "match.unique",
+   "fail": {
+    "content.0.sections.0.recall": {
+     "type": "match",
+     "prompt": "Match each source of finance to the use it suits best:",
+     "pairs": [
+      {
+       "left": "Overdraft",
+       "right": "A short-term cash gap",
+       "why": "w"
+      },
+      {
+       "left": "Loan",
+       "right": "Buying a van",
+       "why": "w"
+      },
+      {
+       "left": "Shares",
+       "right": "Expansion",
+       "why": "w"
+      }
+     ],
+     "distractors": [
+      "Expansion"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "match.prompt",
+   "fail": {
+    "content.0.sections.0.recall": {
+     "type": "match",
+     "prompt": "Sources of finance:",
+     "pairs": [
+      {
+       "left": "Overdraft",
+       "right": "A short-term cash gap",
+       "why": "w"
+      },
+      {
+       "left": "Loan",
+       "right": "Buying a van",
+       "why": "w"
+      },
+      {
+       "left": "Shares",
+       "right": "Expansion",
+       "why": "w"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "rule": "match.prompt",
+   "pass": {
+    "content.0.sections.0.recall": {
+     "type": "match",
+     "prompt": "Match each source of finance to the use it suits best:",
+     "pairs": [
+      {
+       "left": "Overdraft",
+       "right": "A short-term cash gap",
+       "why": "w"
+      },
+      {
+       "left": "Loan",
+       "right": "Buying a van",
+       "why": "w"
+      },
+      {
+       "left": "Shares",
+       "right": "Expansion",
+       "why": "w"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "rule": "classify.groups",
+   "fail": {
+    "content.0.sections.0.recall": {
+     "type": "classify",
+     "prompt": "Sort these costs into fixed and variable:",
+     "groups": [
+      {
+       "name": "Fixed",
+       "items": [
+        "Rent",
+        "Insurance",
+        "Salaries",
+        "Materials"
+       ],
+       "why": "w"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "rule": "classify.unique",
+   "fail": {
+    "content.0.sections.0.recall": {
+     "type": "classify",
+     "prompt": "Sort these costs into fixed and variable:",
+     "groups": [
+      {
+       "name": "Fixed",
+       "items": [
+        "Rent",
+        "Insurance"
+       ],
+       "why": "w"
+      },
+      {
+       "name": "Variable",
+       "items": [
+        "Rent",
+        "Materials"
+       ],
+       "why": "w"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "rule": "classify.prompt",
+   "fail": {
+    "content.0.sections.0.recall": {
+     "type": "classify",
+     "prompt": "Costs:",
+     "groups": [
+      {
+       "name": "Fixed",
+       "items": [
+        "Rent",
+        "Insurance"
+       ],
+       "why": "w"
+      },
+      {
+       "name": "Variable",
+       "items": [
+        "Packaging",
+        "Materials"
+       ],
+       "why": "w"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "rule": "classify.prompt",
+   "pass": {
+    "content.0.sections.0.recall": {
+     "type": "classify",
+     "prompt": "Sort these costs into fixed and variable:",
+     "groups": [
+      {
+       "name": "Fixed",
+       "items": [
+        "Rent",
+        "Insurance"
+       ],
+       "why": "w"
+      },
+      {
+       "name": "Variable",
+       "items": [
+        "Packaging",
+        "Materials"
+       ],
+       "why": "w"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "rule": "extras.shape",
+   "fail": {
+    "extras": {
+     "chains": [
+      {
+       "title": "Is growing larger worth it?",
+       "points": [
+        "a consideration",
+        "another consideration"
+       ]
+      }
+     ],
+     "evaluation": []
+    }
+   }
+  },
+  {
+   "rule": "extras.shape",
+   "fail": {
+    "extras": {
+     "chains": [],
+     "evaluation": [
+      {
+       "title": "How serious is a market failure?",
+       "points": [
+        "a point",
+        "another point"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.0.sections.0.recall": {
+     "type": "reorder",
+     "prompt": "Put the rational decision-making process in order, from first step to last:",
+     "correctOrder": [
+      "Identify all available options",
+      "Compare marginal benefit against marginal cost",
+      "Choose the option with the greatest net benefit"
+     ],
+     "why": [
+      "You cannot compare what you have not listed",
+      "Marginal benefit against marginal cost is the comparison a rational agent makes",
+      "The option with the greatest net benefit is the rational choice"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.1.sections.1.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "PED = percentage change in ___ demanded",
+      "→ divided by percentage change in ___"
+     ],
+     "answers": [
+      "quantity",
+      "price"
+     ],
+     "hints": [
+      "how much is bought",
+      "what it costs"
+     ],
+     "distractors": [
+      "income",
+      "supply"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.3.sections.0.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "If demand is price ___, a price rise raises total revenue"
+     ],
+     "answers": [
+      "inelastic"
+     ],
+     "hints": [
+      "responds less than proportionately"
+     ],
+     "distractors": [
+      "elastic",
+      "unitary"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.3.sections.0.keyIdea": "Whether a price rise helps or hurts turns on how strongly buyers respond.",
+    "content.3.sections.0.body.0.text": "The direction total revenue moves after a price rise depends on one thing only; it is not the size of the rise; it is whether demand is inelastic.",
+    "content.3.sections.0.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "The direction total revenue moves after a price rise depends on whether demand is ___"
+     ],
+     "answers": [
+      "inelastic"
+     ],
+     "hints": [
+      "buyers respond less than proportionately"
+     ],
+     "distractors": [
+      "elastic",
+      "unitary"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.1.sections.1.body": [
+     {
+      "type": "paragraph",
+      "text": "Elasticity is the responsiveness of one variable to another."
+     },
+     {
+      "type": "flow",
+      "steps": [
+       "Price rises by a tenth",
+       "Quantity demanded falls by a quarter",
+       "Demand is price elastic"
+      ],
+      "result": "Total revenue falls",
+      "resultType": "bad"
+     }
+    ],
+    "content.1.sections.1.recall": {
+     "type": "reorder",
+     "prompt": "Order these from the price change to its effect on revenue:",
+     "correctOrder": [
+      "Price rises by a tenth",
+      "Quantity demanded falls by a quarter",
+      "Demand is price elastic"
+     ],
+     "why": [
+      "The price change comes first",
+      "The quantity response follows it",
+      "The two together define the elasticity"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "pass": {
+    "content.3.sections.0.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "A cinema raises ticket prices and its total revenue falls, so demand for its tickets must be price ___"
+     ],
+     "answers": [
+      "elastic"
+     ],
+     "hints": [
+      "revenue moved the opposite way to price"
+     ],
+     "distractors": [
+      "inelastic",
+      "unitary"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.3.sections.0.keyIdea": "A price change moves total revenue, and which way it moves is the question.",
+    "content.3.sections.0.body.0.text": "Total revenue is price times quantity, and a rise in price raises it whenever buyers barely respond.",
+    "content.3.sections.0.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "In a market of loyal shoppers a rise in price raises total revenue whenever buyers barely ___"
+     ],
+     "answers": [
+      "respond"
+     ],
+     "hints": [
+      "what buyers do about the price"
+     ],
+     "distractors": [
+      "switch",
+      "leave"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.3.sections.0.keyIdea": "Two forces decide the outcome and only one of them is the price.",
+    "content.3.sections.0.body.0.text": "Sellers watch one figure above all others, and the figure is total revenue.",
+    "content.3.sections.0.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "Price multiplied by quantity sold is a firm’s total ___"
+     ],
+     "answers": [
+      "revenue"
+     ],
+     "hints": [
+      "what the sales bring in"
+     ],
+     "distractors": [
+      "profit",
+      "cost"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.1.sections.1.body": [
+     {
+      "type": "paragraph",
+      "text": "Elasticity is the responsiveness of one variable to another."
+     },
+     {
+      "type": "flow",
+      "steps": [
+       "Price rises",
+       "Quantity demanded falls",
+       "Revenue moves"
+      ],
+      "result": "The direction depends on PED",
+      "resultType": "neutral"
+     }
+    ],
+    "content.1.sections.1.recall": {
+     "type": "reorder",
+     "prompt": "Order these from the price change to its effect on revenue:",
+     "correctOrder": [
+      "Price rises steeply",
+      "Quantity demanded falls sharply",
+      "Revenue moves downward"
+     ],
+     "why": [
+      "The price change is first",
+      "The quantity response follows",
+      "Revenue is the product of the two"
+     ]
+    }
+   }
+  },
+  {
+   "rule": "recall.recoverable",
+   "fail": {
+    "content.3.sections.0.keyIdea": "Two things decide what a price change does to the money coming in.",
+    "content.3.sections.0.body.0.text": "Total revenue is price times quantity. It rises with the price whenever demand is inelastic.",
+    "content.3.sections.0.recall": {
+     "type": "fillin",
+     "prompt": "Complete:",
+     "template": [
+      "Total revenue is price times quantity and it rises with a price rise whenever demand is ___"
+     ],
+     "answers": [
+      "inelastic"
+     ],
+     "hints": [
+      "buyers barely move"
+     ],
+     "distractors": [
+      "elastic",
+      "unitary"
+     ]
+    }
+   }
+  }
+ ]
+}

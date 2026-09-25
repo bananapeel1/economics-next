@@ -1,0 +1,732 @@
+{
+ "section_id": "decision-making-techniques",
+ "subject": "business",
+ "label": "2026-09-14-pre-packet-13",
+ "tables": {
+  "section_content": [
+   {
+    "id": "decision-making-techniques:block:2316ce5c",
+    "title": "Quantitative Techniques",
+    "sections": [
+     {
+      "id": "decision-making-techniques:sub:decision-trees",
+      "body": [
+       {
+        "text": "A **decision tree** is a diagram that maps a sequence of decisions and uncertain outcomes. **Square nodes** represent decisions (choices the manager controls), while **circle nodes** represent chance events (outcomes determined by probability). Each branch carries a probability and a financial payoff.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **expected monetary value (EMV)** of a chance node is calculated by multiplying each outcome's payoff by its probability and summing the results. The **net gain** subtracts the initial cost of the decision from the EMV. Managers choose the branch with the highest net gain — but this is a long-run average, not a guarantee for any single decision.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The key limitation is that probabilities are **estimates**, not facts. They are based on past data or managerial judgement, both of which may be wrong. Decision trees also assume managers are risk-neutral — they treat a 10% chance of losing £1m the same as a certainty of losing £100k. In reality, most managers are risk-averse.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Identify decision and chance nodes",
+         "Assign probabilities and payoffs",
+         "Calculate EMV at each chance node",
+         "Subtract initial cost for net gain"
+        ],
+        "result": "Quantified comparison of options — but only as reliable as the probability estimates",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Decision Trees",
+      "keyIdea": "A decision tree maps out choices and chance outcomes with probabilities and financial values — the expected monetary value (EMV) tells you which path has the highest average payoff, but averages hide risk.",
+      "examMatters": "Examiners test calculation and evaluation together. You must be able to draw the tree, calculate EMV and net gain, and then critically evaluate the result. Always state that the probabilities are estimates, the decision is one-off not repeated, and risk attitude matters — these are the three standard evaluation points.",
+      "realExample": {
+       "text": "Pharmaceutical companies use decision trees for R&D investment. A new drug might have a 20% chance of passing clinical trials (payoff: £500m) and an 80% chance of failure (payoff: £0), with a development cost of £80m. EMV = (0.2 x £500m) + (0.8 x £0) = £100m. Net gain = £100m - £80m = £20m — worth pursuing on average, but any single drug is more likely to fail.",
+       "emoji": "💊"
+      },
+      "misconception": "Students treat EMV as the actual outcome. Wrong — EMV is a weighted average across many decisions; any single project will either succeed or fail, not land on the average. Instead write: EMV guides the best choice on average over repeated decisions, but does not predict the outcome of a single project."
+     },
+     {
+      "id": "decision-making-techniques:sub:critical-path-analysis",
+      "body": [
+       {
+        "text": "**Critical path analysis** (CPA) is a project management technique that identifies all tasks, their durations, and their dependencies. The **critical path** is the longest route through the network — it determines the minimum project duration. Any delay to a task on the critical path delays the entire project.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Each activity has an **earliest start time (EST)** calculated by a forward pass through the network, and a **latest finish time (LFT)** calculated by a backward pass. **Float** (or slack) is the time a non-critical activity can be delayed without affecting the project completion. Activities on the critical path have zero float.",
+        "type": "paragraph"
+       },
+       {
+        "text": "CPA helps managers allocate resources efficiently — workers and equipment can be moved from high-float activities to critical ones. It also provides a framework for monitoring progress and identifying where time can be saved by investing extra resources (known as 'crashing' an activity).",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "List all activities and dependencies",
+         "Forward pass: calculate ESTs",
+         "Backward pass: calculate LFTs",
+         "Float = LFT - EST - duration"
+        ],
+        "result": "Critical path identified (float = 0) — focus resources here to meet deadline",
+        "resultType": "good"
+       }
+      ],
+      "title": "Critical Path Analysis (CPA)",
+      "keyIdea": "CPA identifies the longest sequence of dependent tasks in a project — this 'critical path' determines the shortest possible completion time, and any delay on it delays the whole project.",
+      "examMatters": "Examiners expect you to calculate ESTs and LFTs, identify the critical path, and calculate float for non-critical activities. Practise the forward and backward pass until they are automatic. In evaluation, note that CPA assumes task durations are accurate — in practice, unexpected delays (supply shortages, weather) can disrupt even the best plan.",
+      "realExample": {
+       "text": "The construction of venues for the London 2012 Olympics relied on CPA to coordinate thousands of interdependent tasks across multiple sites. The critical path for the main stadium determined that steel frame erection and roof installation had zero float — any delay would push back the entire opening ceremony date.",
+       "emoji": "🏟️"
+      },
+      "misconception": "Students think the critical path is the most important path. Partially right, but misleading — it is the longest path, and it is critical because it determines the project duration. Instead write: the critical path is the longest sequence of dependent activities with zero float; it matters because it sets the minimum completion time for the entire project."
+     }
+    ],
+    "takeaway": [
+     "Decision trees: EMV = sum of (probability x payoff); net gain = EMV minus cost.",
+     "EMV is a long-run average — probabilities are estimates and risk attitude matters.",
+     "CPA: the critical path is the longest route with zero float, setting the minimum project time.",
+     "Both techniques provide structure for decisions but depend on the accuracy of the input data."
+    ]
+   },
+   {
+    "id": "decision-making-techniques:block:af33306f",
+    "title": "Sales Forecasting",
+    "sections": [
+     {
+      "id": "decision-making-techniques:sub:moving-averages-extrapolation",
+      "body": [
+       {
+        "text": "A **moving average** calculates the mean of a set number of consecutive data points, then moves forward one period and recalculates. A 4-quarter moving average, for example, smooths out seasonal variation to reveal whether sales are trending up, down, or flat over time.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Extrapolation** extends the identified trend line into the future to generate a forecast. It assumes that the patterns of the past will continue — that the forces driving sales growth or decline will remain broadly the same. This works well in stable, mature markets with consistent consumer behaviour.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The danger is clear: extrapolation cannot predict disruption. It assumes continuity, so it fails spectacularly when markets experience structural change — new technology, regulatory shifts, or sudden changes in consumer behaviour. The further into the future the extrapolation reaches, the less reliable it becomes.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Collect historical sales data",
+         "Calculate moving averages to smooth fluctuations",
+         "Identify the underlying trend",
+         "Extrapolate the trend forward"
+        ],
+        "result": "Sales forecast generated — reliable in stable markets, dangerous in disrupted ones",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Moving Averages & Extrapolation",
+      "keyIdea": "Moving averages smooth out short-term fluctuations to reveal the underlying trend — extrapolation then extends that trend into the future, which works well until the market fundamentally changes.",
+      "examMatters": "Examiners often give you a time series and ask you to calculate a moving average and plot it. Practise the arithmetic. In evaluation, always discuss the assumption of continuity — state that extrapolation works in stable conditions but breaks down when markets are disrupted by technology, regulation, or unexpected events.",
+      "realExample": {
+       "text": "Blockbuster's sales forecasts through the mid-2000s extrapolated steady DVD rental growth. The trend line showed a healthy business. But extrapolation could not predict Netflix's streaming model, which made Blockbuster's entire business model obsolete within five years — a catastrophic failure of backward-looking forecasting.",
+       "emoji": "📼"
+      },
+      "misconception": "Students say moving averages predict the future. Wrong — moving averages only smooth historical data to reveal a past trend. Extrapolation then projects that trend forward, but it is the extrapolation step that creates the forecast. Instead write: moving averages reveal the trend; extrapolation assumes the trend continues — and that assumption is the source of all forecasting risk."
+     },
+     {
+      "id": "decision-making-techniques:sub:correlation-and-forecasting-limits",
+      "body": [
+       {
+        "text": "**Correlation** measures the strength and direction of a relationship between two variables. A positive correlation means they move together; a negative correlation means they move in opposite directions. The correlation coefficient ranges from -1 (perfect negative) to +1 (perfect positive), with 0 meaning no relationship.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The critical distinction is that **correlation does not prove causation**. Ice cream sales and drowning deaths are positively correlated — but ice cream does not cause drowning. Both are driven by a third variable: hot weather. Firms that mistake correlation for causation may invest in marketing strategies based on relationships that have no real causal mechanism.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Forecasting has fundamental limits. All quantitative methods rely on historical data, which may not reflect future conditions. The strongest forecasting combines quantitative techniques with qualitative judgement — market research, expert opinion, and awareness of emerging trends that the numbers cannot yet capture.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Two variables appear correlated",
+         "Firm assumes causal link",
+         "Builds strategy on that assumption",
+         "Third variable was the true driver"
+        ],
+        "result": "Spurious correlation leads to misguided investment — always test for causation",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Correlation, Causation & the Limits of Forecasting",
+      "keyIdea": "Two variables moving together (correlation) does not mean one causes the other — and building a sales forecast on a spurious correlation can lead a firm to invest millions in the wrong strategy.",
+      "examMatters": "The correlation-causation distinction is a favourite evaluation point. If a case study shows two correlated variables, examiners reward students who question whether the relationship is causal. Always suggest possible confounding variables and explain why acting on a spurious correlation could lead to wasted investment.",
+      "realExample": {
+       "text": "Netflix combines quantitative forecasting (viewing data, subscriber growth trends) with qualitative judgement (content strategy, competitive analysis) to forecast demand. Its data-driven approach predicted the success of House of Cards before production began, blending correlation analysis of viewer preferences with creative judgement about content quality.",
+       "emoji": "📊"
+      },
+      "misconception": "Students write that strong correlation proves a relationship is causal. Wrong — correlation only shows co-movement; causation requires a logical mechanism, time sequence, and elimination of confounding variables. Instead write: a strong correlation is evidence of a possible relationship, but causation must be established through further analysis — without a causal mechanism, the correlation may be coincidental."
+     }
+    ],
+    "takeaway": [
+     "Moving averages smooth data to reveal trends; extrapolation projects those trends forward.",
+     "Extrapolation assumes continuity — it fails when markets are disrupted.",
+     "Correlation measures co-movement but does not prove causation — always look for confounding variables.",
+     "The best forecasting combines quantitative techniques with qualitative judgement and market awareness."
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Map out options and chance events",
+      "Assign probabilities and payoffs",
+      "Calculate EMV and net gain for each option"
+     ],
+     "result": "Choose the option with the highest net gain — but consider the limitations",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Decision Trees",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Decision tree</strong> — a diagram showing the choices, chance events, probabilities, and payoffs involved in a decision, allowing calculation of expected monetary values.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Expected monetary value (EMV)</strong> — the weighted average of possible outcomes: EMV = Σ(probability × payoff) for each chance event.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Net gain</strong> — EMV minus the cost of the option; the net gain tells you which option adds the most expected value.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Decision nodes (squares) represent choices the manager controls; chance nodes (circles) represent uncertain outcomes with assigned probabilities.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Calculate EMV at each chance node by multiplying probabilities by payoffs, then subtract costs to find <strong>net gain</strong> for each option.",
+        "type": "mech"
+       },
+       {
+        "text": "Decision trees look objective but rely on <strong>estimated probabilities</strong> — if these are wrong, the 'best' option may actually be the worst.",
+        "type": "imp"
+       }
+      ],
+      "title": "HOW TO USE THEM"
+     }
+    ],
+    "formula": {
+     "text": "EMV = Σ (probability × payoff)",
+     "label": "EXPECTED MONETARY VALUE"
+    },
+    "keyIdea": "Decision trees give managers a visual, quantitative method for comparing options under uncertainty — by calculating expected values they can identify the option that maximises the expected monetary return.",
+    "takeaway": [
+     "EMV = Σ(probability × payoff); net gain = EMV − cost.",
+     "Strengths: visual, quantitative, forces structured thinking.",
+     "Limitations: probabilities are estimates, ignores risk attitude and qualitative factors."
+    ],
+    "examMatters": "Examiners expect you to calculate EMVs accurately, then evaluate the limitations. Always mention: probabilities are estimates, risk attitude matters (a risk-averse manager may avoid the highest EMV if it has high variance), and the tree ignores qualitative factors.",
+    "misconception": "Students think the highest EMV is always the right choice. Wrong because EMV ignores the firm's attitude to risk and the range of possible outcomes. Instead write: EMV identifies the statistically best option, but a risk-averse firm may prefer a lower-EMV option with less downside risk."
+   },
+   {
+    "flow": {
+     "steps": [
+      "List all activities and dependencies",
+      "Forward pass (ESTs) → backward pass (LFTs)",
+      "Identify critical path (zero float activities)"
+     ],
+     "result": "Managers know minimum project time, where to focus resources, and where delays are tolerable",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Critical Path Analysis (CPA)",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Critical path</strong> — the longest sequence of dependent activities through the network; it determines the minimum time to complete the project.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Float (slack)</strong> — the amount of time a non-critical activity can be delayed without extending the total project duration; float = LFT – EST – duration.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>EST/LFT</strong> — Earliest Start Time and Latest Finish Time for each activity, calculated by forward and backward passes through the network.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Forward pass</strong>: calculate ESTs from start to finish to find the earliest each activity can begin.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Backward pass</strong>: calculate LFTs from finish to start to find the latest each activity can finish without delaying the project.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Activities with <strong>zero float</strong> are on the critical path — any delay to these delays the whole project.",
+        "type": "mech"
+       },
+       {
+        "text": "CPA is only as good as the time estimates: if activity durations are inaccurate, the critical path may shift to a different sequence.",
+        "type": "imp"
+       }
+      ],
+      "title": "HOW TO USE CPA"
+     }
+    ],
+    "formula": {
+     "text": "Float = LFT – EST – Duration",
+     "label": "TOTAL FLOAT"
+    },
+    "keyIdea": "Critical path analysis maps every task in a project, identifies which activities determine the minimum project duration, and reveals where float exists — enabling managers to allocate resources efficiently and meet deadlines.",
+    "takeaway": [
+     "Critical path = longest route = minimum project duration.",
+     "Float = how much a non-critical activity can slip without delaying the project.",
+     "Limitations: relies on accurate time estimates, ignores resource constraints."
+    ],
+    "examMatters": "Examiners expect you to calculate ESTs, LFTs, float, and identify the critical path. Then evaluate: CPA assumes accurate time estimates, ignores resource constraints, and doesn't account for task quality.",
+    "misconception": "Students think CPA guarantees the project finishes on time. Wrong because it assumes time estimates are accurate and that unlimited resources are available. Instead write: CPA identifies the minimum project duration assuming accurate estimates and sufficient resources — in reality, estimates may be wrong and resource constraints may extend the project."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Collect historical sales data",
+      "Calculate moving averages / identify trend",
+      "Extrapolate trend into the future"
+     ],
+     "result": "Informed estimate of future sales — but subject to significant uncertainty",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "Quantitative Sales Forecasting",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Moving average</strong> — the mean of a fixed number of recent data points; smooths out short-term fluctuations to reveal the underlying trend.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Extrapolation</strong> — extending a trend line into the future, assuming past patterns will continue.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Correlation</strong> — measuring the strength of the relationship between two variables (e.g. advertising spend and sales); correlation does not prove causation.",
+        "type": "mech"
+       }
+      ],
+      "title": "KEY TECHNIQUES"
+     },
+     {
+      "items": [
+       {
+        "text": "Quantitative forecasting works best in <strong>stable markets</strong> where past trends are reliable predictors of the future.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "In volatile or disrupted markets, extrapolation can be dangerously misleading — a new competitor, regulation, or technology can break any trend.",
+        "type": "imp"
+       },
+       {
+        "text": "Forecasting links to investment appraisal: sales forecasts feed into cash flow projections for NPV and payback calculations.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "Sales forecasting uses past data to predict future demand — moving averages smooth out fluctuations, trend lines show direction, and extrapolation projects forward — but the past is not always a reliable guide to the future.",
+    "takeaway": [
+     "Moving averages smooth data to reveal trends; extrapolation projects trends forward.",
+     "Correlation ≠ causation — always question whether the relationship is causal.",
+     "Forecasting works best in stable markets; in volatile markets, qualitative input is essential."
+    ],
+    "examMatters": "Examiners expect you to calculate a moving average from data and evaluate whether extrapolation is reliable. Always consider: how stable is the market? Are there foreseeable disruptions? Should the firm also use qualitative methods (expert opinion, market research)?",
+    "misconception": "Students think quantitative forecasts are reliable because they use data. Wrong because data only describes the past, and the future may be fundamentally different. Instead write: quantitative forecasts provide a useful starting point but should be combined with qualitative judgement, especially in fast-changing markets."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "decision-making-techniques:quiz:cde89152",
+    "options": [
+     "£45,000",
+     "£50,000",
+     "£55,000",
+     "£150,000"
+    ],
+    "question": "A firm calculates a 3-period moving average using sales data of £40,000, £50,000, and £60,000. What is the result?",
+    "explanation": "(£40,000 + £50,000 + £60,000) ÷ 3 = £150,000 ÷ 3 = £50,000.",
+    "correctIndex": 1
+   },
+   {
+    "id": "decision-making-techniques:quiz:3542b01c",
+    "options": [
+     "2 years",
+     "3 years",
+     "4 years",
+     "5 years"
+    ],
+    "question": "An investment of £120,000 generates annual cash flows of £40,000 for 5 years. The payback period is:",
+    "explanation": "Cumulative: Y1 = £40,000, Y2 = £80,000, Y3 = £120,000. The investment is fully recovered at the end of Year 3.",
+    "correctIndex": 1
+   },
+   {
+    "id": "decision-making-techniques:quiz:2fe633eb",
+    "options": [
+     "5%",
+     "10%",
+     "20%",
+     "40%"
+    ],
+    "question": "A project costs £200,000 and generates total net profit of £80,000 over 4 years. What is the ARR?",
+    "explanation": "Average annual profit = £80,000 ÷ 4 = £20,000. ARR = (£20,000 ÷ £200,000) × 100 = 10%.",
+    "correctIndex": 1
+   },
+   {
+    "id": "decision-making-techniques:quiz:fb473d08",
+    "options": [
+     "Accept the project as it generates revenue",
+     "Accept if the payback period is short enough",
+     "Reject the project as it destroys value",
+     "Accept only if ARR is above 10%"
+    ],
+    "question": "A project has an NPV of −£15,000. The firm should:",
+    "explanation": "A negative NPV means the project's present value of returns is less than the initial investment — it destroys shareholder value and should be rejected.",
+    "correctIndex": 2
+   },
+   {
+    "id": "decision-making-techniques:quiz:8ad1c386",
+    "options": [
+     "Adding all possible outcomes together",
+     "Multiplying each outcome by its probability and summing the results",
+     "Choosing the most likely outcome",
+     "Subtracting costs from the highest possible outcome"
+    ],
+    "question": "In a decision tree, expected value is calculated by:",
+    "explanation": "Expected Value = Σ (Probability × Payoff). It is the weighted average of all possible outcomes.",
+    "correctIndex": 1
+   },
+   {
+    "id": "decision-making-techniques:quiz:6611ae09",
+    "options": [
+     "The shortest route through the network",
+     "The route with the most activities",
+     "The longest route, determining minimum project time",
+     "The most expensive route through the network"
+    ],
+    "question": "In CPA, the critical path is defined as:",
+    "explanation": "The critical path is the longest route through the network diagram. It determines the minimum project completion time — any delay on this path delays the entire project.",
+    "correctIndex": 2
+   },
+   {
+    "id": "decision-making-techniques:quiz:d101b57b",
+    "options": [
+     "3 days",
+     "4 days",
+     "7 days",
+     "0 days"
+    ],
+    "question": "An activity has EST = 8, Duration = 4, LFT = 15. What is the total float?",
+    "explanation": "Total Float = LFT − Duration − EST = 15 − 4 − 8 = 3 days. The activity can be delayed by up to 3 days without affecting the project end date.",
+    "correctIndex": 0
+   },
+   {
+    "id": "decision-making-techniques:quiz:b5977ab6",
+    "options": [
+     "£48",
+     "£30",
+     "£18",
+     "£12"
+    ],
+    "question": "A product sells for £30 with variable costs of £18. The contribution per unit is:",
+    "explanation": "Contribution per unit = Selling price − Variable cost = £30 − £18 = £12.",
+    "correctIndex": 3
+   },
+   {
+    "id": "decision-making-techniques:quiz:d35ddac6",
+    "options": [
+     "2,000 units",
+     "3,000 units",
+     "4,000 units",
+     "5,000 units"
+    ],
+    "question": "Fixed costs are £60,000 and contribution per unit is £15. The break-even point is:",
+    "explanation": "Break-even = Fixed costs ÷ Contribution per unit = £60,000 ÷ £15 = 4,000 units.",
+    "correctIndex": 2
+   },
+   {
+    "id": "decision-making-techniques:quiz:3d708494",
+    "options": [
+     "Simple payback period",
+     "Average rate of return (ARR)",
+     "Net present value (NPV)",
+     "Contribution analysis"
+    ],
+    "question": "Which investment appraisal method accounts for the time value of money?",
+    "explanation": "NPV uses discount factors to convert future cash flows to their present values, reflecting the time value of money. Payback and ARR do not.",
+    "correctIndex": 2
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "decision-making-techniques:practice:dd657aab",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "NPV is the total present value of all future cash flows from an investment, minus the initial cost, after discounting to account for the time value of money (1 mark). The discount rate reflects the opportunity cost of capital — the return the business could earn from an alternative investment (1 mark). A positive NPV means the investment generates returns greater than the cost of capital, making it financially worthwhile (1 mark). A negative NPV means the investment destroys value and should be rejected (1 mark).",
+    "question": "Define the term 'net present value' (NPV) and explain why a positive NPV is desirable. (4 marks)"
+   },
+   {
+    "id": "decision-making-techniques:practice:5075f3f8",
+    "marks": 6,
+    "command": "Analyse",
+    "guidance": "Payback ignores cash flows after the payback period (1 mark) — Machine B's significantly higher long-term returns in years 4-8 are not captured, potentially leading to a poorer investment decision (1 mark). Payback does not account for the time value of money (1 mark) — cash received in year 1 is treated the same as cash in year 5, which is misleading (1 mark). Payback focuses on liquidity rather than total profitability (1 mark), so choosing Machine A based solely on faster payback could mean missing out on Machine B's superior overall return on investment. However, payback remains popular because it is simple and reduces risk in uncertain environments (1 mark).",
+    "question": "ThermoTech is deciding between two production machines. Machine A costs £200,000 with a payback period of 2 years. Machine B costs £350,000 with a payback of 3.5 years but generates significantly higher cash flows in years 4-8. Analyse the limitations of using payback period to evaluate this decision. (6 marks)"
+   },
+   {
+    "id": "decision-making-techniques:practice:0434c043",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Calculate expected values: new resort = (0.6 x £8m) + (0.4 x £2m) - £4m = £1.6m net gain (2 marks). Renovation = £3m - £1.5m = £1.5m net gain (1 mark). The resort has a marginally higher expected value (£0.1m difference).\n\nValue of decision trees: forces managers to quantify probabilities and consider multiple outcomes (2 marks); provides a structured framework for comparison and communicating decisions to stakeholders (1 mark).\n\nLimitations: probabilities are estimates that may be inaccurate (1 mark); the technique assumes decision-makers are risk-neutral — the small £0.1m difference may not justify the much higher risk and cost of the resort option (1 mark); ignores qualitative factors such as brand impact and competitive response (1 mark).\n\nJudgement: decision trees provide useful analytical support but should not be the sole basis for a major investment — the small difference in expected value here may represent false precision (1 mark).",
+    "question": "A hotel chain is deciding whether to build a new luxury resort (60% chance of high demand yielding £8m profit, 40% chance of low demand yielding £2m, costing £4m) or renovate existing hotels (certain return of £3m, costing £1.5m). Assess the value of decision tree analysis for this investment decision. (10 marks)"
+   },
+   {
+    "id": "decision-making-techniques:practice:fea2b9e6",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define investment appraisal and its purpose in evaluating capital expenditure decisions (2 marks).\n\nPayback period: shows how quickly the initial investment is recovered; useful for assessing liquidity impact and short-term risk (2 marks). But ignores cash flows after payback and does not account for the time value of money — problematic for 10-year investments (2 marks).\n\nARR (average rate of return): measures percentage return on investment, allowing comparison with other projects and the company's target rate (2 marks). But uses accounting profits rather than cash flows and ignores the timing of returns (2 marks).\n\nNPV: theoretically the most sound method as it accounts for the time value of money and measures total project value (2 marks). The company's known cost of capital (8%) provides a clear discount rate. But NPV requires accurate long-term cash flow forecasts — difficult over 10 years — and produces an absolute figure that does not directly show percentage return (2 marks).\n\nEvaluation: For a 10-year investment, NPV is the most useful method because the timing of returns matters significantly over such a long horizon, and the 8% cost of capital provides a reliable discount rate. However, using NPV alone would miss important information — payback shows liquidity risk, and ARR allows comparison with target returns. The most effective approach is to use all three methods together, with NPV carrying the most weight in the final decision (6 marks).",
+    "question": "A logistics company must choose between investing £5 million in an automated warehouse system or £5 million in a fleet of electric delivery vehicles. Both have a 10-year expected life and the company's cost of capital is 8%. Evaluate which method of investment appraisal would be most useful for this decision. (20 marks)"
+   },
+   {
+    "id": "decision-making-techniques:practice:ef16797f",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Benefit 1: Identifies which variables the decision is most sensitive to (1 mark) — for example, showing that a small change in sales volume dramatically affects NPV alerts managers to the key risk factor (1 mark).\n\nBenefit 2: Helps managers plan for worst-case scenarios (1 mark) — by testing different assumptions (e.g., higher costs, lower demand), the business can develop contingency plans and understand the margin for error before committing to an investment (1 mark).",
+    "question": "Outline two benefits of using sensitivity analysis alongside investment appraisal. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "decision-making-techniques:card:9d83932a",
+    "back": "The sum of <strong>three consecutive data points</strong> divided by 3. It smooths out short-term fluctuations to reveal the underlying trend.",
+    "front": "What is a 3-period moving average?"
+   },
+   {
+    "id": "decision-making-techniques:card:7a1dff31",
+    "back": "Extending a <strong>trend line beyond existing data</strong> to predict future values. Assumes past patterns continue into the future.",
+    "front": "What is extrapolation?"
+   },
+   {
+    "id": "decision-making-techniques:card:93325e14",
+    "back": "The time it takes for a project's <strong>cumulative net cash inflows to equal the initial investment</strong> — how long until the firm gets its money back.",
+    "front": "What does the payback period measure?"
+   },
+   {
+    "id": "decision-making-techniques:card:a9e148b8",
+    "back": "<strong>Payback = Years before full recovery + (Amount still to recover ÷ Cash flow in recovery year)</strong>.",
+    "front": "State the formula for payback period."
+   },
+   {
+    "id": "decision-making-techniques:card:e05c9611",
+    "back": "<strong>ARR = (Average annual profit ÷ Initial investment) × 100%</strong>. Average annual profit = Total net profit ÷ Number of years.",
+    "front": "State the formula for ARR."
+   },
+   {
+    "id": "decision-making-techniques:card:b7fd492f",
+    "back": "NPV accounts for the <strong>time value of money</strong> — it recognises that £1 received today is worth more than £1 received in the future.",
+    "front": "What is the key advantage of NPV over payback and ARR?"
+   },
+   {
+    "id": "decision-making-techniques:card:8fc24abe",
+    "back": "If NPV is <strong>positive</strong>, accept the project (it adds value). If NPV is <strong>negative</strong>, reject the project (it destroys value). Choose the project with the highest NPV.",
+    "front": "State the NPV decision rule."
+   },
+   {
+    "id": "decision-making-techniques:card:5c30b8e5",
+    "back": "<strong>Decision points</strong> — choices the manager must make between different options.",
+    "front": "What do square nodes represent in a decision tree?"
+   },
+   {
+    "id": "decision-making-techniques:card:7041c66b",
+    "back": "<strong>Chance nodes</strong> — uncertain outcomes, each with an associated probability. All probabilities from one node sum to 1.0.",
+    "front": "What do circle nodes represent in a decision tree?"
+   },
+   {
+    "id": "decision-making-techniques:card:4932e691",
+    "back": "<strong>EV = Σ (Probability × Payoff)</strong>. It is the weighted average return for a given option.",
+    "front": "State the formula for Expected Value."
+   },
+   {
+    "id": "decision-making-techniques:card:0cda4bb5",
+    "back": "The <strong>longest route</strong> through the network diagram, determining the <strong>minimum project completion time</strong>. Any delay on this path delays the entire project.",
+    "front": "What is the critical path in CPA?"
+   },
+   {
+    "id": "decision-making-techniques:card:7182ec8f",
+    "back": "<strong>Total Float = LFT − Duration − EST</strong>. Activities on the critical path have a float of zero.",
+    "front": "State the formula for total float."
+   },
+   {
+    "id": "decision-making-techniques:card:4f166d0e",
+    "back": "Work <strong>forward</strong> through the network. At each node, take the <strong>highest</strong> value of (previous EST + activity duration).",
+    "front": "How is EST calculated?"
+   },
+   {
+    "id": "decision-making-techniques:card:0b3d6003",
+    "back": "Work <strong>backward</strong> from the end. At each node, take the <strong>lowest</strong> value of (next LFT − activity duration).",
+    "front": "How is LFT calculated?"
+   },
+   {
+    "id": "decision-making-techniques:card:3859347d",
+    "back": "<strong>Selling price minus variable cost per unit</strong>. The amount each unit contributes toward paying fixed costs and generating profit.",
+    "front": "What is contribution per unit?"
+   },
+   {
+    "id": "decision-making-techniques:card:6359434a",
+    "back": "<strong>Break-even output = Fixed costs ÷ Contribution per unit</strong>.",
+    "front": "State the break-even formula using contribution."
+   },
+   {
+    "id": "decision-making-techniques:card:a46afa79",
+    "back": "When the special order price <strong>exceeds the variable cost per unit</strong> and there is <strong>spare capacity</strong> — the order makes a positive contribution.",
+    "front": "When should a firm accept a special order?"
+   },
+   {
+    "id": "decision-making-techniques:card:a487403b",
+    "back": "It ignores <strong>cash flows after the payback period</strong> — a project with lower total returns but faster payback could be preferred over a more profitable alternative.",
+    "front": "Give one limitation of the payback method."
+   },
+   {
+    "id": "decision-making-techniques:card:69137f64",
+    "back": "<strong>Probabilities are estimates</strong> based on judgement or historical data, not certainties. The quality of the decision depends on the accuracy of these estimates.",
+    "front": "Give one limitation of decision trees."
+   },
+   {
+    "id": "decision-making-techniques:card:e1dff250",
+    "back": "Because money received further in the future has a <strong>lower present value</strong> — due to the opportunity cost of waiting (you could invest money received today) and the impact of inflation.",
+    "front": "Why does the discount factor decrease for later years?"
+   }
+  ],
+  "section_diagrams": null,
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "Payback period measures how quickly an investment recoups its initial outlay — shorter payback means lower risk.",
+      "Average rate of return (ARR) expresses total profit as a percentage of the investment — enabling comparison across projects.",
+      "Net present value (NPV) discounts future cash flows to present value, accounting for the time value of money.",
+      "A positive NPV means the project generates returns above the required rate — it adds value to the business."
+     ],
+     "title": "Investment appraisal evaluates long-term projects",
+     "result": "Investment appraisal methods provide structured evidence for capital decisions — NPV is theoretically superior but payback and ARR offer simplicity and practicality."
+    },
+    {
+     "steps": [
+      "A decision tree maps out possible outcomes of each option, assigning probabilities and estimated financial values.",
+      "Expected monetary value (EMV) is calculated by multiplying each outcome's value by its probability.",
+      "The option with the highest net EMV (after subtracting initial costs) is identified as the financially optimal choice.",
+      "The visual framework makes complex decisions easier to communicate and justify to stakeholders."
+     ],
+     "title": "Decision trees quantify options under uncertainty",
+     "result": "Decision trees provide a structured method for comparing options under uncertainty — but accuracy depends entirely on the reliability of probability estimates."
+    },
+    {
+     "steps": [
+      "All project activities, their durations and dependencies are mapped in a network diagram.",
+      "The critical path — the longest sequence of dependent activities — determines the minimum project duration.",
+      "Activities on the critical path have zero float; any delay extends the entire project.",
+      "Managers focus resources on critical activities and use float in non-critical activities to reallocate resources where needed."
+     ],
+     "title": "Critical path analysis optimises project management",
+     "result": "CPA enables efficient project delivery by identifying where delays matter most — it reduces waste and improves on-time completion."
+    },
+    {
+     "steps": [
+      "Quantitative tools (NPV, decision trees, CPA) provide objective, evidence-based analysis that reduces bias.",
+      "However, they rely on forecasts and assumptions that may prove inaccurate — especially in volatile markets.",
+      "Qualitative factors — brand impact, employee morale, ethical implications, stakeholder reactions — cannot be easily quantified.",
+      "The best decisions integrate rigorous data analysis with experienced managerial judgement about factors the numbers cannot capture."
+     ],
+     "title": "Effective decisions combine quantitative data with qualitative judgement",
+     "result": "No quantitative technique replaces judgement — effective strategy combines data-driven analysis with an understanding of the broader business context."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "NPV vs payback — different strengths",
+     "content": "NPV considers the time value of money and total return, making it theoretically superior. But payback is simpler, focuses on liquidity and is easier to communicate. Many firms use both: NPV for strategic investments, payback for cash-constrained decisions."
+    },
+    {
+     "title": "Decision tree probabilities are often subjective",
+     "content": "In practice, probability estimates are guesses based on incomplete information — the calculated EMV may be misleading. Decision trees also oversimplify complex decisions with many variables. They are best used as one input into decision-making, not the sole basis."
+    },
+    {
+     "title": "Quantitative tools cannot handle genuine uncertainty",
+     "content": "All techniques assume some predictability, but businesses face genuine uncertainty where probabilities cannot be reliably assigned. Rapid technological change, political instability and shifting preferences defy forecasting. Flexibility and adaptability may matter more than precise calculation."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "decision-making-techniques:mistake:aab75b54",
+    "title": "Confusing Profit and Cash Flow in ARR",
+    "examTip": "If the question provides cash flows, calculate profit by subtracting the initial investment from total cash inflows. This is a very common calculation error.",
+    "mistake": "Using cash flows instead of profit when calculating ARR.",
+    "correction": "ARR uses PROFIT, not cash flow. Total net profit = Total cash inflows − Initial investment. Average annual profit = Total net profit ÷ Number of years. Then: ARR = Average annual profit ÷ Initial investment × 100%."
+   },
+   {
+    "id": "decision-making-techniques:mistake:f53c0cef",
+    "title": "Forgetting to Subtract Initial Investment in NPV",
+    "examTip": "Set up a clear table: Year | Cash Flow | Discount Factor | Present Value. Include Year 0 with the initial investment as a negative value. Sum all present values for NPV.",
+    "mistake": "Calculating the total present value of cash flows but forgetting to subtract the initial investment to find NPV.",
+    "correction": "NPV = Total present value of all future cash flows MINUS the initial investment cost. A common approach is to include the initial investment as a negative cash flow at Year 0 (discount factor = 1.000)."
+   },
+   {
+    "id": "decision-making-techniques:mistake:0631440f",
+    "title": "Working Decision Trees Left to Right",
+    "examTip": "Start at the far right of the tree and work backwards. Calculate EV at each chance node, then at decision nodes, choose the option with the highest net gain.",
+    "mistake": "Attempting to calculate decision tree values from left to right (start to finish).",
+    "correction": "Decision trees are solved by 'rolling back' — working from RIGHT to LEFT. Calculate expected values at chance nodes first, then compare options at decision nodes."
+   },
+   {
+    "id": "decision-making-techniques:mistake:64637a3f",
+    "title": "Confusing EST and LFT Direction in CPA",
+    "examTip": "Remember: 'Forward = Highest' for EST, 'Backward = Lowest' for LFT. This is one of the most common CPA errors in exams.",
+    "mistake": "Calculating EST backwards or LFT forwards, leading to incorrect float calculations.",
+    "correction": "EST is calculated working FORWARD (left to right) — take the HIGHEST value at each node. LFT is calculated working BACKWARD (right to left) — take the LOWEST value at each node."
+   },
+   {
+    "id": "decision-making-techniques:mistake:789262db",
+    "title": "Ignoring Limitations When Recommending a Method",
+    "examTip": "A complete answer uses the quantitative result as a starting point, then evaluates it by considering limitations, qualitative factors, and the specific business context.",
+    "mistake": "Recommending a decision based solely on quantitative results without discussing the limitations of the technique.",
+    "correction": "Always acknowledge that quantitative tools have limitations — they depend on estimated data, ignore qualitative factors, and may not capture real-world complexity. Evaluation requires discussing these limitations alongside the numerical results."
+   },
+   {
+    "id": "decision-making-techniques:mistake:ab8e2dbe",
+    "title": "Not Showing Workings in Calculations",
+    "examTip": "Examiners award METHOD marks even if the final answer is wrong. Showing workings ensures you earn partial credit and makes your reasoning transparent.",
+    "mistake": "Jumping to a final answer without showing the calculation steps.",
+    "correction": "Always show your method clearly: state the formula, substitute the values, show intermediate steps, and clearly label the final answer with correct units (£, %, years)."
+   }
+  ]
+ }
+}

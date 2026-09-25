@@ -1,5 +1,6 @@
 "use client";
 import { useState, useCallback } from 'react';
+import { shuffleAllOptions } from '@/lib/shuffle-options';
 import { useAuth } from '../AuthProvider';
 import SubjectSelect from './SubjectSelect';
 import BlackjackGame from './BlackjackGame';
@@ -83,7 +84,8 @@ export default function FunPage({ previewMode = false }) {
       const r = await fetch(`/api/fun/questions?subject=${subj}`);
       const data = await r.json();
       if (data?.questions) {
-        setQuestionPool(data.questions);
+        // F074: the Fun quiz draws the same bank, so it carried the same 64% bias.
+        setQuestionPool(shuffleAllOptions(data.questions));
       }
     } catch {}
 

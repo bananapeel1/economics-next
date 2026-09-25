@@ -1,0 +1,1292 @@
+{
+ "section_id": "supply",
+ "subject": "economics",
+ "label": "2026-09-16-pre-packet-23",
+ "tables": {
+  "section_content": [
+   {
+    "id": "supply:block:9a558e17",
+    "title": "The Supply Curve",
+    "sections": [
+     {
+      "id": "supply:sub:supply-and-the-supply-curve",
+      "body": [
+       {
+        "text": "**Supply** is the quantity of a good or service that producers are willing and able to offer for sale at a given price in a given time period. Notice the phrase \"willing and able\" -- a firm must both want to sell and have the capacity to produce. The **law of supply** states that, ceteris paribus, as the price of a good rises, the quantity supplied rises.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Price of the good rises",
+         "Revenue per unit increases",
+         "Production becomes more profitable"
+        ],
+        "result": "Firms expand output and new firms enter the market",
+        "resultType": "good"
+       },
+       {
+        "text": "The **supply curve** is an upward-sloping line on a price-quantity diagram. Each point on the curve shows the quantity producers will offer at that specific price. You read it the same way as a demand curve -- price on the vertical axis, quantity on the horizontal axis.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The upward slope reflects increasing **marginal costs** of production. As firms produce more, they use less efficient resources or pay overtime wages, pushing up the cost of each additional unit. A higher price is therefore needed to cover those rising costs.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Supply and the Supply Curve",
+      "recall": {
+       "id": "supply:sub:supply-and-the-supply-curve:recall",
+       "type": "reorder",
+       "prompt": "Put the law of supply chain in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Price of the good rises",
+        "Revenue per unit increases",
+        "Production becomes more profitable",
+        "Firms expand output and new firms enter"
+       ]
+      },
+      "keyIdea": "Supply is the quantity producers are willing and able to sell at each price, and it normally rises as price rises because higher prices mean higher profit per unit.",
+      "examMatters": "Examiners expect you to define supply precisely using the terms \"willing and able\" and \"at each price in a given time period.\" When drawing a supply curve, always label both axes and show the upward slope clearly. Marks are consistently lost for unlabelled or incorrectly sloped diagrams.",
+      "realExample": {
+       "text": "**Saudi Arabia** increases its oil output when crude prices surge above $80 per barrel because expensive extraction methods become profitable at higher prices. When prices fell below $30 in early 2016, Saudi Aramco cut investment in costlier fields and reduced drilling activity. This real-world response demonstrates the law of supply operating in a global commodity market.",
+       "emoji": "🛢️"
+      },
+      "misconception": "Students write \"supply is the amount of a product that exists.\" That confuses stock with supply, which refers only to what producers are willing and able to sell at each price. Instead write: supply is the quantity offered for sale at each price level in a given time period."
+     },
+     {
+      "id": "supply:sub:movements-along-vs-shifts-of-supply",
+      "body": [
+       {
+        "text": "A **movement along the supply curve** (also called a change in quantity supplied) happens when the price of the good itself changes. If price rises, you move up the curve to a higher quantity supplied -- this is called an **extension** of supply. If price falls, you move down the curve -- a **contraction** of supply.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **shift of the supply curve** (also called a change in supply) happens when a non-price factor changes. The entire curve moves to the right (an increase in supply, meaning more is offered at every price) or to the left (a decrease in supply, meaning less is offered at every price).",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Non-price factor changes",
+         "Cost of production falls",
+         "Supply curve shifts right"
+        ],
+        "result": "More quantity supplied at every price level",
+        "resultType": "good"
+       },
+       {
+        "text": "You must be precise about this distinction in exams. If you write \"supply increases\" when you mean quantity supplied increases due to a price change, you will lose marks. The language matters because each describes a fundamentally different economic event.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Movements Along vs Shifts of Supply",
+      "recall": {
+       "id": "supply:sub:movements-along-vs-shifts-of-supply:recall",
+       "type": "fillin",
+       "hints": [
+        "mo______",
+        "ex________",
+        "sh___"
+       ],
+       "prompt": "Complete the supply curve movements vs shifts:",
+       "answers": [
+        "movement",
+        "extension",
+        "shift"
+       ],
+       "template": [
+        "A change in the good's own price causes a ___ along the curve",
+        "→ A price rise causes an ___ of supply (movement up)",
+        "→ A change in a non-price factor causes a ___ of the supply curve"
+       ]
+      },
+      "keyIdea": "A change in the good's own price causes a movement along the supply curve, while a change in any other factor shifts the entire curve left or right.",
+      "examMatters": "This distinction is tested in almost every supply-related question. Examiners want you to use the correct terminology: \"extension\" or \"contraction\" for movements, and \"increase\" or \"decrease\" in supply for shifts. Labelling your diagram with arrows showing the direction of change earns additional marks.",
+      "realExample": {
+       "text": "**John Deere** introduced GPS-guided tractors that reduced fuel costs and seed waste for American wheat farmers. This technological advance lowered production costs across the industry, shifting the supply curve for wheat to the right. More wheat was offered at every price, not because wheat prices changed, but because technology reduced costs.",
+       "emoji": "🚜"
+      },
+      "misconception": "Students say \"a rise in price shifts the supply curve to the right.\" A change in the good's own price causes a movement along the existing curve, not a shift of the whole curve. Instead write: only non-price factors such as costs, technology or the number of firms shift the supply curve."
+     },
+     {
+      "id": "supply:sub:factors-that-shift-supply",
+      "body": [
+       {
+        "text": "Several factors shift the supply curve. A fall in **costs of production** (wages, raw materials, rent) means firms can produce more cheaply, shifting supply right. An improvement in **technology** has the same effect -- it raises productivity and lowers unit costs.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Key Determinants of Supply",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Costs of production** -- higher input costs shift supply left; lower costs shift it right.",
+         "**Technology** -- better technology reduces costs and shifts supply right.",
+         "**Indirect taxes** -- a new or higher tax raises costs and shifts supply left.",
+         "**Subsidies** -- a government payment to producers lowers costs and shifts supply right.",
+         "**Number of firms** -- more firms entering the market shifts supply right.",
+         "**External shocks** -- natural disasters, wars or pandemics can destroy capacity and shift supply left."
+        ]
+       },
+       {
+        "text": "You should remember that anything which changes the cost or ability to produce will shift the supply curve. Think of it as: if the price stays the same but firms can now produce more (or less), the curve has shifted.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Factors That Shift Supply",
+      "recall": {
+       "id": "supply:sub:factors-that-shift-supply:recall",
+       "type": "reorder",
+       "prompt": "Put these supply shift factors in order of explanation:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Identify the factor (e.g. new technology)",
+        "Explain how it affects costs of production",
+        "State the direction of the supply curve shift",
+        "Show the effect on equilibrium price and quantity"
+       ]
+      },
+      "keyIdea": "Costs of production, technology, taxes, subsidies, the number of firms, and external shocks all shift the supply curve because they change how much firms can offer at each price.",
+      "examMatters": "When asked to explain a shift in supply, examiners want a clear chain of reasoning: identify the factor, explain how it affects costs or capacity, and state the direction of the shift. You must then show the effect on equilibrium price and quantity using a correctly labelled diagram. Simply naming the factor without tracing through the mechanism is not enough for full marks.",
+      "realExample": {
+       "text": "**The Chinese government** subsidised solar panel manufacturers by over $50 billion between 2010 and 2020. These subsidies dramatically lowered production costs, shifting the global supply curve for solar panels to the right. World prices fell by more than 90%, making solar energy cost-competitive with fossil fuels.",
+       "emoji": "🔋"
+      },
+      "misconception": "Students list factors that shift supply but forget to explain the direction. Stating \"technology shifts supply\" earns no marks without specifying which direction and why. Instead write: improved technology lowers unit costs of production, which shifts the supply curve to the right because firms can offer more at every given price."
+     }
+    ],
+    "takeaway": [
+     "Supply slopes upward: higher prices make production more profitable.",
+     "A price change moves along the curve; other factors shift it.",
+     "Costs, technology, taxes, subsidies and firm numbers all shift supply.",
+     "Always specify the direction of a shift and explain the mechanism."
+    ],
+    "diagramRef": "Supply Curve",
+    "quizIndices": [
+     0
+    ]
+   },
+   {
+    "id": "supply:block:4dc9b004",
+    "title": "Price Elasticity of Supply (PES)",
+    "sections": [
+     {
+      "id": "supply:sub:pes-definition-and-formula",
+      "body": [
+       {
+        "text": "**Price elasticity of supply (PES)** measures the responsiveness of quantity supplied to a change in the price of a good. It tells you how quickly and easily producers can increase or decrease output when the market price changes. The formula is:",
+        "type": "paragraph"
+       },
+       {
+        "text": "**PES = % change in quantity supplied / % change in price**. Because the supply curve normally slopes upward, PES is almost always a **positive** value. A PES of 2.0 means that a 10% rise in price leads to a 20% rise in quantity supplied.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Price rises by 10%",
+         "Quantity supplied rises by 20%",
+         "PES = 20% / 10% = 2.0"
+        ],
+        "result": "Supply is price elastic -- producers respond strongly to price changes",
+        "resultType": "neutral"
+       },
+       {
+        "text": "You need to understand PES because it determines how market equilibrium adjusts when demand shifts. If supply is elastic, a surge in demand leads to a large output increase with a small price rise. If supply is inelastic, the same demand shift causes a large price spike with little extra output.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "PES Definition and Formula",
+      "recall": {
+       "id": "supply:sub:pes-definition-and-formula:recall",
+       "type": "fillin",
+       "hints": [
+        "su______",
+        "po______",
+        "el_____"
+       ],
+       "prompt": "Complete the PES fundamentals:",
+       "answers": [
+        "supplied",
+        "positive",
+        "elastic"
+       ],
+       "template": [
+        "PES = % change in quantity ___ / % change in price",
+        "→ PES is almost always a ___ value",
+        "→ PES > 1 means supply is price ___"
+       ]
+      },
+      "keyIdea": "PES measures how responsive quantity supplied is to a change in price, calculated as the percentage change in quantity supplied divided by the percentage change in price.",
+      "examMatters": "When calculating PES, examiners check that you use the correct formula and show your working clearly. Always state the formula first, substitute the numbers, and then interpret the result. State whether supply is elastic or inelastic and explain what that means for price stability in the market.",
+      "realExample": {
+       "text": "**Taiwan Semiconductor (TSMC)** cannot quickly expand chip production because building a new fabrication plant takes three to five years and costs over $20 billion. When global chip demand surged in 2021, TSMC's inelastic supply meant prices rose sharply while output barely increased. This illustrates how low PES causes price volatility when demand shifts.",
+       "emoji": "💻"
+      },
+      "misconception": "Students confuse PES with PED and write about consumer responsiveness. PES is about producers, not consumers -- it measures how the quantity supplied responds to a price change. Instead write: PES measures how much the quantity that producers offer for sale changes when the market price changes."
+     },
+     {
+      "id": "supply:sub:interpreting-pes-values",
+      "body": [
+       {
+        "text": "When **PES > 1**, supply is **price elastic** -- quantity supplied changes by a greater percentage than the price change. Producers can adjust output relatively quickly and easily. When **PES < 1**, supply is **price inelastic** -- quantity supplied changes by a smaller percentage than the price change.",
+        "type": "paragraph"
+       },
+       {
+        "text": "There are three special cases you should know. **PES = 0** means supply is **perfectly inelastic** -- quantity supplied does not change at all regardless of price (a vertical supply curve). **PES = infinity** means supply is **perfectly elastic** -- any quantity can be supplied at the going price (a horizontal supply curve). **PES = 1** means supply is **unit elastic** -- the percentage changes are exactly equal.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Demand for housing surges",
+         "Supply is inelastic (PES < 1)",
+         "Builders cannot quickly construct new homes"
+        ],
+        "result": "House prices rise sharply with little increase in quantity",
+        "resultType": "bad"
+       },
+       {
+        "text": "You will find that most real-world supply decisions involve inelastic supply in the short run, because expanding production takes time and resources. Over time, as firms build capacity and new firms enter, supply becomes more elastic.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Interpreting PES Values",
+      "recall": {
+       "id": "supply:sub:interpreting-pes-values:recall",
+       "type": "reorder",
+       "prompt": "Put these PES scenarios in order from least to most elastic:",
+       "shuffled": [
+        3,
+        0,
+        2,
+        1
+       ],
+       "correctOrder": [
+        "PES = 0: perfectly inelastic (vertical curve)",
+        "PES < 1: supply is price inelastic",
+        "PES = 1: unit elastic supply",
+        "PES > 1: supply is price elastic"
+       ]
+      },
+      "keyIdea": "If PES is greater than 1 supply is elastic and producers can respond quickly; if PES is less than 1 supply is inelastic and output adjusts slowly.",
+      "examMatters": "Examiners often give you data and ask you to calculate and interpret PES. After calculating, always link your answer to the real-world implications for price stability and output adjustment. Context-specific interpretation that connects the PES value to market outcomes earns the highest marks.",
+      "realExample": {
+       "text": "**The UK housing market** has a PES estimated at just 0.4, meaning a 10% price rise leads to only a 4% increase in new homes built. Planning restrictions, land shortages and long construction times make housing supply deeply inelastic. This is a key reason UK house prices have risen faster than incomes for decades.",
+       "emoji": "🏠"
+      },
+      "misconception": "Students write \"inelastic supply means supply does not change at all.\" Inelastic does not mean zero response -- it means quantity supplied changes by a smaller proportion than the price change. Instead write: inelastic supply means producers do respond to price changes, but the percentage change in quantity supplied is smaller than the percentage change in price."
+     },
+     {
+      "id": "supply:sub:factors-influencing-pes",
+      "body": [
+       {
+        "text": "Several factors determine whether supply is elastic or inelastic. **Spare capacity** is the most immediate -- if a firm has unused machines and workers, it can raise output quickly without large cost increases. If the firm is already at full capacity, expanding output is slow and expensive.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Key Determinants of PES",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Spare capacity** -- unused resources allow rapid output expansion, making supply elastic.",
+         "**Stocks of finished goods** -- firms holding inventory can supply the market instantly.",
+         "**Ease of factor substitution** -- if firms can easily switch inputs or production lines, supply is more elastic.",
+         "**Time period** -- supply is more elastic in the long run because firms can build new capacity."
+        ]
+       },
+       {
+        "text": "You should understand that time is the single most important factor. In the **momentary period**, supply is perfectly inelastic because output is fixed. In the **short run**, firms can vary some inputs and supply becomes more elastic. In the **long run**, all factors of production can be adjusted and supply is most elastic.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Factors Influencing PES",
+      "recall": {
+       "id": "supply:sub:factors-influencing-pes:recall",
+       "type": "fillin",
+       "hints": [
+        "Sp___",
+        "fi______",
+        "lo__"
+       ],
+       "prompt": "Complete the PES determinants:",
+       "answers": [
+        "Spare",
+        "finished",
+        "long"
+       ],
+       "template": [
+        "___ capacity allows rapid output expansion",
+        "→ Stocks of ___ goods let firms supply instantly",
+        "→ Supply is most elastic in the ___ run"
+       ]
+      },
+      "keyIdea": "Spare capacity, the availability of stocks, the ease of switching production, and time all determine how elastic supply is in a given market.",
+      "examMatters": "When discussing factors influencing PES, examiners want you to link each factor to a specific market rather than listing them in the abstract. Explain why supply of the particular good in the question is elastic or inelastic, using the determinants to support your reasoning. This applied approach scores far higher than generic factor lists.",
+      "realExample": {
+       "text": "**Toyota** uses its famous just-in-time production system with minimal spare capacity and almost no stock of finished vehicles. This makes Toyota's short-run supply relatively inelastic when demand suddenly spikes. However, its flexible production lines allow quick model switches, improving elasticity compared to rivals with rigid assembly lines.",
+       "emoji": "🚗"
+      },
+      "misconception": "Students claim \"agricultural supply is always inelastic.\" While crops do take months to grow, farmers can adjust planting decisions for the next season and release stored grain as buffer stock. Instead write: agricultural supply is inelastic in the short run due to growing seasons, but it becomes more elastic over time as farmers adjust planting."
+     }
+    ],
+    "takeaway": [
+     "PES = % change in Qs / % change in price; always positive.",
+     "PES > 1 is elastic; PES < 1 is inelastic; PES = 0 is perfectly inelastic.",
+     "Spare capacity, stocks, factor mobility and time determine PES.",
+     "Supply is almost always more elastic in the long run than the short run."
+    ],
+    "quizIndices": [
+     1
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "supply:block:d8bb5754",
+    "title": "Short Run vs Long Run",
+    "sections": [
+     {
+      "id": "supply:sub:short-run-production",
+      "body": [
+       {
+        "text": "The **short run** in economics is not a specific length of time -- it is the period during which **at least one factor of production is fixed**. Typically, capital (factories, machinery) is fixed while labour is variable. You can hire more workers, but you cannot instantly build a new factory.",
+        "type": "paragraph"
+       },
+       {
+        "text": "In the short run, the **law of diminishing marginal returns** applies. As you add more units of a variable factor (labour) to a fixed factor (capital), the **marginal product** of each additional worker eventually falls. The first few extra workers increase output significantly, but eventually the factory becomes overcrowded and each new worker adds less.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Fixed factory, add more workers",
+         "Initially output rises quickly",
+         "Marginal returns begin to diminish"
+        ],
+        "result": "Each extra worker adds less output than the one before",
+        "resultType": "bad"
+       },
+       {
+        "text": "Diminishing returns explain why the short-run supply curve slopes upward. As marginal productivity falls, the **marginal cost** of producing each extra unit rises. Firms need a higher price to cover those rising marginal costs, so they supply more only when price increases.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Short Run Production",
+      "recall": {
+       "id": "supply:sub:short-run-production:recall",
+       "type": "reorder",
+       "prompt": "Put the diminishing returns process in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "At least one factor of production is fixed",
+        "More units of the variable factor are added",
+        "Marginal product of each extra worker eventually falls",
+        "Marginal cost of production rises"
+       ]
+      },
+      "keyIdea": "In the short run at least one factor of production is fixed, so output can only expand by adding more of the variable factor, eventually hitting diminishing returns.",
+      "examMatters": "Examiners test whether you understand that diminishing returns is a short-run concept that requires at least one fixed factor. If you apply diminishing returns to a long-run scenario where all factors are variable, you will lose marks. Always state clearly which factor is fixed and which is variable.",
+      "realExample": {
+       "text": "**Domino's Pizza** outlets have a fixed number of ovens. During Friday evening peak demand, adding a fifth or sixth worker to the kitchen raises output only slightly because workers queue to use the same ovens. Domino's experiences clear diminishing marginal returns once its fixed capital is fully utilised.",
+       "emoji": "🍕"
+      },
+      "misconception": "Students write \"diminishing returns means total output falls.\" Total output continues to rise; it is the extra output added by each additional worker that falls. Instead write: diminishing marginal returns means each additional unit of the variable factor adds less to total output than the previous one."
+     },
+     {
+      "id": "supply:sub:long-run-production-and-returns-to-scale",
+      "body": [
+       {
+        "text": "The **long run** is the period during which **all factors of production are variable**. Firms can build new factories, install new technology, and enter or exit the market entirely. There are no fixed factors constraining output, so the concept of diminishing returns does not apply.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Instead, in the long run you analyse **returns to scale**. If a firm doubles all its inputs and output more than doubles, it enjoys **increasing returns to scale** (also called **economies of scale**). If output exactly doubles, there are **constant returns to scale**. If output less than doubles, the firm faces **decreasing returns to scale** (diseconomies of scale).",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firm doubles all inputs",
+         "Output more than doubles",
+         "Average cost per unit falls"
+        ],
+        "result": "Increasing returns to scale -- the firm benefits from growing larger",
+        "resultType": "good"
+       },
+       {
+        "text": "You should understand the difference between diminishing returns (short run, one fixed factor) and decreasing returns to scale (long run, all factors variable). They sound similar but are fundamentally different concepts operating in different time frames. Confusing them is one of the most common exam errors in this topic.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Long Run Production and Returns to Scale",
+      "recall": {
+       "id": "supply:sub:long-run-production-and-returns-to-scale:recall",
+       "type": "fillin",
+       "hints": [
+        "va______",
+        "in________",
+        "fa___"
+       ],
+       "prompt": "Complete the long-run production concepts:",
+       "answers": [
+        "variable",
+        "increasing",
+        "falls"
+       ],
+       "template": [
+        "In the long run all factors of production are ___",
+        "→ Firm doubles inputs and output more than doubles = ___ returns to scale",
+        "→ Increasing returns to scale means average cost per unit ___"
+       ]
+      },
+      "keyIdea": "In the long run all factors are variable, so firms can scale up everything, and whether costs rise, fall or stay constant per unit depends on returns to scale.",
+      "examMatters": "Examiners frequently set trap questions that test whether you can distinguish short-run diminishing returns from long-run returns to scale. When writing about the long run, never mention diminishing returns -- use returns to scale terminology instead. Explain whether average costs rise, fall or stay constant as the firm expands all its inputs.",
+      "realExample": {
+       "text": "**Airbus** invested over $25 billion developing the A350 aircraft, but once production lines were established, doubling the workforce and materials more than doubled the number of planes completed per year. Specialist teams, dedicated tooling and supplier contracts all became more efficient at higher volumes. This is a textbook case of increasing returns to scale in long-run production.",
+       "emoji": "✈️"
+      },
+      "misconception": "Students confuse diminishing returns with decreasing returns to scale. Diminishing returns is a short-run concept where at least one factor is fixed; decreasing returns to scale is a long-run concept where all factors increase proportionally. Instead write: diminishing returns occurs in the short run with a fixed factor, while decreasing returns to scale occurs in the long run when all inputs are increased together."
+     }
+    ],
+    "takeaway": [
+     "Short run: at least one factor fixed; diminishing returns applies.",
+     "Long run: all factors variable; analyse returns to scale instead.",
+     "Diminishing returns and decreasing returns to scale are different concepts.",
+     "Increasing returns to scale lower long-run average costs as firms grow."
+    ],
+    "quizIndices": [
+     2
+    ],
+    "practiceIndices": [
+     1
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Production costs fall",
+      "Supply curve shifts right",
+      "Equilibrium price falls"
+     ],
+     "result": "Consumers benefit from lower prices and higher output",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "The Supply Curve",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Supply</strong> — the quantity of a good that producers are willing and able to offer for sale at a given price in a given time period.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Law of supply</strong> — states that, ceteris paribus, as the price of a good rises, the quantity supplied rises, creating an upward-sloping supply curve.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Movement along the supply curve</strong> — caused only by a change in the good's own price; a rise in price causes an extension, a fall causes a contraction.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Shift of the supply curve</strong> — caused by a change in any non-price factor; the entire curve moves left (decrease in supply) or right (increase in supply).",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "A fall in <strong>costs of production</strong> (raw materials, wages, rent) shifts supply to the right because firms can now produce the same output more cheaply and profitably.",
+        "type": "mech"
+       },
+       {
+        "text": "Improvements in <strong>technology</strong> shift supply to the right by allowing firms to produce more output from the same inputs, lowering the cost per unit.",
+        "type": "mech"
+       },
+       {
+        "text": "An increase in <strong>indirect taxes</strong> (e.g., VAT) shifts supply to the left because it raises the cost of production, while a <strong>subsidy</strong> shifts supply to the right.",
+        "type": "mech"
+       },
+       {
+        "text": "The entry of <strong>new firms</strong> into a market shifts market supply to the right, while firms leaving the market shifts it to the left.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Just as with demand, you must clearly distinguish between a movement along and a shift of the supply curve; examiners <strong>penalise confusion</strong> between the two.",
+        "type": "imp"
+       },
+       {
+        "text": "Supply shifts interact with the demand curve to determine new equilibrium prices and quantities; a rightward shift in supply lowers the equilibrium price, ceteris paribus.",
+        "type": "link"
+       }
+      ],
+      "title": "FACTORS SHIFTING SUPPLY"
+     }
+    ],
+    "keyIdea": "Just as demand tells the consumer's story, the supply curve tells the producer's: at higher prices, firms are willing to produce more because it becomes profitable to cover higher marginal costs.",
+    "takeaway": [
+     "The law of supply states that higher prices incentivise greater quantity supplied, ceteris paribus.",
+     "Only a change in the good's own price causes a movement along the supply curve; everything else shifts it.",
+     "Key supply shifters are production costs, technology, taxes/subsidies, and the number of firms in the market."
+    ],
+    "examMatters": "Examiners test whether you understand that the supply curve shifts because of non-price factors. Memorise the key shifters: costs of production, technology, taxes and subsidies, number of firms, and natural or external shocks. Always draw the diagram to support your answer.",
+    "misconception": "Students say a rise in price shifts the supply curve to the right. Wrong because a change in the good's own price causes a movement along the existing supply curve, not a shift. Instead write: a rise in price causes an extension of supply (movement along the curve); only non-price factors like costs, technology, or taxes shift the curve."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Price rises",
+      "Firm checks spare capacity",
+      "Adjusts output accordingly"
+     ],
+     "result": "Elastic supply: large output increase; Inelastic supply: small increase",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Price Elasticity of Supply",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Price elasticity of supply (PES)</strong> — a measure of the responsiveness of quantity supplied to a change in the good's own price; it is always positive because of the direct relationship.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Elastic supply</strong> — when PES > 1, meaning quantity supplied changes by a greater percentage than the price change; producers can respond quickly.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Inelastic supply</strong> — when PES < 1, meaning quantity supplied changes by a smaller percentage than the price change; producers struggle to adjust output rapidly.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Spare capacity</strong> is the most important factor; if a firm has unused machinery and factory space, it can increase output quickly, making supply elastic.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Availability of stocks</strong> allows firms to meet sudden increases in demand from existing inventory without needing to produce more immediately.",
+        "type": "mech"
+       },
+       {
+        "text": "The <strong>time period</strong> matters greatly; supply is more inelastic in the short run when firms cannot easily expand capacity, and more elastic in the long run when they can build new factories and hire workers.",
+        "type": "mech"
+       },
+       {
+        "text": "The <strong>mobility of factors of production</strong> affects PES; if workers and capital can be easily redeployed from one industry to another, supply becomes more elastic.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Agricultural goods often have highly <strong>inelastic supply</strong> because crops take months to grow; even if prices soar, farmers cannot instantly increase output.",
+        "type": "imp"
+       },
+       {
+        "text": "PES links to the incidence of taxation; when supply is inelastic, producers bear more of the tax burden because they cannot easily reduce output.",
+        "type": "link"
+       }
+      ],
+      "title": "DETERMINANTS OF PES"
+     }
+    ],
+    "keyIdea": "PES reveals how quickly and flexibly producers can respond to a price change; the easier it is to ramp up production, the more elastic supply becomes.",
+    "formulas": [
+     {
+      "text": "PES = % change in quantity supplied ÷ % change in price",
+      "label": "PES"
+     }
+    ],
+    "takeaway": [
+     "PES is always positive and measures how quickly producers can respond to price changes.",
+     "Spare capacity and time are the two most important determinants of PES.",
+     "Agricultural supply tends to be inelastic in the short run; manufactured goods are more elastic due to stockholding and flexible production."
+    ],
+    "examMatters": "Examiners expect you to explain why PES differs between industries and time periods. Always link your answer to specific determinants: spare capacity, stocks, time, and factor mobility. Agricultural supply and manufactured goods are favourite exam examples.",
+    "misconception": "Students confuse PES with PED and write that PES is negative. Wrong because PES is always positive since price and quantity supplied move in the same direction. Instead write: PES is always positive due to the direct relationship between price and quantity supplied; unlike PED, it does not carry a negative sign."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Fixed factor limits expansion",
+      "Adding variable factor hits diminishing returns",
+      "Costs rise in the short run"
+     ],
+     "result": "Long-run adjustment removes the constraint and allows full scaling",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Short Run vs Long Run",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Short run</strong> — the time period in which at least one factor of production is fixed, typically capital; firms can only increase output by adding more variable factors like labour.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Long run</strong> — the time period in which all factors of production are variable; firms can change the scale of production by building new factories, buying new machinery, or entering new markets.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Law of diminishing returns</strong> — in the short run, as more units of a variable factor are added to a fixed factor, the marginal product of the variable factor eventually decreases.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Initially, adding workers to a fixed factory increases output rapidly due to <strong>specialisation</strong>, but eventually the workspace becomes crowded and each extra worker adds less.",
+        "type": "mech"
+       },
+       {
+        "text": "Diminishing returns cause <strong>marginal costs to rise</strong> in the short run, which explains why the short-run supply curve slopes upward; producing more becomes progressively more expensive.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Diminishing returns is a <strong>short-run concept only</strong>; it disappears in the long run when the fixed factor can be increased.",
+        "type": "imp"
+       }
+      ],
+      "title": "DIMINISHING RETURNS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Increasing returns to scale</strong> occur when a proportional increase in all inputs leads to a more than proportional increase in output, often due to economies of scale.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Decreasing returns to scale</strong> occur when increasing all inputs leads to a less than proportional increase in output, often due to coordination problems in very large firms.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Constant returns to scale</strong> occur when a proportional increase in all inputs leads to exactly the same proportional increase in output.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Returns to scale is a <strong>long-run concept</strong> because it requires all factors to be variable; do not confuse it with diminishing returns, which is short-run.",
+        "type": "imp"
+       },
+       {
+        "text": "Returns to scale link to economies of scale; increasing returns to scale are the production-side explanation for why average costs fall as firms grow.",
+        "type": "link"
+       }
+      ],
+      "title": "RETURNS TO SCALE"
+     }
+    ],
+    "keyIdea": "Time changes everything in economics; in the short run at least one factor is fixed and returns diminish, but in the long run all factors are variable and firms can scale up or down completely.",
+    "takeaway": [
+     "The short run has at least one fixed factor; the long run has all factors variable.",
+     "Diminishing returns is a short-run law that explains rising marginal costs; it does not mean total output falls.",
+     "Returns to scale is a long-run concept describing what happens when all inputs increase proportionally."
+    ],
+    "examMatters": "Examiners frequently test whether you can distinguish diminishing returns (short run, one fixed factor) from returns to scale (long run, all factors variable). Mixing them up is one of the most common errors and will cost you marks.",
+    "misconception": "Students say diminishing returns means total output falls. Wrong because diminishing returns means marginal output (the extra output from one more unit) falls, while total output can still be increasing, just at a slower rate. Instead write: diminishing returns means each additional unit of the variable factor adds less to total output than the previous unit, but total output continues to rise until marginal product becomes negative."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "supply:quiz:3b6d3807",
+    "options": [
+     "Consumers demand less at higher prices.",
+     "Higher prices provide a greater profit incentive and cover rising marginal costs.",
+     "Government regulations require firms to increase output when prices rise.",
+     "Technology improvements always accompany price increases."
+    ],
+    "question": "The supply curve for a good slopes upward because:",
+    "explanation": "A higher price increases the profit incentive for firms. In the short run, diminishing returns cause marginal costs to rise, so firms need higher prices to make it worthwhile to produce additional units.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:8e3e5b45",
+    "options": [
+     "A fall in the price of wheat.",
+     "A prolonged drought reducing crop yields.",
+     "An increase in demand for wheat-based products.",
+     "A subsidy given to wheat farmers."
+    ],
+    "question": "Which of the following would shift the supply curve for wheat to the left?",
+    "explanation": "A drought is a non-price supply factor that reduces agricultural output, shifting supply left. A fall in wheat's own price causes a movement along (not a shift). A demand increase shifts the demand curve. A subsidy shifts supply right.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:4632d928",
+    "options": [
+     "Shift rightward (downward) by £2.",
+     "Shift leftward (upward) by £2.",
+     "Become more elastic.",
+     "Become perfectly inelastic."
+    ],
+    "question": "A government imposes a specific tax of £2 per unit on a good. This will cause the supply curve to:",
+    "explanation": "An indirect tax increases costs for producers. The supply curve shifts leftward (or equivalently upward) by the amount of the tax per unit (£2). At every quantity, firms now need a price that is £2 higher to cover the tax.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:693a744a",
+    "options": [
+     "A 60% increase in quantity supplied.",
+     "A 6% increase in quantity supplied.",
+     "A 6.7% increase in quantity supplied.",
+     "A 0.3% increase in quantity supplied."
+    ],
+    "question": "If the PES for a product is 0.3, a 20% increase in price will lead to:",
+    "explanation": "PES = %ΔQs / %ΔP. So %ΔQs = PES × %ΔP = 0.3 × 20% = 6%. The low PES (< 1) confirms supply is price inelastic — quantity supplied is relatively unresponsive.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:790af0cb",
+    "options": [
+     "Manufactured toys produced in factories with spare capacity.",
+     "Seats at a football stadium for a specific match.",
+     "Bread produced by large-scale bakeries.",
+     "Digital downloads of music files."
+    ],
+    "question": "Which of the following is most likely to have a perfectly inelastic supply curve?",
+    "explanation": "Stadium capacity is fixed — the number of seats cannot change regardless of ticket price. Supply is perfectly inelastic (PES = 0, vertical supply curve). Other options involve goods where output can be varied.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:2164d68f",
+    "options": [
+     "There are no workers available to hire.",
+     "At least one factor of production (e.g. factory size) is fixed.",
+     "The government restricts production in the short run.",
+     "Demand for cars is always inelastic."
+    ],
+    "question": "In the short run, a firm cannot increase its output of cars significantly because:",
+    "explanation": "The short run is defined as a period in which at least one factor is fixed (typically capital such as factory space and machinery). The firm can only increase output by adding variable factors (e.g. more workers, overtime), which is limited.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:a9467b4b",
+    "options": [
+     "The product has a long production cycle of several years.",
+     "Factors of production are highly specialised and immobile.",
+     "The firm has significant spare capacity and large inventories.",
+     "There are strict regulatory barriers to entry for new firms."
+    ],
+    "question": "Which of the following factors would make supply more price elastic?",
+    "explanation": "Spare capacity means firms can quickly increase output without new investment, and large inventories allow rapid supply response. Long production cycles, immobile factors and high barriers all make supply more inelastic.",
+    "correctIndex": 2
+   },
+   {
+    "id": "supply:quiz:41232e85",
+    "options": [
+     "Supply is more elastic in the short run than the long run.",
+     "Supply is equally elastic in all time periods.",
+     "Supply is more elastic in the long run because all factors become variable.",
+     "Time has no effect on PES; only the nature of the product matters."
+    ],
+    "question": "How does the time period affect PES?",
+    "explanation": "In the long run, all factors of production are variable: firms can expand capacity, invest in new technology, and new firms can enter. This gives much greater flexibility to respond to price changes, making supply more elastic.",
+    "correctIndex": 2
+   },
+   {
+    "id": "supply:quiz:892f5d36",
+    "options": [
+     "A large increase in quantity with a small price rise.",
+     "A large increase in price with a small increase in quantity.",
+     "No change in price or quantity.",
+     "A decrease in price as firms increase supply."
+    ],
+    "question": "When supply is highly inelastic and demand increases, the most likely outcome is:",
+    "explanation": "With inelastic supply, quantity cannot respond much to the demand increase. The increased demand chases a relatively fixed quantity, driving up the price significantly. This explains high price volatility in markets like housing and oil.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:4e07e809",
+    "options": [
+     "Shift the demand curve for electric vehicles to the right.",
+     "Shift the supply curve for electric vehicles to the right (downward).",
+     "Cause a movement along the supply curve.",
+     "Shift the supply curve for electric vehicles to the left."
+    ],
+    "question": "A subsidy on electric vehicles would:",
+    "explanation": "A subsidy is a payment to producers that reduces their costs. This shifts the supply curve rightward (or equivalently downward) by the subsidy amount. At every price, firms can now supply more because their costs are lower.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:4c1f8555",
+    "options": [
+     "A shift of the whole supply curve to the right",
+     "A shift of the whole supply curve to the left",
+     "A movement along the supply curve, with no shift",
+     "No change in either quantity supplied or supply"
+    ],
+    "question": "The price of wheat rises, with nothing else changing. For wheat farmers this causes:",
+    "explanation": "Supply describes the whole relationship between price and quantity. A change in the price of the good itself moves the market along the existing curve, which is an extension of supply; only a change in something else, such as costs or technology, shifts the curve.",
+    "correctIndex": 2
+   },
+   {
+    "id": "supply:quiz:288efda7",
+    "options": [
+     "Supply is price elastic",
+     "Supply is price inelastic",
+     "Supply is unitary elastic",
+     "Supply is perfectly inelastic"
+    ],
+    "question": "The price elasticity of supply (PES) for a good is +0.3. This means:",
+    "explanation": "A PES between 0 and 1 indicates price inelastic supply: a change in price leads to a proportionally smaller change in quantity supplied. Producers find it difficult to respond quickly to price changes.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:f8d38b28",
+    "options": [
+     "Shift left, because the market is distorted",
+     "Become vertical at the subsidised quantity",
+     "Stay where it is until the market price changes",
+     "Shift right, by $2 vertically downwards at each quantity"
+    ],
+    "question": "A government pays wheat producers a subsidy of $2 per unit. The supply curve will:",
+    "explanation": "A subsidy lowers what it costs a producer to supply each unit, so at any given market price they will offer more. The whole curve moves right, and the vertical gap between the old and new curve is the size of the subsidy. Nothing here changes the price of wheat itself, so this is a shift rather than a movement along the curve.",
+    "correctIndex": 3
+   },
+   {
+    "id": "supply:quiz:d973c76b",
+    "options": [
+     "Shift the supply curve for cars to the left",
+     "Shift the supply curve for cars to the right",
+     "Cause a movement along the supply curve for cars",
+     "Shift the demand curve for cars to the right"
+    ],
+    "question": "A technological improvement in car manufacturing would:",
+    "explanation": "Technological improvement reduces production costs, enabling firms to supply more at every price level. This shifts the supply curve to the right (an increase in supply).",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:989ed868",
+    "options": [
+     "Above the supply curve and below the market price",
+     "Below the demand curve and above the market price",
+     "Between the supply and demand curves",
+     "Above the market price and below the demand curve"
+    ],
+    "question": "Producer surplus is the area:",
+    "explanation": "Producer surplus is the difference between the market price producers receive and the minimum price they would have been willing to accept. Graphically, it is the area above the supply curve and below the price line.",
+    "correctIndex": 0
+   },
+   {
+    "id": "supply:quiz:9c822d27",
+    "options": [
+     "Shift to the right",
+     "Shift to the left",
+     "Not change, but there will be a movement along the curve",
+     "Become more elastic"
+    ],
+    "question": "If the price of leather increases, the supply curve for leather shoes will:",
+    "explanation": "Leather is a raw material (input cost) in shoe production. An increase in input costs raises production costs, reducing the quantity firms are willing to supply at each price, shifting the supply curve leftward.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:229a3a31",
+    "options": [
+     "0.5, inelastic",
+     "0.75, inelastic",
+     "1.33, elastic",
+     "2.0, elastic"
+    ],
+    "question": "Price rises from $10 to $12 and quantity supplied rises from 200 to 230 units. PES is:",
+    "explanation": "Quantity supplied rises 30 on 200, which is 15%. Price rises 2 on 10, which is 20%. PES is 15 divided by 20, or 0.75. Because that is below 1, supply is price inelastic over this range: the quantity responds proportionally less than the price.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:188d0cde",
+    "options": [
+     "Increase the supply of steel",
+     "Decrease the supply of steel",
+     "Increase the demand for steel",
+     "Have no effect on the steel market"
+    ],
+    "question": "If the government imposes a new environmental regulation that increases production costs for steel manufacturers, this would:",
+    "explanation": "Environmental regulations raise production costs for steel firms. Higher costs reduce profitability at each price level, causing firms to supply less, which shifts the supply curve to the left.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:337afaca",
+    "options": [
+     "Consumer preferences change over time",
+     "Firms have more time to adjust capacity, build new boats, and train workers",
+     "The government will impose quotas in the long run",
+     "Fish stocks are unlimited in the long run"
+    ],
+    "question": "The supply of fresh fish is likely to be more price elastic in the long run than the short run because:",
+    "explanation": "In the long run, firms can adjust all factors of production: invest in new fishing vessels, expand fleets, and train crew. This greater flexibility makes supply more responsive to price changes.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:bfdd9f49",
+    "options": [
+     "Decrease the supply of clothing",
+     "Increase the supply of clothing",
+     "Increase the demand for clothing",
+     "Decrease the demand for clothing"
+    ],
+    "question": "An increase in labour productivity in the clothing industry would:",
+    "explanation": "Higher labour productivity means more output per worker, effectively reducing the cost per unit. This enables firms to supply more at every price, shifting the supply curve to the right.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:13967ef4",
+    "options": [
+     "Decrease the supply of good Y",
+     "Increase the supply of good Y",
+     "Decrease the demand for good Y",
+     "Have no effect on the supply of good Y"
+    ],
+    "question": "If good X and good Y are joint products (produced together), an increase in the price of good X will:",
+    "explanation": "Joint products are produced together (e.g., beef and leather). A higher price for X encourages more production of X, which automatically increases the supply of Y as a by-product.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:3a287f89",
+    "options": [
+     "The market price exceeds its average total costs",
+     "The market price is at least equal to its marginal cost of production",
+     "Total revenue is greater than total fixed costs",
+     "The market price exceeds the minimum point on the supply curve"
+    ],
+    "question": "A profit-maximising firm would continue to supply output as long as:",
+    "explanation": "In the short run a firm keeps supplying as long as the price at least covers the marginal cost of the next unit (P = MC is the supply condition), and it shuts down only if price falls below average variable cost. Covering average total cost decides whether the firm stays in the market in the long run, not whether it supplies a unit now.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:6b80b36c",
+    "options": [
+     "Farmers receive government subsidies",
+     "Growing seasons are fixed and output cannot be quickly changed once planted",
+     "Demand for food is price inelastic",
+     "Agricultural goods are exported to other countries"
+    ],
+    "question": "Which of the following best explains why agricultural supply tends to be price inelastic in the short run?",
+    "explanation": "Agricultural products have long production periods determined by growing seasons. Once crops are planted, farmers cannot quickly increase or decrease output in response to price changes, making short-run supply inelastic.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:5937c38f",
+    "options": [
+     "Supply increases as workers are more motivated",
+     "Supply decreases as production costs have risen",
+     "Supply is unchanged because wages do not affect supply",
+     "Supply increases because firms pass costs to consumers"
+    ],
+    "question": "If wages for factory workers increase, what happens to the supply of manufactured goods, ceteris paribus?",
+    "explanation": "Wages are a major component of production costs. Higher wages increase the cost of production, making it less profitable to supply at any given price, so the supply curve shifts to the left.",
+    "correctIndex": 1
+   },
+   {
+    "id": "supply:quiz:e2fa8166",
+    "options": [
+     "They are expensive to produce initially",
+     "Once created, additional copies can be produced at near-zero marginal cost",
+     "Demand for e-books is very high",
+     "There are many publishers competing in the market"
+    ],
+    "question": "Digital goods such as e-books tend to have a very high PES because:",
+    "explanation": "Digital goods have near-zero marginal costs of reproduction. Once the content is created, extra copies can be supplied almost instantly and at negligible cost, making supply highly elastic.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "supply:practice:7925fa6e",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "PES measures the responsiveness of quantity supplied to a change in price (1 mark). It is calculated as the percentage change in quantity supplied divided by the percentage change in price (1 mark). A PES greater than 1 means supply is elastic — producers can respond quickly to price changes (1 mark). A PES less than 1 means supply is inelastic (1 mark).",
+    "question": "Define the term 'price elasticity of supply' (PES). (4 marks)"
+   },
+   {
+    "id": "supply:practice:a72b1a0c",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Factor 1: An increase in the cost of raw materials such as timber or steel (1 mark) — higher input costs reduce profitability at every price level, so firms supply fewer houses (1 mark). This shifts the supply curve to the left (1 mark).\n\nFactor 2: Tighter government planning regulations (1 mark) — stricter rules on where and how housing can be built reduce the number of homes developers can construct (1 mark), decreasing supply at every price level and shifting the curve leftward (1 mark).",
+    "question": "Explain two factors that could cause the supply curve for housing to shift to the left. (6 marks)"
+   },
+   {
+    "id": "supply:practice:d70aba14",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define PES (1 mark). Agricultural supply tends to be price inelastic in the short run because crops take months to grow and land is limited (2 marks). This means price rises cannot be met with quick supply increases, leading to price volatility (2 marks). In the long run, PES is more elastic as farmers can switch crops, invest in technology or expand land use (2 marks). However, factors like weather, perishability and long production cycles still constrain responsiveness (1 mark). Judgement: PES is highly important for understanding agricultural price instability and for governments when designing farm support policies, but its usefulness is limited by unpredictable natural conditions (2 marks).",
+    "question": "Assess the importance of price elasticity of supply for agricultural markets. (10 marks)"
+   },
+   {
+    "id": "supply:practice:e64e60ed",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define supply and cost of production in context of housing (2 marks).\n\nFor rising costs: Labour shortages in construction push up wages (2 marks); rising material costs (timber, concrete, steel) increase the cost of each unit built (2 marks); environmental regulations add compliance costs (2 marks).\n\nOther factors: Planning regulations restrict the amount of land available for development, limiting supply regardless of costs (3 marks); interest rates affect developers' borrowing costs and willingness to invest in new projects (2 marks); government policy — incentives like Help to Buy or restrictions like green belt protection have direct effects on supply (2 marks).\n\nEvaluation: Rising costs are significant but planning restrictions are arguably the most binding constraint in the UK, where land supply is limited (3 marks). The most important factor depends on the time horizon and the region — in London, planning is dominant; in less regulated areas, costs may matter more (2 marks).",
+    "question": "Evaluate the view that rising costs of production are the most significant factor affecting supply in the UK housing market. (20 marks)"
+   },
+   {
+    "id": "supply:practice:25f8f85c",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Reason 1: Limited capacity to increase output quickly — handmade production relies on skilled artisans who cannot easily be replaced or expanded in number (1 mark), so supply responds slowly to price rises (1 mark).\n\nReason 2: Long production times — each unit takes considerable time to produce by hand (1 mark), meaning firms cannot rapidly increase the quantity supplied even if prices increase significantly (1 mark).",
+    "question": "Outline two reasons why the supply of handmade goods tends to be price inelastic. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "supply:card:4f9bd34e",
+    "back": "The quantity of a good that producers are <strong>willing and able to offer for sale</strong> at a given price in a given time period.",
+    "front": "What is supply?"
+   },
+   {
+    "id": "supply:card:b1cc9cee",
+    "back": "Ceteris paribus, as the <strong>price of a good rises</strong>, the <strong>quantity supplied increases</strong>. Higher prices make production more profitable, incentivising greater output.",
+    "front": "State the law of supply."
+   },
+   {
+    "id": "supply:card:695d4d1b",
+    "back": "A change in the <strong>price of the good itself</strong>. A price rise causes an extension in supply; a price fall causes a contraction in supply.",
+    "front": "What causes a movement along the supply curve?"
+   },
+   {
+    "id": "supply:card:8948d83f",
+    "back": "<strong>Costs of production</strong> (wages, raw materials), <strong>technology</strong>, <strong>indirect taxes and subsidies</strong>, and <strong>number of firms</strong> in the market.",
+    "front": "Name four factors that shift the supply curve."
+   },
+   {
+    "id": "supply:card:93773cda",
+    "back": "A measure of the <strong>responsiveness of quantity supplied</strong> to a change in price. Calculated as: <strong>% change in Qs ÷ % change in price</strong>. Always positive.",
+    "front": "What is price elasticity of supply (PES)?"
+   },
+   {
+    "id": "supply:card:422c5b3b",
+    "back": "Firms <strong>cannot quickly increase output</strong> — limited spare capacity, long production times, scarce raw materials, or shortage of skilled labour. Agricultural goods are often supply inelastic.",
+    "front": "What makes supply price inelastic?"
+   },
+   {
+    "id": "supply:card:f827324e",
+    "back": "Firms can <strong>quickly increase output</strong> — spare capacity, easy access to raw materials, flexible workforce, and short production times.",
+    "front": "What makes supply price elastic?"
+   },
+   {
+    "id": "supply:card:64a47fc9",
+    "back": "The difference between the <strong>market price</strong> and the <strong>minimum price</strong> a producer would accept. Shown as the area above the supply curve and below the market price.",
+    "front": "What is producer surplus?"
+   },
+   {
+    "id": "supply:card:e6156b38",
+    "back": "It shifts supply <strong>to the left</strong> (upward). The tax increases the cost of production, so at every price level, producers supply less. The vertical distance between the curves equals the tax.",
+    "front": "How does an indirect tax affect the supply curve?"
+   },
+   {
+    "id": "supply:card:045829ee",
+    "back": "It shifts supply <strong>to the right</strong> (downward). The subsidy reduces production costs, so at every price level, producers supply more.",
+    "front": "How does a subsidy affect the supply curve?"
+   },
+   {
+    "id": "supply:card:1b3c16aa",
+    "back": "In the <strong>short run</strong>, at least one factor of production is fixed (e.g., factory size), limiting output changes. In the <strong>long run</strong>, all factors are variable, allowing full adjustment of capacity.",
+    "front": "What is the difference between short-run and long-run supply?"
+   },
+   {
+    "id": "supply:card:79073c72",
+    "back": "Improved technology <strong>reduces costs of production</strong> and increases productivity. Supply shifts right — firms can produce more at every price. E.g., automation in car manufacturing.",
+    "front": "How does technology affect supply?"
+   },
+   {
+    "id": "supply:card:fc2605a9",
+    "back": "A <strong>fixed amount per unit</strong> sold (e.g., £1 per litre). Shifts the supply curve vertically upward by the same amount at every quantity.",
+    "front": "What is a specific tax?"
+   },
+   {
+    "id": "supply:card:0da261ad",
+    "back": "A tax set as a <strong>percentage of the price</strong> (e.g., 20% VAT). The supply curve pivots — the gap between old and new curves widens as price increases.",
+    "front": "What is an ad valorem tax?"
+   },
+   {
+    "id": "supply:card:fdefae1b",
+    "back": "Higher prices provide <strong>greater profit incentive</strong> for producers. Existing firms increase output and new firms may enter the market, attracted by higher returns.",
+    "front": "Why does the supply curve slope upward?"
+   },
+   {
+    "id": "supply:card:a7907890",
+    "back": "Supply shifts <strong>to the left</strong>. Higher wages increase production costs, reducing the quantity firms are willing to supply at each price.",
+    "front": "What happens to supply when wages increase?"
+   },
+   {
+    "id": "supply:card:37792197",
+    "back": "More firms entering a market <strong>increases market supply</strong> (shifts right). Firms leaving the market <strong>decreases supply</strong> (shifts left).",
+    "front": "How does the number of firms affect market supply?"
+   },
+   {
+    "id": "supply:card:27233c8a",
+    "back": "When the production of one good <strong>automatically leads to the production</strong> of another — e.g., beef and leather. An increase in demand for one increases the supply of the other.",
+    "front": "What is joint supply?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "supply:diagram:3e7b0c3c",
+    "title": "Supply Curve: Movements and Shifts",
+    "checklist": [
+     "Axes correctly labelled: Price on y-axis, Quantity on x-axis",
+     "Supply curve slopes upward from left to right",
+     "Movements along clearly distinguished from shifts",
+     "Direction of shift shown with arrows",
+     "Causes of shift listed (costs, technology, taxes, subsidies, etc.)"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg width=\"500\" height=\"420\" viewBox=\"0 0 500 420\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\">\n  <defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker>\n</defs>\n  \n  <line x1=\"80\" y1=\"330\" x2=\"465\" y2=\"330\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"80\" y1=\"330\" x2=\"80\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"265\" y=\"380\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\">QUANTITY (Q)</text>\n  <text x=\"35\" y=\"190\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\" transform=\"rotate(-90,35,190)\">PRICE (P)</text>\n\n  <!-- Supply curve -->\n  <line x1=\"80\" y1=\"302\" x2=\"431.5\" y2=\"89.20000000000002\" stroke=\"#e2e8f0\" stroke-width=\"3\"/>\n  <text x=\"405.6\" y=\"73\" fill=\"#e2e8f0\" font-size=\"15\" font-weight=\"700\" class=\"draggable\">S</text>\n\n  <!-- Point A -->\n  <line x1=\"191\" y1=\"234.8\" x2=\"80\" y2=\"234.8\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <line x1=\"191\" y1=\"234.8\" x2=\"191\" y2=\"330\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <circle cx=\"191\" cy=\"234.8\" r=\"14\" fill=\"#f472b6\" stroke=\"#f472b6\" stroke-width=\"2\"/>\n  <text x=\"191\" y=\"239.8\" fill=\"#fff\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">A</text>\n  <text x=\"66\" y=\"239.8\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"end\" class=\"draggable\">P₁</text>\n  <text x=\"191\" y=\"352\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Q₁</text>\n\n  <!-- Point B -->\n  <line x1=\"320.5\" y1=\"156.4\" x2=\"80\" y2=\"156.4\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <line x1=\"320.5\" y1=\"156.4\" x2=\"320.5\" y2=\"330\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/>\n  <circle cx=\"320.5\" cy=\"156.4\" r=\"14\" fill=\"#fbbf24\" stroke=\"#fbbf24\" stroke-width=\"2\"/>\n  <text x=\"320.5\" y=\"161.4\" fill=\"#fff\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">B</text>\n  <text x=\"66\" y=\"161.4\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"end\" class=\"draggable\">P₂</text>\n  <text x=\"320.5\" y=\"352\" fill=\"#94a3b8\" font-size=\"13\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Q₂</text>\n\n  <!-- Movement arrow -->\n  <path d=\"M 202.10000000000002 229.2 L 309.4 162\" stroke=\"#fb923c\" stroke-width=\"2.5\" fill=\"none\" marker-end=\"url(#arr)\"/>\n  <text x=\"272.4\" y=\"206.4\" fill=\"#fb923c\" font-size=\"12\" font-weight=\"600\" class=\"draggable\">Movement along</text>\n</svg>",
+      "label": "Base Supply Curve"
+     },
+     {
+      "svg": "<svg width=\"500\" height=\"420\" viewBox=\"0 0 500 420\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\">\n  <defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker>\n</defs>\n  \n  <line x1=\"80\" y1=\"330\" x2=\"465\" y2=\"330\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"80\" y1=\"330\" x2=\"80\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"265\" y=\"380\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\">QUANTITY (Q)</text>\n  <text x=\"35\" y=\"190\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\" transform=\"rotate(-90,35,190)\">PRICE (P)</text>\n\n  <!-- S1 (original, dashed) -->\n  <line x1=\"80\" y1=\"260\" x2=\"394.5\" y2=\"69.59999999999997\" stroke=\"#475569\" stroke-width=\"2\" stroke-dasharray=\"8,5\"/>\n  <text x=\"368.6\" y=\"67.19999999999999\" fill=\"#475569\" font-size=\"12\" class=\"draggable\">S₁</text>\n\n  <!-- S2 (shifted right/down) -->\n  <line x1=\"80\" y1=\"302\" x2=\"431.5\" y2=\"89.20000000000002\" stroke=\"#e2e8f0\" stroke-width=\"3\"/>\n  <text x=\"405.6\" y=\"73\" fill=\"#e2e8f0\" font-size=\"15\" font-weight=\"700\" class=\"draggable\">S₂</text>\n\n  <!-- Shift arrows -->\n  <line x1=\"228\" y1=\"176\" x2=\"272.4\" y2=\"190\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"302\" y1=\"134\" x2=\"346.4\" y2=\"148\" stroke=\"#34d399\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n\n  <text x=\"265\" y=\"400\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\" opacity=\"0.7\">Lower costs of production shift supply to the right</text>\n</svg>",
+      "label": "Rightward Shift (Increase in Supply)"
+     },
+     {
+      "svg": "<svg width=\"500\" height=\"420\" viewBox=\"0 0 500 420\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\">\n  <defs>\n  <marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker>\n</defs>\n  \n  <line x1=\"80\" y1=\"330\" x2=\"465\" y2=\"330\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"80\" y1=\"330\" x2=\"80\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <text x=\"265\" y=\"380\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\">QUANTITY (Q)</text>\n  <text x=\"35\" y=\"190\" fill=\"#94a3b8\" font-size=\"14\" font-weight=\"700\" text-anchor=\"middle\" letter-spacing=\"0.5\" transform=\"rotate(-90,35,190)\">PRICE (P)</text>\n\n  <!-- S1 (original, dashed) -->\n  <line x1=\"80\" y1=\"302\" x2=\"431.5\" y2=\"89.20000000000002\" stroke=\"#475569\" stroke-width=\"2\" stroke-dasharray=\"8,5\"/>\n  <text x=\"405.6\" y=\"75.6\" fill=\"#475569\" font-size=\"12\" class=\"draggable\">S₁</text>\n\n  <!-- S2 (shifted left/up) -->\n  <line x1=\"80\" y1=\"260\" x2=\"394.5\" y2=\"69.59999999999997\" stroke=\"#e2e8f0\" stroke-width=\"3\"/>\n  <text x=\"368.6\" y=\"67.19999999999999\" fill=\"#e2e8f0\" font-size=\"15\" font-weight=\"700\" class=\"draggable\">S₂</text>\n\n  <!-- Shift arrows -->\n  <line x1=\"272.4\" y1=\"190\" x2=\"228\" y2=\"176\" stroke=\"#f87171\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n  <line x1=\"346.4\" y1=\"148\" x2=\"302\" y2=\"134\" stroke=\"#f87171\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/>\n\n  <text x=\"265\" y=\"400\" fill=\"#94a3b8\" font-size=\"11\" text-anchor=\"middle\" opacity=\"0.7\">Higher costs of production shift supply to the left</text>\n</svg>",
+      "label": "Leftward Shift (Decrease in Supply)"
+     }
+    ],
+    "description": "Shows the upward-sloping supply curve with movements along it (caused by price changes) and shifts (caused by non-price factors such as costs, technology, taxes and subsidies)."
+   },
+   {
+    "id": "supply:diagram:9fa3337b",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <!-- Perfectly Elastic -->\n  <text x=\"55\" y=\"18\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Perfectly</text>\n  <text x=\"55\" y=\"30\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Elastic</text>\n  <line x1=\"15\" y1=\"80\" x2=\"95\" y2=\"80\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"90\" y=\"72\" fill=\"#059669\" font-size=\"9\">S</text>\n  <line x1=\"15\" y1=\"50\" x2=\"15\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"15\" y1=\"110\" x2=\"95\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"8\" y=\"100\" fill=\"#e8ecf5\" font-size=\"8\">P</text>\n  <text x=\"90\" y=\"120\" fill=\"#e8ecf5\" font-size=\"8\">Q</text>\n  <text x=\"55\" y=\"135\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">PES = ∞</text>\n\n  <!-- Elastic -->\n  <text x=\"160\" y=\"18\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Elastic</text>\n  <line x1=\"120\" y1=\"108\" x2=\"195\" y2=\"45\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"198\" y=\"45\" fill=\"#059669\" font-size=\"9\">S</text>\n  <line x1=\"120\" y1=\"45\" x2=\"120\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"120\" y1=\"110\" x2=\"200\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"113\" y=\"100\" fill=\"#e8ecf5\" font-size=\"8\">P</text>\n  <text x=\"195\" y=\"120\" fill=\"#e8ecf5\" font-size=\"8\">Q</text>\n  <text x=\"160\" y=\"135\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">PES > 1</text>\n\n  <!-- Unit Elastic -->\n  <text x=\"265\" y=\"18\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Unit Elastic</text>\n  <line x1=\"235\" y1=\"108\" x2=\"295\" y2=\"45\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"298\" y=\"45\" fill=\"#059669\" font-size=\"9\">S</text>\n  <line x1=\"230\" y1=\"45\" x2=\"230\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"230\" y1=\"110\" x2=\"300\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"223\" y=\"100\" fill=\"#e8ecf5\" font-size=\"8\">P</text>\n  <text x=\"295\" y=\"120\" fill=\"#e8ecf5\" font-size=\"8\">Q</text>\n  <text x=\"265\" y=\"135\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">PES = 1</text>\n  <text x=\"265\" y=\"147\" fill=\"#e8ecf5\" font-size=\"7\" text-anchor=\"middle\" opacity=\"0.7\">(from origin)</text>\n\n  <!-- Inelastic -->\n  <text x=\"370\" y=\"18\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Inelastic</text>\n  <line x1=\"355\" y1=\"108\" x2=\"385\" y2=\"45\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"388\" y=\"45\" fill=\"#059669\" font-size=\"9\">S</text>\n  <line x1=\"340\" y1=\"45\" x2=\"340\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"340\" y1=\"110\" x2=\"400\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"333\" y=\"100\" fill=\"#e8ecf5\" font-size=\"8\">P</text>\n  <text x=\"395\" y=\"120\" fill=\"#e8ecf5\" font-size=\"8\">Q</text>\n  <text x=\"370\" y=\"135\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">PES < 1</text>\n\n  <!-- Perfectly Inelastic -->\n  <text x=\"470\" y=\"18\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Perfectly</text>\n  <text x=\"470\" y=\"30\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Inelastic</text>\n  <line x1=\"470\" y1=\"45\" x2=\"470\" y2=\"108\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"478\" y=\"55\" fill=\"#059669\" font-size=\"9\">S</text>\n  <line x1=\"440\" y1=\"45\" x2=\"440\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <line x1=\"440\" y1=\"110\" x2=\"490\" y2=\"110\" stroke=\"#e8ecf5\" stroke-width=\"1\"/>\n  <text x=\"433\" y=\"100\" fill=\"#e8ecf5\" font-size=\"8\">P</text>\n  <text x=\"485\" y=\"120\" fill=\"#e8ecf5\" font-size=\"8\">Q</text>\n  <text x=\"470\" y=\"135\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">PES = 0</text>\n\n  <!-- Factors affecting PES -->\n  <rect x=\"20\" y=\"162\" width=\"460\" height=\"178\" rx=\"6\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.3\"/>\n  <text x=\"250\" y=\"182\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"600\">Factors Influencing PES</text>\n  <line x1=\"30\" y1=\"190\" x2=\"470\" y2=\"190\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n\n  <text x=\"135\" y=\"208\" fill=\"#059669\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Makes PES More Elastic</text>\n  <text x=\"375\" y=\"208\" fill=\"#ef4444\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">Makes PES More Inelastic</text>\n  <line x1=\"250\" y1=\"195\" x2=\"250\" y2=\"335\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n\n  <text x=\"40\" y=\"228\" fill=\"#e8ecf5\" font-size=\"9\">• Long time period</text>\n  <text x=\"40\" y=\"245\" fill=\"#e8ecf5\" font-size=\"9\">• Large stocks / inventories</text>\n  <text x=\"40\" y=\"262\" fill=\"#e8ecf5\" font-size=\"9\">• Spare (excess) capacity</text>\n  <text x=\"40\" y=\"279\" fill=\"#e8ecf5\" font-size=\"9\">• Mobile factors of production</text>\n  <text x=\"40\" y=\"296\" fill=\"#e8ecf5\" font-size=\"9\">• Low barriers to entry</text>\n  <text x=\"40\" y=\"313\" fill=\"#e8ecf5\" font-size=\"9\">• Short production cycle</text>\n  <text x=\"40\" y=\"330\" fill=\"#e8ecf5\" font-size=\"9\">• Non-perishable goods</text>\n\n  <text x=\"270\" y=\"228\" fill=\"#e8ecf5\" font-size=\"9\">• Short time period</text>\n  <text x=\"270\" y=\"245\" fill=\"#e8ecf5\" font-size=\"9\">• Low / no stocks</text>\n  <text x=\"270\" y=\"262\" fill=\"#e8ecf5\" font-size=\"9\">• Full capacity utilisation</text>\n  <text x=\"270\" y=\"279\" fill=\"#e8ecf5\" font-size=\"9\">• Immobile / specialised factors</text>\n  <text x=\"270\" y=\"296\" fill=\"#e8ecf5\" font-size=\"9\">• High barriers to entry</text>\n  <text x=\"270\" y=\"313\" fill=\"#e8ecf5\" font-size=\"9\">• Long production cycle</text>\n  <text x=\"270\" y=\"330\" fill=\"#e8ecf5\" font-size=\"9\">• Perishable goods</text>\n</svg>",
+    "title": "PES: Visual Comparison",
+    "checklist": [
+     "All five PES cases shown with correct curve shapes",
+     "PES values clearly labelled",
+     "Unit elastic supply passes through the origin",
+     "Factors making supply more/less elastic listed"
+    ],
+    "description": "Compares the five key PES cases from perfectly elastic to perfectly inelastic, showing how the shape of the supply curve reflects the responsiveness of quantity supplied to price changes."
+   },
+   {
+    "id": "supply:diagram:48cdd52d",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"ta1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"290\" x2=\"460\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ta1)\"/>\n  <line x1=\"70\" y1=\"290\" x2=\"70\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#ta1)\"/>\n  <text x=\"260\" y=\"330\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\">Quantity</text>\n  <text x=\"20\" y=\"160\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,20,160)\">Price (£)</text>\n  <!-- Momentary supply (vertical) -->\n  <line x1=\"170\" y1=\"270\" x2=\"170\" y2=\"60\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"140\" y=\"55\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">Sₘ</text>\n  <text x=\"140\" y=\"70\" fill=\"#ef4444\" font-size=\"9\">(momentary)</text>\n  <!-- Short-run supply (steep) -->\n  <line x1=\"120\" y1=\"270\" x2=\"310\" y2=\"60\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"305\" y=\"50\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">Sₛᵣ</text>\n  <text x=\"320\" y=\"65\" fill=\"#3b82f6\" font-size=\"9\">(short run)</text>\n  <!-- Long-run supply (flatter) -->\n  <line x1=\"100\" y1=\"270\" x2=\"440\" y2=\"100\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"435\" y=\"92\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">Sₗᵣ</text>\n  <text x=\"435\" y=\"107\" fill=\"#059669\" font-size=\"9\">(long run)</text>\n  <!-- Price level reference -->\n  <line x1=\"70\" y1=\"180\" x2=\"400\" y2=\"180\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.3\"/>\n  <text x=\"55\" y=\"184\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"end\">P₁</text>\n  <!-- Quantity markers at P1 -->\n  <circle cx=\"170\" cy=\"180\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"170\" y1=\"180\" x2=\"170\" y2=\"290\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"170\" y=\"305\" fill=\"#ef4444\" font-size=\"9\" text-anchor=\"middle\">Qₘ</text>\n  <circle cx=\"228\" cy=\"180\" r=\"4\" fill=\"#3b82f6\"/>\n  <line x1=\"228\" y1=\"180\" x2=\"228\" y2=\"290\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"228\" y=\"305\" fill=\"#3b82f6\" font-size=\"9\" text-anchor=\"middle\">Qₛᵣ</text>\n  <circle cx=\"330\" cy=\"180\" r=\"4\" fill=\"#059669\"/>\n  <line x1=\"330\" y1=\"180\" x2=\"330\" y2=\"290\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.5\"/>\n  <text x=\"330\" y=\"305\" fill=\"#059669\" font-size=\"9\" text-anchor=\"middle\">Qₗᵣ</text>\n  <!-- Annotation -->\n  <text x=\"260\" y=\"322\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">At P₁: Qₗᵣ > Qₛᵣ > Qₘ — supply becomes more elastic over time</text>\n  <!-- Key box -->\n  <rect x=\"305\" y=\"210\" width=\"170\" height=\"75\" rx=\"5\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" opacity=\"0.3\"/>\n  <text x=\"315\" y=\"228\" fill=\"#ef4444\" font-size=\"9\">• Momentary: all factors fixed</text>\n  <text x=\"315\" y=\"245\" fill=\"#3b82f6\" font-size=\"9\">• Short run: some factors fixed</text>\n  <text x=\"315\" y=\"262\" fill=\"#059669\" font-size=\"9\">• Long run: all factors variable</text>\n  <text x=\"315\" y=\"279\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">  (new firms can enter/exit)</text>\n</svg>",
+    "title": "PES Over Time: Short Run vs Long Run",
+    "checklist": [
+     "Three supply curves drawn with correct slopes (vertical, steep, shallow)",
+     "Momentary, short-run and long-run supply clearly labelled",
+     "All curves intersect at the initial equilibrium",
+     "Demonstrated that Qs response increases with time",
+     "Key explaining factor fixity for each time period"
+    ],
+    "description": "Shows how the elasticity of supply increases over time as firms gain flexibility to adjust production capacity. The momentary, short-run and long-run supply curves are compared."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "An increase in the cost of raw materials, wages or energy raises firms' costs of production.",
+      "At existing market prices, profit margins are squeezed, making production less profitable.",
+      "Firms reduce output or exit the market, causing the supply curve to shift leftward.",
+      "The leftward shift leads to higher equilibrium prices and lower equilibrium quantities, reducing consumer welfare."
+     ],
+     "title": "Rising input costs reduce supply",
+     "result": "Rising costs of production are a key cause of supply-side contractions, leading to higher prices and reduced output."
+    },
+    {
+     "steps": [
+      "Advances in technology reduce average costs of production by increasing output per unit of input.",
+      "Lower costs make production more profitable at every price level, incentivising firms to increase output.",
+      "The supply curve shifts rightward, increasing equilibrium quantity and reducing equilibrium price.",
+      "Consumers benefit from lower prices and greater availability, while efficient firms earn higher profits."
+     ],
+     "title": "Technology improvements increase supply",
+     "result": "Technological progress is the main driver of long-run increases in supply and improvements in productive efficiency."
+    },
+    {
+     "steps": [
+      "Price elasticity of supply (PES) measures how responsive quantity supplied is to a change in price.",
+      "In the short run, supply is inelastic because firms cannot easily change capacity — factories take time to build.",
+      "In the long run, firms can invest in new capital, hire workers and enter markets, making supply more elastic.",
+      "Industries with spare capacity, mobile factors of production and storable goods have higher PES."
+     ],
+     "title": "PES depends on time, spare capacity and factor mobility",
+     "result": "PES is primarily determined by the time horizon and the ease with which firms can adjust production levels."
+    },
+    {
+     "steps": [
+      "Producer surplus is the difference between the market price a firm receives and the minimum price it would accept (its cost of production).",
+      "When market prices rise, producer surplus increases as firms earn more above their costs.",
+      "Firms with lower costs of production earn the most producer surplus — they are the most efficient producers.",
+      "Total producer surplus is the area above the supply curve and below the market price, and it represents the welfare gain to producers."
+     ],
+     "title": "Producer surplus reflects the gain from selling above cost",
+     "result": "Producer surplus measures how market prices reward efficient producers and is central to welfare analysis."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Technology does not benefit all firms equally",
+     "content": "Large firms can afford to invest in new technology, gaining cost advantages, while small firms may be priced out. This can increase market concentration and reduce competition. Technology can also cause structural unemployment as workers are replaced by automation, meaning the benefits of technological progress are unevenly distributed."
+    },
+    {
+     "title": "PES is difficult to measure precisely",
+     "content": "Estimating PES requires isolating the effect of price changes from all other factors affecting supply. In practice, supply responds to expectations, government policy and global conditions simultaneously. PES is useful as a conceptual tool but specific numerical estimates should be treated with caution."
+    },
+    {
+     "title": "Short-run supply constraints can cause persistent problems",
+     "content": "When supply is inelastic in the short run, sudden demand increases lead to sharp price rises rather than output increases. This can cause cost-push inflation, reduce consumer welfare and disproportionately affect low-income households. Governments may intervene with price controls, but these risk creating further distortions."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "supply:mistake:92fdd036",
+    "title": "Confusing movement along vs shift of the supply curve",
+    "examTip": "Say \"quantity supplied increased\" for a price change, and \"supply increased\" only for a shift of the whole curve.",
+    "mistake": "Students say \"supply increases\" when the price rises. A rise in price causes a movement along the supply curve (extension), not a shift.",
+    "correction": "A change in price → movement along the curve. A change in costs of production, technology, taxes/subsidies, or number of firms → shift of the supply curve."
+   },
+   {
+    "id": "supply:mistake:6bd855bd",
+    "title": "Not knowing factors that affect PES",
+    "examTip": "Time is the most important factor. In the momentary period, supply is perfectly inelastic. In the long run, firms can fully adjust.",
+    "mistake": "Students struggle to explain why some goods have elastic supply and others have inelastic supply.",
+    "correction": "Key factors: spare capacity (more = elastic), time period (longer = more elastic), availability of raw materials, ease of switching production, ability to store stock."
+   },
+   {
+    "id": "supply:mistake:2c4b3469",
+    "title": "Drawing supply curve shifts in the wrong direction",
+    "mistake": "Students shift the supply curve to the left when costs fall, or to the right when costs rise.",
+    "correction": "Lower costs → supply shifts RIGHT (more can be produced at every price). Higher costs → supply shifts LEFT (less can be produced at every price)."
+   }
+  ]
+ }
+}

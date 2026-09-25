@@ -284,12 +284,12 @@ export default function Unit1Page() {
         <div className="elp-cta-bg" style={{ background: 'radial-gradient(ellipse at 50% 50%, rgba(20,184,166,.07) 0%, transparent 65%)' }} />
         <div className="elp-cta-inner elp-fade-up">
           <h2 className="elp-cta-title">Ready to revise Unit 1?</h2>
-          <p className="elp-cta-sub">Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro — £1 for your first month.</p>
+          <p className="elp-cta-sub">Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro — £1 for your first month as a new subscriber.</p>
           <div className="elp-cta-actions">
             <Link href="/economics/unit-1/introductory-concepts" className="elp-btn-primary" style={{ fontSize: 15, padding: '14px 30px' }}>Open Revvy Learn — it&apos;s free →</Link>
             <Link href="/economics" className="elp-btn-secondary">← Back to all units</Link>
           </div>
-          <p className="elp-cta-note">No signup required for notes · Cancel anytime · £1 first month, then £1.99 · charged in your local currency</p>
+          <p className="elp-cta-note">No signup required for notes · Cancel anytime · £1 first month for new subscribers, then £1.99 · charged in your local currency</p>
         </div>
       </div>
 

@@ -24,6 +24,7 @@ export default function BodyRenderer({ blocks, glossaryTerms }) {
                 steps={block.steps}
                 result={block.result}
                 resultType={block.resultType}
+                glossaryTerms={glossaryTerms}
               />
             );
           case 'bullets':

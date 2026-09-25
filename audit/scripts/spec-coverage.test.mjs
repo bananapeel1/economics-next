@@ -1,0 +1,87 @@
+/**
+ * The spec-coverage guard's own tests — packet 12.1, E003.
+ *
+ * Three fixtures, one per failure mode, and one clean fixture that must pass. The clean one is not
+ * decoration: three fixtures that fail prove only that the guard fails on SOMETHING. The control is
+ * what shows that each failure is caused by the one field the fixture changed, because the four
+ * files are otherwise the same section.
+ *
+ * The guard is run as a SUBPROCESS, not imported. Importing it would run its CLI body and share this
+ * process's argv, and — more to the point — the thing being tested is `npm run spec-coverage`'s exit
+ * code, which is what a gate reads. A test that imported the module could pass while the command
+ * exited 0 on a failure.
+ */
+
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const GUARD = path.join(ROOT, 'audit/scripts/spec-coverage-check.mjs');
+const FIXTURES = path.join(ROOT, 'audit/fixtures/spec-coverage');
+
+function run(args) {
+  try {
+    const stdout = execFileSync(process.execPath, [GUARD, ...args], { cwd: ROOT, encoding: 'utf8' });
+    return { code: 0, stdout };
+  } catch (err) {
+    return { code: err.status ?? 1, stdout: err.stdout || '' };
+  }
+}
+
+function runJson(args) {
+  const r = run(args);
+  return { ...r, json: JSON.parse(r.stdout) };
+}
+
+function runFixture(name) {
+  return runJson(['--fixture', path.join(FIXTURES, `${name}.json`), '--json']);
+}
+
+test('the clean fixture passes: valid tariffs, real spec ids, an evaluative question', () => {
+  const { code, json } = runFixture('clean');
+  assert.equal(code, 0, `expected exit 0, got ${code}: ${JSON.stringify(json.failures)}`);
+  assert.deepEqual(json.failures, []);
+  assert.equal(json.rows[0].questions, 4);
+  assert.ok(json.rows[0].examined > 0, 'the clean fixture should examine at least one leaf');
+});
+
+test('an invented specItems id fails, and fails on the specid rule only', () => {
+  const { code, json } = runFixture('invented-spec-id');
+  assert.equal(code, 1);
+  assert.deepEqual([...new Set(json.failures.map((f) => f.rule))], ['specid']);
+  assert.ok(json.failures.some((f) => f.detail.includes('ECON-9.9.9-01')), JSON.stringify(json.failures));
+});
+
+test('Analyse 8 fails on the tariff rule — Analyse is 6 marks in both IAL subjects', () => {
+  const { code, json } = runFixture('invalid-tariff');
+  assert.equal(code, 1);
+  assert.deepEqual([...new Set(json.failures.map((f) => f.rule))], ['tariff']);
+  assert.ok(json.failures.some((f) => f.detail.startsWith('Analyse 8 is not an Economics tariff')), JSON.stringify(json.failures));
+});
+
+test('a section with questions but no evaluative question fails on the noeval rule', () => {
+  const { code, json } = runFixture('no-evaluative');
+  assert.equal(code, 1);
+  assert.deepEqual([...new Set(json.failures.map((f) => f.rule))], ['noeval']);
+  assert.ok(json.failures.some((f) => f.detail.includes('no evaluative question')), JSON.stringify(json.failures));
+});
+
+test('the real run reports all 43 sections against the 1,165-leaf denominator', () => {
+  const { json } = runJson(['--json']);
+  assert.equal(json.leafTotal, 1165, 'the denominator is the count of kind:"leaf" rows, not 1,362 and not 1,073');
+  assert.equal(json.rows.length, 43);
+  for (const row of json.rows) {
+    assert.ok(row.pct >= 0 && row.pct <= 100, `${row.slug} reported ${row.pct}%`);
+  }
+});
+
+test('--section narrows to one section and market-failure reports a real, partial percentage', () => {
+  const { json } = runJson(['--section', 'market-failure', '--json']);
+  assert.equal(json.rows.length, 1);
+  const row = json.rows[0];
+  assert.equal(row.slug, 'market-failure');
+  assert.ok(row.pct > 0 && row.pct < 100, `expected a partial percentage, got ${row.pct}%`);
+});

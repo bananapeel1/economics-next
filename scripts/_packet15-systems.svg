@@ -1,0 +1,63 @@
+<svg width="500" height="350" viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" style="font-family:'DM Sans',sans-serif">
+  <!-- Spectrum bar -->
+  <defs>
+    <linearGradient id="specGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect x="50" y="50" width="400" height="16" rx="8" fill="url(#specGrad)" opacity="0.7"/>
+  <!-- Labels on spectrum -->
+  <text x="50" y="40" fill="#059669" font-size="12" font-weight="600">Free Market</text>
+  <text x="210" y="40" fill="#3b82f6" font-size="12" font-weight="600" text-anchor="middle">Mixed</text>
+  <text x="450" y="40" fill="#ef4444" font-size="12" font-weight="600" text-anchor="end">Command</text>
+  <!-- Markers -->
+  <line x1="80" y1="66" x2="80" y2="85" stroke="#059669" stroke-width="2"/>
+  <text x="80" y="98" fill="#059669" font-size="10" text-anchor="middle">Hong Kong</text>
+  <line x1="160" y1="66" x2="160" y2="85" stroke="#059669" stroke-width="2"/>
+  <text x="160" y="98" fill="#059669" font-size="10" text-anchor="middle">Singapore</text>
+  
+  
+  <line x1="310" y1="66" x2="310" y2="85" stroke="#e8ecf5" stroke-width="2"/>
+  <text x="310" y="98" fill="#e8ecf5" font-size="10" text-anchor="middle">Sweden</text>
+  <line x1="420" y1="66" x2="420" y2="85" stroke="#ef4444" stroke-width="2"/>
+  <text x="420" y="98" fill="#ef4444" font-size="10" text-anchor="middle">N. Korea</text>
+  <!-- Comparison boxes -->
+  <!-- Free Market -->
+  <rect x="30" y="120" width="140" height="210" rx="6" fill="none" stroke="#059669" stroke-width="1.5"/>
+  <text x="100" y="140" fill="#059669" font-size="12" font-weight="600" text-anchor="middle">Free Market</text>
+  <text x="40" y="162" fill="#e8ecf5" font-size="10">Price mechanism</text>
+  <text x="40" y="178" fill="#e8ecf5" font-size="10">Private ownership</text>
+  <text x="40" y="194" fill="#e8ecf5" font-size="10">Profit motive</text>
+  <text x="40" y="210" fill="#e8ecf5" font-size="10">Consumer choice</text>
+  <text x="40" y="232" fill="#059669" font-size="10">+ Efficient allocation</text>
+  <text x="40" y="248" fill="#059669" font-size="10">+ Innovation</text>
+  <text x="40" y="270" fill="#ef4444" font-size="10">– Market failure</text>
+  <text x="40" y="286" fill="#ef4444" font-size="10">– Inequality</text>
+  <text x="40" y="302" fill="#ef4444" font-size="10">– Instability</text>
+  <!-- Mixed -->
+  <rect x="180" y="120" width="140" height="210" rx="6" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="250" y="140" fill="#3b82f6" font-size="12" font-weight="600" text-anchor="middle">Mixed Economy</text>
+  <text x="190" y="162" fill="#e8ecf5" font-size="10">Market + state</text>
+  <text x="190" y="178" fill="#e8ecf5" font-size="10">Private &amp; public sector</text>
+  <text x="190" y="194" fill="#e8ecf5" font-size="10">Regulation</text>
+  <text x="190" y="210" fill="#e8ecf5" font-size="10">Welfare provision</text>
+  <text x="190" y="232" fill="#059669" font-size="10">+ Corrects failure</text>
+  <text x="190" y="248" fill="#059669" font-size="10">+ Equity &amp; efficiency</text>
+  <text x="190" y="270" fill="#ef4444" font-size="10">– Govt. failure risk</text>
+  <text x="190" y="286" fill="#ef4444" font-size="10">– Disagreement on</text>
+  <text x="190" y="300" fill="#ef4444" font-size="10">  balance</text>
+  <!-- Command -->
+  <rect x="330" y="120" width="140" height="210" rx="6" fill="none" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="400" y="140" fill="#ef4444" font-size="12" font-weight="600" text-anchor="middle">Command</text>
+  <text x="340" y="162" fill="#e8ecf5" font-size="10">Central planning</text>
+  <text x="340" y="178" fill="#e8ecf5" font-size="10">State ownership</text>
+  <text x="340" y="194" fill="#e8ecf5" font-size="10">Directed output</text>
+  <text x="340" y="210" fill="#e8ecf5" font-size="10">Limited choice</text>
+  <text x="340" y="232" fill="#059669" font-size="10">+ Equity possible</text>
+  <text x="340" y="248" fill="#059669" font-size="10">+ Public goods</text>
+  <text x="340" y="270" fill="#ef4444" font-size="10">– Inefficiency</text>
+  <text x="340" y="286" fill="#ef4444" font-size="10">– No incentives</text>
+  <text x="340" y="302" fill="#ef4444" font-size="10">– Shortages</text>
+</svg>

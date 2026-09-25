@@ -1,0 +1,52 @@
+packet-39b: 4.3.2 sub-topics 4 and 5, and a loader that reads the wrong column
+
+Second half of trade-global-economy. Packet 39a built sub-topics 1-3 and carried the live
+"Protectionism and the WTO" block forward; 39b builds sub-topics 4 and 5 and replaces it. Together
+the two halves take 4.3.2 from 2 blocks to 10 blocks and 51 subsections, the largest section in the
+programme, for the 46 leaves the specification gives it.
+
+The hazard that governed the packet: loadBundle() selects the `data` column, which is the LIVE
+published row. 39a is staged and not published, so its four blocks exist only in `draft`. A runner
+copied from 39a would have rebuilt on top of the two-block live section and destroyed 39a's work
+with every check passing, because every check would have been measuring a bundle that was internally
+consistent and missing half the section. 39b builds from 39a's committed snapshot and uses the draft
+as a witness. The first version of that check asserted the draft equalled the snapshot and built
+from the draft, which is correct exactly once: the moment it staged, the next run failed its own
+first check with 168 cascading problems.
+
+  2 blocks -> 10 (4 from 39a, 6 built)     2 steps -> 61, ten chapter check-ins
+  4 subsections -> 51                      0 recalls -> 37, 0 answerable by scrolling up
+  14 quiz -> 46      5 practice -> 14      5 diagrams -> 11
+  live 8 BLOCK / 28 DEBT -> staged 0 BLOCK / 1 DEBT
+
+One market drawn three ways is what makes accuracy-01 demonstrable rather than asserted. A $10
+tariff on a $20 world price: consumers lose $900, producers gain $300, the government takes $400,
+and $200 goes to nobody. The live text said the loss exists because producer gains are smaller than
+consumer losses plus revenue, which is true of every tariff ever levied and identifies nothing; the
+loss exists because $900 exceeds $300 PLUS $400. A 40-unit quota gives the identical price and loss
+with the $400 as rent; a $10 subsidy leaves consumers at the world price and so loses $100, half.
+
+Rule 1 caught four findings wrong about the specification: a fifth rung that does not exist (4b-4 is
+"economic and monetary unions", one leaf), a citation of "spec 4.2" which is Assessment information,
+4d worded as "regional trade agreements" where the spec says "trading blocs", and a request for a
+10-mark item in a subject whose tariffs are 2, 2/4, 4, 4, 6, 8, 14 and 20. Four more ids edit the
+globalisation section, which packet 34 rebuilt out from under them.
+
+Verify A confirmed 25 of 26 and rejected one: REPLACES swept seven collections and not extras, so
+the live chain defining trade diversion as something "the common external tariff shifts" survived
+byte-identical beside the subsection that defines it correctly. Fixed, six superseded entries swept,
+and sent back to the same verifier rather than confirmed by the builder who broke it. Verify A also
+found two diagram label defects, three stale counts in this packet's own headers, a reorder testing
+material taught two subsections later, and a collision guard weaker than the one packet 31 already
+had. All fixed; adopting packet 31's 1.2 x face tolerance and its segment check immediately found
+four more collisions, including a y-axis running through its own "Price" label.
+
+Verify B at 390x844 found what nothing else could: a #0b1020 label on a #64748b bar at 3.98:1
+against the 4.5:1 floor. npm run contrast passes it, and is right to - that guard reads
+processSvg.js and the themed tokens and never looks at an authored SVG's text against the rect
+behind it. That check is now in the runner and found four more on the way in.
+
+Staged, not published. 46 of 46 leaves taught in content[], which closes 39a's accepted debt on
+ECON-4.3.2-4c-6 and the inherited spec.uncovered on 5a-5.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>

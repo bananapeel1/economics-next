@@ -11,6 +11,20 @@ function getRecommendation(data) {
   if (data.weakestTopics?.length > 0 && data.weakestTopics[0].accuracy < 50) {
     return { type: 'practice', text: `Practice ${data.weakestTopics[0].title}`, sub: `${data.weakestTopics[0].accuracy}% mastery \u2014 needs work`, action: 'Practice \u2192' };
   }
+  /* F034: this was the fallback for everyone, so a student who had just confirmed their email and
+     never opened a section was told to "continue where you left off". There is nowhere to
+     continue from. `data` exists for anyone signed in, so it cannot stand in for having done
+     something — the counts have to. */
+  // Fields the dashboard route actually returns, checked against
+  // app/api/progress/dashboard/route.js rather than guessed at.
+  const hasHistory =
+    (data.overall?.mastered || 0) > 0 ||
+    (data.overall?.learning || 0) > 0 ||
+    (data.recentActivity?.last30days || 0) > 0 ||
+    (data.weakestTopics?.length || 0) > 0;
+  if (!hasHistory) {
+    return { type: 'start', text: 'Start with your first topic', sub: 'Pick a section and Learn Mode will take you through it', action: 'Get started' };
+  }
   return { type: 'continue', text: 'Continue where you left off', sub: 'Keep building your knowledge', action: 'Continue \u2192' };
 }
 
@@ -81,6 +95,20 @@ export default function HomeScreen({ subjects, units, sections, user, isPremium,
     }
   }, [user]);
 
+  /*
+   * F027. Both "Continue Learning" entry points used to read `last-visited-section` from
+   * localStorage and, finding nothing, do nothing — a button that silently ignores the click on
+   * any device the student has not used before. The server's answer comes first now, the local
+   * pointer is the fallback, and there is always a destination.
+   */
+  function continueLearning() {
+    const local = typeof window !== 'undefined' ? localStorage.getItem('last-visited-section') : null;
+    const target = dashData?.continueSection || local || sections?.[0]?.id;
+    if (!target) return;
+    onNavigateToSection(target);
+    onNavigateToTab('learn-mode');
+  }
+
   // Recommendation action handler
   function handleRecommendAction(rec) {
     if (rec.type === 'review') {
@@ -94,11 +122,7 @@ export default function HomeScreen({ subjects, units, sections, user, isPremium,
         window.location.href = '/practice';
       }
     } else if (rec.type === 'continue') {
-      const lastSection = typeof window !== 'undefined' ? localStorage.getItem('last-visited-section') : null;
-      if (lastSection) {
-        onNavigateToSection(lastSection);
-        onNavigateToTab('learn-mode');
-      }
+      continueLearning();
     } else {
       // Default: go to first section
       const first = sections[0];
@@ -125,14 +149,19 @@ export default function HomeScreen({ subjects, units, sections, user, isPremium,
   const thisWeek = dashData?.recentActivity?.last7days || 0;
   const overdueCount = dashData?.overdueCount || 0;
 
-  // Topic mastery: use the active subject from localStorage or first subject
+  /*
+   * Topic mastery for the subject the student was last in.
+   *
+   * `sub.id === activeSubjectSlug` compared a numeric subject id against the string localStorage
+   * always returns, so the match never succeeded and this panel silently always showed the first
+   * subject — a Business student was shown their Economics mastery. Same bug as the one fixed in
+   * StudyApp's restore, found by the same verification pass.
+   */
   const activeSubjectSlug = typeof window !== 'undefined' ? localStorage.getItem('last-visited-subject') : null;
   const activeSubjectData = dashData?.bySubject?.find(s => {
-    if (activeSubjectSlug) {
-      const matchSubject = subjects.find(sub => sub.id === activeSubjectSlug);
-      return matchSubject && s.slug === matchSubject.slug;
-    }
-    return false;
+    if (!activeSubjectSlug) return false;
+    const matchSubject = subjects.find(sub => String(sub.id) === String(activeSubjectSlug));
+    return matchSubject && s.slug === matchSubject.slug;
   }) || dashData?.bySubject?.[0];
 
   return (
@@ -173,10 +202,7 @@ export default function HomeScreen({ subjects, units, sections, user, isPremium,
 
       {/* Quick Access Grid */}
       <div className="hs-quick">
-        <button className="hs-quick-card" onClick={() => {
-          const lastSection = typeof window !== 'undefined' ? localStorage.getItem('last-visited-section') : null;
-          if (lastSection) { onNavigateToSection(lastSection); onNavigateToTab('learn-mode'); }
-        }}>
+        <button className="hs-quick-card" onClick={continueLearning}>
           <span className="hs-quick-icon">{'\uD83D\uDCDA'}</span>
           Continue Learning
         </button>

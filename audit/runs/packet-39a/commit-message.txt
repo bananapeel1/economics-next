@@ -1,0 +1,54 @@
+packet-39a: 4.3.2 sub-topics 1-3, and a country with two contradictory stories
+
+Packet 39 is the largest content packet in the programme — 4.3.2 has FIVE sub-topics, 55 oracle rows
+and 46 substantive leaves against packet 33's 32/28 — so on the founder's ruling it splits. 39a
+builds sub-topics 1-3 (19 leaves): specialisation and comparative advantage, patterns and volume of
+world trade, and the terms of trade. 39b is ledger packet 39.1 with 27 ids.
+
+Both halves write the same bundle, so this one carries the live "Protectionism and the WTO" block
+forward BY ID, asserts it deep-equal to live, and WIRES it — because LearnModeTab.jsx:255 decides
+hasRefs for the whole section, and a block left unpinned in a wired section gets a diagram by title
+fallback, a quiz by fallbackItemForBlock, and no practice item at all.
+
+  2 blocks -> 5 (4 built, 1 carried)      2 steps -> 30, five chapter check-ins
+  4 subsections -> 25 (23 built)          0 recalls -> 23, all four types, 0 recoverable
+  14 quiz -> 26 (21 built, 3 unpinned)    5 practice -> 8, every authored tariff from the census
+  5 diagrams -> 7 (4 built, 400-unit)     19 of 19 leaves taught in content[]
+
+Rule 1 caught the live bank testing two things that are in no specification: Marshall-Lerner is
+4.3.3 2f and is owed to packet 40, and Prebisch-Singer is 0 hits in both documents. Both are gone
+and their absence is asserted over every string in the bundle rather than trusted to the removal.
+Three bloc quiz items and the Assess/10 practice item go too, and are NOT replaced — the section has
+no bloc assessment until 39b, which must re-author them rather than assume they are there.
+
+Rule 1 also applied to this packet's own notes, twice. The brief claimed 39a would add the
+normalize() stopword filter that topFix-02 and structure-04 ask for; packet 2 added it in 4d45478,
+verified by running matchDiagramsToBlocks rather than by reading the code. And two examMatters told
+students "Appendix 6 defines Assess and Evaluate" when Appendix 6 for Economics lists eight command
+words and Assess is Business-only — the fifth instance in the programme and the first four were all
+caught by a person, so it is a rule in the runner now, A/B'd against a deliberate false citation.
+
+Verify A found the defect worth the packet: Sarova had exports growing to $60.0bn in one chapter and
+falling to $42.0bn in another, off the same $50.0bn base. Every figure divided and the two stories
+still contradicted each other, which no per-figure check can see. The trade-flows spine is now
+Velora on amounts that do not collide, and the structural rule — a money amount printed beside a
+fictional country must be one of that country's own — is in the runner.
+
+Verify A: 15 of 16 confirmed on round 1. structure-02 REJECTED as partial, accepted, and reopened
+on 39.1: its second clause is the protectionism block, which is carried byte-identical and still
+crams two subsections over the word budget. Verify B walked 390x844 signed out: five of five
+chapters resolve a diagram, a question AND a practice item, the four authored diagrams measure
+8.9-11.2 effective CSS px in a 298px column with 0 text leaving the frame, no app console error.
+
+Gate: npm test 237/237, npm run validate, exposure and recalls all exit 0, ledger `unverified 39`
+reports gate clear, and the SERVED draft matches the staged bundle field by field. `npm run build`
+does NOT pass in this working tree and it is not this packet's: another session has staged the
+deletion of components/section-exam-practice.css while the page committed at d013b17 imports it, and
+components/SectionModelAnswersPage.jsx is modified on disk into a prerender TypeError. HEAD's
+versions of both are clean and this packet changes no file under app/, components/ or lib/.
+
+Staged, not published. One accepted new DEBT with its evidence: spec.uncovered on ECON-4.3.2-4c-6,
+a sub-topic 4 leaf whose live coverage was a keyword false positive in a Notes topic about
+comparative advantage. 0 new BLOCK. 16 baselined findings clear on publish.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>

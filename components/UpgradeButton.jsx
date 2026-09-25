@@ -10,8 +10,19 @@ import Link from 'next/link';
  * table.
  */
 export default function UpgradeButton({ plan = 'monthly', label, className = '', ownedLabel }) {
-  const { user, subscription, isPremium } = useAuth();
+  const { user, subscription, isPremium, entitlementKnown } = useAuth();
   const [loading, setLoading] = useState(false);
+
+  /*
+   * V009. Every branch below is a claim about what this account already owns, and on a prerendered
+   * page none of them is answerable for the first moment of the visit — `subscription` is null and
+   * `isPremium` false because nothing has come back, not because the student is on the free plan.
+   * Offering "Upgrade to Pro" on that would put an existing subscriber one click from a second
+   * checkout. A disabled placeholder of the same shape holds the space until we know.
+   */
+  if (!entitlementKnown) {
+    return <div className={`upgrade-btn ${className}`} aria-busy="true" aria-disabled="true">Checking your plan…</div>;
+  }
 
   const hasLifetime = isLifetime(subscription);
 

@@ -1,5 +1,31 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Packet 12.2 wrote this for its noindex lab route; packet 12.3 deleted that route and moved its
+  // layout onto the two model-answer routes, so the entry moves with it (E022).
+  //
+  // These are the routes that read files under `audit/` and `content/` rather than importing them:
+  // the spec oracle for the coverage line (`lib/spec-coverage.js`) and the data-response markdown
+  // that decides whether a link-out renders (`lib/lab-data-response.js`). Next's file tracing
+  // follows imports, and `fs.readFileSync(path.join(process.cwd(), …))` is not an import, so
+  // without this the routes deploy without their data. Local `next dev` and `next build` do not
+  // need it — which is exactly why it has to be written down rather than discovered on Vercel.
+  //
+  // The t=0 section dump the lab route also traced is NOT here and must not come back: it is
+  // frozen since 12 September and no public canonical URL may serve it. That is E017, and the
+  // Quick Check block was dropped rather than shipped stale.
+  outputFileTracingIncludes: {
+    '/economics/[unit]': [
+      './audit/raw/spec-items.json',
+      './audit/raw/spec-coverage.json',
+      './content/data-response/**',
+    ],
+    '/business/[unit]': [
+      './audit/raw/spec-items.json',
+      './audit/raw/spec-coverage.json',
+      './content/data-response/**',
+    ],
+  },
+
   async redirects() {
     return [
       {

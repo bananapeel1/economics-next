@@ -1,0 +1,1682 @@
+{
+ "section_id": "aggregate-supply",
+ "subject": "economics",
+ "label": "2026-09-14-pre-packet-13",
+ "tables": {
+  "section_content": [
+   {
+    "id": "aggregate-supply:block:8f8c48e5",
+    "title": "Short-Run Aggregate Supply (SRAS)",
+    "sections": [
+     {
+      "id": "aggregate-supply:sub:sras-shape-and-slope",
+      "body": [
+       {
+        "text": "**Short-run aggregate supply (SRAS)** is the total output that all firms in the economy are willing and able to supply at each price level, given that at least one factor cost (typically wages) is fixed. Because input costs lag behind output prices, a rise in the general price level increases profit margins and incentivises firms to expand output.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The SRAS curve therefore slopes **upward from left to right**. At low levels of output there is plenty of spare capacity, so firms can increase production without much upward pressure on costs. As the economy approaches full capacity, further output gains require overtime pay, bidding up prices of scarce resources and steepening the curve.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "General price level rises",
+         "Revenue rises but wages are fixed in the short run",
+         "Profit margins widen"
+        ],
+        "result": "Firms expand output — movement along SRAS",
+        "resultType": "good"
+       }
+      ],
+      "title": "The SRAS Curve",
+      "recall": {
+       "id": "aggregate-supply:sub:sras-shape-and-slope:recall",
+       "type": "fillin",
+       "hints": [
+        "wa___",
+        "pr____",
+        "ou____"
+       ],
+       "prompt": "Complete the SRAS logic:",
+       "answers": [
+        "wages",
+        "profit",
+        "output"
+       ],
+       "template": [
+        "SRAS slopes upward because ___ are sticky in the short run",
+        "→ Higher price level raises ___ margins for firms",
+        "→ Firms respond by expanding ___"
+       ]
+      },
+      "keyIdea": "In the short run, higher prices make it profitable for firms to produce more because some costs like wages are fixed, so the SRAS curve slopes upward.",
+      "examMatters": "When drawing SRAS, always label both axes correctly — price level on the vertical axis and real GDP on the horizontal axis. Examiners penalise diagrams where axes are labelled with \"price\" and \"quantity\" as if it were a micro diagram.",
+      "realExample": {
+       "text": "**UK manufacturers** in early 2022 faced rising output prices while many workers were still on contracts set the previous year. The lag between product prices and wage costs temporarily boosted margins, encouraging firms to increase production — exactly the upward SRAS relationship.",
+       "emoji": "🏭"
+      },
+      "misconception": "Students say \"SRAS slopes upward because firms want more profit.\" That is too vague. Instead write: SRAS slopes upward because some input costs, especially wages, are sticky in the short run, so higher output prices temporarily raise profit margins and incentivise more production."
+     },
+     {
+      "id": "aggregate-supply:sub:sras-shifts",
+      "body": [
+       {
+        "text": "A **shift of the SRAS curve** occurs when the costs of production change for reasons other than a change in the general price level. If costs rise, SRAS shifts left — at every price level, firms supply less because their margins are squeezed. If costs fall, SRAS shifts right.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Factors That Shift SRAS",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Wage costs**: a rise in the national minimum wage or union-negotiated pay increases shifts SRAS left.",
+         "**Raw material costs**: higher oil or commodity prices raise production costs and shift SRAS left.",
+         "**Exchange rate changes**: a depreciation makes imported inputs more expensive, shifting SRAS left.",
+         "**Indirect taxes and subsidies**: higher VAT or a new green tax shifts SRAS left; subsidies shift it right."
+        ]
+       },
+       {
+        "text": "You should distinguish between movements along SRAS (caused by a change in the price level) and shifts of SRAS (caused by changes in production costs). This distinction mirrors the demand-side rule you already know: own-variable means movement along, everything else means shift.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Shifts of the SRAS Curve",
+      "recall": {
+       "id": "aggregate-supply:sub:sras-shifts:recall",
+       "type": "reorder",
+       "prompt": "Order these SRAS shift factors from cause to effect:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "OPEC cuts oil production",
+        "Raw material and transport costs rise",
+        "SRAS shifts left at every price level",
+        "Output falls and price level rises"
+       ]
+      },
+      "keyIdea": "Any change in firms' costs of production that is not caused by a change in the price level will shift the whole SRAS curve left or right.",
+      "examMatters": "Whenever you identify an SRAS shift, name the specific cost factor, state the direction of the shift, and show it on a diagram with two clearly labelled curves (SRAS1 and SRAS2). Generic statements like \"costs went up\" without specifying which costs will not earn full marks.",
+      "realExample": {
+       "text": "**OPEC's** oil production cuts in 2023 pushed global crude prices above $90 per barrel. For energy-intensive industries worldwide, higher fuel and transport costs shifted the SRAS curve to the left, contributing to persistent cost-push inflation across advanced economies.",
+       "emoji": "⛽"
+      },
+      "misconception": "Students write \"higher prices shift SRAS left\" without specifying input prices versus the general price level. A rise in the general price level is a movement along SRAS, not a shift. Instead write: only changes in costs of production (wages, raw materials, taxes) shift SRAS; a change in the overall price level causes a movement along it."
+     }
+    ],
+    "takeaway": [
+     "SRAS slopes up because sticky wages let margins rise with the price level.",
+     "Cost changes (wages, commodities, taxes) shift the SRAS curve.",
+     "Movement along SRAS = price level change; shift = cost change.",
+     "Near full capacity the SRAS curve becomes steeper."
+    ],
+    "diagramRef": "SRAS",
+    "quizIndices": [
+     0
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "aggregate-supply:block:fe52ba18",
+    "title": "Long-Run Aggregate Supply (LRAS)",
+    "sections": [
+     {
+      "id": "aggregate-supply:sub:classical-lras",
+      "body": [
+       {
+        "text": "The **classical (monetarist) view** holds that in the long run all factor prices, including wages, adjust fully to changes in the price level. Because no cost remains sticky, changes in the price level have no effect on real output. The LRAS curve is therefore a **vertical line** at the full-employment level of output (Yf).",
+        "type": "paragraph"
+       },
+       {
+        "text": "This vertical line represents the economy's **productive potential** — the maximum output achievable when all resources are fully and efficiently employed. It is determined entirely by supply-side factors: the quantity and quality of labour, capital, land, and the level of technology.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Price level rises in the long run",
+         "Wages and input costs adjust fully upward",
+         "Real profit margins return to normal"
+        ],
+        "result": "Output stays at Yf — LRAS is vertical",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "The Classical LRAS Curve",
+      "recall": {
+       "id": "aggregate-supply:sub:classical-lras:recall",
+       "type": "fillin",
+       "hints": [
+        "wa___",
+        "no____",
+        "ve______"
+       ],
+       "prompt": "Complete the classical LRAS reasoning:",
+       "answers": [
+        "wages",
+        "normal",
+        "vertical"
+       ],
+       "template": [
+        "In the long run, ___ adjust fully to price-level changes",
+        "→ Real profit margins return to ___",
+        "→ LRAS is ___ at the full-employment level of output"
+       ]
+      },
+      "keyIdea": "Classical economists argue that in the long run the economy always returns to full-employment output, so the LRAS curve is vertical.",
+      "examMatters": "When you draw a classical LRAS, it must be a perfectly vertical line at Yf. If you draw it with any slope, examiners will assume you do not understand the classical model. Label Yf clearly on the horizontal axis.",
+      "realExample": {
+       "text": "**Germany** invested heavily in vocational training and automation through its Industrie 4.0 programme. These supply-side improvements expanded productive capacity and shifted the classical LRAS curve to the right, increasing potential output without putting upward pressure on the price level.",
+       "emoji": "🇩🇪"
+      },
+      "misconception": "Students say \"LRAS is vertical because the economy is always at full employment.\" In reality, actual output can be above or below Yf in the short run. Instead write: LRAS is vertical because in the long run all factor prices adjust, so changes in the price level do not alter the economy's productive potential."
+     },
+     {
+      "id": "aggregate-supply:sub:keynesian-lras",
+      "body": [
+       {
+        "text": "The **Keynesian view** challenges the assumption that the economy always self-corrects to full employment. At low levels of output, large amounts of spare capacity mean firms can expand production without raising prices — the curve is **horizontal (perfectly elastic)**. Workers accept jobs at existing wages because unemployment is high.",
+        "type": "paragraph"
+       },
+       {
+        "text": "As the economy approaches full capacity, bottlenecks appear — skilled workers become scarce, raw materials are bid up, and overtime costs rise. The curve becomes **upward-sloping**. At full capacity it becomes **vertical**, just like the classical curve, because no more output can be produced regardless of the price level.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The practical implication is significant: in a recession with spare capacity, increasing aggregate demand can raise real output without causing inflation. This justifies Keynesian demand-management policies like fiscal stimulus during downturns.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Keynesian LRAS Curve",
+      "recall": {
+       "id": "aggregate-supply:sub:keynesian-lras:recall",
+       "type": "reorder",
+       "prompt": "Order the sections of the Keynesian AS curve from left to right:",
+       "shuffled": [
+        1,
+        2,
+        0
+       ],
+       "correctOrder": [
+        "Horizontal section — spare capacity, output rises without inflation",
+        "Upward-sloping section — bottlenecks cause rising costs",
+        "Vertical section — full capacity, only price level can rise"
+       ]
+      },
+      "keyIdea": "Keynesians argue that the economy can get stuck below full employment, so their AS curve is flat at low output and only becomes vertical near capacity.",
+      "examMatters": "Examiners often ask you to compare the classical and Keynesian LRAS views. You must draw both diagrams and explain the different policy implications: classical says demand-side policy only affects prices, Keynesian says it can raise real output when there is spare capacity.",
+      "realExample": {
+       "text": "**Japan's** prolonged period of low growth and deflation from the 1990s onward is often cited as a Keynesian scenario. Despite massive monetary stimulus, the economy remained well below full capacity for decades, with firms able to expand output without generating inflation — consistent with operating on the flat portion of the Keynesian AS curve.",
+       "emoji": "🇯🇵"
+      },
+      "misconception": "Students draw the Keynesian AS as simply a horizontal line. It actually has three distinct sections: horizontal when there is high spare capacity, upward-sloping as bottlenecks emerge, and vertical at full capacity. Instead write: the Keynesian AS curve has a flat section, a rising section, and a vertical section, reflecting how the economy behaves differently at different output levels."
+     },
+     {
+      "id": "aggregate-supply:sub:lras-determinants",
+      "body": [
+       {
+        "text": "Since LRAS represents the economy's maximum sustainable output, it can only shift when the **productive capacity** of the economy changes. You should think about the quantity and quality of the four factors of production: land, labour, capital, and enterprise.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Key Supply-Side Factors",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Labour force size and skills**: immigration, education, and training increase the quantity or quality of workers.",
+         "**Capital investment**: more machinery, infrastructure, and technology raises productivity.",
+         "**Technological progress**: innovation allows more output from the same inputs.",
+         "**Institutional factors**: rule of law, property rights, deregulation, and competition policy improve efficiency."
+        ]
+       },
+       {
+        "text": "These factors also explain differences in economic growth between countries. Economies that invest in education, infrastructure, and technology tend to see faster rightward shifts in LRAS and therefore faster long-run growth in potential output.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Determinants of LRAS",
+      "recall": {
+       "id": "aggregate-supply:sub:lras-determinants:recall",
+       "type": "fillin",
+       "hints": [
+        "ed________",
+        "ca_____",
+        "pr______"
+       ],
+       "prompt": "Complete the LRAS determinants:",
+       "answers": [
+        "education",
+        "capital",
+        "progress"
+       ],
+       "template": [
+        "More or better ___ increases the economy's labour capacity",
+        "→ Higher ___ investment provides more machinery and infrastructure",
+        "→ Technological ___ allows more output from the same inputs"
+       ]
+      },
+      "keyIdea": "Anything that increases the productive potential of the economy — better technology, more capital, a larger or more skilled workforce — shifts LRAS to the right.",
+      "examMatters": "Questions on economic growth often require you to distinguish between short-run growth (AD shifts along a given LRAS) and long-run growth (LRAS shifts right). Make sure you specify which type of growth you are analysing and link to the relevant supply-side factors.",
+      "realExample": {
+       "text": "**South Korea** transformed from one of the poorest countries in the 1960s to a high-income economy by investing massively in education and technology. These supply-side improvements shifted LRAS persistently to the right, increasing potential GDP more than tenfold in real terms over five decades.",
+       "emoji": "🇰🇷"
+      },
+      "misconception": "Students claim \"increasing government spending shifts LRAS right.\" Higher spending shifts AD right, not LRAS. Instead write: LRAS only shifts through changes in productive capacity — education, capital investment, technology, and institutional reform — not through changes in aggregate demand."
+     }
+    ],
+    "takeaway": [
+     "Classical LRAS is vertical at Yf — price-level changes do not alter real output.",
+     "Keynesian AS has flat, rising, and vertical sections.",
+     "LRAS shifts right through education, capital, technology, and institutions."
+    ],
+    "diagramRef": "LRAS",
+    "quizIndices": [
+     1
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "aggregate-supply:block:5b18ac4c",
+    "title": "Macroeconomic Equilibrium",
+    "sections": [
+     {
+      "id": "aggregate-supply:sub:ad-as-equilibrium",
+      "body": [
+       {
+        "text": "**Macroeconomic equilibrium** occurs at the point where the **aggregate demand (AD)** curve intersects the **aggregate supply (AS)** curve. At this point, the total output that firms are willing to supply exactly matches the total output that consumers, firms, the government, and overseas buyers wish to purchase.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The intersection determines two key variables simultaneously: the **equilibrium price level** and the **equilibrium level of real GDP**. If you can read these two values from a diagram and explain what forces brought the economy to that point, you have the foundation for analysing any macroeconomic event.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "AD curve slopes downward",
+         "SRAS curve slopes upward",
+         "Curves intersect"
+        ],
+        "result": "Equilibrium price level and real GDP are determined",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "AD/AS Equilibrium",
+      "recall": {
+       "id": "aggregate-supply:sub:ad-as-equilibrium:recall",
+       "type": "reorder",
+       "prompt": "Order the steps to finding macroeconomic equilibrium:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Draw the AD curve sloping downward",
+        "Draw the SRAS curve sloping upward",
+        "Identify the intersection point",
+        "Read off the equilibrium price level and real GDP"
+       ]
+      },
+      "keyIdea": "Macroeconomic equilibrium is where aggregate demand intersects aggregate supply, determining the price level and real output for the whole economy.",
+      "examMatters": "Every AD/AS diagram must clearly show the equilibrium point labelled with the price level (P1) and real GDP (Y1). Examiners deduct marks if you draw curves that do not intersect or if you fail to read off both the price level and output at equilibrium.",
+      "realExample": {
+       "text": "**The UK economy** in 2019 was operating close to macroeconomic equilibrium with inflation near the 2% target and unemployment at historic lows. The AD and SRAS curves intersected at a point close to the estimated full-employment level of output, producing stable prices and low joblessness.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students treat macroeconomic equilibrium as automatically desirable. Equilibrium simply means AD equals AS — the economy could settle at a point with high unemployment or high inflation. Instead write: macroeconomic equilibrium describes where the economy is, not where it should be; it can occur above or below the full-employment level."
+     },
+     {
+      "id": "aggregate-supply:sub:changes-in-equilibrium",
+      "body": [
+       {
+        "text": "If **AD increases** (shifts right) — for example because of a tax cut or rise in consumer confidence — the new intersection is at a higher price level and a higher level of real GDP. You get both economic growth and inflationary pressure simultaneously.",
+        "type": "paragraph"
+       },
+       {
+        "text": "If **SRAS decreases** (shifts left) — for example because of an oil price shock — the new intersection is at a higher price level but a lower level of real GDP. This combination of rising prices and falling output is called **stagflation** and is one of the most damaging macroeconomic outcomes.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "SRAS shifts left (cost shock)",
+         "New equilibrium at higher price level",
+         "Real GDP falls"
+        ],
+        "result": "Stagflation — rising prices with falling output",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Changes in Macroeconomic Equilibrium",
+      "recall": {
+       "id": "aggregate-supply:sub:changes-in-equilibrium:recall",
+       "type": "fillin",
+       "hints": [
+        "ri___, ri___",
+        "ri___, fa___",
+        "st__________"
+       ],
+       "prompt": "Complete the equilibrium change analysis:",
+       "answers": [
+        "rises, rises",
+        "rises, falls",
+        "stagflation"
+       ],
+       "template": [
+        "AD shifts right → price level ___ and real GDP ___",
+        "→ SRAS shifts left → price level ___ and real GDP ___",
+        "→ The combination of rising prices and falling output is called ___"
+       ]
+      },
+      "keyIdea": "When AD or AS shifts, the equilibrium price level and real GDP both change — you trace the new intersection to find the new equilibrium.",
+      "examMatters": "When analysing a shift, always draw both the before and after equilibrium. Label the original equilibrium (P1, Y1) and the new equilibrium (P2, Y2). State clearly what happened to both the price level and real GDP — examiners will not infer one if you only mention the other.",
+      "realExample": {
+       "text": "**The 1973 oil crisis** quadrupled oil prices almost overnight, shifting SRAS sharply to the left across all oil-importing economies. The result was textbook stagflation — the UK saw inflation exceed 25% while GDP contracted and unemployment rose, a combination that classical economics had not predicted.",
+       "emoji": "🛢️"
+      },
+      "misconception": "Students assume that a rise in AD always causes inflation. On the Keynesian AS curve, if there is significant spare capacity, AD can shift right and increase real output with little or no rise in the price level. Instead write: the inflationary impact of an AD increase depends on how close the economy is to full capacity."
+     }
+    ],
+    "takeaway": [
+     "Equilibrium = AD intersects AS, giving price level and real GDP.",
+     "AD shift right → higher prices and higher output.",
+     "SRAS shift left → stagflation (higher prices, lower output).",
+     "Always label both P and Y at old and new equilibrium."
+    ],
+    "diagramRef": "AD/AS Equilibrium",
+    "quizIndices": [
+     2,
+     3
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "aggregate-supply:block:fabf858e",
+    "title": "AD/AS Analysis of Macroeconomic Events",
+    "sections": [
+     {
+      "id": "aggregate-supply:sub:demand-side-shocks",
+      "body": [
+       {
+        "text": "A **demand-side shock** is a sudden, unexpected change in one of the components of AD (consumption, investment, government spending, or net exports). A positive demand shock shifts AD right, raising both the price level and real output. A negative demand shock shifts AD left, reducing both.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should think about what triggers these shocks. A collapse in consumer confidence, a stock market crash, or a sudden cut in government spending can cause a negative shock. A housing boom, a large fiscal stimulus, or a surge in export demand can cause a positive shock.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Consumer confidence collapses",
+         "Consumption (C) falls sharply",
+         "AD shifts left"
+        ],
+        "result": "Lower real GDP and lower price level — recessionary pressure",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Demand-Side Shocks",
+      "recall": {
+       "id": "aggregate-supply:sub:demand-side-shocks:recall",
+       "type": "reorder",
+       "prompt": "Order the demand-side shock transmission mechanism:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "External event triggers a change in C, I, G, or X-M",
+        "AD curve shifts left or right",
+        "New intersection with AS at different price level and output",
+        "Economy moves to new short-run equilibrium"
+       ]
+      },
+      "keyIdea": "A demand-side shock is a sudden shift in AD — positive shocks boost output and prices while negative shocks reduce both.",
+      "examMatters": "In data-response questions, examiners often present real-world events and ask you to use AD/AS analysis. Identify whether the event is a demand-side or supply-side shock first, then draw the correct shift and read off the impact on both the price level and real GDP.",
+      "realExample": {
+       "text": "**The COVID-19 pandemic** in 2020 caused a massive negative demand shock as lockdowns shut down consumer spending and business investment simultaneously. UK GDP fell by 9.7% in a single year — the largest annual decline in over three centuries — as AD shifted dramatically to the left.",
+       "emoji": "🦠"
+      },
+      "misconception": "Students analyse a demand shock by only discussing output changes and ignoring the price level. Every AD shift affects both variables. Instead write: a negative demand shock reduces real GDP and puts downward pressure on the price level; always state both effects when analysing the new equilibrium."
+     },
+     {
+      "id": "aggregate-supply:sub:supply-side-shocks",
+      "body": [
+       {
+        "text": "A **supply-side shock** is a sudden, unexpected change in the costs of production that shifts the SRAS curve. A negative supply shock (such as a spike in energy prices or a natural disaster) shifts SRAS to the left. This raises the price level while reducing real output — the worst of both worlds for policymakers.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A positive supply shock (such as a fall in commodity prices or a technological breakthrough) shifts SRAS to the right. This is the ideal scenario because it increases real output while reducing inflationary pressure — you get growth and lower prices simultaneously.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Energy prices spike unexpectedly",
+         "Production costs rise across the economy",
+         "SRAS shifts left"
+        ],
+        "result": "Stagflation — higher prices, lower output, policy dilemma",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Supply-Side Shocks",
+      "recall": {
+       "id": "aggregate-supply:sub:supply-side-shocks:recall",
+       "type": "fillin",
+       "hints": [
+        "le__",
+        "ri___, fa___",
+        "di______"
+       ],
+       "prompt": "Complete the supply-side shock analysis:",
+       "answers": [
+        "left",
+        "rises, falls",
+        "dilemma"
+       ],
+       "template": [
+        "A negative supply shock shifts SRAS to the ___",
+        "→ The price level ___ while real GDP ___",
+        "→ This creates a policy ___ for the government"
+       ]
+      },
+      "keyIdea": "A supply-side shock shifts SRAS — a negative supply shock is especially damaging because it pushes prices up and output down at the same time.",
+      "examMatters": "When you explain a supply-side shock, always link the real-world event to a specific cost of production (energy, wages, raw materials) before explaining the SRAS shift. Examiners want to see the transmission mechanism, not just the conclusion.",
+      "realExample": {
+       "text": "**Russia's** invasion of Ukraine in 2022 caused a massive negative supply shock as European gas prices quadrupled. Energy-intensive industries across the EU faced soaring costs, shifting SRAS left and contributing to inflation exceeding 10% in many European economies while growth stalled.",
+       "emoji": "🇷🇺"
+      },
+      "misconception": "Students say the government should \"increase AD to fix a supply shock.\" Boosting AD when SRAS has shifted left would raise real output but at the cost of even higher inflation. Instead write: supply-side shocks create a policy dilemma because boosting AD fights the recession but worsens inflation, while cutting AD fights inflation but deepens the recession."
+     },
+     {
+      "id": "aggregate-supply:sub:applying-adas-to-events",
+      "body": [
+       {
+        "text": "You can use the AD/AS framework to analyse virtually any macroeconomic event. The process is always the same: identify what happened, decide whether it affects AD or AS (or both), determine the direction of the shift, draw the diagram, and read off the impact on the price level and real GDP.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Identify the event (e.g. tax cut, oil shock)",
+         "Determine: does it shift AD or AS?",
+         "Draw the shift and find the new equilibrium"
+        ],
+        "result": "State impact on price level and real GDP",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Some events shift both curves simultaneously. For example, a pandemic can reduce both AD (consumers stop spending) and SRAS (supply chains break down). When both curves shift, the impact on one variable may be clear while the other is ambiguous — you must state this uncertainty explicitly to earn evaluation marks.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Applying AD/AS to Real Events",
+      "recall": {
+       "id": "aggregate-supply:sub:applying-adas-to-events:recall",
+       "type": "reorder",
+       "prompt": "Order the AD/AS analysis framework:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Identify the macroeconomic event",
+        "Determine whether it shifts AD, AS, or both",
+        "Draw the diagram with the correct shift(s)",
+        "Read off the new price level and real GDP and evaluate"
+       ]
+      },
+      "keyIdea": "To analyse any macroeconomic event, identify the initial shock, determine whether AD or AS shifts, then trace through to the new equilibrium.",
+      "examMatters": "The best exam answers follow a clear analytical framework: identify the shock, state which curve shifts and why, draw the diagram, read off the new equilibrium, and evaluate by considering second-round effects or uncertainty about magnitudes. This structured approach consistently earns top marks.",
+      "realExample": {
+       "text": "**The UK's Brexit vote** in 2016 triggered a sterling depreciation of around 15%. This simultaneously shifted AD right (cheaper exports boosted net trade) and SRAS left (imported inputs became more expensive). The net effect was higher inflation with a modest initial impact on output — an outcome only explainable by analysing both shifts together.",
+       "emoji": "💷"
+      },
+      "misconception": "Students pick only one curve to shift when an event clearly affects both AD and AS. For complex events like a pandemic or major policy change, you must consider both sides. Instead write: always ask yourself whether the event affects spending (AD), costs (AS), or both, and analyse each shift separately before combining the effects."
+     }
+    ],
+    "takeaway": [
+     "Demand shocks shift AD; supply shocks shift SRAS.",
+     "Negative supply shocks cause stagflation — a policy dilemma.",
+     "Some events shift both AD and AS simultaneously.",
+     "Always follow: identify shock, shift curve, read new equilibrium."
+    ],
+    "diagramRef": "AD/AS Shifts",
+    "quizIndices": [
+     4
+    ],
+    "practiceIndices": [
+     3
+    ]
+   },
+   {
+    "id": "aggregate-supply:block:9b5114b4",
+    "title": "Short-Run vs Long-Run Adjustment",
+    "sections": [
+     {
+      "id": "aggregate-supply:sub:output-gaps",
+      "body": [
+       {
+        "text": "An **output gap** measures the difference between the economy's actual level of output and its potential (full-employment) level. A **positive (inflationary) output gap** means actual GDP exceeds potential GDP — the economy is overheating, putting upward pressure on wages and prices.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **negative (deflationary or recessionary) output gap** means actual GDP is below potential — there is spare capacity, unemployment is above its natural rate, and there is downward pressure on wages and prices. You should think of potential GDP as where LRAS sits and actual GDP as where the AD/SRAS intersection falls.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Actual GDP > Potential GDP",
+         "Labour market tightens, wages bid up",
+         "Inflationary pressure builds"
+        ],
+        "result": "Positive output gap — economy is overheating",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Output Gaps",
+      "recall": {
+       "id": "aggregate-supply:sub:output-gaps:recall",
+       "type": "fillin",
+       "hints": [
+        "ab___",
+        "in___________",
+        "sp___"
+       ],
+       "prompt": "Complete the output gap definitions:",
+       "answers": [
+        "above",
+        "inflationary",
+        "spare"
+       ],
+       "template": [
+        "Positive output gap: actual GDP is ___ potential GDP",
+        "→ This creates ___ pressure on wages and prices",
+        "→ Negative output gap: there is ___ capacity and higher unemployment"
+       ]
+      },
+      "keyIdea": "An output gap is the difference between actual GDP and potential GDP — positive when the economy overheats, negative when it underperforms.",
+      "examMatters": "When identifying an output gap on a diagram, show clearly where actual GDP (AD/SRAS intersection) falls relative to potential GDP (Yf on the LRAS). Examiners want you to label both points and draw an arrow or annotation showing the gap between them.",
+      "realExample": {
+       "text": "**The US economy** in late 2021 had a significant positive output gap as massive fiscal stimulus pushed actual GDP above its pre-pandemic trend. Labour shortages emerged across sectors, wages surged, and inflation climbed to 9.1% by mid-2022 — a textbook consequence of an inflationary output gap.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students confuse output gaps with recessions. A negative output gap means output is below potential, but the economy could still be growing — just not fast enough to close the gap. Instead write: a negative output gap means the economy is producing below its potential, which can persist even during periods of positive but slow growth."
+     },
+     {
+      "id": "aggregate-supply:sub:self-correcting-mechanism",
+      "body": [
+       {
+        "text": "The **self-correcting mechanism** is the classical argument that the economy will automatically return to the full-employment level of output in the long run. If a negative output gap exists, unemployment puts downward pressure on wages. As wages fall, SRAS shifts right, reducing the price level and restoring output to Yf.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Conversely, if a positive output gap exists, labour shortages push wages up. Rising wages shift SRAS left, raising the price level and bringing actual output back down to Yf. In both cases, the adjustment happens through changes in wages and input costs — no government intervention is needed.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Negative output gap exists (Y < Yf)",
+         "Unemployment pushes wages down",
+         "SRAS shifts right as costs fall"
+        ],
+        "result": "Output returns to Yf — economy self-corrects",
+        "resultType": "good"
+       }
+      ],
+      "title": "The Self-Correcting Mechanism",
+      "recall": {
+       "id": "aggregate-supply:sub:self-correcting-mechanism:recall",
+       "type": "reorder",
+       "prompt": "Order the self-correcting mechanism from start to finish:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Negative output gap — actual GDP below potential",
+        "Unemployment puts downward pressure on wages",
+        "Falling wages shift SRAS to the right",
+        "Economy returns to full-employment output (Yf)"
+       ]
+      },
+      "keyIdea": "Classical economists argue that wage and price flexibility will automatically close output gaps in the long run, returning the economy to full employment without intervention.",
+      "examMatters": "This is a major evaluation point in macroeconomic essays. When you discuss the self-correcting mechanism, always counter-argue with the Keynesian critique: wages may be sticky downward, adjustment may take unacceptably long, and the social costs of waiting may justify government intervention.",
+      "realExample": {
+       "text": "**The UK's recovery** from the 2008 financial crisis took roughly six years to return GDP to its pre-crisis level. Classical economists point to eventual wage adjustment as the mechanism, but critics argue the painfully slow speed of adjustment justified the government's fiscal stimulus and the Bank of England's quantitative easing programme.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students present the self-correcting mechanism as a fact rather than a contested theory. Keynesians argue wages are sticky downward, so the economy can remain stuck below full employment for prolonged periods. Instead write: the self-correcting mechanism assumes flexible wages, but Keynesians argue downward wage stickiness means the economy may not self-correct without policy intervention."
+     },
+     {
+      "id": "aggregate-supply:sub:classical-vs-keynesian-adjustment",
+      "body": [
+       {
+        "text": "**Classical economists** believe that markets clear efficiently and wages adjust quickly, so the economy returns to Yf relatively fast. Government intervention is therefore unnecessary and potentially harmful — fiscal stimulus just raises the price level without lasting output gains.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Keynesian economists** argue that wages are sticky downward because workers resist nominal pay cuts, unions negotiate wage floors, and minimum wage laws prevent adjustment. If wages do not fall, SRAS does not shift right, and the economy can remain stuck in a negative output gap for years.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The policy implication is crucial: if the Keynesian view is correct, governments must use fiscal and monetary policy to shift AD and close the output gap. If the classical view is correct, such intervention merely creates inflation. This is one of the central debates in macroeconomics.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Classical vs Keynesian Views on Adjustment",
+      "recall": {
+       "id": "aggregate-supply:sub:classical-vs-keynesian-adjustment:recall",
+       "type": "fillin",
+       "hints": [
+        "fl______",
+        "st____",
+        "in____________"
+       ],
+       "prompt": "Complete the classical vs Keynesian comparison:",
+       "answers": [
+        "flexible",
+        "sticky",
+        "intervention"
+       ],
+       "template": [
+        "Classical: wages are ___ so the economy self-corrects to Yf",
+        "→ Keynesian: wages are ___ downward so output gaps persist",
+        "→ The policy debate: is government ___ necessary or harmful?"
+       ]
+      },
+      "keyIdea": "The core debate is whether the economy self-corrects quickly enough to make government intervention unnecessary, or whether sticky wages demand active policy.",
+      "examMatters": "This classical vs Keynesian debate appears in almost every macroeconomic essay. To reach the top mark bands, you must present both sides and evaluate which view is more applicable to the specific context in the question — there is no single correct answer.",
+      "realExample": {
+       "text": "**The Great Depression** of the 1930s became the defining evidence for Keynesian economics. The US economy remained far below full employment for a decade despite significant wage falls, suggesting that self-correction had failed. It was ultimately large-scale government spending during World War II that restored full employment.",
+       "emoji": "📉"
+      },
+      "misconception": "Students write \"Keynesians say markets never work\" or \"classical economists ignore unemployment.\" Both views are more nuanced than that. Instead write: Keynesians accept that markets work in the long run but argue the adjustment is too slow and costly; classical economists accept short-run deviations but argue intervention creates worse long-run distortions."
+     }
+    ],
+    "takeaway": [
+     "Output gap = actual GDP minus potential GDP.",
+     "Classical self-correction relies on flexible wages shifting SRAS.",
+     "Keynesians argue sticky wages prevent self-correction.",
+     "This debate determines whether government intervention is needed."
+    ],
+    "diagramRef": "Self-Correcting Mechanism",
+    "quizIndices": [
+     5
+    ],
+    "practiceIndices": [
+     4
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Oil prices spike",
+      "Firms' costs of production rise",
+      "SRAS shifts left",
+      "Price level rises, output falls"
+     ],
+     "result": "Stagflation — the worst of both worlds for policymakers",
+     "resultType": "bad"
+    },
+    "meta": "4 concepts",
+    "title": "Short-Run Aggregate Supply (SRAS)",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Short-run aggregate supply (SRAS)</strong> — the total output that all firms in an economy are willing and able to supply at each price level in the short run, when at least one factor of production (typically wages) is fixed.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Short run</strong> — the period in which at least one factor price (usually wages) is fixed by contract, so firms respond to price level changes by adjusting output rather than renegotiating input costs.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "The SRAS curve slopes <strong>upward</strong> because higher price levels increase revenue relative to fixed costs (especially wages), making it profitable for firms to expand output in the short run.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "SRAS shifts <strong>left</strong> (decreases) when costs of production rise: higher oil prices, rising wages, increased raw material costs, higher indirect taxes, or supply chain disruptions.",
+        "type": "mech"
+       },
+       {
+        "text": "SRAS shifts <strong>right</strong> (increases) when costs fall: lower commodity prices, improved productivity, reduced regulation, subsidies to firms, or technological advances that cut unit costs.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "A leftward shift of SRAS is particularly damaging because it simultaneously <strong>raises the price level and reduces output</strong>, a combination known as stagflation.",
+        "type": "imp"
+       },
+       {
+        "text": "SRAS shifts link to cost-push inflation from section 2.3.1; rising production costs shift SRAS left, raising prices and reducing output in the AD/AS model.",
+        "type": "link"
+       }
+      ],
+      "title": "SHAPE AND SHIFTS"
+     }
+    ],
+    "keyIdea": "In the short run, firms can adjust output but face rising costs as they push beyond normal capacity, which is why the SRAS curve slopes upward and why supply-side shocks hurt so much.",
+    "takeaway": [
+     "SRAS slopes upward because wages are fixed in the short run, so higher prices boost profit margins.",
+     "Cost increases shift SRAS left (stagflation); cost decreases shift it right.",
+     "Movements along SRAS are caused by price level changes; shifts are caused by cost changes.",
+     "A leftward shift of SRAS causes stagflation — higher prices and lower output simultaneously."
+    ],
+    "examMatters": "Examiners test whether you can explain why SRAS slopes upward (wages fixed in short run) and correctly identify factors that shift it. Always distinguish between movements along SRAS (caused by price level changes) and shifts of SRAS (caused by changes in production costs).",
+    "misconception": "Students say the SRAS slopes upward because firms want to charge higher prices. Wrong because the upward slope reflects the fact that higher price levels make production more profitable when wage costs are temporarily fixed, encouraging firms to supply more. Instead write: the SRAS slopes upward because rising prices increase profit margins when input costs are sticky, incentivising greater output."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Education and training improve",
+      "Labour productivity rises",
+      "Economy can produce more at every price level",
+      "LRAS shifts right"
+     ],
+     "result": "Potential output increases — sustainable non-inflationary growth",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Long-Run Aggregate Supply (LRAS)",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Long-run aggregate supply (LRAS) — Classical view</strong> — a vertical line at the full employment level of output (Yfe), reflecting the idea that in the long run, output is determined solely by supply-side factors, not the price level.",
+        "type": "def"
+       },
+       {
+        "text": "The Classical LRAS is vertical because in the long run, all factor prices (including wages) adjust fully to price level changes, so there is <strong>no money illusion</strong> and output returns to its natural rate.",
+        "type": "mech"
+       },
+       {
+        "text": "The LRAS shifts right when the economy's <strong>productive capacity</strong> increases: more or better labour, capital, technology, or natural resources; improved education and infrastructure.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "In the Classical model, demand-side policies can only change the <strong>price level</strong>, not long-run output; only supply-side policies shift LRAS and deliver sustained growth.",
+        "type": "imp"
+       }
+      ],
+      "title": "CLASSICAL VIEW"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>LRAS — Keynesian view</strong> — a curve with three distinct sections: perfectly elastic at low output (spare capacity), upward-sloping as the economy nears capacity, and vertical at full employment.",
+        "type": "def"
+       },
+       {
+        "text": "In the <strong>horizontal section</strong>, output can increase without any rise in prices because there are unemployed resources; demand-side stimulus works without causing inflation.",
+        "type": "mech"
+       },
+       {
+        "text": "In the <strong>upward-sloping section</strong>, the economy approaches capacity; further increases in AD cause both output and prices to rise as bottlenecks emerge.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The Keynesian model justifies <strong>government intervention</strong> during recessions: if the economy is in the horizontal section, fiscal stimulus increases output with minimal inflation.",
+        "type": "imp"
+       },
+       {
+        "text": "The debate between Classical and Keynesian LRAS shapes the entire macro policy debate: Classical economists favour supply-side reforms; Keynesians argue demand management is also necessary.",
+        "type": "link"
+       }
+      ],
+      "title": "KEYNESIAN VIEW"
+     }
+    ],
+    "keyIdea": "The battle between Classical and Keynesian economists over the shape of LRAS is really a battle over whether the economy self-corrects or needs government intervention to reach full employment.",
+    "takeaway": [
+     "Classical LRAS is vertical at Yfe; only supply-side factors determine long-run output.",
+     "Keynesian LRAS has three sections: flat (spare capacity), upward (near capacity), vertical (full).",
+     "LRAS shifts right through better education, technology, infrastructure, and labour supply.",
+     "The model you choose determines whether demand-side policy can raise output or only prices."
+    ],
+    "examMatters": "Examiners expect you to draw both the Classical (vertical) and Keynesian (three-section) LRAS curves and explain the implications of each. Always state which model you are using and explain the policy implications: Classical = supply-side only; Keynesian = demand-side can work when there is spare capacity.",
+    "misconception": "Students think the Classical and Keynesian models contradict each other entirely. Wrong because both agree that LRAS is vertical at full employment; the disagreement is about whether the economy can get stuck below full employment for extended periods. Instead write: both models agree output is supply-determined at full employment; Keynesians argue the economy can remain below Yfe without intervention."
+   },
+   {
+    "flow": {
+     "steps": [
+      "AD shifts right (e.g. fiscal stimulus)",
+      "Excess demand at old price level",
+      "Firms raise prices and expand output",
+      "New equilibrium: higher P, higher Y"
+     ],
+     "result": "Economy moves to a new short-run equilibrium with higher output and higher prices",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Macroeconomic Equilibrium",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Macroeconomic equilibrium</strong> — the point where aggregate demand equals aggregate supply; the price level and real output are both determined simultaneously at this intersection.",
+        "type": "def"
+       },
+       {
+        "text": "Short-run equilibrium occurs where <strong>AD intersects SRAS</strong>; this determines the current price level and output, which may be above or below the full employment level.",
+        "type": "mech"
+       },
+       {
+        "text": "Long-run equilibrium in the Classical model occurs where <strong>AD intersects both SRAS and LRAS</strong>; the economy is at full employment and there is no tendency for change.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "If the economy is in short-run equilibrium but <strong>below full employment</strong>, there is a negative output gap with spare capacity and unemployment above the natural rate.",
+        "type": "imp"
+       }
+      ],
+      "title": "EQUILIBRIUM"
+     },
+     {
+      "items": [
+       {
+        "text": "A rightward shift of AD (e.g. from a tax cut) moves equilibrium to <strong>higher output and a higher price level</strong> along the SRAS curve.",
+        "type": "mech"
+       },
+       {
+        "text": "A leftward shift of SRAS (e.g. from an oil price shock) moves equilibrium to <strong>lower output and a higher price level</strong> — the stagflation outcome.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The extent to which an AD shift affects prices versus output depends on the <strong>slope of SRAS</strong>: flat = mostly output; steep = mostly prices.",
+        "type": "imp"
+       },
+       {
+        "text": "All macroeconomic policy analysis in Unit 2 uses the AD/AS framework; mastering how shifts create new equilibria is the single most important skill for macro exam questions.",
+        "type": "link"
+       }
+      ],
+      "title": "CHANGES IN EQUILIBRIUM"
+     }
+    ],
+    "keyIdea": "Where AD meets AS determines the price level and output of the entire economy, and every macroeconomic event can be analysed as a shift of one or both curves disrupting this equilibrium.",
+    "takeaway": [
+     "Macroeconomic equilibrium is where AD = AS; it determines both price level and real output.",
+     "AD shifts change output and prices; the split depends on the slope of SRAS.",
+     "SRAS shifts cause stagflation (left shift) or non-inflationary growth (right shift).",
+     "Every macro analysis question requires you to identify which curve shifts and in which direction."
+    ],
+    "examMatters": "Examiners expect you to draw a clear AD/AS diagram, label the original and new equilibrium, and explain the direction and cause of the shift. Always state whether the change affects the price level, real output, or both, and by how much depends on the slope of AS."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Identify the shock (demand or supply)",
+      "Determine direction (positive or negative)",
+      "Shift the correct curve",
+      "Analyse new equilibrium"
+     ],
+     "result": "Demand shocks: output and prices move together; Supply shocks: they move in opposite directions",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "AD/AS Analysis of Macroeconomic Events",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Demand-side shock</strong> — an unexpected event that causes a sudden shift in aggregate demand, either positive (rightward) or negative (leftward).",
+        "type": "def"
+       },
+       {
+        "text": "A <strong>positive demand shock</strong> (e.g. a housing boom, consumer credit expansion, or fiscal stimulus) shifts AD right, raising output and the price level.",
+        "type": "mech"
+       },
+       {
+        "text": "A <strong>negative demand shock</strong> (e.g. the 2008 financial crisis, a collapse in consumer confidence, or a major trading partner entering recession) shifts AD left, reducing output and potentially the price level.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Demand shocks affect output and employment first; the policy response is typically <strong>monetary or fiscal</strong> action to stabilise AD.",
+        "type": "imp"
+       }
+      ],
+      "title": "DEMAND-SIDE SHOCKS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Supply-side shock</strong> — an unexpected event that causes a sudden shift in aggregate supply, either positive (rightward) or negative (leftward).",
+        "type": "def"
+       },
+       {
+        "text": "A <strong>negative supply shock</strong> (e.g. oil price spike, pandemic disrupting supply chains, natural disaster) shifts SRAS left, causing stagflation: higher prices with lower output.",
+        "type": "mech"
+       },
+       {
+        "text": "A <strong>positive supply shock</strong> (e.g. discovery of new energy resources, breakthrough technology, sharp fall in commodity prices) shifts SRAS right, lowering prices while raising output.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Supply shocks are harder for policymakers to address because <strong>demand-side tools create trade-offs</strong>: stimulating AD to restore output worsens inflation from a supply shock.",
+        "type": "imp"
+       },
+       {
+        "text": "The 1970s oil crises are classic supply-side shocks; the 2008 financial crisis is a classic demand-side shock. Examiners expect you to classify real events correctly and analyse them using AD/AS.",
+        "type": "link"
+       }
+      ],
+      "title": "SUPPLY-SIDE SHOCKS"
+     }
+    ],
+    "keyIdea": "Real-world events like financial crises, oil shocks, and pandemics are not random chaos — they are demand-side or supply-side shocks that can be precisely mapped onto the AD/AS framework.",
+    "takeaway": [
+     "Demand shocks shift AD; prices and output move in the same direction.",
+     "Supply shocks shift SRAS; prices and output move in opposite directions (stagflation risk).",
+     "Always classify the shock type first, then shift the correct curve on your diagram.",
+     "Supply shocks are harder to manage because demand-side responses create inflation-output trade-offs."
+    ],
+    "examMatters": "Examiners give real-world scenarios and expect you to identify whether it is a demand or supply shock, shift the correct curve, draw the new equilibrium, and analyse the impact on output, employment, and the price level. Always state which AD component or cost factor is affected.",
+    "misconception": "Students treat all economic downturns as demand shocks. Wrong because supply-side shocks (like an oil crisis or pandemic) shift SRAS left, causing both rising prices and falling output simultaneously. Instead write: check whether prices and output move in the same direction (demand shock) or opposite directions (supply shock) to correctly diagnose the event."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Negative output gap exists",
+      "Classical: wages fall → SRAS shifts right → Y returns to Yfe",
+      "Keynesian: wages sticky → output stays below Yfe",
+      "Policy choice depends on which view you adopt"
+     ],
+     "result": "Classical: self-correction restores full employment; Keynesian: intervention needed",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Short-Run vs Long-Run Adjustment",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Positive output gap</strong> — when actual GDP exceeds potential GDP (Yfe); the economy is overheating, demand outstrips capacity, and inflationary pressures build.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Negative output gap</strong> — when actual GDP is below potential GDP; there is spare capacity, unemployment above the natural rate, and downward pressure on prices.",
+        "type": "def"
+       },
+       {
+        "text": "Output gaps are measured as <strong>(Actual GDP – Potential GDP) ÷ Potential GDP × 100</strong>; a positive result signals inflationary pressure, a negative result signals recessionary conditions.",
+        "type": "mech"
+       }
+      ],
+      "title": "OUTPUT GAPS"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "Classical economists argue the economy <strong>self-corrects</strong>: if actual output is below Yfe, unemployment puts downward pressure on wages, costs fall, SRAS shifts right, and output returns to the natural rate.",
+        "type": "mech"
+       },
+       {
+        "text": "With a positive output gap, wages are bid up by competing firms, costs rise, <strong>SRAS shifts left</strong>, and output falls back to the full employment level with a higher price level.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Keynesian economists argue wages are <strong>sticky downward</strong> (workers and unions resist nominal wage cuts), so the self-correcting mechanism is slow or may not work at all, justifying active government intervention.",
+        "type": "imp"
+       },
+       {
+        "text": "The Classical view favours <strong>non-intervention</strong>; the Keynesian view favours fiscal and monetary stimulus to close negative output gaps more quickly than market forces alone.",
+        "type": "imp"
+       },
+       {
+        "text": "This debate underpins all macroeconomic policy questions: do you trust markets to self-correct (supply-side approach) or do you need government to manage demand (Keynesian approach)? Examiners reward balanced discussion of both views.",
+        "type": "link"
+       }
+      ],
+      "title": "SELF-CORRECTING MECHANISM"
+     }
+    ],
+    "keyIdea": "Whether the economy heals itself or needs government medicine depends on whether you believe wages and prices adjust quickly (Classical) or can stay stuck for years (Keynesian).",
+    "formulas": [
+     {
+      "text": "Output gap = ((Actual GDP – Potential GDP) ÷ Potential GDP) × 100",
+      "label": "OUTPUT GAP"
+     }
+    ],
+    "takeaway": [
+     "Positive output gap = inflationary pressure; negative output gap = spare capacity and unemployment.",
+     "Classical view: flexible wages allow SRAS to shift and restore equilibrium automatically.",
+     "Keynesian view: sticky wages prevent self-correction, justifying fiscal and monetary intervention.",
+     "Always present both views in exam answers and evaluate which is more realistic in context."
+    ],
+    "examMatters": "Examiners expect you to explain both Classical and Keynesian views of adjustment and evaluate which is more realistic. Strong answers discuss the speed of adjustment: even if markets do self-correct, it may take years, during which unemployment causes real suffering — this is the Keynesian justification for intervention.",
+    "misconception": "Students present only one view (usually Keynesian) without acknowledging the other. Wrong because exam mark schemes reward balanced evaluation. Instead write: Classical economists argue markets self-correct through wage flexibility, but Keynesians counter that sticky wages mean this process is too slow, causing prolonged unemployment that justifies government intervention."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "aggregate-supply:quiz:f98a7669",
+    "options": [
+     "Higher prices always lead to more productive workers",
+     "Firms increase output as prices rise because many input costs are fixed in the short run, raising profit margins",
+     "The government increases spending when prices rise",
+     "Consumers demand more goods at higher prices"
+    ],
+    "question": "The Short-Run Aggregate Supply (SRAS) curve slopes upward because:",
+    "explanation": "The SRAS slopes upward because, in the short run, many input costs (wages, rents, contracts) are fixed. When the price level rises, firms' revenue increases but costs do not rise proportionally, so profit margins increase. This incentivises firms to expand production. This is NOT because workers become more productive or because consumers demand more.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:390a58f4",
+    "options": [
+     "A fall in the price of crude oil",
+     "An increase in labour productivity",
+     "A significant rise in the national minimum wage",
+     "A reduction in VAT"
+    ],
+    "question": "Which of the following would cause the SRAS curve to shift to the LEFT?",
+    "explanation": "A significant rise in the minimum wage increases labour costs for firms, shifting SRAS to the left (firms supply less at each price level because production is more expensive). Falling oil prices, rising productivity, and lower VAT would all REDUCE costs and shift SRAS to the RIGHT.",
+    "correctIndex": 2
+   },
+   {
+    "id": "aggregate-supply:quiz:33f582d0",
+    "options": [
+     "Increase both the price level and real output permanently",
+     "Increase the price level but leave real output unchanged",
+     "Decrease the price level and increase real output",
+     "Have no effect on either the price level or real output"
+    ],
+    "question": "In the Classical model, an increase in aggregate demand in an economy already at full employment will, in the long run:",
+    "explanation": "In the Classical model, LRAS is vertical at Yfe. If AD increases when the economy is already at full employment, the short-run effect is higher prices and temporarily higher output. But in the long run, wages rise in response, SRAS shifts left, and output returns to Yfe. The ONLY long-run effect is a higher price level.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:1fd79271",
+    "options": [
+     "Only increase the price level",
+     "Increase real output with little or no rise in the price level",
+     "Decrease the price level and output",
+     "Have no effect because wages are sticky"
+    ],
+    "question": "The Keynesian LRAS curve suggests that when the economy has significant spare capacity, an increase in AD will:",
+    "explanation": "On the horizontal (flat) section of the Keynesian LRAS, there is significant spare capacity and unemployment. Firms can increase output simply by employing idle resources — they do not need to raise prices. Therefore, an increase in AD increases real output with little or no inflation. This is the Keynesian justification for demand management.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:df923801",
+    "options": [
+     "A period of rapid economic growth with low inflation",
+     "A simultaneous increase in unemployment and fall in the price level",
+     "A combination of rising prices, falling output, and rising unemployment",
+     "A period of deflation caused by falling aggregate demand"
+    ],
+    "question": "Stagflation is BEST described as:",
+    "explanation": "Stagflation is the combination of stagnation (falling output and rising unemployment) with inflation (rising prices). It is typically caused by a leftward shift of SRAS (cost-push factors like an oil price shock). It creates a policy dilemma because boosting AD would worsen inflation while tightening policy would deepen the recession.",
+    "correctIndex": 2
+   },
+   {
+    "id": "aggregate-supply:quiz:cd7d63fb",
+    "options": [
+     "An increase in consumer confidence",
+     "A cut in interest rates by the central bank",
+     "Significant investment in education and workforce training",
+     "An increase in government spending on benefits"
+    ],
+    "question": "Which of the following would shift LRAS to the right?",
+    "explanation": "Investment in education and training increases the quality of human capital, which raises the productive capacity of the economy, shifting LRAS to the right. Consumer confidence and interest rate cuts affect AD, not LRAS. Government spending on benefits is a transfer payment that may boost AD but does not increase the economy's productive potential.",
+    "correctIndex": 2
+   },
+   {
+    "id": "aggregate-supply:quiz:9eba1e33",
+    "options": [
+     "A rightward shift of SRAS",
+     "A leftward shift of AD creating a negative output gap",
+     "A rightward shift of LRAS",
+     "A rightward shift of AD beyond full employment"
+    ],
+    "question": "A recession is typically shown on an AD/AS diagram by:",
+    "explanation": "A recession involves falling output and rising unemployment. This is shown by a leftward shift of AD — less total spending in the economy. The new equilibrium is at a lower level of output (Y2 < Y1), creating a negative output gap where actual output is below the full employment level (Yfe). The price level may also fall or rise more slowly.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:a5f33834",
+    "options": [
+     "Whether firms exist to maximise profits",
+     "Whether the economy self-corrects to full employment through flexible wages and prices",
+     "Whether government spending is part of aggregate demand",
+     "Whether exports contribute to economic growth"
+    ],
+    "question": "The key disagreement between Classical and Keynesian economists regarding aggregate supply concerns:",
+    "explanation": "The fundamental disagreement is about the self-correcting mechanism. Classical economists believe wages and prices are flexible, so the economy naturally returns to full employment. Keynesians argue wages are 'sticky downwards' — workers resist wage cuts — so the economy can remain stuck below full employment for extended periods, requiring government intervention.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:ebdfc08e",
+    "options": [
+     "Higher prices and lower output",
+     "Lower prices and higher potential output (non-inflationary growth)",
+     "No change in the price level or output",
+     "Higher prices and higher output"
+    ],
+    "question": "If LRAS shifts right while AD remains unchanged, the economy will experience:",
+    "explanation": "A rightward shift of LRAS increases the economy's productive potential. If AD remains unchanged, the economy can now produce more output at a lower price level — this is non-inflationary growth. In practice, AD often also increases, so prices may stay roughly stable while output grows.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:f0624b43",
+    "options": [
+     "Only increase prices with no change in output",
+     "Only increase output with no change in prices",
+     "Increase both the price level and real output",
+     "Decrease both the price level and real output"
+    ],
+    "question": "An economy is operating on the upward-sloping section of the Keynesian LRAS curve. An increase in AD will:",
+    "explanation": "The upward-sloping section of the Keynesian LRAS represents an economy approaching full capacity, where bottlenecks are emerging in some sectors. An increase in AD will increase real output (as some spare capacity remains) BUT also increase the price level (as firms face rising costs). Both price level and output rise — but the closer to full capacity, the more inflationary the effect.",
+    "correctIndex": 2
+   },
+   {
+    "id": "aggregate-supply:quiz:89b023f1",
+    "options": [
+     "Firms are operating at full capacity",
+     "There is significant spare capacity and unemployed resources, so output can increase without rising prices",
+     "The government is controlling prices",
+     "Inflation is always zero in the short run"
+    ],
+    "question": "In the Keynesian model, the aggregate supply curve is horizontal at low levels of output because:",
+    "explanation": "In the Keynesian view, when the economy has high unemployment and spare capacity, firms can increase output by employing idle resources without bidding up wages or prices, making the AS curve horizontal.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:9189fbec",
+    "options": [
+     "A fall in oil prices",
+     "An improvement in technology",
+     "An increase in wage costs across the economy",
+     "An increase in labour productivity"
+    ],
+    "question": "A leftward shift of the short-run aggregate supply (SRAS) curve could be caused by:",
+    "explanation": "Higher wage costs increase production costs for firms across the economy. This reduces the amount firms are willing to supply at each price level, shifting the SRAS curve to the left, causing cost-push inflation.",
+    "correctIndex": 2
+   },
+   {
+    "id": "aggregate-supply:quiz:91985d1d",
+    "options": [
+     "The government controls all production decisions",
+     "In the long run, output is determined by the quantity and quality of resources, not the price level",
+     "Prices are fixed in the long run",
+     "Aggregate demand has no effect on the economy"
+    ],
+    "question": "In the Classical model, the long-run aggregate supply (LRAS) curve is vertical because:",
+    "explanation": "Classical economists argue that in the long run, output is determined by supply-side factors (labour, capital, technology, institutions), not the price level. Changes in AD only affect prices, not real output.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:39111b6b",
+    "options": [
+     "An increase in consumer spending",
+     "A cut in interest rates by the central bank",
+     "Investment in education and training improving human capital",
+     "A depreciation of the exchange rate"
+    ],
+    "question": "Which of the following would cause the LRAS curve to shift to the right?",
+    "explanation": "The LRAS curve shifts right when the economy's productive capacity increases. Investment in education improves human capital (worker skills and productivity), increasing the potential output of the economy.",
+    "correctIndex": 2
+   },
+   {
+    "id": "aggregate-supply:quiz:dba02564",
+    "options": [
+     "Economic growth is high and inflation is low",
+     "There is simultaneously high inflation and high unemployment/stagnant growth",
+     "Deflation and rapid economic growth occur together",
+     "The economy reaches full employment with stable prices"
+    ],
+    "question": "Stagflation refers to a situation where:",
+    "explanation": "Stagflation combines stagnation (low/negative growth, high unemployment) with inflation. It is typically caused by a negative supply shock (e.g., oil price spike) shifting SRAS left, raising prices while reducing output.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:4651fee3",
+    "options": [
+     "Classical economists believe LRAS is vertical; Keynesians believe it has a horizontal section at low output levels",
+     "Both agree the LRAS is always horizontal",
+     "Classical economists believe LRAS is horizontal; Keynesians believe it is vertical",
+     "There is no difference between the two views"
+    ],
+    "question": "The difference between the Classical and Keynesian views on the long-run aggregate supply curve is that:",
+    "explanation": "Classical economists argue LRAS is vertical at full employment output. Keynesians argue the AS curve has three sections: horizontal (spare capacity), upward-sloping (approaching capacity), and vertical (full capacity).",
+    "correctIndex": 0
+   },
+   {
+    "id": "aggregate-supply:quiz:85218ccc",
+    "options": [
+     "An increase in real output with no change in the price level",
+     "An increase in the price level with no change in real output",
+     "An equal increase in both real output and the price level",
+     "A decrease in the price level and increase in output"
+    ],
+    "question": "If aggregate demand increases when the economy is operating on the vertical section of the AS curve, the result is:",
+    "explanation": "On the vertical section of AS, the economy is at full capacity. Any increase in AD cannot increase real output (all resources are employed), so it only causes the price level to rise (demand-pull inflation).",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:5f85b343",
+    "options": [
+     "Shift SRAS left and LRAS right",
+     "Shift both SRAS and LRAS to the right",
+     "Shift SRAS right and LRAS left",
+     "Only shift the AD curve to the right"
+    ],
+    "question": "An improvement in technology across the economy would:",
+    "explanation": "Technological improvement reduces production costs (shifting SRAS right) and increases the economy's productive capacity (shifting LRAS right), enabling more output at every price level in both the short and long run.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:ea383d6c",
+    "options": [
+     "Actual GDP exceeds potential GDP",
+     "Actual GDP is below potential GDP, indicating spare capacity",
+     "The economy is experiencing inflation above target",
+     "Government spending exceeds tax revenue"
+    ],
+    "question": "A negative output gap occurs when:",
+    "explanation": "A negative output gap means actual GDP is below the economy's potential (full capacity) GDP. This indicates spare capacity, unemployment of resources, and likely downward pressure on inflation.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:c935fc7e",
+    "options": [
+     "Increase the price level and reduce output",
+     "Reduce the price level and increase potential output (non-inflationary growth)",
+     "Increase the price level and increase output",
+     "Have no effect on either prices or output"
+    ],
+    "question": "Supply-side improvements that shift LRAS to the right tend to:",
+    "explanation": "A rightward shift of LRAS increases the economy's productive capacity. This allows higher output without inflationary pressure, potentially reducing the price level while increasing real GDP.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:c340870d",
+    "options": [
+     "A large increase in the price level with little change in output",
+     "A large increase in real output with little change in the price level",
+     "A decrease in both output and the price level",
+     "No change in either output or the price level"
+    ],
+    "question": "In the short run, an increase in aggregate demand when the economy has significant spare capacity will primarily lead to:",
+    "explanation": "With significant spare capacity (on the horizontal/flat section of AS), firms can increase output by employing idle resources without significant cost increases. AD increases lead mainly to output growth, not inflation.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:70085e25",
+    "options": [
+     "The size and quality of the labour force",
+     "The level of aggregate demand in the economy",
+     "The quantity and quality of capital stock",
+     "The level of technology and innovation"
+    ],
+    "question": "Which of the following is NOT a factor that determines the position of the LRAS curve?",
+    "explanation": "LRAS is determined by supply-side factors: labour, capital, technology, and institutional factors. Aggregate demand affects the actual level of output in the short run but does not determine the economy's productive capacity.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:a9634927",
+    "options": [
+     "Shift SRAS to the left, causing inflation",
+     "Shift SRAS to the right, reducing the price level and increasing output",
+     "Shift the AD curve to the left",
+     "Have no effect on aggregate supply"
+    ],
+    "question": "A positive supply shock (such as discovery of a major new energy source) would:",
+    "explanation": "A positive supply shock reduces production costs across the economy (e.g., cheaper energy). This shifts SRAS to the right, leading to lower prices and higher output — the opposite of stagflation.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:58fbfa32",
+    "options": [
+     "Prices and wages are perfectly flexible",
+     "Prices and wages are sticky downward, preventing automatic adjustment to full employment",
+     "The government always intervenes to prevent full employment",
+     "Workers always demand wages above the equilibrium level"
+    ],
+    "question": "According to Keynesian economics, the economy can settle at an equilibrium below full employment because:",
+    "explanation": "Keynesians argue that wage and price rigidities (stickiness) prevent the self-correcting mechanism that Classical economists rely on. The economy can therefore remain in a state of deficient demand and unemployment.",
+    "correctIndex": 1
+   },
+   {
+    "id": "aggregate-supply:quiz:8969bc91",
+    "options": [
+     "A positive output gap with inflationary pressure",
+     "A negative output gap with deflationary pressure and spare capacity",
+     "The economy is at full employment equilibrium",
+     "The economy is experiencing hyperinflation"
+    ],
+    "question": "If an economy is at macroeconomic equilibrium where AD intersects SRAS to the left of LRAS, this indicates:",
+    "explanation": "When equilibrium output is below LRAS (potential output), there is a negative output gap. The economy has spare capacity and unemployment, with downward pressure on prices and wages.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "aggregate-supply:practice:a4679fbe",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "LRAS represents the total output an economy can produce when all resources are fully and efficiently employed (1 mark). It is determined by the quantity and quality of factors of production — land, labour, capital and enterprise (1 mark). In the classical model, the LRAS curve is vertical at the full employment level of output (1 mark). Shifts in LRAS are caused by changes in the productive capacity of the economy, such as technological advances or growth in the labour force (1 mark).",
+    "question": "Define the term 'long-run aggregate supply' (LRAS). (4 marks)"
+   },
+   {
+    "id": "aggregate-supply:practice:6801e31c",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "A movement along the SRAS curve occurs when the price level changes (1 mark) — a higher price level incentivises firms to increase output because profit margins widen, causing an extension of supply (1 mark). This does not involve a change in the position of the curve itself (1 mark).\n\nA shift of the SRAS curve occurs when non-price level factors change (1 mark) — for example, a rise in raw material costs, wage increases or higher taxes shifts SRAS to the left (1 mark). Conversely, falling input costs, improved technology or government subsidies shift SRAS to the right (1 mark).",
+    "question": "Explain the difference between a movement along and a shift of the short-run aggregate supply (SRAS) curve. (6 marks)"
+   },
+   {
+    "id": "aggregate-supply:practice:4d3e1aba",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define long-run economic growth as an increase in the productive capacity of the economy, shown by a rightward shift of the LRAS curve (2 marks). Important: investment in education and training increases human capital and labour productivity (2 marks); investment in infrastructure and technology increases the efficiency of production (2 marks); deregulation and flexible labour markets encourage enterprise and innovation (1 mark). Limitations: supply-side policies take a long time to have effect — education reform may take a generation (1 mark); they do not guarantee growth if aggregate demand is weak — firms may not invest if consumer spending is depressed (1 mark). Judgement: supply-side improvements are essential for sustainable growth but must be supported by adequate demand-side conditions (1 mark).",
+    "question": "Assess the importance of supply-side improvements in achieving long-run economic growth. (10 marks)"
+   },
+   {
+    "id": "aggregate-supply:practice:8041e942",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define AS and AD in context of the macroeconomic model (2 marks).\n\nFor AS increase being more beneficial: An outward shift of LRAS increases potential output without inflationary pressure (3 marks); leads to sustainable, non-inflationary growth as the economy can produce more at every price level (2 marks); improves international competitiveness through higher productivity and lower unit costs (2 marks).\n\nFor AD increase being more beneficial: In a recession with spare capacity, increasing AD can quickly reduce unemployment and close the output gap (3 marks); demand-side stimulus is faster-acting — fiscal and monetary policy can take effect within months whereas supply-side reforms take years (2 marks); higher demand creates incentives for firms to invest, potentially increasing supply in the long run (accelerator effect) (2 marks).\n\nEvaluation: The answer depends on the state of the economy (2 marks). In a recession, AD stimulus is more appropriate; in an economy operating near full capacity, supply-side improvements are needed to sustain growth without inflation. Ideally, governments should pursue both simultaneously — stimulating demand in the short run while investing in supply-side reforms for the long run (2 marks).",
+    "question": "Evaluate the view that an increase in aggregate supply is more beneficial for an economy than an increase in aggregate demand. (20 marks)"
+   },
+   {
+    "id": "aggregate-supply:practice:2c873521",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Factor 1: Technological innovation — new production methods and technologies increase the efficiency with which resources are used (1 mark), raising the maximum output the economy can produce (1 mark).\n\nFactor 2: Net immigration of working-age people — increases the size and potentially the skill level of the labour force (1 mark), expanding the economy's productive capacity (1 mark).",
+    "question": "Outline two factors that could shift the LRAS curve to the right. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "aggregate-supply:card:c959580f",
+    "back": "The <strong>total output</strong> of goods and services that firms in an economy are willing and able to supply at a given price level.",
+    "front": "What is aggregate supply (AS)?"
+   },
+   {
+    "id": "aggregate-supply:card:4c10e882",
+    "back": "The total output firms supply when at least one factor input (usually wages) is <strong>fixed in the short run</strong>. SRAS slopes upward — higher prices increase profits, incentivising more output.",
+    "front": "What is short-run aggregate supply (SRAS)?"
+   },
+   {
+    "id": "aggregate-supply:card:4a198d82",
+    "back": "Increases in <strong>costs of production</strong> — higher wages, raw material prices, energy costs, indirect taxes, or a weaker exchange rate (increasing import costs).",
+    "front": "What shifts SRAS to the left?"
+   },
+   {
+    "id": "aggregate-supply:card:fb71aa30",
+    "back": "The total output when <strong>all factors are variable</strong> and the economy is at full employment. In the classical model, LRAS is <strong>vertical</strong> — output is determined by supply-side factors, not the price level.",
+    "front": "What is long-run aggregate supply (LRAS)?"
+   },
+   {
+    "id": "aggregate-supply:card:11e043e6",
+    "back": "Improvements in the economy's <strong>productive capacity</strong>: better technology, more skilled labour, increased capital stock, institutional improvements, and discovery of new resources.",
+    "front": "What shifts LRAS to the right?"
+   },
+   {
+    "id": "aggregate-supply:card:32388142",
+    "back": "A curve with three sections: <strong>horizontal</strong> (spare capacity — output rises with no inflation), <strong>upward-sloping</strong> (approaching full employment — bottlenecks cause some inflation), and <strong>vertical</strong> (at full capacity).",
+    "front": "What is the Keynesian AS curve?"
+   },
+   {
+    "id": "aggregate-supply:card:56f53bfa",
+    "back": "<strong>Classical</strong>: LRAS is vertical — the economy self-corrects to full employment. <strong>Keynesian</strong>: the economy can get stuck below full employment — government spending needed to close the output gap.",
+    "front": "What is the difference between classical and Keynesian views of AS?"
+   },
+   {
+    "id": "aggregate-supply:card:ebaa4fd3",
+    "back": "An unexpected event that <strong>increases production costs</strong> across the economy — e.g., an oil price spike. Shifts SRAS left, causing <strong>stagflation</strong> (higher prices and lower output).",
+    "front": "What is a negative supply shock?"
+   },
+   {
+    "id": "aggregate-supply:card:93c3ff1b",
+    "back": "A combination of <strong>stagnant output</strong> (or recession), <strong>high unemployment</strong>, and <strong>high inflation</strong> occurring simultaneously. Caused by negative supply shocks — very difficult to solve.",
+    "front": "What is stagflation?"
+   },
+   {
+    "id": "aggregate-supply:card:487169f3",
+    "back": "The level of output where <strong>all willing workers are employed</strong> (only frictional and structural unemployment remain). Shown where AD intersects LRAS.",
+    "front": "What is full employment output?"
+   },
+   {
+    "id": "aggregate-supply:card:73be5b22",
+    "back": "When actual GDP <strong>exceeds potential GDP</strong>. The economy is overheating — demand outstrips capacity, creating inflationary pressure.",
+    "front": "What is a positive output gap?"
+   },
+   {
+    "id": "aggregate-supply:card:1f80cb0e",
+    "back": "When actual GDP is <strong>below potential GDP</strong>. There is spare capacity and unemployment — the economy is underperforming. Demand-side stimulus may help.",
+    "front": "What is a negative output gap?"
+   },
+   {
+    "id": "aggregate-supply:card:342ae302",
+    "back": "Investment in <strong>new capital, technology, and infrastructure</strong> increases the economy's productive capacity. LRAS shifts right → potential output increases without inflationary pressure.",
+    "front": "How does investment shift LRAS?"
+   },
+   {
+    "id": "aggregate-supply:card:10ec3945",
+    "back": "Better education increases <strong>labour productivity</strong> and human capital. Workers produce more output per hour → LRAS shifts right. A long-run supply-side improvement.",
+    "front": "How does education shift LRAS?"
+   },
+   {
+    "id": "aggregate-supply:card:beb165d9",
+    "back": "A change in the <strong>aggregate price level</strong>. Higher prices → firms supply more (as nominal revenue rises while some costs are fixed in the short run).",
+    "front": "What causes a movement along the SRAS curve?"
+   },
+   {
+    "id": "aggregate-supply:card:59ed0e17",
+    "back": "The difference between <strong>actual GDP and potential GDP</strong>. Positive gap = inflationary pressure. Negative gap = unemployment and spare capacity.",
+    "front": "What is the output gap?"
+   },
+   {
+    "id": "aggregate-supply:card:b63e63d1",
+    "back": "Increases the <strong>labour supply</strong>, expanding productive capacity. LRAS shifts right — the economy can produce more output. May also fill skills gaps and reduce cost-push inflation.",
+    "front": "How does immigration affect LRAS?"
+   },
+   {
+    "id": "aggregate-supply:card:e6e0ee90",
+    "back": "The economy's <strong>productive potential</strong>: quantity and quality of <strong>labour</strong>, <strong>capital</strong>, <strong>technology</strong>, <strong>natural resources</strong>, and <strong>institutional framework</strong> (property rights, rule of law).",
+    "front": "What determines the position of the LRAS curve?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "aggregate-supply:diagram:8f8c48e5",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Short-Run Aggregate Supply (SRAS)</text>\n\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"40\" x2=\"70\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"310\" x2=\"470\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n\n  <!-- Axis labels -->\n  <text x=\"30\" y=\"175\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90 30 175)\">Price Level (PL)</text>\n  <text x=\"270\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Real GDP (Y)</text>\n\n  <!-- SRAS curve (upward sloping, steepening) -->\n  <path d=\"M 100 280 Q 200 260 280 210 Q 360 140 400 60\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"405\" y=\"55\" fill=\"#059669\" font-size=\"13\" font-weight=\"600\">SRAS</text>\n\n  <!-- Annotations -->\n  <!-- Spare capacity region -->\n  <text x=\"140\" y=\"290\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">Spare capacity</text>\n  <text x=\"140\" y=\"300\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">(flatter section)</text>\n\n  <!-- Approaching full capacity -->\n  <text x=\"340\" y=\"85\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">Near full capacity</text>\n  <text x=\"340\" y=\"95\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">(steeper section)</text>\n\n  <!-- Shift indicators -->\n  <rect x=\"100\" y=\"43\" width=\"180\" height=\"55\" rx=\"5\" fill=\"#3b82f6\" opacity=\"0.08\" stroke=\"#3b82f6\" stroke-width=\"0.5\"/>\n  <text x=\"190\" y=\"58\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">SRAS shifts LEFT when:</text>\n  <text x=\"110\" y=\"72\" fill=\"#e8ecf5\" font-size=\"9\">Higher wages, oil prices, import</text>\n  <text x=\"110\" y=\"84\" fill=\"#e8ecf5\" font-size=\"9\">costs, indirect taxes</text>\n  <text x=\"110\" y=\"96\" fill=\"#e8ecf5\" font-size=\"9\">Lower productivity</text>\n\n  <rect x=\"290\" y=\"230\" width=\"180\" height=\"55\" rx=\"5\" fill=\"#059669\" opacity=\"0.08\" stroke=\"#059669\" stroke-width=\"0.5\"/>\n  <text x=\"380\" y=\"245\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">SRAS shifts RIGHT when:</text>\n  <text x=\"300\" y=\"259\" fill=\"#e8ecf5\" font-size=\"9\">Lower wages, raw material costs</text>\n  <text x=\"300\" y=\"271\" fill=\"#e8ecf5\" font-size=\"9\">Higher productivity, subsidies</text>\n  <text x=\"300\" y=\"283\" fill=\"#e8ecf5\" font-size=\"9\">Exchange rate appreciation</text>\n</svg>",
+    "title": "Short-Run Aggregate Supply (SRAS)",
+    "checklist": [
+     "Draw SRAS sloping upward from left to right, steepening as it approaches full capacity",
+     "Label axes: Price Level (vertical) and Real GDP (horizontal)",
+     "Show shifts clearly with arrows and label SRAS and SRAS'",
+     "Link the shift to a specific cost factor (e.g. rising oil prices shifts SRAS left)",
+     "Explain impact on BOTH price level and real output"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Increase in SRAS (Lower Production Costs)</text>\n\n  <line x1=\"70\" y1=\"40\" x2=\"70\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"310\" x2=\"470\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"30\" y=\"175\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90 30 175)\">Price Level (PL)</text>\n  <text x=\"270\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Real GDP (Y)</text>\n\n  <!-- Original SRAS -->\n  <path d=\"M 100 280 Q 200 260 280 210 Q 360 140 400 60\" stroke=\"#059669\" stroke-width=\"2\" fill=\"none\" opacity=\"0.4\"/>\n  <text x=\"405\" y=\"55\" fill=\"#059669\" font-size=\"12\" opacity=\"0.4\">SRAS</text>\n\n  <!-- New SRAS (shifted right) -->\n  <path d=\"M 160 280 Q 260 260 340 210 Q 420 140 460 60\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"465\" y=\"55\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">SRAS'</text>\n\n  <!-- Shift arrow -->\n  <line x1=\"240\" y1=\"230\" x2=\"300\" y2=\"230\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrowY5)\"/>\n  <defs><marker id=\"arrowY5\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#f59e0b\"/></marker></defs>\n\n  <!-- AD curve -->\n  <path d=\"M 120 70 Q 200 150 300 220 Q 380 270 440 290\" stroke=\"#ef4444\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5,3\"/>\n  <text x=\"445\" y=\"284\" fill=\"#ef4444\" font-size=\"11\">AD</text>\n\n  <!-- Old equilibrium -->\n  <circle cx=\"260\" cy=\"215\" r=\"4\" fill=\"#059669\" opacity=\"0.5\"/>\n  <line x1=\"70\" y1=\"215\" x2=\"260\" y2=\"215\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <line x1=\"260\" y1=\"215\" x2=\"260\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <text x=\"60\" y=\"219\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"10\" opacity=\"0.6\">P1</text>\n  <text x=\"260\" y=\"325\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\" opacity=\"0.6\">Y1</text>\n\n  <!-- New equilibrium -->\n  <circle cx=\"320\" cy=\"195\" r=\"4\" fill=\"#3b82f6\"/>\n  <line x1=\"70\" y1=\"195\" x2=\"320\" y2=\"195\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <line x1=\"320\" y1=\"195\" x2=\"320\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <text x=\"60\" y=\"199\" text-anchor=\"end\" fill=\"#3b82f6\" font-size=\"10\">P2</text>\n  <text x=\"320\" y=\"325\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\">Y2</text>\n\n  <!-- Result -->\n  <text x=\"250\" y=\"345\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Lower costs: Price level FALLS (P1 to P2), Output RISES (Y1 to Y2)</text>\n</svg>",
+      "label": "SRAS Increase (Lower Costs)"
+     },
+     {
+      "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Decrease in SRAS (Stagflation)</text>\n\n  <line x1=\"70\" y1=\"40\" x2=\"70\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"310\" x2=\"470\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"30\" y=\"175\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90 30 175)\">Price Level (PL)</text>\n  <text x=\"270\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Real GDP (Y)</text>\n\n  <!-- Original SRAS -->\n  <path d=\"M 160 280 Q 260 260 340 210 Q 420 140 460 60\" stroke=\"#059669\" stroke-width=\"2\" fill=\"none\" opacity=\"0.4\"/>\n  <text x=\"465\" y=\"55\" fill=\"#059669\" font-size=\"12\" opacity=\"0.4\">SRAS</text>\n\n  <!-- New SRAS (shifted left) -->\n  <path d=\"M 100 280 Q 200 260 280 210 Q 360 140 400 60\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"405\" y=\"55\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\">SRAS'</text>\n\n  <!-- Shift arrow -->\n  <line x1=\"300\" y1=\"230\" x2=\"240\" y2=\"230\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrowY6)\"/>\n  <defs><marker id=\"arrowY6\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#f59e0b\"/></marker></defs>\n\n  <!-- AD curve -->\n  <path d=\"M 120 70 Q 200 150 300 220 Q 380 270 440 290\" stroke=\"#3b82f6\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5,3\"/>\n  <text x=\"445\" y=\"284\" fill=\"#3b82f6\" font-size=\"11\">AD</text>\n\n  <!-- Old equilibrium -->\n  <circle cx=\"320\" cy=\"195\" r=\"4\" fill=\"#059669\" opacity=\"0.5\"/>\n  <line x1=\"70\" y1=\"195\" x2=\"320\" y2=\"195\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <line x1=\"320\" y1=\"195\" x2=\"320\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <text x=\"60\" y=\"199\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"10\" opacity=\"0.6\">P1</text>\n  <text x=\"320\" y=\"325\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\" opacity=\"0.6\">Y1</text>\n\n  <!-- New equilibrium -->\n  <circle cx=\"260\" cy=\"215\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"70\" y1=\"215\" x2=\"260\" y2=\"215\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <line x1=\"260\" y1=\"215\" x2=\"260\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.7\" stroke-dasharray=\"3,3\" opacity=\"0.4\"/>\n  <text x=\"60\" y=\"219\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"10\">P2</text>\n  <text x=\"260\" y=\"325\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\">Y2</text>\n\n  <!-- Result -->\n  <text x=\"250\" y=\"345\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\">STAGFLATION: Price level RISES (P1 to P2), Output FALLS (Y1 to Y2)</text>\n</svg>",
+      "label": "SRAS Decrease (Higher Costs)"
+     }
+    ],
+    "description": "The SRAS curve showing the positive relationship between price level and output in the short run, with shift factors"
+   },
+   {
+    "id": "aggregate-supply:diagram:bb59805e",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"22\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"14\" font-weight=\"600\">Long-Run Aggregate Supply: Two Views</text>\n\n  <!-- ===== LEFT PANEL: CLASSICAL ===== -->\n  <text x=\"130\" y=\"42\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">Classical View</text>\n\n  <!-- Axes -->\n  <line x1=\"50\" y1=\"55\" x2=\"50\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"1.2\"/>\n  <line x1=\"50\" y1=\"290\" x2=\"230\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"1.2\"/>\n  <text x=\"22\" y=\"172\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" transform=\"rotate(-90 22 172)\">Price Level</text>\n  <text x=\"140\" y=\"305\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Real GDP</text>\n\n  <!-- LRAS (vertical line) -->\n  <line x1=\"155\" y1=\"60\" x2=\"155\" y2=\"285\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"162\" y=\"58\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">LRAS</text>\n\n  <!-- Yfe label -->\n  <text x=\"155\" y=\"300\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Yfe</text>\n\n  <!-- AD curves -->\n  <path d=\"M 70 100 Q 120 160 200 225\" stroke=\"#ef4444\" stroke-width=\"1.2\" fill=\"none\" opacity=\"0.6\"/>\n  <text x=\"205\" y=\"222\" fill=\"#ef4444\" font-size=\"9\" opacity=\"0.6\">AD1</text>\n\n  <path d=\"M 90 80 Q 140 140 220 205\" stroke=\"#ef4444\" stroke-width=\"1.2\" fill=\"none\"/>\n  <text x=\"225\" y=\"202\" fill=\"#ef4444\" font-size=\"9\">AD2</text>\n\n  <!-- Price levels -->\n  <circle cx=\"155\" cy=\"170\" r=\"3\" fill=\"#ef4444\" opacity=\"0.6\"/>\n  <line x1=\"50\" y1=\"170\" x2=\"155\" y2=\"170\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.4\"/>\n  <text x=\"43\" y=\"174\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"8\">P1</text>\n\n  <circle cx=\"155\" cy=\"140\" r=\"3\" fill=\"#ef4444\"/>\n  <line x1=\"50\" y1=\"140\" x2=\"155\" y2=\"140\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.4\"/>\n  <text x=\"43\" y=\"144\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"8\">P2</text>\n\n  <!-- Annotation -->\n  <text x=\"130\" y=\"255\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">AD shifts only change</text>\n  <text x=\"130\" y=\"266\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">price level, not output</text>\n\n  <!-- ===== DIVIDER ===== -->\n  <line x1=\"250\" y1=\"40\" x2=\"250\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" opacity=\"0.2\"/>\n\n  <!-- ===== RIGHT PANEL: KEYNESIAN ===== -->\n  <text x=\"375\" y=\"42\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"600\">Keynesian View</text>\n\n  <!-- Axes -->\n  <line x1=\"280\" y1=\"55\" x2=\"280\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"1.2\"/>\n  <line x1=\"280\" y1=\"290\" x2=\"480\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"1.2\"/>\n  <text x=\"262\" y=\"172\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" transform=\"rotate(-90 262 172)\">Price Level</text>\n  <text x=\"380\" y=\"305\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Real GDP</text>\n\n  <!-- Keynesian LRAS (three sections) -->\n  <!-- Horizontal section -->\n  <line x1=\"300\" y1=\"260\" x2=\"380\" y2=\"260\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/>\n  <!-- Upward sloping section -->\n  <path d=\"M 380 260 Q 410 230 430 170 Q 440 130 445 80\" stroke=\"#f59e0b\" stroke-width=\"2.5\" fill=\"none\"/>\n  <!-- Vertical section -->\n  <line x1=\"445\" y1=\"80\" x2=\"445\" y2=\"58\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/>\n  <text x=\"455\" y=\"58\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">LRAS</text>\n\n  <!-- Yfe label -->\n  <text x=\"445\" y=\"300\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Yfe</text>\n  <line x1=\"445\" y1=\"290\" x2=\"445\" y2=\"295\" stroke=\"#e8ecf5\" stroke-width=\"0.8\"/>\n\n  <!-- Section labels -->\n  <text x=\"340\" y=\"278\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"7\" opacity=\"0.6\">Spare capacity</text>\n  <text x=\"340\" y=\"286\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"7\" opacity=\"0.6\">(no inflation)</text>\n\n  <text x=\"415\" y=\"210\" fill=\"#e8ecf5\" font-size=\"7\" opacity=\"0.6\">Bottlenecks</text>\n\n  <text x=\"460\" y=\"100\" fill=\"#e8ecf5\" font-size=\"7\" opacity=\"0.6\">Full</text>\n  <text x=\"460\" y=\"108\" fill=\"#e8ecf5\" font-size=\"7\" opacity=\"0.6\">capacity</text>\n\n  <!-- AD curves at different positions -->\n  <path d=\"M 290 210 Q 330 240 370 260\" stroke=\"#ef4444\" stroke-width=\"1\" fill=\"none\" opacity=\"0.5\"/>\n  <text x=\"372\" y=\"268\" fill=\"#ef4444\" font-size=\"8\" opacity=\"0.5\">AD1</text>\n\n  <path d=\"M 330 150 Q 380 200 430 240\" stroke=\"#ef4444\" stroke-width=\"1.2\" fill=\"none\"/>\n  <text x=\"432\" y=\"248\" fill=\"#ef4444\" font-size=\"8\">AD2</text>\n\n  <!-- Key insight box -->\n  <rect x=\"285\" y=\"130\" width=\"115\" height=\"35\" rx=\"4\" fill=\"#f59e0b\" opacity=\"0.08\" stroke=\"#f59e0b\" stroke-width=\"0.5\"/>\n  <text x=\"342\" y=\"145\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"7\">With spare capacity,</text>\n  <text x=\"342\" y=\"155\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"7\">AD rises can increase</text>\n  <text x=\"342\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"7\">output without inflation</text>\n\n  <!-- Footer -->\n  <text x=\"250\" y=\"330\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">Both views agree: LRAS shifts right with supply-side improvements (technology, education, investment)</text>\n</svg>",
+    "title": "LRAS: Classical vs Keynesian",
+    "checklist": [
+     "Classical: draw LRAS as a vertical line at Yfe — show AD changes only affect price level",
+     "Keynesian: draw the three sections correctly — horizontal, upward sloping, vertical",
+     "Explain the policy implications: Classical favours supply-side policies; Keynesian supports demand management when there is spare capacity",
+     "Know that both views agree LRAS shifts right with supply-side improvements",
+     "Be prepared to evaluate which view is more appropriate for a given situation"
+    ],
+    "description": "Comparison of the Classical vertical LRAS and the Keynesian three-section LRAS curve"
+   },
+   {
+    "id": "aggregate-supply:diagram:b9099bfb",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"18\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\">AD/AS Equilibrium: Base Diagram</text>\n\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"35\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"30\" y=\"168\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 30 168)\">Price Level (PL)</text>\n  <text x=\"270\" y=\"325\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Real GDP (Y)</text>\n\n  <!-- LRAS (vertical) -->\n  <line x1=\"350\" y1=\"40\" x2=\"350\" y2=\"295\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/>\n  <text x=\"358\" y=\"45\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">LRAS</text>\n  <text x=\"350\" y=\"315\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"10\">Yfe</text>\n\n  <!-- SRAS -->\n  <path d=\"M 100 270 Q 200 250 300 200 Q 380 140 420 60\" stroke=\"#059669\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"425\" y=\"55\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\">SRAS</text>\n\n  <!-- AD -->\n  <path d=\"M 120 60 Q 200 140 300 210 Q 370 260 440 280\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"445\" y=\"274\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\">AD</text>\n\n  <!-- Equilibrium point -->\n  <circle cx=\"290\" cy=\"205\" r=\"5\" fill=\"#e8ecf5\"/>\n  <text x=\"298\" y=\"198\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"600\">E</text>\n\n  <!-- Dashed lines to axes -->\n  <line x1=\"70\" y1=\"205\" x2=\"290\" y2=\"205\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n  <line x1=\"290\" y1=\"205\" x2=\"290\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.8\" stroke-dasharray=\"4,3\" opacity=\"0.5\"/>\n  <text x=\"60\" y=\"209\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"10\">P*</text>\n  <text x=\"290\" y=\"315\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Y*</text>\n\n  <!-- Output gap annotation -->\n  <line x1=\"290\" y1=\"293\" x2=\"350\" y2=\"293\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"320\" y=\"340\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">Negative output gap</text>\n  <text x=\"320\" y=\"350\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\">(Y* &lt; Yfe)</text>\n</svg>",
+    "title": "AD/AS Equilibrium: Multiple Scenarios",
+    "checklist": [
+     "Draw initial equilibrium where AD intersects SRAS, with LRAS showing full employment output",
+     "Show the relevant shift clearly (AD for demand-pull/recession, SRAS for cost-push, LRAS for growth)",
+     "Label old and new equilibrium points, price levels, and output levels",
+     "State what happens to BOTH the price level AND real output",
+     "Identify any output gap (positive or negative) relative to Yfe",
+     "Evaluate short-run vs long-run effects where appropriate"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n  <text x=\"250\" y=\"18\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\">Demand-Pull Inflation (AD shifts right)</text>\n\n  <line x1=\"70\" y1=\"35\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"30\" y=\"168\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 30 168)\">Price Level</text>\n  <text x=\"270\" y=\"325\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Real GDP</text>\n\n  <!-- LRAS -->\n  <line x1=\"380\" y1=\"40\" x2=\"380\" y2=\"295\" stroke=\"#f59e0b\" stroke-width=\"1.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"388\" y=\"45\" fill=\"#f59e0b\" font-size=\"10\">LRAS</text>\n\n  <!-- SRAS -->\n  <path d=\"M 100 270 Q 200 250 300 200 Q 380 140 420 60\" stroke=\"#059669\" stroke-width=\"2\" fill=\"none\"/>\n  <text x=\"425\" y=\"55\" fill=\"#059669\" font-size=\"11\">SRAS</text>\n\n  <!-- Original AD -->\n  <path d=\"M 110 70 Q 190 150 280 215 Q 350 260 420 280\" stroke=\"#3b82f6\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.4\"/>\n  <text x=\"425\" y=\"274\" fill=\"#3b82f6\" font-size=\"10\" opacity=\"0.4\">AD</text>\n\n  <!-- New AD -->\n  <path d=\"M 160 60 Q 240 140 330 200 Q 400 250 460 270\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"465\" y=\"264\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">AD'</text>\n\n  <!-- Shift arrow -->\n  <line x1=\"240\" y1=\"200\" x2=\"300\" y2=\"200\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrDP)\"/>\n  <defs><marker id=\"arrDP\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#f59e0b\"/></marker></defs>\n\n  <!-- Old equilibrium -->\n  <circle cx=\"270\" cy=\"218\" r=\"3\" fill=\"#3b82f6\" opacity=\"0.4\"/>\n  <line x1=\"70\" y1=\"218\" x2=\"270\" y2=\"218\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.3\"/>\n  <line x1=\"270\" y1=\"218\" x2=\"270\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.3\"/>\n  <text x=\"60\" y=\"222\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.5\">P1</text>\n  <text x=\"270\" y=\"315\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.5\">Y1</text>\n\n  <!-- New equilibrium -->\n  <circle cx=\"330\" cy=\"178\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"70\" y1=\"178\" x2=\"330\" y2=\"178\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.4\"/>\n  <line x1=\"330\" y1=\"178\" x2=\"330\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.4\"/>\n  <text x=\"60\" y=\"182\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"10\">P2</text>\n  <text x=\"330\" y=\"315\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\">Y2</text>\n\n  <!-- Result box -->\n  <rect x=\"100\" y=\"45\" width=\"200\" height=\"30\" rx=\"4\" fill=\"#ef4444\" opacity=\"0.1\" stroke=\"#ef4444\" stroke-width=\"0.5\"/>\n  <text x=\"200\" y=\"57\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">Price level RISES (P1 to P2)</text>\n  <text x=\"200\" y=\"69\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\">Real output RISES (Y1 to Y2)</text>\n</svg>",
+      "label": "Demand-Pull Inflation"
+     },
+     {
+      "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n  <text x=\"250\" y=\"18\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\">Cost-Push Inflation / Stagflation (SRAS shifts left)</text>\n\n  <line x1=\"70\" y1=\"35\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"30\" y=\"168\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 30 168)\">Price Level</text>\n  <text x=\"270\" y=\"325\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Real GDP</text>\n\n  <!-- LRAS -->\n  <line x1=\"380\" y1=\"40\" x2=\"380\" y2=\"295\" stroke=\"#f59e0b\" stroke-width=\"1.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"388\" y=\"45\" fill=\"#f59e0b\" font-size=\"10\">LRAS</text>\n\n  <!-- Original SRAS -->\n  <path d=\"M 140 270 Q 240 250 330 200 Q 400 140 440 60\" stroke=\"#059669\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.4\"/>\n  <text x=\"445\" y=\"55\" fill=\"#059669\" font-size=\"10\" opacity=\"0.4\">SRAS</text>\n\n  <!-- New SRAS (shifted left) -->\n  <path d=\"M 90 270 Q 190 250 280 200 Q 350 140 390 60\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"395\" y=\"55\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">SRAS'</text>\n\n  <!-- Shift arrow -->\n  <line x1=\"310\" y1=\"210\" x2=\"260\" y2=\"210\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrCP)\"/>\n  <defs><marker id=\"arrCP\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#f59e0b\"/></marker></defs>\n\n  <!-- AD -->\n  <path d=\"M 120 70 Q 200 150 300 215 Q 370 260 440 280\" stroke=\"#3b82f6\" stroke-width=\"2\" fill=\"none\"/>\n  <text x=\"445\" y=\"274\" fill=\"#3b82f6\" font-size=\"11\">AD</text>\n\n  <!-- Old equilibrium -->\n  <circle cx=\"310\" cy=\"195\" r=\"3\" fill=\"#059669\" opacity=\"0.4\"/>\n  <line x1=\"70\" y1=\"195\" x2=\"310\" y2=\"195\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.3\"/>\n  <line x1=\"310\" y1=\"195\" x2=\"310\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.3\"/>\n  <text x=\"60\" y=\"199\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.5\">P1</text>\n  <text x=\"310\" y=\"315\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.5\">Y1</text>\n\n  <!-- New equilibrium -->\n  <circle cx=\"268\" cy=\"218\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"70\" y1=\"218\" x2=\"268\" y2=\"218\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.4\"/>\n  <line x1=\"268\" y1=\"218\" x2=\"268\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.4\"/>\n  <text x=\"60\" y=\"222\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"10\">P2</text>\n  <text x=\"268\" y=\"315\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\">Y2</text>\n\n  <!-- Result box -->\n  <rect x=\"100\" y=\"45\" width=\"210\" height=\"30\" rx=\"4\" fill=\"#ef4444\" opacity=\"0.1\" stroke=\"#ef4444\" stroke-width=\"0.5\"/>\n  <text x=\"205\" y=\"57\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">STAGFLATION: PL RISES (P1 to P2)</text>\n  <text x=\"205\" y=\"69\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">AND Output FALLS (Y1 to Y2)</text>\n</svg>",
+      "label": "Cost-Push Inflation (Stagflation)"
+     },
+     {
+      "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n  <text x=\"250\" y=\"18\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\">Economic Growth (LRAS shifts right)</text>\n\n  <line x1=\"70\" y1=\"35\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"30\" y=\"168\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 30 168)\">Price Level</text>\n  <text x=\"270\" y=\"325\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Real GDP</text>\n\n  <!-- Original LRAS -->\n  <line x1=\"300\" y1=\"40\" x2=\"300\" y2=\"295\" stroke=\"#f59e0b\" stroke-width=\"1.5\" stroke-dasharray=\"6,3\" opacity=\"0.4\"/>\n  <text x=\"308\" y=\"45\" fill=\"#f59e0b\" font-size=\"10\" opacity=\"0.4\">LRAS</text>\n  <text x=\"300\" y=\"315\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.4\">Yfe1</text>\n\n  <!-- New LRAS -->\n  <line x1=\"400\" y1=\"40\" x2=\"400\" y2=\"295\" stroke=\"#059669\" stroke-width=\"2\" stroke-dasharray=\"6,3\"/>\n  <text x=\"410\" y=\"45\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">LRAS'</text>\n  <text x=\"400\" y=\"315\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\">Yfe2</text>\n\n  <!-- Shift arrow -->\n  <line x1=\"315\" y1=\"170\" x2=\"385\" y2=\"170\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrGR)\"/>\n  <defs><marker id=\"arrGR\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#f59e0b\"/></marker></defs>\n\n  <!-- SRAS (also shifts right) -->\n  <path d=\"M 100 270 Q 200 250 300 200 Q 370 140 410 60\" stroke=\"#3b82f6\" stroke-width=\"1.2\" fill=\"none\" opacity=\"0.3\"/>\n  <path d=\"M 160 270 Q 260 250 360 200 Q 430 140 470 60\" stroke=\"#3b82f6\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"4,2\"/>\n  <text x=\"475\" y=\"55\" fill=\"#3b82f6\" font-size=\"9\">SRAS'</text>\n\n  <!-- AD -->\n  <path d=\"M 120 70 Q 210 160 320 230 Q 400 270 460 285\" stroke=\"#ef4444\" stroke-width=\"2\" fill=\"none\"/>\n  <text x=\"465\" y=\"279\" fill=\"#ef4444\" font-size=\"11\">AD</text>\n\n  <!-- Result box -->\n  <rect x=\"90\" y=\"50\" width=\"180\" height=\"40\" rx=\"4\" fill=\"#059669\" opacity=\"0.1\" stroke=\"#059669\" stroke-width=\"0.5\"/>\n  <text x=\"180\" y=\"65\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Non-inflationary growth:</text>\n  <text x=\"180\" y=\"78\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Potential output rises from</text>\n  <text x=\"180\" y=\"89\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Yfe1 to Yfe2</text>\n\n  <!-- Causes -->\n  <rect x=\"90\" y=\"100\" width=\"180\" height=\"55\" rx=\"4\" fill=\"#059669\" opacity=\"0.06\" stroke=\"#059669\" stroke-width=\"0.3\"/>\n  <text x=\"180\" y=\"115\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.8\">Caused by supply-side improvements:</text>\n  <text x=\"100\" y=\"128\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">- Better technology &amp; innovation</text>\n  <text x=\"100\" y=\"139\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">- More/better educated workers</text>\n  <text x=\"100\" y=\"150\" fill=\"#e8ecf5\" font-size=\"8\" opacity=\"0.7\">- More capital investment</text>\n</svg>",
+      "label": "Economic Growth (LRAS shifts right)"
+     },
+     {
+      "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n  <text x=\"250\" y=\"18\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\">Recession (AD shifts left - negative output gap)</text>\n\n  <line x1=\"70\" y1=\"35\" x2=\"70\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1.5\"/>\n  <text x=\"30\" y=\"168\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\" transform=\"rotate(-90 30 168)\">Price Level</text>\n  <text x=\"270\" y=\"325\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"11\">Real GDP</text>\n\n  <!-- LRAS -->\n  <line x1=\"380\" y1=\"40\" x2=\"380\" y2=\"295\" stroke=\"#f59e0b\" stroke-width=\"1.5\" stroke-dasharray=\"6,3\"/>\n  <text x=\"388\" y=\"45\" fill=\"#f59e0b\" font-size=\"10\">LRAS</text>\n  <text x=\"380\" y=\"315\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\">Yfe</text>\n\n  <!-- SRAS -->\n  <path d=\"M 100 270 Q 200 250 300 200 Q 380 140 420 60\" stroke=\"#059669\" stroke-width=\"2\" fill=\"none\"/>\n  <text x=\"425\" y=\"55\" fill=\"#059669\" font-size=\"11\">SRAS</text>\n\n  <!-- Original AD -->\n  <path d=\"M 150 60 Q 240 140 340 200 Q 410 250 470 270\" stroke=\"#3b82f6\" stroke-width=\"1.5\" fill=\"none\" opacity=\"0.4\"/>\n  <text x=\"475\" y=\"264\" fill=\"#3b82f6\" font-size=\"10\" opacity=\"0.4\">AD</text>\n\n  <!-- New AD (shifted left) -->\n  <path d=\"M 100 70 Q 180 150 280 215 Q 350 260 420 280\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/>\n  <text x=\"425\" y=\"274\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">AD'</text>\n\n  <!-- Shift arrow -->\n  <line x1=\"310\" y1=\"200\" x2=\"250\" y2=\"200\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#arrRC)\"/>\n  <defs><marker id=\"arrRC\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0, 8 3, 0 6\" fill=\"#f59e0b\"/></marker></defs>\n\n  <!-- Old equilibrium -->\n  <circle cx=\"330\" cy=\"185\" r=\"3\" fill=\"#3b82f6\" opacity=\"0.4\"/>\n  <line x1=\"70\" y1=\"185\" x2=\"330\" y2=\"185\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.3\"/>\n  <line x1=\"330\" y1=\"185\" x2=\"330\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.3\"/>\n  <text x=\"60\" y=\"189\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.5\">P1</text>\n  <text x=\"330\" y=\"315\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.5\">Y1</text>\n\n  <!-- New equilibrium -->\n  <circle cx=\"268\" cy=\"218\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"70\" y1=\"218\" x2=\"268\" y2=\"218\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.4\"/>\n  <line x1=\"268\" y1=\"218\" x2=\"268\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"0.6\" stroke-dasharray=\"3,2\" opacity=\"0.4\"/>\n  <text x=\"60\" y=\"222\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"10\">P2</text>\n  <text x=\"268\" y=\"315\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\">Y2</text>\n\n  <!-- Output gap bracket -->\n  <line x1=\"268\" y1=\"293\" x2=\"380\" y2=\"293\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <line x1=\"268\" y1=\"290\" x2=\"268\" y2=\"296\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <line x1=\"380\" y1=\"290\" x2=\"380\" y2=\"296\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <text x=\"324\" y=\"340\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">Negative output gap</text>\n  <text x=\"324\" y=\"350\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\">(unemployment, spare capacity)</text>\n\n  <!-- Result box -->\n  <rect x=\"100\" y=\"50\" width=\"190\" height=\"30\" rx=\"4\" fill=\"#ef4444\" opacity=\"0.1\" stroke=\"#ef4444\" stroke-width=\"0.5\"/>\n  <text x=\"195\" y=\"62\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">Price level FALLS (P1 to P2)</text>\n  <text x=\"195\" y=\"74\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">Real output FALLS (Y1 to Y2)</text>\n</svg>",
+      "label": "Recession (AD shifts left)"
+     }
+    ],
+    "description": "Using the AD/AS model to analyse demand-pull inflation, cost-push inflation, economic growth, and recession"
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "Short-run aggregate supply (SRAS) shows the total output firms are willing to supply at each price level, given current input costs.",
+      "A rise in input costs (oil prices, wages, raw materials) increases firms' costs of production at every output level.",
+      "The SRAS curve shifts leftward, reducing output and raising the price level — a combination known as stagflation.",
+      "Conversely, falling input costs shift SRAS rightward, increasing output and reducing inflationary pressure."
+     ],
+     "title": "Short-run supply shocks shift SRAS",
+     "result": "SRAS shifts are caused by changes in costs of production and can create stagflation when costs rise unexpectedly."
+    },
+    {
+     "steps": [
+      "Long-run aggregate supply (LRAS) represents the maximum output an economy can produce when all resources are fully employed.",
+      "LRAS shifts rightward when the quantity or quality of factors of production increases — more labour, better capital, improved technology.",
+      "Investment in education and training increases human capital, raising labour productivity and shifting LRAS outward.",
+      "An outward shift of LRAS enables non-inflationary economic growth — higher output without higher prices."
+     ],
+     "title": "LRAS is determined by the productive capacity of the economy",
+     "result": "LRAS growth depends on expanding productive capacity through investment in physical capital, human capital and technology."
+    },
+    {
+     "steps": [
+      "The Classical model shows LRAS as vertical at the full employment level of output — the economy always returns to full employment in the long run.",
+      "In this model, increases in AD only cause inflation and do not increase real output beyond the full employment level.",
+      "The Keynesian model shows AS as horizontal when there is significant spare capacity, then upward sloping, then vertical at full employment.",
+      "In the Keynesian model, AD increases can raise real output without causing inflation when there is spare capacity — justifying demand management."
+     ],
+     "title": "Classical and Keynesian models differ on the shape of AS",
+     "result": "The debate between Classical and Keynesian AS shapes has fundamental implications for whether demand-side or supply-side policies are effective."
+    },
+    {
+     "steps": [
+      "Supply-side policies aim to increase the productive capacity of the economy by improving the efficiency of markets.",
+      "Market-based policies include deregulation, privatisation, trade liberalisation and labour market reforms to increase flexibility.",
+      "Interventionist policies include government spending on education, infrastructure and R&D to improve factor quality.",
+      "Successful supply-side policies shift LRAS rightward, enabling higher output, lower inflation and improved international competitiveness."
+     ],
+     "title": "Supply-side policies shift LRAS to enable sustainable growth",
+     "result": "Supply-side policies are essential for long-run non-inflationary growth, but they take time to work and have distributional consequences."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Supply-side policies have significant time lags",
+     "content": "Education and infrastructure investment may take years or decades to increase productive capacity. In the meantime, the economy may need demand-side management to address short-run unemployment or inflation. Supply-side policies are necessary but not sufficient for managing the economy — they must be combined with appropriate fiscal and monetary policy."
+    },
+    {
+     "title": "Labour market flexibility has a social cost",
+     "content": "Deregulation and flexible labour markets can reduce unemployment but may lead to job insecurity, low wages and worsening inequality. Zero-hour contracts and the gig economy increase firms' flexibility but transfer risk to workers. The efficiency gains from labour market reform must be weighed against the welfare costs to vulnerable workers."
+    },
+    {
+     "title": "The Classical-Keynesian debate remains unresolved",
+     "content": "In practice, both models have merit depending on economic conditions. The Classical model better describes long-run trends, while the Keynesian model better explains recessions and periods of high unemployment. Most modern economists accept elements of both — flexible wages eventually restore equilibrium, but this process can be painfully slow."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "aggregate-supply:mistake:e23a550b",
+    "title": "Confusing SRAS and LRAS shifts",
+    "examTip": "Ask yourself: does this change the economy's maximum potential output? If yes → LRAS shift. Does it change current production costs? If yes → SRAS shift.",
+    "mistake": "Students shift LRAS when they should shift SRAS, or vice versa. E.g. claiming a rise in oil prices shifts LRAS.",
+    "correction": "SRAS shifts when short-run costs change (wages, raw materials, energy prices). LRAS shifts when the productive capacity of the economy changes (technology, labour force size, education, infrastructure)."
+   },
+   {
+    "id": "aggregate-supply:mistake:9857c28d",
+    "title": "Drawing the LRAS as upward sloping",
+    "mistake": "Students draw LRAS with an upward slope like SRAS, when in the classical model it should be vertical.",
+    "correction": "In the classical model, LRAS is vertical at the full employment level of output (Yf). This means in the long run, output is determined by supply-side factors, not the price level."
+   },
+   {
+    "id": "aggregate-supply:mistake:988f8951",
+    "title": "Not using AD/AS diagrams to show policy effects",
+    "examTip": "Diagram marks are usually 2-4 marks. A correct, fully labelled diagram can make the difference between a pass and a fail on long-answer questions.",
+    "mistake": "Students explain policies in words only and fail to support their answer with a diagram, losing marks.",
+    "correction": "Always draw the AD/AS diagram to support your explanation. Show the initial equilibrium, the shift (AD or AS), and the new equilibrium with new price level and output clearly labelled."
+   }
+  ]
+ }
+}

@@ -1,5 +1,5 @@
 import { createAnonClient } from '@/lib/supabase-anon';
-import { cachedPagePayload } from '@/lib/preview-limits';
+import { publicSectionPayload } from '@/lib/preview-limits';
 import StudyApp from '@/components/StudyApp';
 
 export const metadata = {
@@ -54,22 +54,25 @@ export default async function HomePage({ searchParams }) {
     || (sections || []).find(s => defaultSectionIds.has(s.id))?.id
     || null;
 
-  // Fetch initial section data
+  // Fetch initial section data.
+  //
+  // V007: the free surfaces only. This page read the same four paid tables the topic pages did, with
+  // the same anon client, so the complete quiz bank of whichever section happened to open first was
+  // in the homepage's HTML. `StudyApp` fetches the paid half from the entitled API.
   let initialData = null;
   if (firstSectionId) {
-    /* V007, same rule as the topic pages: this document is cached and served to everyone, so it
-       carries the free preview only. The four paid tables are not read here. */
     const [content, notes, diagrams, practice] = await Promise.all([
-      supabase.from('section_content').select('data').eq('section_id', firstSectionId).single(),
+      supabase.from('section_content').select('data, published_at').eq('section_id', firstSectionId).single(),
       supabase.from('section_notes').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_diagrams').select('data').eq('section_id', firstSectionId).single(),
       supabase.from('section_practice').select('data').eq('section_id', firstSectionId).single(),
     ]);
-    initialData = cachedPagePayload({
-      content: content.data?.data || [],
-      notes: notes.data?.data || [],
-      diagrams: diagrams.data?.data || [],
-      practice: practice.data?.data || [],
+    initialData = publicSectionPayload({
+      content: content.data?.data,
+      notes: notes.data?.data,
+      diagrams: diagrams.data?.data,
+      practice: practice.data?.data,
+      contentVersionSince: content.data?.published_at ?? null,
     });
   }
 

@@ -1,5 +1,14 @@
 "use client";
 import { useState } from 'react';
+import { tariffsFor, commandsFor } from '@/lib/practice-tariffs';
+
+/* The practice editor's two dropdowns used to be typed out: a four-value mark list and a command
+   list containing two words that are not IAL command words in either subject. An admin could author
+   an off-spec item from a menu the product itself offered. Both are derived now, as the union of
+   the two subjects' ladders — the editor is not told which subject it is editing, so the union is
+   the widest defensible list. Packet 12.1, E006. */
+const EDITOR_MARKS = [...new Set([...tariffsFor('economics'), ...tariffsFor('business')])].sort((a, b) => a - b);
+const EDITOR_COMMANDS = [...new Set([...commandsFor('economics'), ...commandsFor('business')])];
 
 const editorTabs = [
   { id: 'content', label: 'Content' },
@@ -17,22 +26,28 @@ export default function SectionEditor({ sectionId, initialData }) {
   const [data, setData] = useState(initialData);
   const [saving, setSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState('');
+  // Packet 3: the route runs the content validator and refuses a save that adds a BLOCK finding.
+  // The findings come back in the body and are listed here so the person can fix them.
+  const [findings, setFindings] = useState([]);
 
   async function handleSave() {
     setSaving(true);
     setSaveMessage('');
+    setFindings([]);
     try {
       const res = await fetch(`/api/admin/sections/${sectionId}/${activeTab}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ data: data[activeTab] }),
       });
+      const body = await res.json();
       if (res.ok) {
-        setSaveMessage('Saved successfully!');
-        setTimeout(() => setSaveMessage(''), 3000);
+        const v = body.validator;
+        setSaveMessage(v && v.newDebt ? `Saved. The validator counts ${v.newDebt} new DEBT finding${v.newDebt === 1 ? '' : 's'} on this section (allowed; see npm run validate --section ${sectionId} --debt).` : 'Saved successfully!');
+        setTimeout(() => setSaveMessage(''), 6000);
       } else {
-        const err = await res.json();
-        setSaveMessage(`Error: ${err.error}`);
+        setSaveMessage(`Error: ${body.error}`);
+        if (Array.isArray(body.findings)) setFindings(body.findings);
       }
     } catch (err) {
       setSaveMessage(`Error: ${err.message}`);
@@ -109,6 +124,15 @@ export default function SectionEditor({ sectionId, initialData }) {
           </span>
         )}
       </div>
+      {findings.length > 0 && (
+        <ul style={{ marginTop: 12, paddingLeft: 18, fontSize: 13, color: '#ef4444', lineHeight: 1.5 }}>
+          {findings.map((f, i) => (
+            <li key={i}>
+              <code style={{ fontSize: 12 }}>{f.rule}</code> · {f.where} — {f.detail}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
@@ -534,10 +558,13 @@ function PracticeEditor({ data, onChange }) {
                     background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit', outline: 'none'
                   }}
                 >
-                  <option value={4}>4</option>
-                  <option value={6}>6</option>
-                  <option value={10}>10</option>
-                  <option value={20}>20</option>
+                  {/* An existing item may sit at a tariff no IAL paper carries. Keep it selectable
+                      and labelled, so editing another field cannot silently re-tariff the item to
+                      the first option in the list. */}
+                  {!EDITOR_MARKS.includes(Number(item.marks)) && item.marks != null && (
+                    <option value={item.marks}>{item.marks} (off-spec)</option>
+                  )}
+                  {EDITOR_MARKS.map(m => <option key={m} value={m}>{m}</option>)}
                 </select>
               </div>
               <div>
@@ -550,14 +577,10 @@ function PracticeEditor({ data, onChange }) {
                     background: '#151825', color: '#e8ecf5', fontSize: 13, fontFamily: 'inherit', outline: 'none'
                   }}
                 >
-                  <option value="Define">Define</option>
-                  <option value="Explain">Explain</option>
-                  <option value="Analyse">Analyse</option>
-                  <option value="Assess">Assess</option>
-                  <option value="Evaluate">Evaluate</option>
-                  <option value="Outline">Outline</option>
-                  <option value="Discuss">Discuss</option>
-                  <option value="Compare">Compare</option>
+                  {item.command && !EDITOR_COMMANDS.includes(item.command) && (
+                    <option value={item.command}>{item.command} (off-spec)</option>
+                  )}
+                  {EDITOR_COMMANDS.map(c => <option key={c} value={c}>{c}</option>)}
                 </select>
               </div>
             </div>

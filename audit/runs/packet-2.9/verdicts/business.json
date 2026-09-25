@@ -1,0 +1,357 @@
+{
+  "assessing-competitiveness": [
+    {
+      "block": 0,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**ROCE (Return on Capital Employed)** = (operating profit / capital employed) x 100.",
+        "reason": "The chapter gives the ROCE formula; £60,000 / £400,000 x 100 = 15%, which is the keyed answer."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Operating profit margin** = (operating profit / revenue) x 100. This deducts all operating expenses (rent, wages, marketing) from gross profit ... It is a better measure of management efficiency than gross margin because it includes overhead control. ... A ratio of 1.5-2.0 is generally healthy — below 1.0 signals potential cash flow crisis",
+        "reason": "A reader of this chapter can benchmark both margins against the industry (which the chapter insists on), attribute the gross-vs-bottom-line gap to overheads/interest, and flag a current ratio below 1.0 as a liquidity danger; 'profit-for-the-year margin' is never named, but the operating-margin logic carries over."
+      },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "business-growth": [
+    {
+      "block": 0,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Backward vertical integration** acquires a supplier, securing inputs and reducing costs.",
+        "reason": "A food processor supplies the supermarket, so buying it is backward vertical integration, as keyed."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "The attraction is speed: the acquiring firm gains customers, capacity, brands, and market share immediately. ... Culture clash between the two workforces, duplication of roles leading to redundancies, management distraction during integration, and the premium paid often exceeds the value created.",
+        "reason": "The chapter teaches both the benefits (instant customers such as the 50,000 subscribers) and the integration risks of a takeover, which is what the item asks the student to analyse."
+      },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": {
+        "verdict": "NONE",
+        "rule": null,
+        "quote": "",
+        "reason": "No unchosen quiz item is taught here: this chapter covers only reasons for staying small (niches, flexibility, personal service, owner choice), while the bank tests economies/diseconomies of scale and overtrading (never taught in the section) and organic/external growth (chapter 1)."
+      },
+      "practice": {
+        "verdict": "NONE",
+        "rule": null,
+        "quote": "",
+        "reason": "No unchosen practice item is taught here: p0 economies of scale, p2 Ansoff and p4 barriers to entry are never taught in the section, and p1/p3 are chapter 1 (acquisition, organic vs inorganic growth)."
+      },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "business-objectives-strategy": [
+    {
+      "block": 0,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "Objectives translate the mission into concrete goals. **SMART objectives** are Specific, Measurable, Achievable, Relevant, and Time-bound.",
+        "reason": "The chapter sets the mission (purpose) against SMART objectives (specific and measurable), so 'corporate objectives' is reachable; 'corporate aims' is never taught, but the key does not depend on it."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Strengths** and **weaknesses** are internal factors the firm can control — brand reputation, workforce skills, financial reserves. ... The real value of SWOT is in the cross-analysis. A strength matched to an opportunity suggests an aggressive growth strategy.",
+        "reason": "The chapter teaches SWOT, the internal/external split, cross-matching and its limitations, which is exactly what is needed to analyse how SWOT helps NovaTech."
+      },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Market development** (existing product, new market) takes a proven product to new geographies or demographics.",
+        "reason": "An existing product sold in a new country is market development, which is the keyed answer and matches the chapter verbatim."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "The strategic choice depends on context. ... Porter warned that firms failing to commit to one strategy get **stuck in the middle** — too expensive for cost-conscious buyers, too generic for quality-seeking ones.",
+        "reason": "The three options map onto Ansoff (international = market development, domestic = penetration) and Porter's warning against not choosing, so a reader of chapters 1-2 can write a creditable evaluation of strategic direction; the item sits in the 'Strategic Direction' chapter."
+      },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "decision-making-techniques": [
+    {
+      "block": 0,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Float** (or slack) is the time a non-critical activity can be delayed without affecting the project completion. ... Float = LFT - EST - duration",
+        "reason": "The chapter gives the float formula; 15 - 8 - 4 = 3, which is the keyed answer."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "The **expected monetary value (EMV)** of a chance node is calculated by multiplying each outcome's payoff by its probability and summing the results. The **net gain** subtracts the initial cost of the decision from the EMV. ... The key limitation is that probabilities are **estimates**, not facts.",
+        "reason": "The student can compute resort EMV 0.6x8 + 0.4x2 = £5.6m, net £1.6m, against renovation net £1.5m, then assess the value of the method using the chapter's limitations (estimated probabilities, risk neutrality)."
+      },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "A **moving average** calculates the mean of a set number of consecutive data points, then moves forward one period and recalculates.",
+        "reason": "The mean of £40,000, £50,000 and £60,000 is £50,000, the keyed answer."
+      },
+      "practice": {
+        "verdict": "NONE",
+        "rule": null,
+        "quote": "",
+        "reason": "No unchosen practice item is taught here: p0 NPV, p1 payback, p3 investment appraisal and p4 sensitivity analysis are never taught anywhere in the section, and p2 (decision trees) belongs to chapter 1."
+      },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "global-industries-mncs": [
+    {
+      "block": 0,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Profit repatriation**: MNCs send profits back to shareholders in the home country rather than reinvesting locally.",
+        "reason": "The keyed option (transferring profits earned abroad back to the home country) is the chapter's own definition."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Labour exploitation**: MNCs may exploit low wages, weak labour laws, and poor enforcement in developing countries. Long hours, unsafe conditions, child labour in supply chains, and suppression of trade unions are persistent concerns.",
+        "reason": "Below-living-wage pay and 60+ hour weeks in Bangladeshi and Cambodian suppliers are exactly the labour-exploitation concerns this chapter teaches."
+      },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "When these prices deviate from **arm's length** (what unrelated parties would charge), the MNC can artificially shift profits to subsidiaries in low-tax jurisdictions.",
+        "reason": "The key matches this chapter's definition, and this chapter is the dedicated treatment of transfer pricing, although chapter 1 already previews it in one sentence."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "The OECD estimates that profit-shifting by MNCs costs governments $100-240 billion per year in lost tax revenue ... Developing countries are disproportionately affected because they lack the resources to audit complex MNC accounts and challenge aggressive transfer pricing arrangements.",
+        "reason": "The chapter teaches the lost host-country tax revenue, why developing countries are hit hardest, the BEPS response and host-country stakeholder effects, which is enough for a creditable 10-mark assessment."
+      },
+      "missed": [],
+      "better": [
+        {
+          "kind": "quiz",
+          "index": 7,
+          "reason": "Advisory: q4's keyed answer is already fully taught in chapter 1 ('Transfer pricing allows MNCs to shift profits to low-tax jurisdictions...'), whereas q7 (OECD BEPS) tests something only this chapter teaches."
+        }
+      ]
+    }
+  ],
+  "global-marketing": [
+    {
+      "block": 0,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "Consumer staples like food and personal care products, however, are deeply influenced by local tastes, religious requirements, and climate. ... **Product**: adapt flavours, sizes, or features (McDonald's serves McArabia in the Middle East).",
+        "reason": "Country-specific KitKat flavours are the product adaptation to local tastes that this chapter teaches, and the keyed answer is correct."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Glocalisation** — a portmanteau of globalisation and localisation — is the strategy of maintaining a **global brand and core product** while adapting specific elements to suit local markets.",
+        "reason": "The definition and the McDonald's example are both in this chapter."
+      },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Product**: ingredients, packaging colours (white = mourning in China, celebration in the West), sizes.",
+        "reason": "The keyed 'mourning and death' comes straight from this chapter's cultural audit of the marketing mix. The fact is narrow, but no unchosen item tests Hofstede or the cultural audit better."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "But cultural influence goes far deeper: **religion** affects product acceptability (halal requirements, modesty in advertising) ... **Promotion**: humour, celebrity choice, gender roles in advertising, appropriate media channels.",
+        "reason": "European models and a heritage message aimed at Middle Eastern and East Asian consumers can be analysed with the chapter's religion/modesty, celebrity choice and Hofstede material."
+      },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "global-markets-expansion": [
+    {
+      "block": 0,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "A **joint venture (JV)** is a separate business entity created by two or more firms, often one local and one foreign.",
+        "reason": "A 50/50 foreign-local partnership that produces in China is a joint venture, as keyed."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "The foreign firm gains the local partner's market knowledge, distribution networks, and regulatory contacts. The local firm gains capital, technology, and global brand recognition. Profits and decisions are shared.",
+        "reason": "The chapter gives the JV's advantages (local knowledge, contacts) and its cost (shared profit and control), which is enough for a 6-mark analysis."
+      },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": {
+        "verdict": "NONE",
+        "rule": null,
+        "quote": "",
+        "reason": "No unchosen quiz item is taught here. The nearest, q0 ('push' factor = saturated domestic market), needs a push/pull distinction the chapter never teaches, and q1, q2, q3, q5, q6, q7, q8 and q9 (off-shoring, PLC extension, repatriation, currency strength, Five Forces, Ireland FDI, acquisition, natural hedging) are untaught; q4 is chapter 1."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "The key risk is assuming that domestic success automatically translates overseas — cultural differences, regulatory requirements, and established local competitors can derail even strong products. ... For global expansion, PESTLE identifies country-specific risks that domestic analysis would miss.",
+        "reason": "Applying PESTLE (political stability, corruption, inflation, exchange rates, culture, IP law) and market-development risk to Brazil, India and Nigeria gives a creditable assessment of the risks."
+      },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "globalisation": [
+    {
+      "block": 0,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Technology** — the internet, containerised shipping, and digital payments make it cheap to coordinate supply chains across continents.",
+        "reason": "The chapter names containerised shipping as a technology driver that makes global supply chains cheap, which supports the keyed cost-reduction answer."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Globalisation** is the increasing integration and interdependence of the world's economies through the free flow of goods, services, capital, and labour across borders. ... Three forces drive it.",
+        "reason": "The chapter gives both the definition and three causes (technology, trade liberalisation, deregulation)."
+      },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Trade diversion** occurs when the CET forces firms to switch from a cheaper non-member supplier to a more expensive bloc member.",
+        "reason": "The keyed answer restates this chapter's definition."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "For businesses **outside**, the CET creates a competitive disadvantage that may force them to set up production inside the bloc (tariff-jumping FDI) to remain competitive.",
+        "reason": "SolarTech is a non-member exporter facing an EU external tariff. The chapter teaches the competitive disadvantage, the switch to bloc suppliers (the banana case) and the tariff-jumping FDI response, which is enough for a creditable 6-mark analysis."
+      },
+      "missed": [],
+      "better": []
+    }
+  ],
+  "influences-business-decisions": [
+    {
+      "block": 0,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "A **strong culture** means values are widely shared and deeply held — this improves consistency and motivation but can become a barrier to change because 'the way we've always done it' resists new ideas.",
+        "reason": "The keyed 'resistance to change' is taught here ('groupthink' is not, but it is not needed to reach the key), and the three distractors are advantages."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Friedman** argued the only social responsibility of business is to increase profits for shareholders — anything else is misusing other people's money. **Freeman** countered that businesses depend on all stakeholders and must balance their interests to survive long-term.",
+        "reason": "The shareholder-vs-stakeholder debate is taught in this chapter's stakeholder subsection."
+      },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "Ethical behaviour covers treatment of workers (fair wages, safe conditions) ... The case **against**: higher short-term costs, competitive disadvantage if rivals cut corners, and difficulty measuring ethical impact on the bottom line.",
+        "reason": "Fair wages as an ethical choice that raises costs is the trade-off this chapter teaches, and the other options are not ethical choices."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "Ethical behaviour covers treatment of workers (fair wages, safe conditions), honesty with customers (transparent pricing, truthful advertising), environmental responsibility (beyond legal minimums), and supply chain standards (refusing to use exploitative suppliers). ... **Arguments against CSR**: Friedman's view that profit is the only social responsibility (CSR diverts resources from shareholders)",
+        "reason": "The moral-obligation framing, exploitative suppliers and Friedman's counter-argument are all in this chapter, leaning on chapter 1's stakeholder debate."
+      },
+      "missed": [],
+      "better": [
+        {
+          "kind": "practice",
+          "index": 1,
+          "reason": "Advisory: p1 (PharmaLife, ethics vs profit maximisation) tests this chapter's case for and against ethics directly, while p3's 'all stakeholders, not just shareholders' framing overlaps with chapter 1's Friedman/Freeman debate, which is already block 0's practice."
+        }
+      ]
+    }
+  ],
+  "managing-change": [
+    {
+      "block": 0,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Incremental change** involves continuous, small-scale improvements to existing products, processes, or strategies.",
+        "reason": "The keyed 'gradual, step-by-step improvements' restates this chapter's definition."
+      },
+      "practice": {
+        "verdict": "NONE",
+        "rule": null,
+        "quote": "",
+        "reason": "No unchosen practice item is taught here: p0 (contingency planning vs crisis management) is never taught, since the chapter covers scenario planning only; p1, p3 and p4 (Lewin, overcoming resistance, reasons for resistance) are chapter 2; p2 (leadership in change) needs chapter 2's Kotter material."
+      },
+      "missed": [],
+      "better": []
+    },
+    {
+      "block": 1,
+      "quiz": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "**Fear of the unknown** — people prefer the certainty of the current situation, even if imperfect, over the uncertainty of something new. ... **Loss of status or job security** — restructuring threatens roles, titles, and livelihoods.",
+        "reason": "Both halves of the keyed answer are causes of resistance named in this chapter."
+      },
+      "practice": {
+        "verdict": "PASS",
+        "rule": null,
+        "quote": "(5) Remove barriers — clear obstacles (resistant managers, outdated systems). ... The practical insight: sometimes it is easier to reduce restraining forces (address fears, provide training) than to increase driving forces (push harder).",
+        "reason": "Kotter's steps (coalition, communication, removing resistant managers, short-term wins), Lewin's restraining forces and the communication point give a creditable 20-mark evaluation."
+      },
+      "missed": [],
+      "better": []
+    }
+  ]
+}

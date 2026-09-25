@@ -252,10 +252,14 @@ function TopicStep({
             <span className="spe-action-count-num">{selectionCount}</span>
             {' '}topic{selectionCount !== 1 ? 's' : ''} selected
           </span>
+          {/* Not `onClick={onStart}`: React passes the click event as the first argument, and
+              handleStart's first parameter is `practiseEarly`. An event object is truthy, so every
+              ordinary Start was pulling in not-yet-due cards and quietly defeating the spaced
+              schedule. Caught by the packet verifier, not by the build. */}
           <button
             className="spe-start-btn"
             disabled={selectionCount === 0 || loading}
-            onClick={onStart}
+            onClick={() => onStart()}
           >
             {loading ? (
               <span className="spe-start-btn-loading">

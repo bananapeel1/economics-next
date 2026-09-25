@@ -1,0 +1,35 @@
+{
+  "produced": "2026-09-13",
+  "why": "F052 and F109. 20 of 39 diagram pins resolve to nothing after the resolver was normalised, so the block renders no diagram and nothing reports it. This splits those 20 into the ones that point at a diagram which exists under a different title, and the ones that name a diagram nobody has drawn.",
+  "howToApply": "The pins live in the section_content rows in Supabase, not in this repo. Applying the repin list is a content push and belongs with the diagramId work in F109/F115 — give every diagram a stable id first, then pin by id, then this file is only a record of what changed.",
+  "repin": [
+    { "section": "economics__economic-growth", "ref": "trade-cycle-diagram", "diagram": "The Business (Trade) Cycle", "confidence": "certain" },
+    { "section": "economics__government-intervention", "ref": "Indirect Tax", "diagram": "Tax to Correct Negative Externality", "confidence": "certain" },
+    { "section": "economics__macroeconomic-objectives-policies", "ref": "supply-side-lras", "diagram": "Supply-Side Policy: LRAS Shift", "confidence": "certain" },
+    { "section": "economics__price-determination", "ref": "Consumer Surplus", "diagram": "Consumer & Producer Surplus", "confidence": "certain" },
+    { "section": "economics__aggregate-demand", "ref": "Aggregate Demand Curve", "diagram": "The AD Curve", "confidence": "certain" }
+  ],
+  "missingDiagrams": [
+    { "section": "business__the-market", "ref": "demand-curve", "note": "the section holds no diagrams at all" },
+    { "section": "business__the-market", "ref": "supply-curve", "note": "the section holds no diagrams at all" },
+    { "section": "business__the-market", "ref": "equilibrium-diagram", "note": "the section holds no diagrams at all" },
+    { "section": "economics__aggregate-demand", "ref": "Shifts in Aggregate Demand", "note": "the AD curve exists; a shift version does not" },
+    { "section": "economics__aggregate-supply", "ref": "AD/AS Shifts", "note": "equilibrium exists; a shift version does not" },
+    { "section": "economics__aggregate-supply", "ref": "Self-Correcting Mechanism", "note": "not drawn" },
+    { "section": "economics__economic-growth", "ref": "ad-as-growth", "note": "three separate blocks want an AD/AS growth diagram; one drawing cannot serve all three, because a block pins at most one" },
+    { "section": "economics__economic-growth", "ref": "ad-as-shifts", "note": "as above" },
+    { "section": "economics__economic-growth", "ref": "ad-as-growth-analysis", "note": "as above" },
+    { "section": "economics__measures-economic-performance", "ref": "Demand-Pull and Cost-Push Inflation", "note": "not drawn" },
+    { "section": "economics__national-income", "ref": "National Income Equilibrium", "note": "injections and withdrawals is close but is pinned by another block" },
+    { "section": "economics__national-income", "ref": "The Multiplier", "note": "EXISTS in economics__aggregate-demand as 'The Multiplier Effect'. Diagrams are stored per section, so it cannot be reused without a shared library" },
+    { "section": "economics__price-determination", "ref": "Indirect Tax", "note": "EXISTS in economics__government-intervention as 'Tax to Correct Negative Externality'" },
+    { "section": "economics__price-determination", "ref": "Subsidy", "note": "EXISTS in economics__government-intervention as 'Subsidy to Correct Positive Externality'" }
+  ],
+  "dropRatherThanDraw": [
+    { "section": "economics__market-failure", "ref": "Deadweight Loss", "note": "PLAN.md packet 13 strips deadweight-loss terminology as off-spec for IAL. Drop the pin rather than draw the diagram." }
+  ],
+  "observations": [
+    "62 authored diagrams are pinned by no block at all. They reach a student only through the packet-2 title fallback, which is a heuristic, so more than half the diagram library is placed by guesswork.",
+    "Three of the fifteen missing diagrams already exist in a sibling section. Diagrams are stored per section in section_diagrams, so there is no way to reference one from another. A shared diagram library would remove three of the fifteen and prevent the next duplicate."
+  ]
+}

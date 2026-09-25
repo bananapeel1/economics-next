@@ -1,17 +1,47 @@
 "use client";
-import { useState } from 'react';
-import { MARK_COLORS } from './utils';
+import { useState, useEffect, useMemo } from 'react';
+import { markColor } from './utils';
 
-/* ── Inline Practice Card (with Worked Example Fading) ── */
-export default function InlinePractice({ question, onAskTutor, mode = 'independent' }) {
+/* Split the guidance into its marked fragments. "Define X (2 marks). Explain Y (2 marks)." becomes
+   two checklist items; a paragraph with no marks is one item. */
+function checklistFrom(guidance) {
+  const text = String(guidance || '');
+  if (!text.trim()) return [];
+  // Split after each "(n marks)"; drop the punctuation that trails the last one, and the punctuation
+  // that leads the next (". Explain Y" -> "Explain Y"). The first version left a checkbox labelled "."
+  // on 164 of the 215 live practice items. Caught by the packet 5 verifier.
+  const parts = text.split(/(?<=\(\s*\d+\s*marks?\s*\))/i).map((p) => p.replace(/^[\s.;:,–—-]+/, '').trim()).filter(Boolean);
+  return parts.map((p) => {
+    const m = /\((\s*\d+)\s*marks?\s*\)\s*$/i.exec(p);
+    return { text: p.replace(/\s*\(\s*\d+\s*marks?\s*\)\s*$/i, '').replace(/[\s.;:,]+$/, '').trim(), marks: m ? Number(m[1]) : null };
+  }).filter((c) => /[a-z0-9]/i.test(c.text));
+}
+
+/* F117: the question text carries "(N marks)" and the badge says it again. Strip it at render. */
+const stripMarks = (q) => String(q || '').replace(/\s*\(\s*\d+\s*marks?\s*\)\s*$/i, '');
+
+/* ── Inline Practice Card (with Worked Example Fading) ──
+   F016. All three modes were read-only views of the same guidance: a 20-mark question the student
+   read, revealed, read again, and moved on from. There is an answer box now, in every mode, and a
+   self-mark checklist built from the guidance's own "(n marks)" fragments; a written answer counts on
+   the completion screen. For a free student the model-answer button is a locked control that says
+   what Pro adds, not a button that is simply missing. */
+export default function InlinePractice({ question, onAskTutor, mode = 'independent', onShown, onAttempt }) {
   // mode: 'worked' | 'guided' | 'independent'
   const [revealed, setRevealed] = useState(mode === 'worked');
   const [guidedExpanded, setGuidedExpanded] = useState(false);
-  const colors = MARK_COLORS[question.marks] || MARK_COLORS[4];
+  const [answer, setAnswer] = useState('');
+  const [marking, setMarking] = useState(false);
+  const [ticks, setTicks] = useState({});
+  const [counted, setCounted] = useState(false);
+  const colors = markColor(question.marks);
+
+  useEffect(() => { if (typeof onShown === 'function') onShown(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const guidanceParagraphs = question.guidance?.split('\n').filter(Boolean) || [];
   const firstParagraph = guidanceParagraphs[0];
   const restParagraphs = guidanceParagraphs.slice(1);
+  const checklist = useMemo(() => checklistFrom(question.guidance), [question.guidance]);
 
   function handleAskTutor() {
     if (!onAskTutor) return;
@@ -20,84 +50,123 @@ export default function InlinePractice({ question, onAskTutor, mode = 'independe
     );
   }
 
+  function startMarking() {
+    setMarking(true);
+    setRevealed(true);
+    if (!counted) { setCounted(true); if (typeof onAttempt === 'function') onAttempt(); }
+  }
+
   const labelText = mode === 'worked' ? '\u{1F4D6} Worked example'
     : mode === 'guided' ? '\u{1F9ED} Guided practice'
-    : '\u270D\uFE0F Quick check';
-
+    : '✍️ Quick check';
   const labelClass = mode === 'worked' ? 'lm-card-label lm-card-label-blue'
     : mode === 'guided' ? 'lm-card-label lm-card-label-amber'
     : 'lm-card-label lm-card-label-red';
+  const labelDesc = mode === 'worked' ? "Read the model, then have a go"
+    : mode === 'guided' ? 'The opening is given; write the rest'
+    : "You're on your own — write it, then mark it";
 
-  const labelDesc = mode === 'worked' ? "We'll walk you through this one"
-    : mode === 'guided' ? 'Try with some hints available'
-    : "You're on your own \u2014 test yourself";
+  const tutorControl = onAskTutor ? (
+    <button className="lm-practice-tutor-btn" onClick={handleAskTutor}>
+      &#129302; Get Full Model Answer from Tutor
+    </button>
+  ) : (
+    <a className="lm-practice-tutor-btn lm-practice-tutor-locked" href="/upgrade">
+      &#128274; Full model answer, marked to the IAL grid &mdash; Pro
+    </a>
+  );
+
+  const claimed = checklist.reduce((n, c, i) => n + (ticks[i] ? (c.marks || 0) : 0), 0);
+  const available = checklist.reduce((n, c) => n + (c.marks || 0), 0);
+
+  const answerBox = (
+    <div className="lm-practice-write">
+      <label className="lm-practice-write-label" htmlFor={`practice-answer-${question.id || question.marks}`}>Your answer</label>
+      <textarea
+        id={`practice-answer-${question.id || question.marks}`}
+        className="lm-practice-textarea"
+        placeholder={mode === 'worked' ? 'Now write it in your own words...' : 'Write your answer here, as you would in the exam...'}
+        value={answer}
+        onChange={(e) => setAnswer(e.target.value)}
+        rows={question.marks >= 10 ? 7 : 4}
+      />
+      {!marking && (
+        <button className="lm-practice-mark-btn" onClick={startMarking} disabled={answer.trim().length < 15}>
+          Mark my answer
+        </button>
+      )}
+      {marking && checklist.length > 0 && (
+        <div className="lm-practice-selfmark" role="region" aria-label="Self-mark checklist">
+          <div className="lm-practice-selfmark-title">Tick what your answer includes</div>
+          <ul className="lm-practice-checklist">
+            {checklist.map((c, i) => (
+              <li key={i}>
+                <label className="lm-practice-check">
+                  <input type="checkbox" checked={!!ticks[i]} onChange={(e) => setTicks((t) => ({ ...t, [i]: e.target.checked }))} />
+                  <span>{c.text}{c.marks ? <em className="lm-practice-check-marks"> {c.marks} mark{c.marks === 1 ? '' : 's'}</em> : null}</span>
+                </label>
+              </li>
+            ))}
+          </ul>
+          <div className="lm-practice-selfmark-total" aria-live="polite">
+            {available ? `${claimed} of ${available} marks claimed` : `${Object.values(ticks).filter(Boolean).length} of ${checklist.length} points covered`}
+            {question.marks > 6 && <span className="lm-practice-selfmark-note"> &middot; questions above 6 marks are levels-marked in the exam; this is a coverage check, not a grade</span>}
+          </div>
+        </div>
+      )}
+    </div>
+  );
 
   return (
     <div className={`lm-practice-card ${mode === 'worked' ? 'lm-worked-example' : ''}`}>
       <div className={labelClass}>{labelText}</div>
       <div className="lm-card-label-desc">{labelDesc}</div>
       <div className="lm-practice-inner">
-        <p className="lm-practice-question">{question.question}</p>
+        <p className="lm-practice-question">{stripMarks(question.question)}</p>
         <span className="lm-practice-marks" style={{ backgroundColor: colors.bg, color: colors.badge, borderColor: colors.border }}>
           {question.marks} marks
         </span>
 
         {mode === 'worked' && (
-          /* Worked example: guidance shown by default */
-          <div className="lm-practice-answer open">
-            <div className="lm-practice-answer-inner lm-worked-answer">
-              {guidanceParagraphs.map((line, i) => (
-                <p key={i}>{line}</p>
-              ))}
-              {onAskTutor && (
-                <button className="lm-practice-tutor-btn" onClick={handleAskTutor}>
-                  &#129302; Get Full Model Answer from Tutor
-                </button>
-              )}
+          <>
+            <div className="lm-practice-answer open">
+              <div className="lm-practice-answer-inner lm-worked-answer">
+                {guidanceParagraphs.map((line, i) => <p key={i}>{line}</p>)}
+                {tutorControl}
+              </div>
             </div>
-          </div>
+            {answerBox}
+          </>
         )}
 
         {mode === 'guided' && (
-          /* Guided: first paragraph visible, rest behind toggle */
           <>
             <div className="lm-practice-answer open">
               <div className="lm-practice-answer-inner lm-guided-answer">
                 {firstParagraph && <p>{firstParagraph}</p>}
-                {guidedExpanded && restParagraphs.map((line, i) => (
-                  <p key={i}>{line}</p>
-                ))}
-                {!guidedExpanded && restParagraphs.length > 0 && (
+                {(guidedExpanded || marking) && restParagraphs.map((line, i) => <p key={i}>{line}</p>)}
+                {!guidedExpanded && !marking && restParagraphs.length > 0 && (
                   <button className="lm-guided-expand-btn" onClick={() => setGuidedExpanded(true)}>
                     See full guidance &#x25BC;
                   </button>
                 )}
-                {onAskTutor && (
-                  <button className="lm-practice-tutor-btn" onClick={handleAskTutor}>
-                    &#129302; Get Full Model Answer from Tutor
-                  </button>
-                )}
+                {tutorControl}
               </div>
             </div>
+            {answerBox}
           </>
         )}
 
         {mode === 'independent' && (
-          /* Independent: current behavior */
           <>
-            <button className="lm-practice-reveal-btn" onClick={() => setRevealed(!revealed)}>
-              {revealed ? 'Hide mark scheme \u25B2' : 'Reveal mark scheme \u25BC'}
+            {answerBox}
+            <button className="lm-practice-reveal-btn" onClick={() => setRevealed(!revealed)} aria-expanded={revealed}>
+              {revealed ? 'Hide mark scheme ▲' : 'Reveal mark scheme ▼'}
             </button>
             <div className={`lm-practice-answer ${revealed ? 'open' : ''}`}>
               <div className="lm-practice-answer-inner">
-                {guidanceParagraphs.map((line, i) => (
-                  <p key={i}>{line}</p>
-                ))}
-                {onAskTutor && (
-                  <button className="lm-practice-tutor-btn" onClick={handleAskTutor}>
-                    &#129302; Get Full Model Answer from Tutor
-                  </button>
-                )}
+                {guidanceParagraphs.map((line, i) => <p key={i}>{line}</p>)}
+                {tutorControl}
               </div>
             </div>
           </>

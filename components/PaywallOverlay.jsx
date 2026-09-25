@@ -1,16 +1,14 @@
 "use client";
 import { useState } from 'react';
 import { useAuth } from './AuthProvider';
+import { introOffer } from '@/lib/trial-eligibility';
 import Link from 'next/link';
+import { PAYWALL_FEATURES as FEATURES } from '@/lib/feature-matrix';
 
 /* ── Feature checklist ── */
-const FEATURES = [
-  'Interactive Flashcards',
-  'Practice Quizzes with Feedback',
-  'AI Tutor for Exam Prep',
-  'Chains of Analysis & Evaluation',
-  'Full Model Answers, Not Just the First',
-];
+/* F031: this list used to be written here and disagreed with the upgrade page — it promised
+   "Full Model Answers, Not Just the First" while the upgrade page sold "Model answers" flatly,
+   and neither matched the subject hubs. Derived from the one matrix now. */
 
 function CheckIcon() {
   return (
@@ -21,16 +19,37 @@ function CheckIcon() {
 }
 
 export default function PaywallOverlay({ feature = 'this feature', inline = false, previewText = '' }) {
-  const { user, isPremium, loading: authLoading, subscriptionLoaded } = useAuth();
+  const { user, isPremium, entitlementKnown, trialEligible } = useAuth();
+  /*
+   * F031, the surfaces the first fix missed. /upgrade was corrected to show the price checkout
+   * will actually charge, and this component went on hardcoding "£1 first month" in six places.
+   * A student who has subscribed before was told £1 here and £1.99 on /upgrade, and charged
+   * £1.99 — the contradiction the finding is named for, made worse rather than better.
+   */
+  const offer = introOffer(trialEligible);
+
+  /*
+   * What this page is allowed to say about the price.
+   *
+   * `trialEligible` defaults to true for a signed-out visitor, because there is no account to
+   * check — but a signed-out visitor may perfectly well be a returning subscriber who has not
+   * logged in yet, and checkout will charge them £1.99. So while nobody is signed in, the offer is
+   * described as belonging to new subscribers rather than promised to whoever is reading.
+   *
+   * Derived once and used by BOTH variants. The previous fix put this reasoning in a comment above
+   * the full overlay's subtitle and applied it only there, while the inline variant sixty lines
+   * above went on promising £1 flat — and the inline one is the variant a signed-out reader
+   * actually meets, on the model answers page and the fun quiz.
+   */
+  const priceChip = user ? `${offer.price} ${offer.unit}` : '\u00a31 first month for new subscribers';
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
-  // Don't show the paywall to premium users — and don't show it to anyone until
-  // we know which they are. `subscription` is fetched after auth resolves, so
-  // `isPremium` is false for a beat on every cold load; rendering on that
-  // showed paying subscribers an upsell for the thing they already pay for.
-  if (authLoading || !subscriptionLoaded) return null;
-  if (isPremium) return null;
+  // Don't show the paywall to premium users — nor to anyone we cannot yet place. V009: this
+  // component renders on prerendered pages now, where `isPremium` is false for the first moment of
+  // every visit simply because nothing has answered. Drawing on that is F035 exactly: "Unlock
+  // Tutor" in front of somebody who pays. Absent is the honest state until we know.
+  if (isPremium || !entitlementKnown) return null;
 
   async function handleUpgrade() {
     setLoading(true);
@@ -64,7 +83,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
 
   const ctaButton = user ? (
     <button className="paywall-btn" onClick={handleUpgrade} disabled={loading}>
-      {loading ? 'Loading...' : 'Get Pro — £1 first month'}
+      {loading ? 'Loading...' : `Get Pro \u2014 ${offer.price} ${offer.unit}`}
     </button>
   ) : (
     <Link href="/login" className="paywall-btn">Sign In to Get Started</Link>
@@ -82,7 +101,19 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
     return (
       <div className="preview-paywall-banner">
         <h3 className="preview-paywall-title">Unlock All {feature}</h3>
-        <p className="preview-paywall-desc">Full access to every section &mdash; <strong>&pound;1 for your first month</strong>, then &pound;1.99. Cheaper than a coffee.</p>
+        <p className="preview-paywall-desc">
+          {user ? (
+            <>
+              Full access to every section &mdash; <strong>{offer.price} {offer.unit}</strong>
+              {trialEligible ? ', then \u00a31.99. Cheaper than a coffee.' : '. Cancel anytime.'}
+            </>
+          ) : (
+            <>
+              Full access to every section. <strong>New subscribers get their first month for
+              &pound;1</strong>, then &pound;1.99. Cheaper than a coffee.
+            </>
+          )}
+        </p>
 
         <div className="paywall-inline-features">
           {FEATURES.map(f => (
@@ -101,7 +132,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
         {plansLink}
 
         <div className="paywall-trust-row-compact">
-          <span>&pound;1 first month</span>
+          <span>{priceChip}</span>
           <span className="paywall-trust-dot" />
           <span>Cancel anytime</span>
         </div>
@@ -137,18 +168,24 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
         </h2>
         <p className="paywall-subtitle">
           {user
-            ? 'Get your first month for £1 and accelerate your revision.'
-            : 'Sign in to unlock everything from £1 for your first month.'
+            ? offer.headline
+            // F031: a signed-out visitor may well be a returning subscriber, and this page cannot
+            // know. It says who the price is for rather than promising it to whoever is reading.
+            : 'Sign in to unlock everything. New subscribers get their first month for \u00a31.'
           }
         </p>
 
         {/* Price */}
         <div className="paywall-price-block">
           <div className="paywall-price">
-            <span className="paywall-price-amount">&pound;1</span>
-            <span className="paywall-price-period">first month</span>
+            <span className="paywall-price-amount">{offer.price}</span>
+            <span className="paywall-price-period">{user ? offer.unit : 'first month, new subscribers'}</span>
           </div>
-          <div className="paywall-price-trial">then &pound;1.99/month &middot; cancel anytime &middot; or &pound;12 once for life</div>
+          <div className="paywall-price-trial">
+            {trialEligible
+              ? 'then \u00a31.99/month \u00b7 cancel anytime \u00b7 or \u00a312 once for life'
+              : 'you have subscribed before, so the \u00a31 first month does not apply \u00b7 cancel anytime \u00b7 or \u00a312 once for life'}
+          </div>
           <div className="paywall-price-value">Shown in GBP &mdash; you&rsquo;ll be charged in your local currency at checkout</div>
         </div>
 
@@ -172,7 +209,7 @@ export default function PaywallOverlay({ feature = 'this feature', inline = fals
           {plansLink}
 
           <div className="paywall-trust-row">
-            <span>&pound;1 first month</span>
+            <span>{priceChip}</span>
             <span className="paywall-trust-dot" />
             <span>Cancel anytime</span>
           </div>

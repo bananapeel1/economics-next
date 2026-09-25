@@ -1,0 +1,2428 @@
+{
+ "section_id": "measures-economic-performance",
+ "subject": "economics",
+ "label": "2026-09-14-pre-packet-13",
+ "tables": {
+  "section_content": [
+   {
+    "id": "measures-economic-performance:block:37fa3a83",
+    "title": "Gross Domestic Product (GDP)",
+    "sections": [
+     {
+      "id": "measures-economic-performance:sub:gdp-definition",
+      "body": [
+       {
+        "text": "**Gross Domestic Product (GDP)** is the total monetary value of all **final** goods and services produced within a country's borders in a given time period, usually a year or a quarter. It only counts final output to avoid **double counting** -- the value of steel used to make a car is already included in the car's price, so you do not count the steel separately.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Firms produce goods and services",
+         "Only final output is counted",
+         "Values are summed at market prices"
+        ],
+        "result": "GDP figure represents the economy's total output",
+        "resultType": "neutral"
+       },
+       {
+        "text": "GDP is \"domestic\" because it counts production that happens inside the country regardless of who owns the factors of production. A Japanese-owned car factory in the UK adds to UK GDP, not Japanese GDP. This distinguishes GDP from **GNI** (Gross National Income), which counts income earned by a country's citizens wherever they work.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "What Is GDP?",
+      "recall": {
+       "id": "measures-economic-performance:sub:gdp-definition:recall",
+       "type": "reorder",
+       "prompt": "Put the GDP calculation logic in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Count all goods and services produced domestically",
+        "Include only final output to avoid double counting",
+        "Value output at market prices",
+        "Sum to get total GDP for the time period"
+       ]
+      },
+      "keyIdea": "GDP measures the total value of all goods and services produced within a country's borders in a given time period, making it the headline indicator of economic size.",
+      "examMatters": "Examiners expect a precise definition that includes \"total value of final goods and services,\" \"within a country's borders,\" and \"in a given time period.\" Missing any element loses marks. Always clarify the difference between GDP and GNI if the question allows.",
+      "realExample": {
+       "text": "**The UK's GDP** was approximately $3.1 trillion in 2023, making it the sixth-largest economy in the world. This figure includes output from foreign-owned firms such as Nissan's Sunderland plant, because the production happens on British soil. GNI would instead count income earned by British citizens abroad.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students write \"GDP measures a country's wealth.\" GDP measures the flow of output produced in a year, not the stock of accumulated wealth like property, savings and infrastructure. Instead write: GDP is a flow measure of annual output, whereas wealth is a stock of accumulated assets built up over time."
+     },
+     {
+      "id": "measures-economic-performance:sub:real-vs-nominal-gdp",
+      "body": [
+       {
+        "text": "**Nominal GDP** (also called money GDP) measures output valued at the prices of the current year. The problem is that if all prices double but output stays the same, nominal GDP doubles even though the economy has not grown. This makes nominal GDP a misleading measure of living standards.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Prices rise by 5%",
+         "Output stays the same",
+         "Nominal GDP rises by 5%"
+        ],
+        "result": "Nominal GDP overstates true growth",
+        "resultType": "bad"
+       },
+       {
+        "text": "**Real GDP** solves this by valuing output at the prices of a **base year**, stripping out the effect of inflation. If nominal GDP grows by 7% but inflation is 3%, real GDP growth is approximately 4%. You should always use real GDP when comparing economic performance over time, because it shows the genuine change in the volume of output.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Real vs Nominal GDP",
+      "recall": {
+       "id": "measures-economic-performance:sub:real-vs-nominal-gdp:recall",
+       "type": "fillin",
+       "hints": [
+        "cu_____",
+        "in_______",
+        "ba__"
+       ],
+       "prompt": "Complete the real vs nominal GDP chain:",
+       "answers": [
+        "current",
+        "inflation",
+        "base"
+       ],
+       "template": [
+        "Nominal GDP values output at ___ prices",
+        "→ It can rise purely because of ___",
+        "→ Real GDP uses a ___ year's prices to strip out inflation"
+       ]
+      },
+      "keyIdea": "Nominal GDP uses current prices and can rise just from inflation, while real GDP strips out price changes so you can see whether actual output has grown.",
+      "examMatters": "If a data-response question gives GDP figures, always check whether they are real or nominal. If only nominal figures are given alongside inflation data, you should adjust for inflation to discuss real growth. Examiners reward candidates who identify this distinction unprompted.",
+      "realExample": {
+       "text": "**Turkey's** nominal GDP grew by over 100% in local currency terms between 2020 and 2023. However, inflation averaged above 50% per year over that period, so real GDP growth was far more modest. This shows why economists insist on using real GDP to judge genuine economic expansion.",
+       "emoji": "🇹🇷"
+      },
+      "misconception": "Students say \"real GDP is the accurate one and nominal GDP is useless.\" Nominal GDP is useful for measuring the current money value of an economy and comparing across countries using exchange rates. Instead write: real GDP is better for tracking growth over time, while nominal GDP reflects the current monetary size of the economy."
+     },
+     {
+      "id": "measures-economic-performance:sub:gdp-per-capita",
+      "body": [
+       {
+        "text": "**GDP per capita** is calculated by dividing total GDP by the population: GDP per capita = GDP / Population. A country can have a very large total GDP but a low GDP per capita if its population is huge. China's total GDP is the second largest in the world, but its GDP per capita is far below that of smaller economies like Norway or Switzerland.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Total GDP rises by 3%",
+         "Population rises by 4%"
+        ],
+        "result": "GDP per capita actually falls -- people are worse off on average",
+        "resultType": "bad"
+       },
+       {
+        "text": "GDP per capita gives you a rough proxy for average living standards, but it hides **income inequality**. If GDP per capita rises because the richest 1% earn dramatically more while everyone else stagnates, the average figure improves but most people are no better off. You should always consider the distribution of income alongside GDP per capita.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "GDP Per Capita",
+      "recall": {
+       "id": "measures-economic-performance:sub:gdp-per-capita:recall",
+       "type": "reorder",
+       "prompt": "Put the GDP per capita reasoning in order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Calculate total real GDP",
+        "Divide by population to get GDP per capita",
+        "Compare across countries or over time",
+        "Evaluate by considering inequality and distribution"
+       ]
+      },
+      "keyIdea": "Dividing GDP by the population gives GDP per capita, which is a better indicator of average living standards than total GDP alone.",
+      "examMatters": "Examiners often present GDP and population data and expect you to calculate and interpret GDP per capita. Always show your working and then evaluate the figure by noting limitations such as inequality, purchasing power differences, and the exclusion of non-market activity.",
+      "realExample": {
+       "text": "**India** has the fifth-largest total GDP in the world at over $3.7 trillion, yet its GDP per capita is only about $2,500, ranking it well below the global average. This gap between total and per-capita GDP reflects a population of 1.4 billion people. It illustrates why total GDP alone is a poor measure of individual prosperity.",
+       "emoji": "🇮🇳"
+      },
+      "misconception": "Students assume \"rising GDP per capita means everyone is better off.\" GDP per capita is an average that hides inequality -- the gains could flow entirely to high earners while median income stagnates. Instead write: GDP per capita shows average output per person but tells you nothing about how that output is distributed across the population."
+     }
+    ],
+    "takeaway": [
+     "GDP measures total final output within a country's borders in a time period.",
+     "Real GDP strips out inflation; nominal GDP uses current prices.",
+     "GDP per capita divides by population but hides inequality.",
+     "Always distinguish GDP (domestic) from GNI (national)."
+    ],
+    "quizIndices": [
+     0
+    ]
+   },
+   {
+    "id": "measures-economic-performance:block:95d5225d",
+    "title": "Three Methods of Measuring GDP",
+    "sections": [
+     {
+      "id": "measures-economic-performance:sub:output-method",
+      "body": [
+       {
+        "text": "The **output method** calculates GDP by summing the **value added** at each stage of production across every industry. Value added is the difference between a firm's revenue and the cost of its intermediate inputs. If a baker buys flour for $2 and sells bread for $5, the value added is $3.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Farmer grows wheat (value added $1)",
+         "Miller makes flour (value added $1)",
+         "Baker makes bread (value added $3)"
+        ],
+        "result": "Total value added = $5, which equals the final price",
+        "resultType": "neutral"
+       },
+       {
+        "text": "By using value added rather than total sales at each stage, you avoid **double counting**. If you simply added $1 + $2 + $5 (total sales at each stage), you would get $8 instead of the true $5. The output method is particularly useful for showing which sectors contribute most to the economy.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Output (Production) Method",
+      "recall": {
+       "id": "measures-economic-performance:sub:output-method:recall",
+       "type": "fillin",
+       "hints": [
+        "in___________",
+        "in________",
+        "do____"
+       ],
+       "prompt": "Complete the output method chain:",
+       "answers": [
+        "intermediate",
+        "industries",
+        "double"
+       ],
+       "template": [
+        "Value added = firm's revenue minus cost of ___ inputs",
+        "→ Sum value added across all ___ in the economy",
+        "→ This avoids ___ counting of intermediate goods"
+       ]
+      },
+      "keyIdea": "The output method adds up the value added by every industry in the economy, avoiding double counting by only measuring each firm's contribution.",
+      "examMatters": "If the exam gives a production chain with values at each stage, you must calculate value added at each stage rather than summing total outputs. Show clearly that you subtract intermediate inputs. Examiners specifically test whether you can avoid double counting.",
+      "realExample": {
+       "text": "**The UK's Office for National Statistics** uses the output method to show that services account for around 80% of British GDP, while manufacturing contributes roughly 10%. This breakdown would be impossible without the value-added approach, because raw sales figures would inflate the manufacturing share through double counting.",
+       "emoji": "🏭"
+      },
+      "misconception": "Students add up total sales revenue at every stage of production and call it GDP. That double counts intermediate goods -- the flour's value is already included in the bread's price. Instead write: the output method uses value added at each stage, which equals revenue minus the cost of intermediate inputs, to avoid counting any output twice."
+     },
+     {
+      "id": "measures-economic-performance:sub:income-method",
+      "body": [
+       {
+        "text": "The **income method** adds up all the incomes earned by the factors of production in a given time period. When a good is produced and sold, the revenue becomes income for someone: **wages** for labour, **profits** for entrepreneurs, **rent** for land, and **interest** for capital. The total of these factor incomes should equal GDP.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Goods and services are produced",
+         "Revenue flows to factor owners",
+         "Wages + profits + rent + interest are summed"
+        ],
+        "result": "Total factor income = GDP",
+        "resultType": "neutral"
+       },
+       {
+        "text": "You only count incomes earned from **productive activity** -- not transfer payments like pensions or benefits, because these are redistributions of existing income, not rewards for producing output. The income method is useful for analysing how national income is distributed between wages and profits.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Income Method",
+      "recall": {
+       "id": "measures-economic-performance:sub:income-method:recall",
+       "type": "reorder",
+       "prompt": "Put the four factor incomes in order of the factors they reward:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Wages reward labour",
+        "Rent rewards land",
+        "Interest rewards capital",
+        "Profit rewards enterprise"
+       ]
+      },
+      "keyIdea": "The income method sums all factor incomes earned in production -- wages, profits, rent and interest -- because every pound of output generates a pound of income for someone.",
+      "examMatters": "Examiners test whether you can identify which incomes to include and exclude. Remember to exclude transfer payments and include only incomes earned from current production. If data is provided, separate factor incomes from non-factor incomes before calculating.",
+      "realExample": {
+       "text": "**The US Bureau of Economic Analysis** uses the income method to show that employee compensation accounts for roughly 53% of US GDP, while corporate profits make up about 12%. This data helps economists track whether the gains from growth are flowing to workers or to capital owners.",
+       "emoji": "📊"
+      },
+      "misconception": "Students include transfer payments like state pensions and unemployment benefits in the income method. Transfer payments are not payments for producing output -- they are redistributions. Instead write: the income method only counts factor incomes earned from productive activity, such as wages, profits, rent and interest."
+     },
+     {
+      "id": "measures-economic-performance:sub:expenditure-method",
+      "body": [
+       {
+        "text": "The **expenditure method** calculates GDP by summing all spending on final output: **C** (household consumption) + **I** (investment by firms) + **G** (government spending on goods and services) + **(X - M)** (net exports, which is exports minus imports). This is the most commonly referenced formula: **GDP = C + I + G + (X - M)**.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Households consume (C)",
+         "Firms invest (I)",
+         "Government spends (G)",
+         "Foreigners buy exports minus imports (X-M)"
+        ],
+        "result": "Total expenditure = GDP",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Imports are subtracted because they represent spending on goods produced abroad, which does not count as domestic output. Only **final** expenditure is counted -- spending on intermediate goods is excluded to avoid double counting. The expenditure method directly links to the **aggregate demand** formula you will study later.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Expenditure Method",
+      "recall": {
+       "id": "measures-economic-performance:sub:expenditure-method:recall",
+       "type": "fillin",
+       "hints": [
+        "_",
+        "co_________",
+        "ab____"
+       ],
+       "prompt": "Complete the expenditure method formula:",
+       "answers": [
+        "M",
+        "consumption",
+        "abroad"
+       ],
+       "template": [
+        "GDP = C + I + G + (X - ___)",
+        "→ C stands for household ___",
+        "→ Imports are subtracted because they are produced ___"
+       ]
+      },
+      "keyIdea": "The expenditure method adds up all spending on final goods and services: consumption, investment, government spending and net exports.",
+      "examMatters": "The expenditure formula GDP = C + I + G + (X - M) appears repeatedly in Unit 2. Examiners expect you to know each component and explain why imports are subtracted. Be ready to calculate GDP from component data and to link each component to aggregate demand.",
+      "realExample": {
+       "text": "**In the United States**, consumption (C) accounts for roughly 68% of GDP, making it by far the largest component. Government spending (G) is about 17%, investment (I) around 18%, and net exports (X-M) are negative because the US imports more than it exports. This composition explains why consumer confidence is so closely watched.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students forget to subtract imports and write GDP = C + I + G + X. Imports must be subtracted because they represent spending that leaves the domestic economy. Instead write: GDP = C + I + G + (X - M), where imports are subtracted because they are goods produced in other countries, not domestic output."
+     }
+    ],
+    "takeaway": [
+     "Output method sums value added; income method sums factor incomes.",
+     "Expenditure method: GDP = C + I + G + (X - M).",
+     "All three methods should give the same GDP figure in theory.",
+     "Exclude transfer payments (income) and intermediate goods (output)."
+    ],
+    "quizIndices": [
+     1
+    ]
+   },
+   {
+    "id": "measures-economic-performance:block:1a7ae868",
+    "title": "Uses and Limitations of GDP Data",
+    "sections": [
+     {
+      "id": "measures-economic-performance:sub:uses-of-gdp-data",
+      "body": [
+       {
+        "text": "Governments use GDP data to measure **economic growth**, defined as an increase in real GDP over time. Positive growth usually signals rising employment, higher tax revenues and improving living standards. Negative growth for two consecutive quarters is the technical definition of a **recession**.",
+        "type": "paragraph"
+       },
+       {
+        "text": "GDP also allows **international comparisons**. To compare countries fairly, economists convert GDP into a common currency (usually US dollars) and adjust for differences in price levels using **Purchasing Power Parity (PPP)**. Without PPP adjustment, you understate the real output of countries where prices are low.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Convert GDP to common currency",
+         "Adjust for price differences using PPP",
+         "Compare real GDP per capita"
+        ],
+        "result": "Fair cross-country comparison of living standards",
+        "resultType": "good"
+       }
+      ],
+      "title": "Uses of GDP Data",
+      "recall": {
+       "id": "measures-economic-performance:sub:uses-of-gdp-data:recall",
+       "type": "reorder",
+       "prompt": "Put the international comparison steps in order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Measure each country's GDP in local currency",
+        "Convert to a common currency (e.g. US dollars)",
+        "Adjust for price differences using PPP",
+        "Compare real GDP per capita across countries"
+       ]
+      },
+      "keyIdea": "GDP data lets governments track growth, compare economies, set policy targets and measure progress -- but only if you understand what it does and does not capture.",
+      "examMatters": "When evaluating GDP as a measure of living standards, examiners want you to state its uses first and then systematically discuss limitations. Structuring your answer as \"useful because... but limited because...\" with specific examples earns high evaluation marks.",
+      "realExample": {
+       "text": "**China's** GDP measured at market exchange rates is about $18 trillion, but adjusted for PPP it exceeds $30 trillion because domestic prices in China are much lower than in the US. The PPP figure better reflects China's actual purchasing power. This is why the IMF publishes both measures.",
+       "emoji": "🌍"
+      },
+      "misconception": "Students state \"GDP is the best measure of living standards.\" GDP only measures market output and ignores inequality, leisure, environmental quality and non-market activity. Instead write: GDP is a useful starting point for comparing living standards, but it must be supplemented with other indicators to give a complete picture."
+     },
+     {
+      "id": "measures-economic-performance:sub:limitations-of-gdp",
+      "body": [
+       {
+        "text": "GDP misses the **informal economy** (cash-in-hand work, subsistence farming) and **non-market activity** (unpaid housework, volunteering). In developing countries, the informal sector can be 30-60% of true economic activity, meaning GDP figures significantly understate actual output.",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Income distribution** -- GDP per capita hides inequality between rich and poor.",
+         "**Environmental costs** -- GDP rises when forests are cleared, ignoring ecological damage.",
+         "**Quality of life** -- GDP does not measure leisure time, health or personal freedom.",
+         "**Composition of output** -- GDP counts weapons and cigarettes the same as education and healthcare."
+        ]
+       },
+       {
+        "text": "These limitations mean GDP should never be used as the sole indicator of a nation's wellbeing. Economists supplement GDP with alternative measures like the **Human Development Index (HDI)**, which combines GDP per capita with life expectancy and education indicators.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Limitations of GDP",
+      "recall": {
+       "id": "measures-economic-performance:sub:limitations-of-gdp:recall",
+       "type": "fillin",
+       "hints": [
+        "in______",
+        "en____________",
+        "ed_______"
+       ],
+       "prompt": "Complete the GDP limitations chain:",
+       "answers": [
+        "informal",
+        "environmental",
+        "education"
+       ],
+       "template": [
+        "GDP misses the ___ economy (cash-in-hand, subsistence farming)",
+        "→ It ignores ___ costs like pollution and deforestation",
+        "→ The HDI supplements GDP with life expectancy and ___"
+       ]
+      },
+      "keyIdea": "GDP ignores the informal economy, environmental damage, income distribution and non-market activity, so it can paint a misleading picture of wellbeing.",
+      "examMatters": "A common 8-mark question asks you to evaluate GDP as a measure of living standards. Structure your answer by acknowledging its value, then presenting at least three specific limitations with examples. Conclude by suggesting supplementary measures like HDI for a balanced evaluation.",
+      "realExample": {
+       "text": "**Bhutan** pioneered Gross National Happiness as an alternative to GDP, arguing that environmental conservation, cultural preservation and good governance matter as much as output. Bhutan's GDP per capita is low, but its citizens report high life satisfaction. This challenges the assumption that GDP growth equals progress.",
+       "emoji": "🇧🇹"
+      },
+      "misconception": "Students write \"GDP is useless because it ignores so many things.\" Despite its flaws, GDP remains the most widely used and comparable measure of economic output across countries and over time. Instead write: GDP is imperfect but valuable as a standardised measure of output; its limitations mean it should be used alongside other indicators rather than replaced entirely."
+     },
+     {
+      "id": "measures-economic-performance:sub:human-development-index",
+      "body": [
+       {
+        "text": "The **Human Development Index (HDI)** was created by the United Nations to measure development using three dimensions: **income** (GNI per capita at PPP), **health** (life expectancy at birth), and **education** (mean years of schooling and expected years of schooling). Each dimension is scored from 0 to 1, and the HDI is the geometric mean of the three scores.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Measure GNI per capita (income)",
+         "Measure life expectancy (health)",
+         "Measure years of schooling (education)"
+        ],
+        "result": "HDI score between 0 and 1 captures broader development",
+        "resultType": "good"
+       },
+       {
+        "text": "The HDI reveals cases where high income does not translate into high development. Some oil-rich nations have very high GDP per capita but lower HDI scores because education and healthcare lag behind. Conversely, countries like Cuba and Sri Lanka score relatively well on HDI despite modest incomes because they invest heavily in health and education.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Human Development Index (HDI)",
+      "recall": {
+       "id": "measures-economic-performance:sub:human-development-index:recall",
+       "type": "reorder",
+       "prompt": "Put the HDI components in order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Measure GNI per capita at PPP (income)",
+        "Measure life expectancy at birth (health)",
+        "Measure mean and expected years of schooling (education)",
+        "Calculate geometric mean for HDI score (0 to 1)"
+       ]
+      },
+      "keyIdea": "The HDI combines GDP per capita with health and education data, giving a broader picture of development than income alone can provide.",
+      "examMatters": "Examiners love comparing GDP and HDI. State what HDI adds (health, education) and then evaluate it by noting what it still misses (inequality, environment, freedom). Naming the three HDI components precisely is essential for full marks on definition questions.",
+      "realExample": {
+       "text": "**Norway** consistently tops the HDI rankings with a score above 0.96, reflecting high GNI per capita, a life expectancy of 83 years, and an average of 13 years of schooling. By contrast, Qatar has higher GDP per capita than Norway but a lower HDI score. This shows that income alone does not capture development.",
+       "emoji": "🇳🇴"
+      },
+      "misconception": "Students treat HDI as a perfect measure. HDI still uses averages that hide inequality, and it only captures three dimensions -- it ignores political freedom, environmental sustainability and personal safety. Instead write: HDI is broader than GDP but still limited; it uses averages that mask inequality and excludes dimensions like freedom and environmental quality."
+     }
+    ],
+    "takeaway": [
+     "GDP tracks growth and enables cross-country comparisons via PPP.",
+     "GDP misses the informal economy, inequality and environmental damage.",
+     "HDI adds health and education but still hides inequality.",
+     "Always evaluate GDP alongside alternative indicators in essays."
+    ],
+    "quizIndices": [
+     2
+    ]
+   },
+   {
+    "id": "measures-economic-performance:block:368fba06",
+    "title": "Consumer Price Index (CPI) and Inflation",
+    "sections": [
+     {
+      "id": "measures-economic-performance:sub:cpi-construction",
+      "body": [
+       {
+        "text": "The **Consumer Price Index (CPI)** measures changes in the average price level faced by consumers. Statisticians construct a **basket of goods and services** representing what a typical household buys -- food, housing, transport, clothing and so on. Each item is given a **weight** reflecting its share of total household spending.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Survey households to find spending patterns",
+         "Assign weights to each category",
+         "Track prices monthly",
+         "Calculate the weighted average price change"
+        ],
+        "result": "CPI index number shows how much prices have changed",
+        "resultType": "neutral"
+       },
+       {
+        "text": "The basket is updated annually to reflect changing spending habits. For example, streaming services were added to the UK basket in recent years as DVD rentals were removed. A base year is set at 100, and subsequent CPI values show the percentage change in prices relative to that base.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "How the CPI Is Constructed",
+      "recall": {
+       "id": "measures-economic-performance:sub:cpi-construction:recall",
+       "type": "fillin",
+       "hints": [
+        "ba____",
+        "we____",
+        "1__"
+       ],
+       "prompt": "Complete the CPI construction process:",
+       "answers": [
+        "basket",
+        "weight",
+        "100"
+       ],
+       "template": [
+        "A ___ of goods represents typical household spending",
+        "→ Each item is given a ___ based on its spending share",
+        "→ A base year is set at ___ and subsequent values show price changes"
+       ]
+      },
+      "keyIdea": "The CPI tracks the cost of a weighted basket of goods and services that a typical household buys, giving each item a weight based on its share of spending.",
+      "examMatters": "Examiners frequently ask how the CPI is constructed. You must mention the basket, the weights based on spending shares, the monthly price collection and the base year. Simply saying \"it measures inflation\" without explaining the process earns very few marks.",
+      "realExample": {
+       "text": "**The UK's ONS** added oat milk and electric vehicle charging to the CPI basket in 2024, while removing coal. These changes reflect evolving consumer behaviour -- households spend more on plant-based alternatives and less on solid fuels. This annual update keeps the CPI relevant.",
+       "emoji": "🛒"
+      },
+      "misconception": "Students think the CPI measures the price of everything in the economy. The CPI only tracks a representative basket of consumer goods and services, weighted by spending patterns. Instead write: the CPI measures changes in the cost of a specific weighted basket, not the price of every good in the economy."
+     },
+     {
+      "id": "measures-economic-performance:sub:rpi-vs-cpi",
+      "body": [
+       {
+        "text": "The UK uses two main price indices. The **CPI** is the official measure used by the Bank of England for its 2% inflation target. The **Retail Price Index (RPI)** is an older measure that includes **mortgage interest payments** and **council tax**, which the CPI excludes.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The RPI also uses a different mathematical formula (the arithmetic mean) compared to the CPI's geometric mean. This **formula effect** means the RPI tends to produce a higher inflation figure than the CPI, typically by 0.5 to 1 percentage point. The government has announced that the RPI will be reformed to align with the CPI in 2030.",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**CPI** -- excludes housing costs, uses geometric mean, official inflation target measure.",
+         "**CPIH** -- CPI plus owner-occupier housing costs, now the ONS headline measure.",
+         "**RPI** -- includes mortgage payments and council tax, uses arithmetic mean, tends to be higher."
+        ]
+       }
+      ],
+      "title": "RPI vs CPI",
+      "recall": {
+       "id": "measures-economic-performance:sub:rpi-vs-cpi:recall",
+       "type": "reorder",
+       "prompt": "Put the differences between CPI and RPI in logical order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "CPI excludes mortgage interest payments",
+        "RPI includes mortgage interest and council tax",
+        "CPI uses geometric mean; RPI uses arithmetic mean",
+        "RPI typically gives a higher inflation figure than CPI"
+       ]
+      },
+      "keyIdea": "The RPI includes mortgage interest payments and uses a different averaging method, which is why it usually gives a higher inflation figure than the CPI.",
+      "examMatters": "When discussing inflation measurement, examiners want you to explain why different indices give different figures. Mention the basket composition difference (housing costs) and the formula effect. Knowing that CPIH is now the ONS headline measure shows up-to-date knowledge.",
+      "realExample": {
+       "text": "**UK rail companies** use the RPI to set annual fare increases, which is why commuters often face rises above the CPI inflation rate. In 2023, RPI was 1.2 percentage points higher than CPI, costing the average season-ticket holder an extra $80 per year. Calls to switch to CPI have been resisted by the Treasury.",
+       "emoji": "🏠"
+      },
+      "misconception": "Students treat CPI and RPI as interchangeable. They use different baskets, different mathematical formulae and produce different results. Instead write: the CPI excludes housing costs and uses the geometric mean, while the RPI includes mortgage payments and uses the arithmetic mean, producing a systematically higher figure."
+     },
+     {
+      "id": "measures-economic-performance:sub:measuring-inflation",
+      "body": [
+       {
+        "text": "**Inflation** is a sustained increase in the **general price level** in an economy over a period of time. It is measured as the annual percentage change in the CPI. If the CPI was 110 last year and is 112.2 this year, inflation is (112.2 - 110) / 110 x 100 = **2%**.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You must distinguish between the **price level** and the **rate of inflation**. If inflation falls from 6% to 3%, prices are still rising -- just more slowly. This is called **disinflation**, not deflation. Prices only fall when inflation becomes **negative**, which is true deflation.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Inflation falls from 6% to 3%",
+         "Prices are still rising, just more slowly"
+        ],
+        "result": "This is disinflation, not deflation",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Measuring Inflation",
+      "recall": {
+       "id": "measures-economic-performance:sub:measuring-inflation:recall",
+       "type": "fillin",
+       "hints": [
+        "pr___",
+        "di___________",
+        "fa_____"
+       ],
+       "prompt": "Complete the inflation terminology chain:",
+       "answers": [
+        "price",
+        "disinflation",
+        "falling"
+       ],
+       "template": [
+        "Inflation is a sustained rise in the general ___ level",
+        "→ A falling inflation rate (still positive) is called ___",
+        "→ A negative inflation rate means prices are actually ___ -- this is deflation"
+       ]
+      },
+      "keyIdea": "Inflation is the sustained rise in the general price level over time, measured as the annual percentage change in the CPI from one year to the next.",
+      "examMatters": "Examiners test the distinction between disinflation and deflation regularly. If a question says \"the rate of inflation fell,\" do not describe it as deflation unless the rate turned negative. Precise use of these terms is essential for demonstrating strong economic literacy.",
+      "realExample": {
+       "text": "**The Bank of England** targets CPI inflation of 2% per year. In late 2022, UK CPI inflation peaked at 11.1%, the highest in 41 years, driven by energy and food prices. By early 2024, it had fallen to around 4% -- this was disinflation, not deflation, because prices were still rising.",
+       "emoji": "📉"
+      },
+      "misconception": "Students confuse disinflation with deflation and write \"inflation fell to -3%.\" A fall in the rate of inflation (e.g. from 5% to 2%) is disinflation -- prices still rise, just more slowly. Instead write: deflation only occurs when the inflation rate is negative, meaning the general price level is actually falling."
+     }
+    ],
+    "takeaway": [
+     "CPI tracks a weighted basket of goods; weights reflect spending shares.",
+     "RPI includes housing costs and uses arithmetic mean, giving higher figures.",
+     "Inflation = annual % change in CPI; disinflation is not deflation.",
+     "The Bank of England targets CPI inflation of 2%."
+    ],
+    "quizIndices": [
+     3
+    ]
+   },
+   {
+    "id": "measures-economic-performance:block:e23b67c5",
+    "title": "Inflation: Causes and Effects",
+    "sections": [
+     {
+      "id": "measures-economic-performance:sub:demand-pull-inflation",
+      "body": [
+       {
+        "text": "**Demand-pull inflation** occurs when **aggregate demand (AD)** increases faster than **aggregate supply (AS)** can respond. If the economy is near full capacity and AD shifts right, firms cannot easily expand output, so they raise prices instead. This is often summarised as \"too much money chasing too few goods.\"",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "AD increases (e.g. tax cuts boost spending)",
+         "Economy is near full capacity",
+         "Firms raise prices rather than output"
+        ],
+        "result": "General price level rises -- demand-pull inflation",
+        "resultType": "bad"
+       },
+       {
+        "text": "Demand-pull inflation is most likely when the economy is in a **boom** phase with low unemployment and high consumer confidence. Causes include excessive government spending, consumer credit expansion, tax cuts, rising asset prices and a weakening currency that boosts export demand.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Demand-Pull Inflation",
+      "recall": {
+       "id": "measures-economic-performance:sub:demand-pull-inflation:recall",
+       "type": "reorder",
+       "prompt": "Put the demand-pull inflation process in order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Aggregate demand increases (e.g. tax cuts)",
+        "Economy is operating near full capacity",
+        "Firms cannot easily increase output",
+        "Firms raise prices -- general price level rises"
+       ]
+      },
+      "keyIdea": "When aggregate demand grows faster than the economy's capacity to produce, excess demand pulls prices upward -- too much money chasing too few goods.",
+      "examMatters": "When explaining demand-pull inflation on a diagram, shift the AD curve to the right along a steep section of the AS curve. Show that the price level rises more than real output. Examiners want you to link the cause (e.g. fiscal stimulus) to the AD shift and then to the inflationary outcome.",
+      "realExample": {
+       "text": "**The US government** distributed over $800 billion in stimulus cheques during 2020-2021 while supply chains were still disrupted. Household spending surged but firms could not meet demand, pushing US CPI inflation to 9.1% by June 2022. This was a textbook case of demand-pull inflation.",
+       "emoji": "💰"
+      },
+      "misconception": "Students write \"demand-pull inflation is caused by a rise in one good's price.\" Inflation is a rise in the general price level, not just one product becoming more expensive. Instead write: demand-pull inflation occurs when aggregate demand outstrips the economy's productive capacity, causing a broad-based rise in the general price level."
+     },
+     {
+      "id": "measures-economic-performance:sub:cost-push-inflation",
+      "body": [
+       {
+        "text": "**Cost-push inflation** occurs when the costs of production rise, causing firms to increase their prices to maintain profit margins. This shifts the **short-run aggregate supply (SRAS) curve to the left**, reducing output while raising the price level. Unlike demand-pull inflation, cost-push inflation can occur even when the economy is below full capacity.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Oil prices spike or wages rise sharply",
+         "Firms' production costs increase",
+         "SRAS shifts left"
+        ],
+        "result": "Price level rises and output falls -- stagflation risk",
+        "resultType": "bad"
+       },
+       {
+        "text": "Common causes include rising **commodity prices** (especially oil), **wage increases** that outstrip productivity growth, a **depreciation of the exchange rate** (making imports more expensive), and higher **indirect taxes**. Cost-push inflation is particularly harmful because it can create **stagflation** -- rising prices combined with falling output and rising unemployment.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Cost-Push Inflation",
+      "recall": {
+       "id": "measures-economic-performance:sub:cost-push-inflation:recall",
+       "type": "fillin",
+       "hints": [
+        "wa___",
+        "pr____",
+        "st_________"
+       ],
+       "prompt": "Complete the cost-push inflation chain:",
+       "answers": [
+        "wages",
+        "prices",
+        "stagflation"
+       ],
+       "template": [
+        "Production costs rise (e.g. oil prices or ___)",
+        "→ Firms pass on costs as higher ___",
+        "→ SRAS shifts left, causing rising prices and falling output -- called ___"
+       ]
+      },
+      "keyIdea": "When firms face rising production costs they pass them on as higher prices, pushing up the general price level even without any increase in demand.",
+      "examMatters": "On a diagram, show cost-push inflation as a leftward shift of the SRAS curve. The price level rises while real GDP falls -- this simultaneous outcome is what makes cost-push inflation so problematic. Always name the specific cost increase causing the shift.",
+      "realExample": {
+       "text": "**The 1973 OPEC oil embargo** quadrupled oil prices in months, dramatically increasing production costs across every sector of Western economies. The UK experienced inflation above 20% combined with rising unemployment -- a clear case of stagflation caused by cost-push forces. This event ended the belief that inflation and unemployment could not rise simultaneously.",
+       "emoji": "⛽"
+      },
+      "misconception": "Students say \"cost-push inflation only comes from oil prices.\" Rising wages, higher taxes, currency depreciation and increased raw material costs all cause cost-push inflation. Instead write: any increase in production costs that is passed on to consumers can cause cost-push inflation, including wages, taxes, import costs and commodity prices."
+     },
+     {
+      "id": "measures-economic-performance:sub:effects-of-inflation",
+      "body": [
+       {
+        "text": "Inflation erodes the **purchasing power** of money -- each pound buys fewer goods and services. **Savers** lose out because the real value of their savings falls if interest rates do not keep pace with inflation. People on **fixed incomes** (such as pensioners with fixed annuities) see their real income decline as prices rise around them.",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Borrowers gain** -- the real value of their debt is eroded by inflation.",
+         "**Savers lose** -- real returns on savings turn negative if interest rates are below inflation.",
+         "**Workers** -- those with weak bargaining power see real wages fall; strong unions may keep pace.",
+         "**Firms** -- face uncertainty over costs, which may reduce investment (menu and shoe-leather costs)."
+        ]
+       },
+       {
+        "text": "High and unpredictable inflation also harms **international competitiveness**. If UK prices rise faster than those of trading partners, British exports become relatively more expensive, worsening the trade balance. Firms also face **menu costs** (reprinting price lists) and **shoe-leather costs** (time spent minimising cash holdings).",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Effects of Inflation on Stakeholders",
+      "recall": {
+       "id": "measures-economic-performance:sub:effects-of-inflation:recall",
+       "type": "reorder",
+       "prompt": "Put the effects of inflation on savers in order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "General price level rises",
+        "Purchasing power of money falls",
+        "Interest rate on savings is below inflation",
+        "Real value of savings declines"
+       ]
+      },
+      "keyIdea": "Inflation redistributes purchasing power from savers and fixed-income earners to borrowers and asset owners, creating winners and losers throughout the economy.",
+      "examMatters": "Questions on the effects of inflation expect you to distinguish between different stakeholders. Structure your answer around winners (borrowers, asset owners) and losers (savers, fixed-income earners, exporters). Always specify whether you are discussing high or moderate inflation, as the effects differ.",
+      "realExample": {
+       "text": "**UK mortgage holders** with fixed-rate deals taken out before 2022 effectively saw the real value of their debt fall as inflation surged above 10%. A mortgage of $200,000 lost significant real value in just two years. Meanwhile, savers with cash ISAs earning 1% suffered a real loss of around 9% per year.",
+       "emoji": "🏦"
+      },
+      "misconception": "Students write \"inflation is always bad for the economy.\" Moderate, predictable inflation (around 2%) is considered healthy because it encourages spending and allows real wages to adjust. Instead write: high and unpredictable inflation causes serious problems, but moderate and stable inflation supports economic activity by discouraging hoarding of cash."
+     }
+    ],
+    "takeaway": [
+     "Demand-pull: AD grows faster than AS; too much money chasing too few goods.",
+     "Cost-push: rising costs shift SRAS left; risk of stagflation.",
+     "Inflation redistributes from savers to borrowers.",
+     "Menu costs and shoe-leather costs reduce economic efficiency."
+    ],
+    "diagramRef": "Demand-Pull and Cost-Push Inflation",
+    "quizIndices": [
+     4
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "measures-economic-performance:block:19241bf7",
+    "title": "Deflation",
+    "sections": [
+     {
+      "id": "measures-economic-performance:sub:causes-of-deflation",
+      "body": [
+       {
+        "text": "**Deflation** is a sustained fall in the general price level, meaning the inflation rate is negative. There are two distinct causes. **Demand-side deflation** (bad deflation) happens when aggregate demand collapses -- consumers stop spending, firms cut prices to clear stock, and a vicious cycle of falling output and employment begins.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Supply-side deflation** (good deflation) happens when improvements in technology or productivity reduce costs, allowing firms to cut prices while maintaining or increasing output. This type benefits consumers without causing unemployment.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "AD collapses (e.g. financial crisis)",
+         "Firms cut prices to attract spending",
+         "Falling revenue leads to job cuts"
+        ],
+        "result": "Demand-side deflation -- harmful deflationary spiral",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Causes of Deflation",
+      "recall": {
+       "id": "measures-economic-performance:sub:causes-of-deflation:recall",
+       "type": "fillin",
+       "hints": [
+        "de____",
+        "pr___________",
+        "be_________"
+       ],
+       "prompt": "Complete the causes of deflation:",
+       "answers": [
+        "demand",
+        "productivity",
+        "beneficial"
+       ],
+       "template": [
+        "Demand-side deflation is caused by falling aggregate ___",
+        "→ Supply-side deflation is caused by improved ___ reducing costs",
+        "→ Demand-side deflation is harmful; supply-side deflation can be ___"
+       ]
+      },
+      "keyIdea": "Deflation can be caused by falling aggregate demand (bad deflation) or by rising productivity and supply improvements (good deflation), and the distinction matters enormously.",
+      "examMatters": "Examiners expect you to distinguish between demand-side and supply-side deflation. If a question asks whether deflation is harmful, your evaluation should depend on the cause. A strong answer considers both types and reaches a reasoned judgement based on context.",
+      "realExample": {
+       "text": "**Japan** experienced demand-side deflation for much of the 1990s and 2000s after its asset bubble burst in 1991. Consumers delayed purchases expecting lower prices, firms cut wages, and banks restricted lending. This \"Lost Decade\" demonstrated how demand-side deflation can trap an economy in stagnation.",
+       "emoji": "🇯🇵"
+      },
+      "misconception": "Students treat all deflation as equally harmful. Supply-side deflation from technological progress (like falling computer prices) benefits consumers and does not cause unemployment. Instead write: demand-side deflation is harmful because it reduces output and employment, whereas supply-side deflation from improved productivity can benefit the economy."
+     },
+     {
+      "id": "measures-economic-performance:sub:deflationary-spiral",
+      "body": [
+       {
+        "text": "A **deflationary spiral** is the most dangerous consequence of demand-side deflation. When prices fall, consumers **delay purchases** because they expect goods to be even cheaper in the future. This reduces aggregate demand, forcing firms to cut prices further, reduce output and lay off workers.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Prices fall",
+         "Consumers delay purchases expecting further falls",
+         "AD drops, firms cut output and jobs",
+         "Incomes fall, spending drops further"
+        ],
+        "result": "Self-reinforcing deflationary spiral deepens recession",
+        "resultType": "bad"
+       },
+       {
+        "text": "The spiral is worsened by rising **real debt burdens**. If you owe $100,000 and prices are falling, the real value of your debt increases because your income falls while the debt stays fixed. Borrowers struggle to repay, banks face defaults, and credit dries up -- further reducing spending. This is why central banks fight deflation aggressively.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Deflationary Spiral",
+      "recall": {
+       "id": "measures-economic-performance:sub:deflationary-spiral:recall",
+       "type": "reorder",
+       "prompt": "Put the deflationary spiral stages in order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "General price level falls",
+        "Consumers delay spending expecting further price falls",
+        "Firms cut output, reduce investment and lay off workers",
+        "Falling incomes reduce spending further -- cycle repeats"
+       ]
+      },
+      "keyIdea": "In a deflationary spiral, falling prices cause consumers to delay spending, which reduces demand further, causing more price falls in a self-reinforcing downward cycle.",
+      "examMatters": "When explaining the deflationary spiral, examiners want a clear chain of reasoning showing how each stage feeds into the next. Draw the circular process: falling prices lead to delayed spending, which leads to lower demand, which leads to further price falls. Mentioning rising real debt burdens shows advanced understanding.",
+      "realExample": {
+       "text": "**The US Great Depression** of the 1930s saw prices fall by about 25% over four years. Consumers hoarded cash, businesses slashed prices and wages, and real debt burdens soared. The deflationary spiral was only broken when the government intervened with massive fiscal stimulus under the New Deal.",
+       "emoji": "📉"
+      },
+      "misconception": "Students write \"deflation is good for consumers because everything gets cheaper.\" In a demand-side deflationary spiral, falling prices are accompanied by falling wages, rising unemployment and collapsing demand. Instead write: while lower prices sound beneficial, demand-side deflation typically comes with falling incomes and rising unemployment that more than offset the price benefit."
+     },
+     {
+      "id": "measures-economic-performance:sub:consequences-of-deflation",
+      "body": [
+       {
+        "text": "The most damaging consequence of deflation is the **increase in real debt**. When prices fall, the money you owe buys more goods than before, making debt relatively harder to repay. Firms and households cut spending to service their debts, further reducing aggregate demand.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Deflation can also trigger a **liquidity trap**, where central banks have already cut interest rates to near zero but cannot cut them further to stimulate borrowing and spending. Conventional monetary policy becomes ineffective. This is why central banks may resort to **quantitative easing** (QE) -- buying government bonds to inject money directly into the economy.",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Rising real debt** -- fixed debts become harder to repay as incomes and prices fall.",
+         "**Delayed consumption** -- consumers wait for lower prices, reducing current demand.",
+         "**Lower business investment** -- falling prices reduce expected returns on investment.",
+         "**Monetary policy ineffectiveness** -- the liquidity trap limits central bank tools."
+        ]
+       }
+      ],
+      "title": "Consequences of Deflation",
+      "recall": {
+       "id": "measures-economic-performance:sub:consequences-of-deflation:recall",
+       "type": "fillin",
+       "hints": [
+        "de__",
+        "ze__",
+        "li_______"
+       ],
+       "prompt": "Complete the deflation consequences chain:",
+       "answers": [
+        "debt",
+        "zero",
+        "liquidity"
+       ],
+       "template": [
+        "Deflation increases the real burden of ___",
+        "→ Central banks may hit the ___ lower bound on interest rates",
+        "→ Conventional monetary policy becomes ineffective -- a ___ trap"
+       ]
+      },
+      "keyIdea": "Deflation increases the real burden of debt, may render monetary policy ineffective through the liquidity trap, and reduces business confidence and investment.",
+      "examMatters": "Questions on deflation often require you to explain why it is difficult to escape once it begins. Link the deflationary spiral to the liquidity trap and explain why monetary policy may be ineffective. Discussing QE as a policy response demonstrates strong analytical depth.",
+      "realExample": {
+       "text": "**The Bank of Japan** cut interest rates to zero in 1999 and kept them there for over two decades, yet deflation persisted. Unable to cut rates further, the BOJ launched massive quantitative easing programmes, eventually buying government bonds worth over 100% of GDP. This demonstrated the limitations of monetary policy during deflation.",
+       "emoji": "🏦"
+      },
+      "misconception": "Students assume central banks can always fix deflation by cutting interest rates. Once rates reach zero (the zero lower bound), conventional monetary policy is exhausted. Instead write: at the zero lower bound, central banks cannot cut rates further and must use unconventional tools like quantitative easing, which may be less effective."
+     }
+    ],
+    "takeaway": [
+     "Demand-side deflation is harmful; supply-side deflation can be beneficial.",
+     "The deflationary spiral is self-reinforcing: falling prices reduce spending.",
+     "Deflation raises real debt burdens and may trigger a liquidity trap.",
+     "QE is a response when interest rates hit the zero lower bound."
+    ],
+    "quizIndices": [
+     5
+    ]
+   },
+   {
+    "id": "measures-economic-performance:block:85b554c4",
+    "title": "Employment and Unemployment",
+    "sections": [
+     {
+      "id": "measures-economic-performance:sub:measuring-unemployment",
+      "body": [
+       {
+        "text": "There are two main measures of unemployment in the UK. The **claimant count** records the number of people claiming unemployment-related benefits (mainly Jobseeker's Allowance or Universal Credit). The **Labour Force Survey (LFS)** is a quarterly survey that classifies people aged 16+ as employed, unemployed or economically inactive using ILO definitions.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Under the ILO definition, someone is unemployed if they are **without a job**, **actively seeking work**, and **available to start within two weeks**. The LFS is internationally comparable, whereas the claimant count depends on each country's benefit rules. The claimant count tends to understate true unemployment because not everyone who is jobless claims benefits.",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Claimant count** -- quick to publish, but excludes those who do not claim benefits.",
+         "**LFS** -- internationally comparable, but is a survey with sampling errors.",
+         "**Neither captures** hidden unemployment -- discouraged workers who stop looking.",
+         "**Underemployment** (working fewer hours than desired) is also missed by both measures."
+        ]
+       }
+      ],
+      "title": "Measuring Unemployment",
+      "recall": {
+       "id": "measures-economic-performance:sub:measuring-unemployment:recall",
+       "type": "reorder",
+       "prompt": "Put the ILO unemployment definition criteria in order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Person is without a job",
+        "Person is actively seeking work",
+        "Person is available to start within two weeks",
+        "Person is classified as ILO unemployed"
+       ]
+      },
+      "keyIdea": "Unemployment is measured by the claimant count (people claiming benefits) and the Labour Force Survey (people actively seeking work), and each method has strengths and weaknesses.",
+      "examMatters": "Examiners expect you to know both measures and their limitations. A strong answer explains why the claimant count may understate or overstate true unemployment and why the LFS has sampling limitations. Mentioning hidden unemployment and underemployment demonstrates evaluative depth.",
+      "realExample": {
+       "text": "**During the UK's furlough scheme** in 2020-2021, the claimant count surged by 1.6 million, but many claimants were technically employed (just on reduced pay). The LFS showed a smaller unemployment rise because furloughed workers were classified as employed. This highlighted how each measure captures a different dimension of the labour market.",
+       "emoji": "📋"
+      },
+      "misconception": "Students write \"the unemployment rate measures everyone without a job.\" Retired people, full-time students and stay-at-home parents are not counted as unemployed -- they are economically inactive because they are not seeking work. Instead write: unemployment only counts people who are without work, actively seeking it and available to start."
+     },
+     {
+      "id": "measures-economic-performance:sub:types-of-unemployment",
+      "body": [
+       {
+        "text": "**Frictional unemployment** is short-term unemployment that occurs when workers are between jobs. It exists even in a healthy economy because it takes time to search for and match with a new role. Better job market information and recruitment platforms reduce frictional unemployment.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Structural unemployment** occurs when there is a mismatch between workers' skills and the skills employers need, or when jobs are in a different region from the workers. It often results from long-term changes like deindustrialisation or automation. Structural unemployment can last for years and requires retraining or relocation policies.",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Cyclical (demand-deficient)** -- caused by a fall in AD during a recession; cured by demand-side policies.",
+         "**Frictional** -- short-term, between jobs; reduced by better labour market information.",
+         "**Structural** -- skills or geographical mismatch; requires retraining and education policies.",
+         "**Seasonal** -- predictable, linked to time of year (e.g. tourism, agriculture)."
+        ]
+       }
+      ],
+      "title": "Types of Unemployment",
+      "recall": {
+       "id": "measures-economic-performance:sub:types-of-unemployment:recall",
+       "type": "fillin",
+       "hints": [
+        "Fr________",
+        "St________",
+        "Cy______"
+       ],
+       "prompt": "Complete the types of unemployment:",
+       "answers": [
+        "Frictional",
+        "Structural",
+        "Cyclical"
+       ],
+       "template": [
+        "___ unemployment: short-term, between jobs",
+        "→ ___ unemployment: skills or geographical mismatch",
+        "→ ___ unemployment: caused by falling AD in a recession"
+       ]
+      },
+      "keyIdea": "Unemployment has four types by cause: frictional (between jobs), structural (skills mismatch), cyclical (demand deficiency) and seasonal — each needing different policies.",
+      "examMatters": "Examiners want you to identify the type of unemployment from the context given and recommend appropriate policies. If a question describes a recession, the unemployment is cyclical. If it describes technological change making skills obsolete, it is structural. Matching the type to the correct policy is essential.",
+      "realExample": {
+       "text": "**The closure of coal mines** across Northern England and Wales in the 1980s created mass structural unemployment. Former miners lacked the skills for the growing service sector jobs concentrated in London and the South East. Decades later, some former mining communities still have higher-than-average unemployment, showing how persistent structural unemployment can be.",
+       "emoji": "⛏️"
+      },
+      "misconception": "Students treat all unemployment as the same and suggest one policy can fix it all. Cyclical unemployment needs demand-side stimulus, while structural unemployment needs supply-side retraining. Instead write: the appropriate policy response depends on the type of unemployment -- demand management for cyclical, education and retraining for structural, information improvements for frictional."
+     },
+     {
+      "id": "measures-economic-performance:sub:causes-and-policies",
+      "body": [
+       {
+        "text": "**Cyclical unemployment** is caused by insufficient aggregate demand during a downturn. The government can tackle it using **demand-side policies**: expansionary fiscal policy (higher government spending or tax cuts) and expansionary monetary policy (lower interest rates or quantitative easing) to boost AD and create jobs.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Recession reduces AD",
+         "Firms cut output and jobs",
+         "Government boosts spending or cuts taxes"
+        ],
+        "result": "AD rises, firms rehire workers -- cyclical unemployment falls",
+        "resultType": "good"
+       },
+       {
+        "text": "**Structural unemployment** requires **supply-side policies**: investment in **education and retraining** to update workers' skills, improved **geographical mobility** through housing and transport policies, and better **occupational mobility** through apprenticeships and certification programmes. These policies take longer to work but address the root cause.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Causes and Policies to Reduce Unemployment",
+      "recall": {
+       "id": "measures-economic-performance:sub:causes-and-policies:recall",
+       "type": "reorder",
+       "prompt": "Put the demand-side unemployment policy chain in order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Recession causes cyclical unemployment",
+        "Government increases spending or cuts taxes",
+        "Aggregate demand rises",
+        "Firms increase output and rehire workers"
+       ]
+      },
+      "keyIdea": "Demand-side policies like fiscal stimulus tackle cyclical unemployment, while supply-side policies like education and training address structural unemployment.",
+      "examMatters": "Essay questions on unemployment policies require you to match the policy to the type of unemployment. Examiners penalise generic answers. State the type of unemployment, explain why it exists, and then evaluate whether demand-side or supply-side policies are more appropriate given the context.",
+      "realExample": {
+       "text": "**The UK's Kickstart scheme** (2020-2022) subsidised six-month work placements for 16-24 year olds on Universal Credit. It combined demand-side stimulus (government funding) with supply-side elements (work experience and skills development). The scheme created over 160,000 placements, targeting both cyclical and structural youth unemployment.",
+       "emoji": "🏗️"
+      },
+      "misconception": "Students suggest cutting wages to reduce unemployment. While lower wages reduce firms' costs, they also reduce consumer spending, potentially deepening a recession. Instead write: wage flexibility may help in theory, but in practice cutting wages reduces aggregate demand, which can worsen cyclical unemployment -- the effect depends on the type of unemployment being addressed."
+     }
+    ],
+    "takeaway": [
+     "Claimant count is quick but narrow; LFS is comparable but survey-based.",
+     "Four types: frictional, structural, cyclical, seasonal.",
+     "Cyclical needs demand-side policies; structural needs supply-side.",
+     "Hidden unemployment and underemployment are missed by both measures."
+    ],
+    "quizIndices": [
+     6
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "measures-economic-performance:block:39fa95a0",
+    "title": "Balance of Payments: Current Account",
+    "sections": [
+     {
+      "id": "measures-economic-performance:sub:current-account-components",
+      "body": [
+       {
+        "text": "The **balance of payments** is a record of all financial transactions between a country and the rest of the world. The **current account** is the most closely watched section, and it has four components: **trade in goods**, **trade in services**, **primary income** and **secondary income**.",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Trade in goods** -- exports and imports of physical products (cars, oil, machinery).",
+         "**Trade in services** -- exports and imports of services (finance, tourism, consulting).",
+         "**Primary income** -- investment income flowing in and out (dividends, interest, wages of workers abroad).",
+         "**Secondary income** -- transfers with no exchange of goods/services (foreign aid, remittances, EU contributions)."
+        ]
+       },
+       {
+        "text": "The current account balance is the sum of all four components. If the total is negative, the country has a **current account deficit** -- it is spending more abroad than it earns from abroad. If positive, it has a **current account surplus**.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Components of the Current Account",
+      "recall": {
+       "id": "measures-economic-performance:sub:current-account-components:recall",
+       "type": "fillin",
+       "hints": [
+        "go___",
+        "se______",
+        "se_______"
+       ],
+       "prompt": "Complete the four components of the current account:",
+       "answers": [
+        "goods",
+        "services",
+        "secondary"
+       ],
+       "template": [
+        "Trade in ___ (physical products like cars and oil)",
+        "→ Trade in ___ (finance, tourism, consulting)",
+        "→ Primary income (investment returns) and ___ income (transfers, aid, remittances)"
+       ]
+      },
+      "keyIdea": "The current account records trade in goods, trade in services, primary income (investment returns) and secondary income (transfers) between a country and the rest of the world.",
+      "examMatters": "Examiners regularly ask you to explain the components of the current account. You must name and briefly define all four components. If data is provided, show that you can calculate the overall balance by summing the individual balances. Forgetting primary and secondary income is a common way to lose marks.",
+      "realExample": {
+       "text": "**The UK** runs a persistent current account deficit, driven by a large trade in goods deficit (the UK imports more manufactured goods than it exports). However, the UK runs a surplus on trade in services thanks to its strong financial and professional services sector. The net effect is still a deficit because the goods gap outweighs the services surplus.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students only mention trade in goods when discussing the current account. The current account has four components, and ignoring services, primary income and secondary income gives an incomplete picture. Instead write: the current account includes trade in goods, trade in services, primary income and secondary income -- all four must be considered when assessing the balance."
+     },
+     {
+      "id": "measures-economic-performance:sub:current-account-deficit",
+      "body": [
+       {
+        "text": "A **current account deficit** occurs when the total outflow on the current account exceeds the total inflow. In simple terms, the country is importing more value than it is exporting (including services and investment income). The deficit must be financed through the **financial account** -- typically by attracting foreign direct investment, portfolio investment or borrowing.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Country imports more than it exports",
+         "Current account deficit develops",
+         "Must attract capital inflows to finance it"
+        ],
+        "result": "Sustainable if inflows fund productive investment; risky if funding consumption",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Whether a deficit is a problem depends on its **cause** and **duration**. A deficit caused by importing capital goods for investment may boost future productivity. A deficit caused by excessive consumer spending on imports may be unsustainable. A persistent deficit can lead to currency depreciation, higher external debt, and reduced investor confidence.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Current Account Deficit",
+      "recall": {
+       "id": "measures-economic-performance:sub:current-account-deficit:recall",
+       "type": "reorder",
+       "prompt": "Put the current account deficit chain in order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Imports of goods and services exceed exports",
+        "Current account deficit develops",
+        "Country must attract capital inflows to finance it",
+        "Evaluate: sustainable if investment-led, risky if consumption-led"
+       ]
+      },
+      "keyIdea": "A current account deficit means a country spends more abroad than it earns, which must be financed by capital inflows -- attracting foreign investment or borrowing from overseas.",
+      "examMatters": "Evaluation is key here. Examiners want you to argue both sides: a deficit can signal strong domestic demand and productive investment, or it can signal a loss of competitiveness and unsustainable borrowing. The quality of your judgement determines your marks.",
+      "realExample": {
+       "text": "**The United States** has run a current account deficit every year since 1982, reaching over $800 billion in 2022. This is financed by huge capital inflows -- foreign investors buy US Treasury bonds, shares and property. The US can sustain this because the dollar is the world's reserve currency, but most countries could not run such large deficits indefinitely.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students write \"a current account deficit is always bad for the economy.\" A deficit financed by productive foreign investment can boost growth and future exports. Instead write: the significance of a current account deficit depends on its cause, size and how it is financed -- deficits funding investment are less concerning than those funding consumption."
+     },
+     {
+      "id": "measures-economic-performance:sub:current-account-surplus",
+      "body": [
+       {
+        "text": "A **current account surplus** occurs when a country's export earnings (goods, services, income) exceed its spending on imports. The surplus funds are typically invested abroad through the financial account. Countries with persistent surpluses are net creditors to the rest of the world.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Country exports more than it imports",
+         "Current account surplus accumulates",
+         "Surplus funds are invested overseas"
+        ],
+        "result": "Country builds up foreign assets but may face trading partner resentment",
+        "resultType": "neutral"
+       },
+       {
+        "text": "A surplus is not automatically good. It may indicate that **domestic demand is too weak** -- consumers are not spending enough, so output is exported instead. It can also cause **upward pressure on the exchange rate**, making exports less competitive over time. Very large surpluses can create tension with trading partners who accuse the surplus country of manipulating its currency.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Current Account Surplus",
+      "recall": {
+       "id": "measures-economic-performance:sub:current-account-surplus:recall",
+       "type": "fillin",
+       "hints": [
+        "ex____",
+        "ab____",
+        "do______"
+       ],
+       "prompt": "Complete the current account surplus analysis:",
+       "answers": [
+        "export",
+        "abroad",
+        "domestic"
+       ],
+       "template": [
+        "A surplus means ___ earnings exceed import spending",
+        "→ Surplus funds are typically invested ___",
+        "→ A large surplus may signal weak ___ demand"
+       ]
+      },
+      "keyIdea": "A current account surplus means a country earns more from abroad than it spends, often reflecting strong exports but potentially signalling weak domestic demand.",
+      "examMatters": "Examiners often present data showing both deficit and surplus countries and ask you to evaluate. Avoid the assumption that surpluses are good and deficits are bad. The strongest answers evaluate the causes, sustainability and wider economic implications of both positions.",
+      "realExample": {
+       "text": "**Germany** has run one of the world's largest current account surpluses for over a decade, exceeding $250 billion in some years. Critics argue this reflects weak domestic consumption and an undervalued euro for Germany's productivity level. The European Commission has repeatedly urged Germany to boost domestic spending to help rebalance the eurozone economy.",
+       "emoji": "🇩🇪"
+      },
+      "misconception": "Students assume \"a surplus is always better than a deficit.\" A surplus can signal weak domestic demand and over-reliance on exports, making the economy vulnerable to global downturns. Instead write: a surplus can reflect competitive exports, but it may also indicate suppressed domestic demand; its desirability depends on the underlying cause."
+     }
+    ],
+    "takeaway": [
+     "The current account has four parts: goods, services, primary and secondary income.",
+     "A deficit must be financed by capital inflows on the financial account.",
+     "Deficits are not always bad; surpluses are not always good.",
+     "Always evaluate by considering the cause, size and sustainability."
+    ],
+    "quizIndices": [
+     7
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Measure nominal GDP",
+      "Adjust for inflation using GDP deflator",
+      "Divide by population"
+     ],
+     "result": "Real GDP per capita — the best single indicator of average living standards",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Gross Domestic Product (GDP)",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Gross Domestic Product (GDP)</strong> — the total monetary value of all final goods and services produced within an economy's borders in a given time period.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Nominal GDP</strong> — GDP measured at current market prices, which includes the effects of inflation and therefore overstates real growth when prices are rising.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Real GDP</strong> — GDP adjusted for inflation using a base year's prices, giving a more accurate measure of actual changes in output over time.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>GDP per capita</strong> — real GDP divided by the total population, providing a rough measure of average living standards and allowing comparison between countries of different sizes.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Nominal GDP can rise simply because <strong>prices have increased</strong>, not because the economy produced more; stripping out inflation reveals whether genuine output growth occurred.",
+        "type": "mech"
+       },
+       {
+        "text": "GDP per capita adjusts for population size, so a country whose GDP grows by 3% but whose population grows by 4% actually sees <strong>falling average living standards</strong>.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Examiners expect you to use <strong>real GDP per capita</strong> when comparing living standards over time or between countries, not just raw GDP figures.",
+        "type": "imp"
+       },
+       {
+        "text": "GDP growth links directly to the PPF from Unit 1; an outward shift of the PPF represents an increase in the economy's potential GDP.",
+        "type": "link"
+       }
+      ],
+      "title": "WHY REAL GDP MATTERS"
+     }
+    ],
+    "formula": {
+     "text": "Real GDP = Nominal GDP ÷ GDP deflator × 100",
+     "label": "REAL GDP"
+    },
+    "keyIdea": "GDP is the headline number for economic performance, but the raw figure hides crucial differences between price-inflated growth and genuine improvements in living standards.",
+    "takeaway": [
+     "GDP measures total output; real GDP strips out inflation for meaningful comparison.",
+     "GDP per capita adjusts for population and is better for comparing living standards.",
+     "Always state 'real GDP per capita' in exam answers to show precise understanding."
+    ],
+    "examMatters": "Examiners test whether you understand the difference between nominal and real GDP. Always specify 'real GDP' in your answers and explain why adjusting for inflation matters. When comparing countries, use GDP per capita and acknowledge its limitations.",
+    "misconception": "Students say rising GDP always means people are better off. Wrong because GDP can rise due to inflation, population growth, or increased output of goods that do not improve welfare (e.g. defence spending after conflict). Instead write: rising real GDP per capita is a better indicator, but it still ignores inequality, leisure time, and environmental costs."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Firms produce output (output method)",
+      "Generate incomes for workers and owners (income method)",
+      "Incomes are spent on goods (expenditure method)"
+     ],
+     "result": "All three methods measure the same circular flow and should give the same GDP",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Three Methods of Measuring GDP",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Output method</strong> — measures GDP by adding up the value added at each stage of production across all industries, avoiding double counting by excluding intermediate goods.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Income method</strong> — measures GDP by summing all incomes earned by factors of production (wages, profits, rents, interest) within the economy.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Expenditure method</strong> — measures GDP by totalling all spending on final goods and services: C + I + G + (X – M).",
+        "type": "def"
+       }
+      ],
+      "title": "THE THREE APPROACHES"
+     },
+     {
+      "items": [
+       {
+        "text": "The <strong>circular flow of income</strong> explains why the three methods are equivalent: every firm's output generates income for households, who spend it back on goods and services.",
+        "type": "mech"
+       },
+       {
+        "text": "The output method uses <strong>value added</strong> to avoid double counting; if a baker buys flour for £1 and sells bread for £3, only £2 of value added is counted.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "In practice the three methods give slightly different results due to <strong>data collection difficulties</strong>, the informal economy, and time lags in reporting.",
+        "type": "imp"
+       },
+       {
+        "text": "The expenditure method (C + I + G + (X – M)) links directly to aggregate demand; understanding the components here prepares you for the AD framework in section 2.3.2.",
+        "type": "link"
+       }
+      ],
+      "title": "HOW THEY CONNECT"
+     }
+    ],
+    "formula": {
+     "text": "GDP = C + I + G + (X – M)",
+     "label": "EXPENDITURE METHOD"
+    },
+    "keyIdea": "Output, income, and expenditure are three windows into the same economy, and in theory they give identical answers because every pound spent is a pound earned and a pound of output produced.",
+    "takeaway": [
+     "Output, income, and expenditure methods all measure GDP from different angles.",
+     "The output method avoids double counting by using value added at each stage.",
+     "In theory the three methods give identical results; in practice they differ slightly due to data limitations."
+    ],
+    "examMatters": "Examiners may ask you to explain why the three methods should give the same result. Link your answer to the circular flow model and explain that each method captures a different point in the same cycle of production, income, and spending."
+   },
+   {
+    "flow": {
+     "steps": [
+      "GDP rises",
+      "Check: real or nominal?",
+      "Check: per capita?",
+      "Check: distribution, environment, informal economy"
+     ],
+     "result": "Only after adjusting for all factors can we judge if living standards truly improved",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Uses and Limitations of GDP Data",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "Governments use GDP data to <strong>track the business cycle</strong>, identify recessions (two consecutive quarters of negative growth), and decide when to apply fiscal or monetary stimulus.",
+        "type": "mech"
+       },
+       {
+        "text": "International organisations use GDP per capita in <strong>purchasing power parity (PPP)</strong> terms to compare living standards across countries with different price levels.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "GDP data informs <strong>policy decisions</strong> on taxation, spending, and interest rates; inaccurate data could lead to poorly timed interventions.",
+        "type": "imp"
+       }
+      ],
+      "title": "USES OF GDP DATA"
+     },
+     {
+      "items": [
+       {
+        "text": "GDP ignores <strong>income distribution</strong>; a country's GDP per capita may rise while most of the gains flow to the richest, leaving average citizens no better off.",
+        "type": "mech"
+       },
+       {
+        "text": "The <strong>informal economy</strong> (cash-in-hand work, subsistence farming) is excluded from GDP figures, particularly significant in developing countries where it can account for 30–60% of activity.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "GDP counts <strong>negative externalities</strong> as positive contributions; cleaning up an oil spill increases GDP even though the spill reduced welfare.",
+        "type": "imp"
+       },
+       {
+        "text": "GDP ignores leisure time, quality of life, and environmental degradation; a country working its population 80-hour weeks may have high GDP but low wellbeing.",
+        "type": "imp"
+       },
+       {
+        "text": "The <strong>Human Development Index (HDI)</strong> combines GDP per capita with life expectancy and education to give a broader measure of development, addressing some of GDP's blind spots.",
+        "type": "link"
+       }
+      ],
+      "title": "LIMITATIONS OF GDP"
+     }
+    ],
+    "keyIdea": "GDP is the best single measure of economic activity we have, but it was never designed to capture happiness, health, or environmental sustainability, so relying on it alone paints an incomplete picture.",
+    "takeaway": [
+     "GDP is essential for tracking output, recessions, and international comparisons.",
+     "Key limitations: ignores distribution, informal economy, externalities, and quality of life.",
+     "HDI complements GDP by incorporating health and education alongside income."
+    ],
+    "examMatters": "Examiners love asking you to evaluate whether GDP is a good measure of living standards. Always acknowledge it is useful, then list at least three specific limitations with examples. Mention HDI or other alternative measures for top marks.",
+    "misconception": "Students say GDP is useless as a measure of living standards. Wrong because GDP per capita in PPP terms is still the best single indicator of material prosperity available. Instead write: GDP is valuable but incomplete; it should be used alongside indicators like HDI, Gini coefficient, and environmental measures for a fuller picture."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Survey household spending",
+      "Select basket and assign weights",
+      "Collect prices monthly",
+      "Calculate weighted price change"
+     ],
+     "result": "CPI inflation rate published — guides monetary policy",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Consumer Price Index (CPI) and Inflation",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Inflation</strong> — a sustained increase in the general price level of goods and services in an economy over a period of time, reducing the purchasing power of money.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Consumer Price Index (CPI)</strong> — a weighted index that measures the average change in prices of a representative basket of goods and services purchased by a typical household.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Retail Price Index (RPI)</strong> — an older measure of inflation that includes mortgage interest payments and uses a different averaging method (arithmetic mean vs CPI's geometric mean).",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "A <strong>basket of goods</strong> is selected based on the Living Costs and Food Survey, representing typical household spending; the basket is updated annually to reflect changing consumption patterns.",
+        "type": "mech"
+       },
+       {
+        "text": "Each item receives a <strong>weight</strong> proportional to its share of average household spending; housing and transport carry heavy weights, while items like postage carry small ones.",
+        "type": "mech"
+       },
+       {
+        "text": "Prices are collected from multiple outlets each month, and the <strong>weighted average change</strong> is calculated to produce the CPI figure.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "CPI may not reflect individual experience because the basket represents the <strong>average household</strong>; pensioners, students, and high earners all face different inflation rates.",
+        "type": "imp"
+       },
+       {
+        "text": "CPI is used by the Bank of England to target inflation at 2%; if CPI diverges from target, it triggers monetary policy adjustments through interest rate changes.",
+        "type": "link"
+       }
+      ],
+      "title": "HOW CPI IS CONSTRUCTED"
+     }
+    ],
+    "keyIdea": "The CPI translates millions of price changes into one number by tracking a weighted basket of goods, but the basket is always slightly out of date and misses the spending patterns of many households.",
+    "takeaway": [
+     "CPI tracks weighted price changes in a representative basket updated annually.",
+     "RPI includes mortgage costs and uses arithmetic averaging; CPI uses geometric.",
+     "CPI may not reflect your personal inflation rate if your spending differs from the average household."
+    ],
+    "examMatters": "Examiners often ask you to explain how CPI is constructed and evaluate its accuracy. Walk through the basket, weighting, and collection process, then discuss at least two limitations such as substitution bias and the unrepresentative basket problem.",
+    "misconception": "Students say CPI measures the cost of living. Wrong because CPI measures price changes for a fixed basket, not changes in the actual cost of maintaining a particular standard of living. Instead write: CPI is a price index that approximates cost of living changes but does not account for substitution between goods or quality improvements."
+   },
+   {
+    "flow": {
+     "steps": [
+      "AD rises faster than AS (demand-pull)",
+      "Firms hit capacity constraints",
+      "Prices are bid upward",
+      "Purchasing power falls"
+     ],
+     "result": "Inflation redistributes income from savers to borrowers and erodes competitiveness",
+     "resultType": "bad"
+    },
+    "meta": "6 concepts",
+    "title": "Inflation: Causes and Effects",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Demand-pull inflation</strong> — inflation caused by aggregate demand growing faster than aggregate supply, pulling prices up as too much money chases too few goods.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Cost-push inflation</strong> — inflation caused by rising costs of production (wages, raw materials, energy) being passed on to consumers as higher prices.",
+        "type": "def"
+       },
+       {
+        "text": "Demand-pull inflation typically occurs when the economy is near <strong>full capacity</strong>; firms cannot increase output to meet extra demand, so they raise prices instead.",
+        "type": "mech"
+       },
+       {
+        "text": "Cost-push inflation can be triggered by <strong>external shocks</strong> such as oil price spikes, supply chain disruptions, or depreciation of the exchange rate raising import costs.",
+        "type": "mech"
+       }
+      ],
+      "title": "CAUSES OF INFLATION"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "Inflation <strong>erodes purchasing power</strong> of those on fixed incomes (pensioners, workers with fixed-wage contracts), as their nominal income buys fewer goods.",
+        "type": "imp"
+       },
+       {
+        "text": "Borrowers benefit from unexpected inflation because the <strong>real value of debt falls</strong>, while savers and lenders lose if the interest rate is below the inflation rate.",
+        "type": "imp"
+       },
+       {
+        "text": "High inflation creates <strong>uncertainty</strong> for businesses, discouraging long-term investment because firms cannot predict future costs or revenues accurately.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Inflation reduces <strong>international competitiveness</strong> if domestic prices rise faster than those of trading partners, increasing imports and reducing exports.",
+        "type": "imp"
+       },
+       {
+        "text": "Demand-pull inflation links to AD/AS analysis; it appears on the diagram as a rightward shift of AD along an upward-sloping AS curve, raising both price level and output.",
+        "type": "link"
+       }
+      ],
+      "title": "EFFECTS ON STAKEHOLDERS"
+     }
+    ],
+    "keyIdea": "Demand-pull inflation signals an overheating economy while cost-push inflation punishes it from the supply side, and both erode purchasing power in ways that hit some groups far harder than others.",
+    "takeaway": [
+     "Demand-pull: too much spending; cost-push: rising production costs pushing prices up.",
+     "Inflation hurts fixed-income earners and savers but benefits borrowers.",
+     "High inflation reduces competitiveness and discourages business investment."
+    ],
+    "examMatters": "Examiners expect you to distinguish clearly between demand-pull and cost-push inflation, identify the cause in context, and then evaluate who wins and who loses. Always consider borrowers vs savers, fixed vs flexible incomes, and domestic vs international competitiveness.",
+    "misconception": "Students say inflation is always bad for the economy. Wrong because moderate inflation (around 2%) is considered healthy; it encourages spending over hoarding, allows real wages to adjust downward without nominal cuts, and gives central banks room to cut real interest rates. Instead write: high or volatile inflation is damaging, but moderate, stable inflation supports economic activity."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Prices begin to fall",
+      "Consumers delay spending",
+      "Firms cut output and jobs",
+      "Incomes fall, spending drops further"
+     ],
+     "result": "Deflationary spiral — difficult to escape once established",
+     "resultType": "bad"
+    },
+    "meta": "4 concepts",
+    "title": "Deflation",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Deflation</strong> — a sustained decrease in the general price level, where the inflation rate falls below zero; the opposite of inflation.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Disinflation</strong> — a fall in the rate of inflation (prices still rising, but more slowly); not the same as deflation where prices actually fall.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "When prices fall, consumers <strong>delay purchases</strong> expecting further price drops, reducing aggregate demand and forcing firms to cut prices even further.",
+        "type": "mech"
+       },
+       {
+        "text": "Deflation increases the <strong>real value of debt</strong>, making it harder for households and firms to service their loans, reducing spending and investment further.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Firms facing falling revenues may cut wages or lay off workers, reducing incomes and creating a <strong>self-reinforcing downward spiral</strong> of falling demand and output.",
+        "type": "imp"
+       },
+       {
+        "text": "Not all deflation is harmful: <strong>benign deflation</strong> from technological improvements or productivity gains increases supply and lowers prices without damaging output.",
+        "type": "mech"
+       },
+       {
+        "text": "Japan's 'Lost Decade' of the 1990s–2000s is the classic case study of a deflationary trap where conventional monetary policy (cutting interest rates to zero) failed to stimulate demand.",
+        "type": "link"
+       }
+      ],
+      "title": "THE DEFLATIONARY SPIRAL"
+     }
+    ],
+    "keyIdea": "Falling prices sound good for consumers, but sustained deflation can trap an economy in a vicious cycle where postponed spending, rising real debt, and falling profits feed on each other.",
+    "takeaway": [
+     "Deflation is a sustained fall in the price level; disinflation is just a slowdown in price rises.",
+     "The deflationary spiral links falling prices, delayed spending, rising real debt, and job losses.",
+     "Benign deflation from productivity gains is positive; malignant deflation from weak demand is dangerous."
+    ],
+    "examMatters": "Examiners want you to distinguish between deflation and disinflation, and between 'good' deflation (productivity-driven) and 'bad' deflation (demand-driven). Always explain the deflationary spiral mechanism and why it is so difficult for policymakers to reverse.",
+    "misconception": "Students say falling prices are always good for consumers. Wrong because malignant deflation from falling demand leads to unemployment, wage cuts, and rising real debt burdens that outweigh any price benefit. Instead write: benign deflation from improved productivity is beneficial, but demand-deficient deflation triggers a destructive spiral."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Identify the type of unemployment",
+      "Match the cause",
+      "Select appropriate policy"
+     ],
+     "result": "Cyclical → demand-side; Structural → supply-side; Frictional → information improvements",
+     "resultType": "good"
+    },
+    "meta": "6 concepts",
+    "title": "Employment and Unemployment",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Unemployment</strong> — occurs when people who are willing and able to work at the prevailing wage rate cannot find employment.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Claimant count</strong> — measures unemployment by counting the number of people claiming Jobseeker's Allowance or the unemployment element of Universal Credit.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Labour Force Survey (LFS)</strong> — uses the ILO definition to measure unemployment through a quarterly sample survey of 40,000 households, capturing those actively seeking work in the last four weeks.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "The LFS is considered more accurate because it captures those who are <strong>unemployed but not claiming</strong> benefits, though it may still miss discouraged workers who have stopped looking.",
+        "type": "imp"
+       }
+      ],
+      "title": "MEASURING UNEMPLOYMENT"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Frictional unemployment</strong> — short-term unemployment arising as workers move between jobs; it exists even in a healthy economy and is generally voluntary.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Structural unemployment</strong> — long-term unemployment caused by a mismatch between workers' skills and the skills demanded by available jobs, often due to deindustrialisation or technological change.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Cyclical (demand-deficient) unemployment</strong> — unemployment caused by a fall in aggregate demand during a recession; firms lay off workers because they cannot sell enough output.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Seasonal unemployment</strong> occurs in industries with predictable demand fluctuations (tourism, agriculture), while <strong>real wage unemployment</strong> occurs when wages are held above the market-clearing level by minimum wages or union power.",
+        "type": "mech"
+       },
+       {
+        "text": "Different types require different policies: cyclical unemployment calls for demand-side stimulus, while structural unemployment requires supply-side measures like retraining and education.",
+        "type": "link"
+       }
+      ],
+      "title": "TYPES AND CAUSES"
+     }
+    ],
+    "keyIdea": "The headline unemployment rate is just the tip of the iceberg — beneath it lie different types of unemployment, each with its own cause and its own policy solution.",
+    "formulas": [
+     {
+      "text": "Unemployment rate = (Unemployed ÷ Labour force) × 100",
+      "label": "UNEMPLOYMENT RATE"
+     }
+    ],
+    "takeaway": [
+     "The LFS is more comprehensive than the claimant count but both measures have limitations.",
+     "Cyclical unemployment needs demand-side fixes; structural needs supply-side interventions.",
+     "Frictional unemployment is normal and even healthy; it shows labour market flexibility.",
+     "Always identify the type of unemployment before recommending a policy in exam answers."
+    ],
+    "examMatters": "Examiners frequently ask you to compare the claimant count and LFS measures and evaluate which is better. They also expect you to identify the type of unemployment from context and recommend an appropriate policy response. Always link the type to the cause.",
+    "misconception": "Students say all unemployment is caused by recessions. Wrong because structural, frictional, and seasonal unemployment exist even when the economy is growing. Instead write: cyclical unemployment is caused by recessions, but other forms exist due to skills mismatches, job transitions, and seasonal patterns, each requiring different policy responses."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Exchange rate appreciates",
+      "Exports become more expensive",
+      "Imports become cheaper",
+      "Trade balance worsens"
+     ],
+     "result": "Current account deficit widens — must be financed by capital inflows",
+     "resultType": "bad"
+    },
+    "meta": "5 concepts",
+    "title": "Balance of Payments: Current Account",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Balance of payments</strong> — a record of all financial transactions between residents of one country and the rest of the world over a given period; it must always balance overall.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Current account</strong> — the section of the balance of payments that records trade in goods, trade in services, primary income (investment returns), and secondary income (transfers).",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Trade balance</strong> — the difference between the value of exports and imports of goods and services; a deficit means imports exceed exports.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Primary income</strong> includes wages earned abroad and investment income (dividends, interest); <strong>secondary income</strong> includes government transfers, overseas aid, and remittances.",
+        "type": "mech"
+       }
+      ],
+      "title": "COMPONENTS"
+     },
+     {
+      "items": [
+       {
+        "text": "A current account deficit can be caused by <strong>high consumer spending on imports</strong>, an overvalued exchange rate making exports expensive, or low productivity reducing competitiveness.",
+        "type": "mech"
+       },
+       {
+        "text": "A strong exchange rate makes imports cheaper and exports more expensive, <strong>worsening the trade balance</strong> and pushing the current account toward deficit.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "A persistent deficit must be financed by capital inflows (foreign investment or borrowing), creating <strong>future obligations</strong> that may constrain economic policy.",
+        "type": "imp"
+       },
+       {
+        "text": "A current account surplus is not always desirable either; it may reflect <strong>weak domestic demand</strong> or excessive saving rather than strong competitiveness.",
+        "type": "imp"
+       },
+       {
+        "text": "The current account links to aggregate demand through the (X – M) component; a deteriorating current account reduces net exports and shifts AD to the left.",
+        "type": "link"
+       }
+      ],
+      "title": "CAUSES AND SIGNIFICANCE"
+     }
+    ],
+    "formula": {
+     "text": "Current Account = Trade in Goods + Trade in Services + Primary Income + Secondary Income",
+     "label": "CURRENT ACCOUNT"
+    },
+    "keyIdea": "The current account reveals whether a country is living within its means or borrowing from the rest of the world, and persistent deficits signal deep structural issues beyond just trade in goods.",
+    "takeaway": [
+     "The current account has four components: goods, services, primary income, and secondary income.",
+     "Deficits must be financed by capital inflows, creating future obligations.",
+     "Whether a deficit is a problem depends on its size, persistence, and financing method.",
+     "Exchange rate movements are a key driver of the trade balance and current account position."
+    ],
+    "examMatters": "Examiners want you to know all four components of the current account, not just the trade balance. They also expect you to evaluate whether a deficit is a problem — consider its size, persistence, and how it is financed. A small deficit financed by FDI is very different from a large deficit financed by short-term borrowing.",
+    "misconception": "Students say a current account deficit always means the economy is performing badly. Wrong because a deficit can reflect strong domestic growth attracting imports and foreign investment. Instead write: the significance of a deficit depends on its size, duration, and how it is financed; a temporary deficit during an investment boom may be healthy."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "measures-economic-performance:quiz:99504b1c",
+    "options": [
+     "Government spending on education",
+     "Transfer payments such as pensions",
+     "Investment in new machinery by firms",
+     "Exports of financial services"
+    ],
+    "question": "Which of the following is NOT included in the measurement of GDP?",
+    "explanation": "Transfer payments (pensions, benefits) are NOT included in GDP because they do not represent new production of goods or services — they are simply redistribution of income. Government spending on education, investment, and exports all represent actual output and are counted.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:04b1d0ec",
+    "options": [
+     "6%",
+     "3%",
+     "0%",
+     "12%"
+    ],
+    "question": "If nominal GDP rises from $500bn to $530bn while the GDP deflator increases from 100 to 106, what is the approximate real GDP growth?",
+    "explanation": "Nominal GDP growth is (530-500)/500 = 6%. The GDP deflator rose from 100 to 106, meaning inflation is 6%. Real GDP = Nominal GDP / Deflator x 100 = 530/106 x 100 = $500bn. Since real GDP is unchanged from $500bn, real GDP growth is approximately 0%. The key insight: if nominal GDP and prices both rise by the same percentage, there has been no real increase in output.",
+    "correctIndex": 2
+   },
+   {
+    "id": "measures-economic-performance:quiz:3137d287",
+    "options": [
+     "Disinflation",
+     "Benign deflation",
+     "Malign deflation",
+     "Cost-push deflation"
+    ],
+    "question": "A sustained fall in the general price level caused by a collapse in aggregate demand is best described as:",
+    "explanation": "Malign deflation is caused by a fall in aggregate demand and is associated with recession, rising unemployment, and falling output. Benign deflation is caused by supply-side improvements (productivity gains). Disinflation is a falling rate of inflation, not falling prices.",
+    "correctIndex": 2
+   },
+   {
+    "id": "measures-economic-performance:quiz:6e20571d",
+    "options": [
+     "It includes mortgage interest payments",
+     "It does not account for consumers switching to cheaper substitutes when prices rise",
+     "It uses the claimant count to weight items",
+     "It is only calculated once a year"
+    ],
+    "question": "The CPI is likely to overstate the true rate of inflation because:",
+    "explanation": "Substitution bias is a key limitation of CPI. When prices of certain goods rise, consumers switch to cheaper alternatives — but the CPI basket is fixed, so it continues to measure the higher-priced items, overstating the actual cost of living increase. CPI does NOT include mortgage interest payments (that's CPIH), is calculated monthly, and uses household spending data for weights.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:1baf40d3",
+    "options": [
+     "Frictional unemployment",
+     "Cyclical unemployment",
+     "Structural unemployment",
+     "Seasonal unemployment"
+    ],
+    "question": "A coal miner who lost his job because the coal industry closed and lacks the skills for new jobs in the technology sector is experiencing:",
+    "explanation": "This is structural unemployment — there is a mismatch between the worker's skills and the skills demanded by available jobs. It results from long-term changes in the structure of the economy (decline of coal mining, growth of tech sector). The worker needs retraining. Cyclical unemployment would be caused by a fall in AD; frictional would be short-term between jobs.",
+    "correctIndex": 2
+   },
+   {
+    "id": "measures-economic-performance:quiz:45ec45b0",
+    "options": [
+     "An increase in consumer confidence leading to higher spending",
+     "A cut in income tax rates",
+     "A sharp rise in global oil prices",
+     "An increase in government spending on infrastructure"
+    ],
+    "question": "Which of the following would cause cost-push inflation?",
+    "explanation": "A rise in oil prices increases firms' production costs, which shifts SRAS to the left, causing cost-push inflation. The other options (higher consumer confidence, tax cuts, increased government spending) would all increase aggregate demand, potentially causing demand-pull inflation rather than cost-push.",
+    "correctIndex": 2
+   },
+   {
+    "id": "measures-economic-performance:quiz:17ce1dfc",
+    "options": [
+     "The pound depreciates against other currencies",
+     "UK inflation is consistently higher than its trading partners",
+     "The UK government reduces spending on imports",
+     "UK productivity rises faster than in competitor countries"
+    ],
+    "question": "The UK's current account deficit is MOST likely to worsen if:",
+    "explanation": "If UK inflation is consistently higher than trading partners, UK exports become relatively more expensive (less competitive) and imports become relatively cheaper. This worsens the trade balance and the current account. A depreciation would make exports cheaper and imports dearer (improving the current account). Rising productivity would improve competitiveness.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:012615ce",
+    "options": [
+     "It uses a smaller sample size",
+     "It includes people seeking work who do not claim benefits",
+     "It only counts those claiming Jobseeker's Allowance",
+     "It measures underemployment rather than unemployment"
+    ],
+    "question": "The Labour Force Survey typically gives a HIGHER unemployment figure than the Claimant Count because:",
+    "explanation": "The LFS uses the ILO definition (without work, seeking work, available to start) and includes everyone meeting these criteria — even if they are not eligible for or not claiming benefits. The Claimant Count only counts those actually claiming unemployment-related benefits, which excludes many unemployed people (e.g. those with savings above the threshold).",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:a2e32933",
+    "options": [
+     "Trade in goods",
+     "Trade in services",
+     "Secondary income",
+     "All components are typically in deficit"
+    ],
+    "question": "Which component of the UK's current account is typically in surplus?",
+    "explanation": "The UK typically runs a surplus on trade in services, particularly due to its strong financial services sector (the City of London), as well as consulting, education, and insurance. The UK usually runs a deficit on trade in goods, as it imports more physical goods than it exports.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:956a029d",
+    "options": [
+     "High economic growth and low inflation",
+     "Rising unemployment and falling prices",
+     "Rising prices, falling output, and rising unemployment",
+     "Low unemployment and rapid GDP growth"
+    ],
+    "question": "An economy experiencing stagflation is characterised by:",
+    "explanation": "Stagflation is the combination of stagnation (falling output and rising unemployment) with inflation (rising prices). It is typically caused by cost-push factors (e.g. an oil price shock) that shift SRAS to the left — simultaneously raising the price level and reducing real output.",
+    "correctIndex": 2
+   },
+   {
+    "id": "measures-economic-performance:quiz:e4ff2ce1",
+    "options": [
+     "$400 billion",
+     "$500 billion",
+     "$625 billion",
+     "$375 billion"
+    ],
+    "question": "If nominal GDP is $500 billion and the GDP deflator is 125, real GDP is:",
+    "explanation": "Real GDP = (Nominal GDP / GDP deflator) x 100 = ($500bn / 125) x 100 = $400 billion. The GDP deflator adjusts for price level changes to give GDP in constant prices.",
+    "correctIndex": 0
+   },
+   {
+    "id": "measures-economic-performance:quiz:0a74953c",
+    "options": [
+     "The total output of goods and services in an economy",
+     "The average change in prices of a representative basket of goods and services over time",
+     "The level of unemployment in the economy",
+     "The balance of payments on the current account"
+    ],
+    "question": "The Consumer Price Index (CPI) measures:",
+    "explanation": "The CPI tracks the cost of a fixed basket of goods and services purchased by a typical household over time, providing a measure of inflation experienced by consumers.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:99504b1c-2",
+    "options": [
+     "Government spending on public services",
+     "Investment by firms in new machinery",
+     "Unpaid housework and childcare within the home",
+     "Consumer spending on goods and services"
+    ],
+    "question": "Which of the following is NOT included in the measurement of GDP?",
+    "explanation": "GDP only measures economic activity that passes through markets. Unpaid housework and voluntary work are excluded because they have no market transaction, leading GDP to underestimate total economic activity.",
+    "correctIndex": 2
+   },
+   {
+    "id": "measures-economic-performance:quiz:0f38fbb3",
+    "options": [
+     "An increase in oil prices raising production costs",
+     "An increase in aggregate demand when the economy is near full capacity",
+     "A decrease in consumer confidence reducing spending",
+     "An increase in labour productivity"
+    ],
+    "question": "Demand-pull inflation is most likely caused by:",
+    "explanation": "Demand-pull inflation occurs when aggregate demand grows faster than the economy's productive capacity, pulling prices up. It is particularly strong when the economy operates near or at full employment.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:c9aeacd8",
+    "options": [
+     "All people aged 16-64 who are not working",
+     "The number of people claiming unemployment-related benefits",
+     "All people who have been made redundant in the past year",
+     "The number of part-time workers seeking full-time employment"
+    ],
+    "question": "The claimant count measure of unemployment counts:",
+    "explanation": "The claimant count measures unemployment by counting those claiming Jobseeker's Allowance or Universal Credit. It tends to underestimate true unemployment as not all unemployed people are eligible for or claim benefits.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:ffd3d234",
+    "options": [
+     "The value of exports exceeds the value of imports",
+     "The value of imports of goods, services, and transfers exceeds the value of exports",
+     "The government is spending more than it receives in tax revenue",
+     "The country is lending more to other countries than it borrows"
+    ],
+    "question": "A current account deficit on the balance of payments means:",
+    "explanation": "A current account deficit occurs when total debits (imports of goods and services, plus net income and transfer payments abroad) exceed total credits (exports plus income and transfers from abroad).",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:82630893",
+    "options": [
+     "Structural unemployment",
+     "Cyclical unemployment",
+     "Frictional unemployment",
+     "Seasonal unemployment"
+    ],
+    "question": "Which type of unemployment is caused by workers being between jobs?",
+    "explanation": "Frictional unemployment occurs when workers are temporarily between jobs, searching for better positions or transitioning. It exists even in a healthy economy and is usually short-term.",
+    "correctIndex": 2
+   },
+   {
+    "id": "measures-economic-performance:quiz:7bc7ed85",
+    "options": [
+     "An increase in consumer spending due to tax cuts",
+     "A significant rise in global oil and commodity prices",
+     "An increase in government borrowing",
+     "A reduction in interest rates stimulating borrowing"
+    ],
+    "question": "Cost-push inflation is most likely to result from:",
+    "explanation": "Cost-push inflation occurs when rising production costs (such as oil prices, wages, or raw materials) push up the general price level. This shifts the SRAS curve to the left, raising prices and reducing output.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:1ac13a8d",
+    "options": [
+     "Accounts for income distribution within a country",
+     "Adjusts total output for the size of the population",
+     "Includes the value of leisure time",
+     "Measures the quality of goods and services produced"
+    ],
+    "question": "GDP per capita is a better measure of living standards than total GDP because it:",
+    "explanation": "GDP per capita divides total GDP by the population, giving output per person. A country can have high total GDP but low living standards if its population is very large. However, it still does not account for income inequality.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:63e54221",
+    "options": [
+     "A general downturn in economic activity",
+     "Seasonal fluctuations in demand for labour",
+     "A mismatch between the skills of workers and the requirements of available jobs",
+     "Workers voluntarily leaving jobs to search for better ones"
+    ],
+    "question": "Structural unemployment is best described as unemployment caused by:",
+    "explanation": "Structural unemployment arises from long-term changes in the economy (e.g., deindustrialisation, technological change) that create a mismatch between workers' skills and the skills demanded by employers.",
+    "correctIndex": 2
+   },
+   {
+    "id": "measures-economic-performance:quiz:e6939e04",
+    "options": [
+     "Only those registered as unemployed with the government",
+     "Those without a job, actively seeking work, and available to start within two weeks",
+     "All people of working age who are not in full-time employment",
+     "Those who are underemployed or in part-time work"
+    ],
+    "question": "The ILO (International Labour Organisation) measure of unemployment includes:",
+    "explanation": "The ILO definition uses three criteria: the person must be without work, actively seeking employment, and available to start within two weeks. It is based on the Labour Force Survey and is internationally comparable.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:f64cbfbf",
+    "options": [
+     "GDP includes government spending on public services",
+     "GDP does not account for environmental degradation caused by production",
+     "GDP measures output in market prices",
+     "GDP can be measured using the expenditure, income, or output method"
+    ],
+    "question": "Which of the following is a limitation of using GDP as a measure of economic welfare?",
+    "explanation": "GDP does not deduct environmental costs such as pollution, resource depletion, or habitat destruction. A country could have high GDP growth while significantly damaging its natural environment, reducing actual welfare.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:98c8e689",
+    "options": [
+     "Deflation",
+     "Disinflation",
+     "Stagflation",
+     "Hyperinflation"
+    ],
+    "question": "If the inflation rate falls from 5% to 2%, this is known as:",
+    "explanation": "Disinflation is a fall in the rate of inflation (prices still rising, but more slowly). Deflation would be a negative inflation rate where the general price level is falling.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:49000eab",
+    "options": [
+     "Overestimate the true level of economic activity",
+     "Underestimate the true level of economic activity",
+     "Accurately reflect the true level of economic activity",
+     "Have no relationship with economic activity"
+    ],
+    "question": "The 'hidden economy' (shadow economy) causes GDP to:",
+    "explanation": "The hidden economy includes unreported cash-in-hand work, tax evasion, and illegal activities. Since these transactions are not recorded, official GDP figures underestimate the true level of economic activity.",
+    "correctIndex": 1
+   },
+   {
+    "id": "measures-economic-performance:quiz:de8a70cc",
+    "options": [
+     "An appreciation of the domestic currency making exports cheaper",
+     "An appreciation of the domestic currency making imports cheaper and exports more expensive",
+     "A depreciation of the domestic currency",
+     "A fall in domestic income levels reducing import demand"
+    ],
+    "question": "A country's current account balance worsens. Which of the following is the most likely cause?",
+    "explanation": "Currency appreciation makes exports more expensive for foreign buyers (reducing export revenue) and imports cheaper for domestic consumers (increasing import spending), worsening the current account balance.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "measures-economic-performance:practice:6bc6a979",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "GDP is the total monetary value of all final goods and services produced within a country's borders in a given time period, usually one year (1 mark). It can be measured using the output, income or expenditure method (1 mark). Real GDP adjusts for inflation and is a more accurate measure of changes in output over time (1 mark). GDP is the most widely used indicator of a country's economic performance (1 mark).",
+    "question": "Define the term 'gross domestic product' (GDP). (4 marks)"
+   },
+   {
+    "id": "measures-economic-performance:practice:4bd103db",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Limitation 1: Income inequality (1 mark) — GDP per capita is an average and does not show how income is distributed (1 mark). A country could have a high GDP per capita but most wealth concentrated among a small elite, leaving the majority in poverty (1 mark).\n\nLimitation 2: Non-marketed output is excluded (1 mark) — activities such as unpaid household work, volunteering and subsistence farming are not recorded in GDP (1 mark). In developing countries where informal economic activity is significant, GDP per capita may substantially understate the true standard of living (1 mark).",
+    "question": "Explain two limitations of using GDP per capita as a measure of living standards. (6 marks)"
+   },
+   {
+    "id": "measures-economic-performance:practice:6150a1ee",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define CPI as a weighted price index that measures the change in the cost of a representative basket of goods and services consumed by a typical household (2 marks). Useful: provides a standardised measure that allows comparison over time and between countries (2 marks); used to adjust wages, benefits and tax thresholds so has practical policy importance (1 mark). Limitations: the basket may not reflect all households — pensioners, students and low-income families have different spending patterns (2 marks); quality improvements are hard to account for — a more expensive phone may also be a better phone (1 mark); housing costs such as mortgage payments are excluded from CPI (though included in CPIH) (1 mark). Judgement: useful but imperfect, and best used alongside other measures such as RPI and CPIH for a fuller picture (1 mark).",
+    "question": "Assess the usefulness of the Consumer Price Index (CPI) as a measure of inflation. (10 marks)"
+   },
+   {
+    "id": "measures-economic-performance:practice:ff43925c",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define the current account as a record of trade in goods and services, investment income and transfers. A deficit means more money flows out than in (2 marks).\n\nCause for concern: May indicate uncompetitiveness — UK exports are less attractive than imports, suggesting declining industries or an overvalued exchange rate (3 marks); must be financed by capital inflows — foreign borrowing or asset sales, increasing external debt (2 marks); persistent deficits may reduce confidence in the currency, causing depreciation and imported inflation (2 marks).\n\nNot necessarily concerning: May reflect strong consumer confidence and economic growth — a growing economy imports more capital goods and raw materials for investment (3 marks); easily financed if the country attracts foreign direct investment due to stable institutions and growth prospects (2 marks); some countries like the US have run persistent deficits for decades without crisis (2 marks).\n\nEvaluation: The concern depends on the size, persistence and financing of the deficit (2 marks). A temporary deficit driven by investment imports is less worrying than a structural deficit caused by declining competitiveness. The key question is whether the deficit is sustainable given the country's ability to attract capital inflows (2 marks).",
+    "question": "Evaluate the extent to which a country's current account deficit is a cause for concern. (20 marks)"
+   },
+   {
+    "id": "measures-economic-performance:practice:f0f6f838",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Type 1: Structural unemployment — caused by a mismatch between the skills workers possess and the skills demanded by employers (1 mark), often due to long-term decline of industries such as coal mining or steel production (1 mark).\n\nType 2: Cyclical (demand-deficient) unemployment — caused by a fall in aggregate demand during a recession (1 mark), leading firms to reduce output and lay off workers (1 mark).",
+    "question": "Outline two types of unemployment. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "measures-economic-performance:card:960c547e",
+    "back": "The total <strong>market value of all final goods and services</strong> produced within a country's borders in a given time period. The primary measure of economic output.",
+    "front": "What is GDP (Gross Domestic Product)?"
+   },
+   {
+    "id": "measures-economic-performance:card:dcf9ed0f",
+    "back": "<strong>Nominal GDP</strong> is measured at current prices (not adjusted for inflation). <strong>Real GDP</strong> is adjusted for inflation, giving a more accurate measure of output changes over time.",
+    "front": "What is the difference between real and nominal GDP?"
+   },
+   {
+    "id": "measures-economic-performance:card:0920e072",
+    "back": "A <strong>sustained increase in the general price level</strong> over time. Measured by CPI (Consumer Price Index) in most countries. Erodes purchasing power.",
+    "front": "What is inflation?"
+   },
+   {
+    "id": "measures-economic-performance:card:aec2cf4f",
+    "back": "The <strong>Consumer Price Index</strong> — measures the average change in prices of a <strong>basket of goods and services</strong> consumed by a typical household. The UK inflation target is 2%.",
+    "front": "What is the CPI?"
+   },
+   {
+    "id": "measures-economic-performance:card:6e6750ad",
+    "back": "Inflation caused by <strong>aggregate demand exceeding aggregate supply</strong> at or near full employment. \"Too much money chasing too few goods.\" AD shifts right faster than AS.",
+    "front": "What is demand-pull inflation?"
+   },
+   {
+    "id": "measures-economic-performance:card:ea9822c7",
+    "back": "Inflation caused by <strong>rising production costs</strong> — e.g., higher oil prices, wages, or raw materials. SRAS shifts left, pushing the price level up and output down.",
+    "front": "What is cost-push inflation?"
+   },
+   {
+    "id": "measures-economic-performance:card:485600fc",
+    "back": "People of working age who are <strong>without work, actively seeking employment</strong>, and available to start. Measured by the claimant count or the ILO/Labour Force Survey.",
+    "front": "What is unemployment?"
+   },
+   {
+    "id": "measures-economic-performance:card:a3447af6",
+    "back": "<strong>Cyclical</strong> (insufficient AD in a recession), <strong>structural</strong> (skills mismatch), <strong>frictional</strong> (between jobs), and <strong>seasonal</strong> (regular fluctuations — e.g., tourism).",
+    "front": "Name four types of unemployment."
+   },
+   {
+    "id": "measures-economic-performance:card:9eca384f",
+    "back": "A record of a country's <strong>trade in goods, trade in services, primary income</strong> (investment returns), and <strong>secondary income</strong> (transfers). A deficit means imports > exports.",
+    "front": "What is the current account of the balance of payments?"
+   },
+   {
+    "id": "measures-economic-performance:card:5101924d",
+    "back": "When a country <strong>imports more than it exports</strong> (plus net income and transfers are negative). May indicate loss of competitiveness, strong currency, or high consumer spending on imports.",
+    "front": "What is a current account deficit?"
+   },
+   {
+    "id": "measures-economic-performance:card:69ef6a2a",
+    "back": "A measure of unemployment counting the number of people <strong>claiming unemployment-related benefits</strong>. Simpler but may undercount (not everyone eligible claims).",
+    "front": "What is the claimant count?"
+   },
+   {
+    "id": "measures-economic-performance:card:46027a73",
+    "back": "An ILO-defined survey measuring unemployment by asking if people are <strong>without work, seeking work, and available</strong>. More comprehensive than claimant count but relies on self-reporting.",
+    "front": "What is the Labour Force Survey (LFS)?"
+   },
+   {
+    "id": "measures-economic-performance:card:d0d07d7d",
+    "back": "GDP divided by <strong>population size</strong>. A better measure of average living standards than total GDP because it accounts for population differences between countries.",
+    "front": "What is GDP per capita?"
+   },
+   {
+    "id": "measures-economic-performance:card:33f7c714",
+    "back": "Ignores <strong>income distribution</strong> (inequality), excludes <strong>non-market activity</strong> (housework, volunteering), and does not account for <strong>environmental degradation</strong> or quality of life.",
+    "front": "Name three limitations of GDP as a measure of welfare."
+   },
+   {
+    "id": "measures-economic-performance:card:ba69cb85",
+    "back": "A <strong>sustained fall in the general price level</strong>. Can be harmful if it leads to delayed spending, rising real debt burdens, and a deflationary spiral of falling output and wages.",
+    "front": "What is deflation?"
+   },
+   {
+    "id": "measures-economic-performance:card:1b47c1bc",
+    "back": "Shows the <strong>short-run trade-off between inflation and unemployment</strong>. Lower unemployment tends to cause higher inflation (wage pressure) and vice versa.",
+    "front": "What is the Phillips Curve?"
+   },
+   {
+    "id": "measures-economic-performance:card:13c52d72",
+    "back": "An exchange rate adjustment that allows <strong>comparing living standards</strong> across countries by accounting for differences in price levels. A dollar buys more in India than in Switzerland.",
+    "front": "What is purchasing power parity (PPP)?"
+   },
+   {
+    "id": "measures-economic-performance:card:55354e11",
+    "back": "A <strong>fall in the rate of inflation</strong> — prices are still rising, but more slowly. Different from deflation (where prices actually fall).",
+    "front": "What is disinflation?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "measures-economic-performance:diagram:177bb593",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <!-- Background -->\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"25\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\">CPI Basket: Weighted Components</text>\n\n  <!-- Horizontal bar chart -->\n  <!-- Housing -->\n  <text x=\"120\" y=\"58\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"11\">Housing & Energy</text>\n  <rect x=\"125\" y=\"45\" width=\"220\" height=\"20\" rx=\"3\" fill=\"#059669\" opacity=\"0.85\"/>\n  <text x=\"350\" y=\"59\" fill=\"#e8ecf5\" font-size=\"11\">22%</text>\n\n  <!-- Transport -->\n  <text x=\"120\" y=\"88\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"11\">Transport</text>\n  <rect x=\"125\" y=\"75\" width=\"150\" height=\"20\" rx=\"3\" fill=\"#3b82f6\" opacity=\"0.85\"/>\n  <text x=\"280\" y=\"89\" fill=\"#e8ecf5\" font-size=\"11\">15%</text>\n\n  <!-- Food & Drink -->\n  <text x=\"120\" y=\"118\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"11\">Food & Drink</text>\n  <rect x=\"125\" y=\"105\" width=\"120\" height=\"20\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.85\"/>\n  <text x=\"250\" y=\"119\" fill=\"#e8ecf5\" font-size=\"11\">12%</text>\n\n  <!-- Recreation -->\n  <text x=\"120\" y=\"148\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"11\">Recreation</text>\n  <rect x=\"125\" y=\"135\" width=\"110\" height=\"20\" rx=\"3\" fill=\"#f59e0b\" opacity=\"0.85\"/>\n  <text x=\"240\" y=\"149\" fill=\"#e8ecf5\" font-size=\"11\">11%</text>\n\n  <!-- Restaurants & Hotels -->\n  <text x=\"120\" y=\"178\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"11\">Restaurants</text>\n  <rect x=\"125\" y=\"165\" width=\"90\" height=\"20\" rx=\"3\" fill=\"#059669\" opacity=\"0.65\"/>\n  <text x=\"220\" y=\"179\" fill=\"#e8ecf5\" font-size=\"11\">9%</text>\n\n  <!-- Clothing -->\n  <text x=\"120\" y=\"208\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"11\">Clothing</text>\n  <rect x=\"125\" y=\"195\" width=\"70\" height=\"20\" rx=\"3\" fill=\"#3b82f6\" opacity=\"0.65\"/>\n  <text x=\"200\" y=\"209\" fill=\"#e8ecf5\" font-size=\"11\">7%</text>\n\n  <!-- Communication -->\n  <text x=\"120\" y=\"238\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"11\">Communication</text>\n  <rect x=\"125\" y=\"225\" width=\"50\" height=\"20\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.65\"/>\n  <text x=\"180\" y=\"239\" fill=\"#e8ecf5\" font-size=\"11\">5%</text>\n\n  <!-- Health -->\n  <text x=\"120\" y=\"268\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"11\">Health</text>\n  <rect x=\"125\" y=\"255\" width=\"40\" height=\"20\" rx=\"3\" fill=\"#f59e0b\" opacity=\"0.65\"/>\n  <text x=\"170\" y=\"269\" fill=\"#e8ecf5\" font-size=\"11\">4%</text>\n\n  <!-- Other -->\n  <text x=\"120\" y=\"298\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"11\">Other</text>\n  <rect x=\"125\" y=\"285\" width=\"150\" height=\"20\" rx=\"3\" fill=\"#8b5cf6\" opacity=\"0.65\"/>\n  <text x=\"280\" y=\"299\" fill=\"#e8ecf5\" font-size=\"11\">15%</text>\n\n  <!-- Note -->\n  <text x=\"250\" y=\"335\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\" opacity=\"0.7\">Approximate weights — updated annually by ONS</text>\n</svg>",
+    "title": "CPI Basket of Goods",
+    "checklist": [
+     "Understand that CPI uses a weighted basket — not all items are equally important",
+     "Know that housing/energy has the largest weight in the UK CPI",
+     "Remember weights are updated annually to reflect changing spending patterns",
+     "Be able to explain why a large price rise in a low-weighted item has little effect on CPI"
+    ],
+    "description": "Weighted components of the CPI basket showing relative importance of different spending categories"
+   },
+   {
+    "id": "measures-economic-performance:diagram:d607a6af",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family: 'DM Sans', sans-serif;\">\n  <rect width=\"500\" height=\"350\" fill=\"transparent\"/>\n\n  <!-- Title -->\n  <text x=\"250\" y=\"25\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"15\" font-weight=\"600\">Types of Unemployment</text>\n\n  <!-- Frictional -->\n  <rect x=\"15\" y=\"45\" width=\"225\" height=\"120\" rx=\"8\" fill=\"#059669\" opacity=\"0.15\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"127\" y=\"65\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"13\" font-weight=\"600\">Frictional</text>\n  <text x=\"25\" y=\"83\" fill=\"#e8ecf5\" font-size=\"10\">Short-term, between jobs</text>\n  <text x=\"25\" y=\"97\" fill=\"#e8ecf5\" font-size=\"10\">Voluntary &amp; unavoidable</text>\n  <text x=\"25\" y=\"111\" fill=\"#e8ecf5\" font-size=\"10\">Information gaps in labour market</text>\n  <text x=\"25\" y=\"130\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">Policy: Better job matching,</text>\n  <text x=\"25\" y=\"142\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">improve information (Job Centres)</text>\n  <line x1=\"25\" y1=\"155\" x2=\"230\" y2=\"155\" stroke=\"#059669\" stroke-width=\"0.5\" opacity=\"0.5\"/>\n  <text x=\"127\" y=\"162\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\">Duration: Weeks</text>\n\n  <!-- Structural -->\n  <rect x=\"260\" y=\"45\" width=\"225\" height=\"120\" rx=\"8\" fill=\"#ef4444\" opacity=\"0.15\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"372\" y=\"65\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"13\" font-weight=\"600\">Structural</text>\n  <text x=\"270\" y=\"83\" fill=\"#e8ecf5\" font-size=\"10\">Skills mismatch with available jobs</text>\n  <text x=\"270\" y=\"97\" fill=\"#e8ecf5\" font-size=\"10\">Caused by industrial change</text>\n  <text x=\"270\" y=\"111\" fill=\"#e8ecf5\" font-size=\"10\">Occupational/geographical immobility</text>\n  <text x=\"270\" y=\"130\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">Policy: Retraining, education,</text>\n  <text x=\"270\" y=\"142\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">subsidise relocation, apprenticeships</text>\n  <line x1=\"270\" y1=\"155\" x2=\"475\" y2=\"155\" stroke=\"#ef4444\" stroke-width=\"0.5\" opacity=\"0.5\"/>\n  <text x=\"372\" y=\"162\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">Duration: Months to Years</text>\n\n  <!-- Cyclical -->\n  <rect x=\"15\" y=\"185\" width=\"225\" height=\"120\" rx=\"8\" fill=\"#3b82f6\" opacity=\"0.15\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"127\" y=\"205\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"13\" font-weight=\"600\">Cyclical (Demand-Deficient)</text>\n  <text x=\"25\" y=\"223\" fill=\"#e8ecf5\" font-size=\"10\">Caused by fall in AD / recession</text>\n  <text x=\"25\" y=\"237\" fill=\"#e8ecf5\" font-size=\"10\">Firms cut output and lay off workers</text>\n  <text x=\"25\" y=\"251\" fill=\"#e8ecf5\" font-size=\"10\">Most significant in recessions</text>\n  <text x=\"25\" y=\"270\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">Policy: Expansionary fiscal/monetary</text>\n  <text x=\"25\" y=\"282\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">policy to boost AD</text>\n  <line x1=\"25\" y1=\"295\" x2=\"230\" y2=\"295\" stroke=\"#3b82f6\" stroke-width=\"0.5\" opacity=\"0.5\"/>\n  <text x=\"127\" y=\"302\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"9\">Duration: Linked to business cycle</text>\n\n  <!-- Seasonal -->\n  <rect x=\"260\" y=\"185\" width=\"225\" height=\"120\" rx=\"8\" fill=\"#f59e0b\" opacity=\"0.15\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/>\n  <text x=\"372\" y=\"205\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"13\" font-weight=\"600\">Seasonal</text>\n  <text x=\"270\" y=\"223\" fill=\"#e8ecf5\" font-size=\"10\">Predictable, time-of-year pattern</text>\n  <text x=\"270\" y=\"237\" fill=\"#e8ecf5\" font-size=\"10\">Tourism, agriculture, retail</text>\n  <text x=\"270\" y=\"251\" fill=\"#e8ecf5\" font-size=\"10\">Data often seasonally adjusted</text>\n  <text x=\"270\" y=\"270\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">Policy: Diversify local economy,</text>\n  <text x=\"270\" y=\"282\" fill=\"#e8ecf5\" font-size=\"9\" opacity=\"0.7\">temporary work schemes</text>\n  <line x1=\"270\" y1=\"295\" x2=\"475\" y2=\"295\" stroke=\"#f59e0b\" stroke-width=\"0.5\" opacity=\"0.5\"/>\n  <text x=\"372\" y=\"302\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\">Duration: Predictable weeks/months</text>\n\n  <!-- Footer -->\n  <text x=\"250\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\" opacity=\"0.7\">The Natural Rate of Unemployment = Frictional + Structural + Seasonal (exists even at full employment)</text>\n</svg>",
+    "title": "Types of Unemployment",
+    "checklist": [
+     "Correctly identify and define each type of unemployment",
+     "Link cyclical unemployment to changes in AD and the business cycle",
+     "Explain that structural unemployment requires supply-side policies, not just demand management",
+     "Know that the natural rate of unemployment exists even when the economy is at 'full employment'",
+     "Be able to recommend appropriate policies for each type"
+    ],
+    "description": "Classification of unemployment types with their key characteristics and typical policy responses"
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "Real GDP measures the total value of goods and services produced in an economy, adjusted for inflation.",
+      "Rising real GDP indicates that the economy is producing more output, which typically leads to higher employment and incomes.",
+      "Real GDP per capita (GDP divided by population) is a better measure of average living standards as it accounts for population changes.",
+      "However, GDP does not capture income distribution, environmental costs or unpaid work, so it is an incomplete measure of welfare."
+     ],
+     "title": "GDP growth indicates improving economic performance",
+     "result": "GDP growth is the primary indicator of economic performance but must be supplemented with other measures for a full picture of living standards."
+    },
+    {
+     "steps": [
+      "Inflation is a sustained increase in the general price level, measured by the Consumer Price Index (CPI).",
+      "Rising prices reduce the real value of money — consumers can buy fewer goods with the same nominal income.",
+      "Unexpected inflation redistributes income from savers (who lose real value) to borrowers (who repay in cheaper money).",
+      "High or volatile inflation creates uncertainty for firms, discouraging investment and reducing long-run economic growth."
+     ],
+     "title": "Inflation erodes purchasing power and creates uncertainty",
+     "result": "Inflation reduces purchasing power, distorts economic decisions and, if left unchecked, undermines macroeconomic stability."
+    },
+    {
+     "steps": [
+      "Unemployment means workers who are willing and able to work cannot find a job, representing idle productive resources.",
+      "The economy operates inside its PPF when there is unemployment, meaning actual output is below potential output.",
+      "Different types of unemployment have different causes: frictional (job search), structural (skills mismatch), cyclical (insufficient AD).",
+      "Unemployment imposes costs on individuals (lost income, reduced wellbeing) and on the government (lower tax revenue, higher welfare spending)."
+     ],
+     "title": "Unemployment represents wasted resources and lost output",
+     "result": "Unemployment is a key measure of economic performance because it signals both wasted resources and human welfare costs."
+    },
+    {
+     "steps": [
+      "The current account records trade in goods and services, primary income (investment returns) and secondary income (transfers).",
+      "A current account deficit means the country is spending more on imports than it earns from exports — it is a net borrower from abroad.",
+      "Persistent deficits may indicate declining competitiveness — high relative prices, poor quality goods or an overvalued exchange rate.",
+      "However, deficits can also reflect strong domestic demand and investment inflows, which are not necessarily problematic."
+     ],
+     "title": "The current account reflects international competitiveness",
+     "result": "The current account balance is an important indicator of external competitiveness, but deficits are not always a cause for concern."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "GDP is a flawed measure of living standards",
+     "content": "GDP excludes the informal economy, household production, leisure time and environmental degradation. A country could have rising GDP while inequality widens and the environment deteriorates. Alternative measures like HDI, GNI per capita and the Gini coefficient provide a broader picture but each has its own limitations."
+    },
+    {
+     "title": "Low unemployment does not mean a healthy labour market",
+     "content": "The headline unemployment rate can be misleading. It excludes discouraged workers who have stopped looking, underemployed workers who want more hours, and those on zero-hour contracts. A low unemployment rate may mask poor-quality employment, stagnant wages and insecure work, all of which reduce living standards."
+    },
+    {
+     "title": "CPI may not reflect the true cost of living",
+     "content": "CPI is based on a fixed basket of goods that may not represent all households' spending patterns. It tends to overstate inflation for some groups and understate it for others. Housing costs (mortgage interest) are excluded from CPI, and quality improvements are difficult to account for. RPI includes housing costs but uses a different formula."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "measures-economic-performance:mistake:b92f2031",
+    "title": "Using nominal GDP to compare living standards over time",
+    "examTip": "If the question gives nominal GDP, check if a price index is provided. Real GDP = (Nominal GDP ÷ Price Index) × 100.",
+    "mistake": "Students compare GDP figures from different years without adjusting for inflation, making it seem like the economy grew more than it actually did.",
+    "correction": "Always use real GDP (adjusted for inflation) when comparing over time. Nominal GDP can increase simply because prices rose, not because more goods were produced."
+   },
+   {
+    "id": "measures-economic-performance:mistake:b88a67d0",
+    "title": "Assuming GDP per capita = standard of living",
+    "examTip": "Always mention at least 2-3 limitations of GDP as a welfare measure: inequality, externalities (pollution counted as positive), non-market activity, PPP differences.",
+    "mistake": "Students treat GDP per capita as a definitive measure of living standards, ignoring its many limitations.",
+    "correction": "GDP per capita is an average — it hides income inequality. It excludes: the informal economy, non-marketed output (household work), quality of life factors (health, environment, leisure), and differences in purchasing power."
+   },
+   {
+    "id": "measures-economic-performance:mistake:8f490bbe",
+    "title": "Confusing the causes of different types of unemployment",
+    "mistake": "Students muddle cyclical, structural, frictional, and seasonal unemployment, or apply the wrong policy solution.",
+    "correction": "Cyclical = caused by recession (fix with demand-side policy). Structural = skills mismatch (fix with supply-side policy like retraining). Frictional = between jobs (reduce with better job information). Seasonal = predictable patterns in certain industries."
+   },
+   {
+    "id": "measures-economic-performance:mistake:3b64cefd",
+    "title": "Forgetting the current account has four components",
+    "mistake": "Students only discuss trade in goods when asked about the current account, forgetting the other three components.",
+    "correction": "The current account consists of: (1) trade in goods, (2) trade in services, (3) primary income (investment income), and (4) secondary income (transfers). A deficit in goods can be offset by a surplus in services."
+   }
+  ]
+ }
+}

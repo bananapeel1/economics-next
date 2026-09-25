@@ -1,9 +1,12 @@
-export const MARK_COLORS = {
-  4: { bg: 'var(--practice-4-bg)', border: 'var(--practice-4-border)', badge: 'var(--practice-4-badge)' },
-  6: { bg: 'var(--practice-6-bg)', border: 'var(--practice-6-border)', badge: 'var(--practice-6-badge)' },
-  10: { bg: 'var(--practice-10-bg)', border: 'var(--practice-10-border)', badge: 'var(--practice-10-badge)' },
-  20: { bg: 'var(--practice-20-bg)', border: 'var(--practice-20-border)', badge: 'var(--practice-20-badge)' },
-};
+import { bestUnclaimedIndex } from '../../lib/checkin-fallback.js';
+
+/**
+ * The inline-practice card's colours. This was the twin of the hardcoded 4/6/10/20 map in
+ * PracticeQuestionsTab; both are now one derivation from lib/ial-marking.js, so a tariff exists
+ * in exactly one place. `markColor` covers every tariff in both subjects and falls back rather
+ * than emitting an unresolved var(). Packet 12.1, E006.
+ */
+export { markColor } from '../../lib/practice-tariffs.js';
 
 /* Evenly space n items across m steps. Returns { stepIndex: item } */
 export function distributeItems(items, totalSteps) {
@@ -61,6 +64,22 @@ export function matchDiagramsToBlocks(diagrams, blocks) {
   return map;
 }
 
+/**
+ * The question a check-in falls back to when its chapter pins none. V026.
+ *
+ * The rule, the reason and the F041 precedent it follows are in lib/checkin-fallback.js. This is
+ * the client half: the server can only rewrite the payload a SIGNED-OUT reader gets, and a paying
+ * one is handed the bank with the pins as authored, so the same chapter resolves to nothing for
+ * them unless the resolution itself falls back. Runs after the pins, out of what no pin claimed,
+ * so it can never displace one that worked.
+ */
+export function fallbackItemForBlock(items, text, used) {
+  const idx = bestUnclaimedIndex(items, text, used);
+  if (idx < 0) return null;
+  used.add(idx);
+  return items[idx];
+}
+
 /* ── Pin resolution ──────────────────────────────────────────────────────────
    A block pins its quiz, practice and diagram either by id (after packet 2) or by
    positional index / title substring (the legacy form). Both are supported for one
@@ -103,6 +122,11 @@ export function resolvePinnedItem(items, pin, used) {
  * @param {object} pin  { id?: string, ref?: string }
  * @param {Set} used
  */
+/** Letters and digits only, so punctuation and spacing cannot break a pin. */
+export function norm(s) {
+  return String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
 export function resolvePinnedDiagram(diagrams, pin, used) {
   if (!Array.isArray(diagrams) || !diagrams.length) return null;
 
@@ -113,13 +137,26 @@ export function resolvePinnedDiagram(diagrams, pin, used) {
   }
 
   if (pin?.ref) {
-    const ref = String(pin.ref).toLowerCase();
-    const idx = diagrams.findIndex((d, di) => {
-      if (used.has(di)) return false;
-      const title = (d.title || '').toLowerCase();
-      return title.includes(ref) || ref.includes(title);
-    });
-    if (idx >= 0) { used.add(idx); return diagrams[idx]; }
+    // F052. The old comparison lowercased but kept punctuation and spacing, so a block asking for
+    // "fiscal-policy-ad" never matched the diagram titled "Fiscal Policy: AD/AS Impact" and the
+    // block silently rendered nothing. Normalising both sides to letters and digits recovers four
+    // of the twenty-four broken pins; the other twenty name a diagram that does not exist, which
+    // is a content gap and is reported by `npm run diagrams` rather than hidden here.
+    const ref = norm(pin.ref);
+    if (ref) {
+      const idx = diagrams.findIndex((d, di) => {
+        if (used.has(di)) return false;
+        const title = norm(d.title);
+        return title && (title.includes(ref) || ref.includes(title));
+      });
+      if (idx >= 0) { used.add(idx); return diagrams[idx]; }
+    }
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(
+        `[diagrams] pin "${pin.ref}" matched no diagram. Available: ` +
+          (diagrams.map((d) => d.title).join(' | ') || '(none)'),
+      );
+    }
   }
 
   return null;

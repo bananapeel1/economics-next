@@ -1,0 +1,2089 @@
+{
+ "section_id": "managing-people",
+ "subject": "business",
+ "label": "auto-prepublish-2026-09-14T14-20-56-575Z",
+ "tables": {
+  "section_content": [
+   {
+    "id": "managing-people:block:4c34ee30",
+    "title": "Approaches to Staffing",
+    "sections": [
+     {
+      "id": "managing-people:sub:staff-as-asset-vs-cost",
+      "body": [
+       {
+        "text": "Managers who see employees as an **asset** invest in training, development and welfare because they believe motivated, skilled workers drive long-term profitability. This approach prioritises retention, empowerment and career progression. You will often see this in knowledge-based industries where human capital is the main source of competitive advantage.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Invest in training and development",
+         "Staff become more skilled and loyal",
+         "Productivity and quality rise"
+        ],
+        "result": "Higher long-term profitability through people",
+        "resultType": "good"
+       },
+       {
+        "text": "Managers who see employees as a **cost** focus on minimising labour expenses through low wages, zero-hours contracts and limited training. This approach treats workers as interchangeable and expendable. It can reduce short-term costs but risks high staff turnover, low morale and poor customer service.",
+        "type": "paragraph"
+       },
+       {
+        "text": "In practice, most businesses sit somewhere between the two extremes. You should recognise that the approach a business takes depends on its industry, competitive strategy and the skills required from its workforce.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Staff as Asset vs Cost",
+      "recall": {
+       "id": "managing-people:sub:staff-as-asset-vs-cost:recall",
+       "type": "reorder",
+       "prompt": "Put the staff-as-asset chain in the right order:",
+       "shuffled": [
+        3,
+        0,
+        2,
+        1
+       ],
+       "correctOrder": [
+        "Invest in training and development",
+        "Staff motivation and loyalty increase",
+        "Productivity and service quality improve",
+        "Long-term profitability rises"
+       ]
+      },
+      "keyIdea": "Some businesses treat staff as their most valuable resource to develop and retain, while others view them as a cost to minimise.",
+      "examMatters": "Examiners want you to link the approach to staffing with business performance. Explain the chain: treating staff as assets leads to higher motivation, lower turnover and better productivity, which can outweigh the higher wage costs.",
+      "realExample": {
+       "text": "**Costco** pays significantly above the industry average and invests heavily in staff training, treating employees as assets. Its staff turnover is just 6% compared to the retail industry average of over 60%, saving millions in recruitment and retraining costs while delivering superior customer service.",
+       "emoji": "🛒"
+      },
+      "misconception": "Students write \"treating staff as a cost is always bad for business.\" In some industries with high labour turnover and low-skill roles, minimising labour costs can be a rational strategy. Instead write: the best approach depends on the nature of the work, the skills required and the business's competitive strategy."
+     },
+     {
+      "id": "managing-people:sub:flexible-workforce",
+      "body": [
+       {
+        "text": "**Workforce flexibility** means a business can quickly adapt its staffing to meet changing needs. There are several forms of flexibility: **numerical flexibility** (adjusting the number of workers through temporary or part-time contracts), **functional flexibility** (multi-skilled workers who can switch between tasks), and **temporal flexibility** (varying working hours through flexi-time or shift patterns).",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Part-time contracts** — reduce hours during quiet periods, saving on wage costs.",
+         "**Temporary/agency staff** — hire extra workers during peak demand without long-term commitment.",
+         "**Zero-hours contracts** — no guaranteed hours; workers are called in as needed.",
+         "**Outsourcing** — contracting out non-core functions like IT support or cleaning to specialist firms.",
+         "**Multi-skilling** — training staff to perform multiple roles so they can be redeployed as needed."
+        ]
+       },
+       {
+        "text": "Flexibility benefits the business through lower fixed labour costs and the ability to respond quickly to demand changes. However, it can harm workers through job insecurity and unpredictable income, which may damage motivation and loyalty.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Flexible Workforce",
+      "recall": {
+       "id": "managing-people:sub:flexible-workforce:recall",
+       "type": "fillin",
+       "hints": [
+        "Nu_______",
+        "Fu________",
+        "Te______"
+       ],
+       "prompt": "Complete the flexibility types:",
+       "answers": [
+        "Numerical",
+        "Functional",
+        "Temporal"
+       ],
+       "template": [
+        "___ flexibility means adjusting the number of workers",
+        "→ ___ flexibility means multi-skilled staff switching roles",
+        "→ ___ flexibility means varying working hours"
+       ]
+      },
+      "keyIdea": "A flexible workforce allows a business to adjust the size, skills and working patterns of its labour force to match changing demand.",
+      "examMatters": "When discussing workforce flexibility, examiners expect you to evaluate from both employer and employee perspectives. A strong answer explains how flexibility reduces costs and increases responsiveness while acknowledging the potential impact on staff morale and productivity.",
+      "realExample": {
+       "text": "**Amazon** hires tens of thousands of temporary workers during the Christmas peak season through its fulfilment centres. This numerical flexibility allows Amazon to handle a 300% surge in orders without carrying the cost of a permanently oversized workforce for the remaining ten months.",
+       "emoji": "📦"
+      },
+      "misconception": "Students assume \"flexible working always benefits employees.\" While flexitime and remote working can benefit workers, zero-hours contracts and temporary work often create insecurity and stress. Instead write: flexibility benefits employers through cost control, but the impact on employees depends on the type of flexibility used."
+     },
+     {
+      "id": "managing-people:sub:dismissal-vs-redundancy",
+      "body": [
+       {
+        "text": "**Dismissal** is when an employer terminates an employee's contract because of a reason related to the individual — such as persistent poor performance, gross misconduct or inability to do the job. Dismissal must follow a fair procedure; otherwise the employee can claim **unfair dismissal** at an employment tribunal.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Employee underperforms or commits misconduct",
+         "Employer follows disciplinary procedure",
+         "Contract is terminated"
+        ],
+        "result": "Dismissal — the person is removed, the job remains",
+        "resultType": "neutral"
+       },
+       {
+        "text": "**Redundancy** occurs when the job itself is no longer needed — perhaps due to a fall in demand, automation, restructuring or relocation. The employer must follow a fair selection process, consult with affected workers and usually pay **statutory redundancy pay** based on length of service.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You must understand this distinction clearly because the legal rights and employer obligations are very different in each case. Redundancy is not the employee's fault, so additional protections apply.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Dismissal vs Redundancy",
+      "recall": {
+       "id": "managing-people:sub:dismissal-vs-redundancy:recall",
+       "type": "reorder",
+       "prompt": "Put the redundancy process in the right order:",
+       "shuffled": [
+        2,
+        3,
+        0,
+        1
+       ],
+       "correctOrder": [
+        "Business identifies roles no longer needed",
+        "Employer consults with affected workers",
+        "Fair selection criteria are applied",
+        "Statutory redundancy pay is provided"
+       ]
+      },
+      "keyIdea": "Dismissal removes a worker because of their conduct or capability, while redundancy removes a job because the business no longer needs that role.",
+      "examMatters": "Examiners specifically test whether you can distinguish dismissal from redundancy. In case study questions, identify which situation applies and explain the legal obligations that follow. Confusing the two will lose you marks even if the rest of your analysis is strong.",
+      "realExample": {
+       "text": "**HSBC** announced 35,000 redundancies as part of a restructuring programme to cut costs and shift its focus to Asian markets. These roles were eliminated because the business no longer needed them, not because of individual performance — a textbook example of redundancy driven by strategic change.",
+       "emoji": "🏦"
+      },
+      "misconception": "Students use \"dismissal\" and \"redundancy\" interchangeably as if both mean firing someone. Dismissal is about the person; redundancy is about the job disappearing. Instead write: dismissal is linked to the employee's conduct or capability, while redundancy is linked to the business no longer needing that particular role."
+     },
+     {
+      "id": "managing-people:sub:employer-employee-relationships",
+      "body": [
+       {
+        "text": "Employer-employee relationships are shaped by how well the two sides communicate, negotiate and resolve disagreements. Strong relationships are built on **trust, fairness and open communication**. When relationships break down, the result can be industrial action — strikes, work-to-rule or overtime bans — which damages productivity and reputation.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Trade unions** represent workers collectively in negotiations with employers over pay, conditions and workplace rights. **Collective bargaining** is the process by which unions and employers negotiate agreements that cover all workers in a group. This gives workers more bargaining power than negotiating individually.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Poor communication or unfair treatment",
+         "Trust breaks down",
+         "Industrial action or high turnover"
+        ],
+        "result": "Lost productivity, damaged reputation and higher costs",
+        "resultType": "bad"
+       },
+       {
+        "text": "You should recognise that good employer-employee relations are a two-way street. Employers who listen to staff concerns, offer fair pay and involve workers in decisions tend to enjoy higher productivity and lower conflict.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Employer-Employee Relationships",
+      "recall": {
+       "id": "managing-people:sub:employer-employee-relationships:recall",
+       "type": "fillin",
+       "hints": [
+        "Tr___ un____",
+        "Co________ ba________",
+        "ac____"
+       ],
+       "prompt": "Complete the key terms:",
+       "answers": [
+        "Trade unions",
+        "Collective bargaining",
+        "action"
+       ],
+       "template": [
+        "___ ___ represent workers collectively in negotiations",
+        "→ ___ ___ is the process of negotiating agreements covering all workers in a group",
+        "→ Industrial ___ includes strikes, work-to-rule and overtime bans"
+       ]
+      },
+      "keyIdea": "The quality of the relationship between employers and employees directly affects motivation, productivity and the risk of industrial disputes.",
+      "examMatters": "When analysing employer-employee relations, examiners want you to consider both perspectives. Explain how good relations benefit productivity and retention, then evaluate by considering the costs of maintaining those relations versus the costs of conflict.",
+      "realExample": {
+       "text": "**British Airways** suffered a series of strikes by cabin crew in 2010 that cost the airline an estimated 150 million pounds in lost revenue. The dispute was triggered by cost-cutting changes to working conditions imposed without adequate consultation, illustrating how poor employer-employee relations can have severe financial consequences.",
+       "emoji": "🚂"
+      },
+      "misconception": "Students write \"trade unions are bad for businesses because they cause strikes.\" Most union activity is about negotiation, not strikes — unions often improve communication and reduce staff turnover. Instead write: trade unions can benefit businesses by providing a structured channel for communication and helping to resolve disputes before they escalate."
+     }
+    ],
+    "takeaway": [
+     "Treating staff as assets raises costs but builds loyalty and productivity.",
+     "Workforce flexibility helps businesses adapt but can harm employee security.",
+     "Dismissal is about the person; redundancy is about the job disappearing.",
+     "Strong employer-employee relations reduce conflict and boost performance."
+    ],
+    "quizIndices": [
+     0
+    ]
+   },
+   {
+    "id": "managing-people:block:f9e81994",
+    "title": "Recruitment, Selection and Training",
+    "sections": [
+     {
+      "id": "managing-people:sub:recruitment-process",
+      "body": [
+       {
+        "text": "The recruitment process begins when a business identifies that it needs to fill a role. The first step is to create a **job description** (outlining the duties, responsibilities and reporting lines of the role) and a **person specification** (outlining the qualifications, skills, experience and personal qualities the ideal candidate should have).",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Identify vacancy",
+         "Write job description and person specification",
+         "Advertise internally or externally",
+         "Applications received"
+        ],
+        "result": "A pool of suitable candidates to select from",
+        "resultType": "good"
+       },
+       {
+        "text": "**Internal recruitment** means filling the vacancy from within the existing workforce — through promotion, redeployment or internal advertising. It is cheaper, faster and the candidate already knows the business. However, it limits the pool of talent and may create resentment among those not selected.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**External recruitment** means attracting candidates from outside the business — through job sites, recruitment agencies, social media or newspaper advertisements. This brings in fresh ideas and a wider talent pool, but it is more expensive and the new hire is an unknown quantity.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Recruitment Process",
+      "recall": {
+       "id": "managing-people:sub:recruitment-process:recall",
+       "type": "reorder",
+       "prompt": "Put the recruitment process in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Identify the vacancy",
+        "Write job description and person specification",
+        "Advertise the role internally or externally",
+        "Receive and shortlist applications"
+       ]
+      },
+      "keyIdea": "Recruitment is about attracting the right candidates to apply for a vacancy, starting with a clear understanding of the role and the person you need.",
+      "examMatters": "Examiners frequently ask you to recommend whether a business should recruit internally or externally. Your answer must be justified by the context — consider the level of the role, the cost, the time available and whether the business needs fresh perspectives or continuity.",
+      "realExample": {
+       "text": "**Starbucks** uses a combination of internal and external recruitment. Store managers are frequently promoted from barista positions (internal), while specialist roles like marketing and finance are recruited externally. This blend allows Starbucks to reward loyalty while also bringing in fresh expertise.",
+       "emoji": "☕"
+      },
+      "misconception": "Students write \"external recruitment is always better because you get more applicants.\" More applicants does not mean better applicants — internal candidates already understand the culture and systems. Instead write: the choice between internal and external recruitment depends on the nature of the role, the urgency of the hire and the skills available within the existing workforce."
+     },
+     {
+      "id": "managing-people:sub:selection-methods",
+      "body": [
+       {
+        "text": "Once you have a pool of applicants, **selection** is the process of choosing the most suitable person. The goal is to find the candidate who best matches the person specification and is most likely to succeed in the role.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Common Selection Methods",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Interviews** — face-to-face, panel or telephone; allow you to assess personality and communication skills but are subjective and can be affected by interviewer bias.",
+         "**Assessment centres** — a combination of exercises, group tasks, presentations and interviews over one or two days; give a rounded view but are expensive and time-consuming.",
+         "**Psychometric tests** — standardised tests measuring aptitude, personality or cognitive ability; objective and comparable but may not capture real-world performance.",
+         "**Work trials** — the candidate works in the role for a short period; excellent predictor of job performance but impractical for senior or specialised roles."
+        ]
+       },
+       {
+        "text": "No single selection method is perfect. You should understand that businesses often combine several methods to reduce the risk of making a poor hiring decision, which can be extremely costly in terms of recruitment expenses, training costs and lost productivity.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Selection Methods",
+      "recall": {
+       "id": "managing-people:sub:selection-methods:recall",
+       "type": "fillin",
+       "hints": [
+        "As________ ce_____",
+        "Ps__________",
+        "Wo__"
+       ],
+       "prompt": "Complete the selection methods:",
+       "answers": [
+        "Assessment centres",
+        "Psychometric",
+        "Work"
+       ],
+       "template": [
+        "___ ___ combine exercises, group tasks and presentations over one or two days",
+        "→ ___ tests measure aptitude, personality or cognitive ability",
+        "→ ___ trials let candidates work in the role for a short period"
+       ]
+      },
+      "keyIdea": "Selection is about choosing the best candidate from those who applied, using methods that predict how well they will perform in the role.",
+      "examMatters": "When recommending a selection method, examiners want you to link your choice to the specific role. A senior management position might warrant an assessment centre, while a part-time retail role might only need an interview and trial shift. Always justify the cost relative to the importance of the hire.",
+      "realExample": {
+       "text": "**Google** famously uses a multi-stage selection process including structured interviews, coding challenges and work-sample tests. Research by Google's People Analytics team found that structured interviews combined with work samples were far better predictors of job performance than traditional unstructured interviews alone.",
+       "emoji": "🔍"
+      },
+      "misconception": "Students assume \"the interview is the most important part of selection.\" Research consistently shows that unstructured interviews are poor predictors of job performance. Instead write: structured selection methods like work samples and assessment centres are better predictors of future performance than unstructured interviews alone."
+     },
+     {
+      "id": "managing-people:sub:training",
+      "body": [
+       {
+        "text": "**Training** is the process of improving employees' skills, knowledge and capabilities so they can perform their roles more effectively. There are three main types: **induction training** (introducing new employees to the business), **on-the-job training** (learning while doing the actual job), and **off-the-job training** (learning away from the workplace, such as courses or workshops).",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Identify skills gap",
+         "Deliver targeted training",
+         "Employee performance improves"
+        ],
+        "result": "Higher productivity, quality and staff retention",
+        "resultType": "good"
+       },
+       {
+        "text": "**On-the-job training** is cheaper and immediately relevant because the employee learns in the actual work environment. However, it can be disruptive, and the quality depends on whoever is doing the training. **Off-the-job training** is often more structured and taught by specialists, but it is more expensive and the employee is away from productive work.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should recognise that training is an investment, not just a cost. Well-trained employees make fewer mistakes, require less supervision and deliver better customer service. Businesses that underinvest in training often suffer from higher error rates, lower morale and greater staff turnover.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Training",
+      "recall": {
+       "id": "managing-people:sub:training:recall",
+       "type": "reorder",
+       "prompt": "Put the training investment chain in the right order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Identify a skills gap in the workforce",
+        "Deliver on-the-job or off-the-job training",
+        "Employee skills and confidence improve",
+        "Productivity, quality and retention rise"
+       ]
+      },
+      "keyIdea": "Training develops employee skills and knowledge, improving productivity and quality while also boosting motivation and retention.",
+      "examMatters": "Examiners want you to evaluate the costs and benefits of different training methods in context. Always link your recommendation to the type of business, the skills required and the budget. A strong answer weighs the cost of training against the cost of not training.",
+      "realExample": {
+       "text": "**McDonald's** runs its own training programme called Hamburger University, which has trained over 275,000 managers since 1961. This investment in structured off-the-job training ensures consistent service standards across 40,000 restaurants worldwide and creates a clear career path that improves staff retention.",
+       "emoji": "🍔"
+      },
+      "misconception": "Students write \"on-the-job training is always better because it is cheaper.\" Cheaper does not mean more effective — for complex or safety-critical skills, off-the-job training with qualified instructors produces far better results. Instead write: the best type of training depends on the nature of the skills being developed, the budget available and the need for consistency."
+     }
+    ],
+    "takeaway": [
+     "Recruitment attracts candidates; selection chooses the best one.",
+     "Internal recruitment is faster and cheaper; external brings fresh talent.",
+     "Training is an investment that pays back through productivity and retention."
+    ],
+    "quizIndices": [
+     1
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "managing-people:block:0363deef",
+    "title": "Organisational Design",
+    "sections": [
+     {
+      "id": "managing-people:sub:hierarchy-and-span-of-control",
+      "body": [
+       {
+        "text": "An **organisational hierarchy** shows the levels of management from the most senior (directors) at the top to the most junior (operatives) at the bottom. Each level has authority over the level below. The **chain of command** is the path along which instructions and decisions flow from top to bottom.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Span of control** refers to the number of employees directly managed by one person. A **wide span** means a manager oversees many subordinates; a **narrow span** means they oversee few. The span of control you choose affects the shape of the organisation and the speed of decision-making.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Narrow span of control",
+         "More layers of hierarchy needed",
+         "Longer chain of command"
+        ],
+        "result": "Slower communication but closer supervision",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Factors that influence the ideal span of control include the complexity of the work, the experience of the manager and subordinates, and whether the business uses centralised or decentralised decision-making.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Hierarchy and Span of Control",
+      "recall": {
+       "id": "managing-people:sub:hierarchy-and-span-of-control:recall",
+       "type": "fillin",
+       "hints": [
+        "Sp__",
+        "co_____",
+        "Ch___",
+        "co_____",
+        "na____"
+       ],
+       "prompt": "Complete the key terms:",
+       "answers": [
+        "Span",
+        "control",
+        "Chain",
+        "command",
+        "narrow"
+       ],
+       "template": [
+        "___ of ___ is the number of subordinates one manager directly oversees",
+        "→ ___ of ___ is the path along which decisions flow from top to bottom",
+        "→ A ___ span means more layers and closer supervision"
+       ]
+      },
+      "keyIdea": "Hierarchy describes the levels of authority in a business, while span of control is the number of subordinates each manager directly oversees.",
+      "examMatters": "Examiners love questions linking span of control to communication and motivation. If the span is narrow, explain that communication is slower but supervision is closer. If wide, explain that employees have more autonomy but managers may become overloaded.",
+      "realExample": {
+       "text": "**Marks & Spencer** restructured its hierarchy in 2022, reducing management layers from seven to five. This widened the span of control for remaining managers but shortened the chain of command, allowing faster decision-making and saving millions in management salaries.",
+       "emoji": "🏬"
+      },
+      "misconception": "Students write \"a wide span of control is always better because it is cheaper.\" A wide span only works when tasks are routine and staff are experienced enough to work independently. Instead write: the ideal span of control depends on the complexity of the work, the skills of the team and the management style of the organisation."
+     },
+     {
+      "id": "managing-people:sub:tall-vs-flat-structures",
+      "body": [
+       {
+        "text": "A **tall organisational structure** has many levels of hierarchy, a long chain of command and typically narrow spans of control. This allows close supervision and clear career progression paths, but communication is slow and the organisation can be bureaucratic and expensive to run.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **flat organisational structure** has few levels of hierarchy, a short chain of command and wide spans of control. Communication is faster, employees have more responsibility and the business is cheaper to run. However, managers may become overloaded and employees may lack clear promotion routes.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Business removes management layers",
+         "Span of control widens",
+         "Employees gain more autonomy"
+        ],
+        "result": "Faster decisions but risk of manager overload",
+        "resultType": "neutral"
+       },
+       {
+        "text": "The process of removing layers of hierarchy is called **delayering**. Many large businesses have delayered in recent years to cut costs, speed up communication and empower front-line staff. You should evaluate delayering by considering both the cost savings and the potential loss of management expertise.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Tall vs Flat Structures",
+      "recall": {
+       "id": "managing-people:sub:tall-vs-flat-structures:recall",
+       "type": "reorder",
+       "prompt": "Put the delayering process in the right order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Business identifies too many management layers",
+        "Middle management positions are removed",
+        "Remaining managers take on wider spans of control",
+        "Communication speeds up but workload increases"
+       ]
+      },
+      "keyIdea": "Tall structures have many layers and narrow spans giving tight control, while flat structures have few layers and wide spans giving speed and autonomy.",
+      "examMatters": "When asked to evaluate a change in organisational structure, examiners want you to consider the trade-offs. Delayering saves costs and speeds communication but may overload remaining managers and reduce promotion opportunities. Always weigh both sides.",
+      "realExample": {
+       "text": "**Nike** has a relatively flat organisational structure with only six levels of hierarchy for a company of over 75,000 employees. This enables rapid product development and empowers regional managers to respond quickly to local market trends, which is critical in the fast-moving sportswear industry.",
+       "emoji": "👟"
+      },
+      "misconception": "Students assume \"flat structures are always better because they are modern.\" Flat structures work well for creative or fast-moving industries but can create chaos in industries that need strict control, such as healthcare or aviation. Instead write: the best structure depends on the industry, the size of the business and the nature of the work being done."
+     },
+     {
+      "id": "managing-people:sub:matrix-structures",
+      "body": [
+       {
+        "text": "A **matrix structure** is an organisational design in which employees are grouped by both function (e.g. marketing, finance, operations) and by project or product. Each employee has two bosses — their functional manager and their project manager. This creates a grid (or matrix) of reporting lines.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Specialist staff from different functions join a project team",
+         "They report to both functional and project managers"
+        ],
+        "result": "Diverse expertise applied to each project, but dual authority can cause conflict",
+        "resultType": "neutral"
+       },
+       {
+        "text": "The advantage of a matrix structure is that it brings together specialists from different departments, encouraging **collaboration and knowledge-sharing**. Projects benefit from diverse perspectives, and staff develop broader skills by working across functions.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The disadvantage is that having two bosses can create **confusion and conflict** over priorities. Employees may feel pulled in different directions, and decision-making can be slow if the two managers disagree. Matrix structures also require a strong culture of communication and teamwork to function effectively.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Matrix Structures",
+      "recall": {
+       "id": "managing-people:sub:matrix-structures:recall",
+       "type": "fillin",
+       "hints": [
+        "fu________",
+        "pr_____",
+        "co_____________",
+        "co________"
+       ],
+       "prompt": "Complete the matrix structure description:",
+       "answers": [
+        "functional",
+        "project",
+        "collaboration",
+        "confusion"
+       ],
+       "template": [
+        "Employees report to both a ___ manager and a ___ manager",
+        "→ This encourages cross-functional ___ and knowledge-sharing",
+        "→ The risk is ___ and conflict from dual authority"
+       ]
+      },
+      "keyIdea": "A matrix structure organises staff into cross-functional project teams so they report to both a project manager and a functional manager simultaneously.",
+      "examMatters": "When evaluating matrix structures, examiners want you to weigh the benefits of cross-functional collaboration against the costs of complexity and potential conflict. A strong answer considers whether the business has the culture and management skills to make a matrix work effectively.",
+      "realExample": {
+       "text": "**Toyota** uses a matrix structure for its vehicle development projects. Engineers from design, manufacturing and marketing work together in cross-functional teams for each new model, while still reporting to their functional departments. This approach helped Toyota develop the Prius hybrid by combining expertise that no single department could provide alone.",
+       "emoji": "🚗"
+      },
+      "misconception": "Students write \"matrix structures cause confusion so they should be avoided.\" While dual reporting can create tension, many of the world's most innovative companies use matrix structures precisely because cross-functional collaboration drives better outcomes. Instead write: matrix structures require strong communication skills and clear role definitions, but they enable innovation by combining diverse specialist expertise."
+     }
+    ],
+    "takeaway": [
+     "Span of control and hierarchy shape communication speed and supervision.",
+     "Tall structures give control; flat structures give speed and autonomy.",
+     "Matrix structures enable cross-functional teamwork but risk dual-authority conflict."
+    ],
+    "quizIndices": [
+     2
+    ]
+   },
+   {
+    "id": "managing-people:block:db25e383",
+    "title": "Motivation in Theory",
+    "sections": [
+     {
+      "id": "managing-people:sub:taylors-scientific-management",
+      "body": [
+       {
+        "text": "**Frederick Winslow Taylor** (1856-1915) developed the theory of **scientific management**, which argued that there is one best way to perform any task. He believed managers should study each job scientifically, break it into small repetitive steps, and then train workers to perform those steps in the most efficient way possible.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Study the task scientifically",
+         "Break it into small, repetitive steps",
+         "Select and train workers for each step",
+         "Pay piece-rate to reward output"
+        ],
+        "result": "Maximum efficiency and productivity",
+        "resultType": "good"
+       },
+       {
+        "text": "Taylor's key assumptions were that workers are motivated primarily by **money** and that they naturally tend to do as little work as possible (what he called \"soldiering\"). His solution was **piece-rate pay** — paying workers per unit of output produced — so that harder work directly translated into higher earnings.",
+        "type": "paragraph"
+       },
+       {
+        "text": "While Taylor's ideas dramatically increased factory productivity in the early twentieth century, they reduced jobs to boring, repetitive tasks. This approach treats workers as extensions of machines, ignoring their social and psychological needs.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Taylor's Scientific Management",
+      "recall": {
+       "id": "managing-people:sub:taylors-scientific-management:recall",
+       "type": "reorder",
+       "prompt": "Put Taylor's scientific management process in order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Study the task scientifically to find the best method",
+        "Break the job into small, repetitive steps",
+        "Select and train workers for each specific step",
+        "Pay piece-rate to incentivise maximum output"
+       ]
+      },
+      "keyIdea": "Frederick Taylor believed workers are motivated primarily by money and that jobs should be scientifically designed for maximum efficiency.",
+      "examMatters": "Examiners expect you to know that Taylor assumed workers are motivated by money and that his approach increased efficiency but ignored human needs. When evaluating, link Taylor's ideas to modern businesses that still use piece-rate or output-based pay systems.",
+      "realExample": {
+       "text": "**Henry Ford** applied Taylor's principles to create the moving assembly line in 1913, reducing the time to build a Model T from 12 hours to 93 minutes. However, worker turnover at Ford's factory reached 370% per year because the repetitive work was so demoralising that workers constantly quit.",
+       "emoji": "🚗"
+      },
+      "misconception": "Students write \"Taylor's theory is outdated and no longer relevant.\" Many modern businesses still use Taylorist principles — Amazon warehouses and fast-food chains break tasks into small, monitored steps. Instead write: Taylor's principles of task specialisation and performance-related pay remain widely used, though most businesses now recognise that money alone does not fully motivate workers."
+     },
+     {
+      "id": "managing-people:sub:mayos-human-relations",
+      "body": [
+       {
+        "text": "**Elton Mayo** (1880-1949) conducted the famous **Hawthorne Studies** at the Western Electric factory in Chicago during the 1920s and 1930s. He originally set out to test whether changes in lighting and working conditions affected productivity — but discovered something far more important.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Mayo found that productivity increased regardless of the physical changes made — even when conditions were made worse. The real factor was that workers felt **special and valued** because someone was paying attention to them. This became known as the **Hawthorne Effect**.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Workers are observed and consulted",
+         "They feel valued and part of a group",
+         "Motivation and productivity rise"
+        ],
+        "result": "Social needs and recognition drive performance more than pay alone",
+        "resultType": "good"
+       },
+       {
+        "text": "Mayo concluded that **social relationships**, **teamwork** and **communication** between managers and workers were more important motivators than money or physical conditions. His work launched the **Human Relations school** of management, which emphasised the importance of meeting workers' social and emotional needs.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Mayo's Human Relations",
+      "recall": {
+       "id": "managing-people:sub:mayos-human-relations:recall",
+       "type": "fillin",
+       "hints": [
+        "Ha_______",
+        "Ha_______",
+        "Hu___ Re_______"
+       ],
+       "prompt": "Complete the Mayo key findings:",
+       "answers": [
+        "Hawthorne",
+        "Hawthorne",
+        "Human Relations"
+       ],
+       "template": [
+        "The ___ Studies at Western Electric revealed the importance of social factors",
+        "→ The ___ Effect means productivity rises when workers feel observed and valued",
+        "→ Mayo's ___ ___ school emphasised teamwork and communication"
+       ]
+      },
+      "keyIdea": "Elton Mayo discovered that workers are motivated more by social relationships and feeling valued than by physical conditions or pay alone.",
+      "examMatters": "When discussing Mayo, examiners want you to contrast his findings with Taylor's. The key difference is that Taylor focused on money and efficiency while Mayo highlighted social needs and group dynamics. Always name the Hawthorne Studies as the evidence base.",
+      "realExample": {
+       "text": "**Google** applies Mayo's principles by creating collaborative workspaces, encouraging team-based projects and holding regular town-hall meetings where employees can question senior leaders directly. Google's emphasis on social connection and employee voice reflects Mayo's finding that feeling valued matters more than physical perks alone.",
+       "emoji": "🔍"
+      },
+      "misconception": "Students write \"Mayo proved that money does not motivate workers.\" Mayo did not say money is irrelevant — he showed that social factors are also powerful motivators that Taylor had ignored. Instead write: Mayo demonstrated that social needs, recognition and teamwork are important motivators alongside financial rewards."
+     },
+     {
+      "id": "managing-people:sub:maslows-hierarchy",
+      "body": [
+       {
+        "text": "**Abraham Maslow** (1908-1970) proposed that human needs are arranged in a **hierarchy of five levels**. You must satisfy the needs at each level before the next level up becomes a motivator. The levels from bottom to top are: **physiological** (food, water, shelter), **safety** (job security, safe conditions), **social** (belonging, friendship), **esteem** (recognition, status) and **self-actualisation** (reaching your full potential).",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Physiological needs met through adequate pay",
+         "Safety needs met through job security",
+         "Social needs met through teamwork",
+         "Esteem and self-actualisation met through recognition and challenge"
+        ],
+        "result": "Fully motivated workforce at every level",
+        "resultType": "good"
+       },
+       {
+        "text": "For managers, the implication is clear: you cannot motivate workers with recognition and interesting work if their basic pay is too low to live on. Equally, once basic needs are met, simply paying more money has a limited motivational effect — workers then seek belonging, status and personal fulfilment.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Critics argue that Maslow's hierarchy is too rigid — people can pursue higher needs even when lower ones are not fully met. The model also assumes all people are motivated in the same way, ignoring cultural and individual differences.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Maslow's Hierarchy",
+      "recall": {
+       "id": "managing-people:sub:maslows-hierarchy:recall",
+       "type": "reorder",
+       "prompt": "Put Maslow's hierarchy in order from lowest to highest:",
+       "shuffled": [
+        2,
+        3,
+        0,
+        1
+       ],
+       "correctOrder": [
+        "Physiological needs (food, shelter, pay)",
+        "Safety needs (job security, safe conditions)",
+        "Social needs (belonging, teamwork)",
+        "Esteem needs (recognition, status)"
+       ]
+      },
+      "keyIdea": "Maslow argued that people have five levels of needs and you must satisfy lower-level needs before higher-level needs can motivate behaviour.",
+      "examMatters": "Examiners expect you to apply Maslow to a business context — do not just describe the five levels. Explain which level a particular policy targets. For example, team-building activities target social needs, while profit-sharing targets esteem. Always evaluate by noting the theory's limitations.",
+      "realExample": {
+       "text": "**John Lewis Partnership** addresses multiple levels of Maslow's hierarchy: competitive salaries cover physiological and safety needs, the partnership structure creates belonging, the annual bonus and \"Partner\" title satisfy esteem needs, and opportunities for career development target self-actualisation.",
+       "emoji": "🏢"
+      },
+      "misconception": "Students write \"once a need is satisfied it no longer motivates.\" Maslow said lower needs must be broadly satisfied before higher ones dominate, but needs can resurface — a threat of redundancy instantly reactivates safety needs. Instead write: lower-level needs must be broadly met for higher-level needs to become the primary motivator, but previously satisfied needs can become dominant again if threatened."
+     },
+     {
+      "id": "managing-people:sub:herzbergs-two-factor-theory",
+      "body": [
+       {
+        "text": "**Frederick Herzberg** (1923-2000) researched what made workers satisfied or dissatisfied with their jobs and discovered that the two sets of factors were completely different. He called them **motivators** (factors that create genuine job satisfaction) and **hygiene factors** (factors that prevent dissatisfaction but do not themselves create motivation).",
+        "type": "paragraph"
+       },
+       {
+        "text": "The Two Factors",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Motivators** — achievement, recognition, the work itself, responsibility, advancement and personal growth. These create genuine satisfaction and drive.",
+         "**Hygiene factors** — pay, working conditions, company policies, job security, supervision and relationships with colleagues. If these are poor, workers become dissatisfied; if adequate, dissatisfaction is removed but motivation is not created."
+        ]
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Fix hygiene factors (pay, conditions)",
+         "Dissatisfaction removed, but not motivated",
+         "Add motivators (recognition, responsibility)"
+        ],
+        "result": "Genuine motivation and job satisfaction created",
+        "resultType": "good"
+       },
+       {
+        "text": "The practical implication is powerful: simply raising pay or improving the office will not motivate workers — it just stops them complaining. To truly motivate, you must give workers challenging work, recognition for achievement, autonomy and opportunities for growth.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Herzberg's Two-Factor Theory",
+      "recall": {
+       "id": "managing-people:sub:herzbergs-two-factor-theory:recall",
+       "type": "fillin",
+       "hints": [
+        "Hy_____",
+        "Mo________",
+        "hy_____"
+       ],
+       "prompt": "Complete the Herzberg classification:",
+       "answers": [
+        "Hygiene",
+        "Motivators",
+        "hygiene"
+       ],
+       "template": [
+        "___ factors prevent dissatisfaction but do not motivate (e.g. pay, conditions)",
+        "→ ___ create genuine satisfaction and drive (e.g. recognition, responsibility)",
+        "→ According to Herzberg, pay is a ___ factor, not a motivator"
+       ]
+      },
+      "keyIdea": "Herzberg found that satisfaction and dissatisfaction have different causes — hygiene factors prevent complaints but only motivators create drive.",
+      "examMatters": "This is one of the most commonly tested theories. Examiners want you to distinguish clearly between motivators and hygiene factors. A classic mistake is putting pay in the wrong category. Remember: hygiene factors prevent dissatisfaction; motivators create satisfaction. They are not two ends of the same scale.",
+      "realExample": {
+       "text": "**IKEA** applies Herzberg's theory by ensuring strong hygiene factors (above-average pay, good working conditions, staff discounts) while also building in motivators. Employees are given responsibility for their department's visual merchandising and encouraged to propose store improvements, creating genuine engagement beyond just acceptable conditions.",
+       "emoji": "🛋️"
+      },
+      "misconception": "Students write \"pay is a motivator according to Herzberg.\" Herzberg explicitly classified pay as a hygiene factor — it prevents dissatisfaction but does not create lasting motivation. Instead write: Herzberg argued that pay is a hygiene factor; once it is adequate, additional pay has diminishing motivational impact compared to factors like recognition and responsibility."
+     }
+    ],
+    "takeaway": [
+     "Taylor: workers motivated by money; break tasks into efficient steps.",
+     "Mayo: social needs and recognition matter more than physical conditions.",
+     "Maslow: five levels of needs from basic survival to self-actualisation.",
+     "Herzberg: fix hygiene factors to stop complaints; add motivators for drive."
+    ],
+    "quizIndices": [
+     3
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "managing-people:block:a9b9f0ce",
+    "title": "Motivation in Practice",
+    "sections": [
+     {
+      "id": "managing-people:sub:financial-methods",
+      "body": [
+       {
+        "text": "**Financial motivation** involves using money-based incentives to encourage workers to perform better. Common methods include **piece-rate pay** (paid per unit produced), **commission** (percentage of sales value), **performance-related pay** (bonuses linked to targets), **profit sharing** (distributing a share of profits to all employees) and **share ownership** (giving employees shares in the company).",
+        "type": "paragraph"
+       },
+       {
+        "text": "Key Financial Methods",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Piece-rate** — directly links pay to output; motivates quantity but can reduce quality.",
+         "**Commission** — common in sales roles; drives revenue but can encourage aggressive selling.",
+         "**Performance-related pay (PRP)** — bonuses for meeting targets; must be based on fair, measurable criteria.",
+         "**Profit sharing** — all employees share in company profits; builds collective ownership but individual impact feels small.",
+         "**Share ownership** — employees become part-owners; aligns interests with shareholders but share prices can fall."
+        ]
+       },
+       {
+        "text": "You should recognise that financial methods work best when output is measurable and individual effort directly affects results. In roles that require creativity, teamwork or long-term relationship building, financial incentives can sometimes distort behaviour and reduce intrinsic motivation.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Financial Methods",
+      "recall": {
+       "id": "managing-people:sub:financial-methods:recall",
+       "type": "reorder",
+       "prompt": "Put the financial incentive evaluation chain in order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Business sets financial targets or incentives",
+        "Workers focus effort on measurable outputs",
+        "Short-term performance may improve",
+        "Risk of unintended consequences if targets are poorly designed"
+       ]
+      },
+      "keyIdea": "Financial methods of motivation use monetary rewards to incentivise performance, but their effectiveness depends on the nature of the work and the worker.",
+      "examMatters": "Examiners expect you to evaluate financial methods, not just describe them. Link back to motivation theory — Taylor would support piece-rate, but Herzberg would argue it only addresses hygiene needs. Always consider whether the method might create unintended consequences.",
+      "realExample": {
+       "text": "**Wells Fargo** staff opened millions of fake bank accounts to meet aggressive sales targets tied to commission and bonuses. This scandal demonstrated how poorly designed financial incentives can drive unethical behaviour, costing the bank over 3 billion dollars in fines and destroying customer trust.",
+       "emoji": "🏦"
+      },
+      "misconception": "Students write \"financial methods always motivate workers to perform better.\" Herzberg's research showed that money is a hygiene factor — it prevents dissatisfaction but does not create lasting motivation. Instead write: financial methods can drive short-term performance, but their long-term effectiveness depends on the nature of the role and whether they are complemented by non-financial motivators."
+     },
+     {
+      "id": "managing-people:sub:non-financial-methods",
+      "body": [
+       {
+        "text": "**Non-financial motivation** involves making the job itself more rewarding without directly increasing pay. Key methods include **job enrichment** (adding more challenging and meaningful tasks), **job enlargement** (widening the range of tasks at the same level), **job rotation** (moving between different tasks to reduce boredom), **empowerment** (giving employees authority to make decisions) and **teamworking** (organising staff into self-managing teams).",
+        "type": "paragraph"
+       },
+       {
+        "text": "Key Non-Financial Methods",
+        "type": "subheading"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Job enrichment** — adds depth and challenge; directly addresses Herzberg's motivators.",
+         "**Job enlargement** — adds variety but not necessarily challenge; can feel like more work for the same pay.",
+         "**Job rotation** — reduces monotony and builds multi-skilled workers; supports functional flexibility.",
+         "**Empowerment** — gives workers authority and ownership; boosts esteem and self-actualisation (Maslow).",
+         "**Teamworking** — satisfies social needs (Mayo); encourages collaboration and shared responsibility."
+        ]
+       },
+       {
+        "text": "Non-financial methods tend to address Herzberg's motivators and Maslow's higher-level needs. They are often more sustainable than financial incentives because they make the work itself fulfilling. However, they require good management, trust and a willingness to delegate, which not all businesses are ready for.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Non-Financial Methods",
+      "recall": {
+       "id": "managing-people:sub:non-financial-methods:recall",
+       "type": "fillin",
+       "hints": [
+        "en________",
+        "en_________",
+        "Em__________"
+       ],
+       "prompt": "Complete the non-financial methods:",
+       "answers": [
+        "enrichment",
+        "enlargement",
+        "Empowerment"
+       ],
+       "template": [
+        "Job ___ adds challenge and responsibility (vertical loading)",
+        "→ Job ___ adds more tasks at the same level (horizontal loading)",
+        "→ ___ gives workers authority to make decisions without managerial approval"
+       ]
+      },
+      "keyIdea": "Non-financial methods motivate by making work more interesting, giving employees responsibility and recognising their contribution.",
+      "examMatters": "When recommending a motivational method, examiners want you to link your choice to a specific motivation theory. Job enrichment links to Herzberg's motivators; teamworking links to Mayo's social needs; empowerment links to Maslow's esteem and self-actualisation. Theory-linked answers score highest.",
+      "realExample": {
+       "text": "**Valve Corporation** (the company behind Steam) has no formal management hierarchy. Employees choose which projects to work on, move their desks to join different teams, and are empowered to make major decisions without managerial approval. This extreme empowerment model has made Valve one of the most profitable companies per employee in the technology industry.",
+       "emoji": "🎮"
+      },
+      "misconception": "Students confuse job enrichment with job enlargement. Enrichment adds challenge and responsibility (vertical loading); enlargement just adds more tasks at the same level (horizontal loading). Instead write: job enrichment gives workers more challenging and meaningful tasks, while job enlargement simply increases the number of tasks without adding depth."
+     }
+    ],
+    "takeaway": [
+     "Financial methods drive short-term output but risk unintended behaviour.",
+     "Non-financial methods build lasting motivation by making work fulfilling.",
+     "The best approach combines financial hygiene with non-financial motivators."
+    ],
+    "quizIndices": [
+     4
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "managing-people:block:4a5fa327",
+    "title": "Leadership Styles",
+    "sections": [
+     {
+      "id": "managing-people:sub:management-vs-leadership",
+      "body": [
+       {
+        "text": "**Management** involves planning, organising, coordinating and controlling resources to achieve objectives. A manager's role is to ensure that day-to-day operations run smoothly, budgets are met and staff follow established procedures. Management is about doing things right.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Leadership** involves setting a vision, inspiring others and driving change. A leader motivates people to go beyond their basic duties and achieve ambitious goals. Leadership is about doing the right things. You should understand that both are essential — a business needs managers to keep things running and leaders to set direction.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Manager organises and controls day-to-day operations",
+         "Leader sets vision and inspires the team"
+        ],
+        "result": "Both roles are needed for a business to function and grow",
+        "resultType": "neutral"
+       },
+       {
+        "text": "In practice, the same person often needs to be both a manager and a leader. The balance depends on the situation — a crisis may demand strong leadership, while routine operations may require effective management.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Management vs Leadership",
+      "recall": {
+       "id": "managing-people:sub:management-vs-leadership:recall",
+       "type": "reorder",
+       "prompt": "Match the focus to the correct role:",
+       "shuffled": [
+        3,
+        0,
+        2,
+        1
+       ],
+       "correctOrder": [
+        "Management: planning, organising and controlling resources",
+        "Management: ensuring day-to-day operations run smoothly",
+        "Leadership: setting a vision and inspiring others",
+        "Leadership: driving change and motivating ambitious goals"
+       ]
+      },
+      "keyIdea": "Managers focus on organising, controlling and maintaining systems, while leaders focus on inspiring, motivating and driving change.",
+      "examMatters": "Examiners often ask you to distinguish between management and leadership in the context of a case study. Identify specific actions that demonstrate each role and explain why both are needed. Avoid claiming one is better than the other without considering the business context.",
+      "realExample": {
+       "text": "**Elon Musk** at Tesla exemplifies the difference between leadership and management. Musk sets the bold vision of accelerating the world's transition to sustainable energy (leadership), while Tesla's operations team ensures that factories run efficiently and cars are delivered on time (management).",
+       "emoji": "🚀"
+      },
+      "misconception": "Students write \"leadership is more important than management.\" Both are essential — a visionary leader without good management will have chaos, and a well-managed business without leadership will stagnate. Instead write: leadership and management are complementary — businesses need leaders to set direction and managers to ensure efficient execution."
+     },
+     {
+      "id": "managing-people:sub:leadership-styles",
+      "body": [
+       {
+        "text": "An **autocratic** (or authoritarian) leader makes decisions alone without consulting the workforce. Communication is top-down. This style works well in crisis situations, when decisions must be made quickly, or when workers are inexperienced. However, it can demotivate skilled workers who want a voice in decisions.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **democratic** (or participative) leader involves employees in decision-making, encourages discussion and values input from the team. This builds motivation and commitment but can be slow when quick decisions are needed. It works best with skilled, experienced staff who can contribute meaningfully.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A **laissez-faire** leader takes a hands-off approach, giving employees freedom to make their own decisions and manage their own work. This can unleash creativity and innovation in highly skilled teams but risks a lack of direction and coordination if workers are not self-motivated.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Autocratic: leader decides alone",
+         "Democratic: leader consults team",
+         "Laissez-faire: leader delegates fully"
+        ],
+        "result": "The best style depends on the situation, task and workforce",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Leadership Styles",
+      "recall": {
+       "id": "managing-people:sub:leadership-styles:recall",
+       "type": "fillin",
+       "hints": [
+        "Au________",
+        "De________",
+        "La_____-fa___"
+       ],
+       "prompt": "Complete the leadership styles:",
+       "answers": [
+        "Autocratic",
+        "Democratic",
+        "Laissez-faire"
+       ],
+       "template": [
+        "___ leaders make decisions alone with top-down communication",
+        "→ ___ leaders involve employees in decision-making",
+        "→ ___-___ leaders take a hands-off approach, delegating fully"
+       ]
+      },
+      "keyIdea": "Different situations call for different leadership styles, from autocratic control to democratic participation to laissez-faire freedom.",
+      "examMatters": "Examiners test whether you can recommend an appropriate leadership style for a given scenario. Your answer must be context-dependent — consider the experience of the workforce, the urgency of the situation and the culture of the organisation. Never claim one style is universally best.",
+      "realExample": {
+       "text": "**Steve Jobs** at Apple was famously autocratic in product design decisions — he personally rejected hundreds of prototypes until they met his standards. Yet Apple's software teams operated more democratically, with engineers debating approaches openly. This shows that effective leaders often adapt their style to the situation.",
+       "emoji": "🍎"
+      },
+      "misconception": "Students write \"democratic leadership is always the best style.\" While it builds motivation and commitment, democratic leadership is too slow for emergencies and ineffective when workers lack the expertise to contribute. Instead write: the most effective leaders adapt their style to fit the situation, the task and the capabilities of the workforce."
+     },
+     {
+      "id": "managing-people:sub:from-entrepreneur-to-leader",
+      "body": [
+       {
+        "text": "In the early stages of a business, the entrepreneur typically does everything — from product development and sales to bookkeeping and customer service. This hands-on involvement is essential when the business is small and resources are limited.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Entrepreneur does everything",
+         "Business grows beyond one person's capacity",
+         "Founder must hire, delegate and lead a team"
+        ],
+        "result": "Successful transition enables further growth; failure to delegate limits the business",
+        "resultType": "neutral"
+       },
+       {
+        "text": "As the business grows, the founder must transition from being a doer to being a leader. This means **hiring skilled people**, **delegating authority**, **building management systems** and **setting strategic direction** rather than handling daily tasks. Many entrepreneurs struggle with this transition because they find it hard to let go of control.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should recognise that the skills needed to start a business are different from those needed to lead a larger organisation. The creativity and risk-taking that drive a start-up must be complemented by strategic thinking, people management and the ability to build a sustainable organisational culture.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "From Entrepreneur to Leader",
+      "recall": {
+       "id": "managing-people:sub:from-entrepreneur-to-leader:recall",
+       "type": "reorder",
+       "prompt": "Put the entrepreneur-to-leader transition in order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Entrepreneur does everything in the start-up phase",
+        "Business grows beyond one person's capacity",
+        "Founder hires skilled people and begins delegating",
+        "Leader focuses on vision and strategy, not daily tasks"
+       ]
+      },
+      "keyIdea": "As a business grows, the founder must transition from doing everything themselves to delegating, building a team and leading through others.",
+      "examMatters": "Examiners may present a case study of a growing business and ask you to evaluate the challenges the founder faces. Focus on the tension between maintaining the entrepreneurial spirit and building the systems and structures needed for a larger organisation.",
+      "realExample": {
+       "text": "**Mark Zuckerberg** at Facebook (now Meta) hired Sheryl Sandberg as COO in 2008 specifically to handle the operational and business side while he focused on product vision and technology. This delegation allowed Facebook to scale from 100 million to over 2 billion users by combining entrepreneurial vision with professional management.",
+       "emoji": "📱"
+      },
+      "misconception": "Students assume \"the founder should always remain CEO as the business grows.\" Many founders are brilliant at starting businesses but lack the management skills to run a large organisation. Instead write: the founder's role should evolve as the business grows, and sometimes the best decision is to bring in professional managers while the founder focuses on innovation and vision."
+     }
+    ],
+    "takeaway": [
+     "Managers control operations; leaders inspire and drive change.",
+     "Autocratic, democratic and laissez-faire styles suit different situations.",
+     "Effective leaders adapt their style to the task and the workforce.",
+     "Growing businesses need founders who can transition from doer to leader."
+    ],
+    "quizIndices": [
+     5
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Firm views staff as asset",
+      "Invests in training and development",
+      "Employees become more productive and loyal"
+     ],
+     "result": "Lower turnover, higher output, competitive advantage",
+     "resultType": "good"
+    },
+    "meta": "6 concepts",
+    "title": "Approaches to Staffing",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Staff as an asset</strong> — the view that employees are the most valuable resource; the firm invests in training, development and welfare to build long-term capability and loyalty.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Staff as a cost</strong> — the view that labour is an expense to be minimised; the firm focuses on keeping wages low, using temporary contracts and outsourcing where possible.",
+        "type": "def"
+       },
+       {
+        "text": "Firms treating staff as assets tend to have <strong>lower labour turnover</strong>, higher productivity and better customer service, but face higher short-term costs from training and competitive salaries.",
+        "type": "mech"
+       }
+      ],
+      "title": "STAFF AS ASSET vs COST"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Flexible workforce</strong> — the use of part-time, temporary, freelance or zero-hours contracts to match labour supply to fluctuating demand; it reduces fixed costs but can lower commitment and morale.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Dismissal</strong> is the termination of employment due to the employee's conduct or capability, while <strong>redundancy</strong> occurs when the job itself ceases to exist; the legal processes and costs differ significantly.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Strong <strong>employer-employee relations</strong> reduce absenteeism, grievances and industrial action; firms that consult employees on changes and treat them fairly build a cooperative culture that boosts productivity.",
+        "type": "imp"
+       },
+       {
+        "text": "Staffing approach links directly to motivation theory; treating staff as assets aligns with Herzberg's motivators (recognition, development), while the cost approach reflects Taylor's view of workers motivated solely by pay.",
+        "type": "link"
+       }
+      ],
+      "title": "FLEXIBLE WORKFORCE & EMPLOYMENT LAW"
+     }
+    ],
+    "keyIdea": "How a firm views its workforce — as an asset to develop or a cost to minimise — shapes every HR decision from recruitment to redundancy and determines whether employees become a source of competitive advantage.",
+    "takeaway": [
+     "The asset approach builds long-term capability; the cost approach minimises short-term expenditure.",
+     "Flexible workforces reduce fixed costs but risk lowering morale and productivity.",
+     "Dismissal is about the employee's behaviour; redundancy is about the job disappearing."
+    ],
+    "examMatters": "Examiners want you to evaluate whether treating staff as an asset or a cost is more appropriate by linking to context. A call centre with high turnover and routine tasks may rationally treat staff as a cost, while a technology firm relying on skilled knowledge workers should treat staff as assets."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Identify vacancy and write job description",
+      "Recruit internally or externally",
+      "Select through interviews and tests",
+      "Train new hire on-the-job or off-the-job"
+     ],
+     "result": "Productive employee contributing to objectives",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "Recruitment, Selection and Training",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Internal recruitment</strong> — filling a vacancy from within the existing workforce through promotion or redeployment; it is cheaper, faster and motivates existing staff, but limits the pool of candidates and may create another vacancy.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>External recruitment</strong> — attracting candidates from outside the organisation through job advertisements, agencies, social media or graduate schemes; it brings fresh ideas and skills but is more expensive and time-consuming.",
+        "type": "def"
+       },
+       {
+        "text": "The <strong>selection process</strong> typically includes application screening, interviews, aptitude tests and references; structured interviews and skills testing are more reliable predictors of job performance than unstructured conversations.",
+        "type": "mech"
+       }
+      ],
+      "title": "RECRUITMENT & SELECTION"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>On-the-job training</strong> — learning while doing the actual job, guided by experienced colleagues; it is practical and cheap but quality varies and can disrupt normal work.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Off-the-job training</strong> — learning away from the workplace through courses, workshops or qualifications; it develops broader skills and knowledge but is more expensive and takes employees away from productive work.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "Training is an investment, not just a cost; well-trained staff are more productive, make fewer mistakes, require less supervision and provide better customer service.",
+        "type": "imp"
+       },
+       {
+        "text": "Training links to motivation; Herzberg's theory suggests personal growth and development are key motivators, so investing in training can simultaneously improve skills and job satisfaction.",
+        "type": "link"
+       }
+      ],
+      "title": "TRAINING"
+     }
+    ],
+    "keyIdea": "Hiring the right people and training them properly is one of the highest-return investments a firm can make; getting recruitment wrong is extremely expensive because of wasted training, low productivity and the cost of re-hiring.",
+    "takeaway": [
+     "Internal recruitment is cheap and motivating but limits fresh thinking; external recruitment brings new ideas at higher cost.",
+     "On-the-job training is practical; off-the-job training builds broader skills — most firms need both.",
+     "Poor recruitment is expensive; getting the right person first time saves far more than any training budget."
+    ]
+   },
+   {
+    "flow": {
+     "steps": [
+      "Firm delayers hierarchy",
+      "Fewer management levels, wider spans",
+      "Faster decisions and lower costs"
+     ],
+     "result": "More responsive organisation but risk of managerial overload",
+     "resultType": "good"
+    },
+    "meta": "6 concepts",
+    "title": "Organisational Design",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Hierarchy</strong> — the levels of authority within an organisation from the most senior (top) to the most junior (bottom); each level has power over the level below it.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Span of control</strong> — the number of subordinates directly reporting to one manager; a wide span means many direct reports, a narrow span means few.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Chain of command</strong> — the formal line of authority from the top of the organisation to the bottom, through which instructions are passed and accountability flows upward.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Tall structures</strong> have many hierarchical levels and narrow spans of control; they provide close supervision and clear promotion paths but slow decision-making and create communication barriers.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Flat structures</strong> have few levels and wide spans of control; they enable faster communication, quicker decisions and greater employee autonomy, but managers may become overloaded.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "A <strong>matrix structure</strong> organises employees into project teams drawn from different functional departments; it improves flexibility and collaboration but can create confusion over who has authority.",
+        "type": "mech"
+       },
+       {
+        "text": "Many firms are <strong>delayering</strong> (removing hierarchical levels) to cut costs and speed up decisions; however, this increases workload on remaining managers and can damage morale if it leads to redundancies.",
+        "type": "imp"
+       },
+       {
+        "text": "Structure links to motivation and leadership; flat structures align with democratic leadership and delegation, while tall structures suit autocratic management where close control is needed.",
+        "type": "link"
+       }
+      ],
+      "title": "STRUCTURAL TYPES"
+     }
+    ],
+    "keyIdea": "Organisational structure determines how information flows, decisions are made and accountability is assigned; the wrong structure creates bottlenecks, slow decisions and frustrated employees.",
+    "takeaway": [
+     "Wide span of control gives autonomy but risks overloading managers; narrow span gives control but slows decisions.",
+     "Flat structures suit dynamic, skilled workforces; tall structures suit environments requiring close supervision.",
+     "Matrix structures offer flexibility but can cause confusion about authority and accountability."
+    ],
+    "misconception": "Students say flat structures are always better than tall structures. Wrong because the right structure depends on the business; a nuclear power plant needs tight supervision (tall/narrow span) for safety, while a creative agency benefits from autonomy (flat/wide span). Instead write: the optimal structure depends on the nature of the work, the skills of employees and the degree of control required."
+   },
+   {
+    "meta": "6 concepts",
+    "title": "Motivation in Theory",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Taylor's scientific management</strong> — workers are primarily motivated by money; managers should break tasks into small, repetitive steps, find the 'one best way' to do each task, and pay workers piece-rate to maximise output.",
+        "type": "def"
+       },
+       {
+        "text": "Taylor's approach increases <strong>productivity in routine tasks</strong> but treats workers as machines, leading to boredom, high turnover and resistance to change — Henry Ford's assembly line is the classic example.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Mayo's Human Relations theory</strong> — workers are motivated by social needs and recognition; the Hawthorne experiments showed that attention from management and good team relationships improved output more than physical conditions or pay alone.",
+        "type": "def"
+       },
+       {
+        "text": "Mayo proved that <strong>informal work groups</strong> and a sense of belonging significantly affect productivity; managers should foster teamwork and consult employees rather than just directing them.",
+        "type": "mech"
+       }
+      ],
+      "title": "TAYLOR & MAYO"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Maslow's hierarchy of needs</strong> — five levels of human needs from basic (physiological, safety) to higher-order (social, esteem, self-actualisation); lower needs must be satisfied before higher needs motivate behaviour.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Herzberg's two-factor theory</strong> — <strong>hygiene factors</strong> (pay, conditions, job security) prevent dissatisfaction but do not motivate; true motivation comes from <strong>motivators</strong> (achievement, recognition, responsibility, personal growth).",
+        "type": "def"
+       },
+       {
+        "text": "Herzberg's key insight is that <strong>removing dissatisfaction is not the same as creating motivation</strong>; raising pay stops complaints but does not inspire extra effort — only enriching the work itself does that.",
+        "type": "imp"
+       },
+       {
+        "text": "Motivation theory links to HR practices; Taylor justifies piece-rate pay, Mayo justifies teamwork, Maslow justifies a range of rewards, and Herzberg justifies job enrichment and delegation.",
+        "type": "link"
+       }
+      ],
+      "title": "MASLOW & HERZBERG"
+     }
+    ],
+    "keyIdea": "Four key theorists explain why people work hard: Taylor said money, Mayo said social needs, Maslow said a hierarchy of needs, and Herzberg said the work itself — each theory has different implications for how firms should manage staff.",
+    "takeaway": [
+     "Taylor = money motivates; Mayo = social needs motivate; Maslow = hierarchy of needs; Herzberg = the work itself motivates.",
+     "Herzberg's distinction between hygiene factors and motivators is the most frequently tested concept.",
+     "No single theory is universally correct; the best approach depends on the workforce and the nature of the work."
+    ],
+    "examMatters": "Examiners want you to apply motivation theory to specific business contexts, not just describe the theory. Explain which theory best fits the workforce in question — Taylor may suit a warehouse with routine tasks, while Herzberg suits a software company where creativity matters."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Diagnose workforce needs (routine vs creative)",
+      "Choose appropriate financial + non-financial mix",
+      "Monitor productivity, morale and turnover"
+     ],
+     "result": "Motivated workforce delivering business objectives",
+     "resultType": "good"
+    },
+    "meta": "6 concepts",
+    "title": "Motivation in Practice",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Piece-rate pay</strong> — payment per unit of output produced; it directly incentivises higher output (Taylor's approach) but can lead to quality problems if workers rush to produce more.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Performance-related pay (PRP)</strong> — bonuses or salary increases linked to individual targets or appraisal outcomes; it rewards high performers but can create unhealthy competition and demotivate those who miss targets.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Profit sharing and share ownership</strong> schemes align employee interests with company performance; when staff own shares, they think more like owners and are motivated to increase long-term value.",
+        "type": "mech"
+       }
+      ],
+      "title": "FINANCIAL METHODS"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Job enrichment</strong> — redesigning a role to include more challenging, varied and meaningful tasks, giving the employee greater responsibility; this directly applies Herzberg's motivators.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Delegation</strong> involves passing authority to subordinates to make decisions; it develops their skills, shows trust, and frees managers to focus on strategic tasks.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Empowerment</strong> goes further than delegation by giving employees genuine control over how they do their work; empowered teams at companies like Google and 3M have driven major innovations.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Non-financial methods often have a <strong>longer-lasting motivational effect</strong> than pay rises; Herzberg's research showed that salary increases are quickly taken for granted, but meaningful work continues to motivate.",
+        "type": "imp"
+       },
+       {
+        "text": "Motivation methods link to leadership style; autocratic leaders rely on financial incentives and control, while democratic leaders use empowerment and delegation to motivate through involvement.",
+        "type": "link"
+       }
+      ],
+      "title": "NON-FINANCIAL METHODS"
+     }
+    ],
+    "keyIdea": "Theory becomes useful only when translated into practice; firms must choose the right blend of financial and non-financial motivators based on the type of work, workforce expectations and budget constraints.",
+    "takeaway": [
+     "Financial incentives attract and retain staff but rarely sustain long-term motivation.",
+     "Job enrichment and empowerment address Herzberg's motivators and create lasting engagement.",
+     "The best approach combines financial security with meaningful, challenging work."
+    ],
+    "misconception": "Students say money is the best motivator. Wrong because Herzberg's research shows that pay is a hygiene factor that prevents dissatisfaction but does not create lasting motivation. Instead write: financial rewards are necessary to attract and retain staff, but non-financial methods like job enrichment, delegation and empowerment are more effective at sustaining long-term motivation and engagement."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Assess situation (crisis, creative project, routine task)",
+      "Choose appropriate leadership style",
+      "Adapt as circumstances change"
+     ],
+     "result": "Leadership style matched to context for maximum effectiveness",
+     "resultType": "good"
+    },
+    "meta": "6 concepts",
+    "title": "Leadership Styles",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Management</strong> — the process of organising resources, setting targets and monitoring performance to achieve objectives; managers focus on systems, control and efficiency.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Leadership</strong> — the ability to inspire, motivate and influence others to achieve a shared vision; leaders focus on direction, innovation and change.",
+        "type": "def"
+       },
+       {
+        "text": "Effective organisations need both; <strong>managers ensure the business runs smoothly today</strong>, while <strong>leaders prepare the business for tomorrow</strong>.",
+        "type": "mech"
+       }
+      ],
+      "title": "MANAGEMENT vs LEADERSHIP"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Autocratic leadership</strong> — the leader makes all decisions without consulting the workforce; it is fast and clear but can demotivate skilled employees who want input.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Democratic leadership</strong> — the leader consults employees and considers their views before making decisions; it improves morale and idea generation but slows decision-making.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Laissez-faire leadership</strong> — the leader sets the vision but delegates almost all decision-making to employees; it suits highly skilled, self-motivated teams but can lead to drift and inconsistency.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Paternalistic leadership</strong> — the leader acts in the best interests of employees like a parent, consulting and explaining decisions; it builds loyalty but can feel patronising to experienced staff.",
+        "type": "mech"
+       },
+       {
+        "text": "As a business grows from a start-up to a larger organisation, the founder must often <strong>transition from entrepreneur to leader</strong>, delegating operational control and developing a management team rather than making every decision personally.",
+        "type": "imp"
+       },
+       {
+        "text": "Leadership style links to organisational structure; autocratic leadership fits tall hierarchies with narrow spans, while democratic and laissez-faire styles suit flat structures with wide spans and empowered teams.",
+        "type": "link"
+       }
+      ],
+      "title": "LEADERSHIP STYLES"
+     }
+    ],
+    "keyIdea": "Leadership is about influencing people toward a vision, not just managing processes; the most effective leaders adapt their style to the situation rather than applying one approach to every scenario.",
+    "takeaway": [
+     "Management is about control and efficiency; leadership is about vision and inspiration — firms need both.",
+     "No single leadership style is best; effective leaders adapt to the situation and the workforce.",
+     "As firms grow, founders must evolve from hands-on entrepreneurs to strategic leaders who delegate."
+    ],
+    "examMatters": "Examiners reward answers that evaluate which leadership style suits the context rather than stating one style is universally best. In a crisis (e.g. factory fire), autocratic leadership is appropriate. For a product design brainstorm, democratic or laissez-faire works better."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "managing-people:quiz:9bf73830",
+    "options": [
+     "Commission",
+     "Salary",
+     "Piece rate",
+     "Profit sharing"
+    ],
+    "question": "A factory worker is paid £2 for every unit they produce. This is an example of:",
+    "explanation": "Piece rate pays workers per unit of output produced. Commission is a percentage of sales value. Salary is a fixed annual payment. Profit sharing distributes a share of overall business profits.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-people:quiz:b999ae41",
+    "options": [
+     "Achievement",
+     "Recognition",
+     "Working conditions",
+     "Responsibility"
+    ],
+    "question": "According to Herzberg, which of the following is a hygiene factor?",
+    "explanation": "Working conditions are a hygiene factor — if poor, they cause dissatisfaction, but improving them does not actively motivate. Achievement, recognition, and responsibility are all motivators that drive genuine satisfaction.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-people:quiz:12ec4073",
+    "options": [
+     "Delegation",
+     "Delayering",
+     "Outsourcing",
+     "Centralisation"
+    ],
+    "question": "A business removes two levels of middle management to speed up communication. This is called:",
+    "explanation": "Delayering is the removal of management layers to create a flatter organisational structure. Delegation passes authority downward. Outsourcing contracts functions to external providers. Centralisation concentrates decision-making at the top.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-people:quiz:8e3685b5",
+    "options": [
+     "Maslow",
+     "Herzberg",
+     "Mayo",
+     "Taylor"
+    ],
+    "question": "Which motivation theorist is most associated with the idea that workers are primarily motivated by money?",
+    "explanation": "Frederick Taylor (scientific management) believed workers are primarily motivated by financial reward. Mayo emphasised social factors. Maslow identified a hierarchy of needs. Herzberg distinguished motivators from hygiene factors.",
+    "correctIndex": 3
+   },
+   {
+    "id": "managing-people:quiz:784536b8",
+    "options": [
+     "Dismissal for misconduct",
+     "Voluntary resignation",
+     "Redundancy",
+     "Unfair dismissal"
+    ],
+    "question": "An employee is let go because the company automated their role. This is an example of:",
+    "explanation": "Redundancy occurs when the job role is no longer needed — in this case due to automation. It relates to the role, not the individual's performance. Dismissal relates to the employee's behaviour or ability.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-people:quiz:10a40e01",
+    "options": [
+     "Autocratic",
+     "Paternalistic",
+     "Democratic",
+     "Laissez-faire"
+    ],
+    "question": "Which leadership style involves the leader making decisions in the best interests of employees, like a parent?",
+    "explanation": "Paternalistic leadership involves the leader acting as a 'father figure', making decisions they believe are best for employees. Autocratic makes decisions without consultation. Democratic consults staff. Laissez-faire delegates fully.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-people:quiz:b0dfe707",
+    "options": [
+     "Self-actualisation",
+     "Esteem",
+     "Safety",
+     "Social"
+    ],
+    "question": "According to Maslow, which need must be satisfied before a worker can be motivated by recognition and status?",
+    "explanation": "Maslow's hierarchy states lower needs must be met first. Social needs (belonging, teamwork) come below esteem needs (recognition, status). Workers must feel they belong before they can be motivated by recognition.",
+    "correctIndex": 3
+   },
+   {
+    "id": "managing-people:quiz:ae431dc7",
+    "options": [
+     "Faster communication through the organisation",
+     "More layers of management in the hierarchy",
+     "Greater employee autonomy",
+     "Lower management costs"
+    ],
+    "question": "A narrow span of control is most likely to result in:",
+    "explanation": "A narrow span of control means each manager supervises fewer people, which requires more managers and therefore more layers in the hierarchy. This slows communication and increases costs, but allows closer supervision.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-people:quiz:0469fbbf",
+    "options": [
+     "It is cheaper and faster",
+     "It brings in new ideas and perspectives",
+     "The candidate is already known to the business",
+     "It always leads to better employee morale"
+    ],
+    "question": "Which is an advantage of external recruitment over internal recruitment?",
+    "explanation": "External recruitment brings fresh skills, ideas, and perspectives from outside the organisation. Internal recruitment is cheaper and faster (A) and means the candidate is known (C). External recruitment does not always improve morale — internal staff may feel overlooked.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-people:quiz:174a4f96",
+    "options": [
+     "Taylor",
+     "Mayo",
+     "Herzberg",
+     "Maslow"
+    ],
+    "question": "Job enrichment is most closely linked to which theorist?",
+    "explanation": "Job enrichment — giving workers more meaningful, challenging tasks with responsibility — is directly linked to Herzberg's motivators (achievement, recognition, responsibility). It goes beyond financial reward (Taylor) and social interaction (Mayo).",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-people:quiz:382cf5e5",
+    "options": [
+     "Self-actualisation",
+     "Esteem needs",
+     "Social (love and belonging) needs",
+     "Physiological needs"
+    ],
+    "question": "According to Maslow's hierarchy of needs, which level comes immediately after safety needs?",
+    "explanation": "Maslow's hierarchy from bottom to top is: physiological, safety, social (love/belonging), esteem, and self-actualisation. Social needs follow safety needs.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-people:quiz:21aade21",
+    "options": [
+     "Social interaction with colleagues",
+     "Opportunities for self-actualisation",
+     "Financial incentives (money)",
+     "Recognition and praise"
+    ],
+    "question": "Frederick Taylor's theory of scientific management suggests that workers are primarily motivated by:",
+    "explanation": "Taylor believed workers are motivated primarily by money. His approach focused on finding the most efficient way to perform tasks and paying piece rates to incentivise output.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-people:quiz:67b87e90",
+    "options": [
+     "Tall structures have more layers of hierarchy and narrower spans of control; flat structures have fewer layers and wider spans",
+     "Tall structures have fewer managers; flat structures have more managers",
+     "Tall structures are more efficient; flat structures are always less efficient",
+     "There is no difference; the terms are interchangeable"
+    ],
+    "question": "What is the difference between a 'tall' and a 'flat' organisational structure?",
+    "explanation": "Tall structures have many hierarchical levels with narrow spans of control. Flat structures have few levels with wider spans of control, encouraging faster communication.",
+    "correctIndex": 0
+   },
+   {
+    "id": "managing-people:quiz:8287cc2a",
+    "options": [
+     "Achievement",
+     "Recognition",
+     "Working conditions",
+     "Responsibility"
+    ],
+    "question": "According to Herzberg's two-factor theory, which of the following is a 'hygiene factor'?",
+    "explanation": "Hygiene factors (e.g. pay, working conditions, company policy) do not motivate but cause dissatisfaction if inadequate. Motivators (e.g. achievement, recognition) actively drive motivation.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-people:quiz:f8cb4819",
+    "options": [
+     "The total number of employees in the business",
+     "The number of subordinates directly reporting to one manager",
+     "The number of departments in the business",
+     "The number of products a business sells"
+    ],
+    "question": "What does 'span of control' refer to in an organisation?",
+    "explanation": "Span of control is the number of employees directly managed by one supervisor. A wider span means more direct reports; a narrower span means fewer.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-people:quiz:a2499c23",
+    "options": [
+     "Taylor (financial incentives only)",
+     "Maslow and Herzberg (addressing higher-order needs and motivating factors)",
+     "Mayo (social relationships are the only motivator)",
+     "Weber (strict bureaucratic rules)"
+    ],
+    "question": "A tech company offers its software engineers flexible working hours, free professional development, and equity shares. This approach is most consistent with the theories of:",
+    "explanation": "Flexible hours, development, and equity address esteem and self-actualisation (Maslow) and are motivating factors like recognition and growth (Herzberg), going beyond basic financial incentives.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-people:quiz:07200d66",
+    "options": [
+     "Herzberg's motivators",
+     "Maslow's self-actualisation",
+     "Taylor's scientific management",
+     "Mayo's human relations theory"
+    ],
+    "question": "A factory introduces piece-rate pay, where workers are paid per unit produced. This is most closely associated with:",
+    "explanation": "Piece-rate pay directly links earnings to output, reflecting Taylor's belief that financial incentives are the primary driver of worker productivity.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-people:quiz:c6c28697",
+    "options": [
+     "Headhunting through an executive recruitment agency",
+     "Online job boards and social media advertising",
+     "Internal promotions only",
+     "Walk-in interviews with no advertising"
+    ],
+    "question": "A company is growing rapidly and needs to recruit 50 new staff. Which recruitment method is most cost-effective for filling these roles quickly?",
+    "explanation": "Online job boards and social media reach a large pool of candidates quickly and at relatively low cost compared to recruitment agencies or headhunting.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-people:quiz:805bbfed",
+    "options": [
+     "Increasing pay further",
+     "Improving hygiene factors like office temperature",
+     "Introducing job enrichment and greater responsibility",
+     "Reducing working hours"
+    ],
+    "question": "Following a workplace survey, employees report that while pay is fair, they feel their work is repetitive and lacks challenge. According to Herzberg, the firm should focus on:",
+    "explanation": "Pay (a hygiene factor) is satisfactory. Herzberg would recommend addressing motivators like job enrichment, responsibility, and opportunities for achievement to increase motivation.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-people:quiz:6a762e82",
+    "options": [
+     "Workers were paid more during the experiments",
+     "Workers responded positively to being observed and feeling valued by management",
+     "The factory lighting was improved",
+     "Workers were threatened with dismissal if they did not work harder"
+    ],
+    "question": "Elton Mayo's Hawthorne Studies found that productivity increased primarily because:",
+    "explanation": "Mayo's research showed that social factors and the attention workers received from management (the Hawthorne Effect) were more important than physical conditions in raising productivity.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-people:quiz:326e866b",
+    "options": [
+     "True, because all employees value money above everything else",
+     "Financial incentives are effective for basic motivation but may not sustain long-term engagement; non-financial factors are also important",
+     "False, because money has no effect on motivation",
+     "True, but only for employees in the manufacturing sector"
+    ],
+    "question": "Evaluate the view that financial incentives are the most effective way to motivate employees.",
+    "explanation": "Financial incentives address lower-level needs and hygiene factors, but sustained motivation often requires non-financial factors such as recognition, autonomy, and career development.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-people:quiz:4885a007",
+    "options": [
+     "Communication will become slower",
+     "Managers will have narrower spans of control",
+     "Remaining managers may be overburdened, reducing the quality of supervision and decision-making",
+     "Delayering always leads to higher costs"
+    ],
+    "question": "A business is considering delayering its organisational structure. Which is the most significant potential disadvantage?",
+    "explanation": "Delayering removes management layers, widening spans of control. This can overload remaining managers, reducing supervisory quality, though it speeds up communication.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-people:quiz:d42ecbf1",
+    "options": [
+     "It is perfectly accurate because all employees progress through needs in the same order",
+     "It provides a useful framework for understanding diverse employee needs but is limited because individuals may not follow a fixed hierarchy",
+     "It is useless because it was developed too long ago",
+     "It only applies to employees in developed countries"
+    ],
+    "question": "To what extent is Maslow's hierarchy of needs a useful tool for managers?",
+    "explanation": "Maslow's hierarchy offers a helpful framework but assumes a fixed order of needs. In reality, individuals may prioritise different needs simultaneously and the hierarchy varies across cultures.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-people:quiz:85783d3f",
+    "options": [
+     "External recruitment is always cheaper than internal recruitment",
+     "External candidates bring fresh ideas, new perspectives, and skills that may not exist internally",
+     "External recruitment is faster than internal recruitment",
+     "Internal candidates are always less qualified"
+    ],
+    "question": "A firm is debating whether to use internal or external recruitment for a senior management position. Which argument best supports external recruitment?",
+    "explanation": "External recruitment can bring in new skills, experiences, and perspectives that drive innovation. However, it is typically more expensive, slower, and carries higher risk of poor cultural fit.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-people:quiz:d340b5dc",
+    "options": [
+     "Yes, because employees always prefer to be consulted",
+     "No, because in a crisis situation or when quick decisions are needed, autocratic leadership may be more effective",
+     "Yes, because autocratic leadership is illegal in most countries",
+     "No, because democratic leadership always leads to slower growth"
+    ],
+    "question": "Evaluate whether a democratic leadership style is always preferable to an autocratic style.",
+    "explanation": "Democratic leadership improves motivation and creativity through consultation, but autocratic leadership may be necessary in crises, time-sensitive situations, or with inexperienced teams.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "managing-people:practice:62295a8b",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Difference 1: On-the-job training takes place in the workplace while the employee performs their role (1 mark), whereas off-the-job training takes place away from the workplace, such as at a college or training centre (1 mark).\n\nDifference 2: On-the-job training is usually cheaper and more specific to the role (1 mark), while off-the-job training can provide broader skills and recognised qualifications but is typically more expensive (1 mark).",
+    "question": "Outline two differences between on-the-job and off-the-job training. (4 marks)"
+   },
+   {
+    "id": "managing-people:practice:96cafc3d",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Herzberg distinguished between hygiene factors and motivators (1 mark). Hygiene factors such as pay, working conditions and company policies do not motivate but cause dissatisfaction if inadequate — the call centre must ensure these meet employee expectations (1 mark). Motivators such as recognition, responsibility, achievement and opportunities for personal growth create genuine motivation (1 mark). The call centre could introduce recognition schemes for high performers (1 mark), give employees more autonomy over how they handle calls (1 mark), and create career progression pathways to provide a sense of achievement (1 mark).",
+    "question": "Explain how Herzberg's two-factor theory could be applied to improve employee motivation at a call centre. (6 marks)"
+   },
+   {
+    "id": "managing-people:practice:4bc0bcb2",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Advantages: faster communication and decision-making as there are fewer layers of hierarchy (2 marks); employees have wider spans of control which encourages delegation and empowerment (2 marks); lower management costs and a less bureaucratic culture that suits innovation (1 mark).\n\nDisadvantages: managers may be overstretched with too many direct reports (2 marks); fewer promotion opportunities could reduce motivation for ambitious employees (1 mark); as the company grows, coordination becomes harder without clear hierarchy (1 mark).\n\nJudgement: A flat structure is well-suited to small, innovative tech firms but may need to evolve as the business grows — many tech companies adopt matrix or hybrid structures at scale (1 mark).",
+    "question": "Assess the advantages and disadvantages of a flat organisational structure for a fast-growing technology company. (10 marks)"
+   },
+   {
+    "id": "managing-people:practice:a185f299",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define financial and non-financial motivation methods (2 marks).\n\nFor financial methods: provide direct, tangible incentives — bonuses, commission, and performance-related pay give employees a clear reason to work harder (3 marks); Taylor's scientific management theory supports the view that workers are primarily motivated by money (2 marks); particularly effective for routine or manual work where output is measurable (2 marks).\n\nFor non-financial methods: job enrichment, empowerment, team working and flexible working address higher-level needs identified by Maslow and Herzberg (3 marks); build long-term engagement, loyalty and intrinsic motivation rather than short-term effort (2 marks); particularly effective for skilled or professional workers who already receive adequate pay (2 marks).\n\nEvaluation: Effectiveness depends on the type of work, the level of employee, and existing pay levels. Shop floor workers may respond more to financial incentives, while managers may value autonomy and recognition. The most effective approach usually combines both, using adequate pay as a foundation and non-financial methods to drive sustained performance (4 marks).",
+    "question": "Evaluate the extent to which financial methods of motivation are more effective than non-financial methods for improving workforce performance. (20 marks)"
+   },
+   {
+    "id": "managing-people:practice:26dc87a9",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "Span of control refers to the number of subordinates (employees) that a manager is directly responsible for (1 mark). A wide span of control means a manager oversees many employees (1 mark), while a narrow span means fewer direct reports (1 mark). The appropriate span depends on factors such as the complexity of the work, the skill level of employees, and the management style used (1 mark).",
+    "question": "Define the term 'span of control'. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "managing-people:card:fda69b9e",
+    "back": "<strong>Investing in employees</strong> through training, development, and good conditions — viewing them as the firm's most valuable resource. Leads to higher motivation and retention.",
+    "front": "What does it mean to treat staff as an asset?"
+   },
+   {
+    "id": "managing-people:card:872a19c5",
+    "back": "<strong>Minimising labour expenses</strong> — paying low wages, minimal training, using flexible contracts. Reduces costs but risks high turnover, low morale, and poor service.",
+    "front": "What does it mean to treat staff as a cost?"
+   },
+   {
+    "id": "managing-people:card:280501d5",
+    "back": "Training employees to <strong>perform a range of tasks</strong> — increases workforce flexibility and reduces dependency on specific individuals.",
+    "front": "What is multi-skilling?"
+   },
+   {
+    "id": "managing-people:card:13dd0d1c",
+    "back": "<strong>Dismissal</strong>: employee is fired for misconduct or poor performance (relates to the individual). <strong>Redundancy</strong>: the job role is no longer needed (relates to the role, not the person).",
+    "front": "What is the difference between dismissal and redundancy?"
+   },
+   {
+    "id": "managing-people:card:da3e8294",
+    "back": "<strong>Internal</strong>: filling vacancies from within the business (promotion, redeployment). <strong>External</strong>: attracting candidates from outside (job adverts, agencies, headhunting).",
+    "front": "What is the difference between internal and external recruitment?"
+   },
+   {
+    "id": "managing-people:card:7b3583bb",
+    "back": "<strong>Induction</strong> (introductory for new starters), <strong>on-the-job</strong> (learning while working), and <strong>off-the-job</strong> (external courses, workshops, conferences).",
+    "front": "Name three types of training."
+   },
+   {
+    "id": "managing-people:card:791bd998",
+    "back": "The <strong>number of subordinates</strong> directly managed by one person. A wide span means many direct reports; a narrow span means few.",
+    "front": "What is span of control?"
+   },
+   {
+    "id": "managing-people:card:b3b8dc15",
+    "back": "The <strong>line of authority</strong> along which orders and decisions are passed down through the levels of an organisation.",
+    "front": "What is the chain of command?"
+   },
+   {
+    "id": "managing-people:card:714b62df",
+    "back": "An organisational structure where employees work in <strong>cross-functional project teams</strong> alongside their departmental structure, reporting to both a functional and a project manager.",
+    "front": "What is a matrix structure?"
+   },
+   {
+    "id": "managing-people:card:0c4b3bac",
+    "back": "<strong>Removing management layers</strong> from an organisation to create a flatter structure — reduces costs, speeds up communication, but increases managers' spans of control.",
+    "front": "What is delayering?"
+   },
+   {
+    "id": "managing-people:card:ad5cd6c1",
+    "back": "<strong>Frederick Taylor</strong> believed workers are motivated by <strong>money</strong>. He advocated piece rate pay, division of labour, and finding the 'one best way' to perform each task (scientific management).",
+    "front": "Summarise Taylor's theory of motivation."
+   },
+   {
+    "id": "managing-people:card:c978278b",
+    "back": "<strong>Elton Mayo</strong> found through the Hawthorne Studies that <strong>social factors, teamwork, and management attention</strong> motivate workers more than physical conditions or pay alone.",
+    "front": "Summarise Mayo's theory of motivation."
+   },
+   {
+    "id": "managing-people:card:a9d7f439",
+    "back": "From bottom to top: <strong>Physiological</strong> (basic survival), <strong>Safety</strong> (security), <strong>Social</strong> (belonging), <strong>Esteem</strong> (recognition), <strong>Self-actualisation</strong> (fulfilling potential).",
+    "front": "Name Maslow's five levels of needs."
+   },
+   {
+    "id": "managing-people:card:c34ca990",
+    "back": "<strong>Motivators</strong> (achievement, recognition, responsibility) create satisfaction and drive motivation. <strong>Hygiene factors</strong> (pay, conditions, policies) prevent dissatisfaction but do not motivate.",
+    "front": "What is the difference between Herzberg's motivators and hygiene factors?"
+   },
+   {
+    "id": "managing-people:card:929f539c",
+    "back": "Giving employees more <strong>meaningful, challenging tasks</strong> with greater responsibility and autonomy. Linked to Herzberg's motivators and Maslow's esteem/self-actualisation needs.",
+    "front": "What is job enrichment?"
+   },
+   {
+    "id": "managing-people:card:e4174586",
+    "back": "<strong>Management</strong> focuses on planning, organising, and controlling resources (doing things right). <strong>Leadership</strong> focuses on inspiring and guiding people towards a vision (doing the right things).",
+    "front": "What is the difference between management and leadership?"
+   },
+   {
+    "id": "managing-people:card:1d4e5249",
+    "back": "The leader makes <strong>all decisions without consulting</strong> employees. Enables quick decisions and clear direction but can demotivate staff and stifle creativity.",
+    "front": "Describe autocratic leadership."
+   },
+   {
+    "id": "managing-people:card:d04a54f5",
+    "back": "The leader <strong>involves employees in decision-making</strong>, consulting them and considering their input. Motivating and generates ideas but can be slow.",
+    "front": "Describe democratic leadership."
+   },
+   {
+    "id": "managing-people:card:03a1a628",
+    "back": "The leader takes a <strong>hands-off approach</strong>, giving employees freedom to make their own decisions. Encourages creativity but can lead to lack of direction and coordination.",
+    "front": "Describe laissez-faire leadership."
+   },
+   {
+    "id": "managing-people:card:465d06c6",
+    "back": "Giving employees the <strong>authority to make decisions</strong> about their own work — increases ownership, motivation, and job satisfaction.",
+    "front": "What is empowerment?"
+   },
+   {
+    "id": "managing-people:card:c8cb3767",
+    "back": "Managers identify which level of need is unmet for employees → Lower-level needs (physiological, safety) are addressed through fair pay and job security → Social needs are met through teamwork and a positive work culture → Esteem needs are addressed through recognition and responsibility → Self-actualisation is supported through challenging roles and development opportunities → Motivation increases → Labour productivity and retention improve",
+    "type": "chain",
+    "front": "Trace the effect of applying Maslow's hierarchy to improve worker motivation."
+   },
+   {
+    "id": "managing-people:card:1a99ba49",
+    "back": "Employees leave the business frequently → Recruitment and training costs rise → Experienced workers are lost → Remaining staff face increased workloads → Productivity falls during transition periods → Customer service quality may decline → Business reputation as an employer may suffer → Further difficulty attracting quality candidates, worsening the problem",
+    "type": "chain",
+    "front": "Trace the effect of high labour turnover on a business."
+   },
+   {
+    "id": "managing-people:card:014fab2d",
+    "back": "Business invests in employee training programmes → Workers develop new skills and knowledge → Labour productivity increases → Quality of output improves → Fewer errors and less waste reduce costs → Employees feel valued, improving motivation and retention → Customer satisfaction rises due to better products and service → Sales revenue and profitability increase",
+    "type": "chain",
+    "front": "Trace the chain from effective training to improved business performance."
+   },
+   {
+    "id": "managing-people:card:c8cb3767-2",
+    "back": "Managers identify which level of need is unmet for employees → Lower-level needs (physiological, safety) are addressed through fair pay and job security → Social needs are met through teamwork and a positive work culture → Esteem needs are addressed through recognition and responsibility → Self-actualisation is supported through challenging roles and development opportunities → Motivation increases → Labour productivity and retention improve",
+    "type": "chain",
+    "front": "Trace the effect of applying Maslow's hierarchy to improve worker motivation."
+   },
+   {
+    "id": "managing-people:card:1a99ba49-2",
+    "back": "Employees leave the business frequently → Recruitment and training costs rise → Experienced workers are lost → Remaining staff face increased workloads → Productivity falls during transition periods → Customer service quality may decline → Business reputation as an employer may suffer → Further difficulty attracting quality candidates, worsening the problem",
+    "type": "chain",
+    "front": "Trace the effect of high labour turnover on a business."
+   },
+   {
+    "id": "managing-people:card:014fab2d-2",
+    "back": "Business invests in employee training programmes → Workers develop new skills and knowledge → Labour productivity increases → Quality of output improves → Fewer errors and less waste reduce costs → Employees feel valued, improving motivation and retention → Customer satisfaction rises due to better products and service → Sales revenue and profitability increase",
+    "type": "chain",
+    "front": "Trace the chain from effective training to improved business performance."
+   }
+  ],
+  "section_diagrams": null,
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "Taylor argued workers are motivated by money — piece-rate pay increases output but ignores non-financial needs.",
+      "Maslow's hierarchy suggests escalating needs: physiological → safety → social → esteem → self-actualisation.",
+      "Herzberg distinguished hygiene factors (pay, conditions — prevent dissatisfaction) from motivators (achievement, responsibility — create satisfaction).",
+      "Modern firms combine financial incentives (bonuses, profit-sharing) with non-financial motivators (training, empowerment, recognition)."
+     ],
+     "title": "Motivation theories explain what drives performance",
+     "result": "Effective motivation combines financial rewards with meaningful work, recognition and development opportunities."
+    },
+    {
+     "steps": [
+      "Autocratic leaders decide without consultation — fast but can reduce morale and creativity.",
+      "Democratic leaders involve employees — improving motivation and ideas but slowing decisions.",
+      "Laissez-faire leaders delegate extensively — effective with skilled teams but risks confusion without direction.",
+      "The most effective style depends on context: crisis favours autocratic, creative projects favour democratic."
+     ],
+     "title": "Leadership style affects employee engagement",
+     "result": "No single leadership style is best — effective leaders adapt their approach to the situation and team."
+    },
+    {
+     "steps": [
+      "Tall structures have many hierarchy layers — clear command chains but slow communication and high overheads.",
+      "Flat structures have few layers — faster communication and more autonomy but wider spans of control.",
+      "Centralised structures keep decisions at the top — ensuring consistency but reducing local responsiveness.",
+      "Decentralised structures push decisions down — increasing speed and empowerment but risking inconsistency."
+     ],
+     "title": "Organisational structure shapes communication and control",
+     "result": "Structure involves trade-offs between control and flexibility — the best fit depends on business size and strategy."
+    },
+    {
+     "steps": [
+      "Motivated, well-led employees in an appropriate structure are more productive — more output per hour.",
+      "Higher productivity reduces unit labour costs, improving competitiveness and profit margins.",
+      "Investment in training develops skills, enabling workers to handle higher-value tasks and adapt to change.",
+      "Low staff turnover reduces recruitment costs and preserves institutional knowledge."
+     ],
+     "title": "Effective people management raises productivity",
+     "result": "People management is a key source of competitive advantage — engaged employees drive productivity, quality and innovation."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Motivation theories are culturally biased",
+     "content": "Maslow and Herzberg developed theories in Western contexts. In different cultures, social belonging or security may outweigh self-actualisation. Effective motivation requires understanding the specific workforce context."
+    },
+    {
+     "title": "Flexible working has trade-offs",
+     "content": "Remote work and flexitime improve work-life balance but can weaken team cohesion and make supervision harder. Not all roles suit flexibility, creating potential inequity within the workforce."
+    },
+    {
+     "title": "Training investment carries poaching risk",
+     "content": "Firms that invest heavily in training risk losing skilled workers to competitors offering higher wages. This discourages investment in transferable skills. But firms that don't train risk falling behind technologically."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "managing-people:mistake:4a29e93d",
+    "title": "Confusing Dismissal and Redundancy",
+    "examTip": "In exam answers, clearly state whether the scenario involves dismissal (individual's fault) or redundancy (role eliminated). This distinction is worth marks.",
+    "mistake": "Students use dismissal and redundancy interchangeably or mix up which relates to the individual vs the role.",
+    "correction": "Dismissal is about the individual (misconduct, poor performance). Redundancy is about the role (no longer needed due to restructuring, automation, or declining demand). Redundancy entitles the employee to redundancy pay."
+   },
+   {
+    "id": "managing-people:mistake:48cd80ca",
+    "title": "Oversimplifying Motivation Theories",
+    "examTip": "For high marks, name the theory, explain it briefly, apply it to the context, and evaluate its limitations. Use the structure: theory → application → evaluation.",
+    "mistake": "Students just list the theory without applying it to the business context or evaluating its limitations.",
+    "correction": "Always apply the theory to the specific scenario. For example, don't just describe Maslow's hierarchy — explain which level is relevant and how the business could address that need. Then evaluate: Maslow's hierarchy may not apply in all cultures and assumes needs are met sequentially."
+   },
+   {
+    "id": "managing-people:mistake:b5312d0a",
+    "title": "Thinking Flat Structures Are Always Better",
+    "examTip": "Always evaluate both tall and flat structures. Consider the business's size, industry, and culture when recommending a structure.",
+    "mistake": "Students assume flat organisational structures are superior because they enable faster communication.",
+    "correction": "Flat structures can overload managers (too-wide spans of control), create confusion about authority, and make career progression less clear. Tall structures suit large, complex organisations that need clear reporting lines and close supervision."
+   },
+   {
+    "id": "managing-people:mistake:03c63778",
+    "title": "Confusing Herzberg's Two Factors",
+    "examTip": "Remember: hygiene factors are like the foundation — they must be adequate, but building higher motivation requires motivators. Use this distinction clearly in your answers.",
+    "mistake": "Students claim that improving hygiene factors (like pay) will motivate workers.",
+    "correction": "Herzberg argued that hygiene factors only prevent dissatisfaction — they do not create motivation. Improving pay removes the source of complaint but does not make workers enthusiastic. Only motivators (achievement, recognition, responsibility) create genuine satisfaction and motivation."
+   },
+   {
+    "id": "managing-people:mistake:9210f935",
+    "title": "Not Linking Leadership Style to Context",
+    "examTip": "Always justify your recommended leadership style with reference to the specific context. Use phrases like 'in this situation... because...' to show contextual awareness.",
+    "mistake": "Students state that one leadership style (usually democratic) is the best without considering the situation.",
+    "correction": "The most effective leadership style depends on the context — the nature of the task, the skills of the workforce, the time available, and the business culture. Autocratic leadership may be best in a crisis; democratic works well with skilled, experienced teams."
+   }
+  ]
+ }
+}

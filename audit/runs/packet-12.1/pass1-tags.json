@@ -1,0 +1,28 @@
+{
+  "note": "Pass 1 of the two-pass tagging method, packet 12.1 E007. Written by the packet's author reading each question's TEXT ONLY against the Economics 1.3.5 rows of audit/raw/spec-items.json, before pass 2 was run on it. Keys are <bank>:<ref>. Two versions of the section_practice bank are tagged because both exist: `live:` is the t=0 dump in audit/content-sections/, which is what a student is served until the packet 5/7 ship checkpoint, and `staged:` is the packet-25 rebuild in audit/snapshots/packet-25-bundle__economics__market-failure.json, which is what publishing it would serve.",
+  "subject": "economics",
+  "topic": "1.3.5",
+  "tags": {
+    "section_practice.live:0": ["ECON-1.3.5-1b-1", "ECON-1.3.5-2b"],
+    "section_practice.live:1": ["ECON-1.3.5-1b-2", "ECON-1.3.5-3a-2", "ECON-1.3.5-3b"],
+    "section_practice.live:2": ["ECON-1.3.5-1a", "ECON-1.3.5-1b-3", "ECON-1.3.5-2c-4"],
+    "section_practice.live:3": ["ECON-1.3.5-2b", "ECON-1.3.5-2c-3", "ECON-1.3.5-2d-2"],
+    "section_practice.live:4": ["ECON-1.3.5-1b-3", "ECON-1.3.5-4a", "ECON-1.3.5-4b"],
+
+    "section_practice.staged:0": ["ECON-1.3.5-1a"],
+    "section_practice.staged:1": ["ECON-1.3.5-2b", "ECON-1.3.5-2c-3"],
+    "section_practice.staged:2": ["ECON-1.3.5-2c-3", "ECON-1.3.5-2d-3"],
+    "section_practice.staged:3": ["ECON-1.3.5-2b", "ECON-1.3.5-2c-3"],
+    "section_practice.staged:4": ["ECON-1.3.5-2d-2", "ECON-1.3.5-2d-3"],
+    "section_practice.staged:5": ["ECON-1.3.5-2c-2", "ECON-1.3.5-2d-1", "ECON-1.3.5-2e-3"],
+    "section_practice.staged:6": ["ECON-1.3.5-2c-4", "ECON-1.3.5-2e-1"],
+    "section_practice.staged:7": ["ECON-1.3.5-1b-2", "ECON-1.3.5-3a-2", "ECON-1.3.5-3b"],
+    "section_practice.staged:8": ["ECON-1.3.5-1b-3", "ECON-1.3.5-4b", "ECON-1.3.5-4c-1"],
+    "section_practice.staged:9": ["ECON-1.3.5-1b-4", "ECON-1.3.5-5a", "ECON-1.3.5-5b-2"],
+    "section_practice.staged:10": ["ECON-1.3.5-1b-5", "ECON-1.3.5-6a", "ECON-1.3.5-6b-1", "ECON-1.3.5-6b-2"],
+
+    "modelAnswers:neg-externality-4": ["ECON-1.3.5-1b-1", "ECON-1.3.5-2b"],
+    "modelAnswers:negative-externality-tax-8": ["ECON-1.3.5-1a", "ECON-1.3.5-2b", "ECON-1.3.5-2c-3", "ECON-1.3.5-2d-2"],
+    "modelAnswers:market-failure-government-intervention-20": ["ECON-1.3.5-1a", "ECON-1.3.5-1b-1", "ECON-1.3.5-1b-2", "ECON-1.3.5-1b-3"]
+  }
+}

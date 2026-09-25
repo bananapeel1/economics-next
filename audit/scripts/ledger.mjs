@@ -9,6 +9,7 @@
 //   node audit/scripts/ledger.mjs confirm <id> --by "<who>" --evidence "<file:line or repro>"
 //   node audit/scripts/ledger.mjs reject <id> --by "<who>" --evidence "<why it is not fixed>"
 //   node audit/scripts/ledger.mjs wontfix <id> --note "<reason>"
+//   node audit/scripts/ledger.mjs sev <id>... --to <level> --note "<evidence>"   re-grade severity
 //   node audit/scripts/ledger.mjs reopen <id>... --note "<why>"    back to open (e.g. moved to a later packet)
 //   node audit/scripts/ledger.mjs unverified <n>                claimed-but-unconfirmed ids for packet n (gate check)
 //   node audit/scripts/ledger.mjs add <n> <id> "<title>" [--file <path>]   mint a feature item (no audit finding behind it)
@@ -71,6 +72,18 @@ switch (cmd) {
   }
   case 'claim': {
     const n = Number(ids[0]);
+    // `claim F004 F006` (no packet number) used to write closed_by = "packet-NaN" and report
+    // success. The gate matches on `closed_by === packet-<n>`, so those items became invisible to
+    // their own packet and it reported clear with unverified work sitting in it — the precise
+    // failure this gate exists to prevent, produced by a typo. It is now an error.
+    // Sub-packets are real: 3.1, 13.1 and 5.1 all exist, and D001-D008 are closed_by "packet-13.1".
+    // The guard below only has to reject a MISSING number (Number("F004") is NaN), so it tests for a
+    // finite number, not an integer — isInteger locked the CLI out of the convention the ledger uses.
+    if (!Number.isFinite(n) || n < 0) {
+      console.error(`claim needs a packet number first: ledger.mjs claim <n> <id>...  (got "${ids[0]}")`);
+      process.exit(1);
+    }
+    if (ids.length < 2) { console.error('claim needs at least one id'); process.exit(1); }
     for (const id of ids.slice(1)) { const r = get(id); if (r.status === 'open' || r.status === 'not-fixed') { r.status = 'claimed'; r.closed_by = `packet-${n}`; } }
     save(); console.log(`claimed ${ids.length - 1} items for packet ${n}`);
     break;
@@ -81,6 +94,19 @@ switch (cmd) {
     if (!by || !evidence) { console.error('--by and --evidence are required'); process.exit(1); }
     for (const id of ids) { const r = get(id); r.status = cmd === 'confirm' ? 'confirmed' : 'not-fixed'; r.verified_by = `${by} ${today}`; r.evidence = evidence; }
     save(); console.log(`${cmd}ed ${ids.length} item(s)`);
+    break;
+  }
+  case 'sev': {
+    const to = flag('to'), note = flag('note');
+    if (!to || !note) { console.error('--to and --note are required'); process.exit(1); }
+    for (const id of ids) {
+      const r = get(id);
+      const was = r.sev || r.kind;
+      r.sev = to;
+      r.note = `${r.note ? r.note + ' | ' : ''}severity ${was} -> ${to}: ${note}`;
+      console.log(`${id}: ${was} -> ${to}`);
+    }
+    save();
     break;
   }
   case 'wontfix': {

@@ -1,11 +1,15 @@
 "use client";
 import { useState } from 'react';
 import { useAuth } from './AuthProvider';
+import { introOffer } from '@/lib/trial-eligibility';
 import { isLifetime } from '@/lib/entitlements';
 import CancelOfferModal from './CancelOfferModal';
 
 export default function SettingsPage() {
-  const { user, subscription, isPremium, supabase } = useAuth();
+  const { user, subscription, isPremium, entitlementKnown, supabase, trialEligible } = useAuth();
+  // F031: this is where a lapsed subscriber actually lands, and it was the surface most certain to
+  // be shown a £1 offer they are not eligible for.
+  const offer = introOffer(trialEligible);
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
@@ -135,7 +139,16 @@ export default function SettingsPage() {
       {/* Subscription */}
       <div className="settings-section">
         <h2 className="settings-section-title">Subscription</h2>
-        {hasLifetime ? (
+        {/* V009: "Free plan, upgrade for £1" is a statement about this account, and until the
+            lookup lands we do not have one to make. `/settings` is still a dynamic route, but the
+            provider above it no longer carries a server seed, so the unknown window is real here
+            too — it is one /api/subscription long. */}
+        {!entitlementKnown ? (
+          <div className="settings-info-row">
+            <span className="settings-info-label">Plan</span>
+            <span className="settings-info-value" aria-busy="true">Checking…</span>
+          </div>
+        ) : hasLifetime ? (
           <>
             <div className="settings-info-row">
               <span className="settings-info-label">Plan</span>
@@ -194,7 +207,11 @@ export default function SettingsPage() {
               onClick={() => handleUpgrade('monthly')}
               disabled={upgradeLoading || lifetimeLoading}
             >
-              {upgradeLoading ? 'Loading...' : 'Get Pro — £1 first month, then £1.99/mo'}
+              {upgradeLoading
+                ? 'Loading...'
+                : trialEligible
+                  ? 'Get Pro \u2014 \u00a31 first month, then \u00a31.99/mo'
+                  : 'Resubscribe \u2014 \u00a31.99/mo'}
             </button>
             <button
               className="settings-btn secondary"

@@ -114,8 +114,52 @@ Each session: spec gaps, quiz re-tagging, practice with levels grids and correct
 authored as data, quantitative items, diagram wiring, internationalised examples, teacher review. Wire the 19
 existing SVGs, 6 extracts and 6 markdown rewrites as the relevant sections come up.
 
-This stage absorbs everything v2 deferred: all 340 spec gaps, all 338 recall exercises, the 215 practice
-questions, the 401 structural wiring items, the 79 accuracy items and the diagrams.
+This stage absorbs everything v2 deferred: all 359 spec gaps, all 338 recall exercises, the 215 practice
+questions, the 401 structural wiring items, the 79 accuracy items, the 71 thin-coverage items and the
+diagrams.
+
+#### Reconciled against the specification-coverage audit, 13 September 2026
+
+The separate coverage audit (`audit/SPEC-COVERAGE.md`, `audit/raw/spec-coverage.json`) checked all 43
+sections requirement by requirement against the verbatim spec and reported 175 MISSING plus 237 THIN across
+1,073 requirements. That is not 412 items of new work, and the Content stage does not grow by twenty
+sessions. Matched against the ledger section by section:
+
+| | Count | What happened |
+|---|---|---|
+| MISSING already described by a ledger item | 156 | The two audits agree. No new scope |
+| MISSING with no ledger counterpart | **19** | Added as `specGap` items |
+| THIN already described by a ledger item | 166 | No new scope |
+| THIN with no counterpart | **71** | Added as `specThin`, a category the ledger never tracked |
+
+**Net new scope: 90 items, spread across 43 sessions.** Roughly two per section, which is inside the
+existing per-session budget rather than beside it. The ledger is now the single work list; the coverage
+JSON stays as the evidence behind it and as the per-section starting point for the spec-gap step.
+
+Two things the reconciliation turned up that are worth more than the counts:
+
+1. **154 ledger items cite UK GCE A-level spec numbers that do not exist in the IAL spec** — 1.1.1, 3.5.1,
+   2.4.3 and so on. Every IAL topic number has 3 as its middle digit (1.3.1 to 4.3.6, 24 in total). The
+   affected items are concentrated in 19 sections, almost all Business. They are annotated in the ledger
+   with the correct IAL topic for their section, and the note says to find the requirement by its wording
+   rather than by the number. **The numbers are not rewritten**, because a UK sub-label such as "1.1.1a"
+   has no mechanical IAL equivalent and inventing one would be a wrong oracle — see the asset rule in
+   `CONTENT-GATE.md`.
+2. **The March audit inherited the same UK framing the content did.** That is the coverage audit's central
+   diagnosis, and it now has a second piece of evidence: not only were the notes adapted from UK GCE
+   A-level, so was the audit of them. Treat any A2 topic as inherited-until-checked, and do not trust a
+   spec reference in a ledger item without opening the spec text.
+
+#### Assessed but never taught — the cheapest item in the stage
+
+`audit/raw/assessed-not-taught-2026-09-13.json`. 17 requirements across 12 sections are quizzed, put on a
+flashcard or set as practice while appearing nowhere in the teaching text. Inertia in consumer behaviour is
+the clearest: the words appear twice in the whole section, both inside a quiz question and its own
+explanation. A student meets the term for the first time in a question about it, gets it wrong, and is told
+the answer they were never given.
+
+These cost a paragraph each and they are the failures a student notices immediately, so they are worth
+doing first in whichever session owns the section.
 
 **Order is traffic, not audit grade.** One D-graded section first as a format pilot
 (`decision-making-techniques` — least worth preserving, 9 untaught quiz items make the rewrite unambiguous),

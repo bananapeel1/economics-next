@@ -1,0 +1,31 @@
+(node:50640) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+templates registered for: WBS11, WBS12, WBS13, WEC11, WEC12
+
+baselined quant.unit keys: 20
+cleared by packet 13.2:    5
+  − entrepreneurs-leaders|quant.unit|section|9c9233a1
+  − managing-people|quant.unit|section|9c9233a1
+  − marketing-mix-strategy|quant.unit|section|9c9233a1
+  − meeting-customer-needs|quant.unit|section|9c9233a1
+  − the-market|quant.unit|section|9c9233a1
+still open:                15
+    balance-payments-exchange-rates|quant.unit|section|8eafe00f  (WEC14)
+    causes-effects-globalisation|quant.unit|section|8eafe00f  (WEC14)
+    global-industries-mncs|quant.unit|section|ed7c9c70  (WBS14)
+    global-marketing|quant.unit|section|ed7c9c70  (WBS14)
+    global-markets-expansion|quant.unit|section|ed7c9c70  (WBS14)
+    globalisation|quant.unit|section|ed7c9c70  (WBS14)
+    government-intervention-firms|quant.unit|section|200e84d4  (WEC13)
+    growth-development|quant.unit|section|8eafe00f  (WEC14)
+    labour-markets|quant.unit|section|200e84d4  (WEC13)
+    market-structures-contestability|quant.unit|section|200e84d4  (WEC13)
+    poverty-inequality|quant.unit|section|8eafe00f  (WEC14)
+    revenue-costs-profits|quant.unit|section|200e84d4  (WEC13)
+    role-state-macroeconomy|quant.unit|section|8eafe00f  (WEC14)
+    trade-global-economy|quant.unit|section|8eafe00f  (WEC14)
+    types-sizes-businesses|quant.unit|section|200e84d4  (WEC13)
+
+live keys not in the baseline: 0

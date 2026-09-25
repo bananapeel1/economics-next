@@ -1,0 +1,288 @@
+/**
+ * PACKET 14 — decision-making-techniques: quiz, practice, flashcards, common mistakes, extras.
+ *
+ * Quiz: 32 items, every one on material the Learn Mode body now teaches, correct answers spread across
+ * the four positions (8 / 8 / 9 / 7) so the bank has no position tell, no essay stems, no option letters
+ * in explanations. Items kept from March keep their ids (a rewrite keeps the id; the progress row points
+ * at it). Practice: IAL Business tariffs only (Calculate 4, Explain 4, Analyse 6, Assess 12 in Unit 3,
+ * Evaluate 20 ending in a recommendation); guidance above 6 marks is levels-shaped, with no "(n marks)".
+ * Break-even (2.3.2, financial-planning's) and sensitivity analysis (in neither specification) are gone;
+ * contribution (3.3.3.5) stays and is taught.
+ */
+import { id } from './_packet14-util.mjs';
+
+/* ── quiz ──────────────────────────────────────────────────────────────────── */
+// [block, stem, options in display order, index of the correct one, explanation, keptId?]
+const Q = [
+  ['Sales Forecasting', 'Monthly sales were 40, 46 and 43 thousand units. What is the three-period moving average centred on the second month?',
+    ['41 thousand', '43 thousand', '44 thousand', '46 thousand'], 1,
+    '(40 + 46 + 43) ÷ 3 = 129 ÷ 3 = 43 thousand, written against the middle of the three months.', 'decision-making-techniques:quiz:cde89152'],
+  ['Sales Forecasting', 'Why is a four-quarter moving average centred?',
+    ['Four values have no middle quarter to be written against', 'Quarterly figures always contain seasonal errors that must be removed', 'The trend line has to pass through the origin of the graph', 'The first quarter of every year is the lowest'], 0,
+    'An average of four quarters sits between the second and third of them. Averaging neighbouring four-quarter results lines the figure up with one quarter.'],
+  ['Sales Forecasting', 'Extrapolating a trend line assumes that:',
+    ['sales will grow faster than they did in the past', 'seasonal variation has been removed for good', 'the forces behind past sales will keep operating', 'competitors will copy the firm\'s forecast'], 2,
+    'Extrapolation extends the past pattern into the future, which is only sound if whatever produced the pattern continues.'],
+  ['Sales Forecasting', 'On a scatter graph of advertising spend against sales, the dots rise from bottom-left to top-right. This shows:',
+    ['no correlation', 'a negative correlation', 'that advertising causes the sales', 'a positive correlation'], 3,
+    'Higher spend goes with higher sales, which is a positive correlation. The graph alone cannot show that one causes the other.'],
+  ['Sales Forecasting', 'Ice-cream sales and air-conditioner sales rise together every summer. The most likely explanation is that:',
+    ['a third factor, hot weather, drives both', 'buying ice cream makes people buy air conditioners', 'the two are negatively correlated', 'one of the two data sets is wrong'], 0,
+    'The two are positively correlated because a third variable, temperature, moves both. Correlation is not causation.'],
+  ['Sales Forecasting', 'Which event would most reduce the reliability of a sales forecast extrapolated from the last five years?',
+    ['Sales continuing to grow at the same rate as before', 'A new competitor entering with a cheaper product', 'The firm keeping its prices unchanged', 'The same seasonal pattern repeating each year'], 1,
+    'Extrapolation assumes continuity. A new competitor changes the market the trend was built on; the other three keep the pattern intact.'],
+  ['Sales Forecasting', 'A line of best fit is drawn so that:',
+    ['it passes through every dot', 'it joins the first dot to the last', 'the dots are balanced above and below it', 'it starts at the origin'], 2,
+    'The line summarises the whole cloud of dots, so it runs through the middle with roughly as many dots on each side.'],
+
+  ['Investment Appraisal', 'An investment of $120,000 generates annual net cash inflows of $40,000 for five years. What is the payback period?',
+    ['2 years', '3 years', '4 years', '5 years'], 1,
+    'Cumulative inflows: $40,000, $80,000, $120,000. The cost is fully recovered at the end of year 3.', 'decision-making-techniques:quiz:3542b01c'],
+  ['Investment Appraisal', 'A machine costs $90,000. Net cash inflows are $30,000 in year 1, $40,000 in year 2 and $50,000 in year 3. What is the payback period?',
+    ['2.0 years', '2.6 years', '3.0 years', '2.4 years'], 3,
+    'After two years $70,000 is recovered, leaving $20,000. Year 3 brings $50,000, so the rest arrives 20,000 ÷ 50,000 = 0.4 of the way through: 2.4 years.'],
+  ['Investment Appraisal', 'A project costs $200,000 and generates total net profit of $80,000 over four years. What is the ARR?',
+    ['5%', '10%', '20%', '40%'], 1,
+    'Average annual profit = $80,000 ÷ 4 = $20,000. ARR = $20,000 ÷ $200,000 × 100 = 10%.', 'decision-making-techniques:quiz:2fe633eb'],
+  ['Investment Appraisal', 'The average rate of return measures:',
+    ['average annual profit as a percentage of the initial investment', 'the number of years until the initial investment is recovered in cash', 'the present value of all the future cash flows minus the initial cost', 'the contribution that each unit sold makes towards the fixed costs'], 0,
+    'ARR = average annual profit ÷ initial investment × 100. It is a percentage return per year, which is why it can be compared with an interest rate.'],
+  ['Investment Appraisal', 'A project has an NPV of −$15,000 at the firm\'s cost of capital. The firm should:',
+    ['accept it, because it generates revenue', 'accept it if the payback period is short', 'reject it, because it fails to earn the required rate', 'accept it only if the ARR is above 10%'], 2,
+    'A negative NPV means the discounted cash flows are worth less than the cost, so the project earns less than the rate used to discount them.', 'decision-making-techniques:quiz:fb473d08'],
+  ['Investment Appraisal', 'A discount factor of 0.826 for year 2 at 10% means that:',
+    ['the project loses 17% of its value every year', 'year 2 cash flows must be multiplied by 1.21', 'the project\'s ARR is 8.26%', '$1 received in two years is worth about 83 cents today'], 3,
+    'Multiplying a year-2 cash flow by 0.826 gives its present value at 10%: what it is worth today, allowing for the return the money could have earned meanwhile.'],
+  ['Investment Appraisal', 'A project costs $50,000 and returns $20,000, $25,000 and $20,000 over three years. The discount factors are 0.909, 0.826 and 0.751. What is the NPV?',
+    ['−$3,850', '+$3,850', '+$15,000', '+$53,850'], 1,
+    'Present values $18,180 + $20,650 + $15,020 = $53,850. Subtract the $50,000 cost: NPV = +$3,850. The total present value alone is not the NPV.'],
+  ['Investment Appraisal', 'Which investment appraisal method takes account of the time value of money?',
+    ['Simple payback', 'Average rate of return', 'Net present value', 'Total profit over the project\'s life'], 2,
+    'NPV multiplies each cash flow by a discount factor, so money that arrives later counts for less. Payback and ARR treat every dollar the same whenever it arrives.', 'decision-making-techniques:quiz:3d708494'],
+  ['Investment Appraisal', 'The main weakness of the payback method is that it:',
+    ['ignores cash flows received after the payback point', 'needs a discount rate to be chosen', 'cannot be calculated from cash-flow forecasts', 'always favours the project with the longest life'], 0,
+    'Payback stops counting once the cost is recovered, so a project with large late returns can lose to one that merely returns its cost quickly.'],
+
+  ['Decision Trees', 'In a decision tree, a square node represents:',
+    ['an outcome decided by chance', 'the payoff at the end of a branch', 'a point where the manager chooses between options', 'the cost of taking an option'], 2,
+    'Squares are decision nodes: the manager picks one of the branches leaving it. Circles are chance nodes, where the outcome is uncertain.'],
+  ['Decision Trees', 'The expected monetary value at a chance node is found by:',
+    ['adding all the possible payoffs together and dividing by their number', 'multiplying each payoff by its probability and adding the results', 'taking the payoff of the single most likely outcome as the value', 'subtracting the cost of the option from the highest possible payoff'], 1,
+    'EMV = Σ (probability × payoff): a weighted average of the outcomes, weighted by how likely each is.', 'decision-making-techniques:quiz:8ad1c386'],
+  ['Decision Trees', 'An option costs $200,000 and leads to a 0.6 chance of $500,000 and a 0.4 chance of $100,000. What is its net gain?',
+    ['$100,000', '$340,000', '$500,000', '$140,000'], 3,
+    'EMV = 0.6 × $500,000 + 0.4 × $100,000 = $340,000. Net gain = $340,000 − $200,000 = $140,000.'],
+  ['Decision Trees', 'The probabilities on the branches leaving one chance node must:',
+    ['add up to 1', 'all be equal', 'each be above 0.5', 'add up to the payoff'], 0,
+    'The branches cover every possible outcome of that chance event, so their probabilities sum to 1.'],
+  ['Decision Trees', 'Which of these is a limitation of decision trees?',
+    ['The cost of an option cannot be included', 'Only one option can be shown at a time', 'The probabilities are estimates, not facts', 'Discount factors are required for every branch'], 2,
+    'Probabilities come from past data or judgement. If they are wrong, the expected values and the choice built on them are wrong too.'],
+  ['Decision Trees', 'A firm rejects the option with the higher net gain because it could not survive the worst outcome. This shows that:',
+    ['EMV assumes risk neutrality, which the firm does not share', 'the decision tree must have been drawn with the wrong node shapes', 'the probabilities on the chance branches must have added to more than 1', 'the option with the higher net gain must really have had the lower EMV'], 0,
+    'EMV is a long-run average and treats a small chance of disaster as just another weighted outcome. A risk-averse firm weighs the worst case more heavily than the average does.'],
+
+  ['Critical Path Analysis', 'In critical path analysis, the critical path is:',
+    ['the shortest route through the network from start to finish', 'the route through the network with the most activities on it', 'the longest route, which sets the minimum project time', 'the most expensive route through the network in terms of cost'], 2,
+    'The longest route through the network is the time the project must take; any delay on it delays the finish, which is what makes it critical.', 'decision-making-techniques:quiz:6611ae09'],
+  ['Critical Path Analysis', 'An activity has an EST of 8, a duration of 4 and an LFT of 15. What is its total float?',
+    ['3 days', '4 days', '7 days', '0 days'], 0,
+    'Total float = LFT − duration − EST = 15 − 4 − 8 = 3 days: the activity can start up to three days late without delaying the project.', 'decision-making-techniques:quiz:d101b57b'],
+  ['Critical Path Analysis', 'Where two activities lead into the same node, the node\'s earliest start time is:',
+    ['the lowest of (previous EST + duration)', 'the highest of (previous EST + duration)', 'the average of the two routes', 'always zero'], 1,
+    'Nothing leaving the node can begin until every activity entering it has finished, so the slowest route sets the earliest start.'],
+  ['Critical Path Analysis', 'On the backward pass, the latest finish time at a node is:',
+    ['the highest of (next LFT − duration)', 'the same as its earliest start time', 'the sum of all the durations after it', 'the lowest of (next LFT − duration)'], 3,
+    'The node must be finished in time for the tightest of the routes ahead of it, so the lowest figure is taken.'],
+  ['Critical Path Analysis', 'Why might the critical path identified at the start of a project turn out to be wrong?',
+    ['The network cannot show which activities depend on others', 'Networks only work for projects with fewer than five activities', 'Activity durations are estimates, so a delay elsewhere moves the path', 'The float can never be calculated before the project starts'], 2,
+    'The path is only the longest route for the durations assumed. If a non-critical activity overruns by more than its float, a different route becomes the longest.'],
+  ['Critical Path Analysis', 'Managers draw a network diagram for a project mainly in order to:',
+    ['calculate the profit the project will earn over its whole life', 'forecast the project\'s future sales from its past sales data', 'measure the strength of the correlation between two variables', 'find the minimum time in which the project can be completed'], 3,
+    'The network shows the dependencies, and the longest route through it is the shortest time the whole project can take.'],
+
+  ['Contribution', 'A product sells for $30 with a variable cost of $18 per unit. What is the contribution per unit?',
+    ['$48', '$30', '$18', '$12'], 3,
+    'Contribution per unit = selling price − variable cost per unit = $30 − $18 = $12.', 'decision-making-techniques:quiz:b5977ab6'],
+  ['Contribution', 'Kopi Kita sells 5,000 bottles at $30 each; variable cost is $18 a bottle and fixed costs are $45,000. Its total contribution is:',
+    ['$15,000', '$60,000', '$90,000', '$150,000'], 1,
+    'Contribution per bottle = $30 − $18 = $12; total contribution = $12 × 5,000 = $60,000. After the $45,000 of fixed costs, profit is $15,000.'],
+  ['Contribution', 'A hotel has empty rooms and a variable cost of $30 per room-night. A tour operator offers $55 a night. On contribution grounds the hotel should:',
+    ['accept, because $55 covers the variable cost and adds $25 of contribution', 'reject, because $55 is below the normal room price of $120', 'reject, because the offer does not cover fixed costs', 'accept only if $55 covers the average total cost per room'], 0,
+    'The rooms are empty, so the fixed costs are paid whether or not the offer is taken. Any price above the $30 variable cost adds contribution.'],
+  ['Contribution', 'Contribution is the amount each unit sold provides towards:',
+    ['variable costs', 'the cost of capital', 'fixed costs and then profit', 'the payback of the investment'], 2,
+    'Contribution = price − variable cost. Added across all units, it pays the fixed costs first; anything left is profit.'],
+];
+
+export const QUIZ = Q.map(([block, question, options, correctIndex, explanation, keptId]) => ({
+  id: keptId || id('quiz', question), block, question, options, correctIndex, explanation,
+}));
+
+/* ── practice ──────────────────────────────────────────────────────────────── */
+const P = [
+  ['Sales Forecasting', 'Calculate', 4,
+    'Kopi Kita, a café chain in Kuala Lumpur, sold the following thousands of cups: January 40, February 46, March 43, April 48, May 54, June 50. Calculate the three-period moving average for February, March, April and May, and state what the figures show about the trend. (4 marks)',
+    'February: (40 + 46 + 43) ÷ 3 = 43.0 (1 mark). March: (46 + 43 + 48) ÷ 3 = 45.7 (1 mark). April: (43 + 48 + 54) ÷ 3 = 48.3 and May: (48 + 54 + 50) ÷ 3 = 50.7 (1 mark). The averages rise steadily by about 2.6 thousand cups a month, so the underlying trend is upward despite the dips in March and June (1 mark).'],
+  ['Investment Appraisal', 'Calculate', 4,
+    'Sunrise Bakery in Nairobi is considering an oven costing $120,000. Forecast net cash inflows are $40,000 in year 1, $40,000 in year 2, $50,000 in year 3 and $50,000 in year 4. Calculate the payback period. (4 marks)',
+    'Cumulative inflows: $40,000 after year 1 and $80,000 after year 2 (1 mark). Still to recover after year 2: $120,000 − $80,000 = $40,000 (1 mark). Fraction of year 3 needed: $40,000 ÷ $50,000 = 0.8 (1 mark). Payback period = 2.8 years, about 2 years and 10 months (1 mark).'],
+  ['Investment Appraisal', 'Calculate', 4,
+    'A courier firm in Lagos plans to buy a delivery van for $50,000. Forecast net cash inflows are $20,000 in year 1, $25,000 in year 2 and $20,000 in year 3. The discount factors at 10% are 0.909 for year 1, 0.826 for year 2 and 0.751 for year 3. Calculate the net present value of the van. (4 marks)',
+    'Present value of year 1: $20,000 × 0.909 = $18,180 (1 mark). Years 2 and 3: $25,000 × 0.826 = $20,650 and $20,000 × 0.751 = $15,020 (1 mark). Total present value = $53,850 (1 mark). NPV = $53,850 − $50,000 = +$3,850, so the van earns more than the 10% required rate and passes the test (1 mark).'],
+  ['Critical Path Analysis', 'Calculate', 4,
+    'The network for fitting out a new Kopi Kita branch has six activities. A: strip out, 2 days, node 1 to node 2. B: wiring, 3 days, node 2 to node 3. C: plumbing, 2 days, node 2 to node 4. D: fit kitchen, 4 days, node 3 to node 5. E: furniture, 3 days, node 4 to node 5. F: final clean, 1 day, node 5 to node 6. The earliest start times at nodes 1 to 6 are 0, 2, 5, 4, 9 and 10; the latest finish times are 0, 2, 5, 6, 9 and 10. Calculate the total float of activity C and identify the critical path. (4 marks)',
+    'Total float = LFT at the end node − duration − EST at the start node (1 mark). Activity C: 6 − 2 − 2 = 2 days (1 mark). The critical path is the route of zero-float activities: A, B, D and F (1 mark). Its length is 2 + 3 + 4 + 1 = 10 days, the minimum time for the fit-out (1 mark).'],
+  ['Sales Forecasting', 'Explain', 4,
+    'Explain one limitation of using extrapolation to forecast the sales of a newly launched food-delivery app. (4 marks)',
+    'Identifies a limitation, for example that extrapolation assumes past patterns will continue (1 mark). Explains why this matters here: a new app has little sales history, so any trend line rests on a few months of unusual launch-period data (1 mark). Develops the consequence: growth driven by launch promotions is extended into a future in which the promotions have ended, so sales are overstated (1 mark). Applies to the context, for example a rival app entering or a change in commission rates breaking the pattern (1 mark).'],
+  ['Decision Trees', 'Analyse', 6,
+    'Sunrise Bakery is using a decision tree to decide whether to open a second branch in Nairobi. Analyse two limitations of using a decision tree for this decision. (6 marks)',
+    'Limitation 1: the probabilities of high and low demand are estimates (1 mark), based on judgement or on data from the first branch that may not apply to a new location (1 mark), so a small change in the estimate could reverse the choice (1 mark).\n\nLimitation 2: the tree compares expected values, which are long-run averages (1 mark); opening one branch is a one-off decision that will land on one outcome (1 mark), so a bakery that could not survive the low-demand branch may rightly refuse the higher net gain (1 mark).\n\nOther valid limitations: the payoffs are forecasts; qualitative factors such as the effect on the existing branch are left out.'],
+  ['Contribution', 'Assess', 12,
+    'Palm Bay Hotel in Penang has 40 rooms empty on most weekday nights. Its normal price is $120 a night and the variable cost of a room-night (cleaning, laundry, breakfast) is $30. A tour operator offers to book 30 rooms every Tuesday at $55 a night for a year. Assess whether Palm Bay should accept the offer. (12 marks)',
+    'Knowledge and application: contribution per room-night from the offer = $55 − $30 = $25; for 30 rooms that is $750 a night and about $39,000 over 52 Tuesdays, which the hotel would not otherwise earn because the rooms are empty and the fixed costs are paid anyway.\n\nAnalysis: on contribution grounds the offer is worth accepting, because the price exceeds variable cost and capacity is spare, so the contribution goes straight towards fixed costs and profit. Against: the operator\'s guests may displace weekday guests who would have paid $120, other customers may learn to wait for a discounted rate, a year-long commitment removes the rooms on any Tuesday when demand recovers, and servicing 30 extra rooms may need more staff, so the variable cost per room could be higher than $30.\n\nEvaluation: a strong answer weighs the near-certain contribution against the risk to full-price sales and recommends accepting if the rooms are genuinely empty on Tuesdays, perhaps with a shorter contract or a price review, and rejecting if weekday demand is expected to recover within the year. The judgement should name the condition it rests on. This tariff is levels-marked: the top level needs a supported judgement, not a list of points.'],
+  ['Investment Appraisal', 'Evaluate', 20,
+    'A logistics company in Dubai has $5 million to invest and must choose between an automated warehouse system and a fleet of electric delivery vans. Each option costs $5 million and has a four-year life. The warehouse is forecast to bring net cash inflows of $1.6 million in each of the four years. The vans are forecast to bring $2.4 million, $2.0 million, $1.2 million and $0.8 million. The company\'s cost of capital is 8%, and the discount factors for years 1 to 4 are 0.926, 0.857, 0.794 and 0.735. Evaluate whether the company should invest in the warehouse or the vans. (20 marks)',
+    'Knowledge: define investment appraisal and the three techniques, and say what each measures.\n\nApplication and analysis, using the calculations the data allow. Payback: warehouse $5m ÷ $1.6m = 3.1 years; vans $4.4m after two years, then $0.6m ÷ $1.2m = 0.5, so 2.5 years. ARR: both bring in $6.4m in total, a profit of $1.4m, $0.35m a year, 7% for each, so ARR cannot separate them. NPV at 8%: warehouse $1.6m × (0.926 + 0.857 + 0.794 + 0.735) = $5.299m, an NPV of +$0.299m (about +$0.30m); vans $2.222m + $1.714m + $0.953m + $0.588m = $5.477m, an NPV of +$0.477m (about +$0.48m). The vans pay back sooner and have the higher NPV because their cash arrives earlier; the tie on ARR is a reminder that ARR ignores timing.\n\nEvaluation: the figures favour the vans, but a four-year life understates a warehouse system that may run for longer, the vans\' later cash flows fall as batteries age, fuel and electricity prices move both forecasts, and the company\'s need for cash and its competitive position matter. A strong answer recommends the vans on the evidence given, states that the recommendation rests on the forecasts and the four-year horizon, and says what would change it: a longer warehouse life or a fall in electricity costs. This tariff is levels-marked: the top level needs the calculations used in the argument and a justified recommendation.'],
+];
+
+export const PRACTICE = P.map(([block, command, marks, question, guidance]) => ({
+  id: id('practice', question), block, command, marks, question, guidance,
+}));
+
+/* ── flashcards ────────────────────────────────────────────────────────────── */
+const kept = (cid, front, back) => ({ id: `decision-making-techniques:card:${cid}`, front, back });
+const card = (front, back) => ({ id: id('card', `${front}|${back}`), front, back });
+
+export const FLASHCARDS = [
+  kept('9d83932a', 'What is a 3-period moving average?', 'The sum of <strong>three consecutive data points</strong> divided by 3, written against the middle period. It smooths out short-term fluctuations to reveal the underlying trend.'),
+  card('Why is a four-quarter moving average centred?', 'Four values have no middle period. <strong>Centring</strong> averages each pair of neighbouring four-quarter averages so the result lines up with one quarter.'),
+  kept('7a1dff31', 'What is extrapolation?', 'Extending a <strong>trend line beyond existing data</strong> to predict future values. It assumes past patterns will continue into the future.'),
+  card('What does a line of best fit show on a scatter graph?', 'The <strong>overall relationship</strong> between the two variables, drawn with the dots balanced above and below it. Reading off the line gives a forecast; extending it beyond the data is extrapolation.'),
+  card('Give one limitation of extrapolation.', 'It assumes <strong>past patterns will continue</strong>. A new competitor, a new technology or a recession breaks the pattern, and the forecast keeps extending the old trend.'),
+  kept('93325e14', 'What does the payback period measure?', 'The time it takes for a project\'s <strong>cumulative net cash inflows to equal the initial investment</strong>: how long until the firm gets its money back.'),
+  kept('a9e148b8', 'State the formula for payback period.', '<strong>Payback = years before full recovery + (amount still to recover ÷ cash inflow in the recovery year)</strong>.'),
+  kept('e05c9611', 'State the formula for ARR.', '<strong>ARR = (average annual profit ÷ initial investment) × 100%</strong>. Average annual profit = total net profit ÷ number of years.'),
+  card('State the formula for net present value.', '<strong>NPV = Σ (cash flow × discount factor) − initial cost</strong>. Positive: accept. Negative: reject.'),
+  kept('b7fd492f', 'What is the key advantage of NPV over payback and ARR?', 'NPV accounts for the <strong>time value of money</strong>: it recognises that $1 received today is worth more than $1 received in the future.'),
+  kept('8fc24abe', 'State the NPV decision rule.', 'If NPV is <strong>positive</strong>, accept the project (it adds value). If NPV is <strong>negative</strong>, reject the project (it destroys value). Between projects, choose the highest NPV.'),
+  kept('e1dff250', 'Why does the discount factor decrease for later years?', 'Because money received further in the future has a <strong>lower present value</strong>: money received today could be invested and earn a return in the meantime, and inflation erodes its buying power.'),
+  kept('a487403b', 'Give one limitation of the payback method.', 'It ignores <strong>cash flows after the payback period</strong>, so a project with lower total returns but a faster payback can be preferred over a more profitable alternative.'),
+  kept('5c30b8e5', 'What do square nodes represent in a decision tree?', '<strong>Decision points</strong>: choices the manager must make between different options. The branches leaving a square carry the cost of each option.'),
+  kept('7041c66b', 'What do circle nodes represent in a decision tree?', '<strong>Chance nodes</strong>: uncertain outcomes, each with a probability. The probabilities leaving one node add up to 1.'),
+  kept('4932e691', 'State the formula for expected monetary value (EMV).', '<strong>EMV = Σ (probability × payoff)</strong>: the weighted average of the outcomes at a chance node. Net gain = EMV − the cost of the option.'),
+  card('What is net gain in a decision tree?', '<strong>EMV minus the cost of the option</strong>. Options are compared on net gain at the decision node, not on EMV.'),
+  kept('69137f64', 'Give one limitation of decision trees.', '<strong>Probabilities are estimates</strong> based on judgement or historical data, not certainties. The quality of the decision depends on the accuracy of those estimates.'),
+  kept('0cda4bb5', 'What is the critical path in CPA?', 'The <strong>longest route</strong> through the network diagram, determining the <strong>minimum project completion time</strong>. Any delay on this path delays the entire project.'),
+  kept('7182ec8f', 'State the formula for total float.', '<strong>Total Float = LFT − Duration − EST</strong>. Activities on the critical path have a float of zero.'),
+  kept('4f166d0e', 'How is EST calculated?', 'Work <strong>forward</strong> through the network. At each node, take the <strong>highest</strong> value of (previous EST + activity duration).'),
+  kept('0b3d6003', 'How is LFT calculated?', 'Work <strong>backward</strong> from the end. At each node, take the <strong>lowest</strong> value of (next LFT − activity duration).'),
+  card('Give one limitation of critical path analysis.', 'It relies on <strong>estimated durations</strong>: a delay to one activity can remove float elsewhere and move the critical path. It also assumes resources are available when needed.'),
+  kept('3859347d', 'What is contribution per unit?', '<strong>Selling price minus variable cost per unit</strong>: the amount each unit contributes towards paying fixed costs and then generating profit.'),
+  card('State the formula for total contribution.', '<strong>Total contribution = contribution per unit × number of units sold</strong>. It goes towards fixed costs first; what remains is profit.'),
+  kept('a46afa79', 'When should a firm accept a special order?', 'When the special order price <strong>exceeds the variable cost per unit</strong> and there is <strong>spare capacity</strong>: the order makes a positive contribution and the fixed costs are paid anyway.'),
+  card('What is a special order?', 'A one-off order at a price <strong>below the normal selling price</strong>. Accept it if the price exceeds variable cost and there is spare capacity, because it adds contribution; refuse it if it displaces full-price sales.'),
+];
+
+/* ── common mistakes ───────────────────────────────────────────────────────── */
+const mkept = (mid, m) => ({ id: `decision-making-techniques:mistake:${mid}`, ...m });
+const mist = (m) => ({ id: id('mistake', m.title), ...m });
+
+export const MISTAKES = [
+  mkept('aab75b54', { title: 'Confusing Profit and Cash Flow in ARR',
+    mistake: 'Using cash flows instead of profit when calculating ARR.',
+    correction: 'ARR uses PROFIT, not cash flow. Total net profit = total cash inflows − initial investment. Average annual profit = total net profit ÷ number of years. Then: ARR = average annual profit ÷ initial investment × 100%.',
+    examTip: 'If the question gives cash flows, find profit first by subtracting the initial investment from the total inflows. This is a very common calculation error.' }),
+  mkept('f53c0cef', { title: 'Forgetting to Subtract the Initial Investment in NPV',
+    mistake: 'Adding up the present values of the cash flows and reporting the total as the NPV.',
+    correction: 'NPV = total present value of the future cash flows MINUS the initial investment. A common approach is to include the investment as a negative cash flow at year 0 with a discount factor of 1.000.',
+    examTip: 'Set up a clear table: Year | Cash flow | Discount factor | Present value. Include year 0 with the initial investment as a negative value, then sum all the present values.' }),
+  mkept('0631440f', { title: 'Working Decision Trees Left to Right',
+    mistake: 'Trying to calculate decision tree values from left to right, from the first decision to the payoffs.',
+    correction: 'Decision trees are solved by rolling back, from RIGHT to LEFT. Calculate the expected value at each chance node first, subtract each option\'s cost, then compare the net gains at the decision node.',
+    examTip: 'Start at the far right of the tree and work backwards. Expected value at each circle, net gain for each option, then choose the highest net gain at the square.' }),
+  mist({ title: 'Putting Probabilities on Decision Branches',
+    mistake: 'Writing probabilities on the branches that leave a decision (square) node.',
+    correction: 'Only chance (circle) nodes have probabilities, and the probabilities leaving one node add up to 1. The branches leaving a decision node are options, and they carry the cost of each option.',
+    examTip: 'Before calculating, check every circle: do its probabilities sum to 1? Check every square: does each branch carry a cost?' }),
+  mist({ title: 'Comparing EMVs Instead of Net Gains',
+    mistake: 'Choosing the option with the highest expected monetary value without subtracting its cost.',
+    correction: 'Net gain = EMV − cost of the option. The decision is made on net gain; the option with the higher EMV can lose once its cost is deducted.',
+    examTip: 'Write the net gain beside every option branch before you state the choice, and quote that figure in your answer.' }),
+  mkept('64637a3f', { title: 'Confusing EST and LFT Direction in CPA',
+    mistake: 'Calculating EST backwards or LFT forwards, or taking the wrong figure where two routes meet, leading to incorrect float calculations.',
+    correction: 'EST is calculated working FORWARD (left to right): take the HIGHEST value at each node. LFT is calculated working BACKWARD (right to left): take the LOWEST value at each node.',
+    examTip: 'Remember: forward = highest for EST, backward = lowest for LFT. This is one of the most common CPA errors.' }),
+  mkept('789262db', { title: 'Ignoring Limitations When Recommending a Method',
+    mistake: 'Recommending a decision based solely on quantitative results without discussing the limitations of the technique.',
+    correction: 'Always acknowledge that quantitative tools have limitations: they depend on estimated data, ignore qualitative factors, and may not capture real-world complexity. Evaluation means discussing these limitations alongside the numerical results.',
+    examTip: 'A complete answer uses the quantitative result as a starting point, then evaluates it by considering limitations, qualitative factors and the specific business context.' }),
+  mkept('ab8e2dbe', { title: 'Not Showing Workings in Calculations',
+    mistake: 'Jumping to a final answer without showing the calculation steps.',
+    correction: 'Always show your method clearly: state the formula, substitute the values, show the intermediate steps, and label the final answer with the correct units ($, %, years, days).',
+    examTip: 'Method marks are available even when the final answer is wrong, because the mark schemes apply an own figure rule and Appendix 6 of WBS13 says workings should be given. Showing workings makes your reasoning transparent and earns partial credit.' }),
+];
+
+/* ── extras ────────────────────────────────────────────────────────────────── */
+export const EXTRAS = {
+  chains: [
+    { title: 'Quantitative forecasting turns past sales into an expected future',
+      steps: [
+        'Past sales are recorded as a time series and smoothed with a moving average, so seasonal noise no longer hides the trend.',
+        'Plotting sales against a driver such as advertising spend gives a scatter graph; the line of best fit summarises the relationship.',
+        'Extending the trend or the line of best fit beyond the data, extrapolation, produces the forecast.',
+        'The forecast holds only while the forces behind the past pattern continue, so it is weakest in new, volatile or disrupted markets.',
+      ],
+      result: 'A numerical forecast that must be combined with qualitative judgement before the firm commits resources to it.' },
+    { title: 'Investment appraisal evaluates long-term projects',
+      steps: [
+        'Payback measures how quickly an investment recoups its initial outlay: a shorter payback means less time with the money at risk.',
+        'Average rate of return expresses average annual profit as a percentage of the investment, so projects can be compared with a target rate.',
+        'Net present value discounts future cash flows to today\'s values, accounting for the time value of money.',
+        'A positive NPV means the project earns more than the required rate: it adds value to the business.',
+      ],
+      result: 'The three methods provide structured evidence for capital decisions; NPV is the most complete, while payback and ARR add simplicity and a liquidity view.' },
+    { title: 'Decision trees quantify options under uncertainty',
+      steps: [
+        'A decision tree maps each option and its possible outcomes, with probabilities on the chance branches and costs on the option branches.',
+        'The expected monetary value at each chance node is the sum of (probability × payoff).',
+        'Subtracting each option\'s cost gives its net gain, and the option with the highest net gain is the financially preferred choice.',
+        'The visual framework makes a complex decision easier to communicate and justify to stakeholders.',
+      ],
+      result: 'Decision trees give a structured comparison of options under uncertainty, but the result is only as reliable as the probability and payoff estimates behind it.' },
+    { title: 'Critical path analysis organises a project',
+      steps: [
+        'Every activity, its duration and its dependencies are mapped in a network diagram.',
+        'The critical path, the longest sequence of dependent activities, sets the minimum project duration.',
+        'Activities on the critical path have zero float, so any delay to them extends the whole project.',
+        'Managers protect the critical activities and use the float on the others to move staff and equipment where they are needed.',
+      ],
+      result: 'CPA shows where delays matter most, which reduces waste and improves on-time completion, provided the duration estimates hold.' },
+    { title: 'Contribution shows what an option really adds',
+      steps: [
+        'Contribution per unit is selling price minus variable cost per unit; total contribution is that figure multiplied by the units sold.',
+        'Total contribution pays the fixed costs first, and whatever is left is profit.',
+        'When fixed costs are paid whatever the firm decides, an option should be judged on the contribution it adds, not on average total cost.',
+        'A special order priced above variable cost is worth accepting when capacity is spare and it does not displace full-price sales.',
+      ],
+      result: 'Contribution is the yardstick for special orders, product mix, dropping a product and make-or-buy decisions, as long as the fixed costs really are fixed.' },
+    { title: 'Effective decisions combine quantitative data with qualitative judgement',
+      steps: [
+        'Quantitative tools (forecasts, NPV, decision trees, CPA, contribution) give objective, evidence-based analysis that reduces bias.',
+        'Every one of them relies on forecasts and assumptions that may prove wrong, especially in volatile markets.',
+        'Qualitative factors, such as brand impact, employee morale, ethics and stakeholder reactions, cannot easily be quantified.',
+        'The best decisions integrate rigorous data analysis with experienced managerial judgement about what the numbers cannot capture.',
+      ],
+      result: 'No quantitative technique replaces judgement; effective strategy combines data-driven analysis with an understanding of the wider business context.' },
+  ],
+  evaluation: [
+    { title: 'NPV and payback answer different questions',
+      content: 'NPV prices the timing of every cash flow and measures total value, which makes it the most complete method. Payback is simpler, focuses on liquidity and is easier to explain. Many firms use both: NPV for strategic investments, payback as a risk screen when cash is tight.' },
+    { title: 'Decision tree probabilities are often subjective',
+      content: 'In practice, probability estimates are judgements made on incomplete information, so the calculated EMV can mislead. Trees also simplify decisions with many variables. They are best used as one input into a decision, not as its sole basis.' },
+    { title: 'Quantitative tools cannot handle genuine uncertainty',
+      content: 'Every technique assumes some predictability, but firms face situations where probabilities cannot be assigned at all. Rapid technological change, political instability and shifting tastes defy forecasting. In those conditions flexibility and adaptability matter more than precise calculation.' },
+  ],
+};

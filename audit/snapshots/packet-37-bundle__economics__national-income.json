@@ -1,0 +1,2540 @@
+{
+ "section_id": "national-income",
+ "subject": "economics",
+ "label": "packet-37-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "national-income:block:9b390ec6",
+    "title": "National Income",
+    "sections": [
+     {
+      "id": "national-income:sub:circular-flow",
+      "title": "The Circular Flow of Income",
+      "keyIdea": "Households and firms are joined by two flows that run in opposite directions: goods and factors one way, money the other. National income is the size of that circuit.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Sub-topic 1 opens with **the circular flow of income**. Strip an economy down to two groups — households, who own the factors of production, and firms, who use them — and everything that passes between them belongs to one of two flows."
+       },
+       {
+        "type": "paragraph",
+        "text": "**The real flow** is the things themselves. Households supply labour, land, capital and enterprise to firms; firms supply finished goods and services back to households. Nothing in that sentence is money."
+       },
+       {
+        "type": "paragraph",
+        "text": "**The money flow** runs the other way round the same circuit. Firms pay households for the factors they used — wages, rent, interest and profit — and households pay firms for the goods and services they bought. Every arrow in one flow has a matching arrow in the other, pointing the opposite way."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is why it is drawn as a circle. The money a firm pays out as wages is the money it receives back as revenue, and the economy keeps going because the circuit closes. In Marisel, a mid-sized open economy that exports processed food and imports machinery, it turns over $500bn a year, and that figure is the national income."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔁",
+       "text": "A food-processing plant in Marisel pays a line worker for a month of labour; the worker pays a landlord and a grocer. The plant's wage bill and the grocer's takings are the same dollars, one circuit apart."
+      },
+      "misconception": "Students draw one arrow between households and firms and label it \"money\". A single arrow cannot be a circular flow: it has no return leg, so the money it carries never comes back. Both flows must be drawn, each running opposite to the other.",
+      "examMatters": "Appendix 6 defines Draw as requiring an accurately labelled diagram. On a circular flow that means four arrows, not two: factors and goods on the real flow, factor incomes and consumer spending on the money flow, with each pair running in opposite directions.",
+      "recall": {
+       "id": "national-income:sub:circular-flow:recall",
+       "type": "classify",
+       "prompt": "Sort each arrow in a two-sector circular flow by which of the two flows it belongs to:",
+       "groups": [
+        {
+         "name": "The real flow",
+         "items": [
+          "Labour supplied by a household to a firm",
+          "A finished refrigerator delivered to a household"
+         ],
+         "why": "Both are the thing itself moving, not a payment for it — the factor going one way and the product coming back."
+        },
+        {
+         "name": "The money flow",
+         "items": [
+          "Wages paid by a firm to a household",
+          "A household paying a firm for a refrigerator",
+          "Rent paid to the owner of a warehouse"
+         ],
+         "why": "Each of these is a payment, and payments are the flow that runs opposite to the things being paid for."
+        }
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:income-output-expenditure",
+      "title": "Income, Output and Expenditure Are One Number",
+      "keyIdea": "Because the circuit closes, the value of what is produced, the incomes paid to produce it and the spending that buys it are the same figure counted at three points.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Follow one dollar. A firm produces a dollar of **output**, and pays a dollar out to households as **income** — wages, rent, interest, and profit to the owners. Households spend it, and it returns to firms as **expenditure**."
+       },
+       {
+        "type": "paragraph",
+        "text": "The three are not estimates that happen to be close. They are one flow measured at three points on a circle, so they are equal by construction: national income, national output and national expenditure are one number with three names."
+       },
+       {
+        "type": "paragraph",
+        "text": "This is what makes the model useful rather than decorative: anything raising spending raises income and output by the same amount, and anything removing spending removes both. Sub-topics 2, 3 and 4 are that one consequence, worked out carefully."
+       },
+       {
+        "type": "paragraph",
+        "text": "In Marisel the figure is $500bn a year at whichever point it is measured. When a later chapter says national income rose to $600bn, output and expenditure rose to $600bn too: there is only one flow to rise."
+       },
+       {
+        "type": "flow",
+        "resultType": "neutral",
+        "steps": [
+         {
+          "title": "Output is produced",
+          "subtitle": "A firm makes a dollar of goods or services"
+         },
+         {
+          "title": "Incomes are paid",
+          "subtitle": "Wages, rent, interest and profit go to the households that produced it"
+         },
+         {
+          "title": "Households spend it",
+          "subtitle": "On goods and services produced by firms"
+         },
+         {
+          "title": "Firms receive expenditure",
+          "subtitle": "The dollar is back where it started"
+         }
+        ]
+       }
+      ],
+      "realExample": {
+       "emoji": "⚖️",
+       "text": "Everything the food plant in Marisel sold last year has a value; everyone who helped produce it was paid; and someone bought all of it. Three counts of the same circuit."
+      },
+      "misconception": "Students treat the equality as an approximation holding \"roughly\". It is an identity. Profit makes it exact: whatever is left of the value of output after every other factor is paid is income to the owners, so no residue remains for the counts to differ by.",
+      "examMatters": "A question that gives income and asks about output is not asking for a conversion. It is testing whether you know they are the same figure, and saying so in one line has the mark (Appendix 6, Explain).",
+      "recall": {
+       "id": "national-income:sub:income-output-expenditure:recall",
+       "type": "reorder",
+       "prompt": "Put one dollar's journey round the circuit in the order the dollar actually moves in, starting where the output is made:",
+       "correctOrder": [
+        "A firm produces a dollar of output",
+        "Wages, rent, interest and profit are paid out to the households that produced it",
+        "That dollar is now a dollar of household income",
+        "Households spend the dollar on goods and services",
+        "Firms receive it back as expenditure, and the circuit closes"
+       ],
+       "criterion": "each step is caused by the one before it, following a single dollar round the circuit",
+       "why": [
+        "Production comes first: there is nothing to pay anyone for until something has been made.",
+        "The factors that produced the output have to be paid, and what they are paid is the value of what they produced.",
+        "A payment by a firm is a receipt by a household. The same dollar has changed its name, not its size.",
+        "Spending is what households do with income, and it is the leg of the circuit that sends the dollar back.",
+        "The dollar arrives where it started, which is why the three counts give one number."
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:income-and-wealth",
+      "title": "Income and Wealth",
+      "keyIdea": "Income is a flow measured over a period; wealth is a stock measured on a date. The circular flow carries income, and wealth is what income has been turned into.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Sub-topic 1 ends with **the distinction between income and wealth**, and the distinction is one of dimension. **Income is a flow**: it has a period attached, and the figure means nothing without it. **Wealth is a stock**: it has a date attached, and it is the value of what is owned at that moment."
+       },
+       {
+        "type": "paragraph",
+        "text": "A household earning $0.00bn a year is describing a rate. The same household owning a home, a car and a pension worth $0.00bn is describing a level — about 6.5 years of that income, accumulated."
+       },
+       {
+        "type": "paragraph",
+        "text": "The two are connected in one direction and only one: income that is not spent becomes wealth, and wealth can generate income in the form of rent, interest or dividends. But a large stock of wealth is not a large income, and an economy can raise its national income for years without much wealth accumulating if all of it is consumed."
+       },
+       {
+        "type": "paragraph",
+        "text": "Only income moves round the circular flow. Wealth is the reservoir beside the circuit, filled by what is not spent. That is worth holding onto, because the next chapter's first withdrawal is exactly the leg where income stops being income and starts being wealth."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏠",
+       "text": "Two households in Marisel earn the same each month. One has been saving for twenty years and one has not. Their incomes are identical and their wealth is not remotely."
+      },
+      "misconception": "Students use \"wealthy\" and \"high-earning\" interchangeably, and then cannot answer a question that separates them. A retired household can hold large wealth and receive a small income; a young professional can earn well and own almost nothing. The test is always the same: does the figure need a period or a date?",
+      "examMatters": "A question asking for the distinction wants both halves and the dimension that separates them, not two examples. Naming income as a flow over a period and wealth as a stock at a point in time is the distinction itself (Appendix 6, Define).",
+      "recall": {
+       "id": "national-income:sub:income-and-wealth:recall",
+       "type": "fillin",
+       "prompt": "Complete the distinction, using one word in each blank:",
+       "template": [
+        "Income is measured over a period of time, which makes it a ___.",
+        "Wealth is measured on a single date, which makes it a ___.",
+        "The two are connected because income that is not spent ___ over the years."
+       ],
+       "answers": [
+        "flow",
+        "stock",
+        "accumulates"
+       ],
+       "hints": [
+        "the dimension a figure has when it needs \"per year\" after it",
+        "the dimension a figure has when it needs \"as at\" in front of a date",
+        "what unspent income does, year after year, to build a reservoir"
+       ],
+       "distractors": [
+        "profit",
+        "revenue",
+        "disappears"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Two flows, running opposite ways round one circuit: things one way, money the other.",
+     "Income, output and expenditure are one number counted at three points.",
+     "Income is a flow over a period; wealth is a stock on a date."
+    ],
+    "diagramId": "national-income:diagram:ce84197a",
+    "quizIndices": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "practiceIndices": [
+     0,
+     1
+    ]
+   },
+   {
+    "id": "national-income:block:8e095ede",
+    "title": "Injections into the Flow",
+    "sections": [
+     {
+      "id": "national-income:sub:injections-withdrawals",
+      "title": "Injections and Withdrawals",
+      "keyIdea": "An injection is spending that enters the circuit from outside; a withdrawal is income that leaves it. The test is direction, not whether the spending is useful.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The two-sector circuit is closed: every dollar of income comes straight back as spending. Real economies are not, and sub-topic 2 opens with **the distinction between injections and withdrawals**."
+       },
+       {
+        "type": "paragraph",
+        "text": "**An injection is spending on domestic output that does not come from household income.** It enters the circuit from outside and adds to the flow. **A withdrawal is income that households receive and that does not return to domestic firms as spending.** It leaves the circuit and subtracts from the flow."
+       },
+       {
+        "type": "paragraph",
+        "text": "There are three of each, and the specification names them in pairs you can hold together: firms invest and households save; governments spend and governments tax; foreigners buy our exports and we buy their imports. **Investment (I)**, **Government expenditure (G)**, **Exports (X)** go in; **Savings (S)**, **Taxation (T)**, **Imports (M)** come out."
+       },
+       {
+        "type": "paragraph",
+        "text": "Notice what the test is not. It is not whether the spending is useful, or who does it: taxation is a withdrawal and government expenditure is an injection, and the same body does both in one budget. The only question is which way the dollar crosses the edge."
+       }
+      ],
+      "realExample": {
+       "emoji": "↔️",
+       "text": "A machine bought by a Marisel cannery from a domestic engineering firm is an injection. The same cannery buying the machine from abroad is an import, and a withdrawal. The purchase is identical; the direction is not."
+      },
+      "misconception": "Students sort by who is spending, so anything a household does becomes a withdrawal. Sort by direction instead: a household buying a domestically made refrigerator is ordinary consumption inside the circuit, and the same household buying an imported one is a withdrawal.",
+      "examMatters": "Write **withdrawal**, not \"leakage\". The specification uses withdrawal throughout sub-topic 2 and never uses the other word, so a mark scheme written from it contains one of them and not the other. Questions here almost always turn on a single classification, and committing to one is worth more than a fluent paragraph that does not.",
+      "recall": {
+       "id": "national-income:sub:injections-withdrawals:recall",
+       "type": "classify",
+       "prompt": "Sort each item by whether it adds spending to the circular flow, removes income from it, or stays inside it:",
+       "groups": [
+        {
+         "name": "Injection",
+         "items": [
+          "A foreign buyer paying for processed food",
+          "A government building a port"
+         ],
+         "why": "Each is spending on domestic output that did not come out of domestic household income, so it enters the circuit from outside."
+        },
+        {
+         "name": "Withdrawal",
+         "items": [
+          "A household putting money into a savings account",
+          "Income tax deducted from a salary"
+         ],
+         "why": "Each is income a household has received and has not passed back to a domestic firm, so it leaves."
+        },
+        {
+         "name": "Neither — it stays inside the circuit",
+         "items": [
+          "A household buying a domestically made refrigerator",
+          "A firm paying its own workers"
+         ],
+         "why": "Both of these are the ordinary household-to-firm circuit turning: money moves, but it never crosses the edge."
+        }
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:investment",
+      "title": "Investment (I)",
+      "keyIdea": "Investment is spending by firms on capital goods. It is an injection because it is spending on output that households did not pay for.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Spending by firms on capital goods — the machines, buildings and vehicles that produce future output.** It is the first of the three injections at 2 · b, and in Marisel it runs at $60bn a year."
+       },
+       {
+        "type": "paragraph",
+        "text": "Why is it an injection? A firm building a new warehouse is buying the output of a construction company. That output was produced, and someone was paid to produce it, but no household spent its income to bring it about. The spending entered the circuit from the firm's own side of it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Investment is the injection with a second effect that the others do not have. The others raise income now; investment raises income now **and** leaves behind a machine that can produce more next year. That is why a change in investment is watched more closely than a change of the same size in anything else."
+       },
+       {
+        "type": "paragraph",
+        "text": "What makes investment rise or fall is 2.3.2's leaf, not this one, and this section deliberately does not teach it. Here the only question is what an extra $10bn of it does to the circuit — which is the same question asked of every injection, and which sub-topic 4 answers."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏗️",
+       "text": "A Marisel cannery orders a domestically built filling line. The engineering firm hires, buys steel and pays wages, and none of that spending began as household income."
+      },
+      "misconception": "Students count a household buying shares as investment. Buying a share transfers ownership of something that already exists; no output is produced and nothing enters the circuit. Investment in this model is spending on newly produced capital goods, and if it is not new output it is not investment.",
+      "examMatters": "Where a question gives you a list and asks which items are investment, the test is whether new capital goods were produced. A share purchase, a house resale and a transfer of an existing factory all fail it.",
+      "recall": {
+       "id": "national-income:sub:investment:recall",
+       "type": "fillin",
+       "prompt": "Marisel's injections are investment $60bn, government expenditure $90bn and exports $50bn. Complete the two figures, in $bn:",
+       "template": [
+        "Total injections into the circular flow come to $___bn",
+        "Investment is the ___ largest of the three injections"
+       ],
+       "answers": [
+        "200",
+        "second"
+       ],
+       "hints": [
+        "add the three figures in the prompt",
+        "rank the three figures and say where this one falls"
+       ],
+       "distractors": [
+        "150",
+        "largest",
+        "240"
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:government-expenditure",
+      "title": "Government Expenditure (G)",
+      "keyIdea": "Government expenditure is government spending on goods and services. It is an injection, and it is the one the government can change deliberately.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Government spending on goods and services: the hospital that is built, the teacher who is paid.** In Marisel it is $90bn a year, the largest of the three injections."
+       },
+       {
+        "type": "paragraph",
+        "text": "It is an injection for the same reason investment is. When a government pays a construction firm to build a road, output is produced and incomes are paid, and no household spent its own income to cause it. The spending crossed into the circuit from outside."
+       },
+       {
+        "type": "paragraph",
+        "text": "What makes G different from the other two is that somebody chooses it. Investment depends on what thousands of firms decide, and exports on what foreign buyers decide. Government expenditure is set in a budget, which is why every worked example of an injection in this topic — including this section's — uses a change in G."
+       },
+       {
+        "type": "paragraph",
+        "text": "**One category of government spending is not counted here.** Money the government hands to households without receiving goods or services in return is not spending on output, so it is not part of G in this model. It becomes part of the circuit only when the household that receives it spends it."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏥",
+       "text": "A Marisel ministry commissions a regional hospital. Engineers, bricklayers and equipment suppliers are all paid, and the output they produce is counted in national output."
+      },
+      "misconception": "Students count transfer payments — pensions, unemployment benefit, subsidies paid direct to households — as part of G, because the government pays them out. No output is produced in exchange, so they are not spending on goods and services and they are not an injection at the point they are paid. Counting them here would count the same dollar twice: once as the transfer, and again when the household spends it. (How government spending is divided into categories is 4.3.5 · 1a's leaf, not this one's.)",
+      "examMatters": "A data question that gives total public spending and asks for the injection is testing exactly this. Take out the payments that buy no output before using the figure (Appendix 6, Calculate).",
+      "recall": {
+       "id": "national-income:sub:government-expenditure:recall",
+       "type": "match",
+       "prompt": "Match each item of government activity to what it is in the circular flow:",
+       "pairs": [
+        {
+         "left": "Paying a construction firm to build a school",
+         "right": "An injection: spending on output",
+         "why": "Output is produced and paid for, and no household income was used to cause it."
+        },
+        {
+         "left": "Paying a monthly pension into a household account",
+         "right": "Not an injection: no output is bought",
+         "why": "Nothing is produced in exchange, so counting it here would count the dollar twice — once now and again when the household spends it."
+        },
+        {
+         "left": "Deducting income tax from a salary",
+         "right": "A withdrawal: income that leaves the circuit",
+         "why": "The household received the income and cannot pass it on to a domestic firm."
+        },
+        {
+         "left": "Paying the salary of a state-employed teacher",
+         "right": "An injection: a service is produced",
+         "why": "Teaching is output the government has bought, so it belongs with the school building rather than with the pension."
+        }
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:exports",
+      "title": "Exports (X)",
+      "keyIdea": "Exports are spending by foreign buyers on domestic output. They are an injection because the income that pays for them was earned abroad.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Spending by foreign buyers on goods and services produced at home.** Marisel exports $50bn a year, mostly processed food."
+       },
+       {
+        "type": "paragraph",
+        "text": "The test is the same one again. A buyer in another country pays a Marisel cannery for a container of goods. The cannery's workers are paid, the output is counted in Marisel's national output, and the income that bought it was earned in an economy whose circuit is not this one. It has entered from outside."
+       },
+       {
+        "type": "paragraph",
+        "text": "What matters for classification is **where the output was produced, not where the buyer is**. A tourist who flies in and spends a week here is buying domestically produced services with foreign income: that is an export, even though nothing left the country. A domestic firm selling to another domestic firm is not, even if the goods are eventually shipped abroad by the second firm — the export is counted once, at the point the foreign income arrives."
+       },
+       {
+        "type": "paragraph",
+        "text": "Exports are the injection a government has least control over, because they depend on demand in other countries. That is worth remembering in an evaluation: an economy that relies on exports for a large share of its injections has tied its national income to decisions made elsewhere."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚢",
+       "text": "A container of Marisel canned fruit is bought by a supermarket chain in another country. The payment arrives from outside and the cannery's wage bill is paid from it."
+      },
+      "misconception": "Students treat exports as \"goods leaving the country\" and so miss services. A hotel room sold to a visitor, an engineering consultancy done for a foreign client and a licence fee paid from abroad are all exports, and nothing is loaded onto a ship in any of them.",
+      "examMatters": "A question about a tourism-dependent economy is an exports question. Saying so in the first line is worth more than a description of the tourist industry.",
+      "recall": {
+       "id": "national-income:sub:exports:recall",
+       "type": "classify",
+       "prompt": "Sort each transaction by whether it is an export of this economy:",
+       "groups": [
+        {
+         "name": "An export",
+         "items": [
+          "A foreign supermarket buying canned fruit from a domestic cannery",
+          "A visitor from abroad paying for a week in a domestic hotel",
+          "An engineering consultancy billing a client in another country"
+         ],
+         "why": "In each one, income earned abroad is paying for output produced here, which is the whole test and has nothing to do with whether anything is shipped."
+        },
+        {
+         "name": "Not an export",
+         "items": [
+          "A domestic household buying an imported machine",
+          "A domestic cannery selling to a domestic wholesaler"
+         ],
+         "why": "The first has the money going the other way and the second never leaves the domestic circuit at all."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "An injection enters the circuit from outside; a withdrawal is income that leaves it.",
+     "Investment, government expenditure and exports are the three injections.",
+     "Sort by direction, never by who is doing the spending.",
+     "Government spending that buys no output is not part of G."
+    ],
+    "diagramId": "national-income:diagram:9bdaba70",
+    "quizIndices": [
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "national-income:block:aeec2f24",
+    "title": "Withdrawals and the Net Position",
+    "sections": [
+     {
+      "id": "national-income:sub:savings",
+      "title": "Savings (S)",
+      "keyIdea": "Savings are income households receive and do not spend. It is a withdrawal because the income has left the circuit, not because saving is unwise.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Income households receive and do not spend.** In Marisel, households save $50bn out of $500bn of national income."
+       },
+       {
+        "type": "paragraph",
+        "text": "A dollar that is saved has been earned, so it is income; it has not been passed to a firm, so it is not expenditure. It has stopped circulating, and while it is stopped the flow is smaller than it would otherwise be. That is the whole of what \"withdrawal\" means here."
+       },
+       {
+        "type": "paragraph",
+        "text": "This is the point at which income becomes wealth, which is the link back to the first chapter. Saving is the leg of the circuit where a flow turns into a stock."
+       },
+       {
+        "type": "paragraph",
+        "text": "Nothing in the model says saving is bad. Savings are what banks lend to firms, and firms' borrowing is what pays for the investment that is the first injection. The model separates the two deliberately: the decision to save is made by households and the decision to invest is made by firms, and there is no mechanism forcing them to match."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏦",
+       "text": "A Marisel household puts part of each month's pay into a deposit account. The money was earned in the circuit and is now sitting outside it."
+      },
+      "misconception": "Students describe saving as money \"doing nothing\", and then cannot explain where investment finance comes from. Saved money is usually lent on by a bank. What makes it a withdrawal is not that it is idle but that the household did not spend it on domestic output — whoever spends it next is a separate decision by a separate person.",
+      "examMatters": "An answer that calls saving harmful has gone further than the model supports. The examinable point is narrower and safer: saving removes spending from the flow in this period, and whether that reduces national income depends on what injections are doing at the same time.",
+      "recall": {
+       "id": "national-income:sub:savings:recall",
+       "type": "fillin",
+       "prompt": "In Marisel, national income is $500bn and households save $50bn. Complete the two figures:",
+       "template": [
+        "Savings as a share of national income are ___%",
+        "Savings are a ___ from the circular flow"
+       ],
+       "answers": [
+        "10",
+        "withdrawal"
+       ],
+       "hints": [
+        "divide the smaller figure by the larger one and turn it into a percentage",
+        "the specification's own word for income that leaves the circuit"
+       ],
+       "distractors": [
+        "20",
+        "50",
+        "100"
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:taxation",
+      "title": "Taxation (T)",
+      "keyIdea": "Taxation is income taken by the government before a household can spend it. It is a withdrawal even though the government spends most of it straight back.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Income taken by the government before a household can spend it.** Marisel collects $100bn a year, the largest of the three withdrawals."
+       },
+       {
+        "type": "paragraph",
+        "text": "The dollar was earned, so it is income; the household could not spend it, so it is not household expenditure. It has left the circuit at the point it was taken, which is what makes it a withdrawal."
+       },
+       {
+        "type": "paragraph",
+        "text": "And that is true even though almost all of it comes back as government expenditure. **The two are counted separately on purpose**, because they are different sizes and are decided in different ways. A government that taxes $100bn and spends $90bn has withdrawn more than it injected, and the circuit is smaller for it; the reverse is also possible, and both happen."
+       },
+       {
+        "type": "paragraph",
+        "text": "Counting them as one net figure would hide exactly the thing the model is for. Taxation is a withdrawal, government expenditure is an injection, and the balance between them is one of the things that decides where national income settles."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧾",
+       "text": "A Marisel salary of ten thousand arrives as eight thousand. The missing two thousand was income, and the household never had the chance to spend it."
+      },
+      "misconception": "Students cancel taxation against government expenditure and say \"they net out, so ignore both\". They net out only when they are equal, which is rare and is a question in its own right. Both belong on the diagram as separate arrows pointing opposite ways.",
+      "examMatters": "Where a question gives tax revenue and government spending as two lines, it is asking you to compare them, not to add them. The answer is which is bigger and what that does to the flow.",
+      "recall": {
+       "id": "national-income:sub:taxation:recall",
+       "type": "fillin",
+       "prompt": "Marisel collects $100bn in taxation and spends $90bn on goods and services. Complete the comparison, in $bn:",
+       "template": [
+        "The government withdraws $___bn more than it injects",
+        "Acting on its own, the government therefore makes the circular flow ___"
+       ],
+       "answers": [
+        "10",
+        "smaller"
+       ],
+       "hints": [
+        "the gap between the two figures in the prompt",
+        "the direction the flow moves when more leaves than enters"
+       ],
+       "distractors": [
+        "190",
+        "larger",
+        "unchanged"
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:imports",
+      "title": "Imports (M)",
+      "keyIdea": "Imports are spending that leaves the country to pay for foreign output. The household did spend the income; it simply did not spend it here.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Spending that leaves the country to pay for goods and services produced abroad.** Marisel imports $50bn a year, mostly machinery."
+       },
+       {
+        "type": "paragraph",
+        "text": "Imports are the withdrawal that catches students out, because the household did spend the money. The point is where it went. A dollar spent on an imported machine pays wages in another country's circuit, not in this one, so as far as domestic national income is concerned it has left."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is why imports are subtracted rather than ignored. They are already inside the spending figures — a household's consumption includes what it buys from abroad — so if they were not taken out again, this economy's national income would include output that some other economy produced."
+       },
+       {
+        "type": "paragraph",
+        "text": "In Marisel, imports $50bn happen to equal exports $50bn, so the two cancel and the economy neither gains nor loses on trade overall. That is a convenience for the arithmetic and not a law: an economy importing more than it exports is withdrawing more than it injects on the trade legs alone."
+       }
+      ],
+      "realExample": {
+       "emoji": "📦",
+       "text": "A Marisel cannery buys a filling line from abroad. The money is spent, the machine arrives, and the wages it paid were paid to workers in another country."
+      },
+      "misconception": "Students say imports \"reduce national income because they are a cost\". They reduce it because the spending went to another economy's producers. An imported machine that raises a firm's output can raise national income overall — the withdrawal is what it does on the spending leg, not the whole story.",
+      "examMatters": "A question about a rise in imports wants the withdrawal and then its size. Naming the direction is one step; using the multiplier to say how much national income falls is the second, and it is where the marks separate.",
+      "recall": {
+       "id": "national-income:sub:imports:recall",
+       "type": "match",
+       "prompt": "Match each of the three withdrawals to the reason the income has left the circuit:",
+       "pairs": [
+        {
+         "left": "Savings",
+         "right": "It was received and not spent at all",
+         "why": "The household kept it, so it never reached a firm in this period."
+        },
+        {
+         "left": "Taxation",
+         "right": "It was taken before the household could spend it",
+         "why": "The income existed, but the decision to spend it was never the household's to make."
+        },
+        {
+         "left": "Imports",
+         "right": "It was spent, but on output produced abroad",
+         "why": "The spending happened; it just paid wages in another economy's circuit."
+        }
+       ],
+       "distractors": [
+        "It was never earned by anyone in the first place"
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:net-injections-withdrawals",
+      "title": "Net Injections and Net Withdrawals",
+      "keyIdea": "What moves national income is not injections or withdrawals on their own, but the gap between the two totals.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "2 · d asks for **the impact of net injections into, and net withdrawals from, the circular flow of income**, and \"net\" is the word carrying the requirement. Six arrows have been described; only their two totals matter."
+       },
+       {
+        "type": "paragraph",
+        "text": "In Marisel: injections $60bn + $90bn + $50bn = **$200bn**. Withdrawals $50bn + $100bn + $50bn = **$200bn**. The two totals are equal, so there is no net injection and no net withdrawal, and the flow is not being pushed either way."
+       },
+       {
+        "type": "paragraph",
+        "text": "**A net injection — injections above withdrawals — makes the circuit grow.** More is entering than leaving, so next period's incomes are larger than this period's. **A net withdrawal makes it shrink**, for the mirror reason. The size of the effect is sub-topic 4's question; the direction is this one's."
+       },
+       {
+        "type": "paragraph",
+        "text": "Notice that the individual arrows can all change without the total moving. A rise in savings of $10bn matched by a rise in investment of $10bn leaves $200bn against $200bn untouched. Only the gap moves the flow, which is why an answer that lists what happened to one arrow has not yet answered the question."
+       }
+      ],
+      "realExample": {
+       "emoji": "🪙",
+       "text": "Marisel's trade legs cancel at $50bn each way and its government withdraws $10bn more than it injects, so investment at $60bn against savings at $50bn is exactly what closes the gap."
+      },
+      "misconception": "Students conclude that a rise in any injection must raise national income. It raises it only if withdrawals have not risen by as much at the same time. The model's arithmetic is about two totals, and a question that changes two arrows at once is asking whether you know that.",
+      "examMatters": "A question that changes several arrows is testing the netting, not the classification. Set out both totals before and after, and the direction falls out of the comparison rather than out of intuition.",
+      "recall": {
+       "id": "national-income:sub:net-injections-withdrawals:recall",
+       "type": "fillin",
+       "prompt": "An economy has injections of $220bn and withdrawals of $180bn. Complete the analysis, in $bn where a figure is asked for:",
+       "template": [
+        "There is a net injection of $___bn",
+        "National income will therefore ___ in the next period",
+        "If withdrawals then rose to $___bn, the flow would stop changing"
+       ],
+       "answers": [
+        "40",
+        "rise",
+        "220"
+       ],
+       "hints": [
+        "the gap between the two totals in the prompt",
+        "the direction the circuit moves when more enters than leaves",
+        "the level at which the two totals would match"
+       ],
+       "distractors": [
+        "400",
+        "fall",
+        "180"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Savings, taxation and imports are the three withdrawals.",
+     "Imports are a withdrawal because the spending paid foreign producers, not because it was wasted.",
+     "Only the gap between the two totals moves national income.",
+     "A net injection grows the flow; a net withdrawal shrinks it."
+    ],
+    "diagramId": "national-income:diagram:31cd1af2",
+    "quizIndices": [
+     12,
+     13,
+     14,
+     15,
+     16
+    ],
+    "practiceIndices": [
+     5
+    ]
+   },
+   {
+    "id": "national-income:block:18c9b529",
+    "title": "Equilibrium Real National Output",
+    "sections": [
+     {
+      "id": "national-income:sub:equilibrium-concept",
+      "title": "The Concept of Equilibrium",
+      "keyIdea": "Real national output is in equilibrium when injections equal withdrawals, because at that point nothing is pushing the flow in either direction.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "3 · a asks for **the concept of equilibrium level of real national output**. An equilibrium is not a level that is good, or full, or fair. It is a level with no tendency to change, and in this model that means one thing: **J = W**."
+       },
+       {
+        "type": "paragraph",
+        "text": "The mechanism is worth two sentences. Suppose injections exceed withdrawals. More is being spent on output than is leaving the circuit, so firms sell more than they produced, respond by producing more, and pay out more income — and as income rises, so do savings, taxation and imports, because all three rise with income. The flow grows until withdrawals have grown enough to match, and then it stops."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is why equilibrium is stable rather than accidental. **Withdrawals rise with income and injections do not**, so any gap closes itself: an economy above equilibrium withdraws more than it injects and shrinks back, and one below it does the reverse."
+       },
+       {
+        "type": "paragraph",
+        "text": "Marisel is at $500bn with $200bn entering and $200bn leaving. Nothing is pushing, so nothing moves. And notice what equilibrium does not promise: $500bn may be well below what this economy could produce, and the flow will still sit there until an injection or a withdrawal changes."
+       }
+      ],
+      "realExample": {
+       "emoji": "⚖️",
+       "text": "Marisel sat at $500bn for three years with unemployment high throughout. Equilibrium held because J and W matched, not because the economy was doing well."
+      },
+      "misconception": "Students read \"equilibrium\" as \"the best the economy can do\", and then cannot explain how an economy can be stuck with high unemployment. The condition is J = W and nothing more. An economy producing far below its potential can satisfy it perfectly.",
+      "examMatters": "Define equilibrium by its condition, not by its consequences. An answer beginning \"equilibrium is where injections equal withdrawals, so there is no tendency for national income to change\" has the definition and the reason in one sentence (Appendix 6, Define).",
+      "recall": {
+       "id": "national-income:sub:equilibrium-concept:recall",
+       "type": "reorder",
+       "prompt": "An economy has injections above withdrawals. Put the adjustment back to equilibrium in order. The ordering principle is that each step is caused by the one before it:",
+       "correctOrder": [
+        "Injections exceed withdrawals, so more is spent on output than leaves the circuit",
+        "Firms find they are selling more than they have been producing",
+        "Output is raised, and more income is paid out to do it",
+        "Savings, taxation and imports all rise, because each of them rises with income",
+        "Withdrawals have risen to match injections, and national income stops changing"
+       ],
+       "criterion": "each step is caused by the one before it, from the initial gap to the new equilibrium",
+       "why": [
+        "This is the starting condition: a net injection is a push, and the flow is not yet balanced.",
+        "Selling more than was produced is the signal firms actually observe; nobody sees the national totals.",
+        "Raising output means hiring and paying, and paying is what turns extra spending into extra income.",
+        "This is the step that makes the process stop: all three withdrawals depend on income, and income has just risen.",
+        "The gap that started the process has closed, which is the definition of the new equilibrium."
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:equilibrium-on-ad-as",
+      "title": "Equilibrium on AD and AS",
+      "keyIdea": "The same equilibrium drawn on price-level and real-output axes: where aggregate demand crosses aggregate supply. J = W and AD = AS are two ways of saying one thing.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The injections-and-withdrawals picture shows where output settles but says nothing about prices. The specification's other apparatus does both. **Aggregate demand** is total planned spending on domestic output at each price level, and **aggregate supply** is total planned output at each price level. Equilibrium real national output is where the two curves cross."
+       },
+       {
+        "type": "paragraph",
+        "text": "The axes matter and are the thing most often drawn wrong. **The price level goes on the vertical axis and real national output on the horizontal axis.** Not price, not quantity of one good: the general price level, as an index, against the real output of the whole economy."
+       },
+       {
+        "type": "paragraph",
+        "text": "Marisel crosses at real output $500bn and a price level of 100. That is the same $500bn the J = W condition gave, because the two conditions are the same condition. Spending that enters the circuit and spending that is planned on domestic output are the same dollars counted two ways, so AD = AS whenever J = W."
+       },
+       {
+        "type": "paragraph",
+        "text": "What the AD/AS picture adds is the second axis. J = W can tell you output has risen; only this diagram can tell you whether the price level rose with it, and that is what the next two subsections are about."
+       }
+      ],
+      "realExample": {
+       "emoji": "📉",
+       "text": "Marisel's statistics office reports real output of $500bn and a price index of 100. One point on a chart, and both curves pass through it."
+      },
+      "misconception": "Students label the vertical axis \"price\" and the horizontal axis \"quantity\", copying a demand-and-supply diagram for a single good. The whole economy's output is not a quantity of anything, and the general price level is not a price. Mislabelling the axes loses the diagram mark before anything is drawn on it.",
+      "examMatters": "Appendix 6 defines Draw as requiring an accurately labelled diagram, and on this one the labels are the accuracy: price level on the vertical, real national output on the horizontal, both curves named, and the equilibrium marked where they cross.",
+      "recall": {
+       "id": "national-income:sub:equilibrium-on-ad-as:recall",
+       "type": "fillin",
+       "prompt": "Complete the description of an AD/AS diagram, one term to a blank:",
+       "template": [
+        "The vertical axis measures the ___ ___, as an index number.",
+        "The horizontal axis measures ___ ___ ___.",
+        "Equilibrium is the point where the two curves ___."
+       ],
+       "answers": [
+        "price",
+        "level",
+        "real",
+        "national",
+        "output",
+        "cross"
+       ],
+       "hints": [
+        "not the price of one good, but the general one",
+        "the word that means \"adjusted for inflation\"",
+        "whose it is: the economy's as a whole",
+        "the thing being produced, not the money it sells for",
+        "the general one, not a single market's",
+        "what two lines on a diagram do at the equilibrium point"
+       ],
+       "distractors": [
+        "quantity",
+        "nominal"
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:shifts-in-ad",
+      "title": "Causes of Change: A Shift in AD",
+      "keyIdea": "A rise in any injection shifts AD to the right. Real output and the price level both rise, and how they split depends on the AS curve it meets.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "3 · b asks for **the causes of changes in equilibrium real national output as a result of shifts in the AD curve**. AD shifts when planned spending on domestic output changes at every price level — which is exactly what a change in an injection or a withdrawal is."
+       },
+       {
+        "type": "paragraph",
+        "text": "So the list of causes is the list this section has already built. **A rise in investment, in government expenditure or in exports shifts AD right; a rise in savings, taxation or imports shifts it left.** What makes each of those rise or fall is 2.3.2's leaf and this section points at it rather than teaching it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Take Marisel and raise government expenditure by $40bn. AD shifts right. Along an upward-sloping short-run AS curve, the new crossing point is at real output $560bn and a price level of 110: **both have risen**."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is the property to carry into an exam answer. **A shift in AD moves real output and the price level in the same direction** — right and up together, left and down together. The reason is that AS slopes upward: getting more output out of an economy costs more per unit, so more output arrives with a higher price level attached."
+       }
+      ],
+      "realExample": {
+       "emoji": "📈",
+       "text": "Marisel's government adds $40bn of port and road building. Two years later real output is $560bn and the price index has moved from 100 to 110."
+      },
+      "misconception": "Students shift AD right and read the new output straight off the horizontal shift, as though the price level had not moved. It did, and the economy slides up its AS curve, so the rise in real output is smaller than the shift.",
+      "examMatters": "A Draw question wants the shift labelled AD to AD₁, the new crossing marked, and both values read off. A diagram showing the shift but not the new equilibrium has answered half of it (Appendix 6, Draw).",
+      "recall": {
+       "id": "national-income:sub:shifts-in-ad:recall",
+       "type": "classify",
+       "prompt": "Sort each change by which way it shifts the AD curve:",
+       "groups": [
+        {
+         "name": "AD shifts right",
+         "items": [
+          "A rise in government expenditure",
+          "A rise in exports",
+          "A rise in investment by firms"
+         ],
+         "why": "Each of these is an injection, and more spending entering the circuit at every price level is a rightward shift."
+        },
+        {
+         "name": "AD shifts left",
+         "items": [
+          "A rise in the rate of income tax",
+          "A rise in imports",
+          "A rise in household savings"
+         ],
+         "why": "Each of these is a withdrawal, and more income leaving the circuit at every price level is a leftward shift."
+        }
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:shifts-in-as",
+      "title": "Causes of Change: A Shift in AS",
+      "keyIdea": "A shift in AS moves real output and the price level in opposite directions. That single difference is how an exam question tells you which curve moved.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The other half of 3 · b is **a shift in the AS curve**. AS moves when the cost or capacity of producing changes rather than when spending does: cheaper imported raw materials or a change in exchange or tax rates in the short run, better technology, skills or productivity in the long run. Those causes are 2.3.3's leaves, referred to here rather than taught."
+       },
+       {
+        "type": "paragraph",
+        "text": "Take Marisel again and let the machinery it imports become cheaper. Producing anything now costs less, so AS shifts right. The new crossing point is at real output $520bn and a price level of 95: **output has risen and the price level has fallen**."
+       },
+       {
+        "type": "paragraph",
+        "text": "**That is the diagnostic.** An AD shift moves output and prices the same way; an AS shift moves them opposite ways. Given a question that reports rising output and falling prices, no other combination fits, and the curve that moved is AS."
+       },
+       {
+        "type": "paragraph",
+        "text": "The shape of AS also decides how much of an AD shift becomes output at all. Well below capacity, AS is close to flat and almost all of a rightward shift arrives as output; at capacity it is close to vertical and almost all arrives as a higher price level. Those shapes are 2.3.3 · 3a's Keynesian and classical curves, and the last chapter puts numbers on both."
+       }
+      ],
+      "realExample": {
+       "emoji": "⚙️",
+       "text": "Imported machinery into Marisel falls in price. Canneries re-equip, unit costs drop, and the statistics office reports output $520bn with the price index down to 95."
+      },
+      "misconception": "Students treat any rise in real output as evidence that demand rose. Output and prices moving in opposite directions rules AD out entirely. Reading the two directions together, rather than output alone, is what identifies the curve.",
+      "examMatters": "Where a data question reports what happened to output and to the price level, it has told you which curve moved. Say which, and why the pair of directions proves it, before analysing anything else.",
+      "recall": {
+       "id": "national-income:sub:shifts-in-as:recall",
+       "type": "match",
+       "prompt": "Match each pair of observed changes to the curve that must have moved, and in which direction:",
+       "pairs": [
+        {
+         "left": "Real output up, price level up",
+         "right": "AD shifted right",
+         "why": "Only a demand shift moves the two in the same direction, and upward is the rightward case."
+        },
+        {
+         "left": "Real output down, price level down",
+         "right": "AD shifted left",
+         "why": "Same direction again, so it is demand; both falling is the leftward case."
+        },
+        {
+         "left": "Real output up, price level down",
+         "right": "AS shifted right",
+         "why": "Opposite directions can only be supply, and more output at lower cost is the rightward case."
+        },
+        {
+         "left": "Real output down, price level up",
+         "right": "AS shifted left",
+         "why": "Opposite directions again, and less output at higher cost is the leftward case."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Equilibrium is where injections equal withdrawals: no tendency to change, and no promise of good.",
+     "The same point on AD/AS axes: price level vertical, real national output horizontal.",
+     "An AD shift moves output and the price level the same way.",
+     "An AS shift moves them opposite ways, which is how you tell which curve moved."
+    ],
+    "diagramId": "national-income:diagram:fa2836cd",
+    "quizIndices": [
+     17,
+     18,
+     19,
+     20,
+     21
+    ],
+    "practiceIndices": [
+     4,
+     7
+    ]
+   },
+   {
+    "id": "national-income:block:c8ff719c",
+    "title": "The Multiplier",
+    "sections": [
+     {
+      "id": "national-income:sub:multiplier-process",
+      "title": "The Multiplier and the Multiplier Process",
+      "keyIdea": "An injection raises national income by more than itself, because the income it creates is spent again. The multiplier is how many times over.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "4 · a asks for **the multiplier and the multiplier process**, and the process is where the number comes from. Marisel's government spends an extra $40bn on a port."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Round one:** the $40bn is paid to construction firms and their workers. National income has risen by $40bn. **Round two:** those households spend 0.60 of it on domestically produced goods — $24bn — and that is somebody else's income. **Round three:** 0.60 of that is spent again: $14.40bn. Then $8.64bn, then $5.18bn."
+       },
+       {
+        "type": "paragraph",
+        "text": "Each round is smaller than the last, because part of every dollar received is saved, taxed or spent abroad and so never makes it to the next round. The rounds shrink to nothing and the total converges: $100bn of extra national income from $40bn of extra spending. The first five rounds alone have already delivered 92.2% of it."
+       },
+       {
+        "type": "paragraph",
+        "text": "**The multiplier is the ratio: $100bn ÷ $40bn = 2.5.** And the process stops exactly where the previous chapter said it would. At the new income of $600bn, withdrawals have risen by $40bn — which is the size of the injection — so $240bn is entering and $240bn is leaving, and the flow is in equilibrium again."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏗️",
+       "text": "The Marisel port contract is $40bn. The dockyard's wage bill becomes grocery takings, the grocer's staff pay rent, and by the fifth round the sums are small enough to stop noticing."
+      },
+      "misconception": "Students describe the process as money going round \"for ever\", and then cannot explain why the total is finite. Each round is smaller than the one before it by a fixed fraction, and a shrinking series has a limit. The process has no end date and a very definite total.",
+      "examMatters": "An answer that describes the rounds without reaching the total has described a mechanism and not answered the question. Two or three rounds are enough to show the mechanism; then use the formula and give the number.",
+      "recall": {
+       "id": "national-income:sub:multiplier-process:recall",
+       "type": "reorder",
+       "prompt": "Put the multiplier process in order, starting with the injection. The ordering principle is that each round's spending creates the next round's income:",
+       "correctOrder": [
+        "A government spends an extra amount on domestic output",
+        "That amount becomes income for the firms and workers who produced it",
+        "Those households spend part of it on domestic output and save, pay tax on, or import the rest",
+        "What they spent becomes income for somebody else, and the round repeats at a smaller size",
+        "The rounds shrink towards nothing and the extra income settles at a finite total"
+       ],
+       "criterion": "each round's spending creates the next round's income, so the order is the order the dollars actually move in",
+       "why": [
+        "The injection is the only step that does not come from somebody's income, which is why the process starts here.",
+        "Spending on output is income to whoever produced it. This is the step that turns the injection into national income.",
+        "This is where the withdrawals happen, and it is the reason each round is smaller than the one before.",
+        "Only the part that was spent domestically carries on, so the round repeats with less in it every time.",
+        "A series that shrinks by a fixed fraction each time has a limit, which is why the multiplier is a finite number."
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:mpc-mps",
+      "title": "Marginal Propensity to Consume and to Save",
+      "keyIdea": "A marginal propensity is the fraction of one extra dollar of income that goes a particular way. MPC is what keeps the process going; MPS is one of the three things that stop it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "4 · b asks for **marginal propensities and their effects on the multiplier**. \"Marginal\" means out of the next dollar, not out of all the dollars: a propensity is what happens to an extra unit of income, and it is written as a decimal."
+       },
+       {
+        "type": "paragraph",
+        "text": "**The marginal propensity to consume (MPC)** is the fraction of extra income spent on **domestically produced** goods and services. In Marisel it is 0.60, which is what generated $24bn out of the first round's $40bn. MPC is the only propensity that keeps a dollar inside the circuit, so it alone decides how much survives into the next round."
+       },
+       {
+        "type": "paragraph",
+        "text": "**The marginal propensity to save (MPS)** is the fraction saved: 0.10 here. A dollar saved does not reach a domestic firm in this round, so it drops out of the process."
+       },
+       {
+        "type": "paragraph",
+        "text": "The word \"domestically\" in the MPC definition is doing real work and is the commonest source of a wrong multiplier. Households in Marisel spend more than 0.60 of extra income in total — some of it goes abroad — but only 0.60 of it lands on domestic output, and only that part starts the next round."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛒",
+       "text": "A dockworker in Marisel receives an extra hundred. Sixty is spent in local shops, ten goes into savings, twenty to tax and ten on an imported phone."
+      },
+      "misconception": "Students take MPC out of disposable income — what is left after tax — and then use it in the formula. The formula's MPC is out of national income, before tax. Mixing the two produces a multiplier that can be double the right one, and it is the single most common calculation error in this topic.",
+      "examMatters": "Where a question gives the propensities, check they sum to one before using any of them. If they do, they are out of national income and both formulae apply; if they do not, read the question again for which base is being used.",
+      "recall": {
+       "id": "national-income:sub:mpc-mps:recall",
+       "type": "fillin",
+       "prompt": "A household receives an extra $100 of income. It spends $55 on domestic goods, saves $15, pays $20 in tax and spends $10 on imports. Complete the propensities as decimals:",
+       "template": [
+        "The marginal propensity to consume is ___",
+        "The marginal propensity to save is ___",
+        "The four propensities together must sum to ___"
+       ],
+       "answers": [
+        "0.55",
+        "0.15",
+        "1"
+       ],
+       "hints": [
+        "the share of the extra hundred that stayed with domestic producers",
+        "the share that was neither spent nor taken",
+        "every dollar goes somewhere, so there is only one possible total"
+       ],
+       "distractors": [
+        "0.65",
+        "0.20",
+        "0.75"
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:mpt-mpm",
+      "title": "Marginal Propensity to Tax and to Import",
+      "keyIdea": "MPT and MPM are the other two ways a dollar leaves the process. Together with MPS they are the marginal propensity to withdraw, and they are what makes a real multiplier small.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The other two propensities 4 · b names are the ones a two-sector model has no room for. **The marginal propensity to tax (MPT)** is the fraction of extra income taken in taxation — 0.20 in Marisel. **The marginal propensity to import (MPM)** is the fraction spent on foreign output: 0.10."
+       },
+       {
+        "type": "paragraph",
+        "text": "MPT is the largest of Marisel's three withdrawal propensities and is often the largest anywhere, because income tax is usually deducted before a household sees the money. It is also the one a government controls directly: raising the rate of income tax raises MPT, which shrinks the multiplier on every future injection, including the government's own spending."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Add the three together and you have the marginal propensity to withdraw: MPW = MPS + MPT + MPM = 0.10 + 0.20 + 0.10 = 0.40.** That is the fraction of every extra dollar that does not survive into the next round, and it is the single number the multiplier depends on."
+       },
+       {
+        "type": "paragraph",
+        "text": "Which is why an open economy with a large government has a smaller multiplier than a closed one with a small government. In Marisel, 40% of each extra dollar leaves per round, so an injection is multiplied 2.5 times. Halve MPW and it would be five."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌐",
+       "text": "Two economies receive the same $40bn injection. The one that imports heavily and taxes highly sees far less of it, because more of each round leaves before the next one starts."
+      },
+      "misconception": "Students treat a high MPM as a problem only for the balance of trade. It is also what makes a stimulus weak: an economy that imports a large share of every extra dollar is sending part of its own stimulus to other countries' producers at every round.",
+      "examMatters": "Where a question names four propensities and asks for the effect on the multiplier, it usually only needs three of them. Add the withdrawal propensities and the answer follows in one step.",
+      "recall": {
+       "id": "national-income:sub:mpt-mpm:recall",
+       "type": "classify",
+       "prompt": "Sort each marginal propensity by what it does to a dollar of extra income:",
+       "groups": [
+        {
+         "name": "Keeps the dollar in the domestic circuit",
+         "items": [
+          "Marginal propensity to consume"
+         ],
+         "why": "Spending on domestic output is somebody else's income here, so this is the only one that survives into the next round."
+        },
+        {
+         "name": "Removes the dollar from the circuit",
+         "items": [
+          "Marginal propensity to save",
+          "Marginal propensity to tax",
+          "Marginal propensity to import"
+         ],
+         "why": "Each of these three is a withdrawal, and together they are the marginal propensity to withdraw."
+        }
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:calculating-multiplier",
+      "title": "Calculating the Multiplier",
+      "keyIdea": "The specification gives two formulae and they are the same formula, because the four propensities add to one.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "4 · c asks for **calculations of the multiplier using the formula 1/(1−MPC) and 1/MPW, where MPW = MPS + MPT + MPM**. Two formulae, and the first question is when to use which."
+       },
+       {
+        "type": "paragraph",
+        "text": "The answer is that they give the same number. Every dollar of extra income is consumed domestically, saved, taxed or imported and there is nowhere else for it to go, so MPC + MPS + MPT + MPM = 1. Rearranged, that says **MPW = 1 − MPC**, and the two formulae are the same fraction written two ways."
+       },
+       {
+        "type": "paragraph",
+        "text": "In Marisel: MPC 0.60, so 1/(1 − 0.60) = 1/0.40 = **2.5**. And MPW = 0.10 + 0.20 + 0.10 = 0.40, so 1/0.40 = **2.5**. Use whichever the data gives you."
+       },
+       {
+        "type": "paragraph",
+        "text": "Then apply it: **change in national income = the multiplier × the change in injections.** 2.5 × $40bn = $100bn, which takes Marisel from $500bn to $600bn. The same step runs in reverse for a withdrawal: $20bn more spent on imports gives 2.5 × −$20bn = −$50bn, and national income falls to $450bn."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧮",
+       "text": "Marisel's finance ministry is handed MPS 0.10, MPT 0.20 and MPM 0.10 and no MPC at all. Adding the three gives 0.40, and the multiplier follows in one division."
+      },
+      "misconception": "Students use 1/(1−MPC) with an MPC that already excludes tax and imports, and get a multiplier far too large. The check takes one line: if the four propensities you have been given do not add to one, they are not all measured out of national income, and the two formulae will not agree.",
+      "examMatters": "Appendix 6 defines Calculate as a calculation based on given data, with workings shown. Write the formula, substitute the figures, then give the number — the substitution line is where the method mark sits when the arithmetic slips.",
+      "recall": {
+       "id": "national-income:sub:calculating-multiplier:recall",
+       "type": "fillin",
+       "prompt": "An economy has MPS 0.15, MPT 0.25 and MPM 0.10. An extra $80bn is injected. Complete the calculation:",
+       "template": [
+        "MPW = ___",
+        "The multiplier is ___",
+        "National income rises by $___bn"
+       ],
+       "answers": [
+        "0.5",
+        "2",
+        "160"
+       ],
+       "hints": [
+        "add the three propensities the question gives you",
+        "one divided by the figure above",
+        "apply the multiplier to the injection in the question"
+       ],
+       "distractors": [
+        "0.75",
+        "4",
+        "40"
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:multiplier-ratio",
+      "title": "The Multiplier as a Ratio",
+      "keyIdea": "The multiplier is also a ratio measured after the fact: the change in real income over the change in injections. That direction recovers the propensities from data.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The formulae go from the propensities to the multiplier. The paper also goes the other way, and it is the direction data questions use, because a statistics office can observe incomes and injections and cannot observe a propensity."
+       },
+       {
+        "type": "paragraph",
+        "text": "**The multiplier is the change in real national income divided by the change in injections.** Both directions describe the same number; one predicts it and one measures it."
+       },
+       {
+        "type": "paragraph",
+        "text": "A different economy raises exports by $200bn and its real national income rises by $800bn. The multiplier is $800bn ÷ $200bn = **4**. From there the propensities follow: if k = 1/MPW then MPW = 1/k = **0.25**, and since MPW = 1 − MPC, MPC = **0.75**."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is a genuinely different economy from Marisel, and the contrast is the point. A multiplier of 4 against 2.5 means less than half as much of each dollar leaks away at each round — and the two economies get very different results from identical stimulus."
+       }
+      ],
+      "realExample": {
+       "emoji": "📊",
+       "text": "An economy's exports rise $200bn and its real national income $800bn. Nobody measured a propensity; the ratio of the two observed changes gives the multiplier directly."
+      },
+      "misconception": "Students divide by the wrong figure and get the reciprocal. The multiplier is always greater than one, so a result below one is a division the wrong way round. Change in income on top; change in injections underneath.",
+      "examMatters": "A data question that gives two changes and asks for the multiplier wants the division and the interpretation. Then go one step further and recover MPW: it is usually the next part of the question.",
+      "recall": {
+       "id": "national-income:sub:multiplier-ratio:recall",
+       "type": "fillin",
+       "prompt": "An economy raises government expenditure by $50bn and real national income rises by $150bn. Complete the analysis:",
+       "template": [
+        "The multiplier is ___",
+        "MPW is therefore ___ (to two decimal places)",
+        "And the marginal propensity to consume is ___ (to two decimal places)"
+       ],
+       "answers": [
+        "3",
+        "0.33",
+        "0.67"
+       ],
+       "hints": [
+        "divide the rise in income by the rise in injections",
+        "the reciprocal of the figure above",
+        "what is left of a dollar once the withdrawals have gone"
+       ],
+       "distractors": [
+        "1.5",
+        "0.50",
+        "0.30"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "An injection is spent again and again, in rounds that shrink to nothing.",
+     "MPC keeps a dollar in the circuit; MPS, MPT and MPM take it out.",
+     "MPW = MPS + MPT + MPM = 1 − MPC, which is why both formulae give one number.",
+     "Measured after the fact, the multiplier is the change in income over the change in injections."
+    ],
+    "diagramId": "national-income:diagram:6650ba36",
+    "quizIndices": [
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "practiceIndices": [
+     3
+    ]
+   },
+   {
+    "id": "national-income:block:c8506984",
+    "title": "The Multiplier, AD and Economic Activity",
+    "sections": [
+     {
+      "id": "national-income:sub:multiplied-shift-of-ad",
+      "title": "The Multiplied Shift of AD",
+      "keyIdea": "An injection does not shift AD by its own size. It shifts AD by the injection times the multiplier, and that is what makes the multiplier matter on a diagram.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "4 · d asks for **the significance of the multiplier for shifts in AD and the level of economic activity**, and the first half of that is a fact about the diagram that is easy to draw wrong."
+       },
+       {
+        "type": "paragraph",
+        "text": "Marisel's government spends an extra $40bn. **AD does not shift right by $40bn. It shifts right by $100bn** — the injection times the multiplier — because the rounds of extra spending all happen at every price level, not only at the original one."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is the whole of the multiplier's significance for AD: it is the reason the horizontal distance between AD and AD₁ is bigger than the policy that caused it. A government that budgets $40bn is moving the curve 2.5 times as far as the budget line suggests."
+       },
+       {
+        "type": "paragraph",
+        "text": "And it works in both directions, which is the half students forget. A $20bn rise in imports shifts AD **left** by $50bn, not by $20bn. The multiplier makes a withdrawal hurt more than its size, exactly as it makes an injection help more than its size."
+       }
+      ],
+      "realExample": {
+       "emoji": "↔️",
+       "text": "On Marisel's diagram, a $40bn budget line moves the AD curve $100bn to the right. The gap between the two figures is the multiplier, drawn."
+      },
+      "misconception": "Students shift AD right by the size of the injection. The shift is the multiplied amount, and measuring it as the injection understates the effect by a factor of the multiplier — here, by $60bn.",
+      "examMatters": "Where a Draw question gives an injection and the propensities, it is asking for the multiplied shift. Calculate the multiplier first and label the horizontal distance with the answer (Appendix 6, Draw).",
+      "recall": {
+       "id": "national-income:sub:multiplied-shift-of-ad:recall",
+       "type": "fillin",
+       "prompt": "An economy has MPW 0.25. Its government cuts spending by $30bn. Complete the effect on the AD curve:",
+       "template": [
+        "The multiplier is ___",
+        "AD shifts to the ___",
+        "The horizontal shift is $___bn"
+       ],
+       "answers": [
+        "4",
+        "left",
+        "120"
+       ],
+       "hints": [
+        "one divided by the propensity in the question",
+        "the direction a fall in an injection moves the curve",
+        "the injection multiplied, not the injection itself"
+       ],
+       "distractors": [
+        "right",
+        "30",
+        "0.25"
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:how-much-becomes-output",
+      "title": "How Much of It Becomes Output",
+      "keyIdea": "The multiplied shift is how far AD moves. How much of it arrives as real output rather than as a higher price level is decided by the AS curve it meets.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The second half of 4 · d is **the level of economic activity**, and the honest answer is that the multiplier alone does not determine it. The multiplier says how far AD moves; where output ends up depends on what AD meets."
+       },
+       {
+        "type": "paragraph",
+        "text": "Three cases, all from Marisel's $100bn shift. **Where the economy is producing well below capacity**, AS is close to flat, and almost the whole shift arrives as output: real output $600bn with the price level still at 100. **Where AS slopes upward**, the shift splits: output $560bn and the price level 110. **Where the economy is already at capacity**, AS is vertical, output cannot rise at all, and the whole shift becomes a price level of 125."
+       },
+       {
+        "type": "paragraph",
+        "text": "Same injection, same multiplier, same $100bn shift — and real output rises by $100bn, by $60bn or by nothing at all. The two AS shapes behind the first and third cases are the Keynesian and classical curves of 2.3.3 · 3a."
+       },
+       {
+        "type": "paragraph",
+        "text": "**This is the evaluation point that turns a good answer into a top one.** A government told its multiplier is 2.5 still cannot say what its spending will do to output until it knows where the economy is relative to its capacity."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧱",
+       "text": "The same $40bn port programme in Marisel would deliver $100bn of extra output in a deep downturn and almost none in a year when every construction firm is already fully booked."
+      },
+      "misconception": "Students calculate the multiplier and report the answer as the rise in real output. It is the rise in the AD curve's position, and it becomes real output only where there is capacity to produce more. In a fully stretched economy the same calculation predicts inflation.",
+      "examMatters": "An Examine or Evaluate question about a stimulus is asking for this. The multiplier is the analysis; where the economy sits against its capacity is the judgement, and it is what separates the top level from the one below it.",
+      "recall": {
+       "id": "national-income:sub:how-much-becomes-output:recall",
+       "type": "match",
+       "prompt": "One rightward AD shift meets three different AS curves. Match each to what the economy gets:",
+       "pairs": [
+        {
+         "left": "AS close to flat, well below capacity",
+         "right": "Almost all of the shift becomes real output",
+         "why": "There is idle capacity, so extra demand is met by producing more rather than by charging more."
+        },
+        {
+         "left": "AS sloping upward",
+         "right": "The shift splits between output and the price level",
+         "why": "Getting more out of the economy costs more per unit, so some of the extra spending is absorbed by price."
+        },
+        {
+         "left": "AS vertical, at capacity",
+         "right": "None of the shift becomes real output",
+         "why": "Nothing more can be produced, so the whole of the extra spending arrives as a higher price level."
+        }
+       ]
+      }
+     },
+     {
+      "id": "national-income:sub:size-of-the-multiplier",
+      "title": "Why the Multiplier Is Not a Fixed Number",
+      "keyIdea": "The multiplier is one over the fraction of each dollar that leaves the circuit, so anything moving that fraction moves the multiplier — including the policy using it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The multiplier looks like a constant because it is written as one. It is not. **It is 2.5 in Marisel because MPW is 0.40 there**, and every one of the three propensities behind that figure can move."
+       },
+       {
+        "type": "paragraph",
+        "text": "**A larger multiplier** comes from a smaller MPW: an economy that imports little, taxes lightly or saves little keeps more of each round. **A smaller multiplier** comes from the reverse — and one that imports most of what it consumes can be barely above one, because most of each round is spent abroad."
+       },
+       {
+        "type": "paragraph",
+        "text": "The consequence for policy is sharper than it first looks. A government that raises income tax to pay for extra spending has raised MPT, which has shrunk the multiplier on the very spending it is financing. The two halves of the budget work against each other, and the net effect is smaller than either half taken alone."
+       },
+       {
+        "type": "paragraph",
+        "text": "So the multiplier is an estimate, not a constant a country possesses. **Its size is why two governments spending the same amount get different results**, and saying so — with the propensity that differs — is what a question about the significance of the multiplier is asking for."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌍",
+       "text": "A small island economy importing most of its consumer goods and a large economy producing its own get very different returns from the same stimulus, because most of the island's rounds leave at the first step."
+      },
+      "misconception": "Students treat the multiplier as a fixed property of a country, quoted once and reused. It is one over MPW, and MPW moves with tax rates, savings habits and how much extra spending goes abroad. A multiplier measured in one year is evidence about that year.",
+      "examMatters": "Where a question asks about the significance of the multiplier, the size is the answer and the propensities are the reason. Naming which propensity makes this economy's multiplier large or small is worth more than a general statement that multipliers vary.",
+      "recall": {
+       "id": "national-income:sub:size-of-the-multiplier:recall",
+       "type": "classify",
+       "prompt": "Sort each change by what it does to the size of an economy's multiplier:",
+       "groups": [
+        {
+         "name": "Makes the multiplier larger",
+         "items": [
+          "Households save a smaller share of extra income",
+          "A larger share of extra spending goes to domestic producers"
+         ],
+         "why": "Each of these lowers the fraction leaving the circuit at every round, so more survives and the total is bigger."
+        },
+        {
+         "name": "Makes the multiplier smaller",
+         "items": [
+          "The rate of income tax rises",
+          "Households buy more of their goods from abroad",
+          "Households save a larger share of extra income"
+         ],
+         "why": "Each of these raises the marginal propensity to withdraw, and the multiplier is one over that figure."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "AD shifts by the injection times the multiplier, not by the injection.",
+     "How much of the shift becomes output is decided by the AS curve it meets.",
+     "The multiplier is one over MPW, and every propensity behind it can move."
+    ],
+    "diagramId": "national-income:diagram:49bfdb69",
+    "quizIndices": [
+     27,
+     28,
+     29,
+     30,
+     31
+    ],
+    "practiceIndices": [
+     6,
+     8
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "National Income",
+    "meta": "2.3.4 · 1a, 1b",
+    "keyIdea": "One circuit, two flows running opposite ways, and the difference between a flow and a stock.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Circular flow of income</strong> — the model of households and firms joined by a real flow and a money flow running in opposite directions."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>National income</strong> — the value of the flow over a period; the same figure as national output and national expenditure."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Income</strong> — a flow, measured over a period of time."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Wealth</strong> — a stock, measured at a point in time; what income that was not spent has accumulated into."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Marisel's circuit turns over $500bn a year, whichever of the three points it is measured at."
+       },
+       {
+        "type": "mechanism",
+        "text": "Real flow: factors of production one way, goods and services the other. Money flow: factor incomes one way, consumer spending the other."
+       },
+       {
+        "type": "link",
+        "text": "Only income moves round the circuit. Wealth is the reservoir beside it, filled by what is not spent."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Four arrows on the diagram, not two.",
+     "Income, output and expenditure are one number.",
+     "A flow needs a period; a stock needs a date."
+    ]
+   },
+   {
+    "title": "Injections into the Flow",
+    "meta": "2.3.4 · 2a, 2b",
+    "keyIdea": "What an injection is, the three the specification names, and the one category of public spending that is not one.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Injection</strong> — spending on domestic output that did not come from domestic household income."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Investment (I)</strong> — Spending by firms on capital goods — the machines, buildings and vehicles that produce future output."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Government expenditure (G)</strong> — Government spending on goods and services: the hospital that is built, the teacher who is paid."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Exports (X)</strong> — Spending by foreign buyers on goods and services produced at home."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Marisel: investment $60bn + government expenditure $90bn + exports $50bn = $200bn."
+       },
+       {
+        "type": "mechanism",
+        "text": "Sort by direction, not by who is spending. A government both injects and withdraws, in the same budget."
+       },
+       {
+        "type": "link",
+        "text": "Payments that buy no goods or services are not part of G at the point they are paid; they enter the circuit when the household spends them."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "I, G and X go in.",
+     "Investment means new capital goods, not buying shares.",
+     "An export is where the output was made, not where the buyer stood."
+    ]
+   },
+   {
+    "title": "Withdrawals and the Net Position",
+    "meta": "2.3.4 · 2c, 2d",
+    "keyIdea": "The three withdrawals, and why only the gap between the two totals moves national income.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Withdrawal</strong> — income received by households that does not return to domestic firms as spending."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Savings (S)</strong> — Income households receive and do not spend."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Taxation (T)</strong> — Income taken by the government before a household can spend it."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Imports (M)</strong> — Spending that leaves the country to pay for goods and services produced abroad."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Net injection</strong> — injections above withdrawals; the flow grows. <strong>Net withdrawal</strong> is the reverse."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Marisel: savings $50bn + taxation $100bn + imports $50bn = $200bn, which equals injections, so nothing is pushing."
+       },
+       {
+        "type": "mechanism",
+        "text": "All three withdrawals rise with income. That is what makes any gap close itself."
+       },
+       {
+        "type": "link",
+        "text": "Two arrows can both move and leave the totals untouched. Compare the totals, not the arrows."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "S, T and M come out.",
+     "Imports are a withdrawal because the wages were paid abroad.",
+     "Only the net position moves the flow."
+    ]
+   },
+   {
+    "title": "Equilibrium Real National Output",
+    "meta": "2.3.4 · 3a, 3b",
+    "keyIdea": "Equilibrium as a condition rather than an achievement, and the two-axis diagram that shows what a shift does to prices as well as to output.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Equilibrium real national output</strong> — the level with no tendency to change: injections equal withdrawals, and AD crosses AS."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Aggregate demand</strong> — total planned spending on domestic output at each price level."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Aggregate supply</strong> — total planned output at each price level."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Marisel crosses at real output $500bn and a price level of 100. Axes: price level vertical, real national output horizontal."
+       },
+       {
+        "type": "mechanism",
+        "text": "A rise in an injection shifts AD right: output $560bn and the price level 110 — both up."
+       },
+       {
+        "type": "mechanism",
+        "text": "Cheaper imported machinery shifts AS right: output $520bn and the price level 95 — opposite ways."
+       },
+       {
+        "type": "link",
+        "text": "Given the two directions, the curve that moved is determined. Same way means AD; opposite ways means AS."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Equilibrium is J = W, and an economy can be stuck there.",
+     "Label the axes before drawing anything.",
+     "Two directions identify the curve."
+    ]
+   },
+   {
+    "title": "The Multiplier",
+    "meta": "2.3.4 · 4a, 4b, 4c",
+    "keyIdea": "Where the multiplier comes from, the four propensities behind it, and why the specification's two formulae are one formula.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>The multiplier</strong> — the number of times an injection raises national income by more than itself."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>MPC</strong> — the marginal propensity to consume: the fraction of extra national income spent on domestically produced goods and services."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>MPS</strong> — the marginal propensity to save: the fraction of extra national income saved rather than spent."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>MPT</strong> — the marginal propensity to tax: the fraction of extra national income taken in taxation."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>MPM</strong> — the marginal propensity to import: the fraction of extra national income spent on goods and services produced abroad."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>MPW</strong> — the marginal propensity to withdraw: MPS + MPT + MPM."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Marisel: MPC 0.60 + MPS 0.10 + MPT 0.20 + MPM 0.10 = 1.00, so MPW = 0.40 = 1 − MPC."
+       },
+       {
+        "type": "mechanism",
+        "text": "1/(1 − 0.60) = 2.5 and 1/0.40 = 2.5. The same number, twice."
+       },
+       {
+        "type": "mechanism",
+        "text": "Rounds from $40bn: $40bn → $24bn → $14.40bn → $8.64bn → $5.18bn … totalling $100bn."
+       },
+       {
+        "type": "link",
+        "text": "Measured the other way: $800bn of extra income from $200bn of extra exports is a multiplier of 4."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "If the four propensities do not sum to one, they are not all out of national income.",
+     "Write the formula, substitute, then answer.",
+     "The multiplier is always greater than one."
+    ]
+   },
+   {
+    "title": "The Multiplier, AD and Economic Activity",
+    "meta": "2.3.4 · 4d",
+    "keyIdea": "What the multiplier does to a diagram, what decides how much of it becomes output, and why the number is not a constant.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>The multiplied shift</strong> — the horizontal distance AD moves: the change in injections times the multiplier."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>The level of economic activity</strong> — how much of that shift arrives as real output rather than as a higher price level."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "$40bn of extra government spending shifts AD right by $100bn, not by $40bn."
+       },
+       {
+        "type": "mechanism",
+        "text": "Below capacity it all becomes output ($600bn); on an upward-sloping AS it splits ($560bn and price level 110); at capacity none of it does (price level 125)."
+       },
+       {
+        "type": "link",
+        "text": "k = 1/MPW, so a rise in the income tax rate shrinks the multiplier on the spending that tax is financing."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Shift AD by the multiplied amount.",
+     "Say where the economy sits against its capacity before predicting output.",
+     "Name the propensity that makes this economy's multiplier what it is."
+    ]
+   }
+  ],
+  "quiz": [
+   {
+    "id": "national-income:quiz:02a1d902",
+    "question": "In the circular flow of income, the money flow runs:",
+    "options": [
+     "in the opposite direction to the real flow",
+     "in the same direction as the real flow",
+     "only from firms to households",
+     "only when the government is included"
+    ],
+    "explanation": "Every payment goes the other way to the thing it pays for: households supply factors and receive incomes, firms supply goods and receive spending. Drawing both flows the same way leaves the circuit with no return leg, and drawing only one direction is not a circular flow at all.",
+    "correctIndex": 0
+   },
+   {
+    "id": "national-income:quiz:bb6c8620",
+    "question": "Which statement about income and wealth is correct?",
+    "options": [
+     "Both income and wealth are flows",
+     "Income is a stock and wealth is a flow",
+     "Income is a flow and wealth is a stock",
+     "Both income and wealth are stocks"
+    ],
+    "explanation": "Income needs a period attached to mean anything and wealth needs a date, which is the whole distinction. A household can hold a large stock of accumulated assets and receive very little each month, and the reverse happens just as often.",
+    "correctIndex": 2
+   },
+   {
+    "id": "national-income:quiz:1cdd652a",
+    "question": "National income, national output and national expenditure are:",
+    "options": [
+     "three separate figures that usually differ a little",
+     "three ways of measuring only the government sector",
+     "the same figure measured at three points on one circuit",
+     "the same figure only in a closed economy"
+    ],
+    "explanation": "The circuit closes, so the value produced, the incomes paid to produce it and the spending that buys it are one flow counted three times. It is an identity rather than a tendency, and it holds whether or not there is trade with other countries.",
+    "correctIndex": 2
+   },
+   {
+    "id": "national-income:quiz:97cde143",
+    "question": "Which of these belongs to the real flow rather than the money flow?",
+    "options": [
+     "Wages paid by a firm to a household",
+     "Labour supplied by a household to a firm",
+     "A household paying for a refrigerator",
+     "Rent paid to the owner of a warehouse"
+    ],
+    "explanation": "The real flow is the things themselves moving — factors one way, goods and services the other. Anything that is a payment belongs to the money flow, whichever direction it travels in.",
+    "correctIndex": 1
+   },
+   {
+    "id": "national-income:quiz:d98b607b",
+    "question": "A household earns $40,000 a year and owns assets valued at $260,000. Its wealth is:",
+    "options": [
+     "$40,000, because wealth is what is earned",
+     "$300,000, because the two are added together",
+     "$260,000, because wealth is what is owned on a date",
+     "$220,000, because income is subtracted from assets"
+    ],
+    "explanation": "Wealth is the value of what is owned at a point in time and income is what arrives over a period. They are measured in different dimensions, so adding them or subtracting one from the other produces a figure that means nothing.",
+    "correctIndex": 2
+   },
+   {
+    "id": "national-income:quiz:4789748f",
+    "question": "Profit is what makes national income exactly equal to national output because it is:",
+    "options": [
+     "the only factor income that is taxed",
+     "added to output to make the two figures match",
+     "the residue left after the other factors have been paid",
+     "measured over a period rather than on a date"
+    ],
+    "explanation": "The owners receive the residue, so there is nothing left over for the two counts to differ by. If profit were a fixed charge like a wage, the equality would only hold by coincidence.",
+    "correctIndex": 2
+   },
+   {
+    "id": "national-income:quiz:9fa22488",
+    "question": "An economy in which households save some of their income still has income equal to output because:",
+    "options": [
+     "saving is counted as a kind of output",
+     "saved income is added back in at the end of the year",
+     "the equality only holds when savings are zero",
+     "saving is income that has been earned, whether or not it is spent"
+    ],
+    "explanation": "The equality is between the value produced and the incomes paid to produce it, and a dollar that is saved was paid out all the same. What saving changes is the spending leg of the circuit, which is the next chapter's question rather than this one.",
+    "correctIndex": 3
+   },
+   {
+    "id": "national-income:quiz:1fbb2dca",
+    "question": "Which of these is an injection into the circular flow?",
+    "options": [
+     "A foreign buyer paying for domestically produced food",
+     "A household buying an imported machine",
+     "A household saving part of its salary",
+     "Income tax deducted from a wage"
+    ],
+    "explanation": "An injection is spending on domestic output that did not come from domestic household income, and payment from abroad is exactly that. The other three each take income out of the circuit rather than putting spending into it.",
+    "correctIndex": 0
+   },
+   {
+    "id": "national-income:quiz:53f29a35",
+    "question": "A firm buys shares in another company. In the circular flow this is:",
+    "options": [
+     "investment, because the firm spent money",
+     "not investment, because no new capital goods were produced",
+     "investment, because the shares may rise in value",
+     "a withdrawal, because the money left the firm"
+    ],
+    "explanation": "Investment in this model is spending on newly produced capital goods. Buying a share transfers ownership of something that already exists, so nothing was produced and nobody was paid to produce it.",
+    "correctIndex": 1
+   },
+   {
+    "id": "national-income:quiz:539eab02",
+    "question": "A government pays a monthly pension directly to retired households. In the circular flow this payment is:",
+    "options": [
+     "not part of government expenditure, because it buys no output",
+     "part of government expenditure, because the government paid it",
+     "a withdrawal, because the government spent the money",
+     "an injection equal to twice its value, because it is spent again"
+    ],
+    "explanation": "Government expenditure in this model is spending on goods and services. A payment that buys no output would be counted twice if it were included here — once when it is paid and again when the household spends it.",
+    "correctIndex": 0
+   },
+   {
+    "id": "national-income:quiz:87ff7de3",
+    "question": "A visitor from another country pays for a week in a domestic hotel. This is:",
+    "options": [
+     "not an export, because nothing left the country",
+     "an import, because the visitor came from abroad",
+     "neither, because services are not counted",
+     "an export, because foreign income bought domestic output"
+    ],
+    "explanation": "The test is where the output was produced and whose income paid for it, not whether anything was shipped. A hotel room sold to a foreign visitor is domestic output bought with income earned abroad.",
+    "correctIndex": 3
+   },
+   {
+    "id": "national-income:quiz:dd8b0446",
+    "question": "Marisel has investment of $60bn, government expenditure of $90bn and exports of $50bn. Total injections are:",
+    "options": [
+     "$200bn",
+     "$150bn",
+     "$500bn",
+     "$140bn"
+    ],
+    "explanation": "Injections are the three added together, which comes to $200bn. Leaving exports out gives $150bn and leaving investment out gives $140bn; the largest figure offered is national income itself, which is the flow the injections enter rather than the injections.",
+    "correctIndex": 0
+   },
+   {
+    "id": "national-income:quiz:91dfbebe",
+    "question": "Imports are a withdrawal from the circular flow because:",
+    "options": [
+     "the spending paid producers in another economy",
+     "the household did not spend the money",
+     "imported goods are not useful to the economy",
+     "the government taxes them"
+    ],
+    "explanation": "The household did spend it, which is what catches students out. Where it went is the point: those wages were paid in another country's circuit, so as far as domestic national income is concerned the dollar has gone.",
+    "correctIndex": 0
+   },
+   {
+    "id": "national-income:quiz:c2a8ac57",
+    "question": "Taxation and government expenditure are counted as two separate arrows rather than one net figure because:",
+    "options": [
+     "they are different sizes and are decided separately",
+     "taxation is always larger than government expenditure",
+     "only one of them affects national income",
+     "government expenditure is not really an injection"
+    ],
+    "explanation": "Netting them off would hide the comparison the model exists to make. Either can be the larger, and which one it is helps decide where national income settles.",
+    "correctIndex": 0
+   },
+   {
+    "id": "national-income:quiz:170ab2d9",
+    "question": "An economy has injections of $240bn and withdrawals of $200bn. In the next period national income will:",
+    "options": [
+     "fall, because withdrawals are positive",
+     "rise, because there is a net injection",
+     "stay the same, because both are positive",
+     "rise by exactly the size of the injections"
+    ],
+    "explanation": "More is entering the circuit than leaving it, so the flow grows. It does not grow by $240bn: what matters is the gap of $40bn, and the size of the eventual rise is the multiplier's question.",
+    "correctIndex": 1
+   },
+   {
+    "id": "national-income:quiz:4cbead42",
+    "question": "Savings rise by $10bn and investment rises by $10bn in the same period. National income will:",
+    "options": [
+     "rise, because investment is an injection",
+     "not change, because the two totals are unaffected",
+     "fall, because saving is a withdrawal",
+     "rise by $20bn, because both arrows moved"
+    ],
+    "explanation": "One withdrawal and one injection have each risen by the same amount, so the gap between the two totals is exactly where it was. Only the gap moves the flow, which is why an answer that follows one arrow has not finished.",
+    "correctIndex": 1
+   },
+   {
+    "id": "national-income:quiz:d9d18b6f",
+    "question": "Which of these describes a net withdrawal?",
+    "options": [
+     "Imports exceed exports in a single period",
+     "Taxation exceeds government expenditure in a period",
+     "Any period in which households save some income",
+     "Total withdrawals exceed total injections"
+    ],
+    "explanation": "Net means the two totals compared, not one pair of arrows. A trade deficit or a budget surplus can each sit inside a balanced circuit if the other legs offset them.",
+    "correctIndex": 3
+   },
+   {
+    "id": "national-income:quiz:b907b425",
+    "question": "Equilibrium real national output is the level at which:",
+    "options": [
+     "the economy is producing as much as it possibly can",
+     "injections equal withdrawals, so there is no tendency to change",
+     "unemployment has been eliminated",
+     "the government budget is balanced"
+    ],
+    "explanation": "Equilibrium is a condition with no tendency to change and nothing more. An economy producing far below its capacity, with high unemployment, satisfies it perfectly and will stay there until an injection or a withdrawal moves.",
+    "correctIndex": 1
+   },
+   {
+    "id": "national-income:quiz:bdc6c5bf",
+    "question": "The adjustment back to equilibrium works because:",
+    "options": [
+     "injections fall automatically when income rises",
+     "the government intervenes whenever the gap appears",
+     "prices adjust until the gap disappears",
+     "withdrawals rise with income and injections do not"
+    ],
+    "explanation": "Savings, taxation and imports all grow as income grows, so a rise in income closes the gap that caused it. That is what makes the equilibrium stable rather than a level the economy happens to be passing through.",
+    "correctIndex": 3
+   },
+   {
+    "id": "national-income:quiz:4a254260",
+    "question": "On an AD/AS diagram, the axes are:",
+    "options": [
+     "price on the vertical and quantity on the horizontal",
+     "real national output on the vertical and the price level on the horizontal",
+     "nominal output on the vertical and time on the horizontal",
+     "the price level on the vertical and real national output on the horizontal"
+    ],
+    "explanation": "The whole economy's output is not a quantity of any one good and the general price level is not the price of one. Labelling them as though this were a single market loses the diagram mark before anything is drawn on it.",
+    "correctIndex": 3
+   },
+   {
+    "id": "national-income:quiz:e667f9d6",
+    "question": "An economy reports rising real output and a falling price level. The curve that moved was:",
+    "options": [
+     "AD, shifting right",
+     "AD, shifting left",
+     "AS, shifting right",
+     "AS, shifting left"
+    ],
+    "explanation": "Output and the price level moving in opposite directions can only be a supply shift, and more output at a lower price level is the rightward case. A demand shift moves the two the same way, in either direction.",
+    "correctIndex": 2
+   },
+   {
+    "id": "national-income:quiz:2993301f",
+    "question": "Marisel's government raises spending and the economy moves to real output $560bn at a price level of 110. This shows that:",
+    "options": [
+     "an AD shift raises output and leaves prices unchanged",
+     "an AD shift raises output and the price level together",
+     "the AS curve must have shifted as well",
+     "the multiplier must be less than one"
+    ],
+    "explanation": "Both figures have risen from $500bn and 100, which is the signature of a demand shift meeting an upward-sloping supply curve. Nothing here requires supply to have moved, and a multiplier below one is not possible.",
+    "correctIndex": 1
+   },
+   {
+    "id": "national-income:quiz:cd95a734",
+    "question": "The multiplier process comes to a finite total because:",
+    "options": [
+     "the government stops the process after a set number of rounds",
+     "each round is a fixed fraction of the one before it",
+     "households eventually run out of money",
+     "the injection is repaid at the end"
+    ],
+    "explanation": "Part of every dollar received is saved, taxed or spent abroad, so each round is smaller than the last by the same proportion. A series that shrinks by a fixed fraction has a limit, which is why the total is a number rather than an argument.",
+    "correctIndex": 1
+   },
+   {
+    "id": "national-income:quiz:9a1412a0",
+    "question": "The marginal propensity to consume is the fraction of extra income that is:",
+    "options": [
+     "spent on anything at all, including imports",
+     "left after tax has been deducted",
+     "spent on domestically produced goods and services",
+     "saved rather than spent"
+    ],
+    "explanation": "The word doing the work is \"domestically\". Spending that goes abroad does not create income here, so it cannot start the next round, and including it produces a multiplier that is too large.",
+    "correctIndex": 2
+   },
+   {
+    "id": "national-income:quiz:4e55bb42",
+    "question": "An economy has MPS 0.15, MPT 0.25 and MPM 0.10. Its multiplier is:",
+    "options": [
+     "4",
+     "0.5",
+     "2",
+     "2.5"
+    ],
+    "explanation": "The three withdrawal propensities add to 0.5, and the multiplier is one divided by that, which is 2. The figure 0.5 is the marginal propensity to withdraw itself rather than the multiplier, and a multiplier can never be below one.",
+    "correctIndex": 2
+   },
+   {
+    "id": "national-income:quiz:f72c6e6c",
+    "question": "The formulae 1/(1−MPC) and 1/MPW give the same answer whenever:",
+    "options": [
+     "the economy has no government",
+     "MPC is measured out of disposable income",
+     "the multiplier is greater than two",
+     "the four marginal propensities add up to one"
+    ],
+    "explanation": "If every extra dollar is consumed domestically, saved, taxed or imported and there is nowhere else for it to go, then MPW is exactly 1 − MPC. Measuring MPC after tax instead breaks that, and the two formulae then disagree.",
+    "correctIndex": 3
+   },
+   {
+    "id": "national-income:quiz:e562231c",
+    "question": "An economy raises exports by $200bn and its real national income rises by $800bn. Its marginal propensity to withdraw is:",
+    "options": [
+     "4",
+     "0.25",
+     "0.75",
+     "0.2"
+    ],
+    "explanation": "The multiplier is the rise in income over the rise in injections, which is 4, and the marginal propensity to withdraw is its reciprocal. The figure 4 is the multiplier and 0.75 would be the marginal propensity to consume.",
+    "correctIndex": 1
+   },
+   {
+    "id": "national-income:quiz:4ac3a2b4",
+    "question": "A government raises spending by $40bn in an economy with a multiplier of 2.5. The AD curve shifts right by:",
+    "options": [
+     "$100bn",
+     "$40bn",
+     "$80bn",
+     "$500bn"
+    ],
+    "explanation": "The rounds of extra spending happen at every price level, so the horizontal shift is the injection multiplied: $40bn times 2.5. Shifting by the injection alone understates the effect by $60bn.",
+    "correctIndex": 0
+   },
+   {
+    "id": "national-income:quiz:1e5eabbb",
+    "question": "An AD curve shifts right in an economy that is already producing at capacity. Real output will:",
+    "options": [
+     "rise by the full size of the shift",
+     "rise by half the size of the shift",
+     "fall, because prices have risen",
+     "not rise, and the price level will rise instead"
+    ],
+    "explanation": "A vertical supply curve means nothing more can be produced, so the extra spending has nowhere to go except into the price level. The same calculation in an economy with idle capacity would deliver the whole shift as output.",
+    "correctIndex": 3
+   },
+   {
+    "id": "national-income:quiz:50dfe703",
+    "question": "Two economies have the same multiplier and receive the same injection, yet real output rises much more in one of them. The likely reason is:",
+    "options": [
+     "one has a larger marginal propensity to consume",
+     "one measured its multiplier incorrectly",
+     "one is a closed economy",
+     "one has more unused productive capacity than the other"
+    ],
+    "explanation": "The multiplier fixes how far the demand curve moves and the supply side decides how much of that arrives as output. A different propensity to consume would mean a different multiplier, which the question has ruled out.",
+    "correctIndex": 3
+   },
+   {
+    "id": "national-income:quiz:a02713e0",
+    "question": "A government raises the rate of income tax to pay for extra spending. The effect on the multiplier is that it:",
+    "options": [
+     "falls, because the marginal propensity to tax has risen",
+     "rises, because government expenditure has risen",
+     "is unchanged, because the two effects cancel",
+     "falls to below one"
+    ],
+    "explanation": "The multiplier is one over the marginal propensity to withdraw, and a higher tax rate raises that figure. The two halves of the budget work against each other, which is why the net effect is smaller than either half taken alone.",
+    "correctIndex": 0
+   },
+   {
+    "id": "national-income:quiz:84c8b8b8",
+    "question": "A small economy that imports most of what it consumes will have:",
+    "options": [
+     "a large multiplier, because imports are cheap",
+     "a multiplier of exactly one, because trade is balanced",
+     "a small multiplier, because most of each round is spent abroad",
+     "no multiplier, because the model needs a closed economy"
+    ],
+    "explanation": "A high marginal propensity to import means most of each round leaves before it can create domestic income. The multiplier is still greater than one, because the first round of spending happens at home.",
+    "correctIndex": 2
+   }
+  ],
+  "practice": [
+   {
+    "id": "national-income:practice:25dc1f6a",
+    "command": "Define",
+    "marks": 2,
+    "question": "Define the term 'circular flow of income'. (2 marks)",
+    "guidance": "Two marks means two separate things to say, and the second must not be a rewording of the first. Settle who is in the model before you settle what passes between them.\nThe circular flow of income is the model of an economy in which households supply factors of production to firms and firms supply goods and services to households (1 mark), with money flowing in the opposite direction as factor incomes and consumer spending (1 mark). An answer that names only the two groups, or only \"money going round\", has given one of the two."
+   },
+   {
+    "id": "national-income:practice:7389cee5",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain why national income, national output and national expenditure are equal. (4 marks)",
+    "guidance": "Appendix 6 says an Explain asking for a reason needs a two-stage chain of reasoning, so plan two linked steps rather than one assertion repeated. Decide first which of the three you will start from, then follow a single unit of value round the circuit to the other two.\nKnowledge and understanding: the three are measures of the same flow taken at different points on the circuit (1 mark). Application: the value of output produced must be paid out to the factors that produced it, as wages, rent, interest and profit, so output equals income (1 mark). Analysis, first stage: that income is then spent on the output, so income equals expenditure (1 mark). Analysis, second stage: profit is the residue after the other factors are paid, which is what makes the equality exact rather than approximate (1 mark). An answer that states the equality without following the value round the circuit has knowledge and no chain."
+   },
+   {
+    "id": "national-income:practice:86fe538f",
+    "command": "Calculate",
+    "marks": 2,
+    "question": "An economy has investment of $60bn, government expenditure of $90bn and exports of $50bn. Calculate total injections into the circular flow. (2 marks)",
+    "guidance": "Appendix 6 defines Calculate as a calculation based on given data, with workings shown. Decide which of the figures in front of you belong in the calculation before adding anything: a question of this kind is usually testing the classification as much as the arithmetic.\nInjections are investment, government expenditure and exports (1 mark for identifying all three or for showing them added). $60bn + $90bn + $50bn = $200bn (1 mark). Marks are available for the workings line even where the final figure slips, so set the addition out rather than writing the answer alone."
+   },
+   {
+    "id": "national-income:practice:4e76ca1d",
+    "command": "Calculate",
+    "marks": 4,
+    "question": "An economy has a marginal propensity to save of 0.15, a marginal propensity to tax of 0.25 and a marginal propensity to import of 0.10. Government expenditure rises by $80bn. Calculate the resulting change in real national income. (4 marks)",
+    "guidance": "Notice which propensity you have not been given, and let that decide which of the two formulae you use. Appendix 6 asks for workings, so write the formula down before substituting anything into it, and check at the end that your multiplier is greater than one.\nStage one: MPW = MPS + MPT + MPM = 0.15 + 0.25 + 0.10 = 0.5 (1 mark). Stage two: the multiplier = 1/MPW = 1/0.5 = 2 (1 mark), and a candidate who writes the formula correctly earns this even if the arithmetic slips. Stage three: change in national income = multiplier × change in injections = 2 × $80bn (1 mark). Stage four: = $160bn (1 mark). The common error is to reach for 1/(1−MPC) with an MPC the question never gave; the three propensities here add to 0.5, so 1 − MPC is 0.5 and the two routes agree."
+   },
+   {
+    "id": "national-income:practice:b4f5c2af",
+    "command": "Draw",
+    "marks": 4,
+    "question": "Draw an AD/AS diagram to show the effect on equilibrium real national output of a rise in government expenditure in an economy with spare productive capacity. (4 marks)",
+    "guidance": "Appendix 6 defines Draw as requiring an accurately labelled diagram. Label the axes before you draw either curve, and decide what the phrase describing the economy's productive capacity is telling you about the shape of the supply curve you should draw — it is there for a reason.\nOne mark for the axes: price level on the vertical, real national output on the horizontal. One mark for AD and AS drawn and labelled, with the supply curve shown as close to horizontal because the economy has unused productive capacity. One mark for the rightward shift of AD, labelled AD to AD₁. One mark for the new equilibrium marked, showing real national output higher with the price level little changed. A diagram that shows the shift but never marks the new crossing point has answered half of it."
+   },
+   {
+    "id": "national-income:practice:b1a76b6e",
+    "command": "Analyse",
+    "marks": 6,
+    "question": "Analyse the effect of a rise in imports on a country's equilibrium real national output. (6 marks)",
+    "guidance": "Appendix 6 asks for depth rather than breadth here, and for a chain of reasoning with a diagram where one helps. One route, followed properly to a conclusion, scores better than three routes named. Decide at the start whether you are explaining the direction, the size, or both, and say so.\nKnowledge: imports are a withdrawal from the circular flow (1 mark). Application: a rise in imports means more income leaving the circuit at every level of income, so withdrawals exceed injections (1 mark). Analysis, first stage: firms sell less than they produce, cut output and pay out less income (1 mark). Analysis, second stage: the fall is larger than the initial rise in imports, because the multiplier works downwards as well as upwards, so a rise in imports of a given size reduces national income by that size times the multiplier (2 marks). Analysis, third stage: on an AD/AS diagram the demand curve shifts left by the multiplied amount, and equilibrium real national output falls (1 mark). A strong answer names the marginal propensity to import as the thing that both causes the shift and shrinks the multiplier that carries it."
+   },
+   {
+    "id": "national-income:practice:c2d4be5b",
+    "command": "Examine",
+    "marks": 8,
+    "question": "Examine the significance of the size of the multiplier for a government planning to raise its spending. (8 marks)",
+    "guidance": "Appendix 6 says an Examine needs a chain of reasoning and a brief assessment of the arguments, so leave room at the end for a judgement rather than spending every line on the mechanism. The question is about the size of the multiplier, not about what a multiplier is, and an answer that explains the process without ever discussing magnitude has answered a different question.\nLevel 1 describes the multiplier process with little reference to size. Level 2 explains that the change in national income is the multiplier times the injection, and that the multiplier is one over the marginal propensity to withdraw, so an economy that saves, taxes and imports little gets more from the same spending. Level 3 develops that into the consequences for the plan: a government with a high multiplier needs to spend less to reach a given target, while one in a small open economy may find much of the effect leaks abroad. The brief assessment that lifts an answer to the top of the range weighs the multiplier against what it meets: the size of the multiplier fixes how far aggregate demand moves, and how much of that becomes real output rather than a higher price level depends on how close the economy is to its productive capacity. Noting that financing the spending through higher income tax raises the marginal propensity to tax, and so shrinks the very multiplier being relied on, is the strongest single point available."
+   },
+   {
+    "id": "national-income:practice:6b719349",
+    "command": "Discuss",
+    "marks": 14,
+    "question": "Discuss the factors that determine the equilibrium level of real national output in an open economy. (14 marks)",
+    "guidance": "Appendix 6 wants logical and coherent chains of reasoning, different viewpoints and a critical assessment of the evidence. Plan the structure before writing: two or three developed factors with a diagram beat a list of six named ones. Decide early which framework you are arguing in, because the two the specification gives can both answer this and mixing them halfway through costs coherence.\nLevel 1 lists factors with little development. Level 2 explains the equilibrium condition that injections equal withdrawals, and identifies the six components as the things that can move it. Level 3 develops the mechanism: any change in the net position sets off a multiplier process that continues until withdrawals have risen to match injections again, so the size of the eventual change depends on the marginal propensities as well as on the shock. Level 4 brings in the second framework, showing equilibrium where aggregate demand crosses aggregate supply and arguing that the same rightward shift in demand produces very different outcomes for real output depending on how close the economy is to its productive capacity. The critical assessment the top level needs might weigh the reliability of a multiplier estimated from past data, or note that the supply side is itself moving while demand moves, so an observed change in output cannot be attributed to demand alone. Recognising that the two frameworks are the same equilibrium seen on different axes, rather than two competing theories, is the clearest signal of understanding available in this topic."
+   },
+   {
+    "id": "national-income:practice:433b13f5",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Evaluate the view that increasing government expenditure is always an effective way to raise the level of economic activity. (20 marks)",
+    "guidance": "Appendix 6 wants multi-stage chains of reasoning, different viewpoints and informed judgements. The word to argue with is in the question, and it is not \"increasing\" — it is the claim that this always works. Plan a case for the view and a case against, and decide in advance what your judgement will depend on, so the conclusion follows the argument rather than being appended to it.\nLevel 1 asserts that spending raises output with little support. Level 2 explains the mechanism: government expenditure is an injection, the multiplier process carries it further than its own size, and aggregate demand shifts right by the multiplied amount. Level 3 develops both sides. For the view: the injection creates income in rounds, and in an economy producing well below its capacity almost all of the shift arrives as real output rather than as a higher price level. Against it: at or near capacity the same shift raises the price level and leaves real output where it was; in a small open economy with a high marginal propensity to import much of each round leaks abroad; and if the spending is financed by higher income tax, the marginal propensity to tax rises and the multiplier shrinks. Level 4 reaches a supported judgement. The strongest is conditional rather than absolute: the policy is effective where there is unused productive capacity and the marginal propensity to withdraw is low, and unreliable where either condition fails — which is precisely why \"always\" cannot be defended. A judgement that also notes the multiplier is an estimate from past data rather than a constant the economy possesses is doing the evaluation the command word asks for."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "national-income:flashcard:d83384d2",
+    "front": "What are the two flows in the circular flow of income?",
+    "back": "The real flow — factors of production to firms, goods and services back to households — and the money flow, running the opposite way as factor incomes and consumer spending."
+   },
+   {
+    "id": "national-income:flashcard:aff1ffb7",
+    "front": "Why are national income, output and expenditure equal?",
+    "back": "They are the same flow measured at three points on one circuit. Profit is the residue after the other factors are paid, which makes the equality exact rather than approximate."
+   },
+   {
+    "id": "national-income:flashcard:5a16e285",
+    "front": "Income or wealth: which is the flow?",
+    "back": "Income is the flow, measured over a period. Wealth is the stock, measured on a date. Income that is not spent accumulates into wealth."
+   },
+   {
+    "id": "national-income:flashcard:8bddc7b2",
+    "front": "Define an injection.",
+    "back": "Spending on domestic output that did not come from domestic household income. It enters the circuit from outside and adds to the flow."
+   },
+   {
+    "id": "national-income:flashcard:90761a32",
+    "front": "Define a withdrawal.",
+    "back": "Income received by households that does not return to domestic firms as spending. It leaves the circuit and subtracts from the flow."
+   },
+   {
+    "id": "national-income:flashcard:08482649",
+    "front": "Name the three injections.",
+    "back": "Investment (I), government expenditure (G) and exports (X)."
+   },
+   {
+    "id": "national-income:flashcard:f4fa3e8b",
+    "front": "Name the three withdrawals.",
+    "back": "Savings (S), taxation (T) and imports (M)."
+   },
+   {
+    "id": "national-income:flashcard:05aade0f",
+    "front": "Is buying shares investment?",
+    "back": "No. Investment is spending on newly produced capital goods. A share purchase transfers ownership of something that already exists, so nothing is produced."
+   },
+   {
+    "id": "national-income:flashcard:7da87d09",
+    "front": "Is a pension paid to a household part of government expenditure in this model?",
+    "back": "No. G is spending on goods and services. A payment that buys no output would be counted twice — once when paid and again when the household spends it."
+   },
+   {
+    "id": "national-income:flashcard:22fdb26e",
+    "front": "Is a hotel room sold to a foreign visitor an export?",
+    "back": "Yes. The test is that domestic output was bought with income earned abroad. Nothing has to be shipped."
+   },
+   {
+    "id": "national-income:flashcard:202f1d07",
+    "front": "Why are imports a withdrawal when the household did spend the money?",
+    "back": "Because the spending paid producers in another economy. Those wages were not paid in this circuit, so as far as domestic national income goes the dollar has left."
+   },
+   {
+    "id": "national-income:flashcard:69247243",
+    "front": "Why are taxation and government expenditure counted separately?",
+    "back": "They are different sizes and are decided separately. Netting them off would hide the comparison — either can be the larger — that helps decide where national income settles."
+   },
+   {
+    "id": "national-income:flashcard:62fdf7be",
+    "front": "What is a net injection?",
+    "back": "Injections above withdrawals. More enters the circuit than leaves it, so national income grows. A net withdrawal is the reverse."
+   },
+   {
+    "id": "national-income:flashcard:e545bfb3",
+    "front": "Two arrows move by the same amount in opposite directions. What happens to national income?",
+    "back": "Nothing. Only the gap between the two totals moves the flow, so a rise in savings matched by a rise in investment leaves it where it was."
+   },
+   {
+    "id": "national-income:flashcard:30ad1dee",
+    "front": "State the equilibrium condition for real national output.",
+    "back": "Injections equal withdrawals, so there is no tendency for national income to change. On the other framework, aggregate demand crosses aggregate supply."
+   },
+   {
+    "id": "national-income:flashcard:62319a06",
+    "front": "Why is that equilibrium stable?",
+    "back": "All three withdrawals rise with income and injections do not, so any gap closes itself as income moves."
+   },
+   {
+    "id": "national-income:flashcard:3b0cecb4",
+    "front": "Does equilibrium mean the economy is doing well?",
+    "back": "No. It means no tendency to change. An economy producing far below its capacity with high unemployment can sit in equilibrium indefinitely."
+   },
+   {
+    "id": "national-income:flashcard:a96bea91",
+    "front": "What goes on each axis of an AD/AS diagram?",
+    "back": "The price level on the vertical axis, real national output on the horizontal. Not price and quantity: this is the whole economy, not one market."
+   },
+   {
+    "id": "national-income:flashcard:aca63128",
+    "front": "Output and the price level both rise. Which curve moved?",
+    "back": "AD, to the right. A demand shift moves the two in the same direction."
+   },
+   {
+    "id": "national-income:flashcard:6397121c",
+    "front": "Output rises and the price level falls. Which curve moved?",
+    "back": "AS, to the right. Opposite directions can only be a supply shift."
+   },
+   {
+    "id": "national-income:flashcard:734e1974",
+    "front": "What is the multiplier?",
+    "back": "The number of times an injection raises national income by more than itself, because the income it creates is spent again in shrinking rounds."
+   },
+   {
+    "id": "national-income:flashcard:6fe62691",
+    "front": "Why does the multiplier process stop?",
+    "back": "Part of every dollar is saved, taxed or imported, so each round is a fixed fraction of the last. A series shrinking by a fixed fraction has a finite total."
+   },
+   {
+    "id": "national-income:flashcard:dd3546d9",
+    "front": "Define the marginal propensity to consume.",
+    "back": "The fraction of extra national income spent on domestically produced goods and services. \"Domestically\" is the word that matters."
+   },
+   {
+    "id": "national-income:flashcard:aecdf903",
+    "front": "What is MPW?",
+    "back": "The marginal propensity to withdraw: MPS + MPT + MPM. The fraction of each extra dollar that does not survive into the next round."
+   },
+   {
+    "id": "national-income:flashcard:67d1f6a1",
+    "front": "Give both multiplier formulae.",
+    "back": "1/(1−MPC) and 1/MPW, where MPW = MPS + MPT + MPM. They agree whenever the four propensities add to one."
+   },
+   {
+    "id": "national-income:flashcard:fc11e470",
+    "front": "When do the two formulae disagree?",
+    "back": "When MPC has been measured out of disposable income rather than national income. Check the four propensities add to one before using either."
+   },
+   {
+    "id": "national-income:flashcard:286df944",
+    "front": "How do you find the multiplier from data?",
+    "back": "Divide the change in real national income by the change in injections. The answer is always greater than one, so a result below one is the division the wrong way round."
+   },
+   {
+    "id": "national-income:flashcard:4e043d30",
+    "front": "An injection of $40bn with a multiplier of 2.5 shifts AD right by how much?",
+    "back": "$100bn. The shift is the multiplied amount, not the injection, because the rounds of spending happen at every price level."
+   },
+   {
+    "id": "national-income:flashcard:1e64154e",
+    "front": "What decides how much of an AD shift becomes real output?",
+    "back": "The AS curve it meets. Below capacity almost all of it is output; at capacity none of it is, and the whole shift becomes a higher price level."
+   },
+   {
+    "id": "national-income:flashcard:c86a4cc6",
+    "front": "Why is the multiplier not a fixed number for a country?",
+    "back": "It is one over MPW, and tax rates, savings habits and the share of spending that goes abroad all move. A multiplier measured in one year is evidence about that year."
+   },
+   {
+    "id": "national-income:flashcard:dc13879f",
+    "front": "A government raises income tax to fund extra spending. What happens to the multiplier?",
+    "back": "It falls, because the marginal propensity to tax has risen. The two halves of the budget work against each other."
+   },
+   {
+    "id": "national-income:flashcard:7a683c77",
+    "front": "Why does a small open economy have a small multiplier?",
+    "back": "A high marginal propensity to import sends most of each round abroad before it can create domestic income."
+   }
+  ],
+  "mistakes": [
+   {
+    "id": "national-income:mistake:ef919a07",
+    "title": "Sorting injections and withdrawals by who is spending",
+    "looks_like": "\"Government spending is an injection and taxation must be one too, because the government does both.\"",
+    "why": "The test is direction, not identity. The same government injects when it buys output and withdraws when it takes income, in the same budget. Sorting by the actor makes taxation an injection and a household buying an imported machine an ordinary consumption item, and both are wrong.",
+    "instead": "Ask one question of every item: does this dollar enter the circuit from outside, or leave it? Everything else about who did it and whether it was a good idea is irrelevant to the classification."
+   },
+   {
+    "id": "national-income:mistake:23aa8937",
+    "title": "Treating saving as an injection, or investment as a withdrawal",
+    "looks_like": "\"Saving puts money into banks, which is money going into the economy.\"",
+    "why": "Saving is income the household did not pass to a firm, so it has left the circuit at that point. What a bank later does with it is a separate decision by a separate person, and that decision is investment — which is the injection.",
+    "instead": "Keep the pair straight by who decides. Households decide to save, which removes spending; firms decide to invest, which adds it. Nothing in the model forces the two to be equal."
+   },
+   {
+    "id": "national-income:mistake:0f23cb9b",
+    "title": "Counting a share purchase as investment",
+    "looks_like": "\"The firm invested $2m in shares, so investment has risen by $2m.\"",
+    "why": "Investment in the circular flow is spending on newly produced capital goods. Buying a share transfers ownership of an asset that already exists, so no output was produced and nobody was paid to produce it. The same applies to buying an existing building.",
+    "instead": "Test every candidate against one question: was something new produced as a result? If not, it is a transfer of an existing asset and it does not enter the flow."
+   },
+   {
+    "id": "national-income:mistake:fce19d4f",
+    "title": "Reading equilibrium as the best the economy can do",
+    "looks_like": "\"National income is in equilibrium, so the economy has reached its potential.\"",
+    "why": "Equilibrium means only that injections equal withdrawals, so nothing is pushing the flow either way. An economy with high unemployment and idle factories satisfies that condition exactly, and will stay there until an injection or a withdrawal moves.",
+    "instead": "Define equilibrium by its condition, then say separately where that level sits against what the economy could produce. In Marisel the equilibrium is $500bn, and whether that is a good outcome is a different sentence."
+   },
+   {
+    "id": "national-income:mistake:731c96ce",
+    "title": "Using 1/(1−MPC) with an MPC measured after tax",
+    "looks_like": "\"Households spend 80% of their take-home pay, so MPC is 0.8 and the multiplier is 5.\"",
+    "why": "The formula's MPC is the fraction of extra NATIONAL income spent on DOMESTIC output. An MPC taken out of disposable income has already had tax removed, and one that includes imports counts spending that creates no domestic income. Either mistake can double the multiplier.",
+    "instead": "Check the four propensities add to one before using any of them. If MPC + MPS + MPT + MPM = 1, then MPW = 1 − MPC and both formulae agree; if they do not add to one, they are not all measured out of national income."
+   },
+   {
+    "id": "national-income:mistake:fb831657",
+    "title": "Shifting AD by the injection rather than by the multiplied amount",
+    "looks_like": "\"The government spent an extra $40bn, so I shifted AD right by $40bn.\"",
+    "why": "The rounds of extra spending all happen at every price level, so the horizontal shift is the injection times the multiplier — $100bn here. Shifting by the injection alone understates the effect by $60bn and will usually give the wrong new equilibrium.",
+    "instead": "Calculate the multiplier before drawing anything, label the horizontal distance with the multiplied figure, and only then read off the new crossing point."
+   },
+   {
+    "id": "national-income:mistake:badb5b81",
+    "title": "Reporting the multiplied shift as the rise in real output",
+    "looks_like": "\"The multiplier is 2.5 and spending rose $40bn, so real output rises $100bn.\"",
+    "why": "That is how far the demand curve moved, not where the economy ended up. On an upward-sloping supply curve the economy slides up as it moves right, so output rises to $560bn and the price level to 110; at capacity, output does not rise at all and the whole shift becomes a price level of 125.",
+    "instead": "Say the shift, then say what it met. \"AD shifts right by the multiplied amount; how much becomes output depends on where the economy is against its capacity\" is the sentence that separates a top answer from a correct calculation."
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "national-income:diagram:ce84197a",
+    "title": "The Circular Flow of Income",
+    "description": "IAL 2.3.4 · 1a: households and firms joined by a real flow and a money flow, each pair of arrows running opposite to the other.",
+    "checklist": [
+     "Four arrows, not two: the real flow and the money flow both drawn",
+     "Factors of production going to firms, goods and services coming back",
+     "Factor incomes going to households, consumer spending coming back",
+     "Each money arrow running opposite to the real arrow it pays for"
+    ],
+    "scenarios": [
+     {
+      "label": "Two flows, opposite ways",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"cf-green\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#34d399\"/></marker><marker id=\"cf-blue\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#60a5fa\"/></marker></defs><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">The circular flow of income</text><rect x=\"24\" y=\"54\" width=\"140\" height=\"72\" rx=\"8\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"94\" y=\"86\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">HOUSEHOLDS</text><text x=\"94\" y=\"106\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">own the factors</text><rect x=\"236\" y=\"54\" width=\"140\" height=\"72\" rx=\"8\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"306\" y=\"86\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">FIRMS</text><text x=\"306\" y=\"106\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">use them to produce</text><line x1=\"170\" y1=\"72\" x2=\"230\" y2=\"72\" stroke=\"#34d399\" stroke-width=\"2\" marker-end=\"url(#cf-green)\"/><text x=\"200\" y=\"48\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"400\">factors of production →</text><line x1=\"230\" y1=\"110\" x2=\"170\" y2=\"110\" stroke=\"#34d399\" stroke-width=\"2\" marker-end=\"url(#cf-green)\"/><text x=\"200\" y=\"128\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"400\">← goods and services</text><line x1=\"230\" y1=\"172\" x2=\"170\" y2=\"172\" stroke=\"#60a5fa\" stroke-width=\"2\" marker-end=\"url(#cf-blue)\"/><text x=\"200\" y=\"164\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"400\">← factor incomes: wages, rent,</text><text x=\"200\" y=\"188\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"400\">interest and profit</text><line x1=\"170\" y1=\"222\" x2=\"230\" y2=\"222\" stroke=\"#60a5fa\" stroke-width=\"2\" marker-end=\"url(#cf-blue)\"/><text x=\"200\" y=\"242\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"400\">consumer spending →</text><line x1=\"20\" y1=\"146\" x2=\"380\" y2=\"146\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 4\"/><text x=\"20\" y=\"140\" font-size=\"12\" fill=\"#059669\" text-anchor=\"start\" font-weight=\"600\">THE REAL FLOW — the things themselves</text><text x=\"20\" y=\"274\" font-size=\"12\" fill=\"#3b82f6\" text-anchor=\"start\" font-weight=\"600\">THE MONEY FLOW — the payments for them</text><text x=\"20\" y=\"292\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">National income: $500bn a year</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "national-income:diagram:9bdaba70",
+    "title": "Injections into the Flow",
+    "description": "IAL 2.3.4 · 2a and 2b: investment, government expenditure and exports entering the circuit, with the figures that total this economy's injections.",
+    "checklist": [
+     "All three injections named: investment, government expenditure, exports",
+     "Every arrow pointing into the circuit, not out of it",
+     "The three figures totalling $200bn",
+     "The test stated: spending that did not come from domestic household income"
+    ],
+    "scenarios": [
+     {
+      "label": "I, G and X",
+      "svg": "<svg width=\"400\" height=\"286\" viewBox=\"0 0 400 286\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"inj-green\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#34d399\"/></marker></defs><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">The three injections</text><circle cx=\"200\" cy=\"150\" r=\"62\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"200\" y=\"144\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">THE</text><text x=\"200\" y=\"162\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">CIRCUIT</text><text x=\"200\" y=\"182\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">$500bn</text><rect x=\"-12\" y=\"48\" width=\"104\" height=\"44\" rx=\"8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"40\" y=\"68\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Investment</text><text x=\"40\" y=\"85\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">$60bn</text><line x1=\"40\" y1=\"98\" x2=\"166\" y2=\"84\" stroke=\"#34d399\" stroke-width=\"2\" marker-end=\"url(#inj-green)\"/><rect x=\"148\" y=\"48\" width=\"104\" height=\"44\" rx=\"8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"200\" y=\"68\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Government</text><text x=\"200\" y=\"85\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">$90bn</text><line x1=\"200\" y1=\"98\" x2=\"200\" y2=\"84\" stroke=\"#34d399\" stroke-width=\"2\" marker-end=\"url(#inj-green)\"/><rect x=\"288\" y=\"48\" width=\"104\" height=\"44\" rx=\"8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"340\" y=\"68\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Exports</text><text x=\"340\" y=\"85\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">$50bn</text><line x1=\"340\" y1=\"98\" x2=\"234\" y2=\"84\" stroke=\"#34d399\" stroke-width=\"2\" marker-end=\"url(#inj-green)\"/><text x=\"200\" y=\"248\" font-size=\"15\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">$60bn + $90bn + $50bn = $200bn</text><text x=\"200\" y=\"268\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Spending on domestic output that did</text><text x=\"200\" y=\"284\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">not come from household income</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "national-income:diagram:31cd1af2",
+    "title": "The Net Position",
+    "description": "IAL 2.3.4 · 2c and 2d: the two totals side by side in the three cases — a net injection, a balance and a net withdrawal — with this economy in the middle.",
+    "checklist": [
+     "Injections and withdrawals shown as two totals, not six arrows",
+     "The three cases: J above W, J equal to W, J below W",
+     "This economy's $200bn against $200bn, with nothing pushing",
+     "The effect on the flow named under each case"
+    ],
+    "scenarios": [
+     {
+      "label": "Three net positions",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Only the gap between the totals moves the flow</text><line x1=\"16\" y1=\"216\" x2=\"384\" y2=\"216\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><rect x=\"30\" y=\"97\" width=\"26\" height=\"119\" rx=\"3\" fill=\"#059669\" opacity=\"0.85\"/><rect x=\"64\" y=\"118\" width=\"26\" height=\"98\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.85\"/><text x=\"43\" y=\"89\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">J</text><text x=\"77\" y=\"110\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">W</text><text x=\"60\" y=\"236\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">Net injection</text><text x=\"60\" y=\"256\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">flow grows</text><rect x=\"142\" y=\"108\" width=\"26\" height=\"108\" rx=\"3\" fill=\"#059669\" opacity=\"0.85\"/><rect x=\"176\" y=\"108\" width=\"26\" height=\"108\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.85\"/><text x=\"155\" y=\"100\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">J</text><text x=\"189\" y=\"100\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">W</text><text x=\"172\" y=\"236\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">Marisel today</text><text x=\"172\" y=\"256\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">no change</text><rect x=\"254\" y=\"118\" width=\"26\" height=\"98\" rx=\"3\" fill=\"#059669\" opacity=\"0.85\"/><rect x=\"288\" y=\"97\" width=\"26\" height=\"119\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.85\"/><text x=\"267\" y=\"110\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">J</text><text x=\"301\" y=\"89\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">W</text><text x=\"284\" y=\"236\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">Net withdrawal</text><text x=\"284\" y=\"256\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">flow shrinks</text><text x=\"16\" y=\"274\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"400\">Withdrawals here: $50bn + $100bn + $50bn = $200bn</text><text x=\"16\" y=\"292\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"400\">Injections here: $60bn + $90bn + $50bn = $200bn</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "national-income:diagram:fa2836cd",
+    "title": "Equilibrium Real National Output",
+    "description": "IAL 2.3.4 · 3a and 3b: the equilibrium on price-level and real-output axes, then what a shift in each curve does to both of them.",
+    "checklist": [
+     "Price level on the vertical axis, real national output on the horizontal",
+     "Both curves named and the equilibrium marked where they cross",
+     "A rightward AD shift raising output to $560bn AND the price level to 110",
+     "A rightward AS shift raising output to $520bn while the price level FALLS to 95"
+    ],
+    "scenarios": [
+     {
+      "label": "Equilibrium",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"22\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Equilibrium: AD crosses AS at $500bn</text><line x1=\"54\" y1=\"38\" x2=\"54\" y2=\"246\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"246\" x2=\"384\" y2=\"246\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"48\" y=\"34\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Price level</text><text x=\"384\" y=\"280\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Real output ($bn)</text><path d=\"M 198 246 L 54 146\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"2.5\"/><text x=\"70\" y=\"150\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">AD</text><path d=\"M 54 229.3 L 378 79.3\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"362\" y=\"83.3\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">AS</text><line x1=\"54\" y1=\"196\" x2=\"126\" y2=\"196\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"126\" y1=\"196\" x2=\"126\" y2=\"246\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"126\" cy=\"196\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"48\" y=\"201\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">100</text><text x=\"126\" y=\"262\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">500</text><text x=\"16\" y=\"272\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Equilibrium: real output $500bn</text><text x=\"16\" y=\"290\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">at a price level of 100.</text></svg>"
+     },
+     {
+      "label": "A shift in AD",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"22\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">A rightward shift in AD</text><line x1=\"54\" y1=\"38\" x2=\"54\" y2=\"246\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"246\" x2=\"384\" y2=\"246\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"48\" y=\"34\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Price level</text><text x=\"384\" y=\"280\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Real output ($bn)</text><path d=\"M 198 246 L 54 146\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"2.5\"/><text x=\"70\" y=\"150\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">AD</text><path d=\"M 54 229.3 L 378 79.3\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"362\" y=\"83.3\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">AS</text><line x1=\"54\" y1=\"196\" x2=\"126\" y2=\"196\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"126\" y1=\"196\" x2=\"126\" y2=\"246\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"126\" cy=\"196\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"48\" y=\"201\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">100</text><text x=\"126\" y=\"262\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">500</text><path d=\"M 378 246 L 90 46\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"108\" y=\"50\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">AD₁</text><line x1=\"54\" y1=\"146\" x2=\"234\" y2=\"146\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"234\" y1=\"146\" x2=\"234\" y2=\"246\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"234\" cy=\"146\" r=\"4\" fill=\"#f59e0b\"/><text x=\"48\" y=\"151\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"end\" font-weight=\"400\">110</text><text x=\"234\" y=\"262\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"400\">560</text><text x=\"228\" y=\"136\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"end\" font-weight=\"600\">both up</text><text x=\"16\" y=\"272\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">AD shifts right $100bn.</text><text x=\"16\" y=\"290\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"400\">Output and the price level BOTH rise.</text></svg>"
+     },
+     {
+      "label": "A shift in AS",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"22\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">A rightward shift in AS</text><line x1=\"54\" y1=\"38\" x2=\"54\" y2=\"246\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"246\" x2=\"384\" y2=\"246\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"48\" y=\"34\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Price level</text><text x=\"384\" y=\"280\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Real output ($bn)</text><path d=\"M 198 246 L 54 146\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"2.5\"/><text x=\"70\" y=\"150\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">AD</text><path d=\"M 54 229.3 L 378 79.3\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"362\" y=\"83.3\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">AS</text><line x1=\"54\" y1=\"196\" x2=\"126\" y2=\"196\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"126\" y1=\"196\" x2=\"126\" y2=\"246\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"126\" cy=\"196\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"48\" y=\"201\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">100</text><text x=\"126\" y=\"262\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">500</text><path d=\"M 108 246 L 378 121\" fill=\"none\" stroke=\"#8b5cf6\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"360\" y=\"125\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"middle\" font-weight=\"600\">AS₁</text><line x1=\"54\" y1=\"221\" x2=\"162\" y2=\"221\" stroke=\"#8b5cf6\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"162\" y1=\"221\" x2=\"162\" y2=\"246\" stroke=\"#8b5cf6\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"162\" cy=\"221\" r=\"4\" fill=\"#8b5cf6\"/><text x=\"48\" y=\"226\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"end\" font-weight=\"400\">95</text><text x=\"162\" y=\"262\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"middle\" font-weight=\"400\">520</text><text x=\"156\" y=\"211\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"end\" font-weight=\"600\">opposite</text><text x=\"16\" y=\"272\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"start\" font-weight=\"600\">AS shifts right $50bn.</text><text x=\"16\" y=\"290\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"start\" font-weight=\"400\">Output rises, the price level FALLS.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "national-income:diagram:6650ba36",
+    "title": "The Multiplier Process",
+    "description": "IAL 2.3.4 · 4a and 4c: the rounds of extra spending, each one the marginal propensity to consume times the last, converging on a finite total.",
+    "checklist": [
+     "Each bar shorter than the one before it, by the same fraction every time",
+     "The first round equal to the injection itself, $40bn",
+     "The total $100bn, which is the injection times 2.5",
+     "The rounds shrinking towards nothing rather than stopping at a chosen round"
+    ],
+    "scenarios": [
+     {
+      "label": "Six rounds",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"22\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Each round is 0.60 of the one before it</text><line x1=\"16\" y1=\"214\" x2=\"384\" y2=\"214\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><rect x=\"30\" y=\"82\" width=\"44\" height=\"132\" rx=\"3\" fill=\"#f59e0b\" opacity=\"0.85\"/><text x=\"52\" y=\"74\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"400\">40</text><text x=\"52\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">1</text><rect x=\"88\" y=\"135\" width=\"44\" height=\"79\" rx=\"3\" fill=\"#3b82f6\" opacity=\"0.85\"/><text x=\"110\" y=\"127\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"400\">24</text><text x=\"110\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">2</text><rect x=\"146\" y=\"166\" width=\"44\" height=\"48\" rx=\"3\" fill=\"#3b82f6\" opacity=\"0.85\"/><text x=\"168\" y=\"158\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"400\">14.4</text><text x=\"168\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">3</text><rect x=\"204\" y=\"185\" width=\"44\" height=\"29\" rx=\"3\" fill=\"#3b82f6\" opacity=\"0.85\"/><text x=\"226\" y=\"177\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"400\">8.64</text><text x=\"226\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">4</text><rect x=\"262\" y=\"197\" width=\"44\" height=\"17\" rx=\"3\" fill=\"#3b82f6\" opacity=\"0.85\"/><text x=\"284\" y=\"189\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"400\">5.18</text><text x=\"284\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">5</text><rect x=\"320\" y=\"204\" width=\"44\" height=\"10\" rx=\"3\" fill=\"#3b82f6\" opacity=\"0.85\"/><text x=\"342\" y=\"196\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"400\">3.11</text><text x=\"342\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">6</text><text x=\"200\" y=\"256\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">round</text><line x1=\"16\" y1=\"244\" x2=\"384\" y2=\"244\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 4\"/><text x=\"16\" y=\"266\" font-size=\"15\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">$40bn  ×  2.5  =  $100bn of extra income</text><text x=\"16\" y=\"288\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">The first five rounds deliver 92.2% of it</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "national-income:diagram:49bfdb69",
+    "title": "The Multiplied Shift of AD",
+    "description": "IAL 2.3.4 · 4d: the injection and the shift it causes are different sizes, and how much of the shift becomes real output depends on the AS curve it meets.",
+    "checklist": [
+     "The shift $100bn against the injection $40bn that caused it",
+     "Three AS shapes: flat below capacity, upward-sloping, vertical at capacity",
+     "Real output 600, 560 and 500 from one identical shift",
+     "The price level rising further the closer the economy is to capacity"
+    ],
+    "scenarios": [
+     {
+      "label": "Three AS shapes",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"20\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">One shift of $100bn, three AS shapes</text><text x=\"200\" y=\"40\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">from an injection of only $40bn</text><rect x=\"14\" y=\"62\" width=\"118\" height=\"134\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><line x1=\"32\" y1=\"84\" x2=\"32\" y2=\"178\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"32\" y1=\"178\" x2=\"116\" y2=\"178\" stroke=\"#94a3b8\" stroke-width=\"1\"/><path d=\"M 34 90 L 114 170\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><path d=\"M 48 90 L 116 170\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><path d=\"M 34 131 L 116 131\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"73\" y=\"216\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">Below capacity</text><text x=\"73\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">AS flat</text><text x=\"73\" y=\"256\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">output 600</text><text x=\"73\" y=\"274\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"400\">price 100</text><rect x=\"144\" y=\"62\" width=\"118\" height=\"134\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><line x1=\"162\" y1=\"84\" x2=\"162\" y2=\"178\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"162\" y1=\"178\" x2=\"246\" y2=\"178\" stroke=\"#94a3b8\" stroke-width=\"1\"/><path d=\"M 164 90 L 244 170\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><path d=\"M 178 90 L 246 170\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><path d=\"M 164 174 L 246 88\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"203\" y=\"216\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">Upward-sloping</text><text x=\"203\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">AS rising</text><text x=\"203\" y=\"256\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">output 560</text><text x=\"203\" y=\"274\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"400\">price 110</text><rect x=\"274\" y=\"62\" width=\"118\" height=\"134\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><line x1=\"292\" y1=\"84\" x2=\"292\" y2=\"178\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"292\" y1=\"178\" x2=\"376\" y2=\"178\" stroke=\"#94a3b8\" stroke-width=\"1\"/><path d=\"M 294 90 L 374 170\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><path d=\"M 308 90 L 376 170\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><path d=\"M 334 176 L 334 84\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"333\" y=\"216\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">At capacity</text><text x=\"333\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">AS vertical</text><text x=\"333\" y=\"256\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">output 500</text><text x=\"333\" y=\"274\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"400\">price 125</text><text x=\"200\" y=\"294\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"middle\" font-weight=\"400\">Same multiplier, same shift, three different economies</text></svg>"
+     }
+    ]
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "From an injection to a new equilibrium",
+     "steps": [
+      "The government raises spending by $40bn. Injections go from $200bn to $240bn while withdrawals are still $200bn: there is now a net injection.",
+      "Round one: the $40bn is paid to the firms and workers who build the port, so national income has already risen by $40bn.",
+      "Round two: those households spend 0.60 of it on domestic output — $24bn — and save, pay tax on, or import the other 0.40.",
+      "The rounds keep shrinking: $14.40bn, then $8.64bn, then $5.18bn. Five rounds in, 92.2% of the total has already arrived.",
+      "As income rises, all three withdrawals rise with it. By the time national income reaches $600bn, withdrawals have grown by $40bn.",
+      "That is exactly the size of the injection, so withdrawals $240bn now match injections $240bn and the flow stops changing."
+     ],
+     "result": "$40bn of extra spending has produced $100bn of extra national income, which is a multiplier of 2.5. And the process ended where it had to: the multiplier is not an open-ended spiral but the exact distance the economy has to travel before its withdrawals have grown by the size of the injection that started it."
+    },
+    {
+     "title": "Why the same stimulus does different things in two economies",
+     "steps": [
+      "Both economies receive the same $40bn of extra government spending.",
+      "The first has MPW 0.40, so its multiplier is 2.5 and its AD curve shifts right by $100bn.",
+      "The second imports and taxes far more heavily. Its MPW is 0.60, so its multiplier is about 1.7 and its AD curve shifts right by far less.",
+      "Now look at what each shift meets. The first economy is producing below its capacity, so its supply curve is close to flat and nearly all of the shift arrives as real output.",
+      "The second is already producing at capacity, so its supply curve is close to vertical and its smaller shift arrives almost entirely as a higher price level."
+     ],
+     "result": "Two differences compound. A larger share of each round leaking abroad makes the first push smaller, and having no room to produce more converts what is left into prices rather than output. A government comparing its own experience with another country's has to separate the two before drawing any conclusion at all."
+    },
+    {
+     "title": "Reading an exam diagram backwards",
+     "steps": [
+      "The data says real national output rose and the general price level fell. Nothing else is given.",
+      "Ask first whether the two moved the same way or opposite ways. Here they moved opposite ways.",
+      "A demand shift moves them together — right and up, or left and down — so AD can be ruled out immediately.",
+      "A supply shift moves them apart, and more output at a lower price level is the rightward case, so AS shifted right.",
+      "Now name a cause from the right chapter: cheaper imported raw materials, a fall in tax rates on production, or better technology and productivity — all of which are 2.3.3's leaves rather than this section's."
+     ],
+     "result": "Two directions are enough to identify the curve and its direction, before any economics is discussed. It is the fastest mark in the topic and the most commonly missed, because students read the output figure, conclude demand rose, and never look at the price level at all."
+    },
+    {
+     "title": "The tax rise that shrinks its own stimulus",
+     "steps": [
+      "A government wants to raise national income and plans $40bn of extra spending, expecting the multiplier of 2.5 to turn it into $100bn.",
+      "To pay for it without borrowing, it raises the rate of income tax.",
+      "A higher income tax rate raises the marginal propensity to tax, which is one of the three components of MPW.",
+      "A larger MPW means a smaller multiplier, because the multiplier is one over MPW.",
+      "So the spending that the higher tax is financing is now being multiplied by a smaller number than the plan assumed.",
+      "And the tax rise is itself a larger withdrawal at every level of income, which pushes in the opposite direction to the spending."
+     ],
+     "result": "The two halves of a balanced budget do not cancel neatly, and they do not simply add either: the financing changes the multiplier that the spending depends on. An answer that notices this is doing the evaluation an Examine or Evaluate question is asking for, rather than restating the mechanism."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "How reliable is a multiplier estimate?",
+     "content": "The multiplier is written as a formula, which makes it look like a measurement. It is an estimate of a ratio that changes. Its value depends on three propensities, and each of them moves: tax rates change with policy, the share of extra income households save changes with confidence and with interest rates, and the share spent abroad changes with exchange rates and with what is available domestically. A multiplier of 2.5 calculated from last year's data is evidence about last year. **The strongest use of this in an answer is conditional**: say what the multiplier implies, then say which propensity would have to move for the conclusion to fail, and how likely that is in the context the question gives you."
+    },
+    {
+     "title": "Which framework should an answer use?",
+     "content": "Injections and withdrawals and AD/AS are not competing theories, and an answer that treats them as alternatives to be chosen between has misread the specification. They are the same equilibrium on different axes: J = W is AD = AS. The choice is about what the question needs. **Use injections and withdrawals when the question is about direction and about the multiplier**, because the six components are visible and the mechanism that stops the process is visible with them. **Use AD/AS when the question involves the price level, or when it hinges on how much of a demand change becomes real output**, because those are the things the second axis exists to show. A top answer in a 14- or 20-mark question often uses both and says explicitly that they are one model."
+    }
+   ]
+  }
+ }
+}

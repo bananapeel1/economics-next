@@ -1,0 +1,16 @@
+{
+  "note": "Failure mode `noeval`. Packet 12.1, E003. Three valid Explain 4 items with valid tags and no evaluative question. A student could work the whole section and never write the answer that carries AO4, which is where 6 of the 20 marks on the essay live. Evaluative means Evaluate 20 in either subject, or Discuss 14 in Economics.",
+  "sections": [
+    {
+      "slug": "fixture-no-evaluative",
+      "subject": "economics",
+      "topic": "1.3.5",
+      "title": "Market Failure (fixture)",
+      "items": [
+        { "command": "Explain", "marks": 4, "question": "Explain why a public good may not be provided by the private sector.", "kind": "written", "ao": ["AO1", "AO2"], "stimulusRef": null, "specItems": ["ECON-1.3.5-3b"] },
+        { "command": "Explain", "marks": 4, "question": "Explain what is meant by an external cost of production.", "kind": "written", "ao": ["AO1", "AO2"], "stimulusRef": null, "specItems": ["ECON-1.3.5-2c-3"] },
+        { "command": "Explain", "marks": 4, "question": "Explain what is meant by asymmetric information.", "kind": "written", "ao": ["AO1", "AO2"], "stimulusRef": null, "specItems": ["ECON-1.3.5-4a"] }
+      ]
+    }
+  ]
+}

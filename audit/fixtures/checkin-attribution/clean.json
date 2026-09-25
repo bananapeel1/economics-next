@@ -1,0 +1,23 @@
+{
+  "note": "The control. Two pinned chapters, each pinned to a question that shares vocabulary with its own title. Must exit 0 with no failures AND no notes — without a fixture that passes, a fixture that fails proves only that the guard fails on something.",
+  "sections": [
+    {
+      "slug": "fixture-clean",
+      "content": [
+        { "title": "Economies of Scale", "quizIndices": [0], "practiceIndices": [0],
+          "sections": [{ "id": "a", "title": "Internal economies of scale", "body": "x" }] },
+        { "title": "Diseconomies of Scale", "quizIndices": [1], "practiceIndices": [1],
+          "sections": [{ "id": "b", "title": "Coordination and communication", "body": "x" }] }
+      ],
+      "quiz": [
+        { "question": "Internal economies of scale arise when:" },
+        { "question": "Diseconomies of scale are most likely when:" }
+      ],
+      "practice": [
+        { "marks": 4, "question": "Explain one internal economy of scale." },
+        { "marks": 6, "question": "Analyse why diseconomies of scale occur." }
+      ],
+      "diagrams": []
+    }
+  ]
+}

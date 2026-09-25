@@ -1,0 +1,2351 @@
+{
+ "section_id": "supply",
+ "subject": "economics",
+ "label": "packet-23-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "supply:block:9a558e17",
+    "title": "The Supply Curve",
+    "sections": [
+     {
+      "id": "supply:sub:supply-and-the-supply-curve",
+      "title": "What Supply Means",
+      "keyIdea": "Supply is the quantity producers are willing and able to offer for sale at each price in a given time period — an intention at every price, not a single amount.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Supply** is the quantity of a good that producers are **willing and able** to offer for sale at a given price in a given time period. Both halves of that phrase do work. A firm that would like to sell but has nothing to sell is not supplying; nor is a firm with a full warehouse that refuses to sell at the price on offer."
+       },
+       {
+        "type": "paragraph",
+        "text": "The words **in a given time period** matter just as much. Supply is a flow — tiles a week, barrels a day, tonnes a year — not a pile sitting somewhere. Kavira Ceramics supplies 400 tiles a week at $8 a tile. That is a rate, and it is what \"supply\" names."
+       },
+       {
+        "type": "paragraph",
+        "text": "The **law of supply** states that, ceteris paribus, a higher price brings a higher quantity supplied. It is a claim about direction, not about size — how MUCH more is offered is the second half of this topic."
+       }
+      ],
+      "realExample": {
+       "emoji": "☕",
+       "text": "Vietnamese robusta growers bring more of their crop to market when the world coffee price is high and hold some back when it is low. The trees are the same trees; what changes is how much of the harvest it is worth picking, processing and shipping at the price being offered."
+      },
+      "misconception": "Students write that supply is the amount of a product that exists. That is stock, and it is a quantity sitting still. Instead write: supply is the quantity producers are willing and able to offer for sale at each price, per week or per year.",
+      "examMatters": "A Define (2 marks, WEC11 Appendix 6) requires the meaning of a term. For supply that means the quantity producers are willing and able to sell, AND the two qualifiers that make it a supply rather than a stock: at a given price, in a given time period.",
+      "recall": {
+       "id": "supply:sub:supply-and-the-supply-curve:recall",
+       "type": "fillin",
+       "prompt": "Complete the definition this chapter opens with:",
+       "template": [
+        "Supply is the quantity producers are willing and ___ to offer for sale",
+        "→ measured at a given ___",
+        "→ and in a given ___ period"
+       ],
+       "answers": [
+        "able",
+        "price",
+        "time"
+       ],
+       "hints": [
+        "the half of the phrase about capability rather than intention",
+        "supply is read off against this, one value at a time",
+        "what makes supply a flow rather than a pile"
+       ],
+       "distractors": [
+        "ready",
+        "quantity",
+        "market"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:why-the-supply-curve-slopes-upward",
+      "title": "Why the Supply Curve Slopes Upward",
+      "keyIdea": "Expanding output draws in resources that cost more per unit, so each extra unit needs a higher price before it is worth producing — which is what gives the curve its upward slope.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **supply curve** puts price on the vertical axis and quantity supplied on the horizontal, and slopes up from left to right. The question worth answering is why."
+       },
+       {
+        "type": "paragraph",
+        "text": "The answer is in the **costs of production**. A firm expanding output does not get the extra units on the same terms as the first ones. It pays overtime rather than ordinary hours, hires less experienced staff, runs older equipment it had left idle, buys materials from a more expensive supplier once the cheap one is exhausted."
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "The firm wants to produce more",
+         "It draws in resources that cost more per unit",
+         "The extra units cost more than the earlier ones"
+        ],
+        "result": "A higher price is needed before those units are worth producing",
+        "resultType": "neutral"
+       },
+       {
+        "type": "paragraph",
+        "text": "Read from the other end, the same fact is the law of supply: raise the price and units that were not worth producing become worth producing, so quantity supplied rises. Kavira works its kiln harder and pays a weekend shift to reach 460 tiles — worth doing at $10, not at $8."
+       }
+      ],
+      "realExample": {
+       "emoji": "⛏️",
+       "text": "A copper mine works its richest ore first. As it pushes output higher it moves to lower-grade ore, where the same effort yields less metal, so the cost of each additional tonne rises. Only a higher copper price makes those tonnes worth extracting."
+      },
+      "misconception": "Students say the curve slopes up because firms are greedy for profit. Greed would apply at every price equally and explains nothing about the slope. Instead write: the extra units cost more to produce than the earlier ones, so a higher price is needed before they are worth producing.",
+      "examMatters": "An Explain (4 marks, WEC11 Appendix 6) asks for a reason developed into a consequence through a two-stage chain. \"Costs rise as output expands\" is the first stage; \"so a higher price is needed before the extra units are worth producing\" is the second, and the answer is not finished without it.",
+      "recall": {
+       "id": "supply:sub:why-the-supply-curve-slopes-upward:recall",
+       "type": "reorder",
+       "prompt": "Put the chain behind the upward slope into the order it runs, from cause to consequence:",
+       "correctOrder": [
+        "The firm expands output beyond its cheapest units",
+        "It draws in resources that cost more per unit",
+        "Each additional unit costs more than the one before",
+        "A higher price is needed before those units are worth producing"
+       ],
+       "why": [
+        "Nothing changes until the firm tries to go beyond the output its cheapest resources can supply",
+        "Overtime, older equipment and dearer suppliers are what expansion reaches for once the cheap options are used",
+        "The cost per unit rising is the consequence of drawing on those dearer resources, not a separate fact",
+        "The price is the last link: it is what has to rise before the dearer units are worth making"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:movements-along-vs-shifts-of-supply",
+      "title": "Movements Along the Curve",
+      "keyIdea": "A change in the good's OWN price moves the firm along the curve it is already on: an extension when price rises, a contraction when it falls.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 1b asks for one distinction, and it is the distinction the rest of this topic depends on. Start with the half that does NOT move the curve."
+       },
+       {
+        "type": "paragraph",
+        "text": "When the good's **own price** changes and nothing else does, the firm moves to a different point on the SAME curve. The relationship between price and quantity has not changed; the firm is simply reading off a different part of it."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Extension of supply** — price rises, quantity supplied rises, and the firm moves UP the curve.",
+         "**Contraction of supply** — price falls, quantity supplied falls, and the firm moves DOWN the curve."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Kavira at $8 supplies 400 tiles a week. At $10 it supplies 460. Both points are on one curve, so this is an extension of supply — not an increase in supply, which means something else entirely."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛢️",
+       "text": "US shale oil producers bring idle rigs back into operation within months when the crude price rises, and stop drilling when it falls. The wells and the geology are unchanged: it is the price that decides how much of the known resource is worth pumping this quarter."
+      },
+      "misconception": "Students write that a rise in price shifts the supply curve to the right. The curve IS the answer to \"how much at each price\", so a price change cannot move it. Instead write: a rise in the good's own price causes an extension of supply, a movement up the existing curve.",
+      "examMatters": "Appendix 6 defines Draw (4 marks, WEC11) as constructing an accurately labelled diagram. A movement is drawn as two points on ONE curve with both prices and both quantities read off to the axes — not as a second curve.",
+      "recall": {
+       "id": "supply:sub:movements-along-vs-shifts-of-supply:recall",
+       "type": "classify",
+       "prompt": "Sort each event into what it does to Kavira: a movement along the curve, or something that is not a movement.",
+       "groups": [
+        {
+         "name": "A movement along",
+         "why": "The good's own price has changed and nothing else has, so the firm reads off a different point on the curve it is already on",
+         "items": [
+          "The tile price rises to $10",
+          "The tile price falls to $8",
+          "Buyers bid the tile price up"
+         ]
+        },
+        {
+         "name": "Not a movement along",
+         "why": "Something other than the tile price has changed, so the whole relationship between price and quantity moves",
+         "items": [
+          "Clay becomes more expensive",
+          "A faster kiln is installed",
+          "A tax is imposed on each tile"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:shifts-of-the-supply-curve",
+      "title": "Shifts of the Curve",
+      "keyIdea": "A change in anything OTHER than the price moves the whole curve, so a different quantity is offered at every price — an increase in supply to the right, a decrease to the left.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The other half of 1b. When something other than the price changes, the firm no longer offers the same quantity at any price. The whole curve moves."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Increase in supply** — the curve shifts RIGHT. More is offered at every price, including the price that was already being charged.",
+         "**Decrease in supply** — the curve shifts LEFT. Less is offered at every price."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The test that settles which is which is a question about ONE price. Hold the price still and ask whether the firm now offers more or less than before. If the answer is more, supply has increased; if less, it has decreased. The direction never depends on what the price happens to be."
+       },
+       {
+        "type": "paragraph",
+        "text": "The vocabulary is worth keeping straight. **Quantity supplied** changes in a movement; **supply** changes in a shift. Saying \"supply rose\" when a price rose is the single most common way to lose the distinction 1b is asking for."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌾",
+       "text": "When a drought cuts yields across a wheat-growing region, growers offer less wheat at every price, not only at the price prevailing that day. That is a decrease in supply, and it is why a bad harvest is drawn as a leftward shift rather than as a move along the curve."
+      },
+      "misconception": "Students describe a shift as supply \"going up\" or \"going down\", which is ambiguous on a diagram where right is more and up is dearer. Instead write: an increase in supply shifts the curve to the RIGHT, because more is offered at every price.",
+      "examMatters": "An Analyse (6 marks, WEC11 Appendix 6) requires a chain of reasoning and a diagram where appropriate. The chain for a shift has three links: name the factor, say what it does to the costs of production or to capacity, then state the direction of the shift.",
+      "recall": {
+       "id": "supply:sub:shifts-of-the-supply-curve:recall",
+       "type": "fillin",
+       "prompt": "Complete the rule that separates the two:",
+       "template": [
+        "A change in the good's own price causes a movement, and what changes is quantity ___",
+        "→ a change in anything else shifts the curve, and what changes is ___ itself",
+        "→ the shift that offers more at every price moves the curve to the ___"
+       ],
+       "answers": [
+        "supplied",
+        "supply",
+        "right"
+       ],
+       "hints": [
+        "the two-word term for the amount read off at one particular price",
+        "the term for the whole price-quantity relationship",
+        "the direction that means more is offered at every price"
+       ],
+       "distractors": [
+        "demanded",
+        "left",
+        "price"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Supply is what producers will offer at EACH price, per period — not a stock.",
+     "The curve slopes up because expanding output draws in dearer resources.",
+     "A change in the good's own price is a movement along the curve.",
+     "A change in anything else shifts the whole curve: right for an increase."
+    ],
+    "diagramId": "supply:diagram:93d2f4e6",
+    "quizIndices": [
+     6,
+     3,
+     4,
+     5
+    ],
+    "practiceIndices": [
+     0,
+     1
+    ]
+   },
+   {
+    "id": "supply:block:68cd0842",
+    "title": "What Shifts Supply",
+    "sections": [
+     {
+      "id": "supply:sub:factors-that-shift-supply",
+      "title": "Changes in the Costs of Production",
+      "keyIdea": "Higher costs of production mean less is worth producing at any given price, so the supply curve shifts left; lower costs shift it right.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The first of the five factors the specification lists, and the one the other four mostly work through. **Costs of production** are what the firm pays for its inputs: wages, raw materials, energy, rent, transport."
+       },
+       {
+        "type": "paragraph",
+        "text": "Hold the price of the good still and raise the cost of an input. Some output that was just worth producing now is not, so the firm offers less at that price — and at every other price too. The curve shifts LEFT."
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "The cost of an input rises",
+         "Producing each unit becomes less profitable at the existing price",
+         "Some output is no longer worth producing"
+        ],
+        "result": "Less is offered at every price: the supply curve shifts left",
+        "resultType": "bad"
+       },
+       {
+        "type": "paragraph",
+        "text": "A fall in costs runs the same chain backwards and shifts the curve right. If clay became cheaper, Kavira would offer more than 400 tiles at $8 — the price has not moved, the curve has."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏭",
+       "text": "Cement is made in kilns that burn fuel continuously, so energy is one of its largest input costs. When fuel prices rise sharply, cement makers across a region offer less at every price, and the effect shows up wherever cement is an input — which is most construction."
+      },
+      "misconception": "Students state the factor and stop: \"costs shift supply\". That names a cause without saying which way anything moves. Instead write: higher costs of production make each unit less profitable at the existing price, so less is offered at every price and the curve shifts left.",
+      "examMatters": "Appendix 6 states that Explain (4 marks, WEC11) requires a two-stage chain when it asks for a reason or an impact. Naming the factor is stage zero; the two stages are what it does to profitability at the existing price, and which way the curve therefore moves.",
+      "recall": {
+       "id": "supply:sub:factors-that-shift-supply:recall",
+       "type": "reorder",
+       "prompt": "Put the chain from a cost rise to a shift into the order it runs, from cause to consequence:",
+       "correctOrder": [
+        "The cost of an input rises",
+        "Each unit is less profitable at the existing price",
+        "Some output is no longer worth producing",
+        "Less is offered at every price, so the curve shifts left"
+       ],
+       "why": [
+        "The input price is the change that starts the chain; nothing else has moved",
+        "Profitability is measured against the price the firm is already getting, which has not changed",
+        "Output that was only just worth producing is what drops out first",
+        "The shift is the conclusion, and it is about every price, not only the current one"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:new-technology",
+      "title": "The Introduction of New Technology",
+      "keyIdea": "New technology lets the same inputs produce more output, which lowers the cost of each unit and shifts the supply curve right.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 1c-2. **New technology** means a better way of turning inputs into output: a faster machine, a better process, a method that wastes less."
+       },
+       {
+        "type": "paragraph",
+        "text": "It reaches supply through costs. If the same labour and materials now yield more units, the cost of each unit falls, and output that was not worth producing becomes worth producing. The curve shifts RIGHT."
+       },
+       {
+        "type": "paragraph",
+        "text": "Two features of this factor are worth noticing. It is usually **permanent** — a firm that has learnt a better method does not unlearn it — and it often works **across a whole industry** rather than one firm, because methods spread. That is why a technological change shifts the market supply curve and not just one firm's."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚜",
+       "text": "Guided tractors let a grain farm plant and spray with far less overlap, so the same fuel, seed and chemical cover more ground. Where the method spreads across a growing region, the whole region offers more grain at every price."
+      },
+      "misconception": "Students treat new technology as raising the price of the good because it is expensive to install. The installation is a one-off cost; what matters for supply is the cost per unit afterwards. Instead write: new technology lowers the cost of each unit produced, so more is offered at every price and supply shifts right.",
+      "examMatters": "An Analyse (6 marks, WEC11 Appendix 6) requires depth rather than breadth — one factor traced properly beats four listed. Technology traced through cost per unit to a rightward shift is the depth the command word asks for.",
+      "recall": {
+       "id": "supply:sub:new-technology:recall",
+       "type": "fillin",
+       "prompt": "Complete the route technology takes to the supply curve:",
+       "template": [
+        "New technology lets the same inputs produce more ___",
+        "→ so the cost of each ___ falls",
+        "→ so the supply curve shifts to the ___"
+       ],
+       "answers": [
+        "output",
+        "unit",
+        "right"
+       ],
+       "hints": [
+        "what comes out of the process rather than what goes in",
+        "the basis on which the cost that matters for supply is measured",
+        "the direction that means more is offered at every price"
+       ],
+       "distractors": [
+        "profit",
+        "left",
+        "input"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:indirect-taxes-specific",
+      "title": "Indirect Taxes: A Specific Tax",
+      "keyIdea": "A specific tax is a fixed sum per unit, so it raises the price the producer needs by the same amount at every quantity — the curve shifts vertically upward and stays parallel.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 1c-3 names **indirect taxes** and then names two kinds, because the two move the curve differently. A **specific tax** is a fixed amount of money on each unit sold, whatever the unit costs."
+       },
+       {
+        "type": "paragraph",
+        "text": "Suppose a tax of $3 is placed on each tile. Kavira still needs the same amount for itself on every tile it sells, so it now needs $3 more from the buyer — at every quantity, because the tax is the same on every unit."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is what makes it a **parallel shift**: the vertical gap between the old curve and the new one is $3 everywhere. Measured the other way, it is a decrease in supply: less is offered at every price."
+       }
+      ],
+      "realExample": {
+       "emoji": "⛽",
+       "text": "Fuel duty is charged as a set amount per litre in many countries, so it adds the same sum to every litre whether the underlying oil price is high or low. The duty is the vertical distance between what the motorist pays and what the refiner receives."
+      },
+      "misconception": "Students draw an indirect tax as a movement along the curve, because a tax makes things dearer and dearer means less is bought. The tax has changed what producers need at every quantity, not the price they face. Instead write: a specific tax shifts the supply curve vertically upward by the amount of the tax.",
+      "examMatters": "Draw (4 marks, WEC11 Appendix 6) requires an accurately labelled diagram, and for a specific tax \"accurate\" has a measurable meaning: the two curves must be parallel, and the vertical gap must equal the tax per unit.",
+      "recall": {
+       "id": "supply:sub:indirect-taxes-specific:recall",
+       "type": "fillin",
+       "prompt": "Complete the description of a specific tax:",
+       "template": [
+        "A specific tax is a fixed sum charged on each ___",
+        "→ so it raises the price the producer needs by the same amount at every ___",
+        "→ which makes the new curve ___ to the old one"
+       ],
+       "answers": [
+        "unit",
+        "quantity",
+        "parallel"
+       ],
+       "hints": [
+        "what the tax is charged per, and what makes it \"specific\" rather than a percentage",
+        "the axis along which the gap stays the same size",
+        "the word for two lines that never converge"
+       ],
+       "distractors": [
+        "price",
+        "steeper",
+        "sale"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:indirect-taxes-ad-valorem",
+      "title": "Indirect Taxes: An Ad Valorem Tax",
+      "keyIdea": "An ad valorem tax is a percentage of the price, so the gap it opens grows as price rises — the curve pivots rather than shifting parallel.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The second kind named in 1c-3. An **ad valorem** tax is charged as a percentage of the price rather than as a fixed sum. A sales tax of 20% is an ad valorem tax."
+       },
+       {
+        "type": "paragraph",
+        "text": "The percentage is constant; the money is not. On a cheap unit, 20% is a small sum. On an expensive one it is a large sum. So the vertical gap between the old curve and the new one WIDENS as you move up the diagram."
+       },
+       {
+        "type": "paragraph",
+        "text": "For Kavira the gap is $1.60 at 400 tiles and $3.20 at 640 — the same tax rate, twice the money, because the price at the higher quantity is higher. The curve **pivots**: it stays anchored at the bottom and swings away at the top."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is the whole reason the specification names both kinds. One is a parallel shift and one is a pivot, and a diagram that draws them the same way has lost the distinction."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧾",
+       "text": "Value-added and goods-and-services taxes are charged as a percentage of price, so the tax on a luxury item is many times the tax on an everyday one at the same rate. The rate is what is set; the money collected per unit follows the price."
+      },
+      "misconception": "Students draw an ad valorem tax as a parallel shift, exactly like a specific tax. A percentage of a larger price is a larger sum, so the gap cannot be constant. Instead write: an ad valorem tax pivots the supply curve, with the vertical gap widening as price rises.",
+      "examMatters": "Appendix 6 defines Explain (4 marks, WEC11) as requiring knowledge, understanding and application. Applied here, the distinction is not \"one is a percentage\" but what the percentage does to the diagram: the gap is proportional to price, so the curve pivots.",
+      "recall": {
+       "id": "supply:sub:indirect-taxes-ad-valorem:recall",
+       "type": "match",
+       "prompt": "Match each kind of indirect tax to what it does to the supply curve:",
+       "pairs": [
+        {
+         "left": "A specific tax",
+         "right": "A parallel shift upward",
+         "why": "The same money is added to every unit whatever its price, so the vertical gap is the same everywhere on the curve"
+        },
+        {
+         "left": "An ad valorem tax",
+         "right": "A pivot, widening as price rises",
+         "why": "A fixed percentage of a higher price is more money, so the gap grows as you move up the curve"
+        },
+        {
+         "left": "A subsidy",
+         "right": "A shift downward and to the right",
+         "why": "The producer receives money per unit rather than paying it, so it needs less from the buyer at every quantity"
+        }
+       ],
+       "distractors": [
+        "A movement up the existing curve"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:government-subsidies",
+      "title": "Government Subsidies",
+      "keyIdea": "A subsidy is a payment to the producer per unit, so it needs less from the buyer at every quantity: the curve shifts down and to the right.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 1c-4. A **subsidy** is a payment from the government to the producer, usually a set amount for each unit produced."
+       },
+       {
+        "type": "paragraph",
+        "text": "It is a specific tax in reverse, and the arithmetic is the mirror image. A subsidy of $2 a tile means Kavira receives $2 from the government on every tile, so it needs $2 less from the buyer to be equally well off."
+       },
+       {
+        "type": "paragraph",
+        "text": "At every quantity the price the producer needs falls by $2. The curve shifts DOWN by the subsidy, which is the same thing as shifting RIGHT: more is offered at every price. Both descriptions name one movement, and either is correct."
+       },
+       {
+        "type": "paragraph",
+        "text": "Governments use subsidies where they want more of something produced than the market would otherwise supply — staple foods, renewable energy, vaccines."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌞",
+       "text": "Several governments have subsidised solar module manufacturing, paying producers for output in order to expand the industry. The effect on the supply curve is the same wherever it is done: producers can accept a lower price from buyers and still cover their costs, so more is offered at every price."
+      },
+      "misconception": "Students say a subsidy increases demand because it makes the good cheaper for buyers. A subsidy paid to producers acts on supply; a cheaper price for buyers is the result, not the mechanism. Instead write: a subsidy lowers the price producers need at every quantity, shifting supply right.",
+      "examMatters": "Draw (4 marks, WEC11 Appendix 6) requires an accurately labelled diagram. A subsidy drawn accurately is a downward vertical shift equal to the subsidy per unit — the same measurement as a specific tax, in the other direction.",
+      "recall": {
+       "id": "supply:sub:government-subsidies:recall",
+       "type": "fillin",
+       "prompt": "Complete the effect of a subsidy:",
+       "template": [
+        "A subsidy is a payment from the government to the ___",
+        "→ so the price it needs from the buyer at every quantity ___",
+        "→ and the supply curve shifts to the ___"
+       ],
+       "answers": [
+        "producer",
+        "falls",
+        "right"
+       ],
+       "hints": [
+        "which side of the market receives the payment",
+        "what happens to the amount the buyer must cover",
+        "the direction that means more is offered at every price"
+       ],
+       "distractors": [
+        "consumer",
+        "rises",
+        "left"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:natural-disasters",
+      "title": "Natural Disasters",
+      "keyIdea": "A natural disaster destroys productive capacity, so less can be offered at any price however profitable production would be.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 1c-5, and the factor that works differently from the other four. A **natural disaster** — a flood, a drought, an earthquake, a cyclone — does not change what production costs or what it is worth. It removes the ability to produce at all."
+       },
+       {
+        "type": "paragraph",
+        "text": "Crops are destroyed, factories are damaged, roads that carried output to market are cut. Less can be offered at every price, so the curve shifts LEFT — and it shifts left even if the price rises sharply, because willingness was never the constraint."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is the connection to the second half of this topic. A disaster hits the **able** half of \"willing and able\", and how far supply can recover depends on how quickly capacity can be rebuilt. The next chapters are about exactly that."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌊",
+       "text": "When severe flooding covers a cotton-growing region, the crop in the ground is lost and the supply for that season falls whatever happens to the cotton price. Growers cannot respond to a higher price with cotton that no longer exists."
+      },
+      "misconception": "Students write that a natural disaster raises costs. Some costs do rise, but the binding effect is that output has been destroyed or made impossible. Instead write: a natural disaster removes productive capacity, so less can be supplied at every price regardless of how profitable production would be.",
+      "examMatters": "Appendix 6 states that Analyse (6 marks, WEC11) requires any relevant data provided to be interpreted. Where a question gives figures on crop losses or damaged capacity, the chain has to run through those figures rather than beside them.",
+      "recall": {
+       "id": "supply:sub:natural-disasters:recall",
+       "type": "classify",
+       "prompt": "Sort each factor by which half of \"willing and able\" it acts on.",
+       "groups": [
+        {
+         "name": "Acts on willingness",
+         "why": "Production is still possible; what has changed is whether it is worth doing at the price on offer",
+         "items": [
+          "A specific tax on each unit",
+          "A subsidy per unit",
+          "A rise in the cost of materials"
+         ]
+        },
+        {
+         "name": "Acts on ability",
+         "why": "The capacity to produce has itself been changed, so the price on offer is not the binding constraint",
+         "items": [
+          "A flood destroying the crop",
+          "An earthquake damaging the factory",
+          "A cyclone cutting the road to market"
+         ]
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Costs of production, new technology, indirect taxes, subsidies and natural disasters.",
+     "A specific tax shifts the curve up in parallel by the tax per unit.",
+     "An ad valorem tax pivots it, because the gap grows with price.",
+     "Always name the direction of the shift, not only the factor."
+    ],
+    "diagramId": "supply:diagram:2d4c0b2e",
+    "quizIndices": [
+     8,
+     7,
+     9,
+     10,
+     11,
+     12
+    ],
+    "practiceIndices": [
+     2,
+     3
+    ]
+   },
+   {
+    "id": "supply:block:0213bb2f",
+    "title": "Price Elasticity of Supply",
+    "sections": [
+     {
+      "id": "supply:sub:pes-definition-and-formula",
+      "title": "What PES Measures",
+      "keyIdea": "Price elasticity of supply measures how responsive quantity supplied is to a change in price: the percentage change in quantity supplied divided by the percentage change in price.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The first half of this topic said that a higher price brings a higher quantity supplied. **Price elasticity of supply (PES)** answers the question that leaves open: how much higher?"
+       },
+       {
+        "type": "paragraph",
+        "text": "It is a ratio of two percentage changes:"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Percentage change in quantity supplied",
+         "divided by percentage change in price"
+        ],
+        "result": "PES — a number, with no units",
+        "resultType": "neutral"
+       },
+       {
+        "type": "paragraph",
+        "text": "Both changes are **percentages**, which is what lets PES compare a tile market with an oil market. And because the supply curve slopes upward, price and quantity move the same way, so PES is normally **positive** — unlike price elasticity of demand, which is normally negative."
+       },
+       {
+        "type": "paragraph",
+        "text": "PES is about **producers**. The mirror-image measure for buyers is price elasticity of demand, and the two are easy to confuse precisely because the formula looks the same."
+       }
+      ],
+      "realExample": {
+       "emoji": "💻",
+       "text": "Building a semiconductor fabrication plant takes years, so when world demand for chips jumps, chipmakers cannot raise output quickly however high the price goes. A low PES is what turns a demand surge into a price surge rather than an output surge."
+      },
+      "misconception": "Students write that PES measures how much producers want to supply. Wanting is not what the number captures; it is the proportional size of the response actually made. Instead write: PES is the percentage change in quantity supplied divided by the percentage change in price.",
+      "examMatters": "A Define (2 marks, WEC11 Appendix 6) gives the meaning of a term. For PES that is the responsiveness of quantity supplied to a change in price — and the formula, which is what makes \"responsiveness\" precise rather than vague.",
+      "recall": {
+       "id": "supply:sub:pes-definition-and-formula:recall",
+       "type": "fillin",
+       "prompt": "Complete the definition and the formula:",
+       "template": [
+        "PES measures the responsiveness of quantity ___ to a change in price",
+        "→ both halves of the ratio are expressed as a ___ change, which removes the units",
+        "→ on an upward-sloping supply curve the value is normally ___"
+       ],
+       "answers": [
+        "supplied",
+        "percentage",
+        "positive"
+       ],
+       "hints": [
+        "the word that makes this about producers rather than buyers",
+        "the kind of change both parts of the ratio use, which is what removes the units",
+        "the sign, given that price and quantity move the same way"
+       ],
+       "distractors": [
+        "demanded",
+        "absolute",
+        "negative"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:calculating-pes",
+      "title": "Calculating PES",
+      "keyIdea": "Work out each percentage change against its own original value, then divide the quantity percentage by the price percentage.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 2b asks for calculation AND interpretation of the value. The calculation is three steps, and the first one is where it usually goes wrong."
+       },
+       {
+        "type": "paragraph",
+        "text": "A percentage change is always measured against the **original** value, not the new one and not the average. Kavira's price rises from $8 to $10: that is a rise of $2 on $8, which is 25%. Its output rises from 400 to 460 tiles a week: a rise of 60 on 400, which is 15%."
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Price $8 → $10, a rise of 25%",
+         "Quantity 400 → 460, a rise of 15%",
+         "15% ÷ 25% = 0.6"
+        ],
+        "result": "PES is 0.6: below 1, so supply is inelastic",
+        "resultType": "neutral"
+       },
+       {
+        "type": "paragraph",
+        "text": "Then interpret it. 0.6 means the quantity moved proportionally LESS than the price did — Kavira responded, but not in step with the price. A value below 1 always means that."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏘️",
+       "text": "Housing supply responds slowly to price in most large cities: land must be found, permission obtained and the building actually built, so a year of rising prices produces a much smaller percentage rise in completions. The calculation on any such market gives a value below 1."
+      },
+      "misconception": "Students divide the change in quantity by the change in price using the raw numbers rather than the percentages, which gives a figure that depends on the units chosen. Instead write: convert each change to a percentage of its own original value first, then divide.",
+      "examMatters": "Appendix 6 defines Calculate (2 or 4 marks, WEC11) as a calculation in several stages from given data, and advises showing workings. The stages are the two percentage changes and the division; writing them down is what allows a partially wrong answer to be credited for the parts that were right.",
+      "recall": {
+       "id": "supply:sub:calculating-pes:recall",
+       "type": "reorder",
+       "prompt": "Put the calculation into the order it must be done, from first step to last:",
+       "correctOrder": [
+        "Find the change in price and the change in quantity supplied",
+        "Express each change as a proportion of its OWN original value",
+        "Multiply each by 100 to get two percentage changes",
+        "Divide the quantity percentage by the price percentage"
+       ],
+       "why": [
+        "Both raw changes are needed before anything can be expressed as a proportion",
+        "The original value is the base, and choosing it correctly is what decides whether the answer is right",
+        "Converting to percentages is what removes the units and makes the two comparable",
+        "The division is last, and the order matters: quantity on top, price underneath"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:interpreting-pes-values",
+      "title": "Elastic and Inelastic Supply",
+      "keyIdea": "PES above 1 is elastic supply — quantity moves proportionally more than price. PES below 1 is inelastic supply — quantity moves proportionally less.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The number has to be turned into a sentence about the market, and the dividing line is **1**."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Elastic supply, PES > 1** — quantity supplied changes by a LARGER percentage than price. Producers can respond readily.",
+         "**Inelastic supply, PES < 1** — quantity supplied changes by a SMALLER percentage than price. Producers respond, but sluggishly."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "On a diagram, comparing two curves **through the same point**, the flatter one is the more elastic and the steeper one the more inelastic. Both still slope upward: elasticity is about how far the response goes, not about its direction. Slope alone is not the whole story, as the next chapter shows."
+       },
+       {
+        "type": "paragraph",
+        "text": "Kavira with one kiln has PES 0.6 — inelastic. Give it a second kiln and the same price rise brings 640 tiles instead of 460, PES 2.4 — elastic. Same firm, same price change: the last chapter is about why."
+       }
+      ],
+      "realExample": {
+       "emoji": "📱",
+       "text": "Digital goods are close to the elastic extreme. Supplying one more copy of a piece of software costs almost nothing, so a publisher can meet a surge in demand without limit — the quantity supplied is barely constrained by anything the price has to overcome."
+      },
+      "misconception": "Students write that inelastic supply means supply does not change at all. That is the special case where PES is exactly zero. Instead write: inelastic supply means the quantity does change, but by a smaller percentage than the price did.",
+      "examMatters": "The interpretation is required by the specification content itself — 1.3.3 · 2b asks for \"calculation AND interpretation of numerical values\" — not by the command word. An interpretation is a sentence about this market: \"supply is inelastic, so a rise in demand raises price more than output\", rather than a restatement of the arithmetic.",
+      "recall": {
+       "id": "supply:sub:interpreting-pes-values:recall",
+       "type": "reorder",
+       "prompt": "Comparing four supply curves through the same point, put them in order of PES, from the least elastic to the most elastic:",
+       "correctOrder": [
+        "Vertical supply curve: PES = 0",
+        "Steep through that point: PES below 1",
+        "Straight line through the origin: PES = 1",
+        "Shallow through that point: PES above 1"
+       ],
+       "why": [
+        "Zero is the floor: quantity does not respond to price at all",
+        "Below 1 means a response that is real but proportionally smaller than the price change",
+        "Exactly 1 is the dividing line, where the two percentage changes match",
+        "Above 1 means the quantity response outruns the price change proportionally"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:unitary-elastic-supply",
+      "title": "Unitary Elastic Supply",
+      "keyIdea": "PES of exactly 1 means quantity supplied changes by the same percentage as price — and it is drawn as any straight line through the origin, whatever its slope.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 2b-3 names the case on the dividing line. **Unitary elastic supply** is PES = 1: a 10% rise in price brings exactly a 10% rise in quantity supplied."
+       },
+       {
+        "type": "paragraph",
+        "text": "It has a property worth knowing because it is counter-intuitive. Any straight supply line drawn **through the origin** has PES of exactly 1 — a steep one and a shallow one alike. Steepness is not what decides elasticity for these lines; where the line starts is."
+       },
+       {
+        "type": "paragraph",
+        "text": "The reason is proportion. On a line through the origin, doubling the price doubles the quantity, because both are measured from zero together. That is what PES = 1 says."
+       },
+       {
+        "type": "paragraph",
+        "text": "It follows that a straight supply line which cuts the PRICE axis is elastic along its whole length, and one which cuts the QUANTITY axis is inelastic along its whole length — which is why Kavira's two curves behave as they do."
+       }
+      ],
+      "realExample": {
+       "emoji": "📐",
+       "text": "Unitary elasticity is a benchmark rather than a common market. Its use is comparative: it marks the point at which a market stops amplifying price changes into larger output changes and starts damping them."
+      },
+      "misconception": "Students say a steeper supply curve is always more inelastic than a shallower one. That holds when comparing curves at the same point, but every straight line through the origin has PES of 1 however steep it is. Instead write: for straight-line supply curves, which axis the line cuts decides elasticity, not its slope.",
+      "examMatters": "Draw (4 marks, WEC11 Appendix 6) may state the type of diagram required or leave the student to decide. Asked for unitary elastic supply, the accurate answer is a straight line from the origin; a steep line that misses the origin is a different elasticity.",
+      "recall": {
+       "id": "supply:sub:unitary-elastic-supply:recall",
+       "type": "match",
+       "prompt": "Match each straight supply line to the elasticity it has along its whole length:",
+       "pairs": [
+        {
+         "left": "A line drawn through the origin",
+         "right": "Unitary elastic, PES = 1",
+         "why": "Price and quantity are both measured from zero together, so a given percentage change in one is the same percentage change in the other"
+        },
+        {
+         "left": "A line cutting the price axis",
+         "right": "Elastic, PES above 1",
+         "why": "Quantity starts from zero at a positive price, so the proportional quantity response always outruns the proportional price change"
+        },
+        {
+         "left": "A line cutting the quantity axis",
+         "right": "Inelastic, PES below 1",
+         "why": "Some quantity is offered even at a price of zero, so the proportional quantity response is always the smaller of the two"
+        }
+       ],
+       "distractors": [
+        "Perfectly inelastic, PES = 0"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:perfectly-elastic-and-perfectly-inelastic",
+      "title": "The Two Extremes",
+      "keyIdea": "Perfectly inelastic supply is vertical: quantity cannot change at all. Perfectly elastic supply is horizontal: any quantity is offered at one price, and none above it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 2b-1 and 2b-5 are the two ends of the range, and each is drawn as a straight line along an unexpected direction."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Perfectly inelastic supply, PES = 0** — a VERTICAL curve. The quantity is fixed and no price changes it. Seats at a stadium for one match, a plot of land, tickets for a concert already sold out.",
+         "**Perfectly elastic supply, PES = ∞** — a HORIZONTAL curve. At one price producers will supply any quantity asked for; a fraction above it they would supply the world, and a fraction below it they supply nothing."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Perfectly inelastic supply is the easier of the two to meet in real markets, at least over a short period: anything whose quantity is physically fixed for now behaves this way."
+       },
+       {
+        "type": "paragraph",
+        "text": "Perfectly elastic supply is a model rather than a market. It describes a very small producer in a very large market — one that can sell as much as it likes at the going price and nothing at all above it."
+       }
+      ],
+      "realExample": {
+       "emoji": "🎟️",
+       "text": "A stadium has the number of seats it has. However far ticket prices rise for a final, not one more seat appears in the ground that evening, so supply for that match is vertical."
+      },
+      "misconception": "Students draw perfectly inelastic supply as a very steep upward line and perfectly elastic as a very shallow one. Those are ordinary inelastic and elastic supply. Instead write: perfectly inelastic supply is exactly vertical and perfectly elastic supply is exactly horizontal.",
+      "examMatters": "Appendix 6 defines Draw (4 marks, WEC11) as requiring an accurately labelled diagram, and here accuracy is the difference between steep and vertical. A perfectly inelastic curve that leans is a different elasticity from the one asked for.",
+      "recall": {
+       "id": "supply:sub:perfectly-elastic-and-perfectly-inelastic:recall",
+       "type": "classify",
+       "prompt": "Sort each market into the extreme its supply is closest to over the period stated.",
+       "groups": [
+        {
+         "name": "Close to perfectly inelastic",
+         "why": "The quantity is physically fixed for the period in question, so no price can bring more of it",
+         "items": [
+          "Seats at a stadium for one match",
+          "Land in a city centre",
+          "A painting by an artist who has died"
+         ]
+        },
+        {
+         "name": "Close to perfectly elastic",
+         "why": "The producer is small enough in a large market to sell any quantity at the going price, and none above it",
+         "items": [
+          "One farm selling wheat on a world market",
+          "One small supplier of a standard screw",
+          "One stallholder selling a standard grade of rice"
+         ]
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "PES = % change in quantity supplied ÷ % change in price, normally positive.",
+     "Each percentage change is measured against its OWN original value.",
+     "Above 1 is elastic, below 1 is inelastic, exactly 1 is unitary elastic.",
+     "Perfectly inelastic is vertical; perfectly elastic is horizontal."
+    ],
+    "diagramId": "supply:diagram:b638bde0",
+    "quizIndices": [
+     16,
+     13,
+     14,
+     15,
+     17,
+     18
+    ],
+    "practiceIndices": [
+     4
+    ]
+   },
+   {
+    "id": "supply:block:da1fd626",
+    "title": "What Determines PES",
+    "sections": [
+     {
+      "id": "supply:sub:the-time-period",
+      "title": "The Time Period",
+      "keyIdea": "The more time producers have to respond to a price change, the more they can do about it — which makes time the determinant every other one runs through.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The first of the five factors in 1.3.3 · 2c, and the one that governs the rest. **Time** decides which responses are available."
+       },
+       {
+        "type": "paragraph",
+        "text": "Each response takes its own amount of time to arrange, and the period available decides which are on the table at all."
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Sell stock that is already made",
+         "Run overtime shifts on existing machines",
+         "Hire and train additional staff",
+         "Build and commission a second factory"
+        ],
+        "result": "The longer the period, the more of these are available — so PES measured over it is larger",
+        "resultType": "good"
+       },
+       {
+        "type": "paragraph",
+        "text": "Given an hour, only the first is possible. Given a month, the second and third are. Given three years, so is the fourth — and each one is a larger response to the same price rise."
+       },
+       {
+        "type": "paragraph",
+        "text": "Every other determinant in this chapter is really a statement about what can be changed within the period in question. That is why the specification returns to time in 1.3.3 · 2d, and why the last chapter of this topic is about nothing else."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛢️",
+       "text": "US shale producers can restart idle rigs within months of a price rise, which is fast for oil. Conventional offshore fields take years from decision to first production. Same commodity, same price signal: the supply response differs because the time each needs differs."
+      },
+      "misconception": "Students write that supply is inelastic in the short run and elastic in the long run as though these were two fixed settings. They are the ends of a continuum, and where a market sits depends on what it takes to change output there. Instead write: the longer the period, the more of the firm's constraints can be altered, so the more elastic supply becomes.",
+      "examMatters": "Appendix 6 states that Analyse (6 marks, WEC11) focuses on depth rather than breadth. Where a question gives a time frame, the time frame is the analysis: the same market has different answers over a week and over a decade, and saying which applies is the point.",
+      "recall": {
+       "id": "supply:sub:the-time-period:recall",
+       "type": "reorder",
+       "prompt": "Put these responses to a price rise in order of how long each takes to arrange, from soonest to latest:",
+       "correctOrder": [
+        "Sell stock that is already made",
+        "Run overtime shifts on existing machines",
+        "Hire and train additional staff",
+        "Build and commission a second factory"
+       ],
+       "why": [
+        "Finished stock needs no production decision at all, only a decision to release it",
+        "Overtime uses equipment the firm already has, so it needs agreement rather than investment",
+        "New staff must be found and trained before they add to output",
+        "New capacity is the slowest response and the one that changes what the firm can ever produce"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:availability-of-stock-and-perishability",
+      "title": "Availability of Stock and Perishability",
+      "keyIdea": "A firm holding stock of a good that keeps can meet a price rise immediately from the warehouse; a firm whose output perishes has no such reserve, so its supply is inelastic.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 2c-2 names this factor and, like the other four, does not explain it. It is two sides of one question: **can output be stored?**"
+       },
+       {
+        "type": "paragraph",
+        "text": "**Availability of stock.** A firm with finished goods in a warehouse can answer a price rise the same day, without producing anything. Stock is a reserve of supply already made, and it makes supply more elastic in the short period where producing more is not yet possible."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Perishability** is the absence of that option. A good that spoils cannot be held back for a better price, and cannot be accumulated in advance. Fresh fish, cut flowers, milk and ripe fruit must be sold close to when they are produced, whatever the price that day."
+       },
+       {
+        "type": "paragraph",
+        "text": "Storage costs money even where it is possible — a warehouse, refrigeration, capital tied up in goods not yet sold — so a firm holds stock only where the benefit of being able to respond is worth that cost."
+       },
+       {
+        "type": "paragraph",
+        "text": "Note the direction carefully: stock that can be held makes supply MORE elastic, and perishability makes it LESS."
+       }
+      ],
+      "realExample": {
+       "emoji": "🐟",
+       "text": "A fresh fish market must clear its catch the day it lands, so a higher price cannot bring more fish that afternoon. Frozen fish from the same waters can be held for months and released when prices are high, which makes the frozen market far more responsive than the fresh one."
+      },
+      "misconception": "Students treat stock as the same thing as supply. Stock is a quantity held; supply is a rate offered at each price. Instead write: stock is a reserve that makes supply more responsive, because it can be released without producing anything new.",
+      "examMatters": "Appendix 6 defines Explain (4 marks, WEC11) as requiring application as well as knowledge. Applied means naming what this good's storability actually is — whether it spoils, how long it keeps, what storing it costs — rather than reciting the factor in the abstract.",
+      "recall": {
+       "id": "supply:sub:availability-of-stock-and-perishability:recall",
+       "type": "fillin",
+       "prompt": "Complete the two sides of this determinant:",
+       "template": [
+        "A firm holding ___ of finished goods can answer a price rise without producing anything",
+        "→ a good that spoils quickly is described as ___",
+        "→ so perishability makes supply more ___"
+       ],
+       "answers": [
+        "stock",
+        "perishable",
+        "inelastic"
+       ],
+       "hints": [
+        "finished output held back rather than sold, which acts as a reserve",
+        "the adjective the specification uses for a good that cannot be kept",
+        "the word for a response proportionally smaller than the price change"
+       ],
+       "distractors": [
+        "capacity",
+        "durable",
+        "elastic"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:mobility-of-factors-of-production",
+      "title": "Mobility of Factors of Production",
+      "keyIdea": "Supply is elastic where labour and equipment can be moved into producing this good, and inelastic where the factors needed are specialised and cannot be redeployed quickly.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 2c-3. **Mobility of factors of production** asks whether the land, labour and capital that producing more would need can actually be brought in."
+       },
+       {
+        "type": "paragraph",
+        "text": "Mobility comes in two forms, and both matter here."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Occupational mobility** — whether a worker or a machine can switch to a different kind of work. General skills and general-purpose equipment are occupationally mobile; a specialist is not.",
+         "**Geographical mobility** — whether they can move to where the work is. Housing, family and licensing all slow this down."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Where factors are mobile, a price rise pulls them in from elsewhere and output expands: supply is elastic. Where the work needs years of training or equipment built for one purpose, a higher price cannot conjure them, and supply is inelastic however profitable production becomes."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚢",
+       "text": "A shipyard needs welders qualified for structural work, and reaching that standard takes years of training. A shipbuilding boom cannot draw in general labourers to do it, so output rises slowly even when orders and prices are strong."
+      },
+      "misconception": "Students read mobility as being about transport — moving the finished product to market. It is about moving the FACTORS into producing it. Instead write: mobility of factors is whether the labour and capital needed can be switched into this use, occupationally or geographically.",
+      "examMatters": "An Examine (8 marks, WEC11 Appendix 6) requires a chain of reasoning and a brief assessment of the factors. Assessment here means saying which constraint actually binds in the market given — specialised labour, specialised equipment, or neither.",
+      "recall": {
+       "id": "supply:sub:mobility-of-factors-of-production:recall",
+       "type": "classify",
+       "prompt": "Sort each input by whether it can be switched quickly into producing something else.",
+       "groups": [
+        {
+         "name": "Mobile: supply is more elastic",
+         "why": "The input is general enough to be redeployed into another use within the period in question",
+         "items": [
+          "A delivery van",
+          "A general warehouse",
+          "A worker doing packing"
+         ]
+        },
+        {
+         "name": "Immobile: supply is more inelastic",
+         "why": "The input was made or trained for one purpose, so a higher price elsewhere cannot draw it across",
+         "items": [
+          "A certified structural welder",
+          "A purpose-built tile kiln",
+          "An oil refinery"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:legal-constraints",
+      "title": "Legal Constraints",
+      "keyIdea": "Where the law caps how much may be produced, output cannot rise with price however profitable it becomes: supply is inelastic by rule rather than by cost.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 2c-4, and the factor the specification names most briefly. A **legal constraint** is a rule that limits output directly, rather than making it more expensive."
+       },
+       {
+        "type": "paragraph",
+        "text": "The forms it takes are worth knowing, because a question will describe one rather than name the factor:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**A quota** — a ceiling on the quantity that may be produced or caught, as with fishing quotas set for a season.",
+         "**A licence** — permission required before producing at all, issued in limited numbers, as with taxi plates or broadcasting licences.",
+         "**Planning permission** — consent required before building, which is why housing supply responds slowly to price almost everywhere.",
+         "**A ban or restriction on an input** — a rule that forbids a material or a method, closing off the cheaper way of expanding output."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "What makes these different from a cost is that money cannot solve them. A firm that would gladly produce more, and could, is simply not permitted to. Supply is inelastic by rule — and because rules can be changed, this is one route by which supply becomes more elastic in the long run."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚕",
+       "text": "Cities that cap the number of taxi licences hold the number of licensed cabs fixed whatever fares do. A fare rise makes each licence more valuable, but it does not put another licensed taxi on the road until the city issues one."
+      },
+      "misconception": "Students treat regulation as just another cost that shifts supply left. A cost changes what is worth producing; a legal cap changes what is permitted, and no price overcomes it. Instead write: a legal constraint limits the quantity that may be produced, so supply cannot respond to price within that limit.",
+      "examMatters": "Appendix 6 states that Analyse (6 marks, WEC11) requires relevant data provided to be interpreted. Where an extract gives a quota figure or a number of licences, that figure is the constraint the analysis has to work from.",
+      "recall": {
+       "id": "supply:sub:legal-constraints:recall",
+       "type": "match",
+       "prompt": "Match each legal constraint to the market whose supply it makes inelastic:",
+       "pairs": [
+        {
+         "left": "A seasonal catch quota",
+         "right": "Fishing",
+         "why": "The quota caps the tonnage that may be landed, so a higher fish price cannot bring more of it ashore that season"
+        },
+        {
+         "left": "A limited number of licences",
+         "right": "Taxis in a city",
+         "why": "Only licence-holders may operate, so the number of cabs is fixed until the authority issues more"
+        },
+        {
+         "left": "Planning permission to build",
+         "right": "Housing",
+         "why": "Land cannot be built on until consent is granted, which is why completions respond to price slowly almost everywhere"
+        }
+       ],
+       "distractors": [
+        "Software downloads"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:factors-influencing-pes",
+      "title": "Capacity",
+      "keyIdea": "A firm with spare capacity can raise output quickly and cheaply, so its supply is elastic; a firm already running flat out can only expand by adding capacity, which takes time.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 2c-5, the last of the five, and the one that decides how the other four apply right now. **Capacity** is the maximum output the firm's existing resources can produce. **Spare capacity** is the gap between that and what it is currently producing."
+       },
+       {
+        "type": "paragraph",
+        "text": "A firm with spare capacity is the elastic case. It can raise output using equipment it already owns, so a price rise brings a large response quickly and at little extra cost."
+       },
+       {
+        "type": "paragraph",
+        "text": "A firm at **full capacity** is the inelastic case. There is no more output to be had from what it has; the only way up is to add capacity, and that takes the time this chapter began with."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is Kavira exactly. One kiln at full stretch answered 25% on price with 15% on quantity — PES 0.6. A second kiln turns the same price rise into 60% — PES 2.4. Nothing changed but the capacity available."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏨",
+       "text": "A hotel with empty rooms can fill them at short notice when a large event comes to the city. A hotel already fully booked cannot take one more guest at any price, and building more rooms is a project of years rather than weeks."
+      },
+      "misconception": "Students say that a large firm has elastic supply because it can produce a lot. Size is not the same as spare capacity: a very large firm running flat out is at the inelastic end. Instead write: what makes supply elastic is unused capacity, not total capacity.",
+      "examMatters": "Appendix 6 defines Examine (8 marks, WEC11) as requiring a brief assessment of the factors. With five determinants available, assessment means judging which one binds in the market described rather than working through all five.",
+      "recall": {
+       "id": "supply:sub:factors-influencing-pes:recall",
+       "type": "fillin",
+       "prompt": "Complete the effect of capacity on PES:",
+       "template": [
+        "The gap between what a firm produces and what it could produce is called ___ capacity",
+        "→ a firm with it can raise output quickly, so its supply is ___",
+        "→ a firm at ___ capacity can only expand by adding more, which takes time"
+       ],
+       "answers": [
+        "spare",
+        "elastic",
+        "full"
+       ],
+       "hints": [
+        "the word for capacity sitting unused",
+        "the word for a quantity response proportionally larger than the price change",
+        "the state in which no further output is possible from existing resources"
+       ],
+       "distractors": [
+        "total",
+        "inelastic",
+        "fixed"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Time, stock and perishability, factor mobility, legal constraints, capacity.",
+     "Every one of them is a question about whether the firm CAN respond.",
+     "Stock makes supply more elastic; perishability makes it less.",
+     "Spare capacity makes supply elastic — total size does not."
+    ],
+    "diagramId": "supply:diagram:01dec386",
+    "quizIndices": [
+     19,
+     20,
+     21,
+     22
+    ],
+    "practiceIndices": [
+     5
+    ]
+   },
+   {
+    "id": "supply:block:bfb65eb4",
+    "title": "The Short Run and the Long Run",
+    "sections": [
+     {
+      "id": "supply:sub:short-run-production",
+      "title": "What the Short Run Means",
+      "keyIdea": "The short run is the period in which at least one factor of production cannot be changed, so output can only be varied within the capacity the firm already has.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 2d asks for the distinction between the short run and the long run **in economics**, and the phrase matters: these are not lengths of time. They are defined by what can be changed."
+       },
+       {
+        "type": "paragraph",
+        "text": "The **short run** is the period in which at least one factor of production is fixed. The firm can vary the others — hours worked, materials ordered, staff on shift — but it cannot alter the fixed one."
+       },
+       {
+        "type": "paragraph",
+        "text": "For Kavira the fixed factor is the kiln. In the short run it can buy more clay, pay a weekend shift and run the kiln harder, and that is how 400 tiles became 460. What it cannot do is fire tiles in a kiln it does not have."
+       },
+       {
+        "type": "paragraph",
+        "text": "How LONG the short run lasts therefore differs by industry. For a market stall it may be a day. For a power station or a shipyard it may be a decade. The definition is about the constraint, not the calendar."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏭",
+       "text": "A car plant can add a night shift within weeks, but the assembly line itself is fixed until a new one is built. Everything the plant can do in response to demand while that line is its ceiling is happening in the short run."
+      },
+      "misconception": "Students define the short run as a fixed length of time, often a year. It is defined by the presence of a fixed factor, and that lasts as long as the factor takes to change. Instead write: the short run is the period in which at least one factor of production cannot be varied.",
+      "examMatters": "A Define (2 marks, WEC11 Appendix 6) requires the meaning of the term. For the short run, the meaning is the fixed factor — a definition given in months or years does not state what the term actually means.",
+      "recall": {
+       "id": "supply:sub:short-run-production:recall",
+       "type": "fillin",
+       "prompt": "Complete the definition of the short run:",
+       "template": [
+        "The short run is the period in which at least one factor of production is ___",
+        "→ the firm can still vary the ___ factors, such as hours worked and materials",
+        "→ so output changes only within the ___ the firm already has"
+       ],
+       "answers": [
+        "fixed",
+        "variable",
+        "capacity"
+       ],
+       "hints": [
+        "the property of the factor that defines the period",
+        "the term for the factors that can still be adjusted",
+        "the ceiling on output set by the fixed factor"
+       ],
+       "distractors": [
+        "scarce",
+        "mobile",
+        "market"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:long-run-production-and-returns-to-scale",
+      "title": "What the Long Run Means",
+      "keyIdea": "The long run is the period in which every factor of production can be varied, so the firm can change what it is able to produce, not only how much of it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The other half of 2d. The **long run** is the period in which ALL factors of production can be varied. Nothing is fixed."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is a change in kind, not merely in degree. In the short run the firm chooses how much to produce within a capacity it has. In the long run it chooses what that capacity is: a second kiln, a second factory, a new location, a different process."
+       },
+       {
+        "type": "paragraph",
+        "text": "The long run begins when the last fixed factor becomes variable. For Kavira it begins when the second kiln is commissioned, which is when $10 a tile starts bringing 640 tiles a week instead of 460."
+       },
+       {
+        "type": "paragraph",
+        "text": "Firms can also LEAVE in the long run, and new firms can enter — which is the market-level version of the same freedom, and part of why market supply is more elastic over longer periods than any one firm's."
+       }
+      ],
+      "realExample": {
+       "emoji": "⛏️",
+       "text": "Opening a new iron ore mine takes years: surveying, permits, rail and port capacity, then construction. Once those decisions are taken the industry's capacity itself has changed, which is what makes them long-run decisions rather than large short-run ones."
+      },
+      "misconception": "Students treat the long run as simply \"a long time from now\", so nothing has to be said about what changed. Instead write: the long run is the period in which every factor can be varied, so the firm can change its capacity rather than only its use of existing capacity.",
+      "examMatters": "Appendix 6 defines Explain (4 marks, WEC11) as requiring a two-stage chain when a reason or impact is asked for. \"In the long run all factors are variable\" is stage one; \"so the firm can add capacity and meet a price rise with a much larger output response\" is stage two.",
+      "recall": {
+       "id": "supply:sub:long-run-production-and-returns-to-scale:recall",
+       "type": "classify",
+       "prompt": "Sort each decision by whether it is available in the short run or only in the long run.",
+       "groups": [
+        {
+         "name": "Available in the short run",
+         "why": "It uses the capacity the firm already has, varying only the factors that can be changed now",
+         "items": [
+          "Adding a weekend shift",
+          "Ordering more clay",
+          "Releasing stock from the warehouse"
+         ]
+        },
+        {
+         "name": "Only in the long run",
+         "why": "It changes the capacity itself, which is the factor that was fixed",
+         "items": [
+          "Commissioning a second kiln",
+          "Opening a factory abroad",
+          "Leaving the industry entirely"
+         ]
+        }
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:why-supply-is-more-elastic-in-the-long-run",
+      "title": "Why Supply Is More Elastic in the Long Run",
+      "keyIdea": "Every determinant of PES loosens when the fixed factor becomes variable, so the same price rise brings a larger proportional output response.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "IAL 1.3.3 · 2d does not stop at the distinction. It asks for **its significance for price elasticity of supply**, and the significance is that each of the five determinants changes when the short run becomes the long run."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Capacity** — the binding one. What was full capacity can be added to, so the ceiling on output moves.",
+         "**Mobility of factors** — workers can be trained and specialised equipment can be built, so factors that could not be moved now can.",
+         "**Legal constraints** — permissions can be applied for and granted, and quotas can be renegotiated.",
+         "**Stock** — a firm that expects to need a reserve has time to build one."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "None of those is available on Monday when the price rises on Sunday. Each becomes available given enough time, and each one enlarges the response the firm can make. So PES rises as the period lengthens."
+       },
+       {
+        "type": "paragraph",
+        "text": "It is also why the market response outlasts the firm response: over a long enough period, high prices bring NEW firms into the industry, which no single firm's capacity decision captures."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌴",
+       "text": "An oil palm planted today yields nothing for several years. A price rise cannot bring more fruit from existing trees beyond what the harvest allows, but it does decide how much is planted — and that planting is what makes the supply response over a decade far larger than the response over a season."
+      },
+      "misconception": "Students explain long-run elasticity only by saying firms have more time. More time matters because of what it makes possible. Instead write: given time, capacity can be added, factors can be trained or built and permissions obtained, so each constraint on the response is loosened.",
+      "examMatters": "Appendix 6 states that Examine (8 marks, WEC11) requires a chain of reasoning plus a brief assessment. Assessment here is saying WHICH constraint binds in the market given and how long it would take to loosen — the answer differs between a bakery and a copper mine.",
+      "recall": {
+       "id": "supply:sub:why-supply-is-more-elastic-in-the-long-run:recall",
+       "type": "match",
+       "prompt": "Match each short-run constraint to what loosens it in the long run:",
+       "pairs": [
+        {
+         "left": "Running at full capacity",
+         "right": "New capacity can be built",
+         "why": "The fixed factor becomes variable, which is precisely what defines the long run"
+        },
+        {
+         "left": "Specialised labour cannot be found",
+         "right": "Workers can be trained",
+         "why": "Training takes time rather than money alone, so the constraint is a short-run one"
+        },
+        {
+         "left": "No permission to build",
+         "right": "Permission can be applied for",
+         "why": "A legal constraint is a rule rather than a cost, and rules can be changed or granted over time"
+        }
+       ],
+       "distractors": [
+        "The price can be raised further"
+       ]
+      }
+     },
+     {
+      "id": "supply:sub:one-price-rise-two-time-horizons",
+      "title": "One Price Rise, Two Time Horizons",
+      "keyIdea": "The same firm, the same price rise and the same starting output give PES 0.6 in the short run and 2.4 in the long run — the distinction made as arithmetic.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Everything in this chapter comes together in one calculation done twice. Kavira's price rises from $8 to $10 a tile: a rise of 25% in both cases."
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Short run, one kiln: 400 → 460 tiles, a rise of 15%",
+         "15% ÷ 25% = 0.6, inelastic"
+        ],
+        "result": "Output responded proportionally less than the price",
+        "resultType": "bad"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Long run, a second kiln: 400 → 640 tiles, a rise of 60%",
+         "60% ÷ 25% = 2.4, elastic"
+        ],
+        "result": "Output responded proportionally more than the price",
+        "resultType": "good"
+       },
+       {
+        "type": "paragraph",
+        "text": "Nothing about the price change differs between the two. Nothing about the firm differs except how much time it had, and therefore whether the kiln was still a fixed factor. That is the whole of 2d in two lines of arithmetic."
+       },
+       {
+        "type": "paragraph",
+        "text": "The consequence reaches beyond this topic. A market with inelastic short-run supply meets a rise in demand mostly with price; the same market meets it mostly with output once supply has had time to respond."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔋",
+       "text": "Lithium supply behaved this way through the battery boom: prices rose far more than output at first, because mines take years to open. As new capacity came on stream the output response caught up, and prices gave back much of the rise."
+      },
+      "misconception": "Students quote PES as a property of a good, as though tiles or oil simply \"have\" an elasticity. The same good has different values over different periods. Instead write: PES is measured over a stated period, and the period has to be named for the value to mean anything.",
+      "examMatters": "Appendix 6 defines Calculate (2 or 4 marks, WEC11) as a calculation in several stages from given data, and advises showing workings. Where data covers two periods, the same three stages are done twice and the comparison is the interpretation.",
+      "recall": {
+       "id": "supply:sub:one-price-rise-two-time-horizons:recall",
+       "type": "reorder",
+       "prompt": "Put the two calculations into the order the chapter works them, from the first step to the conclusion:",
+       "correctOrder": [
+        "Price rises $8 → $10: 25% in both periods",
+        "Short run: quantity rises 15%, so PES is 0.6",
+        "Long run: quantity rises 60%, so PES is 2.4",
+        "Only the time available differed, so time is what changed the elasticity"
+       ],
+       "why": [
+        "The price change is common to both, so it is established once before either calculation",
+        "The short run comes first because it is the period in which the kiln is still fixed",
+        "The long run is the same sum with the quantity response the second kiln allows",
+        "The conclusion is the comparison: nothing else about the firm or the price was different"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "The short run has at least one fixed factor; the long run has none.",
+     "They are defined by what can be changed, never by a length of time.",
+     "Every PES determinant loosens once the fixed factor becomes variable.",
+     "Same firm, same 25% price rise: PES 0.6 then 2.4."
+    ],
+    "diagramId": "supply:diagram:b041a18f",
+    "quizIndices": [
+     25,
+     23,
+     24
+    ],
+    "practiceIndices": [
+     6,
+     7
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "The Supply Curve",
+    "meta": "2 leaves",
+    "keyIdea": "The concept of 'supply', and the distinction between movements along a supply curve and shifts of a supply curve.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Supply</strong> — the quantity of a good producers are willing and able to offer for sale at a given price in a given time period."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Law of supply</strong> — ceteris paribus, a rise in the price of a good raises the quantity supplied of it."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Extension and contraction of supply</strong> — a movement UP or DOWN an existing curve, caused by a change in the good's own price."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Increase and decrease in supply</strong> — a shift of the whole curve RIGHT or LEFT, caused by a change in anything other than the price."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mech",
+        "text": "The curve slopes upward because expanding output draws in resources that cost more per unit, so a higher price is needed before the extra units are worth producing."
+       },
+       {
+        "type": "mech",
+        "text": "The test for a shift is a question about ONE price: hold the price still and ask whether more or less is now offered."
+       },
+       {
+        "type": "link",
+        "text": "Quantity supplied changes in a movement; supply changes in a shift. The vocabulary carries the distinction 1b asks for."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Supply is a rate offered at each price, not a quantity held.",
+     "Only the good's own price causes a movement along the curve.",
+     "An increase in supply is a shift to the right."
+    ]
+   },
+   {
+    "title": "What Shifts Supply",
+    "meta": "5 leaves",
+    "keyIdea": "Factors that may cause a shift in the supply curve: changes in the costs of production, the introduction of new technology, indirect taxes (specific and ad valorem), government subsidies and natural disasters.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Costs of production</strong> — what the firm pays for its inputs: wages, materials, energy, rent and transport."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Indirect tax</strong> — a tax on a good rather than on income, charged either as a <strong>specific</strong> sum per unit or <strong>ad valorem</strong>, as a percentage of price."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Government subsidy</strong> — a payment to the producer per unit, which lowers the price it needs from the buyer."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Natural disaster</strong> — a flood, drought, earthquake or storm that destroys productive capacity, so less can be supplied at any price."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mech",
+        "text": "<strong>Changes in the costs of production</strong> work through profitability at the existing price: higher costs mean some output is no longer worth producing, so the curve shifts left."
+       },
+       {
+        "type": "mech",
+        "text": "<strong>The introduction of new technology</strong> raises output from the same inputs, lowering cost per unit and shifting the curve right."
+       },
+       {
+        "type": "mech",
+        "text": "A <strong>specific</strong> tax of $3 shifts the curve up by $3 at every quantity: a PARALLEL shift. An <strong>ad valorem</strong> tax of 20% opens a gap that grows with price — $1.60 at 400 tiles and $3.20 at 640 — so the curve PIVOTS."
+       },
+       {
+        "type": "imp",
+        "text": "Draw (4 marks, WEC11 Appendix 6) requires an accurately labelled diagram, and for a tax that means the vertical gap equals the tax per unit.",
+        "tag": "exam"
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Five factors, and four of them work through costs of production.",
+     "Specific tax: parallel shift. Ad valorem tax: pivot.",
+     "A natural disaster removes the ability to supply, not the willingness."
+    ]
+   },
+   {
+    "title": "Price Elasticity of Supply",
+    "meta": "6 leaves",
+    "keyIdea": "The concept of 'price elasticity of supply', and the calculation and interpretation of numerical values: perfectly elastic supply, elastic supply, unitary elastic supply, inelastic supply and perfectly inelastic supply.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Price elasticity of supply (PES)</strong> — the responsiveness of quantity supplied to a change in price: the percentage change in quantity supplied divided by the percentage change in price."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Elastic supply</strong> — PES above 1: quantity supplied changes by a larger percentage than price. <strong>Inelastic supply</strong> — PES below 1: it changes by a smaller percentage."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Unitary elastic supply</strong> — PES exactly 1, drawn as any straight line through the origin."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Perfectly inelastic supply</strong> — PES 0, a vertical curve. <strong>Perfectly elastic supply</strong> — PES infinite, a horizontal curve."
+       }
+      ]
+     },
+     {
+      "title": "CALCULATION",
+      "items": [
+       {
+        "type": "mech",
+        "text": "Each percentage change is measured against its OWN original value. Kavira: price $8 → $10 is 25%; quantity 400 → 460 is 15%; PES = 15% ÷ 25% = 0.6."
+       },
+       {
+        "type": "mech",
+        "text": "PES is normally positive, because the supply curve slopes upward and price and quantity move the same way."
+       },
+       {
+        "type": "link",
+        "text": "For straight lines, the axis the line cuts decides elasticity: the price axis means elastic throughout, the quantity axis means inelastic throughout, the origin means exactly 1."
+       },
+       {
+        "type": "imp",
+        "text": "Calculate (2 or 4 marks, WEC11 Appendix 6) is a calculation in several stages from given data, and Appendix 6 advises showing workings.",
+        "tag": "exam"
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "PES = % change in quantity supplied ÷ % change in price.",
+     "Percentages are taken against the original value, never the new one.",
+     "Vertical is PES 0; horizontal is infinite; through the origin is 1."
+    ]
+   },
+   {
+    "title": "What Determines PES",
+    "meta": "5 leaves",
+    "keyIdea": "Factors that influence price elasticity of supply: the time period, availability of stock/perishability, mobility of factors of production, legal constraints and capacity.",
+    "blocks": [
+     {
+      "title": "THE FIVE FACTORS",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>The time period</strong> — the longer producers have, the more of their constraints can be altered, so the more elastic supply becomes."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Availability of stock/perishability</strong> — stock of finished goods is a reserve that can be released without producing anything, making supply elastic; a good that spoils cannot be held, making it inelastic."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Mobility of factors of production</strong> — whether labour and capital can be switched into this use, occupationally or geographically. Specialised factors cannot be, so supply is inelastic."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Legal constraints</strong> — quotas, licences, planning permission or bans on an input, which cap output by rule rather than by cost, so no price overcomes them."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Capacity</strong> — spare capacity allows a quick, cheap output response; a firm at full capacity can expand only by adding capacity."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mech",
+        "text": "Every one of the five is a question about whether the firm CAN respond, not whether it would like to."
+       },
+       {
+        "type": "link",
+        "text": "Each is also a statement about a period: all five loosen given enough time, which is why the time period governs the other four."
+       },
+       {
+        "type": "imp",
+        "text": "Examine (8 marks, WEC11 Appendix 6) requires a chain of reasoning and a brief assessment — which constraint binds in the market given, rather than all five listed.",
+        "tag": "exam"
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Time, stock/perishability, factor mobility, legal constraints, capacity.",
+     "Spare capacity is what makes supply elastic, not firm size.",
+     "A legal constraint is a rule, so money cannot solve it."
+    ]
+   },
+   {
+    "title": "The Short Run and the Long Run",
+    "meta": "1 leaf",
+    "keyIdea": "The distinction between the short run and long run in economics and its significance for price elasticity of supply.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "def",
+        "text": "<strong>Short run</strong> — the period in which at least one factor of production is fixed, so output varies only within existing capacity."
+       },
+       {
+        "type": "def",
+        "text": "<strong>Long run</strong> — the period in which all factors of production are variable, so capacity itself can be changed and firms can enter or leave."
+       },
+       {
+        "type": "def",
+        "text": "Neither is a length of time. Both are defined by what can be changed, so the short run lasts a day for a market stall and a decade for a power station."
+       }
+      ]
+     },
+     {
+      "title": "SIGNIFICANCE FOR PES",
+      "items": [
+       {
+        "type": "mech",
+        "text": "The same price rise, worked twice for the same firm: $8 → $10 is 25% in both. Short run 400 → 460 tiles, 15%, PES 0.6 — inelastic. Long run 400 → 640, 60%, PES 2.4 — elastic."
+       },
+       {
+        "type": "mech",
+        "text": "Every determinant loosens when the fixed factor becomes variable: capacity can be added, factors trained or built, permissions obtained, stock accumulated."
+       },
+       {
+        "type": "link",
+        "text": "At market level the long run also admits NEW firms, so market supply is more elastic over long periods than any one firm's."
+       },
+       {
+        "type": "imp",
+        "text": "A value quoted without its period means nothing: the same good has different values over a week and over a decade.",
+        "tag": "exam"
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Short run: at least one fixed factor. Long run: none.",
+     "Defined by what can change, never by the calendar.",
+     "PES rises with the period because every constraint loosens."
+    ]
+   }
+  ],
+  "quiz": [
+   {
+    "id": "supply:quiz:03fc0e0b",
+    "question": "Supply is best defined as:",
+    "options": [
+     "The quantity producers are willing and able to sell at each price",
+     "The amount of a good that producers have in their warehouses",
+     "The quantity of a good that buyers wish to purchase",
+     "The total amount of a good that exists in a market"
+    ],
+    "correctIndex": 0,
+    "explanation": "Supply is an intention measured at every price and over a period — a rate, not a quantity sitting still. The stock in a warehouse is what a firm holds; supply is what it will offer, and at what price."
+   },
+   {
+    "id": "supply:quiz:ec214f00",
+    "question": "The price of a good rises, with nothing else changing. This causes:",
+    "options": [
+     "A shift of the supply curve to the left",
+     "An extension of supply along the existing curve",
+     "No change in either supply or quantity supplied",
+     "A shift of the supply curve to the right"
+    ],
+    "correctIndex": 1,
+    "explanation": "The curve already answers the question \"how much at each price\", so the good's own price cannot move it. The firm reads off a different point on the same curve, which is an extension of supply."
+   },
+   {
+    "id": "supply:quiz:51864715",
+    "question": "A price elasticity of supply of 0.4 tells you that:",
+    "options": [
+     "Quantity supplied changes by more, proportionally, than price",
+     "Quantity supplied falls when price rises",
+     "Quantity supplied does not respond to price at all",
+     "Quantity supplied changes by less, proportionally, than price"
+    ],
+    "correctIndex": 3,
+    "explanation": "A value between 0 and 1 is inelastic supply: the quantity does respond, but by a smaller percentage than the price changed. Only a value of exactly 0 would mean no response at all."
+   },
+   {
+    "id": "supply:quiz:70e202ae",
+    "question": "The supply curve slopes upward because:",
+    "options": [
+     "Expanding output draws in resources that cost more per unit",
+     "Buyers are willing to pay more when supply is scarce",
+     "Government sets a minimum price for most goods",
+     "Producers always prefer to charge higher prices"
+    ],
+    "correctIndex": 0,
+    "explanation": "Expansion reaches for overtime, older equipment and dearer suppliers once the cheap options are used, so each additional unit costs more than the one before. A higher price is what makes those units worth producing."
+   },
+   {
+    "id": "supply:quiz:db2debf8",
+    "question": "Which of these would shift the supply curve for wheat to the left?",
+    "options": [
+     "An increase in demand for wheat-based products",
+     "A subsidy paid to wheat farmers",
+     "A fall in the price of wheat",
+     "A prolonged drought reducing crop yields"
+    ],
+    "correctIndex": 3,
+    "explanation": "A drought reduces what growers can offer at every price, which is a leftward shift. A fall in wheat's own price is a movement along the curve, a demand change acts on the other curve, and a subsidy shifts supply right."
+   },
+   {
+    "id": "supply:quiz:9e42fa2d",
+    "question": "A contraction of supply is shown on a diagram as:",
+    "options": [
+     "The whole curve moving to the left",
+     "The whole curve moving to the right",
+     "A movement down along the existing curve",
+     "The curve becoming steeper at every price"
+    ],
+    "correctIndex": 2,
+    "explanation": "A contraction is caused by a fall in the good's own price, so the firm moves down the curve it is already on. A leftward shift of the whole curve is a decrease in supply, which is a different event with a different cause."
+   },
+   {
+    "id": "supply:quiz:edb13b96",
+    "question": "Which phrase correctly describes a rightward shift of the supply curve?",
+    "options": [
+     "An extension of supply",
+     "An increase in quantity supplied",
+     "An increase in supply",
+     "A contraction of supply"
+    ],
+    "correctIndex": 2,
+    "explanation": "Supply changes in a shift; quantity supplied changes in a movement. An increase in supply means more is offered at every price, which is drawn as the whole curve moving right."
+   },
+   {
+    "id": "supply:quiz:4bd4151b",
+    "question": "A specific tax of $3 per unit is imposed on a good. The supply curve will:",
+    "options": [
+     "Shift upward by $3 at every quantity, staying parallel",
+     "Pivot, with a wider gap at higher prices",
+     "Stay where it is until the market price changes",
+     "Become vertical at the taxed quantity"
+    ],
+    "correctIndex": 0,
+    "explanation": "A specific tax is the same sum on every unit, so the producer needs exactly $3 more from the buyer whatever the quantity. The vertical gap between the curves is constant, which is what makes the shift parallel."
+   },
+   {
+    "id": "supply:quiz:6018b251",
+    "question": "An ad valorem tax of 20% differs from a specific tax because:",
+    "options": [
+     "It shifts the demand curve instead of the supply curve",
+     "The gap it opens grows as price rises, so the curve pivots",
+     "It applies only to goods sold above a threshold price",
+     "It is paid by consumers rather than producers"
+    ],
+    "correctIndex": 1,
+    "explanation": "A fixed percentage of a higher price is more money, so the vertical gap widens as you move up the curve. That pivot is the whole reason the specification names both kinds of indirect tax rather than one."
+   },
+   {
+    "id": "supply:quiz:72b62937",
+    "question": "A government pays producers a subsidy of $2 per unit. The supply curve will:",
+    "options": [
+     "Shift down by $2, which is the same as shifting right",
+     "Stay where it is until producers raise their prices",
+     "Shift left, because the market has been distorted",
+     "Become vertical at the subsidised quantity"
+    ],
+    "correctIndex": 0,
+    "explanation": "The producer receives $2 from the government on every unit, so it needs $2 less from the buyer at every quantity. Shifting down by the subsidy and shifting right are two descriptions of one movement."
+   },
+   {
+    "id": "supply:quiz:d973c76b",
+    "question": "A technological improvement in car manufacturing would:",
+    "options": [
+     "Shift the supply curve for cars to the left",
+     "Shift the supply curve for cars to the right",
+     "Cause a movement along the supply curve for cars",
+     "Leave the supply of cars unchanged in the long run"
+    ],
+    "correctIndex": 1,
+    "explanation": "Better technology gets more output from the same inputs, so the cost of each unit falls and output that was not worth producing becomes worth producing. More is offered at every price, which is a rightward shift."
+   },
+   {
+    "id": "supply:quiz:836c9ef8",
+    "question": "An increase in wages in the clothing industry, ceteris paribus, would:",
+    "options": [
+     "Increase the supply of clothing",
+     "Decrease the supply of clothing",
+     "Cause an extension of supply of clothing",
+     "Increase the demand for clothing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Wages are a cost of production, so a rise makes each garment less profitable at the price already being charged. Some output stops being worth producing and less is offered at every price: supply decreases."
+   },
+   {
+    "id": "supply:quiz:f47130ca",
+    "question": "A flood destroys much of a cotton crop before harvest. Supply falls because:",
+    "options": [
+     "Growers are unwilling to sell at the market price",
+     "The cost of growing cotton has risen sharply",
+     "The output itself no longer exists to be sold",
+     "Buyers have reduced their orders for cotton"
+    ],
+    "correctIndex": 2,
+    "explanation": "A natural disaster acts on the \"able\" half of willing and able. However high the price goes, growers cannot offer cotton that has been destroyed, which is why the shift happens regardless of price."
+   },
+   {
+    "id": "supply:quiz:f44d0938",
+    "question": "Price rises from $10 to $12 and quantity supplied rises from 200 to 230 units. PES is:",
+    "options": [
+     "0.5, inelastic",
+     "0.75, inelastic",
+     "1.33, elastic",
+     "2.0, elastic"
+    ],
+    "correctIndex": 1,
+    "explanation": "Quantity supplied rises 30 on 200, which is 15%. Price rises 2 on 10, which is 20%. PES is 15 divided by 20, or 0.75. Because that is below 1, supply is price inelastic over this range: the quantity responds proportionally less than the price."
+   },
+   {
+    "id": "supply:quiz:0a216ac6",
+    "question": "Kavira's price rises from $8 to $10 and output from 400 to 460 tiles a week. PES is:",
+    "options": [
+     "0.25, inelastic",
+     "0.6, inelastic",
+     "1.67, elastic",
+     "2.4, elastic"
+    ],
+    "correctIndex": 1,
+    "explanation": "Quantity rises 60 on 400, which is 15%. Price rises $2 on $8, which is 25%. PES is 15% divided by 25%, or 0.6 — below 1, so supply is inelastic."
+   },
+   {
+    "id": "supply:quiz:31fc32e3",
+    "question": "When calculating PES, each percentage change must be measured against:",
+    "options": [
+     "The new value, after the change",
+     "The largest of the two values",
+     "The average of the old and new values",
+     "The original value, before the change"
+    ],
+    "correctIndex": 3,
+    "explanation": "A percentage change is the change divided by the value it started from. Using the new value or the average gives a different answer, and using the raw changes instead of percentages gives a figure that depends on the units chosen."
+   },
+   {
+    "id": "supply:quiz:e877620a",
+    "question": "A supply curve drawn as a straight line through the origin has:",
+    "options": [
+     "A PES that cannot be determined without figures",
+     "PES of exactly 1, whatever its slope",
+     "PES below 1 if it is steep and above 1 if it is shallow",
+     "PES of 0, because it starts at zero"
+    ],
+    "correctIndex": 1,
+    "explanation": "On a line through the origin, price and quantity are measured from zero together, so doubling one doubles the other. That is unitary elasticity, and it holds for a steep line and a shallow line alike."
+   },
+   {
+    "id": "supply:quiz:5d392fb1",
+    "question": "Which of these is most likely to have a perfectly inelastic supply curve?",
+    "options": [
+     "Manufactured toys from a factory with spare capacity",
+     "Seats at a stadium for one particular match",
+     "Bread produced by large-scale bakeries",
+     "Digital downloads of music files"
+    ],
+    "correctIndex": 1,
+    "explanation": "The ground has the seats it has, and no ticket price puts another one in it that evening. That fixed quantity is drawn as a vertical supply curve, which is PES of zero."
+   },
+   {
+    "id": "supply:quiz:103bd624",
+    "question": "Perfectly elastic supply is drawn as:",
+    "options": [
+     "A horizontal line at the going price",
+     "A steep line sloping upward",
+     "A shallow line through the origin",
+     "A vertical line at the fixed quantity"
+    ],
+    "correctIndex": 0,
+    "explanation": "At the going price the producer will supply any quantity asked for; a fraction above it there is unlimited supply, and a fraction below it there is none. That is a horizontal curve, and it describes a small producer in a very large market."
+   },
+   {
+    "id": "supply:quiz:469290c6",
+    "question": "Which of these would make the supply of a good more price elastic?",
+    "options": [
+     "The firm has spare capacity and holds finished stock",
+     "A licence limits how many firms may produce it",
+     "The product has a production cycle of several years",
+     "Factors of production are highly specialised"
+    ],
+    "correctIndex": 0,
+    "explanation": "Spare capacity means output can rise without new investment, and stock can be released without producing anything. The other three are constraints on whether the firm CAN respond, which is what makes supply inelastic."
+   },
+   {
+    "id": "supply:quiz:9b74cd79",
+    "question": "The supply of fresh cut flowers is price inelastic mainly because:",
+    "options": [
+     "Growers face high transport costs to reach the market",
+     "Flower growers are unwilling to expand production",
+     "The output perishes and cannot be stored for a better price",
+     "Flowers are sold only through specialist retailers"
+    ],
+    "correctIndex": 2,
+    "explanation": "A good that spoils cannot be held back or accumulated in advance, so there is no reserve to release when the price rises. Storability is the determinant here: the same flowers dried or frozen would be far more responsive."
+   },
+   {
+    "id": "supply:quiz:3e565065",
+    "question": "A city caps the number of taxi licences it issues. The supply of taxi journeys is then:",
+    "options": [
+     "Inelastic, because no price brings more licensed cabs",
+     "Perfectly elastic at the regulated fare",
+     "Unaffected, since licences do not change costs",
+     "Elastic, because drivers can work longer hours"
+    ],
+    "correctIndex": 0,
+    "explanation": "A legal constraint caps the quantity by rule rather than by cost, so money cannot overcome it. A higher fare makes each licence more valuable but puts no additional licensed taxi on the road until the city issues one."
+   },
+   {
+    "id": "supply:quiz:2d820efe",
+    "question": "Supply is inelastic when factors of production are immobile because:",
+    "options": [
+     "Producers are contractually tied to their existing buyers",
+     "The firm cannot find buyers willing to pay a higher price",
+     "The finished product is expensive to transport to market",
+     "The labour and equipment needed cannot be switched into this use"
+    ],
+    "correctIndex": 3,
+    "explanation": "Mobility is about moving factors INTO producing the good, not moving the product out. Where the work needs years of training or purpose-built equipment, a higher price cannot conjure them and output rises slowly."
+   },
+   {
+    "id": "supply:quiz:5dcea9c3",
+    "question": "In economics, the short run is defined as the period in which:",
+    "options": [
+     "A firm has been trading for less than one year",
+     "Output cannot be changed at all",
+     "At least one factor of production is fixed",
+     "Prices are held constant by the market"
+    ],
+    "correctIndex": 2,
+    "explanation": "The short run is defined by a constraint, not a calendar. It lasts as long as the fixed factor takes to change, which may be a day for a market stall and a decade for a power station."
+   },
+   {
+    "id": "supply:quiz:02981169",
+    "question": "Supply is more price elastic in the long run than in the short run because:",
+    "options": [
+     "Producers become more willing to sell over time",
+     "Prices rise further the longer a shortage lasts",
+     "Capacity can be added and factors trained or built",
+     "Consumers adjust their buying habits over time"
+    ],
+    "correctIndex": 2,
+    "explanation": "Every determinant loosens once the fixed factor becomes variable: capacity can be expanded, workers trained, permissions obtained and stock accumulated. Each one that loosens enlarges the output response the same price rise can produce."
+   },
+   {
+    "id": "supply:quiz:ff3bf6d1",
+    "question": "Given more time, Kavira's response to the same 25% price rise changes from 15% to 60% on quantity. PES therefore moves from:",
+    "options": [
+     "0.6 to 2.4: inelastic to elastic",
+     "2.4 to 0.6: elastic to inelastic",
+     "0.6 to 1.0: inelastic to unitary",
+     "0.6 to 0.6: it is unchanged"
+    ],
+    "correctIndex": 0,
+    "explanation": "The price change is the same in both periods, so only the quantity response differs: 15% ÷ 25% is 0.6, and 60% ÷ 25% is 2.4. The second kiln is the only thing that changed."
+   }
+  ],
+  "practice": [
+   {
+    "id": "supply:practice:eb2601cc",
+    "command": "Define",
+    "marks": 2,
+    "question": "Define the term 'supply'. (2 marks)",
+    "guidance": "The quantity of a good that producers are willing and able to offer for sale (1 mark), at a given price in a given time period (1 mark). Both qualifiers are needed: without them the definition describes a stock rather than a rate."
+   },
+   {
+    "id": "supply:practice:b789b5b4",
+    "command": "Draw",
+    "marks": 4,
+    "question": "Draw a supply curve and show an extension of supply following a rise in price. (4 marks)",
+    "guidance": "Price on the vertical axis and quantity supplied on the horizontal, both labelled (1 mark). An upward-sloping curve labelled S (1 mark). Two points marked ON that single curve, at a lower and a higher price (1 mark). Both prices and both quantities read off to the axes with dashed lines (1 mark). A second curve would show a shift, which is not what was asked for."
+   },
+   {
+    "id": "supply:practice:33fb173c",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain how the imposition of a specific tax of $3 per unit affects the supply curve for a good. (4 marks)",
+    "guidance": "The producer must receive the same amount for itself on each unit, so it needs $3 more from the buyer (1 mark) on every unit sold (1 mark). The vertical gap between the old and new curves is therefore the same at every quantity (1 mark), so the curve shifts upward and remains parallel to the original (1 mark)."
+   },
+   {
+    "id": "supply:practice:e8bcd031",
+    "command": "Analyse",
+    "marks": 6,
+    "question": "Analyse two factors that could cause the supply curve for cement to shift to the left. (6 marks)",
+    "guidance": "Two factors, each traced in a chain rather than named (1 mark each for identification). Rising energy costs: kilns burn fuel continuously, so a fuel price rise raises the cost of each tonne (1 mark), making some output unprofitable at the existing price and shifting supply left (1 mark). A natural disaster damaging plant: capacity is destroyed, so less can be produced at any price (1 mark), shifting supply left regardless of profitability (1 mark)."
+   },
+   {
+    "id": "supply:practice:7b3a88a6",
+    "command": "Calculate",
+    "marks": 4,
+    "question": "The price of a good rises from $8 to $10. Quantity supplied rises from 400 to 460 units a week. Calculate the price elasticity of supply and interpret the value. (4 marks)",
+    "guidance": "Percentage change in quantity supplied: 60 ÷ 400 × 100 = 15% (1 mark). Percentage change in price: $2 ÷ $8 × 100 = 25% (1 mark). PES = 15% ÷ 25% = 0.6 (1 mark). Interpretation: the value is below 1, so supply is price inelastic — quantity supplied changed by proportionally less than price (1 mark). Appendix 6 advises showing workings, which is what allows the percentage stages to be credited even if the final division goes wrong."
+   },
+   {
+    "id": "supply:practice:206acf7a",
+    "command": "Examine",
+    "marks": 8,
+    "question": "Examine the factors that influence the price elasticity of supply of fresh cut flowers. (8 marks)",
+    "guidance": "Appendix 6 defines Examine as requiring a chain of reasoning, diagrams where appropriate, interpretation of any data given, and a brief assessment of the factors. The chain should run through the determinants that actually bind in this market rather than all five: perishability, because the output cannot be stored or accumulated in advance; the time period, because growing takes a season whatever the price does; and capacity, because glasshouse space is fixed within that season. Factor mobility is the weaker case here and saying so is part of the assessment. The brief assessment should conclude which constraint binds most tightly and over what period, since the answer differs between a week and three years."
+   },
+   {
+    "id": "supply:practice:51200a74",
+    "command": "Discuss",
+    "marks": 14,
+    "question": "Discuss the significance of the distinction between the short run and the long run for the price elasticity of supply of a mineral such as lithium. (14 marks)",
+    "guidance": "Appendix 6 requires knowledge, understanding, application, analysis and evaluation, with logical and coherent chains of reasoning developed with reference to context, and a recognition of different viewpoints or a critical assessment of the evidence. The analysis should establish the distinction as one about fixed factors rather than calendar time, then trace it: within the short run mine capacity is fixed, so a demand surge is met mostly by price rather than output; in the long run new mines can be opened and processing built, so the response is largely in output. A diagram contrasting an inelastic and an elastic supply curve supports this directly. Evaluation should weigh how long the long run actually is in this industry, note that the lag depends on permitting and finance as much as on engineering, and consider that expectations of a long-run response can change behaviour before any new capacity exists."
+   },
+   {
+    "id": "supply:practice:034f861e",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Evaluate the view that price elasticity of supply is the most important factor determining how far the price of rice rises when demand increases in a developing economy. (20 marks)",
+    "guidance": "Appendix 6 requires knowledge, understanding, application, analysis and evaluation at this tariff. The case for the view: where supply is inelastic — a fixed growing season, limited arable land, little stock held — an increase in demand is absorbed largely by price rather than output, and the more inelastic supply is, the larger that price movement. This should be argued through the determinants rather than asserted, and applied to rice specifically. The case against: the size of the demand increase itself matters, as does whether the country can import, whether government holds buffer stocks, and how long the period considered is, since supply is far more elastic over several seasons than over one. A judgement is required rather than a balanced list: candidates should reach a supported conclusion about which factor dominates and state the conditions under which their answer would change. Where the extract gives a specific country, the judgement should be about that market rather than about rice in general."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "supply:flashcard:c44c183f",
+    "front": "What is supply?",
+    "back": "The quantity of a good producers are willing and able to offer for sale at a given price in a given time period."
+   },
+   {
+    "id": "supply:flashcard:ad3a3aab",
+    "front": "State the law of supply.",
+    "back": "Ceteris paribus, a rise in the price of a good raises the quantity supplied of it."
+   },
+   {
+    "id": "supply:flashcard:ba9ee56f",
+    "front": "Why does the supply curve slope upward?",
+    "back": "Expanding output draws in resources that cost more per unit, so a higher price is needed before the extra units are worth producing."
+   },
+   {
+    "id": "supply:flashcard:f6903ee9",
+    "front": "What causes a movement along the supply curve?",
+    "back": "A change in the good's own price, and nothing else. It is called an extension when price rises and a contraction when price falls."
+   },
+   {
+    "id": "supply:flashcard:e2fb7584",
+    "front": "What causes a shift of the supply curve?",
+    "back": "A change in anything other than the price: costs of production, new technology, indirect taxes, subsidies or natural disasters."
+   },
+   {
+    "id": "supply:flashcard:a67157e4",
+    "front": "Name the five factors that shift supply.",
+    "back": "Changes in the costs of production, the introduction of new technology, indirect taxes (specific and ad valorem), government subsidies, and natural disasters."
+   },
+   {
+    "id": "supply:flashcard:b24e4a00",
+    "front": "What is a specific tax and what does it do to the curve?",
+    "back": "A fixed sum charged on each unit. It shifts the supply curve vertically upward by the amount of the tax, keeping it parallel to the original."
+   },
+   {
+    "id": "supply:flashcard:b5a49d93",
+    "front": "What is an ad valorem tax and what does it do to the curve?",
+    "back": "A tax charged as a percentage of price. Because the money grows with the price, the curve pivots: the vertical gap widens as price rises."
+   },
+   {
+    "id": "supply:flashcard:e3208893",
+    "front": "How does a subsidy affect the supply curve?",
+    "back": "The producer receives a payment per unit, so it needs less from the buyer at every quantity. The curve shifts down by the subsidy, which is the same as shifting right."
+   },
+   {
+    "id": "supply:flashcard:ee50035f",
+    "front": "What is price elasticity of supply?",
+    "back": "The responsiveness of quantity supplied to a change in price: the percentage change in quantity supplied divided by the percentage change in price."
+   },
+   {
+    "id": "supply:flashcard:485be658",
+    "front": "How is PES calculated?",
+    "back": "Divide each change by its own original value and multiply by 100, then divide the quantity percentage by the price percentage."
+   },
+   {
+    "id": "supply:flashcard:8002df1e",
+    "front": "What do PES values above and below 1 mean?",
+    "back": "Above 1 is elastic supply: quantity changes by a larger percentage than price. Below 1 is inelastic: it changes by a smaller percentage."
+   },
+   {
+    "id": "supply:flashcard:7aa91990",
+    "front": "What is unitary elastic supply and how is it drawn?",
+    "back": "PES of exactly 1, where quantity changes by the same percentage as price. It is any straight line through the origin, whatever its slope."
+   },
+   {
+    "id": "supply:flashcard:32af292b",
+    "front": "How are the two extremes of PES drawn?",
+    "back": "Perfectly inelastic supply is a vertical curve, PES 0. Perfectly elastic supply is a horizontal curve, PES infinite."
+   },
+   {
+    "id": "supply:flashcard:d7601cd5",
+    "front": "Name the five factors that influence PES.",
+    "back": "The time period, availability of stock and perishability, mobility of factors of production, legal constraints, and capacity."
+   },
+   {
+    "id": "supply:flashcard:1ebd5841",
+    "front": "How do stock and perishability affect PES?",
+    "back": "Stock is a reserve that can be released without producing anything, making supply more elastic. A good that perishes has no such reserve, making supply inelastic."
+   },
+   {
+    "id": "supply:flashcard:76d09aa5",
+    "front": "What is the difference between the short run and the long run?",
+    "back": "In the short run at least one factor of production is fixed. In the long run all factors are variable. Both are defined by what can change, not by a length of time."
+   },
+   {
+    "id": "supply:flashcard:2c39a78f",
+    "front": "Why is supply more elastic in the long run?",
+    "back": "Capacity can be added, factors trained or built, permissions obtained and stock accumulated — so every constraint on the response loosens and PES rises."
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "supply:diagram:93d2f4e6",
+    "title": "Supply: Movements Along the Curve and Shifts of It",
+    "description": "The one distinction IAL 1.3.3 · 1b asks for, drawn twice. A change in the good's own price moves the firm along the curve it is already on — $8 to $10 takes Kavira Ceramics from 400 to 460 tiles a week. A change in anything else moves the curve itself, so a different quantity is offered at every price.",
+    "checklist": [
+     "Both axes labelled: price on the vertical axis, quantity supplied on the horizontal",
+     "The supply curve sloping upward from left to right",
+     "A movement shown as two points ON one curve, with both prices and both quantities read off",
+     "A shift shown as a SECOND curve, labelled S₁ or S₂, not as a point on the first",
+     "The direction named: extension or contraction for a movement, increase or decrease in supply for a shift"
+    ],
+    "scenarios": [
+     {
+      "label": "A movement along",
+      "svg": "<svg width=\"500\" height=\"400\" viewBox=\"0 0 500 400\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker></defs><text x=\"26\" y=\"30\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">A movement along the supply curve</text><line x1=\"70\" y1=\"300\" x2=\"464\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"36\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"466\" y=\"316\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">Q</text><text x=\"64\" y=\"32\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">P</text><text x=\"70\" y=\"332\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Quantity supplied (tiles a week)</text><text x=\"70\" y=\"18\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Price ($ a tile)</text><line x1=\"146\" y1=\"300\" x2=\"431\" y2=\"50\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><text x=\"439\" y=\"54\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">S</text><line x1=\"70\" y1=\"200\" x2=\"260\" y2=\"200\" stroke=\"#f59e0b\" stroke-width=\"1.2\" stroke-dasharray=\"4 4\"/><line x1=\"260\" y1=\"200\" x2=\"260\" y2=\"300\" stroke=\"#f59e0b\" stroke-width=\"1.2\" stroke-dasharray=\"4 4\"/><circle cx=\"260\" cy=\"200\" r=\"4\" fill=\"#f59e0b\"/><text x=\"64\" y=\"204\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\" text-anchor=\"end\">$8</text><text x=\"260\" y=\"315\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">400</text><line x1=\"70\" y1=\"175\" x2=\"288.5\" y2=\"175\" stroke=\"#059669\" stroke-width=\"1.2\" stroke-dasharray=\"4 4\"/><line x1=\"288.5\" y1=\"175\" x2=\"288.5\" y2=\"300\" stroke=\"#059669\" stroke-width=\"1.2\" stroke-dasharray=\"4 4\"/><circle cx=\"288.5\" cy=\"175\" r=\"4\" fill=\"#059669\"/><text x=\"64\" y=\"179\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\" text-anchor=\"end\">$10</text><text x=\"288.5\" y=\"315\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">460</text><text x=\"302.5\" y=\"167\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">extension of supply</text><text x=\"26\" y=\"350\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">The price of a tile rises from $8 to $10 and nothing else changes, so</text><text x=\"26\" y=\"364\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">the firm moves UP the same curve: 400 tiles a week become 460.</text></svg>"
+     },
+     {
+      "label": "A shift of the curve",
+      "svg": "<svg width=\"500\" height=\"400\" viewBox=\"0 0 500 400\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker></defs><text x=\"26\" y=\"30\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">A shift of the whole supply curve</text><line x1=\"70\" y1=\"300\" x2=\"464\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"36\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"466\" y=\"316\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">Q</text><text x=\"64\" y=\"32\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">P</text><text x=\"70\" y=\"332\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Quantity supplied (tiles a week)</text><text x=\"70\" y=\"18\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Price ($ a tile)</text><line x1=\"89\" y1=\"300\" x2=\"374\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2.5\"/><text x=\"182.5\" y=\"229\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">S₂</text><line x1=\"146\" y1=\"300\" x2=\"431\" y2=\"50\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><text x=\"439\" y=\"54\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">S</text><line x1=\"203\" y1=\"300\" x2=\"449.95\" y2=\"83.38\" stroke=\"#059669\" stroke-width=\"2.5\"/><text x=\"382\" y=\"154\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">S₁</text><line x1=\"222\" y1=\"225\" x2=\"279\" y2=\"225\" stroke=\"#059669\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/><text x=\"222\" y=\"217\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">increase in supply</text><line x1=\"212.5\" y1=\"262.5\" x2=\"155.5\" y2=\"262.5\" stroke=\"#ef4444\" stroke-width=\"1.5\" marker-end=\"url(#arr)\"/><text x=\"216.5\" y=\"276.5\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\" text-anchor=\"start\">decrease in supply</text><text x=\"26\" y=\"350\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">The price has not changed. Something else has: at EVERY price the firm</text><text x=\"26\" y=\"364\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">now offers more (S₁) or less (S₂) than before.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "supply:diagram:2d4c0b2e",
+    "title": "What Shifts the Supply Curve: Taxes and Subsidies",
+    "description": "IAL 1.3.3 · 1c-3 names indirect taxes as \"specific and ad valorem\", and the reason it names both is that they move the curve differently. A specific tax of $3 a tile lifts the curve by $3 everywhere; an ad valorem tax of 20% opens a gap that grows with price, so the curve pivots. A subsidy (1c-4) does the reverse of a specific tax.",
+    "checklist": [
+     "The original supply curve labelled S, with the new curve labelled separately",
+     "A specific tax drawn as a PARALLEL shift, with the vertical gap equal to the tax per unit",
+     "An ad valorem tax drawn as a PIVOT, with the gap wider at higher prices",
+     "A subsidy drawn downward and to the right, by the subsidy per unit",
+     "The vertical gap measured and labelled with its money value, not just arrowed"
+    ],
+    "scenarios": [
+     {
+      "label": "A specific tax",
+      "svg": "<svg width=\"500\" height=\"400\" viewBox=\"0 0 500 400\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker></defs><text x=\"26\" y=\"30\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">A specific tax of $3 a tile</text><line x1=\"70\" y1=\"300\" x2=\"464\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"36\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"466\" y=\"316\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">Q</text><text x=\"64\" y=\"32\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">P</text><text x=\"70\" y=\"332\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Quantity supplied (tiles a week)</text><text x=\"70\" y=\"18\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Price ($ a tile)</text><line x1=\"146\" y1=\"300\" x2=\"431\" y2=\"50\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><text x=\"439\" y=\"54\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">S</text><line x1=\"103.25\" y1=\"300\" x2=\"388.25\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2.5\"/><text x=\"282.25\" y=\"154\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">S + tax</text><line x1=\"260\" y1=\"200\" x2=\"260\" y2=\"162.5\" stroke=\"#f59e0b\" stroke-width=\"2\"/><text x=\"268\" y=\"181.25\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">$3</text><text x=\"26\" y=\"350\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">The same $3 is added at every quantity, so the curve shifts UP by $3 and</text><text x=\"26\" y=\"364\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">stays parallel to the one it came from.</text></svg>"
+     },
+     {
+      "label": "An ad valorem tax",
+      "svg": "<svg width=\"500\" height=\"400\" viewBox=\"0 0 500 400\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker></defs><text x=\"26\" y=\"30\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">An ad valorem tax of 20% of the price</text><line x1=\"70\" y1=\"300\" x2=\"464\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"36\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"466\" y=\"316\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">Q</text><text x=\"64\" y=\"32\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">P</text><text x=\"70\" y=\"332\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Quantity supplied (tiles a week)</text><text x=\"70\" y=\"18\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Price ($ a tile)</text><line x1=\"146\" y1=\"300\" x2=\"431\" y2=\"50\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><text x=\"439\" y=\"54\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">S</text><line x1=\"146\" y1=\"300\" x2=\"383.5\" y2=\"50\" stroke=\"#8b5cf6\" stroke-width=\"2.5\"/><text x=\"296.5\" y=\"154\" fill=\"#8b5cf6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">S + 20%</text><line x1=\"260\" y1=\"200\" x2=\"260\" y2=\"180\" stroke=\"#f59e0b\" stroke-width=\"2\"/><text x=\"268\" y=\"190\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">$1.60</text><line x1=\"374\" y1=\"100\" x2=\"374\" y2=\"60\" stroke=\"#f59e0b\" stroke-width=\"2\"/><text x=\"382\" y=\"80\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">$3.20</text><text x=\"26\" y=\"350\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">The tax is a share of the price, so the gap GROWS as price rises: $1.60</text><text x=\"26\" y=\"364\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">at 400 tiles and $3.20 at 640. The curve pivots rather than shifting</text><text x=\"26\" y=\"378\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">parallel.</text></svg>"
+     },
+     {
+      "label": "A subsidy",
+      "svg": "<svg width=\"500\" height=\"400\" viewBox=\"0 0 500 400\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker></defs><text x=\"26\" y=\"30\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">A subsidy of $2 a tile</text><line x1=\"70\" y1=\"300\" x2=\"464\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"36\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"466\" y=\"316\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">Q</text><text x=\"64\" y=\"32\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">P</text><text x=\"70\" y=\"332\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Quantity supplied (tiles a week)</text><text x=\"70\" y=\"18\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Price ($ a tile)</text><line x1=\"146\" y1=\"300\" x2=\"431\" y2=\"50\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><text x=\"439\" y=\"54\" fill=\"#3b82f6\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">S</text><line x1=\"174.5\" y1=\"300\" x2=\"449.95\" y2=\"58.38\" stroke=\"#059669\" stroke-width=\"2.5\"/><text x=\"353.5\" y=\"154\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">S − subsidy</text><line x1=\"260\" y1=\"200\" x2=\"260\" y2=\"225\" stroke=\"#f59e0b\" stroke-width=\"2\"/><text x=\"268\" y=\"212.5\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">$2</text><text x=\"26\" y=\"350\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">A subsidy is a specific tax in reverse: the producer receives $2 a tile</text><text x=\"26\" y=\"364\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">from the government, so it needs $2 less from the buyer and the curve</text><text x=\"26\" y=\"378\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">shifts DOWN and to the right.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "supply:diagram:b638bde0",
+    "title": "Price Elasticity of Supply: The Five Values",
+    "description": "The five values IAL 1.3.3 · 2b names, each with the shape it gives the curve, and then the same contrast in one firm's own figures: Kavira Ceramics' supply is inelastic with one kiln (PES 0.6) and elastic with two (PES 2.4).",
+    "checklist": [
+     "Price on the vertical axis and quantity supplied on the horizontal in every panel",
+     "Perfectly inelastic drawn vertical, perfectly elastic drawn horizontal",
+     "Unitary elastic drawn as a straight line through the origin",
+     "The elastic curve flatter than the inelastic one, both sloping upward",
+     "Each panel labelled with its PES value, not only its name"
+    ],
+    "scenarios": [
+     {
+      "label": "The five values",
+      "svg": "<svg width=\"526\" height=\"420\" viewBox=\"0 0 526 420\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker></defs><text x=\"26\" y=\"30\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">The five values the specification names</text><line x1=\"52\" y1=\"154\" x2=\"164\" y2=\"154\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"52\" y1=\"154\" x2=\"52\" y2=\"74\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"46\" y=\"76\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">P</text><text x=\"166\" y=\"164\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Q</text><line x1=\"105\" y1=\"154\" x2=\"105\" y2=\"80\" stroke=\"#ef4444\" stroke-width=\"2.5\"/><text x=\"101\" y=\"192\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Perfectly inelastic</text><text x=\"101\" y=\"206\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">PES = 0</text><line x1=\"214\" y1=\"154\" x2=\"326\" y2=\"154\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"214\" y1=\"154\" x2=\"214\" y2=\"74\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"208\" y=\"76\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">P</text><text x=\"328\" y=\"164\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Q</text><line x1=\"250.04\" y1=\"154\" x2=\"283.96000000000004\" y2=\"80\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/><text x=\"263\" y=\"192\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Inelastic</text><text x=\"263\" y=\"206\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">PES < 1</text><line x1=\"376\" y1=\"154\" x2=\"488\" y2=\"154\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"376\" y1=\"154\" x2=\"376\" y2=\"74\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"370\" y=\"76\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">P</text><text x=\"490\" y=\"164\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Q</text><line x1=\"376\" y1=\"154\" x2=\"482\" y2=\"80\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><text x=\"425\" y=\"192\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Unitary elastic</text><text x=\"425\" y=\"206\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">PES = 1</text><line x1=\"52\" y1=\"318\" x2=\"164\" y2=\"318\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"52\" y1=\"318\" x2=\"52\" y2=\"238\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"46\" y=\"240\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">P</text><text x=\"166\" y=\"328\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Q</text><line x1=\"52\" y1=\"292.84\" x2=\"158\" y2=\"251.39999999999998\" stroke=\"#059669\" stroke-width=\"2.5\"/><text x=\"101\" y=\"356\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Elastic</text><text x=\"101\" y=\"370\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">PES > 1</text><line x1=\"214\" y1=\"318\" x2=\"326\" y2=\"318\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"214\" y1=\"318\" x2=\"214\" y2=\"238\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"208\" y=\"240\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">P</text><text x=\"328\" y=\"328\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">Q</text><line x1=\"214\" y1=\"281\" x2=\"320\" y2=\"281\" stroke=\"#8b5cf6\" stroke-width=\"2.5\"/><text x=\"263\" y=\"356\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Perfectly elastic</text><text x=\"263\" y=\"370\" fill=\"#8b5cf6\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">PES = ∞</text><text x=\"26\" y=\"400\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">A unitary elastic supply curve is any straight line through the origin,</text><text x=\"26\" y=\"414\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">whatever its slope.</text></svg>"
+     },
+     {
+      "label": "Kavira's two curves",
+      "svg": "<svg width=\"500\" height=\"400\" viewBox=\"0 0 500 400\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker></defs><text x=\"26\" y=\"30\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">The same firm, two time horizons</text><line x1=\"70\" y1=\"300\" x2=\"464\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"36\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"466\" y=\"316\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">Q</text><text x=\"64\" y=\"32\" fill=\"#94a3b8\" font-size=\"12\" font-weight=\"600\" text-anchor=\"end\">P</text><text x=\"70\" y=\"332\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Quantity supplied (tiles a week)</text><text x=\"70\" y=\"18\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Price ($ a tile)</text><line x1=\"146\" y1=\"300\" x2=\"431\" y2=\"50\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/><text x=\"325\" y=\"154\" fill=\"#f59e0b\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">S short run</text><line x1=\"70.19\" y1=\"241.63\" x2=\"449.81\" y2=\"158.38\" stroke=\"#059669\" stroke-width=\"2.5\"/><text x=\"404.8\" y=\"174\" fill=\"#059669\" font-size=\"12\" font-weight=\"600\" text-anchor=\"start\">S long run</text><line x1=\"70\" y1=\"200\" x2=\"260\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"4 4\"/><line x1=\"260\" y1=\"200\" x2=\"260\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"4 4\"/><circle cx=\"260\" cy=\"200\" r=\"4\" fill=\"#94a3b8\"/><text x=\"64\" y=\"204\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"end\">$8</text><text x=\"260\" y=\"315\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">400</text><circle cx=\"288.5\" cy=\"175\" r=\"4\" fill=\"#f59e0b\"/><circle cx=\"374\" cy=\"175\" r=\"4\" fill=\"#059669\"/><line x1=\"70\" y1=\"175\" x2=\"374\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"1.2\" stroke-dasharray=\"4 4\"/><text x=\"64\" y=\"179\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"600\" text-anchor=\"end\">$10</text><text x=\"288.5\" y=\"315\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">460</text><text x=\"374\" y=\"315\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\" text-anchor=\"middle\">640</text><text x=\"26\" y=\"350\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Both curves pass through 400 tiles at $8. The same rise to $10 reaches</text><text x=\"26\" y=\"364\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">460 with one kiln and 640 once a second is running: PES 0.6 against 2.4.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "supply:diagram:01dec386",
+    "title": "What Determines Price Elasticity of Supply",
+    "kind": "table",
+    "description": "The five factors IAL 1.3.3 · 2c names, each with the case that makes supply elastic and the case that makes it inelastic. The specification names all five and explains none of them.",
+    "scenarios": [
+     {
+      "label": "The five determinants",
+      "svg": "<svg width=\"560\" height=\"300\" viewBox=\"0 0 560 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker></defs><text x=\"26\" y=\"42\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">The five factors, and what each does to PES</text><text x=\"26\" y=\"74\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">Factor (2c)</text><text x=\"262\" y=\"74\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Supply is ELASTIC when</text><text x=\"442\" y=\"74\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Supply is INELASTIC when</text><line x1=\"26\" y1=\"83\" x2=\"534\" y2=\"83\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"26\" y=\"104\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">The time period</text><text x=\"262\" y=\"104\" fill=\"#059669\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">More time to respond</text><text x=\"442\" y=\"104\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">The response must be now</text><line x1=\"26\" y1=\"113\" x2=\"534\" y2=\"113\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"26\" y=\"134\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">Stock / perishability</text><text x=\"262\" y=\"134\" fill=\"#059669\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Output stores well</text><text x=\"442\" y=\"134\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Output perishes quickly</text><line x1=\"26\" y1=\"143\" x2=\"534\" y2=\"143\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"26\" y=\"164\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">Mobility of factors</text><text x=\"262\" y=\"164\" fill=\"#059669\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Factors switch use easily</text><text x=\"442\" y=\"164\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Factors are specialised</text><line x1=\"26\" y1=\"173\" x2=\"534\" y2=\"173\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"26\" y=\"194\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">Legal constraints</text><text x=\"262\" y=\"194\" fill=\"#059669\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">No permit caps output</text><text x=\"442\" y=\"194\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">A licence caps output</text><line x1=\"26\" y1=\"203\" x2=\"534\" y2=\"203\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"26\" y=\"224\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">Capacity</text><text x=\"262\" y=\"224\" fill=\"#059669\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Spare capacity is idle</text><text x=\"442\" y=\"224\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">Already at full capacity</text><line x1=\"26\" y1=\"233\" x2=\"534\" y2=\"233\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"26\" y=\"260\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Every factor is a question about whether the firm CAN respond, not whether it</text><text x=\"26\" y=\"274\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">wants to.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "supply:diagram:b041a18f",
+    "title": "One Price Rise, Two Time Horizons",
+    "kind": "table",
+    "description": "IAL 1.3.3 · 2d asks what the short run and long run mean for price elasticity of supply. Kavira Ceramics' answer: the same rise from $8 to $10 gives PES 0.6 with one kiln and PES 2.4 once a second kiln is running.",
+    "scenarios": [
+     {
+      "label": "The two calculations",
+      "svg": "<svg width=\"560\" height=\"314\" viewBox=\"0 0 560 314\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker></defs><text x=\"26\" y=\"42\" fill=\"#e8ecf5\" font-size=\"13\" font-weight=\"600\" text-anchor=\"start\">$8 to $10 a tile, worked twice</text><text x=\"26\" y=\"74\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\"></text><text x=\"262\" y=\"74\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Short run (one kiln)</text><text x=\"442\" y=\"74\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"600\" text-anchor=\"middle\">Long run (second kiln)</text><line x1=\"26\" y1=\"83\" x2=\"534\" y2=\"83\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"26\" y=\"104\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">Price</text><text x=\"262\" y=\"104\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">$8 → $10</text><text x=\"442\" y=\"104\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">$8 → $10</text><line x1=\"26\" y1=\"113\" x2=\"534\" y2=\"113\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"26\" y=\"134\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">Quantity supplied</text><text x=\"262\" y=\"134\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">400 → 460</text><text x=\"442\" y=\"134\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">400 → 640</text><line x1=\"26\" y1=\"143\" x2=\"534\" y2=\"143\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"26\" y=\"164\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">% change in quantity</text><text x=\"262\" y=\"164\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">+15%</text><text x=\"442\" y=\"164\" fill=\"#059669\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">+60%</text><line x1=\"26\" y1=\"173\" x2=\"534\" y2=\"173\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"26\" y=\"194\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">% change in price</text><text x=\"262\" y=\"194\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">+25%</text><text x=\"442\" y=\"194\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">+25%</text><line x1=\"26\" y1=\"203\" x2=\"534\" y2=\"203\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"26\" y=\"224\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">PES</text><text x=\"262\" y=\"224\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">0.6</text><text x=\"442\" y=\"224\" fill=\"#059669\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">2.4</text><line x1=\"26\" y1=\"233\" x2=\"534\" y2=\"233\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"26\" y=\"254\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\" text-anchor=\"start\">Supply is</text><text x=\"262\" y=\"254\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">inelastic</text><text x=\"442\" y=\"254\" fill=\"#059669\" font-size=\"11\" font-weight=\"400\" text-anchor=\"middle\">elastic</text><line x1=\"26\" y1=\"263\" x2=\"534\" y2=\"263\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"26\" y=\"290\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Only the time available to respond differs. Nothing about the price change or the</text><text x=\"26\" y=\"304\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">firm has changed.</text></svg>"
+     }
+    ]
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "A rise in input costs decreases supply",
+     "steps": [
+      "The price of an input such as energy, materials or labour rises.",
+      "Each unit becomes less profitable at the price the firm is already charging.",
+      "Output that was only just worth producing is no longer worth producing.",
+      "Less is offered at every price, so the supply curve shifts to the left."
+     ],
+     "result": "A decrease in supply: the whole curve moves left, and the price has not changed at any point in the chain."
+    },
+    {
+     "title": "An indirect tax shifts the curve, and which tax decides how",
+     "steps": [
+      "A tax is imposed on each unit sold, so the producer must receive more from the buyer to be equally well off.",
+      "If it is a specific tax, the extra needed is the same sum at every quantity — $3 a unit here.",
+      "If it is an ad valorem tax, the extra needed is 20% of the price, which is more money at higher prices.",
+      "The first gives a parallel upward shift; the second gives a pivot that widens as price rises."
+     ],
+     "result": "Both are decreases in supply, but only one of them is drawn as a parallel shift."
+    },
+    {
+     "title": "Reading a supply curve's elasticity from its shape",
+     "steps": [
+      "A vertical supply curve: quantity cannot change at all, so PES is 0.",
+      "A straight line cutting the QUANTITY axis: some is offered even at a price of zero, so PES is below 1 along its whole length.",
+      "A straight line through the ORIGIN: price and quantity are measured from zero together, so PES is exactly 1 whatever the slope.",
+      "A straight line cutting the PRICE axis: quantity starts from zero at a positive price, so PES is above 1 along its whole length."
+     ],
+     "result": "For a straight line it is the axis the line cuts that decides elasticity, not how steep it looks — with vertical and horizontal as the two extremes."
+    },
+    {
+     "title": "Why the same price rise gives two different values of PES",
+     "steps": [
+      "The price rises from $8 to $10, a rise of 25%, in both periods.",
+      "In the short run the kiln is fixed, so output rises only to 460 tiles: 15%, and PES is 0.6.",
+      "In the long run a second kiln can be built, so output reaches 640 tiles: 60%, and PES is 2.4.",
+      "Nothing about the price change or the firm differed except the time available to respond."
+     ],
+     "result": "Supply that is inelastic at 0.6 in the short run is elastic at 2.4 in the long run, which is the significance 1.3.3 · 2d asks for."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "How inelastic supply really is depends on the period being considered",
+     "content": "A PES value quoted without its period means very little, because the same market gives different answers over a week, a season and a decade. Where a question gives a time frame, the time frame is doing most of the analytical work."
+    },
+    {
+     "title": "The determinants rarely bind equally, so naming all five is weaker than judging one",
+     "content": "In a fresh produce market perishability dominates; in a licensed trade the legal cap dominates; in heavy industry capacity and factor mobility dominate. Identifying which constraint actually binds is the judgement the higher tariffs ask for."
+    },
+    {
+     "title": "Supply-side constraints can be loosened by policy, not only by time",
+     "content": "Legal constraints are rules rather than costs, so planning reform, licence expansion or quota changes can raise PES without waiting for capacity to be built. That makes the short run partly a policy choice rather than a fact of the industry."
+    },
+    {
+     "title": "A firm-level answer and a market-level answer are not the same",
+     "content": "Over long periods, high prices bring new firms into an industry, so market supply is more elastic than the supply of any single firm. An answer framed entirely around one producer's capacity misses that channel."
+    }
+   ]
+  },
+  "mistakes": [
+   {
+    "id": "supply:mistake:399b1863",
+    "title": "Confusing a movement along the curve with a shift of it",
+    "mistake": "Writing that a rise in the price of a good \"increases supply\", or drawing a second curve when only the price has changed.",
+    "correction": "The curve is the answer to \"how much at each price\", so the good's own price cannot move it. A price change is an extension or contraction along the existing curve; only a non-price factor shifts the curve itself.",
+    "examTip": "Say \"quantity supplied rose\" for a price change, and \"supply rose\" only when something other than the price has changed."
+   },
+   {
+    "id": "supply:mistake:216223ca",
+    "title": "Drawing an ad valorem tax as a parallel shift",
+    "mistake": "Shifting the supply curve up by a constant amount for a percentage tax, exactly as for a specific tax.",
+    "correction": "A percentage of a higher price is more money, so the vertical gap widens as price rises and the curve pivots. Only a specific tax, a fixed sum per unit, gives a parallel shift.",
+    "examTip": "Before drawing, ask whether the tax is a sum per unit or a percentage of price. The answer decides parallel shift or pivot, and that is the distinction 1.3.3 · 1c-3 is testing."
+   },
+   {
+    "id": "supply:mistake:7e652d66",
+    "title": "Treating the short run and long run as fixed lengths of time",
+    "mistake": "Defining the short run as a year, or the long run as \"several years\", and leaving it there.",
+    "correction": "Both are defined by what can be varied: the short run has at least one fixed factor, the long run has none. That makes the short run a day for a market stall and a decade for a power station.",
+    "examTip": "Name the fixed factor. An answer that says which factor is fixed and why it takes that long to change has defined the term; one that gives a number has not."
+   }
+  ]
+ }
+}
