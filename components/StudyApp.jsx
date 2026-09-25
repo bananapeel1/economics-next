@@ -167,9 +167,9 @@ function SectionOverview({ section, unit, sectionData, tabs, onTabSelect, isPrem
                 <span className="overview-hero-progress-text">{progressPct}%</span>
               </div>
             )}
-            {progressOtherVersion && (
-              <div className="overview-hero-rebuilt">This topic has been rebuilt since you were last here</div>
-            )}
+            {/* The founder, 25 Sep: a student is never told a topic "has been rebuilt". Learn Mode now
+                starts a rebuilt topic from the beginning without comment (LearnModeTab, V038), so
+                this overview line has nothing left to announce. */}
           </div>
         </div>
         <span className="overview-hero-btn">
@@ -655,6 +655,13 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
    * the audit measured). HomeScreen, the sidebar and the subject switch all come through here.
    */
   function navigateToSection(sectionId, { tab } = {}) {
+    /*
+     * A review belongs to the moment it was started, not to the Learn tab. `activeReview` used to
+     * survive a section change, so a review begun in one topic sat in front of every topic opened
+     * afterwards until it was finished — found by the founder opening a new topic and meeting
+     * another topic's review first. Changing section ends it; the item stays due.
+     */
+    setActiveReview(null);
     setActiveSection(sectionId);
     setActiveTab(tab || (activeTab === 'home' ? 'overview' : activeTab));
     setSidebarOpen(false);
@@ -985,6 +992,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     const newSections = sections.filter(s => newUnits.some(u => u.id === s.unit_id));
     const firstId = newSections[0]?.id;
     if (firstId) {
+      setActiveReview(null); // a review started under the old subject does not follow the student here
       setActiveSection(firstId);
       setIsInitial(false);
       setSectionData(null);
