@@ -1,6 +1,7 @@
 /* ─── Model Answers Data ─── */
 
 import { EXPANSION_ANSWERS } from './modelAnswersExpansion.js';
+import { MODEL_ANSWER_PAGES, modelAnswersPath } from './modelAnswerPages.js';
 
 const BASE_ANSWERS = [
 
@@ -1419,36 +1420,34 @@ export const MODEL_ANSWERS_SECTIONS = {
   },
 };
 
-/* ── Links map: section number → SEO page URL (for Practice tab) ── */
-/* Subject THEN number, for the collision described above SECTION_MODEL_ANSWERS_FAQ. The Practice
-   tab reads LINKS[subject][section.number]; before packet 12.1 it read LINKS[section.number] and
-   offered every Business section the Economics page that shares its number. */
-export const SECTION_MODEL_ANSWERS_LINKS = {
-  economics: {
-    '1.3.1': '/economics/introductory-concepts-model-answers',
-    '1.3.2': '/economics/demand-model-answers',
-    '1.3.3': '/economics/supply-model-answers',
-    '1.3.4': '/economics/price-determination-model-answers',
-    '1.3.5': '/economics/market-failure-model-answers',
-    '1.3.6': '/economics/government-intervention-model-answers',
-    '2.3.1': '/economics/economic-performance-model-answers',
-    '2.3.2': '/economics/aggregate-demand-model-answers',
-    '2.3.3': '/economics/aggregate-supply-model-answers',
-    '2.3.4': '/economics/national-income-model-answers',
-    '2.3.5': '/economics/economic-growth-model-answers',
-    '2.3.6': '/economics/macroeconomic-policies-model-answers',
-  },
-  business: {
-    // 1.3.2 (the-market) is absent on purpose: after E005 no model answer in the bank examines
-    // Business demand, supply or elasticity, so the card would open an empty page.
-    '1.3.1': '/business/meeting-customer-needs-model-answers',
-    '1.3.3': '/business/marketing-mix-model-answers',
-    '1.3.4': '/business/managing-people-model-answers',
-    '1.3.5': '/business/entrepreneurs-leaders-model-answers',
-    '2.3.1': '/business/raising-finance-model-answers',
-    '2.3.2': '/business/financial-planning-model-answers',
-    '2.3.3': '/business/managing-finance-model-answers',
-    '2.3.4': '/business/resource-management-model-answers',
-    '2.3.5': '/business/external-influences-model-answers',
-  },
-};
+/* ── Links map: section number → SEO page URL (read by the Practice tab) ── */
+/*
+ * DERIVED, not typed. Packet 12.3, E019/E020/E022.
+ *
+ * Subject THEN number, for the collision described above SECTION_MODEL_ANSWERS_FAQ: the Practice
+ * tab reads LINKS[subject][section.number], and before packet 12.1 it read LINKS[section.number]
+ * and offered every Business section the Economics page that shares its number.
+ *
+ * Until packet 12.3 this was a hand-written literal, and it was the third hand-written list of the
+ * same pages — the route shells and `app/sitemap.js` were the other two, and the three had already
+ * drifted apart by one entry. It is now computed from `data/modelAnswerPages.js`, the one table
+ * that declares a page, so the ten Economics sections that gained a page in packet 12.3 gained
+ * their Practice-tab link in the same edit and a future section needs no second one.
+ *
+ * THE FILTER IS THE POINT, and it is what keeps Business `the-market` (IAL 1.3.2) out. That page
+ * exists and serves an honest empty state, but no model answer in the bank examines Business
+ * demand, supply or elasticity, so a Practice-tab card pointing at it would open a page with no
+ * questions on it. The rule is "link a page that has at least one model answer", asked of the bank
+ * itself rather than remembered in a comment — so a section that GAINS its first model answer
+ * gains its link with no edit here at all, and one that has none can never be linked by mistake.
+ */
+const SECTIONS_WITH_ANSWERS = new Set(
+  MODEL_ANSWERS.map((a) => `${a.subject}|${a.sectionNumber}`),
+);
+
+export const SECTION_MODEL_ANSWERS_LINKS = MODEL_ANSWER_PAGES.reduce((map, page) => {
+  if (!SECTIONS_WITH_ANSWERS.has(`${page.subject}|${page.sectionNumber}`)) return map;
+  map[page.subject] = map[page.subject] || {};
+  map[page.subject][page.sectionNumber] = modelAnswersPath(page);
+  return map;
+}, {});

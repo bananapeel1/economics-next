@@ -1,0 +1,17 @@
+A/B — does the sampling-aware variety floor still catch a repeating draw?
+
+A · control: the shipped index-numbers draw, 200 and 2000 draws
+
+quant-check: 8 templates × 200 draws = 1600 items, all clean
+
+quant-check: 8 templates × 2000 draws = 16000 items, all clean
+
+B · sabotage: index-numbers draws its basket cost from ONE value and its rate from two,
+    so the stem can take at most a handful of shapes. variants left untouched at 34,320,
+    which is the case the flat rule and the new one must both still fail.
+  variety (1)
+    index-numbers [—] only 2 distinct stems in 200 draws — the draw is repeating (159 is 80% of the 199 that 31,200 number sets can reach)
+
+  variety (1)
+    index-numbers [—] only 2 distinct stems in 2000 draws — the draw is repeating (1549 is 80% of the 1937 that 31,200 number sets can reach)
+

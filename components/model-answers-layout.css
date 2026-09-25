@@ -1,0 +1,248 @@
+/*
+ * The question-first exam layout. Packet 12.2 wrote it for the noindex lab route; packet 12.3
+ * moved it onto the live model-answer routes and renamed the file (it was
+ * `section-exam-practice.css`). The `lab-` class prefix is deliberately UNCHANGED: renaming forty
+ * selectors across two files would be churn a student cannot see, and the prefix now reads as
+ * "the layout the lab proved".
+ *
+ * Still not in `app/globals.css`: that file is shared with every other session working in this
+ * worktree and is not worth a merge conflict.
+ *
+ * WHAT PACKET 12.3 CHANGED, and why. On `/lab` this block WAS the page — it painted its own
+ * background, owned the viewport and carried its own light and dark palettes. It is now a section
+ * inside `.resource-page`, which is themed by the site's own tokens, so a second palette here would
+ * have produced a light island inside a dark page (or the reverse) at every theme switch. Every
+ * `--lab-*` token is therefore an alias of the site token that already exists, with packet 12.2's
+ * literal kept as the `var()` fallback — so an unresolved token still paints something, which is the
+ * light-mode failure packet 12.1 spent a day on. The `prefers-color-scheme` block that used to
+ * follow is gone with it: the site tokens are switched by `[data-theme]`, and a media query would
+ * have overridden the user's own choice.
+ *
+ * Built mobile-first at 390px. There is no second breakpoint because there is nothing on the page
+ * that wants a second column.
+ */
+
+.lab-page {
+  --lab-bg: var(--bg-primary, #f7f7f5);
+  --lab-surface: var(--bg-card, #ffffff);
+  --lab-border: var(--border-primary, #d8d6d0);
+  --lab-text: var(--text-primary, #1b1b19);
+  --lab-muted: var(--text-muted-alt, #57564f);
+  --lab-accent: var(--accent-blue, #1d4ed8);
+  --lab-flag-bg: var(--bg-section, #fff7e0);
+  --lab-flag-border: var(--accent-amber, #8a6d1f);
+
+  color: var(--lab-text);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+.lab-page * { box-sizing: border-box; }
+.lab-page code { font-size: 0.9em; word-break: break-word; }
+.lab-page a { color: var(--lab-accent); }
+
+.lab-header { margin-bottom: 20px; }
+.lab-crumbs {
+  margin: 0 0 6px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lab-muted);
+}
+.lab-header h1 { margin: 0 0 8px; font-size: 26px; line-height: 1.2; }
+.lab-counts { margin: 0 0 6px; font-size: 15px; font-weight: 600; }
+.lab-note { margin: 6px 0 0; font-size: 13px; color: var(--lab-muted); }
+
+/* Coverage ------------------------------------------------------------------------------------ */
+
+.lab-coverage {
+  background: var(--lab-surface);
+  border: 1px solid var(--lab-border);
+  border-left: 4px solid var(--lab-accent);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+.lab-coverage-head { margin: 0 0 6px; font-size: 17px; line-height: 1.35; }
+.lab-coverage-pct {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px;
+  border: 1px solid var(--lab-border);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--lab-muted);
+  vertical-align: middle;
+}
+.lab-coverage-sub { margin: 0 0 10px; font-size: 13px; color: var(--lab-muted); }
+.lab-coverage-unknown { border-left-color: var(--lab-flag-border); }
+
+.lab-leaf-list { margin: 8px 0 0; padding-left: 18px; font-size: 13px; }
+.lab-leaf-list li { margin-bottom: 5px; }
+.lab-leaf-list code { color: var(--lab-accent); }
+
+/* Blocks -------------------------------------------------------------------------------------- */
+
+.lab-block {
+  background: var(--lab-surface);
+  border: 1px solid var(--lab-border);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+.lab-block-head h2 { margin: 0 0 4px; font-size: 19px; }
+.lab-block-sub { margin: 0 0 12px; font-size: 13px; color: var(--lab-muted); }
+
+/* The Quick Check block that used to sit here is gone with its component. Packet 12.3, E017: the
+   MCQs came from the t=0 dump under `audit/`, and a public canonical URL may not serve frozen quiz
+   content. Its thirty-five lines of rules are deleted rather than left orphaned. */
+
+/* Written items ------------------------------------------------------------------------------- */
+
+.lab-item-list { margin: 0; padding-left: 20px; }
+.lab-item { margin-bottom: 26px; }
+.lab-item-meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 8px; }
+.lab-chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1px solid var(--lab-border);
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--lab-muted);
+  background: var(--lab-bg);
+}
+.lab-chip-command { font-weight: 700; color: var(--lab-text); }
+.lab-item-question { margin: 0 0 10px; font-size: 16px; font-weight: 600; }
+
+.lab-details {
+  border: 1px solid var(--lab-border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background: var(--lab-bg);
+}
+.lab-details > summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 24px;
+  padding: 6px 0;
+}
+.lab-details-midband { border-color: var(--lab-flag-border); background: var(--lab-flag-bg); }
+
+.lab-markscheme { margin: 8px 0 0; font-size: 13px; }
+.lab-markscheme-row { margin-bottom: 8px; }
+.lab-markscheme dt { font-weight: 700; }
+.lab-markscheme dd { margin: 2px 0 0; color: var(--lab-muted); }
+
+.lab-answer-para { margin-top: 10px; font-size: 14px; }
+.lab-answer-para h4 { margin: 0 0 4px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--lab-muted); }
+.lab-commentary { margin-top: 8px; font-size: 14px; }
+
+.lab-midband-basis { margin: 8px 0 0; font-size: 13px; color: var(--lab-muted); }
+.lab-midband-answer { border-left: 3px solid var(--lab-border); padding-left: 10px; margin-top: 10px; }
+.lab-midband-head { margin: 14px 0 0; font-size: 14px; }
+
+.lab-empty-note {
+  margin: 0;
+  padding: 12px;
+  border: 1px dashed var(--lab-border);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--lab-muted);
+}
+
+/* Data response --------------------------------------------------------------------------------*/
+
+.lab-dr-card {
+  display: block;
+  padding: 12px;
+  border: 1px solid var(--lab-border);
+  border-radius: 8px;
+  background: var(--lab-bg);
+  text-decoration: none;
+  color: var(--lab-text);
+}
+.lab-dr-title { display: block; font-weight: 700; margin-bottom: 4px; }
+.lab-dr-sub { display: block; font-size: 13px; color: var(--lab-muted); }
+
+.lab-footer { font-size: 12px; color: var(--lab-muted); }
+.lab-footer p { margin: 0; }
+
+/* Annotation chips and their key -----------------------------------------------------------------
+
+   FIX ROUND B1. Two separate things went wrong with the K / A / An / E / D chips that the model
+   answers carry in their own HTML.
+
+   1. The KEY was not rendered at all. That is a JSX regression and is fixed in
+      `SectionModelAnswersPage.jsx`; `.lab-ann-legend` below is what it renders into. It is a new
+      class rather than globals' `.ma-ann-legend` because that one is padded for the card grid on
+      `/model-answers` (`padding: 0 20px`) and would have hung off the inside of a `<details>`.
+
+   2. The chips were ILLEGIBLE, and still would have been with a key beside them. Globals paints
+      them `color: white` on `var(--accent-blue)` / `var(--accent-amber)` / `#22c55e` / `#8b5cf6`.
+      On this page's real default — `data-theme="dark"`, which is what a signed-out student with
+      cleared storage gets — that resolves to white on #3b82f6, #f59e0b, #22c55e and #8b5cf6:
+      3.68, 2.15, 2.28 and 4.23 to one. Every one is under the 4.5:1 WCAG AA floor for text this
+      small, and amber and green are under 3:1, which is the floor for a non-text indicator too.
+      Light mode was passing on blue and amber only.
+
+   The fix is to stop asking the theme tokens for these four colours. In light mode the chip is a
+   deep fill with white ink; in dark mode it is a bright fill with near-black ink, because no fill
+   dark enough to carry white text at 4.5:1 is still visible as a chip against #1e2335. Measured
+   white/ink against fill: light 6.70 / 6.62 / 6.40 / 7.10, dark 8.42 / 10.66 / 11.13 / 10.07.
+
+   LITERALS, DELIBERATELY. The tokens are what produced the failing values, and `--accent-*` is
+   shared with most of the product — retuning it here would change forty other things. These four
+   pairs are fixed ink-on-fill combinations that must hold their ratio in both themes, which is the
+   same reason globals' ACCEPTED_LITERALS already exempts `.ma-ann-*`.
+
+   NOT SEEN BY `npm run contrast`. That guard reads `app/globals.css` and nothing else
+   (`audit/scripts/contrast-check.mjs:24`), so these rules are outside it, and the rules it CAN see
+   scored green through this whole regression anyway — `.ma-ann` declares `color` while its
+   background comes from a sibling `.ma-ann-<colour>` rule, and the guard scores a `color:` against
+   a surface it can resolve from the same rule. See `audit/runs/packet-12.3/built.md`. The evidence
+   for the numbers above is the rendered page, not this comment. */
+
+.lab-ann-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  margin: 10px 0 12px;
+  padding: 8px 10px;
+  border: 1px dashed var(--lab-border);
+  border-radius: 8px;
+  background: var(--lab-bg);
+  font-size: 12px;
+  /* `--lab-text`, not `--lab-muted`, and the reason is measured rather than stylistic. `.lab-page`
+     lives inside `.resource-page.rl-night`, which pins `--bg-*` and `--text-primary` to the dark
+     palette whatever the site theme is — but NOT `--text-muted-alt`, which `--lab-muted` aliases.
+     Pick light mode and every muted string in this layout becomes #5b6472 on #0e0f16: measured
+     2.8:1 on `.lab-block-sub` and `.lab-coverage-sub`, 3.2:1 on `.lab-note` and the mark-scheme
+     descriptions. That is a PRE-EXISTING defect of the transfer, it is reported in built.md, and
+     this packet was scoped not to fix it — so this rule simply does not join it. `--lab-text` is
+     pinned by `rl-night` and measures 15.6:1 here in both themes. */
+  color: var(--lab-text);
+}
+.lab-ann-legend-title {
+  flex-basis: 100%;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.lab-ann-item { display: inline-flex; align-items: center; gap: 5px; }
+
+.lab-page .ma-ann { color: #ffffff; }
+.lab-page .ma-ann-blue { background: #1d4ed8; }
+.lab-page .ma-ann-green { background: #036a4d; }
+.lab-page .ma-ann-amber { background: #9a4708; }
+.lab-page .ma-ann-purple { background: #6d28d9; }
+
+[data-theme="dark"] .lab-page .ma-ann { color: #10131a; }
+[data-theme="dark"] .lab-page .ma-ann-blue { background: #7cb0ff; }
+[data-theme="dark"] .lab-page .ma-ann-green { background: #4ade80; }
+[data-theme="dark"] .lab-page .ma-ann-amber { background: #fbbf24; }
+[data-theme="dark"] .lab-page .ma-ann-purple { background: #c4b5fd; }

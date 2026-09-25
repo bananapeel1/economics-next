@@ -1,0 +1,402 @@
+{
+  "balance-payments-exchange-rates": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Balance of Payments and Exchange Rates",
+        "quiz": {
+          "index": 1,
+          "id": "balance-payments-exchange-rates:quiz:3a1514da",
+          "evidence": "a current account deficit must be financed by a financial account surplus (capital inflows)",
+          "why": "Tests the chapter's central BoP identity (a deficit on one account is offset by a surplus on the other), and the text directly refutes the 'deficit on the financial account' distractor; q0 and q10 also qualify but test narrower points."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 1,
+          "id": "balance-payments-exchange-rates:practice:2908659e",
+          "evidence": "Current account deficits are caused by strong exchange rates, high domestic demand, low productivity, or deindustrialisation.",
+          "why": "Ch1 explains four causes of a current account deficit with mechanisms and the UK example, enough to explain two; p0 and p3 also qualify, but 6 marks keeps the first chapter's worked example below Ch2's 10."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Competitiveness",
+        "quiz": {
+          "index": 4,
+          "id": "balance-payments-exchange-rates:quiz:ab853afa",
+          "evidence": "If demand is inelastic on both sides, depreciation worsens the current account because import spending rises without a sufficient increase in export revenue. … trade contracts are fixed in foreign currency, export and import volumes are slow to adjust, and consumers take time to switch away from imports. The immediate effect of depreciation is simply a higher import bill.",
+          "why": "Reasoning item on the chapter's Marshall-Lerner/J-curve key idea (short-run volumes do not respond, so the import bill rises first), and the text refutes the 'exporters immediately' and 'consumers immediately switch' distractors; q2 and q3 also qualify."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 2,
+          "id": "balance-payments-exchange-rates:practice:2af9902c",
+          "evidence": "A depreciation only improves the current account if the sum of export and import price elasticities exceeds one (Marshall-Lerner), and even then the improvement is delayed — the J-curve shows a short-run worsening before long-run gains.",
+          "why": "Ch2 supplies both halves of the assessment (the Marshall-Lerner condition and the J-curve delay, with the 2016 sterling case), and 10 marks rises from Ch1's 6."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 5, "id": "balance-payments-exchange-rates:quiz:5851e598", "what": "The term 'devaluation' (a deliberate lowering of a fixed rate) and how it differs from depreciation; the section only ever says 'depreciation'." },
+      { "kind": "quiz", "index": 7, "id": "balance-payments-exchange-rates:quiz:26b66f62", "what": "The unit labour cost formula (average wage divided by labour productivity); unit labour costs are never mentioned." },
+      { "kind": "quiz", "index": 8, "id": "balance-payments-exchange-rates:quiz:c1f24084", "what": "Long-run supply-side routes to competitiveness (education, training, infrastructure); the section links productivity to competitiveness but never says what raises productivity, and never contrasts this with devaluation or tariffs." },
+      { "kind": "quiz", "index": 9, "id": "balance-payments-exchange-rates:quiz:ee902875", "what": "Why a persistent current account surplus is a global problem (other countries' matching deficits, global imbalances); the section discusses deficits only." },
+      { "kind": "quiz", "index": 11, "id": "balance-payments-exchange-rates:quiz:8cff214a", "what": "Relative unit labour costs as a driver of the current account; the term is never taught (Ch1 says only 'low productivity reducing export competitiveness')." },
+      { "kind": "practice", "index": 4, "id": "balance-payments-exchange-rates:practice:a3acabea", "what": "Measures of international competitiveness (relative unit labour costs, relative export prices); Ch2 is titled 'Competitiveness' but defines no measure." }
+    ],
+    "flags": [
+      "Ch2 is titled 'Competitiveness' but teaches only exchange-rate determination and Marshall-Lerner/J-curve. It never defines international competitiveness, unit labour costs, relative export prices or non-price factors; that is why q7, q8, q11 and p4 are untaught.",
+      "q6 (depreciation raises cost-push inflation) is reachable only by inverting Ch2's strong-dollar example ('reduced import costs, helping to dampen inflation'), and 'cost-push' is never defined in the section. It is not pinned and not listed as untaught; a reviewer may call it untaught.",
+      "q2 frames the question around 'UK interest rates' and 'the pound'. The answer is correct, but the framing is UK-centred for an IAL audience (as is Ch1's UK-deficit example).",
+      "Unpinned but eligible: q0 and q10 (Ch1); q2 and q3 (Ch2); p0 and p3 (Ch1; p3, the 20-mark floating-vs-fixed question, is fully taught in Ch1 and could replace p1 if a reviewer prefers the bigger question)."
+    ]
+  },
+  "causes-effects-globalisation": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "What is Globalisation?",
+        "quiz": {
+          "index": 9,
+          "id": "causes-effects-globalisation:quiz:2302a9c2",
+          "evidence": "The net impact depends critically on domestic policy. Countries with strong education systems, safety nets, and effective regulation can capture the gains while cushioning the losers.",
+          "why": "Tests the chapter's central evaluative conclusion (globalisation creates winners and losers; the net effect depends on domestic policy), which the chapter's misconception sets against the same 'entirely beneficial/entirely harmful' distractors; q7 (the inequality mechanism) is the runner-up."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 0,
+          "id": "causes-effects-globalisation:practice:d3a4d784",
+          "evidence": "globalisation is the integration of goods, services, capital, and labour markets across national borders, driven by trade, technology, and policy changes working together.",
+          "why": "Ch1 defines globalisation and its drivers, enough for a full 4-mark definition; it is the only practice item about Ch1 alone (p3 needs Ch2's FDI material)."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Multinational Corporations",
+        "quiz": {
+          "index": 4,
+          "id": "causes-effects-globalisation:quiz:bc4c4b35",
+          "evidence": "bringing FDI that creates jobs, transfers technology, and generates tax revenue for host countries … MNCs can repatriate profits, exploit transfer pricing, suppress wages, and damage the environment",
+          "why": "Requires sorting host-country benefits from costs across both halves of the chapter, since profit repatriation and dependency (two distractors) are taught here as costs; q3 (motives) and q5 (transfer pricing) are recall alternatives."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 2,
+          "id": "causes-effects-globalisation:practice:db485018",
+          "evidence": "MNCs bring both benefits and costs; the net effect depends on the host country's ability to regulate, tax, and channel FDI into productive uses.",
+          "why": "Ch2 teaches FDI's benefits to host countries (jobs, technology, tax, industrial upgrading), its costs (repatriation, transfer pricing, labour, environment, crowding out) and the governance judgement, a full 10-mark assessment rising from Ch1's 4."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 2,
+        "title": "Trade Blocs",
+        "quiz": null,
+        "quizNone": "No quiz item tests trade blocs: nothing on free trade areas vs customs unions, the common external tariff, single markets, monetary union, or trade creation vs diversion. Nearest misses: q1 (the WTO cutting barriers through multilateral negotiations) is multilateral liberalisation taught in Ch1, not regional blocs; q9 (net impact depends on country factors) is Ch1's conclusion and is pinned there; q0 (trade and FDI as characteristics of globalisation) is Ch1's definition.",
+        "practice": null,
+        "practiceNone": "No practice item is about trade blocs. Nearest misses: p3 (globalisation more beneficial than harmful for developing countries, 20) draws on Ch1 and Ch2, not on trade creation or diversion, so Ch3 is not what it is about; p1, p2 and p4 are TNC/FDI questions belonging to Ch2."
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 8, "id": "causes-effects-globalisation:quiz:f48b514a", "what": "The 'race to the bottom' (governments competitively cutting taxes, labour protections and environmental standards to win FDI). Ch2 says MNCs exploit weak standards and Ch1 names the 'pollution haven' effect, but neither teaches governments lowering standards or uses the term." }
+    ],
+    "flags": [
+      "Ch3 (Trade Blocs) has no quiz or practice item at all. Its check-in stays empty until the bank gains trade-bloc items (FTA vs customs union, trade creation vs diversion).",
+      "Terminology: every chapter says 'MNC/multinational corporation' but the bank says 'TNC/transnational corporation' (q3, q4, q5, q8, p1, p4) and the section never says they are the same thing. audit/raw/research-ial-spec-coverage.md records that the IAL Economics Unit 4 spec and mark schemes use 'TNCs', so it is the chapter wording that departs from the spec.",
+      "p4 (two reasons for transfer pricing) is only half taught: Ch2 gives one reason (shifting profits to low-tax jurisdictions) and no second. Not pinned; not listed as untaught.",
+      "p3 (20 marks) qualifies on Ch2 as the last chapter whose content it needs; p2 was preferred because it is squarely about Ch2. p1 (6) also qualifies on Ch2.",
+      "Ch3's Brexit example calls UK importers switching from EU suppliers to 'more expensive domestic or non-EU sources' 'trade diversion in reverse'. The idea is loose, and a content reviewer may want to tighten it."
+    ]
+  },
+  "government-intervention-firms": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Competition Policy",
+        "quiz": null,
+        "quizNone": "No quiz item tests Ch1's content (merger control and the SLC test, cartels and leniency, abuse of dominance, fines). Nearest misses: q8 (competitive tendering) is a pro-competition policy, but competitive tendering is taught nowhere in the section; q2 (privatisation without regulation) and q9 (information asymmetry in regulation) are Ch2 content.",
+        "practice": {
+          "index": 1,
+          "id": "government-intervention-firms:practice:f273da05",
+          "evidence": "meaning fewer choices, higher prices, or lower quality for consumers … They are illegal because they replicate monopoly outcomes — higher prices and restricted output — while pretending to compete.",
+          "why": "Ch1 shows what competition policy protects (choice, prices, quality) and why cartels and abuse of dominance are prohibited, enough to explain two objectives; it is the only practice item about Ch1."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Regulation of Monopoly",
+        "quiz": {
+          "index": 2,
+          "id": "government-intervention-firms:quiz:49506368",
+          "evidence": "simply replaces a public monopoly with a private one. Without regulation, the private firm will charge monopoly prices and restrict output.",
+          "why": "Tests the chapter's key idea that a change of ownership alone does not create efficiency; q9 and q1 also qualify, and q0 was passed over because its keyed 1% is the same figure as the chapter's worked RPI-X example."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 3,
+          "id": "government-intervention-firms:practice:fc97f30e",
+          "evidence": "pursues social objectives — universal service, cross-subsidisation, and long-term investment. … without competitive pressure or the threat of takeover, costs drift upwards and productivity stagnates. The debate ultimately turns on whether government failure or market failure causes greater welfare loss.",
+          "why": "Ch2 gives the case for nationalising natural monopolies (social objectives, avoiding an unregulated private monopoly) and against it (X-inefficiency, losing profit and share-price discipline), with water and rail examples, which supports a creditable 20-mark answer; Ch3's government-failure material deepens it but is not required."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 2,
+        "title": "Government Failure and Minimum Wages",
+        "quiz": {
+          "index": 3,
+          "id": "government-intervention-firms:quiz:86b27dd7",
+          "evidence": "but in a monopsony market it can raise both wages AND employment — the effect depends entirely on market structure. … The wage floor acts like a perfectly elastic labour supply curve up to a point, so the firm hires more workers at the mandated wage.",
+          "why": "Reasoning item on the chapter's counter-intuitive central result (under monopsony, a wage floor up to the competitive level raises both pay and jobs); q4 (regulatory capture) also qualifies but is a definition recall."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 2,
+          "id": "government-intervention-firms:practice:b88b8cc6",
+          "evidence": "If low-wage labour markets exhibit monopsony power — as empirical evidence increasingly suggests — minimum wages can raise pay without significant job losses.",
+          "why": "Ch3 teaches the competitive (unemployment) and monopsony (higher pay and employment) outcomes plus the National Living Wage evidence, enough to assess employment and living standards; 10 marks keeps the last chapter above Ch1's 6."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 5, "id": "government-intervention-firms:quiz:139e74d1", "what": "The Laffer curve; no chapter mentions taxation (it is IAL 4.3.5 Role of the state content)." },
+      { "kind": "quiz", "index": 6, "id": "government-intervention-firms:quiz:afa93371", "what": "Policies to reduce occupational immobility; the section never mentions labour immobility (it is taught in labour-markets Ch3, where q9 is a near-duplicate)." },
+      { "kind": "quiz", "index": 7, "id": "government-intervention-firms:quiz:7f6b5ace", "what": "The poverty (benefits) trap and effective marginal tax rates; never mentioned." },
+      { "kind": "quiz", "index": 8, "id": "government-intervention-firms:quiz:707c0f55", "what": "Competitive tendering; never mentioned, although it is IAL 3.3.5 content (audit/raw/research-ial-spec-coverage.md lists it as a gap in this section)." }
+    ],
+    "flags": [
+      "Ch1 (Competition Policy) has no quiz item: the bank has nothing on mergers and the SLC test, cartels and leniency, or abuse of dominance.",
+      "q0 (RPI-X): the keyed 1% is the same number as the chapter's worked example ('If inflation is 3% and X is 2%, the firm can only raise prices by 1%'), so a student can pick it by recognising the figure without doing the subtraction. Not pinned for that reason; changing the numbers would fix it.",
+      "q5 (Laffer curve), q6 (occupational immobility) and q7 (poverty trap) look misfiled from the role-of-the-state, labour-market and poverty sections. q8 (competitive tendering) is in-spec for this section, so the fix there is a chapter addition, not retiring the item.",
+      "UK framing: Ch1 presents the CMA and its SLC test as the competition regime, Ch2 uses Ofwat/Ofgem/Ofcom and Ch3 the National Living Wage and Low Pay Commission. These are accurate UK facts, but the IAL spec notes (audit/raw/research-ial-spec-coverage.md) say examples should not default to UK institutions such as the CMA. Separately, Ch2's 'Ofwat regulates English and Welsh water companies using an RPI–X framework' looks dated: Ofwat began moving its price controls from RPI to CPIH indexation at PR19 (2020). Worth checking.",
+      "Marks run 6, 20, 10: the first and last still rise, and the 20-marker sits in the middle because p3 (nationalisation) is about Ch2. Unpinned but eligible: q0, q1, q9 (Ch2); q4 (Ch3); p0 (Ch2); p4 (Ch3)."
+    ]
+  },
+  "growth-development": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Growth vs Development",
+        "quiz": {
+          "index": 0,
+          "id": "growth-development:quiz:b16832aa",
+          "evidence": "combines three dimensions: life expectancy at birth, mean and expected years of schooling, and GNI per capita (PPP).",
+          "why": "The HDI is how the chapter measures development (its central growth-vs-development distinction), and the three listed dimensions rule out the Gini coefficient; q1 (Prebisch-Singer) also qualifies but tests a peripheral named hypothesis."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 1,
+          "id": "growth-development:practice:5ed0797d",
+          "evidence": "Development is blocked by the savings gap (Harrod-Domar), primary commodity dependence, debt burdens, weak institutions, low human capital, and geography — often forming a self-reinforcing poverty trap.",
+          "why": "Ch1's barriers subsection explains four constraints with mechanisms (savings gap, commodity dependence, debt, weak institutions), enough for two explained constraints; 6 marks sits below Ch2's 20."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Development Strategies",
+        "quiz": {
+          "index": 5,
+          "id": "growth-development:quiz:d20003b9",
+          "evidence": "However, protection often becomes permanent — firms never become competitive because they face no pressure to innovate or reduce costs.",
+          "why": "Scenario reasoning on the chapter's interventionist key idea (ISI risks long-run inefficiency), and the chapter's 'consumers pay higher prices' refutes the 'lower prices' distractor; q8 (SAP criticism) and q6 (microfinance) also qualify."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 3,
+          "id": "growth-development:practice:87a82eaa",
+          "evidence": "The most successful development stories (East Asia) combined market openness with strategic state intervention.",
+          "why": "Ch2 is structured as exactly this comparison (market-led vs interventionist strategies, each with evaluation, plus the South Korea and India cases), so a 20-mark evaluation is creditable."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 2,
+        "title": "Sustainability",
+        "quiz": null,
+        "quizNone": "No quiz item tests sustainability: nothing on the Brundtland definition, natural capital, the Environmental Kuznets Curve, carbon pricing, climate change as a global public good or common but differentiated responsibilities. No item comes near; the closest in theme are q4 and q11 (Dutch disease) and q7 (capital flight), and all three are untaught anywhere.",
+        "practice": null,
+        "practiceNone": "No practice item is about sustainability or green growth. Nearest misses: p3 (market vs interventionist strategies, 20) is Ch2's question; p1 (constraints) and p2 (Harrod-Domar) are Ch1's; p4 (IMF roles) is Ch2's and only half taught."
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 2, "id": "growth-development:quiz:4c282e45", "what": "The Harrod-Domar growth formula (growth = savings ratio / capital-output ratio); Ch1 teaches only the savings-gap idea and never mentions a capital-output ratio." },
+      { "kind": "quiz", "index": 3, "id": "growth-development:quiz:58e6c1aa", "what": "The Lewis dual-sector model and its turning point; never mentioned (IAL 4.3.6 content the section lacks, per audit/raw/research-ial-spec-coverage.md)." },
+      { "kind": "quiz", "index": 4, "id": "growth-development:quiz:1d5d2227", "what": "Dutch disease as a criticism of aid (a distractor also cites the untaught 'foreign currency gap'); Ch2's criticisms of aid are dependency, propping up corrupt governments and distorting local markets." },
+      { "kind": "quiz", "index": 7, "id": "growth-development:quiz:05c7de38", "what": "Capital flight; never mentioned (IAL 4.3.6 content the section lacks)." },
+      { "kind": "quiz", "index": 9, "id": "growth-development:quiz:efdf4b2d", "what": "Indicators of structural transformation (share of the labour force in agriculture); the section's only indicators are GDP and the HDI." },
+      { "kind": "quiz", "index": 10, "id": "growth-development:quiz:67cc315a", "what": "The Harrod-Domar model's assumptions and why they are unrealistic (savings automatically becoming productive investment); Ch1 states the savings-gap chain but no assumption or criticism." },
+      { "kind": "quiz", "index": 11, "id": "growth-development:quiz:4043148b", "what": "Dutch disease (resource revenues appreciating the real exchange rate); the DRC example mentions the 'resource curse' but not the exchange-rate mechanism." }
+    ],
+    "flags": [
+      "Ch3 (Sustainability) has no quiz or practice item: the bank has nothing on the Brundtland definition, natural capital, the EKC, carbon pricing or burden-sharing.",
+      "Seven of twelve quiz items test models the section never teaches. Lewis and capital flight are IAL 4.3.6 content the section lacks, so the likely fix is extending Ch1/Ch2, not retiring the items.",
+      "p2 (usefulness of Harrod-Domar, 10) is thinly supported: Ch1 teaches the savings-gap idea and Ch2 the aid link, but not the formula, its assumptions or the standard criticisms, so only a mid-band answer is possible. Not pinned.",
+      "p4 (two roles of the IMF) is only half taught: Ch2 mentions IMF/World Bank structural-adjustment loans with conditions, and no second role (crisis lending, surveillance, debt relief) is taught. Not pinned; not listed as untaught.",
+      "Unpinned but eligible: q1 (Ch1); q6 and q8 (Ch2); p0 (Ch1)."
+    ]
+  },
+  "labour-markets": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Demand and Supply of Labour",
+        "quiz": {
+          "index": 1,
+          "id": "labour-markets:quiz:4be1d365",
+          "evidence": "Firms hire until MRP = wage; shifts in product demand or productivity shift the MRP curve.",
+          "why": "Tests the chapter's central hiring rule (the MRP curve is the labour demand curve; hire until MRP = wage); preferred over q0, which recalls the name 'derived demand', and q3 (backward-bending supply), a secondary idea."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 0,
+          "id": "labour-markets:practice:904e9b48",
+          "evidence": "Labour demand is a derived demand — firms hire workers not for their own sake but because they produce output that generates revenue.",
+          "why": "Ch1 defines derived demand and traces it through product demand, MR and MRP to hiring, a full 4-mark answer; it is the only practice item about Ch1."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Wage Determination",
+        "quiz": {
+          "index": 5,
+          "id": "labour-markets:quiz:a4405adb",
+          "evidence": "Employment is also lower than in a competitive market. … Nursing wages have been held below what a competitive market would deliver",
+          "why": "Tests the chapter's core monopsony result (hiring where MCL = MRP gives both lower employment and a lower wage than the competitive outcome) by reasoning, rather than the verbatim recall of the minimum-wage point in q6."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 3,
+          "id": "labour-markets:practice:c499dd15",
+          "evidence": "A monopsony employer is the dominant buyer of labour — it faces an upward-sloping supply curve and pays workers below their MRP, creating exploitation that a minimum wage can actually fix.",
+          "why": "Ch2 teaches the monopsony model (MCL above supply, lower wage and employment, exploitation), the minimum-wage evaluation and the NHS nurses case, enough for a creditable 20-mark evaluation; Ch3's union countervailing power adds depth but is not required."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 2,
+        "title": "Trade Unions and Wage Differentials",
+        "quiz": {
+          "index": 7,
+          "id": "labour-markets:quiz:2515ecf0",
+          "evidence": "Doctors, lawyers, and accountants require years of qualifications that restrict supply, keeping wages above what they would be with free entry. … Too simplistic — difficulty alone does not determine pay; supply and demand do.",
+          "why": "Reasoning item on the chapter's theory of wage differentials (restricted, inelastic supply from long training explains the premium), and the misconception refutes the 'longer hours' distractor; it leans on Ch1's point that long training makes supply inelastic."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 1,
+          "id": "labour-markets:practice:1249c630",
+          "evidence": "Wages differ between occupations because of compensating differentials, human capital, barriers to entry, discrimination, and labour immobility — not because markets are failing.",
+          "why": "Ch3 explains five sources of wage differentials with examples, enough to explain two; 6 marks keeps the last chapter above Ch1's 4."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 2, "id": "labour-markets:quiz:44220611", "what": "What determines the wage elasticity of demand for labour (ease of substituting capital, labour's share of costs, product PED, time); Ch3 says the employment loss 'depends on the elasticity of demand for labour' but never says what determines it." }
+    ],
+    "flags": [
+      "Ch3 has no quiz item on trade unions, half the chapter; p4 is the only union item in either bank.",
+      "q4 (net immigration shifts supply right) belongs with Ch2, because migration as a supply shifter is taught only there; Ch1 covers supply determinants but not migration.",
+      "Marks run 4, 20, 6: the first and last rise, and the 20-marker sits in the middle because p3 (monopsony) is about Ch2.",
+      "Examples are UK-centred (NHS junior doctors and nurses, RMT strikes, City of London, 2004 EU enlargement); the IAL spec notes say examples should not default to UK institutions.",
+      "Unpinned but eligible: q0 and q3 (Ch1); q4 and q6 (Ch2); q8 and q9 (Ch3); p2 (usefulness of MRP theory, 10; Ch2, leaning on Ch3); p4 (trade unions, Ch3)."
+    ]
+  },
+  "market-structures-contestability": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Perfect Competition & Monopolistic Competition",
+        "quiz": {
+          "index": 3,
+          "id": "market-structures-contestability:quiz:cc94f77b",
+          "evidence": "it could produce more at a lower average cost but chooses not to. … Normal profit but excess capacity — firms produce below the cost-minimising output",
+          "why": "Reasoning item on the chapter's monopolistic-competition key idea (tangency before the ATC minimum, i.e. output below the cost-minimising level, is what excess capacity means); preferred over the recall items q0 and q1."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 0,
+          "id": "market-structures-contestability:practice:ee7c1b76",
+          "evidence": "Many firms sell identical products and are price takers — in the long run, freedom of entry competes away all supernormal profit, leaving firms earning just normal profit at P = MC.",
+          "why": "Ch1 teaches the defining characteristics (many firms, homogeneous product, price takers, no barriers to entry), a creditable 4-mark answer; it is the only practice item about Ch1."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Oligopoly",
+        "quiz": {
+          "index": 7,
+          "id": "market-structures-contestability:quiz:ec1ea9f2",
+          "evidence": "When both cheat, they end up worse off than if they had cooperated. … Game theory reveals why collusion is the jointly rational outcome but cheating is the individually rational strategy.",
+          "why": "Reasoning item on the chapter's game-theory key idea (individually rational cheating leaves both firms worse off); q4 (the kinked demand curve explains price rigidity) also qualifies but is recall."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 3,
+          "id": "market-structures-contestability:practice:fddf21e7",
+          "evidence": "Game theory reveals why collusion is the jointly rational outcome but cheating is the individually rational strategy. … oligopoly outcomes depend on whether firms compete or collude — interdependence can lead to either aggressive competition or tacit cooperation.",
+          "why": "Ch2 teaches the prisoner's dilemma, Nash equilibrium, cartel instability (OPEC), tacit collusion and price leadership, and the kinked-demand alternative, enough for a creditable evaluation of game theory's usefulness."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 2,
+        "title": "Monopoly",
+        "quiz": {
+          "index": 5,
+          "id": "market-structures-contestability:quiz:69a7746d",
+          "evidence": "it requires market power, consumer separation, and no resale, and can actually increase total output above the single-price level.",
+          "why": "Tests the three conditions the chapter tells students to 'always state'; it is the only taught Ch3 item (q6 on natural monopoly is untaught), though it is recall rather than reasoning."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 1,
+          "id": "market-structures-contestability:practice:4f590bac",
+          "evidence": "Price discrimination requires market power, consumer separation, and no resale — three conditions, always state them.",
+          "why": "Ch3 states and explains all three conditions with the rail-fares example, enough to explain two; p2 (monopoly vs perfect competition efficiency) goes on Ch4, where its content is taught."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 3,
+        "title": "Contestable Markets",
+        "quiz": {
+          "index": 8,
+          "id": "market-structures-contestability:quiz:84375755",
+          "evidence": "What disciplines firm behaviour is not the number of existing competitors but the threat of entry — if sunk costs are low, even a monopolist must price competitively or face hit-and-run entry.",
+          "why": "Tests the theory the chapter is named for (threat of entry and sunk costs, not the number of firms, discipline behaviour), with distractors (number of firms, concentration) that the key idea explicitly rejects; q11 also qualifies."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 2,
+          "id": "market-structures-contestability:practice:c2c53594",
+          "evidence": "No single market structure achieves every type of efficiency — perfect competition delivers static efficiency but not dynamic, while monopoly may deliver dynamic efficiency but not static.",
+          "why": "The question is exactly Ch4's second subsection (static vs dynamic efficiency across structures), drawing on Ch1 and Ch3; 8 marks makes the last chapter's independent attempt higher than Ch1's 4 (p4, 4 marks, also qualifies)."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 2, "id": "market-structures-contestability:quiz:26433195", "what": "The short-run shutdown point (P = minimum AVC); average variable cost is never mentioned." },
+      { "kind": "quiz", "index": 6, "id": "market-structures-contestability:quiz:d2b4d9d4", "what": "Natural monopoly and a continuously falling LRAC; Ch3 mentions neither (IAL 3.3.3 content)." },
+      { "kind": "quiz", "index": 9, "id": "market-structures-contestability:quiz:0575dcd9", "what": "Monopsony buyer power; this section never mentions monopsony (it is taught in labour-markets)." },
+      { "kind": "quiz", "index": 10, "id": "market-structures-contestability:quiz:66829626", "what": "Strategic barriers to entry such as limit pricing; Ch3 says barriers can be 'strategic' but never names limit pricing or any strategic barrier." }
+    ],
+    "flags": [
+      "Ch3's quiz pin (q5) and practice pin (p1) both test the price-discrimination conditions; nothing in either bank tests the monopoly-equilibrium half (MC = MR, P > MC, welfare-loss triangle).",
+      "q11 (dynamic efficiency) is eligible on Ch4, but its keyed 'Monopoly or oligopoly' credits oligopoly, which the section never links to R&D; option D (contestable market) is ruled out only by inferring that normal profit leaves no R&D funds.",
+      "p0 (characteristics of perfect competition): Ch1 omits perfect information/knowledge, a standard characteristic. The others are taught, so the item remains creditable.",
+      "p3 (usefulness of game theory, 20): Ch2 does not teach formal limitations (rationality, one-shot vs repeated games), so top-band evaluation rests on the student.",
+      "UK examples (the big four supermarkets, Thames Water and Ofwat, Avanti West Coast); the IAL spec notes advise non-UK defaults.",
+      "Unpinned but eligible: q0 and q1 (Ch1); q4 (Ch2); q11 (Ch4); p4 (Ch4)."
+    ]
+  }
+}

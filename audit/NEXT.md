@@ -1,5 +1,311 @@
 # Next session brief
 
+## Packet 2.9 — the banks of the 21 unpinned live sections are pinned; 13 staged, publish is the founder's (25 September 2026, Opus 5.5)
+
+Commit `fc91372`. Picks up the handoff at the end of this file ("packet 2.8 closed"). V057-V059 are claimed;
+Verify A (a fresh Sonnet verifier, round 1) confirmed all three against the live database and an
+isolated checkout of `fc91372`; `ledger.mjs unverified 2.9` exits 0. V056 and V060 move to **packet 2.91**
+("2.10" would read as 2.1 in the ledger, whose `packet` field is a number).
+
+**THE ONE THING WAITING ON THE FOUNDER: publish the 13 staged sections.** Nothing reaches a student until then.
+Production (`main`) still places items POSITIONALLY on all 21 sections (packet 2.8 is not on main), so today a
+live student is shown questions from other chapters. Publishing these pins fixes that for 13 sections
+immediately, whatever the code does, because `main`'s pinned path resolves block `quizIndices`/`practiceIndices`
+the same way. Each publish snapshots automatically first:
+
+```
+node scripts/publish-section.mjs assessing-competitiveness business-growth decision-making-techniques global-industries-mncs global-marketing global-markets-expansion influences-business-decisions managing-change government-intervention-firms growth-development labour-markets poverty-inequality role-state-macroeconomy
+```
+
+That form only diffs. Add `--confirm` to publish. Do NOT run `--all --confirm`: that would also publish the
+held rebuilds.
+
+**What was done.**
+- **The choosing.** Four readers chose a quiz and a practice item per chapter by reading the chapter
+  (`audit/runs/packet-2.9/AUTHOR-BRIEF.md`). Two readers then judged every pin blind (`VERIFY-BRIEF.md`,
+  `verdicts/`): 88 PASS, 1 FAIL (now an empty chapter), 0 MISSED.
+- **The totals.** 51 chapters: 44 quiz pins, 7 chapters decided empty, 38 practice pins, 6 practice pins
+  withheld from guided slots.
+- **The runner.** `scripts/packet-2.9-pin-banks.mjs` applies `pins.json` and proves six things per section
+  (its header). Re-run it with no flags any time; it writes nothing.
+- **Staged.** 13 sections with no draft: 28 chapters, 23 quiz pins, 5 decided-empty chapters, 21 practice
+  pins. Snapshots are `audit/snapshots/2026-09-25-pre-packet-2.9__*`.
+- **Not staged: 8 sections (V060, open).** balance-payments-exchange-rates, business-objectives-strategy,
+  causes-effects-globalisation, globalisation, market-structures-contestability, revenue-costs-profits,
+  trade-global-economy and types-sizes-businesses each hold a whole rebuilt section in draft for the 5/7
+  checkpoint, and those rebuilds pin already. The checkpoint publish closes V060. Their live pins are in
+  `pins.json` if the checkpoint slips and a stop-gap is wanted; that needs a founder-approved direct write
+  to `data`, because `draft` is occupied.
+- **V058.** `quizIndices: []` now means "decided: no question" to the placement and the signed-out payload.
+  Without it, the V026 fallback refilled the decided-empty chapters on one title word. On
+  global-markets-expansion it put back a "push factor" question that no chapter teaches.
+- **V059.** `exposure-census.mjs` restated the pinned path (V054 had moved only the unpinned half). It now
+  composes `placeChapterItems` and reports decided chapters as DECIDED. Staged figures: 209/214 served,
+  5 DECIDED, 0 STARVED, 0 UNWRITTEN.
+- **Verify B.** global-markets-expansion at 390x844 with `?draft=1`, signed out. The chapter 1 check-in shows
+  the joint-venture question and worked example; the chapter 2 check-in shows no question, promises none,
+  and shows the chapter's own independent practice. No console errors.
+
+**For the founder's one Pro pass (a session cannot sign in).** Open `/?section=labour-markets&draft=1` signed
+in. Look at three things:
+1. Chapter 1's check-in asks the hiring rule for a profit-maximising firm and shows the derived-demand worked
+   example.
+2. Chapter 2's check-in asks the monopsony question and shows no practice item (withheld: guided slot).
+3. Chapter 3's check-in asks why surgeons out-earn retail assistants and shows the wage-differentials practice
+   as an independent attempt.
+
+**What the readers found that is not this packet's to fix** (full lists in `proposals/*.json` under
+`untaught` and `flags`):
+- **Untaught items.** 130 items across the 21 banks test something no chapter of their section teaches.
+  role-state-macroeconomy is the extreme: 10 of 12 quiz items are public finance, which neither chapter
+  teaches, and chapter 1 (public goods) has nothing to ask. Several of these are IAL content the CHAPTERS
+  are missing (competitive tendering, Lewis, capital flight), so check the spec before deleting any item.
+- **Items filed in the wrong section's bank.** global-marketing's Ansoff items are taught in
+  global-markets-expansion. The revenue-costs-profits economies-of-scale items are taught in
+  types-sizes-businesses chapter 4, whose own bank has none.
+- **Contestable keys, left unpinned.** global-marketing q2 keys Unilever sachets as Price while chapter 1
+  teaches pack size as Product. business-objectives-strategy q5 keys a minimum-wage rise as Legal (PESTLE).
+- **Content errors in chapter text.**
+  - The World Bank line "$2.15 (2022 PPP)" is mislabelled; the line has been $3.00/day since June 2025.
+  - "Rates cannot fall below zero" is false.
+  - The WTO appellate body is described as working, but it has been non-functional since 2019.
+  - A tariff welfare-loss sentence gets the accounting backwards.
+  - globalisation chapter 2 treats the UK as inside the EU.
+  - A raw `&amp;mdash;` appears in a trade quiz option.
+- **UK institutions as default.** role-state-macroeconomy (tax bands, Universal Credit, NHS) and
+  government-intervention-firms (CMA, Ofwat).
+
+**V056, still open under 2.9: diagrams.** The same wrong-chapter flaw through `matchDiagramsToBlocks`. The
+runner kept diagrams exactly where they were (check 4), so it did not fix any. Measured on the 13 staged
+sections:
+- role-state-macroeconomy chapter 1 (market failure) shows "Crowding Out in the Loanable Funds Market";
+- growth-development chapter 1 shows Harrod-Domar, while the HDI diagram is unplaced;
+- labour-markets chapter 2 teaches monopsony, while "Monopsony Labour Market" is unplaced.
+
+The fix is `diagramId` pins plus a decided-none rule for diagrams, because the diagram fallback would refill
+an emptied chapter on "market". It also needs `checkin-attribution` to judge diagrams. About half a packet.
+
+**`checkin-attribution` cannot see any of this (filed as a task).** It reads `audit/content-sections/`, the
+11 September export, as "live", and every file in `audit/snapshots/` (218 of them, historical ones included)
+as "staged". It never reads the database, so its 0 does not describe what a student is served today.
+
+**V043 is closed wont-fix (another session, 25 September):** its figures came from a probe that called
+`resolvePinnedItem` with the wrong arguments, so its reserved set was always empty. `LearnModeTab` hands `PreTest`
+the questions `placeChapterItems` placed, so these pins also decide what the pre-test may not ask. Evidence:
+`audit/runs/v043/verify.md`. (An earlier draft of this block repeated the packet 2.8 handoff's claim that the
+pre-test reserves through the payload; that claim is wrong.)
+
+## Packet 13.2 spec — six drill templates, Learn Mode and the Quiz tab (COMPLETE, 22 September 2026)
+
+Brief, build notes, three fix rounds, four verification rounds and the 390×844 walkthrough:
+**`audit/runs/packet-13.2/`**. Closed **D018–D027, D029, D030**; **D028 wont-fix and split** (see 3).
+Minted **V051** against packet 13.3.
+
+**Six things the next packet should not have to rediscover.**
+
+1. **THE DEFECT CLASS THIS PACKET ACTUALLY FOUND: a drill that prints its own answer.** Five of the
+   eight templates marked a student correct for typing a number they could already see —
+   `breakeven` where the variable cost in the stem equalled the contribution (1 draw in 23), `arr`
+   and `payback` where a cash flow equalled the figure step one asks for (1 in 21, 1 in 12), `ped`
+   where a 25% price rise landed on a new price of $25 (1 in ~160), and
+   `percentage-change-economics` where a wrong CHOICE was the right answer (1 in ~20,000, found by
+   a verifier counting exhaustively). **Three of them were packet 13.1's, shipped and confirmed.**
+   None of `quant-check`'s six original checks could see it: from inside a template every figure is
+   correct, and it is the COMBINATION of a correct stem and a correct answer that leaks.
+   `quant-check` check 7 now reads the rendered card. **If you add a template, expect to spend the
+   time on the draw's rejections, not the prose.**
+
+   **And the rule that took five rounds to state: a number in a CHOICE is never a coincidence.**
+   Check 7's first version exempted bare small integers, because "Months into year 4" has to say
+   4. `payback` then printed its two-mark months answer in two of three choices on every draw, and
+   the exemption hid it. Choices are built from the answers; stems sometimes collide with them.
+   The two are scanned differently now, and the same reasoning caught the round-5 case — a choice
+   whose answer was named in the label above it.
+
+2. **A probe that enumerates the draw's own parameters cannot find this.** It reuses the filter it
+   is testing. `leak-census.mjs` reads the built item's own strings instead — stem, labels,
+   prefixes, suffixes, choices — which is why it found four leaks the data-side reasoning had
+   missed. The same principle is in `audit/runs/packet-31/probe-reads-shipping-file.md` territory:
+   parse what ships.
+
+3. **D028 was confirmed in round 1 and rejected in round 2, and the rejection was right.** It
+   asserted two things — chapter matching AND "an unmatched drill never lands on the first
+   check-in" — and a fix round traded the second away so `payback` could reach a student at all.
+   Round 1's evidence line had stopped describing the file. **An id that asserts two things can be
+   half-true, and half-true reads as confirmed.** Split into D029 and D030.
+
+4. **Three of packet 13.1's four templates pointed at sections that do not exist.** `ped` carried
+   `1.2.4` and `multiplier` `2.4.2` — UK GCE numbers; every IAL section number has **3 as its middle
+   digit**. `breakeven` carried `2.3.1`, a real Business heading and the wrong one. The pool joins a
+   template to a section BY spec number, so all three would have rendered nowhere. Every template
+   now carries `specLeaf`, `qs` and **`specTerm`** — a phrase the specification uses under its own
+   heading — and `lib/quant-pool.test.mjs` asserts it. **A shape check is not enough**: its first
+   version passed `breakeven` at 2.3.1 because that heading exists.
+
+5. **`quant-check`'s variety rule used to fail correct templates**, because it asked for 80% of the
+   DRAWS to be distinct and sampling D times from V sets can only reach V(1−(1−1/V)^D). It is now
+   80% of what sampling can reach, which makes **`variants` load-bearing in two directions**:
+   under-declare and you fail `MIN_VARIANTS`, over-declare and you fail the variety floor. `ped`
+   declares 1,740 counted by exhaustion, not 2,700 multiplied out.
+
+6. **`quant.unit` is a UNIT-level rule and now reads better than the product is.** One WBS11
+   template cleared it for all five WBS11 sections, but only **7 of 43 sections** carry a drill
+   (`coverage.txt`). Raising the rule to per-section would print 36 new DEBT findings today — a
+   decision, not a fix.
+
+**What 13.2 left for 13.3 and 13.4**, with the reason: the SM-2 queue (`lib/spaced-repetition.js`,
+keyed by `item_id` — that is the packet-2 dependency PROGRESS recorded against 13.2, and it belongs
+to 13.3), `/calculations-practice`, the `quant_*` funnel events, and the twelve further templates.
+**WEC13, WEC14 and WBS14 have no template at all** and are the 15 `quant.unit` keys still baselined.
+
+**Three confirmed ids carry stale evidence, and a verifier should correct them — not a builder.**
+`D007` cites `ped`'s variants as `5*3*6*5*6`, now a counted 1,740; `D019` cites
+`quant-check.mjs:149-164` for the variety floor, now moved; `D006` cites `:66-79` for the slip
+check, also moved. All three still hold in substance. The builder does not rewrite verification
+evidence — that is the line this programme drew after a bookkeeping agent authored a fix.
+
+**Four latent weaknesses in check 7, none live today**, all in `verify-a-round-5.md`: a choice
+step's answer is skipped everywhere rather than only in its own choices; the small-integer
+exemption is defeatable by a bare integer in a stem or by "6 per cent" written in words; the
+method-line exemption is enforced by absence rather than by an assertion; the meta chips are not
+scanned. Each needs a real case to calibrate against, and there is none yet.
+
+**Carried, not fixed, each with its reason:**
+- **V051** — `npm run contrast` reads `app/globals.css` only, so every CSS module is outside the
+  light-mode guard. Verify B measured the card's method line at 2.83:1 in dark mode at 11px; it is
+  `--text-dim`, used 25× at 9–13px, so it is the token, not this packet. Widening the guard at the
+  end of a packet would turn it red on inherited work.
+- **`attempt` is in-memory only.** A student who presses "New figures" and then reloads gets the
+  original figures back. Persisting it belongs with 13.3's queue, where an attempt count acquires a
+  reason to outlive the page.
+- **The Business placement matched on one word** ("market" → "Market Positioning and Orientation"
+  rather than the chapter teaching market share). Both are in 1.3.1; a score floor needs more than
+  one example to calibrate.
+- **No entitlement gate on either surface**, stated as the founder's in DECISIONS.md rather than
+  left as a code comment.
+
+**Operational, and it is not the packet's:** the machine's disk filled during this session —
+**at one point no command could run at all**, because the harness could not create its own output
+file. It recovered to ~570 MB free of 228 GB with nothing deleted. `economics-next/.next` is 2.5 GB
+and this worktree's is 2.3 GB, both regenerable; the npm cache is 554 MB. **Free space before
+starting 13.3**, or its gate will fail somewhere unhelpful.
+
+## Handoff — after packet 39b (written 21 September 2026)
+
+**`trade-global-economy` is finished.** Both halves are built, verified and staged: 10 blocks, 51
+subsections, 61 steps, 46 of 46 leaves of Economics 4.3.2 taught in `content[]`, and the section is
+at **0 BLOCK / 1 DEBT** against the 8 / 28 it carries live. Nothing is published. The next packet is
+whatever `audit/ledger.json` has most open — `ledger.mjs packets` will say.
+
+### If you are building the second half of a section, read this first
+
+1. **`loadBundle()` READS `data`, WHICH IS THE LIVE PUBLISHED ROW.** A staged-not-published section
+   has its real content in `draft`. Copy a first-half runner without changing this and you will
+   rebuild on top of the published version and destroy the first half, with every check green,
+   because every check will be measuring a bundle that is internally consistent and missing half the
+   section. Build from the first half's **committed snapshot** in `audit/snapshots/`; use the draft
+   only as a witness that it is either that snapshot or your own output.
+2. **Make the runner re-runnable, and test that by running it twice.** Asserting "the draft equals
+   the first half's snapshot" is correct exactly once — your own stage falsifies it.
+3. **Invert the carry list rather than writing a second one**, and make sure it covers EVERY
+   collection. `_packet39b-assessment.mjs` imports 39a's `CARRIED` and treats it as its REPLACE
+   list. Verify A rejected 39b because that list covered seven collections and not `extras`, so a
+   live chain contradicting the new teaching text survived byte-identical.
+
+### Three guards that exist now and should be copied forward
+
+- **SVG contrast.** `npm run contrast` reads `processSvg.js` and the themed tokens; it does NOT
+  measure an authored diagram's `<text>` against the `<rect>` behind it. A `#0b1020` label on a
+  `#64748b` bar is 3.98:1 and passes it. The check in `scripts/packet-39b-trade-global-economy.mjs`
+  composites each rect's fill over the page background at its own opacity and requires 4.5:1.
+  Measured for this palette: only `SLATE` fails as text on the background; on a solid fill the dark
+  label wins everywhere (amber 8.82, blue 5.15, green 5.02) and the light one loses everywhere
+  (1.82, 3.11, 3.18).
+- **Text against lines, not only against other text.** A box-against-box check passed a label its
+  own curve ran straight through. `packet-31-financial-planning.mjs:705-772` has both the segment
+  test and a `1.2 × face` vertical tolerance, A/B-proven; 39b started tighter and missed a real 2.6
+  CSS px overlap by 0.575 units. **Check `git log` for the newest version of a guard before writing
+  one.**
+- **A recall must not test material the deck has not reached.** Holding a section to zero
+  recoverable recalls pushes recalls off the step that taught them, and one of 39b's landed two
+  subsections EARLIER — which passes the recoverability gate precisely because the material is
+  untaught there. Both properties need checking.
+
+### Section-specific things still open
+
+- **`C-trade-global-economy-topFix-05` is reopened on packet 12.4.** Its buildable clauses are done
+  (Define 2, Explain 4, `Outline` gone, the Appellate Body limitation in the WTO subsection). What
+  is left is "present 10- and 20-mark guidance as levels", and **IAL Economics has no 10-mark item**
+  — the census is 2, 2/4, 4, 4, 6, 8, 14, 20. The 14- and 20-mark levels-marking work is real and
+  belongs with the model-answers packets.
+- **Ten chapters fills `FREE_QUIZ_MAX`, so this section's signed-out pre-test does not run.**
+  Documented at `lib/preview-limits.js:99-102`; this is the second section in that position. It is
+  a deliberate trade for all ten check-ins keeping their question. If a future packet raises the
+  cap, this section gains a pre-test for free.
+- **`audit/scripts/snapshot-touched-sections.mjs` still crashes on `globalisation`** and silently
+  skips every section after it (packet 39a's finding; line 17 reads `snap[k].length` for a table
+  missing from the t=0 file). One-line guard, its own commit.
+- **`validate-content.mjs` silently ignores `--staged`** and validates the live row. Verify A hit
+  this: it reported 8 BLOCK / 28 DEBT for a section whose staged bundle is 0 / 1. Do not read that
+  output as the staged result; run `validateSection` over the snapshot instead.
+
+### A measurement worth keeping
+
+Packet 11 closed V037 while this packet was being verified, and its numbers match the ones taken
+here independently: **Learn Mode draws a diagram at 298px and the Diagrams tab at 291px**, so a
+15-unit face on a 400-unit frame lands at about 11 CSS px. Its resolution is that the full-screen
+sheet enlarges the whole drawing rather than the font floor being raised, so the 400/15/12
+convention stands and every diagram needs its `Enlarge diagram` path to work.
+
+## Packet 11 spec — V037, diagram labels are 7–9px on a phone (COMPLETE, 21 September 2026)
+
+Full brief, build notes and the 375×812 walkthrough: **`audit/runs/packet-11/`** (`brief.md`,
+`built.md`, `verify-b.md`). Closed **V037 V046 V047 V048**, all confirmed by Verify A. **V042 was
+reassigned to packet 12** — a match-recall chip overflow with no code, CSS or acceptance check in
+common with the diagram work.
+
+**Four things the next packet should not have to rediscover:**
+
+1. **`components/learn-mode/DiagramEnlarge.jsx` is now the only enlarge sheet, and both diagram
+   surfaces mount it.** It used to live inside `InlineDiagram`, which is the whole reason the
+   **Diagrams tab had no enlarge at all** — 291px at 375px, labels 6.98–8.73px, no click handler,
+   `cursor: auto`. If you add a third surface that renders a diagram, mount this, do not re-implement.
+
+2. **The 0.92 artefact is a HIDDEN TAB, not a slow settle — waiting longer does not fix it.**
+   `DiagramEnlarge` adds `lm-diagram-modal-visible` inside `requestAnimationFrame`, and rAF does not
+   fire in a backgrounded tab, so the sheet sits at its resting `scale(0.92)` for ever and every
+   `getBoundingClientRect` reads 0.92× the truth. Measured in packet 11: `visibilityState: "hidden"`,
+   a probe rAF unfired after a full second, and a 10-second poll failing exactly as a 400ms one did.
+   Packet 38 published 789 for 858 this way and passed a defect as qualified on it; packet 11's own
+   Verify B caught 618-for-672, 614-for-667 and 460-for-500. **Front the Browser pane and assert
+   `document.visibilityState === 'visible'` alongside the class and the identity transform — or use
+   layout metrics only** (`getComputedStyle().width`, `scrollWidth`, `clientWidth`, the
+   `--lm-enlarge-w` property), which are transform-free and correct even in a hidden tab. Every
+   earlier write-up of this artefact prescribed "wait longer", which is why it keeps recurring.
+
+3. **The "12px floor" was a 390px figure and is dead.** At 375 the frame it was tuned for (500u/7u)
+   is 11.55px; at 360, 11.09px. The floor is now a guarantee computed per diagram from
+   `face / viewBoxWidth` (`lib/diagram-enlarge.js`), and `lib/diagram-enlarge.test.mjs` asserts the
+   two frames the old constant missed, so restoring a constant fails `npm test`. **Measure at 375.**
+
+4. **Still true, still do not propose it: no font floor.** F088 tried two and both were a relayout.
+   Every change in packet 11 is a uniform scale of the whole drawing. `processSvg.js` step 7 has been
+   corrected — it had been asserting the false 220vw/12px claim in the file the CSS and the ledger
+   both cite as the authority for this rule.
+
+**What packet 11 deliberately left open, with the reason:** the **inline** diagram is unchanged at
+298px with 7–9px labels. No inline width a phone can offer makes a 500-unit drawing with 10-unit
+labels legible; reclaiming the 20% of the screen that is card padding takes the best case from 7.15px
+to 8.4px. It would look like progress and not be any. The inline diagram's job is the shape and a
+route to the sheet, and both surfaces now have that route.
+
+**Pre-existing and not packet 11's:** `audit/scripts/check-staged-drafts.mjs` exits 1 on a crash —
+`TypeError: … (reading 'localeCompare')` at `:62` — because a bundle snapshot in `audit/snapshots/`
+has no `section_id`. It is in nobody's diff and it means the staged-draft drift check is currently
+not running for anyone.
+
+---
+
 ## Handoff — what comes next (written 21 September 2026, after packet 2.3)
 
 **PACKET 2.3 IS BUILT, VERIFIED AND GATE-GREEN, BUT NOT COMMITTED.** Verify A confirmed V009 on round 1. V009 is closed in the working tree:
@@ -9141,6 +9447,79 @@ section appended) only, each with an explicit `git add <path>`. No commit — th
 script file was edited.
 
 
+## Handoff — packet 5 verification round 4 (brain)
+
+**Bookkeeping only.** This session did not author, fix, walk, or commit anything. It verified the
+existing state — `node audit/scripts/ledger.mjs unverified 5`, `ledger.mjs show V038`, `ledger.mjs
+packet 5`, the last sections of `audit/runs/packet-5/verify-a.md` and `verify-b.md`, and `git
+log`/`git status` on the eight files the task brief named — and rewrote packet 5's `PROGRESS.md` row.
+Full check log: `audit/runs/packet-5/verify-round4-bookkeeping.md` (an artefact, not staged).
+
+**Result: packet 5 still DOES NOT PASS — but not for a reason the ledger shows.**
+`node audit/scripts/ledger.mjs unverified 5` now exits **0** ("gate clear"), and `ledger.mjs show
+V038` reads `status: "confirmed"`, `verified_by: "packet-verifier 2026-09-21"`. Ledger for packet 5:
+32 confirmed (the 31 plus V038, newly confirmed this round), 1 wont-fix (F083), 0 rejected.
+
+**This section supersedes the previous section, "## Handoff — packet 5 verification round 3
+(brain)"**, only on the single point of the ledger's own state: that section's "Next session. V038
+needs a fix round 4…" has been acted on and the ledger no longer rejects V038. It does **not**
+supersede that section's record of rounds 1–3, which stands.
+
+**Why the gate still does not clear, found by `packet-verifier`'s round-4 re-verification
+(`audit/runs/packet-5/verify-a.md`).** Round 3's rejected path — an in-app section switch
+(`navigateToSection`, `components/StudyApp.jsx`) handing `resolvePointer` the new section's pointer
+together with the OLD section's deck and `contentVersionSince` — is independently closed: measured
+against the client chunk the dev server actually serves
+(`components_StudyApp_jsx_01d_8tl._.js:2158`), not the fix's own tests, with a 20ms DOM+localStorage
+sampler across four click paths (in-app switch, reverse+race, cross-subject, direct load), all
+clean, and the blast radius bounded a different way (`/api/sections/<id>` for all 43 sections: 31
+null, 12 dated 14–15 Sep, none at or after `LEGACY_POINTER_EPOCH`). Not claimed by that pass:
+anything needing a signed-in session — no sign-in is available, and a direct
+`user_content_progress` read was refused by the permission layer, reason "Production Reads".
+
+**Why the gate still does not clear, found by the student walkthrough's targeted re-walk
+(`audit/runs/packet-5/verify-b.md`, "Targeted re-walk after round 4", appended after the 20
+September and 21 September round-3 walkthroughs — neither replaced).** 14 scripted cases at
+390×844, signed out, real taps: **all PASS**, including the two cases that failed in earlier rounds
+(the in-app-switch fingerprint contamination; the `?draft=1` first-render race). Then a **BLOCKING
+DEFECT with no ledger id**: the rebuilt notice a legacy-pointer student must act on ("Start again" /
+"Jump to the end") renders with no amber card and **19.5px buttons** at 390px — the packet's own
+touch floor is 44px, and this same banner measured 60px on 20 September. Cause, found by a different
+route than the rendering: `app/globals.css`'s twelve `.lm-rebuilt-*` rules are present in the git
+**index** (`git show :app/globals.css | grep -c lm-rebuilt` → 12) and **absent from the worktree
+file the dev server compiles** (`grep -c lm-rebuilt app/globals.css` → 0). This is a concurrent,
+un-scoped edit to a shared file, not part of the V038 diff, which does not touch `app/globals.css`
+at all — confirmed because the same edit also drops V037's deliberate `220vw` diagram-modal rule.
+Not fixed by this pass: no authority to touch code, content, tests, or styles. Filed to escalate by
+the walkthrough, not resolved here.
+
+**The eight files the task brief pointed at are now committed, not merely staged.** `git diff HEAD`
+against all eight is empty. `git log` shows `a9bba5f` ("packet-5: V038 fix round 4, the eight files
+that belong with the one already committed", 2026-09-21 20:44:05, author Aron Gijsel) carrying
+`app/api/sections/[id]/route.js`, both `[unit]/[topic]/page.jsx` routes, `app/page.js`,
+`components/LearnModeTab.jsx`, `lib/learn-steps.js`, `lib/learn-steps.test.mjs` and
+`lib/preview-limits.js` — its message states `components/StudyApp.jsx`'s share of the same change
+landed one commit earlier, in `3b40aa1` ("packet-2.3"), same day. `app/globals.css` is in neither
+commit and is still `MM`. This session did not commit anything; both commits already existed when
+this pass started.
+
+**Scope of every sentence above:** signed out, 390px, this session's own reads of the ledger, the
+two verify files, and `git`. Nothing above is a claim about a signed-in session, about any width
+other than 390, or about `app/globals.css` beyond what `git status`/`git show :app/globals.css`/
+`grep` on the worktree file showed as of this check.
+
+**Next session.** The CSS regression in `app/globals.css` needs a fix — restoring the twelve
+`.lm-rebuilt-*` rules (and the `.lm-diagram-modal` rules it also dropped) to the worktree file — and
+a re-walk at 390px to confirm the buttons clear 44px before packet 5 can close. This is not a V038
+code change; it is a separate, currently-shared-worktree hazard that happens to sit on V038's own
+feature.
+
+Staged by this session: `audit/PROGRESS.md` (packet 5 row rewritten) and `audit/NEXT.md` (this
+section appended) only, each with an explicit `git add <path>`. No commit — the founder commits.
+`audit/EXAM-PRACTICE.md` not opened; `audit/ledger.json` not staged. No code, content, test, or
+script file was edited.
+
+
 ## Handoff — packet 12.3, transfer lab to live model-answer routes (written 21 September 2026, Haiku 4.5)
 
 **Outcome.** DID NOT PASS the gate. Verify A: 7 of 7 ledger ids confirmed (E016-E022). Verify B: BLOCKING DEFECT found at step 10 and step 28 — the annotation legend (AnnotationLegend component) was dropped in the rewrite, leaving 31 of 32 pages printing unexplained annotation chips (K, A, An, E, D) throughout model answers with no key on the page. No fix rounds used (0 of 2 available).
@@ -9159,7 +9538,19 @@ script file was edited.
 
 **What this packet learned for the next one.** The specification says Q&A pages should render annotation keys — this is implicit in the data structure (`annotationLegend` fields exist) but invisible in the rendering contract. Rule 4 applies: the annotation system touches every answer, the field beside it (the legend) is just as critical, and a structural check (grep ≥ 1) can miss it. The walkthrough found something code review and linting could not — a component argument read from the data file but never passed through. Staged changes: `audit/PROGRESS.md` (this packet's row added) and `audit/NEXT.md` (this handoff appended) only.
 
+## Handoff — packet 12.3 fix round 1 passed the gate (brain, 21 September 2026)
 
+**Bookkeeping only.** This session authored nothing, fixed nothing, committed nothing. It verified the gate state against `audit/runs/packet-12.3/{built.md, verify-a.md, verify-b.md}` and updated `audit/PROGRESS.md` row 12.3 and this handoff section to reflect that the fix is verified and gate-complete.
+
+**Outcome.** FIX ROUND 1 PASSED. Verify A round 1: 7 of 7 ids confirmed (E016-E022), zero rejections. Verify B round 1 FAILED due to missing annotation legend (31 of 32 pages printing ~1,350 unexplained chips with no key). Verify B fix round 1 PASSED: legend rendered on all 31 pages, every distinct code appearing in its block's key, all 32 URLs return 200, prerendered build output verified. All gate checks green: `npm run build`, `npm test` 237/237, `npm run validate`, `npm run recalls`, `npm run exposure`, `npm run contrast` all exit 0.
+
+**What the fix round did.** Added `AnnotationLegend` component back to `components/SectionModelAnswersPage.jsx` with three style rules in `.lab-page` context to correct the contrast failure that the initial defect left in place. The 10px white-on-color chips were rendering at 1.8–2.4:1 (below WCAG AA 4.5:1 floor); the fix brought them to 4.5–11.1:1 by remapping the chip backgrounds to darker values in dark mode and keeping light mode's original brighter fills. Literals used deliberately (not tokens) because these are fixed ink-on-fill pairs that must hold their ratio in both themes, as the existing `globals.css:ACCEPTED_LITERALS` exemption documents for the original `.ma-ann-*` classes. `codesIn()` filter ensures the legend on the mid-band panel shows only the codes that appear in that panel's text (a subset of the full model answer).
+
+**Files changed in fix round.** `components/SectionModelAnswersPage.jsx` (added legend render at the correct position), `components/model-answers-layout.css` (three contrast-corrected rules for chips). Both staged, not committed. No new ledger ids claimed.
+
+**Non-blocking defects left open.** (2) Eight pages' mid-band "why this loses marks" panel scores in the same band as the full model answer above it (data-driven selection rule picks highest-tariff item, which can land at the same mark as the 8-mark items' 5–6/8 band). (3) Twenty-one Economics pages headline "0.0% coverage" because spec tags are missing on the question bank (not a rendering error). (4) `/business/the-market-model-answers` promises exam answers in its title but keeps the honest empty state per specification (no model answers exist for this section). All three are data or pre-existing, not regressions. The contrast guard `npm run contrast` remained blind to this class of defect throughout (reads `globals.css` only; cannot join `color:` and `background:` in adjacent selector rules) — filed for future guard improvement but out of scope.
+
+**What comes next.** Packet 12.3 gate is clear and fix round staged. Next scheduled session is the 5/7 checkpoint publish window. Packets 13–21 are scheduled content work staged since 14 September.
 
 ## Handoff — packet 40 closed (brain)
 
@@ -9265,3 +9656,42 @@ the other candidate if traffic order isn't the deciding rule.
 Staged by this session: `audit/PROGRESS.md` (packet 40 row rewritten) and `audit/NEXT.md` (this section
 appended) only, each with an explicit `git add <path>`. No commit. `audit/EXAM-PRACTICE.md` not opened;
 `audit/ledger.json` not staged. No code, content, test, or script file was edited by this session.
+
+## Handoff — packet 5 V038 closed after the stylesheet restore (brain, 21 September 2026, 20:55)
+
+Supersedes the round-4 bookkeeping section above on one point only: the blocking defect it recorded is closed.
+
+- **V038 CONFIRMED** by Verify A round 4 (`audit/runs/packet-5/verify-a.md`); `ledger.mjs unverified 5` exit 0. The fix
+  closed the class: the payload carries its section id, Learn Mode neither resumes nor stamps until the payload is this
+  section's and `contentVersionSince` is present (undefined = not arrived), and the automatic stamp is gone. All four earlier
+  failure paths re-measured A/B in `built.md`; Verify B walked 14 cases at 390 signed out, all pointer cases pass.
+- **The only Verify B blocker was `app/globals.css`**: the 37 staged `.lm-rebuilt-*` lines were missing from the worktree copy,
+  dropped by a concurrent V047/V037 edit. Restored by three-way merge, clean, other edit untouched, not staged (index already
+  held them). Compiled chunk on 3001 re-checked: 12 rules served. Not re-walked at 390 after the restore; the same lines
+  measured 60px buttons on 20 September.
+- **Minted on packet 57**: V049 (SectionOverview's rebuilt line reads the new section's progress against the old payload for
+  ~50ms on an in-app switch, signed-in only, self-corrects), V050 (the loading guard parks for ever if a producer ever omits
+  the field; every producer supplies it today).
+- **Founder, before committing packet 5 by path**: `components/StudyApp.jsx components/LearnModeTab.jsx lib/learn-steps.js
+  lib/learn-steps.test.mjs lib/preview-limits.js "app/economics/[unit]/[topic]/page.jsx" "app/business/[unit]/[topic]/page.jsx"
+  app/page.js audit/runs/packet-5 audit/PROGRESS.md audit/NEXT.md`. `app/globals.css` is shared with live V047 work: a
+  commit by path takes the WORKING TREE (V038 + V047 WIP); the index holds V038 only. Ask the diagram session to stage when
+  ready, or commit the CSS with V047. The index still carries the 36 `git rm --cached` deletions and the ExtrasTab revert.
+- **Release note / DECISIONS**: the legacy-pointer rule; signed-out students see the rebuilt notice once at the checkpoint;
+  rows the pointer repair left with an old `total_steps` will count as `rebuilt_shown` at first visit; the permission layer
+  refused Verify A's read-only production read (`[Production Reads]`), so every signed-in claim in round 4 is reasoned from
+  source, not measured.
+
+_Amendment, brain, 21 Sep 21:15: packet 11 has since committed its V037 CSS (`91c9eca`) through a temporary index and refreshed the shared index entry, so `app/globals.css` is now index == worktree == HEAD + the 37 V038 lines; `git diff --cached -- app/globals.css` is +37/-0 and a commit by path is safe. `audit/ledger.json` went with that commit, carrying V049, V050 and the F088 amendment._
+
+_Amendment 2, brain, 21 Sep 21:10: `check-staged-drafts.mjs managing-people` reported DRIFT (2): packet 2.7 (`12b7e2e`, V036) re-staged four exam-matters glosses and one practice guidance from the packet-30 runner without regenerating the bundle. Regenerated by `node scripts/packet-30-managing-people.mjs --dump` (file only, no draft write); the check now reports `matches`; snapshot staged (sha 78cd447b → 3bb6ac6f). The same script crashed in no-argument mode on two bundles without a `section_id` field (packet 31, packet 39a); it now derives the id from the filename and reports a tables-less file as MALFORMED. Staged. The worksheet proof sheet was built against the OLD bundle: its 167 verbatim supports must be re-digested against the new one before round 6 closes anything._
+
+## Handoff — packet 2.8 closed (25 September 2026, Opus 5.5)
+
+Built in 28bf7e0 (24 Sep), finished here: isolated gate, Verify A, Verify B, one fix commit (a9aefcf), handoff, push.
+
+- **What a student sees now.** On any live section that pins nothing (21 of 43), a chapter check-in shows Explain-it-back and the takeaway, and no question or worked example. That is correct and deliberate, but it is a thinner check-in; the live census reads 114 of 165 chapters served, 51 with no question. **The fix is pins, not placement** — a content packet per section, and publishing the staged rewrites clears only 8 of the 21 (13 staged sections still pin nothing).
+- **The trap that nearly shipped.** 28bf7e0's `package.json` included packet 12.6's `validate` wiring, whose script (`audit/scripts/validate-model-answers.mjs`) is only staged. Every gate run in the shared worktree passed; a clean checkout of the commit failed `npm run validate`. a9aefcf removes the two lines from HEAD and the index only; the working tree still carries them for 12.6. **Whoever commits 12.6 must commit the script and the wiring together.** Lesson: gate the commit's own tree (`git worktree add --detach <scratch> <sha>`, `cp -c -R node_modules`, copy `.env.local`), not the shared worktree.
+- **V056, packet 2.9, open**: check-in diagrams have the same aboutness flaw through `matchDiagramsToBlocks` (most-shared-words wins; on 3.3.1 the integration diagram sits under chapter 2). Pre-existing. Two parts: extend `checkin-attribution.mjs` to judge diagrams (expect notes, not failures, on pinned ones), and pin `diagramId` where it misplaces.
+- **Still open from the build session**: V043 — the signed-out pre-test reserves through `freeQuizPayload`, not placement, so it still asks about chapters the student has not opened (22 of 43 live).
+- **Not verified here**: signed-in (Pro) placement — this session cannot sign in. The code path is the same function for both, and V026's partly-pinned fallback is unchanged, but a founder glance at 3.3.1 signed in (chapter 1 check-in: no horizontal-integration question) closes it.

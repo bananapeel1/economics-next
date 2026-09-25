@@ -1,0 +1,249 @@
+{
+  "assessing-competitiveness": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Financial Ratios",
+        "quiz": {
+          "index": 1,
+          "id": "assessing-competitiveness:quiz:1b2bdcbb",
+          "evidence": "**ROCE (Return on Capital Employed)** = (operating profit / capital employed) x 100. Capital employed = total equity + non-current liabilities. ROCE measures how effectively the firm uses its long-term finance to generate profit. It is the single most important ratio for investors comparing alternative investments.",
+          "why": "A calculation (60,000 / 400,000 x 100 = 15%) using the chapter's own formula for the ratio the chapter calls the most important for investors."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 2,
+          "id": "assessing-competitiveness:practice:0b1f6e16",
+          "evidence": "a number in isolation means nothing; it must be compared year-on-year, against competitors, or against the industry average. [...] A ratio of 1.5-2.0 is generally healthy — below 1.0 signals potential cash flow crisis [...] This deducts all operating expenses (rent, wages, marketing) from gross profit",
+          "why": "The item sets margins against industry averages and a current ratio falling from 1.8 to 0.9, which is the benchmarking and liquidity reading the chapter teaches; the student reads the lower margin through the operating-margin text because the chapter never names the profit-for-the-year margin."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 4, "id": "assessing-competitiveness:quiz:b38c2eab", "what": "The acid test ratio (which ratio excludes inventory). The chapter teaches only the current ratio." },
+      { "kind": "quiz", "index": 6, "id": "assessing-competitiveness:quiz:815a4c46", "what": "The labour turnover formula. No HR measure is taught anywhere in the section." },
+      { "kind": "quiz", "index": 7, "id": "assessing-competitiveness:quiz:088917a5", "what": "HR strategies (empowerment). Not taught." },
+      { "kind": "quiz", "index": 8, "id": "assessing-competitiveness:quiz:0c40ebd1", "what": "Window dressing of accounts. Not taught." },
+      { "kind": "quiz", "index": 9, "id": "assessing-competitiveness:quiz:37077ef7", "what": "Comparing ROCE with the cost of borrowing to judge whether debt adds value. The chapter says gearing amplifies returns and losses but never states this condition." },
+      { "kind": "practice", "index": 0, "id": "assessing-competitiveness:practice:88178688", "what": "The definition of competitive advantage. The chapter never defines it." },
+      { "kind": "practice", "index": 1, "id": "assessing-competitiveness:practice:53a6b7ba", "what": "Bowman's Strategic Clock. Not taught in this section." },
+      { "kind": "practice", "index": 3, "id": "assessing-competitiveness:practice:ad075e4e", "what": "Sources of sustainable competitive advantage in a fast-changing industry. The section teaches only financial ratios." }
+    ],
+    "flags": [
+      "The section has one chapter (financial ratios), but its banks also test the acid test ratio, labour turnover, HR strategies, window dressing, competitive advantage and Bowman's clock: 5 of 10 quiz items and 3 of 5 practice items. If the IAL spec for this topic covers these (as whoever wrote the bank assumed), the gap is in the teaching text, not the items. Check the spec before deleting anything.",
+      "Terminology: the chapter teaches gross and operating profit margin but never the 'profit for the year' margin, which p2 (pinned) and p4 ask about. q5 says 'net profit margin', a legacy term that current Edexcel/IAL statements do not use. p2 is pinned because the figure is given and the reading it needs (a gap between gross margin and the bottom-line margin means costs below gross profit are too high) is taught through operating margin. p4 is left unpinned because it asks the student to calculate a margin the chapter never defines. Its data only support operating profit ($80,000 / $800,000 = 10%), since no interest or tax is given, so the item itself is loosely worded.",
+      "q9's keyed answer is contestable in its wording: borrowing at 10% to earn 8% lowers the return to shareholders, but 'destroying value' is loose. Because the chapter never states the ROCE-versus-interest rule, the item is listed as untaught.",
+      "Other quiz items that also qualify for this chapter: q0 (gross margin 40%), q2 (current ratio 1.6:1) and q3 (gearing 60%). All three are correct calculations from the chapter's formulas. q1 was chosen because the chapter calls ROCE the most important ratio. q5 is a near miss only because of the 'net profit margin' term."
+    ]
+  },
+  "business-growth": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Growth Methods",
+        "quiz": {
+          "index": 1,
+          "id": "business-growth:quiz:9214d35e",
+          "evidence": "**Backward vertical integration** acquires a supplier, securing inputs and reducing costs.",
+          "why": "The student has to recognise the food processor as the supermarket's supplier and apply the chapter's definition. That is a reasoning step on one of the four integration types the takeaway says to know."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 1,
+          "id": "business-growth:practice:a7da89e6",
+          "evidence": "The attraction is speed: the acquiring firm gains customers, capacity, brands, and market share immediately. [...] Culture clash between the two workforces, duplication of roles leading to redundancies, management distraction during integration, and the premium paid often exceeds the value created.",
+          "why": "A 6-mark acquisition analysis that can be answered from the chapter's benefits of external growth (customers gained at once, such as the 50,000 subscribers) and its risks (culture clash, a premium above the value of a loss-making target)."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Growth Decisions",
+        "quiz": null,
+        "quizNone": "No quiz item tests why firms stay small (niche markets, flexibility, personal service, the owner's choice). Nearest misses: q2 (causes of diseconomies of scale) fails because the chapter names diseconomies of scale once, in its misconception, but never teaches their causes and never mentions bulk-buying. q0 and q8 (internal and external economies of scale) fail because economies of scale are never defined anywhere in the section. q4 (organic growth is lower risk) is taught in chapter 1 and is not about this chapter.",
+        "practice": null,
+        "practiceNone": "No practice item is about staying small. Nearest misses: p4 (barriers to entry) fails because the chapter says niche markets are 'too small to attract large firms', which is about market size, and it never names a barrier to entry. p3 (organic vs inorganic growth) needs only chapter 1 and does not ask whether to grow. p0 (economies of scale) is never taught."
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 0, "id": "business-growth:quiz:8219b8a0", "what": "Internal economies of scale (bulk-buying). Economies of scale are named in passing but never defined or classified." },
+      { "kind": "quiz", "index": 2, "id": "business-growth:quiz:dc41d442", "what": "The causes of diseconomies of scale (communication, coordination, motivation) as opposed to bulk-buying. Never taught." },
+      { "kind": "quiz", "index": 3, "id": "business-growth:quiz:91b82ca9", "what": "Overtrading. Never mentioned." },
+      { "kind": "quiz", "index": 7, "id": "business-growth:quiz:b71b74a7", "what": "Preventing overtrading through cash-flow forecasting. Never mentioned." },
+      { "kind": "quiz", "index": 8, "id": "business-growth:quiz:35a05f22", "what": "External economies of scale. Never taught." },
+      { "kind": "practice", "index": 0, "id": "business-growth:practice:ada57e33", "what": "The definition of economies of scale, with examples. Never taught." },
+      { "kind": "practice", "index": 2, "id": "business-growth:practice:f80c553b", "what": "Ansoff's Matrix. It is taught in the business-objectives-strategy section, not this one." },
+      { "kind": "practice", "index": 4, "id": "business-growth:practice:8a97264a", "what": "Barriers to entry. Never taught." }
+    ],
+    "flags": [
+      "Chapter 2 (Growth Decisions, on staying small) has no matching item in either bank, so both of its check-ins are empty.",
+      "Six items test economies of scale (q0, q8, p0), diseconomies of scale (q2) or overtrading (q3, q7), and none of these is taught: chapters 1 and 2 only name economies or diseconomies of scale in passing. If these topics are in the IAL spec for business growth, the gap is in the teaching text.",
+      "p3 (organic vs inorganic growth, 20 marks) fits chapter 1's central idea well, but it uses 'inorganic growth', a term the chapter never uses (the chapter says 'external growth'). q9 uses the same term in a distractor. p3 is left unpinned in favour of p1. It becomes pinnable on chapter 1 if the chapter adds the synonym, or if a reviewer accepts that students will infer it.",
+      "q6 (Disney acquiring 21st Century Fox = horizontal) relies on knowing from outside the chapter that Fox was a film/TV studio. The concept is taught but the case fact is not. Not pinned.",
+      "Other quiz items that also qualify for chapter 1: q4 (organic growth is lower risk), q5 (culture clash) and q9 (20 new stores = organic). q1 was preferred as the item that needs the most reasoning."
+    ]
+  },
+  "business-objectives-strategy": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Corporate Objectives & Strategy",
+        "quiz": {
+          "index": 0,
+          "id": "business-objectives-strategy:quiz:a4319a97",
+          "evidence": "Objectives translate the mission into concrete goals. **SMART objectives** are Specific, Measurable, Achievable, Relevant, and Time-bound.",
+          "why": "Tests the chapter's first key idea: the mission sets direction, and objectives are the specific, measurable level. q4 (a SWOT external factor) qualifies equally, but q0 means the check-in covers both subsections, since the practice pin is on SWOT."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 1,
+          "id": "business-objectives-strategy:practice:c9b4a749",
+          "evidence": "The real value of SWOT is in the cross-analysis. A strength matched to an opportunity suggests an aggressive growth strategy. A weakness exposed to a threat signals a defensive priority.",
+          "why": "NovaTech's skilled workforce and service reputation (strengths) set against price competition from larger firms (a threat) is exactly the matching the chapter teaches, applied to a case."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Strategic Direction",
+        "quiz": {
+          "index": 1,
+          "id": "business-objectives-strategy:quiz:48cabb24",
+          "evidence": "**Market development** (existing product, new market) takes a proven product to new geographies or demographics.",
+          "why": "Classifying a scenario with Ansoff's definitions is a reasoning item on the chapter's first framework. It is preferred over q2, which only asks the student to recall Porter's 'stuck in the middle' label."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 3,
+          "id": "business-objectives-strategy:practice:20fa0f6a",
+          "evidence": "Porter warned that firms failing to commit to one strategy get **stuck in the middle** — too expensive for cost-conscious buyers, too generic for quality-seeking ones. [...] **Market development** (existing product, new market) takes a proven product to new geographies or demographics.",
+          "why": "This 20-mark evaluation needs chapter 1's mission and objectives, plus this chapter's Ansoff options (international expansion as market development, the domestic focus as market penetration) and Porter's warning against failing to choose, so it sits on the last chapter it needs. Marks rise from 6 to 20."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 3, "id": "business-objectives-strategy:quiz:80b55bdd", "what": "The BCG Matrix (cash cow). Never taught." },
+      { "kind": "quiz", "index": 5, "id": "business-objectives-strategy:quiz:4d66f915", "what": "Classifying factors with PESTLE. Never taught." },
+      { "kind": "quiz", "index": 6, "id": "business-objectives-strategy:quiz:379fec86", "what": "Porter's Five Forces (brand loyalty and the threat of new entrants). Never taught; only Porter's generic strategies are." },
+      { "kind": "quiz", "index": 7, "id": "business-objectives-strategy:quiz:70b89bf7", "what": "Strategic vs tactical vs operational decisions. Never taught." },
+      { "kind": "quiz", "index": 8, "id": "business-objectives-strategy:quiz:32655ceb", "what": "Criticisms of mission statements (vague, disconnected from behaviour). The chapter presents missions positively and only hints at 'vague dreaming' when there are no objectives." },
+      { "kind": "quiz", "index": 9, "id": "business-objectives-strategy:quiz:162889b5", "what": "What Porter's Five Forces is used for. Never taught." },
+      { "kind": "practice", "index": 2, "id": "business-objectives-strategy:practice:9eb7ba32", "what": "Conflict between short-term and long-term objectives. Never taught." },
+      { "kind": "practice", "index": 4, "id": "business-objectives-strategy:practice:09ddbcde", "what": "Reasons a business changes its corporate objectives. Never taught." }
+    ],
+    "flags": [
+      "q5 is untaught, and its key (Legal) is also contestable: a rise in the minimum wage is set by government policy and is often classed as Political or Economic as well as Legal. 'National minimum wage' is also the name of the UK scheme; an international (IAL) item would say 'minimum wage'.",
+      "q6 is untaught. Its key (threat of new entrants) is the standard textbook answer, but brand loyalty also weakens buyer power and the threat of substitutes, so 'MOST' is arguable.",
+      "The bank tests PESTLE (q5), Porter's Five Forces (q6, q9), the BCG matrix (q3), strategic vs tactical decisions (q7), criticisms of mission statements (q8), short- vs long-term objectives (p2) and reasons for changing objectives (p4). None of these is taught. If any of them is in the IAL spec for this topic, the gap is in the teaching text.",
+      "Alternatives: q4 (SWOT external factor) and p0 (mission vs corporate objective, 4 marks) also qualify for chapter 1. q2 (stuck in the middle) qualifies for chapter 2 but only asks the student to recall a name."
+    ]
+  },
+  "decision-making-techniques": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Quantitative Techniques",
+        "quiz": {
+          "index": 6,
+          "id": "decision-making-techniques:quiz:d101b57b",
+          "evidence": "**Float** (or slack) is the time a non-critical activity can be delayed without affecting the project completion. Activities on the critical path have zero float. [...] Float = LFT - EST - duration",
+          "why": "A calculation (15 - 8 - 4 = 3) with the chapter's own float formula. q4 (EMV method) and q5 (critical path definition) also qualify but are recall items, and the practice pin already covers decision trees."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 2,
+          "id": "decision-making-techniques:practice:0434c043",
+          "evidence": "The **expected monetary value (EMV)** of a chance node is calculated by multiplying each outcome's payoff by its probability and summing the results. The **net gain** subtracts the initial cost of the decision from the EMV. [...] The key limitation is that probabilities are **estimates**, not facts.",
+          "why": "The student can work out both net gains (resort: 5.6m - 4m = 1.6m; renovation: 3m - 1.5m = 1.5m) and judge the tool using the chapter's limitations (estimated probabilities, the assumption of risk neutrality)."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Sales Forecasting",
+        "quiz": {
+          "index": 0,
+          "id": "decision-making-techniques:quiz:cde89152",
+          "evidence": "A **moving average** calculates the mean of a set number of consecutive data points, then moves forward one period and recalculates.",
+          "why": "The only item on this chapter: the mean of 40,000, 50,000 and 60,000 is 50,000, an application of the chapter's definition."
+        },
+        "quizNone": null,
+        "practice": null,
+        "practiceNone": "No practice item tests moving averages, extrapolation, correlation or the limits of forecasting. Nearest misses: p4 (sensitivity analysis) is never taught in the section. p2 (decision tree) belongs to chapter 1 and is pinned there. p0, p1 and p3 (NPV, payback, choosing an appraisal method) are never taught."
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 1, "id": "decision-making-techniques:quiz:3542b01c", "what": "Calculating a payback period. Investment appraisal is never taught." },
+      { "kind": "quiz", "index": 2, "id": "decision-making-techniques:quiz:2fe633eb", "what": "Calculating ARR. Never taught." },
+      { "kind": "quiz", "index": 3, "id": "decision-making-techniques:quiz:fb473d08", "what": "The NPV decision rule. Never taught." },
+      { "kind": "quiz", "index": 7, "id": "decision-making-techniques:quiz:b5977ab6", "what": "Contribution per unit. Never taught." },
+      { "kind": "quiz", "index": 8, "id": "decision-making-techniques:quiz:d35ddac6", "what": "Break-even output. Never taught." },
+      { "kind": "quiz", "index": 9, "id": "decision-making-techniques:quiz:3d708494", "what": "The time value of money and NPV. Never taught." },
+      { "kind": "practice", "index": 0, "id": "decision-making-techniques:practice:dd657aab", "what": "The definition of net present value. Never taught." },
+      { "kind": "practice", "index": 1, "id": "decision-making-techniques:practice:5075f3f8", "what": "The limitations of the payback period. Never taught." },
+      { "kind": "practice", "index": 3, "id": "decision-making-techniques:practice:fea2b9e6", "what": "Choosing an investment appraisal method (payback, ARR, NPV, cost of capital). Never taught." },
+      { "kind": "practice", "index": 4, "id": "decision-making-techniques:practice:ef16797f", "what": "Using sensitivity analysis alongside investment appraisal. Never taught." }
+    ],
+    "flags": [
+      "10 of the 15 items test investment appraisal (payback, ARR, NPV, sensitivity analysis) or contribution and break-even, and neither chapter teaches any of it. If investment appraisal is in the IAL spec for decision-making techniques, the section is missing a chapter. Contribution and break-even look like items from another unit.",
+      "Chapter 2's practice check-in is empty because no practice item is about sales forecasting.",
+      "q2's keyed answer (ARR 10%: an average annual profit of 20,000 / 200,000) is arithmetically correct, but the topic is untaught."
+    ]
+  },
+  "global-industries-mncs": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "MNC Impact & Ethics",
+        "quiz": {
+          "index": 1,
+          "id": "global-industries-mncs:quiz:6d3f2952",
+          "evidence": "**Profit repatriation**: MNCs send profits back to shareholders in the home country rather than reinvesting locally.",
+          "why": "Profit repatriation is the first negative impact the chapter teaches. The keyed answer restates its definition, and the first distractor is the opposite the chapter names."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 1,
+          "id": "global-industries-mncs:practice:7368bf96",
+          "evidence": "**Labour exploitation**: MNCs may exploit low wages, weak labour laws, and poor enforcement in developing countries. Long hours, unsafe conditions, child labour in supply chains, and suppression of trade unions are persistent concerns.",
+          "why": "Suppliers in Bangladesh and Cambodia paying below the living wage and requiring 60+ hour weeks match the chapter's labour-exploitation concern, and the chapter's misconception supplies the counterpoint (CSR, governance) an evaluative answer needs."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Transfer Pricing & FDI Stakeholders",
+        "quiz": {
+          "index": 4,
+          "id": "global-industries-mncs:quiz:41526fc3",
+          "evidence": "**Transfer pricing** is the price charged between subsidiaries of the same MNC for goods, services, or intellectual property. When these prices deviate from **arm's length** (what unrelated parties would charge), the MNC can artificially shift profits to subsidiaries in low-tax jurisdictions.",
+          "why": "Transfer pricing is this chapter's headline topic and its first key idea. The keyed answer is the mechanism the chapter defines, and the distractors confuse it with retail pricing."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 2,
+          "id": "global-industries-mncs:practice:60f7d479",
+          "evidence": "When these prices deviate from **arm's length** (what unrelated parties would charge), the MNC can artificially shift profits to subsidiaries in low-tax jurisdictions. [...] Developing countries are disproportionately affected because they lack the resources to audit complex MNC accounts and challenge aggressive transfer pricing arrangements.",
+          "why": "A 10-mark item on transfer pricing's impact on (African) host countries, which the chapter teaches directly, including lost revenue, the weaker audit capacity of developing countries and the limits of BEPS. Marks rise from 6 to 10."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 2, "id": "global-industries-mncs:quiz:6d0cae19", "what": "The Rana Plaza disaster. No chapter mentions it; working conditions are taught but the case is not." },
+      { "kind": "quiz", "index": 3, "id": "global-industries-mncs:quiz:079b986c", "what": "The definition of greenwashing. Never taught." },
+      { "kind": "quiz", "index": 5, "id": "global-industries-mncs:quiz:7670ae12", "what": "Methods of controlling MNCs (pressure group activism). Never taught." },
+      { "kind": "quiz", "index": 6, "id": "global-industries-mncs:quiz:7671367a", "what": "Self-regulation by MNCs and the criticism of it. Never taught." },
+      { "kind": "quiz", "index": 8, "id": "global-industries-mncs:quiz:43f9bd2e", "what": "Greenwashing applied to a scenario. Never taught." },
+      { "kind": "quiz", "index": 9, "id": "global-industries-mncs:quiz:02c7a336", "what": "The limits of consumer boycotts as a control on MNCs. Never taught." }
+    ],
+    "flags": [
+      "Five items test controlling MNCs (pressure groups q5, self-regulation q6, consumer boycotts q9) or greenwashing (q3, q8), and none of this is taught. q2 depends on the Rana Plaza case, which no chapter mentions. If controlling MNCs is in the IAL spec for this topic, the gap is in the teaching text.",
+      "p0 asks for a definition of an MNC, but neither chapter gives one: chapter 1 says MNCs 'invest in host countries through FDI' and chapter 2 says the home country is 'where the MNC is headquartered', so the student has to infer the definition mark. The benefits half of p0 is fully taught. p4 (reasons for locating in a developing country) is reachable from the chapter's points on low wages, 'looser environmental regulations ... attract MNCs' and 'cheaper overseas production', but the chapter presents these as harms, not location motives.",
+      "Alternatives for chapter 2: q0 (crowding out local firms) also qualifies, through 'Local firms face increased competition from a well-resourced MNC', and would cover the stakeholder subsection instead of doubling up on transfer pricing with p2. q7 (OECD BEPS) qualifies but only asks the student to recall a name. p3 (20-mark MNC evaluation) is creditable after chapter 2 but is left unpinned in favour of p2, which is squarely about chapter 2.",
+      "Content point, not an item issue: chapter 1 uses 'resource curse' for MNCs extracting resources with little local benefit. The term usually means something wider: dependence on natural resources harming growth and governance."
+    ]
+  }
+}

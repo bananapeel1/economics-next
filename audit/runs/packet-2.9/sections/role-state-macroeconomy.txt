@@ -1,0 +1,129 @@
+SECTION role-state-macroeconomy — The Role of the State in the Macroeconomy
+
+########## CHAPTER 1 (block 0, id role-state-macroeconomy:block:d1cecc10): Market Failure and the State
+
+--- Public Goods
+A **public good** has two defining characteristics: **non-excludability** (once provided, no one can be prevented from using it) and **non-rivalry** (one person's consumption does not reduce availability for others). These properties create the **free rider problem** — rational individuals will not pay voluntarily because they can benefit whether they pay or not.
+Because no one can be excluded, a private firm cannot charge a price — there is no revenue mechanism. This is **complete market failure**: the good has clear social value but zero private provision. The state must therefore provide public goods and fund them through taxation, compelling all citizens to contribute.
+It is important to distinguish public goods from **goods with external benefits** (which are excludable but under-consumed) and from goods that are simply provided by the government. Many state-provided goods — housing, education — are not public goods because they are both excludable and rivalrous. The test is always the two properties, not who provides the good.
+FLOW: Good is non-excludable and non-rivalrous -> Free rider problem emerges — no one pays voluntarily -> Private firms cannot generate revenue -> Complete market failure — zero private provision => State must provide and fund through taxation
+KEY IDEA: Public goods are non-excludable and non-rivalrous, so the free rider problem causes complete market failure — no private firm will supply them, making state provision essential.
+MISCONCEPTION: Students confuse public goods with goods provided by the public sector. Wrong — the NHS, state schools, and council housing are all excludable and rivalrous, so they are not public goods. Instead write: a public good is defined by non-excludability and non-rivalry, not by who provides it — many government-provided goods do not meet these criteria.
+EXAMPLE: National defence is the textbook public good. Once an army protects a country, every citizen benefits regardless of whether they pay taxes (non-excludable), and one person being protected does not reduce protection for others (non-rivalrous). No private firm would supply it because free riders would never pay.
+
+--- External Benefits and Redistribution
+**Goods with external benefits** are goods whose consumption benefits people other than the buyer: a vaccination protects the neighbours, an education raises the productivity of the graduate's colleagues. People **under-consume** them because the buyer weighs only their own benefit and ignores the **external benefit** to third parties; poor information can widen the gap by hiding even the private benefit. The market quantity sits below the social optimum.
+The state corrects this through several mechanisms: **subsidies** lower the price to increase consumption, **free provision** removes the price barrier entirely, and **regulation** can mandate consumption (e.g. compulsory education until age 18). Each intervention aims to move consumption from the privately optimal level to the socially optimal level.
+The main criticism is **paternalism** — the state is overriding individual preferences, assuming it knows better than citizens what is good for them. Libertarians argue that adults should be free to make their own choices, even poor ones. The counter-argument is that the external benefit is real whatever the individual decides, and that where information is also poor the poorest suffer most, because they lack both the information and the resources to act on it.
+FLOW: Buyers count only their own benefit and ignore the benefit to others -> Consumption falls below the socially optimal level -> State subsidises, provides free, or mandates consumption -> Consumption rises towards the social optimum => Improved welfare outcomes but raises paternalism concerns
+KEY IDEA: Goods with external benefits are under-consumed because the buyer ignores the benefit to others — the state intervenes through subsidies, free provision, or regulation.
+MISCONCEPTION: Students say goods with external benefits are the same as public goods. Wrong — healthcare and education are excludable and rival (a hospital bed used by one patient cannot be used by another), so they are private goods; they are under-consumed because the buyer counts only their own benefit, not the benefit to everyone else. Instead write: goods with external benefits suffer from under-consumption, not complete market failure — the market provides them, just not enough of them.
+EXAMPLE: **Thailand's Universal Coverage Scheme** provides healthcare at the point of use for a nominal fee, funded from general taxation. Without it, individuals would under-consume healthcare (especially preventive care), because the benefit to others of a treated, vaccinated population never enters a private decision — and many could not pay in any case. Free provision ensures universal access and reduces the long-term social costs of untreated illness.
+TAKEAWAY: ["Public goods: non-excludable + non-rivalrous = free rider problem = complete market failure.","External benefits: buyers ignore the gain to others, so too little is bought. Subsidise or provide.","Do not confuse public goods (zero market provision) with goods with external benefits (insufficient market provision).","Paternalism is the key criticism of intervention of this kind — the state overrides individual choice."]
+
+########## CHAPTER 2 (block 1, id role-state-macroeconomy:block:f5a30e42): Macroeconomic Policy
+
+--- Fiscal, Monetary and Supply-Side Policies
+**Fiscal policy** involves changes in government spending (G) and taxation (T) to influence aggregate demand. Expansionary fiscal policy (raising G or cutting T) shifts AD right, stimulating output and employment but risking demand-pull inflation and a rising budget deficit. Contractionary fiscal policy does the reverse. The **fiscal multiplier** means the final change in GDP exceeds the initial injection — but its size is uncertain and depends on leakages.
+**Monetary policy** is conducted by the central bank, primarily through setting the **base interest rate**. Lower rates reduce the cost of borrowing, stimulate consumption and investment, and shift AD right. Higher rates cool demand and reduce inflationary pressure. The key advantage is independence from political cycles; the key limitation is **time lags** — changes take 18-24 months to fully affect the economy, and rates cannot fall below zero (the zero lower bound).
+**Supply-side policies** aim to shift LRAS right by improving the productive capacity of the economy. Market-based approaches include deregulation, privatisation, and trade liberalisation. Interventionist approaches include education and training investment, infrastructure spending, and R&D subsidies. Supply-side policies address the root causes of slow growth but take years to show results and may worsen inequality in the short run.
+FLOW: Economy faces rising inflation -> Central bank raises the base interest rate -> Borrowing becomes more expensive, saving more attractive -> Consumption and investment fall, AD shifts left => Inflation brought under control — but with a time lag of 18-24 months and potential output loss
+KEY IDEA: Fiscal policy uses government spending and taxation to shift AD, monetary policy uses interest rates to target inflation, and supply-side policies shift LRAS — each has distinct time lags and trade-offs.
+MISCONCEPTION: Students treat fiscal and monetary policy as interchangeable demand-side tools. Wrong — they work through different transmission mechanisms and have different strengths. Instead write: fiscal policy works through government spending and taxation with political control, while monetary policy works through interest rates with central bank independence — they complement each other but serve different purposes.
+EXAMPLE: The Bank of England raised its base rate from 0.1% in December 2021 to 5.25% by August 2023 — the sharpest tightening cycle in decades — to bring CPI inflation down from a peak of 11.1%. This demonstrated both the power of monetary policy to control inflation and its painful side effects on mortgage holders and economic growth.
+
+--- Income Redistribution Policies
+**Progressive taxation** takes a higher proportion of income from higher earners — the UK's 20%/40%/45% income tax bands are a clear example. Combined with **transfer payments** (Universal Credit, pensions, child benefit), the tax-benefit system compresses the post-tax income distribution. **In-kind provision** — free education, healthcare, social housing — provides real benefits that disproportionately help the poorest, bypassing the problem of cash transfers being spent on non-essentials.
+The **equity-efficiency trade-off** is the central dilemma. Higher tax rates on the wealthy fund redistribution but may reduce incentives to work, invest, and innovate. The **Laffer curve** formalises this: beyond a certain tax rate, total revenue actually falls because economic activity declines. The optimal rate is debated but is clearly above 0% and below 100%.
+**Poverty traps** arise when benefit withdrawal rates create very high **effective marginal tax rates**. If earning an extra pound causes 80p of benefits to be withdrawn, the incentive to work is minimal. **Universal Basic Income (UBI)** is proposed as a solution — a flat payment to all citizens regardless of income, eliminating withdrawal rates entirely. Critics argue UBI is prohibitively expensive and reduces work incentives; supporters cite elimination of poverty traps and administrative simplicity.
+FLOW: Government increases transfer payments to reduce poverty -> Benefits are withdrawn as income rises -> Effective marginal tax rates exceed 70-80% -> Recipients face minimal incentive to increase earnings => Poverty trap — the system designed to help the poor can lock them in poverty
+KEY IDEA: Progressive taxation, transfer payments, and in-kind provision redistribute income, but face the equity-efficiency trade-off, the Laffer curve constraint, poverty traps, and the UBI debate.
+MISCONCEPTION: Students assume UBI would solve poverty without trade-offs. Wrong — a meaningful UBI (e.g. $1,000/month to every adult) would cost trillions and may still reduce work incentives for some. Instead write: UBI eliminates poverty traps and simplifies administration, but its affordability and impact on labour supply remain deeply contested — pilot evidence is mixed.
+EXAMPLE: UK Universal Credit was designed to replace six separate benefits with a single payment, using a consistent 55% taper rate to reduce poverty traps. In practice, implementation failures — the five-week wait, IT problems, and sanctions — meant many claimants faced hardship, demonstrating how policy design and implementation can diverge.
+TAKEAWAY: ["Fiscal policy shifts AD through G and T; monetary policy uses interest rates; supply-side shifts LRAS.","Each policy tool has different time lags, transmission mechanisms, and trade-offs.","Redistribution faces the equity-efficiency trade-off, Laffer curve limits, and poverty trap risks.","UBI is a proposed solution to poverty traps but its cost and labour supply effects are debated."]
+
+########## QUIZ BANK (order as stored)
+q0 role-state-macroeconomy:quiz:1a24c313
+  Q: Which of the following is classified as a transfer payment?
+    Paying a nurse's salary in an NHS hospital
+    Building a new motorway
+  * State pension payments to retired citizens
+    Purchasing textbooks for state schools
+q1 role-state-macroeconomy:quiz:e358b5a1
+  Q: According to the Laffer Curve, what happens if a government increases its tax rate when it is already above the revenue-maximising rate (t*)?
+    Tax revenue increases proportionally
+    Tax revenue remains unchanged
+  * Tax revenue decreases as disincentives, avoidance, and evasion increase
+    Tax revenue doubles due to the higher rate
+q2 role-state-macroeconomy:quiz:0c66e5ef
+  Q: What is the key distinction between a fiscal deficit and the national debt?
+    The deficit is measured in real terms; the debt is measured in nominal terms
+  * The deficit is a flow over one year; the debt is a stock of accumulated borrowing
+    The deficit includes transfer payments; the debt does not
+    The deficit always increases; the debt can only decrease
+q3 role-state-macroeconomy:quiz:e9cd5cbb
+  Q: Automatic stabilisers help moderate economic fluctuations because:
+    The central bank automatically adjusts interest rates in response to GDP data
+  * Progressive taxation and welfare benefits automatically reduce the severity of booms and recessions without policy action
+    The government automatically passes new spending legislation during recessions
+    Exchange rates automatically adjust to offset changes in aggregate demand
+q4 role-state-macroeconomy:quiz:3ff51d3f
+  Q: Crowding out is most likely to occur when:
+    The economy has significant spare capacity and unemployment is high
+    The government runs a budget surplus
+  * The economy is near full capacity and government borrowing increases demand for loanable funds
+    Interest rates are at the zero lower bound
+q5 role-state-macroeconomy:quiz:448aeb48
+  Q: The structural deficit is defined as:
+    The deficit caused by a recession reducing tax revenues
+  * The deficit that would exist even if the economy were at full employment
+    The total national debt divided by GDP
+    The deficit arising from automatic stabilisers
+q6 role-state-macroeconomy:quiz:f86c8392
+  Q: Which statement best describes how TNCs use transfer pricing to reduce their tax liability?
+    They transfer their headquarters to tax havens
+  * They set artificially high or low prices on transactions between their own subsidiaries to shift profits to low-tax jurisdictions
+    They refuse to pay any taxes in countries where they operate
+    They transfer all employees to countries with no income tax
+q7 role-state-macroeconomy:quiz:976749b8
+  Q: Which of the following was NOT a key policy response to the 2008 financial crisis?
+    Massive fiscal stimulus packages to boost aggregate demand
+    Interest rates cut to near-zero by central banks
+    Quantitative easing - central banks purchasing government bonds
+  * Significant increases in income tax rates to rapidly reduce the fiscal deficit
+q8 role-state-macroeconomy:quiz:827fbcd2
+  Q: Which is a key disadvantage of using indirect taxes (such as VAT) as a source of government revenue?
+    They are impossible to collect efficiently
+  * They tend to be regressive, taking a larger proportion of income from lower earners
+    They cannot be used to correct market failure
+    They have no effect on the price level
+q9 role-state-macroeconomy:quiz:071e15ac
+  Q: A government faces inaccurate economic data, time lags, and external shocks. Which problem does this combination most directly create for policymakers?
+  * Policies may become pro-cyclical, amplifying rather than smoothing economic fluctuations
+    The government will always run a surplus
+    Monetary policy will always be more effective than fiscal policy
+    Supply-side policies will have no long-run effect
+q10 role-state-macroeconomy:quiz:0b0d6852
+  Q: When demand for a good is highly price inelastic, the imposition of an indirect tax will result in:
+    Producers bearing most of the tax burden through lower prices received
+  * Consumers bearing most of the tax burden through higher prices paid
+    The tax burden being shared equally between consumers and producers
+    No change in the market price or quantity
+q11 role-state-macroeconomy:quiz:eb1b45a5
+  Q: Which of the following best explains why the OECD agreed a global minimum corporation tax rate of 15%?
+    To increase tax rates in developing countries above 15%
+  * To reduce tax competition between countries and limit profit shifting by TNCs to tax havens
+    To eliminate all corporation tax and replace it with VAT
+    To force all countries to have identical tax systems
+
+########## PRACTICE BANK (order as stored)
+p0 role-state-macroeconomy:practice:90c3f4d2 (4 marks)
+  Define the term 'fiscal policy'. (4 marks)
+p1 role-state-macroeconomy:practice:901afec0 (6 marks)
+  Explain two reasons why a government might choose to use progressive taxation. (6 marks)
+p2 role-state-macroeconomy:practice:1a3fdb45 (10 marks)
+  Assess the validity of the Laffer curve as a basis for government tax policy. (10 marks)
+p3 role-state-macroeconomy:practice:1d5fee2a (20 marks)
+  Evaluate the view that controlling the activities of transnational corporations is essential for developing countries to achieve sustainable economic growth. (20 marks)
+p4 role-state-macroeconomy:practice:caa9fa66 (4 marks)
+  Outline two differences between a fiscal deficit and the national debt. (4 marks)

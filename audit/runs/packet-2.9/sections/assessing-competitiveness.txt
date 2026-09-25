@@ -1,0 +1,96 @@
+SECTION assessing-competitiveness — Assessing Competitiveness
+
+########## CHAPTER 1 (block 0, id assessing-competitiveness:block:12bef43c): Financial Ratios
+
+--- Profitability Ratios
+**Gross profit margin** = (gross profit / revenue) x 100. It shows how much of every pound of revenue is left after direct production costs (cost of sales). A rising gross margin suggests the firm is managing production costs well or gaining pricing power.
+**Operating profit margin** = (operating profit / revenue) x 100. This deducts all operating expenses (rent, wages, marketing) from gross profit, showing the profit from core business operations before interest and tax. It is a better measure of management efficiency than gross margin because it includes overhead control.
+**ROCE (Return on Capital Employed)** = (operating profit / capital employed) x 100. Capital employed = total equity + non-current liabilities. ROCE measures how effectively the firm uses its long-term finance to generate profit. It is the single most important ratio for investors comparing alternative investments.
+FLOW: Calculate profitability ratios -> Compare year-on-year for trends -> Benchmark against competitors and industry => Context reveals whether performance is genuinely strong or weak
+KEY IDEA: Profitability ratios measure how effectively a firm turns revenue into profit — but a number in isolation means nothing; it must be compared year-on-year, against competitors, or against the industry average.
+MISCONCEPTION: Students calculate a ratio and declare it 'good' or 'bad' with no comparison. Wrong — a 10% operating margin is excellent in grocery retail (Tesco) but poor in luxury goods (LVMH). Instead write: always compare ratios in context — against the firm's own history, its competitors, and the industry average.
+EXAMPLE: Apple consistently achieves a gross profit margin of around 45%, compared to Samsung's roughly 35%. This reflects Apple's pricing power — its brand allows premium prices that Samsung's hardware-focused model cannot match, despite Samsung selling more units globally.
+
+--- Liquidity and Gearing Ratios
+**Current ratio** = current assets / current liabilities. It measures whether the firm can meet its short-term debts. A ratio of 1.5-2.0 is generally healthy — below 1.0 signals potential cash flow crisis, while much above 2.0 suggests idle resources that could be invested.
+**Gearing** = (non-current liabilities / capital employed) x 100. It shows what proportion of long-term finance comes from debt rather than equity. High gearing (above 50%) means the firm is heavily reliant on borrowing, which amplifies both profits and losses — a double-edged sword.
+High gearing increases **financial risk** because interest must be paid regardless of profit. In good times, debt magnifies returns to shareholders (because they keep all profit after fixed interest payments). In bad times, the fixed interest burden can push the firm towards insolvency. This is the fundamental trade-off of leverage.
+FLOW: Firm borrows heavily → gearing rises -> Interest payments are fixed obligations -> Profits fall in a downturn => High gearing amplifies losses — the firm may be unable to service its debt
+KEY IDEA: A profitable firm can still collapse if it runs out of cash — liquidity ratios check short-term survival, while gearing measures how dependent the firm is on borrowed money and the financial risk that creates.
+MISCONCEPTION: Students say high gearing is always bad. Wrong — in stable industries with predictable cash flows (utilities, supermarkets), high gearing is manageable because revenue is reliable. Instead write: whether high gearing is risky depends on the stability of the firm's revenue — predictable cash flows can safely support more debt.
+EXAMPLE: Tesla's ROCE improved dramatically from negative figures in 2019 to over 25% by 2023 as production scaled up and the firm turned consistently profitable. Investors tracked this ratio as proof that Tesla was transitioning from a cash-burning start-up to an efficient manufacturer.
+TAKEAWAY: ["Gross margin, operating margin, and ROCE measure profitability — ROCE is the most important for investors.","Current ratio checks short-term survival; gearing measures financial risk from borrowing.","Ratios in isolation are meaningless — always compare year-on-year, vs competitors, and vs industry averages."]
+
+########## QUIZ BANK (order as stored)
+q0 assessing-competitiveness:quiz:736d0dbb
+  Q: A firm has revenue of £500,000 and gross profit of £200,000. Its gross profit margin is:
+    20%
+    25%
+  * 40%
+    60%
+q1 assessing-competitiveness:quiz:1b2bdcbb
+  Q: A firm has operating profit of £60,000 and capital employed of £400,000. Its ROCE is:
+    6%
+    10%
+  * 15%
+    25%
+q2 assessing-competitiveness:quiz:ee18b428
+  Q: A firm has current assets of £80,000 and current liabilities of £50,000. Its current ratio is:
+    0.63:1
+    1.00:1
+  * 1.60:1
+    2.50:1
+q3 assessing-competitiveness:quiz:6c8068cc
+  Q: A firm has non-current liabilities of £300,000 and capital employed of £500,000. Its gearing ratio is:
+    30%
+    40%
+    50%
+  * 60%
+q4 assessing-competitiveness:quiz:b38c2eab
+  Q: Which ratio EXCLUDES inventory from the calculation?
+    Current ratio
+    Gross profit margin
+  * Acid test ratio
+    Gearing ratio
+q5 assessing-competitiveness:quiz:b3467220
+  Q: A firm's high gross profit margin but low net profit margin suggests:
+    Low cost of sales
+  * High overhead costs relative to gross profit
+    Efficient inventory management
+    Strong revenue growth
+q6 assessing-competitiveness:quiz:815a4c46
+  Q: Labour turnover is calculated as:
+    Output ÷ Number of employees
+  * (Leavers ÷ Average staff) × 100%
+    (Days absent ÷ Total working days) × 100%
+    Revenue per employee
+q7 assessing-competitiveness:quiz:088917a5
+  Q: Which HR strategy involves giving employees greater authority over their work?
+    Performance-related pay
+    Employee share ownership
+  * Empowerment
+    Zero-hours contracts
+q8 assessing-competitiveness:quiz:0c40ebd1
+  Q: Window dressing in accounting refers to:
+    Decorating the business premises
+  * Manipulating financial figures to present a better picture
+    Using different accounting standards
+    Increasing window display spending
+q9 assessing-competitiveness:quiz:37077ef7
+  Q: If a firm's ROCE is 8% and its cost of borrowing is 10%, this means:
+    The firm is generating excellent returns
+    Debt finance is adding value to the firm
+  * The firm is destroying value by using debt finance
+    The firm should increase its gearing
+
+########## PRACTICE BANK (order as stored)
+p0 assessing-competitiveness:practice:88178688 (4 marks)
+  Define the term 'competitive advantage' and give one example of how a business might achieve it. (4 marks)
+p1 assessing-competitiveness:practice:53a6b7ba (6 marks)
+  SwiftDeliver is a parcel delivery company competing primarily on low prices, but losing customers to competitors offering faster, more reliable services at slightly higher prices. Analyse how Bowman's Strategic Clock could help SwiftDeliver reposition itself. (6 marks)
+p2 assessing-competitiveness:practice:0b1f6e16 (12 marks)
+  A regional bakery reports a gross profit margin of 42% (industry average 38%) and a profit-for-the-year margin of 3% (industry average 9%). Its current ratio has fallen from 1.8 to 0.9 in two years. Assess what these figures tell the directors about the business. (12 marks)
+p3 assessing-competitiveness:practice:ad075e4e (20 marks)
+  A leading smartphone manufacturer has seen its global market share decline from 25% to 15% over four years as Chinese competitors offer comparable technology at significantly lower prices. Evaluate the most important factors in maintaining a sustainable competitive advantage in a rapidly changing industry. (20 marks)
+p4 assessing-competitiveness:practice:48b12cde (4 marks)
+  A business has revenue of $800,000, cost of sales of $460,000 and operating expenses of $260,000. Calculate its gross profit margin and its profit-for-the-year margin. (4 marks)

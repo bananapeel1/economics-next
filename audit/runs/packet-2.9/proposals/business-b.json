@@ -1,0 +1,275 @@
+{
+  "global-marketing": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Standardisation vs Adaptation",
+        "quiz": {
+          "index": 9,
+          "id": "global-marketing:quiz:e5ac3b3d",
+          "evidence": "**Product**: adapt flavours, sizes, or features (McDonald's serves McArabia in the Middle East).",
+          "why": "Applies the chapter's central standardisation-versus-adaptation distinction to an unseen case (KitKat flavours), with 'Product standardisation across markets' as the opposite-pole distractor, so it tests reasoning rather than recall of the chapter's own McDonald's example (q0)."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 0,
+          "id": "global-marketing:practice:cbfe6f22",
+          "evidence": "**Glocalisation** — a portmanteau of globalisation and localisation — is the strategy of maintaining a **global brand and core product** while adapting specific elements to suit local markets.",
+          "why": "The definition is given verbatim in this chapter and the McDonald's menu example supplies the required example, so a 4-mark worked example sits naturally at chapter 1."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Cultural Influences on Global Marketing",
+        "quiz": {
+          "index": 5,
+          "id": "global-marketing:quiz:ec4aea66",
+          "evidence": "**Product**: ingredients, packaging colours (white = mourning in China, celebration in the West), sizes.",
+          "why": "The only bank item this chapter teaches: the keyed fact is stated in the cultural-audit paragraph; it is a recall detail rather than the Hofstede/cultural-audit core, but no other item qualifies (q7 turns on comparative advertising, which is never taught)."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 1,
+          "id": "global-marketing:practice:96e37a09",
+          "evidence": "But cultural influence goes far deeper: **religion** affects product acceptability (halal requirements, modesty in advertising), **values** shape what consumers aspire to, and **social norms** determine how products are consumed, gifted, and displayed.",
+          "why": "Analysing BellaVita's European-model, Italian-heritage campaign in the Middle East and East Asia draws directly on this chapter's religion/values/norms audit, Hofstede's dimensions and the cost of cultural mistakes, and marks rise 4 to 6."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 1, "id": "global-marketing:quiz:936d4aae", "what": "The ethnocentric/polycentric/geocentric (EPRG) marketing approaches; no chapter names or defines them." },
+      { "kind": "quiz", "index": 3, "id": "global-marketing:quiz:91349f90", "what": "Ansoff's matrix (market development); not taught in this section. It IS taught verbatim in global-markets-expansion chapter 2." },
+      { "kind": "quiz", "index": 4, "id": "global-marketing:quiz:ebcb658e", "what": "Porter's generic strategies (cost leadership / differentiation / focus); never mentioned." },
+      { "kind": "quiz", "index": 6, "id": "global-marketing:quiz:815f1ca3", "what": "Global niche markets and their margin characteristics; never mentioned." },
+      { "kind": "quiz", "index": 7, "id": "global-marketing:quiz:4ff1a7ae", "what": "Comparative advertising and its legal/cultural status in Asian markets; chapter 2 says cultural mistakes 'signal disrespect' but never discusses comparative advertising or advertising law." },
+      { "kind": "quiz", "index": 8, "id": "global-marketing:quiz:f4fb76b5", "what": "EPRG classification (ethnocentric) of a uniform worldwide strategy; the chapters only call this 'global standardisation'." },
+      { "kind": "practice", "index": 2, "id": "global-marketing:practice:d6b36e3a", "what": "Global niche strategy versus mass-market profitability; niche marketing is never taught." },
+      { "kind": "practice", "index": 4, "id": "global-marketing:practice:e2de8577", "what": "Applying Ansoff's matrix to international expansion; not taught in this section (taught in global-markets-expansion chapter 2, where it would qualify)." }
+    ],
+    "flags": [
+      "q2 (global-marketing:quiz:a0293d9e) keyed answer 'Price' is contestable against chapter 1, which lists pack size under Product ('**Product**: adapt flavours, sizes, or features'); single-use sachets are a size adaptation that serves a price point, so a student who learned the chapter would pick Product and be marked wrong. Not pinned.",
+      "q0 (glocalisation, McDonald's) also qualifies for chapter 1 but re-uses the chapter's own McDonald's example as a name recall; q9 preferred as the reasoning item.",
+      "q8 keys 'Ethnocentric' for a uniform worldwide strategy; that follows the Edexcel EPRG convention, but because EPRG is untaught a student could defensibly choose 'Geocentric' (global orientation). Fix by teaching EPRG or removing the item.",
+      "p3 (20 marks, cultural differences as 'the most significant barrier') is near-eligible for chapter 2, but a creditable evaluation needs non-cultural barriers that the section only touches in passing (price for local purchasing power, Place); p1 pinned instead as fully taught.",
+      "Bank looks mis-sectioned: q3 and p4 (Ansoff) belong with global-markets-expansion chapter 2, where Ansoff is taught; q1/q8 (EPRG), q4 (Porter), q6/p2 (global niche) have no home in this section at all.",
+      "Content note: chapter 2's KFC example sits under the Hofstede heading but calls China a 'high-context' culture, which is Hall's concept and is never defined.",
+      "No UK-GCE-specific facts found in this section's chapters or banks."
+    ]
+  },
+  "global-markets-expansion": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Market Entry Methods",
+        "quiz": {
+          "index": 4,
+          "id": "global-markets-expansion:quiz:ab2e4d03",
+          "evidence": "A **joint venture (JV)** is a separate business entity created by two or more firms, often one local and one foreign.",
+          "why": "Applying the chapter's JV definition to a Japanese/Chinese 50-50 case against franchise, off-shoring and takeover distractors; it is the only bank item any chapter of this section teaches."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 1,
+          "id": "global-markets-expansion:practice:b50244eb",
+          "evidence": "The foreign firm gains the local partner's market knowledge, distribution networks, and regulatory contacts. The local firm gains capital, technology, and global brand recognition. Profits and decisions are shared.",
+          "why": "The chapter gives both sides of the JV trade-off (local knowledge and networks versus shared profit and control), so a student can analyse the India JV creditably, and a 6-mark worked example lets marks rise to chapter 2's 10-marker."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Strategic Analysis for Global Expansion",
+        "quiz": null,
+        "quizNone": "No bank item tests Ansoff, PESTLE or Bartlett-Ghoshal, the three things this chapter teaches. Nearest misses: q0 (push factor) - the chapter names domestic saturation as a trigger ('Firm saturates domestic market -> Seeks growth via market development') but never defines push versus pull, and all four options are reasons to expand, so the item turns on the untaught classification; q7 (Ireland FDI) - the key needs low corporation tax, which no chapter mentions (PESTLE's Economic heading lists GDP growth, inflation and exchange rates only); q3 (repatriation of profits) - never mentioned; q6 (Porter's Five Forces) - never mentioned. global-marketing q3 (Ansoff market development) would qualify here verbatim but sits in another section's bank.",
+        "practice": {
+          "index": 2,
+          "id": "global-markets-expansion:practice:928556be",
+          "evidence": "For global expansion, PESTLE identifies country-specific risks that domestic analysis would miss.",
+          "why": "Assessing the risks of Brazil, India and Nigeria is a direct application of this chapter's PESTLE (political stability, corruption, exchange rates, IP protection) and market-development risk, with chapter 1's FDI risk list as support, and marks rise 6 to 10."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 0, "id": "global-markets-expansion:quiz:0f051250", "what": "Push versus pull factors for international expansion; the terms are never used or defined." },
+      { "kind": "quiz", "index": 1, "id": "global-markets-expansion:quiz:3c9e9491", "what": "Off-shoring versus outsourcing; not in this section (taught in globalisation chapter 1: 'Firms can offshore production to low-cost countries')." },
+      { "kind": "quiz", "index": 2, "id": "global-markets-expansion:quiz:137d7f8d", "what": "Extending the product life cycle through international expansion; the product life cycle is never mentioned." },
+      { "kind": "quiz", "index": 3, "id": "global-markets-expansion:quiz:1cd68177", "what": "Repatriation of profits as a location factor; never mentioned." },
+      { "kind": "quiz", "index": 5, "id": "global-markets-expansion:quiz:f94dd6ad", "what": "Direction of the effect of a stronger currency on exports; chapter 1 only says exchange-rate risk squeezes margins. (Taught in globalisation chapter 1: 'A strong pound makes UK exports expensive abroad'.)" },
+      { "kind": "quiz", "index": 6, "id": "global-markets-expansion:quiz:d5599aee", "what": "Porter's Five Forces (threat of new entrants); never mentioned." },
+      { "kind": "quiz", "index": 7, "id": "global-markets-expansion:quiz:2ac0dbe3", "what": "Why Ireland attracts FDI: low corporation tax plus EU single-market access; corporation tax never appears in any chapter." },
+      { "kind": "quiz", "index": 8, "id": "global-markets-expansion:quiz:51ab4429", "what": "Acquisition versus greenfield (starting from scratch); chapter 1 lists 'buying a local company' as one form of FDI but never compares it with building, so the key is reachable only by inference from the JV paragraph and by eliminating absolute distractors. Borderline." },
+      { "kind": "quiz", "index": 9, "id": "global-markets-expansion:quiz:afd047be", "what": "Natural hedging (matching revenues and costs in one currency); never mentioned in this section." }
+    ],
+    "flags": [
+      "Only 1 of 10 quiz items is taught by this section; chapter 2 (Ansoff, PESTLE, Bartlett-Ghoshal) has no quiz item at all. The bank appears shuffled with sibling sections: global-marketing q3 (Ansoff) fits chapter 2 here; this bank's q1 (off-shoring) and q5 (strong currency) are taught in globalisation chapter 1.",
+      "Do not move q9 (natural hedging) to globalisation chapter 1 as-is: that chapter defines hedging as 'forward contracts to lock in exchange rates', which is q9's wrong option, so a student who learned it would be marked wrong.",
+      "p3 (20 marks, entry-method choice for the Korean appliance firm) is fully taught (chapter 1's 'three factors: resources, market characteristics, speed' plus chapter 2's 'weak IP law (Legal) means the firm should use FDI rather than licensing') and is eligible on chapter 1 or chapter 2; left unpinned so marks rise 6 to 10 and chapter 2 gets a question about its own content. Swap it in if the reviewer wants a 20-mark independent attempt.",
+      "p0 (define FDI versus licensing, 4 marks) is fully taught in chapter 1; p4 (two reasons to expand overseas) is thinly taught: the only reasons the text gives are domestic saturation (chapter 2) and tariff avoidance (chapter 1's Toyota example).",
+      "No UK-GCE-specific facts found in this section's chapters or banks."
+    ]
+  },
+  "globalisation": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Globalisation & Business",
+        "quiz": {
+          "index": 5,
+          "id": "globalisation:quiz:c1bf7ca9",
+          "evidence": "**Technology** — the internet, containerised shipping, and digital payments make it cheap to coordinate supply chains across continents.",
+          "why": "Tests the chapter's central idea (the drivers of globalisation) by asking how one named driver works, and the key follows directly from the technology paragraph."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 0,
+          "id": "globalisation:practice:cedf9406",
+          "evidence": "**Globalisation** is the increasing integration and interdependence of the world's economies through the free flow of goods, services, capital, and labour across borders.",
+          "why": "The definition is given verbatim and the next paragraph names three causes (technology, trade liberalisation, deregulation), so the 4-mark item is fully answerable from this chapter as a worked example."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Trade Blocs",
+        "quiz": {
+          "index": 4,
+          "id": "globalisation:quiz:0abf046b",
+          "evidence": "**Trade diversion** occurs when the CET forces firms to switch from a cheaper non-member supplier to a more expensive bloc member.",
+          "why": "Tests the chapter's key creation-versus-diversion distinction (the first distractor is trade creation), which is reasoning rather than the single-market recall offered by q8."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 1,
+          "id": "globalisation:practice:ae43a3dd",
+          "evidence": "For businesses **outside**, the CET creates a competitive disadvantage that may force them to set up production inside the bloc (tariff-jumping FDI) to remain competitive.",
+          "why": "SolarTech is a non-member exporter facing an EU tariff, which is exactly the outsider case this chapter analyses (lost competitiveness, possible tariff-jumping FDI), and marks rise 4 to 6."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 0, "id": "globalisation:quiz:91a98eee", "what": "Definition of an emerging economy; never mentioned." },
+      { "kind": "quiz", "index": 1, "id": "globalisation:quiz:25e5170e", "what": "The Human Development Index and development indicators; never mentioned." },
+      { "kind": "quiz", "index": 2, "id": "globalisation:quiz:2e8ba945", "what": "Risks of over-specialisation in trade (export dependency); specialisation is never taught." },
+      { "kind": "quiz", "index": 3, "id": "globalisation:quiz:968a0a7e", "what": "Reasons for protectionism (infant industry, dumping, jobs); protectionism is never taught as a topic." },
+      { "kind": "quiz", "index": 7, "id": "globalisation:quiz:7a170a84", "what": "Domestic subsidies as a protectionist measure; subsidies and types of protectionism are never taught." }
+    ],
+    "flags": [
+      "The bank covers emerging economies, development indicators, specialisation and protectionism, which neither chapter teaches. Either the section is missing chapters, or these five items are orphaned.",
+      "q8 (EU single market: free movement of goods, services, capital, labour) also qualifies for chapter 2 as a recall item; q6 (WTO promotes free trade) qualifies thinly for chapter 1 ('the WTO and bilateral agreements reduce tariffs and quotas'), with dispute resolution only implied by chapter 2's 'After WTO rulings the tariff was cut'.",
+      "q9 (retaliatory tariffs) is not pinned: retaliation and trade wars are never taught. The key is reachable only from chapter 2's point that the CET disadvantages outside firms.",
+      "p3 (20 marks, 'more winners than losers') is near-eligible for chapter 2. The section supplies business-level winners and losers (consumers and efficient producers versus less efficient producers and firms outside a bloc) but not wider ones (workers, developing countries, environment). Not pinned; p1 is fully taught.",
+      "p2 (10 marks, free trade and developing countries) and p4 (4 marks, two roles of the WTO) are thinly taught: developing-country specifics are absent, and only one WTO role (cutting tariffs and quotas) is stated outright.",
+      "Content note: chapter 2's trade-diversion example has 'UK buyers switch to Spain' under the EU's CET, as if the UK were still an EU member. BMW's example in the same chapter is correctly marked 'pre-Brexit' but this one is not.",
+      "No UK-GCE-specific facts found. Chapter 1's 'A strong pound makes UK exports expensive abroad' is a UK example, not a GCE-specification claim."
+    ]
+  },
+  "influences-business-decisions": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Culture & Stakeholders",
+        "quiz": {
+          "index": 2,
+          "id": "influences-business-decisions:quiz:bb4f538c",
+          "evidence": "A **strong culture** means values are widely shared and deeply held — this improves consistency and motivation but can become a barrier to change because 'the way we've always done it' resists new ideas.",
+          "why": "Reasoning about the chapter's central asset-versus-barrier idea: the three distractors are the advantages of a strong culture and the key is the resistance to change the chapter names, which beats the Handy name-recall items q0 and q1."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 4,
+          "id": "influences-business-decisions:practice:d85be9a4",
+          "evidence": "**Friedman** argued the only social responsibility of business is to increase profits for shareholders — anything else is misusing other people's money. **Freeman** countered that businesses depend on all stakeholders and must balance their interests to survive long-term.",
+          "why": "Fully taught by the chapter's shareholder-versus-stakeholder paragraph, it covers the chapter's stakeholder half (the quiz pin covers culture) and serves as the worked example for chapter 2's 20-mark evaluation of the same debate."
+        },
+        "practiceNone": null
+      },
+      {
+        "block": 1,
+        "title": "Ethics & CSR",
+        "quiz": {
+          "index": 6,
+          "id": "influences-business-decisions:quiz:8223f40c",
+          "evidence": "The case **against**: higher short-term costs, competitive disadvantage if rivals cut corners, and difficulty measuring ethical impact on the bottom line.",
+          "why": "Tests the chapter's central ethics-versus-profit trade-off. The chapter lists fair wages as ethical behaviour and names higher short-term costs as the case against, so this reasoning item beats the greenwashing definition (q5)."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 3,
+          "id": "influences-business-decisions:practice:933cc539",
+          "evidence": "Ethical behaviour covers treatment of workers (fair wages, safe conditions), honesty with customers (transparent pricing, truthful advertising), environmental responsibility (beyond legal minimums), and supply chain standards (refusing to use exploitative suppliers).",
+          "why": "The fast-fashion supplier case needs this chapter's supply-chain ethics and CSR arguments (including Friedman's case against), with chapter 1's Friedman-versus-Freeman and stakeholder mapping, so it belongs on the last chapter it draws on. Marks rise 4 to 20."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 4, "id": "influences-business-decisions:quiz:8ec951c9", "what": "Internal versus external stakeholders; chapter 1 lists stakeholders but never splits them. The key also relies on classing shareholders as internal, a convention some texts do not share." },
+      { "kind": "practice", "index": 2, "id": "influences-business-decisions:practice:276baa1f", "what": "Short-termism, meaning cutting R&D and training to hit quarterly profit targets; neither the term nor the idea is taught. Chapter 2's short-run versus long-run point is about the cost of ethics only." }
+    ],
+    "flags": [
+      "q2's keyed option reads 'Groupthink and resistance to change'. 'Groupthink' appears in no chapter, but the answer is reachable through 'resistance to change', so the pin stands.",
+      "q7 asks for an expert estimate ('3-5 years or more') that no chapter gives. Chapter 1 says only that culture 'takes years to shift', so a student picks the only multi-year option by elimination. The item is weak and is not pinned.",
+      "Other items that qualify but were not preferred: q0 and q1 (Handy recall) and q3 (Friedman name recall) on chapter 1; q8 (argument for the stakeholder model) on chapter 1 or chapter 2; q5 (greenwashing definition) on chapter 2; p0 (define corporate culture) on chapter 1; p1 (PharmaLife ethics versus profit, 6 marks) on chapter 2.",
+      "Cross-section: managing-change q0 ('which culture is MOST likely to embrace change? Task culture') tests Handy's typology, which is taught here in chapter 1 and nowhere in managing-change.",
+      "No UK-GCE-specific facts found in this section's chapters or banks."
+    ]
+  },
+  "managing-change": {
+    "chapters": [
+      {
+        "block": 0,
+        "title": "Types of Change",
+        "quiz": {
+          "index": 1,
+          "id": "managing-change:quiz:efb62fd3",
+          "evidence": "**Incremental change** involves continuous, small-scale improvements to existing products, processes, or strategies.",
+          "why": "Tests the chapter's central incremental-versus-disruptive distinction, with 'Sudden, radical restructuring' as the disruptive-pole distractor. It is the only bank item this chapter teaches."
+        },
+        "quizNone": null,
+        "practice": null,
+        "practiceNone": "No practice item tests incremental versus disruptive change, drivers of change or scenario planning. Nearest misses: p0 (define contingency planning versus crisis management) uses two terms that appear in no chapter. Scenario planning is the closest taught idea, but it is a different tool and gives no basis for the crisis-management contrast. p2 (importance of leadership in change) would be early: chapter 1 only lists 'New leadership' as an internal driver, and the leading-change content it needs (Kotter, the Nadella case) is in chapter 2."
+      },
+      {
+        "block": 1,
+        "title": "Managing Resistance",
+        "quiz": {
+          "index": 9,
+          "id": "managing-change:quiz:66835a2d",
+          "evidence": "**Fear of the unknown** — people prefer the certainty of the current situation, even if imperfect, over the uncertainty of something new. **Loss of control** — change imposed from above makes employees feel powerless. **Loss of status or job security** — restructuring threatens roles, titles, and livelihoods.",
+          "why": "The key combines two of the chapter's named causes of resistance, fear of the unknown and job security, and it is the only bank item this chapter teaches."
+        },
+        "quizNone": null,
+        "practice": {
+          "index": 3,
+          "id": "managing-change:practice:05f31e3e",
+          "evidence": "The practical insight: sometimes it is easier to reduce restraining forces (address fears, provide training) than to increase driving forces (push harder).",
+          "why": "'Overcoming resistance' is the chapter's title idea. The chapter supplies causes, communication, Kotter's steps (including removing 'resistant managers') and Lewin's reduce-versus-push insight to weigh against each other. It is the last chapter the question needs."
+        },
+        "practiceNone": null
+      }
+    ],
+    "untaught": [
+      { "kind": "quiz", "index": 0, "id": "managing-change:quiz:b117513a", "what": "Handy's culture types (task culture embracing change); not taught in this section. They are taught in influences-business-decisions chapter 1." },
+      { "kind": "quiz", "index": 2, "id": "managing-change:quiz:24d45d98", "what": "Kotter and Schlesinger's six strategies for overcoming resistance (coercion as a last resort). Chapter 2 teaches Kotter's 8-step model, a different model." },
+      { "kind": "quiz", "index": 3, "id": "managing-change:quiz:54d017cf", "what": "Transformational leadership; leadership styles are never taught." },
+      { "kind": "quiz", "index": 4, "id": "managing-change:quiz:56d48d19", "what": "Succession planning; never mentioned." },
+      { "kind": "quiz", "index": 5, "id": "managing-change:quiz:fad14b1d", "what": "Business continuity planning (the COVID-19 lesson); never mentioned. Scenario planning is taught but is a different tool." },
+      { "kind": "quiz", "index": 6, "id": "managing-change:quiz:a8f3fdbb", "what": "Organisational size, layers of management and communication channels as a brake on change; never taught." },
+      { "kind": "quiz", "index": 7, "id": "managing-change:quiz:7b882789", "what": "Transformational versus transactional leadership; never taught." },
+      { "kind": "quiz", "index": 8, "id": "managing-change:quiz:2faa641b", "what": "Costs of contingency planning; contingency planning is never taught." },
+      { "kind": "practice", "index": 0, "id": "managing-change:practice:65dd30c7", "what": "Contingency planning versus crisis management; neither term appears in any chapter." }
+    ],
+    "flags": [
+      "Only 2 of 10 quiz items are taught by this section. Leadership styles, succession, contingency and continuity planning, and organisational size make up 7 items with no teaching behind them, so the bank appears to be written for a broader topic than the section's two chapters cover.",
+      "q2 names 'Kotter and Schlesinger', which is easy to confuse with the Kotter 8-step model that chapter 2 teaches. A student who learned only the 8 steps has no basis for the answer.",
+      "Chapter 2's practice has two other fully eligible items: p1 (Lewin's force field for ManuTech, 6 marks) and p4 (two reasons employees resist, 4 marks). This is the section's only practice pin. If it renders as the fully worked example rather than the independent attempt, p1 is the more practical choice.",
+      "p2 (importance of leadership in change, 10 marks) is thinly taught. It is creditable only through Kotter's 'model for leading change' and the Nadella case, since leadership styles are never covered. It is not listed as untaught.",
+      "Content note: the example attached to chapter 1's 'Drivers of Change and Scenario Planning' subsection is Toyota kaizen. That illustrates incremental change, not drivers or scenario planning, which are illustrated only by the Shell line in the body.",
+      "No UK-GCE-specific facts found in this section's chapters or banks."
+    ]
+  }
+}

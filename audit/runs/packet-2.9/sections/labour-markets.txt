@@ -1,0 +1,138 @@
+SECTION labour-markets — Labour Markets
+
+########## CHAPTER 1 (block 0, id labour-markets:block:a6823a69): Demand and Supply of Labour
+
+--- Demand for Labour (MRP Theory)
+The demand for labour is a **derived demand** — it depends on the demand for the product the worker helps produce. A firm's demand curve for labour is the **marginal revenue product (MRP) curve**, where MRP = MPP x MR (marginal physical product multiplied by marginal revenue).
+The MRP curve slopes downward because of **diminishing marginal returns** — as more workers are added to a fixed factor, each extra worker adds less output, so MRP falls. A profit-maximising firm hires workers up to the point where **MRP = wage**, because any worker whose MRP exceeds the wage adds to profit.
+Shifts in the MRP curve are caused by changes in either product demand or worker productivity. If demand for the product rises, MR increases, so MRP shifts right and more workers are hired at a higher wage. Equally, investments in technology or training raise MPP, shifting MRP right.
+FLOW: Product demand rises -> MR increases at each output level -> MRP curve shifts right -> More workers hired at higher wage => Derived demand — labour demand follows product demand
+KEY IDEA: Labour demand is a derived demand — firms hire workers not for their own sake but because they produce output that generates revenue. Hire until MRP = wage.
+MISCONCEPTION: Students say firms hire workers because they need them. Too vague — firms hire because the worker's MRP exceeds the wage, adding to profit. Instead write: labour demand is derived from product demand; the firm hires until the last worker's MRP equals the wage rate.
+EXAMPLE: The explosion in demand for AI products has driven the MRP of AI engineers far above that of other software developers. Companies like Google and OpenAI bid aggressively for scarce talent, pushing salaries above $200k as the derived demand for AI skills tracks the booming product market.
+
+--- Supply of Labour
+The **supply of labour** to a particular occupation depends on the **wage rate** as the primary monetary incentive, plus **non-monetary factors** such as working conditions, job security, status, location, and holiday entitlement. A higher wage attracts more workers into an occupation, giving an upward-sloping supply curve.
+The **individual labour supply curve** is backward-bending. At low wages, the **substitution effect** dominates — a wage rise makes leisure more expensive relative to work, so workers supply more hours. At high wages, the **income effect** dominates — workers are rich enough to afford more leisure, so they cut hours despite the higher wage.
+The supply of labour to an industry also depends on barriers to entry such as qualifications, training periods, and geographical immobility. Occupations requiring years of education have more inelastic supply in the short run because new workers cannot enter quickly.
+FLOW: Wages rise from low level -> Substitution effect dominates -> Workers supply more hours -> Beyond a threshold, income effect dominates => Backward-bending supply curve — very high wages reduce hours supplied
+KEY IDEA: The supply of labour to an occupation depends on the wage rate and non-monetary factors. At very high wages, the backward-bending supply curve shows workers choosing leisure over income.
+MISCONCEPTION: Students think labour supply only depends on wages. Wrong — non-monetary factors like conditions, status, and location strongly influence occupational choice. Instead write: labour supply depends on the net advantages of the job — the full package of monetary and non-monetary rewards compared to alternatives.
+EXAMPLE: Junior doctors in the NHS face gruelling conditions — long shifts, emotional stress, and below-market pay relative to their qualifications. Despite decent headline salaries, poor non-monetary factors have reduced the supply of applicants, with many choosing to emigrate to Australia or leave medicine entirely.
+TAKEAWAY: ["Labour demand is derived demand — the MRP curve (MPP x MR) is the demand curve for labour.","Firms hire until MRP = wage; shifts in product demand or productivity shift the MRP curve.","Labour supply depends on wages and non-monetary factors; the individual supply curve is backward-bending.","At low wages the substitution effect dominates; at high wages the income effect dominates."]
+
+########## CHAPTER 2 (block 1, id labour-markets:block:ceae9f76): Wage Determination
+
+--- Competitive Labour Markets
+A **perfectly competitive labour market** has many employers competing for workers and many workers competing for jobs. No single firm or worker can influence the wage rate. The equilibrium wage is determined where **demand for labour (DL = MRP) equals supply of labour (SL)**.
+Demand shifts are caused by changes in product demand, labour productivity, or the price of substitute/complementary factors. Supply shifts are caused by migration, changes in education and training, population growth, or changes in non-monetary factors of the occupation.
+At the equilibrium wage, the market clears — there is no involuntary unemployment. If the wage is above equilibrium, there is a surplus of labour (unemployment). If the wage is below equilibrium, there is a shortage (vacancies unfilled).
+FLOW: Immigration increases -> Labour supply shifts right -> Equilibrium wage falls -> Employment rises => More workers available at every wage → lower market wage but more jobs filled
+KEY IDEA: In a competitive labour market with many employers and many workers, the wage is set where the demand for labour (MRP) equals the supply of labour — just like any other market.
+MISCONCEPTION: Students say immigration always reduces wages for everyone. Wrong — the effect depends on the skill level and sector; immigration also boosts product demand, shifting labour demand right. Instead write: immigration shifts labour supply right, putting downward pressure on wages in affected sectors, but increased spending by immigrants can shift labour demand right, partially or fully offsetting the wage fall.
+EXAMPLE: After EU enlargement in 2004, significant migration from Eastern Europe into the UK increased the supply of construction workers. Wages in the sector were held down as the supply curve shifted right, while housebuilders benefited from lower labour costs and increased output.
+
+--- Monopsony Power
+A **monopsony** is a single (or dominant) buyer of labour in a market. Because it faces the entire upward-sloping market supply curve, it must raise the wage for all workers to attract one more — so the **marginal cost of labour (MCL) lies above the supply curve**.
+The monopsonist maximises profit by hiring where **MCL = MRP**, but it pays the wage read off the **supply curve** (below MRP), not the MCL curve. Workers are paid less than their marginal revenue product — this gap is **monopsonistic exploitation**. Employment is also lower than in a competitive market.
+Crucially, a **national minimum wage** set between the monopsony wage and the competitive wage can **increase both wages AND employment** simultaneously. This is because the minimum wage creates a horizontal section of the supply curve up to that wage, eliminating the firm's incentive to restrict hiring.
+FLOW: Single dominant employer -> MCL lies above supply curve -> Hires at MCL = MRP -> Pays lower wage from supply curve => Workers paid below MRP — monopsonistic exploitation
+KEY IDEA: A monopsony employer is the dominant buyer of labour — it faces an upward-sloping supply curve and pays workers below their MRP, creating exploitation that a minimum wage can actually fix.
+MISCONCEPTION: Students assume a minimum wage always causes unemployment. Wrong — in a monopsony market, a carefully set minimum wage can raise wages and increase employment simultaneously. Instead write: the standard unemployment prediction applies to competitive markets; in monopsony, a minimum wage up to the competitive level raises both wages and employment.
+EXAMPLE: The NHS is the dominant employer of nurses in the UK, giving it significant monopsony power. Nursing wages have been held below what a competitive market would deliver, contributing to persistent recruitment and retention crises as nurses leave for better-paid agency work or emigrate.
+TAKEAWAY: ["Competitive labour markets clear where DL (MRP) = SL — the standard supply-and-demand model applies.","Monopsony: MCL above supply curve, hires at MCL = MRP, pays the wage from the supply curve — workers exploited.","A minimum wage in a monopsony can increase both wages and employment — a key evaluation point."]
+
+########## CHAPTER 3 (block 2, id labour-markets:block:ad31ac69): Trade Unions and Wage Differentials
+
+--- Trade Unions
+A **trade union** is an organisation of workers that uses **collective bargaining** to negotiate wages and conditions. By bargaining as a group, workers have more power than any individual would. The union acts as a **monopoly supplier of labour**, setting a wage floor above the competitive equilibrium.
+In a **competitive labour market**, a union-imposed wage above equilibrium creates a trade-off: wages rise but employment falls, because firms move up their MRP curve and hire fewer workers at the higher wage. The size of the employment loss depends on the elasticity of demand for labour.
+Against a **monopsony employer**, unions provide **countervailing power**. The union pushes the wage up while the monopsony wants to push it down — the result is a **bilateral monopoly** where the wage is **indeterminate**, settled between the union's target and the employer's preferred wage through negotiation. In this case, the union can raise wages with little or no job loss.
+FLOW: Union negotiates higher wage -> In competitive market: higher W → lower employment -> Against monopsony: countervailing power offsets exploitation -> Bilateral monopoly: wage indeterminate => The employment effect depends on employer market structure
+KEY IDEA: Trade unions act as a monopoly seller of labour, using collective bargaining to push wages above the market rate — but whether this costs jobs depends on the employer's market power.
+MISCONCEPTION: Students say unions always cause unemployment. Wrong — against a monopsony, unions can raise wages without reducing employment by offsetting the employer's wage-suppressing power. Instead write: unions cause a wage-employment trade-off in competitive markets, but against monopsony employers, countervailing power can raise wages with minimal job losses.
+EXAMPLE: The RMT union's rail strikes in 2022-23 demonstrated powerful collective bargaining. Because rail is an essential service with few substitutes, the union's ability to disrupt the entire transport network gave it significant leverage in wage negotiations with Network Rail and train operating companies.
+
+--- Wage Differentials
+**Compensating wage differentials** exist to attract workers into jobs with unpleasant or dangerous characteristics — night shifts, physical risk, or unsociable hours command a premium. **Human capital theory** explains higher wages as a return on investment in education, training, and skills that raise a worker's productivity.
+**Barriers to entry** protect high wages in certain professions. Doctors, lawyers, and accountants require years of qualifications that restrict supply, keeping wages above what they would be with free entry. **Discrimination** based on gender, race, or age creates unjustified differentials where equally productive workers receive different pay.
+**Labour immobility** prevents wage differentials from being competed away. **Geographical immobility** (housing costs, family ties) stops workers moving to higher-wage regions. **Occupational immobility** (lack of transferable skills, retraining costs) stops workers switching to higher-paid occupations. Together, these frictions keep wage gaps persistent.
+FLOW: High wages in occupation A, low wages in occupation B -> Workers try to move from B to A -> Geographical and occupational immobility block movement => Wage differentials persist — labour markets do not fully equalise
+KEY IDEA: Wages differ between occupations because of compensating differentials, human capital, barriers to entry, discrimination, and labour immobility — not because markets are failing.
+MISCONCEPTION: Students say wage differences exist because some jobs are harder. Too simplistic — difficulty alone does not determine pay; supply and demand do. Instead write: wage differentials reflect the interaction of labour demand (MRP) and labour supply (affected by human capital, barriers, mobility, and non-monetary factors) — not just the difficulty or effort involved.
+EXAMPLE: The City of London financial sector pays substantial premiums that reflect multiple factors: human capital returns on advanced degrees and professional qualifications, compensating differentials for extremely long hours and high stress, and barriers to entry through regulated professional exams.
+TAKEAWAY: ["Unions are monopoly sellers of labour — they raise wages but may reduce employment in competitive markets.","Against monopsony, unions provide countervailing power and can raise wages without job losses.","Wage differentials arise from compensating factors, human capital, barriers to entry, and discrimination.","Labour immobility (geographical and occupational) prevents wage differentials from being competed away."]
+
+########## QUIZ BANK (order as stored)
+q0 labour-markets:quiz:710d178c
+  Q: The demand for construction workers rises when there is an increase in demand for new houses. This is an example of:
+    Composite demand.
+    Joint demand.
+  * Derived demand.
+    Effective demand.
+q1 labour-markets:quiz:4be1d365
+  Q: A profit-maximising firm in a competitive labour market will hire workers up to the point where:
+    Marginal Physical Product (MPP) equals zero.
+  * Marginal Revenue Product (MRP) equals the wage rate.
+    Average Revenue Product (ARP) is maximised.
+    Total Revenue Product (TRP) equals total cost.
+q2 labour-markets:quiz:44220611
+  Q: Which of the following is most likely to make the demand for labour wage inelastic?
+    Labour costs form a high proportion of total costs.
+    The final product has price elastic demand.
+  * It is difficult to substitute capital for labour.
+    There is a long time period for adjustment.
+q3 labour-markets:quiz:48ed11ff
+  Q: The individual labour supply curve may 'bend backward' at high wage rates because:
+    Workers become less productive at higher wages.
+  * The income effect dominates the substitution effect, so workers choose more leisure.
+    Employers refuse to pay wages above a certain level.
+    Trade unions restrict the hours their members can work.
+q4 labour-markets:quiz:6ac77fbe
+  Q: Which of the following would shift the supply of labour to the right in a particular occupation?
+    An increase in income tax rates.
+    Stricter occupational licensing requirements.
+  * An increase in net immigration of workers with relevant skills.
+    An increase in the level of welfare benefits.
+q5 labour-markets:quiz:a4405adb
+  Q: In a monopsony labour market, compared to a competitive market, the employer pays:
+    A higher wage and employs more workers.
+  * A lower wage and employs fewer workers.
+    The same wage but employs fewer workers.
+    A lower wage but employs more workers.
+q6 labour-markets:quiz:e6000dd6
+  Q: A national minimum wage set between the monopsony wage and the competitive wage will:
+    Definitely increase unemployment.
+    Have no effect on wages or employment.
+  * Increase both wages and employment.
+    Increase wages but definitely reduce employment.
+q7 labour-markets:quiz:2515ecf0
+  Q: Which of the following best explains why surgeons earn significantly more than retail assistants?
+    Surgeons work longer hours than retail assistants.
+  * The supply of surgeons is highly inelastic due to lengthy training, while retail labour supply is elastic.
+    Demand for surgery is always higher than demand for retail goods.
+    Retail assistants have stronger trade union representation.
+q8 labour-markets:quiz:b90ed052
+  Q: Geographical immobility of labour is most likely to result in:
+    A fall in the national minimum wage.
+  * Persistent regional unemployment alongside unfilled vacancies in other regions.
+    A reduction in structural unemployment.
+    An increase in occupational mobility.
+q9 labour-markets:quiz:e75a70a6
+  Q: Which government policy is most directly aimed at reducing occupational immobility?
+    Building more affordable housing in areas with job vacancies.
+    Reducing income tax to encourage people to seek work.
+  * Investing in education and retraining programmes for workers in declining industries.
+    Raising the national minimum wage to attract workers to low-paid jobs.
+
+########## PRACTICE BANK (order as stored)
+p0 labour-markets:practice:904e9b48 (4 marks)
+  Define the concept of 'derived demand' as it applies to the demand for labour. (4 marks)
+p1 labour-markets:practice:1249c630 (6 marks)
+  Explain two factors that could cause wage differentials between occupations. (6 marks)
+p2 labour-markets:practice:3bb7c3f8 (10 marks)
+  Assess the usefulness of marginal revenue product (MRP) theory in explaining wage determination. (10 marks)
+p3 labour-markets:practice:c499dd15 (20 marks)
+  Evaluate the impact of a monopsony employer on wages and employment in a labour market. (20 marks)
+p4 labour-markets:practice:2648db4a (4 marks)
+  Outline two ways in which trade unions may influence the labour market. (4 marks)

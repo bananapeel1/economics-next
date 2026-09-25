@@ -1,5 +1,6 @@
 import { createAnonClient } from '@/lib/supabase-anon';
 import guidesData from '@/data/guidesData';
+import { MODEL_ANSWER_PAGES, modelAnswersPath } from '@/data/modelAnswerPages';
 
 export default async function sitemap() {
   const baseUrl = 'https://revvylearn.com';
@@ -48,20 +49,6 @@ export default async function sitemap() {
     { url: `${baseUrl}/economics/globalisation`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${baseUrl}/economics/aggregate-demand`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
 
-    // ── Economics section model answers ──
-    { url: `${baseUrl}/economics/introductory-concepts-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/economics/demand-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/economics/supply-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/economics/price-determination-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/economics/market-failure-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/economics/government-intervention-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/economics/economic-performance-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/economics/aggregate-demand-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/economics/aggregate-supply-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/economics/national-income-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/economics/economic-growth-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/economics/macroeconomic-policies-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-
     // ── Business landing pages ──
     { url: `${baseUrl}/business`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/business/unit-1`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
@@ -69,17 +56,20 @@ export default async function sitemap() {
     { url: `${baseUrl}/business/unit-3`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/business/unit-4`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
 
-    // ── Business section model answers ──
-    { url: `${baseUrl}/business/meeting-customer-needs-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/business/the-market-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/business/marketing-mix-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/business/managing-people-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/business/entrepreneurs-leaders-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/business/raising-finance-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/business/financial-planning-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/business/managing-finance-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/business/resource-management-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/business/external-influences-model-answers`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    // ── Section model answers, derived ──
+    // Packet 12.3, E020. This was twenty-two hand-typed lines in two blocks, and it had already
+    // drifted from the routes it claimed to list: the ten Economics Unit 3 and 4 sections that had
+    // model answers and no page were missing from both. Every model-answer page is now a row in
+    // `data/modelAnswerPages.js`, which is also what `generateStaticParams` walks in
+    // `app/economics/[unit]/page.jsx` and `app/business/[unit]/page.jsx` — so a page and its
+    // sitemap entry cannot exist without each other, and adding a section needs no second edit
+    // here. Thirty-two rows today: 22 Economics, 10 Business.
+    ...MODEL_ANSWER_PAGES.map(page => ({
+      url: `${baseUrl}${modelAnswersPath(page)}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    })),
 
     // ── Guides ──
     { url: `${baseUrl}/guides`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },

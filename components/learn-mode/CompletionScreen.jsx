@@ -137,7 +137,7 @@ export default function CompletionScreen({
       <StrengthMeter subjectId={subjectId} sectionId={sectionId} size="medium" />
 
       {/* Score breakdown */}
-      {scores && (scores.quiz.total > 0 || scores.recall.total > 0 || scores.explain.total > 0 || scores.practice?.total > 0) && (
+      {scores && (scores.quiz.total > 0 || scores.recall.total > 0 || scores.explain.total > 0 || scores.practice?.total > 0 || scores.quant?.total > 0) && (
         <div className="lm-score-breakdown">
           <h3 className="lm-score-breakdown-title">Score Breakdown</h3>
           {/* No weight labels. The 50/30/20 percentages named a composite score that was never
@@ -159,6 +159,13 @@ export default function CompletionScreen({
               marks these against a checklist themselves, so the row reads answered / shown. */}
           {scores.practice?.total > 0 && (
             <ScoreRow label="Written practice" emoji="&#9997;&#65039;" score={scores.practice} />
+          )}
+          {/* Packet 13.2. Marks, not items: a three-step calculation is marked a step at a time
+              and a carried figure earns its method mark, so "2/3 calculations" would describe
+              something the marking does not do. `?.` because a completion saved before 13.2
+              has no quant bucket and must still render. */}
+          {scores.quant?.total > 0 && (
+            <ScoreRow label="Calculations (marks)" emoji="&#129518;" score={scores.quant} />
           )}
 
           {/* F006: the weakest area, only when there is enough evidence to name one.

@@ -18,8 +18,7 @@
  *
  *   lib/preview-limits.js       sectionPayload()      what the server sends a stranger
  *   lib/learn-steps.js          buildSteps()          what a chapter's check-in is
- *   components/learn-mode/utils resolvePinnedItem()   the pinned path
- *                               distributeItems()     the legacy path
+ *   lib/checkin-placement.js    placeChapterItems()   both paths, since packet 2.9
  *   lib/pretest-pool.js         pickPretestQuestions() what the pre-test may ask
  *
  * WHAT IT RESTATES, and this is the honest limit of it. Nothing here imports `LearnModeTab.jsx` —
@@ -42,8 +41,8 @@ import { supabase } from '../../scripts/_db.mjs';
 import { sectionPayload, FREE_QUIZ_MAX, PRETEST_HEADROOM } from '../../lib/preview-limits.js';
 import { pickPretestQuestions } from '../../lib/pretest-pool.js';
 import { buildSteps } from '../../lib/learn-steps.js';
-import { distributeItems, resolvePinnedItem, fallbackItemForBlock } from '../../components/learn-mode/utils.js';
-import { bestUnclaimedIndex } from '../../lib/checkin-fallback.js';
+import { placeChapterItems } from '../../lib/checkin-placement.js';
+import { bestUnclaimedIndex, decidedNoQuestion } from '../../lib/checkin-fallback.js';
 
 const args = process.argv.slice(2);
 const VERBOSE = args.includes('--verbose');
@@ -62,24 +61,52 @@ function checkinQuestions(quizData, content) {
   if (!slots.length) return { reserved: [], slots: 0 };
 
   if (hasRefs(slots)) {
-    const used = new Set();
+    /* Packet 2.9. This branch used to restate the pinned path — `resolvePinnedItem` then
+       `fallbackItemForBlock`, "exactly as LearnModeTab runs it" — after V054 had moved the unpinned
+       path below onto the shared placement. So the census still held a copy of half the client, and
+       it went stale the moment 2.9 taught the placement to honour an explicit empty pin: it went on
+       filling those chapters with the fallback's question and reporting them served while the client
+       asked nothing. Both paths now read `placeChapterItems`. */
+    const { quizMap } = placeChapterItems({
+      flatSteps, contentData: content, diagramsData: [], quizData, practiceData: [],
+    });
     const checkins = slots.filter(({ s }) => s.type === 'checkin');
-    const pinned = checkins.map(({ s }) => resolvePinnedItem(quizData, { ids: s.quizIds, indices: s.quizIndices }, used));
-    // then the per-block fallback, V026, exactly as LearnModeTab runs it after the pins
-    const filled = checkins.map(({ s }, i) => pinned[i] || fallbackItemForBlock(quizData, s.blockTitle, used));
+    const filled = checkins.map(({ i }) => quizMap[i] || null);
+    const used = new Set(filled.filter(Boolean).map((q) => quizData.indexOf(q)));
 
-    /* A chapter left with nothing is two different problems and they must not be counted together.
+    /* A chapter left with nothing is three different things and they must not be counted together.
        If a question it could have had was sitting unclaimed, the payload or the resolution starved
-       it and that is a code defect. If nothing in what it was sent shares a word with it, the
-       section never wrote it a question and that is content debt for that section's packet. */
-    const starved = checkins.filter(({ s }, i) => !filled[i] && bestUnclaimedIndex(quizData, s.blockTitle, used) >= 0).length;
-    return { reserved: filled.filter(Boolean), slots: checkins.length, starved };
+       it and that is a code defect. If its author pinned an explicit empty list, somebody read it
+       and found nothing in the bank it teaches — a decision, reported, never a failure. If nothing
+       in what it was sent shares a word with it, the section never wrote it a question and that is
+       content debt for that section's packet. Under the shared placement STARVED cannot occur — the
+       fallback takes the best unclaimed match — so, like checkin-attribution's FAIL tier, it is a
+       regression detector: break the fallback and it fires. */
+    const decided = checkins.filter(({ s }, k) => !filled[k] && decidedNoQuestion(s)).length;
+    const starved = checkins.filter(({ s }, k) => !filled[k] && !decidedNoQuestion(s)
+      && bestUnclaimedIndex(quizData, s.blockTitle, used) >= 0).length;
+    return { reserved: filled.filter(Boolean), slots: checkins.length, starved, decided };
   }
 
-  const map = distributeItems(quizData, slots.length);
-  const reserved = Object.values(map).filter(Boolean);
-  // the legacy path spreads whatever it is sent, so a short chapter list is always the payload's doing
-  return { reserved, slots: slots.length, starved: slots.length - reserved.length };
+  /*
+   * THE UNPINNED PATH SERVES NOTHING, and this census must say so.
+   *
+   * It used to read `distributeItems(quizData, slots.length)` — its own copy of what the client did.
+   * When LearnModeTab stopped placing positionally, this line did not, and for one run this census
+   * reported "chapters served 214 / 214" while the client served 52 fewer: the exact failure this
+   * file's own header names, "a census that reimplements the client tests the reimplementation",
+   * committed by the file that names it.
+   *
+   * So it composes lib/checkin-placement.js, the one function the client calls. A chapter here is
+   * UNWRITTEN, not STARVED: nothing was withheld from it, its section simply pins nothing and no
+   * question can be attributed to it. The fix is a pin, and audit/scripts/checkin-attribution.mjs
+   * is what refuses to let a wrong one stand in for it.
+   */
+  const { quizMap } = placeChapterItems({
+    flatSteps, contentData: content, diagramsData: [], quizData, practiceData: [],
+  });
+  const reserved = Object.values(quizMap).filter(Boolean);
+  return { reserved, slots: slots.length, starved: 0, unpinnedSilent: slots.length - reserved.length };
 }
 
 /*
@@ -117,7 +144,7 @@ for (const corpus of CORPORA) {
 
     const tables = { content, quiz, notes, diagrams, practice, flashcards, mistakes, extras };
     const free = sectionPayload(tables, { isPremium: false });
-    const { reserved, slots, starved } = checkinQuestions(free.quiz, free.content);
+    const { reserved, slots, starved, decided = 0 } = checkinQuestions(free.quiz, free.content);
     /* The same slot filter `checkinQuestions` uses, so the reported label cannot disagree with the
        path actually taken. It read the unfiltered step list before, which was a different question. */
     const pinned = hasRefs(buildSteps(free.content)
@@ -130,7 +157,7 @@ for (const corpus of CORPORA) {
     const proServed = checkinQuestions(pro.quiz, pro.content);
 
     rows.push({
-      id, pinned, chapters: slots, served: reserved.length, starved,
+      id, pinned, chapters: slots, served: reserved.length, starved, decided,
       sent: free.quiz.length, bank: free.counts.quiz,
       pretest: pickPretestQuestions(free.quiz, reserved).length,
       proChapters: proServed.slots, proServed: proServed.reserved.length, proStarved: proServed.starved,
@@ -159,8 +186,11 @@ for (const corpus of CORPORA) {
   console.log(`  STARVED (a code defect — a question was there and the chapter did not get it):`);
   console.log(`    signed out  ${starved.length}${starved.length ? ` — ${starved.map((r) => `${r.id} (${r.starved})`).join(', ')}` : ''}`);
   console.log(`    signed in   ${proStarved.length}${proStarved.length ? ` — ${proStarved.map((r) => `${r.id} (${r.proStarved})`).join(', ')}` : ''}`);
+  const decided = rows.filter((r) => r.decided > 0);
+  console.log(`  DECIDED (a reader found nothing in the bank this chapter teaches; pinned \`quizIndices: []\`):`);
+  console.log(`    ${decided.length}${decided.length ? ` — ${decided.map((r) => `${r.id} (${r.decided})`).join(', ')}` : ''}`);
   console.log(`  UNWRITTEN (content debt — nothing in the section matches that chapter):`);
-  const unwritten = short.map((r) => ({ id: r.id, n: r.chapters - r.served - r.starved })).filter((x) => x.n > 0);
+  const unwritten = short.map((r) => ({ id: r.id, n: r.chapters - r.served - r.starved - r.decided })).filter((x) => x.n > 0);
   console.log(`    ${unwritten.length}${unwritten.length ? ` — ${unwritten.map((x) => `${x.id} (${x.n})`).join(', ')}` : ''}`);
 
   if (VERBOSE) {

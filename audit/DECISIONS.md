@@ -3068,3 +3068,159 @@ and never use it; left alone rather than widen the diff.
 **Still open, unchanged:** the second half of F035 — `/api/subscription` reconciles against Stripe on
 every GET and belongs on a webhook. The comment that said so lived in the code this packet deleted, so
 it is restated here.
+
+
+## 21 September 2026 — the enlarge sheet sizes itself from the diagram, not from the viewport (packet 11, V037)
+
+**Decision: `220vw` is replaced by `12px x viewBoxWidth / smallestFace`, floored at the pane and capped at 1600px, computed per diagram in `lib/diagram-enlarge.js`.** The sheet also gains three stops — Fit / Read / Closer — and the Diagrams tab gains the sheet, which it never had.
+
+**Why the constant had to go.** Legibility is a property of `face / viewBoxWidth`. A viewport unit cannot know which diagram it is scaling, and the corpus is not one frame: 400u x30, 440u x64, 500u x197, 526u x1, 560u x79, 1010u x1. At 1010u a fixed 825px leaves the smallest label at **7.35px — illegible after tapping "enlarge"**; at 400u/12u it delivers 24.75px and charges ~470px of horizontal scroll for text that was never at risk.
+
+**The 12px floor was never met on the width most phones are, including by the frame it was tuned for.** The comment that set 220vw reads "the smallest authored label, 7 units on a 500 box, is 12px here at 390px". It is — *at 390*. At **375 it is 11.55px** and at 360 it is 11.09px. That figure has now been quoted unbounded by packets 37, 38 and 40 and by `processSvg.js` step 7, which this packet corrects. **This is the fourth time in a week that a true measurement has been propagated past the scope it was taken in** (a render mode, a viewport width, a frame width, and now a corpus snapshot). `lib/diagram-enlarge.test.mjs` asserts the two frames the old constant missed, so restoring it fails the build.
+
+**And the census that justified it was bounded to a corpus that no longer exists.** F088's evidence reads "every viewBox 500 wide" — true on 14 September, over the `data` column only. Authoring moved to 440u on 18 September and 400u after that, all staged in `draft`, where that census never looked.
+
+**This is NOT a font floor and the F088 rejection does not apply to it.** F088 tried two floors and both were a relayout: 1/28 of the viewBox raised 1,419 of 1,420 labels, 1/36 still raised 1,281 of 1,377 and put 18 overlapping pairs on a diagram that had none, because a label's size and its neighbours' positions were authored together. Everything here is a **uniform scale of the whole drawing**, which cannot move a label relative to its neighbours. No font-size is read for anything but measurement, and none is written.
+
+**Why Fit exists, and why this stops being a founder trade.** Packet 40 proposed re-pricing the 220vw trade with the founder, on the ground that scroll-to-read is adequate for a table and fatal for a matrix, with a plotted curve undecided. It withdrew that when the measurement landed: **the trade was only forced by there being one stop.** `visualViewport.scale` is pinned at 1, so pinch cannot zoom out, and Close was the sheet's only control — the whole diagram was unreachable from inside the sheet. On `Supply Curve: Movements and Shifts` both shifted curves were off-screen, which is the comparison the diagram exists to make. The CSS was being asked to decide once, for all 372 diagrams, something only the student looking at one of them knows. Fit is the state that did not exist; the taxonomy is now the student's to apply.
+
+**What was deliberately NOT done.** The inline diagram stays at 298px with 7-9px labels. A phone cannot render a 500-unit drawing with 10-unit labels legibly at any inline width, and the 20% of the screen currently spent on card padding would take the best case from 7.15px to 8.4px — still unreadable. Shipping that would look like progress and not be any.
+
+**Bookkeeping, for whoever reads the commit.** `app/globals.css` was `MM` at commit time: packet 5's V038 rebuilt-banner block was staged in the shared index and present in the working tree. The packet-11 commit was built through a **temporary index** so the shared index and working tree were never touched, and its `app/globals.css` is HEAD plus this packet's 62 insertions only — packet 5's 37 lines are not in it and remain theirs to commit. `audit/ledger.json` **is** committed whole and therefore carries packet 5's newly minted V049 and V050: the ledger is a shared record with one sanctioned writer, and dropping rows from it is unrecoverable where sweeping two `open` rows in is visible and harmless.
+
+## 21 September 2026 — packet 39b, `trade-global-economy` (Economics 4.3.2 sub-topics 4 and 5)
+
+**`loadBundle()` READS THE LIVE ROW, AND A SECOND-HALF PACKET MUST NOT USE IT.** It selects the
+`data` column. A section staged and not published has its real content in `draft`, so a runner
+copied from a first-half packet rebuilds on top of the published version and destroys the first
+half — silently, with every check green, because every check measures a bundle that is internally
+consistent and missing half the section. 39b builds from the first half's COMMITTED SNAPSHOT and
+treats the draft as a witness: it must equal that snapshot (first run) or this packet's own output
+(a re-run). Anything else means a third session re-staged underneath.
+
+**A PACKET RUNNER HAS TO BE RE-RUNNABLE, AND THE OBVIOUS FORM OF THIS CHECK IS NOT.** The first
+version asserted the draft equalled 39a's snapshot and built from the draft. That is correct exactly
+once: the moment it stages, the draft is its own output and the next run fails its own first check
+with 168 cascading problems. Assert against the snapshot; build from the snapshot.
+
+**THE CARRY LIST INVERTS, AND IT MUST COVER EVERY COLLECTION.** What the first half carried is what
+the second half rewrites, so `_packet39b-assessment.mjs` imports 39a's `CARRIED` and uses it as its
+REPLACE list — the two halves cannot then disagree about the boundary. **Verify A rejected the
+packet because that list covered seven collections and not `extras`**: the live chain "Trading blocs
+create trade creation and diversion" came through byte-identical, defining diversion as something
+"the common external tariff shifts", which is the framing the finding says to replace and which the
+new `trade-diversion` subsection contradicts. The section taught the leaf two ways at once and the
+Extras tab had the wrong one. A sweep that covers most collections is a sweep that hides in the one
+it misses.
+
+**`npm run contrast` DOES NOT MEASURE AN AUTHORED SVG'S TEXT AGAINST THE SHAPE BEHIND IT.** It reads
+`components/learn-mode/processSvg.js` and checks that themed colour declarations resolve through a
+token. A `#0b1020` label on a `#64748b` bar inside a diagram is 3.98:1 — below the 4.5:1 floor for
+text rendering at about 10.9 CSS px — and passes that guard. Found by a signed-out walkthrough at
+390×844, then measured. The check is now in the packet runner, and adding it immediately found four
+more: light labels on solid amber (1.82:1) and blue (3.11:1) fills, and a solid amber region where a
+0.16 wash was intended. Measured against the page background, only `SLATE` (#64748b) fails as text;
+on a solid fill the dark label wins everywhere and the light one loses everywhere.
+
+**A COLLISION GUARD TIGHTER THAN THE ONE THAT ALREADY CAUGHT THE CLASS IS NOT A GUARD.** 39b started
+with a glyph-tight box (`y − 0.8·size … y + 0.25·size`) and no line check at all, and passed a quota
+label overlapping its neighbour by 2.6 CSS px — it missed by 0.575 units. `packet-31-financial-planning.mjs:705-772`
+already uses `1.2 × face` **and** a segment-against-box crossing test, both A/B-proven. Adopting both
+found four further collisions that the box test could not see, including a y-axis running through
+its own "Price" label. **Check `git log` for the most recent version of a guard before writing one.**
+
+**"NOT RECOVERABLE" AND "ALREADY TAUGHT" ARE DIFFERENT PROPERTIES, AND A PACKET CAN SATISFY THE
+FIRST BY BREAKING THE SECOND.** Holding this section to zero recoverable recalls pushed three
+reorders off the step that taught them. One landed two subsections EARLIER — a retaliation sequence
+asked before retaliation had been mentioned — which passes the recoverability gate precisely because
+the material is untaught at that point. Verify A found it. The runner now fails any reorder whose
+best-matching subsection comes later in the deck than the one carrying it.
+
+**TEN CHAPTERS FILLS `FREE_QUIZ_MAX`, AND THE SIGNED-OUT PRE-TEST THEN DOES NOT RUN.** Documented at
+`lib/preview-limits.js:99-102` — "at nine or ten the payload is full, so PRETEST_HEADROOM gets
+nothing and the pre-test does not run — it hides rather than spoils itself". This is the second
+section in that position. The trade is deliberate: all ten check-ins keep their question, which is
+what `structure-05` and `quiz-02` are about. A verification script inherited from a five-chapter
+packet asserted "at least three pre-test items reached the payload" and had to be corrected to the
+documented either/or.
+
+**THE IAL SPECIFICATION SAYS "WELFARE LOSS", NOT "DEADWEIGHT LOSS".** `terms.off-spec` lists
+deadweight loss among the vocabulary the specification does not use, and packet 13 strips it. It is
+universal in economics teaching, which is exactly why it went in without thinking. Thirteen
+occurrences, all replaced.
+
+## 22 September 2026 — quantitative drills reach students, and three of them were pointing at sections that do not exist (packet 13.2, D018-D028)
+
+**Decision: a section's drills are DERIVED from its spec number, not authored into its content.** `lib/quant-pool.js` matches `template.specCode` against `section.number` within a subject and unit; the figures are rebuilt from `${sectionId}:${templateId}:${attempt}`. No content row changes, no migration, and a section gains a calculation the moment a template claims it. That is also why 13.2 was not in fact blocked on packet 2: the item ids the drills need are for the SM-2 queue, which is 13.3.
+
+**The correction that had to come first, and the reason it is a decision and not a typo.** `ped` shipped `specCode: '1.2.4'` and `multiplier` `'2.4.2'`. **Every IAL section number has 3 as its middle digit** — `1.3.1` through `4.3.6` — so both are UK GCE numbers and neither matches a section in the product. `breakeven` shipped `'2.3.1'`, which is a real Business heading (Planning and raising finance) and the wrong one: break-even and margin of safety are `2.3.2 Financial planning`, topic 3 leaves c and d, `bus_spec.txt:885, :903-904`. Under the join above, all three drills would have been mounted and appeared **nowhere**, and the packet would have looked finished. This is the fifth sighting of the UK-GCE-numbering class the ledger already carries against content; it is now in code.
+
+**So a template names a phrase, not just a number.** `specTerm` is a string the specification uses under that heading, and `lib/quant-pool.test.mjs` asserts it is there. The first version of that test checked only the SHAPE of the code — middle digit 3, unit digit matching, a heading with that number existing — and it **passed `breakeven` at 2.3.1**, because that heading is real. Measured, not assumed: `audit/runs/packet-13.2/spec-code-ab.txt` puts all three codes back one at a time and adds a fourth sabotage. A number that exists is not evidence that the topic lives there.
+
+**The drill is not in the quiz score, and that is a data decision.** `QuizTab` posts `{score, total}` to `/api/progress/quiz` and compares a student's best "like with like" on `total`. Folding a generated item into the total would move every future attempt from 25 to 26 and silently orphan every row already in the table — a student's 18/25 would stop matching and their best would disappear. The calculation is marked by its own engine, above the questions, and says so.
+
+**No entitlement gate on the drill, on either surface — founder's to overturn.** A generated item is not a content bank: there is nothing to leak, so withholding it protects nothing F086 was about, and a gate would have to carry the three-valued `isPremium` that packet 2.3 introduced. A free student gets the calculation; a paying one gets the same calculation.
+
+**A guard that fails correct work is worse than no guard.** `quant-check`'s variety rule demanded 80% of the DRAWS be distinct stems. Drawing D times from V number sets can only reach V(1 − (1 − 1/V)^D) of them, so at `--draws 2000` it failed `ped`, `percentage-change-economics` and `multiplier` — three templates whose arithmetic is right. The floor is now 80% of what sampling can reach, and `audit/runs/packet-13.2/variety-ab.txt` shows a sabotaged draw still failing at both 200 and 2000 draws. The next session would have "fixed" the templates.
+
+**Where a drill lands is a content decision, so it reads the content.** The even spread put the multiplier drill on `national-income`'s check-in 2 — one chapter before 1/MPW is introduced. A drill now goes to the check-in of the chapter whose title shares a word with the template's, and only falls back to a spread over the later check-ins. An unmatched drill never lands on the first check-in; a matched one may, because there the chapter it belongs to is the reason.
+
+**The five baseline keys were removed by hand rather than by `--baseline --confirm`.** Registering WBS11 clears `quant.unit` for the five Business Unit 1 sections. The sanctioned rewrite would at that moment also have folded in ~130 `practice.opening` keys belonging to another session's live rule, and `audit/validator-baseline.json` is a file that may only shrink. The measurement is `audit/runs/packet-13.2/quant-unit-delta.txt`, which also records 0 live keys missing from the baseline. The 15 `quant.unit` keys that remain are exactly WEC13, WEC14 and WBS14 — packet 13.3's twelve templates.
+
+**And the finding the packet will be remembered for: a drill that prints its own answer.** Five of
+the eight templates marked a student correct for typing a figure they could already see — the
+variable cost that equalled the contribution, the cash flow that equalled the total return, the
+$25 price that equalled a 25% rise, the wrong CHOICE that was the right answer. Three were packet
+13.1's, shipped and confirmed in September. None of `quant-check`'s six checks could see it,
+because from inside a template every figure is correct: it is the combination of a correct stem
+and a correct answer that leaks, and **only the rendered card shows it**. Check 7 reads the card
+now — stem, labels, prefixes, suffixes and choices — and each of its three exemptions is a reason
+rather than a threshold: a choice step's own answer (printing it is what a choice is), the method
+line (a formula, never data), and a bare small integer with no currency marker ("Months into year
+4" has to say 4). `audit/runs/packet-13.2/printed-answer-ab.txt` removes each template's rejection
+in turn; the rarest instance the guard catches is 2 in 40,000, which is the one a verifier had
+found by exhaustive counting.
+
+**The probe that found four of the five did not look at the data.** Enumerating the draw's own
+number sets and comparing fields reuses the filter it is meant to test and can only find what that
+filter already knows. `leak-census.mjs` builds the item and reads its strings instead. That is the
+same rule this programme keeps relearning — a check that shares the implementation's blind spot
+cannot see past it — and it is now written into a guard rather than into a session's memory.
+
+**An acceptance id may assert one thing.** D028 asserted two — that a drill lands on the chapter
+that teaches it, and that an unmatched drill never lands on the first check-in — and a fix round
+traded the second away on purpose, because reserving that slot left `payback` reaching no student
+on the only section that carries it. Round 1 had confirmed it; round 2 rejected it correctly. A
+half-true id reads as confirmed. Split into D029 and D030, both verified against the code as it
+now stands.
+
+## 2026-09-25 — packet 2.8: a wholly unpinned section serves no check-in question (V053)
+
+Silence over misdirection. Where a section pins nothing, no question and no worked example are placed; the title-matching fallback (V026) stays only for one unpinned chapter inside an otherwise pinned section, because only there do the other pins establish the bank is chapter-addressed. Measured reason: on 3.3.1 the fallback moved a satisficing question (chapter 1) to chapter 3 on the word `firms`. Diagrams keep `matchDiagramsToBlocks`, which has the same weakness (V056, packet 2.9). Placement lives in one function, `lib/checkin-placement.js`; a checker that re-implements it is not a checker.
+
+## 2026-09-25 — packet 2.9: a pin is chosen by reading the chapter, and an empty pin is a decision (V057, V058)
+
+**A pin is a judgement about teaching, not vocabulary.** An item is pinned to a chapter only when that chapter's
+text teaches the keyed answer: quoted, not early, and not untaught anywhere in the section. Every pin was judged
+blind by a second reader who never saw the chooser's reasoning. Sharing a word with the title counts for nothing:
+the gates in this repository all match vocabulary, and that is exactly how a horizontal-integration question
+reached a chapter on business objectives. **An empty check-in is acceptable and a wrong one is not**, so a
+chapter whose bank holds nothing it teaches gets no question.
+
+**`quizIndices: []` means "decided: no question".** It does not mean "not yet pinned". Once one chapter pins,
+the whole section is on the pinned path, and there V026's fallback fills every unpinned chapter on one shared
+title word. That is right for a chapter nobody decided about and wrong for one somebody read. So an explicit
+empty list is honoured by the placement and by the signed-out payload (`decidedNoQuestion`,
+`lib/checkin-fallback.js`), while an absent pin still falls back. Practice has no fallback, so an absent
+practice pin is already empty.
+
+**A practice pin must not land in a GUIDED slot while its opening paragraph is its mark scheme.**
+`practice.opening` is still DEBT on 160 back-catalogue items. On a 3–4 chapter section the middle check-ins are
+guided, so six pins were withheld rather than print a mark scheme above an empty answer box. They are listed in
+`audit/runs/packet-2.9/merge-proposals.mjs` and restore with one line once the founder takes the
+`getPracticeMode` fix.
+
+**Pins are by index, not id.** No block in the corpus pins by id, and `pins.range` / `pins.reuse`, `pin-check`
+and the `_content-ops` renumbering all read indices only. The one risk ids would cover — a bank that has moved
+since the pin was chosen — is checked by the runner instead: every index must still hold the id it was chosen
+for.

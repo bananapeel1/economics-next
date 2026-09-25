@@ -1,0 +1,165 @@
+SECTION market-structures-contestability — Market Structures and Contestability
+
+########## CHAPTER 1 (block 0, id market-structures-contestability:block:95d1ffec): Perfect Competition & Monopolistic Competition
+
+--- Perfect Competition
+**Perfect competition** is a market structure with many firms, each selling a **homogeneous (identical) product**. Because no single firm is large enough to influence the market price, each is a **price taker** — it accepts the price set by market supply and demand. This means the firm's demand curve is perfectly elastic: AR = MR = P.
+In the **short run**, a perfectly competitive firm can earn supernormal profit if the market price is above average total cost. However, because there are **no barriers to entry**, new firms are attracted by supernormal profit. As they enter, market supply shifts right, the price falls, and supernormal profit is competed away. In **long-run equilibrium**, each firm earns **normal profit** only (AR = ATC). At this point, the firm produces where **P = MC** (allocative efficiency) and at the **minimum point of ATC** (productive efficiency).
+FLOW: Firms earn supernormal profit -> New firms enter the market -> Market supply increases -> Market price falls => Normal profit only in long run — allocative and productive efficiency achieved
+KEY IDEA: Many firms sell identical products and are price takers — in the long run, freedom of entry competes away all supernormal profit, leaving firms earning just normal profit at P = MC.
+MISCONCEPTION: Students say perfectly competitive firms earn no profit. Wrong — they earn normal profit, which is the minimum return needed to keep the entrepreneur in the industry. Supernormal (above-normal) profit is what gets competed away. Instead write: in long-run equilibrium, firms earn normal profit — enough to stay in business, but no more.
+EXAMPLE: Agricultural commodity markets like wheat approximate perfect competition. Thousands of farmers sell an identical product, no single farmer can influence the world price, and entry barriers are relatively low — making them price takers in a global market.
+
+--- Monopolistic Competition
+**Monopolistic competition** combines elements of both perfect competition and monopoly. There are **many firms**, each selling a **slightly differentiated product** — think different restaurant cuisines, branding, or quality levels. Because products are not identical, each firm has a small degree of market power and faces a **downward-sloping demand curve**.
+In the **short run**, firms can earn supernormal profit if demand is strong enough. But because **barriers to entry are low**, new firms enter, attracted by profit. Entry shifts each existing firm's demand curve leftward (customers are shared among more firms). In **long-run equilibrium**, the AR curve is **tangent to the ATC curve** — the firm earns normal profit only. Crucially, the tangency point is **not at the minimum of ATC**, meaning the firm has **excess capacity** — it could produce more at a lower average cost but chooses not to.
+FLOW: Firms earn supernormal profit -> Low barriers attract new entrants -> Each firm's demand shifts left -> AR tangent to ATC => Normal profit but excess capacity — firms produce below the cost-minimising output
+KEY IDEA: Many firms sell differentiated products with low barriers to entry — supernormal profit is possible in the short run, but entry competes it away, leaving excess capacity in the long run.
+MISCONCEPTION: Students confuse monopolistic competition with monopoly because of the similar name. Wrong — monopolistic competition has many firms and low barriers, whereas monopoly has one firm and high barriers. Instead write: the 'monopolistic' part refers only to product differentiation giving a small degree of pricing power, not to dominance.
+EXAMPLE: The restaurant industry is a classic example of monopolistic competition. Hundreds of restaurants in any city sell differentiated meals (Italian, Thai, vegan), entry costs are low, and while a popular new restaurant may earn supernormal profit initially, rival openings soon erode it.
+TAKEAWAY: ["Perfect competition: P = MC and minimum ATC in long run — the benchmark for static efficiency.","Monopolistic competition: normal profit in long run but excess capacity due to product differentiation.","In both structures, freedom of entry is the mechanism that competes away supernormal profit over time."]
+
+########## CHAPTER 2 (block 1, id market-structures-contestability:block:746d3193): Oligopoly
+
+--- Oligopoly Characteristics & the Kinked Demand Curve
+An **oligopoly** is a market dominated by a **few large firms** that together hold a significant share of total output. Key features include **high barriers to entry** (economies of scale, branding, patents), **interdependence** (each firm must consider rivals' reactions before changing price or output), and products that may be differentiated or homogeneous.
+The **kinked demand curve** model explains why prices in oligopolies tend to be **sticky**. If one firm raises its price, rivals do not follow — the firm loses customers and demand is elastic above the current price. If the firm cuts its price, rivals match the cut to protect market share — demand is inelastic below the current price. This creates a **kink** at the prevailing price and a **discontinuous gap in the MR curve**. Costs can shift within this gap without changing the profit-maximising price or output.
+FLOW: Firm considers raising price -> Rivals do not follow — firm loses customers -> Firm considers cutting price -> Rivals match — little gain in market share => Price stickiness — prices tend to remain stable even when costs change
+KEY IDEA: A market dominated by a few large interdependent firms — the kinked demand curve explains price stickiness because rivals match price cuts but ignore price rises.
+MISCONCEPTION: Students say oligopolies always charge high prices. Wrong — intense rivalry between interdependent firms can lead to price wars and competitive pricing. Instead write: oligopoly outcomes depend on whether firms compete or collude — interdependence can lead to either aggressive competition or tacit cooperation.
+EXAMPLE: The UK supermarket industry — dominated by Tesco, Sainsbury's, Asda, and Morrisons — is a classic oligopoly. When one supermarket launches a price-matching campaign, rivals respond immediately, making sustained price cuts unprofitable and keeping prices broadly stable.
+
+--- Game Theory, Collusion & Cartels
+**Game theory** analyses strategic interaction between interdependent firms. The **prisoner's dilemma** illustrates the core problem: if both firms cooperate (keep prices high), they share monopoly profit. But each firm has a **dominant strategy to cheat** — cutting its price to steal market share. When both cheat, they end up worse off than if they had cooperated. This is the **Nash equilibrium**: neither firm can improve its position by changing strategy alone.
+A **cartel** is a formal agreement between firms to fix prices, restrict output, or divide markets. By acting as a collective monopoly, cartel members can earn supernormal profit. However, cartels are **inherently unstable** because each member has an incentive to secretly increase output above its quota — gaining revenue at other members' expense. **Tacit collusion** avoids illegal agreements: firms follow a **price leader** (usually the largest firm) without explicit communication.
+FLOW: Firms form cartel to restrict output -> Each member tempted to cheat for extra revenue -> One firm secretly exceeds quota -> Others retaliate or cartel collapses => Cartels are unstable — the incentive to cheat undermines cooperation
+KEY IDEA: The prisoner's dilemma shows why collusion is unstable — every cartel member has a dominant strategy to cheat by secretly increasing output, which is why most cartels eventually collapse.
+MISCONCEPTION: Students assume collusion always succeeds in raising prices. Wrong — collusion is difficult to maintain because the incentive to cheat is built into the structure. Instead write: collusion raises joint profits only if all members comply; the prisoner's dilemma shows why defection is the dominant strategy, making cartels inherently fragile.
+EXAMPLE: OPEC is the world's most prominent cartel, coordinating oil output among member nations. Yet OPEC regularly struggles with compliance — members like Iraq and Nigeria frequently exceed their production quotas to boost national revenue, undermining the cartel's ability to keep prices high.
+TAKEAWAY: ["Oligopoly = few firms, high barriers, interdependence — the kinked demand curve explains price stickiness.","Game theory reveals why collusion is the jointly rational outcome but cheating is the individually rational strategy.","Cartels like OPEC are unstable because every member has an incentive to secretly exceed its quota."]
+
+########## CHAPTER 3 (block 2, id market-structures-contestability:block:c072910f): Monopoly
+
+--- Monopoly Equilibrium & Welfare Loss
+A **pure monopoly** is a single firm that is the sole supplier in a market, protected by **high barriers to entry** (legal, technical, or strategic). The monopolist faces the entire market demand curve, which slopes downward — to sell more, it must lower the price on all units, so **MR < AR** at every output level.
+The monopolist maximises profit at **MC = MR**, then charges the price consumers are willing to pay on the **AR (demand) curve** above. Because **P > MC**, the monopolist is **allocatively inefficient** — it produces too little and charges too much relative to the competitive outcome. The gap between the monopoly outcome and the competitive outcome creates a **welfare loss triangle**, representing surplus that is lost to society entirely. Unlike in perfect competition, **supernormal profit persists in the long run** because barriers to entry prevent new firms from entering.
+FLOW: Monopolist sets MC = MR -> Reads price from AR curve above -> P > MC at equilibrium -> Output restricted below competitive level => Welfare loss — allocative inefficiency with persistent supernormal profit
+KEY IDEA: A monopolist sets MC = MR then reads price from the AR curve — charging P > MC creates allocative inefficiency and a welfare loss triangle that represents lost consumer and producer surplus.
+MISCONCEPTION: Students say monopolies are always bad for consumers. Wrong — monopolies can achieve economies of scale that lower costs, and supernormal profit can fund R&D and innovation (dynamic efficiency). Instead write: monopoly creates static inefficiency but may promote dynamic efficiency — the net effect depends on the specific market.
+EXAMPLE: Thames Water is a regional monopoly supplying water to 15 million customers in London and the South East. Customers cannot switch supplier, giving Thames Water significant market power — which is why Ofwat regulates its prices to prevent exploitation.
+
+--- Price Discrimination
+**Price discrimination** occurs when a firm charges **different prices to different consumers** for the same product, where the price difference is not justified by cost differences. There are three degrees: **first-degree** (each consumer pays their maximum willingness to pay — all consumer surplus extracted), **second-degree** (different prices for different quantities — e.g. bulk discounts), and **third-degree** (different prices for different groups identified by elasticity — e.g. student discounts, peak pricing).
+Three conditions must hold: the firm must have **market power** (downward-sloping demand), it must be able to **separate consumers** into groups with different price elasticities, and there must be **no possibility of resale** between groups. Third-degree discrimination is the most common and exam-relevant: the firm charges a higher price in the market with inelastic demand and a lower price where demand is elastic.
+A key evaluation point: price discrimination can **increase total output** above the single-price monopoly level. Some consumers who would have been priced out under a single price now receive the product at a lower price. This can improve allocative efficiency, though it also transfers consumer surplus to the producer.
+FLOW: Firm identifies groups with different elasticities -> Charges higher price to inelastic group -> Charges lower price to elastic group -> Total output rises above single-price level => Higher profit for the firm and potentially greater output — but consumer surplus is redistributed
+KEY IDEA: Charging different prices to different consumers for the same product — it requires market power, consumer separation, and no resale, and can actually increase total output above the single-price level.
+MISCONCEPTION: Students say price discrimination is always harmful to consumers. Wrong — third-degree discrimination can extend the market to price-sensitive consumers who would otherwise be excluded. Instead write: price discrimination redistributes surplus from consumers to the firm, but can increase total output and allow some consumers access to goods they could not otherwise afford.
+EXAMPLE: Train operators like Avanti West Coast charge vastly different fares for the same journey — peak-time commuters with inelastic demand pay far more than off-peak leisure travellers. The same seat, same route, same service, but different prices based on time of travel and willingness to pay.
+TAKEAWAY: ["Monopoly: MC = MR, price from AR, P > MC creates welfare loss — supernormal profit persists in the long run.","Price discrimination requires market power, consumer separation, and no resale — three conditions, always state them.","Monopoly is statically inefficient but may be dynamically efficient — this trade-off is central to evaluation."]
+
+########## CHAPTER 4 (block 3, id market-structures-contestability:block:9634759b): Contestable Markets
+
+--- Theory of Contestable Markets
+The theory of **contestable markets**, developed by William Baumol, argues that the **threat of entry** matters more than the actual number of firms in a market. A perfectly contestable market has **zero sunk costs** — meaning a firm can enter, compete, and exit without losing any investment. In such a market, even a single incumbent firm (a monopoly) would be forced to behave competitively.
+The key concept is **hit-and-run entry**: if an incumbent earns supernormal profit, a new firm can enter, undercut the price, capture the profit, and exit before the incumbent can respond — provided there are no sunk costs trapping the entrant. **Sunk costs are the crucial barrier** to contestability: the higher the sunk costs (advertising, specialised equipment, brand building), the less contestable the market. Contestability shifts the focus from market structure to market behaviour — a monopoly in a contestable market may produce outcomes closer to perfect competition.
+FLOW: Incumbent earns supernormal profit -> Low sunk costs make entry easy -> Threat of hit-and-run entry -> Incumbent forced to lower price => Competitive behaviour despite few firms — the threat of entry disciplines the market
+KEY IDEA: What disciplines firm behaviour is not the number of existing competitors but the threat of entry — if sunk costs are low, even a monopolist must price competitively or face hit-and-run entry.
+MISCONCEPTION: Students say a market is contestable simply because there are few barriers to entry. Incomplete — contestability specifically requires low **sunk** costs, not just low entry barriers. Instead write: a market is contestable when sunk costs are low, allowing costless exit as well as easy entry — it is the ability to leave without loss that enables hit-and-run competition.
+EXAMPLE: The budget airline industry demonstrates contestability. Airlines like Ryanair and easyJet lease aircraft rather than buying them (reducing sunk costs), can quickly switch routes, and face low exit costs — making the threat of new entrants on any profitable route a constant discipline on pricing.
+
+--- Evaluating Market Structures & Efficiency
+**Allocative efficiency** (P = MC) and **productive efficiency** (minimum ATC) are both achieved in long-run perfect competition. However, perfectly competitive firms earn only normal profit and have no funds for research and development — they lack **dynamic efficiency** (innovation and technological progress over time). The identical products and tiny firm sizes leave no room for investment in new processes or products.
+**Monopoly** is the mirror image: persistent supernormal profit funds R&D and innovation (Schumpeter's argument for dynamic efficiency), but P > MC means allocative inefficiency and production may not occur at minimum ATC. The policy question becomes whether the long-run gains from innovation outweigh the short-run losses from higher prices and restricted output.
+This trade-off is **central to competition policy**. Competition regulators must weigh static efficiency losses (welfare loss, higher prices) against potential dynamic efficiency gains (new products, lower future costs). Patent systems explicitly make this trade-off: they grant a **temporary monopoly** to incentivise innovation, accepting short-run inefficiency for long-run gains.
+FLOW: Perfect competition: static efficiency but no dynamic -> Monopoly: possible dynamic efficiency but static inefficiency -> Policy must weigh short-run costs vs long-run gains => No single structure is best — the optimal outcome depends on the specific market and time horizon
+KEY IDEA: No single market structure achieves every type of efficiency — perfect competition delivers static efficiency but not dynamic, while monopoly may deliver dynamic efficiency but not static. This trade-off is the heart of competition policy.
+MISCONCEPTION: Students rank market structures from best to worst and conclude perfect competition is always ideal. Wrong — perfect competition has zero dynamic efficiency, meaning no innovation, no new products, and no technological progress. Instead write: perfect competition is the benchmark for static efficiency, but the absence of supernormal profit means it cannot fund the R&D that drives long-run growth and consumer welfare improvements.
+EXAMPLE: Pharmaceutical patents grant companies like Pfizer a 20-year monopoly on new drugs. The resulting high prices are allocatively inefficient, but without the monopoly profit incentive, firms would not invest the billions required for R&D — a deliberate policy trade-off between static and dynamic efficiency.
+TAKEAWAY: ["Contestability: sunk costs are the key barrier — low sunk costs enable hit-and-run entry that disciplines incumbent behaviour.","Perfect competition achieves static efficiency (P = MC, min ATC) but not dynamic efficiency (no R&D funds).","The efficiency trade-off between market structures is the central evaluation point in competition policy questions."]
+
+########## QUIZ BANK (order as stored)
+q0 market-structures-contestability:quiz:478aa9ed
+  Q: Allocative efficiency is achieved when:
+    The firm produces at the minimum of its average cost curve
+  * Price equals marginal cost (P = MC)
+    The firm earns only normal profit
+    Total revenue is maximised
+q1 market-structures-contestability:quiz:3f44b2c5
+  Q: In the long run in perfect competition, the firm produces where:
+    P > MC and earns supernormal profit
+  * P = MC = AC at the minimum of the AC curve
+    MR < MC and earns normal profit
+    P = MC but above the minimum of the AC curve
+q2 market-structures-contestability:quiz:26433195
+  Q: The shutdown point in the short run occurs where:
+    Price equals average total cost (P = AC)
+    Marginal revenue equals zero (MR = 0)
+  * Price equals minimum average variable cost (P = min AVC)
+    Marginal cost equals average cost (MC = AC)
+q3 market-structures-contestability:quiz:cc94f77b
+  Q: In the long run in monopolistic competition, excess capacity exists because:
+    The firm produces beyond the minimum of its AC curve
+  * The AR curve is tangent to AC to the LEFT of the minimum AC point
+    The firm earns supernormal profit, attracting entry
+    The demand curve is perfectly elastic
+q4 market-structures-contestability:quiz:e2c7bb41
+  Q: The kinked demand curve model for oligopoly explains:
+    How the initial equilibrium price is determined
+    Why oligopolists always collude
+  * Price rigidity — why prices tend to be 'sticky'
+    Why oligopolists always engage in price wars
+q5 market-structures-contestability:quiz:69a7746d
+  Q: Which of the following is NOT a condition required for price discrimination?
+    The firm must be a price maker with market power
+    The firm must be able to identify groups with different elasticities of demand
+    Resale (arbitrage) between consumer groups must be prevented
+  * The firm must be productively efficient
+q6 market-structures-contestability:quiz:d2b4d9d4
+  Q: A natural monopoly is characterised by:
+    A U-shaped LRAC curve with minimum efficient scale at a small output
+  * A continuously falling LRAC curve over the relevant range of output
+    Many firms competing for market share
+    Zero barriers to entry and exit
+q7 market-structures-contestability:quiz:ec1ea9f2
+  Q: In the Prisoner's Dilemma applied to oligopoly, the Nash Equilibrium typically results in:
+    Both firms cooperating and earning maximum joint profit
+  * Both firms cheating (cutting prices) — individually rational but collectively suboptimal
+    One firm cooperating while the other cheats
+    Both firms exiting the market
+q8 market-structures-contestability:quiz:84375755
+  Q: Contestable market theory (Baumol) argues that competitive behaviour is determined by:
+    The number of firms currently in the market
+    The level of product differentiation
+  * The threat of potential entry and the level of sunk costs
+    The concentration ratio of the industry
+q9 market-structures-contestability:quiz:0575dcd9
+  Q: A monopsony buyer will tend to:
+    Pay suppliers a higher price than in a competitive market
+    Buy more than the competitive quantity of inputs
+  * Pay suppliers less and buy fewer inputs than in a competitive market
+    Have no effect on input prices or quantities
+q10 market-structures-contestability:quiz:66829626
+  Q: Which of the following is an example of a strategic (artificial) barrier to entry?
+    Economies of scale in production
+    High natural resource requirements
+  * Limit pricing by incumbent firms
+    High minimum efficient scale
+q11 market-structures-contestability:quiz:e59a2f4c
+  Q: Which market structure is most likely to achieve dynamic efficiency?
+    Perfect competition — because intense competition drives innovation
+    Monopolistic competition — because product differentiation requires R&D
+  * Monopoly or oligopoly — because supernormal profits fund R&D investment
+    A perfectly contestable market — because the threat of entry forces innovation
+
+########## PRACTICE BANK (order as stored)
+p0 market-structures-contestability:practice:ee7c1b76 (4 marks)
+  Define the characteristics of a perfectly competitive market. (4 marks)
+p1 market-structures-contestability:practice:4f590bac (6 marks)
+  Explain two conditions necessary for a firm to successfully practise price discrimination. (6 marks)
+p2 market-structures-contestability:practice:c2c53594 (8 marks)
+  Examine whether monopoly is always less efficient than perfect competition. (8 marks)
+p3 market-structures-contestability:practice:fddf21e7 (20 marks)
+  Evaluate the usefulness of game theory in explaining the behaviour of firms in an oligopolistic market. (20 marks)
+p4 market-structures-contestability:practice:3abb75a3 (4 marks)
+  Outline two characteristics of a contestable market. (4 marks)

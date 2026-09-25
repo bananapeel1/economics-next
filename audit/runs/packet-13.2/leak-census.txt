@@ -1,0 +1,11 @@
+8 templates × 5,000 draws = 40,000 cards read
+
+  percentage-change-business: 110 of 5000 (1 in 45)
+    leak-percentage-change-business-59 — answer 6 printed as "6"
+    leak-percentage-change-business-118 — answer 5 printed as "5"
+    leak-percentage-change-business-350 — answer 5 printed as "5"
+
+  breakeven: 213 of 5000 (1 in 23)
+    leak-breakeven-7 — answer 20 printed as "20"
+    leak-breakeven-80 — answer 16 printed as "16"
+    leak-breakeven-119 — answer 7 printed as "7"
