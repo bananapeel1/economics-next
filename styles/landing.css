@@ -668,3 +668,30 @@
   .b2a-icon { width: 32px; height: 32px; border-radius: 8px; }
   .elp-page a.b2a-btn { width: 100%; text-align: center; }
 }
+
+/* --- Exam timetable table (IAL series pages) --- */
+.elp-tt-wrap { max-width: 900px; margin: 0 auto; }
+.elp-tt { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.elp-tt th {
+  text-align: left; font-size: 11.5px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--elp-tx-c); padding: 0 12px 10px; border-bottom: 1px solid var(--elp-bd2);
+}
+.elp-tt td { padding: 14px 12px; border-bottom: 1px solid var(--elp-bd); vertical-align: top; color: var(--elp-tx-b); }
+.elp-tt-date { white-space: nowrap; font-weight: 600; color: var(--elp-tx); }
+.elp-tt-paper { color: var(--elp-tx); text-decoration: none; }
+.elp-tt-paper:hover { color: var(--elp-green); }
+.elp-tt-code {
+  display: inline-block; margin-right: 8px; padding: 1px 7px; border-radius: 6px;
+  font-family: var(--elp-mono); font-size: 12.5px; font-weight: 500;
+}
+.elp-tt-code.is-econ { background: var(--elp-g-bg); color: var(--elp-green); border: 1px solid var(--elp-g-bd); }
+.elp-tt-code.is-bus { background: var(--elp-b-bg); color: var(--elp-blue); border: 1px solid var(--elp-b-bd); }
+.elp-tt-session { white-space: nowrap; }
+.elp-tt-session span { display: block; font-size: 12.5px; color: var(--elp-tx-c); }
+.elp-tt-source { margin-top: 14px; font-size: 13px; color: var(--elp-tx-c); }
+.elp-tt-source a { color: var(--elp-tx-b); }
+@media (max-width: 600px) {
+  .elp-tt { font-size: 13.5px; }
+  .elp-tt th, .elp-tt td { padding-left: 6px; padding-right: 6px; }
+  .elp-tt-code { display: block; width: max-content; margin: 0 0 4px; }
+}

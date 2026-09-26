@@ -7,7 +7,7 @@ import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Edexcel IAL Revision — Free International A-Level Economics & Business Notes | Revvy Learn',
-  description: 'Free revision notes and practice questions for Edexcel International A-Level (IAL) Economics and Business, plus free past papers and mark schemes for all four units. Flashcards, quizzes and the AI tutor unlock with Pro. Built for IAL students worldwide. January and June exam series covered.',
+  description: 'Free revision notes and practice questions for Edexcel International A-Level (IAL) Economics and Business, plus free past papers and mark schemes for all four units. Flashcards, quizzes and the AI tutor unlock with Pro. Built for IAL students worldwide. October, January and June exam series covered.',
   alternates: { canonical: 'https://revvylearn.com/ial-revision' },
   openGraph: {
     title: 'Edexcel IAL Revision — Free International A-Level Notes | Revvy Learn',
@@ -27,7 +27,7 @@ export default function IALRevisionPage() {
         "name": "What is Edexcel IAL?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Edexcel IAL (International A-Level) is a modular qualification offered by Pearson Edexcel, designed specifically for students outside the UK. It is available in subjects including Economics and Business and is recognised by universities worldwide. Unlike the UK domestic A-Level, IAL exams can be sat in both January and June exam series."
+          "text": "Edexcel IAL (International A-Level) is a modular qualification offered by Pearson Edexcel, designed specifically for students outside the UK. It is available in subjects including Economics and Business and is recognised by universities worldwide. Unlike the UK domestic A-Level, IAL Economics and Business exams can be sat in three series a year: January, May/June and October."
         }
       },
       {
@@ -35,7 +35,7 @@ export default function IALRevisionPage() {
         "name": "Is IAL the same as A-Level?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "IAL and the UK domestic A-Level cover similar content but differ in structure. IAL is modular — you sit individual unit exams across multiple sessions (January and June). The UK A-Level is linear — all exams are sat in June of the final year. IAL also offers R papers (alternative papers for different time zones) to prevent paper leaks across regions."
+          "text": "IAL and the UK domestic A-Level cover similar content but differ in structure. IAL is modular — you sit individual unit exams across multiple series (January, May/June and October). The UK A-Level is linear — all exams are sat in June of the final year."
         }
       },
       {
@@ -51,7 +51,7 @@ export default function IALRevisionPage() {
         "name": "When are the IAL exam dates?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Edexcel IAL exams run in two series each year: January (typically mid-January) and June (typically May–June). This modular structure allows students to spread their units across multiple sittings, retake individual units to improve grades, or complete the full qualification in a single session."
+          "text": "IAL Economics and Business exams run in three series each year: January, May/June and October. This modular structure allows students to spread their units across multiple sittings, retake individual units to improve grades, or complete the full qualification in a single session."
         }
       }
     ]
@@ -173,20 +173,20 @@ export default function IALRevisionPage() {
             <div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-amber)' }} />
             Exam sessions
           </div>
-          <h2 className="elp-s-title">January &amp; June exam series</h2>
+          <h2 className="elp-s-title">October, January &amp; June exam series</h2>
           <p className="elp-s-sub" style={{ maxWidth: '720px' }}>
-            Unlike the UK domestic A-Level, Edexcel IAL offers two exam windows per year. This is a major advantage for international students &mdash; you can sit Units 1 and 2 in January and Units 3 and 4 in June, or take all units in a single session.
+            Unlike the UK domestic A-Level, IAL Economics and Business can be sat in three series a year. You can sit Units 1 and 2 in one series and Units 3 and 4 in a later one, or take all units in a single series.
           </p>
         </div>
 
         <div className="elp-wyg-grid" style={{ maxWidth: '700px', margin: '0 auto' }}>
-          <Link href="/ial-revision/june-2026" className="elp-wyg-card elp-fade-up" style={{ textDecoration: 'none' }}>
-            <div className="elp-wyg-title">June 2026 Exam Series</div>
-            <div className="elp-wyg-desc">Revision resources and preparation guide for the upcoming June 2026 IAL exam session. Covers all Economics and Business units.</div>
+          <Link href="/ial-revision/exam-series#october-2026" className="elp-wyg-card elp-fade-up" style={{ textDecoration: 'none' }}>
+            <div className="elp-wyg-title">October 2026 Exam Series</div>
+            <div className="elp-wyg-desc">Economics and Business papers from 8 to 30 October 2026: every date from Pearson&apos;s final timetable.</div>
           </Link>
           <Link href="/ial-revision/january-2027" className="elp-wyg-card elp-fade-up" style={{ textDecoration: 'none', transitionDelay: '.07s' }}>
-            <div className="elp-wyg-title">January 2027 Exam Series</div>
-            <div className="elp-wyg-desc">Get ahead with early revision for the January 2027 session. Perfect for students sitting their first IAL units.</div>
+            <div className="elp-wyg-title">January 2027 Timetable</div>
+            <div className="elp-wyg-desc">All eight Economics and Business papers, 11 to 21 January 2027, and the two dates to plan around.</div>
           </Link>
         </div>
       </div>
@@ -231,7 +231,7 @@ export default function IALRevisionPage() {
             </Link>
             <Link href="/business" className="elp-btn-secondary">Business &rarr;</Link>
           </div>
-          <p className="elp-cta-note">No signup required &middot; January &amp; June series &middot; 80+ countries</p>
+          <p className="elp-cta-note">No signup required &middot; October, January &amp; June series &middot; 80+ countries</p>
         </div>
       </div>
 
