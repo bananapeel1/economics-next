@@ -61,7 +61,7 @@ function PracticeWithheld() {
 }
 
 /**
- * One recall widget, by type: packet 7's four, plus the drawing drill from 13.2
+ * One recall widget, by type: packet 7's four, plus the drawing drill from 13.7
  * (lib/recall-widgets.js). `showing` is 'first' on the recall's own step and 'spaced' on a later
  * check-in; every widget derives its own seeded order from it — the drill has no order to seed, so
  * it ignores `showing`. `pool` is the section's other fill-in answers, the distractor source for a

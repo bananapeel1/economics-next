@@ -1,20 +1,8 @@
 /* Wrapper for the drawing drill when it appears as a recall widget. Tokens only — the
    light-mode audit's root cause was dark-tuned colours written as literals. */
 
-.wrap { display: flex; flex-direction: column; gap: 10px; }
-
-.skip {
-  align-self: flex-start;
-  font-family: inherit;
-  font-size: 13px;
-  padding: 6px 12px;
-  border-radius: 8px;
-  border: 1px solid var(--border-primary);
-  background: transparent;
-  color: var(--text-muted);
-  cursor: pointer;
-}
-.skip:hover { border-color: var(--border-hover); color: var(--text-secondary); }
+/* .wrap and .skip are gone: RecallFrame owns the card and the skip button, as it does for the
+   other four types. Only the missing-spec note is this file's own. */
 
 .missing {
   border: 1.5px dashed var(--border-hover);

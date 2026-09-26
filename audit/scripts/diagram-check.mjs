@@ -23,7 +23,7 @@
 // and npm run quant-check. Text metrics are supplied by the browser at runtime, so the label
 // check uses synthetic boxes to test the ALGORITHM; real metrics are the component's job.
 import { specs, mark, modelAttempt, applyShifts, buildRegions, placeLabels, overlaps, contains, area, intersect } from '../../lib/diagram/index.mjs';
-import { specSection, SPEC_CODE } from '../../lib/spec-sections.mjs';
+import { checkSpecCitation } from '../../lib/spec-sections.mjs';
 
 const VERBOSE = process.argv.includes('--verbose');
 const failures = [];
@@ -41,18 +41,8 @@ for (const spec of specs) {
      equivalent guard until this check. The shape test alone is not enough — `2.3.1` is a real
      heading and still the wrong one — so the drill also names a phrase the specification uses
      under its own section, and this asserts the phrase is there. */
-  if (!SPEC_CODE.test(spec.specCode || '')) {
-    fail(spec.id, 'spec code', `"${spec.specCode}" is not an IAL section number (n.3.n)`);
-  } else if (spec.specCode[0] !== spec.unit.slice(-1)) {
-    fail(spec.id, 'spec code', `${spec.unit} and ${spec.specCode} are different units`);
-  } else {
-    const body = specSection(spec.subject, spec.specCode);
-    if (!body) fail(spec.id, 'spec code', `${spec.specCode} is not a heading in the ${spec.subject} specification`);
-    else if (!spec.specTerm) fail(spec.id, 'spec code', 'no specTerm, so nothing ties this drill to its section');
-    else if (!body.includes(spec.specTerm.toLowerCase())) {
-      fail(spec.id, 'spec code', `the ${spec.subject} specification does not use "${spec.specTerm}" anywhere under ${spec.specCode}`);
-    }
-  }
+  const citation = checkSpecCitation(spec);
+  if (citation) fail(spec.id, 'spec code', citation);
 
   const target = spec.expect.curve;
   const wanted = spec.expect.direction === 'up' ? 1 : -1;
