@@ -2,6 +2,20 @@
 import PaywallOverlay from './PaywallOverlay';
 import { PREVIEW_LIMITS } from '@/lib/preview-limits';
 import { Star } from './Icons';
+import { parseInlineMarkdown } from '@/lib/parse-inline-markdown';
+
+/*
+ * EVERY TEXT FIELD GOES THROUGH THE NOTES PARSER. Evaluation bodies use **bold** for run-in labels
+ * ("**Size relative to the economy** — a deficit of…"), and this tab printed them as plain text, so
+ * a student saw the asterisks. Packet 45's walkthrough found it; on 26 Sep 2026, 14 live frames across
+ * six sections carried it, and in all six the first frame, the one a free student is shown, was one
+ * of them. Only the bodies carry markup today, but titles, steps and results go through the same path
+ * so the next field to gain some does not reopen this. The parser escapes before it adds tags, so
+ * nothing in the content becomes markup except the bold and italic it intends.
+ */
+function Inline({ as: Tag, className, text }) {
+  return <Tag className={className} dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(text) }} />;
+}
 
 export default function ExtrasTab({ data, previewMode = false, totalCount }) {
   const chains = data?.chains || [];
@@ -63,7 +77,7 @@ export default function ExtrasTab({ data, previewMode = false, totalCount }) {
               <div key={i} className="extras-card chain-card">
                 <div className="extras-card-header chain-header">
                   <span className="extras-card-number">{i + 1}</span>
-                  <h3 className="extras-card-title">{chain.title}</h3>
+                  <Inline as="h3" className="extras-card-title" text={chain.title} />
                 </div>
 
                 {/*
@@ -85,7 +99,7 @@ export default function ExtrasTab({ data, previewMode = false, totalCount }) {
                       </div>
                       <div className="chain-step-content">
                         <span className="chain-step-label">Step {si + 1}</span>
-                        <p className="chain-step-text">{step}</p>
+                        <Inline as="p" className="chain-step-text" text={step} />
                       </div>
                     </div>
                   ))}
@@ -96,7 +110,7 @@ export default function ExtrasTab({ data, previewMode = false, totalCount }) {
                     <span className="chain-result-icon">⇒</span>
                     <div>
                       <span className="chain-result-label">Result</span>
-                      <p className="chain-result-text">{chain.result}</p>
+                      <Inline as="p" className="chain-result-text" text={chain.result} />
                     </div>
                   </div>
                 )}
@@ -123,10 +137,10 @@ export default function ExtrasTab({ data, previewMode = false, totalCount }) {
               <div key={i} className="extras-card eval-card">
                 <div className="extras-card-header eval-header">
                   <span className="extras-card-number">{i + 1}</span>
-                  <h3 className="extras-card-title">{point.title}</h3>
+                  <Inline as="h3" className="extras-card-title" text={point.title} />
                 </div>
                 <div className="eval-content">
-                  <p>{point.content}</p>
+                  <Inline as="p" text={point.content} />
                 </div>
               </div>
             ))}
