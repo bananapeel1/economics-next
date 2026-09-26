@@ -15102,12 +15102,12 @@
    "kind": "topFix",
    "rank": 4,
    "text": "Realign practice with IAL conventions: 'Define' 2 marks; 'Explain' 4 marks with the tariff diagram required; replace 'Outline' with 'Explain'; present 10- and 20-mark guidance as levels (KAA + Evaluation) with an explicit diagram and application requirement, and add the Appellate Body paralysis to the WTO section as the key contemporary limitation.",
-   "packet": 12.5,
+   "packet": 57,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "PARTIAL and reassigned. 39b built the clauses that are true of this specification: Define is 2 marks, Explain is 4 with the tariff item rebuilt from 6, Outline is gone, and the Appellate Body limitation is in the WTO subsection. NOT built, because the finding is wrong about IAL Economics: it asks for '10- and 20-mark guidance as levels' and there is NO 10-mark item in this subject (Appendix 6 and tariff-census.json give 2, 2/4, 4, 4, 6, 8, 14, 20); and it requires a diagram inside an Explain, where Appendix 6 makes Draw the command word that requires one. The levels-marking clause for the 14- and 20-mark items is real work and belongs with the model-answers packets, not here."
+   "note": "Reassigned 12.5 -> 57 by the founder, 26 Sep: model-answer authoring, outside 12.5's spec-tagging scope; folded into the later model-answer rewrite pass with V068/V070. Earlier note (39b): PARTIAL and reassigned. 39b built the clauses that are true of this specification: Define is 2 marks, Explain is 4 with the tariff item rebuilt from 6, Outline is gone, and the Appellate Body limitation is in the WTO subsection. NOT built, because the finding is wrong about IAL Economics: it asks for '10- and 20-mark guidance as levels' and there is NO 10-mark item in this subject (Appendix 6 and tariff-census.json give 2, 2/4, 4, 4, 6, 8, 14, 20); and it requires a diagram inside an Explain, where Appendix 6 makes Draw the command word that requires one. The levels-marking clause for the 14- and 20-mark items is real work and belongs with the model-answers packets, not here."
   },
   {
    "id": "C-trade-global-economy-accuracy-01",
@@ -19076,12 +19076,12 @@
    "kind": "feature",
    "title": "Economics 4.3.5 role-state-macroeconomy has no model answers at all, so its page can only ever read 0.0% until some are written",
    "file": "data/modelAnswersData.js",
-   "packet": 12.5,
+   "packet": 57,
    "status": "open",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null,
+   "note": "Reassigned 12.5 -> 57 by the founder, 26 Sep: model-answer authoring, outside 12.5's spec-tagging scope; folded into the later model-answer rewrite pass with V068/V070.",
    "added": "2026-09-22"
   },
   {

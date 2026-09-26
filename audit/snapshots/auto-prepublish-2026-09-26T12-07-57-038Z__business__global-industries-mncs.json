@@ -1,0 +1,745 @@
+{
+ "section_id": "global-industries-mncs",
+ "subject": "business",
+ "label": "auto-prepublish-2026-09-26T12-07-57-038Z",
+ "tables": {
+  "section_content": [
+   {
+    "id": "global-industries-mncs:block:b8f1c4c2",
+    "title": "MNC Impact & Ethics",
+    "sections": [
+     {
+      "id": "global-industries-mncs:sub:mnc-positive-impacts",
+      "body": [
+       {
+        "text": "**Multinational corporations (MNCs)** invest in host countries through FDI, creating direct and indirect benefits. **Employment**: MNCs create jobs directly in their operations and indirectly through local supply chains. A single car factory can support thousands of supplier jobs. **Technology transfer**: MNCs bring advanced production techniques, management practices, and R&D capabilities that spill over to local firms through training, supplier requirements, and worker mobility.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Tax revenue**: MNC operations generate corporation tax, payroll taxes, and VAT that fund public services. **Export earnings**: MNCs often produce goods for export, improving the host country's current account and bringing in foreign currency. **Infrastructure investment**: MNCs may build roads, ports, and telecommunications to support their operations, benefiting the wider economy.",
+        "type": "paragraph"
+       },
+       {
+        "text": "However, these positive impacts are not automatic. They depend on the **host government's bargaining power and governance quality**. Countries with strong institutions can negotiate tax commitments, local content requirements, and technology-sharing agreements. Countries with weak governance may find MNCs extract resources while delivering minimal local benefit — a pattern sometimes called the 'resource curse' in mineral-rich developing nations.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "MNC invests via FDI in host country",
+         "Creates jobs, transfers technology, pays taxes",
+         "Host economy benefits from multiplier effects"
+        ],
+        "result": "Net positive impact — but only if host governance captures the gains effectively",
+        "resultType": "good"
+       }
+      ],
+      "title": "Positive Impacts of MNCs on Host Countries",
+      "keyIdea": "MNCs bring jobs, technology, tax revenue, and export earnings to host countries — but the net benefit depends on whether the host government has the governance capacity to capture these gains.",
+      "examMatters": "Examiners expect a balanced evaluation. List specific positive impacts (jobs, technology, taxes, exports) and then challenge each one: Are the jobs high-quality? Is technology actually transferred or kept in-house? Are taxes paid in full or minimised through transfer pricing? A strong answer evaluates each claimed benefit rather than listing them uncritically.",
+      "realExample": {
+       "text": "Samsung's investment in Vietnam is one of the most successful FDI stories. Samsung employs over 100,000 Vietnamese workers, accounts for roughly a quarter of Vietnam's total exports, and has attracted dozens of Korean supplier firms to relocate nearby — creating an industrial cluster that has transformed Vietnam's manufacturing capability and lifted wages in the surrounding provinces.",
+       "emoji": "📱"
+      },
+      "misconception": "Students assume MNCs always benefit host countries. Wrong — benefits depend on the host country's governance, bargaining power, and the MNC's industry. Extractive industries (mining, oil) often deliver fewer benefits than manufacturing because they create fewer jobs, use less local labour, and are more prone to environmental damage. Instead write: the net impact of MNC investment depends on the industry, the host country's institutional capacity, and the specific terms negotiated between the MNC and the government."
+     },
+     {
+      "id": "global-industries-mncs:sub:mnc-negative-impacts-ethics",
+      "body": [
+       {
+        "text": "**Profit repatriation**: MNCs send profits back to shareholders in the home country rather than reinvesting locally. This drains wealth from the host economy — the FDI inflow generates local activity, but much of the value created leaves the country as dividends. In extreme cases, repatriated profits exceed the original investment, making the host country a net loser.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Labour exploitation**: MNCs may exploit low wages, weak labour laws, and poor enforcement in developing countries. Long hours, unsafe conditions, child labour in supply chains, and suppression of trade unions are persistent concerns. **Environmental damage**: looser environmental regulations in developing countries attract MNCs seeking to reduce compliance costs — a 'pollution haven' effect that shifts environmental harm to the world's poorest communities.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Transfer pricing** allows MNCs to shift profits to low-tax jurisdictions by manipulating the prices charged between their own subsidiaries. A subsidiary in a high-tax country sells components to a subsidiary in a low-tax country at below-market prices, reducing reported profit where taxes are high. This deprives host governments of legitimate tax revenue and distorts competition with local firms who cannot use the same strategies.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "MNC operates across multiple countries",
+         "Profits repatriated, labour exploited, environment damaged",
+         "Transfer pricing shifts taxable profits to low-tax havens"
+        ],
+        "result": "Host country bears costs while benefits are captured by MNC shareholders abroad",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Negative Impacts & Ethical Concerns",
+      "keyIdea": "MNCs can repatriate profits, exploit cheap labour, damage the environment, and use transfer pricing to avoid tax — making their net impact on host countries deeply contested.",
+      "examMatters": "A strong exam answer balances positive and negative impacts, then evaluates: 'The net impact depends on the host country's governance capacity, the MNC's industry, and the specific regulatory framework.' This shows the examiner you can weigh evidence rather than taking a one-sided position.",
+      "realExample": {
+       "text": "Shell's operations in the Niger Delta in Nigeria illustrate the worst-case MNC impact. Oil extraction generated billions in revenue, but local communities suffered oil spills, gas flaring, environmental devastation, and minimal employment. Profit was repatriated to shareholders in London and The Hague while the Niger Delta remained one of Africa's most polluted and impoverished regions — a stark example of how MNC investment can harm host communities when governance is weak.",
+       "emoji": "🛢️"
+      },
+      "misconception": "Students assume all MNCs deliberately exploit host countries. Wrong — many MNCs invest in CSR programmes, pay above-market wages, and comply with international labour standards. The negative impacts are most severe where host governance is weakest. Instead write: the ethical impact of MNCs varies enormously — the same firm may have excellent practices in one country and exploitative practices in another, depending on local regulatory enforcement and civil society pressure."
+     }
+    ],
+    "takeaway": [
+     "Positive MNC impacts: jobs, technology transfer, tax revenue, exports, infrastructure — but none are guaranteed.",
+     "Negative impacts: profit repatriation, labour exploitation, environmental damage, transfer pricing — worst where governance is weak.",
+     "Net impact depends on host government bargaining power, industry type, and regulatory enforcement.",
+     "Evaluative answers must weigh both sides and conclude with context-dependent judgement."
+    ],
+    "quizIndices": [
+     1
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "global-industries-mncs:block:5352a33b",
+    "title": "Transfer Pricing & FDI Stakeholders",
+    "sections": [
+     {
+      "id": "global-industries-mncs:sub:transfer-pricing-mechanism",
+      "body": [
+       {
+        "text": "**Transfer pricing** is the price charged between subsidiaries of the same MNC for goods, services, or intellectual property. When these prices deviate from **arm's length** (what unrelated parties would charge), the MNC can artificially shift profits to subsidiaries in low-tax jurisdictions. For example, an MNC might charge its UK subsidiary a high price for using a brand name owned by an Irish subsidiary, reducing UK taxable profit and increasing profit in Ireland where corporation tax is lower.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The scale is enormous. The OECD estimates that profit-shifting by MNCs costs governments $100-240 billion per year in lost tax revenue — equivalent to 4-10% of global corporate tax receipts. Developing countries are disproportionately affected because they lack the resources to audit complex MNC accounts and challenge aggressive transfer pricing arrangements.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **OECD BEPS (Base Erosion and Profit Shifting)** framework is the main international response. It establishes rules requiring MNCs to report profits and taxes paid country-by-country, mandates arm's-length pricing, and proposes a global minimum corporate tax rate of 15%. However, enforcement remains patchy because tax competition between countries creates a 'race to the bottom' — countries offer low rates to attract MNC investment, undermining collective action.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "MNC sets intra-company transfer prices above/below market rates",
+         "Profits shifted from high-tax to low-tax subsidiaries",
+         "Host governments lose tax revenue"
+        ],
+        "result": "Legal tax avoidance — but the OECD BEPS framework is tightening rules globally",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Transfer Pricing & International Tax Avoidance",
+      "keyIdea": "Transfer pricing manipulates intra-company prices to shift profits to low-tax jurisdictions — it is legal within limits but costs governments billions in lost tax revenue and is the focus of major OECD reform efforts.",
+      "examMatters": "Examiners ask about the impact of transfer pricing on stakeholders. Structure your answer: governments lose tax revenue, local competitors face unfair cost advantages, consumers may benefit from lower prices, and shareholders benefit from higher after-tax profits. Always mention BEPS as the regulatory response and evaluate whether it is likely to succeed.",
+      "realExample": {
+       "text": "Apple routed billions in international profits through Irish subsidiaries that employed only a handful of staff, paying an effective tax rate as low as 0.005% on European profits. The European Commission ruled that Ireland had granted Apple illegal state aid and ordered Apple to pay 13 billion euros in back taxes — a landmark case that exposed how transfer pricing and tax rulings allow MNCs to minimise tax obligations on a massive scale.",
+       "emoji": "🍏"
+      },
+      "misconception": "Students confuse tax avoidance with tax evasion. Wrong — tax avoidance (including transfer pricing) is legal, using loopholes and structures permitted by law. Tax evasion is illegal concealment of income. Instead write: transfer pricing is a form of legal tax avoidance that exploits differences between national tax systems; the OECD BEPS framework aims to close these gaps without criminalising the firms that use them."
+     },
+     {
+      "id": "global-industries-mncs:sub:fdi-stakeholder-analysis",
+      "body": [
+       {
+        "text": "In the **host country**, FDI affects multiple stakeholders. **Workers** gain jobs and skills, but may face low wages and poor conditions if regulation is weak. **Local firms** face increased competition from a well-resourced MNC but may benefit as suppliers to the MNC's operations. **Government** gains tax revenue and economic growth but may lose policy autonomy as MNCs demand favourable terms. **Local communities** may gain infrastructure and services but suffer environmental damage or cultural disruption.",
+        "type": "paragraph"
+       },
+       {
+        "text": "In the **home country** (where the MNC is headquartered), the effects mirror inversely. **Shareholders** benefit from higher returns generated by cheaper overseas production. **Domestic workers** may lose jobs as production is offshored — the 'hollowing out' of manufacturing in developed economies. **Government** may lose tax revenue through transfer pricing but gains from repatriated profits and dividends taxed domestically. **Consumers** may benefit from lower prices on goods produced more cheaply abroad.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A complete evaluation recognises that FDI is not a zero-sum game — it can create value for stakeholders in both countries — but the **distribution** of gains is uneven. The key determinant is **governance**: strong institutions, transparent regulation, and effective tax enforcement ensure that FDI benefits are shared widely rather than captured by MNC shareholders and political elites.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "MNC invests in host country via FDI",
+         "Host: jobs created, competition intensifies, tax revenue gained/lost",
+         "Home: jobs offshored, shareholders gain, consumers benefit from lower prices"
+        ],
+        "result": "Both countries affected — distribution of gains depends on governance and bargaining power",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "FDI Stakeholder Analysis: Host & Home Country",
+      "keyIdea": "FDI creates winners and losers in both the host country and the home country — a complete stakeholder analysis must consider workers, local firms, governments, and communities on both sides.",
+      "examMatters": "Examiners reward structured stakeholder analysis. Create a clear framework: list stakeholders in the host country and home country separately, explain the positive and negative impact on each, then evaluate which stakeholders gain most and which lose most. Conclude with: 'The overall impact depends on the quality of governance in the host country and the regulatory framework governing the MNC.'",
+      "realExample": {
+       "text": "Amazon's Luxembourg tax structure illustrates home/host stakeholder tensions. Amazon routes European sales through a Luxembourg subsidiary, reducing tax paid in countries like the UK, Germany, and France where sales actually occur. UK high-street retailers (local firms) compete against Amazon's lower tax burden. UK government loses corporation tax revenue. UK consumers benefit from lower prices and fast delivery — a classic case where stakeholder impacts diverge sharply.",
+       "emoji": "📦"
+      },
+      "misconception": "Students analyse FDI impacts only on the host country and forget the home country. Wrong — FDI creates offshoring that reduces manufacturing employment at home and transfer pricing that reduces home-country tax revenue too. Instead write: a complete stakeholder analysis considers both host country (workers, local firms, government, community) and home country (shareholders, domestic workers, government, consumers) to evaluate the full impact of FDI."
+     }
+    ],
+    "takeaway": [
+     "Transfer pricing shifts profits to low-tax jurisdictions via manipulated intra-company prices — costing governments billions.",
+     "OECD BEPS framework: country-by-country reporting, arm's-length pricing, global minimum tax of 15%.",
+     "FDI stakeholder analysis must cover both host (workers, local firms, government, community) and home (shareholders, domestic workers, government, consumers).",
+     "The distribution of FDI gains depends on governance quality, regulatory enforcement, and the MNC's industry."
+    ],
+    "quizIndices": [
+     7
+    ],
+    "practiceIndices": [
+     2
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "MNC invests in host country",
+      "Brings jobs, technology, and tax revenue",
+      "But may repatriate profits, avoid tax, and exploit workers"
+     ],
+     "result": "Net impact depends on host-country governance and MNC's ethical standards",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Multinational Corporations: Impact and Ethics",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Job creation</strong> — MNC operations directly employ local workers and indirectly support jobs in local supply chains.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Technology and skills transfer</strong> — MNCs introduce advanced production methods, management techniques, and training programmes.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Tax revenue and exports</strong> — MNC output contributes to GDP, tax collection, and foreign exchange earnings.",
+        "type": "mech"
+       }
+      ],
+      "title": "POSITIVE IMPACTS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Profit repatriation</strong> — MNCs send profits back to their home country, reducing the economic benefit to the host economy.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Transfer pricing</strong> — MNCs shift profits to low-tax jurisdictions by manipulating prices between subsidiaries, reducing host-country tax revenue.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Labour exploitation</strong> — low wages, poor conditions, excessive hours, and weak enforcement of labour laws in developing countries.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Environmental damage</strong> — some MNCs relocate polluting operations to countries with weaker environmental regulation ('pollution havens').",
+        "type": "mech"
+       }
+      ],
+      "title": "NEGATIVE IMPACTS AND ETHICAL ISSUES"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "The net impact of MNCs depends on the host country's <strong>governance quality</strong> — strong regulation and institutions capture more of the benefits; weak governance allows exploitation.",
+        "type": "imp"
+       },
+       {
+        "text": "MNC ethics links to CSR (3.3.4): firms that adopt genuine CSR practices in their global operations build brand trust; those caught exploiting workers face boycotts and reputational damage.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "MNCs bring investment, jobs, and technology to host countries but also raise ethical concerns about labour exploitation, environmental damage, and tax avoidance — the net impact depends on the host country's governance.",
+    "takeaway": [
+     "Positives: jobs, technology transfer, tax revenue, exports.",
+     "Negatives: profit repatriation, transfer pricing, labour/environmental exploitation.",
+     "Host-country governance determines how much benefit is captured locally."
+    ],
+    "examMatters": "Examiners expect balanced evaluation: acknowledge both the benefits (jobs, technology, exports) and the costs (profit repatriation, transfer pricing, exploitation). The strongest answers link to stakeholder analysis and CSR frameworks.",
+    "misconception": "Students say MNCs always exploit developing countries. Wrong because MNC wages are typically above local averages, technology transfer raises productivity, and exports boost economic growth. Instead write: MNCs create significant benefits for host countries but the distribution of those benefits depends on the strength of local governance, regulation, and the MNC's own ethical standards."
+   },
+   {
+    "flow": {
+     "steps": [
+      "MNC creates subsidiary in low-tax country",
+      "Charges inflated prices to subsidiaries in high-tax countries",
+      "Profit shifts to low-tax jurisdiction"
+     ],
+     "result": "MNC pays less tax overall; host countries lose revenue",
+     "resultType": "bad"
+    },
+    "meta": "4 concepts",
+    "title": "Transfer Pricing and Tax Avoidance",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Transfer pricing</strong> — the price at which goods, services, or intellectual property are traded between different subsidiaries of the same MNC across national borders.",
+        "type": "def"
+       },
+       {
+        "text": "By charging <strong>artificially high prices</strong> from a subsidiary in a low-tax country to one in a high-tax country, the MNC shifts profit to where it is taxed least.",
+        "type": "mech"
+       },
+       {
+        "text": "Intellectual property (brands, patents) is particularly easy to manipulate — an MNC can park a patent in Ireland or Luxembourg and charge royalties to subsidiaries worldwide.",
+        "type": "mech"
+       }
+      ],
+      "title": "HOW IT WORKS"
+     },
+     {
+      "items": [
+       {
+        "text": "Transfer pricing is <strong>legal</strong> but ethically questionable — it deprives host countries of tax revenue that could fund public services and infrastructure.",
+        "type": "mech"
+       },
+       {
+        "text": "International efforts to combat it include the OECD's <strong>BEPS (Base Erosion and Profit Shifting)</strong> framework and proposals for a global minimum corporate tax rate.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "For developing countries with weak tax authorities, transfer pricing can drain billions in potential revenue, undermining development efforts.",
+        "type": "imp"
+       }
+      ],
+      "title": "ETHICAL AND POLICY IMPLICATIONS"
+     }
+    ],
+    "keyIdea": "Transfer pricing allows MNCs to shift profits to low-tax jurisdictions by manipulating prices between their own subsidiaries — it is legal but controversial, reducing tax revenue in countries where real economic activity occurs.",
+    "takeaway": [
+     "Transfer pricing shifts profit to low-tax countries via intra-company price manipulation.",
+     "Legal but ethically controversial — deprives host countries of tax revenue.",
+     "OECD BEPS and global minimum tax proposals aim to combat it."
+    ],
+    "examMatters": "Examiners expect you to explain the mechanism and evaluate the ethics. Distinguish between legal tax avoidance (transfer pricing) and illegal tax evasion. Discuss: should governments crack down, or will that just drive MNCs to relocate elsewhere?",
+    "misconception": "Students confuse tax avoidance with tax evasion. Tax avoidance (including transfer pricing) is legal — it exploits loopholes in tax law. Tax evasion is illegal — it involves hiding income. Instead write: transfer pricing is a form of legal tax avoidance that exploits differences between national tax systems; it is not illegal but is increasingly viewed as ethically unacceptable."
+   },
+   {
+    "flow": {
+     "steps": [
+      "MNC makes FDI in host country",
+      "Jobs and technology created locally",
+      "Profits flow back to home country"
+     ],
+     "result": "Benefits and costs distributed unevenly — stakeholder analysis reveals the trade-offs",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "FDI and Its Impact on Stakeholders",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Workers</strong>: FDI creates jobs and may raise wages, but working conditions depend on the MNC's standards and local regulation.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Local businesses</strong>: may benefit from supply chain contracts, but risk being crowded out by the MNC's scale and resources.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Government</strong>: gains tax revenue and GDP growth, but may offer excessive tax breaks to attract FDI, reducing net fiscal benefit.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Community</strong>: benefits from infrastructure and employment, but may suffer environmental damage and cultural disruption.",
+        "type": "mech"
+       }
+      ],
+      "title": "IMPACT ON HOST-COUNTRY STAKEHOLDERS"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Shareholders</strong>: benefit from access to cheaper inputs and new markets, potentially increasing profits.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Domestic workers</strong>: may lose jobs if production is offshored to lower-cost countries.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Examiners expect you to consider FDI from multiple stakeholder perspectives and evaluate whether the net impact is positive — this depends on governance, regulation, and the type of FDI (manufacturing vs extractive).",
+        "type": "imp"
+       }
+      ],
+      "title": "IMPACT ON HOME-COUNTRY STAKEHOLDERS"
+     }
+    ],
+    "keyIdea": "Foreign direct investment is a double-edged sword — it brings capital, jobs, and technology, but the benefits and costs are distributed unevenly among different stakeholder groups in both home and host countries.",
+    "takeaway": [
+     "FDI impacts: workers (jobs), local firms (contracts vs crowding out), government (tax), community.",
+     "Home-country: shareholders gain but domestic workers may lose jobs.",
+     "Net benefit depends on host government's bargaining power and regulatory framework."
+    ],
+    "examMatters": "Examiners expect multi-stakeholder analysis of FDI. Don't just list pros and cons — assign them to specific stakeholder groups and evaluate the net impact. The strongest answers consider whether the host government can negotiate terms that capture local benefit.",
+    "misconception": "Students say FDI is always good for the host country. Wrong because the terms of FDI matter — if the government offers excessive tax holidays and the MNC repatriates all profit, the host country may gain very little. Instead write: FDI is beneficial when the host government negotiates strong terms (local content requirements, tax obligations, labour standards) — without these, the benefits may flow disproportionately to the MNC."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "global-industries-mncs:quiz:e1d43334",
+    "options": [
+     "Higher wages compared to local employers",
+     "Transfer of advanced technology and skills",
+     "Crowding out of local businesses that cannot compete",
+     "Increased consumer choice and product quality"
+    ],
+    "question": "Which of the following is a negative impact of MNCs on local economies?",
+    "explanation": "MNCs can crowd out local businesses that cannot compete on price, brand recognition or product range. While higher wages and technology transfer are positive impacts, the displacement of local firms is a significant negative effect.",
+    "correctIndex": 2
+   },
+   {
+    "id": "global-industries-mncs:quiz:6d3f2952",
+    "options": [
+     "MNCs investing profits back into the host country",
+     "MNCs transferring profits earned abroad back to their home country",
+     "The host government taxing MNC profits at higher rates",
+     "MNCs distributing profits equally to all stakeholders"
+    ],
+    "question": "What is profit repatriation?",
+    "explanation": "Profit repatriation occurs when MNCs transfer profits earned in the host country back to their home country, reducing the net economic benefit of FDI for the host nation.",
+    "correctIndex": 1
+   },
+   {
+    "id": "global-industries-mncs:quiz:6d0cae19",
+    "options": [
+     "Tax avoidance by international brands",
+     "Environmental pollution from textile production",
+     "Poor working conditions and safety standards",
+     "Intellectual property theft by local manufacturers"
+    ],
+    "question": "The Rana Plaza disaster in Bangladesh highlighted which issue in MNC supply chains?",
+    "explanation": "The Rana Plaza factory collapse in 2013 killed over 1,100 garment workers, highlighting dangerously poor working conditions and safety standards in the supply chains of major Western clothing brands.",
+    "correctIndex": 2
+   },
+   {
+    "id": "global-industries-mncs:quiz:079b986c",
+    "options": [
+     "MNCs investing genuinely in sustainable practices",
+     "Governments forcing firms to adopt environmental standards",
+     "Misleading consumers about a company's environmental practices",
+     "Using green packaging materials to reduce waste"
+    ],
+    "question": "What is greenwashing?",
+    "explanation": "Greenwashing occurs when companies mislead consumers about their environmental practices, presenting themselves as more sustainable than they actually are through vague claims and superficial initiatives.",
+    "correctIndex": 2
+   },
+   {
+    "id": "global-industries-mncs:quiz:41526fc3",
+    "options": [
+     "Set competitive retail prices in foreign markets",
+     "Shift profits to low-tax jurisdictions by setting internal prices between subsidiaries",
+     "Comply with host country pricing regulations",
+     "Match competitor pricing in international markets"
+    ],
+    "question": "Transfer pricing is used by MNCs to:",
+    "explanation": "Transfer pricing involves MNCs setting prices for transactions between their own subsidiaries in different countries, allowing them to report higher profits in low-tax jurisdictions and reduce their overall tax burden.",
+    "correctIndex": 1
+   },
+   {
+    "id": "global-industries-mncs:quiz:7670ae12",
+    "options": [
+     "Legal control",
+     "Self-regulation",
+     "Consumer pressure",
+     "Pressure group activism"
+    ],
+    "question": "Which method of controlling MNCs involves organisations like Greenpeace campaigning against unethical practices?",
+    "explanation": "Pressure groups like Greenpeace, Oxfam and Amnesty International campaign against unethical MNC practices through awareness campaigns, investigative reports and lobbying for regulatory change.",
+    "correctIndex": 3
+   },
+   {
+    "id": "global-industries-mncs:quiz:7671367a",
+    "options": [
+     "It requires too much government involvement",
+     "It is too expensive for MNCs to implement",
+     "It may be superficial window-dressing without real accountability",
+     "It prevents consumers from making ethical choices"
+    ],
+    "question": "Why is self-regulation by MNCs often criticised?",
+    "explanation": "Self-regulation through CSR programmes is criticised as potentially superficial — firms may publicise ethical initiatives while continuing problematic practices elsewhere, without independent verification or accountability.",
+    "correctIndex": 2
+   },
+   {
+    "id": "global-industries-mncs:quiz:9f8831e1",
+    "options": [
+     "The UN Global Compact",
+     "The OECD BEPS project",
+     "The World Trade Organisation rules",
+     "The European single market"
+    ],
+    "question": "Which international initiative aims to prevent MNCs from shifting profits to low-tax countries?",
+    "explanation": "The OECD Base Erosion and Profit Shifting (BEPS) project specifically targets MNC tax avoidance by addressing gaps in international tax rules that allow profits to be shifted to low-tax jurisdictions.",
+    "correctIndex": 1
+   },
+   {
+    "id": "global-industries-mncs:quiz:43f9bd2e",
+    "options": [
+     "Transfer pricing",
+     "Regulatory arbitrage",
+     "Greenwashing",
+     "Ethical consumerism"
+    ],
+    "question": "A clothing brand markets its products as 'sustainably sourced' but an investigation reveals most materials come from factories with poor environmental records. This is an example of:",
+    "explanation": "This is greenwashing — misleading consumers about sustainability credentials. The brand's marketing claims do not match the reality of its supply chain practices.",
+    "correctIndex": 2
+   },
+   {
+    "id": "global-industries-mncs:quiz:02c7a336",
+    "options": [
+     "Consumers never care about ethical issues",
+     "Boycotts are illegal in most countries",
+     "Boycotts are less effective when consumers have few alternative products to choose from",
+     "Social media prevents boycotts from gaining traction"
+    ],
+    "question": "What is the most likely limitation of using consumer boycotts to control MNC behaviour?",
+    "explanation": "Consumer boycotts work best when consumers have viable alternatives. In markets dominated by a few large firms, boycotting one MNC may mean switching to another with similar practices, limiting the boycott's effectiveness.",
+    "correctIndex": 2
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "global-industries-mncs:practice:55dd5619",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "A multinational corporation is a business that has operations — such as factories, offices or retail outlets — in more than one country (1 mark). Benefit 1: Job creation — MNCs employ local workers, reducing unemployment and increasing household incomes in the host country (1 mark). Benefit 2: Transfer of technology and skills — MNCs bring advanced equipment, management techniques and training programmes that develop the capabilities of the local workforce (1 mark). Other valid benefits include increased tax revenue, infrastructure development, and stimulation of local supply chains (1 mark).",
+    "question": "Define the term 'multinational corporation' (MNC) and explain two benefits it might bring to a developing host country. (4 marks)"
+   },
+   {
+    "id": "global-industries-mncs:practice:7368bf96",
+    "marks": 6,
+    "command": "Analyse",
+    "guidance": "Exploitation of vulnerable workers: the gap between legal minimum wages and living wages means workers cannot meet basic needs despite full-time employment (1 mark). Excessive working hours affect worker health, wellbeing and safety (1 mark). Power imbalance: GlobalTextiles as a large buyer can dictate terms to small suppliers who have little bargaining power (1 mark). Reputational risk: if the story becomes public, consumer boycotts and social media campaigns could significantly damage the brand (1 mark). Legal risk: potential liability under modern slavery legislation in Europe (1 mark). Counter-argument: the company provides employment that might not otherwise exist in these countries, and responsibility may also lie with host country governments that set minimum standards (1 mark).",
+    "question": "GlobalTextiles is a European clothing retailer sourcing 80% of its products from factories in Bangladesh and Cambodia. An investigation revealed some supplier factories pay below the living wage and require 60+ hour weeks. Analyse the ethical concerns associated with these supply chain practices. (6 marks)"
+   },
+   {
+    "id": "global-industries-mncs:practice:60f7d479",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Explain transfer pricing: MNCs set prices for transactions between their own subsidiaries, and by charging artificially high fees for services or IP to subsidiaries in higher-tax countries, profits are shifted to low-tax jurisdictions (2 marks).\n\nImpact on host countries: reduced corporation tax revenue that could fund public services, healthcare and infrastructure (2 marks); creates an unfair competitive advantage over local businesses that cannot use similar strategies (1 mark); undermines the tax base of developing countries that already have limited resources (1 mark).\n\nMNC perspective: transfer pricing is legal and shareholders expect tax efficiency; the MNC still creates jobs and economic activity regardless of where profits are reported (2 marks).\n\nJudgement: transfer pricing is a significant concern because it reduces the economic benefit that host countries receive from MNC investment. International efforts such as the OECD BEPS initiative and global minimum tax proposals aim to address this, but enforcement remains challenging (2 marks).",
+    "question": "A major technology MNC generates significant revenue from sales in several African countries but reports most of its profits in a low-tax European jurisdiction using transfer pricing between subsidiaries. Assess the impact of transfer pricing on host countries. (10 marks)"
+   },
+   {
+    "id": "global-industries-mncs:practice:cb24c38c",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define MNCs and describe their growth in scale and influence over recent decades (2 marks).\n\nPositive impacts: drive economic growth through investment and job creation in host countries (2 marks); transfer technology, management skills and training to developing nations (2 marks); increase consumer choice and drive innovation through global competition (2 marks); contribute to poverty reduction by providing employment and stimulating local supply chains (2 marks).\n\nNegative impacts: may exploit workers in countries with weak labour protections, paying low wages for long hours in poor conditions (2 marks); transfer pricing and tax avoidance deprive host governments of revenue needed for public services (2 marks); may damage local competitors, reduce cultural diversity, and cause environmental degradation by prioritising profits (2 marks); political influence of MNCs may undermine democratic governance, and profits repatriated to the home country reduce the reinvestment benefit (1 mark).\n\nEvaluation: the impact of MNCs varies enormously depending on the industry, the specific company's practices, and the host country's governance and regulatory framework. Countries with strong institutions tend to benefit more, while those with weak governance are more vulnerable to exploitation. The answer is not that MNCs are universally good or bad — effective regulation at both national and international levels is the key to tipping the balance towards positive outcomes. Global initiatives on labour standards, tax transparency and environmental requirements are essential for ensuring MNC growth benefits the wider economy (3 marks).",
+    "question": "Evaluate whether the growth of multinational corporations has been a positive or negative development for the global economy. (20 marks)"
+   },
+   {
+    "id": "global-industries-mncs:practice:0ca37dbe",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Reason 1: Lower labour costs (1 mark) — wages in developing countries are typically much lower than in developed economies, significantly reducing production costs and increasing profit margins (1 mark).\n\nReason 2: Government incentives to attract FDI (1 mark) — many developing countries offer tax breaks, subsidised land, or free trade zones to encourage MNCs to invest, further reducing operating costs (1 mark).",
+    "question": "Outline two reasons why a multinational corporation might locate manufacturing operations in a developing country. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "global-industries-mncs:card:1f81703a",
+    "back": "MNCs create <strong>jobs</strong> and often pay <strong>higher wages</strong> than local alternatives, but employment may be <strong>insecure</strong> as firms can relocate to cheaper locations.",
+    "front": "How do MNCs affect employment in host countries?"
+   },
+   {
+    "id": "global-industries-mncs:card:2589a400",
+    "back": "A garment factory in <strong>Bangladesh collapsed</strong>, killing over 1,100 workers. It highlighted <strong>poor safety standards</strong> in MNC supply chains and led to calls for better regulation of working conditions.",
+    "front": "What happened at Rana Plaza in 2013?"
+   },
+   {
+    "id": "global-industries-mncs:card:21d2e8d2",
+    "back": "MNCs compete with superior <strong>brand recognition</strong>, <strong>pricing power</strong> and <strong>product range</strong>, making it impossible for smaller local firms to survive — e.g. small retailers struggling against Walmart.",
+    "front": "How can MNCs 'crowd out' local businesses?"
+   },
+   {
+    "id": "global-industries-mncs:card:de363b8f",
+    "back": "When MNCs <strong>transfer profits earned in a host country back to their home country</strong>, reducing the net economic benefit of FDI for the host nation.",
+    "front": "What is profit repatriation?"
+   },
+   {
+    "id": "global-industries-mncs:card:52381ccb",
+    "back": "When MNCs bring <strong>advanced production methods</strong>, <strong>management practices</strong> and <strong>innovation</strong> to host countries, raising local productivity and industrial capacity.",
+    "front": "What is technology transfer?"
+   },
+   {
+    "id": "global-industries-mncs:card:34f285c6",
+    "back": "Through <strong>transfer pricing</strong> (setting prices between subsidiaries to shift profits to low-tax countries) and <strong>profit shifting</strong> (locating intellectual property in tax havens).",
+    "front": "How do MNCs avoid paying tax?"
+   },
+   {
+    "id": "global-industries-mncs:card:29e6f9e5",
+    "back": "A country with <strong>weak environmental regulations</strong> that attracts MNCs seeking to carry out polluting activities with fewer restrictions and lower compliance costs.",
+    "front": "What is a pollution haven?"
+   },
+   {
+    "id": "global-industries-mncs:card:03eb1e13",
+    "back": "When a company <strong>misleads consumers</strong> about its environmental practices, presenting itself as more sustainable than it actually is — e.g. vague 'eco-friendly' labels without substance.",
+    "front": "What is greenwashing?"
+   },
+   {
+    "id": "global-industries-mncs:card:20ef061a",
+    "back": "<strong>Cobalt mining in the Democratic Republic of Congo</strong> involves child labour, supplying batteries for electronics companies including Apple and Samsung.",
+    "front": "Give an example of child labour in MNC supply chains."
+   },
+   {
+    "id": "global-industries-mncs:card:db6cfef3",
+    "back": "Nestlé aggressively marketed <strong>baby formula in developing countries</strong>, discouraging breastfeeding despite evidence that formula feeding with unsafe water supplies increased infant mortality.",
+    "front": "What was the Nestlé baby formula scandal?"
+   },
+   {
+    "id": "global-industries-mncs:card:5615d104",
+    "back": "When MNCs exploit <strong>differences in regulations between countries</strong> by locating activities where rules are weakest — e.g. moving polluting operations to countries with lax environmental laws.",
+    "front": "What is regulatory arbitrage?"
+   },
+   {
+    "id": "global-industries-mncs:card:56ef0b54",
+    "back": "Through <strong>boycotts</strong>, <strong>ethical purchasing decisions</strong> and demands for <strong>transparency</strong> — e.g. public backlash forced Starbucks to review its UK tax arrangements.",
+    "front": "How can consumers control MNC behaviour?"
+   },
+   {
+    "id": "global-industries-mncs:card:3bb16616",
+    "back": "Organisations like <strong>Greenpeace</strong>, <strong>Oxfam</strong> and <strong>Amnesty International</strong> campaign against unethical practices, raise public awareness and lobby for regulatory change.",
+    "front": "What is the role of pressure groups in controlling MNCs?"
+   },
+   {
+    "id": "global-industries-mncs:card:4290870f",
+    "back": "Social media provides <strong>rapid amplification</strong> of ethical concerns, enabling consumers and activists to <strong>mobilise quickly</strong> and create reputational pressure on MNCs.",
+    "front": "How does social media help control MNC behaviour?"
+   },
+   {
+    "id": "global-industries-mncs:card:42b983de",
+    "back": "When MNCs <strong>voluntarily adopt higher standards</strong> through CSR programmes, industry codes of conduct and sustainability reporting — though this is criticised as potentially <strong>superficial</strong>.",
+    "front": "What is self-regulation by MNCs?"
+   },
+   {
+    "id": "global-industries-mncs:card:aac400a7",
+    "back": "The <strong>Base Erosion and Profit Shifting</strong> project aims to prevent MNCs from exploiting gaps in tax rules to <strong>shift profits to low-tax jurisdictions</strong>, supported by a global minimum corporate tax rate.",
+    "front": "What is the OECD BEPS project?"
+   },
+   {
+    "id": "global-industries-mncs:card:04596e49",
+    "back": "MNCs operate across <strong>multiple jurisdictions</strong> with different laws; many developing countries lack <strong>enforcement capacity</strong>; and MNCs can <strong>lobby against</strong> or relocate to avoid unfavourable regulations.",
+    "front": "Why is legal control of MNCs difficult?"
+   },
+   {
+    "id": "global-industries-mncs:card:df9f5b30",
+    "back": "UK legislation requiring large businesses to publish annual statements on the steps they take to ensure <strong>modern slavery and human trafficking</strong> are not present in their operations or supply chains.",
+    "front": "What is the UK Modern Slavery Act 2015?"
+   },
+   {
+    "id": "global-industries-mncs:card:6b7f7c62",
+    "back": "MNCs can <strong>improve</strong> the balance of payments through export earnings and FDI inflows, but <strong>worsen</strong> it through profit repatriation and importing components from abroad.",
+    "front": "How do MNCs affect the balance of payments?"
+   }
+  ],
+  "section_diagrams": [],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "A multinational establishes a subsidiary in a developing country, investing capital in plant, equipment and infrastructure.",
+      "Direct employment is created, plus indirect employment through demand for local suppliers and services.",
+      "Workers acquire new skills and technical knowledge through training, increasing human capital in the host economy.",
+      "Tax revenues from the MNC and its employees' incomes fund public services and infrastructure."
+     ],
+     "title": "MNC investment drives host country economic development",
+     "result": "MNC investment can accelerate development — but the benefit depends on job quality, technology transfer and how much profit is reinvested locally versus repatriated."
+    },
+    {
+     "steps": [
+      "An MNC holds intellectual property in a low-tax subsidiary and charges other subsidiaries large royalties, shifting profits to the low-tax jurisdiction.",
+      "Taxable profits in higher-tax countries are artificially reduced, minimising the MNC's global tax liability.",
+      "Host country governments lose significant tax revenue that could fund education, healthcare and infrastructure.",
+      "While legal, this practice is increasingly challenged by international frameworks like the OECD BEPS initiative."
+     ],
+     "title": "Transfer pricing raises ethical questions about tax contribution",
+     "result": "Transfer pricing is rational from a shareholder perspective but raises serious ethical concerns — MNCs must weigh financial benefits against reputational and regulatory risk."
+    },
+    {
+     "steps": [
+      "Cost pressure drives MNC suppliers in developing countries to minimise labour costs — resulting in low wages and poor conditions.",
+      "Investigative reports or NGO campaigns expose these conditions, generating global negative publicity.",
+      "Consumer boycotts and reputational damage force the MNC to invest in supply chain auditing and ethical sourcing.",
+      "Reactive responses are more expensive and less effective than proactive ethical supply chain management."
+     ],
+     "title": "Supply chain labour standards create reputational risk",
+     "result": "Supply chain ethics is a major strategic risk — firms that proactively invest in standards avoid the higher costs of crisis management and reputational damage."
+    },
+    {
+     "steps": [
+      "Individual governments struggle to regulate MNCs because firms can threaten to relocate to less regulated countries.",
+      "This creates a 'race to the bottom' — countries competing to attract investment by lowering labour, tax and environmental standards.",
+      "International cooperation (OECD, WTO, UN frameworks) establishes shared standards that prevent regulatory arbitrage.",
+      "However, enforcement remains difficult because international bodies lack direct regulatory power over sovereign nations."
+     ],
+     "title": "Regulating MNCs requires international cooperation",
+     "result": "Effective MNC regulation requires international coordination — individual governments often lack the bargaining power to impose standards on globally mobile firms."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "MNCs are neither purely beneficial nor harmful",
+     "content": "MNCs bring capital, jobs, technology and tax revenue — but may also repatriate profits, exploit weak regulation and crowd out domestic firms. The net impact depends on host government bargaining power, institutional quality and the extent to which MNCs integrate with the local economy."
+    },
+    {
+     "title": "Ethical sourcing may be superficial",
+     "content": "Many MNCs adopt codes of conduct in response to consumer pressure. But auditing is often infrequent, standards are loosely enforced, and the fundamental cost-minimisation model remains unchanged. Genuine ethical sourcing requires accepting higher costs and long-term supplier development — not just PR exercises."
+    },
+    {
+     "title": "The race to the bottom is not inevitable",
+     "content": "Some countries maintain high standards while still attracting investment — offering skilled workforces, political stability and market access that offset higher regulatory costs. The race to the bottom is most likely in cost-sensitive industries where MNCs can easily relocate. International agreements and consumer pressure can help prevent it."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "global-industries-mncs:mistake:4a582999",
+    "title": "One-Sided MNC Impact Analysis",
+    "examTip": "Always evaluate from multiple stakeholder perspectives — workers, local businesses, consumers, government, environment — and consider short-run vs long-run effects.",
+    "mistake": "Presenting MNCs as either entirely beneficial or entirely harmful to host economies.",
+    "correction": "MNC impact is complex and context-dependent. Job creation and technology transfer are real benefits, but so are crowding out local firms, profit repatriation and potential exploitation. The net effect depends on the regulatory environment, the industry, and the specific practices of the MNC."
+   },
+   {
+    "id": "global-industries-mncs:mistake:92cd4bcb",
+    "title": "Vague Ethics Discussion",
+    "examTip": "Examiners explicitly look for 'knowledge and understanding of relevant business concepts, including real-world examples'. Name companies, dates and specific incidents.",
+    "mistake": "Making generic statements like 'MNCs should be more ethical' without specific evidence or examples.",
+    "correction": "Use named case studies: Rana Plaza (working conditions), DRC cobalt mining (child labour), Shell Niger Delta (environmental damage), Nestlé formula (marketing ethics). Specific examples make arguments far more convincing and demonstrate knowledge depth."
+   },
+   {
+    "id": "global-industries-mncs:mistake:18338fa3",
+    "title": "Overestimating the Effectiveness of CSR",
+    "examTip": "Critically evaluate CSR — is it genuine commitment or reputation management? Consider whether external regulation is needed alongside voluntary initiatives.",
+    "mistake": "Arguing that corporate social responsibility programmes effectively address MNC ethical issues.",
+    "correction": "CSR is voluntary, often lacks independent verification, and may serve as a public relations tool rather than driving genuine change. Many firms invest in visible CSR projects while continuing problematic practices in less visible parts of their operations — this is often termed 'window-dressing'."
+   },
+   {
+    "id": "global-industries-mncs:mistake:27dcd933",
+    "title": "Ignoring the Power Imbalance",
+    "examTip": "Address the structural challenge: even well-designed regulations are ineffective if governments lack the power or resources to enforce them against powerful MNCs.",
+    "mistake": "Discussing MNC regulation without acknowledging the power asymmetry between MNCs and host country governments.",
+    "correction": "Large MNCs have revenues exceeding the GDP of many host countries, giving them significant bargaining power. They can threaten to relocate, lobby against regulations, or use their economic importance to negotiate favourable terms. This power imbalance means that regulation is often weak or unenforced in developing countries."
+   },
+   {
+    "id": "global-industries-mncs:mistake:9607ec56",
+    "title": "Treating Tax Avoidance as Illegal",
+    "examTip": "Use precise terminology: tax avoidance is legal but ethically questionable; tax evasion is illegal. The distinction matters for accurate analysis.",
+    "mistake": "Confusing tax avoidance (legal) with tax evasion (illegal), or treating all MNC tax planning as criminal.",
+    "correction": "Tax avoidance uses legal mechanisms (transfer pricing, locating IP in low-tax jurisdictions) to minimise tax bills. Tax evasion is illegal — concealing income or filing false returns. The ethical debate concerns whether legal avoidance is morally acceptable when it reduces tax revenue in countries where MNCs operate."
+   },
+   {
+    "id": "global-industries-mncs:mistake:84544c01",
+    "title": "Suggesting a Single Solution to MNC Control",
+    "examTip": "Conclude by arguing for a multi-pronged approach — combining legal frameworks, consumer awareness, pressure group campaigns, media scrutiny and international cooperation.",
+    "mistake": "Arguing that one control mechanism (e.g. legal regulation, consumer pressure) alone can effectively control MNCs.",
+    "correction": "No single mechanism is sufficient. Legal controls struggle with cross-border enforcement; consumer pressure depends on available alternatives; pressure groups raise awareness but lack direct power; self-regulation lacks accountability. Effective control requires a combination of complementary approaches."
+   }
+  ]
+ }
+}
