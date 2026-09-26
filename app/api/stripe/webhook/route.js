@@ -1,6 +1,7 @@
 import { getStripe, getSubscriptionPeriodEnd } from '@/lib/stripe';
 import { createServerClient } from '@/lib/supabase-server';
 import { isLifetime, PLAN_LIFETIME } from '@/lib/entitlements';
+import { findLiveSubscription } from '@/lib/subscription-sync';
 import { NextResponse } from 'next/server';
 
 /**
@@ -114,6 +115,25 @@ async function userHasLifetime(supabase, userId, logCtx) {
     throw error; // Safer to retry than to risk wrongly downgrading a lifetime user.
   }
   return isLifetime(data);
+}
+
+/**
+ * Before revoking access because `ending` stopped being live, check whether the customer holds
+ * another live subscription. If one exists, point the row at it and return true.
+ *
+ * Without this, any subscription ending downgraded the user outright: on 4 Sep 2026 an expired
+ * trial's deletion locked out a customer who was paying on a second subscription. Stripe errors
+ * propagate, so an outage is retried rather than read as "nothing is live".
+ */
+async function keepAccessFromAnotherSubscription(supabase, stripe, { userId, customerId, ending }, logCtx) {
+  const remaining = await findLiveSubscription(stripe, customerId, { excludeId: ending.id });
+  if (!remaining) return false;
+
+  await writeActiveSubscription(supabase, { userId, customerId, subscription: remaining }, logCtx);
+  console.log('[webhook:%s] %s is no longer live but %s is — access kept', logCtx.eventType, ending.id, remaining.id, {
+    eventId: logCtx.eventId, userId, customerId,
+  });
+  return true;
 }
 
 /**
@@ -328,6 +348,10 @@ export async function POST(request) {
         if (isActive) {
           await writeActiveSubscription(supabase, { userId, customerId, subscription }, logCtx);
         } else {
+          if (await keepAccessFromAnotherSubscription(
+            supabase, stripe, { userId, customerId, ending: subscription }, logCtx,
+          )) break;
+
           const { error } = await supabase
             .from('user_subscriptions')
             .update({
@@ -365,6 +389,10 @@ export async function POST(request) {
           });
           break;
         }
+
+        if (await keepAccessFromAnotherSubscription(
+          supabase, stripe, { userId, customerId, ending: subscription }, logCtx,
+        )) break;
 
         const { error } = await supabase
           .from('user_subscriptions')
