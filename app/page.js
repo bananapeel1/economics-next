@@ -99,7 +99,7 @@ export default async function HomePage({ searchParams }) {
           Unlike general A-Level revision sites, Revvy Learn is purpose-built for the International A-Level. All 23 Economics sections and all 20 Business sections have concise, exam-focused notes, and every Economics section comes with clear exam diagrams. Flashcards use spaced repetition (SM-2), so the cards you get wrong come back sooner. Our AI tutor answers any Economics or Business question instantly, helping you build evaluation chains and check your reasoning before exam day.
         </p>
         <p>
-          Revvy Learn covers both the January and June exam series, so whether you are sitting papers in the winter or summer session, your revision is always aligned to the right content. Start revising today — choose Economics or Business and work through every topic at your own pace.
+          Revvy Learn covers the October, January and June exam series, so whichever series you sit, your revision is always aligned to the right content. Start revising today — choose Economics or Business and work through every topic at your own pace.
         </p>
       </section>
     </>

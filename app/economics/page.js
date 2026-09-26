@@ -115,7 +115,7 @@ export default function EconomicsPage() {
         "name": "What is Edexcel IAL Economics?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Edexcel IAL (International A-Level) Economics is a globally recognised qualification offered by Pearson Edexcel. It is designed for international students and covers microeconomics, macroeconomics, business behaviour and the global economy across four units (WEC11–WEC14). IAL exams are available in January and June exam series."
+          "text": "Edexcel IAL (International A-Level) Economics is a globally recognised qualification offered by Pearson Edexcel. It is designed for international students and covers microeconomics, macroeconomics, business behaviour and the global economy across four units (WEC11–WEC14). IAL Economics exams are available in the January, May/June and October series."
         }
       },
       {
