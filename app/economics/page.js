@@ -47,7 +47,7 @@ const unit4Sections = [
   { id: 'causes-effects-globalisation', number: '4.3.1', title: 'Causes and Effects of Globalisation', meta: 'MNCs, trade blocs, benefits & costs' },
   { id: 'trade-global-economy', number: '4.3.2', title: 'Trade and the Global Economy', meta: 'Comparative advantage, free trade, protectionism' },
   { id: 'balance-payments-exchange-rates', number: '4.3.3', title: 'BoP, Exchange Rates & Competitiveness', meta: 'Current account, Marshall-Lerner, J-curve' },
-  { id: 'poverty-inequality', number: '4.3.4', title: 'Poverty and Inequality', meta: 'Lorenz curve, Gini coefficient, relative vs absolute poverty' },
+  { id: 'poverty-inequality', number: '4.3.4', title: 'Poverty and Inequality', meta: 'Absolute vs relative poverty, Lorenz curve & Gini, causes of inequality' },
   { id: 'role-state-macroeconomy', number: '4.3.5', title: 'The Role of the State in the Macroeconomy', meta: 'Public goods, merit goods, redistribution' },
   { id: 'growth-development', number: '4.3.6', title: 'Growth and Development', meta: 'HDI, development strategies, barriers to growth' },
 ];
