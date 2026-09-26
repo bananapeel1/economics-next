@@ -179,7 +179,7 @@ export default function IALRevisionPage() {
           </p>
         </div>
 
-        <div className="elp-wyg-grid" style={{ maxWidth: '700px', margin: '0 auto' }}>
+        <div className="elp-wyg-grid" style={{ maxWidth: '900px', margin: '0 auto' }}>
           <Link href="/ial-revision/exam-series#october-2026" className="elp-wyg-card elp-fade-up" style={{ textDecoration: 'none' }}>
             <div className="elp-wyg-title">October 2026 Exam Series</div>
             <div className="elp-wyg-desc">Economics and Business papers from 8 to 30 October 2026: every date from Pearson&apos;s final timetable.</div>
@@ -187,6 +187,10 @@ export default function IALRevisionPage() {
           <Link href="/ial-revision/january-2027" className="elp-wyg-card elp-fade-up" style={{ textDecoration: 'none', transitionDelay: '.07s' }}>
             <div className="elp-wyg-title">January 2027 Timetable</div>
             <div className="elp-wyg-desc">All eight Economics and Business papers, 11 to 21 January 2027, and the two dates to plan around.</div>
+          </Link>
+          <Link href="/ial-revision/june-2027" className="elp-wyg-card elp-fade-up" style={{ textDecoration: 'none', transitionDelay: '.14s' }}>
+            <div className="elp-wyg-title">June 2027 Timetable</div>
+            <div className="elp-wyg-desc">The biggest series: every Economics and Business paper from 5 May to 4 June 2027.</div>
           </Link>
         </div>
       </div>

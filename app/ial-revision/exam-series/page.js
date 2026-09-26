@@ -4,12 +4,12 @@ import BackToApp from '@/components/BackToApp';
 import { Clipboard } from '@/components/Icons';
 import IALScrollBar from '../IALScrollBar';
 import ExamTimetable from '../ExamTimetable';
-import { oct2026, jan2027, lastJanuaryResults } from '@/data/ialTimetables';
+import { oct2026, jan2027, jun2027, lastJanuaryResults } from '@/data/ialTimetables';
 import '@/styles/landing.css';
 
 export const metadata = {
   title: 'Edexcel IAL Exam Series — October, January & June Dates | Revvy Learn',
-  description: 'How the three Edexcel IAL exam series work for Economics (WEC11–14) and Business (WBS11–14), with every paper date for October 2026 and January 2027 from Pearson’s final timetables. Retakes, time zones and modular planning.',
+  description: 'How the three Edexcel IAL exam series work for Economics (WEC11–14) and Business (WBS11–14), with every paper date for October 2026, January 2027 and June 2027 from Pearson’s final timetables. Retakes, time zones and modular planning.',
   alternates: { canonical: 'https://revvylearn.com/ial-revision/exam-series' },
   openGraph: {
     title: 'Edexcel IAL Exam Series — October, January & June Dates | Revvy Learn',
@@ -145,6 +145,17 @@ export default function ExamSeriesPage() {
           </p>
         </div>
         <ExamTimetable series={jan2027} />
+      </div>
+
+      <div className="elp-section" id="june-2027">
+        <div className="elp-units-header">
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-blue)' }} />The big one</div>
+          <h2 className="elp-s-title">May/June 2027 timetable</h2>
+          <p className="elp-s-sub" style={{ maxWidth: '720px' }}>
+            Economics and Business papers run from 5 May to 4 June 2027. <Link href="/ial-revision/june-2027">Plan for June 2027 &rarr;</Link>
+          </p>
+        </div>
+        <ExamTimetable series={jun2027} />
       </div>
 
       <div className="elp-cta-section">

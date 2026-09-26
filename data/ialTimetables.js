@@ -37,5 +37,25 @@ export const oct2026 = {
   ],
 };
 
+export const jun2027 = {
+  series: 'May/June 2027',
+  status: 'FINAL',
+  source: 'https://qualifications.pearson.com/content/dam/pdf/Support/Examination-timetables-for-International-Advanced-Levels/ial-summer-2027-final.pdf',
+  checked: '2026-09-26',
+  papers: [
+    { code: 'WBS11', subject: 'Business', unit: 1, title: 'Marketing and People', date: '2027-05-05', day: 'Wed 5 May', session: 'Morning', length: '2h' },
+    { code: 'WEC11', subject: 'Economics', unit: 1, title: 'Markets in Action', date: '2027-05-06', day: 'Thu 6 May', session: 'Morning', length: '1h 45m' },
+    { code: 'WBS12', subject: 'Business', unit: 2, title: 'Managing Business Activities', date: '2027-05-10', day: 'Mon 10 May', session: 'Morning', length: '2h' },
+    { code: 'WEC12', subject: 'Economics', unit: 2, title: 'Macroeconomic Performance and Policy', date: '2027-05-12', day: 'Wed 12 May', session: 'Morning', length: '1h 45m' },
+    { code: 'WBS13', subject: 'Business', unit: 3, title: 'Business Decisions and Strategy', date: '2027-05-24', day: 'Mon 24 May', session: 'Morning', length: '2h' },
+    { code: 'WEC13', subject: 'Economics', unit: 3, title: 'Business Behaviour', date: '2027-05-26', day: 'Wed 26 May', session: 'Morning', length: '2h' },
+    { code: 'WBS14', subject: 'Business', unit: 4, title: 'Global Business', date: '2027-06-01', day: 'Tue 1 Jun', session: 'Morning', length: '2h' },
+    { code: 'WEC14', subject: 'Economics', unit: 4, title: 'Developments in the Global Economy', date: '2027-06-04', day: 'Fri 4 Jun', session: 'Morning', length: '2h' },
+  ],
+};
+
+/** Pearson's key-dates page (checked 2026-09-26): June 2026 IAL results reached students on 13 August 2026. */
+export const lastJuneResults = { series: 'June 2026', students: '13 August 2026' };
+
 /** Pearson's key-dates page (checked 2026-09-26) lists January 2026 results, not yet January 2027. */
 export const lastJanuaryResults = { series: 'January 2026', students: '19 March 2026' };
