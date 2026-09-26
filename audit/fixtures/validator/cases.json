@@ -561,7 +561,22 @@
    ],
    "evaluation": []
   },
-  "mistakes": []
+  "mistakes": [
+   {
+    "id": "base:mistake:1",
+    "title": "Treating revenue as profit",
+    "mistake": "Students say a rise in revenue means profit rose.",
+    "correction": "Ask what happened to total cost as well.",
+    "examTip": "Always state both sides."
+   },
+   {
+    "id": "base:mistake:2",
+    "title": "Confusing a shift with a movement",
+    "looks_like": "\"Price rose, so demand fell.\"",
+    "why": "A change in price moves along the curve; it does not shift it.",
+    "instead": "Say quantity demanded fell."
+   }
+  ]
  },
  "cases": [
   {
@@ -1795,6 +1810,36 @@
    "fail": {
     "content.0.sections.0.recall.type": "diagram",
     "content.0.sections.0.recall.specId": "no-such-spec"
+  },
+  {
+   "rule": "mistakes.shape",
+   "fail": {
+    "mistakes": [
+     {
+      "id": "x:mistake:1",
+      "title": "An unread shape",
+      "trap": "students do X",
+      "better": "do Y"
+     }
+    ]
+   },
+   "pass": {
+    "mistakes": [
+     {
+      "id": "x:mistake:2",
+      "title": "The quote shape",
+      "quote": "\"Costs fell.\"",
+      "why": "Only unit costs fell.",
+      "fix": "Say which cost."
+     },
+     {
+      "id": "x:mistake:3",
+      "title": "The error shape",
+      "error": "Adding the two",
+      "why": "They are different bases.",
+      "fix": "Use one base."
+     }
+    ]
    }
   }
  ]

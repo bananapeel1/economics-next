@@ -10865,6 +10865,87 @@ opened, never by an automatic check (a word-overlap test caught 0 of these 4). *
 before publish.** Packet 45's own four questions are being rewritten by `packet-close.js` (run
 `wf_b6a22d45-7fa`); that fix is staged to draft only and needs the founder's re-publish.
 
+## Handoff — packet 46 (growth-development) closed, gate passed (bookkeeping pass, 26 September 2026)
+
+**Bookkeeping-only pass.** Authored nothing, fixed nothing, ran no build, published nothing, committed
+nothing. Read `audit/PROTOCOL.md`, `audit/CONTENT-GATE.md` (the recall contract and the per-section
+checklist), the Settled list in `audit/DECISIONS.md`, this packet's own `audit/runs/packet-46/{brief,
+built,verify-a,verify-b,gate.log}` in full, and the tail of this file, before writing anything.
+`audit/ledger.json` was read (via a direct Python parse, not the CLI the build/verify session used), not
+written.
+
+**No contradiction found** among `audit/PROTOCOL.md`, the Settled entries in `audit/DECISIONS.md`, and
+`audit/CONTENT-GATE.md`'s recall contract, for this packet's work. **No `## Packet 46 spec` heading
+exists anywhere in this file** — the same gap packets 41, 43, 44 and 45 hit and normalized; PROTOCOL's
+own rule is that the ledger defines scope, and `brief.md`/`built.md` supplied it here instead, before
+this pass ever ran.
+
+**Packet 46 (growth-development, IAL Economics 4.3.6, WEC14) PASSED the gate.** STAGED to `draft` only;
+live `data` and git HEAD are both untouched; nothing committed. Rebuilt to **4.3.6 only**
+(`audit/raw/econ_spec.txt:1899`, re-confirmed by this pass with a direct `sed` read, not by trusting
+`built.md`'s citation: the heading, "What students need to learn", runs to the NGOs bullet at `:1968`
+with "Assessment information" starting immediately after). The old Sustainability/EKC/green-growth block
+was off-spec (0 hits, re-grepped fresh) and removed; Fairtrade and Dutch disease were correctly not
+added (0 hits each, also re-grepped fresh).
+
+**Independently re-verified this pass, by methods different from the ones already in the run folder:**
+- Ledger count: `python3` parsing `audit/ledger.json` directly (not `ledger.mjs`) and grouping on
+  `packet === 46` → **25 confirmed, 0 wont-fix, 0 rejected, 0 open**, every id `closed_by: "packet-46"`.
+  Cross-checked against a fresh `node audit/scripts/ledger.mjs unverified 46` → "gate clear". No other
+  ledger item (code, feature, content) mentions `growth-development`; V056/V057/V059 (named in
+  `verify-a.md` as pre-existing) are independently confirmed already-`confirmed` feature ids.
+- Spec span and off-spec terms: `sed -n '1895,1975p' audit/raw/econ_spec.txt` and a fresh
+  `grep -in "fairtrade\|dutch disease\|sustainab\|kuznets"` over the whole file, both run directly by
+  this pass rather than reading `built.md`'s or `verify-a.md`'s citations on trust. Both confirm.
+- Staged-vs-live: a fresh `curl` (this pass's own script, not `draft-readback.mjs`) of
+  `localhost:3001/api/sections/growth-development` and `?draft=1`, dumped and compared by block/
+  subsection count: **live 3 blocks / 6 subsections (unchanged), draft 7 blocks / 34 subsections (the
+  rebuild)**. Also re-ran `node audit/scripts/check-staged-drafts.mjs growth-development` fresh →
+  "matches", 0 drift. No `auto-prepublish-2026-09-26*growth-development*` snapshot exists; the two
+  `auto-prepublish-2026-09-25T*` files pre-date this packet by a day (the 2.9/2.91 diagram-pin
+  checkpoint), the same pattern packet 45's own row already flagged for its section.
+- `audit/runs/packet-46/gate.log` read directly (not re-run in full by this pass, for token discipline):
+  `npm test`, `npm run build`, `npm run validate`, `npm run exposure`, `npm run recalls`,
+  `check-staged-drafts.mjs growth-development` all exit 0, dated 26 Sep; advisory checks (`contrast`,
+  `spec-items`, `tariff-census`, `pin-check`) also exit 0. This pass did not re-run `npm test`/`build`/
+  `validate`/`exposure`/`recalls` itself — only the two cheap, fast checks above (`ledger.mjs unverified`
+  and `check-staged-drafts.mjs`) were re-run fresh, plus the live-curl comparison, as the independent
+  cross-check; the heavier gate commands are reported from the log, not re-executed, and that is exactly
+  what this row says.
+
+**Verify A (25/25 confirmed, zero fix rounds) and Verify B (390×844 signed out, 41-step walkthrough,
+PASS, no blocking defect)** are both already in `audit/runs/packet-46/`; this pass did not repeat either,
+only spot-checked their evidence by the independent methods above. Verify B's non-blocking notes (a
+stated dollar figure with no GDP shown behind it; "Appendix 6" named to the student by name; a
+guided-practice "opening" that reads as advice rather than an opening sentence; the server-rendered
+crawler text still showing old live content, expected pre-publish) are carried forward, not fixed here.
+
+**Next unclaimed packet, re-checked live rather than chained forward from an earlier claim:**
+- **Packet 47 (global-markets-expansion) is still in progress**, not free: `python3` parse of
+  `audit/ledger.json` for `packet === 47` shows 33 items — 20 `claimed`, 12 `confirmed`, 1 `wont-fix`, 0
+  `open` — so a build has run but Verify A has not closed the 20 still-`claimed` ids. Do not treat it as
+  free or as done. It also has a run folder with `gate.log`/`built.md`/`verify-a.md` etc. already
+  present; whoever picks it up next should read those, not restart the build.
+- **Packet 48 (government-intervention-firms) is genuinely free**: `packet === 48` shows 33 items, all
+  `open`, 0 `claimed`; `PROGRESS.md` row 48 reads "not started" — consistent with live state. Per packet
+  45's own handoff, packet 48 is also where packet 45's minimum-wage/maximum-wages/immobility-measures/
+  discrimination pointers (3.3.5.2b) send the reader, so read that section's `built.md` before starting,
+  not just the specification.
+- Packets 49-51 (`business-growth`, `managing-change`, `poverty-inequality`) are untouched, all `open`,
+  behind 47/48 in traffic order.
+
+**Escalate to the founder:** nothing blocking from packet 46 itself. When ready to publish:
+```
+node scripts/packet-46-growth-development.mjs --stage && node scripts/publish-section.mjs growth-development --confirm
+```
+Per PROTOCOL Rule 3, `built.md` itself records that origin/main field-compatibility was **not checked**
+("relevant only at publish") — check it against a current `origin/main` checkout before publishing, the
+same gap packets 40-45 have each carried forward rather than closed. Separately, `verify-b.md`'s Rule-4
+carry-forward item — the check-in quiz answer sitting in a diagram caption or checklist directly above
+the question — was NOT reported for this section by its own Verify B walkthrough (no such instance is
+listed among its notes), so packet 46 itself does not add to that programme-wide backlog; the backlog
+itself (raised at packets 44/45) is still open and unassigned to any packet.
+
 ## Handoff — packet 12.75 closed (brain)
 
 **Bookkeeping-only pass, second visit to this packet.** Authored, fixed and committed nothing. Read
@@ -11054,3 +11135,115 @@ build has landed yet — but **a brief this fresh means another session is very 
 right now, not that it is free to start.** Do not restart or duplicate that work; check for a live session
 or a newer run folder before touching it. Packets 49-51 (`business-growth`, `managing-change`,
 `poverty-inequality`) are untouched, all `open`, behind 48 in traffic order.
+
+## Handoff — what comes next (packet 48 bookkeeping pass, 26 September 2026)
+
+**Bookkeeping-only pass. Authored, fixed, staged, published, restored and committed nothing.** Read
+`audit/PROTOCOL.md`, the "## Packet 48 spec" reference (does not exist — see below), the newest Handoff
+above (packet 45 closed, brain), this packet's row in `audit/PROGRESS.md`, the Settled list in
+`audit/DECISIONS.md`, `audit/CONTENT-GATE.md` including the recall and check-in-answer contracts,
+`audit/SPEC-OWNERSHIP.md`, and `audit/runs/packet-45/built.md`'s "For the next phases" section, before
+writing anything. `audit/ledger.json` was read (direct Python parse, cross-checked against the `ledger.mjs`
+CLI), not written.
+
+**No `## Packet 48 spec` heading exists anywhere in this file** — the same gap packets 41/43/44/45/46/47
+hit and normalized; PROTOCOL's own rule is that the ledger defines scope, and `brief.md`/`built.md`
+supplied it here instead, before this pass ever ran. **No contradiction found** among PROTOCOL.md,
+SESSION-PROMPT.md, the Settled entries in DECISIONS.md and CONTENT-GATE.md's contracts for this packet's
+work — a missing document, worked around an eighth time, not a contradiction between authorities.
+
+**Packet 48 (government-intervention-firms, IAL Economics 3.3.5) is built, ledger-clear, and Verify
+A/B-clean, but its GATE DID NOT PASS.** STAGED to `draft` only; live untouched (re-confirmed by this pass
+with a fresh signed-out `curl`: still 3 blocks, `contentVersionSince` unchanged). Span independently
+re-confirmed with a direct `grep` of `econ_spec.txt` (`:1485-1535`, product markets 1a-1f + labour markets
+2a-2b, matching the task brief exactly). **Ledger: 33/33 confirmed, 0 open, 0 rejected, 0 wont-fix**
+(direct JSON parse + `ledger.mjs unverified 48` → "gate clear", both re-run fresh by this pass). **Verify
+A: 33/33 confirmed, 6/6 check-ins recorded `clean` per CONTENT-GATE's required format** (this section did
+the documentation packet 47's row flagged as missing). **Verify B: PASS**, 34-step/6-chapter walk at
+390×844, 0 blocking defect in the packet's own content; one carried, non-blocking, non-content defect —
+the Unit 3 hub page (`app/economics/unit-3/page.js:56-64`) still advertises the OLD section (CMA, RPI-X,
+"Government Failure", a "Minimum Wage" tile), the same class of defect packet 47 found and fixed on the
+Business Unit 4 page. **Zero fix rounds used.**
+
+**Why "DID NOT PASS" is still the right verdict, and what this pass found about why.**
+`audit/runs/packet-48/gate.log` (dated 12:40:23) shows build/validate/exposure/recalls/check-staged-drafts
+all exit 0, but **`npm test` exited 1: 339 pass, 3 fail of 342** — all three about a "market-failure panel
+built on Evaluate 20", "1.3.5 groups into the extract set", and a tag-leaf check failing on an `mf-`
+(market-failure) tag. **None names or touches `government-intervention-firms`**, confirmed by a direct
+`grep` of packet 48's own five script files for the failing tests' subject matter (0 hits). PROTOCOL's
+Definition of Done blocks the gate on any `npm test` failure regardless of cause, so this pass records
+**DID NOT PASS** rather than excusing it. **Independently verified by a different method than reading the
+log — a fresh, full `npm test` run performed by this pass just now: 356/356 pass, 0 fail** (a different
+total from the gate's 342, so the shared worktree's suite has changed composition since). File mtimes,
+checked directly: `lib/mid-band-answer.test.mjs` (12:49:55), `components/SectionModelAnswersPage.jsx`
+(12:46:18) and `app/model-answers/page.js` (12:55:30) all carry unstaged edits AFTER the gate's 12:40:23
+capture, and all three are exactly the files `audit/DECISIONS.md` (26 Sep) names for **packet 12.75's**
+still-open E053 fix (the mid-band "why this loses marks" panel) — a different, concurrent packet in this
+shared worktree. **This is a strong, evidenced inference — timing plus file scope — that the failure was
+caused by packet 12.75's in-flight edit, not by packet 48's content, and may already be resolved.** It is
+an inference, not a re-run of packet 48's own gate, and this pass has no authority to re-run, re-stage or
+re-claim it. **The next session on packet 48 should re-run `npm test` fresh first**, rather than trusting
+either the stale failure or this pass's inference, before deciding whether a fix round is even needed.
+
+**What the next packet 48 session needs, beyond re-running the gate**: the Unit 3 hub-page copy fix
+(above) must land with, or before, any publish. Per PROTOCOL Rule 3, field compatibility against a
+current `origin/main` checkout has not been checked for this packet (recall types
+match/classify/fillin/reorder, `diagramId` pins, flow-step shape) — the same gap packets 40-47 have each
+carried forward. Publish command, for the founder, not run by any pass so far:
+```
+node scripts/packet-48-government-intervention-firms.mjs --stage && node scripts/publish-section.mjs government-intervention-firms --confirm
+```
+
+**Next unclaimed packet, checked live by this pass rather than chained forward from an earlier claim.**
+The prior handoff named packets 48/50/51/52/53 as "same-hour activity" without checking each one's ledger;
+this pass did, by both a direct JSON parse and `ledger.mjs unverified <n>`:
+- **Packet 49 (business-growth) is genuinely free**: 27 items, all `open`, 0 `claimed`; no run folder
+  (`audit/runs/packet-49/` does not exist); `PROGRESS.md` row still reads "not started", consistent with
+  live state.
+- **Packets 50 (managing-change) and 52 (role-state-macroeconomy) and 53
+  (influences-business-decisions) are gate-clear but NOT free to build**: `unverified 50/52/53` each
+  return "gate clear" (50: 25 confirmed/2 wont-fix; 52: 29 confirmed; 53: 22 confirmed/4 wont-fix; all 0
+  open), each with a full run folder including `verify-a.md`/`verify-b.md` (except 51, below) already
+  staged. Their `PROGRESS.md` rows all still read "not started" — stale, the same pattern packets 45/46/47
+  carried until their own bookkeeping passes ran. **Each needs its own bookkeeping pass to write up its
+  row, not a rebuild** — do not restart any of the three.
+- **Packet 51 (poverty-inequality) is still in progress, not free and not gate-clear**: `unverified 51` →
+  "GATE BLOCKED: 1 claimed item(s) not confirmed" (`topFix-03`, MCQ distractor rewrite); 22 of 23 confirmed.
+  Do not treat it as done.
+- Packets 54+ untouched, behind these in traffic order (not checked by this pass — token discipline).
+
+**Escalate to the founder**: nothing to publish yet — packet 48's gate has not passed. When the `npm test`
+failure above is re-checked (by re-running it, not by trusting this pass's inference) and, if still needed,
+fixed and re-verified, the Unit 3 hub-page copy must be updated with, or before, the publish. Separately,
+worth the founder's attention across the whole programme now that it recurs a fourth time (packets
+44/45/47's own bookkeeping rows): **a shared worktree with several sessions active on adjacent packets can
+make one packet's gate fail from a file it never touched** — packet 48 is the clearest evidenced case yet,
+with file mtimes pinning the cause to a specific other packet's in-flight edit rather than leaving it a
+guess.
+
+### Packet 48 — brain close (26 September 2026, after the bookkeeping pass above)
+
+**Packet 48 PASSED; the "DID NOT PASS" above was a peer's mid-edit, now measured.** Fresh on HEAD `ef2d0b3` at
+13:25: `npm test` 357/357, `npm run validate` exit 0, `check-staged-drafts government-intervention-firms` 0 drift.
+Nothing in `app/`, `components/`, `lib/` or `data/` references packet 48's files; the failing `mf-` tag lives in
+`data/modelAnswersExpansion.js`. The commit's own tree was gated in a detached worktree before the ref moved.
+
+Closed in this pass, so no longer waiting on anyone:
+- **Unit 3 hub copy** (`app/economics/unit-3/page.js`, and the card in `app/economics/page.js`) now names the six
+  rebuilt chapters in spec terms. It ships with the next branch-to-main merge, not with `publish-section.mjs`, so a
+  publish before that merge leaves the old tiles on the Unit 3 page until the deploy.
+- **Question first (PR #43).** Verify B walked before the merge, so a fresh read-only verifier checked the six
+  check-ins on the merged code: all rendered question-first on :3001, 0 of 6 state the answer before answering,
+  diagrams 6/6 clean, takeaways state it at CH1 and CH3 (DEBT). `audit/runs/packet-48/verify-question-first.md`.
+- **Rule 3**, measured: `origin/main` holds nothing the branch lacks and every renderer file is identical, so
+  production reads this bundle with the code both verifiers ran.
+
+**For the founder, programme-level, not this packet's to fix:** on the Learn Mode opening screen the step-1 text
+below the "Test yourself first" offer states pre-test Q0's answer almost word for word (below the fold, before the
+pre-test starts). Every section's pre-test draws its three unpinned items from early content, so this is likely not
+unique to 3.3.5 — measure it on another section before ruling.
+
+Publish (founder only, rule 6):
+```
+node scripts/packet-48-government-intervention-firms.mjs --stage && node scripts/publish-section.mjs government-intervention-firms --confirm
+```

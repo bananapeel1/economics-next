@@ -14722,10 +14722,10 @@
    "rank": 0,
    "text": "Replace quiz[5] (Laffer), quiz[6] (occupational immobility), quiz[7] (poverty trap) with on-spec MCQs on mergers/SLC, predatory pricing vs abuse of dominance, and quality standards/performance targets; then add quizIndices, practiceIndices and diagramRef to each block so pre-test and inline items match what the step teaches.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:381-1747 all 6 blocks pin diagramId+quizIndices+practiceIndices, each pinned item taught in its block; Laffer/poverty-trap strings 0 (were 2/4); SLC Q2 at :2080, predatory Q6, performance-target Q4; staged draft == bundle row-by-row",
    "note": null
   },
   {
@@ -14735,10 +14735,10 @@
    "rank": 1,
    "text": "Fix the diagrams: redraw diagrams[0] as a natural-monopoly price-cap diagram (falling LRAC, P=MC vs P=AC caps, Preg not below AC, MC=MR dashed lines at the true intersection); retitle/replace diagrams[2] so privatisation is not shown as a competitive supply shift; add the competitive-market NMW diagram the examMatters demands; draw the kinked post-NMW MCL in diagrams[1].",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:2678 D0 AC falls monotonically, MR∩MC marker (156.5,188.8) on computed intersection (156.6,188.8), AC and MC caps on D; :2703 D1 privatisation drawn as MC fall with MR=MC, no supply curve; :2770 D4 competitive NMW view + kinked MCL (flat $10 to 16k, jump to MCL 18) — SVG parsed independently",
    "note": null
   },
   {
@@ -14748,10 +14748,10 @@
    "rank": 2,
    "text": "Add the missing spec content as a new block ('Promoting competition and contestability': deregulation, competitive tendering, promotion of small business; 'Protecting suppliers': monopsony buyers) plus a short 'impact on prices, profit, efficiency, quality, choice' summary table; consider moving the minimum-wage subsection to 3.3.4.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:394 chapter 'Promoting Competition and Contestability' (deregulation :450, tendering :561, small business/FDI :397); monopsony buyers :879; five-impact summary :1012; min wage correctly kept here per econ_spec.txt:1530 (3.3.5 2b) and SPEC-OWNERSHIP row 28",
    "note": null
   },
   {
@@ -14761,10 +14761,10 @@
    "rank": 3,
    "text": "Add recall exercises: fillin on RPI-X (RPI 5%, X 2% → ?%), reorder on merger-control procedure and on the Averch-Johnson causal chain.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:118 fillin CPI-X 6%-4%=2; :357 reorder merger review, chronological criterion; :186 reorder Averch-Johnson cause-to-effect; each with why lines",
    "note": null
   },
   {
@@ -14774,10 +14774,10 @@
    "rank": 4,
    "text": "De-UK and de-GCE the exam framing: change '25-mark essay' to '20-mark Evaluate'; say 'competition authorities (e.g. CMA, CCCS, KFTC, HK Competition Commission)'; add 2-3 Asia/ME examples (CCCS Grab-Uber 2018 fine, KFTC Google 2021); rewrite practice mark schemes as IAL KAA + Evaluation levels, fix 'Define (4 marks)' and 'Outline'.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json 25-mark 0, Outline 0, RPI 0, CMA 0, UK 0 (pre 1/2/27/26/12); Define 2 at :2394; Evaluate schemes KAA+evaluation levels :2390; HK/Pakistan authorities :264, KFTC-Google :284, Singapore Grab-Uber :352",
    "note": null
   },
   {
@@ -14786,10 +14786,10 @@
    "kind": "accuracy",
    "text": "content[1] Regulation of Monopoly > privatisation-nationalisation > examMatters: \"This is a classic 25-mark essay topic\" — 25-mark essays are UK GCE 9EC0 Papers 1/2 Section C. IAL WEC13 essays (Section C) are 20 marks; the highest IAL tariff is 20 ('Evaluate'). Sets wrong exam expectations for the target audience.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:533 privatisation examMatters now 'An Evaluate on privatisation carries 20 marks (Appendix 6)'; '25-mark' occurs 0 times in the staged section (was 1)",
    "note": null
   },
   {
@@ -14798,10 +14798,10 @@
    "kind": "accuracy",
    "text": "diagrams[0] 'Price Regulation of a Monopoly (RPI-X Price Cap)' svg: Geometry contradicts the intended teaching. The regulated price line Preg is at y=170 while the AC curve at Qreg (x=268) is at y≈115 — i.e. AC is ABOVE Preg, so the regulated firm is drawn making a loss, with no mention of this anywhere in checklist/description (the SVG comment even says 'above AC'). Also the MC=MR point is marked at (200,226) but the MC and MR paths actually intersect near (232,228), so the Qm/Pm dashed lines hang in space. The AC is U-shaped, not the falling LRAC of a natural monopoly, which is the case regulators actually price-cap.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:2678 D0 rebuilt: AC path falls across whole range (y 56→170.7), MC=MR marker on the parsed MR∩MC intersection within 0.1px, AC cap at D∩AC (207.9,155.6) = normal profit, MC cap below AC captioned as a loss needing subsidy; values match P=100-Q, AC=20+1200/Q",
    "note": null
   },
   {
@@ -14810,10 +14810,10 @@
    "kind": "accuracy",
    "text": "diagrams[2] 'Effects of Privatisation and Deregulation': Represents privatisation as a rightward supply shift in a competitive S/D market ('new entry + efficiency gains'). This directly contradicts content[1] > privatisation-nationalisation body[1] ('privatising a natural monopoly simply replaces a public monopoly with a private one') and conflates privatisation with deregulation — exactly the confusion common_mistakes[1] warns against. E1 is also mis-plotted (S1 and D cross near (272,165), not (260,150)).",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:2703 old 'Effects of Privatisation and Deregulation' diagram removed; D1 shows privatisation as MC 40→32 with MR=MC re-solved ($76, 22m) and only competition taking P to MC; no supply curve; all markers on parsed intersections",
    "note": null
   },
   {
@@ -14822,10 +14822,10 @@
    "kind": "quiz",
    "text": "q5: Not 3.3.5 content (fiscal policy / macro). With the pre-test drawing 3 random MCQs from this bank, students can be tested on it before seeing anything on government intervention in firms. Also appears in inline quiz rotation for a section that never mentions it.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:2051 quiz bank rebuilt to 27 items all on 3.3.5; 'Laffer' occurs 0 times (was 2); every item pinned to the block that teaches it",
    "note": null
   },
   {
@@ -14834,10 +14834,10 @@
    "kind": "quiz",
    "text": "q6: Belongs to 3.3.4 Labour Markets (labour immobility policies), not taught anywhere in this section's content[]. Off-topic for pre-test and inline quiz.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:1607 occupational immobility is now taught (3.3.5 2b, econ_spec.txt:1533) and Q23 on immobility is pinned to that chapter; old q6 removed from the bank",
    "note": null
   },
   {
@@ -14846,10 +14846,10 @@
    "kind": "quiz",
    "text": "q7: Welfare/tax content (macro / UK-style 'poverty trap'), not in 3.3.5 and not taught in this section. Off-topic for pre-test.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:2051 'poverty trap' occurs 0 times in the staged section (was 4); all 27 MCQs are 3.3.5 content",
    "note": null
   },
   {
@@ -14858,10 +14858,10 @@
    "kind": "structure",
    "text": "Zero recall exercises (0 reorder, 0 fillin) — the section has no retrieval practice at all between steps; the only checks are 3 inline MCQs. Obvious candidates exist: a fillin on RPI-X arithmetic; a reorder on the merger-control procedure (notification → Phase 1 → SLC test → Phase 2 → remedies/decision), which is a genuine procedural sequence; a reorder on the Averch-Johnson chain (guaranteed return on capital → incentive to over-invest → inflated capital base → productive inefficiency).",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:118,186,357 et al. 28 recalls, one per subsection (match/fillin/reorder/classify, reorders carry criterion + why); recall-census STAGED 28 recalls, 0 recoverable",
    "note": null
   },
   {
@@ -14870,10 +14870,10 @@
    "kind": "structure",
    "text": "No block carries diagramRef / quizIndices / practiceIndices, so LearnModeTab.jsx:117-121 falls back to distributeItems()/matchDiagramsToBlocks(). Result (3 steps, 1 block each): step 0 'Competition Policy' gets quiz[0] (RPI-X arithmetic) + practice 'Define privatisation' — both untaught at that point; step 1 'Regulation of Monopoly' gets practice 'Outline regulatory capture' (taught in block 3); step 2 gets 'Explain two objectives of competition policy' (block 1). All three inline practice items are on the wrong block.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:381-388,685-692,996-1003,1241-1248,1486-1493,1740-1747 every block pins diagramId/quizIndices/practiceIndices; checkin-placement resolves Q3/Q7/Q11/Q15/Q19/Q23 and P0/P1/P4/P5/P6/P7, each taught in its own chapter",
    "note": null
   },
   {
@@ -14882,10 +14882,10 @@
    "kind": "structure",
    "text": "diagrams[2] 'Effects of Privatisation and Deregulation' shares no title word with any block title ('Competition Policy', 'Regulation of Monopoly', 'Government Failure and Minimum Wages'), so matchDiagramsToBlocks() never places it — it is invisible in Learn Mode and only visible on the Diagrams tab.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:2675 six diagrams, each pinned by id to exactly one block; the unplaceable 'Effects of Privatisation and Deregulation' no longer exists",
    "note": null
   },
   {
@@ -14894,10 +14894,10 @@
    "kind": "structure",
    "text": "Pre-test contamination: 3 of 10 MCQs are off-topic (Q5 Laffer, Q6 occupational immobility, Q7 poverty trap); P(at least one off-topic in a 3-question pre-test) = 1 - C(7,3)/C(10,3) ≈ 71%. This is a concrete mechanism behind the founder's 'pre-test demotivates' hypothesis for this section.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:2051 all 27 MCQs are 3.3.5; lib/pretest-pool.js takes first 3 unreserved = Q0-Q2 (natural monopoly, CPI-X incentive, SLC), all chapter-1 content; off-topic count 0",
    "note": null
   },
   {
@@ -14906,10 +14906,10 @@
    "kind": "structure",
    "text": "Block 3 'Government Failure and Minimum Wages' pairs two unrelated topics into one step. Government failure is Unit 1 content used here as an evaluation lens (fine) and minimum wage is 3.3.4 Labour Markets content; neither is a 3.3.5 bullet. The spec's own 3.3.5 hook for labour is 'protect suppliers and employees: restricting monopsony power of firms', which is only obliquely covered.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:1009 'The Impact and Limits of Intervention' holds 1e/1f; wages have their own chapter (:1428); supplier-side monopsony restriction taught at :879; the mixed 'Government Failure and Minimum Wages' block is gone",
    "note": null
   },
   {
@@ -14918,10 +14918,10 @@
    "kind": "structure",
    "text": "The section is not organised around the spec's logic (why intervene → tools: mergers / monopoly control / promoting competition & contestability / protecting suppliers & employees → impacts on prices, profit, efficiency, quality, choice → limits: regulatory capture, asymmetric information). There is no summary of 'impact on prices/profit/efficiency/quality/choice' (spec 3.3.5b), so a student cannot easily answer the standard 'assess the impact of X on consumers/firms' data-response question.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:1755-2001 notes meta walk 1a-b, 1c, 1d, 1e-f, 2a-b, 2b in spec order; explicit five-impact summary subsection :1012",
    "note": null
   },
   {
@@ -14930,10 +14930,10 @@
    "kind": "structure",
    "text": "Difficulty ramp is inverted: the most technical material (RPI-X vs rate-of-return, Averch-Johnson, information asymmetry) sits mid-section, while the closing block depends on 3.3.4 prerequisites (MRPL, MCL, ACL) that are assumed rather than recapped.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:1372 MRP glossed ('the value of what each extra worker adds') and the MCL mechanism explained before the monopsony floor; ACL unused; closing chapter needs only S/D of labour",
    "note": null
   },
   {
@@ -14942,10 +14942,10 @@
    "kind": "structure",
    "text": "Takeaways match their blocks and misconceptions are genuine student errors (dominance vs abuse; RPI-X 'prices always fall'; privatisation 'always improves efficiency'; always-draw-competitive-model) — these are good. Flashcards drift off-section (consumer sovereignty, contestable market, deadweight loss, dynamic efficiency are 3.3.3), low priority.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:2442 36 flashcards all on this section's content; consumer sovereignty / contestable market / deadweight / dynamic efficiency occur 0 times (pre 1/1/0/6); misconceptions still genuine errors",
    "note": null
   },
   {
@@ -14954,10 +14954,10 @@
    "kind": "specGap",
    "text": "3.3.5a control of monopolies: quality standards and performance targets — not mentioned anywhere in content[] (only price regulation and, via quiz[1], profit regulation).",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:205 subsection 'Quality Standards and Performance Targets' defines both, distinguishes them, gives impacts; classify recall + Q4",
    "note": null
   },
   {
@@ -14966,10 +14966,10 @@
    "kind": "specGap",
    "text": "3.3.5a promote competition and contestability: promotion of small business — absent.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:397 subsection 'Tax Incentives and Grants for Small Businesses and FDI' teaches small-business measures and how they add rivals; Q9, classify recall",
    "note": null
   },
   {
@@ -14978,10 +14978,10 @@
    "kind": "specGap",
    "text": "3.3.5a promote competition and contestability: deregulation — appears only in flashcards, common_mistakes[1] and diagrams[2]; never taught in content[].",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:450 subsection 'Deregulation' taught in body with contestability flow and impacts; reorder recall, Q8, P3",
    "note": null
   },
   {
@@ -14990,10 +14990,10 @@
    "kind": "specGap",
    "text": "3.3.5a promote competition and contestability: competitive tendering for government contracts — only in quiz[8]; not taught.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:561 subsection 'Competitive Tendering for Public Sector Contracts' taught (competition for the market, risks); reorder recall, Q7",
    "note": null
   },
   {
@@ -15002,10 +15002,10 @@
    "kind": "specGap",
    "text": "3.3.5a protect suppliers and employees: restricting monopsony power of firms (as buyers, e.g. supermarket-supplier codes) — only the NMW/labour-monopsony angle is covered; the supplier-protection angle is absent.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:879 subsection 'Restrictions on the Monopsony Power of Firms' covers the supplier-as-seller angle (buyer codes, prompt payment, crop floor prices); classify recall, Q12",
    "note": null
   },
   {
@@ -15014,10 +15014,10 @@
    "kind": "specGap",
    "text": "3.3.5b impact of government intervention on prices, profit, efficiency, quality, choice — no explicit treatment; partially implied in RPI-X and privatisation sections but never framed as the spec's five impacts.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:1012 subsection 'The Impact of Each Measure on Price, Profit, Efficiency, Quality and Choice' runs every measure through all five; impacts also stated per measure",
    "note": null
   },
   {
@@ -15026,10 +15026,10 @@
    "kind": "specGap",
    "text": "3.3.5c limits to intervention: regulatory capture and asymmetric information — covered (government-failure-intervention; price-cap-regulation body[2]; quiz[9]). No gap.",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:1068,1133 regulatory capture and asymmetric information remain taught (own subsections, D3 diagram, Q15/Q18); 'no gap' still holds",
    "note": null
   },
   {
@@ -15038,10 +15038,10 @@
    "kind": "specGap",
    "text": "Unsure: whether IAL 3.3.5 explicitly lists 'nationalisation' under protecting suppliers/employees (I believe it does, and it is covered).",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "econ_spec.txt:1512 lists 'nationalisation.' under 1d; audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:938 subsection 'Nationalisation' teaches it; Q11",
    "note": null
   },
   {
@@ -16002,10 +16002,10 @@
    "rank": 0,
    "text": "Wire the block metadata: add diagramRef (HDI -> block 1, Harrod-Domar/Prebisch-Singer -> block 1 or a new barriers block, strategies comparison -> block 2), quizIndices and practiceIndices per block, and add one recall per subsection (e.g. fillin on HDI components; reorder on the Harrod-Domar savings->investment->capital->output->income loop; reorder on the Lewis process surplus labour -> migration -> profits -> reinvestment -> turning point).",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:251-253 (+615,926,1140,1447,1789,2132) all 7 blocks pin diagramId/quizIndices/practiceIndices; placeChapterItems on served draft resolves every diagram by pin; 34/34 subsections carry a recall (verify-a.md)",
    "note": null
   },
   {
@@ -16015,10 +16015,10 @@
    "rank": 1,
    "text": "Re-map Block 2 to the spec taxonomy (market-orientated / interventionist / other / international institutions) and add the missing named strategies: privatisation, subsidy removal, floating vs managed exchange rates, joint ventures, Lewis-model industrialisation (own subsection), tourism, primary industries, Fairtrade, debt relief, NGOs.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:1154,1462,1804 strategies re-mapped to 3a/3b/3c+3d; privatisation+subsidies :1272, floating :1322, managed :1565, JVs :1682, Lewis own subsection :1807, tourism :1872, primary :1922, debt relief :1977, NGOs :2077; Fairtrade correctly not added (0 hits econ_spec.txt)",
    "note": null
   },
   {
@@ -16028,10 +16028,10 @@
    "rank": 2,
    "text": "Teach what the quiz tests or cut the questions: add capital flight, foreign currency gap, Dutch disease and the Lewis turning point to the Learn content (they are spec items), or remove Q3/Q4/Q7/Q11 from the pre-test pool. Replace Q11's joke distractors.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:545 capital flight and :471 foreign currency gap taught; Lewis turning point :1843; Dutch disease 0 hits in any table (not in econ_spec.txt); old Q11 gone, all 44 distractors read, none off-topic",
    "note": null
   },
   {
@@ -16041,10 +16041,10 @@
    "rank": 3,
    "text": "Verify Block 3 (Sustainability/EKC/green growth) against the WEC14 spec; if off-spec, demote it to a short evaluation card and reuse the step for 'Factors influencing growth and development' (demographics, property rights, access to credit, infrastructure, non-economic factors), which is currently only in the Notes tab.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json: Sustainability block removed (0 hits sustainab*/Kuznets/green growth); step reused for constraints blocks :266,:631,:940 covering every 2a/2b leaf; environmental cost demoted to one evaluation card pointing to 2.3.5 (:3549)",
    "note": null
   },
   {
@@ -16054,10 +16054,10 @@
    "rank": 4,
    "text": "Fix factual/marking errors: Paris Agreement '1.5C commitment' -> 'well below 2C, pursue 1.5C'; convert practice guidance for the 10- and 20-markers to IAL levels (KAA + EV) rather than marks-per-point; change 'Outline' to an IAL command word and 'Define HDI (4)' to a 2-mark define; resolve the 'growth is necessary' contradiction in block 1.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:2999ff practice tariffs Define2/Calc2/Explain4/Calc4/Analyse6/Examine8/Discuss14/Evaluate20x3, Define 2 at :3002, no Outline/Assess/10-mark; 8/14/20 guidance in Levels; Paris gone; contradiction resolved :26 + misconception :33",
    "note": null
   },
   {
@@ -16066,10 +16066,10 @@
    "kind": "accuracy",
    "text": "Sustainability > green-growth > realExample: States the Paris Agreement 'committed 196 countries to limiting global warming to 1.5 degrees Celsius'. The Agreement commits parties to hold warming 'well below 2C' and to 'pursue efforts' toward 1.5C. The $100bn/yr climate-finance pledge originated at Copenhagen (2009) and was reaffirmed in the Paris decision text, not established by the Agreement; OECD reports it was first met in 2022, so 'consistently fallen short' is dated.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json: green-growth subsection removed; 0 hits for Paris/1.5C/degrees/100bn/196 countries/climate across all tables of the served draft",
    "note": null
   },
   {
@@ -16078,10 +16078,10 @@
    "kind": "accuracy",
    "text": "Sustainability > sustainable-development > examMatters: Claims 'Examiners expect you to ... evaluate the Environmental Kuznets Curve' and green-growth section claims examiners 'want you to evaluate whether green growth is achievable'. I am not aware of EKC, green growth, natural capital or CBDR appearing in WEC14 4.3.6; these examiner expectations look invented. (Sustainability is assessed in Unit 2 as a cost of growth, not here.)",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json: EKC/green-growth examMatters removed; 0 hits for 'examiner' in any table; exam lenses cite Appendix 6 or a spec bullet (e.g. :34, :69)",
    "note": null
   },
   {
@@ -16090,10 +16090,10 @@
    "kind": "quiz",
    "text": "q3: Correct answer (B) is right, but the Lewis model is never mentioned in any of the six Learn subsections; it exists only in diagram 2, flashcards and extras. Students hit this in the pre-test and inline quiz having never been taught it.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:1807-1860 lewis-model subsection teaches surplus labour, reinvestment, turning point; Lewis quiz items :2903 (c36e9ef0), :2927 (4b20e06e) keyed to that prose",
    "note": null
   },
   {
@@ -16102,10 +16102,10 @@
    "kind": "quiz",
    "text": "q7: Correct (B), but 'capital flight' is never defined or explained in Learn content (it appears only in practice Q1 guidance). Untaught item in the quiz bank.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:545ff capital-flight subsection defines residents moving savings abroad; Q13 (quiz:bfc94a44, :2627) keyed to that definition, pinned in block 1",
    "note": null
   },
   {
@@ -16114,10 +16114,10 @@
    "kind": "structure",
    "text": "Zero recall exercises (meta reorder=0, fillin=0). None of the six subsections has a 'recall' object, so Learn Mode's spaced/immediate recall widgets never fire and the section has no retrieval practice at all between reading and the inline quiz.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json: 34/34 subsections carry recall (10 reorder, 6 fillin, 9 classify, 9 match); lib/learn-steps.js buildSteps on served draft: 0 teach steps without recall",
    "note": null
   },
   {
@@ -16126,10 +16126,10 @@
    "kind": "structure",
    "text": "No block has diagramRef, quizIndices or practiceIndices (all null). Consequence: the five diagrams (HDI, Harrod-Domar, Lewis, Prebisch-Singer, strategies comparison) never render inline in Learn Mode, and the inline quiz/practice picked for each block is not tied to that block. Block 3 (Sustainability) has no quiz question and no practice question covering it at all, so whatever is shown after that step is off-topic.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:251-2133 every block pinned; placeChapterItems on served draft gives all 7 check-ins a topical diagram (by pin), quiz and practice; no chapter uncovered",
    "note": null
   },
   {
@@ -16138,10 +16138,10 @@
    "kind": "structure",
    "text": "Pre-test gate draws 3 random MCQs from a 12-item bank in which 5 items (Q3 Lewis, Q4 aid/Dutch disease, Q7 capital flight, Q11 Dutch disease, Q10 H-D assumptions) test content the section never teaches. A student can legitimately score 0/3 before starting, which matches the founder's 'pre-test demotivates' hypothesis.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:2469ff all 44 quiz keys read against prose, each taught; pre-test = first 3 unreserved (lib/pretest-pool.js) = Q0-Q2, taught in block 0 (:9-125); Dutch disease/untaught items gone",
    "note": null
   },
   {
@@ -16150,10 +16150,10 @@
    "kind": "structure",
    "text": "Each block has exactly two sections, so the whole section is 3 steps. Each step is ~900-1000 words of prose (2 x 3 paragraphs + flow + example + misconception + examMatters) before any interaction. No difficulty ramp inside a step; the interactive elements are all stacked at the end.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "lib/learn-steps.js:48-62 one subsection per step; audit/snapshots/packet-46-bundle__economics__growth-development.json subsections ~270-370 words each with own recall below; no step.words finding on the draft",
    "note": null
   },
   {
@@ -16162,10 +16162,10 @@
    "kind": "structure",
    "text": "Takeaways match their blocks (checked all 12 bullets) - good. But Block 1's takeaway bullet 3 names 'debt' and bullet 4 'multi-dimensional intervention' while the body's flow only shows the savings-gap loop; the debt/commodity/institution links are asserted, not shown.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:246,610,921,1135,1442,1784,2127 all 21 takeaway bullets checked against their chapter bodies, each shown; debt has its own subsection :684",
    "note": null
   },
   {
@@ -16174,10 +16174,10 @@
    "kind": "structure",
    "text": "Notes tab is broader than Learn content (geography, human capital, disease burden, Washington vs post-Washington Consensus) and diagram 4 uses the spec's strategy taxonomy, whereas the Learn text uses a different (SAP/aid) classification. A student switching tabs sees two different maps of the same topic.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:2149ff 7 notes titles equal the 7 Learn block titles; 0 hits Washington/geography/disease burden; diagram 'Market-Orientated Strategies at Work' matches block :1154",
    "note": null
   },
   {
@@ -16186,10 +16186,10 @@
    "kind": "structure",
    "text": "Misconceptions: growth-vs-development, barriers-as-checklist, market-led-universal, dismiss-all-intervention and sustainability-means-no-growth are genuine student errors. 'Students present green growth as a cost-free solution' is filler - no IAL question elicits that error. Every misconception uses the identical 'Wrong - ... Instead write:' template, which reads as generated.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json: green-growth filler misconception gone; 0 hits 'Wrong —'/'Instead write'; 34 misconceptions each name a specific error (shared 'Students ...' opening is the house form of packets 43-45)",
    "note": null
   },
   {
@@ -16198,10 +16198,10 @@
    "kind": "structure",
    "text": "Lewis model and Prebisch-Singer are 'taught' only through a diagram (which cannot render inline) and a quiz question. Lewis is a named spec strategy ('industrialisation: the Lewis model') and should have its own subsection, not be relegated to extras.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:1807 Lewis and :334 Prebisch-Singer each have their own subsection with prose, flow and recall; Lewis diagram pinned to block 6 check-in",
    "note": null
   },
   {
@@ -16210,10 +16210,10 @@
    "kind": "structure",
    "text": "Sequencing: Block 3 (sustainability) is the least spec-relevant content but is placed last, where completion-rate data shows the fewest students arrive; meanwhile the spec's core 'other strategies' and 'international institutions' bullets have no block at all.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:1804 block for other strategies + international institutions (6 subsections); sustainability removed; order follows spec 1 -> 2a -> 2b -> 3a -> 3b -> 3c/3d",
    "note": null
   },
   {
@@ -16222,10 +16222,10 @@
    "kind": "specGap",
    "text": "Measures of development beyond HDI: HDI limitations, other indicators (e.g. MPI, IHDI, Gini, % in agriculture, access to clean water) - only Q0 and Q9 touch this; not taught.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:125ff HDI limitations and :184ff all six 4.3.6.1c indicators taught (econ_spec.txt:1899-1968); MPI/IHDI/Gini not in 4.3.6",
    "note": null
   },
   {
@@ -16234,10 +16234,10 @@
    "kind": "specGap",
    "text": "Factors influencing growth and development: foreign currency gap; capital flight; demographic factors (population growth, dependency ratio); access to credit and banking; infrastructure (mentioned only as a strategy); education/skills; absence of property rights (one phrase only); non-economic factors (wars, political instability, geography) - taught only in the Notes tab, not in Learn content.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:471,545,634,684,749,801,856,943,1015,1080 each 2a/2b leaf has its own subsection; property rights within poor governance (:943ff)",
    "note": null
   },
   {
@@ -16246,10 +16246,10 @@
    "kind": "specGap",
    "text": "Market-orientated strategies missing: removal of government subsidies; floating exchange rate systems; privatisation (appear in diagram 4 only).",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:1272 subsidy removal + privatisation and :1322 floating exchange rates taught in prose with recalls",
    "note": null
   },
   {
@@ -16258,10 +16258,10 @@
    "kind": "specGap",
    "text": "Interventionist strategies missing: development of human capital as a strategy; managed exchange rates; promoting joint ventures with global companies (diagram 4 only).",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:1465 human capital, :1565 managed exchange rates, :1682 joint ventures with TNCs taught in prose with recalls",
    "note": null
   },
   {
@@ -16270,10 +16270,10 @@
    "kind": "specGap",
    "text": "Other strategies missing entirely: industrialisation via the Lewis model (diagram/quiz only), development of tourism, development of primary industries, Fairtrade schemes, debt relief (flashcards only).",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:1807 Lewis, :1872 tourism, :1922 primary industries, :1977 debt relief taught; Fairtrade off-spec (0 hits econ_spec.txt) correctly not added",
    "note": null
   },
   {
@@ -16282,10 +16282,10 @@
    "kind": "specGap",
    "text": "Role of international institutions and NGOs: World Bank, IMF (beyond SAPs), NGOs - absent from Learn content; app's spec map puts IMF/World Bank in 4.3.5 but practice Q4 tests it here.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-46-bundle__economics__growth-development.json:2027 World Bank and IMF, :2077 NGOs taught (4.3.6.3d); the 4.3.5 parenthetical does not hold, since 4.3.5 has no institution bullet",
    "note": null
   },
   {
@@ -16294,10 +16294,10 @@
    "kind": "specGap",
    "text": "Unsure: whether sustainability / Environmental Kuznets Curve / green growth is in WEC14 4.3.6 at all - I believe it is not (sustainability of growth is a Unit 2 cost-of-growth point). If confirmed, Block 3 is off-spec and should be cut or demoted.",
    "packet": 46,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-46",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "econ_spec.txt has 0 hits for sustainab*/Kuznets/green growth; audit/snapshots/packet-46-bundle__economics__growth-development.json has 0 hits for them, the block is removed",
    "note": null
   },
   {
@@ -16846,10 +16846,10 @@
    "kind": "specGap",
    "text": "3.3.5 1c) Trade liberalisation — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:626 subsection 'Trade Liberalisation' teaches tariffs/quotas removal and impacts; fillin recall, Q10",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16858,10 +16858,10 @@
    "kind": "specGap",
    "text": "3.3.5 1d) Local sourcing of raw materials and components — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:703 subsection 'Local Sourcing of Raw Materials and Components' teaches local-content rules with gainers/payers; classify recall, Q13",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16870,10 +16870,10 @@
    "kind": "specGap",
    "text": "3.3.5 1d) Employment legislation to protect workers from exploitation — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:757 subsection 'Employment Legislation to Protect Workers From Exploitation' defines exploitation and the rules; match recall, Q14",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16882,10 +16882,10 @@
    "kind": "specGap",
    "text": "3.3.5 2b) Direct taxes on firms and employment (e.g. national insurance contributions, corporation tax) and their labour market effects — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:1502 subsection 'Direct Taxes: National Insurance Contributions and Corporation Tax' with worked $2 contribution (11/13, 32k→28k, re-derived) and corporation tax via investment; D5, P8, Q24/Q25",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16894,10 +16894,10 @@
    "kind": "specGap",
    "text": "3.3.5 2b) Measures to reduce discrimination — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:1677 subsection 'Measures to Reduce Discrimination and Exploitation' with demand-shift analysis ($10/24k vs $12/32k, re-derived); D5, Q26, classify recall",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16906,10 +16906,10 @@
    "kind": "specThin",
    "text": "3.3.5 2b) Measures to reduce exploitation of workers — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 48,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-48",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:763 exploitation defined ('accept only because they have no real alternative') with measures; audit/snapshots/packet-48-bundle__economics__government-intervention-firms.json:1677 2b measures against exploitation; classify recall separates it from discrimination",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {

@@ -1,0 +1,34 @@
+content     identical
+notes       identical
+quiz        DIFFERS
+practice    identical
+flashcards  identical
+mistakes    identical
+diagrams    identical
+extras      identical
+
+7 differing leaf paths:
+.quiz[14].id
+  - "growth-development:quiz:a315e66b"
+  + "growth-development:quiz:bb8f266a"
+.quiz[14].question
+  - "A country has 40% of its people under 15, 5% over 64 and 55% of working age. Its dependency ratio is about:"
+  + "An emerging economy's birth rate has fallen: 20% of its people are under 15 and 5% are over 64. Its dependency ratio is approximately:"
+.quiz[14].options[0]
+  - "45"
+  + "31"
+.quiz[14].options[1]
+  - "55"
+  + "27"
+.quiz[14].options[2]
+  - "122"
+  + "133"
+.quiz[14].options[3]
+  - "82"
+  + "33"
+.quiz[14].explanation
+  - "The dependency ratio is (young + old) ÷ working age × 100 = 45 ÷ 55 × 100 = 82. Inverting the fraction gives 122."
+  + "Working age is what is left: 100 − 20 − 5 = 75%. The dependency ratio is (young + old) ÷ working age × 100 = 25 ÷ 75 × 100 = 33. Taking working age as 80% forgets to take out the over-64s and gives 31; leaving the over-64s out of the dependants gives 27; dividing the whole population by the working age gives 133."
+
+correctIndex changed on: none (of 44); histogram before [11,11,11,11] after [11,11,11,11]
+chapter-3 quizIndices before [14,15,16,17,18] after [14,15,16,17,18]

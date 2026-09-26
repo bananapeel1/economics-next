@@ -1501,14 +1501,14 @@ body {
   .tab-bar {
     padding: 4px 0 8px;
     margin: 0 -14px;
-    padding-left: 14px; padding-right: 58px;
+    padding-left: 14px; padding-right: 30px;
     /* A tapped tab that is only partly visible must slide clear of the chevron too: scrollIntoView
        ('nearest') otherwise counts it as visible. Round-3 note, F096's area. */
-    scroll-padding-inline-end: 58px;
-    /* The 44px chevron sits over the right edge; the strip fades under it and scrolls 44px past its last tab
-       so every tab label can be brought fully clear of it. */
-    mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 52px), transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 52px), transparent 100%);
+    scroll-padding-inline-end: 30px;
+    /* The quiet chevron (.tab-bar-more) sits over the right edge; the strip fades under it and scrolls
+       30px past its last tab so every tab label can be brought fully clear of it. */
+    mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 36px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 36px), transparent 100%);
   }
   .tab-face { padding: 8px 10px; font-size: 12px; }
   .tab-glow { display: none; }
@@ -1850,6 +1850,7 @@ body {
 .mistake-wrong-label { color: var(--accent-red); }
 .mistake-correct-label { color: var(--accent-green-light); }
 .mistake-text { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.mistake-why { margin-top: 8px; }
 
 /* ─── Resource Pages (shared) ─── */
 .resource-page { min-height: 100vh; background: var(--bg-primary); color: var(--text-primary); padding: 40px 20px 60px; }
@@ -7506,6 +7507,11 @@ a.auth-dropdown-item:visited {
 .lm-eyebrow-part { text-transform: none; letter-spacing: 0; font-size: 12px; font-weight: 500; color: var(--text-dim); }
 .lm-eyebrow-part::before { content: '·'; margin-right: 8px; color: var(--text-dim); }
 .lm-checkin-intro { font-size: 14px; color: var(--text-tertiary); margin: -8px 0 18px; }
+.lm-checkin-held { margin: 14px 0 4px; padding: 12px 14px; border: 1px dashed var(--border-primary); border-radius: 10px; color: var(--text-tertiary); font-size: 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+.lm-checkin-held p { margin: 0; flex: 1 1 220px; }
+.lm-checkin-skip { background: none; border: none; padding: 10px 4px; min-height: 44px; font: inherit; font-size: 14px; font-weight: 600; color: var(--text-secondary); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.lm-checkin-skip:hover { color: var(--text-primary); }
+.lm-checkin-skip:focus-visible { outline: 2px solid var(--border-primary); outline-offset: 2px; border-radius: 4px; }
 
 /* Chapter dots: one per chapter, clickable once reached (F046) */
 .lm-chapter-dots { display: flex; gap: 6px; margin: -10px 0 18px; }
@@ -7603,13 +7609,19 @@ a.auth-dropdown-item:visited {
 
 /* Tab strip overflow (F096) */
 .tab-bar-wrap { position: relative; }
+/* A quiet chevron, not a button-shaped disc (founder, 26 Sep: the 44px circle over the tabs was
+   "very invasive"). It stays because F096 is real: at 360-390px only four of nine tabs fit, and a fade
+   alone reads as the end of the row. The 44px hit area remains; only the glyph is visible, sitting in
+   the strip's own fade. */
 .tab-bar-more {
   display: none; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
-  width: 44px; height: 44px; border-radius: 22px; border: 1px solid var(--border-primary);
-  background: var(--bg-card); color: var(--text-secondary); font-size: 24px; line-height: 1;
-  align-items: center; justify-content: center; cursor: pointer; z-index: 2;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  width: 36px; height: 44px; border: none; background: none; padding: 0 6px 0 0;
+  color: var(--text-tertiary); font-size: 20px; line-height: 1; font-family: inherit;
+  align-items: center; justify-content: flex-end; cursor: pointer; z-index: 2;
+  -webkit-tap-highlight-color: transparent;
 }
+.tab-bar-more:hover { color: var(--text-secondary); }
+.tab-bar-more:focus-visible { outline: 2px solid var(--border-primary); outline-offset: -2px; border-radius: 6px; }
 
 /* Diagram modal as a sheet (F088, F062) */
 .lm-diagram-modal { flex-direction: column; background: var(--bg-card); border-radius: 12px; padding: 0; overflow: hidden; width: min(90vw, 1000px); }

@@ -1,0 +1,65 @@
+reference: round-1 dump (fix2-bundle-round1.json) -> worktree dump
+content     identical
+notes       identical
+quiz        DIFFERS
+practice    identical
+flashcards  identical
+mistakes    identical
+diagrams    identical
+extras      identical
+
+7 differing leaf paths; items touched: .quiz[8]
+.quiz[8].id
+  - "growth-development:quiz:3f651164"
+  + "growth-development:quiz:37b5e13a"
+.quiz[8].question
+  - "Copper is 50% of a country's export earnings and its world price falls by 20%. Export earnings fall by:"
+  + "A country earns 80% of its export revenue from copper, and the world copper price falls by 65%. Its export earnings fall by:"
+.quiz[8].options[0]
+  - "20%"
+  + "65%"
+.quiz[8].options[1]
+  - "10%"
+  + "52%"
+.quiz[8].options[2]
+  - "50%"
+  + "48%"
+.quiz[8].options[3]
+  - "70%"
+  + "80%"
+.quiz[8].explanation
+  - "The fall in earnings is the good's share of exports times the fall in its price: 0.5 × 20% = 10%. Using the price fall alone assumes copper is all the country exports."
+  + "The fall in earnings is the good's share of exports times the fall in its price: 0.8 × 65% = 52%. Using the price fall alone, 65%, assumes copper is all the country exports; 48% is what earnings fall to, not by; and 80% is copper's share, not the fall."
+
+correctIndex changed on: none (of 44); histogram [11,11,11,11] -> [11,11,11,11]
+chapter-2 quizIndices [8,9,10,11,12,13] -> [8,9,10,11,12,13]; chapter-3 [14,15,16,17,18] -> [14,15,16,17,18]
+
+==========
+reference: pre-fix dump (git index) -> worktree dump
+content     identical
+notes       identical
+quiz        DIFFERS
+practice    identical
+flashcards  identical
+mistakes    identical
+diagrams    identical
+extras      identical
+
+14 differing leaf paths; items touched: .quiz[8], .quiz[14]
+.quiz[8].id
+.quiz[8].question
+.quiz[8].options[0]
+.quiz[8].options[1]
+.quiz[8].options[2]
+.quiz[8].options[3]
+.quiz[8].explanation
+.quiz[14].id
+.quiz[14].question
+.quiz[14].options[0]
+.quiz[14].options[1]
+.quiz[14].options[2]
+.quiz[14].options[3]
+.quiz[14].explanation
+
+correctIndex changed on: none (of 44); histogram [11,11,11,11] -> [11,11,11,11]
+chapter-2 quizIndices [8,9,10,11,12,13] -> [8,9,10,11,12,13]; chapter-3 [14,15,16,17,18] -> [14,15,16,17,18]
