@@ -1,0 +1,365 @@
+{
+  "id": "C-resource-management-topFix-01",
+  "section": "resource-management",
+  "kind": "topFix",
+  "rank": 0,
+  "text": "Fix the MCQ bank: redistribute correct answers across indices 0-3 (22/25 currently sit at index 1), swap block0/block1 quizIndices, remove the five near-duplicate pairs, and replace the three 'Evaluate/To what extent' MCQs (20, 22, 23) with items on productivity calculation, labour vs capital intensity, and stock-control diagram reading.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-topFix-02",
+  "section": "resource-management",
+  "kind": "topFix",
+  "rank": 1,
+  "text": "Add a stock-control subsection and diagram (buffer stock, re-order level, lead time, max stock, implications of poor stock control) to Block 2 before JIT, and rename the block 'Stock Control and Lean Production' - this is the spec's most-examined visual and is entirely missing.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-topFix-03",
+  "section": "resource-management",
+  "kind": "topFix",
+  "rank": 2,
+  "text": "Correct the Toyota 2021 JIT example (Toyota held chip buffers post-2011 and fared better than rivals; the 14-plant halt was supplier COVID outbreaks) and remove/replace the unsourced Rolls-Royce, JLR '40%' and BrewDog claims; fix the corrupted emoji on lean-production.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-topFix-04",
+  "section": "resource-management",
+  "kind": "topFix",
+  "rank": 3,
+  "text": "Add recall widgets: fillins for the two formulas (capacity utilisation, labour productivity) and the seven wastes; a fillin contrasting QC/QA/TQM (reactive/preventive/cultural); avoid reorder exercises except for a genuine sequence such as the kaizen cycle (identify -> test -> implement -> standardise).",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-topFix-05",
+  "section": "resource-management",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "Rework practice to IAL formats: turn Q0 into a 4-mark 'Calculate' with a mini case (including a capacity change), relabel Q1 as 'Analyse (6)' and Q4 as 'Explain one (4)', add a short stimulus to Q2/Q3, and replace point-scores with Level 1-4 descriptors; surface Q2/Q3 inline on Block 3 and Q4 on Block 1.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-accuracy-01",
+  "section": "resource-management",
+  "kind": "accuracy",
+  "text": "Inventory Management > just-in-time > realExample: Claims Toyota 'had to halt production at 14 factories because its JIT system had no buffer stock of chips' in the 2021 semiconductor shortage. This inverts the well-documented story: after the 2011 Fukushima earthquake Toyota deliberately built a business-continuity plan holding 2-6 months of chip stock, and in early 2021 it was widely reported as the carmaker LEAST affected by the chip shortage precisely because it broke from pure JIT for semiconductors. The August/September 2021 cuts at 14 plants were driven mainly by COVID outbreaks at parts suppliers in Malaysia/Vietnam. A student who repeats this line to an examiner who knows the case loses credibility.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-quiz-01",
+  "section": "resource-management",
+  "kind": "quiz",
+  "text": "q0: Answer is correct, but this is the inline quiz for Block 0 'Methods of Production' (quizIndices [0]) - it tests capacity utilisation, which is not taught until Block 1. Meanwhile Block 1's inline quiz (quizIndices [1]) asks about job production, a Block 0 topic. The two indices are swapped. A student hits a formula they have not yet seen.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-quiz-02",
+  "section": "resource-management",
+  "kind": "quiz",
+  "text": "q24: No error in this item; listed to note the bank-wide problem: 22 of 25 questions have correctIndex = 1 (only indices 1 and 6 use index 2; none use 0 or 3). A student who always picks option B scores 88%. This invalidates the pre-test/post-test comparison and the completion-screen score.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-practice-01",
+  "section": "resource-management",
+  "kind": "practice",
+  "text": "p0: 'Define the term capacity utilisation (4 marks)' is not an IAL Business question format; definitions in WBS papers carry 2 marks (or appear inside 'Explain one...' 4-mark items). The guidance awards 4 discrete marks for definition + formula + worked example + an implication about unit costs, which is not how a definition is marked. Should be either a 2-mark define or a 4-mark 'Calculate' with data (the spec's actual skill: 2.4.2a calculation of capacity utilisation).",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-resource-management-structure-01",
+  "section": "resource-management",
+  "kind": "structure",
+  "text": "Inline quiz indices for Block 0 and Block 1 are swapped: Block 0 'Methods of Production' shows Q0 (capacity utilisation calculation, untaught yet); Block 1 'Capacity Utilisation' shows Q1 (job production). Fix: block0.quizIndices=[1], block1.quizIndices=[0] (or better, [15]/[0] and [11]/[14]).",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-structure-02",
+  "section": "resource-management",
+  "kind": "structure",
+  "text": "Zero recall objects across all 10 subsections, so Learn Mode has no 'spaced' or 'immediate' retrieval widgets anywhere in this section; the only active elements are one MCQ per block and the ExplainItBack (premium). For a formula-heavy, list-heavy topic this is the section that most needs fill-ins (capacity utilisation formula, productivity formula, seven wastes, QC vs QA contrasts).",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-structure-03",
+  "section": "resource-management",
+  "kind": "structure",
+  "text": "Zero diagrams. Spec 2.4.3a explicitly requires interpreting stock control diagrams (buffer stock, re-order level, re-order quantity, lead time, maximum stock). The Block 2 'Inventory Management' has no diagramRef and the diagrams[] array is null, so the most examinable visual in this topic is absent. A second useful diagram: fixed cost per unit vs capacity utilisation curve.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-resource-management-structure-04",
+  "section": "resource-management",
+  "kind": "structure",
+  "text": "2-per-step pairing: Block 0 pairs (job/batch/flow + productivity) then (labour-vs-capital alone). Labour- vs capital-intensive belongs next to production methods; productivity (+ efficiency) should be the standalone step. Reorder Block 0 sections to job-batch-flow, labour-vs-capital-intensive, productivity.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-structure-05",
+  "section": "resource-management",
+  "kind": "structure",
+  "text": "Block 2 is titled 'Inventory Management' but half of it (lean production, kaizen, cell production, time-based management) is not inventory management. Retitle 'Stock Control and Lean Production' and add a stock-control subsection (buffer stock, re-order level, lead time, implications of poor stock control) before JIT.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-structure-06",
+  "section": "resource-management",
+  "kind": "structure",
+  "text": "Kaizen appears in Block 2 (as a lean technique) and gets its own subsection in Block 3; Block 3's kaizen subsection says 'kaizen circles or quality circles' - the spec lists quality circles (2.4.4c) as a distinct item, so it deserves at least its own paragraph rather than an alias.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-resource-management-structure-07",
+  "section": "resource-management",
+  "kind": "structure",
+  "text": "Practice questions 2, 3, 4 are never surfaced inline (practiceIndices only on blocks 1 and 2); Block 0 and Block 3 have no InlinePractice.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-structure-08",
+  "section": "resource-management",
+  "kind": "structure",
+  "text": "Block 2 takeaway[0] ('JIT eliminates stock-holding costs') contradicts the block's own misconception ('minimise, not eliminate'). Block 3 takeaways are fine; Block 0 and 1 takeaways match content.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-structure-09",
+  "section": "resource-management",
+  "kind": "structure",
+  "text": "Misconceptions: productivity vs production, JIT = zero stock, lean = JIT, 100% utilisation is ideal, and 'just cut prices' are genuine student errors. 'TQM guarantees zero defects', 'QC is a bad method businesses should never use' and 'kaizen is a one-off project' are weaker/filler - few students actually write these; better real ones: 'capacity utilisation above 100% is possible', 'QA means no inspection at all', 'higher productivity means workers work harder'.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-structure-10",
+  "section": "resource-management",
+  "kind": "structure",
+  "text": "Difficulty ramp is acceptable (definitions and calculation early, evaluative content later), but the section never moves from 'describe' to 'apply to context': no worked capacity-utilisation or productivity calculation with a twist (e.g. capacity changes after rationalisation), which is where IAL marks are lost.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-specGap-01",
+  "section": "resource-management",
+  "kind": "specGap",
+  "text": "2.4.3a Interpretation of stock control diagrams: buffer stock, re-order level, re-order quantity, lead time, maximum stock level - entirely absent (no diagram, no text).",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-resource-management-specGap-02",
+  "section": "resource-management",
+  "kind": "specGap",
+  "text": "2.4.3b/c Buffer stocks and implications of poor stock control (stock-outs, obsolescence, cash tied up, storage costs) - only implicit inside the JIT subsection; never taught as its own idea.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-resource-management-specGap-03",
+  "section": "resource-management",
+  "kind": "specGap",
+  "text": "2.4.1c Efficiency defined as production at minimum average cost, and factors influencing efficiency - not taught; 'efficiency' is used loosely as a synonym for productivity.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-resource-management-specGap-04",
+  "section": "resource-management",
+  "kind": "specGap",
+  "text": "2.4.1a Cell production as a method of production - mentioned in one clause under lean and used as a quiz distractor, but not taught (the section says 'job, batch or flow' only).",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-resource-management-specGap-05",
+  "section": "resource-management",
+  "kind": "specGap",
+  "text": "2.4.1b Factors influencing productivity (training, technology, motivation, working practices) and the productivity-competitiveness link - present but thin; no worked calculation of output per worker per period with a comparison over time.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-resource-management-specGap-06",
+  "section": "resource-management",
+  "kind": "specGap",
+  "text": "2.4.4c Quality circles as a distinct technique - only aliased inside kaizen.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-resource-management-specGap-07",
+  "section": "resource-management",
+  "kind": "specGap",
+  "text": "2.4.3e/f Waste minimisation and competitive advantage from lean production - competitive advantage is in extras chains only, not in Learn Mode content.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-resource-management-specGap-08",
+  "section": "resource-management",
+  "kind": "specGap",
+  "text": "2.4.2b Implications of OVER-utilisation - covered in one paragraph and practice Q4, adequate.",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-resource-management-specGap-09",
+  "section": "resource-management",
+  "kind": "specGap",
+  "text": "Spec numbering: content sits under 2.3.4 but IAL Resource management is 2.4 (unsure of app's numbering convention; verify).",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-resource-management-specThin-01",
+  "section": "resource-management",
+  "kind": "specThin",
+  "text": "2.3.4 1c) Ways to improve efficiency — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+{
+  "id": "C-resource-management-specThin-02",
+  "section": "resource-management",
+  "kind": "specThin",
+  "text": "2.3.4 1e) Competitive advantage from short product lead-in times — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 42,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}

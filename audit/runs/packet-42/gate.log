@@ -1,0 +1,75 @@
+=== GATE RUN PACKET 42 ===
+Date: 2026-09-22
+
+MAIN GATE COMMANDS:
+
+=== npm test ===
+EXIT CODE: 0
+ℹ tests 279
+ℹ pass 279
+ℹ fail 0
+ℹ duration_ms 1940.954083
+
+=== npm run build ===
+EXIT CODE: 0
+
+=== npm run validate ===
+EXIT CODE: 0
+
+section                             unit   block  debt  new-block  new-debt  coverage
+resource-management                 WBS12     30    17          0         0       86%
+
+0 new BLOCK / 0 new DEBT outside the baseline
+
+=== npm run exposure ===
+EXIT CODE: 0
+
+chapters with no question: 0 across 0 section(s)
+STARVED (a code defect — a question was there and the chapter did not get it):
+  signed out  0
+  signed in   0
+UNWRITTEN (content debt — nothing in the section matches that chapter):
+  0
+
+=== npm run recalls ===
+EXIT CODE: 0
+
+=== STAGED (draft) — 32 sections ===
+recalls answerable by scrolling up: 335 of 803 (42%)
+  3 section(s) at 100%, 6 clean
+
+no section is worse than the baseline.
+
+=== node audit/scripts/check-staged-drafts.mjs resource-management ===
+EXIT CODE: 0
+
+resource-management            matches
+
+0 section(s) with drift.
+
+=== node audit/scripts/ledger.mjs unverified 42 ===
+EXIT CODE: 2
+
+GATE BLOCKED: 29 claimed item(s) not confirmed
+(Expected — Verify A has not run)
+
+---
+
+ADVISORY COMMANDS (non-blocking):
+
+=== npm run contrast ===
+EXIT CODE: 0
+clean
+
+=== npm run spec-items ===
+EXIT CODE: 0
+audit/raw/spec-items.json matches the specification text
+
+=== npm run tariff-census ===
+EXIT CODE: 0
+audit/raw/tariff-census.json matches the specification text
+
+=== npm run pin-check ===
+EXIT CODE: 0
+pin-check passed: 13 broken pin(s), within the agreed baseline of 15
+

@@ -3342,3 +3342,35 @@ against HEAD before commit. The result:
 `placeChapterItems`, extracted with `git archive`, over the production API and the live tables. None of the
 eight sections uses a decided-empty pin (`quizIndices: []` or `diagramId: null`), so the part of 2.91 that main
 lacks changes nothing for them.
+
+## 2026-09-22 — packet 42: the resource-management MCQ answer-position bias moves from packet 8 to the content packet
+
+**Founder ruling, 22 September 2026: packet 42 takes it.** The entry of 11 September ("deferred from packet 0,
+with reasons") assigned the bank-wide answer-position bias in `resource-management` (22 of 25 at option B) and
+`entrepreneurs-leaders` (20 of 25) to packet 8, "not an in-place fix". That sentence is now superseded for both
+sections, and this entry is the ratification.
+
+Why it was raised. Packet 42's Brief phase stopped on it: `DECISIONS.md:57-59` says packet 8, the ledger assigns
+`C-resource-management-topFix-01`, `-quiz-01` and `-quiz-02` to packet 42, and a brain may not resolve a scope
+question against this file on its own (BRAIN.md hard stop 6). It was right to stop.
+
+Why the ruling goes this way, on the evidence rather than convenience:
+
+- **The twin was already closed by a content packet.** `C-entrepreneurs-leaders-quiz-01` — the other half of the
+  same 11 September sentence, same defect, "20 of 25 MCQs have correctIndex 1" — is `confirmed`, closed by
+  **packet 35 on 18 September** in its from-zero rebuild (25 quiz → 35, pins derived from each item's block tag).
+  Practice outran the note a week ago; only the note was never updated.
+- **Packet 8 holds no scope.** `node audit/scripts/ledger.mjs packet 8 --open` → **0 items**. There is no
+  quiz-hygiene migration left to defer to; the ledger has already distributed this work to the content packets.
+- **The 11 September reasoning does not apply to a rebuild.** Its objection was "not an in-place fix" — correct,
+  because redistributing `correctIndex` across a bank you are keeping means re-ordering options under
+  explanations written against their old positions. Packet 42 does not keep the bank: it authors it from the
+  specification. There is no in-place edit to object to, and no distribution to preserve.
+
+**What this obliges packet 42 to do.** Author the bank with the correct option distributed across indices 0-3 by
+construction, and derive the answer position from the item rather than inheriting it. This does not relax
+packet 26's rule (`DECISIONS.md`, 17 September): an explanation still names an option by its CONTENT, never by
+position, so a redistributed bank must not contain a single positional reference.
+
+**What it does not do.** It says nothing about any other section's bank. A section whose bias is still open stays
+where the ledger puts it.

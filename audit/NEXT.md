@@ -355,6 +355,125 @@ missing binary, a failed import or an exited server is not a rejection, it is a 
 
 **Next unclaimed packet**: not re-derived in this bookkeeping pass — check `node audit/scripts/ledger.mjs packet <n> --open` fresh. Packet 42's own handoff (immediately above) names **packet 43 (`economic-growth`, 28 open)** as free as of its own write; packet 12.7 (the v6 chrome: mode gate, question-navigation row, sticky bar, keyboard nav) and packet 12.8 (the other 65 model answers) are both named as follow-ons to 12.6 specifically, by `audit/specs/packet-12.6.md` itself, and are unclaimed as of this write.
 
+## Packet 42 spec — Resource management, rebuilt to IAL 2.3.4 (Opus author, 22 September 2026)
+
+**Read first:** `audit/raw/bus_spec.txt:965-1005` (the whole sub-topic — it is 40 lines, read it, do not
+summarise it from a finding), `audit/raw/spec-coverage.json` → `business__resource-management`,
+`audit/CONTENT-GATE.md` ("The per-section edit pass"), and the packet 36 row in `PROGRESS.md` — it is the
+sibling Business Unit 2 section (`2.3.3 Managing finance`) and its command-word and tariff work is verified.
+
+**Goal in one line:** rebuild `business__resource-management` to the four sub-topics IAL 2.3.4 actually has,
+in the specification's own vocabulary, with inventory-control diagrams and recall widgets built from zero.
+
+**Section:** `business__resource-management` · Business Unit 2 (WBS12) · IAL **2.3.4**, `bus_spec.txt:965`.
+Live shape: 4 blocks / 10 subsections / 25 quiz / 5 practice / **0 diagrams / 0 recalls**.
+
+### The five things that stopped the first Brief, all resolved — do not stop on them again
+
+1. **There was no `## Packet 42 spec` block.** There is now: this one. `PROTOCOL.md` §1.3 has the Brief
+   *write* this block, not read it; its absence was the precondition, not a missing input.
+2. **`PROGRESS.md` row 42 said 13 opens, the ledger says 30.** The ledger wins — `PROTOCOL.md`: "the ledger
+   is the definition of coverage." The `Opens` column is planning-time data and is stale for every unbuilt
+   packet (34 says 18 against 25, 38 says 16 against 27, 41 says 14 against 32). The row has been corrected
+   to 30; rewrite it properly at Handoff.
+3. **`DECISIONS.md:57-59` assigned the MCQ answer-position bias to packet 8.** **Founder ruled 22 September:
+   packet 42 takes it** — see the ratification appended at the end of `DECISIONS.md`. Packet 8 has 0 open
+   ledger items; the twin id `C-entrepreneurs-leaders-quiz-01` was closed by packet 35 on 18 September.
+4. **`spec-coverage.json` does not flag 3b/3c/3e/3f, but `specGap-02`/`-07` call them gaps.** Both are right
+   about different things: the coverage audit asks whether a leaf is *taught*, and those four are. So
+   **`specGap-02`'s premise as written is false** — buffer inventory and the implications of poor inventory
+   control are present, not absent. Re-scope it to depth and vocabulary, or wont-fix it with the citation.
+   Judge `specGap-07` the same way against the item's own text.
+5. **`2c) Ways of dealing with OVER-utilisation of capacity` has no ledger id.** Build it anyway.
+   `spec-coverage.json` flags it as one of only two genuinely **missing** leaves, and packet 40 built three
+   leaves no ledger id named. The gate is *claimed* ids confirmed plus full leaf coverage; an unclaimed leaf
+   is work, not a contradiction.
+
+### Rule 1 — the numbering, settled three ways before you start
+
+**IAL Resource management is `2.3.4`. `2.4` does not exist in the IAL Business specification.** Evidence:
+`grep -c "2\.4\.3" audit/raw/bus_spec.txt` → **0**; the heading at `:965` reads `2.3.4 Resource management`;
+and `spec-coverage.json` independently carries `"number": "2.3.4"` for this section. The ledger already
+records this on `specGap-01`, `-02` and `-07` as a note dated 13 September.
+
+- **`specGap-09` is INVERTED and is `wont-fix` with that evidence.** It asks to renumber correct content
+  ("content sits under 2.3.4 but IAL Resource management is 2.4") to a section that does not exist. The live
+  content's `2.3.4` is right. Record the citation in the ledger note; do not renumber anything.
+- Every other `specGap` citing `2.4.x` keeps its substance and loses its number. **Find each requirement by
+  its wording at `:965-1005`, never by the number a finding gives you.**
+
+### Rule 2 — speak the specification's word
+
+Measured in `bus_spec.txt`: **`inventory control` 3 · `buffer inventory` 1** against **`stock control` 0 ·
+`buffer stock` 0 · `re-order level` 0 · `lead time` 0 · `stock-out` 0**. `topFix-02` and `specGap-01`/`-02`
+are written entirely in the missing vocabulary. Build the requirement; **say `inventory control` and
+`buffer inventory`**. The diagram at 3a is the standard one, so re-order and maximum/minimum levels appear as
+*labels on the drawing*; they do not become the teaching vocabulary, and no takeaway or quiz stem may depend
+on a phrase the specification does not use. Same test for `cell` (a bullet of 1a, not "cell production") and
+`circles` (a bullet of 4a, not a standalone technique — which is what `specGap-04` and `specGap-06` are
+really asking for).
+
+### What must become true
+
+**Four chapters in the specification's own order**, not the live four: 1 Production, productivity and
+efficiency · 2 Capacity utilisation · 3 Inventory control · 4 Quality management.
+
+- **Every leaf at `:965-1005` evidenced**, including the two `spec-coverage.json` calls **missing** (2c, 3a)
+  and the seven it calls **thin** (1a `cell`, 1b factors influencing productivity, 1c all three bullets,
+  1e short product lead-in times, 4a `circles`).
+- **Diagrams from zero.** At least one inventory control diagram (3a is a *named* spec requirement — a
+  student is asked to interpret one), plus capacity and productivity where they carry an argument. Pin by
+  `diagramId`. **Run a collision guard**: `COLLIDE_TOL = 1.2`, exported once, A/B'd against geometry
+  re-derived independently — not reused from the builder's own log. Packets 37 and 40 both shipped
+  colliding labels past every other check.
+- **Recalls from zero** (`structure-02`: the section has none, so Learn Mode has no spaced or immediate
+  recall at all). `audit/recall-census-baseline.json` has no row for this section, so **it is held to zero**
+  — `npm run recalls` fails on any recoverable recall. A recall may not be answerable by scrolling up.
+- **Quiz bank authored, not edited** — the correct option distributed across indices 0-3 by construction
+  (`topFix-01`, `quiz-02`), pins derived from each item's block tag, which also fixes the swapped Block 0 /
+  Block 1 indices (`structure-01`, `quiz-01`) and the never-surfaced practice items (`structure-07`).
+  **Packet 26's rule still binds: an explanation names an option by its CONTENT, never by position.**
+- **Practice to IAL Business Unit 2 formats** (`practice-01`, `topFix-05`). Derive every (command word,
+  tariff) pair from the Appendix and the census — packet 36 did this for the sibling Unit 2 section. Do not
+  take a tariff from a finding: `practice-01` is right that a 4-mark `Define` is not a real format, and
+  `topFix-05`'s own proposed tariff needs the same check before you build it.
+- **Contradictions fixed at the source**, not patched: Block 2's takeaway contradicting its own
+  misconception (`structure-08`), Kaizen taught twice (`structure-06`), the block mis-titled `Inventory
+  Management` while half of it is lean (`structure-05`), the 2-per-step pairing (`structure-04`).
+- **`topFix-03` / `accuracy-01`, the Toyota 2021 JIT claim.** The finding says the live text has it backwards.
+  Packet 15's rule applies and packet 40 endorsed it: a dated assertion about a named company that this
+  programme cannot re-check gets **removed, not corrected**. Teach the JIT trade-off with the section's own
+  worked figures instead.
+
+### Acceptance — what a verifier runs without this conversation
+
+1. `node audit/scripts/ledger.mjs unverified 42` exits 0.
+2. `npm test` · `npm run build` · `npm run validate` · `npm run exposure` · `npm run recalls` all exit 0,
+   0 new BLOCK and 0 new DEBT outside the baseline.
+3. `node audit/scripts/check-staged-drafts.mjs resource-management` → matches, 0 drift, with the bundle
+   re-dumped *after* the last module change. Gate item 5: verify field by field against
+   `curl "localhost:3001/api/sections/resource-management?draft=1"`, not against the file.
+4. `grep -ci "stock control\|buffer stock\|re-order level\|lead time\|stock-out" ` over the staged bundle's
+   teaching text → **0** outside diagram labels.
+5. Spec coverage 100% of substantive leaves, 2c and 3a among them.
+
+### Verify B — 390x844, signed out
+
+Walk every step of the rebuilt deck and report, step by step: (a) the **inventory control diagram** renders
+inline and its labels do not collide — measure with `getComputedTextLength()`, all pairs, not just a reported
+pair; (b) **tap** to enlarge (a real tap — a scripted click leaves the sheet at its resting `scale(0.92)` and
+every measurement taken through it is wrong, see packet 38); (c) at least one recall of each type authored
+renders and **grades** on real input; (d) the three-question pre-test serves; (e) each chapter's inline quiz
+belongs to that chapter; (f) console errors from the app. **V037 is out of scope** — the enlarge sheet is
+`220vw` and horizontally scrolls at 390px; record it, do not fix it, it is filed on packet 11.
+
+### Out of scope, named so nobody re-opens them
+
+`V006` (the last step reads "Before the next chapter", packet 57) · `V037` (enlarge sheet width, packet 11) ·
+`V038` (step-pointer versioning, packet 5) · every other section's quiz bank.
+
+
+
 ## Handoff — packet 41 closed, gate passed (written 22 September 2026, workflow bookkeeping pass)
 
 **Packet 41 (`external-influences`, Business 2.3.5) PASSED the gate.** Ledger 32 confirmed / 1 wont-fix / 0 open of 33 total (`ledger.mjs unverified 41` exit 0). One fix round (B1) ran after Verify B's first walkthrough found a blocking defect; an independent re-walk (`audit/runs/packet-41/verify-b-r1.md`) passed clean afterward. **STAGED, NOT PUBLISHED, NOT COMMITTED** — held for the packet 5/7 checkpoint like every other content packet since 34. Full detail is in `audit/PROGRESS.md` row 41 and `audit/runs/packet-41/{brief,built,verify-a,verify-b,verify-b-r1}.md` plus `gate.log`; this section names only what the next packet needs and what is still unresolved.
@@ -372,6 +491,61 @@ missing binary, a failed import or an exited server is not a rejection, it is a 
 **Nothing in `audit/DECISIONS.md`'s Settled list conflicts with this packet's work**; the newest entry there (2026-09-22, packet 42, MCQ answer-position bias) is unrelated. **`audit/CONTENT-GATE.md`'s recall contract is met**: 24 recalls across the four built types (classify/fill-in/match/reorder), 0 of 24 answerable by scrolling up per `npm run recalls` and a separate `recall-census --section external-influences` read.
 
 **Publish line, when the founder runs the checkpoint** (not run here, per this session's scope): the staged bundle is `audit/snapshots/packet-41-bundle__business__external-influences.json`; publishing is `scripts/publish-section.mjs external-influences --confirm` after a commit, same pattern as packets 34-40.
+
+## Handoff — packet 42 NOT done: gate and ledger clear, but Verify B's final report found an unfixed blocking defect (written 22 September 2026, workflow bookkeeping pass)
+
+**This session's job was bookkeeping only.** It read `audit/runs/packet-42/{brief,built,gate.log,gate-fix-1.log,verify-a,verify-b}.md`, independently re-ran `node audit/scripts/ledger.mjs unverified 42` itself (exit 0, "gate clear" — not taken from a log), and cross-checked the vocabulary and validator claims against `verify-a.md`'s own re-derivations. It authored, fixed, verified or committed nothing; no code, content, test or script file was touched.
+
+**The computed task brief that launched this session asserted "PASSED the gate" and "walkthrough: clean." Neither is fully supported by the artefacts.** This is recorded as a contradiction, per this programme's own "verify independently" rule (`audit/DECISIONS.md` names this class of miss four times already) — not picked one way or the other.
+
+**What is independently confirmed true:**
+- Ledger: 30 items, 29 confirmed / 1 wont-fix (`specGap-09`) / 0 open.
+- Mechanical gate: `npm test` 279/279 · `npm run build` · `npm run validate` · `npm run exposure` · `npm run recalls` · `check-staged-drafts resource-management` (0 drift, checked against the live `?draft=1` API) all exit 0, in both `gate.log` (pre-fix) and `gate-fix-1.log` (post-fix).
+- One fix round ran (round 1: structure-09's misconceptions), verified by an independent control (`verify-structure-09.mjs`, 4 filler claims in a pre-fix control vs 0 in the served draft) and reconfirmed by a fresh Verify A pass.
+- Worth repeating for whoever reads `gate.log` next: its `npm run validate` line reads `lib/content-gate.mjs`'s `loadBundle()`, which selects `data` only — that EXIT 0 validates the **stale live** section, not this packet's work. Verify A re-ran `validateSection()` against the staged bundle directly: 0 BLOCK / 0 DEBT / 28 of 28 leaves, the real result, which also passes.
+
+**What is NOT true, and is why this packet is not done:**
+`audit/runs/packet-42/verify-b.md` is the LAST artefact this run wrote (after the fix round and after Verify A's final confirmation) and its own verdict is **"Qualified pass, with one blocking content defect,"** closing with **"it should not publish as it stands."** The defect: **20 of 26 subsections' body text opens by addressing the specification's own leaf numbering instead of the student** — `"**Leaf 1a** names four methods of production..."`, `"**Leaf 3a** asks for the interpretation of an inventory control diagram..."` — 25 occurrences in `content[].sections[].body[].text`, read live through `?draft=1`, not from a file. Verify B's reproduction command and the full list of the 20 ids are in `verify-b.md` itself. No `verify-b-r1.md` exists; nothing rewrote those sentences and nothing re-walked the deck. `PROTOCOL.md`'s definition of done requires "walkthrough clean where applicable," and packet 42's own spec required this walk (see above, "Verify B — 390x844, signed out") — it is not clean.
+
+**What the next session must do, in order, before this row can read "done and verified":**
+1. Rewrite the 20 openers (25 occurrences) to speak to the student, dropping "Leaf Na" language entirely from `content[].sections[].body[].text` across all four chapters — the content underneath is accurate and correctly scoped per Verify B, only the framing is wrong.
+2. Re-stage (`--stage`), re-check drift against the live `?draft=1` API, and re-run `npm run validate` against the **staged bundle directly**, not the gate script's `data`-only line.
+3. Re-run Verify B as an independent re-walk (`verify-b-r1.md`, the pattern packet 41 used after its own round-1 blocking defect) at 390×844, signed out, storage cleared, real taps.
+4. Only then update `PROGRESS.md` row 42 to "done and verified."
+
+**Everything else packet 42 built is not in question**, per Verify A's independent re-derivation: MCQ answer position now constructed rather than inherited (settles `DECISIONS.md`'s 22 September ruling), all four chapters in the specification's own order, leaves 2c and 3a built, banned UK-GCE vocabulary at 0 hits in teaching text (`stock control`/`buffer stock`/`re-order level`/`lead time`/`stock-out`), Toyota 2021 JIT claim removed per the packet-15/40 rule, diagram collision guard run at `COLLIDE_TOL=1.2`. Only the 25 opener sentences are open.
+
+**Nothing in `audit/DECISIONS.md`'s Settled list conflicts with this packet's work** — the newest entry (2026-09-22, packet 42's own MCQ ruling) is what the build correctly followed. `audit/CONTENT-GATE.md`'s recall contract gate (`npm run recalls`) exits 0, "no section worse than the baseline"; this bookkeeping pass did not isolate resource-management's own recoverable-count from the aggregate figure in the log, so that narrower claim is Verify A's, not independently re-derived here.
+
+**Next unclaimed packet**: not determined by this session — check `ledger.mjs packet <n> --open` fresh, per packet 41's own handoff note, rather than trusting a number written in this file.
+
+## Handoff — packet 42 closed (brain)
+
+**This session's job was bookkeeping only, per its brief: verify, write the row and this section, `git add` by explicit path, do not author content, do not fix code, do not commit.** It read `audit/runs/packet-42/{verify-a,verify-b,verify-b-fix,built}.md`, independently re-ran `node audit/scripts/ledger.mjs unverified 42` and `node audit/scripts/check-staged-drafts.mjs resource-management` itself (both clean, not taken from a log), and cross-checked `V038` directly in `audit/ledger.json`. It did not touch `app/`, `components/`, `lib/`, `scripts/`, or any content/test file, and did not commit.
+
+**State at the start of this session:** the previous bookkeeping pass (same day, see the row this replaces in `PROGRESS.md`'s history and the "packet 42 NOT done" handoff above) had correctly found `verify-b.md` blocking on a content defect — 20 of 26 subsections opening their body text with the audit's own leaf numbering ("Leaf 1a names…") rather than speaking to the student, 25 occurrences in `content[].sections[].body[].text` — and left four numbered steps for whoever picked this up next: rewrite the openers, re-stage, re-run `npm run validate` against the staged bundle directly, and re-walk as an independent Verify B before the row could read "done and verified."
+
+**All four are now done, by a fix round that ran between that handoff and this one** (`audit/runs/packet-42/built.md`, "Fix round (post founder decision)"): 37 strings rewritten at the source across `scripts/_packet42-{content,diagrams,assessment}.mjs` (never the bundle, never the database), re-staged (`node scripts/packet-42-resource-management.mjs --stage --dump`, exit 0), and re-walked independently in `audit/runs/packet-42/verify-b-fix.md` — a fresh pattern list written from Verify B's own prose, not imported from the runner's `SCAFFOLDING_IN_PROSE` guard, so the check does not share the fix's blind spot. Result: **22 / 25 / 30 (the same defect counted three ways) → 0**, on a fresh `curl` of the served draft and across all 30 rendered Learn-panel steps; source and database agree field-by-field (1,108 fields, only `contentVersionSince` differs); the Rule-3 A/B guard fails on the pre-fix text (35 hits, exit 1) and passes on the post-fix text (0 hits, exit 0); no box overlap or 390px viewport overflow on any of the 30 steps; teaching substance and every figure survive. `verify-b-fix.md`'s own verdict: **"The blocking defect is closed, on the served draft, and the class is held."**
+
+**Gate, re-run after the fix, all exit 0**: `npm test` 279/279 · `npm run build` · `npm run validate` (staged bundle: 0 BLOCK / 0 DEBT / 28 of 28 leaves) · `npm run exposure` · `npm run recalls` · `node audit/scripts/check-staged-drafts.mjs resource-management` — matches, 0 drift. **Ledger unchanged**: 30 items, 29 confirmed / 1 wont-fix (`specGap-09`) / 0 open; the fix round claimed no new ledger id — `audit/ledger.json` is untouched by it, per `built.md`'s own bookkeeping note, because the defect was a verifier rejection, not a ledger item.
+
+`audit/PROGRESS.md` row 42 is rewritten to **"BUILT and VERIFIED… STAGED, NOT PUBLISHED, held for the packet 5/7 checkpoint."**
+
+**Two things left open for the founder, not this session's to resolve:**
+1. The quiz bank's hash-dealt key re-ranked when the fix rewrote one quiz stem, so 4 of the 7 served items now key to slot B where 3 did before. Mechanical consequence of `placeKeys` hashing the stem, not a content error — but Verify B had specifically credited this packet with "the quiz no longer answers B every time," so it is worth the founder's eye before publish.
+2. Five "the specification…" sentences were kept on purpose (Rule 3's negative controls: the document quoted, not speaking — defensible exam-technique register). A judgment call, not a defect.
+
+**A correction, not a new finding, on the task brief that opened this session.** The brief asked this row and this section to credit "the pointer-versioning ledger item this packet's Verify B caused to be filed on packet 5," naming `V038` ("Version the Learn Mode step pointer", `ledger.mjs packet 5`). Checked directly: `V038` is real, `status: confirmed`, `closed_by: packet-5` — but its `added` date is 2026-09-19 and its cited evidence is `audit/runs/packet-37/verify-b.md`, both three days before packet 42's own Verify B runs (dated 22 September on disk). Packet 42's Verify B did not cause it to be filed; it pre-exists this packet. What packet 42's `verify-b.md` actually did with the resume-pointer failure class `V038` covers is independently re-test it and find it **not reproduced** — a mid-deck reload resumed correctly at "step 6 of 30," no false "this topic has been rebuilt" notice — which is consistent with `V038` already being closed by packet 5, not evidence of a new filing. `PROGRESS.md`'s row states this correction rather than the brief's claim. Flagging it here because the brief's phrasing, if repeated uncritically, would have put a false provenance trail into two permanent project records.
+
+**Publish, when the founder runs the checkpoint (not run here, per rule 6 and this session's scope):** staged bundle is `audit/snapshots/packet-42-bundle__business__resource-management.json`; the command is
+
+```
+node scripts/publish-section.mjs resource-management --confirm
+```
+
+after a commit, same pattern as packets 34-41. No D013-style post-publish census step is named by `verify-b.md` or `verify-b-fix.md` for this packet — that instruction in the brief was conditional ("if verify-b.md names one") and it does not, so nothing is added here.
+
+**Next unclaimed packet.** `git status --short | grep -oE "packet-[0-9]+"` shows in-progress or touched work up to and including **packet 42** (0/2/2.3/5/12.2-12.6/13.2/23-25/27/28/30-37/39-42) and nothing at 43 or above. `node audit/scripts/ledger.mjs packet 43 --open` returns **28 open items** (`economic-growth`) and `PROGRESS.md` row 43 reads "not started." `node audit/scripts/ledger.mjs packet 44 --open` returns 27 open items (`aggregate-supply`), also untouched and also "not started," as a fallback if 43 is claimed between this write and the next session's start. **Packet 43 (economic-growth) is free.**
 
 ## Packet 2.92 — V060 closed: the eight held rebuilds are pinned on the live site (25 September 2026, Opus 5.5)
 
