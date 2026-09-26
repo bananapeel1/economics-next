@@ -15,6 +15,7 @@ import { createClient } from '@supabase/supabase-js';
 import { readFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { createReadCache, formatStats } from './_read-cache.mjs';
 
 // Attempt to load .env.local if env vars are not set
 if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_KEY) {
@@ -43,7 +44,18 @@ if (!url || !key) {
   process.exit(1);
 }
 
-const client = createClient(url, key);
+/*
+ * Reads of the eight content tables go through a cache (scripts/_read-cache.mjs): the gate
+ * scripts re-read the whole corpus on every pass, and on 26 Sep 2026 that was most of the
+ * org's egress. A saved copy is reused only while content_versions says it is current, and
+ * any write through this client clears it. REVVY_READ_CACHE=off turns it off for one run.
+ */
+const readCache = process.env.REVVY_READ_CACHE === 'off' ? null : createReadCache();
+if (readCache && process.env.REVVY_READ_CACHE_STATS === '1') {
+  process.on('exit', () => console.error(formatStats(readCache.stats, readCache.modeReason)));
+}
+
+const client = createClient(url, key, readCache ? { global: { fetch: readCache.fetch } } : undefined);
 
 const CONTENT_TABLES = new Set([
   'section_content', 'section_notes', 'section_quiz', 'section_practice',
