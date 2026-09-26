@@ -1228,30 +1228,44 @@ body {
 .diagram-svg-wrapper svg path,
 .diagram-svg-wrapper svg polyline,
 .diagram-svg-wrapper svg circle { shape-rendering: geometricPrecision; }
-.diagram-checklist { background: var(--bg-input); border: 1px solid var(--border-primary); border-radius: 8px; margin-top: 16px; }
-/* Collapsed by default (components/DiagramChecklist.jsx). The summary row is the whole tap target,
-   44px tall on every device; the chevron turns when open. */
+/* "What a correct diagram shows" (components/DiagramChecklist.jsx). Closed, it is one quiet line of
+   muted text under the diagram, not a box: most students pass it, and it must not compete with the
+   diagram or the question below (founder, 26 Sep). Open, the points sit in a soft panel with room
+   between the tick and the text. */
+.diagram-checklist { margin-top: 10px; }
 .diagram-checklist-title {
-  display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 10px 16px; cursor: pointer;
-  list-style: none; user-select: none; -webkit-tap-highlight-color: transparent; border-radius: 8px;
-  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-amber);
+  display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 4px 6px; margin-left: -6px;
+  cursor: pointer; list-style: none; user-select: none; -webkit-tap-highlight-color: transparent; border-radius: 6px;
+  font-size: 13px; font-weight: 500; color: var(--text-tertiary); transition: color 0.15s;
 }
 .diagram-checklist-title::-webkit-details-marker { display: none; }
 .diagram-checklist-title::marker { content: ''; }
-.diagram-checklist-title::after {
-  content: ''; flex: none; width: 7px; height: 7px; margin-left: 2px;
-  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
-  transform: rotate(45deg) translateY(-2px); transition: transform 0.15s;
+.diagram-checklist-title::before {
+  content: ''; flex: none; width: 5px; height: 5px; margin: 0 3px 0 1px;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg); transition: transform 0.15s;
 }
-.diagram-checklist[open] > .diagram-checklist-title::after { transform: rotate(-135deg) translateY(-2px); }
-.diagram-checklist-title:focus-visible { outline: 2px solid var(--accent-amber); outline-offset: 2px; }
-.diagram-checklist-title > span:first-child { flex: 1 1 auto; min-width: 0; }
-.diagram-checklist-count { flex: none; white-space: nowrap; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--text-tertiary); }
-@media (max-width: 480px) { .diagram-checklist-title { letter-spacing: 0.02em; padding: 10px 12px; } .diagram-checklist ul { padding: 0 12px 12px; } }
-.diagram-checklist ul { list-style: none; padding: 0 16px 12px; margin: 0; }
-@media (prefers-reduced-motion: reduce) { .diagram-checklist-title::after { transition: none; } }
-.diagram-checklist li { font-size: 13px; color: var(--text-secondary); padding: 3px 0; }
-.diagram-checklist li::before { content: '\2713 '; color: var(--accent-green); font-weight: 700; }
+.diagram-checklist[open] > .diagram-checklist-title::before { transform: rotate(45deg) translate(-1px, -1px); }
+.diagram-checklist-title:hover, .diagram-checklist[open] > .diagram-checklist-title { color: var(--text-secondary); }
+.diagram-checklist-title:focus { outline: none; }
+.diagram-checklist-title:focus-visible { outline: 2px solid var(--border-primary); outline-offset: 1px; }
+.diagram-checklist-count { white-space: nowrap; font-weight: 400; }
+.diagram-checklist-count::before { content: '\00b7'; margin-right: 6px; }
+/* A finger needs the full 44px; a mouse does not, so the line stays slim on desktop. */
+@media (pointer: coarse) { .diagram-checklist-title { min-height: 44px; } }
+.diagram-checklist ul {
+  list-style: none; margin: 6px 0 0; padding: 10px 14px;
+  background: var(--bg-input); border: 1px solid var(--border-primary); border-radius: 8px;
+  display: grid; gap: 6px;
+}
+.diagram-checklist[open] ul { animation: diagramChecklistIn 0.18s ease-out; }
+@keyframes diagramChecklistIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .diagram-checklist-title, .diagram-checklist-title::before { transition: none; }
+  .diagram-checklist[open] ul { animation: none; }
+}
+.diagram-checklist li { display: flex; gap: 8px; align-items: baseline; font-size: 13px; line-height: 1.5; color: var(--text-secondary); padding: 0; }
+.diagram-checklist li::before { content: '\2713'; flex: none; color: var(--accent-green); font-weight: 700; }
 .scenario-switcher { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
 .scenario-btn { padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.15s; border: 1px solid var(--border-primary); background: var(--bg-input); color: var(--text-tertiary); font-family: inherit; }
 .scenario-btn:hover { border-color: var(--accent-green); color: var(--text-secondary); }
