@@ -1850,6 +1850,7 @@ body {
 .mistake-wrong-label { color: var(--accent-red); }
 .mistake-correct-label { color: var(--accent-green-light); }
 .mistake-text { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.mistake-why { margin-top: 8px; }
 
 /* ─── Resource Pages (shared) ─── */
 .resource-page { min-height: 100vh; background: var(--bg-primary); color: var(--text-primary); padding: 40px 20px 60px; }

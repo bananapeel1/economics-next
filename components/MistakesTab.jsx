@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { readAnswerLog } from '@/lib/answer-log';
+import { readMistake } from '@/lib/mistakes-shape';
 
 /**
  * Two kinds of mistake, in the order a student cares about them.
@@ -82,18 +83,23 @@ export default function MistakesTab({ data, subjectId, sectionId, quizData }) {
           <div className="mistakes-intro">
             Avoid these common mistakes that students frequently make in exams.
           </div>
-      {data.map((item, i) => (
-        <div className="mistake-card" key={i}>
+      {/* Read through lib/mistakes-shape.js: the rebuilds wrote four field shapes besides
+          title/mistake/correction, and reading only that one left 157 live cards with two empty boxes. */}
+      {data.map((raw, i) => {
+        const item = readMistake(raw);
+        return (
+        <div className="mistake-card" key={raw?.id || i}>
           <div className="mistake-card-title">{item.title}</div>
 
           <div className="mistake-wrong">
             <div className="mistake-label mistake-wrong-label">✗ Common Mistake</div>
-            <div className="mistake-text">{item.mistake}</div>
+            <div className="mistake-text">{item.wrong}</div>
+            {item.why && <div className="mistake-text mistake-why"><strong>Why it&rsquo;s wrong:</strong> {item.why}</div>}
           </div>
 
           <div className="mistake-correct">
             <div className="mistake-label mistake-correct-label">✓ Correct Approach</div>
-            <div className="mistake-text">{item.correction}</div>
+            <div className="mistake-text">{item.right}</div>
           </div>
 
           {item.examTip && (
@@ -102,7 +108,8 @@ export default function MistakesTab({ data, subjectId, sectionId, quizData }) {
             </div>
           )}
         </div>
-      ))}
+        );
+      })}
         </>
       ) : (
         <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--text-muted)' }}>
