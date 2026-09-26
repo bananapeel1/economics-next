@@ -5,12 +5,14 @@ import ReorderRecall from './ReorderRecall';
 import FillInRecall from './FillInRecall';
 import MatchRecall from './MatchRecall';
 import ClassifyRecall from './ClassifyRecall';
+import DiagramRecall from './DiagramRecall';
 import DiagramLabelDrill from './DiagramLabelDrill';
 
-const WIDGETS = { reorder: ReorderRecall, fillin: FillInRecall, match: MatchRecall, classify: ClassifyRecall };
+const WIDGETS = { reorder: ReorderRecall, fillin: FillInRecall, match: MatchRecall, classify: ClassifyRecall, diagram: DiagramRecall };
 
 /**
- * The widget gallery, packet 7 (W003). One exemplar of each recall type and the label drill, from
+ * The widget gallery, packet 7 (W003), and the drawing drill since 13.7. One exemplar of each
+ * recall type and the label drill, from
  * lib/recall-fixtures.js, with the same props the Learn Mode engine passes. "Spaced" remounts every
  * widget in its second-showing order. The log at the bottom is what each widget reported to the engine.
  */
@@ -23,7 +25,7 @@ export default function WidgetGallery() {
     <div className="lm-gallery">
       <h1 className="lm-gallery-title">Recall widgets</h1>
       <p className="lm-gallery-intro">
-        The four recall types a section can carry, rendered from <code>lib/recall-fixtures.js</code> exactly as Learn Mode
+        The five recall types a section can carry, rendered from <code>lib/recall-fixtures.js</code> exactly as Learn Mode
         renders them. Authors copy these shapes; the contract is in <code>audit/CONTENT-GATE.md</code>.
       </p>
       <div className="lm-gallery-controls" role="group" aria-label="Showing">
