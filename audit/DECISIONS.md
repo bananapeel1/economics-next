@@ -12,6 +12,35 @@ Append only. Every entry needs a date and the packet that made it.
 
 ## Settled
 
+- **2026-09-26 — the practice page's design is the v7 mockup, and no text on it is ever cut, spilled or
+  shortened.** After seven iterations the founder signed off `audit/specs/packet-12.75-mockup.html`
+  (published as https://claude.ai/artifact/Tr5PkdbzhVgTk3NFgzgfKL): the site's own DM type and
+  `globals.css` tokens, the extract beside the answer, self-marking against tickable criteria, the question
+  stem in DM Sans with only its key term in DM Serif Display italic. The founder then found question cards
+  cutting "6 marks" to "6 mar" at ~700px, a width between the three that had been spot-checked, and set the
+  standard: *"make sure this text overflowing never happens. I want a reliable, trustworthy feel."* **The
+  standard includes ellipsis: text wraps, or a layout tier removes a secondary element whole, and nothing
+  is ever shortened with "…".** Its check is `audit/scripts/text-fit-sweep.js`, a width sweep from 320 to
+  1920px, proved by A/B (it fails the pre-fix mockup at 650–810px with the card metadata bleeding 151px
+  and the page scrolling sideways, and passes the fixed one on 1,926 checks). Spot-checking breakpoints
+  is not acceptable evidence for this standard. Running the sweep in CI needs a headless browser
+  dependency and is an open founder decision. The shell keeps the `rl-night` dark pin every resource page
+  uses; it is token-only so that can change with one line.
+
+- **2026-09-25 — Economics 1.3.5 practises the extract's own question set, not the bank's generic
+  questions.** Packet 12.7's E038 asked for the bank's 4-mark and 8-mark answers to be re-authored against
+  the attached extract. Reading them showed the 8-mark question is *"Examine how a negative externality of
+  production leads to market failure"*, while the extract (UAE plastics, GCC sugar tax) is entirely about
+  consumption externalities and its own examiner note warns against production examples: the re-authoring
+  would have taught the exact mistake the note names. The extract file `content/data-response/econ-u1-market-failure.md`
+  already carries its own three questions whose model answers use the extract's figures, and that is also
+  where packet 12.6's false premise came from (the extract file's answers were mistaken for the bank's).
+  **The founder's ruling: the 1.3.5 practice page leads with the extract's set — Define (2), Analyse (6),
+  Evaluate (20) — in the criteria/script/stimulus shape. Question 3 is re-tariffed from the file's 10 marks,
+  which is not a legal IAL Economics tariff, to 20.** The bank's three generic 1.3.5 answers stay on the site
+  without an extract attached, because they never used one. E038 is superseded by E043/E044.
+
+
 - **2026-09-22 — packet 12.6 shipped a pilot whose extract its own answers do not use, and 12.7 re-authors
   rather than grandfathers it.** Economics 1.3.5 was chosen as the marked-script pilot on a claim in
   `audit/specs/packet-12.6.md` that its three model answers cite the attached extract (`AED 0.18`, `PED -1.4`,

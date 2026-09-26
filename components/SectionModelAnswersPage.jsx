@@ -255,21 +255,12 @@ function StimulusBlock({ stimulus }) {
       <h2 id="lab-stimulus-head" className="lab-stimulus-head">
         The extract these questions are answered from
       </h2>
-      {/*
-        Fix round B1. This note used to read "The application marks below are awarded for using it,
-        not for remembering a textbook example." That was false about this page and the walkthrough
-        caught it: the three model answers below were written before any extract was attached and
-        their application marks come from a coal-fired power station, a steel factory and the UK
-        Soft Drinks Industry Levy — the textbook examples the sentence disowned. Re-authoring those
-        answers against this extract is new marking, which E034 forbids in this packet, so the note
-        stops making a promise the page does not keep and points at the page that does.
-      */}
+      {/* Packet 12.7, E043. Fix round B1's "Read this first" disclaimer is gone because what it
+          disclaimed is gone: the only questions that carry this extract now are the extract's own,
+          and their model answers use its figures. The three generic answers no longer attach it. */}
       <p className="lab-note">
-        Read this first. In a data-response question the application marks come from the extract in
-        front of you, not from a remembered textbook example. The model answers below were written
-        before this extract was attached, so they apply the theory to other cases: take the
-        technique from them, then write your own answer from the figures here. The link at the end
-        of this extract goes to answers that do use it.
+        The first questions below are set on this extract, and their application marks are awarded for
+        using it.
       </p>
       {stimulus.blocks.map((b, i) =>
         b.kind === 'table' ? (

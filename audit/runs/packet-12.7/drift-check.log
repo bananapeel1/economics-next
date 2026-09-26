@@ -1,0 +1,9 @@
+MATCH  Q1  ### Question 1 (2 marks)  md-words=67
+   md==answerParagraphs true · md==script true · tariff md 2 / bank 2 · question text equal true
+   criteria by AO: {"(no AO)":2} · segRoles: earned
+MATCH  Q2  ### Question 2 (6 marks)  md-words=172
+   md==answerParagraphs true · md==script true · tariff md 6 / bank 6 · question text equal true
+   criteria by AO: {"AO1":2,"AO2":2,"AO3":2} · segRoles: earned
+MATCH  Q3  ### Question 3 (20 marks)  md-words=1178
+   md==answerParagraphs true · md==script true · tariff md 20 / bank 20 · question text equal true
+   criteria by AO: {"AO1":4,"AO2":4,"AO3":6,"AO4":6} · segRoles: earned

@@ -30,6 +30,16 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 
 const STORAGE_PREFIX = 'rl:attempt:v1:';
 
+/**
+ * Packet 12.7, E039 (DECISIONS 2026-09-22). A criterion's link to its segment is either where the
+ * model script EARNED the mark or where it MISSED it — a mid-band script's top-band criteria point at
+ * the place the assessment belongs and is not made. Opposite messages, so they render differently,
+ * and not by colour alone: a text label and a line style (solid for earned, dashed for missed).
+ * Absent means earned; R7 in audit/scripts/validate-model-answers.mjs requires it to be explicit.
+ */
+const ROLE_LABEL = { earned: 'Earned', missed: 'Missed — this is where it goes' };
+const roleOf = (c) => (c.segRole === 'missed' ? 'missed' : 'earned');
+
 function storageKey(questionId) {
   return `${STORAGE_PREFIX}${questionId}`;
 }
@@ -103,6 +113,8 @@ export default function MarkedScriptAttempt({ item }) {
     return map;
   }, [criteria]);
 
+  const anyMissed = criteria.some((c) => roleOf(c) === 'missed');
+
   const claimed = criteria.reduce((n, c) => (ticked.has(c.id) ? n + (Number(c.marks) || 0) : n), 0);
   const tariff = Number(item.marks) || 0;
 
@@ -173,7 +185,9 @@ export default function MarkedScriptAttempt({ item }) {
         <summary>
           {ticked.size > 0
             ? `The marked script — ${ticked.size} segment${ticked.size === 1 ? '' : 's'} marked`
-            : 'The marked script — where each of those marks is earned'}
+            : anyMissed
+              ? 'The marked script — where each of those marks is earned, or missed'
+              : 'The marked script — where each of those marks is earned'}
         </summary>
         {script.map((para) => (
           <div key={para.id} className="lab-script-para">
@@ -183,20 +197,28 @@ export default function MarkedScriptAttempt({ item }) {
             </h4>
             {(para.segments || []).map((seg) => {
               const pointing = bySegment.get(seg.id) || [];
-              const marked = pointing.some((c) => ticked.has(c.id));
+              const claimedHere = pointing.filter((c) => ticked.has(c.id));
+              const marked = claimedHere.length > 0;
+              // The line style follows the segment: dashed only when every mark claimed on it is one
+              // the script missed. The label is per criterion, so a mixed segment says both.
+              const role = marked && claimedHere.every((c) => roleOf(c) === 'missed') ? 'missed' : 'earned';
               return (
                 <div
                   key={seg.id}
                   id={`seg-${item.id}-${seg.id}`}
-                  className={marked ? 'lab-script-seg is-marked' : 'lab-script-seg'}
+                  className={marked ? `lab-script-seg is-marked is-${role}` : 'lab-script-seg'}
+                  data-seg-role={marked ? role : undefined}
                 >
                   <p className="lab-script-text" dangerouslySetInnerHTML={{ __html: seg.html }} />
                   {marked && (
                     <p className="lab-script-claimed">
-                      {pointing
-                        .filter((c) => ticked.has(c.id))
-                        .map((c) => `${c.marks === 1 ? '1 mark' : `${c.marks} marks`} — ${c.band}`)
-                        .join(' · ')}
+                      {claimedHere.map((c, i) => (
+                        <span key={c.id}>
+                          {i > 0 ? ' · ' : null}
+                          <span className="lab-script-role">{ROLE_LABEL[roleOf(c)]}</span>
+                          {`: ${c.marks === 1 ? '1 mark' : `${c.marks} marks`} — ${c.band}`}
+                        </span>
+                      ))}
                     </p>
                   )}
                   {seg.note && <p className="lab-script-note">{seg.note}</p>}

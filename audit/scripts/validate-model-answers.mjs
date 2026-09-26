@@ -20,16 +20,23 @@
  *   R4  the item's marks is a legal IAL tariff FOR ITS SUBJECT
  *   R5  criteria and script travel together — neither alone
  *   R6  stimulus, when present, resolves to a real file in content/data-response/
+ *   R7  every criteria[].segRole is the literal 'earned' or 'missed' (packet 12.7, E039)
  *
  * R4 READS `lib/ial-marking.js`, THROUGH `lib/practice-tariffs.js`. There is no tariff list in this
  * file and there must never be one. IAL Economics has no 10-mark question and IAL Business has no
  * 14-mark one; a second copy of that fact here would be a second thing to keep in step, and the
  * programme has already paid for one of those (`lib/practice-tariffs.js`'s own header).
  *
- * R6 CHECKS THAT THE FILE EXISTS AND NOTHING ELSE. The six files in `content/data-response/` each
- * carry a 10-mark question, which is not a legal IAL Economics tariff. Those are packet 12.9's, they
- * are known, and widening this rule to reach them would fail the gate on six defects this packet did
- * not cause and is not allowed to fix. See audit/specs/packet-12.6.md, "Explicitly out of scope".
+ * R6 CHECKS THAT THE FILE EXISTS AND NOTHING ELSE. Five of the six files in `content/data-response/`
+ * carry a 10-mark question, which is not a legal IAL Economics tariff (packet 12.7 re-tariffed the
+ * sixth, econ-u1-market-failure, to 20). Those five are packet 12.9's, they are known, and widening
+ * this rule to reach them would fail the gate on defects this packet did not cause and is not allowed
+ * to fix. See audit/specs/packet-12.6.md, "Explicitly out of scope".
+ *
+ * R7 REQUIRES THE FIELD, IT DOES NOT DEFAULT IT. The component reads an absent `segRole` as
+ * 'earned', so a page never breaks on one; the validator refuses the absence anyway, because a
+ * criterion whose role nobody decided is exactly how a missed mark would be rendered as an earned
+ * one (DECISIONS 2026-09-22: "Do not collapse the two roles back into one link type").
  *
  * NOTHING HERE TOUCHES SUPABASE (rule 2). It reads two static ES modules and one directory listing.
  *
@@ -110,6 +117,14 @@ export function checkItem(item, { stimuli }) {
   for (const c of item.criteria) {
     if (!seen.has(c.seg)) {
       push('R2', `criterion ${c.id || '(no id)'} points at seg "${c.seg}", which is not a segment id on this item`);
+    }
+  }
+
+  // R7 — every criterion says whether the script earned it at its segment or missed it there. An
+  // exact-literal check: 'Missed', 'miss' or a boolean is a typo the renderer would read as earned.
+  for (const c of item.criteria) {
+    if (c.segRole !== 'earned' && c.segRole !== 'missed') {
+      push('R7', `criterion ${c.id || '(no id)'} has segRole ${c.segRole === undefined ? '(absent)' : JSON.stringify(c.segRole)}; it must be 'earned' or 'missed'`);
     }
   }
 

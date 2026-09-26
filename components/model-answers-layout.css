@@ -421,6 +421,9 @@
   border-radius: 0 8px 8px 0;
   padding-right: 8px;
 }
+/* Packet 12.7, E039: a mark the script MISSED here is told apart from one it earned without colour —
+   a dashed rule instead of a solid one, plus the text label from MarkedScriptAttempt's ROLE_LABEL. */
+.lab-script-seg.is-marked.is-missed { border-left-style: dashed; }
 .lab-script-text { margin: 0; font-size: 14px; }
 .lab-script-claimed {
   margin: 4px 0 0;
@@ -428,4 +431,5 @@
   font-weight: 700;
   color: var(--lab-accent);
 }
+.lab-script-role { text-transform: uppercase; letter-spacing: 0.04em; }
 .lab-script-note { margin: 4px 0 0; font-size: 13px; color: var(--lab-muted); }

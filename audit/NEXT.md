@@ -13,18 +13,26 @@ section was chosen on that false premise. See `audit/DECISIONS.md` → Settled �
 Also: the 8m and 20m Market Failure answers live in `data/modelAnswersExpansion.js`, which E034/E035's
 `file` field does not name.
 
-## Packet 12.7 spec — RESERVED, spec lives elsewhere (22 September 2026)
+## Packet 12.75 spec — RESERVED, waits for 12.7's commit (26 September 2026)
 
-**Packet 12.7 is claimed. Do not pick it up.**
+**Packet 12.75 is claimed. Do not pick it up.** It launches only after packet 12.7 is committed, because
+both edit `components/SectionModelAnswersPage.jsx` and 12.75 renders the items 12.7 adds.
 
-The authoritative spec is `audit/specs/packet-12.7.md`. It is deliberately not copied here: a spec
-written into NEXT.md is published to every live session, which is how packet 12.4 was taken by a peer
-minutes after being specced. This block reserves the packet; it is not a work item.
+The authoritative spec is `audit/specs/packet-12.75.md`; the approved design is
+`audit/specs/packet-12.75-mockup.html`. Neither is copied here: a spec written into NEXT.md is published to
+every live session. One line so a reader knows what is moving: 12.75 builds the practice shell (extract
+beside the answer, tickable criteria, figure links, question cards and dock) on criteria-bearing
+model-answer pages, and proves no text is ever cut at any width with `audit/scripts/text-fit-sweep.js`.
+Ledger ids E040, E045–E052.
 
-One line so a reader knows what is moving: 12.7 re-authors 1.3.5's application marks against its
-attached extract, adds `segRole: earned|missed` to the criterion shape, and builds the v6 chrome —
-mode gate, question navigation, keyboard. Ledger ids E038-E042. Two founder rulings in
-`audit/DECISIONS.md` (Settled, 2026-09-22) govern it and are not open questions.
+## Packet 12.7 — PASSED 26 September 2026, committed
+
+Gate test/build/validate/drift all 0. E039, E042, E043, E044 confirmed, none rejected, no fix rounds. E038
+wont-fix (superseded, DECISIONS 2026-09-25). E040/E041 moved to 12.75. Spec `audit/specs/packet-12.7.md`,
+artefacts `audit/runs/packet-12.7/`. Economics 1.3.5 now leads with the extract's own Define (2), Analyse (6)
+and Evaluate (20) questions. **Known and carried:** the mid-band panel now sits on the extract Evaluate item
+and quotes an AO3 row its shown paragraphs do not contain (E053, packet 12.75); do not cut a release between
+12.7 and 12.75. Pre-existing findings from its walkthrough are E054-E056 on packet 12.9.
 
 ## Packet 12.4 spec — tag the Economics bank, and two defects 12.3 left (Opus author, 22 September 2026)
 
@@ -10217,3 +10225,50 @@ Built in 28bf7e0 (24 Sep), finished here: isolated gate, Verify A, Verify B, one
 - **V056, packet 2.9, open**: check-in diagrams have the same aboutness flaw through `matchDiagramsToBlocks` (most-shared-words wins; on 3.3.1 the integration diagram sits under chapter 2). Pre-existing. Two parts: extend `checkin-attribution.mjs` to judge diagrams (expect notes, not failures, on pinned ones), and pin `diagramId` where it misplaces.
 - **Still open from the build session**: V043 — the signed-out pre-test reserves through `freeQuizPayload`, not placement, so it still asks about chapters the student has not opened (22 of 43 live).
 - **Not verified here**: signed-in (Pro) placement — this session cannot sign in. The code path is the same function for both, and V026's partly-pinned fallback is unchanged, but a founder glance at 3.3.1 signed in (chapter 1 check-in: no horizontal-integration question) closes it.
+
+## Handoff — what comes next (packet 12.7 bookkeeping pass, 26 September 2026)
+
+**Packet 12.7 PASSED the gate, 0 fix rounds, nothing committed.** Ledger E039/E042/E043/E044 all confirmed
+(E038 wont-fix). Full detail in the `PROGRESS.md` row for 12.7; artefacts in `audit/runs/packet-12.7/`. This
+was a bookkeeping-only pass: no code, content, test or script file was touched — only this section and the
+matching `PROGRESS.md` row.
+
+**No contradiction found.** `audit/PROTOCOL.md`, this file's "## Packet 12.7 spec" reservation block (which
+correctly defers to `audit/specs/packet-12.7.md` as authoritative and does not restate it), the three Settled
+DECISIONS entries the spec names (2026-09-22 ×2, 2026-09-25), and `audit/CONTENT-GATE.md`'s recall contract
+all agree; nothing to escalate on that front.
+
+**Next packet is 12.75, but it is blocked, not free.** The "## Packet 12.75 spec — RESERVED, waits for
+12.7's commit" block above is accurate: 12.75 edits `components/SectionModelAnswersPage.jsx` and renders the
+items 12.7 adds, so it cannot start until **the founder commits 12.7's seven files**, unstaged in the
+working tree right now: `data/modelAnswersExpansion.js`, `data/modelAnswersData.js`,
+`content/data-response/econ-u1-market-failure.md`, `components/SectionModelAnswersPage.jsx`,
+`components/model-answers-layout.css`, `lib/model-answers-route.js`, `audit/scripts/validate-model-answers.mjs`
+(new R7 rule), plus this row in `PROGRESS.md` and this section in `NEXT.md`. **Escalate to the founder**:
+this bookkeeping session has no authority to stage or commit (Rule 6 / COMMIT HYGIENE); someone must run
+`git add` on exactly that list and commit before 12.75 can be picked up.
+
+**One non-blocking defect this packet's own Verify B found, worth fixing before 12.75 reuses the pattern**:
+on the extract's 20-mark Evaluate item, the "Why this loses marks" panel shows "2 of 7 paragraphs" kept and
+lists AO3's row verbatim from `markScheme`, but that row describes chains that live entirely in the
+paragraphs the panel says were removed — the panel doesn't yet describe the attempt it's showing
+(`audit/runs/packet-12.7/verify-b.md`, step 8). Not blocking, not fixed here (out of budget for a bookkeeping
+pass); 12.75 rebuilds this shell, so it may be moot, but check before assuming it is.
+
+**Carried forward, still open, not this packet's to close:**
+- R3 and R6 of `validate-model-answers.mjs` are implemented but still not proved by mutation — only R1/R2/R4
+  (12.6) and R7 (12.7, this packet) have A/B proof. Worth a mutation pass before either rule is trusted on
+  12.8's larger retrofit (65 more model answers).
+- Two pre-existing, out-of-scope defects Verify B re-confirmed but did not fix: `/data-response/econ-u1-market-failure`
+  scrolls sideways at 390×844 (unchanged since fe8b65a — not a 12.7 regression; `verify-b.md` step 10), and
+  the "Practise Market Failure →" CTA on the model-answers page lands on the section overview, not the
+  Practice tab (`verify-b.md` step 13).
+- 12.75's own ledger ids as stated in its reservation block (E040, E045–E052) don't line up cleanly with this
+  spec's "E040/E041 moved to 12.75" line — E041 isn't named in 12.75's id list. Not this packet's spec to
+  resolve; whoever picks up 12.75 should read `audit/specs/packet-12.75.md` itself rather than trust either
+  summary.
+- 12.6's older residuals (R3/R6 unproved, the `file` field on E034/E035 pointing at the wrong data file) are
+  still open; 12.7 did not touch them and they were not in scope.
+
+**No SQL, no DB write, no live content published by this packet.** All changes are in code/data files; the
+"CONTENT GATE" step was correctly skipped per `gate.log`.
