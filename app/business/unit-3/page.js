@@ -48,12 +48,12 @@ const SECTIONS = [
       { letter: 'd', name: 'Business Ethics', kw: 'Profit vs ethics trade-offs \u00b7 pay and rewards \u00b7 corporate social responsibility' },
     ] },
   { id: 'assessing-competitiveness', ref: '3.3.5', title: 'Assessing Competitiveness',
-    desc: 'How businesses measure and improve their competitive position — financial statements and ratios, HR performance metrics, and how firms respond when competitiveness changes.',
+    desc: 'How to judge a business from its financial statements, its ratios and its workforce data — and the HR strategies that raise productivity and retention.',
     subtopics: [
-      { letter: 'a', name: 'Financial Ratios', kw: 'Gearing · ROCE · labour productivity · unit costs · efficiency' },
-      { letter: 'b', name: 'HR Performance Metrics', kw: 'Labour productivity · labour turnover & retention · absenteeism' },
-      { letter: 'c', name: 'Porter\'s Generic Strategies', kw: 'Cost leadership · differentiation · focus · stuck in the middle' },
-      { letter: 'd', name: 'Benchmarking', kw: 'Best practice · performance gaps · imitation vs innovation' },
+      { letter: 'a', name: 'Financial Statements', kw: 'Statement of comprehensive income · statement of financial position · stakeholder interest' },
+      { letter: 'b', name: 'Ratio Analysis', kw: 'Profit margins · current & acid test ratios · gearing · ROCE · limitations' },
+      { letter: 'c', name: 'HR Measures', kw: 'Labour productivity · labour turnover & retention · absenteeism · limitations' },
+      { letter: 'd', name: 'HR Strategies', kw: 'Financial rewards · employee share ownership · consultation · empowerment' },
     ] },
   { id: 'managing-change', ref: '3.3.6', title: 'Managing Change',
     desc: 'How businesses manage change and plan for risk — what triggers change and what it affects, the key factors in successful change, managing resistance to change, and contingency planning through risk assessment, business continuity and succession planning.',
@@ -130,7 +130,7 @@ export default function Unit3Page() {
           <div className="eup-key-concepts">
             <div className="eup-concept"><div className="eup-concept-icon"><Star size={18} /></div><div><div className="eup-concept-title">Objectives shape every decision</div><div className="eup-concept-desc">Every strategy question requires you to link back to business objectives. Short-term vs long-term, stakeholder conflicts and the mission statement all matter.</div></div></div>
             <div className="eup-concept"><div className="eup-concept-icon"><ChartHistogram size={18} /></div><div><div className="eup-concept-title">Quantitative tools have limits</div><div className="eup-concept-desc">Decision trees, CPA and investment appraisal give useful numbers, but examiners reward you for evaluating their limitations — estimated data, external changes, qualitative factors.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon"><Star size={18} /></div><div><div className="eup-concept-title">Competitiveness is relative</div><div className="eup-concept-desc">A business is only competitive compared to its rivals. Use Porter, ratios and benchmarking to analyse competitive position — and always consider the market context.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><Star size={18} /></div><div><div className="eup-concept-title">Competitiveness is relative</div><div className="eup-concept-desc">A business is only competitive compared to its rivals. Use the financial statements, ratio analysis and human resource measures such as labour productivity and labour turnover to analyse competitive position — and always consider the market context.</div></div></div>
             <div className="eup-concept"><div className="eup-concept-icon"><CardsIcon size={18} /></div><div><div className="eup-concept-title">Change depends on key factors</div><div className="eup-concept-desc">Whether change succeeds depends on organisational culture, the size of the organisation, the time and speed of change, how resistance is managed and transformative leadership. Contingency planning identifies key risks through risk assessment, then plans for business continuity and succession.</div></div></div>
           </div>
         </div>
