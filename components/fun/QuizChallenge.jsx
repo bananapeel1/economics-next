@@ -41,6 +41,11 @@ export default function QuizChallenge({ questions, onComplete }) {
     <div className="fun-quiz">
       <div className="fun-quiz-header">
         <span className="fun-quiz-progress">Question {currentIndex + 1} of {questions.length}</span>
+        {q.unit && (
+          <span className="fun-quiz-source">
+            Unit {q.unit}{q.sectionTitle ? ` · ${q.sectionTitle}` : ''}
+          </span>
+        )}
       </div>
 
       <div className="quiz-question">

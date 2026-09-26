@@ -1,16 +1,14 @@
-export const SUBJECT_SECTIONS = {
-  economics: [
-    'introductory-concepts', 'consumer-behaviour-demand', 'supply',
-    'price-determination', 'market-failure', 'government-intervention',
-    'measures-economic-performance', 'aggregate-demand', 'aggregate-supply',
-    'national-income', 'economic-growth', 'macroeconomic-objectives-policies',
-  ],
-  business: [
-    'meeting-customer-needs', 'the-market', 'marketing-mix-strategy',
-    'managing-people', 'entrepreneurs-leaders', 'planning-raising-finance',
-    'financial-planning', 'managing-finance', 'resource-management',
-    'external-influences',
-  ],
+/*
+ * The `subject_id` Blackjack saves a player's progress under in `user_fun_progress`. It is NOT
+ * `subjects.id`: Business is 3 in `subjects`, but this page has always written Business progress as
+ * 2, and every Business player's level lives there (7 players, the highest at level 12, on
+ * 26 Sep 2026). "Correcting" it to 3 silently starts all of them again at level 1. Moving to 3 means
+ * moving those rows in the same change. lib/fun-pool.test.mjs states these numbers so that a change
+ * here fails a test instead of a player.
+ */
+export const FUN_PROGRESS_SUBJECT_ID = {
+  economics: 1,
+  business: 2,
 };
 
 export const ECON_TITLES = [

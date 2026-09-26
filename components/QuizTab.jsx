@@ -6,6 +6,7 @@ import { Quiz as QuizIcon, CardClub } from './Icons';
 import Link from 'next/link';
 import { PREVIEW_LIMITS } from '@/lib/preview-limits';
 import { subjectFrom } from '@/lib/ial-commands';
+import { blackjackHref } from '@/lib/fun-pool';
 import { templatesForSection, quantItem } from '@/lib/quant-pool';
 import CalculationItem from './quant/CalculationItem';
 import ReportProblem from './feedback/ReportProblem';
@@ -273,7 +274,7 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
         <div className="quiz-break-prompt">
           <div className="quiz-break-emoji">&#127881;</div>
           <div className="quiz-break-text">Nice work! Want a break?</div>
-          <Link href="/fun" className="quiz-break-cta">
+          <Link href={blackjackHref(unitCode)} className="quiz-break-cta">
             <CardClub size={16} />
             Play Blackjack
           </Link>

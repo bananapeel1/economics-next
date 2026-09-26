@@ -10,21 +10,24 @@ import LevelUpCelebration from './LevelUpCelebration';
 import PaywallOverlay from '../PaywallOverlay';
 import useBlackjack from './useBlackjack';
 import useFunProgress from './useFunProgress';
+import { FUN_PROGRESS_SUBJECT_ID } from './constants';
 import './fun.css';
 
 const STATES = {
   SUBJECT_SELECT: 'subject_select',
   LOADING: 'loading',
+  LOAD_FAILED: 'load_failed',
   BLACKJACK: 'blackjack',
   QUIZ: 'quiz',
   LEVEL_UP: 'level_up',
   ROUND_RESULT: 'round_result',
 };
 
-export default function FunPage({ previewMode = false }) {
+export default function FunPage({ previewMode = false, unitTitles = {}, initialSubject = null, initialUnit = null }) {
   const { user } = useAuth();
   const [gameState, setGameState] = useState(STATES.SUBJECT_SELECT);
   const [subject, setSubject] = useState(null);
+  const [units, setUnits] = useState([]);
   const [subjectId, setSubjectId] = useState(null);
   const [questionPool, setQuestionPool] = useState([]);
   const [usedIndices, setUsedIndices] = useState(new Set());
@@ -75,25 +78,30 @@ export default function FunPage({ previewMode = false }) {
     return [...retryPicks, ...freshPicks].sort(() => Math.random() - 0.5);
   }, [questionPool, usedIndices, retryPool]);
 
-  async function handleSubjectSelect(subj) {
+  async function handleSubjectSelect(subj, chosenUnits) {
     setSubject(subj);
+    setUnits(chosenUnits);
     setGameState(STATES.LOADING);
 
-    // Get subject ID
+    let pool = [];
     try {
-      const r = await fetch(`/api/fun/questions?subject=${subj}`);
-      const data = await r.json();
-      if (data?.questions) {
-        // F074: the Fun quiz draws the same bank, so it carried the same 64% bias.
-        setQuestionPool(shuffleAllOptions(data.questions));
-      }
+      const r = await fetch(`/api/fun/questions?subject=${subj}&units=${chosenUnits.join(',')}`);
+      const data = r.ok ? await r.json() : null;
+      // F074: the Fun quiz draws the same bank, so it carried the same 64% bias.
+      if (Array.isArray(data?.questions)) pool = shuffleAllOptions(data.questions);
     } catch {}
 
-    // Lookup subject ID for progress
-    // Economics = 1, Business = 2 based on sort_order in seed
-    // We'll use a simple lookup
-    const id = subj === 'economics' ? 1 : 2;
-    setSubjectId(id);
+    /* No questions means no game: a lost hand would open a five-question quiz holding none, and
+       QuizChallenge has nothing to render. Say so instead of dealing. */
+    if (pool.length === 0) {
+      setGameState(STATES.LOAD_FAILED);
+      return;
+    }
+    setQuestionPool(pool);
+
+    // Progress is one ladder per subject whichever units are in play. Read the note on
+    // FUN_PROGRESS_SUBJECT_ID before changing how it is keyed: Business is not subjects.id.
+    setSubjectId(FUN_PROGRESS_SUBJECT_ID[subj]);
 
     // Start first hand after a brief moment
     setTimeout(() => {
@@ -173,8 +181,8 @@ export default function FunPage({ previewMode = false }) {
     setGameState(STATES.BLACKJACK);
   }
 
+  /* Back to the picker. `subject` and `units` are kept so it reopens on the game just played. */
   function handleChangeSubject() {
-    setSubject(null);
     setSubjectId(null);
     setQuestionPool([]);
     setUsedIndices(new Set());
@@ -183,7 +191,23 @@ export default function FunPage({ previewMode = false }) {
   }
 
   if (gameState === STATES.SUBJECT_SELECT) {
-    return <SubjectSelect onSelect={handleSubjectSelect} />;
+    return (
+      <SubjectSelect
+        onSelect={handleSubjectSelect}
+        unitTitles={unitTitles}
+        initialSubject={subject ?? initialSubject}
+        initialUnits={subject ? units : (initialUnit ? [initialUnit] : null)}
+      />
+    );
+  }
+
+  if (gameState === STATES.LOAD_FAILED) {
+    return (
+      <div className="fun-loading">
+        <p>We couldn&rsquo;t load the questions for that game. Check your connection and try again.</p>
+        <button className="fun-btn fun-btn-hit" onClick={handleChangeSubject}>Back</button>
+      </div>
+    );
   }
 
   if (gameState === STATES.LOADING || progressLoading) {
@@ -255,7 +279,7 @@ export default function FunPage({ previewMode = false }) {
                   Next Round
                 </button>
                 <button className="fun-btn fun-btn-stand" onClick={handleChangeSubject}>
-                  Change Subject
+                  Change Units
                 </button>
               </div>
             )}
