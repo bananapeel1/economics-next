@@ -167,6 +167,11 @@
 .lab-dr-title { display: block; font-weight: 700; margin-bottom: 4px; }
 .lab-dr-sub { display: block; font-size: 13px; color: var(--lab-muted); }
 
+/* Packet 12.85, E071: the data-response card and the gradient call-to-action are one quiet line each. */
+.lab-quiet-link { margin: 20px 0 0; font-size: 15px; }
+.lab-quiet-link a { color: var(--lab-text); text-decoration: underline; text-underline-offset: 3px; }
+.lab-quiet-link a:hover { color: var(--accent-green-light); }
+
 .lab-footer { font-size: 12px; color: var(--lab-muted); }
 .lab-footer p { margin: 0; }
 

@@ -1,0 +1,17 @@
+A control (unmutated)              findings 0 | R14 0 | 
+B1 levels item with criteria       findings 1 | R14 1 | mf-extract-evaluate-soft-drinks-excise-20: a 14-mark economics item is marked by levels (KAA + E); it carries a point-list `criteria` (1 points)
+B2 levels removed                  findings 2 | R14 1 | mf-extract-evaluate-soft-drinks-excise-20: a 14-mark economics item needs `levels: { strands: [...] }` naming KAA and E || mf-extract-evaluate-soft-drinks-excise-20: carries `script` but neither `criteria` nor `levels` — a segmented script with no marks against it renders as 
+B3 E strand dropped                findings 1 | R14 1 | mf-extract-evaluate-soft-drinks-excise-20: levels.strands are ["KAA"]; the structure file names ["KAA","E"], each once
+B4 KAA strand twice                findings 1 | R14 1 | mf-extract-evaluate-soft-drinks-excise-20: levels.strands are ["KAA","E","KAA"]; the structure file names ["KAA","E"], each once
+B5 empty indicative                findings 1 | R14 1 | market-failure-government-intervention-20: strand "E" needs a non-empty `indicative` list of non-empty strings
+B6 blank indicative line           findings 1 | R14 1 | market-failure-government-intervention-20: strand "E" needs a non-empty `indicative` list of non-empty strings
+B7 mark outside its level band     findings 1 | R14 1 | mf-extract-evaluate-soft-drinks-excise-20: verdict KAA Level 3 gives 6, outside that level's band 7-8
+B8 level the 14 scheme lacks       findings 1 | R14 1 | mf-extract-evaluate-soft-drinks-excise-20: verdict KAA: level 4, mark 9 — needs an integer mark and a level the scheme has (1, 2, 3)
+B9 verdict missing a strand        findings 1 | R14 1 | mf-extract-evaluate-soft-drinks-excise-20: verdict strands are ["KAA"]; the scheme's are ["KAA","E"], each once
+B10 non-integer mark               findings 1 | R14 1 | mf-extract-evaluate-soft-drinks-excise-20: verdict KAA: level 3, mark 7.5 — needs an integer mark and a level the scheme has (1, 2, 3)
+B11 no verdict                     findings 1 | R14 1 | mf-extract-evaluate-soft-drinks-excise-20: needs a `verdict`: one { strand, level, mark } per strand
+B12 segment strand not in scheme   findings 1 | R14 1 | market-failure-government-intervention-20: segment p1a carries strand "AO1"; the margin needs one of KAA, E
+B13 14-mark paper item, no marking findings 3 | R14 2 | mf-extract-evaluate-soft-drinks-excise-20: a 14-mark economics item needs `levels: { strands: [...] }` naming KAA and E || mf-extract-evaluate-soft-drinks-excise-20: carries `script` but neither `criteria` nor `levels` — a segmented script with no marks against it renders as  || mf-extract-evaluate-soft-drinks-excise-20: needs a `verdict`: one { strand, level, mark } per strand
+B14 levels on an 8-mark item       findings 1 | R14 1 | negative-externality-tax-8: carries `levels`, but ial-paper-structure.json has no levels scheme for economics at 8 marks
+B15 verdict sums above tariff      findings 1 | R14 1 | market-failure-government-intervention-20: verdict marks sum to 21, more than the 20-mark tariff
+C control again (restored)         findings 0 | R14 0 | 

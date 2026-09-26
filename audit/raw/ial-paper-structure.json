@@ -21,6 +21,36 @@
       { "id": "C", "kind": "essay", "marksEach": 20, "offered": 3, "answer": 2 }
     ]}
   },
+  "economics_levels": {
+    "_about": "How Economics 14- and 20-mark parts are marked: by levels in two strands, knowledge, application and analysis (KAA) and evaluation (E). The band edges are Pearson's, read from the WEC11 sample mark scheme on 26 Sep 2026 (the same bands appear in WEC12-14's). The descriptors are OUR OWN short summaries, written for students; Pearson's wording is not reproduced. The practice shell prints these bands, and validator R14 checks every levels-marked item's verdict against them; no item repeats them.",
+    "source": "WEC11 sample mark scheme in the SAMs above: Question 12(e), Discuss, 14 marks, printed page 39; Questions 13 and 14, Evaluate, 20 marks, printed pages 41-43.",
+    "note": "The SAMs print the 20-mark Evaluation Level 3 as 5-8 for WEC11 Q13 and for WEC13/WEC14, which overlaps Level 2 (4-6); WEC11 Q14 prints 7-8, the only reading consistent with Level 2 ending at 6, and it is the band used here.",
+    "14": { "strands": [
+      { "strand": "KAA", "name": "Knowledge, application and analysis", "marks": 8, "levels": [
+        { "level": 1, "lo": 1, "hi": 3, "descriptor": "Thin or inaccurate knowledge that is not tied to the question; the answer describes rather than reasons." },
+        { "level": 2, "lo": 4, "hi": 6, "descriptor": "Sound knowledge applied to parts of the question, with some use of the evidence; reasoning starts but steps are missing." },
+        { "level": 3, "lo": 7, "hi": 8, "descriptor": "Accurate, precise knowledge used throughout in the question's own setting; reasoning runs in several linked steps to a clear effect." }
+      ]},
+      { "strand": "E", "name": "Evaluation", "marks": 6, "levels": [
+        { "level": 1, "lo": 1, "hi": 2, "descriptor": "A general evaluative remark, not tied to the evidence and not reasoned." },
+        { "level": 2, "lo": 3, "hi": 4, "descriptor": "Weighs another approach or view, with some use of the evidence and a partly reasoned argument." },
+        { "level": 3, "lo": 5, "hi": 6, "descriptor": "Weighs opposing views or questions the evidence itself, using the setting, with every point properly reasoned." }
+      ]}
+    ]},
+    "20": { "strands": [
+      { "strand": "KAA", "name": "Knowledge, application and analysis", "marks": 12, "levels": [
+        { "level": 1, "lo": 1, "hi": 3, "descriptor": "Thin or inaccurate knowledge that is not tied to the question; the answer describes rather than reasons." },
+        { "level": 2, "lo": 4, "hi": 6, "descriptor": "Some relevant knowledge, loosely applied; a narrow answer whose reasoning stops after a step or two." },
+        { "level": 3, "lo": 7, "hi": 9, "descriptor": "Accurate knowledge applied to parts of the question with some evidence; clear reasoning, though not every step is developed." },
+        { "level": 4, "lo": 10, "hi": 12, "descriptor": "Accurate, precise knowledge applied throughout with well-chosen examples; reasoning runs in several linked steps to a clear effect." }
+      ]},
+      { "strand": "E", "name": "Evaluation", "marks": 8, "levels": [
+        { "level": 1, "lo": 1, "hi": 3, "descriptor": "A general evaluative remark, not tied to the evidence and not reasoned." },
+        { "level": 2, "lo": 4, "hi": 6, "descriptor": "Weighs another approach or view, with some use of the evidence and a partly reasoned argument." },
+        { "level": 3, "lo": 7, "hi": 8, "descriptor": "Weighs opposing views or questions the evidence, with each point reasoned, and reaches a supported judgement." }
+      ]}
+    ]}
+  },
   "business": {
     "units_1_2": { "papers": ["WBS11", "WBS12"], "minutes": 120, "marks": 80, "sections": [
       { "id": "A", "kind": "source_set", "tariffs": [2, 4, 6, 8, 10], "total": 30,

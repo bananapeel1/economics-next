@@ -1,0 +1,135 @@
+=== E065 ===
+{
+  "id": "E065",
+  "kind": "feature",
+  "title": "One header with the Revvy Learn logo linking back to the app at the topic, the paper's outline as a left rail with one total, the question paper and source booklet as two sheets; phone outline button and paper/booklet tabs",
+  "file": "components/PracticeShell.jsx",
+  "packet": 12.85,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E066 ===
+{
+  "id": "E066",
+  "kind": "feature",
+  "title": "The paper's conventions: bold part numbers, marks in brackets, Pearson's instructions and totals, ruled answer space sized to the tariff, a marked answer that grows with its text; DM Sans at three sizes, no monospace, no uppercase labels, student-facing copy",
+  "file": "components/PracticeShell.jsx",
+  "packet": 12.85,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E067 ===
+{
+  "id": "E067",
+  "kind": "feature",
+  "title": "Marking up to 8 marks in Pearson's format (objective headings with marking points, one running mark), 8-mark Examine carrying 2 Evaluation marks, the model answer as an examiner's exemplar with margin objectives, verdict line and comment",
+  "file": "components/PracticeShell.jsx",
+  "packet": 12.85,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E068 ===
+{
+  "id": "E068",
+  "kind": "feature",
+  "title": "14 and 20-mark Economics items marked by levels (KAA and Evaluation bands from the WEC11 sample mark scheme, in the structure file), validator rule R14 proved by A/B, 1.3.5's Discuss 14 and two essays re-expressed, verdicts read by Verify A as an examiner",
+  "file": "audit/scripts/validate-model-answers.mjs",
+  "packet": 12.85,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E069 ===
+{
+  "id": "E069",
+  "kind": "feature",
+  "title": "Section D essay choice counting only the chosen essay, Draw questions sketched on paper then marked with the model diagram, an honest Section A row linking the topic quiz",
+  "file": "components/PracticeShell.jsx",
+  "packet": 12.85,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E070 ===
+{
+  "id": "E070",
+  "kind": "feature",
+  "title": "Paper by default and dark only by the student's choice on shell pages (rl-night lifted there), colour from globals.css tokens only with zero colour literals, contrast measured on rendered pixels in both themes",
+  "file": "components/practice-shell.css",
+  "packet": 12.85,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E071 ===
+{
+  "id": "E071",
+  "kind": "feature",
+  "title": "On all 32 model-answer pages: coverage panel, spec ids, method notes and counts line removed, the gradient call-to-action replaced by one quiet line, the data-response card removed on shell pages; JSON-LD, title and canonical unchanged",
+  "file": "components/SectionModelAnswersPage.jsx",
+  "packet": 12.85,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E072 ===
+{
+  "id": "E072",
+  "kind": "feature",
+  "title": "No leak before marking, everything in the server HTML with a noscript fallback, drafts kept, text-fit sweep with the bottom-cut check at 0 from 320 to 1920px in every state after first failing, other 31 pages changed only by E071",
+  "file": "audit/scripts/text-fit-sweep.js",
+  "packet": 12.85,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E073 ===
+{
+  "id": "E073",
+  "kind": "feature",
+  "title": "public/logo.svg reduced from 1.7 MB (two 2000px PNGs in base64) to under 30 KB, identical at the 18-30px sizes it is drawn, so every existing reference loads the light file",
+  "file": "public/logo.svg",
+  "packet": 12.85,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+

@@ -1,0 +1,25 @@
+PACKET 12.85 GATE RESULTS — 2026-09-26
+
+=== MANDATORY GATES (must be 0) ===
+npm test                                        EXIT 0
+npm run build                                   EXIT 0
+npm run validate                                EXIT 0
+npm run exposure                                EXIT 0
+npm run recalls                                 EXIT 0
+node audit/scripts/check-staged-drafts.mjs      EXIT 0
+
+=== ADVISORY GATES (informational only) ===
+npm run contrast                                EXIT 0
+npm run spec-items                              EXIT 0
+npm run tariff-census                           EXIT 0
+npm run pin-check                               EXIT 0
+
+=== VALIDATION SUMMARY ===
+- validate: 105 new DEBT findings (within baseline, all recorded)
+- model-answers: 13 items with marked-script shape, 0 finding errors
+- exposure: 0 starved chapters, 256 chapters served (draft)
+- recalls: 306 of 1077 recoverable by scrolling (within baseline)
+- staged-drafts: market-failure matches, 0 drift
+
+=== CONCLUSION ===
+All mandatory gates pass. Gate ready for verifier.

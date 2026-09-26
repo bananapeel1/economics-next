@@ -14,7 +14,8 @@
  *   2. Every item states its command word, its tariff, its assessment objectives and a working-time
  *      estimate. The estimate comes from one constant per paper (`lib/exam-timing.js`), read off the
  *      specification's own rubric — not a per-question guess.
- *   3. The page states its own spec coverage as a number, including when that number is zero.
+ *   3. (Packet 12.3-12.4 printed the page's spec coverage here; packet 12.85, E071, removed it from every
+ *      page as internal machinery. `npm run spec-coverage` still reports it.)
  *   4. The highest-tariff item carries "why this loses marks": the model answer with its closing
  *      material removed, annotated against the bands that removal puts out of reach. Constructed
  *      from the item, never invented (`lib/mid-band-answer.js`).
@@ -25,7 +26,8 @@
  * block is gone rather than restaged, and `audit/runs/packet-12.3/built.md` records what that
  * cost. No file under `app/` or `components/` opens that dump any more, which is E017's own test.
  *
- * The FAQ schema, the back link and the "now try one yourself" CTA are packet 12.1's and are kept.
+ * The FAQ schema and the back link are packet 12.1's and are kept; its "now try one yourself" CTA is one
+ * quiet line since packet 12.85 (E071).
  */
 
 import Link from 'next/link';
@@ -33,14 +35,14 @@ import SiteHeader from '@/components/SiteHeader';
 import { SECTION_MODEL_ANSWERS_FAQ } from '@/data/modelAnswersData';
 import { modelAnswersHeading, modelAnswersPath } from '@/data/modelAnswerPages';
 import { aoListFor } from '@/lib/exam-item';
-import { timeLabel, paperLabel } from '@/lib/exam-timing';
-import { midBandAttempt, highestTariffItem, pagePanelItem } from '@/lib/mid-band-answer';
+import { timeLabel } from '@/lib/exam-timing';
+import { midBandAttempt, pagePanelItem } from '@/lib/mid-band-answer';
 import MarkedScriptAttempt from '@/components/MarkedScriptAttempt';
 import PracticeShell from '@/components/PracticeShell';
 import { stimulusFor, figuresIn, withFigures, linkFigures, parseBlocks } from '@/lib/stimulus';
 import {
-  hasShell, isShellItem, questionSets, stemParts, cardLabel, minutesFor, focusRowsFor,
-  hasPaper, paperSets, sectionARow,
+  hasShell, isShellItem, isPointsItem, questionSets, stemParts, focusRowsFor,
+  hasPaper, paperSets, sectionARow, objectiveOf, objectiveGroups, pointsVerdict, levelsScheme, levelsVerdict,
 } from '@/lib/practice-shell';
 import './model-answers-layout.css';
 
@@ -301,123 +303,75 @@ function StimulusBlock({ stimulus }) {
   );
 }
 
-/** E014. The section's real coverage, and the requirements no question on this page examines. */
-function CoveragePanel({ coverage, page }) {
-  if (!coverage.available) {
-    return (
-      <section className="lab-coverage lab-coverage-unknown">
-        <p>
-          Spec coverage is not computable here, so no number is shown rather than a guessed one.
-        </p>
-      </section>
-    );
-  }
+/* ── The practice shell: the exam paper and the examiner's marked script (packet 12.85) ───────────
 
-  /* E031, packet 12.4. A page with no questions used to print "This page examines 0 of 24
-     requirements in 1.3.2 The Market — 0.0%" and then list all 24, with no caveat: the floor line
-     below is gated on `untagged > 0`, and a page with no items has nothing untagged. A percentage
-     is a claim about how well the questions cover the specification, and with no questions there is
-     no claim to make — 0.0% reads as "this page covers nothing" when the truth is "this page has
-     nothing yet". The empty state below says that in words, so the panel says it too and shows no
-     number. The unexamined list is dropped with it: enumerating every requirement a page with no
-     questions fails to examine is not information, it is an accusation. */
-  if (coverage.questions === 0) {
-    return (
-      <section className="lab-coverage" aria-labelledby="lab-coverage-head">
-        <h2 id="lab-coverage-head" className="lab-coverage-head">
-          No questions on this page yet, so there is no coverage figure for {page.sectionNumber}{' '}
-          {page.topic}
-        </h2>
-        <p className="lab-coverage-sub">
-          {`A percentage here would say how much of the specification this page's questions examine. With no questions, a figure of 0.0% would read as a judgement on the topic rather than on the page, so none is shown.`}
-        </p>
-      </section>
-    );
-  }
-
-  const { examined, leaves, pct, examinedLeaves, unexaminedLeaves } = coverage;
-  return (
-    <section className="lab-coverage" aria-labelledby="lab-coverage-head">
-      <h2 id="lab-coverage-head" className="lab-coverage-head">
-        This page examines {examined} of {leaves} requirements in {page.sectionNumber} {page.topic}
-        <span className="lab-coverage-pct">{pct.toFixed(1)}%</span>
-      </h2>
-      <p className="lab-coverage-sub">
-        Counted over the {coverage.questions} written question{coverage.questions === 1 ? '' : 's'} on
-        this page and nothing else — not the whole question bank, and not the revision notes, which
-        are measured separately and are much better covered.
-        {coverage.untagged > 0 && (
-          <> {coverage.untagged} of them carry no spec tag yet, so this number is a floor, not an estimate.</>
-        )}
-      </p>
-
-      {examinedLeaves.length > 0 && (
-        <ul className="lab-leaf-list">
-          {examinedLeaves.map((l) => (
-            <li key={l.id}>
-              <code>{l.id}</code> {l.wording}
-            </li>
-          ))}
-        </ul>
-      )}
-
-      {unexaminedLeaves.length > 0 && (
-        <details className="lab-details">
-          <summary>
-            {unexaminedLeaves.length} requirement{unexaminedLeaves.length === 1 ? '' : 's'} in{' '}
-            {page.sectionNumber} that no question on this page examines
-          </summary>
-          <ul className="lab-leaf-list">
-            {unexaminedLeaves.map((l) => (
-              <li key={l.id}>
-                <code>{l.id}</code> {l.wording}
-              </li>
-            ))}
-          </ul>
-        </details>
-      )}
-    </section>
-  );
-}
-
-/* ── Packet 12.75: the practice shell ───────────────────────────────────────────────────────────
-
-   A page renders the shell IF AND ONLY IF one of its written items carries `criteria` (E045 scope).
-   After packet 12.7 that is Economics 1.3.5 alone; every other page takes the untouched path at the
-   bottom of this file and renders exactly as it did at HEAD (E051).
+   A page renders the shell IF AND ONLY IF one of its written items carries a marked script, by points
+   (`criteria`) or by levels (`levels`). After packet 12.8 that is Economics 1.3.5 alone; every other
+   page takes the untouched path at the bottom of this file, changed only by E071's removals.
 
    Everything the shell prints about content is prepared here, on the server, from the item itself:
-   the stem cut around `keyTerm` (E052), minutes from `item.minutes` or `minutesForMarks()` (E046),
-   AO codes from `item.ao` and each criterion's `band`, figures derived from the extract's own text
-   and linked into the model answer by exact occurrence (E047), and the mid-band panel restricted to
-   level-banded mark schemes (E053). The client component decides only what is visible. */
+   the stem cut around `keyTerm` (12.75, E052), the paper's sections, numbers and instructions from
+   `audit/raw/ial-paper-structure.json` (12.8, E061), figures derived from the extract's own text and
+   linked into the model answer by exact occurrence (12.75, E047), the objective headings and the
+   exemplar's margin letters and verdict line from the criteria (E067), and the level bands from the
+   structure file (E068). The client component decides only what is visible. */
 
-function shellItem(item, page, figures, midBand) {
+// Ruled lines of answer space by tariff (E066): what a WEC11 answer booklet gives, rounded to the paper.
+const ANSWER_LINES = { 2: 4, 4: 6, 6: 9, 8: 12, 14: 18, 20: 24 };
+
+function shellItem(item, page, figures, numbering) {
   const texts = figures.map((f) => f.text);
+  const points = isPointsItem(item);
+  const criteria = points
+    ? item.criteria.map((c) => ({
+        id: c.id, band: c.band, text: c.text, marks: Number(c.marks) || 0, seg: c.seg,
+        segRole: c.segRole === 'missed' ? 'missed' : 'earned',
+      }))
+    : [];
+  // The margin beside each paragraph of the exemplar: the objectives its sentences earn (points), or
+  // the strands they count towards (levels). A paragraph whose only criteria are ones the model
+  // answer MISSES shows what is missing there instead.
+  const earnedBySeg = new Map();
+  const missedBySeg = new Map();
+  for (const c of criteria) {
+    const m = c.segRole === 'missed' ? missedBySeg : earnedBySeg;
+    if (!m.has(c.seg)) m.set(c.seg, []);
+    m.get(c.seg).push(objectiveOf(c.band).abbr);
+  }
+  const uniq = (xs) => [...new Set(xs)];
   return {
     id: item.id,
+    n: numbering.n,
+    part: numbering.part,
+    label: numbering.label,
+    railLabel: numbering.railLabel,
+    short: numbering.short,
     commandWord: item.commandWord,
     marks: Number(item.marks) || 0,
     question: item.question,
     stem: stemParts(item.question, item.keyTerm),
-    cardLabel: cardLabel(item),
-    minutes: minutesFor(item, page.subject, page.unit),
-    ao: Array.isArray(item.ao) ? item.ao.map(String) : [],
-    likelyScore: item.likelyScore || '',
-    criteria: item.criteria.map((c) => ({
-      id: c.id, band: c.band, text: c.text, marks: Number(c.marks) || 0, seg: c.seg,
-      segRole: c.segRole === 'missed' ? 'missed' : 'earned',
-    })),
-    script: (item.script || []).map((p) => ({
-      id: p.id,
-      label: p.label || '',
-      aos: Array.isArray(p.aos) ? p.aos : [],
-      segments: (p.segments || []).map((sg) => ({
-        id: sg.id,
-        html: texts.length ? linkFigures(sg.html, texts) : sg.html,
-        note: sg.note || '',
-      })),
-    })),
+    lines: ANSWER_LINES[Number(item.marks)] || 8,
+    marking: points ? 'points' : 'levels',
+    groups: points ? objectiveGroups(criteria) : [],
+    scheme: points ? null : levelsScheme(item),
+    verdict: points ? pointsVerdict(item) : levelsVerdict(item),
+    levelsVerdict: points ? null : (item.verdict || []).map((v) => ({ strand: v.strand, level: v.level, mark: v.mark })),
+    script: (item.script || []).map((p) => {
+      const segs = p.segments || [];
+      const earned = points ? uniq(segs.flatMap((sg) => earnedBySeg.get(sg.id) || [])) : uniq(segs.map((sg) => sg.strand).filter(Boolean));
+      const missed = points ? uniq(segs.flatMap((sg) => missedBySeg.get(sg.id) || [])) : [];
+      return {
+        id: p.id,
+        margin: earned,
+        missed: missed.filter((x) => !earned.includes(x)),
+        segments: segs.map((sg) => ({
+          id: sg.id,
+          html: texts.length ? linkFigures(sg.html, texts) : sg.html,
+          note: sg.note || '',
+          strand: sg.strand || null,
+        })),
+      };
+    }),
     examinerHtml: item.examinerCommentary || '',
     // Packet 12.8, E061. A short answer's or an essay's own context, as blocks (a sentence or a small
     // table), shown above the stem in every mode. A Draw item is sketched on paper and self-marked;
@@ -426,71 +380,94 @@ function shellItem(item, page, figures, midBand) {
       ? parseBlocks(item.paper.context)
       : null,
     draw: item.commandWord === 'Draw',
-    part: item.paper && item.paper.kind === 'data_question' ? String(item.paper.part || '') || null : null,
     diagram: item.diagram && item.diagram.src
       ? { src: String(item.diagram.src), alt: String(item.diagram.alt || ''), width: Number(item.diagram.width) || null, height: Number(item.diagram.height) || null }
       : null,
-    markScheme: (item.markScheme || []).map((r) => ({ range: String(r.range ?? ''), desc: String(r.desc ?? '') })),
     focusRows: figures.length ? focusRowsFor(item, figures) : [],
-    midBand: midBand
-      ? {
-          basis: midBand.basis,
-          kept: midBand.kept.map((k) => ({ index: k.index, label: k.label, html: k.html })),
-          outOfReach: midBand.outOfReach,
-          ceiling: midBand.ceiling,
-        }
-      : null,
   };
 }
 
-function shellFor(page, written, heading) {
+function shellFor(page, written, heading, subjectLabel) {
   const items = written.filter(isShellItem);
-  // E053: only a level-banded scheme can say where a truncated attempt "tops out". On 1.3.5 no item
-  // qualifies (both 20s are AO-split; Examine 8 is suppressed by E028), so no panel renders there.
-  const midBandItem = highestTariffItem(items, { levelsOnly: true });
-  const midBand = midBandItem ? midBandAttempt(midBandItem) : null;
   // Packet 12.8, E061: a page whose items carry `paper` is laid out as its paper's sections; every
-  // other shell page keeps 12.75's grouping by extract, exactly as before.
+  // other shell page keeps 12.75's grouping by extract.
   const paperShaped = hasPaper(items);
   const grouped = paperShaped
     ? paperSets(items, { subject: page.subject, unit: page.unit })
     : questionSets(items);
+  // Question numbers run through the paper's written sections in order, as the v8 design numbers
+  // them (Section B 1-5, the data question 6 (a)-(e), the essays 7 and 8). "More practice" is not
+  // part of the paper and is not numbered.
+  let q = 0;
   const sets = grouped.map((set) => {
     const stim = set.stimulus ? stimulusFor(set.stimulus) : null;
     const figures = stim ? figuresIn(stim.blocks) : [];
+    const inPaper = paperShaped && set.id !== 'more';
+    let dataNo = null;
+    const shaped = set.items.map((it, i) => {
+      let numbering;
+      // `label` is what the paper prints beside the stem ("6 (a)", then "(b)"); `railLabel` the outline's
+      // shorter form; `short` names the question on its own ("6(c)", "3"), for the pager and phone bar.
+      if (!inPaper) numbering = { n: '', part: null, label: '', railLabel: '', short: it.commandWord };
+      else if (set.paperKind === 'data_question') {
+        if (dataNo === null) { q += 1; dataNo = String(q); }
+        const part = `(${String(it.paper.part || '')})`;
+        numbering = { n: i === 0 ? dataNo : '', part, label: i === 0 ? `${dataNo} ${part}` : part, railLabel: i === 0 ? `${dataNo}${part}` : part, short: `${dataNo}${part}` };
+      } else {
+        q += 1;
+        numbering = { n: String(q), part: null, label: String(q), railLabel: String(q), short: String(q) };
+      }
+      return shellItem(it, page, figures, numbering);
+    });
+    const total = Number.isFinite(set.total) ? set.total : shaped.reduce((n, it) => n + it.marks, 0);
     return {
       id: set.id,
       kind: stim ? 'extract' : 'standalone',
+      paperKind: set.paperKind || null,
+      inPaper,
       label: set.label,
-      // The extract's own name ("Extract A") for the pane, the tab and the "Uses …" chip. Under the
-      // 12.75 grouping it is the set's label; under the paper's sections the set is "Section C".
+      what: set.what || '',
+      total,
+      instructions: set.instructions || [],
+      choice: set.choice || null,
+      closing: set.paperKind === 'data_question' && dataNo ? `(Total for Question ${dataNo} = ${total} marks)` : '',
+      // The extract's own name ("Extract A") for the booklet and the phone tab.
       extractLabel: stim ? (paperShaped ? 'Extract A' : set.label) : null,
-      extract: stim ? { href: stim.href, title: stim.title, blocks: withFigures(stim.blocks) } : null,
-      paper: paperShaped
-        ? { kind: set.paperKind, section: set.section, heading: set.heading, note: set.note, total: set.total, choice: set.choice }
-        : null,
-      items: set.items.map((it) => shellItem(it, page, figures, midBandItem && it.id === midBandItem.id ? midBand : null)),
+      extract: stim ? { title: stim.title, blocks: withFigures(stim.blocks) } : null,
+      items: shaped,
     };
   });
+  const paperTotal = sets.filter((s) => s.inPaper).reduce((n, s) => n + s.total, 0);
+  const topic = heading.startsWith(page.topic) ? page.topic : heading;
+  const appHref = page.sectionId ? `/?section=${page.sectionId}` : '/';
   return {
     pageKey: modelAnswersPath(page),
-    title: heading,
-    backLink: page.backLink,
+    heading,
+    headingLead: topic,
+    headingRest: heading.slice(topic.length),
+    crumbs: [
+      { label: subjectLabel, href: `/${page.subject}` },
+      { label: `Unit ${page.unit}`, href: page.backLink.href },
+      { label: page.sectionNumber, href: null },
+    ],
+    appHref,
+    appLine: `Open ${page.topic} in the Revvy Learn app`,
     sectionA: paperShaped
       ? sectionARow({ subject: page.subject, unit: page.unit, sectionId: page.sectionId, topic: page.topic })
       : null,
+    paperTotal,
     sets,
   };
 }
 
-function ShellPage({ page, written, coverage, dataResponse, heading, subjectLabel, totalMarks, faqSchema, quizSchema }) {
-  const shell = shellFor(page, written, heading);
-  // Items without `criteria` on a shell page keep the old rendering, below the shell. None today.
+function ShellPage({ page, written, heading, subjectLabel, faqSchema, quizSchema }) {
+  const shell = shellFor(page, written, heading, subjectLabel);
+  // Items without a marked script on a shell page keep the old rendering, below the shell. None today.
   const rest = written.filter((a) => !isShellItem(a));
+  // Packet 12.85, E070: no `rl-night` and no `resource-page` (its dark ground and padding) here. The
+  // shell is paper by default, themes itself and fills the page.
   return (
-    <div className="resource-page rl-night ps-page">
-      <SiteHeader crumb={`${subjectLabel} / Model answers`} />
-
+    <div className="ps-page">
       {faqSchema && (
         <script
           type="application/ld+json"
@@ -504,28 +481,9 @@ function ShellPage({ page, written, coverage, dataResponse, heading, subjectLabe
         />
       )}
 
-      <PracticeShell shell={shell} />
-
-      {/* Everything that sat around the question list at HEAD, below the shell and in this order:
-          the page's own description and counts, CoveragePanel, the data-response link, the CTA. */}
-      <div className="ps-after" id="ps-after">
-        <div className="lab-page">
-          <header className="lab-header">
-            <p className="resource-page-subtitle" dangerouslySetInnerHTML={{ __html: page.subtitle }} />
-            <p className="lab-crumbs">
-              {subjectLabel} &middot; {page.unitCode} &middot; Unit {page.unit} &middot; {page.sectionNumber}
-            </p>
-            <p className="lab-counts">
-              {`${written.length} written question${written.length === 1 ? '' : 's'} · ${totalMarks} marks`}
-            </p>
-            <p className="lab-note">
-              {`Time estimates come from one constant per paper — ${subjectLabel} Unit ${page.unit} is ${paperLabel(page.subject, page.unit)} — not from a per-question guess.`}
-            </p>
-          </header>
-
-          <CoveragePanel coverage={coverage} page={page} />
-
-          {rest.length > 0 && (
+      <PracticeShell shell={shell}>
+        {rest.length > 0 && (
+          <div className="lab-page">
             <section className="lab-block" aria-labelledby="lab-written">
               <div className="lab-block-head">
                 <h2 id="lab-written">More exam questions</h2>
@@ -542,47 +500,16 @@ function ShellPage({ page, written, coverage, dataResponse, heading, subjectLabe
                 ))}
               </ol>
             </section>
-          )}
-
-          {dataResponse && (
-            <section className="lab-block" aria-labelledby="lab-data-response">
-              <div className="lab-block-head">
-                <h2 id="lab-data-response">Data response</h2>
-              </div>
-              <Link href={dataResponse.href} className="lab-dr-card">
-                <span className="lab-dr-title">{dataResponse.title}</span>
-                <span className="lab-dr-sub">
-                  Stimulus, question ladder and KAA+E model answers on the live page &rarr;
-                </span>
-              </Link>
-            </section>
-          )}
-        </div>
-
-        <div className="seo-cta" style={{ marginTop: 32 }}>
-          <h2>Now try one yourself</h2>
-          <p>
-            Practise {page.topic} in the app: exam-style questions filtered by mark
-            value, each with model answer guidance you can open when you are ready.
-            Free, and it opens exactly where you are. Getting your own written
-            answers AI-marked is a Pro feature.
-          </p>
-          <Link
-            href={page.sectionId ? `/?section=${page.sectionId}` : modelAnswersPath(page)}
-            className="seo-cta-button"
-          >
-            Practise {page.topic} &rarr;
-          </Link>
-        </div>
-      </div>
+          </div>
+        )}
+      </PracticeShell>
     </div>
   );
 }
 
-export default function SectionModelAnswersPage({ page, written = [], coverage, dataResponse, stimulus = null }) {
+export default function SectionModelAnswersPage({ page, written = [], dataResponse, stimulus = null }) {
   const subjectLabel = SUBJECT_LABEL[page.subject] || page.subject;
   const heading = modelAnswersHeading(page, { hasAnswers: written.length > 0 });
-  const totalMarks = written.reduce((n, a) => n + (Number(a.marks) || 0), 0);
   // E053, every page (founder, 26 Sep 2026): no panel unless the top item's scheme is level-banded.
   const midBandItem = pagePanelItem(written);
   const midBand = midBandItem ? midBandAttempt(midBandItem) : null;
@@ -626,11 +553,8 @@ export default function SectionModelAnswersPage({ page, written = [], coverage, 
       <ShellPage
         page={page}
         written={written}
-        coverage={coverage}
-        dataResponse={dataResponse}
         heading={heading}
         subjectLabel={subjectLabel}
-        totalMarks={totalMarks}
         faqSchema={faqSchema}
         quizSchema={quizSchema}
       />
@@ -663,22 +587,14 @@ export default function SectionModelAnswersPage({ page, written = [], coverage, 
       </div>
 
       <div className="lab-page">
+        {/* Packet 12.85, E071: the "N written questions · M marks" line, the time-estimate method
+            note and the coverage panel (spec ids, "This page examines…") are internal machinery and
+            are gone from every page. Coverage stays an internal report: `npm run spec-coverage`. */}
         <header className="lab-header">
           <p className="lab-crumbs">
             {subjectLabel} &middot; {page.unitCode} &middot; Unit {page.unit} &middot; {page.sectionNumber}
           </p>
-          {/* One expression per sentence. JSX trims the leading whitespace of a text node that spans
-              more than one line, which is how "32marks" reached the lab page on its first render —
-              the same trap as the empty note below (packet 12.1, fix round B1). */}
-          <p className="lab-counts">
-            {`${written.length} written question${written.length === 1 ? '' : 's'} · ${totalMarks} marks`}
-          </p>
-          <p className="lab-note">
-            {`Time estimates come from one constant per paper — ${subjectLabel} Unit ${page.unit} is ${paperLabel(page.subject, page.unit)} — not from a per-question guess.`}
-          </p>
         </header>
-
-        <CoveragePanel coverage={coverage} page={page} />
 
         <StimulusBlock stimulus={stimulus} />
 
@@ -730,39 +646,19 @@ export default function SectionModelAnswersPage({ page, written = [], coverage, 
           )}
         </section>
 
+        {/* E071: the data-response card becomes one quiet link line. */}
         {dataResponse && (
-          <section className="lab-block" aria-labelledby="lab-data-response">
-            <div className="lab-block-head">
-              <h2 id="lab-data-response">Data response</h2>
-            </div>
-            <Link href={dataResponse.href} className="lab-dr-card">
-              <span className="lab-dr-title">{dataResponse.title}</span>
-              <span className="lab-dr-sub">
-                Stimulus, question ladder and KAA+E model answers on the live page &rarr;
-              </span>
-            </Link>
-          </section>
+          <p className="lab-quiet-link">
+            <Link href={dataResponse.href}>{`Data response: ${dataResponse.title}`}</Link>
+          </p>
         )}
-      </div>
 
-      {/* The old CTA sent the reader to /model-answers — another SEO page, not
-          the app. Someone who has just read worked answers wants to attempt one,
-          so this offers that, on the topic they are already reading, and it
-          keeps the ?section= form so the click is measurable. */}
-      <div className="seo-cta" style={{ marginTop: 32 }}>
-        <h2>Now try one yourself</h2>
-        <p>
-          Practise {page.topic} in the app: exam-style questions filtered by mark
-          value, each with model answer guidance you can open when you are ready.
-          Free, and it opens exactly where you are. Getting your own written
-          answers AI-marked is a Pro feature.
+        {/* E071: the gradient "Now try one yourself" block becomes one quiet line to the topic in the
+            app, keeping the ?section= form so the click is measurable. It names the topic, not the
+            Practice tab: the app has no deep link into a tab (E056). */}
+        <p className="lab-quiet-link">
+          <Link href={page.sectionId ? `/?section=${page.sectionId}` : '/'}>{`Open ${page.topic} in the Revvy Learn app`}</Link>
         </p>
-        <Link
-          href={page.sectionId ? `/?section=${page.sectionId}` : modelAnswersPath(page)}
-          className="seo-cta-button"
-        >
-          Practise {page.topic} &rarr;
-        </Link>
       </div>
     </div>
   );

@@ -44,7 +44,11 @@ before building on it** (`audit/raw/ial-paper-structure.json` cites the PDFs).
 Extend `audit/raw/ial-paper-structure.json` with a `marking` section per subject and tariff: points splits, or
 levels with each strand's bands. For Economics 4 marks, record the default the marker uses (K2·A2, today's) and
 say in the file that the sample mark scheme varies it by question, so a question's own split wins where the
-bank carries one. Descriptors, where included, are in our own words; never copy Pearson's text verbatim. The
+bank carries one. **Every levels tariff carries a short descriptor per level, in our own words**: packet 12.85
+adds Economics 14 and 20 (KAA and E strands) with descriptors; this packet adds **Business 8, 10, 12 and 20** (one
+combined strand) in the same shape, read from the WBS11 and WBS13 sample mark schemes and cited. Never copy
+Pearson's text verbatim. Packet 13.9 (the Learn Mode practice card) reads these Business descriptors and carries
+a cited copy in `lib/practice-card.js` until this lands; say in `built.md` when they exist so it can switch. The
 file stays the single source; `lib/ial-paper.js` exposes it.
 
 ## E075 — `lib/ao-spec.js` reads the table

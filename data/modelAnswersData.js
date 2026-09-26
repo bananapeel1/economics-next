@@ -265,10 +265,10 @@ const BASE_ANSWERS = [
        demonstrates it. `minutes` is `minutesForMarks('economics', 1, 4)` from `lib/exam-timing.js`
        (4 × 105/80 = 5.25 → 5), not a per-question guess. */
     criteria: [
-      { id: 'c1', band: '1–2 marks — definition', text: 'Names the spill-over cost as falling on third parties outside the transaction', marks: 1, seg: 'p1a', segRole: 'earned' },
-      { id: 'c2', band: '1–2 marks — definition', text: 'States that the cost is not reflected in the market price', marks: 1, seg: 'p1b', segRole: 'earned' },
-      { id: 'c3', band: '3–4 marks — developed example', text: 'Gives a specific example and identifies the third-party cost it imposes', marks: 1, seg: 'p2a', segRole: 'earned' },
-      { id: 'c4', band: '3–4 marks — developed example', text: 'Links the external cost to market over-production relative to the socially optimal output', marks: 1, seg: 'p2b', segRole: 'earned' },
+      { id: 'c1', band: 'Knowledge 2', text: 'Names the spill-over cost as falling on third parties outside the transaction', marks: 1, seg: 'p1a', segRole: 'earned' },
+      { id: 'c2', band: 'Knowledge 2', text: 'States that the cost is not reflected in the market price', marks: 1, seg: 'p1b', segRole: 'earned' },
+      { id: 'c3', band: 'Application 2', text: 'Gives a specific example and identifies the third-party cost it imposes', marks: 1, seg: 'p2a', segRole: 'earned' },
+      { id: 'c4', band: 'Application 2', text: 'Links the external cost to market over-production relative to the socially optimal output', marks: 1, seg: 'p2b', segRole: 'earned' },
     ],
     script: [
       {

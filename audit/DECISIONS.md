@@ -39,6 +39,10 @@ Append only. Every entry needs a date and the packet that made it.
   optional through the site's theme, which lifts the `rl-night` pin on this page; (4) **everything below the
   practice area goes**: the coverage panel with spec ids, the method notes, the duplicate data-response card and
   the gradient call-to-action. Coverage remains an internal report (`npm run spec-coverage`).
+  **The approved design is the v8 mockup, and it supersedes v7** (the 2026-09-26 v7 entry below): the founder,
+  on v8, *"yes this is great. just instead of r in the corner show revvy learn logo that will bring user back to
+  app if pressed on"*. The approved file is `audit/specs/practice-redesign-v8-mockup.html` (published with the
+  logo as https://claude.ai/artifact/4nLQVTMEs6VDKCzxeBmEMQ). v7's no-cut-text standard still holds in full.
 
 - **2026-09-26 — marking follows Pearson's sample mark schemes, everywhere, including the live AI marker.**
   `lib/ao-spec.js` ALLOCATION calls its split "Revvy's own… neither specification publishes a per-objective
@@ -98,7 +102,7 @@ Append only. Every entry needs a date and the packet that made it.
 
 
 - **2026-09-26 — the practice page's design is the v7 mockup, and no text on it is ever cut, spilled or
-  shortened.** After seven iterations the founder signed off `audit/specs/packet-12.75-mockup.html`
+  shortened.** *(Design superseded by v8, entry above; the no-cut-text standard stands.)* After seven iterations the founder signed off `audit/specs/packet-12.75-mockup.html`
   (published as https://claude.ai/artifact/Tr5PkdbzhVgTk3NFgzgfKL): the site's own DM type and
   `globals.css` tokens, the extract beside the answer, self-marking against tickable criteria, the question
   stem in DM Sans with only its key term in DM Serif Display italic. The founder then found question cards

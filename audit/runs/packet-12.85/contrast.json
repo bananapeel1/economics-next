@@ -1,0 +1,309 @@
+{
+ "page": "/economics/market-failure-model-answers",
+ "method": "see contrast-run.mjs header",
+ "floor": 4.5,
+ "themes": {
+  "light": {
+   "measured": 642,
+   "below45": 0,
+   "lowest": [
+    {
+     "state": "6(e) marked by levels, level and mark chosen",
+     "width": 1440,
+     "theme": "light",
+     "text": "4–6",
+     "cls": "psx-band",
+     "color": "rgb(91, 100, 114)",
+     "opacity": 1,
+     "bg": "rgb(232,242,239)",
+     "ratio": 5.24,
+     "size": "13px"
+    },
+    {
+     "state": "First question, blank (previous disabled)",
+     "width": 1440,
+     "theme": "light",
+     "text": "Model answers",
+     "cls": "BUTTON",
+     "color": "rgb(91, 100, 114)",
+     "opacity": 1,
+     "bg": "rgb(238,241,247)",
+     "ratio": 5.29,
+     "size": "13px"
+    },
+    {
+     "state": "6(c) writing + booklet, figure linked",
+     "width": 1440,
+     "theme": "light",
+     "text": "Model answers",
+     "cls": "BUTTON",
+     "color": "rgb(91, 100, 114)",
+     "opacity": 1,
+     "bg": "rgb(238,241,247)",
+     "ratio": 5.29,
+     "size": "13px"
+    },
+    {
+     "state": "6(c) marked by points, a point ticked and seen",
+     "width": 1440,
+     "theme": "light",
+     "text": "Model answers",
+     "cls": "BUTTON",
+     "color": "rgb(91, 100, 114)",
+     "opacity": 1,
+     "bg": "rgb(238,241,247)",
+     "ratio": 5.29,
+     "size": "13px"
+    },
+    {
+     "state": "6(e) marked by levels, level and mark chosen",
+     "width": 1440,
+     "theme": "light",
+     "text": "Model answers",
+     "cls": "BUTTON",
+     "color": "rgb(91, 100, 114)",
+     "opacity": 1,
+     "bg": "rgb(238,241,247)",
+     "ratio": 5.29,
+     "size": "13px"
+    },
+    {
+     "state": "Section D essay choice",
+     "width": 1440,
+     "theme": "light",
+     "text": "Model answers",
+     "cls": "BUTTON",
+     "color": "rgb(91, 100, 114)",
+     "opacity": 1,
+     "bg": "rgb(238,241,247)",
+     "ratio": 5.29,
+     "size": "13px"
+    },
+    {
+     "state": "Section D after picking 8 (7 dimmed in the outline)",
+     "width": 1440,
+     "theme": "light",
+     "text": "Model answers",
+     "cls": "BUTTON",
+     "color": "rgb(91, 100, 114)",
+     "opacity": 1,
+     "bg": "rgb(238,241,247)",
+     "ratio": 5.29,
+     "size": "13px"
+    },
+    {
+     "state": "Model answers mode, 2 Draw",
+     "width": 1440,
+     "theme": "light",
+     "text": "Practise",
+     "cls": "BUTTON",
+     "color": "rgb(91, 100, 114)",
+     "opacity": 1,
+     "bg": "rgb(238,241,247)",
+     "ratio": 5.29,
+     "size": "13px"
+    },
+    {
+     "state": "Phone: outline open",
+     "width": 390,
+     "theme": "light",
+     "text": "Model answers",
+     "cls": "BUTTON",
+     "color": "rgb(91, 100, 114)",
+     "opacity": 1,
+     "bg": "rgb(238,241,247)",
+     "ratio": 5.29,
+     "size": "13px"
+    },
+    {
+     "state": "Phone: 6(b) answer seen",
+     "width": 390,
+     "theme": "light",
+     "text": "Model answers",
+     "cls": "BUTTON",
+     "color": "rgb(91, 100, 114)",
+     "opacity": 1,
+     "bg": "rgb(238,241,247)",
+     "ratio": 5.29,
+     "size": "13px"
+    },
+    {
+     "state": "Phone: 6(b) answer seen",
+     "width": 390,
+     "theme": "light",
+     "text": "Source booklet",
+     "cls": "BUTTON",
+     "color": "rgb(91, 100, 114)",
+     "opacity": 1,
+     "bg": "rgb(238,241,247)",
+     "ratio": 5.29,
+     "size": "13px"
+    },
+    {
+     "state": "First question, blank (previous disabled)",
+     "width": 1440,
+     "theme": "light",
+     "text": "Multiple choice · 6",
+     "cls": "SPAN",
+     "color": "rgb(91, 100, 114)",
+     "opacity": 1,
+     "bg": "rgb(244,246,250)",
+     "ratio": 5.53,
+     "size": "13px"
+    }
+   ],
+   "belowFloor": []
+  },
+  "dark": {
+   "measured": 642,
+   "below45": 0,
+   "lowest": [
+    {
+     "state": "First question, blank (previous disabled)",
+     "width": 1440,
+     "theme": "dark",
+     "text": "Mark my answer",
+     "cls": "psx-btn",
+     "color": "rgb(237, 240, 247)",
+     "opacity": 1,
+     "bg": "rgb(4,120,87)",
+     "ratio": 4.81,
+     "size": "13px"
+    },
+    {
+     "state": "6(c) writing + booklet, figure linked",
+     "width": 1440,
+     "theme": "dark",
+     "text": "Mark my answer",
+     "cls": "psx-btn",
+     "color": "rgb(237, 240, 247)",
+     "opacity": 1,
+     "bg": "rgb(4,120,87)",
+     "ratio": 4.81,
+     "size": "13px"
+    },
+    {
+     "state": "Section D essay choice",
+     "width": 1440,
+     "theme": "dark",
+     "text": "Answer this question",
+     "cls": "psx-btn",
+     "color": "rgb(237, 240, 247)",
+     "opacity": 1,
+     "bg": "rgb(4,120,87)",
+     "ratio": 4.81,
+     "size": "13px"
+    },
+    {
+     "state": "Section D essay choice",
+     "width": 1440,
+     "theme": "dark",
+     "text": "Answer this question",
+     "cls": "psx-btn",
+     "color": "rgb(237, 240, 247)",
+     "opacity": 1,
+     "bg": "rgb(4,120,87)",
+     "ratio": 4.81,
+     "size": "13px"
+    },
+    {
+     "state": "6(c) marked by points, a point ticked and seen",
+     "width": 1440,
+     "theme": "dark",
+     "text": "AED 0.25",
+     "cls": "ps-fig",
+     "color": "rgb(96, 165, 250)",
+     "opacity": 1,
+     "bg": "rgb(37,48,73)",
+     "ratio": 5.17,
+     "size": "15.5px"
+    },
+    {
+     "state": "6(e) marked by levels, level and mark chosen",
+     "width": 1440,
+     "theme": "dark",
+     "text": "4–6",
+     "cls": "psx-band",
+     "color": "rgb(156, 166, 190)",
+     "opacity": 1,
+     "bg": "rgb(28,45,58)",
+     "ratio": 5.8,
+     "size": "13px"
+    },
+    {
+     "state": "First question, blank (previous disabled)",
+     "width": 1440,
+     "theme": "dark",
+     "text": "2 Draw →",
+     "cls": "psx-next",
+     "color": "rgb(16, 185, 129)",
+     "opacity": 1,
+     "bg": "rgb(30,35,53)",
+     "ratio": 6.15,
+     "size": "13px"
+    },
+    {
+     "state": "6(c) writing + booklet, figure linked",
+     "width": 1440,
+     "theme": "dark",
+     "text": "6(d) Examine →",
+     "cls": "psx-next",
+     "color": "rgb(16, 185, 129)",
+     "opacity": 1,
+     "bg": "rgb(30,35,53)",
+     "ratio": 6.15,
+     "size": "13px"
+    },
+    {
+     "state": "6(c) marked by points, a point ticked and seen",
+     "width": 1440,
+     "theme": "dark",
+     "text": "1/6",
+     "cls": "psx-os",
+     "color": "rgb(16, 185, 129)",
+     "opacity": 1,
+     "bg": "rgb(30,35,53)",
+     "ratio": 6.15,
+     "size": "13px"
+    },
+    {
+     "state": "6(e) marked by levels, level and mark chosen",
+     "width": 1440,
+     "theme": "dark",
+     "text": "4/14",
+     "cls": "psx-os",
+     "color": "rgb(16, 185, 129)",
+     "opacity": 1,
+     "bg": "rgb(30,35,53)",
+     "ratio": 6.15,
+     "size": "13px"
+    },
+    {
+     "state": "Section D essay choice",
+     "width": 1440,
+     "theme": "dark",
+     "text": "8 Evaluate →",
+     "cls": "psx-next",
+     "color": "rgb(16, 185, 129)",
+     "opacity": 1,
+     "bg": "rgb(30,35,53)",
+     "ratio": 6.15,
+     "size": "13px"
+    },
+    {
+     "state": "Phone: outline open",
+     "width": 390,
+     "theme": "dark",
+     "text": "Open Market Failure in the app",
+     "cls": "psx-olink",
+     "color": "rgb(16, 185, 129)",
+     "opacity": 1,
+     "bg": "rgb(30,35,53)",
+     "ratio": 6.15,
+     "size": "13px"
+    }
+   ],
+   "belowFloor": []
+  }
+ }
+}
