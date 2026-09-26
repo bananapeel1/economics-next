@@ -1,5 +1,59 @@
 # Next session brief
 
+## Packet 15.1 spec — re-check and close out packet 15, introductory-concepts (Opus, 26 September 2026)
+
+**Why.** Packet 15 (Economics Unit 1, IAL **1.3.1 Introductory concepts**, `econ_spec.txt:510`, 192 opens,
+the most-opened section on the site) was verified, published and reverted on 15 September: its reorders
+carried no `shuffled` and main's `ReorderRecall` of that day read it first, so Learn Mode crashed. Production
+still serves the old 5-block section. The founder ruled on 26 Sep: re-check it against today's rules, fix
+what fails, publish if it passes. Packet 15's 33 ledger ids stay confirmed; this packet mints nine
+acceptance checks, `C-introductory-concepts-recheck-01`…`09`, one per rule re-checked.
+
+**What today's rules found in packet 15's bundle, before any fix** (runner dry run, 26 Sep):
+- 9 new `practice.opening` DEBT: every guidance was one paragraph, so guided mode printed the whole scheme,
+  answer included, above the answer box.
+- 26 recall answers recoverable by scrolling up in 11 recalls, against a `recall-census-baseline.json` row
+  of 9 for the section: `npm run recalls` would have gone red at staging.
+- Chapters 1 and 2 carried `diagramId: undefined`, so `matchDiagramsToBlocks` could title-match a diagram
+  onto them; `null` is decided-none since packet 2.91.
+- The ≤6-mark practice items wrote no "(n marks)" points, so `checklistFrom` gave them no tick-boxes.
+- Quiz length tell: the key was strictly the longest option in 14 of 32 items (inside the validator's 1.5×).
+
+**Fixed** in `scripts/_packet15-*` and the runner (no ids renumbered, every question text and id kept):
+nine two-paragraph guidances (opening = how to start, no figure, no mark, no answer; the six ≤6-mark items
+then list "(n marks)" points summing to the tariff; Examine 8 and Evaluate 20 stay levels-shaped); four
+recalls rewritten as application exercises (social science and free goods → classify on new cases; money →
+match of situations to the four functions; Maraya's frontier → classify on coordinates the step does not
+print) plus item rewordings in six more; chapters 1-2 `diagramId: null`; one distractor lengthened in nine
+quiz items. Result: 0 BLOCK / 0 new DEBT, 0 recoverable at the lexical floor, key-longest 5 of 32,
+answer positions still 8/8/8/8, 27 of 27 leaves.
+
+**Acceptance checks** (a verifier can run each without this conversation):
+1. `recheck-01` fields and crash: `git show origin/main:components/learn-mode/{Reorder,FillIn,Match,Classify}Recall.jsx`
+   and `lib/recall-widgets.js` read only fields the bundle carries; the walk in
+   `audit/runs/packet-15.1/verify-b.md` (origin/main `540825f`, `?draft=1`, 390x844, three walks, 0 errors).
+2. `recheck-02`/`03`: `node scripts/packet-15-introductory-concepts.mjs` prints 0 new DEBT; run
+   `checklistFrom` (from `git show origin/main:lib/practice-checklist.js`) over `PRACTICE`.
+3. `recheck-04`: `npm run recalls` exits 0; the runner prints no `recall.recoverable` line.
+4. `recheck-05`: `buildContent` output has `diagramId === null` on blocks 1 and 2.
+5. `recheck-06`: the six check-ins' pre-answer text, in `verify-b.md`, and the bundle's quiz items.
+6. `recheck-07`: count over `audit/snapshots/packet-15-bundle__economics__introductory-concepts.json`.
+7. `recheck-08`: `grep -oE '\b[0-9]\.[0-9]\.[0-9]+\b'` over the bundle is empty; the runner's `spec.coverage` line.
+8. `recheck-09`: `node audit/runs/packet-15.1/diagram-guard.mjs <bundle> <main diagram-enlarge.js>` (its
+   estimate flags 5; the real-glyph measure in `verify-b.md`'s session found 0 overlaps and 0 overflow, A/B'd).
+
+**Verify A round 1 rejected `recheck-04`, correctly:** the lexical floor read 0, but three reorders still
+paraphrased the flow printed in their own subsection, and two match pairs were printed in the body in other
+words. The floor cannot see a paraphrase; a reader can. Round 2 rewrote all three reorders as the same chain
+applied to a new case (a fuel-price study, a farmer with one field, an irrigation economy — each still
+sourced from a flow or an extras chain elsewhere in the section, so `reorder.source` holds), the renewables
+match on four new resources, two value-judgement pairs on new policies, and the verifier's five
+outside-the-ids items (a defensible ch1 distractor, two ambiguous classify items, a step-19 pair that
+pre-answered the ch5 check-in, a stale `why`).
+
+Out of scope, on purpose: reshaping practice into the WEC11 paper layout is ROLLOUT packet **104**; the
+check-in diagram/takeaway leaks and stem-guessable stems are recorded as DEBT in `verify-b.md`, not fixed.
+
 ## Packet 14.1 — PASSED 26 September 2026, committed, STAGED NOT PUBLISHED (decision-making-techniques)
 
 Spec, acceptance checks and the check-in record: `audit/specs/packet-14.1.md`. Reports: `audit/runs/packet-14.1/`

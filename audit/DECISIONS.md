@@ -3531,3 +3531,28 @@ Two smaller findings from the re-check, for whoever copies packet 14's template 
   first step of the practice below it, too (Ch 5's hotel case); give the quiz its own case.
 - Main's `NotesTab.jsx` styles a notes-chapter flow result red unless `resultType === 'good'`; the body's `FlowChain`
   handles `neutral`. A notes flow therefore takes `good` or `bad`, never `neutral`.
+
+## 26 September 2026 — packet 15.1, introductory-concepts re-checked against today's rules (Opus 5.5)
+
+**A section built before a rule existed is re-checked against the rule, not grandfathered.** Packet 15 was
+verified on 15 September. Against the rules added since, its bundle carried nine one-paragraph practice
+guidances (`practice.opening`, which printed the full scheme and the answer above the answer box), no
+"(n marks)" points, 26 recall answers recoverable against its census baseline of 9, and two chapters with
+`diagramId: undefined`. None of it was visible to the checks that passed it on the 15th.
+
+**The recoverable count at zero is a floor, not a clearance, and Verify A proved it twice here.** Round 1: the
+lexical measure read 0 while three reorders still paraphrased the flow printed in their own subsection and
+two match pairs were in the body in other words. Round 2: 0 again, with six more recalls whose answers were
+the step's own bold headings, bullets and worked figures. What cleared it was a reader, and a single fix
+shape: **ask for the taught idea applied to a new case** (a farmer with one field, an irrigation economy,
+another economy's frontier figures, new policies and resources), never the step's own examples. A reorder
+may still follow its subsection's flow (CONTENT-GATE, reorder rule); it must not reuse its wording.
+
+**The runner's comment that the three unpinned quiz items "ARE the pre-test" is out of date.** Main's
+`lib/pretest-pool.js` now takes the first unreserved items of what the student is sent, excluding only the
+check-in questions, so a signed-out student's pre-test here is quiz items 0, 2 and 4 (chapters 1-2). No
+question is spoiled; the comment is left as history, not fixed in this packet.
+
+**Page copy follows the publish, not the other way round.** PR #64 rewrites the Unit 1 tile and the index meta
+for the six rebuilt chapters; merged before the publish it would describe chapters production does not have.
+

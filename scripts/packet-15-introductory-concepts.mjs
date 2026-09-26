@@ -75,7 +75,10 @@ const practiceIndices = {
   [B4]: practiceByBlock[B4], [B5]: practiceByBlock[B5], [B6]: practiceByBlock[B6],
 };
 const diagramIds = {
-  [B1]: undefined, [B2]: undefined,          // a drawing of "a model" would be decoration, not teaching
+  // A drawing of "a model" would be decoration, not teaching. `null`, not undefined: null is decided-none
+  // (`decidedNoDiagram`, lib/checkin-fallback.js on main), while a missing key lets matchDiagramsToBlocks
+  // guess a diagram from title words (packet 2.91). Packet 15.1.
+  [B1]: null, [B2]: null,
   [B3]: DIAGRAMS[0].id, [B4]: DIAGRAMS[1].id, [B5]: DIAGRAMS[2].id, [B6]: DIAGRAMS[3].id,
 };
 const strip = ({ block, ...rest }) => rest;
