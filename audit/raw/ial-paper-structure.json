@@ -1,0 +1,38 @@
+{
+  "_about": "IAL paper layouts at part level, read from Pearson's Sample Assessment Materials on 26 Sep 2026. Structure only (section, part tariffs, command words, choice); no question text is reproduced. Section-level totals also appear in audit/raw/*_spec.txt and audit/PROTOCOL.md. Part-level splits appear ONLY in the SAMs; the specifications do not fix them.",
+  "sources": {
+    "economics": "https://qualifications.pearson.com/content/dam/pdf/International%20Advanced%20Level/Economics/2018/Specification-and-Sample-Assessment/International-A-Level-Economics-SAMs.pdf",
+    "business": "https://qualifications.pearson.com/content/dam/pdf/International%20Advanced%20Level/Business/2018/Specification-and-Sample-Assessment/International-A-Level-Business-SAMs.pdf"
+  },
+  "economics": {
+    "units_1_2": { "papers": ["WEC11", "WEC12"], "minutes": 105, "marks": 80, "sections": [
+      { "id": "A", "kind": "multiple_choice", "parts": 6, "marksEach": 1, "total": 6, "explanationMarks": false },
+      { "id": "B", "kind": "short_answer", "parts": 5, "marksEach": 4, "total": 20, "commandWords": ["Draw", "Explain", "Calculate"], "note": "each question has its own short context (a sentence or a small table), then the task" },
+      { "id": "C", "kind": "data_question", "source": "extracts and figures in a source booklet", "tariffs": [2, 4, 6, 8, 14], "total": 34,
+        "commandWordByTariff": { "2": ["Define", "Calculate"], "4": ["Explain"], "6": ["Analyse"], "8": ["Examine"], "14": ["Discuss"] },
+        "note": "the multiset {2,4,6,8,14} is constant across the SAMs; order is usually ascending but WEC12 puts 14 before 8" },
+      { "id": "D", "kind": "essay", "marksEach": 20, "offered": 2, "answer": 1, "commandWords": ["Evaluate", "To what extent"], "note": "each essay opens with a short quoted context" }
+    ]},
+    "units_3_4": { "papers": ["WEC13", "WEC14"], "minutes": 120, "marks": 80, "sections": [
+      { "id": "A", "kind": "multiple_choice", "parts": 6, "marksEach": 1, "total": 6, "explanationMarks": false },
+      { "id": "B", "kind": "data_question", "tariffs": [2, 4, 6, 8, 14], "total": 34,
+        "commandWordByTariff": { "2": ["Calculate", "Define"], "4": ["Explain"], "6": ["Analyse"], "8": ["Examine"], "14": ["Discuss"] },
+        "note": "WEC14 puts 8 before 6" },
+      { "id": "C", "kind": "essay", "marksEach": 20, "offered": 3, "answer": 2 }
+    ]}
+  },
+  "business": {
+    "units_1_2": { "papers": ["WBS11", "WBS12"], "minutes": 120, "marks": 80, "sections": [
+      { "id": "A", "kind": "source_set", "tariffs": [2, 4, 6, 8, 10], "total": 30,
+        "commandWordByTariff": { "2": ["Define"], "4": ["Construct", "Calculate"], "6": ["Analyse"], "8": ["Discuss"], "10": ["Assess"] } },
+      { "id": "B", "kind": "source_set", "sameFormatAs": "A", "differentSources": true, "tariffs": [2, 4, 6, 8, 10], "total": 30 },
+      { "id": "C", "kind": "essay", "marksEach": 20, "offered": 1, "answer": 1, "basedOnSources": true, "commandWords": ["Evaluate"] }
+    ]},
+    "units_3_4": { "papers": ["WBS13", "WBS14"], "minutes": 120, "marks": 80, "sections": [
+      { "id": "A", "kind": "source_set", "tariffs": [4, 4, 8, 12, 12], "total": 40,
+        "commandWordByTariff": { "4": ["Calculate", "Construct", "Explain"], "8": ["Discuss"], "12": ["Assess"] } },
+      { "id": "B", "kind": "essay", "marksEach": 20, "offered": 1, "answer": 1, "basedOnSources": true, "commandWords": ["Evaluate"] },
+      { "id": "C", "kind": "essay", "marksEach": 20, "offered": 1, "answer": 1, "basedOnSources": true, "commandWords": ["Evaluate"] }
+    ]}
+  }
+}

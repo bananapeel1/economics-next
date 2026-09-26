@@ -27,8 +27,9 @@
  */
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
-
-const STORAGE_PREFIX = 'rl:attempt:v1:';
+// Packet 12.75, E048: the key and the record live in one module the practice shell shares, so a
+// 12.6 draft and a shell draft are the same record. Same prefix, same key, never renamed.
+import { storageKey, writeAttempt } from '@/lib/attempt-storage';
 
 /**
  * Packet 12.7, E039 (DECISIONS 2026-09-22). A criterion's link to its segment is either where the
@@ -39,10 +40,6 @@ const STORAGE_PREFIX = 'rl:attempt:v1:';
  */
 const ROLE_LABEL = { earned: 'Earned', missed: 'Missed — this is where it goes' };
 const roleOf = (c) => (c.segRole === 'missed' ? 'missed' : 'earned');
-
-function storageKey(questionId) {
-  return `${STORAGE_PREFIX}${questionId}`;
-}
 
 function readSaved(questionId) {
   try {
@@ -59,11 +56,7 @@ function readSaved(questionId) {
 }
 
 function writeSaved(questionId, value) {
-  try {
-    window.localStorage.setItem(storageKey(questionId), JSON.stringify(value));
-  } catch {
-    /* Quota, private mode, disabled storage. The attempt still works for this visit. */
-  }
+  writeAttempt(questionId, value); // merges, so the shell's `phase`/`time` survive a write from here
 }
 
 export default function MarkedScriptAttempt({ item }) {

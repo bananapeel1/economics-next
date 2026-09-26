@@ -1,0 +1,718 @@
+[
+ {
+  "label": "mobile 390x844",
+  "w": 390,
+  "h": 844,
+  "control": false,
+  "results": [
+   {
+    "name": "Q1 marked+long, deep scroll -> dock Next (go)",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 2393,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 79,
+     "docH": 2578,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "stemTop": 280,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": true,
+     "dockTop": 758,
+     "dockBottom": 844,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Q2 marked+long, deep scroll -> dock Next (go)",
+    "tapped": "Next: Evaluate · 20 marks→",
+    "before": {
+     "scrollY": 3907,
+     "q": "Question 2 of 3Banked 0 / 28Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 79,
+     "docH": 2635,
+     "q": "Question 3 of 3Banked 0 / 2800:00 / 26:0",
+     "stemTop": 311,
+     "stemText": "Evaluate the view that the current 50% excise tax ",
+     "stemHit": true,
+     "dockTop": 758,
+     "dockBottom": 844,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Q3 marked+long, deep scroll -> dock Next: Standalone (goSet)",
+    "tapped": "Next: Standalone questions→",
+    "before": {
+     "scrollY": 10690,
+     "q": "Question 3 of 3Banked 0 / 28Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 79,
+     "docH": 2470,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "stemTop": 280,
+     "stemText": "Explain what is meant by a negative externality an",
+     "stemHit": true,
+     "dockTop": 758,
+     "dockBottom": 844,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Standalone Q1 at top, card 2 tapped (go, upward-only: must not scroll down)",
+    "tapped": "2 Examine8 marks · 11 minNegative extern",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 2470,
+     "q": "Question 2 of 3Banked 0 / 3200:00 / 11:0",
+     "stemTop": 359,
+     "stemText": "Examine how a negative externality of production l",
+     "stemHit": true,
+     "dockTop": 758,
+     "dockBottom": 844,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Standalone Q2 marked+long, deep scroll -> dock Previous (go)",
+    "tapped": "←Previous",
+    "before": {
+     "scrollY": 4649,
+     "q": "Question 2 of 3Banked 0 / 32Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 79,
+     "docH": 2470,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "stemTop": 280,
+     "stemText": "Explain what is meant by a negative externality an",
+     "stemHit": true,
+     "dockTop": 758,
+     "dockBottom": 844,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Card 3 tapped at scrollY 0 (go, upward-only)",
+    "tapped": "3 Evaluate20 marks · 26 minAlways necess",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 2496,
+     "q": "Question 3 of 3Banked 0 / 3200:00 / 26:0",
+     "stemTop": 359,
+     "stemText": "Evaluate the view that government intervention is ",
+     "stemHit": true,
+     "dockTop": 758,
+     "dockBottom": 844,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Set switch tapped at scrollY 40 (goSet, upward-only)",
+    "tapped": "Extract A · 3 questions",
+    "before": {
+     "scrollY": 40,
+     "q": "Question 3 of 3Banked 0 / 3200:00 / 26:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 40,
+     "docH": 4783,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "stemTop": 319,
+     "stemText": "Define the term 'negative externality of consumpti",
+     "stemHit": true,
+     "dockTop": 758,
+     "dockBottom": 844,
+     "onScreen": true
+    }
+   }
+  ]
+ },
+ {
+  "label": "mobile 320x640",
+  "w": 320,
+  "h": 640,
+  "control": false,
+  "results": [
+   {
+    "name": "Q1 marked+long, deep scroll -> dock Next (go)",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 2986,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 98,
+     "docH": 2935,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "stemTop": 331,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": true,
+     "dockTop": 554,
+     "dockBottom": 640,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Q2 marked+long, deep scroll -> dock Next (go)",
+    "tapped": "Next: Evaluate · 20 marks→",
+    "before": {
+     "scrollY": 5143,
+     "q": "Question 2 of 3Banked 0 / 28Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 98,
+     "docH": 2961,
+     "q": "Question 3 of 3Banked 0 / 2800:00 / 26:0",
+     "stemTop": 331,
+     "stemText": "Evaluate the view that the current 50% excise tax ",
+     "stemHit": true,
+     "dockTop": 554,
+     "dockBottom": 640,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Q3 marked+long, deep scroll -> dock Next: Standalone (goSet)",
+    "tapped": "Next: Standalone questions→",
+    "before": {
+     "scrollY": 14488,
+     "q": "Question 3 of 3Banked 0 / 28Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 98,
+     "docH": 2796,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "stemTop": 300,
+     "stemText": "Explain what is meant by a negative externality an",
+     "stemHit": true,
+     "dockTop": 554,
+     "dockBottom": 640,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Standalone Q1 at top, card 2 tapped (go, upward-only: must not scroll down)",
+    "tapped": "2 Examine8 marks · 11 minNegative extern",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 2796,
+     "q": "Question 2 of 3Banked 0 / 3200:00 / 11:0",
+     "stemTop": 398,
+     "stemText": "Examine how a negative externality of production l",
+     "stemHit": true,
+     "dockTop": 554,
+     "dockBottom": 640,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Standalone Q2 marked+long, deep scroll -> dock Previous (go)",
+    "tapped": "←Previous",
+    "before": {
+     "scrollY": 6171,
+     "q": "Question 2 of 3Banked 0 / 32Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 98,
+     "docH": 2796,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "stemTop": 300,
+     "stemText": "Explain what is meant by a negative externality an",
+     "stemHit": true,
+     "dockTop": 554,
+     "dockBottom": 640,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Card 3 tapped at scrollY 0 (go, upward-only)",
+    "tapped": "3 Evaluate20 marks · 26 minAlways necess",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 2822,
+     "q": "Question 3 of 3Banked 0 / 3200:00 / 26:0",
+     "stemTop": 398,
+     "stemText": "Evaluate the view that government intervention is ",
+     "stemHit": true,
+     "dockTop": 554,
+     "dockBottom": 640,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Set switch tapped at scrollY 40 (goSet, upward-only)",
+    "tapped": "Extract A · 3 questions",
+    "before": {
+     "scrollY": 40,
+     "q": "Question 3 of 3Banked 0 / 3200:00 / 26:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 40,
+     "docH": 5396,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "stemTop": 358,
+     "stemText": "Define the term 'negative externality of consumpti",
+     "stemHit": true,
+     "dockTop": 554,
+     "dockBottom": 640,
+     "onScreen": true
+    }
+   }
+  ]
+ },
+ {
+  "label": "tablet 768x1024",
+  "w": 768,
+  "h": 1024,
+  "control": false,
+  "results": [
+   {
+    "name": "Q1 marked+long, deep scroll -> dock Next (go)",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 893,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 53,
+     "docH": 2067,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "stemTop": 260,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": true,
+     "dockTop": 777,
+     "dockBottom": 835,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Q2 marked+long, deep scroll -> dock Next (go)",
+    "tapped": "Next: Evaluate · 20 marks→",
+    "before": {
+     "scrollY": 1726,
+     "q": "Question 2 of 3Banked 0 / 28Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 53,
+     "docH": 2094,
+     "q": "Question 3 of 3Banked 0 / 2800:00 / 26:0",
+     "stemTop": 260,
+     "stemText": "Evaluate the view that the current 50% excise tax ",
+     "stemHit": true,
+     "dockTop": 804,
+     "dockBottom": 862,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Q3 marked+long, deep scroll -> dock Next: Standalone (goSet)",
+    "tapped": "Next: Standalone questions→",
+    "before": {
+     "scrollY": 5055,
+     "q": "Question 3 of 3Banked 0 / 28Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 53,
+     "docH": 1984,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "stemTop": 260,
+     "stemText": "Explain what is meant by a negative externality an",
+     "stemHit": true,
+     "dockTop": 694,
+     "dockBottom": 752,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Standalone Q1 at top, card 2 tapped (go, upward-only: must not scroll down)",
+    "tapped": "2 Examine8 marks · 11 minNegative extern",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 1984,
+     "q": "Question 2 of 3Banked 0 / 3200:00 / 11:0",
+     "stemTop": 313,
+     "stemText": "Examine how a negative externality of production l",
+     "stemHit": true,
+     "dockTop": 747,
+     "dockBottom": 805,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Standalone Q2 marked+long, deep scroll -> dock Previous (go)",
+    "tapped": "←Previous",
+    "before": {
+     "scrollY": 2113,
+     "q": "Question 2 of 3Banked 0 / 32Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 53,
+     "docH": 1984,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "stemTop": 260,
+     "stemText": "Explain what is meant by a negative externality an",
+     "stemHit": true,
+     "dockTop": 694,
+     "dockBottom": 752,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Card 3 tapped at scrollY 0 (go, upward-only)",
+    "tapped": "3 Evaluate20 marks · 26 minAlways necess",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 2011,
+     "q": "Question 3 of 3Banked 0 / 3200:00 / 26:0",
+     "stemTop": 313,
+     "stemText": "Evaluate the view that government intervention is ",
+     "stemHit": true,
+     "dockTop": 774,
+     "dockBottom": 832,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Set switch tapped at scrollY 40 (goSet, upward-only)",
+    "tapped": "Extract A · 3 questions",
+    "before": {
+     "scrollY": 40,
+     "q": "Question 3 of 3Banked 0 / 3200:00 / 26:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 40,
+     "docH": 3096,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "stemTop": 273,
+     "stemText": "Define the term 'negative externality of consumpti",
+     "stemHit": true,
+     "dockTop": 965,
+     "dockBottom": 1024,
+     "onScreen": true
+    }
+   }
+  ]
+ },
+ {
+  "label": "edge 1023x800",
+  "w": 1023,
+  "h": 800,
+  "control": false,
+  "results": [
+   {
+    "name": "Q1 marked+long, deep scroll -> dock Next (go)",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 939,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 53,
+     "docH": 2064,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "stemTop": 278,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": true,
+     "dockTop": 741,
+     "dockBottom": 800,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Q2 marked+long, deep scroll -> dock Next (go)",
+    "tapped": "Next: Evaluate · 20 marks→",
+    "before": {
+     "scrollY": 1606,
+     "q": "Question 2 of 3Banked 0 / 28Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 53,
+     "docH": 2064,
+     "q": "Question 3 of 3Banked 0 / 2800:00 / 26:0",
+     "stemTop": 278,
+     "stemText": "Evaluate the view that the current 50% excise tax ",
+     "stemHit": true,
+     "dockTop": 741,
+     "dockBottom": 800,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Q3 marked+long, deep scroll -> dock Next: Standalone (goSet)",
+    "tapped": "Next: Standalone questions→",
+    "before": {
+     "scrollY": 4251,
+     "q": "Question 3 of 3Banked 0 / 28Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 53,
+     "docH": 1964,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "stemTop": 261,
+     "stemText": "Explain what is meant by a negative externality an",
+     "stemHit": true,
+     "dockTop": 695,
+     "dockBottom": 753,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Standalone Q1 at top, card 2 tapped (go, upward-only: must not scroll down)",
+    "tapped": "2 Examine8 marks · 11 minNegative extern",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 1964,
+     "q": "Question 2 of 3Banked 0 / 3200:00 / 11:0",
+     "stemTop": 314,
+     "stemText": "Examine how a negative externality of production l",
+     "stemHit": true,
+     "dockTop": 741,
+     "dockBottom": 800,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Standalone Q2 marked+long, deep scroll -> dock Previous (go)",
+    "tapped": "←Previous",
+    "before": {
+     "scrollY": 1969,
+     "q": "Question 2 of 3Banked 0 / 32Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 53,
+     "docH": 1964,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "stemTop": 261,
+     "stemText": "Explain what is meant by a negative externality an",
+     "stemHit": true,
+     "dockTop": 695,
+     "dockBottom": 753,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Card 3 tapped at scrollY 0 (go, upward-only)",
+    "tapped": "3 Evaluate20 marks · 26 minAlways necess",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 1 of 3Banked 0 / 3200:00 / 05:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 1964,
+     "q": "Question 3 of 3Banked 0 / 3200:00 / 26:0",
+     "stemTop": 314,
+     "stemText": "Evaluate the view that government intervention is ",
+     "stemHit": true,
+     "dockTop": 741,
+     "dockBottom": 800,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Set switch tapped at scrollY 40 (goSet, upward-only)",
+    "tapped": "Extract A · 3 questions",
+    "before": {
+     "scrollY": 40,
+     "q": "Question 3 of 3Banked 0 / 3200:00 / 26:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 40,
+     "docH": 2897,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "stemTop": 291,
+     "stemText": "Define the term 'negative externality of consumpti",
+     "stemHit": true,
+     "dockTop": 741,
+     "dockBottom": 800,
+     "onScreen": true
+    }
+   }
+  ]
+ },
+ {
+  "label": "study 390x844",
+  "w": 390,
+  "h": 844,
+  "control": false,
+  "results": [
+   {
+    "name": "Model answers Q1, deep scroll -> dock Next (go)",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 1168,
+     "q": "Question 1 of 3",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 79,
+     "docH": 5051,
+     "q": "Question 2 of 3",
+     "stemTop": 280,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": true,
+     "dockTop": 785,
+     "dockBottom": 844,
+     "onScreen": true
+    }
+   }
+  ]
+ },
+ {
+  "label": "desktop 1024x800",
+  "w": 1024,
+  "h": 800,
+  "control": false,
+  "results": [
+   {
+    "name": "Desktop Q1 marked -> dock Next (go): window must stay put",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 1958,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "stemTop": 331,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": true,
+     "dockTop": 737,
+     "dockBottom": 800,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Desktop Q2 at scrollY 300 -> dock Next (go): toQuestion must not move window",
+    "tapped": "Next: Evaluate · 20 marks→",
+    "before": {
+     "scrollY": 300,
+     "q": "Question 2 of 3Banked 0 / 28Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 300,
+     "docH": 1958,
+     "q": "Question 3 of 3Banked 0 / 2800:00 / 26:0",
+     "stemTop": 31,
+     "stemText": "Evaluate the view that the current 50% excise tax ",
+     "stemHit": false,
+     "dockTop": 437,
+     "dockBottom": 500,
+     "onScreen": false
+    }
+   }
+  ]
+ },
+ {
+  "label": "desktop 1440x900",
+  "w": 1440,
+  "h": 900,
+  "control": false,
+  "results": [
+   {
+    "name": "Desktop Q1 marked -> dock Next (go): window must stay put",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 2058,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "stemTop": 314,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": true,
+     "dockTop": 837,
+     "dockBottom": 900,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Desktop Q2 at scrollY 300 -> dock Next (go): toQuestion must not move window",
+    "tapped": "Next: Evaluate · 20 marks→",
+    "before": {
+     "scrollY": 300,
+     "q": "Question 2 of 3Banked 0 / 28Took 00:00",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 300,
+     "docH": 2058,
+     "q": "Question 3 of 3Banked 0 / 2800:00 / 26:0",
+     "stemTop": 31,
+     "stemText": "Evaluate the view that the current 50% excise tax ",
+     "stemHit": false,
+     "dockTop": 537,
+     "dockBottom": 600,
+     "onScreen": false
+    }
+   }
+  ]
+ }
+]

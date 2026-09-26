@@ -1,0 +1,941 @@
+{
+ "method": "headless Chrome CDP setDeviceMetricsOverride, hydrated page, own measure",
+ "control": false,
+ "widths": [
+  320,
+  1920,
+  321
+ ],
+ "states": {
+  "Extract Q1 writing · work": {
+   "widthsFailing": 0,
+   "checks": 50622,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Your answer",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Your answer",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q1 writing · extract tab": {
+   "widthsFailing": 0,
+   "checks": 65919,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q1 marking + note + details · work": {
+   "widthsFailing": 0,
+   "checks": 74386,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Marking",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Marking",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q1 marked · extract tab (focus rows)": {
+   "widthsFailing": 0,
+   "checks": 77731,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 1,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q1 model answers + note + details · work": {
+   "widthsFailing": 0,
+   "checks": 67355,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Model answer",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Model answer",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q1 model answers · extract tab": {
+   "widthsFailing": 0,
+   "checks": 73097,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 1,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q2 writing · work": {
+   "widthsFailing": 0,
+   "checks": 50622,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Your answer",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Your answer",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q2 writing · extract tab": {
+   "widthsFailing": 0,
+   "checks": 65919,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q2 marking + note + details · work": {
+   "widthsFailing": 0,
+   "checks": 95251,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Marking",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Marking",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q2 marked · extract tab (focus rows)": {
+   "widthsFailing": 0,
+   "checks": 88891,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 1,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q2 model answers + note + details · work": {
+   "widthsFailing": 0,
+   "checks": 81800,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Model answer",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Model answer",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q2 model answers · extract tab": {
+   "widthsFailing": 0,
+   "checks": 80657,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 1,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q3 writing · work": {
+   "widthsFailing": 0,
+   "checks": 50622,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Your answer",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Your answer",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q3 writing · extract tab": {
+   "widthsFailing": 0,
+   "checks": 65919,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q3 marking + note + details · work": {
+   "widthsFailing": 0,
+   "checks": 163324,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Marking",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Marking",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q3 marked · extract tab (focus rows)": {
+   "widthsFailing": 0,
+   "checks": 126391,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 1,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q3 model answers + note + details · work": {
+   "widthsFailing": 0,
+   "checks": 127403,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Model answer",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Model answer",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q3 model answers · extract tab": {
+   "widthsFailing": 0,
+   "checks": 105557,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 1,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q1 writing · work": {
+   "widthsFailing": 0,
+   "checks": 28458,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 1: Explain, 4",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 1: Explain, 4",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q1 marking + note + details · work": {
+   "widthsFailing": 0,
+   "checks": 58963,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 1: Explain, 4",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 1: Explain, 4",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q1 model answers + note + details · work": {
+   "widthsFailing": 0,
+   "checks": 48722,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 1: Explain, 4",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 1: Explain, 4",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q2 writing · work": {
+   "widthsFailing": 0,
+   "checks": 28458,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 2: Examine, 8",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 2: Examine, 8",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q2 marking + note + details · work": {
+   "widthsFailing": 0,
+   "checks": 84001,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 2: Examine, 8",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 2: Examine, 8",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q2 model answers + note + details · work": {
+   "widthsFailing": 0,
+   "checks": 67340,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 2: Examine, 8",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 2: Examine, 8",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q3 writing · work": {
+   "widthsFailing": 0,
+   "checks": 83411,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q3 marking + note + details · work": {
+   "widthsFailing": 0,
+   "checks": 119653,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q3 model answers + note + details · work": {
+   "widthsFailing": 0,
+   "checks": 88547,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "LIGHT unpinned · Extract Q3 writing · extract tab": {
+   "widthsFailing": 0,
+   "checks": 65919,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "light/unpinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "light/unpinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "LIGHT unpinned · Extract Q2 marking + note": {
+   "widthsFailing": 0,
+   "checks": 95251,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Marking",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "light/unpinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Marking",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "light/unpinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "LIGHT unpinned · Standalone Q3 model answers": {
+   "widthsFailing": 0,
+   "checks": 88547,
+   "fails": {},
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "light/unpinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "light/unpinned",
+     "band": ">=1024"
+    }
+   ]
+  }
+ }
+}

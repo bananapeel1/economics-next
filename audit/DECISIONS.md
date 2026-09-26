@@ -12,6 +12,39 @@ Append only. Every entry needs a date and the packet that made it.
 
 ## Settled
 
+- **2026-09-26 — the mid-band "Why this loses marks" panel renders only for level-banded mark schemes, on
+  every page.** Packet 12.75 built the rule (E053) but its spec confined it to the new practice shell, and
+  its census (`audit/runs/packet-12.75/midband-census.txt`) found the same false panel live on 8 other pages:
+  Economics 2.3.2, 2.3.5, 2.3.6, 3.3.3, 4.3.2 and Business 1.3.4, 2.3.3, 2.3.5. Each prints an objectives-split
+  AO3 row ("chains for and against…") as the ceiling of an attempt whose paragraphs argue one side. **The
+  founder's ruling: apply it everywhere now; a panel that states something false is worse than no panel.**
+  This overrides packet 12.75's E051 ("the other 31 pages render identically to HEAD") for those 8 panels
+  and nothing else; the 11 level-banded panels stay. The spec's expectation that 1.3.5's panel would return
+  to the generic 20-mark item was also wrong: that item is objectives-split too, so 1.3.5 shows none.
+
+- **2026-09-26 — practice follows the real IAL paper layout, for every unit of both subjects.** The founder,
+  after packet 12.7's author noted that a Define 2 / Analyse 6 / Evaluate 20 set is not the shape of any
+  IAL section. Practice sets are shaped like the sections of the real paper for the unit the topic sits in,
+  taken from `audit/PROTOCOL.md` → "Canonical IAL paper structures" (verified against both specifications;
+  never restate from memory):
+
+  | Paper | Sections a topic's practice is shaped like |
+  |---|---|
+  | Economics Units 1-2 (WEC11/12) | B five short answers (20) · C one five-part data question on an extract (34) · D one 20-mark essay chosen from two |
+  | Economics Units 3-4 (WEC13/14) | B one five-part data question on an extract (34) · C two 20-mark essays chosen from three |
+  | Business Units 1-2 (WBS11/12) | A/B source-based short and extended response (30 each) · C one 20-mark essay from sources |
+  | Business Units 3-4 (WBS13/14) | A source-based short and extended response (40) · B and C one 20-mark essay each, from sources |
+
+  **Part-level splits, verified the same day from Pearson's Sample Assessment Materials** (the
+  specifications fix only section totals): `audit/raw/ial-paper-structure.json`, with sources. Economics data
+  question 2+4+6+8+14 = 34 in all four papers (Define/Calculate, Explain, Analyse, Examine, Discuss); Economics
+  short answers 5 × 4 (Draw, Explain, Calculate); essays 20, choose 1 of 2 (Units 1-2) or 2 of 3 (Units 3-4).
+  Business source sets 2+4+6+8+10 = 30 (Units 1-2) and 4+4+8+12+12 = 40 (Units 3-4); Business essays 20, no
+  choice. Section A (six 1-mark MCQs, Economics only) is **not rebuilt on topic pages: the page links the
+  topic's existing quiz as Section A practice.** Full timed mock papers per unit: **not now.** Economics
+  1.3.5's current extract set (2/6/20, packet 12.7) does not match and is reshaped first.
+
+
 - **2026-09-26 — the practice page's design is the v7 mockup, and no text on it is ever cut, spilled or
   shortened.** After seven iterations the founder signed off `audit/specs/packet-12.75-mockup.html`
   (published as https://claude.ai/artifact/Tr5PkdbzhVgTk3NFgzgfKL): the site's own DM type and

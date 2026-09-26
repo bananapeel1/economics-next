@@ -185,6 +185,9 @@ export const EXPANSION_ANSWERS = [
     type: 'Data Response — Knowledge',
     commandWord: 'Define',
     question: "Define the term 'negative externality of consumption', using an example from the stimulus.",
+    // Packet 12.75, E052: the phrase the question hinges on, set in the serif italic. Must be an
+    // exact substring of `question` (validator R8); `question` itself is unchanged.
+    keyTerm: 'negative externality of consumption',
     markScheme: [
       { range: 'Define (2)', desc: 'Appendix 6: Requires knowledge and understanding only. Requires students to give the meaning of a term, concept or phrase.' },
       { range: '1 mark — the definition', desc: 'A cost that falls on a third party when the good is consumed, and that is not reflected in the market price.' },
@@ -253,6 +256,9 @@ export const EXPANSION_ANSWERS = [
     type: 'Data Response — Analysis',
     commandWord: 'Analyse',
     question: 'Analyse how the AED 0.25 charge on single-use plastic bags is likely to correct the market failure associated with plastic bag consumption in the UAE.',
+    // Packet 12.75, E052: the phrase the question hinges on, set in the serif italic. Must be an
+    // exact substring of `question` (validator R8); `question` itself is unchanged.
+    keyTerm: 'the AED 0.25 charge on single-use plastic bags',
     markScheme: [
       { range: 'Analyse (6)', desc: 'Appendix 6: Requires knowledge, understanding, application and analysis. Requires an explanation which includes a chain of reasoning, and diagrams where appropriate. Focuses on depth rather than breadth. Any relevant data provided needs to be interpreted. Does not include evaluation.' },
       { range: 'AO1 (2 marks)', desc: 'Knowledge: a negative externality of consumption, and how an indirect (Pigouvian) tax is meant to internalise it.' },
@@ -343,6 +349,9 @@ export const EXPANSION_ANSWERS = [
     type: 'Data Response — Evaluation',
     commandWord: 'Evaluate',
     question: 'Evaluate the view that the current 50% excise tax on carbonated soft drinks in the UAE is the most effective way to correct the market failure caused by sugary drink consumption.',
+    // Packet 12.75, E052: the phrase the question hinges on, set in the serif italic. Must be an
+    // exact substring of `question` (validator R8); `question` itself is unchanged.
+    keyTerm: 'the most effective way',
     markScheme: [
       { range: 'Evaluate (20)', desc: 'Appendix 6: Requires knowledge, understanding, application, analysis and evaluation. Logical and coherent multi-stage chains of reasoning need to be developed with reference to context where appropriate. The validity and significance of arguments/models and concepts should be considered and supported by relevant chains of reasoning. There should also be a recognition of different viewpoints and/or a critical assessment of the evidence so that informed judgements may be made.' },
       { range: 'AO1 (4 marks)', desc: 'Knowledge: a negative externality of consumption, information failure, an excise as an indirect tax, and the corrective-tax rule on the externality diagram.' },
@@ -513,6 +522,9 @@ export const EXPANSION_ANSWERS = [
     type: 'Analysis & Evaluation',
     commandWord: 'Examine',
     question: 'Examine how a negative externality of production leads to market failure.',
+    // Packet 12.75, E052: the phrase the question hinges on, set in the serif italic. Must be an
+    // exact substring of `question` (validator R8); `question` itself is unchanged.
+    keyTerm: 'negative externality of production',
     markScheme: [
       { range: 'Examine (8)', desc: 'Appendix 6: Requires knowledge, understanding, application, analysis and evaluation. Requires an explanation which includes a chain of reasoning, and diagrams where appropriate. Focuses on depth rather than breadth. Any relevant data provided needs to be interpreted. There should be a brief assessment of the arguments/factors/evidence.' },
       { range: 'Level 1 — 1–2 marks', desc: 'Isolated knowledge and understanding. No application to the context and no chain of reasoning.' },
@@ -643,6 +655,9 @@ export const EXPANSION_ANSWERS = [
     type: 'Evaluation Essay',
     commandWord: 'Evaluate',
     question: 'Evaluate the view that government intervention is always necessary to correct market failure.',
+    // Packet 12.75, E052: the phrase the question hinges on, set in the serif italic. Must be an
+    // exact substring of `question` (validator R8); `question` itself is unchanged.
+    keyTerm: 'always necessary',
     markScheme: [
       { range: 'AO1 (4 marks)', desc: 'Knowledge of market failure types and government intervention methods' },
       { range: 'AO2 (4 marks)', desc: 'Application — relevant examples of market failure and intervention' },

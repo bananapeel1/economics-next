@@ -13,17 +13,15 @@ section was chosen on that false premise. See `audit/DECISIONS.md` → Settled �
 Also: the 8m and 20m Market Failure answers live in `data/modelAnswersExpansion.js`, which E034/E035's
 `file` field does not name.
 
-## Packet 12.75 spec — RESERVED, waits for 12.7's commit (26 September 2026)
+## Packet 12.75 — PASSED 26 September 2026, committed
 
-**Packet 12.75 is claimed. Do not pick it up.** It launches only after packet 12.7 is committed, because
-both edit `components/SectionModelAnswersPage.jsx` and 12.75 renders the items 12.7 adds.
-
-The authoritative spec is `audit/specs/packet-12.75.md`; the approved design is
-`audit/specs/packet-12.75-mockup.html`. Neither is copied here: a spec written into NEXT.md is published to
-every live session. One line so a reader knows what is moving: 12.75 builds the practice shell (extract
-beside the answer, tickable criteria, figure links, question cards and dock) on criteria-bearing
-model-answer pages, and proves no text is ever cut at any width with `audit/scripts/text-fit-sweep.js`.
-Ledger ids E040, E045–E052.
+Gate test/build/validate/drift all 0. E040, E045-E053 confirmed (E053 after the founder's "apply everywhere"
+close: the false mid-band panel is gone from 8 pages, 11 level-banded panels kept, 23 pages unchanged). E041
+wont-fix. The practice shell is live on Economics 1.3.5 only; text-fit sweep 8,667 checks per theme, 27 states,
+0 failures, after being shown to fail with the card container rule removed. Spec `audit/specs/packet-12.75.md`,
+artefacts `audit/runs/packet-12.75/`. Known follow-up for 12.8: `--rlh-h` (SiteHeader height) is read but never
+defined, so the frame always uses its 60px fallback. Next in this stream: packet 12.8, paper-shaped sets proved
+on 1.3.5 (`audit/raw/ial-paper-structure.json`, DECISIONS 2026-09-26).
 
 ## Packet 12.7 — PASSED 26 September 2026, committed
 
@@ -10677,6 +10675,74 @@ aggregate-supply with the command above to ship the printed-answer fix; the thre
 programme-wide item (self-mark checklist, resume banner, post-reload score), not a per-packet one, and sit
 outside this and packet 43's scope alike.
 
+## Handoff — what comes next (packet 12.75 bookkeeping pass, 26 September 2026)
+
+**Bookkeeping-only pass. Authored, fixed and committed nothing.** Full detail in `PROGRESS.md`'s 12.75 row;
+artefacts in `audit/runs/packet-12.75/`. Read `audit/PROTOCOL.md`, this file's "## Packet 12.75 spec"
+reservation block, this file's "## Packet 12.7 — PASSED... committed" section, the newest prior Handoff
+(above, packet 44), `DECISIONS.md`'s Settled entries dated 2026-09-22/25/26, and `audit/CONTENT-GATE.md`'s
+recall contract; then independently re-ran the ledger CLI and the gate rather than trusting either the
+run's own prose or the task brief handed to this session.
+
+**Contradiction found and NOT resolved by picking one side — escalate to the founder.** The task brief this
+session was given stated "Outcome of packet 12.75: PASSED the gate ... ledger: 2 confirmed, 0 still
+rejected, 0 unverified." Reading `audit/ledger.json` directly (`node audit/scripts/ledger.mjs packet
+12.75`) and `audit/runs/packet-12.75/verify-a.md` shows something different: of the 11 ids the ledger
+assigns to this packet (E040, E041, E045-E053 — note E041 is not in the packet spec's own stated list of
+E040, E045-E053; `built.md` flags this mismatch too and does not resolve it), **9 are confirmed, 1 is
+wont-fix (E041), and 1 — E053 — is open and unclaimed.** `ledger.mjs unverified 12.75` exits 0 (a non-blocking
+exit code) but its own printed text is unambiguous: "gate clear on claims, but 1 scope item(s) are
+unclaimed... Do not record the packet as done while these are open." `verify-a.md`'s own last line: "The
+gate is still held by E053." **So the packet is not "done and verified" by this programme's own stated
+rule** ("'done and verified' ONLY if the gate passed AND the ledger is clear") **even though every gate
+command genuinely passed.** This bookkeeping session has no authority to fix E053, decide it wont-fix, or
+reassign it — only the founder or the next building session can. Do not carry forward a "PASSED" reading
+of this packet without also carrying E053.
+
+**What E053 actually is**, for whoever picks this up: `lib/mid-band-answer.js`, the mid-band "Why this loses
+marks" panel on non-shell (i.e. the 8 model-answer pages this packet did not touch) still renders for
+level-banded mark schemes even when its ceiling isn't true of the paragraphs it shows — the same class of
+defect packet 12.7 first noticed on the shell's own extract Evaluate item (E053 was filed 2026-09-25,
+scoped to 12.75, and 12.75's own round-0 and B1 both left `lib/mid-band-answer.js` untouched; see
+`verify-a.md`'s "Unclaimed but relevant" section).
+
+**Everything else in this packet is solid and independently re-confirmed, a different method from the
+builder's own probes each time:** `npm test` 331/331, `npm run build`, `npm run validate`, `npm run
+exposure`, `npm run recalls`, `node audit/scripts/check-staged-drafts.mjs market-failure` all exit 0
+(`gate.log`, freshly re-read, not re-run — re-running was not needed since nothing changed since `built.md`
+was written and no other session's commits touched these files per `built.md`'s own HEAD-move note).
+Two fix rounds ran (matching "2 of 2"): round 1 closed E048/E050; round B1 closed a real phone-width
+blocking defect in `verify-b.md` (below 1024px, `go()`/`goSet()` never scrolled the page, only the desktop
+panes, stranding the student below the shell on "Next") and `verify-b-r1.md` re-walked all 17 steps at
+390×844 clean, with an A/B control reproducing the pre-fix failure. The no-ellipsis founder standard
+(DECISIONS 2026-09-26) is proved by real A/B, not spot-checked: `text-fit-sweep.js` fails when `.ps-card`'s
+CSS containment is removed and passes the shipped code at 0 of 5,778 checks, 320-1920px, both themes.
+AO labels spot-checked as reading from item data (`data/modelAnswersData.js:277`, `aos: ['AO1']` on the
+Define item), not the mockup, per this packet's own instruction.
+
+**Not committed. Founder commits** (COMMIT HYGIENE / Rule 6 honoured — nothing staged, nothing committed by
+this pass): new `components/PracticeShell.jsx`, `components/practice-shell.css`, `lib/practice-shell.js`,
+`lib/practice-shell.test.mjs`, `lib/attempt-storage.js`, `lib/stimulus.test.mjs`; modified
+`components/SectionModelAnswersPage.jsx`, `components/MarkedScriptAttempt.jsx`, `lib/stimulus.js`,
+`lib/mid-band-answer.js`, `lib/mid-band-answer.test.mjs`, `data/modelAnswersData.js`,
+`data/modelAnswersExpansion.js`, `audit/scripts/validate-model-answers.mjs`,
+`audit/scripts/text-fit-sweep.js`, `package.json`. These sit alongside 12.7's own seven files (b1942fe is
+now committed, so those are no longer in this list) and packets 41/42/43/44's still-unstaged work in the
+same shared tree — `git status --short` mixes all of them; do not commit anything under this packet's name
+that is not in the list above.
+
+**Next packet is not free to pick as "12.75 done."** Whoever resumes this line should either (a) fix
+`lib/mid-band-answer.js` for E053 and re-run Verify A on that one id, or (b) get a founder ruling that
+E053 is wont-fix or moves to a later packet (12.9 already holds E054-E056, a natural place), and only then
+flip the PROGRESS.md row to "done and verified." Packets 45 (labour-markets) and 46 (growth-development)
+remain the next free content packets per the prior handoff and are unaffected by any of this.
+
+**Escalate:** (1) E053, open and unclaimed, blocks calling 12.75 done under this programme's own rule — a
+human decision is needed, not a bookkeeping one; (2) the task brief's stated ledger figures for this packet
+("2 confirmed, 0 unverified") do not match `audit/ledger.json` (9 confirmed, 1 wont-fix, 1 open) — worth
+checking why before trusting a future packet's computed brief the same way, per this programme's own
+"verify independently" lesson.
+
 ## Handoff — packet 45 (labour-markets) closed, gate passed (bookkeeping pass, 26 September 2026)
 
 **Bookkeeping-only pass.** Authored nothing, fixed nothing, committed nothing. Read `audit/PROTOCOL.md`,
@@ -10798,3 +10864,88 @@ carrying both a diagram and a quiz, in Verify A and again on screen at 390px in 
 opened, never by an automatic check (a word-overlap test caught 0 of these 4). **Packet 46 onwards: apply it
 before publish.** Packet 45's own four questions are being rewritten by `packet-close.js` (run
 `wf_b6a22d45-7fa`); that fix is staged to draft only and needs the founder's re-publish.
+
+## Handoff — packet 12.75 closed (brain)
+
+**Bookkeeping-only pass, second visit to this packet.** Authored, fixed and committed nothing. Read
+`audit/PROTOCOL.md`, this packet's prior Handoff above ("what comes next (packet 12.75 bookkeeping pass,
+26 September 2026)"), `audit/runs/packet-12.75/{verify-a,verify-b,verify-b-fix,built}.md` in full, and
+`audit/PROGRESS.md`'s 12.75 row (this pass's own update to it) before writing this section.
+
+**Status: E053 has moved from open/unclaimed to claimed, verified clean by an independent re-walk, but
+still not ledger-confirmed — the packet is still not "done and verified."** Founder, 26 Sep 2026: "Apply
+everywhere now" (recorded verbatim in `built.md`), overriding E051's "the other 31 pages render
+identically to HEAD" for exactly the 8 objectives-scheme mid-band panels named below, nothing wider.
+Fix: `lib/mid-band-answer.js`'s `pagePanelItem()` restricts the default (non-shell) path to level-banded
+items via `isLevelBanded()`; `SectionModelAnswersPage.jsx`'s default path calls it. Both files plus
+`lib/mid-band-answer.test.mjs` are modified, unstaged, uncommitted. `ledger.mjs claim 12.75 E053` was run
+inside the fix round; `ledger.mjs confirm E053` was not — `node audit/scripts/ledger.mjs unverified
+12.75` still returns "GATE BLOCKED: 1 claimed item(s) not confirmed" when re-run fresh here.
+
+**Independent verification (`verify-b-fix.md`, a different method from the fix's own probes): PASS.**
+Own servers (a b1942fe worktree as BEFORE, a copy with the change as AFTER), a text-only comparer distinct
+from the builder's markup-diffing `compare.mjs`, real taps in a signed-out Browser pane, storage cleared,
+390 and 1440. Across all 32 model-answer pages: the 8 named objectives pages (business
+managing-people, managing-finance, external-influences; economics aggregate-demand, economic-growth,
+macroeconomic-policies, market-structures-contestability, trade-global-economy) show 0 panels; the 3
+levels pages (business meeting-customer-needs; economics economic-performance,
+balance-payments-exchange-rates) keep theirs, text byte-identical to the pre-edit render at both widths;
+23 pages wholly unchanged; 0 pages show any other difference; the shell page (market-failure) is
+node-for-node identical to its own pre-fix capture. Gate re-read from `audit/runs/packet-12.75/e053/`:
+`npm test` 334/334, `npm run validate` 0 findings, `node audit/scripts/check-staged-drafts.mjs
+market-failure` matches (0 drift).
+
+**Two items in the task brief handed to this pass did not check out; flagged instead of written up as
+given:**
+1. "The pointer-versioning ledger item this packet's Verify B caused to be filed on packet 5" does not
+   exist. `node audit/scripts/ledger.mjs show V038` (the only "Version the Learn Mode step pointer" item)
+   was added 2026-09-19 and confirmed 2026-09-21 by packet 5's own verifier — a week before packet 12.75
+   was added to the ledger (2026-09-25) — and its evidence cites `audit/runs/packet-37/verify-b.md`.
+   Neither of this packet's own walkthrough files (`verify-b.md`, `verify-b-fix.md`) mentions a
+   pointer-versioning defect or mints a new id. Not cited above because it is not true; worth finding out
+   how this got into a computed task brief before trusting the next one the same way.
+2. "The D013 post-publish census step, if verify-b.md names one" — it does not. `grep -rn "D013"
+   audit/runs/packet-12.75/` is empty; `ledger.mjs show D013` is an unrelated packet-37 item (teaching the
+   multiplier twice). No such step applies here.
+3. The brief's own template left one placeholder blank ("the defect filed out as ... and the fix made
+   here"). Read most naturally, that is E053 itself — but E053 was filed by **packet 12.7's own Verify B**
+   (this file's earlier packet-12.7 handoff / `PROGRESS.md` row 12.7, step 8: the extract Evaluate item's
+   mid-band panel reusing a `markScheme` AO3 row verbatim), not minted fresh by this packet's walkthrough.
+
+**Publish command for the founder: there is not one for this packet.** `built.md`, verbatim: "there is no
+`scripts/packet-12.75-*` runner, so no re-stage or `--dump` applies." This is a code packet (a new
+component + a library fix), not a content-stage packet — nothing here goes through
+`scripts/publish-section.mjs`. Once E053 is ledger-confirmed (or rejected/reassigned), the founder's
+action is to review and commit the eleven files listed in `PROGRESS.md`'s 12.75 row (new:
+`components/PracticeShell.jsx`, `components/practice-shell.css`, `lib/practice-shell.js`,
+`lib/practice-shell.test.mjs`, `lib/attempt-storage.js`, `lib/stimulus.test.mjs`; modified:
+`components/SectionModelAnswersPage.jsx`, `components/MarkedScriptAttempt.jsx`, `lib/stimulus.js`,
+`lib/mid-band-answer.js`, `lib/mid-band-answer.test.mjs`, `data/modelAnswersData.js`,
+`data/modelAnswersExpansion.js`, `audit/scripts/validate-model-answers.mjs`,
+`audit/scripts/text-fit-sweep.js`, `package.json`), then deploy through the normal path — no database
+write, no `--confirm`, no section publish.
+
+**Next unclaimed packet, checked live rather than chained forward from an earlier claim:**
+- **Packet 47 (global-markets-expansion) is built, verified and gate-clear** —
+  `node audit/scripts/ledger.mjs unverified 47` now returns "gate clear: every claimed item is confirmed
+  and no scope is left unclaimed" (33 items, all confirmed), and `git status --short | grep packet-47`
+  shows a full run folder (`brief.md`, `built.md`, `verify-a.md`, `gate.log`, snapshots, the packet script)
+  already present, mostly staged. Its `PROGRESS.md` row 47 still reads "not started" — stale, the same
+  pattern packets 45/46 carried until their own bookkeeping passes ran. **It is not free to build — it
+  needs its own bookkeeping pass to write up its row**, the same kind of pass this section is; do not
+  restart its build.
+- **Packet 48 (government-intervention-firms) is the next genuinely free-to-build packet**:
+  `node audit/scripts/ledger.mjs packet 48 --open` shows 33 items, all `open`, 0 `claimed`; `git status
+  --short | grep packet-48` returns nothing (no run folder, no snapshot, no script); `PROGRESS.md` row 48
+  reads "not started" — consistent with live state. Per packet 45's own handoff, packet 48 is also where
+  packet 45's minimum-wage / maximum-wages / immobility-measures / discrimination pointers (3.3.5.2b) send
+  the reader, so read that section's `built.md` before starting, not just the specification.
+- Packets 49-51 (`business-growth`, `managing-change`, `poverty-inequality`) are untouched and behind 48
+  in traffic order.
+
+**Escalate to the founder:** (1) E053 — fix applied, independently re-walked clean, still only
+ledger-`claimed`; needs a formal confirm (or reject/reassign) before 12.75 is "done and verified"; (2) two
+factual mismatches in this task's own computed brief (the phantom packet-5 pointer item; the D013 step
+that isn't named anywhere) — worth checking why a computed brief carried them before trusting the next
+one the same way, this programme's own "verify independently" lesson applied to the brief itself, not
+just the build.

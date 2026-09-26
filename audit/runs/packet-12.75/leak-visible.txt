@@ -1,0 +1,18 @@
+E048 half 2 — nothing visible before marking. Browser pane, dev server :3001, storage cleared on another
+page of the origin first, Practise mode (the default). Expected strings: the first 40 characters of every
+criterion, model-answer segment, segment note, examiner's note and mark-scheme description of all six
+criteria-bearing items (201 probes), generated from data/modelAnswersData.js (leak-strings.json), searched
+for in document.body.innerText (which skips display:none) with each question current in turn.
+
+1440x900
+  set0 Q1..Q3 (Extract A), set1 Q1..Q3 (Standalone): 201 probes each, 0 visible. Primary button read
+  "Show the model answer" on all six (empty draft, writing state).
+  Positive control: after "Show the model answer without marking" on Extract A Q1, 5 of that item's 10
+  probes became visible — the criteria, sentences and examiner's note; the other 5 are its segment notes
+  (shown one at a time on selection) and its mark-scheme rows (inside a closed <details>).
+390x844
+  set0 Q1..Q3 with the Extract tab and with the Your answer tab selected, set1 Q1..Q3 (no tabs): 201
+  probes each, 0 visible.
+
+Not measured: a probe whose data text carries an HTML entity (one: "The UK&rsquo;s sugar tax") can never
+match rendered text, so that one string is not covered; widths other than 390 and 1440.

@@ -1,0 +1,9 @@
+✖ the default path returns no panel for an objectives-split item (2.395042ms)
+✖ the default path removes the panel rather than moving it to a lower level-banded item (0.398667ms)
+✖ the real bank: exactly the eight objectives pages lose the default panel, the levels pages keep theirs (1.772375ms)
+ℹ pass 20
+ℹ fail 3
+✖ failing tests:
+✖ the default path returns no panel for an objectives-split item (2.395042ms)
+✖ the default path removes the panel rather than moving it to a lower level-banded item (0.398667ms)
+✖ the real bank: exactly the eight objectives pages lose the default panel, the levels pages keep theirs (1.772375ms)

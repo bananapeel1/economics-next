@@ -33,6 +33,15 @@
  * It returns { checks, failures: { '<theme> · <state>': 0 | { count, first: [...] } } }.
  * Every value must be 0.
  *
+ * ON THIS SITE (packet 12.75): pass `load: 'write'` and run it FROM the page being swept — every route
+ * sends `X-Frame-Options: DENY`, so the default framed navigation is refused. Pass `prepare: (doc) =>
+ * <true once hydrated>`. A state's `run(doc, settle)` may be async and should `await settle()` after each
+ * click, because React applies a click after the click returns; an optional `after(doc, settle)` undoes
+ * a state (e.g. switches the mode back). The light theme must be re-asserted inside `run`: the app sets
+ * `data-theme` itself after hydration. PROVE EVERY STATE ENGAGED — read back a signature of the page at
+ * one width per state; packet 12.75's first real-page run passed 5,778 checks that had all measured
+ * the initial render (audit/runs/packet-12.75/text-fit.json).
+ *
  * Measurements are synchronous (layout is forced by reading geometry), so it works in a hidden tab
  * where requestAnimationFrame and timers are throttled. Fonts are awaited before the first
  * measurement; a fallback font has different metrics and would make the sweep meaningless.
@@ -41,13 +50,33 @@
  * with BLEED on the question-card metadata, the fixed version passes all widths. A sweep that has
  * never been seen to fail is not evidence (see npm run contrast, 21 Sep).
  */
-async function textFitSweep({ url, states, themes = ['dark', 'light'], from = 320, to = 1920, step = 5, allowEllipsis = false }) {
+async function textFitSweep({ url, states, themes = ['dark', 'light'], from = 320, to = 1920, step = 5, allowEllipsis = false, load = 'navigate', prepare = null }) {
   const ifr = document.createElement('iframe');
   ifr.style.cssText = 'border:0;height:900px;width:1440px;display:block;position:fixed;left:0;top:0;z-index:2147483647;background:#fff';
   document.body.appendChild(ifr);
-  await new Promise((r) => { ifr.onload = r; ifr.src = url; });
-  try { ifr.contentWindow.localStorage.clear(); } catch (e) { /* storage blocked: fine, start as-is */ }
-  await new Promise((r) => { ifr.onload = r; ifr.contentWindow.location.reload(); });
+  if (load === 'write') {
+    /* Packet 12.75. The site sends `X-Frame-Options: DENY` on every route (next.config.mjs), so a
+       framed NAVIGATION to the real page is refused and the sweep would measure an error page. In
+       'write' mode the page's own HTML is fetched and written into an about:blank frame; a document
+       written with open()/write() takes the URL of the document that wrote it, so run the sweep
+       FROM the page being swept and the app's router and hydration see their own path. Storage is
+       cleared before the write, because reloading a written frame would navigate and be refused. */
+    try { localStorage.clear(); } catch (e) { /* storage blocked: fine */ }
+    const html = await (await fetch(url, { cache: 'no-store' })).text();
+    await new Promise((r) => { ifr.onload = r; ifr.src = 'about:blank'; });
+    ifr.contentDocument.open();
+    ifr.contentDocument.write(html);
+    ifr.contentDocument.close();
+    // Hydration: wait until the app has attached its handlers (a caller-supplied probe), or 4s.
+    for (let i = 0; i < 80; i += 1) {
+      if (!prepare || prepare(ifr.contentDocument)) break;
+      await new Promise((r) => setTimeout(r, 50));
+    }
+  } else {
+    await new Promise((r) => { ifr.onload = r; ifr.src = url; });
+    try { ifr.contentWindow.localStorage.clear(); } catch (e) { /* storage blocked: fine, start as-is */ }
+    await new Promise((r) => { ifr.onload = r; ifr.contentWindow.location.reload(); });
+  }
   const D = ifr.contentDocument;
   const W = ifr.contentWindow;
   await D.fonts.ready;
@@ -111,6 +140,17 @@ async function textFitSweep({ url, states, themes = ['dark', 'light'], from = 32
     return [...new Set(bad)];
   }
 
+  /* Packet 12.75. A React app applies a click's state change in a microtask or a scheduler task,
+     not inside `click()`, so a state that is driven synchronously and measured at once is measured
+     BEFORE it renders — the first real-page run of this sweep "passed" 5,778 checks that had all
+     measured the page's initial state. `run` may now be async, and every run is followed by a yield
+     to the microtask queue and one MessageChannel task (not a timer: timers are throttled to one a
+     second in a hidden tab, which is where the Browser pane runs). */
+  const settle = async () => {
+    for (let i = 0; i < 3; i += 1) await Promise.resolve();
+    await new Promise((r) => { const c = new MessageChannel(); c.port1.onmessage = () => r(); c.port2.postMessage(0); });
+  };
+
   const failures = {};
   let checks = 0;
   for (const theme of themes) {
@@ -121,13 +161,15 @@ async function textFitSweep({ url, states, themes = ['dark', 'light'], from = 32
         ifr.style.width = `${x}px`;
         ifr.style.height = `${x >= 1024 ? 900 : 844}px`;
         void D.body.offsetWidth;
-        state.run(D);
+        await state.run(D, settle);
+        await settle();
         void D.body.offsetWidth;
         const b = check();
         checks += 1;
         if (b.length) fails.push(`${x}: ${b.slice(0, 3).join(' | ')}`);
       }
       failures[`${theme} · ${state.name}`] = fails.length ? { count: fails.length, first: fails.slice(0, 6) } : 0;
+      if (state.after) { await state.after(D, settle); await settle(); }
     }
   }
   ifr.remove();

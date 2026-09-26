@@ -1,0 +1,34 @@
+SAME  panel kept                       /business/meeting-customer-needs-model-answers
+SAME  panel none                       /business/the-market-model-answers
+SAME  panel none                       /business/marketing-mix-model-answers
+DIFF  = panel removed, nothing else    /business/managing-people-model-answers
+SAME  panel none                       /business/entrepreneurs-leaders-model-answers
+SAME  panel none                       /business/raising-finance-model-answers
+SAME  panel kept                       /business/financial-planning-model-answers
+DIFF  = panel removed, nothing else    /business/managing-finance-model-answers
+SAME  panel none                       /business/resource-management-model-answers
+DIFF  = panel removed, nothing else    /business/external-influences-model-answers
+SAME  panel none                       /economics/introductory-concepts-model-answers
+SAME  panel none                       /economics/demand-model-answers
+SAME  panel kept                       /economics/supply-model-answers
+SAME  panel none                       /economics/price-determination-model-answers
+skip  shell page (packet 12.75's own change, not in the 31)  /economics/market-failure-model-answers
+SAME  panel kept                       /economics/government-intervention-model-answers
+SAME  panel kept                       /economics/economic-performance-model-answers
+DIFF  = panel removed, nothing else    /economics/aggregate-demand-model-answers
+SAME  panel kept                       /economics/aggregate-supply-model-answers
+SAME  panel kept                       /economics/national-income-model-answers
+DIFF  = panel removed, nothing else    /economics/economic-growth-model-answers
+DIFF  = panel removed, nothing else    /economics/macroeconomic-policies-model-answers
+SAME  panel none                       /economics/types-sizes-businesses-model-answers
+SAME  panel none                       /economics/revenue-costs-profits-model-answers
+DIFF  = panel removed, nothing else    /economics/market-structures-contestability-model-answers
+SAME  panel none                       /economics/labour-markets-model-answers
+SAME  panel none                       /economics/government-intervention-firms-model-answers
+SAME  panel kept                       /economics/causes-effects-globalisation-model-answers
+DIFF  = panel removed, nothing else    /economics/trade-global-economy-model-answers
+SAME  panel kept                       /economics/balance-payments-exchange-rates-model-answers
+SAME  panel kept                       /economics/poverty-inequality-model-answers
+SAME  panel kept                       /economics/growth-development-model-answers
+
+31 non-shell pages: 23 identical, 8 differ ONLY by the removed panel, 0 other differences. Noise control (after vs after-repeat): 0 of 32 differ.

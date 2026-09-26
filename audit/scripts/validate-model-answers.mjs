@@ -21,6 +21,10 @@
  *   R5  criteria and script travel together — neither alone
  *   R6  stimulus, when present, resolves to a real file in content/data-response/
  *   R7  every criteria[].segRole is the literal 'earned' or 'missed' (packet 12.7, E039)
+ *   R8  keyTerm, when present, is a non-empty string and an EXACT substring of `question`
+ *       (packet 12.75, E052). The practice shell sets the first occurrence of it in DM Serif
+ *       Display italic; a keyTerm that is not in the stem would render nothing and say nothing,
+ *       so the rule is what keeps the emphasis honest. `question` itself never changes for it.
  *
  * R4 READS `lib/ial-marking.js`, THROUGH `lib/practice-tariffs.js`. There is no tariff list in this
  * file and there must never be one. IAL Economics has no 10-mark question and IAL Business has no
@@ -85,6 +89,17 @@ export function checkItem(item, { stimuli }) {
     push('R5', hasCriteria
       ? 'carries `criteria` but no `script` — a criterion with nowhere to point is not tickable'
       : 'carries `script` but no `criteria` — a segmented script with no marks against it renders as prose');
+  }
+
+  // R8 — runs on every item, not only the retrofitted ones: `keyTerm` is its own optional field.
+  // Exact, case-sensitive substring. A near miss ("negative externalities" against a stem that says
+  // "negative externality") is a finding, because the shell would silently emphasise nothing.
+  if (item.keyTerm !== undefined) {
+    if (typeof item.keyTerm !== 'string' || !item.keyTerm.trim()) {
+      push('R8', `keyTerm is ${JSON.stringify(item.keyTerm)}; it must be a non-empty string`);
+    } else if (!String(item.question || '').includes(item.keyTerm)) {
+      push('R8', `keyTerm "${item.keyTerm}" is not an exact substring of the question`);
+    }
   }
 
   if (!hasCriteria) return out;

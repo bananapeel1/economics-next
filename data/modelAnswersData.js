@@ -232,6 +232,9 @@ const BASE_ANSWERS = [
     type: 'Knowledge & Application',
     commandWord: 'Explain',
     question: 'Explain what is meant by a negative externality and give one example.',
+    // Packet 12.75, E052: the phrase the question hinges on, set in the serif italic. Must be an
+    // exact substring of `question` (validator R8); `question` itself is unchanged.
+    keyTerm: 'negative externality',
     markScheme: [
       { range: '1–2 marks', desc: 'Definition of negative externality (spill-over cost to third parties not reflected in price)' },
       { range: '3–4 marks', desc: 'Clear, developed example with reference to third-party cost and market over-production' },

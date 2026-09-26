@@ -34,8 +34,13 @@ import { SECTION_MODEL_ANSWERS_FAQ } from '@/data/modelAnswersData';
 import { modelAnswersHeading, modelAnswersPath } from '@/data/modelAnswerPages';
 import { aoListFor } from '@/lib/exam-item';
 import { timeLabel, paperLabel } from '@/lib/exam-timing';
-import { midBandAttempt, highestTariffItem } from '@/lib/mid-band-answer';
+import { midBandAttempt, highestTariffItem, pagePanelItem } from '@/lib/mid-band-answer';
 import MarkedScriptAttempt from '@/components/MarkedScriptAttempt';
+import PracticeShell from '@/components/PracticeShell';
+import { stimulusFor, figuresIn, withFigures, linkFigures } from '@/lib/stimulus';
+import {
+  hasShell, isShellItem, questionSets, stemParts, cardLabel, minutesFor, focusRowsFor,
+} from '@/lib/practice-shell';
 import './model-answers-layout.css';
 
 const SUBJECT_LABEL = { economics: 'Economics', business: 'Business' };
@@ -374,11 +379,185 @@ function CoveragePanel({ coverage, page }) {
   );
 }
 
+/* ── Packet 12.75: the practice shell ───────────────────────────────────────────────────────────
+
+   A page renders the shell IF AND ONLY IF one of its written items carries `criteria` (E045 scope).
+   After packet 12.7 that is Economics 1.3.5 alone; every other page takes the untouched path at the
+   bottom of this file and renders exactly as it did at HEAD (E051).
+
+   Everything the shell prints about content is prepared here, on the server, from the item itself:
+   the stem cut around `keyTerm` (E052), minutes from `item.minutes` or `minutesForMarks()` (E046),
+   AO codes from `item.ao` and each criterion's `band`, figures derived from the extract's own text
+   and linked into the model answer by exact occurrence (E047), and the mid-band panel restricted to
+   level-banded mark schemes (E053). The client component decides only what is visible. */
+
+function shellItem(item, page, figures, midBand) {
+  const texts = figures.map((f) => f.text);
+  return {
+    id: item.id,
+    commandWord: item.commandWord,
+    marks: Number(item.marks) || 0,
+    question: item.question,
+    stem: stemParts(item.question, item.keyTerm),
+    cardLabel: cardLabel(item),
+    minutes: minutesFor(item, page.subject, page.unit),
+    ao: Array.isArray(item.ao) ? item.ao.map(String) : [],
+    likelyScore: item.likelyScore || '',
+    criteria: item.criteria.map((c) => ({
+      id: c.id, band: c.band, text: c.text, marks: Number(c.marks) || 0, seg: c.seg,
+      segRole: c.segRole === 'missed' ? 'missed' : 'earned',
+    })),
+    script: (item.script || []).map((p) => ({
+      id: p.id,
+      label: p.label || '',
+      aos: Array.isArray(p.aos) ? p.aos : [],
+      segments: (p.segments || []).map((sg) => ({
+        id: sg.id,
+        html: texts.length ? linkFigures(sg.html, texts) : sg.html,
+        note: sg.note || '',
+      })),
+    })),
+    examinerHtml: item.examinerCommentary || '',
+    markScheme: (item.markScheme || []).map((r) => ({ range: String(r.range ?? ''), desc: String(r.desc ?? '') })),
+    focusRows: figures.length ? focusRowsFor(item, figures) : [],
+    midBand: midBand
+      ? {
+          basis: midBand.basis,
+          kept: midBand.kept.map((k) => ({ index: k.index, label: k.label, html: k.html })),
+          outOfReach: midBand.outOfReach,
+          ceiling: midBand.ceiling,
+        }
+      : null,
+  };
+}
+
+function shellFor(page, written, heading) {
+  const items = written.filter(isShellItem);
+  // E053: only a level-banded scheme can say where a truncated attempt "tops out". On 1.3.5 no item
+  // qualifies (both 20s are AO-split; Examine 8 is suppressed by E028), so no panel renders there.
+  const midBandItem = highestTariffItem(items, { levelsOnly: true });
+  const midBand = midBandItem ? midBandAttempt(midBandItem) : null;
+  const sets = questionSets(items).map((set) => {
+    const stim = set.stimulus ? stimulusFor(set.stimulus) : null;
+    const figures = stim ? figuresIn(stim.blocks) : [];
+    return {
+      id: set.id,
+      kind: stim ? 'extract' : 'standalone',
+      label: set.label,
+      extract: stim ? { href: stim.href, title: stim.title, blocks: withFigures(stim.blocks) } : null,
+      items: set.items.map((it) => shellItem(it, page, figures, midBandItem && it.id === midBandItem.id ? midBand : null)),
+    };
+  });
+  return {
+    pageKey: modelAnswersPath(page),
+    title: heading,
+    backLink: page.backLink,
+    sets,
+  };
+}
+
+function ShellPage({ page, written, coverage, dataResponse, heading, subjectLabel, totalMarks, faqSchema, quizSchema }) {
+  const shell = shellFor(page, written, heading);
+  // Items without `criteria` on a shell page keep the old rendering, below the shell. None today.
+  const rest = written.filter((a) => !isShellItem(a));
+  return (
+    <div className="resource-page rl-night ps-page">
+      <SiteHeader crumb={`${subjectLabel} / Model answers`} />
+
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+      {quizSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(quizSchema) }}
+        />
+      )}
+
+      <PracticeShell shell={shell} />
+
+      {/* Everything that sat around the question list at HEAD, below the shell and in this order:
+          the page's own description and counts, CoveragePanel, the data-response link, the CTA. */}
+      <div className="ps-after" id="ps-after">
+        <div className="lab-page">
+          <header className="lab-header">
+            <p className="resource-page-subtitle" dangerouslySetInnerHTML={{ __html: page.subtitle }} />
+            <p className="lab-crumbs">
+              {subjectLabel} &middot; {page.unitCode} &middot; Unit {page.unit} &middot; {page.sectionNumber}
+            </p>
+            <p className="lab-counts">
+              {`${written.length} written question${written.length === 1 ? '' : 's'} · ${totalMarks} marks`}
+            </p>
+            <p className="lab-note">
+              {`Time estimates come from one constant per paper — ${subjectLabel} Unit ${page.unit} is ${paperLabel(page.subject, page.unit)} — not from a per-question guess.`}
+            </p>
+          </header>
+
+          <CoveragePanel coverage={coverage} page={page} />
+
+          {rest.length > 0 && (
+            <section className="lab-block" aria-labelledby="lab-written">
+              <div className="lab-block-head">
+                <h2 id="lab-written">More exam questions</h2>
+              </div>
+              <ol className="lab-item-list">
+                {rest.map((item) => (
+                  <li key={item.id} className="lab-item">
+                    <Meta item={item} subject={page.subject} unit={page.unit} />
+                    <p className="lab-item-question">{item.question}</p>
+                    <MarkScheme rows={item.markScheme} />
+                    <ModelAnswer item={item} />
+                    <ExaminerCommentary html={item.examinerCommentary} />
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+
+          {dataResponse && (
+            <section className="lab-block" aria-labelledby="lab-data-response">
+              <div className="lab-block-head">
+                <h2 id="lab-data-response">Data response</h2>
+              </div>
+              <Link href={dataResponse.href} className="lab-dr-card">
+                <span className="lab-dr-title">{dataResponse.title}</span>
+                <span className="lab-dr-sub">
+                  Stimulus, question ladder and KAA+E model answers on the live page &rarr;
+                </span>
+              </Link>
+            </section>
+          )}
+        </div>
+
+        <div className="seo-cta" style={{ marginTop: 32 }}>
+          <h2>Now try one yourself</h2>
+          <p>
+            Practise {page.topic} in the app: exam-style questions filtered by mark
+            value, each with model answer guidance you can open when you are ready.
+            Free, and it opens exactly where you are. Getting your own written
+            answers AI-marked is a Pro feature.
+          </p>
+          <Link
+            href={page.sectionId ? `/?section=${page.sectionId}` : modelAnswersPath(page)}
+            className="seo-cta-button"
+          >
+            Practise {page.topic} &rarr;
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function SectionModelAnswersPage({ page, written = [], coverage, dataResponse, stimulus = null }) {
   const subjectLabel = SUBJECT_LABEL[page.subject] || page.subject;
   const heading = modelAnswersHeading(page, { hasAnswers: written.length > 0 });
   const totalMarks = written.reduce((n, a) => n + (Number(a.marks) || 0), 0);
-  const midBandItem = highestTariffItem(written);
+  // E053, every page (founder, 26 Sep 2026): no panel unless the top item's scheme is level-banded.
+  const midBandItem = pagePanelItem(written);
   const midBand = midBandItem ? midBandAttempt(midBandItem) : null;
 
   // Subject first: Business 1.3.1 and Economics 1.3.1 are different topics. Packet 12.1, E005.
@@ -414,6 +593,22 @@ export default function SectionModelAnswersPage({ page, written = [], coverage, 
       acceptedAnswer: { '@type': 'Answer', text: answerText(item) },
     })),
   } : null;
+
+  if (hasShell(written)) {
+    return (
+      <ShellPage
+        page={page}
+        written={written}
+        coverage={coverage}
+        dataResponse={dataResponse}
+        heading={heading}
+        subjectLabel={subjectLabel}
+        totalMarks={totalMarks}
+        faqSchema={faqSchema}
+        quizSchema={quizSchema}
+      />
+    );
+  }
 
   return (
     <div className="resource-page rl-night">
