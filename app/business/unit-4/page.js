@@ -22,12 +22,13 @@ const SECTIONS = [
       { letter: 'd', name: 'Impact of Globalisation', kw: 'FDI · cultural convergence · inequality · environmental impact' },
     ] },
   { id: 'global-markets-expansion', ref: '4.3.2', title: 'Global Markets & Expansion',
-    desc: 'How businesses enter and compete in global markets — market entry strategies, assessing international opportunities, applying Ansoff\'s matrix abroad and managing the risks of global expansion.',
+    desc: 'Why businesses expand abroad and how they choose where — the push and pull factors behind trade, assessing a country as a market and as a production location, the reasons for global mergers, takeovers and joint ventures, and the uncertainty that exchange rates and skill shortages bring.',
     subtopics: [
-      { letter: 'a', name: 'Market Entry Strategies', kw: 'Exporting · licensing · franchising · joint ventures · FDI · subsidiaries' },
-      { letter: 'b', name: 'Assessing Opportunities', kw: 'Market size · growth potential · cultural distance · political risk' },
-      { letter: 'c', name: 'Managing International Risk', kw: 'Exchange rate risk · political instability · legal differences · corruption' },
-      { letter: 'd', name: 'Ansoff\'s Matrix (Global)', kw: 'Market development · diversification · existing vs new markets/products' },
+      { letter: 'a', name: 'Conditions that Prompt Trade', kw: 'Push & pull factors · off-shoring & outsourcing · extending the product life cycle' },
+      { letter: 'b', name: 'Assessing a Country as a Market', kw: 'Disposable income · ease of doing business · infrastructure · political stability · Porter\'s five forces' },
+      { letter: 'c', name: 'Assessing a Production Location', kw: 'Costs of production · skills & labour · trade blocs · government incentives · return on investment' },
+      { letter: 'd', name: 'Global Mergers, Takeovers & Joint Ventures', kw: 'Spreading risk · new markets · brands & patents · securing supplies · local knowledge' },
+      { letter: 'e', name: 'Global Expansion & Uncertainty', kw: 'Exchange rate movements · skill shortages · international competitiveness' },
     ] },
   { id: 'global-marketing', ref: '4.3.3', title: 'Global Marketing',
     desc: 'Adapting the marketing mix for international markets — standardisation vs adaptation, glocalisation, cultural differences and the challenges of marketing across borders.',
@@ -109,7 +110,7 @@ export default function Unit4Page() {
           <h2 className="elp-s-title">What you need to know for {UNIT.code}</h2>
           <div className="eup-key-concepts">
             <div className="eup-concept"><div className="eup-concept-icon"><NetworkGraph size={18} /></div><div><div className="eup-concept-title">Globalisation is a double-edged sword</div><div className="eup-concept-desc">Trade creates winners and losers. Always evaluate both sides — economic growth and job creation vs inequality, cultural erosion and environmental damage.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon"><BoltIcon size={18} /></div><div><div className="eup-concept-title">Entry strategy depends on context</div><div className="eup-concept-desc">Exporting, licensing, franchising, JVs and FDI each carry different levels of risk, cost and control. Match the strategy to the market conditions and business resources.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><BoltIcon size={18} /></div><div><div className="eup-concept-title">Where to expand is an assessment</div><div className="eup-concept-desc">A country is judged twice: as a market (income, ease of doing business, infrastructure, political stability, exchange rates) and as a place to produce (costs, skills, incentives, likely return). Weigh the factors against what the business is trying to achieve.</div></div></div>
             <div className="eup-concept"><div className="eup-concept-icon"><PenIcon size={18} /></div><div><div className="eup-concept-title">Glocalisation is the sweet spot</div><div className="eup-concept-desc">The best global businesses balance standardisation (cost efficiency) with adaptation (local relevance). Weigh both sides before you recommend a strategy.</div></div></div>
             <div className="eup-concept"><div className="eup-concept-icon"><ChartHistogram size={18} />️</div><div><div className="eup-concept-title">MNCs face ethical scrutiny</div><div className="eup-concept-desc">Transfer pricing, labour standards and environmental impact are key evaluation themes. Examiners want you to weigh economic benefits against ethical concerns.</div></div></div>
           </div>

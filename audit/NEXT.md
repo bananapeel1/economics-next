@@ -10949,3 +10949,108 @@ factual mismatches in this task's own computed brief (the phantom packet-5 point
 that isn't named anywhere) — worth checking why a computed brief carried them before trusting the next
 one the same way, this programme's own "verify independently" lesson applied to the brief itself, not
 just the build.
+
+## Handoff — packet 47 (global-markets-expansion) closed, gate passed (bookkeeping pass, 26 September 2026)
+
+**Bookkeeping-only pass.** Authored nothing, fixed nothing, ran no build, published nothing, committed
+nothing. Read `audit/PROTOCOL.md`, `audit/CONTENT-GATE.md` (including the recall contract and the new
+check-in answer rule), the Settled list in `audit/DECISIONS.md`, this packet's own
+`audit/runs/packet-47/{brief,built,verify-a,verify-b,gate.log,fix1-*}` in full, and the tail of this file,
+before writing anything. `audit/ledger.json` was read (via a direct Python parse, not the `ledger.mjs` CLI
+the build/verify session used), not written.
+
+**No `## Packet 47 spec` heading exists anywhere in this file** — the same gap packets 41/43/44/45/46 hit
+and normalized; PROTOCOL's own rule is that the ledger defines scope, and `brief.md`/`built.md` supplied it
+here instead, before this pass ever ran. Not a contradiction between authorities, a missing document worked
+around a sixth time.
+
+**Packet 47 (global-markets-expansion, IAL Business 4.3.2) PASSED THE GATE.** STAGED to `draft` only; live
+`data` and git HEAD both untouched; nothing committed. Span independently confirmed by this pass with a
+direct `grep`/`sed` read of `audit/raw/bus_spec.txt` (heading "4.3.2 Global markets and business expansion"
+at `:1372`, 5 sub-topics, last bullet at `:1417`, next heading "4.3.3 Global marketing" at `:1424`).
+
+**The ledger's own `structure-06` item was an inverted UK-GCE-numbering claim, and it was correctly refused,
+not worked around.** It asserted the app's "4.3.2" tag was wrong and the real IAL number was "4.2" (with
+sub-bullets "4.2.1"-"4.2.5"). `bus_spec.txt` has no such heading — `:1304` is "4.2 Assessment information",
+an unrelated administrative section — so the packet's own `4.3.2`/WBS14 tagging is the one that is right;
+disposed `wont-fix` with file:line evidence on the item, re-verified by this pass with the same grep. This
+is exactly the "154 items cite UK GCE numbers that do not exist in the IAL spec" trap this programme has
+been warned about (Rule 1); packet 47 is a clean example of catching one rather than acting on it.
+
+**Ledger: 33 items, 32 confirmed / 1 wont-fix (`structure-06`, above) / 0 rejected / 0 open** —
+independently recounted by this pass with a direct Python parse of `audit/ledger.json`, grouping on
+`packet === 47`; cross-checked against a fresh `node audit/scripts/ledger.mjs unverified 47` → "gate clear"
+and `ledger.mjs packet 47` (same 33 ids). **This contradicts the task brief's own "2 confirmed" figure for
+this packet, which is wrong and is not propagated** — the same class of brief error packets 44 ("0
+confirmed"), 45 ("3 confirmed") and 12.75 (a phantom pointer item and an unnamed D013 step) already
+flagged. Whoever computes these briefs should be checked before being trusted, not just this once — five
+packets in a row now.
+
+**One fix round of 2 budgeted, matching the brief.** Verify A round 0 rejected `structure-03` (the
+"zero-recall" fix added a reorder with two defensible orders — netting a grant off a cost before or after
+estimating profit are independent steps, so one order was marked wrong for no real reason) and `specGap-02`
+(an arithmetic misstatement: "$5.50 is about a seventh of $34" when 5.50/34 = 16.2% ≈ a sixth, not a
+seventh). Both fixed (the reorder replaced with a `classify` recall; the fraction corrected) and confirmed
+on an independent round-1 re-verification using a different method from round 0 (served-draft `curl` read,
+not the bundle file).
+
+**Verify B, 390×844 signed out, real taps, storage cleared: PASS, no blocking defect in the packet's own
+content.** Full 22-step, 5-chapter walk; every recall/quiz/practice widget marks; the "step N of M" resume
+family does not reproduce in either direction; 0 tables; 5 diagrams/7 views all ≥9.2px with none clipped;
+the automated `leak-probe-bundle.log` (packet 44's script, run against the full bundle) found 0 check-in
+quiz keys printed on that check-in's own diagram.
+
+**One real, unfixed, non-packet-content defect found: the Unit 4 hub page and the Business index still
+advertise the OLD section.** `app/business/unit-4/page.js:24-31` names sub-topics ("Market Entry
+Strategies", "Ansoff's Matrix (Global)") this rebuild no longer teaches under those names; `app/
+business/page.js:47` reads "Market entry, Ansoff's matrix, risk". Non-blocking while staged; it will
+mislead a student the moment this section publishes, and must change with, or before, the publish. Verify
+B graded it correctly as a FAIL for publish, not for staging.
+
+**Escalating, not resolved by this pass: the CONTENT-GATE.md check-in answer rule's required documentation
+is missing, even though no leak was found by a lesser method.** The rule (BLOCKING, added 26 September,
+before this packet's own Verify A/B ran — confirmed by file mtimes: the addendum to packet 45's handoff
+above landed around the time of the labour-markets publish, and every file under `audit/runs/packet-47/`
+postdates it) requires Verify A and Verify B to each record an explicit reader-judged `leaks` / `clean`
+line for every check-in that carries both a diagram and a quiz, and says outright — in so many words — that
+an automatic check is never a substitute, because a word-overlap test caught 0 of the 4 leaks a human found
+on packet 45. Neither `verify-a.md` nor `verify-b.md` for this packet contains that line for any of its 5
+check-ins; the only defence against this specific rule is `leak-probe-bundle.log`, an automated script,
+which is exactly the kind of check the rule was written to say is not enough (it found 0 HARD matches, and
+Verify B's narrative walk of all 5 check-ins raised nothing either, so there is no positive evidence of a
+leak — only an absence of the required documentation that would let anyone certify there isn't one). **The
+next packet that builds a content section should write the reader's `leaks`/`clean` line explicitly, per
+check-in, in both Verify A and Verify B** — and packet 47's own two verification files are one packet short
+of a full re-read against this rule if the founder wants that certainty before publish.
+
+**Gate re-run fresh by this pass, from `gate.log` plus the fix round's `fix1-gate-*.log`:** `npm test`
+334/334 (post-fix; 331/331 pre-fix) · `npm run build` exit 0 · `npm run validate` exit 0 (0 BLOCK / 1 DEBT
+`quant.unit`, baselined) · `npm run exposure` exit 0 (DECIDED, not UNWRITTEN) · `npm run recalls` exit 0 ·
+`node audit/scripts/check-staged-drafts.mjs global-markets-expansion` exit 0, re-run fresh by this pass —
+"matches", 0 drift. A fresh read of `draft-readback.log` confirms all 8 tables' `draft` equals the bundle
+and `data` equals the t=0 snapshot (live untouched).
+
+**No other contradiction found** among `audit/PROTOCOL.md`, the Settled entries in `audit/DECISIONS.md`,
+and `audit/CONTENT-GATE.md`'s recall contract, for this packet's work.
+
+**Escalate to the founder:** (1) the Unit 4 hub / Business index copy must be updated with, or before, the
+publish of this section (files named above); (2) per PROTOCOL Rule 3, field compatibility against a
+current `origin/main` checkout was not run before this pass (`built.md` names the fields to check:
+`mistakes[].mistake/correction/examTip`, `diagramId` pins, and recall types `classify`/`fillin`/`match`/
+`reorder`) — the same gap packets 40-46 have each carried forward rather than closed; (3) the check-in
+answer rule documentation gap above — no leak found, but the required reader judgment was never written
+down for this section's 5 check-ins; (4) the recurring brief-accuracy problem (five packets running now)
+is worth its own fix, separate from any one packet. When ready to publish (not run by this pass, per Rule
+6):
+```
+node scripts/packet-47-global-markets-expansion.mjs --stage && node scripts/publish-section.mjs global-markets-expansion --confirm
+```
+
+**Next unclaimed packet, re-checked live rather than chained forward from an earlier claim — and this
+finding is time-sensitive.** `audit/runs/packet-48/` now exists (`brief.md` at 39KB, dated minutes before
+this pass ran, plus `ledger-packet-48*.txt`, `ids.txt`, `live-section-2026-09-26.json`), all untracked. The
+ledger still shows packet 48 (government-intervention-firms) at 33 items, all `open`, 0 `claimed` — so no
+build has landed yet — but **a brief this fresh means another session is very likely mid-build on packet 48
+right now, not that it is free to start.** Do not restart or duplicate that work; check for a live session
+or a newer run folder before touching it. Packets 49-51 (`business-growth`, `managing-change`,
+`poverty-inequality`) are untouched, all `open`, behind 48 in traffic order.

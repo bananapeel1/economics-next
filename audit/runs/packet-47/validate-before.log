@@ -1,0 +1,26 @@
+(node:53414) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+section                             unit   block  debt  new-block  new-debt  coverage
+global-markets-expansion            WBS14      9    38          0        10       52%
+total                                          9    38          0        10
+
+10 findings not in the baseline:
+  (10 new DEBT — rerun with --debt to list them)
+
+by rule:
+  DEBT   spec.uncovered                  16
+  DEBT   schema.lengths                   8
+  BLOCK  claim.uncited                    5
+  DEBT   practice.opening                 4
+  DEBT   step.words                       3
+  BLOCK  practice.tariff                  2
+  DEBT   practice.levels                  2
+  DEBT   quiz.histogram                   1
+  BLOCK  practice.command                 1
+  BLOCK  section.no-recall                1
+  DEBT   depth.blocks                     1
+  DEBT   depth.recalls                    1
+  DEBT   depth.quiz                       1
+  DEBT   quant.unit                       1
