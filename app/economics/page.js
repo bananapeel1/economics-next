@@ -48,7 +48,7 @@ const unit4Sections = [
   { id: 'trade-global-economy', number: '4.3.2', title: 'Trade and the Global Economy', meta: 'Comparative advantage, free trade, protectionism' },
   { id: 'balance-payments-exchange-rates', number: '4.3.3', title: 'BoP, Exchange Rates & Competitiveness', meta: 'Current account, Marshall-Lerner, J-curve' },
   { id: 'poverty-inequality', number: '4.3.4', title: 'Poverty and Inequality', meta: 'Lorenz curve, Gini coefficient, relative vs absolute poverty' },
-  { id: 'role-state-macroeconomy', number: '4.3.5', title: 'The Role of the State in the Macroeconomy', meta: 'Public goods, merit goods, redistribution' },
+  { id: 'role-state-macroeconomy', number: '4.3.5', title: 'The Role of the State in the Macroeconomy', meta: 'Public expenditure, taxation, fiscal deficits and debt' },
   { id: 'growth-development', number: '4.3.6', title: 'Growth and Development', meta: 'HDI, development strategies, barriers to growth' },
 ];
 
