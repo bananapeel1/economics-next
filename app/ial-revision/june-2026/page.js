@@ -39,11 +39,11 @@ export default function June2026Page() {
             <div className="elp-hero-eyebrow">Edexcel IAL &middot; June 2026 Exam Series</div>
             <h1 className="elp-hero-title">June 2026<br /><em>IAL revision guide</em></h1>
             <p className="elp-hero-desc">
-              The June 2026 Edexcel IAL exam series runs from late May to mid-June. Whether you are sitting Economics units (WEC11&ndash;WEC14) or Business units (WBS11&ndash;WBS14), Revvy Learn has free revision notes and practice questions for both subjects.
+              The June 2026 Edexcel IAL series has finished: Pearson released results to students on 13 August 2026. The next May/June series runs from 5 May to 4 June 2027, with October 2026 and January 2027 before it. Revvy Learn has free revision notes and practice questions for Economics (WEC11&ndash;WEC14) and Business (WBS11&ndash;WBS14).
             </p>
             <div className="elp-hero-actions">
-              <Link href="/economics" className="elp-btn-primary">Economics revision &rarr;</Link>
-              <Link href="/business" className="elp-btn-secondary">Business revision &rarr;</Link>
+              <Link href="/ial-revision/june-2027" className="elp-btn-primary">June 2027 timetable &rarr;</Link>
+              <Link href="/economics" className="elp-btn-secondary">Economics revision &rarr;</Link>
             </div>
           </div>
         </div>

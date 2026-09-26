@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { IAL_PAPERS } from '@/data/ialPapers';
-import { oct2026, jan2027 } from '@/data/ialTimetables';
+import { oct2026, jan2027, jun2027 } from '@/data/ialTimetables';
 import '@/styles/paper-facts.css';
 
 /**
@@ -12,7 +12,7 @@ export default function PaperFacts({ code }) {
   if (!paper) return null;
   const subject = code.startsWith('WEC') ? 'economics' : 'business';
   const today = new Date().toISOString().slice(0, 10);
-  const sittings = [oct2026, jan2027]
+  const sittings = [oct2026, jan2027, jun2027]
     .map((series) => ({ series, p: series.papers.find((x) => x.code === code) }))
     .filter(({ p }) => p && p.date >= today);
 

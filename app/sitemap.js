@@ -39,6 +39,7 @@ export default async function sitemap() {
     { url: `${baseUrl}/ial-revision`, ...at('/ial-revision'), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/ial-revision/exam-series`, ...at('/ial-revision/exam-series'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/ial-revision/june-2026`, ...at('/ial-revision/june-2026'), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/ial-revision/june-2027`, ...at('/ial-revision/june-2027'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/ial-revision/january-2027`, ...at('/ial-revision/january-2027'), changeFrequency: 'monthly', priority: 0.7 },
 
     // ── Economics landing pages ──
