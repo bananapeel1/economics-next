@@ -40,13 +40,12 @@ const SECTIONS = [
       { letter: 'e', name: 'Cultural & Social Factors', kw: 'Cultural differences · tastes & preferences · language & unintended meanings · inappropriate branding' },
     ] },
   { id: 'global-industries-mncs', ref: '4.3.4', title: 'Global Industries & MNCs',
-    desc: 'The role and impact of multinational corporations — transfer pricing, FDI, ethical issues, the impact on host and home countries, and the power of global brands.',
+    desc: 'The impact of multinational corporations and how they are controlled — their effects on the local economy and on the national economy, the ethical issues they raise for stakeholders, the environment, supply chains and marketing, and the factors to consider when controlling them.',
     subtopics: [
-      { letter: 'a', name: 'Multinational Corporations', kw: 'Definition · reasons for MNCs · benefits · drawbacks · power' },
-      { letter: 'b', name: 'Transfer Pricing & Tax', kw: 'Profit shifting · tax avoidance · ethical implications · regulation' },
-      { letter: 'c', name: 'FDI & Host Countries', kw: 'Job creation · technology transfer · exploitation · environmental damage' },
-      { letter: 'd', name: 'Ethical Issues in Global Business', kw: 'Labour standards · sweatshops · environmental responsibility · fair trade' },
-      { letter: 'e', name: 'Controlling MNCs', kw: 'Government regulation · international law · pressure groups · CSR' },
+      { letter: 'a', name: 'MNCs and the Local Economy', kw: 'FDI & subsidiaries · local labour, wages & working conditions · local businesses · the community & environment' },
+      { letter: 'b', name: 'MNCs and the National Economy', kw: 'Economic growth & FDI flows · balance of payments · technology, skills & business culture · consumers · tax revenues & transfer pricing' },
+      { letter: 'c', name: 'International Business Ethics', kw: 'Stakeholder conflicts · emissions, waste & sustainability · pay, working conditions & child labour · misleading labelling & marketing' },
+      { letter: 'd', name: 'Controlling MNCs', kw: 'Power of MNCs · political influence · legal control · consumer pressure · pressure groups & social media · self-regulation' },
     ] },
 ];
 
