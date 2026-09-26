@@ -54,13 +54,14 @@ const SECTIONS = [
       { letter: 'f', name: 'Wage Differentials', kw: 'Human capital · compensating · discrimination' },
     ] },
   { id: 'government-intervention-firms', ref: '3.3.5', title: 'Government Intervention',
-    desc: 'How governments regulate firms and markets — competition policy, regulation of monopoly, privatisation and nationalisation, and the risk of government failure.',
+    desc: 'Why governments intervene in product and labour markets — controlling monopolies and mergers, promoting competition, protecting suppliers and employees, and the limits of what intervention can achieve.',
     subtopics: [
-      { letter: 'a', name: 'Competition Policy', kw: 'CMA · SLC test · leniency programs' },
-      { letter: 'b', name: 'Regulation of Monopoly', kw: 'RPI\u2013X · rate of return · information asymmetry' },
-      { letter: 'c', name: 'Privatisation & Nationalisation', kw: 'Profit motive vs social objectives' },
-      { letter: 'd', name: 'Government Failure', kw: 'Regulatory capture · unintended consequences' },
-      { letter: 'e', name: 'Minimum Wage', kw: 'Competitive vs monopsony analysis' },
+      { letter: 'a', name: 'Controlling Monopolies and Mergers', kw: 'Price and profit regulation · quality standards · mergers' },
+      { letter: 'b', name: 'Promoting Competition', kw: 'Deregulation · privatisation · competitive tendering' },
+      { letter: 'c', name: 'Protecting Suppliers and Employees', kw: 'Local sourcing · employment legislation · nationalisation' },
+      { letter: 'd', name: 'Impact and Limits', kw: 'Price, profit, quality and choice · regulatory capture · information gaps' },
+      { letter: 'e', name: 'Wage Controls', kw: 'Minimum wage · maximum wage · monopsony' },
+      { letter: 'f', name: 'Taxes, Mobility and Fair Treatment', kw: 'National insurance · immobility · discrimination and exploitation' },
     ] },
 ];
 
