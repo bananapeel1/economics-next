@@ -67,9 +67,15 @@ export const QUIZ = placeKeys([
     'With equipment and space fixed, every extra worker has less to work with, so the extra output falls: diminishing marginal productivity. The workers themselves are identical, and neither the wage nor the customers change how much an extra worker can physically produce.'),
 
   /* ── Block 1 · The Demand for Labour ─────────────────────────────────────── */
-  qi(B1, 'A rise in the price of the product a firm sells is most likely to:',
-    ['shift its demand for labour to the right', 'cause a movement along its demand for labour', 'shift the supply of labour to the right', 'shift its demand for labour to the left'],
-    'Each worker\'s output now sells for more, so more workers are worth hiring at every wage: the whole demand curve moves right. A movement along the curve needs a change in the wage, and the supply of labour is unaffected by what the product sells for.'),
+  /* Fix round 2 (check-in answer rule, CONTENT-GATE 26 Sep): the old stem asked what a rise in the product
+   * price does, and the check-in's "Price or productivity rises: a shift" view draws exactly that
+   * (MRP to MRP₁, 6 → 7 at $12). The item now asks the case the diagram does not draw: product demand
+   * FALLING (derived-demand, "The link runs both ways"). The five fix-round stems are worded so each
+   * hashes into its predecessor's rank: placeKeys deals every key by rank, so any other wording would
+   * re-deal the keys of unchanged, published items (packet 44's method, audit/runs/packet-45/fix2-rank-search.mjs). */
+  qi(B1, 'Demand for a firm\'s product falls as fashions change. The firm\'s demand for labour is most likely to:',
+    ['shift to the left', 'shift to the right', 'move down along its curve', 'stay where it is'],
+    'The demand for labour is derived from the demand for the product. With fewer customers, less output is needed, so the firm wants fewer workers at every wage and the whole curve moves left. The wage has not changed, so this is a shift, not a movement along the curve.'),
   qi(B1, 'Training lets every worker produce one more unit an hour, and the wage is unchanged. The firm will most likely:',
     ['employ more workers', 'employ fewer workers', 'employ the same number', 'lower the wage it pays'],
     'Higher productivity raises what each worker\'s output is worth, so at the same wage the firm finds it worth hiring more. A firm in a competitive labour market takes the wage as given, so it cannot simply cut it.'),
@@ -84,9 +90,11 @@ export const QUIZ = placeKeys([
     'If a machine can do the job, a rise in the wage makes firms switch, so employment falls a lot. A small share of costs, inelastic product demand and a short time period all make the demand for labour less responsive.'),
 
   /* ── Block 2 · The Supply of Labour ──────────────────────────────────────── */
-  qi(B2, 'Which of these would shift the supply of labour to an occupation to the left?',
-    ['A new licence the job now requires', 'A rise in the wage rate for the job', 'A net inflow of workers from abroad', 'A cut in income tax rates'],
-    'A licence shuts out everyone who does not hold it, so fewer can offer themselves at every wage. A rise in the wage is a movement along the curve, while net inflows and tax cuts shift it the other way.'),
+  /* Fix round 2: the old key (a licence shifts S left) is the check-in diagram's own view and checklist line.
+   * A later retirement age (government-regulations) appears on no B2 diagram surface. */
+  qi(B2, 'The government raises the age at which people retire by two years. The supply of labour is most likely to:',
+    ['shift to the right', 'shift to the left', 'move up along its curve', 'stay where it is'],
+    'People who would have left the labour force keep working for two more years, so more are willing to work at every wage and supply shifts right. The wage has not changed, so this is a shift, not a movement along the curve.'),
   qi(B2, 'A rise in out-of-work welfare benefits is most likely to:',
     ['reduce the supply of labour to low-paid jobs', 'increase the supply of labour to low-paid jobs', 'increase the demand for low-paid workers', 'cause a movement along the demand for labour'],
     'Higher benefits shrink the gain from taking a job, which is the pay kept minus the benefits given up, so fewer people find low-paid work worth taking at each wage. Benefits act on the supply side; they do not change how many workers firms want.'),
@@ -104,9 +112,11 @@ export const QUIZ = placeKeys([
     'Net migration is immigration minus emigration; when trained nurses leave, fewer are available at every wage, so supply shifts left. The number of nurses hospitals want has not changed.'),
 
   /* ── Block 3 · Wage Determination in a Competitive Market ────────────────── */
-  qi(B3, 'At a wage above equilibrium in a competitive labour market there will be:',
-    ['more workers willing than firms want', 'more workers wanted than are willing', 'equal numbers wanted and willing', 'a rightward shift of labour demand'],
-    'Above equilibrium, the higher wage draws more people in while firms hire fewer, leaving a surplus of labour that bids the wage down. A shortage is what happens below equilibrium, and nothing here shifts a curve.'),
+  /* Fix round 2: the old key (a surplus above equilibrium) is the check-in's caption, "Below it, a shortage;
+   * above it, a surplus." The item now asks the next step: what the surplus does to the wage. */
+  qi(B3, 'In a competitive labour market, the wage is above equilibrium. It then falls mainly because:',
+    ['workers without a post offer to work for less', 'firms compete for staff by offering more pay', 'the demand for labour shifts to the left', 'the supply of labour shifts to the left'],
+    'Above equilibrium more people want the work than there are posts, so those without one accept less and firms find they can fill posts for less: the wage is bid down until the numbers wanted and willing match. Firms bidding pay up is what happens below equilibrium, and no curve needs to shift.'),
   qi(B3, 'One small firm in a competitive labour market faces a supply of labour that is:',
     ['horizontal at the market wage', 'upward-sloping like the market curve', 'vertical at its current workforce', 'downward-sloping from left to right'],
     'The firm is a wage-taker: it can hire as many as it wants at the going rate, and none if it offers less. So the supply it faces is flat at the market wage, even though the market supply curve slopes up.'),
@@ -124,9 +134,11 @@ export const QUIZ = placeKeys([
     'Surgeons\' work is highly valued, few can do it and training takes years, so the equilibrium wage is high. That is the market working, not failing, and the supply of shop assistants is elastic because many people can do the job.'),
 
   /* ── Block 4 · Trade Unions and Public-Sector Pay ────────────────────────── */
-  qi(B4, 'A trade union wins a pay deal above the market-clearing wage. The most likely result is:',
-    ['fewer jobs and a surplus of labour', 'more jobs and a shortage of labour', 'more jobs and a surplus of labour', 'fewer jobs and a shortage of labour'],
-    'At the higher wage firms move up their demand curve and hire fewer, while more people want the work, so a surplus opens. Unless productivity or demand for the product rises alongside, employment falls.'),
+  /* Fix round 2: the old key (fewer jobs and a surplus) is the check-in's caption, "A surplus of 18,000; 6,000
+   * fewer jobs." The item now asks the cause of the exception union-wage teaches: a deal that lifts productivity. */
+  qi(B4, 'A union wins a wage above equilibrium and no jobs are lost. The most likely reason is that:',
+    ['output per worker rose with the deal', 'the union also lengthened apprenticeships', 'more people now want the work', 'demand for the product has fallen'],
+    'Firms hire fewer at a higher wage only if nothing else changes. If each worker now produces more, the demand for labour shifts right and can hold employment up at the higher wage. Longer apprenticeships shift supply left, more applicants only widen the surplus, and weaker product demand would cost more jobs, not fewer.'),
   qi(B4, 'A union that makes apprenticeships much longer affects the labour market mainly by:',
     ['shifting the supply of labour to the left', 'shifting the supply of labour to the right', 'shifting the demand for labour to the right', 'lowering the productivity of trained workers'],
     'A longer path into the job means fewer people can offer themselves at every wage, so supply shifts left and the wage rises. It works with no negotiation over pay at all.'),
@@ -144,9 +156,11 @@ export const QUIZ = placeKeys([
     'The same pay goes further where living is cheap and less far where it is dear, so fewer teachers will work in high-cost areas at the national rate. Falling school rolls and plentiful local teachers make shortages less likely, not more.'),
 
   /* ── Block 5 · Market Failure in the Labour Market ───────────────────────── */
-  qi(B5, 'Geographical immobility of labour is most likely to cause:',
-    ['unemployment in one region alongside vacancies in another', 'a fall in wages in every region', 'a shortage of workers in every region', 'higher productivity in the declining region'],
-    'Workers who cannot move stay jobless where demand has fallen, while firms where demand has risen cannot fill their posts. The two exist side by side, which is why immobility is a market failure.'),
+  /* Fix round 2: the old key (unemployment alongside vacancies) is the check-in diagram's description and
+   * checklist. The item now asks a cause of geographical immobility, which the two-region diagram does not show. */
+  qi(B5, 'Jobless miners in one region do not move to fill the vacant mining jobs in another. The most likely reason is that:',
+    ['homes near the vacant jobs cost far more', 'the vacant jobs pay a higher wage', 'demand for coal has fallen in their region', 'the other region is short of miners'],
+    'The miners have the skills and the jobs exist, so the barrier is the move itself: housing in the growing region costs far more. Higher pay there is a reason to move, not to stay, and falling demand at home and a shortage elsewhere are why the jobs and the jobless exist, not why the gap stays open.'),
   qi(B5, 'Which of these is a cause of occupational immobility?',
     ['lacking the qualifications a new job requires', 'high housing costs in the growing region', 'family ties to a home town', 'not knowing where the vacancies are'],
     'Occupational immobility is about moving between KINDS of job, so the barrier is skills or qualifications. Housing costs, family ties and a lack of information stop workers moving between PLACES, which is geographical immobility.'),

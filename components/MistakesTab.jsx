@@ -29,7 +29,9 @@ function YourMistakes({ subjectId, sectionId, quizData }) {
       log
         .map((e) => ({ entry: e, question: byKey.get(e.q) }))
         .filter((x) => x.question)
-        .sort((a, b) => b.entry.ts - a.entry.ts),
+        // Confident mistakes first: a belief, not a slip, and nothing else flags it. Smart Practice
+        // writes here too since its confidence redesign, so this is where "Sure but wrong" lands.
+        .sort((a, b) => ((b.entry.confidence === 'certain') - (a.entry.confidence === 'certain')) || (b.entry.ts - a.entry.ts)),
     );
   }, [subjectId, sectionId, quizData]);
 

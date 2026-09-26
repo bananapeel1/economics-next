@@ -1,0 +1,5 @@
+
+> economics-next@0.1.0 tariff-census
+> node audit/scripts/build-tariff-census.mjs --check
+
+audit/raw/tariff-census.json matches the specification text

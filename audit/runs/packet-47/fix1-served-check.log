@@ -1,0 +1,11 @@
+served draft: "seventh" hits 0 | "about a sixth of the $34" hits 1
+printed: saves $5.5 = 16.2% of $34.0; word "sixth"; 1/6=16.7% 1/7=14.3%
+served recalls: 17 {'classify': 6, 'fillin': 5, 'reorder': 2, 'match': 4}
+stability recall at /content[2]/sections[2]/recall type classify
+   Ease of doing business | ['A building permit takes fourteen months and a dozen separate approvals', 'A new company can be registered online in a single day']
+   Political stability | ['The army has taken power twice in the last ten years', 'Three governments have fallen in the last four years']
+   Natural resources | ['Cotton is grown within fifty kilometres of the site', 'Every tonne of timber the plant needs would have to be shipped in']
+reorder: Put these in the order they happen, from the decline at home to the longer life:
+reorder: Put the effects of a rise in the home currency in causal order, from the rate change to th
+grant-first reorder item in served draft: False
+live (no draft=1) still old? "Bartlett" in live: True

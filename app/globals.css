@@ -1228,11 +1228,44 @@ body {
 .diagram-svg-wrapper svg path,
 .diagram-svg-wrapper svg polyline,
 .diagram-svg-wrapper svg circle { shape-rendering: geometricPrecision; }
-.diagram-checklist { background: var(--bg-input); border: 1px solid var(--border-primary); border-radius: 8px; padding: 16px 20px; margin-top: 16px; }
-.diagram-checklist-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent-amber); margin-bottom: 8px; }
-.diagram-checklist ul { list-style: none; padding: 0; }
-.diagram-checklist li { font-size: 13px; color: var(--text-secondary); padding: 3px 0; }
-.diagram-checklist li::before { content: '\2713 '; color: var(--accent-green); font-weight: 700; }
+/* "What a correct diagram shows" (components/DiagramChecklist.jsx). Closed, it is one quiet line of
+   muted text under the diagram, not a box: most students pass it, and it must not compete with the
+   diagram or the question below (founder, 26 Sep). Open, the points sit in a soft panel with room
+   between the tick and the text. */
+.diagram-checklist { margin-top: 10px; }
+.diagram-checklist-title {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 4px 6px; margin-left: -6px;
+  cursor: pointer; list-style: none; user-select: none; -webkit-tap-highlight-color: transparent; border-radius: 6px;
+  font-size: 13px; font-weight: 500; color: var(--text-tertiary); transition: color 0.15s;
+}
+.diagram-checklist-title::-webkit-details-marker { display: none; }
+.diagram-checklist-title::marker { content: ''; }
+.diagram-checklist-title::before {
+  content: ''; flex: none; width: 5px; height: 5px; margin: 0 3px 0 1px;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg); transition: transform 0.15s;
+}
+.diagram-checklist[open] > .diagram-checklist-title::before { transform: rotate(45deg) translate(-1px, -1px); }
+.diagram-checklist-title:hover, .diagram-checklist[open] > .diagram-checklist-title { color: var(--text-secondary); }
+.diagram-checklist-title:focus { outline: none; }
+.diagram-checklist-title:focus-visible { outline: 2px solid var(--border-primary); outline-offset: 1px; }
+.diagram-checklist-count { white-space: nowrap; font-weight: 400; }
+.diagram-checklist-count::before { content: '\00b7'; margin-right: 6px; }
+/* A finger needs the full 44px; a mouse does not, so the line stays slim on desktop. */
+@media (pointer: coarse) { .diagram-checklist-title { min-height: 44px; } }
+.diagram-checklist ul {
+  list-style: none; margin: 6px 0 0; padding: 10px 14px;
+  background: var(--bg-input); border: 1px solid var(--border-primary); border-radius: 8px;
+  display: grid; gap: 6px;
+}
+.diagram-checklist[open] ul { animation: diagramChecklistIn 0.18s ease-out; }
+@keyframes diagramChecklistIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .diagram-checklist-title, .diagram-checklist-title::before { transition: none; }
+  .diagram-checklist[open] ul { animation: none; }
+}
+.diagram-checklist li { display: flex; gap: 8px; align-items: baseline; font-size: 13px; line-height: 1.5; color: var(--text-secondary); padding: 0; }
+.diagram-checklist li::before { content: '\2713'; flex: none; color: var(--accent-green); font-weight: 700; }
 .scenario-switcher { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
 .scenario-btn { padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.15s; border: 1px solid var(--border-primary); background: var(--bg-input); color: var(--text-tertiary); font-family: inherit; }
 .scenario-btn:hover { border-color: var(--accent-green); color: var(--text-secondary); }
@@ -7284,24 +7317,59 @@ a.auth-dropdown-item:visited {
 }
 .spe-access-note-btn:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
 
-/* ── Smart Practice confidence row (F076): asked after the reveal, and it schedules the card ── */
-.spe-qcard-confidence { margin: 14px 0 4px; }
-.spe-qcard-confidence-label {
-  display: block; font-size: 12.5px; font-weight: 600; letter-spacing: .02em;
-  color: var(--text-muted); margin-bottom: 8px;
+/* ── Smart Practice: confidence is given WITH the answer ("Check answer" / "Check — I guessed"),
+   replacing the F076 row that blocked Next after every reveal ── */
+.spe-qcard-guess {
+  padding: 12px 20px; border-radius: 10px; background: transparent;
+  color: var(--text-secondary); border: 1px solid var(--border-primary);
+  font-size: 15px; font-weight: 600; cursor: pointer; font-family: inherit;
 }
-.spe-qcard-confidence-row { display: flex; flex-wrap: wrap; gap: 8px; }
-.spe-qcard-conf-btn {
-  flex: 1 1 auto; min-width: 92px; min-height: 44px; padding: 0 16px;
-  border-radius: 999px; font-size: 14px; font-weight: 600; cursor: pointer;
-  color: var(--text-primary); background: transparent;
-  border: 1px solid var(--border-color, rgba(127, 127, 127, .35));
+.spe-qcard-guess:hover:not(:disabled) { color: var(--text-primary); border-color: var(--text-muted); }
+.spe-qcard-guess:disabled { opacity: .45; cursor: not-allowed; }
+.spe-qcard-check:focus-visible, .spe-qcard-guess:focus-visible, .spe-qcard-next:focus-visible {
+  outline: 2px solid var(--accent-blue-light); outline-offset: 2px;
 }
-.spe-qcard-conf-btn.active {
-  background: var(--rl-green, #10b981); color: #fff; border-color: transparent;
+.spe-qcard-keys { font-size: 12px; color: var(--text-muted); margin: 10px 0 0; }
+@media (hover: none) { .spe-qcard-keys { display: none; } }
+@media (max-width: 480px) {
+  .spe-qcard-actions { flex-wrap: wrap; gap: 10px; }
+  .spe-qcard-check, .spe-qcard-guess { flex: 1 1 auto; padding: 12px 14px; }
 }
-.spe-qcard-conf-btn:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
-.spe-qcard-next:disabled { opacity: .55; cursor: not-allowed; }
+.spe-qcard-result-next { font-size: 14px; color: var(--text-primary); line-height: 1.55; margin: 0 0 10px; }
+.spe-qcard-result--lucky { background: rgba(245,158,11,.07); border-color: rgba(245,158,11,.3); }
+.spe-qcard-result--lucky .spe-qcard-result-header { color: var(--accent-amber); }
+.spe-qcard-note-link {
+  display: inline-block; margin: 0 0 12px; font-size: 14px; font-weight: 600;
+  color: var(--accent-blue-light); text-decoration: underline; text-underline-offset: 3px;
+}
+
+/* Summary: four outcomes instead of one score */
+.spe-summary-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0 0 18px; text-align: left; }
+.spe-group {
+  padding: 14px; border-radius: 12px; border: 1px solid var(--border-primary);
+  display: flex; flex-direction: column; gap: 2px;
+}
+.spe-group-num { font-size: 26px; font-weight: 800; color: var(--text-primary); line-height: 1.1; }
+.spe-group-label { font-size: 14px; font-weight: 700; color: var(--text-primary); }
+.spe-group-note { font-size: 12.5px; color: var(--text-muted); }
+.spe-group--knew .spe-group-num { color: var(--accent-green); }
+.spe-group--lucky .spe-group-num { color: var(--accent-amber); }
+.spe-group--misconception { border-color: rgba(239,68,68,.35); background: rgba(239,68,68,.05); }
+.spe-group--misconception .spe-group-num { color: var(--accent-red); }
+.spe-summary-retry { font-size: 14px; color: var(--text-secondary); margin: 0 0 18px; }
+.spe-summary-fix { text-align: left; margin: 0 0 24px; }
+.spe-summary-fix-title { font-size: 15px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+.spe-summary-fix-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.spe-summary-fix-item {
+  display: flex; flex-direction: column; gap: 4px; padding: 10px 12px;
+  border-radius: 10px; border: 1px solid var(--border-primary);
+}
+.spe-fix-tag { font-size: 11.5px; font-weight: 700; letter-spacing: .02em; color: var(--text-muted); }
+.spe-fix-tag--misconception { color: var(--accent-red); }
+.spe-fix-stem { font-size: 14px; color: var(--text-primary); line-height: 1.45; }
+.spe-fix-link { font-size: 13px; font-weight: 600; color: var(--accent-blue-light); text-decoration: underline; text-underline-offset: 3px; }
+.spe-summary-fix-more { font-size: 13px; color: var(--text-muted); margin: 10px 0 0; }
+@media (max-width: 400px) { .spe-summary-groups { grid-template-columns: minmax(0, 1fr); } }
 
 /* ── Smart Practice topic picker (F085): explicit select-all, and counts on every chip ── */
 .spe-unit-selectall {

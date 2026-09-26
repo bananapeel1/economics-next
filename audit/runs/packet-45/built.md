@@ -206,3 +206,64 @@ superseded by this section.
 ```
 node scripts/packet-45-labour-markets.mjs --stage && node scripts/publish-section.mjs labour-markets --confirm
 ```
+
+## Fix round (post founder decision) — check-in answers stated by the diagram (26 September 2026)
+
+**Decision:** the founder published labour-markets at 08:27 UTC on 26 Sep (backup
+`audit/snapshots/auto-prepublish-2026-09-26T08-27-52-160Z__economics__labour-markets.json`), then chose "Fix and
+republish". The board-session ruling is now `audit/CONTENT-GATE.md` "The check-in answer rule — BLOCKING": the
+diagram stays first, and each leaking question is rewritten. This round re-staged to DRAFT only; live is untouched
+(`fix2-api-live.log` still serves the five old ids). The founder re-publishes after the re-walk.
+
+**What each check-in shows** was read with the client's own `buildSteps` + `placeChapterItems`
+(`resolvePinnedItem` / `resolvePinnedDiagram`), not from the pins: `fix2-checkin-shows.mjs`, output
+`fix2-shows-before.log`. Check-ins sit at steps 6, 12, 18, 22 and 26 and show quiz[3], [8], [14], [20] and [26].
+
+**Five items, not four.** Verify B named four (its steps 12, 14, 17, 19). Reading step 6 by the same rule, quiz[3]
+("A rise in the price of the product… shift its demand for labour to the right") sits under the view "Price or
+productivity rises: a shift", captioned "Shirt price $3 → $4: 6 → 7 at $12", with the description "a change in the
+product price… shifts it". That states the key, so it is rewritten too. Flagged for the brain: this goes beyond the
+four the brief listed.
+
+| check-in | diagram text that stated the old key | rewritten item (`scripts/_packet45-assessment.mjs`) | new key |
+|---|---|---|---|
+| step 6, quiz[3] | "Price or productivity rises: a shift"; "Shirt price $3 → $4: 6 → 7 at $12" | :76, a different case: product demand FALLS (derived-demand teaches "The link runs both ways") | shift to the left |
+| step 12, quiz[8] | checklist "A licence, higher income tax or higher benefits: S shifts left"; view "A licence requirement" | :95, a different case: a later retirement age (government-regulations) | shift to the right |
+| step 18, quiz[14] | "Below it, a shortage; above it, a surplus." | :117, the next step: why the wage above equilibrium falls (market-equilibrium: "the wage is bid down") | workers without a post offer to work for less |
+| step 22, quiz[20] | "A surplus of 18,000; 6,000 fewer jobs." | :139, the cause of the exception union-wage teaches: pay rises with no jobs lost | output per worker rose with the deal |
+| step 26, quiz[26] | description and checklist, "jobless workers in one region and vacancies in the other" | :161, the cause rather than the outcome: why the jobless do not move (geographical-immobility's causes) | homes near the vacant jobs cost far more |
+
+Each comment is at the line above its item (:70, :93, :115, :137, :159). Every item stays on its chapter's leaf
+(1a, 2c, 3a, 2c/3a, 4a), and each was taught earlier in the section. None carries a figure except "two years",
+which appears on no diagram. The diagrams are byte-identical: no title, description, checklist, view label or SVG
+changed.
+
+**Keys dealt as the runner deals them.** `placeKeys` ranks the whole bank by stem hash, so a freely reworded stem
+re-deals the keys of unchanged, published items. `fix2-rank-search.mjs` generated wordings and kept only those that
+hash into the old item's rank. The result is **0 keys moved** on the other 26 items, the five keep their slots, and
+the histogram is still 8/8/8/7 (`fix2-bundle-diff.log`).
+
+**No guard added.** Per the rule there is no automatic check for this, and none was written or widened. The
+runner (`scripts/packet-45-labour-markets.mjs`) is unchanged. Its printed-figure check still passes, and it proves
+nothing about this class of leak.
+
+**Ran:**
+- `node scripts/packet-45-labour-markets.mjs --dump --stage` exits 0: 0 new BLOCK / 0 new DEBT / 0 recoverable.
+  `staged: ["section_quiz"]`, and the other 7 tables are unchanged (`fix2-runner-stage.log`). Pins unchanged:
+  `[[3..7],[8..13],[14..19],[20..25],[26..30]]`.
+- `fix2-bundle-diff.mjs` reads only the two dump files, pre-fix (== HEAD) against new. content, notes, practice,
+  flashcards, mistakes, diagrams and extras are identical. Quiz items changed: [3, 8, 14, 20, 26] only, with
+  correctIndex unchanged on all 31. So the 26 steps and the 5 chapter headers are as in `verify-b.md`.
+- `node audit/scripts/check-staged-drafts.mjs labour-markets` reports **matches**, 0 drift (`fix2-check-staged.log`).
+  The five rewritten items are all in the signed-out slice, so this check covers them.
+- The served `?draft=1` payload was run through the client placement (`fix2-shows-served-draft.log`): 26 steps,
+  and check-ins 6/12/18/22/26 show the five new items.
+- `npm run validate` exits 0: 0 new BLOCK programme-wide, and labour-markets reads 0 BLOCK / 1 DEBT (baselined
+  `quant.unit`) (`fix2-validate.log`). The 153 new DEBT are in other sections.
+
+**Not done here (the rule's Verify A and B, by an agent other than the fixer):** a read of every check-in's
+diagram text against its question and options, both from the served payload and on screen at 390x844 with the
+checklist opened, plus a key-and-figure check on each rewritten item. `fix2-shows-after.log` prints every diagram
+surface and each question for that reader, and it judges nothing.
+
+**Out of scope, left alone:** the literal `**` in the Extras evaluation card, and the platform FAILs in `verify-b.md`.

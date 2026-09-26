@@ -1,0 +1,48 @@
+=== Gate run for packet 47 ===
+Date: 2026-09-26T08:16:43Z
+
+1. npm test
+EXIT CODE: 0
+
+2. npm run build
+EXIT CODE: 0
+
+3. npm run validate
+EXIT CODE: 0
+
+4. npm run exposure
+EXIT CODE: 0
+
+5. npm run recalls
+EXIT CODE: 0
+
+6. node audit/scripts/check-staged-drafts.mjs global-markets-expansion
+EXIT CODE: 0
+
+=== ADVISORY ONLY ===
+
+7. npm run contrast
+EXIT CODE: 0
+
+8. npm run spec-items
+EXIT CODE: 0
+
+9. npm run tariff-census
+EXIT CODE: 0
+
+10. npm run pin-check
+EXIT CODE: 0
+
+=== SUMMARY ===
+test: 0
+build: 0
+validate: 0
+exposure: 0
+recalls: 0
+check-staged-drafts: 0
+
+advisory:
+  contrast: 0
+  spec-items: 0
+  tariff-census: 0
+  pin-check: 0

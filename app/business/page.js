@@ -44,7 +44,7 @@ const unit3Sections = [
 
 const unit4Sections = [
   { id: 'globalisation', number: '4.3.1', title: 'Globalisation', meta: 'Causes, effects, MNCs, trade blocs' },
-  { id: 'global-markets-expansion', number: '4.3.2', title: 'Global Markets & Expansion', meta: 'Market entry, Ansoff\'s matrix, risk' },
+  { id: 'global-markets-expansion', number: '4.3.2', title: 'Global Markets & Expansion', meta: 'Push & pull factors, markets & locations, mergers' },
   { id: 'global-marketing', number: '4.3.3', title: 'Global Marketing', meta: 'Glocalisation, cultural differences' },
   { id: 'global-industries-mncs', number: '4.3.4', title: 'Global Industries & MNCs', meta: 'Transfer pricing, FDI, ethical issues' },
 ];
