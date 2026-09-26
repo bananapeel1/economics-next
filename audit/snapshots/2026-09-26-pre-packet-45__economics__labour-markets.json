@@ -1,0 +1,1052 @@
+{
+ "content": [
+  {
+   "id": "labour-markets:block:a6823a69",
+   "title": "Demand and Supply of Labour",
+   "sections": [
+    {
+     "id": "labour-markets:sub:demand-for-labour-mrp",
+     "body": [
+      {
+       "text": "The demand for labour is a **derived demand** — it depends on the demand for the product the worker helps produce. A firm's demand curve for labour is the **marginal revenue product (MRP) curve**, where MRP = MPP x MR (marginal physical product multiplied by marginal revenue).",
+       "type": "paragraph"
+      },
+      {
+       "text": "The MRP curve slopes downward because of **diminishing marginal returns** — as more workers are added to a fixed factor, each extra worker adds less output, so MRP falls. A profit-maximising firm hires workers up to the point where **MRP = wage**, because any worker whose MRP exceeds the wage adds to profit.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Shifts in the MRP curve are caused by changes in either product demand or worker productivity. If demand for the product rises, MR increases, so MRP shifts right and more workers are hired at a higher wage. Equally, investments in technology or training raise MPP, shifting MRP right.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Product demand rises",
+        "MR increases at each output level",
+        "MRP curve shifts right",
+        "More workers hired at higher wage"
+       ],
+       "result": "Derived demand — labour demand follows product demand",
+       "resultType": "good"
+      }
+     ],
+     "title": "Demand for Labour (MRP Theory)",
+     "keyIdea": "Labour demand is a derived demand — firms hire workers not for their own sake but because they produce output that generates revenue. Hire until MRP = wage.",
+     "examMatters": "Examiners expect you to draw the MRP curve as the labour demand curve and show hiring where MRP = W. Always label both axes correctly — wage rate on the vertical, quantity of labour on the horizontal. Explain why the curve slopes down using diminishing returns.",
+     "realExample": {
+      "text": "The explosion in demand for AI products has driven the MRP of AI engineers far above that of other software developers. Companies like Google and OpenAI bid aggressively for scarce talent, pushing salaries above $200k as the derived demand for AI skills tracks the booming product market.",
+      "emoji": "💻"
+     },
+     "misconception": "Students say firms hire workers because they need them. Too vague — firms hire because the worker's MRP exceeds the wage, adding to profit. Instead write: labour demand is derived from product demand; the firm hires until the last worker's MRP equals the wage rate."
+    },
+    {
+     "id": "labour-markets:sub:supply-of-labour",
+     "body": [
+      {
+       "text": "The **supply of labour** to a particular occupation depends on the **wage rate** as the primary monetary incentive, plus **non-monetary factors** such as working conditions, job security, status, location, and holiday entitlement. A higher wage attracts more workers into an occupation, giving an upward-sloping supply curve.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The **individual labour supply curve** is backward-bending. At low wages, the **substitution effect** dominates — a wage rise makes leisure more expensive relative to work, so workers supply more hours. At high wages, the **income effect** dominates — workers are rich enough to afford more leisure, so they cut hours despite the higher wage.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The supply of labour to an industry also depends on barriers to entry such as qualifications, training periods, and geographical immobility. Occupations requiring years of education have more inelastic supply in the short run because new workers cannot enter quickly.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Wages rise from low level",
+        "Substitution effect dominates",
+        "Workers supply more hours",
+        "Beyond a threshold, income effect dominates"
+       ],
+       "result": "Backward-bending supply curve — very high wages reduce hours supplied",
+       "resultType": "neutral"
+      }
+     ],
+     "title": "Supply of Labour",
+     "keyIdea": "The supply of labour to an occupation depends on the wage rate and non-monetary factors. At very high wages, the backward-bending supply curve shows workers choosing leisure over income.",
+     "examMatters": "The backward-bending supply curve is a favourite diagram question. Clearly label the substitution effect region (upward-sloping) and the income effect region (backward-bending), and explain the threshold where the income effect begins to dominate.",
+     "realExample": {
+      "text": "Junior doctors in the NHS face gruelling conditions — long shifts, emotional stress, and below-market pay relative to their qualifications. Despite decent headline salaries, poor non-monetary factors have reduced the supply of applicants, with many choosing to emigrate to Australia or leave medicine entirely.",
+      "emoji": "🏥"
+     },
+     "misconception": "Students think labour supply only depends on wages. Wrong — non-monetary factors like conditions, status, and location strongly influence occupational choice. Instead write: labour supply depends on the net advantages of the job — the full package of monetary and non-monetary rewards compared to alternatives."
+    }
+   ],
+   "takeaway": [
+    "Labour demand is derived demand — the MRP curve (MPP x MR) is the demand curve for labour.",
+    "Firms hire until MRP = wage; shifts in product demand or productivity shift the MRP curve.",
+    "Labour supply depends on wages and non-monetary factors; the individual supply curve is backward-bending.",
+    "At low wages the substitution effect dominates; at high wages the income effect dominates."
+   ],
+   "diagramId": null,
+   "quizIndices": [
+    1
+   ],
+   "practiceIndices": [
+    0
+   ]
+  },
+  {
+   "id": "labour-markets:block:ceae9f76",
+   "title": "Wage Determination",
+   "sections": [
+    {
+     "id": "labour-markets:sub:competitive-labour-markets",
+     "body": [
+      {
+       "text": "A **perfectly competitive labour market** has many employers competing for workers and many workers competing for jobs. No single firm or worker can influence the wage rate. The equilibrium wage is determined where **demand for labour (DL = MRP) equals supply of labour (SL)**.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Demand shifts are caused by changes in product demand, labour productivity, or the price of substitute/complementary factors. Supply shifts are caused by migration, changes in education and training, population growth, or changes in non-monetary factors of the occupation.",
+       "type": "paragraph"
+      },
+      {
+       "text": "At the equilibrium wage, the market clears — there is no involuntary unemployment. If the wage is above equilibrium, there is a surplus of labour (unemployment). If the wage is below equilibrium, there is a shortage (vacancies unfilled).",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Immigration increases",
+        "Labour supply shifts right",
+        "Equilibrium wage falls",
+        "Employment rises"
+       ],
+       "result": "More workers available at every wage → lower market wage but more jobs filled",
+       "resultType": "neutral"
+      }
+     ],
+     "title": "Competitive Labour Markets",
+     "keyIdea": "In a competitive labour market with many employers and many workers, the wage is set where the demand for labour (MRP) equals the supply of labour — just like any other market.",
+     "examMatters": "Examiners want you to draw a standard supply-and-demand diagram for labour and show how shifts in either curve change the equilibrium wage and employment level. Always identify the direction of the shift and state whether wage rises or falls and whether employment rises or falls.",
+     "realExample": {
+      "text": "After EU enlargement in 2004, significant migration from Eastern Europe into the UK increased the supply of construction workers. Wages in the sector were held down as the supply curve shifted right, while housebuilders benefited from lower labour costs and increased output.",
+      "emoji": "🏗️"
+     },
+     "misconception": "Students say immigration always reduces wages for everyone. Wrong — the effect depends on the skill level and sector; immigration also boosts product demand, shifting labour demand right. Instead write: immigration shifts labour supply right, putting downward pressure on wages in affected sectors, but increased spending by immigrants can shift labour demand right, partially or fully offsetting the wage fall."
+    },
+    {
+     "id": "labour-markets:sub:monopsony-power",
+     "body": [
+      {
+       "text": "A **monopsony** is a single (or dominant) buyer of labour in a market. Because it faces the entire upward-sloping market supply curve, it must raise the wage for all workers to attract one more — so the **marginal cost of labour (MCL) lies above the supply curve**.",
+       "type": "paragraph"
+      },
+      {
+       "text": "The monopsonist maximises profit by hiring where **MCL = MRP**, but it pays the wage read off the **supply curve** (below MRP), not the MCL curve. Workers are paid less than their marginal revenue product — this gap is **monopsonistic exploitation**. Employment is also lower than in a competitive market.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Crucially, a **national minimum wage** set between the monopsony wage and the competitive wage can **increase both wages AND employment** simultaneously. This is because the minimum wage creates a horizontal section of the supply curve up to that wage, eliminating the firm's incentive to restrict hiring.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Single dominant employer",
+        "MCL lies above supply curve",
+        "Hires at MCL = MRP",
+        "Pays lower wage from supply curve"
+       ],
+       "result": "Workers paid below MRP — monopsonistic exploitation",
+       "resultType": "bad"
+      }
+     ],
+     "title": "Monopsony Power",
+     "keyIdea": "A monopsony employer is the dominant buyer of labour — it faces an upward-sloping supply curve and pays workers below their MRP, creating exploitation that a minimum wage can actually fix.",
+     "examMatters": "The monopsony diagram is one of the most commonly tested in A-level economics. You must draw SL, MCL (above SL), and MRP, show hiring at MCL = MRP, then read the wage off the supply curve. Then show how a minimum wage between the monopsony wage and competitive wage increases both W and employment.",
+     "realExample": {
+      "text": "The NHS is the dominant employer of nurses in the UK, giving it significant monopsony power. Nursing wages have been held below what a competitive market would deliver, contributing to persistent recruitment and retention crises as nurses leave for better-paid agency work or emigrate.",
+      "emoji": "👩‍⚕️"
+     },
+     "misconception": "Students assume a minimum wage always causes unemployment. Wrong — in a monopsony market, a carefully set minimum wage can raise wages and increase employment simultaneously. Instead write: the standard unemployment prediction applies to competitive markets; in monopsony, a minimum wage up to the competitive level raises both wages and employment."
+    }
+   ],
+   "takeaway": [
+    "Competitive labour markets clear where DL (MRP) = SL — the standard supply-and-demand model applies.",
+    "Monopsony: MCL above supply curve, hires at MCL = MRP, pays the wage from the supply curve — workers exploited.",
+    "A minimum wage in a monopsony can increase both wages and employment — a key evaluation point."
+   ],
+   "diagramId": "labour-markets:diagram:e2d91263",
+   "quizIndices": [
+    5
+   ]
+  },
+  {
+   "id": "labour-markets:block:ad31ac69",
+   "title": "Trade Unions and Wage Differentials",
+   "sections": [
+    {
+     "id": "labour-markets:sub:trade-unions",
+     "body": [
+      {
+       "text": "A **trade union** is an organisation of workers that uses **collective bargaining** to negotiate wages and conditions. By bargaining as a group, workers have more power than any individual would. The union acts as a **monopoly supplier of labour**, setting a wage floor above the competitive equilibrium.",
+       "type": "paragraph"
+      },
+      {
+       "text": "In a **competitive labour market**, a union-imposed wage above equilibrium creates a trade-off: wages rise but employment falls, because firms move up their MRP curve and hire fewer workers at the higher wage. The size of the employment loss depends on the elasticity of demand for labour.",
+       "type": "paragraph"
+      },
+      {
+       "text": "Against a **monopsony employer**, unions provide **countervailing power**. The union pushes the wage up while the monopsony wants to push it down — the result is a **bilateral monopoly** where the wage is **indeterminate**, settled between the union's target and the employer's preferred wage through negotiation. In this case, the union can raise wages with little or no job loss.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "Union negotiates higher wage",
+        "In competitive market: higher W → lower employment",
+        "Against monopsony: countervailing power offsets exploitation",
+        "Bilateral monopoly: wage indeterminate"
+       ],
+       "result": "The employment effect depends on employer market structure",
+       "resultType": "neutral"
+      }
+     ],
+     "title": "Trade Unions",
+     "keyIdea": "Trade unions act as a monopoly seller of labour, using collective bargaining to push wages above the market rate — but whether this costs jobs depends on the employer's market power.",
+     "examMatters": "Examiners love the bilateral monopoly scenario. Draw the monopsony diagram, add the union wage above the monopsony wage, and explain that the final wage is indeterminate — it depends on relative bargaining strength. This is a top-tier evaluation point.",
+     "realExample": {
+      "text": "The RMT union's rail strikes in 2022-23 demonstrated powerful collective bargaining. Because rail is an essential service with few substitutes, the union's ability to disrupt the entire transport network gave it significant leverage in wage negotiations with Network Rail and train operating companies.",
+      "emoji": "🚂"
+     },
+     "misconception": "Students say unions always cause unemployment. Wrong — against a monopsony, unions can raise wages without reducing employment by offsetting the employer's wage-suppressing power. Instead write: unions cause a wage-employment trade-off in competitive markets, but against monopsony employers, countervailing power can raise wages with minimal job losses."
+    },
+    {
+     "id": "labour-markets:sub:wage-differentials",
+     "body": [
+      {
+       "text": "**Compensating wage differentials** exist to attract workers into jobs with unpleasant or dangerous characteristics — night shifts, physical risk, or unsociable hours command a premium. **Human capital theory** explains higher wages as a return on investment in education, training, and skills that raise a worker's productivity.",
+       "type": "paragraph"
+      },
+      {
+       "text": "**Barriers to entry** protect high wages in certain professions. Doctors, lawyers, and accountants require years of qualifications that restrict supply, keeping wages above what they would be with free entry. **Discrimination** based on gender, race, or age creates unjustified differentials where equally productive workers receive different pay.",
+       "type": "paragraph"
+      },
+      {
+       "text": "**Labour immobility** prevents wage differentials from being competed away. **Geographical immobility** (housing costs, family ties) stops workers moving to higher-wage regions. **Occupational immobility** (lack of transferable skills, retraining costs) stops workers switching to higher-paid occupations. Together, these frictions keep wage gaps persistent.",
+       "type": "paragraph"
+      },
+      {
+       "type": "flow",
+       "steps": [
+        "High wages in occupation A, low wages in occupation B",
+        "Workers try to move from B to A",
+        "Geographical and occupational immobility block movement"
+       ],
+       "result": "Wage differentials persist — labour markets do not fully equalise",
+       "resultType": "bad"
+      }
+     ],
+     "title": "Wage Differentials",
+     "keyIdea": "Wages differ between occupations because of compensating differentials, human capital, barriers to entry, discrimination, and labour immobility — not because markets are failing.",
+     "examMatters": "When explaining wage differentials, examiners expect you to use specific causes — not just say 'supply and demand'. Name the type of differential (compensating, human capital, barrier to entry, discrimination) and link it to a shift in either demand or supply of labour for that occupation.",
+     "realExample": {
+      "text": "The City of London financial sector pays substantial premiums that reflect multiple factors: human capital returns on advanced degrees and professional qualifications, compensating differentials for extremely long hours and high stress, and barriers to entry through regulated professional exams.",
+      "emoji": "🏦"
+     },
+     "misconception": "Students say wage differences exist because some jobs are harder. Too simplistic — difficulty alone does not determine pay; supply and demand do. Instead write: wage differentials reflect the interaction of labour demand (MRP) and labour supply (affected by human capital, barriers, mobility, and non-monetary factors) — not just the difficulty or effort involved."
+    }
+   ],
+   "takeaway": [
+    "Unions are monopoly sellers of labour — they raise wages but may reduce employment in competitive markets.",
+    "Against monopsony, unions provide countervailing power and can raise wages without job losses.",
+    "Wage differentials arise from compensating factors, human capital, barriers to entry, and discrimination.",
+    "Labour immobility (geographical and occupational) prevents wage differentials from being competed away."
+   ],
+   "diagramId": "labour-markets:diagram:488e9c65",
+   "quizIndices": [
+    7
+   ],
+   "practiceIndices": [
+    1
+   ]
+  }
+ ],
+ "notes": [
+  {
+   "flow": {
+    "steps": [
+     "Consumer demand creates demand for product",
+     "Firm needs workers to produce",
+     "Hire until MRP = wage"
+    ],
+    "result": "MRP curve = the firm's demand curve for labour",
+    "resultType": "good"
+   },
+   "meta": "5 concepts",
+   "title": "Demand for Labour (MRP Theory)",
+   "blocks": [
+    {
+     "items": [
+      {
+       "tag": "exam",
+       "text": "<strong>Derived demand</strong> — the demand for labour exists not for its own sake but because workers produce goods and services that consumers want.",
+       "type": "def"
+      },
+      {
+       "text": "<strong>Marginal revenue product (MRP)</strong> — the extra revenue a firm earns from employing one more worker; MRP = MPP × MR.",
+       "type": "def"
+      },
+      {
+       "text": "<strong>Marginal physical product (MPP)</strong> — the extra output produced by one more worker, holding other factors constant.",
+       "type": "def"
+      }
+     ],
+     "title": "DEFINITIONS"
+    },
+    {
+     "items": [
+      {
+       "text": "A profit-maximising firm hires workers until <strong>MRP = wage (MCL)</strong>; hiring beyond this point means the worker costs more than they generate.",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "The MRP curve slopes downward due to <strong>diminishing marginal returns</strong> — each extra worker adds less output, so MRP falls.",
+       "type": "mech"
+      },
+      {
+       "text": "The MRP curve is the firm's demand curve for labour: at a higher wage, fewer workers are demanded; at a lower wage, more are demanded.",
+       "type": "mech"
+      },
+      {
+       "text": "MRP connects to the law of diminishing returns from 3.3.2 — the same mechanism that creates U-shaped cost curves drives the downward-sloping labour demand curve.",
+       "type": "link"
+      }
+     ],
+     "title": "HOW MRP DETERMINES HIRING"
+    }
+   ],
+   "formula": {
+    "text": "MRP = MPP × MR",
+    "label": "MARGINAL REVENUE PRODUCT"
+   },
+   "keyIdea": "A firm's demand for labour is derived from the demand for its product — it hires workers up to the point where the extra revenue a worker generates equals the extra cost of employing them.",
+   "takeaway": [
+    "Labour demand is derived from product demand — MRP = MPP × MR.",
+    "The MRP curve is the labour demand curve; it slopes down due to diminishing returns.",
+    "Profit-maximising hiring: employ up to where MRP = wage (MCL)."
+   ],
+   "examMatters": "Examiners expect you to draw MRP = DL and explain why it slopes downward (diminishing returns). The profit-maximising hiring rule is MRP = MCL (cost of one more worker). If the wage rises, the firm moves up the MRP curve and hires fewer workers.",
+   "misconception": "Students confuse labour demand with product demand. Labour demand is derived — it depends on product demand and worker productivity. Instead write: the demand for labour is derived from the demand for the product; a rise in product demand shifts the MRP curve right, increasing the quantity of labour demanded."
+  },
+  {
+   "flow": {
+    "steps": [
+     "Wage rises from low level",
+     "Substitution effect: work more",
+     "At high wage, income effect kicks in",
+     "Worker cuts hours: backward bend"
+    ],
+    "result": "Individual labour supply bends backward at high wages; market supply usually slopes up",
+    "resultType": "neutral"
+   },
+   "meta": "4 concepts",
+   "title": "Supply of Labour",
+   "blocks": [
+    {
+     "items": [
+      {
+       "text": "The <strong>wage rate</strong> is the main determinant — higher wages attract more workers into the occupation, all else equal.",
+       "type": "mech"
+      },
+      {
+       "text": "<strong>Non-monetary factors</strong> affect supply: job security, working conditions, status, location, holidays, and opportunities for progression.",
+       "type": "mech"
+      },
+      {
+       "text": "The supply of labour to a specific occupation depends on <strong>transferable skills</strong>, training requirements, and qualifications needed.",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "Government policies affect labour supply: immigration rules, retirement age, benefits (reservation wage), education and training schemes.",
+       "type": "imp"
+      }
+     ],
+     "title": "DETERMINANTS"
+    },
+    {
+     "items": [
+      {
+       "text": "At low wages, the <strong>substitution effect</strong> dominates: higher wages make work more attractive than leisure, so labour supply increases.",
+       "type": "mech"
+      },
+      {
+       "text": "At very high wages, the <strong>income effect</strong> dominates: workers can afford the same standard of living with fewer hours, so they choose more leisure and supply fewer hours.",
+       "type": "mech"
+      },
+      {
+       "text": "The backward-bending supply curve links to PED concepts from Unit 1 — it shows how the same factor (wages) can have opposite effects at different levels.",
+       "type": "link"
+      }
+     ],
+     "title": "THE BACKWARD-BENDING SUPPLY CURVE"
+    }
+   ],
+   "keyIdea": "The supply of labour to a market depends on wages and non-monetary factors, while the individual worker's supply curve can bend backward when income effects outweigh substitution effects at high wages.",
+   "takeaway": [
+    "Labour supply depends on wages, non-monetary factors, and government policy.",
+    "Individual supply may bend backward; market supply to an occupation slopes upward.",
+    "Substitution effect dominates at low wages; income effect dominates at high wages."
+   ],
+   "examMatters": "Examiners may ask you to draw and explain the backward-bending supply curve. Most exam questions focus on the market supply curve (upward-sloping) rather than the individual curve, so check which one the question asks for.",
+   "misconception": "Students assume labour supply always slopes upward. Wrong because at very high wages workers may prefer leisure. Instead write: the market supply of labour to an occupation typically slopes upward, but the individual labour supply curve can bend backward when the income effect of higher wages outweighs the substitution effect."
+  },
+  {
+   "flow": {
+    "steps": [
+     "Labour demand (MRP) meets labour supply",
+     "Equilibrium wage determined",
+     "Shifts in either curve change wage and employment"
+    ],
+    "result": "Competitive wage = MRP at the equilibrium level of employment",
+    "resultType": "good"
+   },
+   "meta": "4 concepts",
+   "title": "Wage Determination in Competitive Markets",
+   "blocks": [
+    {
+     "items": [
+      {
+       "tag": "exam",
+       "text": "<strong>Competitive labour market</strong> — many employers and many workers, no single party can influence the wage; wage is set where labour demand (MRP) = labour supply.",
+       "type": "def"
+      },
+      {
+       "text": "At the equilibrium wage, the quantity of labour demanded equals the quantity supplied — there is no involuntary unemployment in this market.",
+       "type": "mech"
+      },
+      {
+       "text": "If demand for the product rises, MRP shifts right → equilibrium wage and employment both increase.",
+       "type": "mech"
+      }
+     ],
+     "title": "EQUILIBRIUM WAGE"
+    },
+    {
+     "items": [
+      {
+       "text": "Labour demand shifts with: changes in <strong>product demand</strong>, changes in worker productivity, changes in the price of substitute/complement factors (e.g. automation).",
+       "type": "mech"
+      },
+      {
+       "text": "Labour supply shifts with: <strong>migration</strong>, changes in non-monetary factors, education/training availability, demographic changes.",
+       "type": "mech"
+      },
+      {
+       "text": "Wage determination links to market equilibrium from Unit 1 — the same demand-supply framework applies, with wages as the 'price' and employment as the 'quantity'.",
+       "type": "link"
+      }
+     ],
+     "title": "SHIFTS IN DEMAND AND SUPPLY"
+    }
+   ],
+   "keyIdea": "In a competitive labour market, wages are determined by the interaction of demand (MRP) and supply of labour — just as product prices are set by demand and supply in goods markets.",
+   "takeaway": [
+    "Competitive wage set where DL (MRP) = SL at the equilibrium employment level.",
+    "Product demand, productivity, and technology shift labour demand.",
+    "Migration, education, and demographics shift labour supply."
+   ],
+   "examMatters": "Examiners expect a clear labour market diagram: wage on y-axis, quantity of labour on x-axis, DL (= MRP) and SL intersecting at the equilibrium. Show how shifts in demand or supply change the wage and employment level.",
+   "misconception": "Students think all workers are paid the same in a competitive market. Wrong because different occupations have different MRP curves (based on productivity and product demand) and different supply conditions. Instead write: the competitive model explains wage determination within a single labour market; wage differentials between markets arise from differences in MRP and supply."
+  },
+  {
+   "flow": {
+    "steps": [
+     "Single employer dominates market",
+     "MCL > supply curve",
+     "Hires at MCL = MRP, pays lower wage from supply curve"
+    ],
+    "result": "Wage below competitive level, employment below competitive level — exploitation",
+    "resultType": "bad"
+   },
+   "meta": "5 concepts",
+   "title": "Monopsony in Labour Markets",
+   "blocks": [
+    {
+     "items": [
+      {
+       "tag": "exam",
+       "text": "<strong>Monopsony</strong> — a labour market with a single (or dominant) employer who has the power to influence wages by varying the number of workers it employs.",
+       "type": "def"
+      }
+     ],
+     "title": "DEFINITION"
+    },
+    {
+     "items": [
+      {
+       "text": "To hire more workers, the monopsonist must <strong>raise the wage for all workers</strong>, not just the new hire. This makes the marginal cost of labour (MCL) higher than the average cost of labour (ACL = supply curve).",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "The MCL curve lies <strong>above the supply curve</strong> because each extra worker raises the wage bill for all existing workers too.",
+       "type": "mech"
+      },
+      {
+       "text": "Profit-maximising hiring: employ where MCL = MRP, then pay the wage on the <strong>supply curve</strong> below, not on the MRP curve — resulting in a wage below the competitive level.",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "The gap between MRP and the wage represents <strong>exploitation</strong> — the worker is paid less than their marginal revenue product.",
+       "type": "imp"
+      }
+     ],
+     "title": "HOW MONOPSONY WORKS"
+    },
+    {
+     "items": [
+      {
+       "text": "A <strong>minimum wage</strong> set between the monopsony wage and the competitive wage can increase both wages and employment — a result that contradicts the standard competitive model.",
+       "type": "mech"
+      },
+      {
+       "text": "Monopsony links to government intervention (3.3.5): it provides the economic justification for minimum wages and explains why they do not always cause unemployment.",
+       "type": "link"
+      }
+     ],
+     "title": "POLICY IMPLICATIONS"
+    }
+   ],
+   "keyIdea": "A monopsonist is the sole buyer of labour in a market, giving it the power to drive wages below the competitive level — creating a welfare loss and a case for minimum wage intervention.",
+   "takeaway": [
+    "Monopsony: single buyer of labour, MCL above supply curve, wage < MRP.",
+    "Workers are 'exploited' — paid below their marginal revenue product.",
+    "A minimum wage can increase both wages and employment in a monopsony."
+   ],
+   "examMatters": "Examiners expect the full monopsony diagram: SL (= ACL), MCL above it, MRP = DL. Show the monopsony wage (below competitive) and monopsony employment (below competitive). Then show how a minimum wage between these levels can increase both wage and employment.",
+   "misconception": "Students think minimum wages always cause unemployment. Wrong because in a monopsony market, a carefully set minimum wage can increase employment by eliminating the firm's incentive to restrict hiring. Instead write: the employment effect of a minimum wage depends on market structure — in competitive markets it may cause unemployment, but in monopsony markets it can increase employment."
+  },
+  {
+   "flow": {
+    "steps": [
+     "Union negotiates higher wage",
+     "In competitive market: higher wage → lower employment",
+     "Against monopsony: wage rises with little/no job loss"
+    ],
+    "result": "The employment effect depends on the employer's market power",
+    "resultType": "neutral"
+   },
+   "meta": "4 concepts",
+   "title": "Trade Unions",
+   "blocks": [
+    {
+     "items": [
+      {
+       "text": "<strong>Trade union</strong> — an organisation of workers that collectively bargains with employers over wages, working conditions, and employment terms.",
+       "type": "def"
+      },
+      {
+       "tag": "exam",
+       "text": "<strong>Collective bargaining</strong> — negotiations between union representatives and employers to agree on wages and conditions for all members.",
+       "type": "def"
+      }
+     ],
+     "title": "DEFINITIONS"
+    },
+    {
+     "items": [
+      {
+       "text": "In a competitive labour market, a union acts like a <strong>monopoly seller of labour</strong> — it can push the wage above the equilibrium, but this reduces the quantity of labour demanded.",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "Against a monopsonist, the union acts as a <strong>countervailing power</strong> — pushing wages closer to the competitive level without necessarily reducing employment.",
+       "type": "mech"
+      },
+      {
+       "text": "Unions can also raise productivity through improved morale, reduced labour turnover, and investment in training — shifting the MRP curve right.",
+       "type": "mech"
+      },
+      {
+       "text": "The bilateral monopoly model (union vs monopsony) results in an <strong>indeterminate wage</strong> — the outcome depends on the relative bargaining power of each side.",
+       "type": "link"
+      }
+     ],
+     "title": "EFFECTS ON WAGES AND EMPLOYMENT"
+    }
+   ],
+   "keyIdea": "Trade unions shift the balance of power in labour markets by bargaining collectively for higher wages and better conditions — but the impact on employment depends on the employer's market power.",
+   "takeaway": [
+    "Unions bargain collectively to raise wages above what individual workers could achieve.",
+    "In competitive markets: higher wages → lower employment (trade-off).",
+    "Against monopsony: unions act as countervailing power with little/no job loss."
+   ],
+   "examMatters": "Examiners expect you to analyse unions differently depending on market structure. In a competitive market, unions cause a trade-off (higher wages vs fewer jobs). Against a monopsonist, unions can raise wages without reducing employment. Always state which model applies.",
+   "misconception": "Students say unions always cause unemployment. Wrong because against a monopsonist employer, union power acts as a corrective — pushing wages up toward the competitive level without reducing employment. Instead write: the employment effect of unions depends on whether the labour market is competitive or monopsonistic."
+  },
+  {
+   "flow": {
+    "steps": [
+     "Differences in MRP, skills, conditions, and barriers",
+     "Labour immobility prevents equalisation",
+     "Differentials persist across occupations"
+    ],
+    "result": "Wages differ due to demand, supply, and market imperfections",
+    "resultType": "neutral"
+   },
+   "meta": "5 concepts",
+   "title": "Wage Differentials",
+   "blocks": [
+    {
+     "items": [
+      {
+       "text": "<strong>Compensating wage differentials</strong> — higher pay compensates for unpleasant, dangerous, or unsociable working conditions (e.g. oil rig workers, night shifts).",
+       "type": "mech"
+      },
+      {
+       "text": "<strong>Human capital</strong> — workers with more education, training, and experience have higher productivity (MRP), so firms pay them more.",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "<strong>Barriers to entry</strong> — professional qualifications (doctors, lawyers) restrict labour supply, keeping wages high for those inside the profession.",
+       "type": "mech"
+      },
+      {
+       "text": "<strong>Discrimination</strong> — wages may differ due to gender, race, or other characteristics unrelated to productivity, representing a market failure.",
+       "type": "mech"
+      }
+     ],
+     "title": "CAUSES OF DIFFERENTIALS"
+    },
+    {
+     "items": [
+      {
+       "text": "Labour is <strong>not perfectly mobile</strong>: geographical immobility (housing costs, family ties) and occupational immobility (lack of transferable skills) prevent workers from moving to higher-paid jobs.",
+       "type": "mech"
+      },
+      {
+       "tag": "exam",
+       "text": "Wage differentials serve an important <strong>signalling function</strong>: they direct workers toward occupations where demand is high and away from occupations with excess supply.",
+       "type": "imp"
+      },
+      {
+       "text": "Wage differentials link to inequality and poverty (Unit 4): persistent differentials based on discrimination or lack of opportunity contribute to income inequality.",
+       "type": "link"
+      }
+     ],
+     "title": "WHY DIFFERENTIALS PERSIST"
+    }
+   ],
+   "keyIdea": "Wages differ across occupations and individuals because of differences in labour demand (productivity, MRP), labour supply (skills, barriers to entry), and market imperfections that prevent wages from equalising.",
+   "takeaway": [
+    "Differentials arise from: compensating factors, human capital, barriers, discrimination.",
+    "Labour immobility (geographical and occupational) prevents wage equalisation.",
+    "Differentials signal where labour is scarce — they allocate resources."
+   ],
+   "examMatters": "Examiners expect you to explain wage differentials using demand and supply analysis: shifts in MRP (demand) or changes in the supply of labour to specific occupations. Use real-world examples and always consider whether the differential is justified by productivity or reflects discrimination.",
+   "misconception": "Students say all wage differentials are unfair. Wrong because many differentials reflect genuine differences in skills, risk, and productivity. Instead write: some differentials are economically justified (compensating for risk or rewarding human capital) while others reflect discrimination or market imperfections."
+  }
+ ],
+ "quiz": [
+  {
+   "id": "labour-markets:quiz:710d178c",
+   "options": [
+    "Composite demand.",
+    "Joint demand.",
+    "Derived demand.",
+    "Effective demand."
+   ],
+   "question": "The demand for construction workers rises when there is an increase in demand for new houses. This is an example of:",
+   "explanation": "Labour demand is a derived demand — it is derived from the demand for the final product (houses). When product demand rises, the demand for the workers who produce it also rises. This is a fundamental concept in labour market theory.",
+   "correctIndex": 2
+  },
+  {
+   "id": "labour-markets:quiz:4be1d365",
+   "options": [
+    "Marginal Physical Product (MPP) equals zero.",
+    "Marginal Revenue Product (MRP) equals the wage rate.",
+    "Average Revenue Product (ARP) is maximised.",
+    "Total Revenue Product (TRP) equals total cost."
+   ],
+   "question": "A profit-maximising firm in a competitive labour market will hire workers up to the point where:",
+   "explanation": "A profit-maximising firm hires where MRP = W (the wage rate). If MRP > W, the firm can increase profit by hiring more. If MRP < W, the firm is making a loss on the marginal worker and should reduce employment. This is analogous to MC = MR in output markets.",
+   "correctIndex": 1
+  },
+  {
+   "id": "labour-markets:quiz:44220611",
+   "options": [
+    "Labour costs form a high proportion of total costs.",
+    "The final product has price elastic demand.",
+    "It is difficult to substitute capital for labour.",
+    "There is a long time period for adjustment."
+   ],
+   "question": "Which of the following is most likely to make the demand for labour wage inelastic?",
+   "explanation": "If it is difficult to substitute capital for labour (e.g. specialist skilled workers who cannot easily be replaced by machines), a wage increase will not lead firms to significantly reduce the number of workers hired — demand is inelastic. All the other options tend to make demand more elastic.",
+   "correctIndex": 2
+  },
+  {
+   "id": "labour-markets:quiz:48ed11ff",
+   "options": [
+    "Workers become less productive at higher wages.",
+    "The income effect dominates the substitution effect, so workers choose more leisure.",
+    "Employers refuse to pay wages above a certain level.",
+    "Trade unions restrict the hours their members can work."
+   ],
+   "question": "The individual labour supply curve may 'bend backward' at high wage rates because:",
+   "explanation": "At high wages, the income effect may dominate: workers can achieve their desired income in fewer hours, so they choose to work less and enjoy more leisure. This causes the supply curve to bend backward. The substitution effect (working more because leisure is expensive) is outweighed.",
+   "correctIndex": 1
+  },
+  {
+   "id": "labour-markets:quiz:6ac77fbe",
+   "options": [
+    "An increase in income tax rates.",
+    "Stricter occupational licensing requirements.",
+    "An increase in net immigration of workers with relevant skills.",
+    "An increase in the level of welfare benefits."
+   ],
+   "question": "Which of the following would shift the supply of labour to the right in a particular occupation?",
+   "explanation": "Net immigration of workers with relevant skills directly increases the number of workers available in that occupation, shifting supply right. Higher taxes and benefits discourage work (reduce supply), and stricter licensing restricts entry (reduces supply).",
+   "correctIndex": 2
+  },
+  {
+   "id": "labour-markets:quiz:a4405adb",
+   "options": [
+    "A higher wage and employs more workers.",
+    "A lower wage and employs fewer workers.",
+    "The same wage but employs fewer workers.",
+    "A lower wage but employs more workers."
+   ],
+   "question": "In a monopsony labour market, compared to a competitive market, the employer pays:",
+   "explanation": "A monopsony employer has the market power to pay a wage below the competitive level. It employs where MCL = MRP and pays the wage from the supply curve (ACL), resulting in both lower wages (Wm < Wc) and lower employment (Qm < Qc) compared to the competitive outcome. Workers are paid below their MRP.",
+   "correctIndex": 1
+  },
+  {
+   "id": "labour-markets:quiz:e6000dd6",
+   "options": [
+    "Definitely increase unemployment.",
+    "Have no effect on wages or employment.",
+    "Increase both wages and employment.",
+    "Increase wages but definitely reduce employment."
+   ],
+   "question": "A national minimum wage set between the monopsony wage and the competitive wage will:",
+   "explanation": "In a monopsony, a minimum wage set above Wm but below Wc makes the supply curve perfectly elastic at the minimum wage, reducing MCL for the monopsonist. This creates an incentive to hire more workers, so both wages and employment rise. This is a key evaluation point when discussing minimum wage effects.",
+   "correctIndex": 2
+  },
+  {
+   "id": "labour-markets:quiz:2515ecf0",
+   "options": [
+    "Surgeons work longer hours than retail assistants.",
+    "The supply of surgeons is highly inelastic due to lengthy training, while retail labour supply is elastic.",
+    "Demand for surgery is always higher than demand for retail goods.",
+    "Retail assistants have stronger trade union representation."
+   ],
+   "question": "Which of the following best explains why surgeons earn significantly more than retail assistants?",
+   "explanation": "Surgeons require many years of training and specialist qualifications, making the supply of surgeons very inelastic (steep supply curve). Combined with high demand (high MRP), this results in a high equilibrium wage. Retail assistants require minimal training, so supply is elastic, keeping wages lower.",
+   "correctIndex": 1
+  },
+  {
+   "id": "labour-markets:quiz:b90ed052",
+   "options": [
+    "A fall in the national minimum wage.",
+    "Persistent regional unemployment alongside unfilled vacancies in other regions.",
+    "A reduction in structural unemployment.",
+    "An increase in occupational mobility."
+   ],
+   "question": "Geographical immobility of labour is most likely to result in:",
+   "explanation": "Geographical immobility means workers cannot or will not move to where jobs are available. This creates persistent regional disparities: some regions have high unemployment while others have unfilled vacancies. Labour resources are misallocated, reducing national output below its potential.",
+   "correctIndex": 1
+  },
+  {
+   "id": "labour-markets:quiz:e75a70a6",
+   "options": [
+    "Building more affordable housing in areas with job vacancies.",
+    "Reducing income tax to encourage people to seek work.",
+    "Investing in education and retraining programmes for workers in declining industries.",
+    "Raising the national minimum wage to attract workers to low-paid jobs."
+   ],
+   "question": "Which government policy is most directly aimed at reducing occupational immobility?",
+   "explanation": "Occupational immobility is caused by workers lacking the skills needed for available jobs. Education and retraining programmes directly address this skills mismatch by equipping workers with new qualifications. Affordable housing addresses geographical immobility. Tax cuts and minimum wages address different issues.",
+   "correctIndex": 2
+  }
+ ],
+ "practice": [
+  {
+   "id": "labour-markets:practice:904e9b48",
+   "marks": 4,
+   "command": "Define",
+   "guidance": "Derived demand means that the demand for labour is not a direct demand but arises from the demand for the goods and services that labour produces (1 mark). Firms hire workers not for their own sake but because their output can be sold to generate revenue (1 mark). For example, the demand for construction workers is derived from the demand for new housing and infrastructure projects (1 mark). If the demand for the final product falls, the demand for the labour used to produce it will also fall, and vice versa (1 mark).",
+   "question": "Define the concept of 'derived demand' as it applies to the demand for labour. (4 marks)"
+  },
+  {
+   "id": "labour-markets:practice:1249c630",
+   "marks": 6,
+   "command": "Explain",
+   "guidance": "Factor 1: Differences in human capital (1 mark) — occupations that require extensive education, training and qualifications, such as medicine or law, command higher wages because the supply of suitably qualified workers is restricted (1 mark). The higher wages compensate workers for the cost and time invested in acquiring human capital (1 mark).\n\nFactor 2: Compensating wage differentials (1 mark) — jobs that involve unpleasant, dangerous or unsociable working conditions, such as deep-sea fishing or night-shift work, must offer higher wages to attract sufficient workers (1 mark). The wage premium compensates for the non-monetary disadvantages of the occupation (1 mark).",
+   "question": "Explain two factors that could cause wage differentials between occupations. (6 marks)"
+  },
+  {
+   "id": "labour-markets:practice:3bb7c3f8",
+   "marks": 10,
+   "command": "Assess",
+   "guidance": "Define MRP as the additional revenue generated by employing one more unit of labour, calculated as marginal physical product (MPP) multiplied by the marginal revenue (MR) of the output (2 marks). Useful: in a perfectly competitive labour market, a profit-maximising firm will hire workers up to the point where the wage equals MRP — this provides a clear, logical basis for understanding labour demand (2 marks); the theory explains why workers in high-productivity industries tend to earn higher wages (2 marks). Limitations: MRP is difficult to measure in practice, especially in service industries and for team-based production where individual contributions cannot be isolated (2 marks); ignores the role of trade unions, minimum wage legislation and employer monopsony power in determining actual wages (1 mark). Judgement: MRP theory provides a useful theoretical framework for understanding the demand side of the labour market but is an incomplete explanation of wage determination because it neglects supply-side factors and institutional influences (1 mark).",
+   "question": "Assess the usefulness of marginal revenue product (MRP) theory in explaining wage determination. (10 marks)"
+  },
+  {
+   "id": "labour-markets:practice:c499dd15",
+   "marks": 20,
+   "command": "Evaluate",
+   "guidance": "Introduction: Define monopsony as a market structure in which there is a single or dominant buyer of labour. The monopsonist faces the entire market supply curve of labour and therefore has the power to influence the wage rate (2 marks).\n\nNegative impacts: A monopsonist maximises profit by hiring where MCL = MRP, but pays the wage on the supply curve — this results in a wage below MRP and employment below the competitive level (3 marks); workers are exploited in the sense that they are paid less than the value of their marginal contribution to revenue (2 marks); there may be a welfare loss from the underemployment of labour compared with a competitive outcome (2 marks).\n\nPositive aspects or mitigating factors: In practice, a large employer such as the NHS or a major retailer may offer non-wage benefits — pensions, training, job security — that partially compensate for lower wages (2 marks); trade unions can act as a countervailing force — bilateral monopoly (union vs monopsony) can result in a wage closer to the competitive level (2 marks); a monopsonist may invest in training and skills development because it can recoup the investment through lower wages (2 marks).\n\nEvaluation: Monopsony power generally leads to lower wages and employment than a competitive market, representing a form of market failure in the labour market (1 mark). However, the extent of the negative impact depends on the degree of monopsony power, the presence of trade unions, and government interventions such as the minimum wage — which can actually increase both wages and employment in a monopsony labour market, unlike in a competitive market (2 marks).",
+   "question": "Evaluate the impact of a monopsony employer on wages and employment in a labour market. (20 marks)"
+  },
+  {
+   "id": "labour-markets:practice:2648db4a",
+   "marks": 4,
+   "command": "Outline",
+   "guidance": "Way 1: Collective bargaining — trade unions negotiate with employers on behalf of their members to secure higher wages and better working conditions than individual workers could achieve alone (1 mark). This shifts the effective labour supply curve and can raise wages above the market equilibrium (1 mark).\n\nWay 2: Restricting labour supply — some unions operate closed shops or enforce entry requirements that limit the number of workers available to employers (1 mark). By reducing labour supply, the equilibrium wage is pushed upward, benefiting existing members but potentially reducing employment opportunities for non-members (1 mark).",
+   "question": "Outline two ways in which trade unions may influence the labour market. (4 marks)"
+  }
+ ],
+ "flashcards": [
+  {
+   "id": "labour-markets:card:c33206eb",
+   "back": "Labour is demanded not for itself but because it is <strong>needed to produce goods and services</strong>. If demand for the product rises, demand for the workers who make it rises too.",
+   "front": "What is derived demand for labour?"
+  },
+  {
+   "id": "labour-markets:card:626b6835",
+   "back": "The <strong>additional revenue</strong> a firm earns from hiring one more worker. MRP = <strong>MPP × MR</strong> (marginal physical product × marginal revenue). Firms hire until MRP = wage.",
+   "front": "What is marginal revenue product (MRP)?"
+  },
+  {
+   "id": "labour-markets:card:45b8948d",
+   "back": "The <strong>MRP of workers</strong>, which depends on: productivity (MPP), price of the product (MR), and the state of product demand. Higher MRP → higher demand for labour.",
+   "front": "What determines the demand for labour?"
+  },
+  {
+   "id": "labour-markets:card:05189f64",
+   "back": "<strong>Wages</strong> (higher wages attract more workers), <strong>non-monetary benefits</strong>, <strong>qualifications and training</strong>, <strong>geographic mobility</strong>, and the size of the working-age population.",
+   "front": "What determines the supply of labour?"
+  },
+  {
+   "id": "labour-markets:card:08a36da4",
+   "back": "Many employers and workers, <strong>homogeneous labour</strong>, perfect information, and no barriers to entry. The wage is set by market supply and demand — firms are wage-takers.",
+   "front": "What is a perfectly competitive labour market?"
+  },
+  {
+   "id": "labour-markets:card:cabe510c",
+   "back": "A labour market with a <strong>single dominant employer</strong> (or very few). The employer has wage-setting power and can pay below the competitive wage. E.g., the NHS for nurses.",
+   "front": "What is a monopsony?"
+  },
+  {
+   "id": "labour-markets:card:487ef665",
+   "back": "The monopsonist faces an <strong>upward-sloping supply curve</strong> and hires where MCL = MRP. This results in a <strong>lower wage and fewer workers</strong> than in a competitive market.",
+   "front": "How does a monopsony affect wages?"
+  },
+  {
+   "id": "labour-markets:card:15f4afa4",
+   "back": "A <strong>legal floor on wages</strong> set by the government. Aims to reduce poverty but may cause unemployment if set above equilibrium — firms hire fewer workers.",
+   "front": "What is the national minimum wage (NMW)?"
+  },
+  {
+   "id": "labour-markets:card:ff171a4a",
+   "back": "Unions use <strong>collective bargaining</strong> to negotiate wages above the competitive level. If successful, wages rise but employment may fall — depends on the employer's market power.",
+   "front": "What is the effect of a trade union on wages?"
+  },
+  {
+   "id": "labour-markets:card:588fa9a4",
+   "back": "The <strong>responsiveness of quantity of labour demanded</strong> to a change in the wage rate. Inelastic if workers are hard to replace or labour costs are a small share of total costs.",
+   "front": "What is wage elasticity of demand?"
+  },
+  {
+   "id": "labour-markets:card:da446355",
+   "back": "Higher wages make <strong>leisure more expensive</strong> relative to work (the opportunity cost of not working rises). Workers substitute leisure for work → <strong>supply more labour hours</strong>.",
+   "front": "What is the substitution effect of a wage increase?"
+  },
+  {
+   "id": "labour-markets:card:c3a7aea9",
+   "back": "Higher wages mean workers can <strong>earn the same income in fewer hours</strong>. They may choose more leisure → <strong>supply fewer labour hours</strong>. Dominates at very high wages.",
+   "front": "What is the income effect of a wage increase?"
+  },
+  {
+   "id": "labour-markets:card:ecde5876",
+   "back": "The <strong>knowledge, skills, and experience</strong> embodied in workers. Investment in education and training increases human capital, raising productivity and earning potential.",
+   "front": "What is human capital?"
+  },
+  {
+   "id": "labour-markets:card:7159e62b",
+   "back": "<strong>Skills and qualifications</strong>, <strong>working conditions</strong> (compensating differentials), <strong>labour supply and demand</strong> imbalances, <strong>trade union power</strong>, and <strong>discrimination</strong>.",
+   "front": "What causes wage differentials between occupations?"
+  },
+  {
+   "id": "labour-markets:card:df623be2",
+   "back": "At low wages, higher wages increase supply (substitution effect dominates). Beyond a point, higher wages <strong>reduce supply</strong> (income effect dominates — workers value leisure more).",
+   "front": "What is the backward-bending supply curve of labour?"
+  },
+  {
+   "id": "labour-markets:card:fc1a697b",
+   "back": "Workers are unable or unwilling to <strong>move to where jobs are</strong> — due to housing costs, family ties, or regional attachment. Causes persistent unemployment in some areas.",
+   "front": "What is geographic immobility of labour?"
+  },
+  {
+   "id": "labour-markets:card:f4a4630b",
+   "back": "Workers lack the <strong>skills or qualifications</strong> to switch between jobs or industries. Causes structural unemployment — e.g., coal miners cannot easily become software engineers.",
+   "front": "What is occupational immobility of labour?"
+  },
+  {
+   "id": "labour-markets:card:f3ce73d0",
+   "back": "Increases <strong>labour supply</strong>, which may lower wages in affected sectors. But also increases demand for goods (more consumers) and fills skills gaps. Net effect is debated.",
+   "front": "How does immigration affect the labour market?"
+  }
+ ],
+ "diagrams": [
+  {
+   "id": "labour-markets:diagram:40143342",
+   "title": "Competitive Labour Market Equilibrium",
+   "checklist": [
+    "Axes labelled: Wage Rate (W) on y-axis, Quantity of Labour on x-axis",
+    "Supply curve slopes upward, demand curve slopes downward",
+    "Equilibrium point clearly marked at intersection",
+    "Dashed lines from equilibrium to both axes showing We and Qe",
+    "Surplus and shortage regions identified",
+    "Demand shift shows new higher equilibrium wage and employment"
+   ],
+   "scenarios": [
+    {
+     "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"lm1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"290\" x2=\"460\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#lm1)\"/>\n  <line x1=\"70\" y1=\"290\" x2=\"70\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#lm1)\"/>\n  <text x=\"270\" y=\"330\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\">Quantity of Labour</text>\n  <text x=\"20\" y=\"160\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,20,160)\">Wage Rate (W)</text>\n  <!-- Supply curve (upward sloping) -->\n  <line x1=\"100\" y1=\"270\" x2=\"420\" y2=\"70\" stroke=\"#3b82f6\" stroke-width=\"3\"/>\n  <text x=\"425\" y=\"65\" fill=\"#3b82f6\" font-size=\"14\" font-weight=\"600\">Sₗ</text>\n  <!-- Demand curve (downward sloping) -->\n  <line x1=\"100\" y1=\"70\" x2=\"420\" y2=\"270\" stroke=\"#059669\" stroke-width=\"3\"/>\n  <text x=\"425\" y=\"265\" fill=\"#059669\" font-size=\"14\" font-weight=\"600\">Dₗ</text>\n  <!-- Equilibrium point -->\n  <circle cx=\"260\" cy=\"170\" r=\"5\" fill=\"#e8ecf5\"/>\n  <text x=\"272\" y=\"163\" fill=\"#e8ecf5\" font-size=\"12\" font-weight=\"600\">E</text>\n  <!-- Dashed lines to axes -->\n  <line x1=\"70\" y1=\"170\" x2=\"255\" y2=\"170\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/>\n  <line x1=\"260\" y1=\"170\" x2=\"260\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/>\n  <text x=\"55\" y=\"174\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"end\">Wₑ</text>\n  <text x=\"260\" y=\"308\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"middle\">Qₑ</text>\n  <!-- Surplus label above equilibrium -->\n  <text x=\"330\" y=\"110\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"middle\">Surplus of labour</text>\n  <text x=\"330\" y=\"124\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"middle\">(W above Wₑ)</text>\n  <line x1=\"330\" y1=\"128\" x2=\"330\" y2=\"145\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n  <!-- Shortage label below equilibrium -->\n  <text x=\"180\" y=\"245\" fill=\"#3b82f6\" font-size=\"11\" text-anchor=\"middle\">Shortage of labour</text>\n  <text x=\"180\" y=\"259\" fill=\"#3b82f6\" font-size=\"11\" text-anchor=\"middle\">(W below Wₑ)</text>\n  <line x1=\"180\" y1=\"230\" x2=\"180\" y2=\"241\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"3,2\"/>\n</svg>",
+     "label": "Labour Market Equilibrium"
+    },
+    {
+     "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"lm2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n    <marker id=\"lm2a\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#ef4444\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"290\" x2=\"460\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#lm2)\"/>\n  <line x1=\"70\" y1=\"290\" x2=\"70\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#lm2)\"/>\n  <text x=\"270\" y=\"330\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\">Quantity of Labour</text>\n  <text x=\"20\" y=\"160\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,20,160)\">Wage Rate (W)</text>\n  <!-- Supply curve -->\n  <line x1=\"100\" y1=\"270\" x2=\"420\" y2=\"70\" stroke=\"#3b82f6\" stroke-width=\"3\"/>\n  <text x=\"425\" y=\"65\" fill=\"#3b82f6\" font-size=\"14\" font-weight=\"600\">Sₗ</text>\n  <!-- Original demand curve (dashed) -->\n  <line x1=\"100\" y1=\"90\" x2=\"380\" y2=\"270\" stroke=\"#e8ecf5\" stroke-width=\"2\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n  <text x=\"385\" y=\"267\" fill=\"#e8ecf5\" font-size=\"12\" opacity=\"0.6\">Dₗ₁</text>\n  <!-- New demand curve (shifted right) -->\n  <line x1=\"160\" y1=\"60\" x2=\"440\" y2=\"260\" stroke=\"#059669\" stroke-width=\"3\"/>\n  <text x=\"445\" y=\"256\" fill=\"#059669\" font-size=\"14\" font-weight=\"600\">Dₗ₂</text>\n  <!-- Original equilibrium -->\n  <circle cx=\"238\" cy=\"180\" r=\"4\" fill=\"#e8ecf5\" opacity=\"0.5\"/>\n  <line x1=\"70\" y1=\"180\" x2=\"233\" y2=\"180\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.4\"/>\n  <line x1=\"238\" y1=\"180\" x2=\"238\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.4\"/>\n  <text x=\"55\" y=\"184\" fill=\"#e8ecf5\" font-size=\"11\" text-anchor=\"end\" opacity=\"0.5\">W₁</text>\n  <text x=\"238\" y=\"308\" fill=\"#e8ecf5\" font-size=\"11\" text-anchor=\"middle\" opacity=\"0.5\">Q₁</text>\n  <!-- New equilibrium -->\n  <circle cx=\"290\" cy=\"150\" r=\"5\" fill=\"#ef4444\"/>\n  <text x=\"302\" y=\"143\" fill=\"#ef4444\" font-size=\"12\" font-weight=\"600\">E₂</text>\n  <line x1=\"70\" y1=\"150\" x2=\"285\" y2=\"150\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/>\n  <line x1=\"290\" y1=\"150\" x2=\"290\" y2=\"290\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/>\n  <text x=\"55\" y=\"154\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"end\">W₂</text>\n  <text x=\"290\" y=\"308\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"middle\">Q₂</text>\n  <!-- Shift arrow -->\n  <line x1=\"220\" y1=\"200\" x2=\"280\" y2=\"180\" stroke=\"#ef4444\" stroke-width=\"2\" marker-end=\"url(#lm2a)\"/>\n  <!-- Annotation -->\n  <text x=\"170\" y=\"48\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">↑ Product demand / ↑ Productivity</text>\n  <text x=\"170\" y=\"63\" fill=\"#ef4444\" font-size=\"11\">→ Dₗ shifts right → ↑ W and ↑ Q</text>\n</svg>",
+     "label": "Increase in Demand for Labour"
+    }
+   ],
+   "description": "Shows how the equilibrium wage rate and employment level are determined by the intersection of the demand for labour (DL) and supply of labour (SL) curves. Includes the effects of a shift in demand."
+  },
+  {
+   "id": "labour-markets:diagram:e2d91263",
+   "title": "Monopsony Labour Market",
+   "checklist": [
+    "MCL curve drawn steeper and above the supply (ACL) curve",
+    "Monopsony employment where MCL = MRP, wage read from supply curve",
+    "Monopsony wage (Wm) clearly below competitive wage (Wc)",
+    "Monopsony employment (Qm) clearly below competitive employment (Qc)",
+    "Exploitation gap labelled between Wc and Wm",
+    "Minimum wage diagram shows both wages and employment can increase"
+   ],
+   "scenarios": [
+    {
+     "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"mn1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"290\" x2=\"460\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#mn1)\"/>\n  <line x1=\"70\" y1=\"290\" x2=\"70\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#mn1)\"/>\n  <text x=\"270\" y=\"330\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\">Quantity of Labour</text>\n  <text x=\"20\" y=\"160\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,20,160)\">Wage Rate (W)</text>\n  <!-- MCL curve (steeper, above supply) -->\n  <line x1=\"110\" y1=\"250\" x2=\"350\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"3\"/>\n  <text x=\"355\" y=\"47\" fill=\"#ef4444\" font-size=\"13\" font-weight=\"600\">MCₗ</text>\n  <!-- Supply = ACL curve (upward sloping, less steep) -->\n  <line x1=\"110\" y1=\"270\" x2=\"420\" y2=\"70\" stroke=\"#3b82f6\" stroke-width=\"3\"/>\n  <text x=\"425\" y=\"67\" fill=\"#3b82f6\" font-size=\"13\" font-weight=\"600\">Sₗ = ACₗ</text>\n  <!-- Demand = MRP curve (downward sloping) -->\n  <line x1=\"100\" y1=\"80\" x2=\"420\" y2=\"260\" stroke=\"#059669\" stroke-width=\"3\"/>\n  <text x=\"425\" y=\"257\" fill=\"#059669\" font-size=\"13\" font-weight=\"600\">Dₗ = MRP</text>\n  <!-- Monopsony employment: where MCL = MRP -->\n  <circle cx=\"230\" cy=\"160\" r=\"4\" fill=\"#ef4444\"/>\n  <!-- Drop down to supply curve for monopsony wage -->\n  <line x1=\"230\" y1=\"160\" x2=\"230\" y2=\"215\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <circle cx=\"230\" cy=\"215\" r=\"5\" fill=\"#ef4444\"/>\n  <!-- Dashed to axes for monopsony outcome -->\n  <line x1=\"70\" y1=\"215\" x2=\"225\" y2=\"215\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/>\n  <line x1=\"230\" y1=\"215\" x2=\"230\" y2=\"290\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/>\n  <text x=\"55\" y=\"219\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"end\">Wₘ</text>\n  <text x=\"230\" y=\"308\" fill=\"#ef4444\" font-size=\"11\" text-anchor=\"middle\">Qₘ</text>\n  <!-- Competitive equilibrium for comparison -->\n  <circle cx=\"280\" cy=\"172\" r=\"4\" fill=\"#e8ecf5\" opacity=\"0.6\"/>\n  <line x1=\"70\" y1=\"172\" x2=\"275\" y2=\"172\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.4\"/>\n  <line x1=\"280\" y1=\"172\" x2=\"280\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,3\" opacity=\"0.4\"/>\n  <text x=\"55\" y=\"176\" fill=\"#e8ecf5\" font-size=\"11\" text-anchor=\"end\" opacity=\"0.6\">Wᶜ</text>\n  <text x=\"280\" y=\"308\" fill=\"#e8ecf5\" font-size=\"11\" text-anchor=\"middle\" opacity=\"0.6\">Qᶜ</text>\n  <!-- Exploitation label -->\n  <line x1=\"75\" y1=\"172\" x2=\"75\" y2=\"215\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <line x1=\"72\" y1=\"172\" x2=\"78\" y2=\"172\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <line x1=\"72\" y1=\"215\" x2=\"78\" y2=\"215\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"45\" y=\"196\" fill=\"#ef4444\" font-size=\"9\" text-anchor=\"middle\" transform=\"rotate(-90,45,196)\">Exploitation</text>\n  <!-- Labels -->\n  <text x=\"310\" y=\"45\" fill=\"#e8ecf5\" font-size=\"10\" opacity=\"0.7\">Competitive: Wᶜ, Qᶜ</text>\n  <text x=\"310\" y=\"60\" fill=\"#ef4444\" font-size=\"10\">Monopsony: Wₘ &lt; Wᶜ, Qₘ &lt; Qᶜ</text>\n</svg>",
+     "label": "Monopsony Equilibrium"
+    },
+    {
+     "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"mn2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- Axes -->\n  <line x1=\"70\" y1=\"290\" x2=\"460\" y2=\"290\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#mn2)\"/>\n  <line x1=\"70\" y1=\"290\" x2=\"70\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\" marker-end=\"url(#mn2)\"/>\n  <text x=\"270\" y=\"330\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\">Quantity of Labour</text>\n  <text x=\"20\" y=\"160\" fill=\"#e8ecf5\" font-size=\"13\" text-anchor=\"middle\" transform=\"rotate(-90,20,160)\">Wage Rate (W)</text>\n  <!-- MCL curve -->\n  <line x1=\"110\" y1=\"250\" x2=\"350\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"6,4\" opacity=\"0.5\"/>\n  <text x=\"355\" y=\"47\" fill=\"#ef4444\" font-size=\"12\" opacity=\"0.5\">MCₗ</text>\n  <!-- Supply = ACL curve -->\n  <line x1=\"110\" y1=\"270\" x2=\"420\" y2=\"70\" stroke=\"#3b82f6\" stroke-width=\"3\"/>\n  <text x=\"425\" y=\"67\" fill=\"#3b82f6\" font-size=\"13\" font-weight=\"600\">Sₗ = ACₗ</text>\n  <!-- Demand = MRP curve -->\n  <line x1=\"100\" y1=\"80\" x2=\"420\" y2=\"260\" stroke=\"#059669\" stroke-width=\"3\"/>\n  <text x=\"425\" y=\"257\" fill=\"#059669\" font-size=\"13\" font-weight=\"600\">Dₗ = MRP</text>\n  <!-- Minimum wage line -->\n  <line x1=\"70\" y1=\"185\" x2=\"420\" y2=\"185\" stroke=\"#e8ecf5\" stroke-width=\"2.5\" stroke-dasharray=\"8,4\"/>\n  <text x=\"430\" y=\"189\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"600\">Wₘᵢₙ</text>\n  <!-- Original monopsony outcome (faded) -->\n  <circle cx=\"230\" cy=\"215\" r=\"3\" fill=\"#ef4444\" opacity=\"0.4\"/>\n  <line x1=\"70\" y1=\"215\" x2=\"225\" y2=\"215\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.3\"/>\n  <line x1=\"230\" y1=\"215\" x2=\"230\" y2=\"290\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\" opacity=\"0.3\"/>\n  <text x=\"55\" y=\"219\" fill=\"#ef4444\" font-size=\"10\" text-anchor=\"end\" opacity=\"0.4\">Wₘ</text>\n  <text x=\"230\" y=\"308\" fill=\"#ef4444\" font-size=\"10\" text-anchor=\"middle\" opacity=\"0.4\">Qₘ</text>\n  <!-- New employment with minimum wage: where Wmin = MRP on demand curve -->\n  <circle cx=\"268\" cy=\"185\" r=\"5\" fill=\"#059669\"/>\n  <line x1=\"268\" y1=\"185\" x2=\"268\" y2=\"290\" stroke=\"#059669\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/>\n  <text x=\"268\" y=\"308\" fill=\"#059669\" font-size=\"11\" text-anchor=\"middle\" font-weight=\"600\">Qₘᵢₙ</text>\n  <!-- Arrow showing increase in employment -->\n  <line x1=\"235\" y1=\"282\" x2=\"262\" y2=\"282\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <polygon points=\"262,279 268,282 262,285\" fill=\"#059669\"/>\n  <text x=\"250\" y=\"277\" fill=\"#059669\" font-size=\"9\" text-anchor=\"middle\">↑ Q</text>\n  <!-- Arrow showing increase in wage -->\n  <line x1=\"82\" y1=\"210\" x2=\"82\" y2=\"190\" stroke=\"#059669\" stroke-width=\"2\"/>\n  <polygon points=\"79,190 82,184 85,190\" fill=\"#059669\"/>\n  <text x=\"92\" y=\"202\" fill=\"#059669\" font-size=\"9\">↑ W</text>\n  <!-- Annotation box -->\n  <rect x=\"290\" y=\"30\" width=\"175\" height=\"55\" rx=\"4\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\"/>\n  <text x=\"378\" y=\"48\" fill=\"#059669\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">NMW in monopsony:</text>\n  <text x=\"378\" y=\"63\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">↑ Wages AND ↑ Employment</text>\n  <text x=\"378\" y=\"78\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">(if set between Wₘ and Wᶜ)</text>\n</svg>",
+     "label": "Minimum Wage in Monopsony"
+    }
+   ],
+   "description": "Shows how a monopsony employer pays a wage below the competitive level by employing where MCL = MRP and reading the wage off the supply curve (ACL). Includes the effect of a minimum wage."
+  },
+  {
+   "id": "labour-markets:diagram:488e9c65",
+   "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <defs>\n    <marker id=\"wd1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><polygon points=\"0 0,8 3,0 6\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n  <!-- LEFT DIAGRAM: High-skill market -->\n  <text x=\"135\" y=\"22\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"700\">High-Skill Market (e.g. surgeons)</text>\n  <!-- Axes -->\n  <line x1=\"40\" y1=\"280\" x2=\"230\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#wd1)\"/>\n  <line x1=\"40\" y1=\"280\" x2=\"40\" y2=\"35\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#wd1)\"/>\n  <text x=\"135\" y=\"310\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Quantity of Labour</text>\n  <text x=\"15\" y=\"155\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" transform=\"rotate(-90,15,155)\">Wage Rate</text>\n  <!-- Steep supply (inelastic — hard to train) -->\n  <line x1=\"110\" y1=\"265\" x2=\"150\" y2=\"50\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"155\" y=\"47\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">Sₗ</text>\n  <!-- Demand -->\n  <line x1=\"60\" y1=\"65\" x2=\"215\" y2=\"250\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"220\" y=\"248\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">Dₗ</text>\n  <!-- Equilibrium -->\n  <circle cx=\"130\" cy=\"115\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"40\" y1=\"115\" x2=\"126\" y2=\"115\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"30\" y=\"119\" fill=\"#ef4444\" font-size=\"10\" text-anchor=\"end\">W₁</text>\n  <text x=\"135\" y=\"103\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">HIGH W</text>\n\n  <!-- RIGHT DIAGRAM: Low-skill market -->\n  <text x=\"375\" y=\"22\" fill=\"#e8ecf5\" font-size=\"12\" text-anchor=\"middle\" font-weight=\"700\">Low-Skill Market (e.g. retail)</text>\n  <!-- Axes -->\n  <line x1=\"280\" y1=\"280\" x2=\"470\" y2=\"280\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#wd1)\"/>\n  <line x1=\"280\" y1=\"280\" x2=\"280\" y2=\"35\" stroke=\"#e8ecf5\" stroke-width=\"1.5\" marker-end=\"url(#wd1)\"/>\n  <text x=\"375\" y=\"310\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\">Quantity of Labour</text>\n  <text x=\"258\" y=\"155\" fill=\"#e8ecf5\" font-size=\"10\" text-anchor=\"middle\" transform=\"rotate(-90,258,155)\">Wage Rate</text>\n  <!-- Flatter supply (elastic — easy to enter) -->\n  <line x1=\"295\" y1=\"230\" x2=\"455\" y2=\"100\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"460\" y=\"97\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">Sₗ</text>\n  <!-- Demand -->\n  <line x1=\"305\" y1=\"100\" x2=\"450\" y2=\"250\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"455\" y=\"248\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">Dₗ</text>\n  <!-- Equilibrium -->\n  <circle cx=\"385\" cy=\"170\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"280\" y1=\"170\" x2=\"381\" y2=\"170\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"270\" y=\"174\" fill=\"#ef4444\" font-size=\"10\" text-anchor=\"end\">W₂</text>\n  <text x=\"390\" y=\"158\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">LOW W</text>\n\n  <!-- Connecting annotation -->\n  <rect x=\"140\" y=\"320\" width=\"220\" height=\"22\" rx=\"4\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <text x=\"250\" y=\"336\" fill=\"#ef4444\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"600\">W₁ &gt; W₂ : Wage differential persists due to immobility</text>\n</svg>",
+   "title": "Wage Differentials and Labour Immobility",
+   "checklist": [
+    "Two separate labour markets shown side by side",
+    "High-skill market has steep (inelastic) supply curve",
+    "Low-skill market has flatter (elastic) supply curve",
+    "Higher equilibrium wage in the high-skill market",
+    "Lower equilibrium wage in the low-skill market",
+    "Annotation explains that immobility prevents wage equalisation"
+   ],
+   "description": "Illustrates why wages differ between occupations by comparing a high-skill labour market with restricted supply against a low-skill labour market with elastic supply, and shows how immobility prevents equalisation."
+  }
+ ],
+ "extras": {
+  "chains": [
+   {
+    "steps": [
+     "The demand for labour is derived from the demand for the goods and services that labour produces — firms hire workers to meet consumer demand.",
+     "When demand for a product increases, firms need more workers to increase output, shifting the demand curve for labour rightward and putting upward pressure on wages.",
+     "Conversely, a fall in product demand reduces the need for workers, shifting labour demand leftward and leading to lower wages or unemployment.",
+     "This link means that labour market outcomes — wages, employment levels and job creation — are fundamentally determined by conditions in product markets."
+    ],
+    "title": "Derived demand links product and labour markets",
+    "result": "The derived nature of labour demand means that product market conditions directly determine employment and wage outcomes in labour markets."
+   },
+   {
+    "steps": [
+     "A profit-maximising firm hires workers up to the point where the marginal revenue product of labour (MRP) equals the marginal cost of labour (MCL) — i.e., MRPL = MCL.",
+     "The MRP is calculated as marginal physical product (MPP) multiplied by marginal revenue (MR) — it represents the additional revenue generated by hiring one more worker.",
+     "If MRPL > MCL, hiring an extra worker adds more to revenue than to cost, so the firm should expand employment to increase profit.",
+     "The MRP curve is the firm's demand curve for labour — it slopes downward due to diminishing marginal returns, showing that each additional worker adds less to output and revenue."
+    ],
+    "title": "MRP theory determines profit-maximising employment",
+    "result": "MRP theory shows that profit-maximising firms hire where the value of a worker's output equals the cost of employing them, with the MRP curve acting as the labour demand curve."
+   },
+   {
+    "steps": [
+     "A monopsony is a labour market with a single or dominant employer, giving the firm wage-setting power — it faces the entire upward-sloping labour supply curve.",
+     "The monopsonist must raise wages to attract additional workers, but this higher wage must be paid to all existing workers, making the marginal cost of labour (MCL) exceed the wage rate.",
+     "The monopsonist maximises profit by hiring where MRPL = MCL, but pays a wage read off the supply curve — which is below both the MRP and the MCL at the profit-maximising employment level.",
+     "This results in workers being paid below their marginal revenue product — a form of exploitation — with lower employment and wages compared to a competitive labour market."
+    ],
+    "title": "Monopsony power leads to exploitation of workers",
+    "result": "Monopsony power enables employers to pay wages below workers' MRP, resulting in both exploitation and a welfare loss from under-employment."
+   },
+   {
+    "steps": [
+     "Occupational immobility arises when workers lack the skills, qualifications or training needed to move between different jobs or industries.",
+     "Geographical immobility occurs when workers cannot easily relocate due to housing costs, family ties or regional differences in the cost of living.",
+     "These immobilities prevent labour from moving from low-wage to high-wage markets, meaning wage differentials persist rather than being competed away.",
+     "Persistent wage differentials lead to structural unemployment in declining sectors and labour shortages in growing ones, reducing overall economic efficiency."
+    ],
+    "title": "Immobility causes persistent wage differentials",
+    "result": "Labour immobility prevents the equalisation of wages across markets, creating persistent differentials and structural unemployment that reduce economic welfare."
+   }
+  ],
+  "evaluation": [
+   {
+    "title": "MRP theory has significant limitations in practice",
+    "content": "Measuring an individual worker's marginal revenue product is extremely difficult in complex production processes where output depends on teamwork. In the public sector and non-profit organisations, there is no market revenue to calculate MRP against. In practice, wages are often determined by collective bargaining, custom, minimum wage legislation and internal pay structures rather than individual productivity."
+   },
+   {
+    "title": "Monopsony can be addressed by minimum wages",
+    "content": "In a monopsony labour market, a minimum wage set between the monopsony wage and the competitive wage can simultaneously increase both wages and employment — a seemingly paradoxical result. This is because the minimum wage eliminates the need to raise all workers' pay when hiring, reducing the gap between MCL and the wage. This provides a strong theoretical justification for minimum wage legislation, though setting the optimal level requires accurate information about market conditions."
+   },
+   {
+    "title": "Trade unions can counterbalance monopsony power",
+    "content": "Trade unions can act as a monopoly seller of labour, counterbalancing employer monopsony power in a bilateral monopoly. The union can negotiate wages closer to the MRP, reducing exploitation. However, if union power exceeds employer power, wages may be pushed above the competitive equilibrium, causing unemployment. The net effect depends on the relative bargaining strength of each side and the elasticity of labour demand."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "id": "labour-markets:mistake:b6d26f1f",
+   "title": "Forgetting that labour demand is a derived demand",
+   "examTip": "Chain: product demand ↑ → product price ↑ → MRP ↑ → labour demand ↑ → wage ↑ and/or employment ↑.",
+   "mistake": "Students analyse labour demand without linking it to the demand for the product the workers produce.",
+   "correction": "Always state that labour demand is derived demand — it depends on the demand for the final product. If product demand falls, the MRP of workers falls, so fewer workers are demanded at any given wage."
+  },
+  {
+   "id": "labour-markets:mistake:5f78dfc0",
+   "title": "Not using MRP = W for profit-maximising employment",
+   "mistake": "Students say firms hire \"as many workers as possible\" or \"until productivity stops increasing\".",
+   "correction": "A profit-maximising firm hires where MRP = W. If MRP > W, hiring one more worker adds more to revenue than cost. If MRP < W, the worker costs more than they generate."
+  },
+  {
+   "id": "labour-markets:mistake:41208e2b",
+   "title": "Assuming minimum wage always causes unemployment",
+   "examTip": "This is a key evaluation point. In competitive markets, NMW causes unemployment. In monopsony, it can increase employment. The real world is usually between these extremes.",
+   "mistake": "Students apply the competitive model conclusion (NMW above equilibrium = unemployment) to all situations.",
+   "correction": "In a monopsony, a minimum wage set between Wm and Wc can increase both wages AND employment. The effect depends on the market structure. Always state assumptions."
+  },
+  {
+   "id": "labour-markets:mistake:a1076825",
+   "title": "Confusing geographical and occupational immobility",
+   "mistake": "Students mix up the two types of labour market failure.",
+   "correction": "Geographical immobility = workers cannot move location (housing costs, family ties). Occupational immobility = workers lack skills for available jobs (skills mismatch). Different policies address each."
+  }
+ ]
+}

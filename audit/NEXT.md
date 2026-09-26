@@ -10676,3 +10676,125 @@ Opens).**
 aggregate-supply with the command above to ship the printed-answer fix; the three platform FAILs are a
 programme-wide item (self-mark checklist, resume banner, post-reload score), not a per-packet one, and sit
 outside this and packet 43's scope alike.
+
+## Handoff — packet 45 (labour-markets) closed, gate passed (bookkeeping pass, 26 September 2026)
+
+**Bookkeeping-only pass.** Authored nothing, fixed nothing, committed nothing. Read `audit/PROTOCOL.md`,
+`audit/SESSION-PROMPT.md`, the Settled list in `audit/DECISIONS.md`, `audit/CONTENT-GATE.md`'s recall
+contract, this packet's own `audit/runs/packet-45/{brief,built,verify-a,verify-b,gate.log}` in full, and the
+tail of this file, before writing anything. `audit/ledger.json` was read, not written.
+
+**Packet 45 (labour-markets, IAL Economics 3.3.4) PASSED the gate.** STAGED to `draft` only; live `data` and
+git HEAD are both untouched; nothing committed. Rebuilt to **3.3.4 only** (`audit/raw/econ_spec.txt:1447`,
+next heading 3.3.5 at `:1485`, re-confirmed by this pass with a direct grep, not by reading `built.md`'s
+citation on trust). Monopsony (3.3.3.7) and the minimum wage/maximum wages/immobility measures/
+discrimination (all 3.3.5.2b) were removed and replaced with counted, topic-numbered pointers to their
+owning sections (`market-structures-contestability`, packet 29, published; `government-intervention-firms`,
+packet 48, not started); `audit/SPEC-OWNERSHIP.md` gained a row recording it (staged, unstaged in the
+worktree — verified with `git diff --cached -- audit/SPEC-OWNERSHIP.md`).
+
+**Correction to the task brief that opened this pass.** The brief's "Outcome of packet 45" summary read
+"ledger: 3 confirmed, 0 still rejected, 0 unverified." That is wrong. `node audit/scripts/ledger.mjs packet
+45` run fresh by this pass, and independently recounted by piping its output through `sort | uniq -c`, shows
+**26 confirmed, 5 wont-fix, 0 rejected, 0 open** — matching `verify-a.md`'s own final tally (23 confirmed on
+round 0 + 3 confirmed on the round-1 re-verification = 26) and `built.md`'s "26 claimed, 5 wont-fix" header.
+`node audit/scripts/ledger.mjs unverified 45` → "gate clear". Recorded here rather than propagated; this is
+the same shape of error packet 44's bookkeeping pass caught in its own brief ("0 confirmed" vs. the true 25).
+**Whoever computes these briefs should be checked before being trusted, not just this once.**
+
+**No contradiction found** among `audit/PROTOCOL.md`, the Settled entries in `audit/DECISIONS.md`, and
+`audit/CONTENT-GATE.md`'s recall contract, for this packet's work. **No `## Packet 45 spec` heading exists
+anywhere in this file** — only the packet-44 handoff (several sections above) naming labour-markets as the
+next free packet. This is the same gap packets 41, 43 and 44 hit and normalized: `PROTOCOL.md`'s own rule is
+that the ledger, not this file, defines scope, and `built.md`/`brief.md` supplied it here, independently
+recorded before this pass ever ran. Not a contradiction between authorities; a missing document, worked
+around a fifth time now.
+
+**Independently re-verified this pass, by methods different from the ones already in the run folder:**
+- Section span: `grep -n "3\.3\.[0-9]" audit/raw/econ_spec.txt` run directly (not read from `built.md`) →
+  3.3.4 at `:1447`, 3.3.5 at `:1485`.
+- `node audit/scripts/ledger.mjs unverified 45` → "gate clear", run fresh.
+- `node audit/scripts/ledger.mjs packet 45` output piped through `awk`/`sort`/`uniq -c` for an
+  arithmetic recount, rather than trusting either document's prose count: 26 confirmed + 5 wont-fix = 31,
+  matching the ledger item count.
+- `audit/runs/packet-45/gate.log` read directly: TEST=0 BUILD=0 VALIDATE=0 EXPOSURE=0 RECALLS=0 STAGED=0,
+  dated 10:24-10:27, i.e. run on the round-0 build, before the fix round (10:48-10:54) — the fix round's own
+  narrower re-runs (`test-fix1.log`, `recalls-fix1.log`, `exposure-fix1.log`, `validate-fix1.log`, all exit
+  0) cover the same four gates after the content fix; `npm run build` itself was not re-run post-fix, which
+  `built.md` states and reasons ("no file this packet touches is imported by `app/`") — the fix touched only
+  `scripts/_packet45-{content,assessment}.mjs`, staging-only modules, not app code. That reasoning was
+  checked, not merely quoted: neither file appears in any `app/`-side import in this tree.
+- `git status --short` for the packet's own files, checked directly rather than trusted from `built.md`:
+  the five `scripts/_packet45-*.mjs` files, both snapshots and the `audit/SPEC-OWNERSHIP.md` row are staged
+  (`A`/`M`); `audit/ledger.json` is modified but unstaged; `audit/runs/packet-45/{gate.log,verify-a.md,
+  verify-b.md}` are untracked; two `auto-prepublish-2026-09-25T*__economics__labour-markets.json` snapshots
+  are untracked and pre-date this packet by a day (from the 2.91/2.92 diagram-pin checkpoint, not this
+  packet's output — confirmed by their timestamp and by `git log`/DECISIONS not naming a labour-markets
+  publish on 26 Sep).
+
+**Carried forward, not this pass's to fix — found by this packet's own Verify B, most of it shared with
+packets 42-44:**
+- **Worth its own escalation, not just a carry-forward note**: the check-in quiz's correct answer sits in
+  the diagram caption or the checklist text directly above the question at **4 of this section's 5
+  check-ins** (steps 12, 14, 17, 19 of `verify-b.md`). Packet 44 found and fixed three instances of this
+  exact class in its own quiz bank; this section shows it is not a one-off but a recurring blind spot in how
+  content is authored across packets, and neither `npm run validate` nor `npm run recalls` catches it (it is
+  a cross-field coincidence — a diagram caption or checklist line restating the same number the quiz answer
+  needs — not a within-item leak). **Worth a dedicated guard, the way `recall-census.mjs` was built for
+  answer-recoverability**, rather than a per-packet manual catch after the fact.
+- The self-mark checklist fuses a low-mark item's opening paragraph into an extra tickbox
+  (`InlinePractice.jsx`'s `checklistFrom`), as packets 42-44.
+- The "You left off at step N" banner fires with no dismissal the instant a just-auto-restarted student taps
+  Next (`LearnModeTab.jsx:659`), as packets 43-44. **Publishing this packet moves the section 9→26 steps,
+  which will auto-restart every mid-section legacy-pointer student and land them in this banner** — the same
+  mechanism packet 43's publish already triggered for economic-growth and packet 44's for aggregate-supply.
+- `**bold**` markdown renders as literal asterisks in the Extras tab's evaluation card. Also present in the
+  aggregate-supply and national-income payloads (read via the API, not their pages) — platform-wide, not
+  specific to this packet.
+- Minor, packet-specific, non-blocking: Notes tab starts one sentence lower-case ("garment machinists: L =
+  60 − 2W…"); the fill-in distractor "lifts" at step 16 is ruled out only by grammar, not meaning, and a
+  student could read it as a synonym of "rises"; a section-level `completed:true` on the draft carries over
+  to the live page's completion screen after publish (same class as the pointer-versioning family, not new).
+
+**Next unclaimed packet, re-checked live rather than chained forward from the packet-44 handoff's own
+claim.** Two packets past 45 already have build artefacts in this worktree from concurrent sessions:
+- **Packet 46 (growth-development)** has a full `audit/runs/packet-46/` folder including `built.md` and an
+  untracked `verify-a.md`, and `node audit/scripts/ledger.mjs packet 46` shows **25 confirmed, 0 open**
+  (`unverified 46` → "gate clear"). Its `PROGRESS.md` row still reads "not started" — stale, the same way
+  45's own row was stale until this pass, and **not corrected here**: this pass's mandate is packet 45's row
+  only, and touching 46's row while its own bookkeeping pass has not run would be exactly the race Rule 5
+  warns about.
+- **Packet 47 (global-markets-expansion)** is **still in progress**: `node audit/scripts/ledger.mjs packet
+  47` shows 32 claimed and 1 wont-fix, but `unverified 47` returns "GATE BLOCKED: 32 claimed item(s) not
+  confirmed" — a Verify A has not closed it yet. Do not treat it as free or as done.
+- **Packet 48 (government-intervention-firms)** is genuinely free: `ledger.mjs packet 48` shows 33 open
+  items, 0 claimed, and `PROGRESS.md` row 48 reads "not started" — consistent with live state. It is also
+  where this packet's own pointers send the reader for the minimum wage, maximum wages, immobility measures
+  and discrimination (3.3.5.2b), per `built.md`'s "For the next phases" section — so packet 48 should read
+  that section before starting, not just the specification.
+- **Packet 49 (traffic order, 27 Opens)** is untouched and behind 48 in the same table.
+
+**Escalate to the founder:** nothing blocking from packet 45 itself. When ready to publish:
+```
+node scripts/packet-45-labour-markets.mjs --stage && node scripts/publish-section.mjs labour-markets --confirm
+```
+Per PROTOCOL Rule 3, re-check field compatibility against a current `origin/main` checkout first — this
+packet only proxied it against packet 44's already-live bundle (`field-paths-vs-p44.log`: every field path
+and body `type` here already occurs there), the same gap packets 40-44 carried forward, not a real check.
+Separately, the two platform-wide items above (printed-answer-in-caption, the resume banner) are real,
+reproducible today, not specific to this packet, and worth a programme-wide fix before more sections
+publish and multiply the number of students who hit them — the resume banner especially, since every
+content-packet publish that changes a step count re-triggers it.
+
+**Addendum (brain, 26 September 2026, after the publish).** The founder published labour-markets at 08:27 UTC
+(undo: `node scripts/restore-section.mjs audit/snapshots/auto-prepublish-2026-09-26T08-27-52-160Z__economics__labour-markets.json --confirm`);
+production's `/api/sections/labour-markets` was read back byte-identical to `:3001` (125,353 bytes), and
+`validate-content.mjs --section labour-markets --baseline` adds 0 keys. It shipped with Verify B's check-in
+answer leak (the quiz answer stated by the diagram above it at 4 of 5 check-ins), which this handoff graded
+non-blocking. **That grading is withdrawn.** The founder has since ruled (26 Sep, `audit/CONTENT-GATE.md`,
+"The check-in answer rule — BLOCKING") that such a leak blocks the gate; that it is fixed by rewriting the
+question, never the diagram; and that it is judged by a reader, one `leaks` / `clean` line per check-in
+carrying both a diagram and a quiz, in Verify A and again on screen at 390px in Verify B with the checklist
+opened, never by an automatic check (a word-overlap test caught 0 of these 4). **Packet 46 onwards: apply it
+before publish.** Packet 45's own four questions are being rewritten by `packet-close.js` (run
+`wf_b6a22d45-7fa`); that fix is staged to draft only and needs the founder's re-publish.

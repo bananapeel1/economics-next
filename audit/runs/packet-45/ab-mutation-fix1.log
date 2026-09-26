@@ -1,0 +1,12 @@
+PASS  clean copy exits 0
+PASS  accuracy-01 (exit 1, "accuracy-01 regressed")
+PASS  uncited-monopsony (exit 1, "a pointer without its topic number")
+PASS  typed-spine (exit 1, "the spine is no longer")
+PASS  define-4 (exit 1, "Define (4)")
+PASS  printed-key (exit 1, "printed-answer leak")
+PASS  parallel-flow (exit 1, "structure-08")
+PASS  backward-bending (exit 1, "backward-bending")
+PASS  opening-figure (exit 1, "carries a figure")
+PASS  no-discuss (exit 1, "14-mark Discuss part")
+PASS  missing-why (exit 1, "why lines against")
+PASS  label-collision (exit 1, "overlap")

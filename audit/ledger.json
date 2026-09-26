@@ -13783,10 +13783,10 @@
    "rank": 0,
    "text": "Add diagramRef/quizIndices/practiceIndices to all three blocks (block 0: 'Competitive Labour Market', quiz [0,1], practice [0]; block 1: 'Monopsony', quiz [5,6], practice [3]; block 2: 'Wage Differentials', quiz [7,8,9], practice [1,4]) so the monopsony diagram actually renders and inline MCQs/practice match what was just taught.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "packet-45 bundle content[0..4] all carry diagramId+quizIndices+practiceIndices; placeChapterItems (lib/checkin-placement.js:37-51) run on the ?draft=1 payload places all 5 diagrams by pin and serves an on-topic quiz/practice item per chapter; monopsony diagram moved to 3.3.3 owner (packet 29 diagram geometry verified correct)",
    "note": null
   },
   {
@@ -13796,10 +13796,10 @@
    "rank": 1,
    "text": "Write recalls for all six subsections — reorder for the monopsony construction (faces whole market supply → must raise wage for all → MCL above S → hire where MCL = MRP → pay wage from S), reorder for NMW-in-monopsony, fillin for 'MRP = MPP × MR; hire until MRP = W', fillin for bilateral monopoly/indeterminate wage.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "bundle: 21/21 subsections carry a recall (reorder 6, fillin 4, classify 6, match 5); recall-census --check re-run exit 0, staged recoverable unchanged at 308 so labour-markets adds 0; monopsony/NMW/bilateral recalls are for content moved out under SPEC-OWNERSHIP packet-45 row",
    "note": null
   },
   {
@@ -13809,10 +13809,10 @@
    "rank": 2,
    "text": "Fix wage-differentials keyIdea ('not because markets are failing') and add a short NMW-in-competitive-market paragraph plus determinants of elasticity of demand/supply for labour, so the misconceptions and quiz[2] rest on taught content.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "'not because markets are failing' 0 hits in bundle; elasticity determinants taught content[0].sections[4] and content[1].sections[4]; NMW not added but nothing presupposes it: only mention is 3.3.5 pointer content[3].sections[1].body[3] (econ_spec.txt:1530 = 3.3.5.2b)",
    "note": null
   },
   {
@@ -13822,10 +13822,10 @@
    "rank": 3,
    "text": "Repair the two monopsony SVGs: put Wm on the supply curve, Qc at the true S=MRP intersection, Qmin at the Wmin ∩ S kink, and correct the 'Wmin = MRP' construction note.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "both monopsony SVGs absent from draft (5 diagrams, no MCL/monopsony label); construction now owned by market-structures-contestability, whose live diagrams[7] has Wm (310.8,229.09) on S, MCL=MRP at y=180, competitive S∩MRP at (390.4,212.73), checked numerically",
    "note": null
   },
   {
@@ -13835,10 +13835,10 @@
    "rank": 4,
    "text": "Bring practice in line with IAL command words and marking: Define → 2 marks (or 'Explain', 4); drop 'Outline'; make the 20-mark guidance total 20, structure as KAA/Evaluation levels, and require the monopsony diagram.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "bundle practice = Define 2, Calculate 2, Explain 4, Analyse 6, Examine 8, Discuss 14, Evaluate 20, all legal per econ_spec.txt Appendix 6 (:2696+); no Outline; guidance above 6 marks uses levels with no '(1 mark)'; monopsony essay replaced",
    "note": null
   },
   {
@@ -13847,10 +13847,10 @@
    "kind": "accuracy",
    "text": "content[2] 'Trade Unions and Wage Differentials' > wage-differentials > keyIdea: States wages differ 'not because markets are failing'. The IAL spec explicitly lists geographical and occupational immobility as market failure in labour markets, and the same section's own body calls discrimination 'unjustified' and immobility a 'friction' that stops differentials being competed away. A student who writes 'wage differentials are not a market failure' in an exam loses the evaluation.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "keyIdea gone; content[2].sections[4] and content[4].sections[2] separate market-working pay gaps from immobility failure, consistent with econ_spec.txt:1475-1479 (4a/4b)",
    "note": null
   },
   {
@@ -13859,10 +13859,10 @@
    "kind": "quiz",
    "text": "q2: Correct (index 2) and distractors are fine, but the determinants of elasticity of demand for labour are not taught in any content[] subsection. Because no block has quizIndices, the legacy fallback (components/learn-mode/utils.js distributeItems) shows quiz[0], quiz[1], quiz[2] at steps 0/1/2, so this untaught question is the inline MCQ on the Trade Unions & Wage Differentials step.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "elasticity-of-demand-for-labour item is now quiz[7], taught before it at content[0].sections[4] (four determinants) and pinned to block 0 (quizIndices 3-7)",
    "note": null
   },
   {
@@ -13871,10 +13871,10 @@
    "kind": "structure",
    "text": "No block has diagramRef, quizIndices or practiceIndices, so LearnModeTab.jsx:86 takes the legacy fallback. matchDiagramsToBlocks (utils.js:31) scores by title-word overlap: 'Competitive Labour Market Equilibrium' matches block 0 ('Demand and Supply of Labour') on 'labour' and consumes it; 'Monopsony Labour Market' then scores 0 against 'Wage Determination' and 'Trade Unions and Wage Differentials' and is NEVER shown. The single most examined diagram in the section is invisible in Learn Mode.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "every block pins diagramId; placeChapterItems (lib/checkin-placement.js:37-48) on the served draft returns diagramHow='pin' for all 5 chapters and places all 5 diagrams, so the matchDiagramsToBlocks title fallback never runs",
    "note": null
   },
   {
@@ -13883,10 +13883,10 @@
    "kind": "structure",
    "text": "distributeItems fallback assigns quiz[0], quiz[1], quiz[2] to steps 0/1/2: step 1 (monopsony) gets the MRP = W question, step 2 (unions/differentials) gets the untaught elasticity question. quiz[5..9] (monopsony, NMW, differentials, immobility) never appear inline.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "quizIndices derived from each item's block tag (scripts/_packet45-assessment.mjs:14-19); shipping placement serves ch0 Q3, ch1 Q8, ch2 Q14, ch3 Q20, ch4 Q26, each on its own chapter's topic; no distributeItems fallback",
    "note": null
   },
   {
@@ -13895,10 +13895,10 @@
    "kind": "structure",
    "text": "Practice fallback sorts by marks then takes the first three: step 0 = Define derived demand (worked), step 1 = Outline trade unions (guided) — shown BEFORE trade unions are taught in step 2 — and step 2 = Explain wage differentials. The Assess (10) and Evaluate (20) questions never reach Learn Mode.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "lib/checkin-placement.js:51 + components/learn-mode/utils.js:111-113 resolve raw practiceIndices (no marks sort on pinned path); bundle content[3].practiceIndices=[4,5] serves practice[4] Evaluate 20 (_packet45-assessment.mjs:191) at ch3, visible per lib/ial-commands.js:60; Outline/unions item gone; every served item taught at or before its chapter",
    "note": null
   },
   {
@@ -13907,10 +13907,10 @@
    "kind": "structure",
    "text": "Zero recall objects across all six subsections: the spaced/immediate recall mechanism has nothing to show, so the only retrieval in the whole section is three inline MCQs. This section has several genuinely orderable chains that should be recalls (monopsony construction; NMW-in-monopsony mechanism; derived-demand chain; union wage above equilibrium → move up MRP → lower employment).",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "21/21 subsections in bundle and ?draft=1 content carry a recall object; recall-census --check exit 0",
    "note": null
   },
   {
@@ -13919,10 +13919,10 @@
    "kind": "structure",
    "text": "Block 2 pairing is incoherent: 'Trade Unions' is the bilateral-monopoly counterpart to monopsony and belongs with block 1; 'Wage Differentials' belongs with supply-side immobility. Suggested: Block 1 = competitive market + NMW in a competitive market; Block 2 = monopsony + trade unions/bilateral monopoly; Block 3 = wage differentials + immobility + government policy.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "blocks regrouped: content[3] = trade unions + public-sector pay (3.3.4 2c/3c non-competitive setting); pay differentials moved to content[2].sections[4] in the competitive block, linking forward to immobility in content[4]",
    "note": null
   },
   {
@@ -13931,10 +13931,10 @@
    "kind": "structure",
    "text": "Firm vs market never distinguished: no subsection shows the perfectly competitive firm facing a horizontal labour supply (W = ACL = MCL) hiring where W = MRP, so the jump to 'MCL above supply' in monopsony has no baseline diagram to contrast against.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[2].sections[1] 'One Firm in a Competitive Labour Market' plus diagram 8898e521 scenario 'One firm: a wage-taker': horizontal S at $12, firm demand meets it at 6 (circle incidence checked numerically), alongside the market 'Equilibrium' scenario",
    "note": null
   },
   {
@@ -13943,10 +13943,10 @@
    "kind": "structure",
    "text": "NMW in a COMPETITIVE labour market (wage floor → excess supply → unemployment) is never taught, yet monopsony-power > misconception refers to 'the standard unemployment prediction' as if it had been, and flashcard 'What is the national minimum wage' states it. The student meets the exception before the rule.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "no monopsony misconception and no NMW flashcard in the draft; 'minimum wage' occurs only in the 3.3.5 pointers content[3].sections[1].body[3] and notes[3], so no text presupposes an untaught result",
    "note": null
   },
   {
@@ -13955,10 +13955,10 @@
    "kind": "structure",
    "text": "trade-unions > body flow is a list of three parallel cases (competitive / monopsony / bilateral monopoly), not a causal chain — misuse of the flow type; would confuse a reorder recall if one were later generated from it.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "union flows content[3].sections[0].body[2] (limit entry → fewer → S left) and sections[1].body[2] (floor → move up D → surplus) are causal chains; the other 11 flows were read and none is a parallel list",
    "note": null
   },
   {
@@ -13967,10 +13967,10 @@
    "kind": "structure",
    "text": "demand-for-labour-mrp > misconception ('firms hire workers because they need them') is filler. Real student errors here: confusing a movement along MRP (wage change) with a shift (product demand / productivity); writing MRP = MPP × price when the product market is imperfectly competitive; treating diminishing returns as workers being 'worse'.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "filler gone from every bundle string (0 hits need(ed) them/because..need; sub:demand-for-labour-mrp removed); real errors now taught: shift vs movement _packet45-content.mjs:76, MRP=output x MR not price _packet45-content.mjs:106 + mistakes[2] _packet45-assessment.mjs:255, worse-workers _packet45-content.mjs:110 + _packet45-assessment.mjs:252",
    "note": null
   },
   {
@@ -13979,10 +13979,10 @@
    "kind": "structure",
    "text": "supply-of-labour > examMatters directly contradicts the Notes-tab examMatters for the same subsection (backward-bending 'favourite diagram' vs 'most questions focus on the market supply curve'). Students switching tabs see opposite advice.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "backward-bending/'favourite' advice 0 hits; notes[1] carries no examMatters, and content[1].sections[0].examMatters gives the only advice, so nothing is left to contradict",
    "note": null
   },
   {
@@ -13991,10 +13991,10 @@
    "kind": "structure",
    "text": "Difficulty ramp is otherwise sensible (demand/supply → competitive → monopsony → unions → differentials) and each block's takeaway list faithfully summarises its two subsections.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "not a defect: the draft ramp runs demand → supply → competitive → unions/public → market failure; each block takeaway summarises its own subsections",
    "note": null
   },
   {
@@ -14003,10 +14003,10 @@
    "kind": "specGap",
    "text": "Elasticity of demand for labour and its determinants (labour share of cost, substitutability, PED of product, time) — not taught; tested in quiz[2].",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[0].sections[4] teaches the definition, a worked -0.67 elasticity and four determinants (capital substitutability, share of costs, product PED, time)",
    "note": null
   },
   {
@@ -14015,10 +14015,10 @@
    "kind": "specGap",
    "text": "Elasticity of supply of labour and its determinants (training period, qualifications, mobility, time) — not taught beyond one sentence.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[1].sections[4] teaches the definition, four determinants (training/qualifications, skill specificity, mobility, time) and a worked elastic vs inelastic comparison ($14/44k vs $16/40k)",
    "note": null
   },
   {
@@ -14027,11 +14027,11 @@
    "kind": "specGap",
    "text": "National minimum wage in a competitive labour market (wage floor, excess supply, unemployment diagram) — only the monopsony case is covered.",
    "packet": 45,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Packet 45, 26 Sep: the minimum wage (in a competitive market or any other) is 3.3.5.2b 'minimum wage controls' (econ_spec.txt:1530), owned by government-intervention-firms (packet 48), not a 3.3.4 leaf (3.3.4 = :1447-1479, 17 leaves, none names it). Recorded in audit/SPEC-OWNERSHIP.md (packet 45 row). labour-markets now points at it once, citing 3.3.5 (scripts/_packet45-content.mjs, union-wage body). The defect this item implied (structure-07: text presupposing the competitive result) is removed in the draft; the runner asserts it absent."
   },
   {
    "id": "C-labour-markets-specGap-04",
@@ -14039,11 +14039,11 @@
    "kind": "specGap",
    "text": "Government intervention to reduce labour market failure: maximum wages, public-sector wage setting, policies to tackle geographical/occupational immobility (housing, retraining, relocation grants) — only appears in quiz[9].",
    "packet": 45,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Packet 45, 26 Sep: this item's subject is 3.3.5.2 'Government intervention in labour markets' (econ_spec.txt:1524-1535): maximum wages (:1529) and measures to reduce immobility (:1533) belong to government-intervention-firms (packet 48); SPEC-OWNERSHIP.md row added. Its one clause inside 3.3.4 — public-sector wage setting, 3.3.4.3c (:1473) — IS built in the draft: scripts/_packet45-content.mjs subsection public-sector-pay (pay scales, commissions, budget, state-owned enterprises, below-equilibrium vacancies) and diagram scenario 'Public-sector pay' in scripts/_packet45-diagrams.mjs. Immobility measures are pointed at with a 3.3.5 citation only."
   },
   {
    "id": "C-labour-markets-specGap-05",
@@ -14051,11 +14051,11 @@
    "kind": "specGap",
    "text": "Current labour market issues listed in WEC13 3.4.3 (from my recollection of the spec — treat as 'probable'): skills shortages, ageing population/retirement age, young workers, flexible/temporary/zero-hours working, migration — only migration is touched, via one flow and one misconception.",
    "packet": 45,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "Packet 45, 26 Sep: SPEC NUMBERING — this item cites 3.4.3, UK GCE numbering that does not exist in the IAL spec (runner asserts '3.4.1-3.4.3' absent from econ_spec.txt). By wording: 'skills shortage', 'zero-hours', 'ageing population', 'flexible working' occur nowhere in econ_spec.txt; the only listed labour issue it names that IS spec text is net migration (3.3.4.2c, :1461), taught in the draft (population-and-migration subsection, with size of population and ageing). No 'current labour market issues' requirement exists to build."
   },
   {
    "id": "C-labour-markets-specGap-06",
@@ -14063,10 +14063,10 @@
    "kind": "specGap",
    "text": "Diagram for the individual firm in a perfectly competitive labour market (horizontal supply to the firm, W = MRP) versus the industry — not taught.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "diagram 8898e521 scenarios 'Equilibrium' (market) and 'One firm: a wage-taker' (horizontal S at the market wage, hires where firm demand meets it), taught at content[2].sections[1]; geometry checked numerically",
    "note": null
   },
   {
@@ -14075,11 +14075,11 @@
    "kind": "specGap",
    "text": "Discrimination as a labour-market failure — one sentence only; no analysis of how it distorts demand for labour.",
    "packet": 45,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Packet 45, 26 Sep: 'discrimination' occurs in econ_spec.txt's labour content only at 3.3.5.2b 'measures to reduce discrimination and exploitation' (:1535), owned by government-intervention-firms (packet 48); it is not a 3.3.4 leaf (runner asserts no 'discrimination' inside :1447-1479). The draft bans the word in this section (BANNED_ELSEWHERE, scripts/_packet45-util.mjs) and teaches the 3.3.4 market failures, geographical and occupational immobility (4a/4b). SPEC-OWNERSHIP.md row added."
   },
   {
    "id": "C-labour-markets-specGap-08",
@@ -14087,10 +14087,10 @@
    "kind": "specGap",
    "text": "Unsure: whether WEC13 explicitly requires MRP = MPP × MR theory (the 2018 spec wording I recall is 'demand for labour as derived demand' plus factors influencing demand). Content leans heavily on MRP; not wrong, but examMatters 'Examiners expect you to draw the MRP curve' may overclaim.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "examiner overclaim gone (0 hits); ch0 built on econ_spec.txt:1451-1457 factors, MRP only as 'Textbooks call it'; MRP = extra output x MR, = price only for a price-taker (_packet45-content.mjs:106, flashcards[4] _packet45-assessment.mjs:210, notes[0]); every other price-times-output line states the given-price assumption",
    "note": null
   },
   {
@@ -14099,11 +14099,11 @@
    "kind": "specGap",
    "text": "Section numbering: the app labels this 3.3.4; in the WEC13 spec I recall the labour market as topic 3.4 (3.4.1 demand, 3.4.2 supply, 3.4.3 wage determination). Unsure — flag for verification against the current spec PDF.",
    "packet": 45,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.4.1, 3.4.2, 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "Packet 45, 26 Sep: SPEC NUMBERING — the item doubts the app's 3.3.4 and recalls '3.4.1/3.4.2/3.4.3'. Checked by wording and line: econ_spec.txt:1447 reads '3.3.4 Labour markets', and '3.4.1', '3.4.2', '3.4.3' occur nowhere in the document (runner scripts/packet-45-labour-markets.mjs §5 asserts both). The app's number is correct; nothing to change."
   },
   {
    "id": "C-causes-effects-globalisation-topFix-01",
@@ -16954,10 +16954,10 @@
    "kind": "specThin",
    "text": "3.3.4 1a) Wage rate relative to the price of capital (substituting capital for labour) — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[0].sections[3] explains the wage rate relative to the price of capital: worked $10 break-even, flow and complement caveat",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16966,10 +16966,10 @@
    "kind": "specThin",
    "text": "3.3.4 2c) Size of population as a factor influencing labour supply — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[1].sections[1].body[0] explains size of population: growing vs ageing working-age population shifting supply",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16978,10 +16978,10 @@
    "kind": "specThin",
    "text": "3.3.4 2c) Level of welfare benefits as a factor influencing labour supply — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[1].sections[2].body[1] explains the level of welfare benefits via the gain from working (pay kept minus benefits lost), plus flow and classify recall",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16990,10 +16990,10 @@
    "kind": "specThin",
    "text": "3.3.4 2c) Government regulations as a factor influencing labour supply — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[1].sections[3] explains government regulations: licensing, work permits, hours limits, retirement/school-leaving age, plus a worked -12k shift to $14/32k",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
