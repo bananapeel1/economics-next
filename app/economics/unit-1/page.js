@@ -21,14 +21,14 @@ const UNIT = { number: 1, code: 'WEC11', title: 'Markets in Action', accent: 'te
 const SECTIONS = [
   {
     id: 'introductory-concepts', ref: '1.3.1', title: 'Introductory Concepts',
-    desc: 'Scarcity, choice, and opportunity cost — the foundations of economic thinking. Covers the nature of economics, the production possibility frontier, specialisation, and the price mechanism as a resource-allocation system.',
+    desc: 'The foundations of economic thinking: economics as a social science, positive and normative statements, scarcity and opportunity cost, the production possibility frontier, specialisation and the role of money and financial markets, and how free market, mixed and command economies allocate resources.',
     subtopics: [
-      { letter: 'a', name: 'Scarcity & Opportunity Cost', kw: 'Unlimited wants · finite resources · next best alternative forgone · PPF' },
-      { letter: 'b', name: 'The Production Possibility Frontier', kw: 'Productive efficiency · opportunity cost · actual vs potential output · shifts' },
-      { letter: 'c', name: 'Specialisation & Exchange', kw: 'Division of labour · comparative advantage · money & barter · trade' },
-      { letter: 'd', name: 'The Price Mechanism', kw: 'Signalling · rationing · incentive function · free market allocation' },
-      { letter: 'e', name: 'Positive vs Normative Statements', kw: 'Facts vs value judgements · role of economists · policy debate' },
-      { letter: 'f', name: 'Economic Systems', kw: 'Free market · command · mixed economy · resource allocation mechanisms' },
+      { letter: 'a', name: 'The Nature of Economics', kw: 'Social science · models and assumptions · ceteris paribus' },
+      { letter: 'b', name: 'Positive & Normative Economics', kw: 'Positive statements · value judgements · decision making and policy' },
+      { letter: 'c', name: 'Scarcity & Opportunity Cost', kw: 'Unlimited wants · finite resources · renewable and non-renewable · free and economic goods' },
+      { letter: 'd', name: 'Production Possibility Frontiers', kw: 'Efficient allocation · marginal opportunity cost · movements and shifts · capital and consumer goods' },
+      { letter: 'e', name: 'Specialisation, Money & Financial Markets', kw: 'Division of labour · Adam Smith · functions of money · role of financial markets' },
+      { letter: 'f', name: 'Free Market, Mixed & Command Economies', kw: 'The three systems · advantages and disadvantages · role of the state' },
     ],
   },
   {

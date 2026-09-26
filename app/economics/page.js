@@ -19,7 +19,7 @@ export const metadata = {
 };
 
 const unit1Sections = [
-  { id: 'introductory-concepts', number: '1.3.1', title: 'Introductory Concepts', meta: 'Scarcity, PPF, specialisation, price mechanism' },
+  { id: 'introductory-concepts', number: '1.3.1', title: 'Introductory Concepts', meta: 'Scarcity, PPF, specialisation, money, economic systems' },
   { id: 'consumer-behaviour-demand', number: '1.3.2', title: 'Consumer Behaviour & Demand', meta: 'Utility, demand curves, determinants of demand' },
   { id: 'supply', number: '1.3.3', title: 'Supply', meta: 'Supply curves, determinants, shifts' },
   { id: 'price-determination', number: '1.3.4', title: 'Price Determination', meta: 'Equilibrium, PED, PES, taxes & subsidies' },
