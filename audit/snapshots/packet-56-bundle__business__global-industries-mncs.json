@@ -1,0 +1,1878 @@
+{
+ "section_id": "global-industries-mncs",
+ "subject": "business",
+ "label": "packet-56-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "global-industries-mncs:block:f51c4e46",
+    "title": "MNCs and the Local Economy",
+    "sections": [
+     {
+      "id": "global-industries-mncs:sub:mncs-subsidiaries-and-fdi",
+      "title": "MNCs, Subsidiaries and FDI",
+      "keyIdea": "A multinational corporation (MNC) owns and controls operations in more than one country; setting them up or buying them is foreign direct investment (FDI).",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **multinational corporation (MNC)** is a business that owns and controls operations, such as factories, offices or shops, in more than one country. Its head office is in its **home country**, and every other country where it runs operations is a **host country** for that MNC."
+       },
+       {
+        "type": "paragraph",
+        "text": "An operation abroad is usually set up as a **subsidiary**: a company owned by the MNC but registered where it operates, so it obeys that country's laws and pays its taxes."
+       },
+       {
+        "type": "paragraph",
+        "text": "Setting up or buying such an operation is **foreign direct investment (FDI)**: money put into a lasting business abroad that the investor owns and runs. Buying a few shares in a foreign firm is not FDI, because it brings no control."
+       },
+       {
+        "type": "paragraph",
+        "text": "Korvane, a sportswear MNC with its head office in Europe, spent $120m building a shoe factory in Kestria, a lower-income country. Every impact in this topic, good or bad, starts from a decision like that one."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚗",
+       "text": "Japanese carmakers own assembly plants across South-East Asia, each set up as a local company that employs local workers and buys from local suppliers."
+      },
+      "misconception": "Students write that any firm selling abroad is an MNC. A firm that only exports from its home country is not one; an MNC owns and controls operations in other countries.",
+      "examMatters": "Define MNC and FDI briefly in your own words, then use the case's own figures, such as the size of the investment and the jobs it creates, instead of general points about globalisation.",
+      "recall": {
+       "id": "global-industries-mncs:sub:mncs-subsidiaries-and-fdi:recall",
+       "type": "fillin",
+       "prompt": "Name each term:",
+       "template": [
+        "For a carmaker from Japan, its plant in Thailand is in a ___ country, where it employs local staff.",
+        "The plant is registered in Thailand but owned by the carmaker: a ___.",
+        "The money spent building a plant the carmaker will own and run is ___."
+       ],
+       "answers": [
+        "host",
+        "subsidiary",
+        "foreign direct investment"
+       ],
+       "hints": [
+        "where the operation is, not the head office",
+        "a company another company owns and controls",
+        "lasting investment that brings ownership and control"
+       ],
+       "distractors": [
+        "home",
+        "franchise"
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:local-labour-wages-and-conditions",
+      "title": "Local Labour, Wages and Working Conditions",
+      "keyIdea": "An MNC creates local jobs and often pays above local wages, but the jobs may be routine, and working conditions depend on its standards and the local law.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Job creation** is the most visible impact on **local labour**. Korvane's factory employs 4,000 people in Kestria, many of whom used to work on farms or in informal jobs with no regular pay."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Wages** are often higher than local employers pay, because an MNC wants reliable, trained workers who stay. Korvane pays $300 a month against a local factory average of $240: a **wage premium** of 25%."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Working conditions** can be better too: regular hours, safety equipment, training and sick pay, especially where the MNC applies its home standards. They can be worse where it chose the country for low costs and weak labour laws: long shifts, pressure to hit targets and little job security."
+       },
+       {
+        "type": "paragraph",
+        "text": "The kind of job matters. Senior engineering and management posts are sometimes filled by staff sent from the home country, leaving local workers the routine assembly work, which can disappear if the MNC later finds a cheaper location."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧵",
+       "text": "Foreign-owned garment and electronics factories in South and South-East Asia usually pay more than farm work, yet many are still criticised for long hours and low pay by international standards."
+      },
+      "misconception": "Students treat a wage above the local average as proof that workers are treated well. Pay can beat local rates while hours, safety and job security stay poor; wages are one part of the impact on labour, not all of it.",
+      "examMatters": "Compare the wage in the case with the local figure, not the home country's: what matters to a worker in the host country is what the other jobs open to them pay.",
+      "recall": {
+       "id": "global-industries-mncs:sub:local-labour-wages-and-conditions:recall",
+       "type": "classify",
+       "prompt": "Sort each effect of a new foreign-owned plant into a gain or a risk for local workers.",
+       "groups": [
+        {
+         "name": "Gain for local workers",
+         "items": [
+          "Monthly pay above what nearby employers offer",
+          "Training in how to run modern machines",
+          "Hundreds of new posts in a town with few"
+         ],
+         "why": "Each leaves local workers better off than the work they had before."
+        },
+        {
+         "name": "Risk for local workers",
+         "items": [
+          "Managers' posts filled by staff flown in from abroad",
+          "Twelve-hour shifts to meet export orders",
+          "Closure if a neighbouring country offers lower costs"
+         ],
+         "why": "Each limits or threatens what local workers gain from the plant."
+        }
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:local-businesses",
+      "title": "Local Businesses: Suppliers and Rivals",
+      "keyIdea": "An MNC can help local businesses by buying from them and bringing customers, or harm them by taking their skilled staff and their customers.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "An MNC's arrival affects **local businesses** in opposite ways, and a case usually shows both."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Suppliers can gain.** Korvane's factory buys $18m a year of materials, packaging, transport and catering from firms in Kestria. Those firms grow and hire, and meeting the MNC's standards for quality and delivery makes them better at selling to others too."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Nearby shops and services can gain** from the wages the MNC's workers spend: food stalls, transport, housing and banks near the site see more customers."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Rivals can lose.** A local firm making the same product now competes with a global brand that has lower costs from scale and more to spend on advertising. It may also lose its best workers to the MNC's higher pay. When local firms are squeezed out of a market they used to serve, this is called **crowding out**."
+       },
+       {
+        "type": "paragraph",
+        "text": "Which effect is larger depends on how much the MNC buys locally rather than importing, and on whether local firms supply it or compete with it."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔩",
+       "text": "Where a foreign carmaker builds a plant, local makers of seats, wiring and parts often grow around it, while small local brands of the same product struggle to match its prices."
+      },
+      "misconception": "Students assume local businesses always lose when an MNC arrives. Suppliers and the shops near the site often gain; the loss falls mainly on firms that compete with the MNC for customers or for staff.",
+      "examMatters": "Split the local firms in the case into suppliers and rivals before you judge; the same MNC can help one group and harm the other.",
+      "recall": {
+       "id": "global-industries-mncs:sub:local-businesses:recall",
+       "type": "match",
+       "prompt": "Match each local business to the most likely effect of a new foreign-owned factory on it.",
+       "pairs": [
+        {
+         "left": "A firm that makes cardboard boxes",
+         "right": "Wins a large, regular customer",
+         "why": "The factory needs packaging for everything it ships, so a nearby box maker can win the order."
+        },
+        {
+         "left": "A local shoemaker selling in the same towns",
+         "right": "Faces a rival with a global brand and scale",
+         "why": "It competes with the MNC for the same buyers."
+        },
+        {
+         "left": "A café by the factory gates",
+         "right": "Serves more workers with money to spend",
+         "why": "Its trade rises with the number of people paid nearby."
+        },
+        {
+         "left": "A workshop whose machinists are offered more elsewhere",
+         "right": "Loses staff it spent years training",
+         "why": "Higher MNC pay draws away the workers the workshop invested in."
+        }
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:local-community-and-environment",
+      "title": "The Local Community and Environment",
+      "keyIdea": "An MNC can bring roads, power, schools and clinics to the area around it, but also pollution, congestion and competition for land and water.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **local community** is everyone living near the operation, not just the people who work there."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Gains** often include new or better roads, power and water supplies built to serve the site, and schools, clinics or training centres the MNC funds to attract staff and win local support. More work nearby can also keep young people from leaving the area."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Costs** fall on the **local environment** and on daily life: smoke and dust from the site, waste water in rivers, heavy lorries on village roads, and land or water taken that farmers used. Rents can rise when many new workers arrive."
+       },
+       {
+        "type": "paragraph",
+        "text": "Residents near Korvane's factory have gained a paved road and a clinic, but they complain about dye in the river and smoke from the boilers. Whether they are better off overall depends on the MNC's own standards and on how firmly the local authority enforces its rules."
+       }
+      ],
+      "realExample": {
+       "emoji": "⛏️",
+       "text": "Mining companies working in remote regions often build roads, clinics and schools for nearby villages, and are often in dispute with the same villages over polluted water and lost land."
+      },
+      "misconception": "Students count only the MNC's own employees when judging its local impact. Families who never work at the site still breathe its air, use its roads and drink water from the river it drains into.",
+      "examMatters": "Name the part of the community affected and how, such as farmers losing water or families gaining a clinic, rather than calling the MNC simply good or bad for the area.",
+      "recall": {
+       "id": "global-industries-mncs:sub:local-community-and-environment:recall",
+       "type": "classify",
+       "prompt": "Sort each effect on the villages around a new mine into a gain or a cost for the community.",
+       "groups": [
+        {
+         "name": "Gain for the community",
+         "items": [
+          "A health centre open to every family in the valley",
+          "A tarred road to the nearest market town",
+          "Electricity reaching homes along the new power line"
+         ],
+         "why": "They improve life for residents whether or not they work at the mine."
+        },
+        {
+         "name": "Cost for the community",
+         "items": [
+          "Dust settling on crops beside the pit",
+          "Wells drying up as the mine pumps groundwater",
+          "Trucks through the village day and night"
+         ],
+         "why": "They make life harder for residents, including those who earn nothing from the mine."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "An MNC owns operations abroad; building or buying them is FDI.",
+     "Local workers and suppliers often gain; rival firms can lose staff and buyers.",
+     "The community can gain facilities and still bear the pollution."
+    ],
+    "diagramId": "global-industries-mncs:diagram:b1a0b279",
+    "quizIndices": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "global-industries-mncs:block:27c7c6f5",
+    "title": "MNCs and the National Economy",
+    "sections": [
+     {
+      "id": "global-industries-mncs:sub:economic-growth-and-fdi-flows",
+      "title": "Economic Growth and FDI Flows",
+      "keyIdea": "FDI flowing into a country adds to what it can produce, and so to economic growth; flows that slow down or leave work the other way.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Economic growth** is a rise in the value of the goods and services a country produces. An MNC adds to it directly, through what its own operation produces, and indirectly, through the firms its spending keeps busy."
+       },
+       {
+        "type": "paragraph",
+        "text": "**FDI flows** are the money MNCs invest in a country (inflows) or take out of it (outflows) over a period. An inflow builds new capacity: factories, mines, hotels, offices. Where local savings are too small to fund such projects, FDI can be the largest source of new investment."
+       },
+       {
+        "type": "paragraph",
+        "text": "Korvane's $120m was an inflow to Kestria. It created a factory producing $200m of shoes a year that did not exist before, and that output counts directly in Kestria's growth."
+       },
+       {
+        "type": "paragraph",
+        "text": "The growth is not guaranteed to last. FDI goes where costs are low and rules are stable, so it can slow or reverse if wages rise, a neighbour offers better terms or the government changes the rules. A country that relies on a few MNCs relies on their decisions."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏭",
+       "text": "Countries that attract electronics and car plants often see factory output rise within a few years, and can lose that growth when production moves to a cheaper neighbour."
+      },
+      "misconception": "Students describe FDI as any foreign money entering the country. FDI is investment in a business the foreign firm owns and runs; that ownership is why it builds lasting capacity, and why the profit it earns belongs to the MNC.",
+      "examMatters": "Link the FDI in the case to what it builds and what that adds to output, then ask how secure the flow is: what would make the MNC invest more, or leave?",
+      "recall": {
+       "id": "global-industries-mncs:sub:economic-growth-and-fdi-flows:recall",
+       "type": "reorder",
+       "prompt": "Put these in cause-to-effect order, from an MNC's investment to the extra tax the government receives.",
+       "criterion": "cause to effect, from the investment to the tax it brings in",
+       "correctOrder": [
+        "An MNC builds a factory with foreign direct investment",
+        "Its factory hires local workers and orders from local suppliers",
+        "Workers and suppliers earn and spend more income",
+        "Government collects more tax on the extra income and spending"
+       ],
+       "why": [
+        "Nothing else happens until the investment creates the operation.",
+        "A working factory needs staff and materials, so it hires and buys locally.",
+        "The wages and orders become income for households and firms, who spend it.",
+        "Higher incomes and spending are what income and sales taxes are charged on."
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:balance-of-payments",
+      "title": "The Balance of Payments",
+      "keyIdea": "An MNC affects a host country's balance of payments through the money it brings in and sends out: FDI and exports in, imports and profits out.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **balance of payments** records all the money flowing into and out of a country from trade and investment. An MNC creates flows in both directions, and its impact is the balance between them."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Into the host country:** the FDI itself, and the earnings from goods the MNC exports.",
+         "**Out of the host country:** payments for components it imports, and the profits it sends back to its head office, called **repatriated profits**."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Korvane exports $200m of shoes a year from Kestria, imports $80m of components and sends $30m of profit home. Together these yearly flows bring in a net $90m, on top of the $120m it invested once."
+       },
+       {
+        "type": "paragraph",
+        "text": "Repatriated profit is a real cost to the host, but it does not by itself show that the host loses overall. Over the life of a profitable factory the profit sent home will usually add up to more than the original investment, while the host keeps the wages, the local purchases, the taxes and the factory itself."
+       },
+       {
+        "type": "paragraph",
+        "text": "The balance is weaker when an MNC imports most of what it uses, sells mainly to the host's own buyers rather than abroad, or sends all of its profit home."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚢",
+       "text": "Export-processing zones in many lower-income countries are built so that foreign-owned factories earn foreign currency by selling abroad, which helps the country pay for its own imports."
+      },
+      "misconception": "Students conclude that a host country loses once the profit an MNC has sent home is larger than what it invested. That comparison leaves out the wages, local orders, taxes and capacity the host keeps, so it cannot settle the question.",
+      "examMatters": "Add up what comes in and what goes out using the case's figures before judging, and say which flow could change: more local buying, or more profit sent home.",
+      "recall": {
+       "id": "global-industries-mncs:sub:balance-of-payments:recall",
+       "type": "classify",
+       "prompt": "Sort each flow by its direction for the host country's balance of payments.",
+       "groups": [
+        {
+         "name": "Money into the host country",
+         "items": [
+          "A foreign bank buys and expands a local bank",
+          "A car plant ships vehicles to buyers abroad",
+          "A hotel group builds a resort with money raised overseas"
+         ],
+         "why": "Money arrives from abroad, as investment or as export earnings."
+        },
+        {
+         "name": "Money out of the host country",
+         "items": [
+          "A subsidiary pays its parent company a yearly dividend",
+          "A plant buys engines from its sister plant overseas",
+          "A mine pays a foreign shipper to bring in machinery"
+         ],
+         "why": "Money leaves to pay for imports or to return profit to the owner abroad."
+        }
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:technology-skills-and-business-culture",
+      "title": "Technology, Skills and Business Culture",
+      "keyIdea": "MNCs bring technology and skills that can spread to local firms, and ways of running a business, known as business culture, that can spread too.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Technology and skills transfer** happens when an MNC brings machines, methods and know-how the host country lacked, and they spread beyond the MNC. Workers trained on modern equipment move to local firms or start their own; suppliers learn quality methods to meet the MNC's standards; local managers copy what works."
+       },
+       {
+        "type": "paragraph",
+        "text": "In Kestria, supervisors trained by Korvane in quality control have left to run local workshops, taking the methods with them."
+       },
+       {
+        "type": "paragraph",
+        "text": "Transfer is limited when the MNC keeps research and design at home, brings its own engineers, or guards its technology closely. The host then gets the jobs but not the know-how."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Business culture** is the shared way firms in a country are run: how decisions are made, how staff are managed and promoted, and what counts as acceptable practice. MNCs can change it, bringing merit-based promotion, written contracts, safety rules and anti-bribery policies that local firms adopt. They can also bring long-hours working and aggressive sales targets, or clash with local customs such as family-run management."
+       }
+      ],
+      "realExample": {
+       "emoji": "⚙️",
+       "text": "Across East Asia, local suppliers to foreign car and electronics makers adopted methods such as just-in-time delivery and quality circles, and some later became exporters themselves."
+      },
+      "misconception": "Students assume the technology inside an MNC's factory benefits the host country automatically. It does so only if it spreads, through trained workers, suppliers and imitation; kept inside the MNC, it mainly benefits the MNC.",
+      "examMatters": "For technology and culture, show the route by which the change reaches local firms, such as a worker who moves or a supplier who adapts, and what could block it.",
+      "recall": {
+       "id": "global-industries-mncs:sub:technology-skills-and-business-culture:recall",
+       "type": "classify",
+       "prompt": "Sort each change into technology and skills transfer or a change in business culture.",
+       "groups": [
+        {
+         "name": "Technology and skills transfer",
+         "items": [
+          "Engineers trained on robotic welding join a local firm",
+          "A local supplier learns a new quality-testing method",
+          "Local technicians learn to repair imported machines"
+         ],
+         "why": "Know-how or equipment the host lacked spreads beyond the MNC."
+        },
+        {
+         "name": "Business culture",
+         "items": [
+          "Local firms start promoting staff on results, not family ties",
+          "Written contracts replace spoken deals with suppliers",
+          "Refusing to pay bribes becomes normal in the industry"
+         ],
+         "why": "These change how firms are run and what counts as acceptable, not what they can make."
+        }
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:host-country-consumers",
+      "title": "Consumers in the Host Country",
+      "keyIdea": "MNCs can give host-country consumers more choice, better quality and lower prices, but can also push out local products and later use their market power.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The impact on **consumers** here means consumers in the host country, not in the MNC's home market."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Gains**: more choice, as global brands appear beside local ones; better quality and safety; and lower prices where the MNC's scale cuts costs or its arrival forces local rivals to compete harder. Goods that were imported and expensive may be made locally and sold for less."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Risks**: if the MNC drives local rivals out, consumers may later face fewer choices and higher prices from one dominant firm. Local products and tastes can disappear. And much of what an export factory makes is never offered to local consumers at all."
+       },
+       {
+        "type": "paragraph",
+        "text": "Most of Korvane's shoes are exported, so Kestria's consumers gain little from them directly. Its effect on them comes mainly through the wages it pays, which let its workers buy more."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛒",
+       "text": "When foreign supermarket chains enter a country, shoppers often gain lower prices and a wider range, while small family grocers nearby lose trade."
+      },
+      "misconception": "Students write about cheaper goods for shoppers in the MNC's home country when the question is about the host country. Ask who buys where the MNC operates, and what changes for them.",
+      "examMatters": "Check whether the MNC in the case sells to local buyers or exports; if it exports, its effect on local consumers is mostly indirect, through incomes.",
+      "recall": {
+       "id": "global-industries-mncs:sub:host-country-consumers:recall",
+       "type": "match",
+       "prompt": "Match each change after an MNC enters a market to what it means for consumers in that country.",
+       "pairs": [
+        {
+         "left": "A global grocery chain opens in the capital",
+         "right": "More brands on the shelves",
+         "why": "It stocks international brands next to local ones."
+        },
+        {
+         "left": "A drugs maker starts producing locally instead of importing",
+         "right": "Cheaper medicines",
+         "why": "Making them locally avoids freight and import costs."
+        },
+        {
+         "left": "Local rivals close and one foreign brand is left",
+         "right": "Prices that may rise later",
+         "why": "With no competitor left, the survivor can charge more."
+        },
+        {
+         "left": "A food MNC applies the hygiene rules it uses at home",
+         "right": "Safer food to buy",
+         "why": "Its own standards may be stricter than local rules."
+        }
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:tax-revenues-and-transfer-pricing",
+      "title": "Tax Revenues and Transfer Pricing",
+      "keyIdea": "An MNC pays tax in each country on the profit it reports there; transfer pricing can move that profit, and the tax on it, to a low-tax country.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Tax revenues** from an MNC include tax on its profits, income tax paid by its workers, and taxes on its sales and imports. In many lower-income countries a large MNC is one of the biggest taxpayers."
+       },
+       {
+        "type": "paragraph",
+        "text": "But an MNC can influence where its profit is reported. **Transfer pricing** is how it sets the prices its own companies charge each other, for example when a factory sells to the group's trading company. Because both sides have the same owner, the price can be set to leave the profit where tax is lowest."
+       },
+       {
+        "type": "paragraph",
+        "text": "Korvane's factory makes a pair of shoes for $20. Unrelated firms trade similar pairs at $30, the **arm's length price**. Instead the factory sells to Korvane Trading, based in Vessia, for $22. Kestria taxes profit at 25% but sees only $2 of profit a pair; the other $8 is reported in Vessia, taxed at 5%. On 5,000,000 pairs a year, Kestria collects $2.5m instead of $12.5m."
+       },
+       {
+        "type": "paragraph",
+        "text": "This is **tax avoidance**, which is legal unless the prices break the host's rules. Many governments now check an MNC's internal prices against what unrelated firms would pay, and tax the difference."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧾",
+       "text": "Tax authorities in many countries now have specialist teams whose job is to check the prices MNCs charge between their own subsidiaries."
+      },
+      "misconception": "Students call transfer pricing tax evasion. Setting prices between subsidiaries is legal and normal; used to shift profit it is avoidance, and it becomes evasion only when it breaks the law, such as by faking invoices.",
+      "examMatters": "Work out the profit reported in each country at the internal price and at the arm's length price; the gap, times the host's tax rate, is the tax the host loses.",
+      "recall": {
+       "id": "global-industries-mncs:sub:tax-revenues-and-transfer-pricing:recall",
+       "type": "fillin",
+       "prompt": "Complete how a group with plants in a 30% tax country and a 10% tax country shifts profit:",
+       "template": [
+        "The price a factory charges its own group's sales company is called a ___.",
+        "To cut tax, the plant in the 30% country charges the sales company in the 10% country a price ___ than an outside buyer would pay.",
+        "The 30% country then collects ___ tax from the plant."
+       ],
+       "answers": [
+        "transfer price",
+        "lower",
+        "less"
+       ],
+       "hints": [
+        "a price set inside one group",
+        "below what an unrelated firm would pay",
+        "the profit it can tax has shrunk"
+       ],
+       "distractors": [
+        "higher",
+        "more",
+        "market price"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "FDI adds capacity and output, but it can leave as easily as it came.",
+     "Weigh exports and FDI in against imports and profit sent home.",
+     "Know-how and business culture help the host only if they spread.",
+     "Transfer pricing can move profit, and the tax on it, out of the host."
+    ],
+    "diagramId": "global-industries-mncs:diagram:0f749f10",
+    "quizIndices": [
+     7,
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "practiceIndices": [
+     1,
+     3,
+     5
+    ]
+   },
+   {
+    "id": "global-industries-mncs:block:7a4f041b",
+    "title": "International Business Ethics",
+    "sections": [
+     {
+      "id": "global-industries-mncs:sub:stakeholder-conflicts",
+      "title": "Stakeholder Conflicts",
+      "keyIdea": "Many MNC decisions help one group of stakeholders at another's expense; business ethics is about how the firm weighs those conflicts, not only about obeying the law.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**International business ethics** asks whether an MNC's decisions are morally right, not only legal and profitable. The hardest cases are **stakeholder conflicts**: one decision that helps one group and harms another."
+       },
+       {
+        "type": "paragraph",
+        "text": "An MNC has more stakeholders, spread across more countries, than a domestic firm: owners at home, workers and suppliers in several host countries, local communities, consumers worldwide and governments on every side."
+       },
+       {
+        "type": "paragraph",
+        "text": "Suppose Korvane considers moving its clothing orders from well-run suppliers to cheaper ones that pay less and cut corners on safety. Its **shareholders** see the saving as extra profit. **Workers** at the cheaper suppliers face lower pay and more danger. **Consumers** pay less but may be buying goods made in ways they would object to. The **host government** sees jobs move from one region to another."
+       },
+       {
+        "type": "paragraph",
+        "text": "No option suits everyone, so a judgement has to say whose interest should come first and why: for example, that a short-term saving is not worth a risk to workers' lives, or to the brand once the conditions become known."
+       }
+      ],
+      "realExample": {
+       "emoji": "⚖️",
+       "text": "Plans to close a factory in one country and reopen in a cheaper one regularly set owners, who gain from lower costs, against workers and towns that lose their jobs."
+      },
+      "misconception": "Students list the stakeholders an MNC affects and stop there, as if naming them were the analysis. The ethical question is the conflict between them: who gains, who loses, and whether the firm can justify that trade-off.",
+      "examMatters": "Pick the two stakeholders whose interests clash most in the case, show the clash with its evidence, and say which interest should win and on what grounds.",
+      "recall": {
+       "id": "global-industries-mncs:sub:stakeholder-conflicts:recall",
+       "type": "match",
+       "prompt": "Match each stakeholder to what it most wants when an MNC thinks about switching to a cheaper supplier.",
+       "pairs": [
+        {
+         "left": "Shareholders",
+         "right": "A bigger return on their investment",
+         "why": "A cheaper supplier raises profit, and so what the owners receive."
+        },
+        {
+         "left": "Workers at the supplier",
+         "right": "Fair pay and a safe workplace",
+         "why": "Their income and safety are what a cheaper supplier puts at risk."
+        },
+        {
+         "left": "Customers abroad",
+         "right": "Good value from a brand they can trust",
+         "why": "They want low prices, but many also care how products are made."
+        },
+        {
+         "left": "The host government",
+         "right": "Employment and revenue kept in the country",
+         "why": "It depends on the work and the tax the MNC brings."
+        }
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:environmental-considerations",
+      "title": "Environmental Considerations",
+      "keyIdea": "Environmental ethics asks what an MNC releases into the air, water and land, and whether its use of resources can continue without harming the future.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Emissions** are gases and particles released into the air: carbon dioxide from burning fuel, smoke from boilers and furnaces, fumes from vehicles. **Waste disposal** is what happens to everything left over, such as waste water, chemicals, packaging and scrap. Disposed of cheaply, waste ends up in rivers, in landfill or burned in the open."
+       },
+       {
+        "type": "paragraph",
+        "text": "An MNC may be tempted to follow the host country's rules where they are weaker than at home, because cleaner equipment and treatment plants cost money. That saves cost but moves the harm onto local people and, with greenhouse gases, onto everyone."
+       },
+       {
+        "type": "paragraph",
+        "text": "Residents near Korvane's factory report dye in the river and smoke from the boilers. Cleaner boilers and a water-treatment plant would cost $6m."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Sustainability** means meeting today's needs without harming the ability of future generations to meet theirs. For an MNC it means using water, energy, timber and land at a rate that can continue, cutting waste and emissions over time, and designing products that last or can be recycled."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌍",
+       "text": "Many large manufacturers now publish yearly figures for their carbon emissions, water use and waste, and set targets to reduce them, partly because investors and customers ask for them."
+      },
+      "misconception": "Students assume an MNC that obeys the host country's environmental law has no ethical question to answer. Where that law is weaker than at home, obeying it can still mean polluting in ways the firm could not at home.",
+      "examMatters": "Weigh the cost of cleaner methods against the harm avoided and the damage to the brand if the pollution becomes public, using any figures the case gives.",
+      "recall": {
+       "id": "global-industries-mncs:sub:environmental-considerations:recall",
+       "type": "classify",
+       "prompt": "Sort each practice by the environmental consideration it concerns.",
+       "groups": [
+        {
+         "name": "Emissions",
+         "items": [
+          "Smoke from coal-fired boilers",
+          "Exhaust from a fleet of diesel lorries"
+         ],
+         "why": "Released into the air as gases or particles."
+        },
+        {
+         "name": "Waste disposal",
+         "items": [
+          "Used chemicals poured down a drain",
+          "Scrap rubber buried in a landfill site"
+         ],
+         "why": "What is left over, and how the firm gets rid of it."
+        },
+        {
+         "name": "Sustainability",
+         "items": [
+          "Pumping groundwater faster than rain refills it",
+          "Switching to cotton grown with less water"
+         ],
+         "why": "Whether its use of resources can continue into the future."
+        }
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:supply-chain-considerations",
+      "title": "Supply Chain Considerations",
+      "keyIdea": "An MNC is judged on conditions at the suppliers that make its goods, not only in its own factories: pay, safety, exploitation and child labour.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Many MNCs own few of the factories that make their products. They buy through **supply chains** of independent suppliers, often in low-wage countries, who buy from others in turn."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Pay and working conditions**: suppliers pushed to cut prices may pay below a living wage, demand unpaid overtime, or skip safety measures such as fire exits and sound buildings."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Exploitation of labour** goes further: forced overtime, wages held back, identity papers kept by the employer, workers not free to leave. **Child labour** is work by children that harms their health or schooling. It is most common in the lower tiers of a supply chain, in small workshops and farms far from any inspector."
+       },
+       {
+        "type": "paragraph",
+        "text": "Korvane buys clothing from 40 supplier factories in Kestria. An inspection found children working at 3 of them."
+       },
+       {
+        "type": "paragraph",
+        "text": "An MNC can lower these risks through the prices it pays and the checks it makes: visits without warning, wage and hours records, proof of age, and private interviews with workers. None of it works if it then demands prices that only exploitation can meet."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏚️",
+       "text": "Factory fires and building collapses in garment-producing countries have killed workers making clothes for international brands, and led many brands to publish their supplier lists and fund independent safety inspections."
+      },
+      "misconception": "Students write that an MNC is not responsible for conditions in factories it does not own. Buyers, campaigners and the law increasingly hold the brand responsible, because its orders and prices shape what suppliers can afford to pay.",
+      "examMatters": "Separate the MNC's own workplaces from its suppliers', then say what the MNC controls through its orders, prices and inspections, and what it cannot.",
+      "recall": {
+       "id": "global-industries-mncs:sub:supply-chain-considerations:recall",
+       "type": "match",
+       "prompt": "Match each problem at a supplier to the check most likely to uncover it.",
+       "pairs": [
+        {
+         "left": "Children working in the sewing room",
+         "right": "Checking every worker's proof of age",
+         "why": "Age documents show directly whether workers are old enough."
+        },
+        {
+         "left": "Pay below the legal minimum",
+         "right": "Comparing wage records with hours worked",
+         "why": "The records show what each worker was paid for the time worked."
+        },
+        {
+         "left": "Fire exits locked during shifts",
+         "right": "Visiting the factory without warning",
+         "why": "A visit with notice lets managers unlock the doors first."
+        },
+        {
+         "left": "Workers too afraid to report abuse",
+         "right": "Interviewing staff where managers cannot hear",
+         "why": "Workers speak freely only away from the people they fear."
+        }
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:marketing-considerations",
+      "title": "Marketing Considerations",
+      "keyIdea": "Marketing ethics covers what an MNC says on its labels and how it promotes: misleading claims and marketing that exploits or offends are both unethical.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Misleading product labelling** gives buyers a false impression of what they are buying: health claims the product cannot support, \"natural\" or \"eco\" on products that are neither, or details that leave out what buyers would want to know. Claiming environmental benefits a product does not have is known as **greenwashing**."
+       },
+       {
+        "type": "paragraph",
+        "text": "Korvane sells a range labelled \"eco\" in which 10% of the material is recycled. Nothing on the label is false, but a buyer could reasonably assume far more."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Inappropriate marketing activities** are promotions that are unethical even when every claim is true: advertising unhealthy food or costly goods to children, pushing a product where it is harmful or unaffordable, using images that exploit or offend, or paying for endorsements buyers do not know are paid."
+       },
+       {
+        "type": "paragraph",
+        "text": "MNCs face a particular risk, because a label or advert accepted in one country can be judged misleading or offensive in another, and a complaint in one market can be seen in all of them."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏷️",
+       "text": "Regulators in several countries have made firms withdraw \"green\" and \"natural\" claims they could not support, and some now publish guidance on what such words must mean."
+      },
+      "misconception": "Students think a label is ethical as long as each statement on it is true. A label made of true statements can still mislead, through what it stresses and what it leaves out.",
+      "examMatters": "Say who is misled or harmed and how, such as a buyer paying extra for a green claim or a child targeted by an advert, and what it could cost the brand.",
+      "recall": {
+       "id": "global-industries-mncs:sub:marketing-considerations:recall",
+       "type": "classify",
+       "prompt": "Sort each case into misleading product labelling or an inappropriate marketing activity.",
+       "groups": [
+        {
+         "name": "Misleading product labelling",
+         "items": [
+          "\"Made with natural extracts\" on a mostly synthetic cream",
+          "A \"light\" claim on a drink with more sugar than its rivals",
+          "A green tree logo on a bottle made from new plastic"
+         ],
+         "why": "The pack itself gives a false impression of the product."
+        },
+        {
+         "name": "Inappropriate marketing activity",
+         "items": [
+          "Cartoon adverts for sweets during children's programmes",
+          "Influencers paid to praise a phone without saying so",
+          "Free samples of formula milk handed to new mothers"
+         ],
+         "why": "The promotion is unethical in whom it targets or how it persuades, whatever the pack says."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Ethics is about conflicts between stakeholders, not only about the law.",
+     "Emissions, waste and resource use are judged against the future too.",
+     "An MNC answers for its suppliers' workers and for what its labels imply."
+    ],
+    "diagramId": "global-industries-mncs:diagram:3f19d889",
+    "quizIndices": [
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "practiceIndices": [
+     2,
+     4
+    ]
+   },
+   {
+    "id": "global-industries-mncs:block:31cd6c11",
+    "title": "Controlling MNCs",
+    "sections": [
+     {
+      "id": "global-industries-mncs:sub:power-and-political-influence",
+      "title": "The Power of MNCs and Political Influence",
+      "keyIdea": "Large MNCs are hard to control because of their size, their ability to move, and their political influence over the governments meant to regulate them.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Controlling MNCs** means making them act in the interests of the countries and people they affect, not only their owners. Several factors decide how far that is possible, starting with the **power of the MNC** itself."
+       },
+       {
+        "type": "paragraph",
+        "text": "That power comes from size, since the largest MNCs have yearly sales greater than the national income of many countries; from mobility, since an MNC can move production, profit or jobs elsewhere; and from how much a host government relies on its jobs, exports and tax."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Political influence** is how an MNC uses that power over governments: lobbying ministers and officials, offering or withholding investment, and negotiating special terms, such as years of reduced tax, before it arrives. A government competing with its neighbours for FDI may weaken its own rules to win it."
+       },
+       {
+        "type": "paragraph",
+        "text": "When Korvane says its second factory, costing $80m with 2,500 jobs, will go to whichever country offers better terms, it is using this influence."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏛️",
+       "text": "Governments competing for large factories often offer years of reduced tax, cheap land and relaxed rules, and the MNC chooses between the offers."
+      },
+      "misconception": "Students treat a government as always able to control an MNC by passing a law. A small or poor country that relies on an MNC's jobs and tax may choose not to, and the MNC can move to one that will not.",
+      "examMatters": "Before judging how well an MNC can be controlled, weigh its power in the case: how much the host relies on it, and how easily it could leave.",
+      "recall": {
+       "id": "global-industries-mncs:sub:power-and-political-influence:recall",
+       "type": "classify",
+       "prompt": "Sort each fact about an MNC into a source of its power or a use of its political influence.",
+       "groups": [
+        {
+         "name": "Power of the MNC",
+         "items": [
+          "It employs a tenth of the country's factory workers",
+          "It could shift production to three other countries",
+          "Its turnover exceeds the host government's budget"
+         ],
+         "why": "These are what the MNC has: size, mobility and importance to the host."
+        },
+        {
+         "name": "Political influence",
+         "items": [
+          "It lobbies ministers to delay a new safety law",
+          "It warns that a tax rise would end new investment",
+          "It hires retired ministers as advisers"
+         ],
+         "why": "These are how it uses its power to shape what a government decides."
+        }
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:legal-control",
+      "title": "Legal Control",
+      "keyIdea": "Legal control uses laws in the host country, laws in the home country and agreements between countries; each is limited by enforcement and by the MNC's ability to move.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Legal control** is the use of law to limit what an MNC may do. It works at three levels."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Host-country law**: minimum wages, health and safety, pollution limits, competition law and tax rules, including rules on the prices an MNC's companies charge each other. It is only as strong as the government's will and ability to enforce it.",
+         "**Home-country law**: some countries make firms answer at home for what they do abroad, such as bribing foreign officials or failing to check suppliers for forced labour.",
+         "**International agreements**: rules many countries sign up to, such as trade rules, labour standards and an agreed minimum rate of tax on the profits of the largest MNCs, which reduces the gain from reporting profit in low-tax countries."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Each level has limits. A host country may lack inspectors; a home country's courts may struggle to gather evidence abroad; an agreement binds only the countries that sign and enforce it. Where one country's rules are strict, an MNC can move to one where they are not, which is why cooperation between countries matters."
+       }
+      ],
+      "realExample": {
+       "emoji": "📜",
+       "text": "Several countries now require large companies to report what they do to find and stop forced labour in their supply chains, wherever the suppliers are."
+      },
+      "misconception": "Students assume a strict law in the host country settles the matter. A law that is not enforced, or that the MNC escapes by moving, controls nothing.",
+      "examMatters": "Name the level of law in the case, host, home or international, and the reason it might fail here: weak enforcement, evidence abroad, or an MNC able to move.",
+      "recall": {
+       "id": "global-industries-mncs:sub:legal-control:recall",
+       "type": "fillin",
+       "prompt": "Name the level of legal control each rule works at:",
+       "template": [
+        "Inspectors from the country where a foreign-owned plant operates fine it for dumping waste: ___ law.",
+        "A firm is prosecuted where its head office is for bribing an official abroad: ___ law.",
+        "Many governments sign up to a shared minimum tax rate on large firms: a rule set by ___."
+       ],
+       "answers": [
+        "host-country",
+        "home-country",
+        "international agreement"
+       ],
+       "hints": [
+        "where the operation is",
+        "where the MNC comes from",
+        "many countries acting together"
+       ],
+       "distractors": [
+        "self-regulation",
+        "consumer pressure"
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:consumer-pressure-pressure-groups-social-media",
+      "title": "Consumer Pressure, Pressure Groups and Social Media",
+      "keyIdea": "Buyers, campaign groups and social media can change an MNC's behaviour faster than law, by threatening the sales and reputation it depends on.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Consumer pressure** works through what people buy. Boycotts, switching to rival brands and demanding ethical products all hit sales, and an MNC with a valuable brand has most to lose."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Pressure groups** are organisations that campaign on an issue, such as workers' rights, the environment or health. They investigate MNCs, publish reports, organise protests, lobby governments for new laws, and sometimes work with firms to raise standards."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Social media** speeds all of this up. A photo from inside a supplier can reach millions of buyers in days without a newspaper or a government involved, campaigns can be organised cheaply across many countries at once, and an MNC's replies are judged in public."
+       },
+       {
+        "type": "paragraph",
+        "text": "When footage from one of Korvane's suppliers spread online, the brand faced calls for a boycott in several of its biggest markets."
+       },
+       {
+        "type": "paragraph",
+        "text": "The limits: many buyers say they care but still buy on price; attention moves on quickly; and firms that sell to other businesses rather than to the public have little brand to protect."
+       }
+      ],
+      "realExample": {
+       "emoji": "📱",
+       "text": "Campaigns spread on social media have led clothing, food and electronics brands to publish lists of their suppliers and to drop suppliers found using child or forced labour."
+      },
+      "misconception": "Students assume consumer pressure always works because boycotts get attention. It works only while enough buyers actually change what they buy, and only on firms whose sales depend on their public reputation.",
+      "examMatters": "Say which of the three the case shows and how it reaches the MNC's sales or reputation; then ask how long the pressure is likely to last.",
+      "recall": {
+       "id": "global-industries-mncs:sub:consumer-pressure-pressure-groups-social-media:recall",
+       "type": "reorder",
+       "prompt": "Put these in cause-to-effect order, from what happens at a supplier to the MNC changing its behaviour.",
+       "criterion": "cause to effect, from the supplier to the MNC's response",
+       "correctOrder": [
+        "A worker films unsafe conditions at a supplier",
+        "Footage spreads widely on social media",
+        "Buyers boycott the brand and pressure groups campaign",
+        "Head office changes its supplier rules to protect sales"
+       ],
+       "why": [
+        "Nothing can spread until someone records what is happening.",
+        "Shared online, the video reaches buyers and campaigners within days.",
+        "Once they have seen it, buyers stop buying and groups organise pressure.",
+        "Falling sales and a damaged brand give the MNC a reason to act."
+       ]
+      }
+     },
+     {
+      "id": "global-industries-mncs:sub:self-regulation",
+      "title": "Self-Regulation",
+      "keyIdea": "Self-regulation is an MNC or its industry setting and checking its own standards; it can go further than the law, but it relies on the firm choosing to enforce it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Self-regulation** means an MNC, or its whole industry, sets its own rules of behaviour and checks they are followed, without waiting for the law to require it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Common forms are a **code of conduct** suppliers must sign, covering pay, hours, safety and child labour; regular audits of suppliers; industry-wide standards and labels that members agree to meet; and published reports on the firm's social and environmental record."
+       },
+       {
+        "type": "paragraph",
+        "text": "It has real advantages. It can apply the same standards in every country, including where local law is weak, and it can move faster than governments. Firms that do it well protect their brands and can charge more for products buyers trust."
+       },
+       {
+        "type": "paragraph",
+        "text": "Its weakness is that the firm writes, checks and reports on its own rules. Audits can be announced in advance, codes can be ignored when they cost money, and reports can dwell on good news. Korvane's supplier code already banned child labour, yet children were found at 3 of its suppliers."
+       },
+       {
+        "type": "paragraph",
+        "text": "Self-regulation is most believable when someone independent checks it, such as an outside auditor or a pressure group, and when breaking it has consequences."
+       }
+      ],
+      "realExample": {
+       "emoji": "✅",
+       "text": "Industry groups in sectors such as clothing, coffee and timber run certification schemes whose labels tell buyers that independent auditors have checked the standards behind a product."
+      },
+      "misconception": "Students treat a published code of conduct as evidence that an MNC behaves ethically. A code shows what the firm has promised; only independent checks, and consequences for breaking it, show whether it is kept.",
+      "examMatters": "Judge self-regulation by who checks it and what happens when it is broken, using the case's evidence, rather than by what the code says.",
+      "recall": {
+       "id": "global-industries-mncs:sub:self-regulation:recall",
+       "type": "classify",
+       "prompt": "Sort each rule into self-regulation or legal control.",
+       "groups": [
+        {
+         "name": "Self-regulation",
+         "items": [
+          "A brand's own ban on overtime above sixty hours a week",
+          "An industry label that members agree to earn",
+          "A firm's yearly report on its own supplier audits"
+         ],
+         "why": "The firm or its industry sets and checks the rule itself."
+        },
+        {
+         "name": "Legal control",
+         "items": [
+          "A national minimum wage for factory workers",
+          "A court fine for polluting a river",
+          "Emission limits set by a host government"
+         ],
+         "why": "A government imposes the rule and punishes those who break it."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Size, mobility and political influence make MNCs hard to control.",
+     "Law works at host, home and international level, if it is enforced.",
+     "Buyers, campaigners and social media hit sales; codes need outside checks."
+    ],
+    "diagramId": "global-industries-mncs:diagram:1c047735",
+    "quizIndices": [
+     19,
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "practiceIndices": [
+     6
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "MNCs and the Local Economy",
+    "meta": "4.3.4 · 1a",
+    "keyIdea": "What an MNC and FDI are, and how one factory affects local workers, local firms and the community around it.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>MNC</strong> — a business that owns and controls operations in more than one country. <strong>Subsidiary</strong> — a company it owns, registered where it operates."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>FDI</strong> — investment in a lasting business abroad that the investor owns and runs; a few shares with no control are not FDI."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Crowding out</strong> — local firms squeezed out of a market by the MNC's scale, brand and pay."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Wages: $300 a month against a local $240 is a 25% premium — pay, not conditions."
+       },
+       {
+        "type": "mechanism",
+        "text": "Local firms: $18m a year of orders for suppliers; lost staff and buyers for rivals."
+       },
+       {
+        "type": "link",
+        "text": "The community includes people who never work at the site."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Define, then apply the case figures.",
+     "Suppliers and rivals, separately.",
+     "Gains and costs for the community."
+    ]
+   },
+   {
+    "title": "MNCs and the National Economy",
+    "meta": "4.3.4 · 1b",
+    "keyIdea": "Seven national effects: growth, FDI flows, the balance of payments, technology and skills, consumers, business culture and tax revenues.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>FDI flows</strong> — money MNCs invest in (inflows) or take out of (outflows) a country over a period."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Balance of payments</strong> — the record of money flowing into and out of a country from trade and investment."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Business culture</strong> — the shared way firms are run: decisions, management, promotion and acceptable practice."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Transfer price</strong> — the price one part of an MNC charges another. <strong>Arm's length price</strong> — what unrelated firms would charge."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Flows: $200m exports − $80m imports − $30m profit home = $90m a year in."
+       },
+       {
+        "type": "mechanism",
+        "text": "Tax: at $22 not $30, Kestria taxes $2 a pair, not $10; it collects $2.5m, not $12.5m."
+       },
+       {
+        "type": "link",
+        "text": "Profit sent home is one cost among several effects, not proof the host loses."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Add up the flows.",
+     "Show how know-how spreads.",
+     "Price gap × tax rate = tax lost."
+    ]
+   },
+   {
+    "title": "International Business Ethics",
+    "meta": "4.3.4 · 2a-2d",
+    "keyIdea": "Four ethical considerations for an MNC: stakeholder conflicts, the environment, the supply chain and marketing.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Stakeholder conflict</strong> — one decision that helps one group and harms another."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Emissions</strong> — gases and particles released into the air. <strong>Waste disposal</strong> — how leftovers are got rid of. <strong>Sustainability</strong> — meeting today's needs without harming future generations'."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Child labour</strong> — work by children that harms their health or schooling. <strong>Greenwashing</strong> — claiming environmental benefits a product does not have."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Cheaper supplier → higher profit for owners → lower pay and more risk for workers."
+       },
+       {
+        "type": "link",
+        "text": "Legal is not the same as ethical: a weaker host law still permits harm."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Name the clash, then judge it.",
+     "Suppliers count.",
+     "True statements can still mislead."
+    ]
+   },
+   {
+    "title": "Controlling MNCs",
+    "meta": "4.3.4 · 3a",
+    "keyIdea": "Seven factors in controlling MNCs: their power, political influence, legal control, consumer pressure, pressure groups, social media and self-regulation.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Political influence</strong> — lobbying, promising or withholding investment, and negotiating special terms with governments."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Legal control</strong> — host-country law, home-country law and international agreements."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Self-regulation</strong> — codes, audits and industry standards the firm or its industry sets and checks itself."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Pressure: evidence → shared online → boycotts and campaigns → falling sales → the MNC acts."
+       },
+       {
+        "type": "link",
+        "text": "Every control is limited by enforcement and by the MNC's ability to move."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Weigh the MNC's power first.",
+     "Law needs enforcement.",
+     "Codes need outside checks."
+    ]
+   }
+  ],
+  "quiz": [
+   {
+    "id": "global-industries-mncs:quiz:5e8a732c",
+    "question": "A business that owns and controls factories in several countries is best described as:",
+    "options": [
+     "a firm that only exports",
+     "a franchise business",
+     "a multinational corporation",
+     "a campaigning pressure group"
+    ],
+    "explanation": "Owning and controlling operations in more than one country is what makes a business a multinational corporation (MNC). An exporter sells abroad from home, a franchise licenses its brand to others who own the outlets, and a pressure group campaigns rather than produces.",
+    "correctIndex": 2
+   },
+   {
+    "id": "global-industries-mncs:quiz:61eb4c0f",
+    "question": "A carmaker spends money building a plant that it will own and run in another country. This spending is:",
+    "options": [
+     "an export of capital goods",
+     "a transfer price",
+     "self-regulation",
+     "foreign direct investment"
+    ],
+    "explanation": "Money put into a lasting business abroad that the investor owns and runs is foreign direct investment. An export of capital goods is a sale of machinery abroad, a transfer price is what one part of a group charges another, and self-regulation is a firm setting its own rules.",
+    "correctIndex": 3
+   },
+   {
+    "id": "global-industries-mncs:quiz:4399880c",
+    "question": "Which local business is most likely to lose when an MNC opens a shoe factory nearby?",
+    "options": [
+     "a firm that sells it packaging",
+     "a local firm that makes shoes",
+     "a café beside the factory",
+     "a bus company carrying its workers"
+    ],
+    "explanation": "A local shoemaker competes with the MNC for buyers and for skilled staff, so it faces crowding out. The packaging firm, the café and the bus company all gain customers from the factory and its workers.",
+    "correctIndex": 1
+   },
+   {
+    "id": "global-industries-mncs:quiz:c6f84c77",
+    "question": "An investor buys 3% of the shares of a foreign company. Why is this not foreign direct investment?",
+    "options": [
+     "the company is in another country",
+     "shares cannot be bought from abroad",
+     "so small a stake gives no control of the business",
+     "only governments can make FDI"
+    ],
+    "explanation": "FDI means owning and running a lasting business abroad, and a small shareholding brings no control, so it is not FDI. Being abroad is what FDI needs, foreign shares can be bought, and FDI is made by firms rather than governments.",
+    "correctIndex": 2
+   },
+   {
+    "id": "global-industries-mncs:quiz:d9e32373",
+    "question": "A plant pays workers $420 a month where the local average for similar work is $350. Its wage premium is:",
+    "options": [
+     "17%",
+     "20%",
+     "70%",
+     "14%"
+    ],
+    "explanation": "The premium is the extra $70 as a share of the local average: 70 ÷ 350 = 20%. Dividing by the plant's own wage gives about 17%, and $70 is the gap in dollars, not a percentage.",
+    "correctIndex": 1
+   },
+   {
+    "id": "global-industries-mncs:quiz:20094634",
+    "question": "Which effect of a foreign-owned plant on local labour is a risk rather than a gain?",
+    "options": [
+     "pay above local rates",
+     "training on modern machines",
+     "senior posts filled by staff from abroad",
+     "new jobs in the area"
+    ],
+    "explanation": "Filling senior posts with staff from abroad leaves local workers the routine jobs, which limits what they gain. Higher pay, training and new jobs all leave local workers better off.",
+    "correctIndex": 2
+   },
+   {
+    "id": "global-industries-mncs:quiz:5c786982",
+    "question": "A mine builds a clinic for the valley but pumps the groundwater that farmers' wells rely on. Its impact on the local community:",
+    "options": [
+     "is wholly positive",
+     "includes both gains and costs",
+     "affects only its own workers",
+     "is a national, not a local, impact"
+    ],
+    "explanation": "The clinic is a gain and the lost well water is a cost, and both fall on residents whether or not they work at the mine. So the impact is mixed, local, and wider than the workforce.",
+    "correctIndex": 1
+   },
+   {
+    "id": "global-industries-mncs:quiz:139756c4",
+    "question": "An MNC exports $70m a year from a host country, imports $30m of parts and sends $12m of profit home. Its net yearly flow into the host country is:",
+    "options": [
+     "$40m",
+     "$28m",
+     "$58m",
+     "$112m"
+    ],
+    "explanation": "Exports bring in $70m, while imports ($30m) and profit sent home ($12m) take $42m out, leaving a net $28m. Leaving out the profit gives $40m, leaving out the imports gives $58m, and adding all three treats money going out as money coming in.",
+    "correctIndex": 1
+   },
+   {
+    "id": "global-industries-mncs:quiz:6e8f4660",
+    "question": "A factory makes a product for $40 and sells it to its own sales company abroad for $45, when unrelated firms would pay $60. The host taxes profit at 20%. The host's tax lost on each unit is:",
+    "options": [
+     "$3",
+     "$1",
+     "$4",
+     "$12"
+    ],
+    "explanation": "At the internal price the host taxes $5 of profit instead of $20, so $15 of profit has moved abroad, and 20% of $15 is $3. The $1 is the tax still collected, the $4 is the tax at the fair price, and $12 is the profit moved minus the tax on it.",
+    "correctIndex": 0
+   },
+   {
+    "id": "global-industries-mncs:quiz:5136a7f6",
+    "question": "Which of these is technology and skills transfer from an MNC to the host country?",
+    "options": [
+     "a trained engineer leaving to start a local firm",
+     "the MNC exporting its output",
+     "the MNC sending profit home",
+     "the MNC paying above local wages"
+    ],
+    "explanation": "Know-how spreads beyond the MNC when a worker it trained takes the skills to a local firm. Exporting, sending profit home and paying above local wages are other effects, and none of them moves know-how to local firms.",
+    "correctIndex": 0
+   },
+   {
+    "id": "global-industries-mncs:quiz:125a9d90",
+    "question": "An MNC's factory exports everything it makes. Its main effect on consumers in the host country comes through:",
+    "options": [
+     "the wages it pays local workers",
+     "cheaper products in local shops",
+     "a wider choice of its brands",
+     "higher local safety standards"
+    ],
+    "explanation": "Local buyers never see the exported goods, so the factory reaches them mainly through the incomes it pays, which workers spend. Lower prices, more brands and safety standards affect consumers only where the MNC sells locally.",
+    "correctIndex": 0
+   },
+   {
+    "id": "global-industries-mncs:quiz:f3706f2d",
+    "question": "Which change in a host country's business culture could follow an MNC's arrival?",
+    "options": [
+     "more machines imported for the factory",
+     "higher exports of finished goods",
+     "lower import taxes on components",
+     "local firms promoting on merit, not family ties"
+    ],
+    "explanation": "Business culture is how firms are run, and promotion on merit is a change in management practice that local firms can copy. Imported machines, exports and import taxes are trade and technology, not the way firms are run.",
+    "correctIndex": 3
+   },
+   {
+    "id": "global-industries-mncs:quiz:d77201ea",
+    "question": "For the host country, the profit an MNC's subsidiary sends to its head office is:",
+    "options": [
+     "a flow out, and one cost among several effects",
+     "proof that the host loses from the MNC",
+     "a flow into its balance of payments",
+     "a form of foreign direct investment"
+    ],
+    "explanation": "Repatriated profit leaves the country, so it is a flow out and a real cost, but the host also keeps wages, orders, taxes and the plant, so it proves nothing about the overall result on its own. It is not money coming in, and it is not new investment.",
+    "correctIndex": 0
+   },
+   {
+    "id": "global-industries-mncs:quiz:8be7d3f2",
+    "question": "A shampoo bottle carries a picture of a tree and the words \"planet friendly\", though only its cap is recycled. This is an example of:",
+    "options": [
+     "an inappropriate marketing activity",
+     "misleading product labelling",
+     "poor waste disposal",
+     "a stakeholder conflict"
+    ],
+    "explanation": "The false impression is created on the product's own pack, so it is misleading labelling, and claiming green benefits the product lacks is greenwashing. An inappropriate marketing activity concerns how and to whom a product is promoted, not what the pack claims.",
+    "correctIndex": 1
+   },
+   {
+    "id": "global-industries-mncs:quiz:feed2aac",
+    "question": "An MNC could cut costs by 8% by moving orders to suppliers with worse safety records. The clearest stakeholder conflict is between:",
+    "options": [
+     "shareholders and the suppliers' workers",
+     "consumers and competitors",
+     "the government and pressure groups",
+     "managers and head office"
+    ],
+    "explanation": "The saving raises profit for the owners while the risk falls on the workers making the goods, so their interests clash directly. Competitors, campaign groups and managers are not the ones who gain and lose from this decision.",
+    "correctIndex": 0
+   },
+   {
+    "id": "global-industries-mncs:quiz:2d7f225c",
+    "question": "A drinks plant takes more water from a river each year than the river can spare in a dry season. Its use of resources is mainly a question of:",
+    "options": [
+     "sustainability",
+     "emissions",
+     "waste disposal",
+     "marketing ethics"
+    ],
+    "explanation": "Using a resource faster than it can be replaced means the use cannot continue, which is sustainability. Nothing is being released into the air or dumped, and the issue has nothing to do with how the drinks are promoted.",
+    "correctIndex": 0
+   },
+   {
+    "id": "global-industries-mncs:quiz:ca6ed47e",
+    "question": "Why is child labour most often found in the lower tiers of a supply chain?",
+    "options": [
+     "MNCs own those workshops directly",
+     "the law allows it in such workshops",
+     "children earn more there than adults",
+     "small workshops there are rarely inspected"
+    ],
+    "explanation": "Small workshops and farms far down the chain are the hardest for anyone to see or check, so abuses go unnoticed. MNCs rarely own them, the law does not permit harmful child labour there, and children are paid less, not more.",
+    "correctIndex": 3
+   },
+   {
+    "id": "global-industries-mncs:quiz:c06b2dcf",
+    "question": "Advertising sugary snacks with cartoon characters during children's television programmes is:",
+    "options": [
+     "misleading product labelling",
+     "an inappropriate marketing activity",
+     "self-regulation",
+     "a supply chain consideration"
+    ],
+    "explanation": "The problem is whom the promotion targets and how, so it is an inappropriate marketing activity even if every claim is true. Nothing on the pack is false, no rule is being set by the firm, and the supply chain is not involved.",
+    "correctIndex": 1
+   },
+   {
+    "id": "global-industries-mncs:quiz:4e315c89",
+    "question": "An MNC obeys a host country's pollution law, which is weaker than the law at home. Why might this still be an ethical issue?",
+    "options": [
+     "it breaks the host country's law",
+     "the host law does not apply to MNCs",
+     "pollution abroad cannot be measured",
+     "it pollutes more than home law would allow"
+    ],
+    "explanation": "Obeying a weaker law can still mean causing harm the firm knows it could not cause at home, which is an ethical choice, not a legal one. The firm is not breaking the host law, host law does apply to it, and pollution can be measured anywhere.",
+    "correctIndex": 3
+   },
+   {
+    "id": "global-industries-mncs:quiz:a138bd41",
+    "question": "Which of these is an example of self-regulation by an MNC?",
+    "options": [
+     "a fine imposed by a host-country court",
+     "a boycott organised by a campaign group",
+     "a supplier code it writes and audits itself",
+     "a minimum wage set by the government"
+    ],
+    "explanation": "Self-regulation is the firm setting and checking its own rules, which is what a supplier code it audits does. A court fine and a minimum wage are legal control, and a boycott is pressure from outside the firm.",
+    "correctIndex": 2
+   },
+   {
+    "id": "global-industries-mncs:quiz:b296d841",
+    "question": "A host government drops a planned pollution law after an MNC hints that it will move its plant abroad. This shows the MNC's:",
+    "options": [
+     "self-regulation",
+     "consumer pressure",
+     "legal control",
+     "political influence"
+    ],
+    "explanation": "The MNC used the threat of taking its jobs elsewhere to change what the government decided, which is political influence. It set no rule of its own, buyers played no part, and the law was dropped rather than applied.",
+    "correctIndex": 3
+   },
+   {
+    "id": "global-industries-mncs:quiz:448f3a3e",
+    "question": "Why can a small, poor country find it hard to control a large MNC?",
+    "options": [
+     "MNCs are not bound by host-country law",
+     "small countries cannot pass laws on pay",
+     "it relies on the jobs and tax the MNC brings",
+     "MNCs never move production"
+    ],
+    "explanation": "A host that relies on an MNC's jobs and tax may not risk driving it away with strict rules, and the MNC can move. MNCs are bound by host law, any country can legislate on pay, and the ability to move is exactly what gives an MNC its power.",
+    "correctIndex": 2
+   },
+   {
+    "id": "global-industries-mncs:quiz:e53686c3",
+    "question": "Why has social media made pressure on MNCs faster?",
+    "options": [
+     "it lets governments fine firms directly",
+     "it replaces the need for any law",
+     "images from a supplier can reach millions in days",
+     "MNCs cannot reply to posts"
+    ],
+    "explanation": "Evidence posted online spreads to buyers and campaigners in many countries almost at once, with no need for a newspaper or a government. Social media does not issue fines, does not replace law, and MNCs can and do reply in public.",
+    "correctIndex": 2
+   },
+   {
+    "id": "global-industries-mncs:quiz:214775e4",
+    "question": "Why does consumer pressure work poorly on a firm that sells only to other businesses?",
+    "options": [
+     "businesses never change suppliers",
+     "the law forbids business boycotts",
+     "its prices are set by government",
+     "it has little public brand to protect"
+    ],
+    "explanation": "Consumer pressure works by threatening a brand's sales to the public, and a firm with no public brand has little to lose from it. Businesses do change suppliers, boycotts are not banned, and its prices are its own.",
+    "correctIndex": 3
+   },
+   {
+    "id": "global-industries-mncs:quiz:bf6fb7f5",
+    "question": "A minimum rate of tax on the profits of large MNCs, agreed by many governments together, is legal control through:",
+    "options": [
+     "an international agreement",
+     "self-regulation by MNCs",
+     "a form of transfer pricing",
+     "political influence"
+    ],
+    "explanation": "A rule that many governments sign up to is an international agreement, one of the three levels of legal control. It is imposed on MNCs rather than set by them, it limits the gain from shifting profit rather than being a way to shift it, and it is governments, not MNCs, acting.",
+    "correctIndex": 0
+   }
+  ],
+  "practice": [
+   {
+    "id": "global-industries-mncs:practice:d9473b03",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Explain one way Korvane's factory could affect local businesses in Kestria. (4 marks)",
+    "guidance": "Decide which kind of local firm you are writing about before you write, because firms that supply the factory and firms that compete with it are affected in opposite directions. Use one piece of evidence from the source and follow it through to what happens to that firm.\nKnowledge: an MNC can help local businesses that supply it or serve its workers, and harm those that compete with it (1 mark). Application: the factory buys $18m a year of materials and services from local firms, or two local shoemakers have lost skilled staff to it (1 mark). Analysis: suppliers gain a large regular customer, so they can expand, hire and raise their standards to meet Korvane's requirements (1 mark). Analysis: which makes them better able to win other customers too; or, for the shoemakers, losing trained staff raises their costs and cuts their output, so they may be crowded out (1 mark). An answer that gives both a gain and a loss without developing either earns fewer marks than one developed chain."
+   },
+   {
+    "id": "global-industries-mncs:practice:cf190259",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Explain one impact of Korvane's factory on Kestria's balance of payments. (4 marks)",
+    "guidance": "Sort the flows in the source into money coming into the country and money going out before you write. Then pick one impact and explain it through to its effect on the country.\nKnowledge: the balance of payments records money flowing into and out of a country from trade and investment (1 mark). Application: Korvane exports $200m of shoes a year from Kestria, while $80m leaves for components and $30m as profit sent home (1 mark). Analysis: the yearly flows bring in a net $90m, which gives Kestria foreign currency to pay for its own imports (1 mark). Analysis: the benefit would shrink if the factory imported more of its components or sent more profit home, so it depends on how much Korvane buys locally (1 mark). Treating the profit sent home as proof that Kestria loses overall is a misreading; it is one outflow among several flows."
+   },
+   {
+    "id": "global-industries-mncs:practice:e0d68349",
+    "command": "Discuss",
+    "marks": 8,
+    "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Discuss the stakeholder conflicts Korvane faces over conditions in its supplier factories. (8 marks)",
+    "guidance": "Identify which stakeholders gain and which lose from the way the supplier factories are run, using the source rather than a general list. For each conflict, say why the interests clash, and leave room for a brief assessment of which conflict matters most for this firm.\nLevel 1: names stakeholders with little use of the source. Level 2: knowledge and application — shareholders gain from cheap supplier prices; workers at the 40 suppliers bear the cost, with children found at 3; consumers want low prices but many object to child labour; Kestria's government wants the jobs but also has laws to uphold. Level 3: analysis of the conflicts — raising standards means paying suppliers more, which cuts profit, while leaving things as they are risks a boycott, as the video shared on social media shows; the supplier code already bans child labour, so the conflict is between the cost of enforcing it and the damage from not doing so. Level 4: a brief assessment of which conflict matters most, for example that the clash between shareholders and suppliers' workers is sharpest because the brand's value, and so shareholders' own interest, depends on buyers' trust. Discuss needs this assessment; it does not need a final recommendation."
+   },
+   {
+    "id": "global-industries-mncs:practice:2d606643",
+    "command": "Assess",
+    "marks": 12,
+    "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Assess the impact of Korvane's transfer pricing on Kestria's tax revenues. (12 marks)",
+    "guidance": "Work out what profit is reported in each country at the price the factory actually charges and at the price unrelated firms would pay, and what that means for the tax each country collects. Then weigh that against the other taxes the factory still brings in and what the government could do about it.\nLevel 1: knowledge of transfer pricing or tax revenues, described generally. Level 2: application — the factory sells at $22 a pair against $30 between unrelated firms, so Kestria taxes $2 of profit a pair instead of $10; on 5,000,000 pairs at 25% it collects $2.5m rather than $12.5m, losing $10m a year, while Vessia collects $2m at 5%. Level 3: analysis of both sides — the lost $10m could have paid for public services, and the arrangement shifts the burden to local taxpayers; against that, the factory's 4,000 workers still pay income tax, its local purchases generate taxable income, and Kestria could challenge the price under its transfer-pricing rules. Level 4: evaluation reaching a supported judgement, for example that the impact on profit tax is large, but that the overall effect on tax revenues depends on whether Kestria can enforce an arm's length price without driving Korvane's second factory to its neighbour.\nA strong answer, in outline: the internal price cuts Kestria's profit tax from $12.5m to $2.5m; the factory still generates income and sales taxes; so the impact is significant but partly recoverable, and it turns on how firmly Kestria applies its rules while it competes for the second factory."
+   },
+   {
+    "id": "global-industries-mncs:practice:ae159de5",
+    "command": "Assess",
+    "marks": 12,
+    "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Assess whether Korvane should spend $6m on cleaner equipment at its factory in Kestria. (12 marks)",
+    "guidance": "Set out what the spending would buy and who would benefit, then what it costs the firm and what it might do instead. Your judgement should say whether the benefits justify the cost for this firm, and what it depends on.\nLevel 1: knowledge of emissions, waste disposal or sustainability, described generally. Level 2: application — residents complain of dye in the river and smoke from the boilers; the equipment would cost $6m; the firm already faces scrutiny on social media over its suppliers. Level 3: analysis of both sides — cleaner equipment reduces harm to the community, lowers the risk of stricter enforcement and protects a brand already under pressure, and it may cut fuel and water costs over time; against that, $6m is a large cost that reduces the $30m of profit sent home, and Korvane may argue that it already meets Kestria's law. Level 4: evaluation reaching a supported judgement, for example that the spending is justified because the reputational risk is already live and the law is weaker than at home, provided the firm makes the improvement visible to buyers.\nA strong answer, in outline: the harm is real and public; the cost is a fraction of a year's profit sent home; so Korvane should invest, unless it plans to leave Kestria, in which case the choice of where to build the second factory matters more."
+   },
+   {
+    "id": "global-industries-mncs:practice:1a7b024c",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Evaluate whether Kestria's government should offer Korvane a 5-year tax holiday to attract its second factory. (20 marks)",
+    "guidance": "Set out what the second factory would bring to the country and what the tax holiday would cost, using the source, before judging. Then consider what the government risks by not offering it, and finish with a recommendation that says what would change it.\nLevel 1: describes the effects of MNCs or tax holidays with little reference to the source. Level 2: knowledge and application — the factory would bring $80m of FDI and 2,500 jobs, and the existing factory already pays above local wages and buys from local firms; a tax holiday means no profit tax for 5 years, from a firm whose transfer pricing already cuts its profit tax in Kestria. Level 3: analysis — the jobs, wages, local orders and exports would add to growth and to income and sales taxes even without profit tax; but a holiday gives away revenue the country needs, rewards a firm already shifting profit to Vessia, and invites every future investor to ask for the same; and without it, the factory may go to the neighbour. Level 4: evaluation — weighs these against the evidence, considers what is not in the source (how close the neighbour's offer is, how long Korvane is likely to stay), and reaches a perceptive recommendation with conditions.\nA strong answer, in outline: the factory's jobs and local spending are worth more to Kestria than profit tax it may not collect anyway; but an unconditional holiday rewards profit shifting; so a shorter or conditional holiday is justified, tied to local hiring and an arm's length price, unless Korvane would come without one, in which case it is revenue given away for nothing."
+   },
+   {
+    "id": "global-industries-mncs:practice:81609ec0",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Evaluate whether pressure from consumers, pressure groups and social media is more likely than legal control to end child labour at Korvane's suppliers. (20 marks)",
+    "guidance": "Compare the two routes on the same questions: how directly each reaches the supplier factories, how quickly it works, and how long it lasts. Use the source for evidence of each, then bring in what the source does not show, and finish with a recommendation and the condition that would change it.\nLevel 1: describes ways of controlling MNCs in general terms. Level 2: knowledge and application — a video from a supplier has already been shared on social media; Korvane sells a consumer brand, so a boycott would hit its sales; its own supplier code bans child labour yet children were found at 3 of 40 suppliers; Kestria's law applies to the suppliers, and some home countries make firms answer for forced labour abroad. Level 3: analysis — public pressure works quickly and reaches the brand directly, but attention fades and buyers often return on price; legal control is lasting and applies to every firm, but depends on inspectors Kestria may lack and on political will while it competes for the second factory. Level 4: evaluation — judges which is more likely to end the practice rather than hide it, notes that pressure often works by pushing firms to enforce their codes and governments to act, and reaches a perceptive recommendation with conditions.\nA strong answer, in outline: pressure has already reached Korvane and threatens its sales, so it is likely to move the firm first; but only enforced law reaches suppliers who sell to firms with no brand to protect; so pressure is more likely to change Korvane's own suppliers quickly, while ending the practice across Kestria needs law that is enforced."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "global-industries-mncs:flashcard:64c157de",
+    "front": "What is a multinational corporation (MNC)?",
+    "back": "A business that owns and controls operations, such as factories, offices or shops, in more than one country."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:b7797d36",
+    "front": "What is a subsidiary?",
+    "back": "A company owned and controlled by another company, registered in the country where it operates."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:fe8c160f",
+    "front": "What is foreign direct investment (FDI)?",
+    "back": "Money put into a lasting business abroad that the investor owns and runs. A small shareholding with no control is not FDI."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:ad576fd5",
+    "front": "How can an MNC affect local labour?",
+    "back": "It creates jobs and often pays above local wages; conditions can be better or worse; senior posts may go to staff from abroad."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:2f702c50",
+    "front": "How can an MNC affect local businesses?",
+    "back": "Suppliers and nearby shops can gain; local rivals can lose customers and skilled staff, and be crowded out."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:4e5ba075",
+    "front": "How can an MNC affect the local community and environment?",
+    "back": "It may bring roads, power, clinics and schools, and also smoke, waste water, traffic and competition for land and water."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:97ccdec1",
+    "front": "How does FDI add to economic growth?",
+    "back": "It builds new capacity whose output counts in the country's production, and its spending supports other firms."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:65f07f10",
+    "front": "How does an MNC affect the balance of payments?",
+    "back": "FDI and exports bring money in; imported components and profits sent home take money out. The impact is the balance."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:d5f4ff36",
+    "front": "Does profit sent home prove the host country loses?",
+    "back": "No. It is one outflow; the host also keeps the wages, local orders, taxes and the capacity built."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:22ea0c5c",
+    "front": "What is technology and skills transfer?",
+    "back": "Know-how and methods an MNC brings that spread to local firms, through trained workers, suppliers and imitation."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:073fcce4",
+    "front": "What is business culture?",
+    "back": "The shared way firms in a country are run: decisions, management, promotion and what counts as acceptable practice."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:6f707204",
+    "front": "How can an MNC affect consumers in the host country?",
+    "back": "More choice, better quality and lower prices; but the risk of fewer rivals and higher prices later."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:849c983f",
+    "front": "What is a transfer price?",
+    "back": "The price one part of an MNC charges another part, such as a factory selling to the group's trading company."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:eb9c7a66",
+    "front": "What is the arm's length price?",
+    "back": "The price unrelated firms would agree for the same goods; tax authorities use it to test transfer prices."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:248df937",
+    "front": "How does transfer pricing cut a host's tax revenue?",
+    "back": "Low internal prices move profit to a low-tax country; the host taxes less profit, so it collects less."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:20b7601d",
+    "front": "What is a stakeholder conflict?",
+    "back": "One decision that helps one group of stakeholders and harms another, such as owners gaining from cuts that hurt workers."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:2c768f4d",
+    "front": "Emissions or waste disposal: what is the difference?",
+    "back": "Emissions are released into the air; waste disposal is how leftover water, chemicals and scrap are got rid of."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:5a0bbf1c",
+    "front": "What is sustainability?",
+    "back": "Meeting today's needs without harming the ability of future generations to meet theirs."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:6cf5a4e9",
+    "front": "What is child labour?",
+    "back": "Work by children that harms their health or schooling; most common in the lower tiers of supply chains."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:079b986c",
+    "front": "What is greenwashing?",
+    "back": "Claiming environmental benefits a product does not have, a form of misleading labelling."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:83092378",
+    "front": "What is an inappropriate marketing activity?",
+    "back": "Promotion that is unethical even if true: targeting children, pushing harmful products, hidden paid endorsements."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:45d1e98f",
+    "front": "What gives an MNC power over a host country?",
+    "back": "Its size, its ability to move production elsewhere, and how much the host relies on its jobs and tax."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:094b8a8e",
+    "front": "What is political influence?",
+    "back": "An MNC using its power over governments: lobbying, offering or withholding investment, negotiating special terms."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:4f4745d4",
+    "front": "What are the three levels of legal control?",
+    "back": "Host-country law, home-country law and international agreements."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:b60ec34a",
+    "front": "How do consumer pressure, pressure groups and social media control MNCs?",
+    "back": "They threaten sales and reputation: boycotts, campaigns and evidence shared online."
+   },
+   {
+    "id": "global-industries-mncs:flashcard:77ef106e",
+    "front": "What is self-regulation, and its weakness?",
+    "back": "The firm or its industry sets and checks its own rules; it relies on the firm enforcing them, so it needs independent checks."
+   }
+  ],
+  "mistakes": [
+   {
+    "id": "global-industries-mncs:mistake:d9ee4863",
+    "title": "Calling any exporter an MNC",
+    "mistake": "Describing a firm that sells abroad from its home factories as a multinational.",
+    "correction": "An MNC owns and controls operations in more than one country. Exporting is selling abroad; FDI is what makes a firm multinational.",
+    "examTip": "Check whether the firm in the case owns something abroad before calling it an MNC."
+   },
+   {
+    "id": "global-industries-mncs:mistake:926246c9",
+    "title": "Treating profit sent home as proof the host loses",
+    "mistake": "Arguing that once repatriated profit exceeds the original investment, the host country is worse off.",
+    "correction": "Any profitable, long-lived investment returns more than it cost. The host also keeps the wages, local orders, taxes and the capacity built, so the comparison settles nothing.",
+    "examTip": "Weigh every flow and effect in the case, and treat profit sent home as one cost among them."
+   },
+   {
+    "id": "global-industries-mncs:mistake:7c0a6137",
+    "title": "Calling transfer pricing tax evasion",
+    "mistake": "Writing that an MNC setting prices between its own companies is breaking the law.",
+    "correction": "Transfer pricing is legal and normal. Used to move profit to low-tax countries it is avoidance; it becomes evasion only when it breaks the law, for example with false invoices.",
+    "examTip": "Use the word avoidance, show the profit moved with the case figures, and say what rules the host could apply."
+   },
+   {
+    "id": "global-industries-mncs:mistake:96974b09",
+    "title": "Judging workers by wages alone",
+    "mistake": "Stating that because an MNC pays above the local average, its workers are treated well.",
+    "correction": "Pay is one part of the impact on labour; hours, safety, security and the kind of job matter too.",
+    "examTip": "Compare pay with the local figure, then say what the case shows about conditions."
+   },
+   {
+    "id": "global-industries-mncs:mistake:b830ef73",
+    "title": "Listing stakeholders without the conflict",
+    "mistake": "Naming shareholders, workers, consumers and government, and describing what each wants.",
+    "correction": "Ethics questions turn on the clash: one decision that helps one group and harms another.",
+    "examTip": "Pick the two groups whose interests clash most in the case and judge which should come first, and why."
+   },
+   {
+    "id": "global-industries-mncs:mistake:773c43d1",
+    "title": "Treating legal as ethical",
+    "mistake": "Arguing that an MNC obeying the host country's law has behaved ethically.",
+    "correction": "Where host law is weaker than at home, obeying it can still cause harm the firm could not cause at home.",
+    "examTip": "Ask whether the firm would be allowed to do the same at home, and who bears the harm."
+   },
+   {
+    "id": "global-industries-mncs:mistake:89dd8a70",
+    "title": "Assuming a code of conduct is kept",
+    "mistake": "Using an MNC's published supplier code as evidence that its suppliers treat workers well.",
+    "correction": "A code is a promise. Only independent checks and consequences for breaking it show whether it is kept.",
+    "examTip": "Say who checks the code in the case and what happens when it is broken."
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "global-industries-mncs:diagram:b1a0b279",
+    "title": "Pay at an MNC Factory Against Local Work",
+    "description": "IAL 4.3.4 · 1a: monthly pay at Korvane's factory in Kestria against the local factory average, and the jobs it created.",
+    "checklist": [
+     "Korvane pays $300 a month where local factories pay $240",
+     "Higher pay helps an MNC attract and keep trained workers",
+     "Hours, safety and job security matter as well as pay",
+     "Routine jobs can go if a cheaper location appears"
+    ],
+    "scenarios": [
+     {
+      "label": "Pay and jobs",
+      "svg": "<svg width=\"400\" height=\"290\" viewBox=\"0 0 400 290\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Monthly pay: the factory against local work</text><line x1=\"40\" y1=\"210\" x2=\"360\" y2=\"210\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><rect x=\"90\" y=\"90\" width=\"90\" height=\"120\" rx=\"3\" fill=\"#7a8299\" stroke=\"#7a8299\" stroke-width=\"1\"/><text x=\"135\" y=\"82\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">$240</text><text x=\"135\" y=\"230\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Local factories</text><rect x=\"220\" y=\"60\" width=\"90\" height=\"150\" rx=\"3\" fill=\"#60a5fa\" stroke=\"#60a5fa\" stroke-width=\"1\"/><text x=\"265\" y=\"52\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">$300</text><text x=\"265\" y=\"230\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Korvane</text><text x=\"200\" y=\"260\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">4,000 jobs at the factory</text><text x=\"200\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Pay is one part of the impact on labour</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "global-industries-mncs:diagram:0f749f10",
+    "title": "Transfer Pricing Between Two Subsidiaries",
+    "description": "IAL 4.3.4 · 1b (tax revenues): Korvane's factory sells to its own trading company in a low-tax country below the arm's length price, moving profit out of Kestria.",
+    "checklist": [
+     "The internal price ($22) is set below the arm's length price ($30)",
+     "So $8 of each pair's profit is reported in Vessia, taxed at 5%",
+     "Kestria taxes $2 a pair at 25% instead of $10",
+     "Tax authorities can test an internal price against the arm's length price"
+    ],
+    "scenarios": [
+     {
+      "label": "Two subsidiaries",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"tp\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#94a3b8\"/></marker></defs><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Where the profit on each pair is reported</text><rect x=\"100\" y=\"44\" width=\"200\" height=\"64\" rx=\"6\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><text x=\"200\" y=\"70\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">Factory in Kestria</text><text x=\"200\" y=\"90\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">cost $20 a pair · tax 25%</text><line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"140\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#tp)\"/><text x=\"212\" y=\"130\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">sold at $22</text><rect x=\"100\" y=\"144\" width=\"200\" height=\"64\" rx=\"6\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"200\" y=\"170\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">Korvane Trading, Vessia</text><text x=\"200\" y=\"190\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">sells at $30 · tax 5%</text><text x=\"200\" y=\"236\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Profit reported on each pair</text><text x=\"110\" y=\"258\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">Kestria: $2</text><text x=\"290\" y=\"258\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">Vessia: $8</text><text x=\"200\" y=\"286\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">At $30, Kestria would tax $10 a pair</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "global-industries-mncs:diagram:3f19d889",
+    "title": "Four Ethical Questions for an MNC",
+    "description": "IAL 4.3.4 · 2a-2d: the four areas of international business ethics, each as a question to ask of an MNC's decision.",
+    "checklist": [
+     "Stakeholders: whose interest does the decision serve, and at whose cost?",
+     "Environment: what goes into the air, water and land, and can it continue?",
+     "Supply chain: how are the people who make the goods paid and treated?",
+     "Marketing: is the way the product is sold fair to buyers?"
+    ],
+    "scenarios": [
+     {
+      "label": "The four questions",
+      "svg": "<svg width=\"400\" height=\"260\" viewBox=\"0 0 400 260\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Four ethical questions for an MNC</text><rect x=\"16\" y=\"50\" width=\"180\" height=\"76\" rx=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.5\"/><text x=\"106\" y=\"82\" font-size=\"12\" fill=\"#a78bfa\" text-anchor=\"middle\" font-weight=\"600\">Stakeholders</text><text x=\"106\" y=\"102\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Who gains, who loses?</text><rect x=\"204\" y=\"50\" width=\"180\" height=\"76\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"294\" y=\"82\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Environment</text><text x=\"294\" y=\"102\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Air, water, land, future?</text><rect x=\"16\" y=\"138\" width=\"180\" height=\"76\" rx=\"6\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"1.5\"/><text x=\"106\" y=\"170\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">Supply chain</text><text x=\"106\" y=\"190\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Who made it, and how?</text><rect x=\"204\" y=\"138\" width=\"180\" height=\"76\" rx=\"6\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"294\" y=\"170\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">Marketing</text><text x=\"294\" y=\"190\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Is the message fair?</text><text x=\"200\" y=\"240\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Legal is not the same as ethical</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "global-industries-mncs:diagram:1c047735",
+    "title": "What Limits an MNC, and What Protects It",
+    "description": "IAL 4.3.4 · 3a: the seven factors in controlling MNCs, sorted into those that limit an MNC and those that protect it.",
+    "checklist": [
+     "Limits: legal control, buyers, campaign groups, social media and self-regulation",
+     "Protection: the MNC's size, its ability to move, and its influence over governments",
+     "The more a host relies on the MNC, the weaker its controls",
+     "Every limit is only as strong as its enforcement"
+    ],
+    "scenarios": [
+     {
+      "label": "Limits and protection",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">What limits an MNC, and what protects it</text><text x=\"100\" y=\"58\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Limits</text><text x=\"300\" y=\"58\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">Protects</text><rect x=\"16\" y=\"76\" width=\"168\" height=\"30\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"100\" y=\"95\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Legal control</text><rect x=\"16\" y=\"110\" width=\"168\" height=\"30\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"100\" y=\"129\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Consumer pressure</text><rect x=\"16\" y=\"144\" width=\"168\" height=\"30\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"100\" y=\"163\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Pressure groups</text><rect x=\"16\" y=\"178\" width=\"168\" height=\"30\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"100\" y=\"197\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Social media</text><rect x=\"16\" y=\"212\" width=\"168\" height=\"30\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"100\" y=\"231\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Self-regulation</text><rect x=\"216\" y=\"76\" width=\"168\" height=\"30\" rx=\"6\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"1.5\"/><text x=\"300\" y=\"95\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Size</text><rect x=\"216\" y=\"110\" width=\"168\" height=\"30\" rx=\"6\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"1.5\"/><text x=\"300\" y=\"129\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Mobility</text><rect x=\"216\" y=\"144\" width=\"168\" height=\"30\" rx=\"6\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"1.5\"/><text x=\"300\" y=\"163\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Political influence</text><text x=\"300\" y=\"208\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">The more a host relies</text><text x=\"300\" y=\"228\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">on it, the weaker</text><text x=\"300\" y=\"248\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">the limits</text><text x=\"200\" y=\"286\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Each limit is as strong as its enforcement</text></svg>"
+     }
+    ]
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "From FDI to tax revenue",
+     "steps": [
+      "An MNC builds a factory with foreign direct investment.",
+      "Its factory hires local workers and orders from local suppliers.",
+      "Workers and suppliers earn and spend more income.",
+      "Government collects more tax on the extra income and spending."
+     ],
+     "result": "The investment reaches the government through incomes; profit shifting can still cut the profit tax."
+    },
+    {
+     "title": "How social media pressure reaches an MNC",
+     "steps": [
+      "A worker films unsafe conditions at a supplier.",
+      "Footage spreads widely on social media.",
+      "Buyers boycott the brand and pressure groups campaign.",
+      "Head office changes its supplier rules to protect sales."
+     ],
+     "result": "Pressure works through sales and reputation, and only while buyers keep caring."
+    },
+    {
+     "title": "How transfer pricing moves tax",
+     "steps": [
+      "A factory in a high-tax country sells to its own trading company abroad.",
+      "The price is set below what unrelated firms would pay.",
+      "Most of the profit is reported where the trading company is, at a low tax rate.",
+      "The high-tax host collects less profit tax than it would at a fair price."
+     ],
+     "result": "The group pays less tax overall; the host loses the difference unless it enforces an arm's length price."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Is an MNC good for the host country?",
+     "content": "Neither answer holds in general. Korvane's factory brings 4,000 jobs at a 25% wage premium, $18m a year of local orders and a net $90m a year into the balance of payments; it also shifts profit to Vessia and pollutes the river. Three things decide it. HOW MUCH STAYS: local buying, local hiring, tax actually paid. HOW MUCH SPREADS: skills, methods and standards reaching local firms. HOW WELL IT IS CONTROLLED: whether the host can enforce its rules without the MNC leaving."
+    },
+    {
+     "title": "Which control works best?",
+     "content": "Law is lasting and covers every firm, but depends on enforcement and can be escaped by moving. Consumer pressure, pressure groups and social media are fast and reach the brand directly, but fade and barely touch firms with no public brand. Self-regulation can go beyond the law in every country, but relies on the firm policing itself. The strongest answers treat them as working together: pressure pushes firms to enforce their codes and governments to act."
+    },
+    {
+     "title": "Should a host country compete for FDI with tax breaks?",
+     "content": "A tax break can win jobs, exports and know-how a country would not otherwise get, and income and sales taxes still flow. But it gives away profit tax, rewards firms that would have come anyway, and invites a race in which every country offers more. Conditions — local hiring, a time limit, an arm's length price — make it more defensible than an open-ended holiday."
+    }
+   ]
+  }
+ }
+}

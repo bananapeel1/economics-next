@@ -11981,3 +11981,140 @@ log, until the concurrent `modelAnswersData.js`/market-failure edit is committed
 - **Could not verify:** the Pro Common Mistakes tab on screen (a session cannot sign in; main reads the shape); the
   topic page may lag the API by up to an hour (ISR). Completion-score readings during Verify B were disturbed by peers on
   :3001.
+
+## Handoff — packet 56 (global-industries-mncs) bookkeeping pass, gate passed, STAGED NOT PUBLISHED (26 September 2026)
+
+**Bookkeeping-only pass, per this packet's own harness instructions. Authored, fixed, staged, published,
+restored and committed nothing.** Read `audit/PROTOCOL.md`, `audit/SESSION-PROMPT.md`, the newest relevant
+handoff above (packet 55's, which live-checked packet 56 via `ps aux`/`git status` and found it already past
+Verify A, needing a Verify B walk then this bookkeeping close — exactly what has now happened), this packet's
+row in `audit/PROGRESS.md`, the Settled list in `audit/DECISIONS.md`, and `audit/CONTENT-GATE.md` including the
+recall contract and both check-in-answer-rule sections, before writing anything. **No `## Packet 56 spec`
+heading exists anywhere in this file** (confirmed by direct grep, 0 hits) — the same gap packets 41/43-55 each
+hit and normalized; `audit/runs/packet-56/brief.md` and `built.md` supplied the scope instead, as `built.md`
+itself says it read PROTOCOL, SESSION-PROMPT, the packet-53 handoff (the newest one at the time it was built),
+the PROGRESS row and the DECISIONS Settled entries first. **No contradiction found** among the four documents
+for this packet's own scope: the two "check-in answer rule" sections in CONTENT-GATE.md reconcile at point 4
+(question-first, PR #43, has governed production since 26 Sep; the older section's leak/DEBT split still holds
+for what that makes non-blocking), and the 26 Sep Settled rulings (rollout scope, the Units-3-4 practice shape,
+marking-follows-SAM) are exactly what `built.md`'s own "scope call" section applies.
+
+**Packet 56 (global-industries-mncs, IAL Business 4.3.4, `bus_spec.txt:1453`, no 4.3.5 anywhere in the file —
+the unit's last 4.3 topic) is built and ledger-clear — 28 confirmed, 0 wont-fix, 0 rejected, 0 open —
+independently recounted by this pass two ways: a direct Node parse of `audit/ledger.json` grouping on
+`packet === 56` (28 items, all `status: "confirmed"`), and a fresh `node audit/scripts/ledger.mjs unverified 56`
+→ "gate clear". `packet 56 --open` also reads "0 items" here (unlike packet 12.8's row, where `--open` and
+`unverified` disagreed because of a `not-fixed` id — no such id exists in this packet's set, checked one by
+one).** STAGED to `draft` only; **independently re-confirmed by this pass with a fresh
+`check-staged-drafts.mjs global-industries-mncs` run just now** (not read from a log): 0 drift, "matches" —
+the staged draft still equals the dumped bundle at bookkeeping time. `npm test` 357/357, `npm run build`,
+`validate`, `exposure`, `recalls` all exit 0 per `audit/runs/packet-56/gate.log` — **worth flagging precisely:
+`built.md` (written earlier the same day) states plainly that `npm run build` was "NOT run" (it would rewrite
+`.next` under the shared `:3001` eight other sessions use), while `gate.log` (a later file in the same run
+directory, read directly by this pass, not from `built.md`'s prose) records `buildExit=0`.** Both artefacts are
+this packet's own; the simplest reading is that the build step ran later, as part of a fuller gate
+consolidation after `built.md` was written, and this pass did not re-run `npm run build` itself for the same
+shared-server caution `built.md` names. Old section (2 blocks/4 subsections/0 recalls/0 diagrams/10 quiz/5
+practice/19 flashcards/6 mistakes) rebuilt to 4 blocks/17 subsections (21 Learn steps)/17 recalls (2 reorder, 3
+fill-in, 4 match, 8 classify)/4 diagrams/25 quiz (3 unpinned pre-test)/7 practice (4/4/8/12/12/20/20, one
+source)/26 flashcards/7 mistakes/3 chains+3 evaluation/4 notes — all read from `audit/runs/packet-56/stage.log`'s
+own JSON findings, not prose. **Spec coverage 24/24 (100%)**, same log. **A scope note from `built.md` worth
+carrying, not a contradiction:** the ledger's `specGap` items were apparently written against an assumed 25
+leaves; the spec oracle `built.md` re-read holds 24 (30 rows / 6 requirement parents). This pass did not
+adjudicate which count is authoritative — the runner/validator's own 24/24 is what shipped and is what this row
+records.
+
+**Verify A (`verify-a.md`, fresh context, did not read `built.md`): all 28 CONFIRMED** with bundle `file:line`
+evidence, hand-recomputed arithmetic (wage premium 25%, BoP net $90m, transfer-pricing tax $2.5m vs $12.5m, four
+quiz calculations), a banned-term sweep (Rana Plaza, Nestlé, Amazon, Luxembourg, BEPS, Pillar, Shell, NNPC,
+Greenpeace, DRC, cobalt, "current account", multiplier, "resource curse", "global economy", "net loser" — all
+0), and an untaught-material check tracing every quiz/card/mistake/chain/evaluation to a teaching sentence.
+Layer 4 (real-case corroboration) was resolved by deletion, not re-dating: Rana Plaza/DRC cobalt/Nestlé/
+Amazon-Luxembourg/Shell-NNPC are all gone, replaced by an invented MNC/host/country (Korvane/Kestria/Vessia)
+and undated general patterns — Verify A read this as the correct Layer 4 call and did not reject it. Two ids
+carry an explicit **deferred, non-blocking DEBT** note under CONTENT-GATE's rule 5 (26 Sep founder ruling):
+quiz-03's check-in questions at q19 ("self-regulation") and q24 ("an international agreement") are guessable
+from their own stems; not fixed before publish, recorded for the later rewrite pass.
+
+**Verify B (`verify-b.md`, 390×844, storage cleared, real taps, the already-running shared `remediation-dev`
+reused not restarted): 21 Learn steps + 4 chapter check-ins walked, essentially clean — worth stating precisely
+rather than as unqualified "clean," the same distinction packets 51/55's handoffs drew.** Question-first
+confirmed live on all 4 check-ins, each recorded clean at the moment of answering; 3 planted resume-pointer
+cases (in-range, stale-version, out-of-range) all PASS, no "step N of M" with N>M and no blank body; 0
+`<table>` elements at 390px; diagram labels 9.2-9.4px inline, 12.0px in the enlarge sheet, no overlap or
+clipping. **One FAIL survives, non-blocking for staging, blocking for publish — the same defect class packets
+47/48/50/51/55 each carried for their own unit page:** `app/business/unit-4/page.js`'s 4.3.4 tile still lists
+the OLD five-part a-e breakdown ("reasons for MNCs", "power of global brands", "fair trade", "CSR",
+"sweatshops") instead of the rebuilt four chapters (MNCs and the Local Economy / National Economy /
+International Business Ethics / Controlling MNCs).
+
+**Could not verify — flagged per this packet's own harness instruction, because eight other packet sessions
+share `:3001` and its localStorage** (`verify-b.md`'s own console log records `[Fast Refresh] rebuilding` lines
+during the walk, confirming another session was editing files in this worktree at the time): the end-of-section
+completion score ("Quiz 2/3, Recall 0/1, Written practice 0/6" beside "100% strength · review tomorrow") and the
+skipped-recall return timing (the chapter-1 skip came back at check-in 2, not check-in 1 as the skip message
+implied) are both readings of a shared, mutable client store and are not independently re-confirmed by this
+pass. Also not run, per `built.md`'s own account and not attempted by this pass: Pro-only entitled surfaces
+beyond the bundle read (the full quiz bank, all 26 cards, all 7 mistakes); Rule 3 field-compatibility against a
+current `origin/main` checkout (required before publish, not staging); Layer 4 corroboration-by-search (every
+example is invented or an undated general pattern, by design, so nothing to search for).
+
+**Not committed; not published; not restored** — this pass has no authority to do any of the three and did
+none, nor did it fix, re-stage or re-claim anything. `audit/ledger.json` untouched by this pass.
+`audit/runs/packet-56/*` and the `scripts/_packet56-*.mjs` / `scripts/packet-56-global-industries-mncs.mjs`
+files are staged by the build/verify session, not this pass (`git status`, checked directly). `audit/PROGRESS.md`
+(packet 56 row rewritten) and `audit/NEXT.md` (this section) are the only files this pass touched. No file
+outside those two was written by this pass.
+
+**What the next session on packet 56 needs, in order:**
+1. Fix `app/business/unit-4/page.js`'s 4.3.4 tile copy to name the four rebuilt chapters instead of the old
+   five-part a-e breakdown, before or with publish — same fix class as packets 47/48/50/51/55's own unit pages.
+2. Rule 3 field-compatibility check against a current `origin/main` checkout has not been demonstrated fresh by
+   any pass for this packet — required before publish, not before staging (same gap as packets 40-55).
+3. Decide whether the ledger's `specGap` items should be re-numbered against the oracle's 24-leaf count rather
+   than the 25 they were apparently written against (`built.md`'s own scope note); not urgent, since the shipped
+   validator already reads 24/24.
+4. Publish command, for the founder, not run by any pass so far:
+   ```
+   node scripts/packet-56-global-industries-mncs.mjs --stage && node scripts/publish-section.mjs global-industries-mncs --confirm
+   ```
+   (only after item 1's tile fix lands, same sequencing as packets 47/48/50/51/55).
+
+**Escalate to the founder:** nothing to publish yet (rule 6). Packet 56's gate passed and its ledger is clear,
+but one pre-publish fix is needed first (the Unit 4 tile copy, item 1 above) — cosmetic, not a content defect,
+and it does not touch the staged bundle. Once that lands and Rule 3 is checked, the publish command above is
+ready. Also worth a look, low urgency: the ledger's own `specGap` items assume one more spec leaf than the
+oracle now counts for 4.3.4 (item 3 above) — worth fixing before this pattern is reused, not before this
+packet publishes.
+
+**Next unclaimed packet — checked live by this pass via `ps aux`, not by reading a handoff:** packet 49
+(business-growth) is the only packet process observed running at check time
+(`node scripts/packet-49-business-growth.mjs`). Packet 56 itself is not running. This pass did not survey the
+full 41-56 range beyond confirming 56 is now closed to this bookkeeping pass and 49 is not free.
+
+### Packet 56 — brain close (26 September 2026, after the run)
+
+- **Commit:** committed through a temporary index with compare-and-swap, carrying only packet 56's own files, row, handoff and 28 ledger ids. Pushed.
+- **Mistakes check A/B** (`audit/runs/packet-56/ab-mistakes.sh`, `.log`): an empty `mistake` on card 1 and an
+  invented field name (`blunder`) on every card both fail. Each fails through the runner's `mistakeGaps()` check
+  (`scripts/packet-56-global-industries-mncs.mjs:447`) and through the validator's `mistakes.shape` BLOCK. The
+  module is restored byte for byte, and the clean control exits 0.
+- **Rule 3 against `origin/main` `903b8e8`: safe** (`audit/runs/packet-56/rule3.md`, a fresh read-only pass that
+  listed the bundle's fields per kind and cited main's reader for each). Main's own `lib/mistakes-shape.js` finds
+  0 gaps on 7 of 7 cards, and all 4 check-ins resolve for free and Pro. Two fields are not shown. First, notes
+  bullets typed `definition`/`mechanism` get no colour bar, because `app/globals.css` styles only
+  `def`/`mech`/`imp`/`link`; that is **true of 32 of 43 rebuilt bundles**, and the fix belongs in code, not in
+  this packet. Second, a reorder recall's `criterion` is never read, but both prompts state the rule, so nothing
+  is lost.
+- **Unit 4 copy: PR #59** (`fix/unit4-global-industries-copy`, off main) rewrites the 4.3.4 tile to the four
+  chapters and the Business hub line to "Local & national impact, ethics, controlling MNCs". **Merge it before
+  or with the publish.**
+- **The Brief's two scope escalations are closed by the build, not open.** The practice set follows the 26 Sep
+  Units 3-4 paper layout (4/4/8/12/12 + 20 + 20). "Sustainability untaught" was measured on the pre-packet
+  section; the build teaches it in content, notes, quiz and a flashcard.
+- **For the founder:** (1) merge PR #59; (2) publish from the worktree, not from `/Users/arongijsel/Claude APP`:
+  `node scripts/packet-56-global-industries-mncs.mjs --stage && node scripts/publish-section.mjs global-industries-mncs --confirm`;
+  (3) the Pro pass on `?draft=1`, which no signed-out walk can reach: the full quiz bank, the 7 mistakes, and the
+  practice mark scheme behind "See full guidance".
+- **Not verified:** the end-of-section score and the skipped-recall return timing (eight packets shared `:3001`
+  and its localStorage); the Pro surfaces above; and whether the live deployment is at `903b8e8`.

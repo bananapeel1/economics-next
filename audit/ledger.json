@@ -8543,10 +8543,10 @@
    "rank": 0,
    "text": "Add a third block 'Ethics & Controlling MNCs' to content[] (marketing ethics/greenwashing, supply chain labour and child labour with Rana Plaza/DRC cobalt, and the four controls: political influence, legal control, pressure groups, social media) so that the quiz bank, PreTest and flashcards test what the lesson teaches; until then, remove or re-tag quiz Q3, Q4, Q6, Q7, Q9, Q10 so PreTest cannot sample untaught material.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:549,803 two new blocks International Business Ethics (2a-2d, greenwashing :734, child labour :682) and Controlling MNCs (7 factors :806-964); every quiz/card/mistake traced to taught text",
    "note": null
   },
   {
@@ -8556,10 +8556,10 @@
    "rank": 1,
    "text": "Merge the two transfer-pricing sections into one (define transfer pricing neutrally, then manipulation, then BEPS with Pillar Two as implemented from 2024) and use the freed space for balance of payments, business culture and host-country consumers.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:472 transfer pricing taught once (only subsection with hits); freed space used for BoP :301, business culture :380, host consumers :416; min tax stated as agreed :873",
    "note": null
   },
   {
@@ -8569,10 +8569,10 @@
    "rank": 2,
    "text": "Add recall widgets that are genuinely orderable: a fillin for the transfer-pricing mechanism ('subsidiary in a ___-tax country charges ___ prices to a subsidiary in a ___-tax country so profit is reported where tax is ___') and a reorder for the causal chain 'MNC invests via FDI -> jobs and supplier demand -> skills/technology spill over -> tax revenue -> but profits repatriated'; plus one diagram (stakeholder map host vs home, or a two-subsidiary transfer-pricing flow).",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:501 transfer-pricing fillin, :283 FDI reorder with cause-to-effect criterion and per-step why, :532 two-subsidiary diagram; 17 recalls, 4 diagrams",
    "note": null
   },
   {
@@ -8582,10 +8582,10 @@
    "rank": 3,
    "text": "Fix the practice set to IAL formats: 4-mark items become 'Explain one...' with a short extract; replace practice[3] (production-location reasons, wrong spec point); rewrite the 20-marker as a data-response decision ('Evaluate whether [country] should offer tax incentives to attract [MNC]'), and add levelled mark schemes/model answers so AI grading and self-marking have a reference.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:1527-1569 7 source-based items Explain 4/4, Discuss 8, Assess 12/12, Evaluate 20/20; old production-location p3 gone; :1562 tax-holiday decision; Level 1-4 plus model outline",
    "note": null
   },
   {
@@ -8595,10 +8595,10 @@
    "rank": 4,
    "text": "Correct the factual issues: delete the 'repatriated profits exceed investment = net loser' sentence, date or replace the Amazon Luxembourg example (structure changed in 2015), change BEPS 15% from 'proposes' to 'implemented from 2024', and add the NNPC 55% JV point to the Shell example.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:322 net-loser fallacy replaced by correction; Amazon/Luxembourg, BEPS, Shell/NNPC examples removed (grep 0 across bundle); min tax phrased as agreed :873",
    "note": null
   },
   {
@@ -8607,10 +8607,10 @@
    "kind": "accuracy",
    "text": "content[0] 'MNC Impact & Ethics' > mnc-negative-impacts-ethics > body[0]: 'In extreme cases, repatriated profits exceed the original investment, making the host country a net loser.' This is a fallacy: any profitable long-lived investment eventually returns more than its initial capital; that does not make the host a net loser because the host retains wages, supplier spending, tax and capital stock. It teaches a common student error as fact.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:322 'net loser' absent (0 hits); correct reasoning stated, reinforced by mistakes[1] and quiz[12]",
    "note": null
   },
   {
@@ -8619,10 +8619,10 @@
    "kind": "quiz",
    "text": "q2: Rana Plaza appears nowhere in content[] (only flashcards[1] and common_mistakes). Because PreTest samples 3 random MCQs from this bank and InlineQuiz draws from it, students are examined on material Learn Mode never teaches.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json Rana Plaza item retired (0 hits); supply-chain ethics taught :668-682 and quiz[16] child-labour item traced to :682",
    "note": null
   },
   {
@@ -8631,10 +8631,10 @@
    "kind": "quiz",
    "text": "q3: Greenwashing is not taught in content[] (flashcards only). Same untaught-material problem; and it duplicates Q9's concept, so 2 of 10 questions test one term that is not in the lesson.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:734 greenwashing taught in 2.3 body[0]; tested once via quiz[13] :1381; duplicate Q3/Q9 pair gone",
    "note": null
   },
   {
@@ -8643,10 +8643,10 @@
    "kind": "quiz",
    "text": "q5: 'Controlling MNCs' is entirely absent from content[]. Also the stem gives the answer away: 'organisations ... campaigning' maps directly onto 'Pressure group activism'; no thinking required.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json Greenpeace q5 retired (0 hits); Controlling MNCs taught :806-964. Debt per CONTENT-GATE rule 5: quiz[24] :1513 and quiz[19] :1453 stems cue their keys (guessable, not stating)",
    "note": null
   },
   {
@@ -8655,10 +8655,10 @@
    "kind": "practice",
    "text": "p4: 'Evaluate whether the growth of MNCs has been a positive or negative development for the global economy' — 20 marks with context: null. IAL Business 20-mark questions are always data-response, framed around a specific business/country decision in the extract ('Evaluate whether X should...' / 'Evaluate the likely impact of ... on Y'). A context-free 'global economy' essay is an Economics-style framing and cannot earn IAL application marks. Guidance is an unranked pro/con list with no levelled scheme (Level 4 = balanced, contextual judgement) and no model answer.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:1562 context-free global-economy essay replaced by Evaluate tax holiday for Korvane on Source A, with Level 4 and model outline",
    "note": null
   },
   {
@@ -8667,10 +8667,10 @@
    "kind": "structure",
    "text": "Zero recall widgets (0 reorder, 0 fillin) and 0 diagrams: with block 1 = 2 sections and block 2 = 2 sections, the whole Learn Mode is exactly 2 steps of ~700-800 words of prose each, followed by one InlineQuiz MCQ, one practice question, ExplainItBack and a takeaway. There is no spaced/immediate recall at all, so the section is the passive-reading failure mode the founder worries about (opposite of the 'arbitrary reorder' problem).",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json 17/17 subsections carry recall (3 fillin, 8 classify, 4 match, 2 reorder: :41,:283,:501,:889,:946); 4 diagrams :1778+",
    "note": null
   },
   {
@@ -8679,10 +8679,10 @@
    "kind": "structure",
    "text": "Transfer pricing is taught twice: content[0] > mnc-negative-impacts-ethics > body[2] (full mechanism, components example) and content[1] > transfer-pricing-mechanism (full mechanism again, brand-name example, BEPS). The avoidance-vs-evasion misconception is also repeated in notes[1]. Block 2 section 2 (fdi-stakeholder-analysis) then re-sorts block 1's positives/negatives by stakeholder, so roughly half of block 2 is restatement.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:472 transfer pricing in one subsection only; fdi-stakeholder-analysis removed; avoidance/evasion no longer in notes",
    "note": null
   },
   {
@@ -8691,10 +8691,10 @@
    "kind": "structure",
    "text": "No difficulty ramp and no foundation: 'FDI', 'MNC' and 'subsidiary' are used from the first sentence without definition; 'arm's length' is defined only in block 2 after transfer pricing has already been explained in block 1. All four sections sit at the same evaluative level ('net impact depends on governance') rather than definitions -> mechanisms -> evaluation.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:12 subsection 0.0 defines MNC, home/host, subsidiary, FDI first; arm's length defined with transfer pricing :486; ramp definitions to local to national to ethics to control",
    "note": null
   },
   {
@@ -8703,10 +8703,10 @@
    "kind": "structure",
    "text": "Content[] vs assessment misalignment: quiz (6/10 items), flashcards (10/19), common_mistakes (4/6) and extras chains cover controlling MNCs, greenwashing, Rana Plaza, Nestlé, boycotts, social media — none of which appear in content[]. PreTest and InlineQuiz therefore examine students on material the lesson never presents, which is a plausible driver of pre-test demotivation.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:1223-1878 each of 25 quiz, 26 cards, 7 mistakes, 3 chains, 3 evaluations traced to a teaching sentence in content[]; Rana Plaza/Nestle/boycott-untaught items gone",
    "note": null
   },
   {
@@ -8715,10 +8715,10 @@
    "kind": "structure",
    "text": "examMatters is near-identical across all four sections (variations of 'the net impact depends on the host country's governance capacity, the MNC's industry and the regulatory framework'); the block 2 takeaway[3] repeats block 1 takeaway[2]. The evaluation template is good but repeated four times it reads as filler.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json 17 examMatters, 0 governance-template hits, max pairwise word-Jaccard 0.29; 13/13 takeaways unique",
    "note": null
   },
   {
@@ -8727,10 +8727,10 @@
    "kind": "structure",
    "text": "Misconceptions: 'Students assume MNCs always benefit host countries' (mnc-positive-impacts) and 'Students assume all MNCs deliberately exploit host countries' (mnc-negative-impacts-ethics) are mirror images and generic; only the avoidance/evasion and host-only-stakeholder ones are genuine, mark-scheme-relevant errors.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json mirror misconceptions 'always benefit'/'deliberately exploit' 0 hits; 17 specific misconceptions e.g. repatriation :322, legal vs ethical, code vs compliance",
    "note": null
   },
   {
@@ -8739,10 +8739,10 @@
    "kind": "structure",
    "text": "Block 1 title 'MNC Impact & Ethics' promises ethics, but ethics content is one sentence on labour exploitation and one on pollution havens; marketing ethics, child labour and stakeholder conflict (all spec bullets) are absent. Block 2 title 'Transfer Pricing & FDI Stakeholders' bundles two unrelated topics.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:549,803 block titles now Local Economy / National Economy / International Business Ethics / Controlling MNCs, each delivered by its subsections",
    "note": null
   },
   {
@@ -8751,10 +8751,10 @@
    "kind": "structure",
    "text": "Economics framing leaks into a Business section ('current account', 'multiplier effects', 'resource curse', 'global economy' in the 20-marker); IAL Business examiners want business-decision and stakeholder framing.",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json 'current account','multiplier','resource curse','global economy' all 0 across bundle; case framed as Korvane/Kestria decisions",
    "note": null
   },
   {
@@ -8763,10 +8763,10 @@
    "kind": "specGap",
    "text": "Controlling MNCs: political influence, legal control, pressure groups, social media — not taught in content[] at all (only flashcards/quiz/common_mistakes)",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:806 power+political influence, :860 legal control, :913 consumer pressure/pressure groups/social media, :964 self-regulation",
    "note": null
   },
   {
@@ -8775,10 +8775,10 @@
    "kind": "specGap",
    "text": "Ethics — marketing considerations: misleading product labelling, inappropriate promotional activities (greenwashing, Nestlé formula) — absent from content[]",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:728 misleading product labelling and inappropriate marketing activities defined, with Korvane eco case",
    "note": null
   },
   {
@@ -8787,10 +8787,10 @@
    "kind": "specGap",
    "text": "Ethics — supply chain considerations: exploitation of labour and child labour — mentioned in one clause only; no Rana Plaza / DRC cobalt in content[] despite quiz testing them",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:668-682 pay/conditions, exploitation and child labour developed over 5 paragraphs, with a checks match recall",
    "note": null
   },
   {
@@ -8799,10 +8799,10 @@
    "kind": "specGap",
    "text": "Ethics — stakeholder conflicts as a framing (shareholders vs workers vs communities) — implicit in fdi-stakeholder-analysis but not framed as ethical conflict",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:552 stakeholder conflicts framed as international business ethics, shareholders vs workers vs consumers vs host government case",
    "note": null
   },
   {
@@ -8811,10 +8811,10 @@
    "kind": "specGap",
    "text": "Impact on the national economy: balance of payments (export earnings vs profit repatriation and imported components) — only in flashcards[18]; content[] mentions 'current account' in one clause",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:301 balance of payments: FDI and exports in, imports and repatriated profit out, net 90m worked",
    "note": null
   },
   {
@@ -8823,10 +8823,10 @@
    "kind": "specGap",
    "text": "Impact on the national economy: business culture — not covered anywhere",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:380 business culture defined, spread and clash effects, classify recall",
    "note": null
   },
   {
@@ -8835,10 +8835,10 @@
    "kind": "specGap",
    "text": "Impact on the national economy: consumers (host-country consumers: choice, price, quality) — only home-country consumers are covered",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:416 host-country consumers subsection, explicitly not the home market; choice, quality, price, market-power risk",
    "note": null
   },
   {
@@ -8847,10 +8847,10 @@
    "kind": "specGap",
    "text": "Impact on the local economy: local businesses (crowding out vs supplier opportunities) and local community and environment — covered briefly in fdi-stakeholder-analysis but not developed; wages relative to local averages (MNC wage premium) only in notes misconception",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:75 wage premium in body, :119/:137 local suppliers vs crowding out, :179 local community and environment",
    "note": null
   },
   {
@@ -8859,10 +8859,10 @@
    "kind": "specGap",
    "text": "Exact IAL spec numbering for this section (app uses 4.3.4) — unsure; the bullets above are those Edexcel lists under the MNC topic (impact / ethics / controlling MNCs)",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/raw/bus_spec.txt:1453 '4.3.4 Global industries and companies (multinational corporations)' only MNC heading; app/business/unit-4/page.js:41 ref 4.3.4",
    "note": null
   },
   {
@@ -16402,10 +16402,10 @@
    "kind": "specThin",
    "text": "4.3.4 2b) Environmental considerations: emissions and waste disposal — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 56,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-56",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-56-bundle__business__global-industries-mncs.json:614 emissions and waste disposal defined with examples, :626 sustainability, 3-way classify recall",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
