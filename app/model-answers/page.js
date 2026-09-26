@@ -5,6 +5,8 @@ import { BookAlt, ChartHistogram, Document, Glossary } from '@/components/Icons'
 import SiteHeader from '@/components/SiteHeader';
 import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
+import '@/styles/hub-links.css';
+import { MODEL_ANSWER_PAGES, modelAnswersPath } from '@/data/modelAnswerPages';
 
 export const metadata = {
   title: 'Edexcel IAL Economics & Business Model Answers | Revvy Learn',
@@ -66,6 +68,36 @@ export default function ModelAnswersRoute() {
 
       <div className="elp-section">
         <ModelAnswersPage answers={MODEL_ANSWERS} sectionsMeta={MODEL_ANSWERS_SECTIONS} />
+      </div>
+
+      <div className="elp-section" id="by-topic">
+        <div className="elp-units-header">
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />Every topic</div>
+          <h2 className="elp-s-title">Model answers by topic</h2>
+        </div>
+        <div className="ma-index">
+          {['economics', 'business'].map((subject) => {
+            const pages = MODEL_ANSWER_PAGES.filter((p) => p.subject === subject);
+            const units = [...new Set(pages.map((p) => p.unit))].sort();
+            return (
+              <div key={subject}>
+                <h3>{subject === 'economics' ? 'Economics' : 'Business'}</h3>
+                {units.map((u) => (
+                  <div key={u}>
+                    <h4>Unit {u} &middot; {pages.find((p) => p.unit === u).unitCode}</h4>
+                    <ul>
+                      {pages.filter((p) => p.unit === u).map((p) => (
+                        <li key={p.slug}>
+                          <Link href={modelAnswersPath(p)}><span className="ma-num">{p.sectionNumber}</span>{p.topic}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <div className="elp-section-sm elp-fade-up">

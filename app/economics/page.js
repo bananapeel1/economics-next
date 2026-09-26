@@ -4,9 +4,10 @@ import { BoltIcon, BookAlt, CardsIcon, Clipboard, Document, DrawerAlt, Glossary,
 import SiteHeader from '@/components/SiteHeader';
 import EconomicsScrollBar from './EconomicsScrollBar';
 import '@/styles/landing.css';
+import '@/styles/hub-links.css';
 
 export const metadata = {
-  title: 'Edexcel IAL Economics Notes — Free Revision for Units 1–4 (2026)',
+  title: 'IAL Economics Notes (Edexcel WEC11–WEC14) — Free Revision, Units 1–4 | Revvy Learn',
   description: 'Free Edexcel IAL Economics revision notes for all units: Markets in Action (WEC11), Macroeconomic Performance (WEC12), Business Behaviour (WEC13) and Global Economy (WEC14). Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.',
   alternates: { canonical: 'https://revvylearn.com/economics' },
   openGraph: {
@@ -256,7 +257,7 @@ export default function EconomicsPage() {
             <div className="elp-unit-block elp-fade-up">
               <div className="elp-unit-label-row">
                 <div className="elp-unit-num">{unit.num}</div>
-                <div className="elp-unit-heading">{unit.heading}</div>
+                <Link href={`/economics/unit-${unit.num}`} className="elp-unit-heading elp-unit-heading-link">{unit.heading}</Link>
                 <div className="elp-unit-code">{unit.code}</div>
               </div>
               <p className="elp-unit-desc">{unit.desc}</p>
