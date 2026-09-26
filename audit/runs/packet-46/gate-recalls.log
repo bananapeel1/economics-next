@@ -1,0 +1,18 @@
+
+> economics-next@0.1.0 recalls
+> node audit/scripts/recall-census.mjs --check
+
+(node:54924) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+=== LIVE (data) — 32 sections ===
+recalls answerable by scrolling up: 308 of 812 (38%) AT fillin 0.70 · classify 0.75 · reorder 0.75 · match 0.75
+  3 section(s) at 100%, 8 clean
+
+=== STAGED (draft) — 34 sections ===
+recalls answerable by scrolling up: 308 of 867 (36%) AT fillin 0.70 · classify 0.75 · reorder 0.75 · match 0.75
+  3 section(s) at 100%, 10 clean
+
+no section is worse than the baseline.

@@ -1,0 +1,9 @@
+section_content          draft NULL (serves data); effective draft == new dump · data == pre-fix dump
+section_notes            draft NULL (serves data); effective draft == new dump · data == pre-fix dump
+section_quiz             draft present; effective draft == new dump · data == pre-fix dump · draft vs data item by item: 44 vs 44 items, differ at [8, 14]; draft[14].id growth-development:quiz:bb8f266a, correctIndex 3 -> "33"
+section_practice         draft NULL (serves data); effective draft == new dump · data == pre-fix dump
+section_flashcards       draft NULL (serves data); effective draft == new dump · data == pre-fix dump
+section_diagrams         draft NULL (serves data); effective draft == new dump · data == pre-fix dump
+section_extras           draft NULL (serves data); effective draft == new dump · data == pre-fix dump
+section_common_mistakes  draft NULL (serves data); effective draft == new dump · data == pre-fix dump
+all 8 tables as expected
