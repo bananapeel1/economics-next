@@ -7507,6 +7507,11 @@ a.auth-dropdown-item:visited {
 .lm-eyebrow-part { text-transform: none; letter-spacing: 0; font-size: 12px; font-weight: 500; color: var(--text-dim); }
 .lm-eyebrow-part::before { content: '·'; margin-right: 8px; color: var(--text-dim); }
 .lm-checkin-intro { font-size: 14px; color: var(--text-tertiary); margin: -8px 0 18px; }
+.lm-checkin-held { margin: 14px 0 4px; padding: 12px 14px; border: 1px dashed var(--border-primary); border-radius: 10px; color: var(--text-tertiary); font-size: 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+.lm-checkin-held p { margin: 0; flex: 1 1 220px; }
+.lm-checkin-skip { background: none; border: none; padding: 10px 4px; min-height: 44px; font: inherit; font-size: 14px; font-weight: 600; color: var(--text-secondary); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.lm-checkin-skip:hover { color: var(--text-primary); }
+.lm-checkin-skip:focus-visible { outline: 2px solid var(--border-primary); outline-offset: 2px; border-radius: 4px; }
 
 /* Chapter dots: one per chapter, clickable once reached (F046) */
 .lm-chapter-dots { display: flex; gap: 6px; margin: -10px 0 18px; }
