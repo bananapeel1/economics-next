@@ -6,6 +6,8 @@ import SiteHeader from '@/components/SiteHeader';
 import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
 
+export const revalidate = 3600;
+
 export const metadata = {
   title: 'Edexcel IAL Past Papers & Mark Schemes 2024–2020 — Free PDF Download',
   description: 'Download free Edexcel IAL Economics and Business past papers with mark schemes. All units covered: WEC11, WEC12, WEC13, WEC14, WBS11, WBS12, WBS13, WBS14. Instant access — no sign-up required.',

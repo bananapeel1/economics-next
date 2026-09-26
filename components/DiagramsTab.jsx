@@ -1,4 +1,5 @@
 "use client";
+import DiagramChecklist from './DiagramChecklist';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import processSvg from './learn-mode/processSvg';
 import DiagramEnlarge from './learn-mode/DiagramEnlarge';
@@ -74,19 +75,7 @@ function DiagramCard({ diagram, sectionId }) {
         Enlarge diagram
       </button>
 
-      {diagram.checklist && !isTable && (
-        <div className="diagram-checklist">
-          {/* Not "what examiners look for": that is the uncited claim about marking the content gate
-              blocks in prose (claim.uncited), printed by the app itself over every diagram in the
-              product. The checklist says what a correct diagram contains, which is checkable. */}
-            <div className="diagram-checklist-title">What a correct diagram shows</div>
-          <ul>
-            {diagram.checklist.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {!isTable && <DiagramChecklist items={diagram.checklist} />}
 
       {sectionId && (
         <div className="rp-slot">
