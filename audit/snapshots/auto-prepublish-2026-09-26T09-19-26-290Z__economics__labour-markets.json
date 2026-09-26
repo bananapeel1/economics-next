@@ -1,0 +1,2497 @@
+{
+ "section_id": "labour-markets",
+ "subject": "economics",
+ "label": "auto-prepublish-2026-09-26T09-19-26-290Z",
+ "tables": {
+  "section_content": [
+   {
+    "id": "labour-markets:block:4421fc89",
+    "title": "The Demand for Labour",
+    "sections": [
+     {
+      "id": "labour-markets:sub:derived-demand",
+      "body": [
+       {
+        "text": "The **demand for labour** is the number of workers firms want to employ at each wage rate. It is a **derived demand**: firms hire because customers want the goods and services those workers produce, not because they value workers in themselves.",
+        "type": "paragraph"
+       },
+       {
+        "text": "So anything that changes the demand for the final product changes the demand for the people who make it. In Tellmar, export orders for shirts rise. Workshops need more hours of sewing to fill them, so at every wage they want more garment machinists.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "Customers want more shirts",
+          "subtitle": "Export orders rise"
+         },
+         {
+          "title": "Workshops need more output",
+          "subtitle": "More machine hours to fill the orders"
+         },
+         {
+          "title": "Firms want more machinists",
+          "subtitle": "At every wage rate"
+         },
+         {
+          "title": "Demand for labour shifts right",
+          "subtitle": "A derived change"
+         }
+        ],
+        "resultType": "good"
+       },
+       {
+        "text": "The link runs both ways. When demand for a product falls, so does demand for the workers who make it — which is why an industry sheds jobs when its product goes out of fashion, however skilled its workers are.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Labour as a Derived Demand",
+      "recall": {
+       "id": "labour-markets:sub:derived-demand:recall",
+       "why": [
+        "The chain starts in the product market, with the customers.",
+        "More orders mean more output has to be made.",
+        "More output needs more workers at any given wage.",
+        "Summed over every workshop, that is a shift of the demand for labour, not a movement along it."
+       ],
+       "type": "reorder",
+       "prompt": "Put this causal chain in order, from the customers to the labour market:",
+       "criterion": "cause to effect: each step is caused by the one before it",
+       "correctOrder": [
+        "Shoppers abroad order far more cotton shirts this season",
+        "Workshops must run their machines longer to fill the orders",
+        "At an unchanged rate of pay, owners now want extra machinists",
+        "Across the industry, the labour demand curve moves outward"
+       ]
+      },
+      "keyIdea": "Firms do not want workers for their own sake. They want what workers make, so the demand for labour is derived from the demand for the final product.",
+      "examMatters": "Appendix 6 gives Define 2 marks. For derived demand the two parts are that labour is wanted for the output it produces, and that it therefore depends on the demand for the final product.",
+      "realExample": {
+       "text": "As online shopping grew in cities such as Kuala Lumpur and Lagos, so did the demand for delivery riders and warehouse pickers. Nobody wanted riders for their own sake; they wanted the parcels delivered.",
+       "emoji": "📦"
+      },
+      "misconception": "Students draw a rise in demand for the product as a movement along the demand curve for labour, because more workers are hired. The wage has not changed, yet firms want more workers at every wage, so the whole curve shifts right. Only a change in the wage moves firms along the curve."
+     },
+     {
+      "id": "labour-markets:sub:hiring-rule",
+      "body": [
+       {
+        "text": "Take Arun Shirts, a Tellmar workshop whose shirts sell for $3 each. The first machinist adds 9 shirts an hour, the second 8, the third 7. With the same machines and floor space, each extra worker adds less than the one before: **diminishing marginal productivity**.",
+        "type": "paragraph"
+       },
+       {
+        "text": "What the firm cares about is what that extra output adds to its revenue. Arun Shirts is one of many workshops and sells every extra shirt at the market price of $3, so that is the extra shirts times the price. Textbooks call it the **marginal revenue product (MRP)**: extra output × marginal revenue, which equals the price only for a firm selling at a given price. A firm that must cut its price to sell more gains less than the price on each extra shirt. The sixth machinist adds 4 shirts, worth $12 an hour; the seventh adds 3, worth $9.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The firm keeps hiring while the next worker's output is worth at least the wage. At $12 an hour it hires 6: one more would cost more than she brings in. At $15 an hour it hires only 5. So a change in the wage is a **movement along** the firm's demand curve for labour.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "How Many Workers a Firm Hires",
+      "recall": {
+       "id": "labour-markets:sub:hiring-rule:recall",
+       "type": "fillin",
+       "hints": [
+        "what each unit sells for",
+        "what each worker is paid for an hour",
+        "not a shift of the curve"
+       ],
+       "prompt": "Complete the rule a firm uses to decide how many to employ:",
+       "answers": [
+        "price",
+        "wage",
+        "along"
+       ],
+       "template": [
+        "A workshop that sells every shirt without cutting what it charges values an extra machinist's shirts at the number made multiplied by the ___ each fetches.",
+        "Taking on staff stops once the next recruit would bring in less than her hourly ___.",
+        "A higher hourly rate of pay moves the firm ___ its demand curve for labour."
+       ],
+       "distractors": [
+        "cost",
+        "across",
+        "profit"
+       ]
+      },
+      "keyIdea": "A firm hires another worker only if that worker's extra output is worth at least the wage. Each extra worker adds less, so the demand curve for labour slopes down.",
+      "examMatters": "For an Explain on why the demand curve for labour slopes down, Appendix 6 wants two linked stages: each extra worker adds less output, and the firm hires only while that output is worth the wage.",
+      "realExample": {
+       "text": "A tea estate in Kenya takes on extra pickers at harvest only while the leaf each one adds sells for more than the day's pay. Late in the season, with the bushes thin, the extra picker adds too little to be worth hiring.",
+       "emoji": "🍃"
+      },
+      "misconception": "Students explain the downward slope by saying later recruits are lazier or less skilled. The workers are identical. Each adds less because the equipment does not grow with the workforce, so every new hand has less to work with."
+     },
+     {
+      "id": "labour-markets:sub:productivity-and-price",
+      "body": [
+       {
+        "text": "For a firm that sells at a given price, as Arun Shirts does, what a worker adds is worth two things multiplied together: how much the worker produces, and what each unit sells for. Change either, and the firm's demand for labour **shifts**.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Productivity of labour.** A training course lets every machinist at Arun Shirts sew one more shirt an hour. At $12 an hour the seventh machinist now adds 4 shirts worth $12, so the firm hires 7 instead of 6. Better machines and better organisation work the same way.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Price of the product.** If the price of a shirt rises from $3 to $4, productivity unchanged, the seventh machinist's 3 shirts are worth $12: again the firm hires 7.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "The shirt price rises",
+          "subtitle": "$3 to $4"
+         },
+         {
+          "title": "Each worker's output is worth more",
+          "subtitle": "At every level of employment"
+         },
+         {
+          "title": "The firm hires more at the same wage",
+          "subtitle": "6 to 7 machinists"
+         }
+        ],
+        "resultType": "good"
+       },
+       {
+        "text": "A fall in either shifts demand left. Keep the two apart from a wage change: the wage moves the firm along its demand curve; productivity and the product price move the curve.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Productivity and the Price of the Product",
+      "recall": {
+       "id": "labour-markets:sub:productivity-and-price:recall",
+       "type": "classify",
+       "groups": [
+        {
+         "why": "Each raises what a worker's output is worth — through the price or through how much is made — so more workers are wanted at every wage.",
+         "name": "Shifts demand right",
+         "items": [
+          "Customers pay more for each shirt",
+          "New sewing machines speed up every worker",
+          "A course teaches every machinist a faster stitch"
+         ]
+        },
+        {
+         "why": "Each lowers what a worker's output is worth, so fewer workers are worth hiring at every wage.",
+         "name": "Shifts demand left",
+         "items": [
+          "Shirt prices are cut to match a cheaper rival",
+          "Worn-out machines slow every worker down"
+         ]
+        },
+        {
+         "why": "The wage is on the axis, so a change in it moves the firm along its demand curve rather than moving the curve.",
+         "name": "A movement along the curve",
+         "items": [
+          "The hourly wage for machinists goes up"
+         ]
+        }
+       ],
+       "prompt": "Sort each change by what it does to a garment workshop's demand for machinists:"
+      },
+      "keyIdea": "A rise in the productivity of labour or in the price of the product makes each worker's output worth more, so the demand for labour shifts right at every wage.",
+      "examMatters": "Appendix 6 wants a chain for an Explain: name the factor, show that it raises what each worker's output is worth, then conclude that the demand for labour shifts right at every wage.",
+      "realExample": {
+       "text": "When the world price of palm oil rises, plantations in Malaysia and Indonesia want more harvesters: every bunch a worker cuts is worth more, though the cutting is no quicker.",
+       "emoji": "🌴"
+      },
+      "misconception": "Students treat any rise in employment as proof that productivity rose. A higher product price raises employment with productivity unchanged: each worker makes the same amount, but it sells for more."
+     },
+     {
+      "id": "labour-markets:sub:labour-or-capital",
+      "body": [
+       {
+        "text": "Many tasks can be done by people or by machines. What decides it is not the wage alone but the **wage rate relative to the price of capital**: what a worker costs compared with a machine that does the same work.",
+        "type": "paragraph"
+       },
+       {
+        "text": "An automatic cutter at Arun Shirts costs $30 an hour to run and does the work of 3 machinists. At a wage of $12 an hour, the 3 cost $36 an hour between them, so the cutter is cheaper and the firm buys it. At $9 an hour they would cost $27 an hour and keep their jobs. The dividing line is $10 an hour: a third of the machine's cost.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "Wages rise relative to machines",
+          "subtitle": "Or machines get cheaper"
+         },
+         {
+          "title": "Capital does the work for less",
+          "subtitle": "Firms change how they produce"
+         },
+         {
+          "title": "Demand for labour falls",
+          "subtitle": "Fewer workers wanted at each wage"
+         }
+        ],
+        "resultType": "bad"
+       },
+       {
+        "text": "So a fall in the price of capital can shift the demand for labour left with wages unchanged. It is not always so: a machine that needs an operator, or that makes each worker more productive, can raise the demand for the people who run it.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Wage Rate Relative to the Price of Capital",
+      "recall": {
+       "id": "labour-markets:sub:labour-or-capital:recall",
+       "type": "fillin",
+       "hints": [
+        "three times the hourly wage",
+        "machines rather than people",
+        "fewer workers wanted at every wage"
+       ],
+       "prompt": "Work through the choice a workshop faces between people and a machine:",
+       "answers": [
+        "33",
+        "capital",
+        "left"
+       ],
+       "template": [
+        "At $11 an hour, three machinists together cost $___ an hour.",
+        "A cutter doing their work for $30 an hour makes ___ the cheaper method.",
+        "So the workshop's demand curve for machinists shifts to the ___."
+       ],
+       "distractors": [
+        "labour",
+        "right",
+        "30"
+       ]
+      },
+      "keyIdea": "When workers become dear relative to machines, firms replace some workers with capital and the demand for labour falls. When machines become dear, the reverse.",
+      "examMatters": "Appendix 6 wants workings shown on a Calculate. Here that means the cost of each method for the same amount of work, side by side, and then which is cheaper.",
+      "realExample": {
+       "text": "Supermarkets from Singapore to Nairobi have installed self-checkout tills as the machines became cheaper. Each till does part of a cashier's work, so fewer cashiers are needed at each wage.",
+       "emoji": "🛒"
+      },
+      "misconception": "Students say firms bring in machines \"to be modern\". It is a comparison of costs: if a machine costs more per unit of work than the people it would replace, a profit-seeking firm keeps the people."
+     },
+     {
+      "id": "labour-markets:sub:elasticity-of-demand",
+      "body": [
+       {
+        "text": "**Elasticity of demand for labour** = % change in the quantity of labour demanded ÷ % change in the wage rate. For Tellmar's garment machinists, a rise in the wage from $12 an hour to $15 an hour is 25%; the number firms want falls from 36,000 to 30,000, by 16.7%. The elasticity is −0.67: demand is **inelastic**, so employment falls proportionately less than the wage rises.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Four factors influence the elasticity of demand for labour:",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**How easily capital can replace labour.** Where a machine can do the job, a higher wage makes firms switch, so demand is elastic.",
+         "**Labour's share of total costs.** Where wages are most of what a firm spends, a pay rise lifts its costs sharply; where they are a small share, it barely matters.",
+         "**The price elasticity of demand for the product.** If higher costs push up the price and customers buy much less, output and jobs fall a lot.",
+         "**Time.** Firms are tied to their equipment at first; given time they redesign how they work, so demand becomes more elastic."
+        ]
+       },
+       {
+        "text": "So the same pay rise costs very different numbers of jobs in different occupations.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Elasticity of Demand for Labour",
+      "recall": {
+       "id": "labour-markets:sub:elasticity-of-demand:recall",
+       "type": "match",
+       "pairs": [
+        {
+         "why": "An easy switch to capital makes demand for them elastic.",
+         "left": "Toll-booth collectors",
+         "right": "A machine can take the payment instead"
+        },
+        {
+         "why": "An elastic demand for the product passes through to an elastic demand for the workers.",
+         "left": "Hand-weavers of costly carpets",
+         "right": "Buyers turn to cheaper rugs when prices climb"
+        },
+        {
+         "why": "A small share of costs makes demand for them inelastic.",
+         "left": "Cleaners at a large power station",
+         "right": "Their pay is a tiny fraction of the plant's costs"
+        },
+        {
+         "why": "In the short run firms cannot change how they produce, so demand is inelastic.",
+         "left": "Staff at a factory whose equipment was just installed",
+         "right": "The production method is fixed for years"
+        }
+       ],
+       "prompt": "Match each group of workers to the reason its demand for labour is elastic or inelastic:"
+      },
+      "keyIdea": "The elasticity of demand for labour measures how strongly employment responds to a change in the wage. It is higher where labour is easy to replace or a large share of costs.",
+      "examMatters": "Appendix 6 gives Explain 4 marks. Each factor needs its reason: not \"substitutes\", but \"a machine can do the work, so firms switch when wages rise\".",
+      "realExample": {
+       "text": "A pay rise for airline pilots barely changes how many an airline employs: every flight needs its crew, and their pay is a modest share of costs next to fuel and aircraft. The same rise for car-park attendants hastens the switch to automatic barriers.",
+       "emoji": "✈️"
+      },
+      "misconception": "Students confuse the elasticity of demand for labour with the price elasticity of demand for the product. They are linked but different: the first is how employment responds to the wage; the second is one of the things that decides it."
+     }
+    ],
+    "takeaway": [
+     "Labour is a derived demand: it depends on demand for the final product.",
+     "Firms hire while the next worker's output is worth at least the wage.",
+     "Productivity, the product price and the price of capital shift demand."
+    ],
+    "diagramId": "labour-markets:diagram:0cb19ee8",
+    "quizIndices": [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "practiceIndices": [
+     0,
+     1
+    ]
+   },
+   {
+    "id": "labour-markets:block:766f73f5",
+    "title": "The Supply of Labour",
+    "sections": [
+     {
+      "id": "labour-markets:sub:occupational-supply",
+      "body": [
+       {
+        "text": "The **supply of labour** to an occupation is how many people are willing and able to work in it at each wage. In Tellmar, 36,000 people offer to work as garment machinists at $12 an hour; at $15 an hour, 48,000 would.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The curve slopes up because a higher wage pulls people in from other jobs, from study and from home. Some were earning nearly as much elsewhere, and a better rate tips the balance. Pay is not all they weigh — hours, safety and the work itself matter too — which is why two jobs on the same wage can attract very different numbers.",
+        "type": "paragraph"
+       },
+       {
+        "text": "As with demand, a change in the wage moves along the curve and anything else shifts it. The specification names six factors that influence the supply of labour to a particular occupation: the **size of population**, **net migration**, **income tax rates**, the **level of welfare benefits**, **government regulations** and **trade unions**. The first five follow in this chapter; trade unions have chapter 4.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "The Supply of Labour to an Occupation",
+      "recall": {
+       "id": "labour-markets:sub:occupational-supply:recall",
+       "type": "classify",
+       "groups": [
+        {
+         "why": "The cause is the wage, which is on the axis, so the quantity supplied changes along the same curve.",
+         "name": "A movement along the curve",
+         "items": [
+          "Hospitals raise the hourly rate and more nurses apply",
+          "Pay for nursing falls and some leave for other jobs"
+         ]
+        },
+        {
+         "why": "Each changes how many will offer to nurse at an unchanged wage, so the whole curve moves.",
+         "name": "A shift of the curve",
+         "items": [
+          "Thousands of qualified nurses arrive from abroad",
+          "A degree becomes compulsory before anyone may nurse",
+          "The tax taken from every pay packet is cut"
+         ]
+        }
+       ],
+       "prompt": "Sort each event into a movement along the supply of labour to nursing or a shift of it:"
+      },
+      "keyIdea": "The supply of labour to an occupation is the number of workers willing and able to do it at each wage rate. A higher wage draws more people in, so the curve slopes up.",
+      "examMatters": "Put the wage rate on the vertical axis and the quantity of labour on the horizontal. A shift is a new labelled curve, S₁; a movement is an arrow along the old one.",
+      "realExample": {
+       "text": "When a hospital in Nairobi raises its night-shift rate, nurses from day shifts and from private clinics apply for the nights: a movement along the supply of labour to night nursing.",
+       "emoji": "🏥"
+      },
+      "misconception": "Students shift the supply curve right when the wage rises. The wage is on the vertical axis, so a higher wage is a movement along the curve to a larger quantity supplied. A shift needs one of the six factors."
+     },
+     {
+      "id": "labour-markets:sub:population-and-migration",
+      "body": [
+       {
+        "text": "**Size of population.** More people of working age means more potential workers for every occupation. A young, growing population adds to supply year after year; an ageing one, with more people retiring than leaving school, takes supply away.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Net migration** is immigration minus emigration. When more workers arrive than leave, supply rises; when trained workers leave for better pay abroad, it falls. Migrants often cluster in particular occupations, so the effect on one job can be far larger than on the labour force as a whole.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "Workers arrive from abroad",
+          "subtitle": "Net migration is positive"
+         },
+         {
+          "title": "More people seek machinist jobs",
+          "subtitle": "At every wage rate"
+         },
+         {
+          "title": "Supply of labour shifts right",
+          "subtitle": "S to S₁"
+         }
+        ],
+        "resultType": "good"
+       },
+       {
+        "text": "In Tellmar, a net inflow of 12,000 garment machinists shifts supply right by 12,000 at every wage. What that does to the wage is a question for chapter 3.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Size of Population and Net Migration",
+      "recall": {
+       "id": "labour-markets:sub:population-and-migration:recall",
+       "why": [
+        "The chain starts with the movement of people: net migration is positive.",
+        "The new arrivals have the skills, so more offer to do this job at every wage.",
+        "More willing at every wage is a shift of supply, not a movement along it."
+       ],
+       "type": "reorder",
+       "prompt": "Put this causal chain in order, from the border to the labour market:",
+       "criterion": "cause to effect: each step is caused by the one before it",
+       "correctOrder": [
+        "Several thousand trained sewing workers move to Tellmar from abroad",
+        "Machinist vacancies attract more applicants at each rate of pay",
+        "The industry's supply curve for this labour moves outward"
+       ]
+      },
+      "keyIdea": "A larger population and a net inflow of working-age migrants add people able to do a job, so the supply of labour to an occupation shifts right.",
+      "examMatters": "Appendix 6 asks an Analyse for a chain. For net migration the stages are: which way it runs, which occupations it adds to, the shift of supply, and only then the effect on the wage.",
+      "realExample": {
+       "text": "Construction in the UAE and Qatar relies heavily on workers from South Asia, so net migration largely decides the supply of labour to building sites there. Nigeria and Kenya, by contrast, have lost many trained doctors and nurses to jobs abroad.",
+       "emoji": "🏗️"
+      },
+      "misconception": "Students write that immigration always lowers wages. It shifts supply right, which lowers the wage only if demand stays put; migrants also spend what they earn, which raises the demand for labour in other occupations."
+     },
+     {
+      "id": "labour-markets:sub:tax-and-benefits",
+      "body": [
+       {
+        "text": "What draws people into work is the pay they keep, not the figure on the contract. **Income tax rates** decide the gap between the two. A higher rate lowers take-home pay at every wage, so fewer people are willing to do the job at each wage, or some offer fewer hours: supply shifts left. A cut shifts it right.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **level of welfare benefits** works on the same gap from the other side. The gain from taking a job is the pay kept minus the benefits given up. Where support for those out of work is close to what low-paid jobs leave in the pocket, the reward for working is small, and supply to those occupations falls.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "Benefits rise",
+          "subtitle": "For those out of work"
+         },
+         {
+          "title": "The gain from working shrinks",
+          "subtitle": "Pay kept minus benefits lost"
+         },
+         {
+          "title": "Fewer willing at each wage",
+          "subtitle": "Supply shifts left"
+         }
+        ],
+        "resultType": "bad"
+       },
+       {
+        "text": "Neither effect is certain in size. Some people work longer after a tax rise to keep their income up, and many would work whatever the benefit. How large the shift is — 6,000 garment machinists or none — is exactly what an evaluation should ask.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Income Tax Rates and Welfare Benefits",
+      "recall": {
+       "id": "labour-markets:sub:tax-and-benefits:recall",
+       "type": "classify",
+       "groups": [
+        {
+         "why": "Each widens the gap between being in work and out of it, so more people will take the job at a given wage.",
+         "name": "Likely to raise supply",
+         "items": [
+          "The tax rate on wages is cut",
+          "Support for the jobless is made less generous",
+          "Earnings under a threshold become tax-free"
+         ]
+        },
+        {
+         "why": "Each narrows that gap, so fewer people find the job worth taking at a given wage.",
+         "name": "Likely to reduce supply",
+         "items": [
+          "The tax rate on wages goes up",
+          "Jobless support is raised almost to the lowest wages"
+         ]
+        }
+       ],
+       "prompt": "Sort each change by its likely effect on the supply of labour to low-paid occupations:"
+      },
+      "keyIdea": "Higher income tax cuts take-home pay, and higher welfare benefits cut the gain from taking a job. Either can reduce the supply of labour at each wage.",
+      "examMatters": "Appendix 6 wants a brief assessment in an Examine. For taxes and benefits it is usually size: how far take-home pay moves, and how many people are close to deciding whether to take a job at all.",
+      "realExample": {
+       "text": "The UAE levies no personal income tax, so the salary offered to a professional from abroad is also the salary kept — part of what draws accountants and engineers to jobs there.",
+       "emoji": "🏙️"
+      },
+      "misconception": "Students say a benefit cut \"forces people into work\". It changes the reward for working, which may raise supply to low-paid jobs; whether there are jobs to take depends on demand, which the benefit does not touch."
+     },
+     {
+      "id": "labour-markets:sub:government-regulations",
+      "body": [
+       {
+        "text": "**Government regulations** decide who is allowed to work in an occupation and on what terms. Four kinds act on supply:",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Licensing and qualifications.** Doctors, pilots and electricians need a licence, and a new requirement removes everyone without it.",
+         "**Work permits.** Rules on foreign workers set how many can come to do a job — net migration by another route.",
+         "**Limits on hours.** A cap on the working week reduces the hours each worker can offer.",
+         "**Retirement and school-leaving ages.** A later retirement age keeps experienced workers in; a later school-leaving age delays entry."
+        ]
+       },
+       {
+        "text": "In Tellmar, a new licence that 12,000 garment machinists cannot yet meet shifts supply left by 12,000 at every wage. The wage rises to $14 an hour and employment falls to 32,000.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Regulations are not simply costs. A licence can protect the public and raise the standard of the work; its effect on supply is one thing an evaluation weighs, not the whole of it.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Government Regulations",
+      "recall": {
+       "id": "labour-markets:sub:government-regulations:recall",
+       "type": "match",
+       "pairs": [
+        {
+         "why": "A licence narrows who may do the job, so supply shifts left.",
+         "left": "A licence exam for electricians",
+         "right": "Shuts out anyone who cannot pass it"
+        },
+        {
+         "why": "It is net migration controlled by rule, so supply to building falls.",
+         "left": "Fewer foreign work permits for builders",
+         "right": "Cuts how many can arrive to do the work"
+        },
+        {
+         "why": "People who would have left stay in the labour force, so supply rises.",
+         "left": "A later age of retirement",
+         "right": "Keeps older hands working for longer"
+        },
+        {
+         "why": "The number of workers is unchanged, but the labour each can supply is smaller.",
+         "left": "A 48-hour ceiling on weekly work",
+         "right": "Shrinks how much time each employee can sell"
+        }
+       ],
+       "prompt": "Match each regulation to the way it changes the supply of labour:"
+      },
+      "keyIdea": "Rules on who may do a job, and for how long, change how many can supply it: a new licence or a tighter work-permit rule shifts supply left; easing them shifts it right.",
+      "examMatters": "Appendix 6 wants an Analyse to use a diagram where it helps. Name the regulation, say which side of the market it acts on, then shift that curve and read off the new wage.",
+      "realExample": {
+       "text": "Singapore's work-pass system sets the pay and qualifications a foreign worker needs for each kind of pass, so it shapes the supply of labour to jobs from construction to finance.",
+       "emoji": "🛂"
+      },
+      "misconception": "Students treat every labour regulation as a cost that cuts the demand for labour. Licensing, work permits and retirement ages act on who can supply labour, so they shift the supply curve."
+     },
+     {
+      "id": "labour-markets:sub:elasticity-of-supply",
+      "body": [
+       {
+        "text": "**Elasticity of supply of labour** = % change in the quantity of labour supplied ÷ % change in the wage rate. Where it is high, a small pay rise brings in many workers; where it is low, pay can rise a long way and few extra workers appear.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Four factors influence the elasticity of supply of labour:",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Length of training and qualifications.** Machinists learn in weeks; surgeons train for years, so a pay rise this year cannot produce new surgeons this year.",
+         "**How specific the skills are.** The rarer the skill, the fewer people in other jobs who could switch in.",
+         "**Mobility of labour.** If workers cannot move to where the jobs are, or retrain into them, supply cannot respond.",
+         "**Time.** Given long enough, people train, move and switch, so supply becomes more elastic."
+        ]
+       },
+       {
+        "text": "Give two occupations, both at $12 an hour and 36,000 workers, the same rise in demand: 12,000 more wanted at every wage. With the garment machinists' elastic supply the wage rises to $14 an hour and employment to 44,000. With an inelastic supply the wage rises to $16 an hour and employment only to 40,000.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Elasticity of Supply of Labour",
+      "recall": {
+       "id": "labour-markets:sub:elasticity-of-supply:recall",
+       "type": "classify",
+       "groups": [
+        {
+         "why": "Each can be learned in days, so many people from other jobs can switch in when pay rises.",
+         "name": "Likely elastic",
+         "items": [
+          "Shelf-stackers in a supermarket",
+          "Fruit pickers at harvest time",
+          "Call-centre staff"
+         ]
+        },
+        {
+         "why": "Each needs years of training and a licence, so few new workers can appear however much pay rises.",
+         "name": "Likely inelastic",
+         "items": [
+          "Heart surgeons",
+          "Commercial airline pilots",
+          "Air-traffic controllers"
+         ]
+        }
+       ],
+       "prompt": "Sort these occupations by whether their supply of labour is likely to be elastic or inelastic:"
+      },
+      "keyIdea": "The elasticity of supply of labour measures how strongly the number of workers responds to a change in the wage. It is low where a job needs long training or rare skills.",
+      "examMatters": "Appendix 6 gives Explain 4 marks, so each factor needs its reason: \"supply is inelastic because training takes years, so pay can rise without new entrants for a long time\" is both stages.",
+      "realExample": {
+       "text": "When hospitals need more specialist doctors, pay rises well before numbers do: a specialist takes many years to train, so for a long time the extra pay mostly goes to the specialists already working.",
+       "emoji": "🩺"
+      },
+      "misconception": "Students write that inelastic supply means workers do not care about pay. It means they cannot respond quickly: the qualifications, skills or location the job needs take time to acquire."
+     }
+    ],
+    "takeaway": [
+     "A higher wage is a movement along supply; six named factors shift it.",
+     "Tax and benefits act through the pay a worker keeps by working.",
+     "Supply is inelastic where training is long and skills are rare."
+    ],
+    "diagramId": "labour-markets:diagram:b00dccd9",
+    "quizIndices": [
+     8,
+     9,
+     10,
+     11,
+     12,
+     13
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "labour-markets:block:c0b44a14",
+    "title": "Wage Determination in a Competitive Market",
+    "sections": [
+     {
+      "id": "labour-markets:sub:market-equilibrium",
+      "body": [
+       {
+        "text": "A labour market is **competitive** when many firms hire and many workers offer themselves, so no one on either side can set the wage. The wage settles where demand meets supply: **labour market equilibrium**.",
+        "type": "paragraph"
+       },
+       {
+        "text": "For Tellmar's garment machinists, demand is L = 60 − 2W and supply is L = 4W − 12, in thousands, with W in dollars an hour. They meet at **$12 an hour**, where 36,000 are wanted and 36,000 are willing.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "Wage below equilibrium",
+          "subtitle": "Firms want more workers than will come"
+         },
+         {
+          "title": "Firms compete for workers",
+          "subtitle": "Each offers more to fill its jobs"
+         },
+         {
+          "title": "The wage rises",
+          "subtitle": "Until wanted equals willing"
+         }
+        ],
+        "resultType": "neutral"
+       },
+       {
+        "text": "Above equilibrium the reverse happens. At $15 an hour firms want 30,000 and 48,000 are willing, so there are more applicants than posts and the wage is bid down. Only at $12 an hour does nothing push it.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Labour Market Equilibrium",
+      "recall": {
+       "id": "labour-markets:sub:market-equilibrium:recall",
+       "why": [
+        "Below equilibrium the quantity demanded exceeds the quantity supplied: a shortage.",
+        "With posts unfilled, firms compete for the workers there are by raising what they offer.",
+        "The wage keeps rising until the numbers wanted and willing match."
+       ],
+       "type": "reorder",
+       "prompt": "Put this adjustment process in order, from a wage below equilibrium to the new wage:",
+       "criterion": "what happens first, then next: each step causes the one after it",
+       "correctOrder": [
+        "At $10 an hour, firms want more machinists than come forward",
+        "Workshops try to poach each other's staff with better offers",
+        "Hourly pay climbs until the gap has closed"
+       ]
+      },
+      "keyIdea": "In a competitive labour market the wage settles where the number of workers firms want equals the number willing to work, so there is neither shortage nor surplus.",
+      "examMatters": "Mark the equilibrium wage and quantity on both axes with dashed lines to the intersection. Appendix 6 asks for accurately labelled diagrams, and the intersection is what the answer is about.",
+      "realExample": {
+       "text": "In a port city with hundreds of small garment workshops, no single employer can pay below the going rate for machinists: its workers would walk to the workshop next door.",
+       "emoji": "🧵"
+      },
+      "misconception": "Students think the equilibrium wage is what workers \"deserve\". It is the wage at which the numbers wanted and willing match. It says nothing about fairness, and it changes whenever demand or supply does."
+     },
+     {
+      "id": "labour-markets:sub:firm-as-wage-taker",
+      "body": [
+       {
+        "text": "The market sets the wage; each firm takes it. Arun Shirts employs 6 of the 36,000 garment machinists in Tellmar. Offer less than $12 an hour and nobody comes. Offer more and it is paying for nothing, because at $12 an hour it can already hire as many as it wants.",
+        "type": "paragraph"
+       },
+       {
+        "text": "So the supply of labour **to the firm** is a horizontal line at the market wage, although the **market** supply curve slopes up. The two are drawn side by side: the market diagram sets the wage, and the firm's diagram carries it across as a flat line.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "Market demand meets market supply",
+          "subtitle": "The wage is set at $12"
+         },
+         {
+          "title": "Each firm takes that wage",
+          "subtitle": "A horizontal supply to the firm"
+         },
+         {
+          "title": "The firm hires to its own demand curve",
+          "subtitle": "6 machinists at $12"
+         }
+        ],
+        "resultType": "neutral"
+       },
+       {
+        "text": "The firm hires where that line meets its demand curve for labour — the value of what each extra worker adds, from chapter 1. At $12 an hour that is 6 machinists.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "One Firm in a Competitive Labour Market",
+      "recall": {
+       "id": "labour-markets:sub:firm-as-wage-taker:recall",
+       "type": "match",
+       "pairs": [
+        {
+         "why": "It slopes up: a higher wage draws more people into the occupation.",
+         "left": "Market supply of machinists",
+         "right": "How many in the whole city would work at each wage"
+        },
+        {
+         "why": "One small employer cannot move the market wage, so the line is flat.",
+         "left": "Supply of machinists to one workshop",
+         "right": "Any number can be hired at the going rate"
+        },
+        {
+         "why": "It is every firm's demand added up, and it slopes down.",
+         "left": "Market demand for machinists",
+         "right": "How many all the workshops together want at each wage"
+        },
+        {
+         "why": "The firm hires while an extra worker is worth at least the wage.",
+         "left": "One workshop's demand for machinists",
+         "right": "What each extra worker's shirts are worth to that workshop"
+        }
+       ],
+       "prompt": "Match each curve to what it shows:"
+      },
+      "keyIdea": "One firm in a competitive labour market is a wage-taker: it can hire as many as it wants at the market wage, and it hires until the next worker is not worth that wage.",
+      "examMatters": "When the question is about one firm, draw one firm: a horizontal supply at the market wage and the firm's own demand for labour. The market diagram beside it shows where the wage came from.",
+      "realExample": {
+       "text": "A café in a city of thousands of cafés pays the going rate for baristas. Advertise a lower rate and nobody applies; pay more and it is giving money away.",
+       "emoji": "☕"
+      },
+      "misconception": "Students draw the firm's labour supply sloping upward, copying the market curve. One small firm hiring one more worker does not move the market wage, so the supply it faces is flat at that wage."
+     },
+     {
+      "id": "labour-markets:sub:demand-shifts",
+      "body": [
+       {
+        "text": "This step and the next take the causes of changes in the equilibrium wage rate and quantity of labour: each is the result of shifts in the demand and supply curves. Demand shifts for the reasons chapter 1 gave — the demand for the final product, productivity, the price of the product and the price of capital.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Export orders for Tellmar's shirts rise, and at every wage workshops want 12,000 more garment machinists. At the old wage of $12 an hour there is now a shortage: 48,000 wanted, 36,000 willing. Firms bid for workers until the wage reaches **$14 an hour**, where 44,000 are employed.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "Demand for shirts rises",
+          "subtitle": "Export orders grow"
+         },
+         {
+          "title": "Demand for machinists shifts right",
+          "subtitle": "D to D₁"
+         },
+         {
+          "title": "Shortage at the old wage",
+          "subtitle": "Firms bid pay up"
+         },
+         {
+          "title": "A new equilibrium",
+          "subtitle": "Higher wage, more jobs"
+         }
+        ],
+        "resultType": "good"
+       },
+       {
+        "text": "A fall in demand works in reverse: a surplus of workers at the old wage, which pushes the wage down, and employment with it. The wage and employment move in the same direction as demand.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "When the Demand for Labour Shifts",
+      "recall": {
+       "id": "labour-markets:sub:demand-shifts:recall",
+       "why": [
+        "The cause is outside the labour market, in the demand for the product.",
+        "Derived demand: more shirts wanted means more machinists wanted at every wage.",
+        "At the old wage the quantity demanded now exceeds the quantity supplied.",
+        "Firms bid the wage up, and the higher wage draws more workers in along the supply curve."
+       ],
+       "type": "reorder",
+       "prompt": "Put this causal chain in order, from the product market to the new equilibrium:",
+       "criterion": "cause to effect: each step is caused by the one before it",
+       "correctOrder": [
+        "Buyers abroad place bigger orders for Tellmar's shirts",
+        "Workshops want more machinists at any given rate of pay",
+        "At $12 an hour, a shortage opens as vacancies outnumber applicants",
+        "Pay settles higher with more people in work"
+       ]
+      },
+      "keyIdea": "A rise in the demand for labour raises both the equilibrium wage and employment; a fall lowers both. What shifts it are the factors of chapter 1.",
+      "examMatters": "An Analyse asks for the chain and the diagram (Appendix 6). Name the cause, shift D to D₁, show the shortage at the old wage, then mark the new wage and quantity on the axes.",
+      "realExample": {
+       "text": "When a new airport opens, airlines, caterers and security firms all want more staff at once, and local pay for those jobs rises until enough people are drawn in.",
+       "emoji": "🛫"
+      },
+      "misconception": "Students show a rise in demand for labour raising the wage and leave employment unchanged. Along an upward-sloping supply curve, a higher wage draws more workers in, so employment rises too."
+     },
+     {
+      "id": "labour-markets:sub:supply-shifts",
+      "body": [
+       {
+        "text": "Supply shifts for the reasons chapter 2 gave: population, net migration, income tax, welfare benefits, regulations and trade unions. This time the wage and employment move against each other.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A net inflow of 12,000 garment machinists shifts supply right. At $12 an hour there are 48,000 willing and 36,000 wanted, a surplus, so the wage falls to **$10 an hour**. Employment rises to 40,000, because firms hire more at the lower wage.",
+        "type": "paragraph"
+       },
+       {
+        "text": "A new licence that 12,000 of them cannot meet shifts supply left: the wage rises to **$14 an hour** and employment falls to 32,000. A tax rise that deters 6,000 at every wage does the same on a smaller scale: $13 an hour and 34,000.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "Supply of labour shifts left",
+          "subtitle": "S to S₁"
+         },
+         {
+          "title": "Too few workers at the old wage",
+          "subtitle": "Firms compete for the rest"
+         },
+         {
+          "title": "Wage up, employment down",
+          "subtitle": "A movement up the demand curve"
+         }
+        ],
+        "resultType": "bad"
+       }
+      ],
+      "title": "When the Supply of Labour Shifts",
+      "recall": {
+       "id": "labour-markets:sub:supply-shifts:recall",
+       "type": "fillin",
+       "hints": [
+        "firms hire more at a lower wage",
+        "fewer are employed at a higher wage",
+        "how strongly firms respond to the wage"
+       ],
+       "prompt": "Complete what a shift of supply does to the market:",
+       "answers": [
+        "rises",
+        "cuts",
+        "elasticity"
+       ],
+       "template": [
+        "After a net inflow of workers, employment in the occupation ___.",
+        "A licence that shuts some workers out raises the wage and ___ the number employed.",
+        "How big the fall in jobs is turns on the ___ of demand for labour."
+       ],
+       "distractors": [
+        "falls",
+        "lifts",
+        "productivity"
+       ]
+      },
+      "keyIdea": "A rise in the supply of labour lowers the equilibrium wage and raises employment; a fall raises the wage and lowers employment. The factors of chapter 2 shift it.",
+      "examMatters": "Appendix 6 wants an Examine to include a brief assessment. For a supply shift it is the size of the change in employment, which turns on how elastic the demand for labour is.",
+      "realExample": {
+       "text": "If recruitment of building workers from abroad is paused in a Gulf state, sites compete for the workers already there: pay rises, and fewer people are employed than before.",
+       "emoji": "🧱"
+      },
+      "misconception": "Students expect employment to rise whenever the wage rises. After a supply shift the two move apart: a higher wage from a leftward shift comes with fewer jobs, because firms move up their demand curve."
+     },
+     {
+      "id": "labour-markets:sub:why-pay-differs",
+      "body": [
+       {
+        "text": "There is not one labour market but one for each occupation, each with its own equilibrium. Pay differs because the curves differ:",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Demand**: what the work is worth to employers, which is high where productivity is high or the product is valuable.",
+         "**Supply**: how many can and will do it. Long training, rare skills and dangerous or unpleasant conditions keep it small.",
+         "**Elasticity of supply**: where training takes years, a rise in demand raises pay a long way before new workers arrive."
+        ]
+       },
+       {
+        "text": "A surgeon's work is worth a great deal and few can do it; a shelf-stacker's is worth less and many can. That gap can be the market working: the high wage is the signal that draws people into years of training.",
+        "type": "paragraph"
+       },
+       {
+        "text": "But a gap that lasts because workers **cannot** move to the better-paid job — they live in the wrong region, or lack the qualification — is not the market working. That is the market failure of chapter 5.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Why Two Occupations Pay Differently",
+      "recall": {
+       "id": "labour-markets:sub:why-pay-differs:recall",
+       "type": "classify",
+       "groups": [
+        {
+         "why": "Each gap reflects demand, supply and elasticity; a higher wage is how the market rations scarce work and attracts trainees.",
+         "name": "The market working",
+         "items": [
+          "Surgeons train for years and few qualify",
+          "Oil-rig work is dangerous, so fewer apply",
+          "Firms value software skills highly"
+         ]
+        },
+        {
+         "why": "Each gap persists because workers cannot move to where they are wanted — geographical or occupational immobility.",
+         "name": "The market failing",
+         "items": [
+          "Jobless machinists live far from the cities with vacancies",
+          "Laid-off miners lack the certificates new jobs require"
+         ]
+        }
+       ],
+       "prompt": "Sort each reason two jobs pay differently into the market working or the market failing:"
+      },
+      "keyIdea": "Each occupation has its own demand, supply and labour market equilibrium. Pay is high where demand is strong and supply small and inelastic, low where many can do the job.",
+      "examMatters": "Appendix 6 wants an Examine to end in a brief assessment. For pay gaps, say which part is the market working and which reflects workers unable to move — that distinction is the assessment.",
+      "realExample": {
+       "text": "In Hong Kong, commercial pilots earn many times what restaurant waiters do: airlines value their work highly, training takes years and few qualify, while many people can learn to wait tables.",
+       "emoji": "🛩️"
+      },
+      "misconception": "Students say pay gaps show the market has failed. Many do not: a high wage for a scarce skill is how the market rations it and draws in trainees. The failure is a gap that persists because workers cannot move to close it."
+     }
+    ],
+    "takeaway": [
+     "The wage settles where the numbers wanted and willing are equal.",
+     "One firm is a wage-taker: its supply of labour is flat at the market wage.",
+     "Demand shifts move wage and jobs together; supply shifts move them apart."
+    ],
+    "diagramId": "labour-markets:diagram:8898e521",
+    "quizIndices": [
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "practiceIndices": [
+     3
+    ]
+   },
+   {
+    "id": "labour-markets:block:8da82be6",
+    "title": "Trade Unions and Public-Sector Pay",
+    "sections": [
+     {
+      "id": "labour-markets:sub:unions-and-supply",
+      "body": [
+       {
+        "text": "A **trade union** is an organisation of workers that deals with employers on its members' behalf. The specification lists trade unions among the factors that influence the supply of labour, and one way they do it is by controlling who may enter an occupation.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Some unions insist on long apprenticeships, set the qualifications a newcomer needs, or agree with employers that only members will be hired. Each reduces how many people can offer themselves for the job at every wage.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "The union limits entry",
+          "subtitle": "Longer apprenticeships, members only"
+         },
+         {
+          "title": "Fewer can do the job",
+          "subtitle": "At every wage rate"
+         },
+         {
+          "title": "Supply shifts left",
+          "subtitle": "Wage up, employment down"
+         }
+        ],
+        "resultType": "neutral"
+       },
+       {
+        "text": "If Tellmar's machinists' union limited entry so that 18,000 fewer could work at every wage, the wage would rise to **$15 an hour** and employment fall to 30,000.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "How Trade Unions Affect the Supply of Labour",
+      "recall": {
+       "id": "labour-markets:sub:unions-and-supply:recall",
+       "why": [
+        "The chain starts with the union's rule on entry.",
+        "A longer path in means fewer people can offer themselves at every wage.",
+        "Fewer at every wage is a leftward shift of supply, which raises the wage and cuts employment."
+       ],
+       "type": "reorder",
+       "prompt": "Put this causal chain in order, from the union's rule to the labour market:",
+       "criterion": "cause to effect: each step is caused by the one before it",
+       "correctOrder": [
+        "The electricians' union doubles the length of an apprenticeship",
+        "Fewer newcomers qualify to wire buildings each year",
+        "Supply of electricians moves to the left"
+       ]
+      },
+      "keyIdea": "A trade union can raise pay by limiting how many may do a job. Restricting entry shifts supply left, which raises the wage and lowers employment.",
+      "examMatters": "For how unions affect the supply of labour (3.3.4 · 2c), draw the supply shift. For a negotiated wage, draw the wage floor of the next step: two routes to a higher wage, on two different diagrams.",
+      "realExample": {
+       "text": "Dock workers' unions in many ports have controlled who may be hired for loading work, keeping the pool of dockers small and their pay above what open hiring would bring.",
+       "emoji": "⚓"
+      },
+      "misconception": "Students assume a union can raise pay only by negotiating it. Controlling entry works through supply, with no bargaining over pay at all: the higher wage follows from a smaller pool."
+     },
+     {
+      "id": "labour-markets:sub:union-wage",
+      "body": [
+       {
+        "text": "In **collective bargaining** a union negotiates one wage for all its members, and none of them works for less. That agreed rate is a floor: employers may pay more, but not less.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Suppose Tellmar's machinists' union wins $15 an hour, above the equilibrium of $12 an hour. Workshops now hire only 30,000, 6,000 fewer than before, while 48,000 would like the work. The 18,000 left over are people willing to work at the going rate who cannot find a post in the occupation.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "The union wins a wage above equilibrium",
+          "subtitle": "$15 against $12"
+         },
+         {
+          "title": "Firms move up their demand curve",
+          "subtitle": "Hiring fewer at the higher wage"
+         },
+         {
+          "title": "Fewer jobs, more applicants",
+          "subtitle": "A surplus of labour"
+         }
+        ],
+        "resultType": "bad"
+       },
+       {
+        "text": "How many jobs are lost turns on the elasticity of demand for labour. It can be none, if the pay deal comes with higher productivity or demand for the product is rising — or if the employer is the only buyer of labour in the area, a case topic 3.3.3 covers as monopsony. A legal minimum wage is a floor set by government rather than by bargaining; its effects are topic 3.3.5.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "A Wage Negotiated Above Equilibrium",
+      "recall": {
+       "id": "labour-markets:sub:union-wage:recall",
+       "type": "fillin",
+       "hints": [
+        "the lowest the wage is allowed to go",
+        "more willing than wanted",
+        "productivity is measured per one of these"
+       ],
+       "prompt": "Complete what a negotiated wage does to a competitive market:",
+       "answers": [
+        "floor",
+        "surplus",
+        "worker"
+       ],
+       "template": [
+        "A pay deal that no member may undercut acts like a price ___ on labour.",
+        "At $16, firms want 28,000 and 52,000 want the work: a ___ of 24,000.",
+        "Pay can rise with no jobs lost if the deal also lifts output per ___."
+       ],
+       "distractors": [
+        "ceiling",
+        "shortage",
+        "machine"
+       ]
+      },
+      "keyIdea": "Through collective bargaining a union can hold the wage above equilibrium. More people want the job at that wage but firms hire fewer, so employment falls unless demand rises.",
+      "examMatters": "A Discuss on unions wants different viewpoints (Appendix 6). The strongest judgement turns on how elastic the demand for labour is, and on whether productivity rises with pay.",
+      "realExample": {
+       "text": "Port workers' unions in many countries negotiate one hourly rate for every docker in the port, so no individual worker can undercut it to win a shift.",
+       "emoji": "🚢"
+      },
+      "misconception": "Students write that a union wage above equilibrium always destroys jobs. Firms move up their demand curve only if nothing else changes; a deal that raises productivity, or rising demand for the product, can offset it."
+     },
+     {
+      "id": "labour-markets:sub:public-sector-pay",
+      "body": [
+       {
+        "text": "Nurses, teachers and police, and the staff of **state-owned enterprises** such as national airlines, railways and power companies, are paid by the state. Wage setting in the public sector is an administrative decision: **pay scales** by grade and years of service, a pay commission that recommends each year's rise, and bargaining with public-sector unions.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Three things shape it that a market would not. The **government budget** limits what can be paid. **Fairness and comparability** push for one national scale, so a nurse in the capital earns what one in a village earns. And the state is often the main employer of the occupation, so it can hold pay down without losing all its staff — buying power that topic 3.3.3 calls monopsony.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Set pay below equilibrium and shortages follow. Tellmar's market for nurses clears at $24 an hour with 26,000 nurses. A commission that sets $21 an hour leaves hospitals wanting 29,000 while only 20,000 are willing: 9,000 posts stay empty.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Because living costs differ, one national scale can do both at once: too high where living is cheap, so applicants queue, and too low in the capital, so posts go unfilled.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Wage Setting in the Public Sector",
+      "recall": {
+       "id": "labour-markets:sub:public-sector-pay:recall",
+       "type": "match",
+       "pairs": [
+        {
+         "why": "One scale is fair between regions, but it ignores differences in living costs and so in supply.",
+         "left": "A national pay scale",
+         "right": "A teacher earns the same in every region"
+        },
+        {
+         "why": "Pay competes with every other use of public money, not with a rival employer.",
+         "left": "The government budget",
+         "right": "Caps the total the state can afford for wages"
+        },
+        {
+         "why": "The wage is a recommendation and a decision, not an equilibrium.",
+         "left": "A pay commission",
+         "right": "Recommends each year's rise after taking evidence"
+        },
+        {
+         "why": "Collective bargaining sets one rate for everyone the union covers.",
+         "left": "A public-sector union",
+         "right": "Bargains for all its members with the state"
+        }
+       ],
+       "prompt": "Match each influence on public-sector pay to how it works:"
+      },
+      "keyIdea": "In the public sector and state-owned enterprises, wage setting is a government decision: pay scales, commissions, bargaining. Set below equilibrium, pay leaves vacancies.",
+      "examMatters": "For a Discuss on public-sector pay, Appendix 6 wants competing arguments weighed: the budget and fairness case for one scale, against the shortages it causes where pay sits below what the market would set.",
+      "realExample": {
+       "text": "Kenya's Salaries and Remuneration Commission sets pay for state officers and advises on pay across the rest of the public sector; doctors' unions there have struck when agreed pay deals were not honoured.",
+       "emoji": "🏛️"
+      },
+      "misconception": "Students assume public-sector pay is set by supply and demand like any other. It is set by a decision, so it can sit away from equilibrium for years, with shortages or queues a market would have removed."
+     }
+    ],
+    "takeaway": [
+     "Unions raise pay by limiting entry or by bargaining for one wage.",
+     "A wage above equilibrium cuts jobs unless productivity or demand rise.",
+     "Public-sector pay is a decision, so it can leave shortages for years."
+    ],
+    "diagramId": "labour-markets:diagram:8da82be6",
+    "quizIndices": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "practiceIndices": [
+     4,
+     5
+    ]
+   },
+   {
+    "id": "labour-markets:block:30860391",
+    "title": "Market Failure in the Labour Market",
+    "sections": [
+     {
+      "id": "labour-markets:sub:geographical-immobility",
+      "body": [
+       {
+        "text": "**Geographical immobility of labour** means workers are unable, or unwilling, to move from one area to another to take a job. Its causes:",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Housing costs**: homes in the growing region cost far more to buy or rent.",
+         "**Family and social ties**: children in school, relatives to care for, a partner's job.",
+         "**The cost of moving and a lack of information**: the move itself is expensive, and workers may not know where the vacancies are."
+        ]
+       },
+       {
+        "text": "The consequences of geographical immobility show in each region's labour market. Demand for garment machinists falls by 12,000 in the North, where workshops are closing, and rises by 12,000 in the South. If wages adjust, the North's falls to $10 an hour and the South's rises to $14 an hour: a $4 gap that movers would normally close. If pay in both regions stays at $12 an hour, 12,000 machinists are out of work in the North while 12,000 posts go unfilled in the South.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "Demand falls in one region",
+          "subtitle": "Workshops close in the North"
+         },
+         {
+          "title": "Workers cannot afford to move",
+          "subtitle": "Housing in the South costs more"
+         },
+         {
+          "title": "Unemployment beside vacancies",
+          "subtitle": "A gap that does not close"
+         }
+        ],
+        "resultType": "bad"
+       }
+      ],
+      "title": "Geographical Immobility of Labour",
+      "recall": {
+       "id": "labour-markets:sub:geographical-immobility:recall",
+       "why": [
+        "The chain starts with a fall in the demand for labour in one region.",
+        "The workers who lose their jobs cannot move to where demand is rising.",
+        "So unemployment and unfilled posts exist at the same time: the consequence of immobility."
+       ],
+       "type": "reorder",
+       "prompt": "Put this causal chain in order, from the closures to the result:",
+       "criterion": "cause to effect: each step is caused by the one before it",
+       "correctOrder": [
+        "Three Northern workshops close as orders go elsewhere",
+        "Laid-off machinists cannot afford a flat in the growing South",
+        "Unemployment in the North persists beside Southern vacancies"
+       ]
+      },
+      "keyIdea": "Geographical immobility is when workers cannot move to where the jobs are. It leaves unemployment in one region alongside vacancies in another.",
+      "examMatters": "3.3.4 · 4a asks for causes AND consequences. Housing, family and information are the causes; regional unemployment, unfilled vacancies and a lasting wage gap are the consequences, and an answer needs both.",
+      "realExample": {
+       "text": "In Pakistan and Nigeria, workers from rural areas can find that rent in Karachi or Lagos would take much of what a city job pays, so posts there stay open while jobless workers stay at home.",
+       "emoji": "🏘️"
+      },
+      "misconception": "Students describe geographical immobility as workers being \"unwilling to work\". They are willing to work; they cannot get to where the work is, and the barrier is cost, family or information."
+     },
+     {
+      "id": "labour-markets:sub:occupational-immobility",
+      "body": [
+       {
+        "text": "**Occupational immobility of labour** means workers are unable to move from one type of job to another. Its causes:",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Skills specific to one job**: a machinist's skill is worth little in a software firm.",
+         "**Qualifications and licences**: many jobs require a certificate that takes years to earn.",
+         "**The cost and time of retraining**, which falls on people who have just lost their income — and age, which shortens the years a retrained worker has to earn it back."
+        ]
+       },
+       {
+        "text": "The consequences of occupational immobility: workers from a declining industry stay unemployed, or take lower-paid work that uses none of their skill, while growing industries report skill shortages and bid up pay for the few who can do the work. This is **structural unemployment**, and output is lost twice over: people who could work are idle, and work that could be done is not.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         {
+          "title": "Demand for one skill falls",
+          "subtitle": "Garment orders move abroad"
+         },
+         {
+          "title": "Workers lack the skills new jobs need",
+          "subtitle": "Retraining takes years"
+         },
+         {
+          "title": "Unemployment beside skill shortages",
+          "subtitle": "Output is lost"
+         }
+        ],
+        "resultType": "bad"
+       }
+      ],
+      "title": "Occupational Immobility of Labour",
+      "recall": {
+       "id": "labour-markets:sub:occupational-immobility:recall",
+       "type": "classify",
+       "groups": [
+        {
+         "why": "Each stops a worker moving to another PLACE where the job already exists.",
+         "name": "Geographical immobility",
+         "items": [
+          "Flats near the new factories cost twice as much",
+          "A partner's job keeps the family in the old town",
+          "Nobody in the village hears about the city's openings"
+         ]
+        },
+        {
+         "why": "Each stops a worker moving into a different KIND of job, because of skills or qualifications.",
+         "name": "Occupational immobility",
+         "items": [
+          "A welder has no nursing certificate",
+          "Qualifying as an electrician takes three years",
+          "A miner's know-how is no use in a bank"
+         ]
+        }
+       ],
+       "prompt": "Sort each barrier into geographical or occupational immobility:"
+      },
+      "keyIdea": "Occupational immobility is when workers cannot move into a different kind of job because they lack its skills or qualifications, so declining industries leave workers stranded.",
+      "examMatters": "Appendix 6 says a Discuss needs a critical assessment. Here it is how long the immobility lasts: some workers retrain within a year, while older workers with narrow skills may never move.",
+      "realExample": {
+       "text": "As garment factories close in one region, their machinists cannot simply become the nurses, electricians or software testers that growing sectors are short of: each of those needs a qualification that takes years.",
+       "emoji": "🧰"
+      },
+      "misconception": "Students treat the two kinds of immobility as one. Geographical is about place: the job exists somewhere else. Occupational is about skills: the job exists, but the worker cannot do it. One worker can face both."
+     },
+     {
+      "id": "labour-markets:sub:immobility-market-failure",
+      "body": [
+       {
+        "text": "In a working labour market, a shortage in one place or occupation raises pay there, and the higher pay draws workers in until the gap closes. **Immobility** breaks the link: the signal is sent, and the workers who would answer it cannot.",
+        "type": "paragraph"
+       },
+       {
+        "text": "So geographical and occupational immobility are **market failure in the labour market**: labour is not allocated to where it is most valued. The costs fall on three groups:",
+        "type": "paragraph"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Workers** stuck in the declining region or occupation lose income, and a long spell out of work erodes their skills further.",
+         "**Firms** in the growing region or occupation cannot fill posts, so they produce less or pay far more for the few they find.",
+         "**The economy** loses output it could have had, and spends on benefits for people who could be working."
+        ]
+       },
+       {
+        "text": "Not every difference in pay is a failure: a high wage for a scarce skill is the market doing its job. The failure is the gap that does not close because workers cannot move. What government does about it is topic 3.3.5.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Why Immobility Is a Market Failure",
+      "recall": {
+       "id": "labour-markets:sub:immobility-market-failure:recall",
+       "type": "match",
+       "pairs": [
+        {
+         "why": "Unable to move, the worker stays out of work, and skills fade with disuse.",
+         "left": "A laid-off worker in the declining region",
+         "right": "Loses income and, over time, skills"
+        },
+        {
+         "why": "The workers who would fill its vacancies cannot reach them.",
+         "left": "A firm in the growing region",
+         "right": "Leaves posts empty or pays far more to fill them"
+        },
+        {
+         "why": "Resources that could produce are unused — the inefficiency that makes it a market failure.",
+         "left": "The economy as a whole",
+         "right": "Produces less and funds support for idle people"
+        }
+       ],
+       "prompt": "Match each consequence of immobility to who bears it:"
+      },
+      "keyIdea": "A market fails when it allocates resources inefficiently. Immobility stops labour moving to where it is worth most, so idle workers and unfilled jobs exist side by side.",
+      "examMatters": "An Evaluate on labour market failure needs a justified judgement (Appendix 6). A strong one weighs how large and how lasting the immobility is: a gap that closes within a year is a friction; one that lasts a decade is a serious failure.",
+      "realExample": {
+       "text": "Economies with fast-growing cities and declining rural industries, from Pakistan to Indonesia, often have high unemployment in some regions at the same time as labour shortages in others.",
+       "emoji": "🗺️"
+      },
+      "misconception": "Students call every wage gap a market failure, or none. The test is whether the gap would close if workers could move. If it would, immobility is the failure; if it reflects skills that take years to build, it is the market working."
+     }
+    ],
+    "takeaway": [
+     "Geographical immobility: the job exists, but somewhere else.",
+     "Occupational immobility: the job exists, but needs other skills.",
+     "Both leave idle workers beside unfilled jobs: a market failure."
+    ],
+    "diagramId": "labour-markets:diagram:98be411e",
+    "quizIndices": [
+     26,
+     27,
+     28,
+     29,
+     30
+    ],
+    "practiceIndices": [
+     6
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "meta": "3.3.4 · 1a, 1b",
+    "title": "The Demand for Labour",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Derived demand</strong> — labour is wanted for the output it produces, so the demand for it depends on the demand for the final product.",
+        "type": "definition"
+       },
+       {
+        "text": "<strong>Diminishing marginal productivity</strong> — with other inputs fixed, each extra worker adds less output than the one before.",
+        "type": "definition"
+       },
+       {
+        "text": "<strong>Elasticity of demand for labour</strong> — % change in the quantity of labour demanded ÷ % change in the wage rate.",
+        "type": "definition"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Hiring rule: hire while what the extra worker adds to revenue ≥ wage. For a firm selling at a given price, that is extra output × price; in general, extra output × marginal revenue. Arun Shirts: at $12 an hour, 6 machinists; at $15 an hour, 5 (a movement along).",
+        "type": "mechanism"
+       },
+       {
+        "text": "Shifts: a shirt price of $4, or one more shirt an hour each, and the firm hires 7 at $12 an hour.",
+        "type": "mechanism"
+       },
+       {
+        "text": "Capital: a $30 an hour cutter doing 3 workers' jobs is cheaper above a wage of $10 an hour.",
+        "type": "mechanism"
+       },
+       {
+        "text": "Elastic where capital substitutes easily, labour is a large share of costs, product demand is elastic, and in the long run.",
+        "type": "link"
+       }
+      ],
+      "title": "MECHANISMS"
+     }
+    ],
+    "keyIdea": "Why firms want workers at all, how many they hire, the four factors that shift the demand for labour, and what makes it elastic.",
+    "takeaway": [
+     "Derived demand: no product demand, no labour demand.",
+     "The wage moves along the curve; the four factors shift it.",
+     "Four factors decide the elasticity of demand for labour."
+    ]
+   },
+   {
+    "meta": "3.3.4 · 2c, 2d",
+    "title": "The Supply of Labour",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Supply of labour to an occupation</strong> — the number willing and able to do the job at each wage rate.",
+        "type": "definition"
+       },
+       {
+        "text": "<strong>Net migration</strong> — immigration minus emigration.",
+        "type": "definition"
+       },
+       {
+        "text": "<strong>Elasticity of supply of labour</strong> — % change in the quantity of labour supplied ÷ % change in the wage rate.",
+        "type": "definition"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Size of population and net migration: more people able to do the job, so supply shifts right.",
+        "type": "mechanism"
+       },
+       {
+        "text": "Income tax rates and welfare benefits: both act on the pay kept by working, so higher tax or benefits can shift supply left.",
+        "type": "mechanism"
+       },
+       {
+        "text": "Government regulations: a licence 12,000 cannot meet shifts supply left; the wage rises to $14 an hour.",
+        "type": "mechanism"
+       },
+       {
+        "text": "Same rise in demand: elastic supply, $14 an hour and 44,000; inelastic supply, $16 an hour and 40,000.",
+        "type": "link"
+       }
+      ],
+      "title": "MECHANISMS"
+     }
+    ],
+    "keyIdea": "The supply of labour to one occupation, five of the six factors that shift it, and what makes it elastic or inelastic.",
+    "takeaway": [
+     "A wage change is a movement along supply.",
+     "Six factors shift it; trade unions are in chapter 4.",
+     "Long training and rare skills make supply inelastic."
+    ]
+   },
+   {
+    "meta": "3.3.4 · 3a, 3b",
+    "title": "Wage Determination in a Competitive Market",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Labour market equilibrium</strong> — the wage at which the quantity of labour demanded equals the quantity supplied.",
+        "type": "definition"
+       },
+       {
+        "text": "<strong>Wage-taker</strong> — a firm too small to move the market wage; the supply of labour it faces is horizontal at that wage.",
+        "type": "definition"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "garment machinists: L = 60 − 2W and L = 4W − 12 meet at $12 an hour, 36,000.",
+        "type": "mechanism"
+       },
+       {
+        "text": "Demand +12,000: $14 an hour, 44,000. Supply +12,000: $10 an hour, 40,000. Supply −12,000: $14 an hour, 32,000.",
+        "type": "mechanism"
+       },
+       {
+        "text": "Pay gaps from scarce skills are the market working; gaps that last because workers cannot move are a market failure.",
+        "type": "link"
+       }
+      ],
+      "title": "MECHANISMS"
+     }
+    ],
+    "keyIdea": "Where the wage settles in a competitive market, why one firm takes it as given, what shifts it, and why two occupations pay differently.",
+    "takeaway": [
+     "Demand shifts: wage and employment move together.",
+     "Supply shifts: wage and employment move apart.",
+     "Each occupation has its own equilibrium wage."
+    ]
+   },
+   {
+    "meta": "3.3.4 · 2c, 3c",
+    "title": "Trade Unions and Public-Sector Pay",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Trade union</strong> — an organisation of workers that deals with employers on its members' behalf.",
+        "type": "definition"
+       },
+       {
+        "text": "<strong>Collective bargaining</strong> — negotiating one wage for all the workers a union covers.",
+        "type": "definition"
+       },
+       {
+        "text": "<strong>State-owned enterprise</strong> — a business owned by the government, such as a national airline or power company.",
+        "type": "definition"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Limiting entry: supply −18,000, wage $15 an hour, 30,000 employed.",
+        "type": "mechanism"
+       },
+       {
+        "text": "Bargaining: a floor of $15 an hour: 30,000 hired, 48,000 willing, a surplus of 18,000.",
+        "type": "mechanism"
+       },
+       {
+        "text": "Public sector: nurses clear at $24 an hour; pay set at $21 an hour leaves 9,000 vacancies.",
+        "type": "mechanism"
+       },
+       {
+        "text": "A single dominant employer is topic 3.3.3; a legal minimum wage is topic 3.3.5.",
+        "type": "link"
+       }
+      ],
+      "title": "MECHANISMS"
+     }
+    ],
+    "keyIdea": "The two ways a trade union raises pay, what each does to employment, and how pay is set in the public sector and state-owned enterprises.",
+    "takeaway": [
+     "Two routes to a higher wage: less supply, or a floor.",
+     "Job losses depend on the elasticity of demand for labour.",
+     "Budget, fairness and pay scales set public-sector pay."
+    ]
+   },
+   {
+    "meta": "3.3.4 · 4a, 4b",
+    "title": "Market Failure in the Labour Market",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Geographical immobility of labour</strong> — workers unable to move to another area to take a job.",
+        "type": "definition"
+       },
+       {
+        "text": "<strong>Occupational immobility of labour</strong> — workers unable to move into a different type of job.",
+        "type": "definition"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Geographical causes: housing costs, family ties, moving costs and lack of information.",
+        "type": "mechanism"
+       },
+       {
+        "text": "Occupational causes: specific skills, qualifications and licences, the cost and time of retraining.",
+        "type": "mechanism"
+       },
+       {
+        "text": "Two regions: North $10 an hour, South $14 an hour; with pay stuck at $12 an hour in both, 12,000 jobless beside 12,000 vacancies.",
+        "type": "mechanism"
+       },
+       {
+        "text": "What government can do about immobility is topic 3.3.5.",
+        "type": "link"
+       }
+      ],
+      "title": "MECHANISMS"
+     }
+    ],
+    "keyIdea": "The causes and consequences of geographical and occupational immobility, and why they are a market failure.",
+    "takeaway": [
+     "Place or skills: two different barriers.",
+     "Consequences: unemployment beside vacancies, lasting pay gaps.",
+     "Labour not where it is most valued: a market failure."
+    ]
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "labour-markets:quiz:3da0d1c3",
+    "options": [
+     "is set by the government for each occupation",
+     "depends on demand for the goods workers produce",
+     "comes from the number of people of working age",
+     "is calculated from the hours each worker offers"
+    ],
+    "question": "The demand for labour is described as a derived demand because it:",
+    "explanation": "Firms hire workers for what they make, so when customers want more of the product, firms want more of the people who make it. The number of people of working age and the hours they offer belong to the supply side, and no government sets the demand for labour.",
+    "correctIndex": 1
+   },
+   {
+    "id": "labour-markets:quiz:0f39fdb3",
+    "options": [
+     "more than the wage",
+     "less than the wage",
+     "less than the price of the product",
+     "more than the average worker produces"
+    ],
+    "question": "A profit-seeking firm stops taking on workers when the output of one more worker would be worth:",
+    "explanation": "Hiring pays while an extra worker brings in at least what she costs. Once her extra output is worth less than the wage, employing her would lower profit. Comparing her output with the product price, or with the average worker, misses what she costs.",
+    "correctIndex": 1
+   },
+   {
+    "id": "labour-markets:quiz:9c5329d0",
+    "options": [
+     "later recruits are less skilled than earlier ones",
+     "the machines and space do not grow with the workforce",
+     "the wage rises as more workers are hired",
+     "customers buy less as more is produced"
+    ],
+    "question": "Each additional worker in a workshop adds less output than the one before mainly because:",
+    "explanation": "With equipment and space fixed, every extra worker has less to work with, so the extra output falls: diminishing marginal productivity. The workers themselves are identical, and neither the wage nor the customers change how much an extra worker can physically produce.",
+    "correctIndex": 1
+   },
+   {
+    "id": "labour-markets:quiz:9960c68b",
+    "options": [
+     "shift its demand for labour to the right",
+     "cause a movement along its demand for labour",
+     "shift the supply of labour to the right",
+     "shift its demand for labour to the left"
+    ],
+    "question": "A rise in the price of the product a firm sells is most likely to:",
+    "explanation": "Each worker's output now sells for more, so more workers are worth hiring at every wage: the whole demand curve moves right. A movement along the curve needs a change in the wage, and the supply of labour is unaffected by what the product sells for.",
+    "correctIndex": 0
+   },
+   {
+    "id": "labour-markets:quiz:72e83a63",
+    "options": [
+     "employ fewer workers",
+     "employ the same number",
+     "employ more workers",
+     "lower the wage it pays"
+    ],
+    "question": "Training lets every worker produce one more unit an hour, and the wage is unchanged. The firm will most likely:",
+    "explanation": "Higher productivity raises what each worker's output is worth, so at the same wage the firm finds it worth hiring more. A firm in a competitive labour market takes the wage as given, so it cannot simply cut it.",
+    "correctIndex": 2
+   },
+   {
+    "id": "labour-markets:quiz:f6fa2f3e",
+    "options": [
+     "$9",
+     "$1.25",
+     "$20",
+     "$4"
+    ],
+    "question": "A worker adds 5 units an hour, and the firm sells every unit at the market price of $4. The worker's extra output is worth, per hour:",
+    "explanation": "The value of the extra output is the extra units times the price: 5 × $4 = $20. Adding the two figures, or dividing one by the other, has no meaning here.",
+    "correctIndex": 2
+   },
+   {
+    "id": "labour-markets:quiz:bcae5ef3",
+    "options": [
+     "$40",
+     "$5",
+     "$200",
+     "$8"
+    ],
+    "question": "A machine that does the work of five employees costs $40 an hour. Above what hourly wage is the machine the cheaper choice?",
+    "explanation": "Five employees cost the same as the machine when each is paid $40 ÷ 5 = $8 an hour. Above $8 the five cost more than $40, so the machine is cheaper; that is why the wage relative to the price of capital matters, not the wage alone.",
+    "correctIndex": 3
+   },
+   {
+    "id": "labour-markets:quiz:62d9e016",
+    "options": [
+     "wages are a small share of total costs",
+     "demand for the product is price inelastic",
+     "capital can easily replace the workers",
+     "the time period is very short"
+    ],
+    "question": "The demand for labour in an occupation is likely to be most elastic when:",
+    "explanation": "If a machine can do the job, a rise in the wage makes firms switch, so employment falls a lot. A small share of costs, inelastic product demand and a short time period all make the demand for labour less responsive.",
+    "correctIndex": 2
+   },
+   {
+    "id": "labour-markets:quiz:7a9180ea",
+    "options": [
+     "A new licence the job now requires",
+     "A rise in the wage rate for the job",
+     "A net inflow of workers from abroad",
+     "A cut in income tax rates"
+    ],
+    "question": "Which of these would shift the supply of labour to an occupation to the left?",
+    "explanation": "A licence shuts out everyone who does not hold it, so fewer can offer themselves at every wage. A rise in the wage is a movement along the curve, while net inflows and tax cuts shift it the other way.",
+    "correctIndex": 0
+   },
+   {
+    "id": "labour-markets:quiz:5e855e72",
+    "options": [
+     "increase the supply of labour to low-paid jobs",
+     "reduce the supply of labour to low-paid jobs",
+     "increase the demand for low-paid workers",
+     "cause a movement along the demand for labour"
+    ],
+    "question": "A rise in out-of-work welfare benefits is most likely to:",
+    "explanation": "Higher benefits shrink the gain from taking a job, which is the pay kept minus the benefits given up, so fewer people find low-paid work worth taking at each wage. Benefits act on the supply side; they do not change how many workers firms want.",
+    "correctIndex": 1
+   },
+   {
+    "id": "labour-markets:quiz:7ce3d1e0",
+    "options": [
+     "a rightward shift of the supply of labour",
+     "a movement along the supply of labour",
+     "a leftward shift of the demand for labour",
+     "a rightward shift of the demand for labour"
+    ],
+    "question": "A rise in the wage rate for bus drivers, with nothing else changing, causes:",
+    "explanation": "The wage is on the vertical axis, so a change in it moves along the curves rather than shifting them: more drivers offer themselves at the higher wage. Shifts need a cause other than the wage.",
+    "correctIndex": 1
+   },
+   {
+    "id": "labour-markets:quiz:ad48dcf1",
+    "options": [
+     "the job needs years of training",
+     "the skills needed are widely held",
+     "workers move easily between regions",
+     "the time period is long"
+    ],
+    "question": "A pay rise brings in the fewest extra workers where:",
+    "explanation": "If qualifying takes years, a pay rise cannot bring in new qualified workers quickly, so supply responds little. Widely held skills, mobile workers and a long time period all make supply more responsive.",
+    "correctIndex": 0
+   },
+   {
+    "id": "labour-markets:quiz:2e8a0eae",
+    "options": [
+     "lowers the wage that employers must pay",
+     "raises the price of the product workers make",
+     "increases the size of the population",
+     "raises the pay workers keep at each wage"
+    ],
+    "question": "A cut in income tax rates can increase the supply of labour because it:",
+    "explanation": "What draws people into work is take-home pay. A lower tax rate raises it at every gross wage, so more are willing to work at each wage. It does not change what employers pay, the product price or the population.",
+    "correctIndex": 3
+   },
+   {
+    "id": "labour-markets:quiz:ee6d81df",
+    "options": [
+     "shift the demand for nurses to the left",
+     "shift the supply of nurses to the left",
+     "shift the supply of nurses to the right",
+     "cause a movement along the supply of nurses"
+    ],
+    "question": "Large-scale emigration of trained nurses is most likely to:",
+    "explanation": "Net migration is immigration minus emigration; when trained nurses leave, fewer are available at every wage, so supply shifts left. The number of nurses hospitals want has not changed.",
+    "correctIndex": 1
+   },
+   {
+    "id": "labour-markets:quiz:1896f9c5",
+    "options": [
+     "more workers wanted than are willing",
+     "equal numbers wanted and willing",
+     "more workers willing than firms want",
+     "a rightward shift of labour demand"
+    ],
+    "question": "At a wage above equilibrium in a competitive labour market there will be:",
+    "explanation": "Above equilibrium, the higher wage draws more people in while firms hire fewer, leaving a surplus of labour that bids the wage down. A shortage is what happens below equilibrium, and nothing here shifts a curve.",
+    "correctIndex": 2
+   },
+   {
+    "id": "labour-markets:quiz:afea80ea",
+    "options": [
+     "upward-sloping like the market curve",
+     "horizontal at the market wage",
+     "vertical at its current workforce",
+     "downward-sloping from left to right"
+    ],
+    "question": "One small firm in a competitive labour market faces a supply of labour that is:",
+    "explanation": "The firm is a wage-taker: it can hire as many as it wants at the going rate, and none if it offers less. So the supply it faces is flat at the market wage, even though the market supply curve slopes up.",
+    "correctIndex": 1
+   },
+   {
+    "id": "labour-markets:quiz:8bf01a19",
+    "options": [
+     "raise the wage and lower employment",
+     "lower the wage and raise employment",
+     "raise the wage and leave employment unchanged",
+     "raise both the wage and employment"
+    ],
+    "question": "A rise in demand for an occupation's product, with the supply of labour unchanged, will:",
+    "explanation": "Derived demand: the demand for labour shifts right, a shortage opens at the old wage, and firms bid the wage up. The higher wage draws more people in along the supply curve, so employment rises too.",
+    "correctIndex": 3
+   },
+   {
+    "id": "labour-markets:quiz:77ce665a",
+    "options": [
+     "raise the wage and lower employment",
+     "lower both the wage and employment",
+     "raise both the wage and employment",
+     "lower the wage and raise employment"
+    ],
+    "question": "A net inflow of migrants into an occupation, with labour demand unchanged, will:",
+    "explanation": "Supply shifts right, leaving a surplus at the old wage, so the wage falls. At the lower wage firms hire more, moving down their demand curve: after a supply shift, the wage and employment move in opposite directions.",
+    "correctIndex": 3
+   },
+   {
+    "id": "labour-markets:quiz:6b4c76fc",
+    "options": [
+     "$60",
+     "$16",
+     "$35",
+     "$8"
+    ],
+    "question": "Labour demand is L = 70 − 3W and supply is L = 2W − 10, in thousands, with W in dollars an hour. The equilibrium wage is:",
+    "explanation": "Set the two equal: 70 − 3W = 2W − 10, so 80 = 5W and W = $16, where 22,000 are both wanted and willing. The other figures come from solving only one of the two equations or dropping a term.",
+    "correctIndex": 1
+   },
+   {
+    "id": "labour-markets:quiz:9fc216a6",
+    "options": [
+     "the market for surgeons has failed",
+     "surgeons' pay depends on the price of capital",
+     "demand is high and supply small and inelastic",
+     "the supply of shop assistants is inelastic"
+    ],
+    "question": "Surgeons earn far more than shop assistants mainly because:",
+    "explanation": "Surgeons' work is highly valued, few can do it and training takes years, so the equilibrium wage is high. That is the market working, not failing, and the supply of shop assistants is elastic because many people can do the job.",
+    "correctIndex": 2
+   },
+   {
+    "id": "labour-markets:quiz:353b87d6",
+    "options": [
+     "fewer jobs and a surplus of labour",
+     "more jobs and a shortage of labour",
+     "more jobs and a surplus of labour",
+     "fewer jobs and a shortage of labour"
+    ],
+    "question": "A trade union wins a pay deal above the market-clearing wage. The most likely result is:",
+    "explanation": "At the higher wage firms move up their demand curve and hire fewer, while more people want the work, so a surplus opens. Unless productivity or demand for the product rises alongside, employment falls.",
+    "correctIndex": 0
+   },
+   {
+    "id": "labour-markets:quiz:57a07ed7",
+    "options": [
+     "shifting the supply of labour to the left",
+     "shifting the supply of labour to the right",
+     "shifting the demand for labour to the right",
+     "lowering the productivity of trained workers"
+    ],
+    "question": "A union that makes apprenticeships much longer affects the labour market mainly by:",
+    "explanation": "A longer path into the job means fewer people can offer themselves at every wage, so supply shifts left and the wage rises. It works with no negotiation over pay at all.",
+    "correctIndex": 0
+   },
+   {
+    "id": "labour-markets:quiz:435d5059",
+    "options": [
+     "capital can easily replace the workers",
+     "wages are most of the firm's costs",
+     "demand for labour is wage inelastic",
+     "demand for the product is price elastic"
+    ],
+    "question": "Job losses from a union wage rise will be smallest when:",
+    "explanation": "If employment responds little to the wage, a higher negotiated rate costs few jobs. Easy substitution by machines, a large wage share of costs and elastic product demand all make job losses larger.",
+    "correctIndex": 2
+   },
+   {
+    "id": "labour-markets:quiz:ac72455e",
+    "options": [
+     "many private hospitals competing for staff",
+     "the number of patients each nurse treats",
+     "the price of the medicines hospitals buy",
+     "a government decision on a pay scale"
+    ],
+    "question": "In most economies, the pay of nurses employed by the state is set mainly by:",
+    "explanation": "Public-sector pay is an administrative decision, taken through pay scales, pay commissions and bargaining with public-sector unions, with the government budget as the limit. There is no competitive market price for most public-sector posts.",
+    "correctIndex": 3
+   },
+   {
+    "id": "labour-markets:quiz:c8e0290f",
+    "options": [
+     "vacancies the service cannot fill",
+     "a surplus of applicants for each post",
+     "a rise in the equilibrium wage",
+     "a fall in demand for the service"
+    ],
+    "question": "Public-sector pay set below the equilibrium wage is most likely to cause:",
+    "explanation": "Below equilibrium, the state wants more workers than are willing to work at that pay, so posts stay empty. A surplus of applicants is what pay set above equilibrium would cause.",
+    "correctIndex": 0
+   },
+   {
+    "id": "labour-markets:quiz:07c499f9",
+    "options": [
+     "living costs are high",
+     "living costs are low",
+     "fewer children attend school",
+     "many trained teachers live nearby"
+    ],
+    "question": "A single national pay scale for teachers is most likely to leave shortages where:",
+    "explanation": "The same pay goes further where living is cheap and less far where it is dear, so fewer teachers will work in high-cost areas at the national rate. Falling school rolls and plentiful local teachers make shortages less likely, not more.",
+    "correctIndex": 0
+   },
+   {
+    "id": "labour-markets:quiz:6690631e",
+    "options": [
+     "a fall in wages in every region",
+     "a shortage of workers in every region",
+     "higher productivity in the declining region",
+     "unemployment in one region alongside vacancies in another"
+    ],
+    "question": "Geographical immobility of labour is most likely to cause:",
+    "explanation": "Workers who cannot move stay jobless where demand has fallen, while firms where demand has risen cannot fill their posts. The two exist side by side, which is why immobility is a market failure.",
+    "correctIndex": 3
+   },
+   {
+    "id": "labour-markets:quiz:6a070ae8",
+    "options": [
+     "lacking the qualifications a new job requires",
+     "high housing costs in the growing region",
+     "family ties to a home town",
+     "not knowing where the vacancies are"
+    ],
+    "question": "Which of these is a cause of occupational immobility?",
+    "explanation": "Occupational immobility is about moving between KINDS of job, so the barrier is skills or qualifications. Housing costs, family ties and a lack of information stop workers moving between PLACES, which is geographical immobility.",
+    "correctIndex": 0
+   },
+   {
+    "id": "labour-markets:quiz:7ee8cf34",
+    "options": [
+     "occupational immobility",
+     "a shift in the demand for labour",
+     "geographical immobility",
+     "an inelastic demand for labour"
+    ],
+    "question": "A worker cannot take a job in the capital because rents there are far higher than at home. This is an example of:",
+    "explanation": "The job exists and the worker could do it; what stops the move is the cost of living in another place. That is geographical immobility. Occupational immobility would mean lacking the skills for the job.",
+    "correctIndex": 2
+   },
+   {
+    "id": "labour-markets:quiz:4db46c12",
+    "options": [
+     "wages differ between occupations",
+     "some workers earn more than others",
+     "firms pay the market wage",
+     "labour is not allocated to where it is most valued"
+    ],
+    "question": "Immobility of labour is regarded as a market failure because:",
+    "explanation": "A working market moves labour towards the jobs where it is worth most; immobility stops that, leaving idle workers beside unfilled jobs. Wage differences alone are not a failure, because many reflect scarce skills.",
+    "correctIndex": 3
+   },
+   {
+    "id": "labour-markets:quiz:bb47f053",
+    "options": [
+     "Jobless miners cannot move to where jobs are",
+     "A region's pay stays low as workers cannot leave",
+     "Pilots earn more because training takes years",
+     "Posts stay empty because no one has the skills"
+    ],
+    "question": "Which pay gap is most clearly the market working rather than failing?",
+    "explanation": "A high wage for a skill that takes years to acquire rations the few who have it and draws in trainees: the market doing its job. The other three are gaps that persist because workers cannot move, which is immobility.",
+    "correctIndex": 2
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "labour-markets:practice:ee773d09",
+    "marks": 2,
+    "command": "Define",
+    "guidance": "Two marks means two separate things to say. Say what firms actually want when they hire, and then what the demand for workers therefore depends on.\nDerived demand is demand for something wanted not for itself but for what it produces (1 mark). So the demand for labour depends on the demand for the final product the workers make (1 mark). An answer that says only \"demand that comes from something else\", without tying it to labour and the product, has the first mark at most.",
+    "question": "Define the term 'derived demand' as it applies to labour. (2 marks)"
+   },
+   {
+    "id": "labour-markets:practice:c0aa3062",
+    "marks": 2,
+    "command": "Calculate",
+    "guidance": "Work out what the extra output is worth before comparing it with anything, and keep the units the same: output in an hour against pay for an hour.\nValue of the extra output = 6 × $5 = $30 an hour (1 mark). This is more than the $25 wage, so the firm employs the worker (1 mark). An answer that compares the $5 price with the $25 wage has compared a unit of output with an hour of labour and has neither mark.",
+    "question": "A worker adds 6 units of output an hour, each unit sells for $5, and the wage is $25 an hour. The firm can sell any amount at this price. Calculate the value of the worker's extra output per hour and state whether a profit-maximising firm would employ the worker. (2 marks)"
+   },
+   {
+    "id": "labour-markets:practice:eef2f34c",
+    "marks": 4,
+    "command": "Explain",
+    "guidance": "Two factors, each with its reason. Choose factors you can tie to how quickly extra workers can appear when pay rises, and say which way each pushes the elasticity.\nEach factor earns a mark for identifying it and a mark for explaining it. Length of training (1 mark): where a job needs years of training or a licence, a pay rise cannot bring in new qualified workers quickly, so supply is inelastic (1 mark). Mobility of labour (1 mark): where workers can move between regions or retrain easily, supply responds strongly, so it is elastic (1 mark). Other creditworthy factors: how specific the skills are, and the time period.",
+    "question": "Explain two factors that influence the elasticity of supply of labour to an occupation. (4 marks)"
+   },
+   {
+    "id": "labour-markets:practice:f62019c4",
+    "marks": 6,
+    "command": "Analyse",
+    "guidance": "Follow one chain through linked stages, and use a diagram. Keep the demand curve where it is unless you give a reason to move it, and say which curve shifts before saying what happens to the wage.\nKnowledge: net migration is immigration minus emigration, and a net inflow of workers with the skills the occupation needs adds to the number willing to do it (1 mark). Application: the supply of labour to the occupation shifts right at every wage (1 mark). Analysis: at the old wage there is now a surplus of labour, so the wage is bid down (1 mark); at the lower wage firms move down their demand curve and employ more (1 mark). A correctly labelled diagram — the wage rate and the quantity of labour on the axes, S shifting to S₁, the lower wage and the higher employment marked (2 marks).",
+    "question": "Analyse the likely effects of a net inflow of migrant workers on the equilibrium wage and employment in an occupation. (6 marks)"
+   },
+   {
+    "id": "labour-markets:practice:71516c3e",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "The word to argue with is \"only\". Plan the case for supply and demand, then the cases where something else sets pay, and decide in advance what your judgement will depend on, so the conclusion follows from the argument.\nKnowledge, application and analysis are placed in levels, and evaluation is credited in levels of its own. Level 1 describes supply and demand with little explanation. Level 2 explains how a competitive labour market sets the wage where the numbers wanted and willing are equal, and how shifts in demand and supply change it, with a labelled diagram. Level 3 develops both sides. For the view: in occupations with many employers and many workers, pay follows shifts in demand and supply, and even a negotiated or administered wage cannot stay far from equilibrium for long without shortages or surpluses. Against it: trade unions set wages by collective bargaining and control entry; the state sets public-sector pay by pay scales and commissions, with its budget and fairness in mind; and immobility stops workers moving, so pay gaps persist that supply and demand alone would close. Level 4 applies these to named occupations. Evaluation that reaches the top of the range is a supported judgement: supply and demand set the wage in competitive markets and limit how far anyone else can move it, but in unionised occupations and the public sector the wage is a decision, so the view is closer to true the more competitive the market.",
+    "question": "Evaluate the view that wage rates are determined only by the demand for and supply of labour. (20 marks)"
+   },
+   {
+    "id": "labour-markets:practice:2b8922f5",
+    "marks": 8,
+    "command": "Examine",
+    "guidance": "Examine asks for a chain of reasoning and a brief assessment, so build the chain first and keep space for a judgement on how large the effect is likely to be.\nLevel 1 states that jobs may be lost, with little explanation. Level 2 explains the chain: the negotiated wage is a floor above equilibrium, so firms move up their demand curve for labour and employ fewer, while more people want the work, leaving a surplus of labour. Level 3 develops it with a labelled diagram and applies it to the occupation in the question. The brief assessment that lifts an answer to the top of the range weighs how elastic the demand for labour is — few jobs are lost where labour is hard to replace and a small share of costs — and whether productivity, or demand for the product, rises alongside the pay deal.",
+    "question": "Examine the likely effects on employment of a trade union negotiating a wage above the equilibrium wage. (8 marks)"
+   },
+   {
+    "id": "labour-markets:practice:a297c181",
+    "marks": 14,
+    "command": "Discuss",
+    "guidance": "Discuss wants different viewpoints and a critical assessment. Plan the consequences for workers, for firms and for the economy as a whole, then decide what makes them large or small.\nLevel 1 describes immobility with little explanation of its effects. Level 2 explains the two kinds and their causes — housing costs, family ties and information for geographical immobility; skills, qualifications and the cost of retraining for occupational immobility. Level 3 analyses the consequences: unemployment in declining regions and occupations alongside unfilled vacancies elsewhere, lasting pay gaps, lost output and spending on benefits for people who could be working, ideally with a diagram of two regions. Level 4 reaches a critical assessment: how serious the consequences are depends on how long the immobility lasts, how large the declining industries are, and whether workers are young enough to retrain — a friction that clears in a year is far less costly than immobility that lasts a decade.",
+    "question": "Discuss the likely consequences of geographical and occupational immobility of labour for an economy. (14 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "labour-markets:flashcard:9eeebbe4",
+    "back": "Labour is wanted for the output it produces, so the demand for it depends on the demand for the final product.",
+    "front": "Define derived demand for labour."
+   },
+   {
+    "id": "labour-markets:flashcard:b314c9dd",
+    "back": "How many workers firms want to employ at each wage rate. It slopes down.",
+    "front": "What does the demand curve for labour show?"
+   },
+   {
+    "id": "labour-markets:flashcard:36995054",
+    "back": "Diminishing marginal productivity: each extra worker adds less output, so at a lower wage it pays to hire more.",
+    "front": "Why does the demand curve for labour slope down?"
+   },
+   {
+    "id": "labour-markets:flashcard:231f633b",
+    "back": "Hire while what the extra worker adds to revenue is at least the wage. For a firm selling at a given price, that is the extra output times the price of the product.",
+    "front": "What rule does a firm use to decide how many to hire?"
+   },
+   {
+    "id": "labour-markets:flashcard:5bc81164",
+    "back": "The standard name for what one more worker adds to the firm's revenue: extra output × marginal revenue. Only for a firm selling at a given price does that equal extra output × the price of the product.",
+    "front": "What is the marginal revenue product (MRP)?"
+   },
+   {
+    "id": "labour-markets:flashcard:1321befb",
+    "back": "Demand for the final product, productivity of labour, the price of the product, and the wage rate relative to the price of capital.",
+    "front": "Name the four factors that influence the demand for labour to an occupation."
+   },
+   {
+    "id": "labour-markets:flashcard:753d4438",
+    "back": "No. It is a movement along the curve. The four factors shift it.",
+    "front": "Does a rise in the wage shift the demand for labour?"
+   },
+   {
+    "id": "labour-markets:flashcard:d7730c81",
+    "back": "If machines get cheaper relative to wages, firms swap some workers for capital, so the demand for labour falls.",
+    "front": "How does the price of capital affect the demand for labour?"
+   },
+   {
+    "id": "labour-markets:flashcard:038b5825",
+    "back": "% change in the quantity of labour demanded ÷ % change in the wage rate.",
+    "front": "Define the elasticity of demand for labour."
+   },
+   {
+    "id": "labour-markets:flashcard:27174829",
+    "back": "How easily capital replaces labour; labour's share of total costs; the price elasticity of demand for the product; the time period.",
+    "front": "Name four factors that influence the elasticity of demand for labour."
+   },
+   {
+    "id": "labour-markets:flashcard:eb246dca",
+    "back": "The number of workers willing and able to do the job at each wage rate. It slopes up.",
+    "front": "What is the supply of labour to an occupation?"
+   },
+   {
+    "id": "labour-markets:flashcard:591e0794",
+    "back": "Size of population, net migration, income tax rates, the level of welfare benefits, government regulations, and trade unions.",
+    "front": "Name the six factors that influence the supply of labour to an occupation."
+   },
+   {
+    "id": "labour-markets:flashcard:38ecf8f9",
+    "back": "Immigration minus emigration. A net inflow of people with the right skills shifts the supply of labour to their occupation right.",
+    "front": "Define net migration."
+   },
+   {
+    "id": "labour-markets:flashcard:10b4e38d",
+    "back": "A higher rate cuts take-home pay at every wage, so fewer are willing to work at each wage and supply shifts left.",
+    "front": "How do income tax rates affect the supply of labour?"
+   },
+   {
+    "id": "labour-markets:flashcard:5893d5a3",
+    "back": "Higher benefits shrink the gain from taking a job, so supply to low-paid occupations can fall.",
+    "front": "How does the level of welfare benefits affect the supply of labour?"
+   },
+   {
+    "id": "labour-markets:flashcard:0ed25a97",
+    "back": "Licences and required qualifications, work-permit rules for foreign workers, and retirement or school-leaving ages.",
+    "front": "Give three government regulations that change the supply of labour."
+   },
+   {
+    "id": "labour-markets:flashcard:7ee34dbe",
+    "back": "% change in the quantity of labour supplied ÷ % change in the wage rate.",
+    "front": "Define the elasticity of supply of labour."
+   },
+   {
+    "id": "labour-markets:flashcard:0be94d59",
+    "back": "Training takes years and few can qualify, so a pay rise brings in few extra surgeons for a long time.",
+    "front": "Why is the supply of surgeons inelastic?"
+   },
+   {
+    "id": "labour-markets:flashcard:1cab7c87",
+    "back": "The wage at which the number of workers firms want equals the number willing to work.",
+    "front": "What is labour market equilibrium?"
+   },
+   {
+    "id": "labour-markets:flashcard:fca30ad1",
+    "back": "A horizontal line at the market wage: it is a wage-taker and can hire as many as it wants at that wage.",
+    "front": "What supply of labour does one firm in a competitive labour market face?"
+   },
+   {
+    "id": "labour-markets:flashcard:75d229ce",
+    "back": "Raises both: a shortage at the old wage bids pay up, and more workers are drawn in.",
+    "front": "What does a rise in the demand for labour do to wage and employment?"
+   },
+   {
+    "id": "labour-markets:flashcard:ff2686c7",
+    "back": "Lowers the wage and raises employment: they move in opposite directions.",
+    "front": "What does a rise in the supply of labour do to wage and employment?"
+   },
+   {
+    "id": "labour-markets:flashcard:8e48b74f",
+    "back": "No. A high wage for scarce skills is the market working. A gap that lasts because workers cannot move is a failure.",
+    "front": "Is every pay gap between occupations a market failure?"
+   },
+   {
+    "id": "labour-markets:flashcard:167eb3e5",
+    "back": "By restricting entry, which shifts supply left, and by collective bargaining for a wage above equilibrium.",
+    "front": "Name two ways a trade union can raise pay."
+   },
+   {
+    "id": "labour-markets:flashcard:4e019deb",
+    "back": "Firms hire fewer and more people want the work: a surplus of labour, unless productivity or product demand rise too.",
+    "front": "What does a union wage above equilibrium do in a competitive market?"
+   },
+   {
+    "id": "labour-markets:flashcard:68fc20e2",
+    "back": "By decision: pay scales, pay commissions and bargaining with public-sector unions, within the government budget.",
+    "front": "How is pay set in the public sector and state-owned enterprises?"
+   },
+   {
+    "id": "labour-markets:flashcard:76518741",
+    "back": "More workers are wanted than are willing at that pay, so vacancies go unfilled.",
+    "front": "What happens if public-sector pay is set below equilibrium?"
+   },
+   {
+    "id": "labour-markets:flashcard:96507af6",
+    "back": "Workers unable to move to another area to take a job.",
+    "front": "Define geographical immobility of labour."
+   },
+   {
+    "id": "labour-markets:flashcard:a50af0f9",
+    "back": "Housing costs, family and social ties, and the cost of moving and a lack of information about vacancies.",
+    "front": "Give three causes of geographical immobility."
+   },
+   {
+    "id": "labour-markets:flashcard:9bdc25f0",
+    "back": "Workers unable to move into a different type of job.",
+    "front": "Define occupational immobility of labour."
+   },
+   {
+    "id": "labour-markets:flashcard:59d5c8fc",
+    "back": "Skills specific to one job, required qualifications and licences, and the cost and time of retraining.",
+    "front": "Give three causes of occupational immobility."
+   },
+   {
+    "id": "labour-markets:flashcard:07830802",
+    "back": "Labour is not allocated to where it is most valued: idle workers exist alongside unfilled jobs, and output is lost.",
+    "front": "Why is immobility of labour a market failure?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "labour-markets:diagram:0cb19ee8",
+    "title": "The Demand for Labour",
+    "checklist": [
+     "The wage on the vertical axis, the number of workers on the horizontal",
+     "A downward-sloping demand curve: each extra worker adds less (diminishing marginal productivity)",
+     "The firm hires where the wage line meets the curve",
+     "A wage change as a movement along; a price or productivity change as a new curve"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">One workshop: hire while output is worth the wage</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists at one workshop</text><path d=\"M 336 222 L 54 71.1\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"90.2\" y=\"78.2\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">MRP = demand</text><line x1=\"54\" y1=\"161.6\" x2=\"336\" y2=\"161.6\" stroke=\"#22d3ee\" stroke-width=\"2\"/><text x=\"340\" y=\"165.6\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">W $12</text><line x1=\"54\" y1=\"161.6\" x2=\"223.2\" y2=\"161.6\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"223.2\" y1=\"161.6\" x2=\"223.2\" y2=\"222\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"223.2\" cy=\"161.6\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"223.2\" y=\"238\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">6</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">At $12 it hires 6: the 6th adds $12.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">The next would add $9, less than the wage.</text></svg>",
+      "label": "The hiring rule"
+     },
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"wr-amber\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#f59e0b\"/></marker></defs><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">A higher wage: a movement along</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists at one workshop</text><path d=\"M 336 222 L 54 71.1\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"90.2\" y=\"78.2\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">MRP = demand</text><line x1=\"54\" y1=\"161.6\" x2=\"336\" y2=\"161.6\" stroke=\"#7a8299\" stroke-width=\"2\" stroke-dasharray=\"4 4\"/><text x=\"340\" y=\"165.6\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"600\">$12</text><line x1=\"54\" y1=\"146.5\" x2=\"336\" y2=\"146.5\" stroke=\"#f59e0b\" stroke-width=\"2\"/><text x=\"340\" y=\"150.5\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">$15</text><line x1=\"54\" y1=\"161.6\" x2=\"223.2\" y2=\"161.6\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"223.2\" y1=\"161.6\" x2=\"223.2\" y2=\"222\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"223.2\" cy=\"161.6\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"223.2\" y=\"238\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">6</text><line x1=\"54\" y1=\"146.5\" x2=\"195\" y2=\"146.5\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"195\" y1=\"146.5\" x2=\"195\" y2=\"222\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"195\" cy=\"146.5\" r=\"4\" fill=\"#f59e0b\"/><text x=\"195\" y=\"238\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"400\">5</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">Wage $12 → $15: 6 → 5 machinists.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Same curve: only the wage changed.</text></svg>",
+      "label": "A higher wage"
+     },
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Price or productivity rises: a shift</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists at one workshop</text><path d=\"M 336 222 L 54 71.1\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"158.8\" y=\"147.5\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"end\" font-weight=\"600\">MRP</text><path d=\"M 336 222 L 103.4 56\" fill=\"none\" stroke=\"#8b5cf6\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"231.2\" y=\"133.5\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"start\" font-weight=\"600\">MRP₁</text><line x1=\"54\" y1=\"161.6\" x2=\"336\" y2=\"161.6\" stroke=\"#22d3ee\" stroke-width=\"2\"/><text x=\"340\" y=\"165.6\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">W $12</text><line x1=\"54\" y1=\"161.6\" x2=\"223.2\" y2=\"161.6\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"223.2\" y1=\"161.6\" x2=\"223.2\" y2=\"222\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"223.2\" cy=\"161.6\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"223.2\" y=\"238\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">6</text><line x1=\"54\" y1=\"161.6\" x2=\"251.4\" y2=\"161.6\" stroke=\"#8b5cf6\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"251.4\" y1=\"161.6\" x2=\"251.4\" y2=\"222\" stroke=\"#8b5cf6\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"251.4\" cy=\"161.6\" r=\"4\" fill=\"#8b5cf6\"/><text x=\"251.4\" y=\"238\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"middle\" font-weight=\"400\">7</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"start\" font-weight=\"600\">Shirt price $3 → $4: 6 → 7 at $12.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">One more shirt each an hour does the same.</text></svg>",
+      "label": "Price or productivity rises"
+     }
+    ],
+    "description": "IAL 3.3.4 · 1a: one workshop's demand for labour is the value of what each extra machinist adds (extra output × the price of the product, a price the workshop cannot change). A change in the wage moves along it; a change in the product price or in productivity shifts it."
+   },
+   {
+    "id": "labour-markets:diagram:b00dccd9",
+    "title": "The Supply of Labour",
+    "checklist": [
+     "An upward-sloping supply curve, the wage on the vertical axis",
+     "Net migration: S shifts right, 12,000 more willing at every wage",
+     "A licence, higher income tax or higher benefits: S shifts left",
+     "With inelastic supply, a rise in demand raises the wage more and employment less"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"nm-green\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#059669\"/></marker></defs><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">A net inflow of 12,000 machinists</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists (thousands)</text><path d=\"M 54 194.3 L 336 69.8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"340\" y=\"73.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">S</text><path d=\"M 85.3 222 L 336 111.3\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"340\" y=\"115.3\" font-size=\"12\" fill=\"#059669\" text-anchor=\"start\" font-weight=\"600\">S₁</text><line x1=\"54\" y1=\"139\" x2=\"179.3\" y2=\"139\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"179.3\" y1=\"139\" x2=\"179.3\" y2=\"222\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"179.3\" cy=\"139\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"48\" y=\"143\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">12</text><text x=\"179.3\" y=\"238\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">36</text><line x1=\"54\" y1=\"139\" x2=\"273.3\" y2=\"139\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"273.3\" y1=\"139\" x2=\"273.3\" y2=\"222\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"273.3\" cy=\"139\" r=\"4\" fill=\"#059669\"/><text x=\"273.3\" y=\"238\" font-size=\"12\" fill=\"#059669\" text-anchor=\"middle\" font-weight=\"400\">48</text><line x1=\"185.3\" y1=\"153\" x2=\"267.3\" y2=\"153\" stroke=\"#059669\" stroke-width=\"2\" marker-end=\"url(#nm-green)\"/><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#059669\" text-anchor=\"start\" font-weight=\"600\">At $12: 48,000 willing instead of 36,000.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">A new curve: more willing at every wage.</text></svg>",
+      "label": "Net migration"
+     },
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"li-red\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#f87171\"/></marker></defs><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">A licence some cannot meet</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists (thousands)</text><path d=\"M 54 194.3 L 336 69.8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"340\" y=\"73.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">S</text><path d=\"M 54 152.8 L 273.3 56\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"273.3\" y=\"50\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">S₁</text><line x1=\"54\" y1=\"139\" x2=\"179.3\" y2=\"139\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"179.3\" y1=\"139\" x2=\"179.3\" y2=\"222\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"179.3\" cy=\"139\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"48\" y=\"143\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">12</text><text x=\"179.3\" y=\"238\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">36</text><line x1=\"54\" y1=\"139\" x2=\"85.3\" y2=\"139\" stroke=\"#f87171\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"85.3\" y1=\"139\" x2=\"85.3\" y2=\"222\" stroke=\"#f87171\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"85.3\" cy=\"139\" r=\"4\" fill=\"#f87171\"/><text x=\"85.3\" y=\"238\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"400\">24</text><line x1=\"173.3\" y1=\"153\" x2=\"91.3\" y2=\"153\" stroke=\"#f87171\" stroke-width=\"2\" marker-end=\"url(#li-red)\"/><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">At $12: 24,000 willing instead of 36,000.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Tax or benefit rises shift S left in the same way.</text></svg>",
+      "label": "A licence requirement"
+     },
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">The same rise in demand, two supply curves</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists (thousands)</text><path d=\"M 273.3 222 L 85.3 56\" fill=\"none\" stroke=\"#22d3ee\" stroke-width=\"2.5\"/><text x=\"279.3\" y=\"216\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">D</text><path d=\"M 336 194.3 L 179.3 56\" fill=\"none\" stroke=\"#22d3ee\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"340\" y=\"198.3\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">D₁</text><path d=\"M 54 194.3 L 336 69.8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"340\" y=\"73.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">elastic S</text><path d=\"M 132.3 222 L 226.3 56\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.5\"/><text x=\"226.3\" y=\"50\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">inelastic S</text><line x1=\"54\" y1=\"139\" x2=\"179.3\" y2=\"139\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"179.3\" y1=\"139\" x2=\"179.3\" y2=\"222\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"179.3\" cy=\"139\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"48\" y=\"143\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">12</text><text x=\"179.3\" y=\"238\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">36</text><line x1=\"54\" y1=\"111.3\" x2=\"242\" y2=\"111.3\" stroke=\"#34d399\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"242\" y1=\"111.3\" x2=\"242\" y2=\"222\" stroke=\"#34d399\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"242\" cy=\"111.3\" r=\"4\" fill=\"#34d399\"/><text x=\"48\" y=\"115.3\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"end\" font-weight=\"400\">14</text><text x=\"242\" y=\"238\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"400\">44</text><line x1=\"54\" y1=\"83.7\" x2=\"210.7\" y2=\"83.7\" stroke=\"#f87171\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"210.7\" y1=\"83.7\" x2=\"210.7\" y2=\"222\" stroke=\"#f87171\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"210.7\" cy=\"83.7\" r=\"4\" fill=\"#f87171\"/><text x=\"48\" y=\"87.7\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"end\" font-weight=\"400\">16</text><text x=\"210.7\" y=\"238\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"400\">40</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">Elastic: $14, 44,000. Inelastic: $16, 40,000.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Inelastic supply: more of the rise goes on pay.</text></svg>",
+      "label": "Elastic and inelastic supply"
+     }
+    ],
+    "description": "IAL 3.3.4 · 2c and 2d: the supply of labour to one occupation, shifted right by net migration and left by a licence requirement, and the same rise in demand met by an elastic and an inelastic supply."
+   },
+   {
+    "id": "labour-markets:diagram:8898e521",
+    "title": "Labour Market Equilibrium",
+    "checklist": [
+     "D and S labelled, with the equilibrium wage and quantity marked on both axes",
+     "One firm: a horizontal supply at the market wage, hiring where it meets the firm's demand",
+     "Demand rises: $14 and 44,000 — both up",
+     "Supply rises: $10 and 40,000 — wage down, employment up"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Labour market equilibrium</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists (thousands)</text><path d=\"M 273.3 222 L 85.3 56\" fill=\"none\" stroke=\"#22d3ee\" stroke-width=\"2.5\"/><text x=\"279.3\" y=\"216\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">D</text><path d=\"M 54 194.3 L 336 69.8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"340\" y=\"73.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">S</text><line x1=\"54\" y1=\"139\" x2=\"179.3\" y2=\"139\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"179.3\" y1=\"139\" x2=\"179.3\" y2=\"222\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"179.3\" cy=\"139\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"48\" y=\"143\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">12</text><text x=\"179.3\" y=\"238\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">36</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"600\">Wanted = willing at $12: 36,000 machinists.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Below it, a shortage; above it, a surplus.</text></svg>",
+      "label": "Equilibrium"
+     },
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">One firm: a wage-taker</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists at one workshop</text><path d=\"M 336 222 L 54 71.1\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"90.2\" y=\"78.2\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">firm's demand</text><line x1=\"54\" y1=\"161.6\" x2=\"336\" y2=\"161.6\" stroke=\"#22d3ee\" stroke-width=\"2\"/><text x=\"340\" y=\"165.6\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">S = W</text><line x1=\"54\" y1=\"161.6\" x2=\"223.2\" y2=\"161.6\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"223.2\" y1=\"161.6\" x2=\"223.2\" y2=\"222\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"223.2\" cy=\"161.6\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"48\" y=\"165.6\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">12</text><text x=\"223.2\" y=\"238\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">6</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">The market sets $12; the firm faces a flat supply there.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">It hires 6, where its demand meets that line.</text></svg>",
+      "label": "One firm: a wage-taker"
+     },
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Export orders rise: demand shifts right</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists (thousands)</text><path d=\"M 273.3 222 L 85.3 56\" fill=\"none\" stroke=\"#22d3ee\" stroke-width=\"2.5\"/><text x=\"279.3\" y=\"216\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">D</text><path d=\"M 54 194.3 L 336 69.8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"340\" y=\"73.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">S</text><path d=\"M 336 194.3 L 179.3 56\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"340\" y=\"198.3\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">D₁</text><line x1=\"54\" y1=\"139\" x2=\"179.3\" y2=\"139\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"179.3\" y1=\"139\" x2=\"179.3\" y2=\"222\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"179.3\" cy=\"139\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"48\" y=\"143\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">12</text><text x=\"179.3\" y=\"238\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">36</text><line x1=\"54\" y1=\"111.3\" x2=\"242\" y2=\"111.3\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"242\" y1=\"111.3\" x2=\"242\" y2=\"222\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"242\" cy=\"111.3\" r=\"4\" fill=\"#f59e0b\"/><text x=\"48\" y=\"115.3\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"end\" font-weight=\"400\">14</text><text x=\"242\" y=\"238\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"400\">44</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">New equilibrium: $14, 44,000 machinists.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Wage and employment both rise.</text></svg>",
+      "label": "Demand rises"
+     },
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Net migration: supply shifts right</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists (thousands)</text><path d=\"M 273.3 222 L 85.3 56\" fill=\"none\" stroke=\"#22d3ee\" stroke-width=\"2.5\"/><text x=\"279.3\" y=\"216\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">D</text><path d=\"M 54 194.3 L 336 69.8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"340\" y=\"73.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">S</text><path d=\"M 85.3 222 L 336 111.3\" fill=\"none\" stroke=\"#8b5cf6\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"340\" y=\"115.3\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"start\" font-weight=\"600\">S₁</text><line x1=\"54\" y1=\"139\" x2=\"179.3\" y2=\"139\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"179.3\" y1=\"139\" x2=\"179.3\" y2=\"222\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"179.3\" cy=\"139\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"48\" y=\"143\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">12</text><text x=\"179.3\" y=\"238\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">36</text><line x1=\"54\" y1=\"166.7\" x2=\"210.7\" y2=\"166.7\" stroke=\"#8b5cf6\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"210.7\" y1=\"166.7\" x2=\"210.7\" y2=\"222\" stroke=\"#8b5cf6\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"210.7\" cy=\"166.7\" r=\"4\" fill=\"#8b5cf6\"/><text x=\"48\" y=\"170.7\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"end\" font-weight=\"400\">10</text><text x=\"210.7\" y=\"238\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"middle\" font-weight=\"400\">40</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"start\" font-weight=\"600\">New equilibrium: $10, 40,000 machinists.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">The wage falls; employment rises.</text></svg>",
+      "label": "Supply rises"
+     }
+    ],
+    "description": "IAL 3.3.4 · 3a and 3b: the machinists' market clears where demand meets supply; one firm takes that wage as a horizontal supply; a shift of demand moves the wage and employment together, a shift of supply moves them apart."
+   },
+   {
+    "id": "labour-markets:diagram:8da82be6",
+    "title": "Trade Unions and Public-Sector Pay",
+    "checklist": [
+     "A negotiated wage of $15 drawn as a horizontal line above equilibrium",
+     "The quantity hired read off demand, the quantity willing read off supply, the gap between them marked",
+     "Restricting entry drawn as a leftward shift of supply",
+     "Public-sector pay set below equilibrium, with the vacancies it leaves"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">A negotiated wage above equilibrium</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists (thousands)</text><path d=\"M 273.3 222 L 85.3 56\" fill=\"none\" stroke=\"#22d3ee\" stroke-width=\"2.5\"/><text x=\"279.3\" y=\"216\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">D</text><path d=\"M 54 194.3 L 336 69.8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"340\" y=\"73.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">S</text><line x1=\"54\" y1=\"97.5\" x2=\"336\" y2=\"97.5\" stroke=\"#f87171\" stroke-width=\"2\"/><text x=\"340\" y=\"101.5\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">union $15</text><line x1=\"54\" y1=\"139\" x2=\"179.3\" y2=\"139\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"179.3\" y1=\"139\" x2=\"179.3\" y2=\"222\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"179.3\" cy=\"139\" r=\"4\" fill=\"#7a8299\"/><text x=\"48\" y=\"143\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">12</text><text x=\"179.3\" y=\"238\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">36</text><line x1=\"54\" y1=\"97.5\" x2=\"132.3\" y2=\"97.5\" stroke=\"#f87171\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"132.3\" y1=\"97.5\" x2=\"132.3\" y2=\"222\" stroke=\"#f87171\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"132.3\" cy=\"97.5\" r=\"4\" fill=\"#f87171\"/><text x=\"132.3\" y=\"238\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"400\">30</text><line x1=\"54\" y1=\"97.5\" x2=\"273.3\" y2=\"97.5\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"273.3\" y1=\"97.5\" x2=\"273.3\" y2=\"222\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"273.3\" cy=\"97.5\" r=\"4\" fill=\"#f59e0b\"/><text x=\"273.3\" y=\"238\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"400\">48</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">At $15: 30,000 hired, 48,000 willing.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">A surplus of 18,000; 6,000 fewer jobs.</text></svg>",
+      "label": "A negotiated wage"
+     },
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">The union restricts entry</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists (thousands)</text><path d=\"M 273.3 222 L 85.3 56\" fill=\"none\" stroke=\"#22d3ee\" stroke-width=\"2.5\"/><text x=\"279.3\" y=\"216\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">D</text><path d=\"M 54 194.3 L 336 69.8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"340\" y=\"73.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">S</text><path d=\"M 54 132.1 L 226.3 56\" fill=\"none\" stroke=\"#8b5cf6\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"226.3\" y=\"50\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"middle\" font-weight=\"600\">S₁</text><line x1=\"54\" y1=\"139\" x2=\"179.3\" y2=\"139\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"179.3\" y1=\"139\" x2=\"179.3\" y2=\"222\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"179.3\" cy=\"139\" r=\"4\" fill=\"#7a8299\"/><text x=\"48\" y=\"143\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">12</text><text x=\"179.3\" y=\"238\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">36</text><line x1=\"54\" y1=\"97.5\" x2=\"132.3\" y2=\"97.5\" stroke=\"#8b5cf6\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"132.3\" y1=\"97.5\" x2=\"132.3\" y2=\"222\" stroke=\"#8b5cf6\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"132.3\" cy=\"97.5\" r=\"4\" fill=\"#8b5cf6\"/><text x=\"48\" y=\"101.5\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"end\" font-weight=\"400\">15</text><text x=\"132.3\" y=\"238\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"middle\" font-weight=\"400\">30</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"start\" font-weight=\"600\">Supply −18,000 at every wage: $15, 30,000.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">No queue: the others never qualified.</text></svg>",
+      "label": "Restricting entry"
+     },
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Public-sector pay set below equilibrium</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Nurses (thousands)</text><path d=\"M 298.4 222 L 110.4 56\" fill=\"none\" stroke=\"#22d3ee\" stroke-width=\"2.5\"/><text x=\"304.4\" y=\"216\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">D</text><path d=\"M 54 205.4 L 336 80.9\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"340\" y=\"84.9\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">S</text><line x1=\"54\" y1=\"163.9\" x2=\"336\" y2=\"163.9\" stroke=\"#f59e0b\" stroke-width=\"2\"/><text x=\"340\" y=\"167.9\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">set $21</text><line x1=\"54\" y1=\"139\" x2=\"204.4\" y2=\"139\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"204.4\" y1=\"139\" x2=\"204.4\" y2=\"222\" stroke=\"#7a8299\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"204.4\" cy=\"139\" r=\"4\" fill=\"#7a8299\"/><text x=\"48\" y=\"143\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">24</text><text x=\"204.4\" y=\"238\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">26</text><line x1=\"54\" y1=\"163.9\" x2=\"148\" y2=\"163.9\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"148\" y1=\"163.9\" x2=\"148\" y2=\"222\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"148\" cy=\"163.9\" r=\"4\" fill=\"#f59e0b\"/><text x=\"148\" y=\"238\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"400\">20</text><line x1=\"54\" y1=\"163.9\" x2=\"232.6\" y2=\"163.9\" stroke=\"#22d3ee\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"232.6\" y1=\"163.9\" x2=\"232.6\" y2=\"222\" stroke=\"#22d3ee\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"232.6\" cy=\"163.9\" r=\"4\" fill=\"#22d3ee\"/><text x=\"232.6\" y=\"238\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"middle\" font-weight=\"400\">29</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">At $21: 29,000 wanted, 20,000 willing.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">9,000 posts stay empty; clearing pay $24.</text></svg>",
+      "label": "Public-sector pay"
+     }
+    ],
+    "description": "IAL 3.3.4 · 2c and 3c: a union wage above equilibrium leaves a surplus of labour; restricting entry shifts supply left to the same wage; public-sector pay set below equilibrium leaves vacancies."
+   },
+   {
+    "id": "labour-markets:diagram:98be411e",
+    "title": "Immobility: Two Regions",
+    "checklist": [
+     "Two regional labour markets with the same supply and the same starting point",
+     "North: D shifts left; the wage falls to $10, or at $12 12,000 are jobless",
+     "South: D shifts right; the wage rises to $14, or at $12 12,000 posts are empty",
+     "The gap persists because workers cannot move between the two"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">The North: workshops close</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists (thousands)</text><path d=\"M 273.3 222 L 85.3 56\" fill=\"none\" stroke=\"#7a8299\" stroke-width=\"2.5\" stroke-dasharray=\"4 4\"/><text x=\"279.3\" y=\"216\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"600\">D</text><path d=\"M 54 194.3 L 336 69.8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"340\" y=\"73.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">S</text><path d=\"M 179.3 222 L 54 111.3\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"2.5\"/><text x=\"185.3\" y=\"216\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">D₁</text><line x1=\"54\" y1=\"139\" x2=\"179.3\" y2=\"139\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"179.3\" y1=\"139\" x2=\"179.3\" y2=\"222\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"179.3\" cy=\"139\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"48\" y=\"143\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">12</text><text x=\"179.3\" y=\"238\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">36</text><line x1=\"54\" y1=\"166.7\" x2=\"116.7\" y2=\"166.7\" stroke=\"#f87171\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"116.7\" y1=\"166.7\" x2=\"116.7\" y2=\"222\" stroke=\"#f87171\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"116.7\" cy=\"166.7\" r=\"4\" fill=\"#f87171\"/><text x=\"48\" y=\"170.7\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"end\" font-weight=\"400\">10</text><text x=\"116.7\" y=\"238\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"400\">28</text><line x1=\"54\" y1=\"139\" x2=\"85.3\" y2=\"139\" stroke=\"#f87171\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"85.3\" y1=\"139\" x2=\"85.3\" y2=\"222\" stroke=\"#f87171\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"85.3\" cy=\"139\" r=\"4\" fill=\"#f87171\"/><text x=\"85.3\" y=\"238\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"400\">24</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">Wage $10 if it falls; at $12, 12,000 jobless.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">The workers cannot move South.</text></svg>",
+      "label": "North: demand falls"
+     },
+     {
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">The South: orders grow</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Wage ($ an hour)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Machinists (thousands)</text><path d=\"M 273.3 222 L 85.3 56\" fill=\"none\" stroke=\"#7a8299\" stroke-width=\"2.5\" stroke-dasharray=\"4 4\"/><text x=\"279.3\" y=\"216\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"600\">D</text><path d=\"M 54 194.3 L 336 69.8\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"340\" y=\"73.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">S</text><path d=\"M 336 194.3 L 179.3 56\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/><text x=\"340\" y=\"198.3\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">D₁</text><line x1=\"54\" y1=\"139\" x2=\"179.3\" y2=\"139\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"179.3\" y1=\"139\" x2=\"179.3\" y2=\"222\" stroke=\"#e2e8f0\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"179.3\" cy=\"139\" r=\"4\" fill=\"#e2e8f0\"/><text x=\"48\" y=\"143\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">12</text><text x=\"179.3\" y=\"238\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">36</text><line x1=\"54\" y1=\"111.3\" x2=\"242\" y2=\"111.3\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"242\" y1=\"111.3\" x2=\"242\" y2=\"222\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"242\" cy=\"111.3\" r=\"4\" fill=\"#f59e0b\"/><text x=\"48\" y=\"115.3\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"end\" font-weight=\"400\">14</text><text x=\"242\" y=\"238\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"400\">44</text><line x1=\"54\" y1=\"139\" x2=\"273.3\" y2=\"139\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"273.3\" y1=\"139\" x2=\"273.3\" y2=\"222\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"273.3\" cy=\"139\" r=\"4\" fill=\"#f59e0b\"/><text x=\"273.3\" y=\"238\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"400\">48</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">Wage $14 if it rises; at $12, 12,000 vacancies.</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Idle workers in the North could fill them.</text></svg>",
+      "label": "South: demand rises"
+     }
+    ],
+    "description": "IAL 3.3.4 · 4a: demand for machinists falls in one region and rises in another. If workers cannot move, the wage gap does not close, and if pay stays at the old wage in both there are jobless workers in one region and vacancies in the other."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "Export orders for Tellmar's shirts rise: demand for the final product increases.",
+      "Labour is a derived demand, so at every wage workshops want 12,000 more garment machinists.",
+      "At the old wage of $12 an hour there is a shortage: 48,000 wanted against 36,000 willing.",
+      "Workshops compete for workers and the wage rises to $14 an hour, drawing in more people along the supply curve.",
+      "The new equilibrium: 44,000 employed at $14 an hour."
+     ],
+     "title": "From a rise in export orders to a new equilibrium wage",
+     "result": "A demand shift moves the wage and employment in the same direction. How much of the change shows up as higher pay rather than more jobs depends on how elastic the supply of labour is."
+    },
+    {
+     "steps": [
+      "The market sets the wage at $12 an hour; Arun Shirts is too small to change it, so it takes it.",
+      "Each extra machinist adds fewer shirts than the one before, because the machines are fixed.",
+      "It sells every shirt at the market price of $3, so the sixth adds 4 shirts worth $12 and the seventh 3 worth $9.",
+      "The firm hires while the extra output is worth at least the wage: 6 machinists."
+     ],
+     "title": "How one firm decides how many to hire",
+     "result": "A higher wage moves the firm along its demand curve (5 at $15 an hour); a higher product price or higher productivity shifts it (7 at $12 an hour)."
+    },
+    {
+     "steps": [
+      "Restricting entry: longer apprenticeships and member-only hiring cut supply by 18,000 at every wage.",
+      "The wage rises to $15 an hour and 30,000 are employed; no one qualified is left queuing.",
+      "Bargaining: the union wins a floor of $15 an hour with supply unchanged.",
+      "Firms hire 30,000 while 48,000 want the work: a surplus of 18,000."
+     ],
+     "title": "Two ways a union raises pay",
+     "result": "Both routes reach the same wage and the same employment. What differs is who is left out: with a restriction they never qualified; with a floor they are qualified and cannot find a post. In both, the jobs lost depend on the elasticity of demand for labour."
+    },
+    {
+     "steps": [
+      "Demand for garment machinists falls by 12,000 in the North and rises by 12,000 in the South.",
+      "If wages adjust, the North's falls to $10 an hour and the South's rises to $14 an hour.",
+      "Normally workers would move South and close the $4 gap. Housing costs and family ties stop them.",
+      "If pay in both regions stays at $12 an hour, 12,000 are out of work in the North while 12,000 posts go unfilled in the South."
+     ],
+     "title": "Immobility, from a regional shock to a market failure",
+     "result": "Idle workers beside unfilled jobs is labour not allocated to where it is most valued: market failure in the labour market. How serious it is depends on how long the barriers last."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Does a wage above equilibrium cost jobs?",
+     "content": "The basic prediction is yes: a union wage above equilibrium moves firms up their demand curve and leaves a surplus of labour. **How many jobs go depends on the elasticity of demand for labour.** Where labour is hard to replace with machines, a small share of costs and making a product customers keep buying, few jobs are lost. Where the pay rise comes with higher productivity, or demand for the product is rising, the demand curve itself moves right and the losses can be none. A strong judgement names which of these holds for the occupation in the question."
+    },
+    {
+     "title": "Is a pay gap a market failure?",
+     "content": "Some are and some are not. **The test is whether the gap would close if workers could move.** A high wage for a skill that takes years to learn rations the few who have it and draws in trainees: the market working. A gap between regions, or between a declining and a growing occupation, that lasts because workers cannot afford to move or lack the qualifications, is immobility: a market failure. The strongest answers weigh how large and how lasting the immobility is, since a friction that clears in a year matters far less than one that lasts a decade."
+    },
+    {
+     "title": "Supply and demand, or a decision?",
+     "content": "In competitive occupations with many employers, supply and demand set the wage, and **even a negotiated or administered wage cannot stay far from equilibrium for long without shortages or surpluses.** But trade unions set wages by collective bargaining and control entry, and the state sets public-sector pay through pay scales, commissions and its budget. The judgement depends on how competitive the occupation is and how long a period the question is about."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "labour-markets:mistake:31634dc6",
+    "why": "The wage is on the vertical axis, so a change in it moves firms along their demand curve, and workers along the supply curve. Drawing a shift for it double-counts the change.",
+    "title": "Shifting the curve for a change in the wage",
+    "instead": "Ask whether the cause is on an axis. If it is the wage, draw a movement. If it is one of the named factors — product demand, productivity, migration, tax — draw a new, labelled curve.",
+    "looks_like": "\"Wages rose, so the demand for labour shifted left.\""
+   },
+   {
+    "id": "labour-markets:mistake:0a9f23e9",
+    "why": "The workers are identical. Each adds less because the machines and space do not grow with the workforce — diminishing marginal productivity.",
+    "title": "Explaining the downward slope with worse workers",
+    "instead": "Name fixed inputs as the reason, then link it to the hiring rule: the extra output is worth less, so only a lower wage makes the extra worker worth hiring.",
+    "looks_like": "\"Firms hire fewer at a higher wage because extra workers are less skilled.\""
+   },
+   {
+    "id": "labour-markets:mistake:40ecdffe",
+    "why": "Extra output times the price is what a worker adds to revenue only when the firm can sell every extra unit at the same price, as one small firm among many can. A firm that must cut its price to sell more gains less than the price on each extra unit, because the lower price also applies to the units it was already selling.",
+    "title": "Valuing extra output at the price when the firm must cut its price to sell more",
+    "instead": "State the assumption before you multiply: \"the firm sells at a given market price, so each extra unit adds its price to revenue.\" If the firm must cut its price to sell more, value the extra output at the extra revenue it brings in, which is below the price.",
+    "looks_like": "\"The extra worker makes 3 more units and each sells for $10, so she adds $30 to revenue\" — written about a firm that has to lower its price to sell the extra units."
+   },
+   {
+    "id": "labour-markets:mistake:8963384f",
+    "why": "When supply shifts left, the wage rises and firms move up their demand curve, so employment falls. Wage and employment move together only when demand shifts.",
+    "title": "Expecting employment to rise whenever pay rises",
+    "instead": "Identify which curve moved first. Demand: both move together. Supply: they move apart.",
+    "looks_like": "\"A licence raised machinists' pay, so more machinists are employed.\""
+   },
+   {
+    "id": "labour-markets:mistake:c271fd6c",
+    "why": "A high wage for scarce, hard-won skills is how the market rations them and draws in trainees. Market failure in the labour market is immobility: gaps that persist because workers cannot move.",
+    "title": "Calling every pay gap a market failure",
+    "instead": "Ask whether the gap would close if workers could move. If yes, immobility is the failure; if it reflects long training and strong demand, it is the market working.",
+    "looks_like": "\"Surgeons earn more than cleaners, so the labour market has failed.\""
+   },
+   {
+    "id": "labour-markets:mistake:4815444d",
+    "why": "Lacking the skills for a different job is occupational immobility. Geographical immobility is being unable to move to another place where the same kind of job exists.",
+    "title": "Confusing the two kinds of immobility",
+    "instead": "Test with one question: is the barrier the place or the skill? Name the kind, then give its cause and its consequence.",
+    "looks_like": "\"The miners are geographically immobile because they have no IT skills.\""
+   },
+   {
+    "id": "labour-markets:mistake:a8fdc36b",
+    "why": "Public-sector pay is set by decision — pay scales, commissions, the budget — so it can stay below equilibrium for years while posts go unfilled.",
+    "title": "Treating public-sector pay as a market price",
+    "instead": "Say who sets the wage and what limits them, then show the shortage at the set wage on a diagram.",
+    "looks_like": "\"Nurses' pay will rise to clear the shortage.\""
+   }
+  ]
+ }
+}

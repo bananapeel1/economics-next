@@ -1707,15 +1707,15 @@
     "correctIndex": 1
    },
    {
-    "id": "labour-markets:quiz:9ad88246",
-    "question": "Demand for a firm's product falls as fashions change. The firm's demand for labour is most likely to:",
+    "id": "labour-markets:quiz:9960c68b",
+    "question": "A rise in the price of the product a firm sells is most likely to:",
     "options": [
-     "shift to the left",
-     "shift to the right",
-     "move down along its curve",
-     "stay where it is"
+     "shift its demand for labour to the right",
+     "cause a movement along its demand for labour",
+     "shift the supply of labour to the right",
+     "shift its demand for labour to the left"
     ],
-    "explanation": "The demand for labour is derived from the demand for the product. With fewer customers, less output is needed, so the firm wants fewer workers at every wage and the whole curve moves left. The wage has not changed, so this is a shift, not a movement along the curve.",
+    "explanation": "Each worker's output now sells for more, so more workers are worth hiring at every wage: the whole demand curve moves right. A movement along the curve needs a change in the wage, and the supply of labour is unaffected by what the product sells for.",
     "correctIndex": 0
    },
    {
@@ -1767,15 +1767,15 @@
     "correctIndex": 2
    },
    {
-    "id": "labour-markets:quiz:7929c937",
-    "question": "The government raises the age at which people retire by two years. The supply of labour is most likely to:",
+    "id": "labour-markets:quiz:7a9180ea",
+    "question": "Which of these would shift the supply of labour to an occupation to the left?",
     "options": [
-     "shift to the right",
-     "shift to the left",
-     "move up along its curve",
-     "stay where it is"
+     "A new licence the job now requires",
+     "A rise in the wage rate for the job",
+     "A net inflow of workers from abroad",
+     "A cut in income tax rates"
     ],
-    "explanation": "People who would have left the labour force keep working for two more years, so more are willing to work at every wage and supply shifts right. The wage has not changed, so this is a shift, not a movement along the curve.",
+    "explanation": "A licence shuts out everyone who does not hold it, so fewer can offer themselves at every wage. A rise in the wage is a movement along the curve, while net inflows and tax cuts shift it the other way.",
     "correctIndex": 0
    },
    {
@@ -1839,15 +1839,15 @@
     "correctIndex": 1
    },
    {
-    "id": "labour-markets:quiz:266cfd23",
-    "question": "In a competitive labour market, the wage is above equilibrium. It then falls mainly because:",
+    "id": "labour-markets:quiz:1896f9c5",
+    "question": "At a wage above equilibrium in a competitive labour market there will be:",
     "options": [
-     "firms compete for staff by offering more pay",
-     "the demand for labour shifts to the left",
-     "workers without a post offer to work for less",
-     "the supply of labour shifts to the left"
+     "more workers wanted than are willing",
+     "equal numbers wanted and willing",
+     "more workers willing than firms want",
+     "a rightward shift of labour demand"
     ],
-    "explanation": "Above equilibrium more people want the work than there are posts, so those without one accept less and firms find they can fill posts for less: the wage is bid down until the numbers wanted and willing match. Firms bidding pay up is what happens below equilibrium, and no curve needs to shift.",
+    "explanation": "Above equilibrium, the higher wage draws more people in while firms hire fewer, leaving a surplus of labour that bids the wage down. A shortage is what happens below equilibrium, and nothing here shifts a curve.",
     "correctIndex": 2
    },
    {
@@ -1911,15 +1911,15 @@
     "correctIndex": 2
    },
    {
-    "id": "labour-markets:quiz:3c03bafa",
-    "question": "A union wins a wage above equilibrium and no jobs are lost. The most likely reason is that:",
+    "id": "labour-markets:quiz:353b87d6",
+    "question": "A trade union wins a pay deal above the market-clearing wage. The most likely result is:",
     "options": [
-     "output per worker rose with the deal",
-     "the union also lengthened apprenticeships",
-     "more people now want the work",
-     "demand for the product has fallen"
+     "fewer jobs and a surplus of labour",
+     "more jobs and a shortage of labour",
+     "more jobs and a surplus of labour",
+     "fewer jobs and a shortage of labour"
     ],
-    "explanation": "Firms hire fewer at a higher wage only if nothing else changes. If each worker now produces more, the demand for labour shifts right and can hold employment up at the higher wage. Longer apprenticeships shift supply left, more applicants only widen the surplus, and weaker product demand would cost more jobs, not fewer.",
+    "explanation": "At the higher wage firms move up their demand curve and hire fewer, while more people want the work, so a surplus opens. Unless productivity or demand for the product rises alongside, employment falls.",
     "correctIndex": 0
    },
    {
@@ -1983,15 +1983,15 @@
     "correctIndex": 0
    },
    {
-    "id": "labour-markets:quiz:66a69dd2",
-    "question": "Jobless miners in one region do not move to fill the vacant mining jobs in another. The most likely reason is that:",
+    "id": "labour-markets:quiz:6690631e",
+    "question": "Geographical immobility of labour is most likely to cause:",
     "options": [
-     "the vacant jobs pay a higher wage",
-     "demand for coal has fallen in their region",
-     "the other region is short of miners",
-     "homes near the vacant jobs cost far more"
+     "a fall in wages in every region",
+     "a shortage of workers in every region",
+     "higher productivity in the declining region",
+     "unemployment in one region alongside vacancies in another"
     ],
-    "explanation": "The miners have the skills and the jobs exist, so the barrier is the move itself: housing in the growing region costs far more. Higher pay there is a reason to move, not to stay, and falling demand at home and a shortage elsewhere are why the jobs and the jobless exist, not why the gap stays open.",
+    "explanation": "Workers who cannot move stay jobless where demand has fallen, while firms where demand has risen cannot fill their posts. The two exist side by side, which is why immobility is a market failure.",
     "correctIndex": 3
    },
    {
