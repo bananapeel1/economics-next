@@ -10272,3 +10272,136 @@ pass); 12.75 rebuilds this shell, so it may be moot, but check before assuming i
 
 **No SQL, no DB write, no live content published by this packet.** All changes are in code/data files; the
 "CONTENT GATE" step was correctly skipped per `gate.log`.
+
+## Handoff — what comes next (packet 44 bookkeeping pass, 26 September 2026)
+
+**Packet 44 (aggregate-supply, IAL Economics 2.3.3) PASSED the gate, 25 confirmed / 2 wont-fix / 0 open,
+1 fix round of 2 budgeted.** STAGED to `draft` only; live `data` and git HEAD are both untouched; nothing
+committed by this pass. Full detail in the `PROGRESS.md` row for 44; artefacts in `audit/runs/packet-44/`.
+This was a bookkeeping-only pass: no code, content, test or script file was touched, and `audit/ledger.json`
+was read but not written.
+
+**Correction to the task brief that opened this pass.** The brief's own "Outcome of packet 44" summary read
+"ledger: 0 confirmed, 0 still rejected, 0 unverified." That is wrong. `node audit/scripts/ledger.mjs packet 44`
+run fresh by this pass shows **25 confirmed, 2 wont-fix, 0 open** — matching `built.md`'s own line ("Packet 44
+now stands at 25 confirmed and 2 wont-fix") written by the build session before this pass ever ran. Recorded
+here rather than propagated; do not carry the brief's figure forward.
+
+**No `## Packet 44 spec` heading exists anywhere in this file** — only the packet-43 handoff (a few sections
+above) reporting `audit/runs/packet-44/` as concurrently in progress. This is the same gap packets 41 and 43
+hit and normalized: PROTOCOL's own rule is that the ledger, not this file, defines scope, and `built.md`/
+`brief.md` supplied it here. Not a contradiction between authorities; a missing document.
+
+**Independently re-verified this pass, by methods different from the ones in the existing logs:**
+- Section span: `grep -n "2\.3\.[0-9]" audit/raw/econ_spec.txt` run directly by this pass (not read from
+  `built.md`) → 2.3.3 "Aggregate supply (AS)" at `:1026`, 2.3.4 "National income" at `:1056`. Confirms the
+  build session's own citation independently.
+- `node audit/scripts/ledger.mjs unverified 44` → "gate clear", run fresh.
+- `npm run attribution` (not in the original `gate.log`) run fresh → 0 UNATTRIBUTED, 0 UNDECIDED DIAGRAMS,
+  "no failures" for both live and staged.
+- `node audit/scripts/check-staged-drafts.mjs aggregate-supply` re-run fresh against the **currently running**
+  dev server (not a saved log) → matches, 0 drift.
+- Two live `curl` calls against the running server, read for specific fields (not the admin summary): a
+  fresh `curl "localhost:3001/api/sections/aggregate-supply"` (no `draft=1`) returned 5 blocks / 3 diagrams /
+  5 practice — **the old, unpublished section, confirming live `data` is genuinely untouched right now**; the
+  same call with `?draft=1` returned 5 blocks / 18 subsections / 5 diagrams — matching the staged bundle.
+
+**Carried forward, not this pass's to fix:**
+- One new, this-packet FAIL from `verify-b.md`: the quiz at step 14 (40m × $20,000) and step 23 (50m × 80%)
+  both have their answer printed in the diagram caption or checklist directly above the question. Same
+  defect class as `revvylearn_printed_answer_leak` — worth checking whether the runner's own answer-leak
+  guard has a blind spot for diagram captions specifically, since it apparently passed this content.
+- Three pre-existing platform bugs, confirmed non-blocking and not scoped to this packet (same as packets 42
+  and 43 carried): the self-mark checklist box count (`InlinePractice.jsx`'s `checklistFrom`), the
+  resume-banner dismissal gap (`LearnModeTab.jsx:659`), and a mid-section reload's completion score counting
+  only the post-reload session.
+- A loose thread from packet 44's own fix round, about a **different** section: `built.md`'s fix-round note
+  says a fresh `curl "localhost:3001/api/sections/national-income"` **without** `?draft=1` served "Three AS
+  shapes" (packet 37's own content) — the same thing `?draft=1` serves — even though `PROGRESS.md` row 37
+  reads "STAGED NOT PUBLISHED". The build session flagged this but did not investigate why the non-draft
+  route would serve draft-only content, and this pass did not re-check it (out of scope: it is national-income's
+  row, not aggregate-supply's). **Worth checking before any publish**: if the non-draft API genuinely
+  serves unpublished draft content for national-income, that is a live-serving-draft leak, not merely a
+  documentation gap in row 37's status.
+
+**Next unclaimed packet.** Row 45 (labour-markets) reads "not started" in `PROGRESS.md` as of this write and
+had no `audit/runs/packet-45/` directory as of this check. Re-verify both facts live before starting; do not
+chain this claim forward the way earlier handoffs' "N open" figures went stale within the same day.
+
+**Escalate to the founder**: nothing blocking from this packet itself. When ready to publish, per the packet
+5/7 checkpoint: commit the staged packet-44 files (script modules + SPEC-OWNERSHIP row + both snapshots,
+listed in the `PROGRESS.md` row), run Rule 3's field check against an actual `origin/main` checkout, fix the
+two printed-answer-in-caption items, then `node scripts/publish-section.mjs aggregate-supply --confirm`.
+Separately: the national-income non-draft-serves-draft question above should be resolved before that
+section (or any section that depends on it, like this one's `specGap-07` disposition) is treated as safe to
+publish.
+
+## Handoff — packet 44 closed (brain)
+
+**Bookkeeping-only pass, 26 September 2026.** Authored nothing, fixed nothing, committed nothing. Re-ran
+`node audit/scripts/ledger.mjs unverified 44` (gate clear) and `node audit/scripts/check-staged-drafts.mjs
+aggregate-supply` (matches, 0 drift) fresh; read `verify-a.md`, `verify-b.md`, `verify-b-fix.md` and
+`built.md` in full; ran two independent `curl` checks (live vs `?draft=1`) against the running dev server
+rather than reusing the DOM-walk or the bundle-table probe those files already used.
+
+**What this pass found that the prior packet-44 bookkeeping handoff (above, same date) did not know yet:**
+that handoff's own live `curl` genuinely found the OLD, unpublished section — but the founder published
+this section **at 05:45 UTC 2026-09-26**, `node scripts/publish-section.mjs aggregate-supply --confirm`,
+backup `audit/snapshots/auto-prepublish-2026-09-26T05-45-10-050Z__economics__aggregate-supply.json` —
+**before** the printed-answer fix below, so the leak that earlier handoff listed as "carried forward, not
+this pass's to fix" shipped live. Founder decision, 26 Sep 2026 ("yes do that"): fix the two check-in quiz
+items whose answers print on screen (steps 14 and 23). The fix round's own probe (`leak-probe.mjs`) found a
+third instance of the same class, unreported by `verify-b.md`, at step 9 (quiz[8], the energy item, key 2%
+matched by the check-in's own "Tax adds 2%…" diagram view) and fixed it too. All three bundle items —
+quiz[8], [14], [26] — were reworded with figures that do not appear on their block's diagram caption or
+checklist; `correctIndex` and every other field are unchanged; re-staged to `draft` only.
+
+**Independently confirmed by a fresh `curl`, this session, a method distinct from `verify-b-fix.md`'s
+rendered-DOM walk and from `leak-probe.mjs`'s bundle-table read:** `curl "localhost:3001/api/sections/
+aggregate-supply"` (no `?draft=1`) still serves, this minute, the pre-fix wording verbatim at served index 2
+("40 million workers, each producing $20,000 … $800bn"), index 4 ("50 million … 80% … 40 million") and
+index 1 ("Energy makes up 20% … rises by 10% … 2%"); the same call with `?draft=1` serves the fixed wording
+at the same three indices (25 million/$30,000 → $750bn; 60 million/75% → 45 million; 40%/10% → 4%). **The
+live leak is confirmed live right now. Only a second publish clears it.**
+
+**Exact publish command for the founder** (unchanged from what was already run once — this is a
+re-publish, not a new one):
+```
+node scripts/publish-section.mjs aggregate-supply --confirm
+```
+Rule 3 (origin/main field compatibility) should be re-checked against a current `origin/main` before that
+run, per PROTOCOL; it was not re-run by this bookkeeping pass.
+
+**D013 post-publish census step:** `audit/runs/packet-44/verify-b.md` and `verify-b-fix.md` were both
+checked (grep, not read-and-guess) and neither names a D013 or any other post-publish census step. None is
+added here.
+
+**Pointer-versioning ledger item, packet 44's task brief asked this pass to cite:** `V038` ("Version the
+Learn Mode step pointer," `node audit/scripts/ledger.mjs packet 5`, status confirmed, `closed_by:
+packet-5`). **Correction — the same one packet 42's row already made for this exact item, so this is not a
+new finding**: V038 was added 2026-09-19 and closed by packet 5, three-plus days before packet 44 existed;
+it was not caused by this packet's Verify B. `verify-b.md` (steps 18, 22, 23) independently re-tested that
+already-closed failure class here and found it does not reproduce — consistent with V038 already being
+fixed, not evidence of a new filing.
+
+**The three platform FAILs, filed programme-wide in `verify-b.md` and confirmed out of this packet's
+scope, shared with packet 43** — not this packet's to fix and not touched here: the self-mark checklist
+shows 3 tickable boxes on a 2-mark item because `InlinePractice.jsx`'s `checklistFrom` fuses the opening
+onto mark point 1 and offers a 0-mark caveat as a tickbox; the "You left off at step N" banner fires the
+instant a just-auto-restarted student taps Next (`LearnModeTab.jsx:659`, no dismissal path from step 0),
+which publishing this packet's step-count change (18→23, now already shipped at 05:45 UTC) will trigger for
+every mid-section legacy-pointer student; and a mid-section reload's completion-score breakdown counts only
+the post-reload session, not the whole topic.
+
+**Next unclaimed packet.** Re-checked fresh, per the prior handoff's own instruction not to chain a stale
+claim forward: `git status --short | grep packet-45` and `git status --short | grep packet-46` both return
+nothing (no in-progress files for either), `PROGRESS.md` rows 45 and 46 both read "not started," and
+`node audit/scripts/ledger.mjs packet 45 --open` / `packet 46 --open` return 31 and 25 open items
+respectively (no claimed/confirmed items on either). **Both are free; packet 45 (labour-markets, 13 Opens)
+is next in the traffic order PROGRESS.md's table already runs, ahead of packet 46 (growth-development, 12
+Opens).**
+
+**Escalate:** nothing blocking from this packet's own content. When the founder is ready: re-publish
+aggregate-supply with the command above to ship the printed-answer fix; the three platform FAILs are a
+programme-wide item (self-mark checklist, resume banner, post-reload score), not a per-packet one, and sit
+outside this and packet 43's scope alike.

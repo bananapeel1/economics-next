@@ -1,0 +1,14 @@
+
+> economics-next@0.1.0 recalls
+> node audit/scripts/recall-census.mjs --check
+
+
+=== LIVE (data) — 32 sections ===
+recalls answerable by scrolling up: 335 of 803 (42%) AT fillin 0.70 · classify 0.75 · reorder 0.75 · match 0.75
+  3 section(s) at 100%, 6 clean
+
+=== STAGED (draft) — 32 sections ===
+recalls answerable by scrolling up: 308 of 812 (38%) AT fillin 0.70 · classify 0.75 · reorder 0.75 · match 0.75
+  3 section(s) at 100%, 8 clean
+
+no section is worse than the baseline.
