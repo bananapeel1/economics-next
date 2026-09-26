@@ -1,0 +1,246 @@
+{
+ "section": "revenue-costs-profits",
+ "subject": "economics",
+ "topic": "3.3.2",
+ "title": "Revenue, costs and profits",
+ "questions": [
+  {
+   "key": "revenue-costs-profits:practice:a2910ca0",
+   "question": "Define the term 'marginal revenue'. (2 marks)"
+  },
+  {
+   "key": "revenue-costs-profits:practice:8d4b3b2d",
+   "question": "Nadira Textiles faces the demand curve P = 40 − 2Q, where Q is rolls a day. Calculate its total revenue at 6 rolls, its marginal revenue at that output, and the output at which total revenue is greatest. (4 marks)"
+  },
+  {
+   "key": "revenue-costs-profits:practice:84f1fbac",
+   "question": "Nadira Textiles cuts its price from $10 to $8 a roll and the quantity it sells rises from 15 to 16 rolls a day. Calculate the price elasticity of demand. (2 marks)"
+  },
+  {
+   "key": "revenue-costs-profits:practice:b99c2f42",
+   "question": "Explain why a firm facing inelastic demand for its product would not raise its total revenue by cutting its price. (4 marks)"
+  },
+  {
+   "key": "revenue-costs-profits:practice:6fca1574",
+   "question": "Analyse how the law of diminishing returns shapes a firm's short-run marginal cost curve. (6 marks)"
+  },
+  {
+   "key": "revenue-costs-profits:practice:37e90b95",
+   "question": "Draw a short-run cost diagram showing average cost, average variable cost and marginal cost, and label the two points at which marginal cost crosses an average. (4 marks)"
+  },
+  {
+   "key": "revenue-costs-profits:practice:9b1a540d",
+   "question": "Explain why a firm with a high minimum efficient scale relative to the size of its market is likely to face few competitors. (4 marks)"
+  },
+  {
+   "key": "revenue-costs-profits:practice:7a04d18a",
+   "question": "Examine the effects on a firm of growing beyond its minimum efficient scale. (8 marks)"
+  },
+  {
+   "key": "revenue-costs-profits:practice:239a6d28",
+   "question": "Discuss whether a firm making a loss should continue to produce in the short run. (14 marks)"
+  },
+  {
+   "key": "revenue-costs-profits:practice:745fd7b6",
+   "question": "Evaluate the view that a firm earning only normal profit is performing badly. (20 marks)"
+  }
+ ],
+ "leaves": [
+  {
+   "id": "ECON-3.3.2-1a-1",
+   "subtopic": "Revenue",
+   "requirement": "Formulae to calculate and understand the relationship between:",
+   "wording": "total revenue"
+  },
+  {
+   "id": "ECON-3.3.2-1a-2",
+   "subtopic": "Revenue",
+   "requirement": "Formulae to calculate and understand the relationship between:",
+   "wording": "average revenue"
+  },
+  {
+   "id": "ECON-3.3.2-1a-3",
+   "subtopic": "Revenue",
+   "requirement": "Formulae to calculate and understand the relationship between:",
+   "wording": "marginal revenue."
+  },
+  {
+   "id": "ECON-3.3.2-1b",
+   "subtopic": "Revenue",
+   "wording": "Price elasticity of demand and its relationship to revenue concepts, including calculations."
+  },
+  {
+   "id": "ECON-3.3.2-2a",
+   "subtopic": "Costs",
+   "wording": "Derivation of short-run cost curves from the assumption of diminishing marginal productivity."
+  },
+  {
+   "id": "ECON-3.3.2-2b",
+   "subtopic": "Costs",
+   "wording": "The law of diminishing returns."
+  },
+  {
+   "id": "ECON-3.3.2-2c-1",
+   "subtopic": "Costs",
+   "requirement": "Formulae to calculate and understand the relationship between:",
+   "wording": "total cost"
+  },
+  {
+   "id": "ECON-3.3.2-2c-2",
+   "subtopic": "Costs",
+   "requirement": "Formulae to calculate and understand the relationship between:",
+   "wording": "total fixed cost"
+  },
+  {
+   "id": "ECON-3.3.2-2c-3",
+   "subtopic": "Costs",
+   "requirement": "Formulae to calculate and understand the relationship between:",
+   "wording": "total variable cost"
+  },
+  {
+   "id": "ECON-3.3.2-2c-4",
+   "subtopic": "Costs",
+   "requirement": "Formulae to calculate and understand the relationship between:",
+   "wording": "average (total) cost"
+  },
+  {
+   "id": "ECON-3.3.2-2c-5",
+   "subtopic": "Costs",
+   "requirement": "Formulae to calculate and understand the relationship between:",
+   "wording": "average fixed cost"
+  },
+  {
+   "id": "ECON-3.3.2-2c-6",
+   "subtopic": "Costs",
+   "requirement": "Formulae to calculate and understand the relationship between:",
+   "wording": "average variable cost"
+  },
+  {
+   "id": "ECON-3.3.2-2c-7",
+   "subtopic": "Costs",
+   "requirement": "Formulae to calculate and understand the relationship between:",
+   "wording": "marginal cost."
+  },
+  {
+   "id": "ECON-3.3.2-2d-1",
+   "subtopic": "Costs",
+   "requirement": "The relationship between:",
+   "wording": "marginal product and marginal costs"
+  },
+  {
+   "id": "ECON-3.3.2-2d-2",
+   "subtopic": "Costs",
+   "requirement": "The relationship between:",
+   "wording": "average products and average cost"
+  },
+  {
+   "id": "ECON-3.3.2-2d-3",
+   "subtopic": "Costs",
+   "requirement": "The relationship between:",
+   "wording": "total product and total cost"
+  },
+  {
+   "id": "ECON-3.3.2-2d-4",
+   "subtopic": "Costs",
+   "requirement": "The relationship between:",
+   "wording": "short-run and long-run costs."
+  },
+  {
+   "id": "ECON-3.3.2-3a",
+   "subtopic": "Economies and",
+   "wording": "The relationship between long-run cost curves and economies/diseconomies of scale."
+  },
+  {
+   "id": "ECON-3.3.2-3b",
+   "subtopic": "Economies and scale",
+   "wording": "Minimum efficient scale."
+  },
+  {
+   "id": "ECON-3.3.2-3c",
+   "subtopic": "Economies and scale",
+   "wording": "Distinction between internal/external economies of scale."
+  },
+  {
+   "id": "ECON-3.3.2-3d-1",
+   "subtopic": "Economies and scale",
+   "requirement": "Sources of internal economies of scale:",
+   "wording": "financial"
+  },
+  {
+   "id": "ECON-3.3.2-3d-2",
+   "subtopic": "Economies and scale",
+   "requirement": "Sources of internal economies of scale:",
+   "wording": "technical"
+  },
+  {
+   "id": "ECON-3.3.2-3d-3",
+   "subtopic": "Economies and scale",
+   "requirement": "Sources of internal economies of scale:",
+   "wording": "managerial"
+  },
+  {
+   "id": "ECON-3.3.2-3d-4",
+   "subtopic": "Economies and scale",
+   "requirement": "Sources of internal economies of scale:",
+   "wording": "marketing"
+  },
+  {
+   "id": "ECON-3.3.2-3d-5",
+   "subtopic": "Economies and scale",
+   "requirement": "Sources of internal economies of scale:",
+   "wording": "purchasing"
+  },
+  {
+   "id": "ECON-3.3.2-3d-6",
+   "subtopic": "Economies and scale",
+   "requirement": "Sources of internal economies of scale:",
+   "wording": "risk bearing."
+  },
+  {
+   "id": "ECON-3.3.2-3e-1",
+   "subtopic": "Economies and scale",
+   "requirement": "Sources of external economies of scale:",
+   "wording": "availability of skilled labour"
+  },
+  {
+   "id": "ECON-3.3.2-3e-2",
+   "subtopic": "Economies and scale",
+   "requirement": "Sources of external economies of scale:",
+   "wording": "access to transport links"
+  },
+  {
+   "id": "ECON-3.3.2-3e-3",
+   "subtopic": "Economies and scale",
+   "requirement": "Sources of external economies of scale:",
+   "wording": "sharing knowledge."
+  },
+  {
+   "id": "ECON-3.3.2-3f-1",
+   "subtopic": "Economies and scale",
+   "requirement": "Sources of diseconomies of scale:",
+   "wording": "communication problems"
+  },
+  {
+   "id": "ECON-3.3.2-3f-2",
+   "subtopic": "Economies and scale",
+   "requirement": "Sources of diseconomies of scale:",
+   "wording": "coordination problems"
+  },
+  {
+   "id": "ECON-3.3.2-3f-3",
+   "subtopic": "Economies and scale",
+   "requirement": "Sources of diseconomies of scale:",
+   "wording": "X-inefficiency."
+  },
+  {
+   "id": "ECON-3.3.2-4a",
+   "subtopic": "Profits and losses",
+   "wording": "The distinction between normal profit, supernormal profit and losses."
+  },
+  {
+   "id": "ECON-3.3.2-4b",
+   "subtopic": "Profits and losses",
+   "wording": "Short-run and long-run shutdown points."
+  }
+ ]
+}

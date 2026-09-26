@@ -1,0 +1,87 @@
+{
+ "note": "Market Failure items whose question text is byte-identical to packet 12.1 staged items; their pass 1 is 12.1's, recorded before 12.1 ran pass 2.",
+ "tags": {
+  "market-failure:practice:93c7e203": {
+   "from": "packet-12.1 pass1 section_practice.staged:0",
+   "tags": [
+    "ECON-1.3.5-1a"
+   ]
+  },
+  "market-failure:practice:071bf234": {
+   "from": "packet-12.1 pass1 section_practice.staged:1",
+   "tags": [
+    "ECON-1.3.5-2b",
+    "ECON-1.3.5-2c-3"
+   ]
+  },
+  "market-failure:practice:0e574dfc": {
+   "from": "packet-12.1 pass1 section_practice.staged:2",
+   "tags": [
+    "ECON-1.3.5-2c-3",
+    "ECON-1.3.5-2d-3"
+   ]
+  },
+  "market-failure:practice:0753cacb": {
+   "from": "packet-12.1 pass1 section_practice.staged:3",
+   "tags": [
+    "ECON-1.3.5-2b",
+    "ECON-1.3.5-2c-3"
+   ]
+  },
+  "market-failure:practice:d6ef6424": {
+   "from": "packet-12.1 pass1 section_practice.staged:4",
+   "tags": [
+    "ECON-1.3.5-2d-2",
+    "ECON-1.3.5-2d-3"
+   ]
+  },
+  "market-failure:practice:22087c8d": {
+   "from": "packet-12.1 pass1 section_practice.staged:5",
+   "tags": [
+    "ECON-1.3.5-2c-2",
+    "ECON-1.3.5-2d-1",
+    "ECON-1.3.5-2e-3"
+   ]
+  },
+  "market-failure:practice:e4c8dfa8": {
+   "from": "packet-12.1 pass1 section_practice.staged:6",
+   "tags": [
+    "ECON-1.3.5-2c-4",
+    "ECON-1.3.5-2e-1"
+   ]
+  },
+  "market-failure:practice:053116dd": {
+   "from": "packet-12.1 pass1 section_practice.staged:7",
+   "tags": [
+    "ECON-1.3.5-1b-2",
+    "ECON-1.3.5-3a-2",
+    "ECON-1.3.5-3b"
+   ]
+  },
+  "market-failure:practice:c1ff7774": {
+   "from": "packet-12.1 pass1 section_practice.staged:8",
+   "tags": [
+    "ECON-1.3.5-1b-3",
+    "ECON-1.3.5-4b",
+    "ECON-1.3.5-4c-1"
+   ]
+  },
+  "market-failure:practice:c1091515": {
+   "from": "packet-12.1 pass1 section_practice.staged:9",
+   "tags": [
+    "ECON-1.3.5-1b-4",
+    "ECON-1.3.5-5a",
+    "ECON-1.3.5-5b-2"
+   ]
+  },
+  "market-failure:practice:1e4d06c6": {
+   "from": "packet-12.1 pass1 section_practice.staged:10",
+   "tags": [
+    "ECON-1.3.5-1b-5",
+    "ECON-1.3.5-6a",
+    "ECON-1.3.5-6b-1",
+    "ECON-1.3.5-6b-2"
+   ]
+  }
+ }
+}

@@ -1,0 +1,149 @@
+{
+ "section": "financial-planning",
+ "subject": "business",
+ "topic": "2.3.2",
+ "title": "Financial Planning",
+ "questions": [
+  {
+   "key": "financial-planning:practice:4166f834",
+   "question": "Define the term 'margin of safety'. (2 marks)"
+  },
+  {
+   "key": "financial-planning:practice:de4233c2",
+   "question": "A bottling plant has fixed costs of $36,000 a month and a variable cost of $3.60 a case. Calculate its total cost and its average cost at an output of 25,000 cases. (4 marks)"
+  },
+  {
+   "key": "financial-planning:practice:6d28546f",
+   "question": "A bottling plant is launching a flavour that has never been sold in its region. Explain one difficulty it will face in forecasting sales of the new flavour. (4 marks)"
+  },
+  {
+   "key": "financial-planning:practice:be2a63ae",
+   "question": "A bottling plant sells at $6 a case with a variable cost of $3.60 a case and fixed costs of $36,000 a month. Calculate its break-even point, and calculate the new break-even point if the variable cost rises to $4. (4 marks)"
+  },
+  {
+   "key": "financial-planning:practice:a1118525",
+   "question": "A plant opens month 1 with $30,000. It expects receipts of $72,000, $120,000 and $129,600 and payments of $108,000, $122,400 and $108,000 over three months. Construct a cash-flow forecast showing net cash flow and the closing balance for each month. (4 marks)"
+  },
+  {
+   "key": "financial-planning:practice:a65c1fd9",
+   "question": "A bottling plant budgets historically: each line is last year's actual figure adjusted for expected changes. Its finance manager has found a service contract for equipment sold two years ago, and proposes moving the whole firm to zero-based budgeting from next year. Assess whether the plant should do so. (10 marks)"
+  },
+  {
+   "key": "financial-planning:practice:3c8bbb72",
+   "question": "A bottling plant sells at $6 a case, with a variable cost of $3.60 and fixed costs of $36,000 a month. It breaks even at 15,000 cases and currently produces 20,000. Its owner discounts heavily on orders above a hundred cases and is considering a second production line. Evaluate the usefulness of break-even analysis to the owner in making that decision. (20 marks)"
+  }
+ ],
+ "leaves": [
+  {
+   "id": "BUS-2.3.2-1a",
+   "subtopic": "Sales, revenue",
+   "wording": "Calculation of sales volume and sales revenue."
+  },
+  {
+   "id": "BUS-2.3.2-1b",
+   "subtopic": "Sales, revenue and costs",
+   "wording": "Calculation of fixed, variable costs, total costs and average costs."
+  },
+  {
+   "id": "BUS-2.3.2-1c",
+   "subtopic": "Sales, revenue and costs",
+   "wording": "Ways of improving sales volumes and sales revenues."
+  },
+  {
+   "id": "BUS-2.3.2-2a",
+   "subtopic": "Sales forecasting",
+   "wording": "Purpose of sales forecasts."
+  },
+  {
+   "id": "BUS-2.3.2-2b-1",
+   "subtopic": "Sales forecasting",
+   "requirement": "Factors affecting sales forecasts:",
+   "wording": "consumer trends"
+  },
+  {
+   "id": "BUS-2.3.2-2b-2",
+   "subtopic": "Sales forecasting",
+   "requirement": "Factors affecting sales forecasts:",
+   "wording": "economic variables"
+  },
+  {
+   "id": "BUS-2.3.2-2b-3",
+   "subtopic": "Sales forecasting",
+   "requirement": "Factors affecting sales forecasts:",
+   "wording": "actions of competitors."
+  },
+  {
+   "id": "BUS-2.3.2-2c",
+   "subtopic": "Sales forecasting",
+   "wording": "Difficulties of sales forecasting."
+  },
+  {
+   "id": "BUS-2.3.2-3a",
+   "subtopic": "Break-even",
+   "wording": "Contribution: selling price − variable cost per unit."
+  },
+  {
+   "id": "BUS-2.3.2-3b-1",
+   "subtopic": "Break-even",
+   "requirement": "Break-even point:",
+   "wording": "total fixed costs + total variable costs = total revenue."
+  },
+  {
+   "id": "BUS-2.3.2-3c",
+   "subtopic": "Break-even",
+   "wording": "Using contribution to calculate the break-even point."
+  },
+  {
+   "id": "BUS-2.3.2-3d",
+   "subtopic": "Break-even",
+   "wording": "Margin of safety."
+  },
+  {
+   "id": "BUS-2.3.2-3e",
+   "subtopic": "Break-even",
+   "wording": "Interpretation of break-even charts."
+  },
+  {
+   "id": "BUS-2.3.2-3f",
+   "subtopic": "Break-even",
+   "wording": "Limitations of break-even analysis."
+  },
+  {
+   "id": "BUS-2.3.2-4a",
+   "subtopic": "Cash flow",
+   "wording": "Construction and interpretation of simple cash-flow forecasts."
+  },
+  {
+   "id": "BUS-2.3.2-4b",
+   "subtopic": "Cash flow",
+   "wording": "Use and limitations of cash-flow forecasts."
+  },
+  {
+   "id": "BUS-2.3.2-5a",
+   "subtopic": "Budgets",
+   "wording": "Purposes of budgets."
+  },
+  {
+   "id": "BUS-2.3.2-5b-1",
+   "subtopic": "Budgets",
+   "requirement": "Types of budget:",
+   "wording": "based on historical figures"
+  },
+  {
+   "id": "BUS-2.3.2-5b-2",
+   "subtopic": "Budgets",
+   "requirement": "Types of budget:",
+   "wording": "zero based."
+  },
+  {
+   "id": "BUS-2.3.2-5c",
+   "subtopic": "Budgets",
+   "wording": "Variance analysis."
+  },
+  {
+   "id": "BUS-2.3.2-5d",
+   "subtopic": "Budgets",
+   "wording": "Difficulties of budgeting."
+  }
+ ]
+}

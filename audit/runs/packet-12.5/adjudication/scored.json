@@ -1,0 +1,457 @@
+{
+ "rule": "write = pass-1 leaves the blind reader confirmed, only on items where it picked no control",
+ "summary": {
+  "items": 43,
+  "realTotal": 52,
+  "realConfirmed": 49,
+  "ctlTotal": 87,
+  "ctlPicked": 1,
+  "itemsWithControlPicked": 1,
+  "itemsWritten": 40,
+  "tagsWritten": 47
+ },
+ "items": {
+  "aggregate-demand:practice:99c73692": {
+   "confirmed": [
+    "ECON-2.3.2-1a"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-2.3.2-1a"
+   ]
+  },
+  "aggregate-supply:practice:ffef2ba6": {
+   "confirmed": [
+    "ECON-2.3.3-1a"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-2.3.3-1a"
+   ]
+  },
+  "aggregate-supply:practice:c18dd05f": {
+   "confirmed": [
+    "ECON-2.3.3-3b-5"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-2.3.3-3b-5"
+   ]
+  },
+  "assessing-competitiveness:practice:0b82e182": {
+   "confirmed": [
+    "BUS-3.3.5-2a-3",
+    "BUS-3.3.5-2b"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-3.3.5-2a-3",
+    "BUS-3.3.5-2b"
+   ]
+  },
+  "balance-payments-exchange-rates:practice:06c5813b": {
+   "confirmed": [
+    "ECON-4.3.3-2c-3"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-4.3.3-2c-3"
+   ]
+  },
+  "business-growth:practice:a7da89e6": {
+   "confirmed": [
+    "BUS-3.3.2-3b"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-3.3.2-3b"
+   ]
+  },
+  "business-growth:practice:38e35a6e": {
+   "confirmed": [
+    "BUS-3.3.2-2b"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-3.3.2-2b"
+   ]
+  },
+  "business-growth:practice:5cc1b428": {
+   "confirmed": [
+    "BUS-3.3.2-2b",
+    "BUS-3.3.2-3b"
+   ],
+   "rejected": [],
+   "controlsPicked": [
+    "BUS-3.3.2-3a-5"
+   ],
+   "write": []
+  },
+  "business-objectives-strategy:practice:16bfcf20": {
+   "confirmed": [
+    "BUS-3.3.1-2a-1"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-3.3.1-2a-1"
+   ]
+  },
+  "business-objectives-strategy:practice:ca45be92": {
+   "confirmed": [
+    "BUS-3.3.1-2a-2"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-3.3.1-2a-2"
+   ]
+  },
+  "causes-effects-globalisation:practice:d705e71a": {
+   "confirmed": [
+    "ECON-4.3.1-2b-2"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-4.3.1-2b-2"
+   ]
+  },
+  "consumer-behaviour-demand:practice:cba90ca6": {
+   "confirmed": [
+    "ECON-1.3.2-2b",
+    "ECON-1.3.2-2d-1"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-1.3.2-2b",
+    "ECON-1.3.2-2d-1"
+   ]
+  },
+  "consumer-behaviour-demand:practice:3b14f765": {
+   "confirmed": [
+    "ECON-1.3.2-3a"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-1.3.2-3a"
+   ]
+  },
+  "consumer-behaviour-demand:practice:0cdc49a5": {
+   "confirmed": [
+    "ECON-1.3.2-3a",
+    "ECON-1.3.2-3h-5",
+    "ECON-1.3.2-3j"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-1.3.2-3a",
+    "ECON-1.3.2-3h-5",
+    "ECON-1.3.2-3j"
+   ]
+  },
+  "economic-growth:practice:2b0652fa": {
+   "confirmed": [],
+   "rejected": [
+    "ECON-2.3.5-2a-1",
+    "ECON-2.3.5-3a-2"
+   ],
+   "controlsPicked": [],
+   "write": []
+  },
+  "entrepreneurs-leaders:practice:9ef00349": {
+   "confirmed": [
+    "BUS-1.3.5-4a"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-1.3.5-4a"
+   ]
+  },
+  "external-influences:practice:29edd752": {
+   "confirmed": [
+    "BUS-2.3.5-1a-2"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-2.3.5-1a-2"
+   ]
+  },
+  "external-influences:practice:b6c279c0": {
+   "confirmed": [
+    "BUS-2.3.5-1a-2"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-2.3.5-1a-2"
+   ]
+  },
+  "external-influences:practice:8331eb87": {
+   "confirmed": [
+    "BUS-2.3.5-1a-5"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-2.3.5-1a-5"
+   ]
+  },
+  "external-influences:practice:f1117796": {
+   "confirmed": [
+    "BUS-2.3.5-3a-3"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-2.3.5-3a-3"
+   ]
+  },
+  "global-industries-mncs:practice:60f7d479": {
+   "confirmed": [
+    "BUS-4.3.4-1b-7"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-4.3.4-1b-7"
+   ]
+  },
+  "global-marketing:practice:96e37a09": {
+   "confirmed": [
+    "BUS-4.3.3-2a",
+    "BUS-4.3.3-3a-1"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-4.3.3-2a",
+    "BUS-4.3.3-3a-1"
+   ]
+  },
+  "global-marketing:practice:9be0acd8": {
+   "confirmed": [
+    "BUS-4.3.3-1d"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-4.3.3-1d"
+   ]
+  },
+  "government-intervention:practice:ae68cc3d": {
+   "confirmed": [
+    "ECON-1.3.6-1b-2",
+    "ECON-1.3.6-1c-6"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-1.3.6-1b-2",
+    "ECON-1.3.6-1c-6"
+   ]
+  },
+  "government-intervention-firms:practice:62f1e83d": {
+   "confirmed": [
+    "ECON-3.3.5-1c-3"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-3.3.5-1c-3"
+   ]
+  },
+  "growth-development:practice:d4209568": {
+   "confirmed": [
+    "ECON-4.3.6-2a-6"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-4.3.6-2a-6"
+   ]
+  },
+  "labour-markets:practice:71516c3e": {
+   "confirmed": [
+    "ECON-3.3.4-3a"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-3.3.4-3a"
+   ]
+  },
+  "macroeconomic-objectives-policies:practice:39f05efb": {
+   "confirmed": [],
+   "rejected": [
+    "ECON-2.3.6-3b-4"
+   ],
+   "controlsPicked": [],
+   "write": []
+  },
+  "measures-economic-performance:practice:9b090272": {
+   "confirmed": [
+    "ECON-2.3.1-2e-2"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-2.3.1-2e-2"
+   ]
+  },
+  "meeting-customer-needs:practice:11062b94": {
+   "confirmed": [
+    "BUS-1.3.1-3b"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-1.3.1-3b"
+   ]
+  },
+  "poverty-inequality:practice:f5fc1fc2": {
+   "confirmed": [
+    "ECON-4.3.4-1a"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-4.3.4-1a"
+   ]
+  },
+  "poverty-inequality:practice:058dadf4": {
+   "confirmed": [
+    "ECON-4.3.4-1a"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-4.3.4-1a"
+   ]
+  },
+  "poverty-inequality:practice:1138b142": {
+   "confirmed": [
+    "ECON-4.3.4-1b"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-4.3.4-1b"
+   ]
+  },
+  "resource-management:practice:99a69bae": {
+   "confirmed": [
+    "BUS-2.3.4-1d"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "BUS-2.3.4-1d"
+   ]
+  },
+  "supply:practice:eb2601cc": {
+   "confirmed": [
+    "ECON-1.3.3-1a"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-1.3.3-1a"
+   ]
+  },
+  "supply:practice:7b3a88a6": {
+   "confirmed": [
+    "ECON-1.3.3-2a",
+    "ECON-1.3.3-2b-4"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-1.3.3-2a",
+    "ECON-1.3.3-2b-4"
+   ]
+  },
+  "supply:practice:034f861e": {
+   "confirmed": [
+    "ECON-1.3.3-2a"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-1.3.3-2a"
+   ]
+  },
+  "trade-global-economy:practice:4893ba66": {
+   "confirmed": [
+    "ECON-4.3.2-3a"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-4.3.2-3a"
+   ]
+  },
+  "trade-global-economy:practice:22c2ba68": {
+   "confirmed": [
+    "ECON-4.3.2-3a"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-4.3.2-3a"
+   ]
+  },
+  "types-sizes-businesses:practice:41e40770": {
+   "confirmed": [
+    "ECON-3.3.1-1a-4"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-3.3.1-1a-4"
+   ]
+  },
+  "types-sizes-businesses:practice:713cf058": {
+   "confirmed": [
+    "ECON-3.3.1-2g-1"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-3.3.1-2g-1"
+   ]
+  },
+  "types-sizes-businesses:practice:e2d3c8e3": {
+   "confirmed": [
+    "ECON-3.3.1-3c-1"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-3.3.1-3c-1"
+   ]
+  },
+  "types-sizes-businesses:practice:3cb79ed0": {
+   "confirmed": [
+    "ECON-3.3.1-3c-1"
+   ],
+   "rejected": [],
+   "controlsPicked": [],
+   "write": [
+    "ECON-3.3.1-3c-1"
+   ]
+  }
+ }
+}

@@ -3419,3 +3419,38 @@ Relative Poverty", shows the absolute/relative poverty diagram it is named for. 
 diagram the chapter is named for, or the one only it teaches); it does not change the rule. The runner pins chapter
 *i* to `DIAGRAMS[i]` (`scripts/packet-51-poverty-inequality.mjs:55`) and refuses a chapter without its own diagram
 (`:192-198`); the result is in `audit/snapshots/packet-51-bundle__economics__poverty-inequality.json`.
+
+## 2026-09-26 — packet 12.5: practice tags live in a file keyed by item id, not in `section_practice`
+
+**`section_practice` is one row per SECTION, not per question.** 43 rows; a section's questions are the jsonb
+array in `data` (live) and `draft` (staged). `scripts/packet-12-1-spec-items.sql` was written as if each row were
+a question, so the `spec_items` and `kind` columns it added — which the founder ran on 22 September — hold one
+value per section and cannot say what a question examines. Packet 12.5's spec rested on the same reading ("215
+rows, 5 per section"; "match rows by item_id"). Measured at the census (`audit/runs/packet-12.5/census.json`):
+362 live questions and 48 staged in 6 held drafts, every one carrying an id `<slug>:practice:<hash8>` that is a
+hash of the question text.
+
+**Ruled by the founder in session, 26 September:** per-question tags live in `audit/practice-spec-items.json`,
+keyed by item id, committed and read only by `npm run spec-coverage`. The two per-section columns are dropped by
+`scripts/packet-12-5-drop-section-grain-columns.sql`, which the founder runs. Why a file rather than a new table:
+the guard never opens a Supabase client (it runs in CI and cannot break a Vercel build), the tags are audit
+metadata no component reads, and a file is reviewed in a diff. Why not inside each question's JSON (the shape
+`lib/exam-item.js` documents): every `--stage` from a runner rewrites the practice array from source and would
+strip the tags silently.
+
+**What follows from keying by a text hash.** A rewritten question arrives with a new id and reads as untagged
+instead of inheriting a tag written for other words; the guard counts the old entry as an orphan and does not
+apply it. So a content packet that rewrites practice questions LOWERS its section's measured coverage until the
+new questions are tagged by the method (two passes, or a blind reader where the disagreement is structural) —
+by a reader who did not write them. That drop is honest, not a regression to be patched by copying old tags.
+
+**The guard's bank 2 moved from the t=0 dump to `audit/practice-bank.json`.** The t=0 dump (11 September, 215
+questions, no ids) stopped describing the live bank when the 25 September checkpoint published the rebuilds, and no
+id-keyed tag can reach it. `audit/scripts/dump-practice-bank.mjs` re-takes the dump read-only; `--check` says
+whether it is stale. Re-run it after a publish. `--t0` keeps the old view for comparison with earlier logs.
+
+**The drop has been run.** The founder ran `scripts/packet-12-5-drop-section-grain-columns.sql` in Supabase on 26
+September; packet 12.5 confirmed it read-only (PostgREST: "column section_practice.spec_items does not exist") and
+re-took the dump, whose `sectionGrainColumns` is now `{}`. The script's pre-check was made ENFORCING after Verify A
+round 1 (a `do` block that aborts the transaction if any row holds a value); on empty columns both versions do the
+same thing, so which one was run does not matter.

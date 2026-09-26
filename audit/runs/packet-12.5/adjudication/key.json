@@ -1,0 +1,402 @@
+{
+ "note": "NEVER shown to the reader. real = pass 1 leaves under adjudication; controls = leaves neither pass proposed.",
+ "key": {
+  "aggregate-demand:practice:99c73692": {
+   "real": [
+    "ECON-2.3.2-1a"
+   ],
+   "controls": [
+    "ECON-2.3.2-1c",
+    "ECON-2.3.2-4a-4"
+   ]
+  },
+  "aggregate-supply:practice:ffef2ba6": {
+   "real": [
+    "ECON-2.3.3-1a"
+   ],
+   "controls": [
+    "ECON-2.3.3-1c",
+    "ECON-2.3.3-1b"
+   ]
+  },
+  "aggregate-supply:practice:c18dd05f": {
+   "real": [
+    "ECON-2.3.3-3b-5"
+   ],
+   "controls": [
+    "ECON-2.3.3-3b-6",
+    "ECON-2.3.3-3b-2"
+   ]
+  },
+  "assessing-competitiveness:practice:0b82e182": {
+   "real": [
+    "BUS-3.3.5-2a-3",
+    "BUS-3.3.5-2b"
+   ],
+   "controls": [
+    "BUS-3.3.5-2c",
+    "BUS-3.3.5-3a-3"
+   ]
+  },
+  "balance-payments-exchange-rates:practice:06c5813b": {
+   "real": [
+    "ECON-4.3.3-2c-3"
+   ],
+   "controls": [
+    "ECON-4.3.3-2b-2",
+    "ECON-4.3.3-2c-6"
+   ]
+  },
+  "business-growth:practice:a7da89e6": {
+   "real": [
+    "BUS-3.3.2-3b"
+   ],
+   "controls": [
+    "BUS-3.3.2-3a-4",
+    "BUS-3.3.2-3a-3"
+   ]
+  },
+  "business-growth:practice:38e35a6e": {
+   "real": [
+    "BUS-3.3.2-2b"
+   ],
+   "controls": [
+    "BUS-3.3.2-4b",
+    "BUS-3.3.2-1a-1"
+   ]
+  },
+  "business-growth:practice:5cc1b428": {
+   "real": [
+    "BUS-3.3.2-2b",
+    "BUS-3.3.2-3b"
+   ],
+   "controls": [
+    "BUS-3.3.2-3a-2",
+    "BUS-3.3.2-3a-5"
+   ]
+  },
+  "business-objectives-strategy:practice:16bfcf20": {
+   "real": [
+    "BUS-3.3.1-2a-1"
+   ],
+   "controls": [
+    "BUS-3.3.1-2a-2",
+    "BUS-3.3.1-2c"
+   ]
+  },
+  "business-objectives-strategy:practice:ca45be92": {
+   "real": [
+    "BUS-3.3.1-2a-2"
+   ],
+   "controls": [
+    "BUS-3.3.1-2b",
+    "BUS-3.3.1-2c"
+   ]
+  },
+  "causes-effects-globalisation:practice:d705e71a": {
+   "real": [
+    "ECON-4.3.1-2b-2"
+   ],
+   "controls": [
+    "ECON-4.3.1-2a-2",
+    "ECON-4.3.1-2b-1"
+   ]
+  },
+  "consumer-behaviour-demand:practice:cba90ca6": {
+   "real": [
+    "ECON-1.3.2-2b",
+    "ECON-1.3.2-2d-1"
+   ],
+   "controls": [
+    "ECON-1.3.2-2d-4",
+    "ECON-1.3.2-2d-5"
+   ]
+  },
+  "consumer-behaviour-demand:practice:3b14f765": {
+   "real": [
+    "ECON-1.3.2-3a"
+   ],
+   "controls": [
+    "ECON-1.3.2-3c-1",
+    "ECON-1.3.2-3i-3"
+   ]
+  },
+  "consumer-behaviour-demand:practice:0cdc49a5": {
+   "real": [
+    "ECON-1.3.2-3a",
+    "ECON-1.3.2-3h-5",
+    "ECON-1.3.2-3j"
+   ],
+   "controls": [
+    "ECON-1.3.2-3d-1",
+    "ECON-1.3.2-3c-5",
+    "ECON-1.3.2-3h-1"
+   ]
+  },
+  "economic-growth:practice:2b0652fa": {
+   "real": [
+    "ECON-2.3.5-2a-1",
+    "ECON-2.3.5-3a-2"
+   ],
+   "controls": [
+    "ECON-2.3.5-3a-3",
+    "ECON-2.3.5-2a-2"
+   ]
+  },
+  "entrepreneurs-leaders:practice:9ef00349": {
+   "real": [
+    "BUS-1.3.5-4a"
+   ],
+   "controls": [
+    "BUS-1.3.5-4b",
+    "BUS-1.3.5-3b"
+   ]
+  },
+  "external-influences:practice:29edd752": {
+   "real": [
+    "BUS-2.3.5-1a-2"
+   ],
+   "controls": [
+    "BUS-2.3.5-1a-5",
+    "BUS-2.3.5-1a-3"
+   ]
+  },
+  "external-influences:practice:b6c279c0": {
+   "real": [
+    "BUS-2.3.5-1a-2"
+   ],
+   "controls": [
+    "BUS-2.3.5-1a-3",
+    "BUS-2.3.5-1a-1"
+   ]
+  },
+  "external-influences:practice:8331eb87": {
+   "real": [
+    "BUS-2.3.5-1a-5"
+   ],
+   "controls": [
+    "BUS-2.3.5-1a-3",
+    "BUS-2.3.5-1a-1"
+   ]
+  },
+  "external-influences:practice:f1117796": {
+   "real": [
+    "BUS-2.3.5-3a-3"
+   ],
+   "controls": [
+    "BUS-2.3.5-3a-2",
+    "BUS-2.3.5-3a-1"
+   ]
+  },
+  "global-industries-mncs:practice:60f7d479": {
+   "real": [
+    "BUS-4.3.4-1b-7"
+   ],
+   "controls": [
+    "BUS-4.3.4-1b-6",
+    "BUS-4.3.4-1b-2"
+   ]
+  },
+  "global-marketing:practice:96e37a09": {
+   "real": [
+    "BUS-4.3.3-2a",
+    "BUS-4.3.3-3a-1"
+   ],
+   "controls": [
+    "BUS-4.3.3-3a-3",
+    "BUS-4.3.3-2c"
+   ]
+  },
+  "global-marketing:practice:9be0acd8": {
+   "real": [
+    "BUS-4.3.3-1d"
+   ],
+   "controls": [
+    "BUS-4.3.3-1b-1",
+    "BUS-4.3.3-1b-3"
+   ]
+  },
+  "government-intervention:practice:ae68cc3d": {
+   "real": [
+    "ECON-1.3.6-1b-2",
+    "ECON-1.3.6-1c-6"
+   ],
+   "controls": [
+    "ECON-1.3.6-1b-8",
+    "ECON-1.3.6-1c-1"
+   ]
+  },
+  "government-intervention-firms:practice:62f1e83d": {
+   "real": [
+    "ECON-3.3.5-1c-3"
+   ],
+   "controls": [
+    "ECON-3.3.5-1b-3",
+    "ECON-3.3.5-1d-6"
+   ]
+  },
+  "growth-development:practice:d4209568": {
+   "real": [
+    "ECON-4.3.6-2a-6"
+   ],
+   "controls": [
+    "ECON-4.3.6-2b-2",
+    "ECON-4.3.6-2b-4"
+   ]
+  },
+  "labour-markets:practice:71516c3e": {
+   "real": [
+    "ECON-3.3.4-3a"
+   ],
+   "controls": [
+    "ECON-3.3.4-1b",
+    "ECON-3.3.4-2c-1"
+   ]
+  },
+  "macroeconomic-objectives-policies:practice:39f05efb": {
+   "real": [
+    "ECON-2.3.6-3b-4"
+   ],
+   "controls": [
+    "ECON-2.3.6-3b-1",
+    "ECON-2.3.6-3b-5"
+   ]
+  },
+  "measures-economic-performance:practice:9b090272": {
+   "real": [
+    "ECON-2.3.1-2e-2"
+   ],
+   "controls": [
+    "ECON-2.3.1-2a",
+    "ECON-2.3.1-2g-3"
+   ]
+  },
+  "meeting-customer-needs:practice:11062b94": {
+   "real": [
+    "BUS-1.3.1-3b"
+   ],
+   "controls": [
+    "BUS-1.3.1-3d",
+    "BUS-1.3.1-3a"
+   ]
+  },
+  "poverty-inequality:practice:f5fc1fc2": {
+   "real": [
+    "ECON-4.3.4-1a"
+   ],
+   "controls": [
+    "ECON-4.3.4-1c-3",
+    "ECON-4.3.4-1c-5"
+   ]
+  },
+  "poverty-inequality:practice:058dadf4": {
+   "real": [
+    "ECON-4.3.4-1a"
+   ],
+   "controls": [
+    "ECON-4.3.4-1c-5",
+    "ECON-4.3.4-1b"
+   ]
+  },
+  "poverty-inequality:practice:1138b142": {
+   "real": [
+    "ECON-4.3.4-1b"
+   ],
+   "controls": [
+    "ECON-4.3.4-1c-7",
+    "ECON-4.3.4-1c-2"
+   ]
+  },
+  "resource-management:practice:99a69bae": {
+   "real": [
+    "BUS-2.3.4-1d"
+   ],
+   "controls": [
+    "BUS-2.3.4-1b-4",
+    "BUS-2.3.4-1e"
+   ]
+  },
+  "supply:practice:eb2601cc": {
+   "real": [
+    "ECON-1.3.3-1a"
+   ],
+   "controls": [
+    "ECON-1.3.3-1c-2",
+    "ECON-1.3.3-1c-1"
+   ]
+  },
+  "supply:practice:7b3a88a6": {
+   "real": [
+    "ECON-1.3.3-2a",
+    "ECON-1.3.3-2b-4"
+   ],
+   "controls": [
+    "ECON-1.3.3-2b-5",
+    "ECON-1.3.3-2c-5"
+   ]
+  },
+  "supply:practice:034f861e": {
+   "real": [
+    "ECON-1.3.3-2a"
+   ],
+   "controls": [
+    "ECON-1.3.3-2c-2",
+    "ECON-1.3.3-2c-1"
+   ]
+  },
+  "trade-global-economy:practice:4893ba66": {
+   "real": [
+    "ECON-4.3.2-3a"
+   ],
+   "controls": [
+    "ECON-4.3.2-3b-3",
+    "ECON-4.3.2-3b-2"
+   ]
+  },
+  "trade-global-economy:practice:22c2ba68": {
+   "real": [
+    "ECON-4.3.2-3a"
+   ],
+   "controls": [
+    "ECON-4.3.2-3c-2",
+    "ECON-4.3.2-3c-1"
+   ]
+  },
+  "types-sizes-businesses:practice:41e40770": {
+   "real": [
+    "ECON-3.3.1-1a-4"
+   ],
+   "controls": [
+    "ECON-3.3.1-1a-1",
+    "ECON-3.3.1-1a-5"
+   ]
+  },
+  "types-sizes-businesses:practice:713cf058": {
+   "real": [
+    "ECON-3.3.1-2g-1"
+   ],
+   "controls": [
+    "ECON-3.3.1-2b-4",
+    "ECON-3.3.1-2b-2"
+   ]
+  },
+  "types-sizes-businesses:practice:e2d3c8e3": {
+   "real": [
+    "ECON-3.3.1-3c-1"
+   ],
+   "controls": [
+    "ECON-3.3.1-3a-2",
+    "ECON-3.3.1-3c-2"
+   ]
+  },
+  "types-sizes-businesses:practice:3cb79ed0": {
+   "real": [
+    "ECON-3.3.1-3c-1"
+   ],
+   "controls": [
+    "ECON-3.3.1-3c-3",
+    "ECON-3.3.1-3a-2"
+   ]
+  }
+ }
+}

@@ -1,5 +1,31 @@
 # Next session brief
 
+## Packet 12.5 — PASSED 26 September 2026, committed
+
+Both practice banks are tagged, per question, keyed by item id: `audit/practice-spec-items.json`, 322 of the 410
+questions at the census, 427 tags. Everything is in `audit/runs/packet-12.5/`: `built.md` for the account,
+`tagging-diff.md` for every item's verdict, and `verify-a-r1.md`/`-r2.md`. E086-E093 are confirmed.
+
+**What the next session must know:**
+- **`section_practice` is one row per SECTION.** The questions are the jsonb array in `data` (live) and `draft`
+  (staged). The per-section `spec_items`/`kind` columns from packet 12.1 were dropped by the founder on 26 Sep.
+  Tags do not live in the database.
+- **After any publish, re-take the dump:** `node audit/scripts/dump-practice-bank.mjs`. `--check` exits 1 when it
+  is stale. `npm run spec-coverage` reads that file, never the database.
+- **A rewritten practice question loses its tag, by design.** Ids hash the question text, so new wording gets a
+  new id and reads as untagged, and the old entry becomes an orphan (counted, never applied). A content packet
+  that rewrites practice LOWERS its section's measured coverage until the new questions are tagged by the
+  12.1/12.5 method, by a reader who did not write them. Never copy old tags onto new ids.
+- **`npm run spec-coverage` exits 1 in every mode.** There is no `audit/spec-coverage-baseline.json`, and the
+  live default now shows 13 real tariff failures (Define 4 / Outline 4 / Explain 6 / Assess 10). They are in the
+  six sections still serving pre-rebuild practice: assessing-competitiveness, business-growth,
+  decision-making-techniques, global-industries-mncs, global-marketing, introductory-concepts. Their rebuilds
+  own them. It is not a gate command, and baselining it is a founder call.
+- **Limits of the tagging, stated rather than tuned away.**
+  - For 22 of the 40 adjudicated items, pass 2's competing leaves were not offered to the blind reader.
+  - The two LLM readers are less independent of each other than of the lexical pass.
+  - The adjudicator's blindness rests on its prompt: the key sat in the same folder.
+
 ## Packet 12.6 — PASSED 22 September 2026, awaiting commit
 
 Gate test/build/validate/drift all 0. E033-E037 confirmed, none rejected, one fix round. Artefacts in
