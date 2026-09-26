@@ -30,7 +30,7 @@ export const PAGE_DATES = {
   '/economics/market-failure': '2026-09-21',
   '/economics/macroeconomic-objectives': '2026-09-21',
   '/economics/globalisation': '2026-09-21',
-  '/economics/aggregate-demand': '2026-09-13',
+  '/economics/aggregate-demand': '2026-09-26',
   '/business': '2026-09-26',
   '/business/unit-1': '2026-09-26',
   '/business/unit-2': '2026-09-26',
