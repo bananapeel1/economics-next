@@ -4,6 +4,7 @@ import { BoltIcon, BookAlt, CardsIcon, ChartHistogram, Clipboard, Document, Glos
 import SiteHeader from '@/components/SiteHeader';
 import BusinessScrollBar from './BusinessScrollBar';
 import '@/styles/landing.css';
+import '@/styles/hub-links.css';
 
 export const metadata = {
   title: 'Edexcel IAL Business Studies Notes — Free Revision for Units 1–4 (2026)',
@@ -251,7 +252,7 @@ export default function BusinessPage() {
             <div className="elp-unit-block elp-fade-up">
               <div className="elp-unit-label-row">
                 <div className="elp-unit-num">{unit.num}</div>
-                <div className="elp-unit-heading">{unit.heading}</div>
+                <Link href={`/business/unit-${unit.num}`} className="elp-unit-heading elp-unit-heading-link">{unit.heading}</Link>
                 <div className="elp-unit-code">{unit.code}</div>
               </div>
               <p className="elp-unit-desc">{unit.desc}</p>
