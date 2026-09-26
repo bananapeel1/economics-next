@@ -51,15 +51,12 @@ export async function generateMetadata({ params }) {
     || `${section.title} — Edexcel IAL Economics ${section.units.title} | Revvy Learn`;
   const description = `Free revision notes, diagrams and practice questions for ${section.title}. Flashcards and quizzes unlock with Pro. Edexcel International A-Level Economics ${section.units.title}.`;
 
-  // Some topics have a dedicated SEO pillar page that should absorb canonical authority.
-  // Point the canonical at the pillar to consolidate ranking signals.
-  const pillarCanonicals = {
-    'market-failure': 'https://revvylearn.com/economics/market-failure',
-    'aggregate-demand': 'https://revvylearn.com/economics/aggregate-demand',
-    'macroeconomic-objectives-policies': 'https://revvylearn.com/economics/macroeconomic-objectives',
-    'causes-effects-globalisation': 'https://revvylearn.com/economics/globalisation',
-  };
-  const canonicalUrl = pillarCanonicals[topic] || `https://revvylearn.com/economics/unit-${section.units.number}/${topic}`;
+  // Every topic page is its own canonical. Four of them used to point at a pillar page
+  // (/economics/market-failure, /aggregate-demand, /macroeconomic-objectives, /globalisation), but
+  // Search Console's URL Inspection (26 Sep 2026) showed Google had chosen the topic page as canonical
+  // in all four cases anyway, and globalisation was indexed under neither. The pillar pages keep
+  // their own canonical and their own job: an exam guide with diagrams and model answers.
+  const canonicalUrl = `https://revvylearn.com/economics/unit-${section.units.number}/${topic}`;
 
   return {
     title,

@@ -4,10 +4,10 @@ import SiteHeader from '@/components/SiteHeader';
 import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 
 export const metadata = {
-  title: 'Aggregate Demand \u2014 Edexcel IAL Economics Unit 2 | Revvy Learn',
+  title: 'Aggregate Demand Revision Guide \u2014 Edexcel IAL Economics WEC12 | Revvy Learn',
   description: 'Free aggregate demand revision notes for Edexcel IAL Economics (2.3.2). Covers components of AD (C+I+G+X\u2212M), the AD curve, shifts in AD, the multiplier and the accelerator effect, with practice questions and diagrams in the app.',
   openGraph: {
-    title: 'Aggregate Demand \u2014 Edexcel IAL Economics Unit 2 | Revvy Learn',
+    title: 'Aggregate Demand Revision Guide \u2014 Edexcel IAL Economics WEC12 | Revvy Learn',
     description: 'Complete aggregate demand revision notes for Edexcel IAL Economics. AD components, shifts, the multiplier and the accelerator effect.',
     url: 'https://revvylearn.com/economics/aggregate-demand',
     type: 'article',
