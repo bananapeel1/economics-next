@@ -1789,6 +1789,13 @@
      ]
     }
    }
+  },
+  {
+   "rule": "schema.recall-diagram",
+   "fail": {
+    "content.0.sections.0.recall.type": "diagram",
+    "content.0.sections.0.recall.specId": "no-such-spec"
+   }
   }
  ]
 }
