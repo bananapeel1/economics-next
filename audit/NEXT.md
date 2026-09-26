@@ -11712,6 +11712,12 @@ without checking the underlying commit.
 
 ## Handoff — packet 55 closed (brain)
 
+**PUBLISHED 12:15:27 UTC, 26 September 2026**, from this session at the founder's go, after PR #55 put the new
+Unit 4 tiles live on production. Backup: `audit/snapshots/auto-prepublish-2026-09-26T12-15-27-437Z__business__global-marketing.json`.
+The publish verified the live row equals the draft (0 BLOCK / 1 DEBT). Production `/api/sections/global-marketing`
+serves the new chapters and both post-run wordings, with 0 "Hofstede". The section's baseline adds 0 keys,
+and `npm run recalls` reports no section worse. The "Waiting on the founder" paragraph below is done.
+
 Run `wf_9a30df0c-bb5`: PASSED, 0 fix rounds, 6 agents, ~1.33M worker tokens, ~81 min. Ledger read fresh:
 23 items, 22 confirmed, 1 wont-fix (`specGap-06`, no such leaf: `bus_spec.txt:1424-1446` has no (g) and no
 social media), 0 open; `ledger.mjs unverified 55` gate clear.
