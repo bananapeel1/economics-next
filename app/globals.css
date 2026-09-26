@@ -1549,7 +1549,7 @@ body {
   .lm-nav { flex-wrap: wrap; }
   .lm-nav-back, .lm-nav-next, .lm-nav-complete { width: 100%; justify-content: center; }
   .lm-nav-spacer { display: none; }
-  .lm-resume-banner { flex-direction: column; text-align: center; }
+  .lm-resume-banner { flex-direction: column; text-align: center; padding-left: 52px; }
   .lm-resume-text { text-align: center; min-width: 0; }
   .lm-resume-actions { justify-content: center; }
   .lm-complete-screen { margin: 20px auto; }
@@ -2076,8 +2076,9 @@ button.sidebar-resource-link {
 
 /* Resume banner */
 .lm-resume-banner {
+  position: relative;
   display: flex; align-items: center; gap: 12px;
-  padding: 14px 18px;
+  padding: 14px 52px 14px 18px;
   background: var(--green-light-6);
   border: 1.5px solid var(--green-light-20);
   border-radius: 12px; margin-bottom: 20px;
@@ -2099,6 +2100,18 @@ button.sidebar-resource-link {
   font-size: 13px; font-weight: 600;
   cursor: pointer; font-family: inherit;
 }
+/* Dismiss (the founder's board, 26 Sep). In the corner, so it sits the same in the row and in the
+   phone's stacked layout; 44px, the platform minimum DECISIONS settled on. */
+.lm-resume-banner-close {
+  position: absolute; top: 4px; right: 4px;
+  min-width: 44px; min-height: 44px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: transparent; border: none; border-radius: 22px;
+  color: var(--accent-green); font-size: 24px; line-height: 1;
+  cursor: pointer; font-family: inherit; transition: background 0.15s;
+}
+.lm-resume-banner-close:hover { background: var(--green-light-20); }
+.lm-resume-banner-close:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px; }
 
 /* Progress bar */
 .lm-progress-container {

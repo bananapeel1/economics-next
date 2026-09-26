@@ -390,9 +390,18 @@ export default function LearnModeTab({
       onPersistStep?.(target, totalSteps);
     }
     scrollToTop(true);
+    /*
+     * Moving answers the resume question. "You left off at step N" is about the step this visit
+     * opened on; it used to stay up until Continue was pressed, re-labelled with wherever the
+     * student had got to since. Worse after the silent restart below: that lands on step 0 with
+     * `isResuming` still set, so the banner (hidden at step 0) appeared on the first Next as
+     * "You left off at step 2" and followed the student through the topic — on every
+     * mid-section return to a rebuilt section (packets 43 and 44, Verify B).
+     */
+    onResumeDismiss?.();
     // V038: every write stamps the deck this step was reached on.
     onStepChange(target, deckVersion);
-  }, [safeStep, totalSteps, sectionId, onPersistStep, onStepChange, scrollToTop, deckVersion]);
+  }, [safeStep, totalSteps, sectionId, onPersistStep, onStepChange, onResumeDismiss, scrollToTop, deckVersion]);
 
   /*
    * V038, the two ways out of a pointer from another version. Neither resumes: "start again" puts
@@ -688,6 +697,9 @@ export default function LearnModeTab({
             <button className="lm-resume-continue" onClick={onResumeDismiss}>Continue</button>
             <button className="lm-resume-restart" onClick={() => { navigateToStep(0); onResumeDismiss?.(); }}>Start over</button>
           </div>
+          {/* The founder's board, 26 Sep: a banner that shows needs an ×, like the review reminder. */}
+          <button type="button" className="lm-resume-banner-close" onClick={onResumeDismiss}
+            aria-label="Hide this reminder">&times;</button>
         </div>
       )}
 
