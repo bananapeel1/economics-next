@@ -1,0 +1,26 @@
+before items 30 rejected strings anywhere in bundle: 3 key uniquely longest: 5
+ [13] Why does poverty often stay high for years after a civil war ends?
+    0 (50) the median income rises sharply once peace returns
+    1 (50) aid is withdrawn as soon as a peace deal is signed
+   *2 (57) lost schooling and destroyed assets take years to rebuild
+    3 (41) prices fall as soon as the fighting stops
+   expl: Children who missed school earn less for life, and homes, tools, roads and livestock must be replaced, while investors stay cautious, so incomes recover slowly. Aid does not simply stop at peace, and falling prices would lower poverty, not hold it up.
+ [29] In a free market economy, a key reason incomes are unequal is that:
+    0 (54) minimum wages hold low pay above what firms can afford
+   *1 (57) owners of capital receive profit and rent on top of wages
+    2 (47) the state sets the wage paid in each occupation
+    3 (41) taxes are levied only on income from work
+   expl: Income comes from owning assets as well as from work, and ownership is unequal, so those who own capital and land receive returns that others do not. In a free market, wages are set by markets, not by the state.
+after items 30 rejected strings anywhere in bundle: 0 key uniquely longest: 3
+ [13] Why does poverty often stay high for years after a civil war ends?
+    0 (50) the median income rises sharply once peace returns
+    1 (59) donors withdraw their aid as soon as a peace deal is signed
+   *2 (57) lost schooling and destroyed assets take years to rebuild
+    3 (45) refugees who settle abroad send no money home
+   expl: Children who missed school earn less for life, and homes, tools, roads and livestock must be replaced while investors stay cautious, so incomes, the median among them, recover slowly rather than sharply. Aid does not simply stop at peace, and refugees who settle abroad often send money home, which supports incomes there.
+ [29] In a free market economy, a key reason incomes are unequal is that:
+    0 (52) wages are highest in the jobs most useful to society
+   *1 (50) owners of capital and land receive profit and rent
+    2 (47) goods are rationed by price rather than by need
+    3 (41) taxes are levied only on income from work
+   expl: Income comes from owning assets as well as from work, and ownership is unequal, so owners of capital and land receive profit and rent that others do not. Pay follows the demand for and supply of each skill, not how useful a job is: care work is vital, but many people can do it. Rationing by price decides who gets goods once incomes differ; it does not make incomes differ. Market economies also tax profits, rent and property, not only wages.

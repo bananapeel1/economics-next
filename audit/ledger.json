@@ -15404,10 +15404,10 @@
    "rank": 0,
    "text": "Add body subsections for the untaught spec bullets (income vs wealth inequality; measures and causes of poverty incl. headcount/poverty gap/MPI; inequality between countries; Kuznets/impact of development; capitalism and inequality) so the quiz bank, PreTest and flashcards test what the Learn flow actually teaches.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "api draft content[0].sections[1],content[1..2] (7 subsections = 7 spec 1c bullets),content[3].sections[0],content[4].sections[2],content[6].sections[0..2]: every named leaf taught in body; 21/21 spec leaves read in body",
    "note": null
   },
   {
@@ -15417,10 +15417,10 @@
    "rank": 1,
    "text": "Fix the relative-poverty/inequality conflation in absolute-relative-poverty (body[1], body[2], flow, realExample 'relative inequality', takeaway[1]) so it agrees with common_mistakes[0]; say inequality rose (Gini) and relative poverty depends on the bottom vs the median.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "api draft content[0].sections[0].body[1] median-based line, body[3] 'Relative poverty is not the same thing as inequality'; realExample/misconception/mistakes[0] agree; no string pairs relative poverty with a rising Gini",
    "note": null
   },
   {
@@ -15430,10 +15430,10 @@
    "rank": 2,
    "text": "Rewrite MCQ distractors so the correct option is not the longest (currently 8/10), replace the absurd distractors in quiz[3] and quiz[9] with plausible near-misses, remove the 'within a country' giveaway in quiz[7], and correct quiz[1]'s 'relative poverty exists primarily in developed countries' explanation.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "bundle:2222-2229 quiz[29] (old q9 successor) now [0] useful-jobs pay, [2] price rationing vs distribution, [3] tax only on work: all stem-consistent near-misses each refuted, correct 50ch < 52ch; :2030-2038 quiz[13] 'prices fall' gone, [0] median-rises is a relative-poverty near-miss refuted by the explanation; correct strictly longest 3/30 (margins 1-3ch) and strictly shortest 4/30; 'within a country' in no quiz stem/option; 'primarily in developed' absent; draft API 10 served items byte-equal bundle. Source scripts/_packet51-assessment.mjs:92-94,148-150",
    "note": null
   },
   {
@@ -15443,10 +15443,10 @@
    "rank": 3,
    "text": "Add recall widgets and diagram hooks: a reorder on the Lorenz→Gini procedure (from notes[1].flow), fillins on the Gini formula/endpoints and the two poverty definitions, and set diagramRef: 'Lorenz' on content[0] and 'Kuznets' on content[1] so InlineDiagram renders.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "api draft content[3].sections[1].recall reorder Lorenz->Gini (5 steps), content[3].sections[2].recall fillin zero/one/0.24, content[0].sections[0].recall fillin absolute/relative; all 7 blocks diagramId-pinned (lib/checkin-placement.js:46 -> LearnModeTab.jsx:813 InlineDiagram); 7/7 check-ins clean",
    "note": null
   },
   {
@@ -15456,10 +15456,10 @@
    "rank": 4,
    "text": "Update the poverty line to $3.00/day (2021 PPP, June 2025) everywhere ($2.15 '2022 PPP' is mislabelled and superseded), fix the US 91%→70% top-rate claim, and recast practice[2]/[3] guidance as IAL levels-based marking (KAA/Evaluation) while replacing the non-IAL 'Define the difference' and 'Outline' command words.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[0].sections[1].body[0] '$3.00 a day ... PPP in 2021 prices' sourced World Bank June 2025; 0 hits 2.15/2022 PPP/70%/top-rate; practice commands+tariffs all in lib/ial-marking.js:18-27; 0 Outline/'Define the difference'; 8+ guidance levels without allocations per DECISIONS 2026-09-17",
    "note": null
   },
   {
@@ -15468,10 +15468,10 @@
    "kind": "accuracy",
    "text": "content[0] 'Types of Poverty' > absolute-relative-poverty > body[0] and keyIdea; diagrams[1] label '(fixed: $2.15/day)'; practice[0].guidance; notes[0]; flashcards[0]: '$2.15 per day (2022 PPP)' is wrong on two counts: the $2.15 line was expressed in 2017 PPP (adopted Sept 2022), and in June 2025 the World Bank raised the international poverty line to $3.00/day at 2021 PPP. As of 2026 the section teaches a superseded figure with a mislabelled base year.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "every poverty-line mention is $3.00 2021 PPP: content[0].sections[1].body[0], notes[0], flashcards[2], diagrams[0] SVG 'Absolute line $3.00', diagrams[2] checklist; 0 hits for 2.15 or 2022 PPP",
    "note": null
   },
   {
@@ -15480,10 +15480,10 @@
    "kind": "accuracy",
    "text": "content[0] > absolute-relative-poverty > body[1], body[2], flow.steps[3], realExample ('meaning relative inequality worsened dramatically'), takeaway[1]: Relative poverty is treated as a synonym for inequality. 'Relative inequality' is not a term; a rising Gini driven by the top decile pulling away does not by itself raise relative poverty (share of households below 60% of median), which depends on the median and the bottom of the distribution. The section's own common_mistakes[0] says students must not 'confuse relative poverty with inequality', yet the body does exactly that.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[0].sections[0].body[3] separates relative poverty from inequality; extras.chains[0] Gini 0.39->0.49 with relative still 30%, re-derived independently from the stated tenths (0.3907->0.4851, median 6.00)",
    "note": null
   },
   {
@@ -15492,10 +15492,10 @@
    "kind": "quiz",
    "text": "q0: Answer-length cue across the bank: in 8 of 10 MCQs (indices 0,1,2,3,4,6,8,9) the correct option is the longest, usually by a wide margin. A test-wise student can score ~80% without reading the stems. Since the PreTest samples 3 of these, the pre/post-test delta is unreliable.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "bundle quiz: correct option strictly longest in 5/30 (q8,q13,q17,q25,q29), tied-longest in 5; pick-longest expects 25% = chance; 0/10 strictly longest in the non-premium served slice; correctIndex spread 8/8/7/7",
    "note": null
   },
   {
@@ -15504,10 +15504,10 @@
    "kind": "structure",
    "text": "Zero recall widgets in the section (meta.reorder=0, meta.fillin=0), so the spaced/immediate recall mechanic of LearnModeTab never fires here. Obvious candidates exist in the data already: notes[1].flow ('Rank population by income' → 'Plot cumulative income share' → 'Calculate Gini = A/(A+B)') is a genuine procedure suitable for reorder; the Gini formula and 0/1 endpoints are ideal fillin material.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "api draft: 24/24 subsections carry recall (fillin/reorder/match/classify) incl. Lorenz reorder content[3].sections[1].recall and Gini fillin content[3].sections[2].recall",
    "note": null
   },
   {
@@ -15516,10 +15516,10 @@
    "kind": "structure",
    "text": "Neither block carries diagramRef, quizIndices or practiceIndices (content[0] and content[1] have only title/sections/takeaway). InlineDiagram matches by diagramRef substring, so none of the 3 diagrams (including the exam-critical Lorenz curve) appears inside the Learn flow; students only meet it if they visit the Diagrams tab.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "api draft: all 7 blocks carry diagramId+quizIndices+practiceIndices; every diagramId exists in diagrams; resolved by lib/checkin-placement.js:46-52 and rendered LearnModeTab.jsx:813,867",
    "note": null
   },
   {
@@ -15528,10 +15528,10 @@
    "kind": "structure",
    "text": "Coverage vs testing mismatch: quiz[4] (Kuznets), quiz[7] (between-country causes), quiz[8] (civil war/poverty), quiz[9] (capitalism), practice[3] (globalisation and between-country inequality), practice[4] (effects of poverty) and 8 of 18 flashcards (HDI, wealth tax, minimum wage, equity vs equality, income vs wealth, Kuznets, between-country causes, education) test material absent from content[] body. The PreTest can therefore gate on untaught content, which plausibly feeds the observed step-0 abandonment.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "bank rebuilt; each of 30 quiz/10 practice/32 flashcards reads to a body source, e.g. q18 -> content[3].sections[1].body[3], q24 -> content[5].sections[3].body[2], F19 -> content[3].sections[2].body[3]",
    "note": null
   },
   {
@@ -15540,10 +15540,10 @@
    "kind": "structure",
    "text": "Only 4 subsections for a spec point with ~8 bullets; two steps total. Block 1 (poverty types + Lorenz/Gini) and Block 2 (causes + consequences/redistribution) pair coherently, but the ramp is flat: nothing on measures of poverty (headcount, poverty gap, MPI), income-vs-wealth distinction, or development/Kuznets before the causes block.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "api draft: 7 blocks, 24 subsections; measures (content[0].sections[1..2]) precede causes; income/wealth content[3].sections[0] and Kuznets content[6].sections[0] have their own subsections",
    "note": null
   },
   {
@@ -15552,10 +15552,10 @@
    "kind": "structure",
    "text": "Misconceptions: absolute-relative-poverty ('growth automatically reduces all poverty') is a real student error. lorenz-curve-gini ('Gini is a perfect measure') is filler — the real student errors are swapping the axes, reading Gini 0.4 as '40% poor', and drawing the Lorenz curve above the diagonal (common_mistakes[1] already names the axis error and should be promoted into the section). causes-inequality ('caused only by effort or talent') is ideological rather than an exam misconception. consequences-redistribution is really an evaluation point restated as a misconception.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-51-bundle__economics__poverty-inequality.json:769,818 Lorenz/Gini misconceptions are the real errors (axes swap, above diagonal, Gini 0.4 read as 40% poor); :897 causes-within is now 'pay differences alone, leaving out no-pay incomes' (no effort/talent ideology); :1524 capitalism is 'only through pay, ownership is a second source'; :560 aid and :1107 enterprise are conceptual confusions, not always/never evaluation points; growth error kept at mistakes[1]; all 24 misconceptions read, draft API slice == bundle",
    "note": null
   },
   {
@@ -15564,10 +15564,10 @@
    "kind": "structure",
    "text": "Takeaways match their blocks (Block 1 takeaway[0-3] and Block 2 takeaway[0-3] all trace to body text). Block 2 takeaway[3] name-checks the Laffer curve, which gets one sentence in the body — thin support for a takeaway.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "0 hits for Laffer; every takeaway in the 7 blocks traces to its own body (read block by block)",
    "note": null
   },
   {
@@ -15576,10 +15576,10 @@
    "kind": "structure",
    "text": "The examMatters fields are good and IAL-consistent (chains of reasoning, define both terms, Gini = A/(A+B)), but three of four end with the same 'this earns the highest marks / top marks' formula, which reads as template output.",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "0 hits for 'top marks'/'highest marks' across the bundle; the 24 examMatters have distinct endings",
    "note": null
   },
   {
@@ -15588,10 +15588,10 @@
    "kind": "specGap",
    "text": "Distinction between income inequality and wealth inequality (spec bullet explicitly requires it; only flashcards[17] covers it, body never does)",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "api draft content[3].sections[0] teaches income (flow) vs wealth (stock) inequality with examples and Marenda shares, plus classify recall",
    "note": null
   },
   {
@@ -15600,10 +15600,10 @@
    "kind": "specGap",
    "text": "Measures of absolute and relative poverty beyond the $-a-day line: headcount ratio, poverty gap, Multidimensional Poverty Index (only extras.evaluation[2] mentions MPI)",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "api draft content[0].sections[1].body[2] teaches headcount ratio, poverty gap and MPI with worked figures (recomputed: 4m, $0.80, $3.2m)",
    "note": null
   },
   {
@@ -15612,10 +15612,10 @@
    "kind": "specGap",
    "text": "Causes of changes in absolute and relative poverty (unemployment, low wages, lack of education/health, conflict, demographic change, benefit levels) — body only covers causes of inequality",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[1] and content[2] teach causes of changes in poverty: all 7 spec 1c bullets (econ_spec.txt:1795-1801); 'demographic change' in the item is not a spec bullet",
    "note": null
   },
   {
@@ -15624,10 +15624,10 @@
    "kind": "specGap",
    "text": "Causes of inequality between countries (institutions, colonial legacy, capital/infrastructure, primary-commodity dependence) — flashcards[5] and quiz[7] only",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "api draft content[4].sections[2].body[1]: capital/infrastructure, human capital, technology, institutions, primary dependence, colonial history, conflict",
    "note": null
   },
   {
@@ -15636,10 +15636,10 @@
    "kind": "specGap",
    "text": "Impact of economic change and development on inequality (Kuznets hypothesis, structural change, technology) — diagrams[2] and quiz[4] only, no body teaching",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "api draft content[6].sections[0] Kuznets with evidence; content[6].sections[1] technology, globalisation, structural shifts",
    "note": null
   },
   {
@@ -15648,10 +15648,10 @@
    "kind": "specGap",
    "text": "Significance of capitalism for inequality (returns to capital vs labour, factor ownership) — extras.chains[3] and quiz[9] only",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "api draft content[6].sections[2].body[1] ownership, returns to capital vs labour, accumulation; body[2] asset-income shares",
    "note": null
   },
   {
@@ -15660,10 +15660,10 @@
    "kind": "specGap",
    "text": "Unsure: whether the IAL spec lists 'measures of inequality' beyond Lorenz/Gini (e.g. income share ratios, Palma) — practice[2] guidance mentions income share ratios without teaching them",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "spec 2b is closed (econ_spec.txt:1803-1805 Lorenz, Gini); 0 hits for 'income share ratio'/'Palma' in bundle, so no practice guidance names an untaught measure",
    "note": null
   },
   {
@@ -17146,10 +17146,10 @@
    "kind": "specThin",
    "text": "4.3.4 1c) Cause of changes in poverty: structural changes in the economy — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 51,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-51",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "api draft content[2].sections[0] defines structural change and explains both directions with worked Marenda case (20%->30%) and flow",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {

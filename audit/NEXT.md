@@ -11692,3 +11692,292 @@ the next branch-to-main merge, so until then the unit page lists the old sub-top
 **Could not verify:** the Pro surfaces (full quiz bank, the seven mistakes as rendered, the practice mark
 schemes); a verifier reading of the two re-worded strings in place; and Verify B's end-of-section score and
 skipped-recall readings, because packets 48 and 50-54 shared :3001 and its localStorage during the walk.
+
+## Handoff — packet 51 (poverty-inequality) bookkeeping pass, GATE DID NOT PASS, STAGED NOT PUBLISHED (26 September 2026)
+
+**Bookkeeping-only pass, per the packet's own harness instructions. Authored, fixed, staged, published, restored
+and committed nothing; `audit/ledger.json` not written.** Read `audit/PROTOCOL.md`, `audit/SESSION-PROMPT.md`,
+this packet's row in `audit/PROGRESS.md`, the Settled list in `audit/DECISIONS.md`, and `audit/CONTENT-GATE.md`
+including the recall and check-in-answer contracts, before writing anything. **No `## Packet 51 spec` heading
+exists anywhere in this file** (confirmed by direct grep, 0 hits) — the same gap packets 41/43-48/50/53 each hit
+and normalized; `audit/runs/packet-51/brief.md` and `built.md` supplied the scope instead, as PROTOCOL says the
+ledger should. **No contradiction found** among PROTOCOL, SESSION-PROMPT, the Settled entries in DECISIONS.md
+(0 hits for "poverty-inequality" or "packet 51") and CONTENT-GATE's contracts, for this packet's own scope.
+
+**Packet 51 (poverty-inequality, IAL Economics 4.3.4, `econ_spec.txt:1788-1817`) is built and ledger-clear —
+23/23 confirmed, 0 rejected, 0 unverified, 0 open, independently recounted by this pass two ways (a direct
+Python parse of `ledger.json` and a fresh `ledger.mjs unverified 51` → "gate clear") — but the packet's own
+GATE DID NOT PASS, and this pass is recording that honestly.** STAGED to `draft` only; live untouched —
+independently re-confirmed by this pass with a fresh signed-out `curl` of `/api/sections/poverty-inequality`
+(no `?draft=1`) just now: still 2 blocks, `contentVersionSince` 2026-09-25T14:22:35Z; `?draft=1` independently
+confirmed to carry the new 7-block/10-quiz-served staged deck. Span independently re-confirmed with a direct
+read of `econ_spec.txt:1788-1817`. Old section (2 blocks/4 subsections/0 recalls/3 diagrams/10 quiz/5 practice)
+rebuilt to 7 blocks/24 subsections (31 Learn steps)/24 recalls/7 diagrams (12 views)/30 quiz (10 free)/10
+practice/32 flashcards/7 mistakes/4 chains+3 evaluation; 21/21 spec leaves evidenced.
+
+**Two fix rounds used (2 of 2 budgeted) — the budget is exhausted, so a next session that finds anything else
+wrong in the 23 ledger ids cannot simply fix-and-reconfirm; it needs its own round.** Verify A round 0 rejected
+`topFix-03` (absurd quiz distractors, a length cue, an "only in developed countries" leak) and `structure-05`
+(five ideological/evaluation-shaped misconceptions). Round 1 fixed both; Verify A round 1 confirmed
+`structure-05` but rejected `topFix-03` again (two items still carried three replaceable strings). Round 2
+replaced them; Verify A round 2 (fresh context, `built.md` not read) **CONFIRMED** it by reading all 30 items
+by eye plus an independent A/B diff of the bundle JSON against the pre-fix copy — all 23 ids now confirmed, all
+7 check-ins clean against CONTENT-GATE's check-in-answer rule.
+
+**Verify B's own verdict is "PASS for the student flow" — NOT unqualified "clean", and the packet's own
+workflow-run outcome calling the walkthrough "clean" does not match what `verify-b.md` itself records.** Two
+content **FAIL**s survive in the staged bundle, described as "should be fixed before publish," one explicitly
+**blocking for publish**:
+1. **Step 16, the Gini fill-in marks a defensible answer wrong.** The exercise marks "100" wrong in a blank,
+   although the same screen's body states the coefficient "is sometimes written as a number from 0 to 100
+   instead" (`scripts/_packet51-content.mjs:487` vs `:470`). Blocking for publish — a student will hit a mark
+   scheme error.
+2. **Step 29, literal `**…**` Markdown renders on screen** in the free Extras evaluation point
+   (`components/ExtrasTab.jsx:129` prints `point.content` as plain text; not present in the live version of
+   this section, so new with this packet — `scripts/_packet51-assessment.mjs:322`).
+
+**Neither defect is a ledger item.** This pass grepped `audit/ledger.json` for `gini`/`markdown`/`extras`/`100`
+and found no id covering either — they were found only by Verify B's independent walkthrough, not by the
+builder's runner or by Verify A's content read. The next session on this packet needs to open a ledger item for
+each (or fix and reconfirm, if it still has fix-round budget under its own packet-run) before publish is even
+considered. A third, non-blocking-while-staged defect is the same class packets 47/48/50 already carried: the
+Unit 4 tile (`app/economics/unit-4/page.js:40-46`) and the economics-index meta (`app/economics/page.js:50`)
+still describe the OLD three-part section shape ("Absolute vs Relative Poverty / Lorenz Curve & Gini / Causes &
+Consequences", "social mobility", "addressing" — the last of which belongs to 4.3.5, not this section) rather
+than the rebuilt seven chapters. Resume pointer (5 planted cases plus 2 unplanned mid-walk reloads from other
+sessions sharing `:3001`'s storage) never showed "step N of M" with N > M and never a blank body. A handful of
+borderline, non-blocking notes (a "migrants" vs "refugees" distractor, two close options in an education match,
+pointer words in a step-29 match, one "leaf of its own" jargon sentence, capped bars in diagram 1) are carried,
+not fixed.
+
+**Why GATE DID NOT PASS is still the right verdict, and what this pass found about why, going further than the
+packet's own artefacts did.** The original consolidated `audit/runs/packet-51/gate.log` (round 0, 26 Sep
+~12:49) recorded `npm test` exit 1 — 339/342, 3 failures, the exact same signature packets 48/50/53 each hit the
+same day on the same files ("market-failure panel… loses AO4", "1.3.5 groups into the extract set", "every
+tag… names a leaf of its own section") — while `npm run build`, `npm run validate`, `npm run exposure`, `npm run
+recalls` and `check-staged-drafts` all exited 0. **A direct grep of packet 51's own five script files against
+all three failing tests' subject matter: 0 hits** — independently confirms `built.md`'s account that this is
+another concurrent session's edit (to `data/modelAnswersData.js` / `content/data-response/econ-u1-market-
+failure.md`), not this packet's content. **Independently re-verified by this pass, by a method different from
+reading any log: a fresh, full `npm test` run performed by this pass just now (26 Sep, 13:53) shows 357/357
+pass, 0 fail.** This matches the packet's own fix-round-2 capture earlier the same afternoon
+(`gate-test-fix2.log`, 13:20: 356/356 pass) and the same finding the packet-48/50/53 bookkeeping passes already
+made and evidenced in this shared worktree today: **the specific 3-test failure is not currently reproducing.**
+This pass has no authority to upgrade the verdict on that basis, so DID NOT PASS is recorded as instructed, not
+worked around — a later pass with that authority (as the "brain" addenda did for packets 48/50/53 above) should
+decide whether this, plus the two Verify-B content defects above, clears the gate. **`npm run build` was never
+independently re-run after either fix round** (`built.md`: "Not done… no build" in both the initial phase and
+fix round 2, to avoid rewriting `.next` under the shared `:3001` dev server); it exited 0 once, at the round-0
+consolidated gate, before either fix round, and neither fix round touched `app/` or `components/`.
+
+**Rule 3 (field compatibility against a current `origin/main` checkout) has not been run**, same gap as packets
+40-50/53: nobody has checked that `origin/main`'s components can read every field the `poverty-inequality`
+bundle carries (`diagramId` pins, the four recall types fillin/reorder/match/classify, the mistake fields).
+Required before publish, not before staging.
+
+**Not committed; not published; not restored** (this pass has no authority to do any of the three and did none,
+nor did it fix, re-stage, or re-claim anything — the fresh `npm test` run and the two live/draft `curl` checks
+above are read-only verification). `audit/ledger.json` (23 claims) is shared with other sessions' concurrent
+changes and untouched by this pass. `audit/runs/packet-51/*` and the `scripts/_packet51-*.mjs` /
+`scripts/packet-51-*.mjs` files are staged by the build/verify session, not this pass.
+
+**What the next session on packet 51 needs, in order:**
+1. Open (or fix directly, if fix-round budget allows under a fresh packet-run) two new ledger items for the
+   Gini "100" fill-in mismarking (step 16) and the raw Markdown in the free Extras evaluation point (step 29) —
+   neither is currently tracked anywhere.
+2. Run a fresh, single consolidated gate — `npm test`, `npm run build`, `npm run validate`, `npm run exposure`,
+   `npm run recalls`, `check-staged-drafts.mjs poverty-inequality` — all in the same pass, in an isolated clone
+   if the shared `:3001` dev server is a concern (as packet 48's bookkeeping pass and the packet-53 brain
+   addendum did), before calling this "done and verified". Given the `npm test` failure is not reproducing and
+   packet 51 touches no `app/`/`components/` file, a clean result is the likely outcome but has not been
+   demonstrated fresh together with the two new content fixes above.
+3. Rule 3 field-compatibility check, before publish.
+4. The Unit 4 tile / economics-index copy fix (above) must land with, or before, any publish — same as packets
+   47/48/50's carried defect on their own unit pages.
+5. Publish command, for the founder, not run by any pass so far:
+   ```
+   node scripts/packet-51-poverty-inequality.mjs --stage && node scripts/publish-section.mjs poverty-inequality --confirm
+   ```
+   (the `--stage` re-run is precautionary in case the two new content fixes change the bundle; re-run
+   `check-staged-drafts` after.)
+
+**Next unclaimed packet — not re-checked live by this pass (token discipline); trust the packet-50 handoff
+above, which re-checked live moments before this packet's own build started:** packet 49 (business-growth) is
+the next free packet to build (27 items, all open, per packet-50's live check). Packet 52
+(role-state-macroeconomy) is gate-clear per the ledger but its `PROGRESS.md` row is still stale ("not
+started") — it needs the same kind of bookkeeping-only pass this one just gave packet 51, not a rebuild.
+
+**Escalate to the founder:** nothing to publish yet — packet 51's gate has not passed, for the `npm test`
+build-evidence reason above (not currently reproducing, but not re-verified fresh alongside a build) AND for
+two real, unticketed content defects Verify B found (the Gini "100" mismark is a mark-scheme error a student
+will hit; the raw Markdown is cosmetic but visible on a free screen). Neither is a ledger item yet. Once both
+are ticketed and fixed, a fresh consolidated gate is run, and Rule 3 is checked, the publish command above is
+ready. Separately, worth the founder's attention as a sixth data point on the same shared-worktree pattern
+packets 48/50/53 already raised: this packet's own original gate log's `npm test` result read as a failing gate
+at capture time for a reason entirely outside its own files, and only a fresh re-run (not the saved log) showed
+the true state — every packet from here should get a fresh re-run at bookkeeping time, not a read of the log,
+before its verdict is written down.
+
+## Handoff — packet 51 closed (brain)
+
+**Bookkeeping only, per the packet's own harness instructions. Authored, fixed, staged, published and
+committed nothing.** Read `audit/PROTOCOL.md`, this packet's row in `audit/PROGRESS.md`, the Settled list in
+`audit/DECISIONS.md` and `audit/CONTENT-GATE.md` before writing anything; re-read `audit/PROGRESS.md` and this
+file immediately before each write, since other sessions edit both live in this shared worktree — `audit/NEXT.md`
+had grown from 11,789 to 11,880 lines (a new packet-55 handoff landed) between this pass starting and this
+section being appended.
+
+**Verified independently, before writing anything:** `node audit/scripts/ledger.mjs unverified 51` → gate clear;
+`node audit/scripts/check-staged-drafts.mjs poverty-inequality` → matches, 0 drift; and the four run files
+(`verify-a.md`, `verify-b.md`, `verify-b-fix.md`, `built.md`) read in full.
+
+**Founder ruling, relayed to this session: "Fix both via closer (Recommended)" — fix both, then publish.** The
+two Verify-B **FAIL**s the prior bookkeeping pass recorded (step 16 Gini fill-in marking "100" wrong; step 29
+literal `**` on the free Extras screen) were never opened as ledger items — grepped `audit/ledger.json` again for
+`gini`/`markdown`/`extras`/`100`, still 0 hits — so no id is cited for either; the founder's closer fixed both
+directly instead of ticketing them.
+
+**(a) Gini fill-in.** Not made lenient — no second correct answer was added. Reworded instead so only the 0-1
+scale is possible: `scripts/_packet51-content.mjs:479` prompt now reads "…written on its 0 to 1 scale:", and the
+`:487` distractor `"100"` is replaced with `"0.76"` (B÷(A+B), a real wrong-working trap on either scale). Rule-4
+neighbours (hints, key idea, misconception, examMatters, notes twin, flashcard, quiz) already stated 0-1 and were
+left alone; only the one true body sentence still names the 0-100 alternative, unchanged because it is correct.
+**Independently re-verified by this pass with a direct read of the live source file** (not `verify-b-fix.md`'s
+account): `scripts/_packet51-content.mjs:487` distractors are `['0.5','0.32','0.76']`; no `"100"` anywhere in the
+recall.
+
+**(b) Extras `**`.** All three evaluation points carried literal markers, not only the free one
+(`scripts/_packet51-assessment.mjs:322,326,330`); stripped from all three, sentences unchanged, because
+`components/ExtrasTab.jsx` renders `point.content` as plain text. **Independently re-verified by this pass with a
+direct grep of the staged bundle JSON's `extras` table** (`audit/snapshots/packet-51-bundle__economics__poverty-
+inequality.json`, not the runner's own guard, not `verify-b-fix.md`'s account): 0 occurrences of `**`/`__`/
+backtick in `tables.extras`. (62 `**` hits remain in `tables.content`, which `ExtrasTab` never renders — expected,
+not a miss; checked this is the right table by reading `ExtrasTab.jsx`'s own field list first.)
+
+Runner guards added for both: `scripts/packet-51-poverty-inequality.mjs:435-440` (Gini scale guard) and `:504-509`
+(no-markdown-in-extras guard), each self-tested by restoring the pre-fix strings and confirming the runner then
+fails, then restoring the fix.
+
+**`verify-b-fix.md`'s targeted re-walk (390×844, signed out, real taps, `remediation-dev` reused not restarted)
+independently confirms both fixed on screen**, by a method distinct from reading source: step 3, the recall
+prompt names "0 to 1 scale" and "100" is gone from the bank; step 4, filled correctly by tap; step 5, all three
+distractors checked defensible on neither scale; step 6, every rule-4 neighbour on the step-16 screen consistent;
+step 9, the Extras tab's whole-page `innerText` has 0 `**`/`*`/`#`/`__`/backtick; step 11, the 5 paywalled extras
+(not signed-out visible) read straight from `section_extras.draft` by a script independent of the runner and the
+bundle (`extras-draft-scan.mjs`) — 33 strings, 0 markdown hits, with a working regex control that still fires
+true on the old string, so the 0 is real, not a broken check; step 12, every staged table scanned for Gini/scale/
+100 near "0 to 100" (`scale-neighbours-scan.mjs`) — only the one unchanged true body sentence remains, and live
+`data` still carries no packet text. 0 console errors. Step count and chapter headers unchanged (31 steps, 7
+chapters). **Verdict: "both defects fixed on screen."** Carried, not in this fix's scope: the Unit 4 tile
+(`app/economics/unit-4/page.js:40-46`) and economics-index meta (`app/economics/page.js:50`) still describe the
+OLD three-part section shape, not the rebuilt seven chapters — must be fixed with, or before, publish, same class
+as packets 47/48/50/53/55's own unit-page carries.
+
+**Ledger unchanged: 23 items, 23 confirmed / 0 wont-fix / 0 rejected / 0 open** (the fix touched no id).
+
+**The pointer-versioning ledger item, cited as asked.** `node audit/scripts/ledger.mjs packet 5` lists **`V038`**
+— title starts "Version the Learn Mode step pointer" — `status: confirmed`, `closed_by: packet-5`,
+`verified_by: packet-verifier 2026-09-21`. **Correcting the premise, as the packet-40 handoff already had to for
+the same claim:** `V038` was added 2026-09-19 and closed 2026-09-21, both before packet 51 was ever built (26
+Sep) — it was not filed as a result of this packet's Verify B, and `git status` shows no packet-5 file touched by
+this pass. What packet 51's own Verify B *did* do is independently exercise V038's fix under a real 31-step
+rebuilt deck: 5 planted pointer cases (draft↔live, in-range, out-of-range-clamped, legacy bare integer) plus 2
+unplanned mid-walk reloads from other sessions sharing `:3001`, and none showed "step N of M" with N > M or a
+blank body (`audit/runs/packet-51/verify-b.md`, step 24) — independent confirmation that V038's fix holds for
+this section, satisfying V038's own "must ship BEFORE the packet 5/7 checkpoint publishes any rebuilt section"
+condition.
+
+**D013 post-publish census step: not applicable to this packet.** Grepped all five run files (`brief`, `built`,
+`verify-a`, `verify-b`, `verify-b-fix`) for "D013" and "census" — 0 hits naming a D013 step for packet 51. (D013
+is the packet-37 multiplier-ownership item, `audit/SPEC-OWNERSHIP.md:22`, `national-income` vs `aggregate-
+demand` — unrelated to this section, per the same finding packet 40's handoff recorded.)
+
+**Gate, re-run fresh by this pass just now, by methods different from the ones that produced the fix:**
+`node audit/scripts/ledger.mjs unverified 51` → gate clear; `check-staged-drafts.mjs poverty-inequality` →
+matches, 0 drift; `npm run validate` → 0 findings, exit 0; a fresh **full** `npm test` run (not a re-read of any
+log) → **363/363 pass, 0 fail**, including `lib/spec-coverage.test.mjs`'s "every tag in the real economics bank
+names a leaf of its own section" — the same test that failed at this packet's own round-0 gate (339/342) and
+that the task brief attributes to another session's uncommitted `data/modelAnswersData.js` /
+`content/data-response/econ-u1-market-failure.md` edit. **That attribution is independently confirmed still true
+right now**: `git status --short` shows both files still modified and uncommitted by a concurrent session, and
+per instruction this pass left both alone. `npm run build` was **not** independently re-run (same caution as
+prior passes: the fix touches only `scripts/_packet51-{content,assessment}.mjs` and
+`scripts/packet-51-poverty-inequality.mjs`, no `app/`/`components/` file, against a shared `:3001` dev server;
+last known-good build exit 0 was at the round-0 consolidated gate). Rule 3 (field compatibility against a current
+`origin/main` checkout) still not checked — required before publish, not before staging, per `built.md`.
+
+**GATE now reads PASSED on this fresh re-run for staging purposes**, upgraded from the prior pass's honestly-
+recorded "DID NOT PASS" (the same class of upgrade packet 48's bookkeeping pass made): both content defects Verify
+B found are now fixed and independently re-confirmed by a re-walk, and the only failing gate check (`npm test`)
+is not reproducing on a fresh full run and is independently traced to another session's untouched, unrelated
+in-flight edit.
+
+**Publish command for the founder** (unchanged from `built.md`; not run by this pass — rule 6):
+```
+node scripts/packet-51-poverty-inequality.mjs --stage --dump && \
+node scripts/publish-section.mjs poverty-inequality --confirm
+```
+Before running it: fix the Unit 4 tile / economics-index copy (above) with or before the publish, and run the
+Rule 3 field-compatibility check (neither is this pass's to do).
+
+**Not committed; not published; not restored** — this pass has no authority to do any of the three and did none,
+nor did it fix, re-stage or re-claim anything beyond the two founder-authorised source edits already made by the
+closer before this pass started. `audit/ledger.json` untouched by this pass. `audit/PROGRESS.md` (packet 51 row
+rewritten) and `audit/NEXT.md` (this section) are the only files this pass staged, each with an explicit
+`git add <path>`. No commit. `audit/EXAM-PRACTICE.md` not opened.
+
+**Next unclaimed packet — checked live, not by reading a handoff.** `git status --short | grep packet-<n>` plus
+`node audit/scripts/ledger.mjs packet <n> --open` for 49, 53, 54, 55, 56:
+- **49 (business-growth):** actively being built right now — `audit/runs/packet-49/` files touched as recently as
+  14:23:57 (this check was run at 14:23:57), 27 open ledger items, the runner's latest pass still reports 10
+  failing packet checks. **Not free — do not claim.**
+- **53 (influences-business-decisions):** ledger gate clear, `PROGRESS.md` already accurately says staged, not
+  published. Done; needs a founder publish decision, not a rebuild.
+- **54 (assessing-competitiveness):** `PROGRESS.md` still says "not started" (stale) but the ledger shows 3
+  claimed ids `not-fixed` — `GATE BLOCKED`. Already claimed and mid-build (packet 55's own handoff caught it
+  running live via `ps aux` a few minutes before this check). **Not free.**
+- **55 (global-marketing):** ledger gate clear, `PROGRESS.md` already accurately says staged, gate passed. Done;
+  needs a founder publish decision (one pre-publish copy fix per its own handoff), not a rebuild.
+- **56 (global-industries-mncs):** `PROGRESS.md` still says "not started" (stale) but the ledger shows **28
+  confirmed, 0 open** — `ledger.mjs unverified 56` → gate clear — and `built.md` plus `verify-a.md` are staged
+  (`verify-a.md` mtime 14:19, ~5 minutes before this check). No `verify-b.md` yet, no `verify-b-fix.md`, no `ps
+  aux` process observed for it at check time. **Not free to start from scratch** — a build session has already
+  taken it through Verify A; what it needs next is a Verify B walkthrough, then a bookkeeping pass to write its
+  `PROGRESS.md` row (the same job this section just did for 51), not a fresh build.
+
+**No content packet in the 49-56 range is genuinely unclaimed right now.** The packet-55 handoff above guessed
+56 might be free "if still observed free"; this pass's own live check five minutes later found it is not —
+already built past Verify A. The next actionable work for the whole programme is: (i) let 49 and 54 finish their
+in-flight builds; (ii) run Verify B on 56 and then close its bookkeeping row; (iii) the founder publish decisions
+already queued and ready for 53 and 55 (and 51, per this section, once its two pre-publish copy/Rule-3 items are
+done).
+
+**Escalate to the founder:** packet 51 is now staging-gate-clean and the founder's own two content fixes are
+verified on screen. Not yet ready to publish: the Unit 4 tile / economics-index copy for 4.3.4 still names the
+old three-part section, and Rule 3 has not been run. Once both are done, the publish command above is ready. This
+is the sixth packet (after 40, 45, 46, 47, 48, 50, 55) where the packet's own saved gate log recorded a failing
+`npm test` for a reason entirely outside its own files, and only a fresh re-run showed the true state — every
+bookkeeping pass on this shared worktree should keep re-running `npm test` fresh rather than trusting a saved
+log, until the concurrent `modelAnswersData.js`/market-failure edit is committed or reverted.
+
+## Handoff — packet 51 published and committed (26 September 2026)
+
+**`poverty-inequality` is LIVE: published 11:31 UTC by the founder, in the packet 51 session.** Undo:
+`node scripts/restore-section.mjs audit/snapshots/auto-prepublish-2026-09-26T11-31-17-576Z__economics__poverty-inequality.json --confirm`.
+
+- **Order kept:** page copy first. PR #51 (`fix/unit4-poverty-inequality-copy`, built in the idle `economics-next-feedback`
+  worktree off `origin/main`) put the Unit 4 tiles and the index meta into the specification's words; it was merged and
+  live on production before the publish. The rebuild's two chapters on bullet 1c share one tile, so 7 chapters show as 6.
+- **Rule 3 was run, not reasoned,** against `origin/main` a6547cd. Main lacks the branch's 13.7 `diagram` recall type;
+  packet 51 carries none. Main has #40 (mistakes shapes) and #53 (extras bold), so `looks_like/why/instead` render.
+- **Production read back after the publish:** every content field equals the bundle except `quizIndices`, which the
+  signed-out payload re-indexes into its 10 free items. That difference is the free slice, not drift.
+- **Validator:** the corpus-wide `validate-content --baseline` dry run lists 65 keys it would add, none of them
+  poverty-inequality's (they are `practice.opening`, `diagram.table-legible` and `spec.uncovered` on other packets'
+  sections). Scoped to this section it adds 0. Do not `--confirm` a scoped baseline: it rewrites the file to one section.
+- **The failing `spec-coverage.test.mjs:207` in round 0 was never packet 51's.** It came from another session's
+  uncommitted `data/modelAnswersData.js` (tag `mf-short-explain-sea-wall-public-good-4`); it passed by the closer's gate.
+  The `packet-51:` commit is gated on its own tree in a detached worktree: `audit/runs/packet-51/commit-gate-*.log`.
+- **Could not verify:** the Pro Common Mistakes tab on screen (a session cannot sign in; main reads the shape); the
+  topic page may lag the API by up to an hour (ISR). Completion-score readings during Verify B were disturbed by peers on
+  :3001.

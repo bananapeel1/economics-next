@@ -3407,3 +3407,15 @@ position, so a redistributed bank must not contain a single positional reference
 
 **What it does not do.** It says nothing about any other section's bank. A section whose bias is still open stays
 where the ledger puts it.
+
+## 2026-09-26 — packet 51: the poverty-inequality rebuild supersedes packet 2.91's chapter 1 diagram
+
+**Packet 2.91 pinned the Lorenz curve to `poverty-inequality` chapter 1, "Types of Poverty", and decided chapter 2
+("Causes and Consequences") has no diagram** (`audit/runs/packet-2.91/`, row 17-18). Neither chapter exists after
+packet 51: the section is now seven chapters built to IAL 4.3.4 (`audit/raw/econ_spec.txt:1788-1817`), and each
+carries an authored `diagramId` for the diagram it teaches. The Lorenz curve ("The Lorenz Curve and the Gini
+Coefficient") is pinned to chapter 4, "Measuring Inequality", the chapter that teaches it; chapter 1, "Absolute and
+Relative Poverty", shows the absolute/relative poverty diagram it is named for. This applies 2.91's own rule (show the
+diagram the chapter is named for, or the one only it teaches); it does not change the rule. The runner pins chapter
+*i* to `DIAGRAMS[i]` (`scripts/packet-51-poverty-inequality.mjs:55`) and refuses a chapter without its own diagram
+(`:192-198`); the result is in `audit/snapshots/packet-51-bundle__economics__poverty-inequality.json`.

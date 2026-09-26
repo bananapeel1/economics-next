@@ -1,0 +1,22 @@
+api ?draft=1 quiz: 10 served, 10 identical to the bundle by id, 0 differ (bundle has 30)
+api ?draft=1 practice: 10 served, 10 identical to the bundle by id, 0 differ (bundle has 10)
+api ?draft=1 flashcards: 2 served, 2 identical to the bundle by id, 0 differ (bundle has 32)
+api ?draft=1 diagrams: 7 served, 7 identical to the bundle by id, 0 differ (bundle has 7)
+api ?draft=1 mistakes: 0 served, 0 identical to the bundle by id, 0 differ (bundle has 7)
+api ?draft=1 content: 7 blocks, 24 subsections, 24 recalls; titles Absolute and Relative Poverty | Causes of Changes in Poverty: Growth, Skills, Benefits and Tax | Causes of Changes in Poverty: Structural Change, Aid and Conflict | Measuring Inequality | Causes of Inequality | The Impact of Inequality | Development, Economic Change and Capitalism
+  block 1: diagramId matches; first pinned quiz served -> the block's own item
+  block 2: diagramId matches; first pinned quiz served -> the block's own item
+  block 3: diagramId matches; first pinned quiz served -> the block's own item
+  block 4: diagramId matches; first pinned quiz served -> the block's own item
+  block 5: diagramId matches; first pinned quiz served -> the block's own item
+  block 6: diagramId matches; first pinned quiz served -> the block's own item
+  block 7: diagramId matches; first pinned quiz served -> the block's own item
+api live content: 2 blocks, first title "Types of Poverty" (t=0: "Types of Poverty")
+section_content: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_notes: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_quiz: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_practice: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_flashcards: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_diagrams: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_extras: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_common_mistakes: draft == bundle; data (live) == t=0 snapshot (untouched)
