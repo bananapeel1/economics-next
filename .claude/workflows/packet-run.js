@@ -9,7 +9,7 @@ export const meta = {
     { title: 'Verify A', detail: 'adversarial read-only verifier against the ledger', model: 'opus' },
     { title: 'Fix', detail: 'close rejections, then re-verify', model: 'opus' },
     { title: 'Verify B', detail: 'student walkthrough at 390x844', model: 'opus' },
-    { title: 'Handoff', detail: 'update PROGRESS row and write the next brief', model: 'haiku' },
+    { title: 'Handoff', detail: 'update PROGRESS row and write the next brief', model: 'sonnet' },
   ],
 }
 
@@ -79,6 +79,12 @@ const COMMON = [
   'VERIFY INDEPENDENTLY: a check that finds its evidence the same way the fix does cannot see the fix\'s',
   'blind spot. This has now bitten this programme four times. When you check something, locate the',
   'evidence by a DIFFERENT method than the one that produced it.',
+  '',
+  'SCOPE OF A SENTENCE: no sentence may state a scope it did not measure. "Mobile legibility confirmed at',
+  '390x844" written after measuring only the inline render is true of what was measured and false of what',
+  'it claims; "fixed" written after editing code but before any verifier ran is the same shape. Both read',
+  'as a yes to someone skimming for whether the check happened. Name what you measured, at the width you',
+  'measured it, and nothing wider. (Packet 37 brief, packet 5 handoff, 21 Sep.)',
   '',
   'TOKEN DISCIPLINE, which is why this runs as a workflow at all:',
   '  - Locate with grep/rg first; read only the line ranges you need. Do not cat whole files.',
@@ -201,9 +207,13 @@ const VERIFY_SCHEMA = {
     confirmed: { type: 'array', items: { type: 'string' } },
     rejected: { type: 'array', items: { type: 'string' }, description: 'id — why it is still reachable' },
     unverifiedRemaining: { type: 'number', description: 'from `ledger.mjs unverified ' + PACKET + '` after you recorded verdicts' },
+    // 26 Sep, packet 12.75: `unverified` counts CLAIMED-but-unconfirmed ids only, so an id nobody claimed
+    // (E053) was invisible and the run reported PASSED with scope open. The verdict now reads the packet.
+    openRemaining: { type: 'number', description: 'number of item lines printed by `node audit/scripts/ledger.mjs packet ' + PACKET + ' --open`, run after you recorded verdicts: every id in this packet that is not confirmed or wont-fix, claimed or not' },
+    confirmedTotal: { type: 'number', description: 'number of ids in `node audit/scripts/ledger.mjs packet ' + PACKET + '` whose status is confirmed, across ALL rounds, not only the ones you checked' },
     summary: { type: 'string' },
   },
-  required: ['confirmed', 'rejected', 'unverifiedRemaining', 'summary'],
+  required: ['confirmed', 'rejected', 'unverifiedRemaining', 'openRemaining', 'confirmedTotal', 'summary'],
 }
 
 const VERIFY_PROMPT = [
@@ -348,7 +358,7 @@ fixRounds += bRounds
 
 // ----------------------------------------------------------------- 7. HANDOFF
 const gateOk = !!(gate && gate.ok)
-const ledgerClear = !!(verify && verify.unverifiedRemaining === 0 && (!verify.rejected || !verify.rejected.length))
+const ledgerClear = !!(verify && verify.unverifiedRemaining === 0 && verify.openRemaining === 0 && (!verify.rejected || !verify.rejected.length))
 const walkOk = !STUDENT_VISIBLE || !!(walkthrough && walkthrough.ok)
 const passed = gateOk && ledgerClear && walkOk
 
@@ -357,13 +367,20 @@ phase('Handoff')
 const handoff = await agent(COMMON + [
   '',
   'YOUR JOB: bookkeeping only. Author nothing, fix nothing, and do not commit.',
+  'You have NO authority to change code, content, tests or scripts. If the outcome below says DID NOT',
+  'PASS, that is what you record; you do not fix it, however small the remedy looks. (21 Sep, packet 5:',
+  'a handoff agent read a "one column" remedy in the verifier\'s rejection, authored it, staged it and',
+  'wrote a handoff claiming the id fixed. It was unverified and outside the fix budget.) Any file you',
+  'touch other than audit/PROGRESS.md and audit/NEXT.md is a harness breach: list it in filesTouched',
+  'and say so in escalate.',
   '',
   'Outcome of packet ' + PACKET + ': ' + (passed ? 'PASSED the gate' : 'DID NOT PASS'),
   '  gate: test=' + (gate ? gate.testExit : '?') + ' build=' + (gate ? gate.buildExit : '?') +
     ' validate=' + (gate ? gate.validateExit : '?') + ' drift=' + (gate ? gate.driftExit : '?'),
-  '  ledger: ' + (verify ? verify.confirmed.length : 0) + ' confirmed, ' +
+  '  ledger: ' + (verify ? verify.confirmedTotal : '?') + ' confirmed in the packet, ' +
     (verify ? verify.rejected.length : 0) + ' still rejected, ' +
-    (verify ? verify.unverifiedRemaining : '?') + ' unverified',
+    (verify ? verify.unverifiedRemaining : '?') + ' unverified, ' +
+    (verify ? verify.openRemaining : '?') + ' still open (claimed or not)',
   '  fix rounds used: ' + fixRounds + ' of ' + MAX_FIX_ROUNDS,
   STUDENT_VISIBLE ? '  walkthrough: ' + (walkOk ? 'clean' : 'found a blocking defect') : '  walkthrough: n/a',
   '',
@@ -375,7 +392,7 @@ const handoff = await agent(COMMON + [
   '2. Append a "## Handoff — what comes next" section to audit/NEXT.md naming the next packet, anything',
   '   this packet learned that the next one needs, and every unresolved item.',
   '3. Do not write a commit. The founder commits.',
-].join('\n'), { label: 'handoff', phase: 'Handoff', model: 'haiku', schema: VERDICT })
+].join('\n'), { label: 'handoff', phase: 'Handoff', model: 'sonnet', schema: VERDICT })
 
 // Everything below is read by the brain. Keep it small on purpose.
 return {
@@ -383,11 +400,16 @@ return {
   verdict: passed ? 'PASSED' : 'NOT PASSED',
   gate: gate ? { test: gate.testExit, build: gate.buildExit, validate: gate.validateExit, drift: gate.driftExit, failureHead: gate.failureHead || null } : null,
   ledger: verify ? {
-    confirmed: verify.confirmed.length,
+    confirmed: verify.confirmedTotal,
+    confirmedThisRound: verify.confirmed.length,
     rejected: verify.rejected,
     unverifiedRemaining: verify.unverifiedRemaining,
+    openRemaining: verify.openRemaining,
   } : null,
   fixRoundsUsed: fixRounds,
+  handoffTouched: (handoff && handoff.filesTouched) || [],
+  // 21 Sep: a Haiku handoff authored and staged a code fix. Anything outside the two books files is a breach.
+  harnessBreach: ((handoff && handoff.filesTouched) || []).filter(f => !/audit\/(PROGRESS|NEXT)\.md$/.test(f)),
   walkthrough: walkthrough ? { ok: walkthrough.ok, summary: walkthrough.summary } : 'n/a',
   escalate: [].concat(
     (brief && brief.escalate) || [], (built && built.escalate) || [],
