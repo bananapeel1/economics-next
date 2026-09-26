@@ -1,0 +1,38 @@
+=== Gate run for packet 45: labour-markets ===
+Date: Sat Sep 26 10:24:16 EEST 2026
+
+Running: npm test
+Exit code: 0
+
+Running: npm run build
+Exit code: 0
+
+Running: npm run validate
+Exit code: 0
+
+Running: npm run exposure
+Exit code: 0
+
+Running: npm run recalls
+Exit code: 0
+
+Running: node audit/scripts/check-staged-drafts.mjs labour-markets
+Exit code: 0
+
+=== ADVISORY ONLY ===
+
+Running: npm run contrast
+Exit code: 0
+
+Running: npm run spec-items
+Exit code: 0
+
+Running: npm run tariff-census
+Exit code: 0
+
+Running: npm run pin-check
+Exit code: 0
+
+=== SUMMARY ===
+TEST=0 BUILD=0 VALIDATE=0 EXPOSURE=0 RECALLS=0 STAGED=0
+CONTRAST=0 SPEC_ITEMS=0 TARIFF=0 PIN=0

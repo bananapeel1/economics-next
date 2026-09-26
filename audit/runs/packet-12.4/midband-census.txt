@@ -1,0 +1,46 @@
+(node:80110) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/data/modelAnswersData.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+business 1.3.1 meeting-customer-needs | item=market-research-8 likely="7–8 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=false
+business 1.3.3 marketing-mix-strategy | item=biz-product-life-cycle-8 likely="5–6 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=true
+business 1.3.4 managing-people | item=biz-motivation-productivity-20 likely="18–20 / 20" ceiling=[AO3 (6 marks)] outOfReach=[AO4 (6 marks)] scheme=objectives sameBand=false
+business 1.3.5 entrepreneurs-leaders | item=biz-entrepreneur-role-8 likely="5–6 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=true
+business 2.3.2 financial-planning | item=break-even-8 likely="7–8 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=false
+business 2.3.3 managing-finance | item=biz-cash-flow-profit-20 likely="18–20 / 20" ceiling=[AO3 (6 marks)] outOfReach=[AO4 (6 marks)] scheme=objectives sameBand=false
+business 2.3.5 external-influences | item=interest-rate-retail-20 likely="18–20 / 20" ceiling=[AO3 (6 marks)] outOfReach=[AO4 (6 marks)] scheme=objectives sameBand=false
+economics 1.3.1 introductory-concepts | item=ppf-economic-growth-8 likely="5–6 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=true
+economics 1.3.2 consumer-behaviour-demand | item=yed-business-strategy-8 likely="5–6 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=true
+economics 1.3.3 supply | item=supply-shift-8 likely="7–8 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=false
+economics 1.3.4 price-determination | item=maximum-price-8 likely="5–6 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=true
+economics 1.3.5 market-failure | item=market-failure-government-intervention-20 likely="18–20 / 20" ceiling=[AO3 (6 marks)] outOfReach=[AO4 (6 marks)] scheme=objectives sameBand=false
+economics 1.3.6 government-intervention | item=indirect-tax-8 likely="7–8 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=false
+economics 2.3.1 measures-economic-performance | item=unemployment-types-8 likely="7–8 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=false
+economics 2.3.2 aggregate-demand | item=consumer-spending-growth-20 likely="18–20 / 20" ceiling=[AO3 (6 marks)] outOfReach=[AO4 (6 marks)] scheme=objectives sameBand=false
+economics 2.3.3 aggregate-supply | item=supply-side-lras-8 likely="7–8 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=false
+economics 2.3.4 national-income | item=circular-flow-8 likely="5–6 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=true
+economics 2.3.5 economic-growth | item=supply-side-growth-20 likely="18–20 / 20" ceiling=[AO3 (6 marks)] outOfReach=[AO4 (6 marks)] scheme=objectives sameBand=false
+economics 2.3.6 macroeconomic-objectives-policies | item=fiscal-vs-monetary-20 likely="18–20 / 20" ceiling=[AO3 (6 marks)] outOfReach=[AO4 (6 marks)] scheme=objectives sameBand=false
+economics 3.3.1 types-sizes-businesses | item=econ-diseconomies-scale-8 likely="5–6 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=true
+economics 3.3.2 revenue-costs-profits | item=profit-maximisation-mc-mr-8 likely="5–6 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=true
+economics 3.3.3 market-structures-contestability | item=monopoly-efficiency-20 likely="18–20 / 20" ceiling=[AO3 (6 marks)] outOfReach=[AO4 (6 marks)] scheme=objectives sameBand=false
+economics 3.3.4 labour-markets | item=monopsony-wages-8 likely="5–6 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=true
+economics 3.3.5 government-intervention-firms | item=econ-competition-policy-8 likely="5–6 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=true
+economics 4.3.1 causes-effects-globalisation | item=mnc-host-country-8 likely="7–8 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=false
+economics 4.3.2 trade-global-economy | item=free-trade-protectionism-20 likely="18–20 / 20" ceiling=[AO3 (6 marks)] outOfReach=[AO4 (6 marks)] scheme=objectives sameBand=false
+economics 4.3.3 balance-payments-exchange-rates | item=econ-j-curve-depreciation-8 likely="7–8 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=false
+economics 4.3.4 poverty-inequality | item=gini-lorenz-inequality-8 likely="7–8 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=false
+economics 4.3.6 growth-development | item=aid-vs-trade-development-8 likely="7–8 / 8" ceiling=[Level 3 — 5–6 marks] outOfReach=[Level 4 — 7–8 marks] scheme=levels sameBand=false
+
+Total sections with a mid-band panel candidate: 29
+Sections where model-answer's own band == the cut attempt's ceiling band: 10
+business 1.3.3 marketing-mix-strategy (biz-product-life-cycle-8)
+business 1.3.5 entrepreneurs-leaders (biz-entrepreneur-role-8)
+economics 1.3.1 introductory-concepts (ppf-economic-growth-8)
+economics 1.3.2 consumer-behaviour-demand (yed-business-strategy-8)
+economics 1.3.4 price-determination (maximum-price-8)
+economics 2.3.4 national-income (circular-flow-8)
+economics 3.3.1 types-sizes-businesses (econ-diseconomies-scale-8)
+economics 3.3.2 revenue-costs-profits (profit-maximisation-mc-mr-8)
+economics 3.3.4 labour-markets (monopsony-wages-8)
+economics 3.3.5 government-intervention-firms (econ-competition-policy-8)

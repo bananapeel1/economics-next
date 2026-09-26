@@ -1,0 +1,34 @@
+      business  1.3.1  before: levels     market-research-8                   after: levels     market-research-8                   kept
+      business  1.3.2  before: no panel                                       after: no panel                                       none
+      business  1.3.3  before: no panel                                       after: no panel                                       none
+      business  1.3.4  before: objectives biz-motivation-productivity-20      after: no panel                                       REMOVED
+      business  1.3.5  before: no panel                                       after: no panel                                       none
+      business  2.3.1  before: no panel                                       after: no panel                                       none
+      business  2.3.2  before: levels     break-even-8                        after: levels     break-even-8                        kept
+      business  2.3.3  before: objectives biz-cash-flow-profit-20             after: no panel                                       REMOVED
+      business  2.3.4  before: no panel                                       after: no panel                                       none
+      business  2.3.5  before: objectives interest-rate-retail-20             after: no panel                                       REMOVED
+      economics 1.3.1  before: no panel                                       after: no panel                                       none
+      economics 1.3.2  before: no panel                                       after: no panel                                       none
+      economics 1.3.3  before: levels     supply-shift-8                      after: levels     supply-shift-8                      kept
+      economics 1.3.4  before: no panel                                       after: no panel                                       none
+SHELL economics 1.3.5  before: no panel                                       after: no panel                                       shell (unchanged)
+      economics 1.3.6  before: levels     indirect-tax-8                      after: levels     indirect-tax-8                      kept
+      economics 2.3.1  before: levels     unemployment-types-8                after: levels     unemployment-types-8                kept
+      economics 2.3.2  before: objectives consumer-spending-growth-20         after: no panel                                       REMOVED
+      economics 2.3.3  before: levels     supply-side-lras-8                  after: levels     supply-side-lras-8                  kept
+      economics 2.3.4  before: levels     multiplier-effect-8                 after: levels     multiplier-effect-8                 kept
+      economics 2.3.5  before: objectives supply-side-growth-20               after: no panel                                       REMOVED
+      economics 2.3.6  before: objectives fiscal-vs-monetary-20               after: no panel                                       REMOVED
+      economics 3.3.1  before: no panel                                       after: no panel                                       none
+      economics 3.3.2  before: no panel                                       after: no panel                                       none
+      economics 3.3.3  before: objectives monopoly-efficiency-20              after: no panel                                       REMOVED
+      economics 3.3.4  before: no panel                                       after: no panel                                       none
+      economics 3.3.5  before: no panel                                       after: no panel                                       none
+      economics 4.3.1  before: levels     mnc-host-country-8                  after: levels     mnc-host-country-8                  kept
+      economics 4.3.2  before: objectives free-trade-protectionism-20         after: no panel                                       REMOVED
+      economics 4.3.3  before: levels     econ-j-curve-depreciation-8         after: levels     econ-j-curve-depreciation-8         kept
+      economics 4.3.4  before: levels     gini-lorenz-inequality-8            after: levels     gini-lorenz-inequality-8            kept
+      economics 4.3.6  before: levels     aid-vs-trade-development-8          after: levels     aid-vs-trade-development-8          kept
+
+non-shell pages: 8 panels removed (objectives), 11 kept unchanged (levels), 12 without a panel before and after, 0 other changes

@@ -1,0 +1,90 @@
+(node:75720) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/learn-steps.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+steps: 26
+checkin at step 6: block 0 "The Demand for Labour"
+checkin at step 12: block 1 "The Supply of Labour"
+checkin at step 18: block 2 "Wage Determination in a Competitive Market"
+checkin at step 22: block 3 "Trade Unions and Public-Sector Pay"
+checkin at step 26: block 4 "Market Failure in the Labour Market"
+
+=== step 6 · block 0 "The Demand for Labour" · quiz index 3
+DIAGRAM title: The Demand for Labour
+description: IAL 3.3.4 · 1a: one workshop's demand for labour is the value of what each extra machinist adds (extra output × the price of the product, a price the workshop cannot change). A change in the wage moves along it; a change in the product price or in productivity shifts it.
+checklist: ["The wage on the vertical axis, the number of workers on the horizontal","A downward-sloping demand curve: each extra worker adds less (diminishing marginal productivity)","The firm hires where the wage line meets the curve","A wage change as a movement along; a price or productivity change as a new curve"]
+view: {"label":"The hiring rule"}
+  svg text: One workshop: hire while output is worth the wage | Wage ($ an hour) | Machinists at one workshop | MRP = demand | W $12 | 6 | At $12 it hires 6: the 6th adds $12. | The next would add $9, less than the wage.
+view: {"label":"A higher wage"}
+  svg text: A higher wage: a movement along | Wage ($ an hour) | Machinists at one workshop | MRP = demand | $12 | $15 | 6 | 5 | Wage $12 → $15: 6 → 5 machinists. | Same curve: only the wage changed.
+view: {"label":"Price or productivity rises"}
+  svg text: Price or productivity rises: a shift | Wage ($ an hour) | Machinists at one workshop | MRP | MRP₁ | W $12 | 6 | 7 | Shirt price $3 → $4: 6 → 7 at $12. | One more shirt each an hour does the same.
+QUIZ labour-markets:quiz:9960c68b: A rise in the price of the product a firm sells is most likely to:
+  * A. shift its demand for labour to the right
+    B. cause a movement along its demand for labour
+    C. shift the supply of labour to the right
+    D. shift its demand for labour to the left
+
+=== step 12 · block 1 "The Supply of Labour" · quiz index 8
+DIAGRAM title: The Supply of Labour
+description: IAL 3.3.4 · 2c and 2d: the supply of labour to one occupation, shifted right by net migration and left by a licence requirement, and the same rise in demand met by an elastic and an inelastic supply.
+checklist: ["An upward-sloping supply curve, the wage on the vertical axis","Net migration: S shifts right, 12,000 more willing at every wage","A licence, higher income tax or higher benefits: S shifts left","With inelastic supply, a rise in demand raises the wage more and employment less"]
+view: {"label":"Net migration"}
+  svg text: A net inflow of 12,000 machinists | Wage ($ an hour) | Machinists (thousands) | S | S₁ | 12 | 36 | 48 | At $12: 48,000 willing instead of 36,000. | A new curve: more willing at every wage.
+view: {"label":"A licence requirement"}
+  svg text: A licence some cannot meet | Wage ($ an hour) | Machinists (thousands) | S | S₁ | 12 | 36 | 24 | At $12: 24,000 willing instead of 36,000. | Tax or benefit rises shift S left in the same way.
+view: {"label":"Elastic and inelastic supply"}
+  svg text: The same rise in demand, two supply curves | Wage ($ an hour) | Machinists (thousands) | D | D₁ | elastic S | inelastic S | 12 | 36 | 14 | 44 | 16 | 40 | Elastic: $14, 44,000. Inelastic: $16, 40,000. | Inelastic supply: more of the rise goes on pay.
+QUIZ labour-markets:quiz:7a9180ea: Which of these would shift the supply of labour to an occupation to the left?
+  * A. A new licence the job now requires
+    B. A rise in the wage rate for the job
+    C. A net inflow of workers from abroad
+    D. A cut in income tax rates
+
+=== step 18 · block 2 "Wage Determination in a Competitive Market" · quiz index 14
+DIAGRAM title: Labour Market Equilibrium
+description: IAL 3.3.4 · 3a and 3b: the machinists' market clears where demand meets supply; one firm takes that wage as a horizontal supply; a shift of demand moves the wage and employment together, a shift of supply moves them apart.
+checklist: ["D and S labelled, with the equilibrium wage and quantity marked on both axes","One firm: a horizontal supply at the market wage, hiring where it meets the firm's demand","Demand rises: $14 and 44,000 — both up","Supply rises: $10 and 40,000 — wage down, employment up"]
+view: {"label":"Equilibrium"}
+  svg text: Labour market equilibrium | Wage ($ an hour) | Machinists (thousands) | D | S | 12 | 36 | Wanted = willing at $12: 36,000 machinists. | Below it, a shortage; above it, a surplus.
+view: {"label":"One firm: a wage-taker"}
+  svg text: One firm: a wage-taker | Wage ($ an hour) | Machinists at one workshop | firm's demand | S = W | 12 | 6 | The market sets $12; the firm faces a flat supply there. | It hires 6, where its demand meets that line.
+view: {"label":"Demand rises"}
+  svg text: Export orders rise: demand shifts right | Wage ($ an hour) | Machinists (thousands) | D | S | D₁ | 12 | 36 | 14 | 44 | New equilibrium: $14, 44,000 machinists. | Wage and employment both rise.
+view: {"label":"Supply rises"}
+  svg text: Net migration: supply shifts right | Wage ($ an hour) | Machinists (thousands) | D | S | S₁ | 12 | 36 | 10 | 40 | New equilibrium: $10, 40,000 machinists. | The wage falls; employment rises.
+QUIZ labour-markets:quiz:1896f9c5: At a wage above equilibrium in a competitive labour market there will be:
+    A. more workers wanted than are willing
+    B. equal numbers wanted and willing
+  * C. more workers willing than firms want
+    D. a rightward shift of labour demand
+
+=== step 22 · block 3 "Trade Unions and Public-Sector Pay" · quiz index 20
+DIAGRAM title: Trade Unions and Public-Sector Pay
+description: IAL 3.3.4 · 2c and 3c: a union wage above equilibrium leaves a surplus of labour; restricting entry shifts supply left to the same wage; public-sector pay set below equilibrium leaves vacancies.
+checklist: ["A negotiated wage of $15 drawn as a horizontal line above equilibrium","The quantity hired read off demand, the quantity willing read off supply, the gap between them marked","Restricting entry drawn as a leftward shift of supply","Public-sector pay set below equilibrium, with the vacancies it leaves"]
+view: {"label":"A negotiated wage"}
+  svg text: A negotiated wage above equilibrium | Wage ($ an hour) | Machinists (thousands) | D | S | union $15 | 12 | 36 | 30 | 48 | At $15: 30,000 hired, 48,000 willing. | A surplus of 18,000; 6,000 fewer jobs.
+view: {"label":"Restricting entry"}
+  svg text: The union restricts entry | Wage ($ an hour) | Machinists (thousands) | D | S | S₁ | 12 | 36 | 15 | 30 | Supply −18,000 at every wage: $15, 30,000. | No queue: the others never qualified.
+view: {"label":"Public-sector pay"}
+  svg text: Public-sector pay set below equilibrium | Wage ($ an hour) | Nurses (thousands) | D | S | set $21 | 24 | 26 | 20 | 29 | At $21: 29,000 wanted, 20,000 willing. | 9,000 posts stay empty; clearing pay $24.
+QUIZ labour-markets:quiz:353b87d6: A trade union wins a pay deal above the market-clearing wage. The most likely result is:
+  * A. fewer jobs and a surplus of labour
+    B. more jobs and a shortage of labour
+    C. more jobs and a surplus of labour
+    D. fewer jobs and a shortage of labour
+
+=== step 26 · block 4 "Market Failure in the Labour Market" · quiz index 26
+DIAGRAM title: Immobility: Two Regions
+description: IAL 3.3.4 · 4a: demand for machinists falls in one region and rises in another. If workers cannot move, the wage gap does not close, and if pay stays at the old wage in both there are jobless workers in one region and vacancies in the other.
+checklist: ["Two regional labour markets with the same supply and the same starting point","North: D shifts left; the wage falls to $10, or at $12 12,000 are jobless","South: D shifts right; the wage rises to $14, or at $12 12,000 posts are empty","The gap persists because workers cannot move between the two"]
+view: {"label":"North: demand falls"}
+  svg text: The North: workshops close | Wage ($ an hour) | Machinists (thousands) | D | S | D₁ | 12 | 36 | 10 | 28 | 24 | Wage $10 if it falls; at $12, 12,000 jobless. | The workers cannot move South.
+view: {"label":"South: demand rises"}
+  svg text: The South: orders grow | Wage ($ an hour) | Machinists (thousands) | D | S | D₁ | 12 | 36 | 14 | 44 | 48 | Wage $14 if it rises; at $12, 12,000 vacancies. | Idle workers in the North could fill them.
+QUIZ labour-markets:quiz:6690631e: Geographical immobility of labour is most likely to cause:
+    A. a fall in wages in every region
+    B. a shortage of workers in every region
+    C. higher productivity in the declining region
+  * D. unemployment in one region alongside vacancies in another

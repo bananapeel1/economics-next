@@ -4,9 +4,10 @@ import { BoltIcon, BookAlt, CardsIcon, Clipboard, Document, DrawerAlt, Glossary,
 import SiteHeader from '@/components/SiteHeader';
 import EconomicsScrollBar from './EconomicsScrollBar';
 import '@/styles/landing.css';
+import '@/styles/hub-links.css';
 
 export const metadata = {
-  title: 'Edexcel IAL Economics Notes — Free Revision for Units 1–4 (2026)',
+  title: 'IAL Economics Notes (Edexcel WEC11–WEC14) — Free Revision, Units 1–4 | Revvy Learn',
   description: 'Free Edexcel IAL Economics revision notes for all units: Markets in Action (WEC11), Macroeconomic Performance (WEC12), Business Behaviour (WEC13) and Global Economy (WEC14). Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.',
   alternates: { canonical: 'https://revvylearn.com/economics' },
   openGraph: {
@@ -39,16 +40,16 @@ const unit3Sections = [
   { id: 'types-sizes-businesses', number: '3.3.1', title: 'Types and Sizes of Businesses', meta: 'Objectives, growth, integration' },
   { id: 'revenue-costs-profits', number: '3.3.2', title: 'Revenue, Costs and Profits', meta: 'TR, TC, AR, MR, AC, MC, profit maximisation' },
   { id: 'market-structures-contestability', number: '3.3.3', title: 'Market Structures & Contestability', meta: 'Perfect competition, monopoly, oligopoly' },
-  { id: 'labour-markets', number: '3.3.4', title: 'Labour Markets', meta: 'MRP, wage determination, monopsony' },
-  { id: 'government-intervention-firms', number: '3.3.5', title: 'Government Intervention', meta: 'Competition policy, regulation, privatisation' },
+  { id: 'labour-markets', number: '3.3.4', title: 'Labour Markets', meta: 'Demand and supply of labour, wages, immobility' },
+  { id: 'government-intervention-firms', number: '3.3.5', title: 'Government Intervention', meta: 'Monopoly regulation, competition, wage controls' },
 ];
 
 const unit4Sections = [
   { id: 'causes-effects-globalisation', number: '4.3.1', title: 'Causes and Effects of Globalisation', meta: 'MNCs, trade blocs, benefits & costs' },
   { id: 'trade-global-economy', number: '4.3.2', title: 'Trade and the Global Economy', meta: 'Comparative advantage, free trade, protectionism' },
   { id: 'balance-payments-exchange-rates', number: '4.3.3', title: 'BoP, Exchange Rates & Competitiveness', meta: 'Current account, Marshall-Lerner, J-curve' },
-  { id: 'poverty-inequality', number: '4.3.4', title: 'Poverty and Inequality', meta: 'Lorenz curve, Gini coefficient, relative vs absolute poverty' },
-  { id: 'role-state-macroeconomy', number: '4.3.5', title: 'The Role of the State in the Macroeconomy', meta: 'Public goods, merit goods, redistribution' },
+  { id: 'poverty-inequality', number: '4.3.4', title: 'Poverty and Inequality', meta: 'Absolute vs relative poverty, Lorenz curve & Gini, causes of inequality' },
+  { id: 'role-state-macroeconomy', number: '4.3.5', title: 'The Role of the State in the Macroeconomy', meta: 'Public expenditure, taxation, fiscal deficits and debt' },
   { id: 'growth-development', number: '4.3.6', title: 'Growth and Development', meta: 'HDI, development strategies, barriers to growth' },
 ];
 
@@ -115,7 +116,7 @@ export default function EconomicsPage() {
         "name": "What is Edexcel IAL Economics?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Edexcel IAL (International A-Level) Economics is a globally recognised qualification offered by Pearson Edexcel. It is designed for international students and covers microeconomics, macroeconomics, business behaviour and the global economy across four units (WEC11–WEC14). IAL exams are available in January and June exam series."
+          "text": "Edexcel IAL (International A-Level) Economics is a globally recognised qualification offered by Pearson Edexcel. It is designed for international students and covers microeconomics, macroeconomics, business behaviour and the global economy across four units (WEC11–WEC14). IAL Economics exams are available in the January, May/June and October series."
         }
       },
       {
@@ -256,7 +257,7 @@ export default function EconomicsPage() {
             <div className="elp-unit-block elp-fade-up">
               <div className="elp-unit-label-row">
                 <div className="elp-unit-num">{unit.num}</div>
-                <div className="elp-unit-heading">{unit.heading}</div>
+                <Link href={`/economics/unit-${unit.num}`} className="elp-unit-heading elp-unit-heading-link">{unit.heading}</Link>
                 <div className="elp-unit-code">{unit.code}</div>
               </div>
               <p className="elp-unit-desc">{unit.desc}</p>

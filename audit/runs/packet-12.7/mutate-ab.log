@@ -1,0 +1,21 @@
+=== control: unmutated copy ===
+--- r7-control: exit 0
+  (no findings)
+=== R7 A — segRole absent (8-mark c7) ===
+--- r7-absent-mutated: exit 1
+  R7  negative-externality-tax-8                   criterion c7 has segRole (absent); it must be 'earned' or 'missed'
+--- r7-absent-reverted: exit 0
+  (no findings)
+=== R7 B — wrong case (8-mark c7: 'missed' -> 'Missed') ===
+--- r7-case-mutated: exit 1
+  R7  negative-externality-tax-8                   criterion c7 has segRole "Missed"; it must be 'earned' or 'missed'
+--- r7-case-reverted: exit 0
+  (no findings)
+=== R7 C — a third literal (new Evaluate 20 c20: 'earned' -> 'partial') ===
+--- r7-literal-mutated: exit 1
+  R7  mf-extract-evaluate-soft-drinks-excise-20    criterion c20 has segRole "partial"; it must be 'earned' or 'missed'
+--- r7-literal-reverted: exit 0
+  (no findings)
+=== byte check: reverted copy equals the worktree file ===
+identical
+=== B-side: HEAD's validator (no R7) on the absent-segRole mutation: exit 0

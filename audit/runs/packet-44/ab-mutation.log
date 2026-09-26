@@ -1,0 +1,14 @@
+CLEAN  passes
+FIRES  M1 year+UK in an example
+FIRES  M2 uncited output-gap pointer
+FIRES  M3 a typed LRAS figure
+FIRES  M4 two blanks on one line
+FIRES  M5 Define (4)
+FIRES  M6 a colliding label
+FIRES  M7 a leaf mapped to a subsection that never says it
+FIRES  M8 near-duplicate stem
+MISSED M9 a block with no diagram
+FIRES  M10 banned word
+FIRES  M11 long-run point off AD1
+FIRES  M12 shuffled on a reorder
+NOTE   M9 is reported MISSED by this harness's message grep; run by hand it exits 1 with a TypeError (DIAGRAMS[4] undefined) before any stage call — it fails closed, without a named message.

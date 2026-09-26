@@ -1,0 +1,29 @@
+E053 re-walk, 26 Sep 2026, Browser pane, real page loads (JS hydrated, 1.2s settle), viewport emulated.
+after = dev server on a copy of this working tree WITH the change (port 3122); base = detached worktree at b1942fe (port 3121).
+Probe per page: count of details.lab-details-midband; body innerText contains "Why this loses marks" / "Where it tops out instead".
+Kept panels: opened, innerText SHA-256 (first 16 hex) and length, compared after vs base.
+
+390x844 — the 8 objectives pages, after (panels / "Why this loses marks" / "Where it tops out instead" / answer paras / scrollWidth)
+  business/managing-people (1.3.4)                 0 / false / false / 7  / 390
+  business/managing-finance (2.3.3)                0 / false / false / 7  / 390
+  business/external-influences (2.3.5)             0 / false / false / 5  / 390
+  economics/aggregate-demand (2.3.2)               0 / false / false / 10 / 390
+  economics/economic-growth (2.3.5)                0 / false / false / 10 / 390
+  economics/macroeconomic-policies (2.3.6)         0 / false / false / 8  / 390
+  economics/market-structures-contestability (3.3.3) 0 / false / false / 5 / 390
+  economics/trade-global-economy (4.3.2)           0 / false / false / 6  / 390
+  control: base economics/macroeconomic-policies   1 / true   (the probe sees a panel when one is there)
+390x844 — 3 levels pages, after vs base (panels, summary, len, hash, left/width, visibility, has "Where it tops out instead")
+  business/meeting-customer-needs (1.3.1)   after 1 len 2037 cb480e70be38a1b9 [55,300] visible  | base 1 len 2037 cb480e70be38a1b9 [55,300]  SAME
+  economics/economic-performance (2.3.1)    after 1 len 2312 7b782c8b79dec552 [55,300] visible  | base 1 len 2312 7b782c8b79dec552 [55,300]  SAME
+  economics/balance-payments-exchange-rates (4.3.3) after 1 len 1788 1067775c760e2fe4 [55,300] | base same                                   SAME
+  summary on all three: "Why this loses marks — a mid-band attempt at the same question"
+
+1440x900 — the 8 objectives pages, after: all 8 read 0 / false / false (answer paras 7,7,5,10,10,8,5,6 as at 390)
+  control: base business/managing-people           1 / true
+1440x900 — 3 levels pages, after vs base
+  business/meeting-customer-needs     after len 2037 cb480e70be38a1b9 [352,750] | base identical  SAME
+  economics/economic-performance      after len 2312 7b782c8b79dec552 [352,750] | base identical  SAME
+  economics/balance-payments-exchange-rates after len 1788 1067775c760e2fe4 [352,750] | base identical SAME
+
+Verdict: PASS at both widths. 8/8 show no panel; 3/3 levels panels present, visible, text byte-identical to b1942fe.

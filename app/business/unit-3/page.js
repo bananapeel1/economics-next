@@ -39,12 +39,12 @@ const SECTIONS = [
       { letter: 'd', name: 'Data & Decision-Making', kw: 'Moving averages · extrapolation · correlation vs causation · forecasting limits' },
     ] },
   { id: 'influences-business-decisions', ref: '3.3.4', title: 'Influences on Business Decisions',
-    desc: 'The internal and external forces that shape strategic decisions — corporate culture, ethics, stakeholder pressure, technology and the conflict between stakeholder and shareholder objectives.',
+    desc: 'What shapes a business\u2019s strategic decisions from the inside \u2014 its corporate culture, how that culture forms and why it is hard to change, whose interests it serves (stakeholders or shareholders), and the ethics of the choices it makes.',
     subtopics: [
-      { letter: 'a', name: 'Corporate Culture', kw: 'Handy · strong vs weak culture · power, role, task, person · cultural change' },
-      { letter: 'b', name: 'Business Ethics', kw: 'CSR · ethical dilemmas · trade-offs · pressure groups · reputation' },
-      { letter: 'c', name: 'Technology & Innovation', kw: 'Disruptive innovation · digital transformation · R&D investment' },
-      { letter: 'd', name: 'Stakeholder vs Shareholder Model', kw: 'Mendelow\'s matrix · Friedman vs Freeman · internal & external stakeholders · shareholder returns' },
+      { letter: 'a', name: 'Corporate Culture', kw: 'Strong and weak cultures \u00b7 power, role, task and person cultures' },
+      { letter: 'b', name: 'Forming and Changing a Culture', kw: 'How a culture is formed \u00b7 difficulties in changing an established culture' },
+      { letter: 'c', name: 'Stakeholder Model Versus Shareholder Model', kw: 'Internal and external stakeholders \u00b7 stakeholder objectives \u00b7 profit-based vs wider objectives' },
+      { letter: 'd', name: 'Business Ethics', kw: 'Profit vs ethics trade-offs \u00b7 pay and rewards \u00b7 corporate social responsibility' },
     ] },
   { id: 'assessing-competitiveness', ref: '3.3.5', title: 'Assessing Competitiveness',
     desc: 'How businesses measure and improve their competitive position — financial statements and ratios, HR performance metrics, and how firms respond when competitiveness changes.',
@@ -55,12 +55,13 @@ const SECTIONS = [
       { letter: 'd', name: 'Benchmarking', kw: 'Best practice · performance gaps · imitation vs innovation' },
     ] },
   { id: 'managing-change', ref: '3.3.6', title: 'Managing Change',
-    desc: 'How businesses plan for and manage change — causes of change, barriers to change, scenario planning and the leadership skills needed to drive transformation.',
+    desc: 'How businesses manage change and plan for risk — what triggers change and what it affects, the key factors in successful change, managing resistance to change, and contingency planning through risk assessment, business continuity and succession planning.',
     subtopics: [
-      { letter: 'a', name: 'Causes of Change', kw: 'Internal triggers · external drivers · disruptive technology · markets' },
-      { letter: 'b', name: 'Barriers to Change', kw: 'Resistance · inertia · culture · communication · cost of change' },
-      { letter: 'c', name: 'Scenario Planning', kw: 'What-if analysis · contingency planning · risk management · agility' },
-      { letter: 'd', name: 'Leading Change', kw: 'Transformative leadership · vision · empowering employees · driving change' },
+      { letter: 'a', name: 'Triggers, Effects & Speed of Change', kw: 'Causes & effects of change · productivity · competitiveness · stakeholders · time/speed of change' },
+      { letter: 'b', name: 'Culture, Size & Leadership', kw: 'Organisational culture · size of organisation · transformative leadership' },
+      { letter: 'c', name: 'Managing Resistance to Change', kw: 'Why staff resist · ways to reduce resistance · choosing an approach' },
+      { letter: 'd', name: 'Identifying Key Risks', kw: 'Risk assessment · natural disasters · IT systems failure · loss of key staff' },
+      { letter: 'e', name: 'Planning for Risk Mitigation', kw: 'Business continuity · succession planning · is a contingency plan worth it?' },
     ] },
 ];
 
@@ -127,7 +128,7 @@ export default function Unit3Page() {
             <div className="eup-concept"><div className="eup-concept-icon"><Star size={18} /></div><div><div className="eup-concept-title">Objectives shape every decision</div><div className="eup-concept-desc">Every strategy question requires you to link back to business objectives. Short-term vs long-term, stakeholder conflicts and the mission statement all matter.</div></div></div>
             <div className="eup-concept"><div className="eup-concept-icon"><ChartHistogram size={18} /></div><div><div className="eup-concept-title">Quantitative tools have limits</div><div className="eup-concept-desc">Decision trees, CPA and investment appraisal give useful numbers, but examiners reward you for evaluating their limitations — estimated data, external changes, qualitative factors.</div></div></div>
             <div className="eup-concept"><div className="eup-concept-icon"><Star size={18} /></div><div><div className="eup-concept-title">Competitiveness is relative</div><div className="eup-concept-desc">A business is only competitive compared to its rivals. Use Porter, ratios and benchmarking to analyse competitive position — and always consider the market context.</div></div></div>
-            <div className="eup-concept"><div className="eup-concept-icon"><CardsIcon size={18} /></div><div><div className="eup-concept-title">Change is inevitable</div><div className="eup-concept-desc">Managing change requires understanding both the drivers (technology, markets, regulation) and the barriers (resistance, culture, cost). Transformative leadership and contingency planning are the spec&apos;s own headings.</div></div></div>
+            <div className="eup-concept"><div className="eup-concept-icon"><CardsIcon size={18} /></div><div><div className="eup-concept-title">Change depends on key factors</div><div className="eup-concept-desc">Whether change succeeds depends on organisational culture, the size of the organisation, the time and speed of change, how resistance is managed and transformative leadership. Contingency planning identifies key risks through risk assessment, then plans for business continuity and succession.</div></div></div>
           </div>
         </div>
         <div className="elp-fade-up" style={{ transitionDelay: '.1s' }}>

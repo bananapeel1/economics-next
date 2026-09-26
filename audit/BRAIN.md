@@ -11,7 +11,8 @@ brain escalates.
 | **Brain** | Fable 5.1 | Picks the packet, invokes the workflow, reads a verdict, decides ship / retry / escalate, keeps the books |
 | **Author, Fix** | Opus | Writes the content and the code |
 | **Verify A, Verify B** | Opus | Decides whether the work is real |
-| **Brief, Gate, Handoff** | Haiku | Reads the ledger, runs four shell commands, edits one table row |
+| **Brief, Handoff** | Sonnet | Reads the ledger and writes the work list; edits one table row and appends the handoff |
+| **Gate** | Haiku | Runs four shell commands and reports exit codes |
 
 The rule that makes this safe: **the brain is never the last line of quality defence.** It reads exit
 codes and id counts. It does not judge content, and it cannot overrule a verifier. Verification is the
@@ -20,6 +21,17 @@ correct, and Verify A/B stay on Opus for that reason alone.
 
 The brain also never loads content into its own context. It reads a verdict of a few hundred tokens and
 a path. That is the whole efficiency story; everything else is a rounding error next to it.
+
+Two sentence rules every agent prompt carries, both learned from a Haiku agent writing a true sentence
+with the wrong reach: **a brief contains no results** (packet 37, 19 Sep: the brief pre-wrote "Mobile
+legibility confirmed at 390x844" having measured only the inline render, and the enlarge view, where the
+defect was, had never been measured) and **no sentence may state a scope it did not measure** (packet 5,
+21 Sep: the handoff authored a code fix outside the fix budget and wrote "fixed" before any verifier ran).
+Both sentences were true of the thing done and false of the thing claimed, and both read as a yes to a
+reader skimming for whether the check happened. Brief and Handoff moved to Sonnet on 21 Sep for the same
+reason; Haiku now runs only the Gate, whose output is exit codes. A fix that lands after the loop is
+verified with `.claude/workflows/packet-verify.js`, never by resuming `packet-run.js`, whose Verify B
+prompt is round-invariant and replays the stale walkthrough from cache.
 
 ## Per-packet loop
 
@@ -38,7 +50,9 @@ packets 32-35 were all live in other sessions while their rows still read "not s
 `git status --short | grep packet-<n>` (artefacts on disk) and `node audit/scripts/ledger.mjs packet <n>
 --open`, not the PROGRESS row.
 
-The workflow runs Brief → Author → Gate → Verify A → (Fix → Verify A)* → Verify B → Handoff and returns:
+The workflow runs Brief → Author → Gate → Verify A → (Fix → Verify A)* → Verify B → Handoff. **PASSED requires `ledger.mjs packet <n> --open` to be empty**, not only
+`unverified` to be clear: on 26 Sep packet 12.75 returned PASSED with E053 open and unclaimed, which
+`unverified` (claimed-but-unconfirmed only) cannot see. `ledger.confirmed` is the packet total. It returns:
 
 ```
 { verdict, gate:{test,build,validate}, ledger:{confirmed,rejected,unverifiedRemaining},

@@ -5,6 +5,7 @@ import { shuffleAllOptions } from '@/lib/shuffle-options';
 import { buildQueue, queueStats, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
 import QuestionCard from '@/components/practice/QuestionCard';
 import { signalMoment } from '@/lib/feedback/client';
+import { recordAnswer, recordConfidence } from '@/lib/answer-log';
 import SessionSummary from '@/components/practice/SessionSummary';
 
 /** "Next due in 6 hours" / "Next due tomorrow", from a timestamp. Empty string if nothing is scheduled. */
@@ -631,35 +632,42 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         progressMap[key] ||
         createDefaultProgress(item.sectionId, item.questionIndex);
 
-      // F076: confidence reaches the scheduler. computeNextReview already understood
-      // 'guessed' and 'certain'; nothing had ever passed them.
+      // Confidence arrives with the answer ('certain' or 'guessed'), and the scheduler treats a
+      // lucky guess as not yet learned. See computeNextReview.
       const updated = computeNextReview(current, correct, confidence);
 
-      // Save progress
+      // Save progress. Not awaited: the card shows when this comes back from the returned value,
+      // and that should not wait on the network.
       if (isLoggedIn) {
-        try {
-          await fetch('/api/practice/progress', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              sectionId: updated.sectionId,
-              questionIndex: updated.questionIndex,
-              // Packet 2 dual-write. buildQueue carries the source item, which now has an id.
-              // Sent alongside the index, never instead of it; packet 4 switches the key.
-              itemId: item.question?.id,
-              ease: updated.ease,
-              intervalDays: updated.intervalDays,
-              repetitions: updated.repetitions,
-              nextReview: updated.nextReview,
-              lastResult: updated.lastResult,
-              lastConfidence: updated.lastConfidence,
-            }),
-          });
-        } catch (err) {
-          console.error('Failed to save progress:', err);
-        }
+        fetch('/api/practice/progress', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            sectionId: updated.sectionId,
+            questionIndex: updated.questionIndex,
+            // Packet 2 dual-write. buildQueue carries the source item, which now has an id.
+            // Sent alongside the index, never instead of it; packet 4 switches the key.
+            itemId: item.question?.id,
+            ease: updated.ease,
+            intervalDays: updated.intervalDays,
+            repetitions: updated.repetitions,
+            nextReview: updated.nextReview,
+            lastResult: updated.lastResult,
+            lastConfidence: updated.lastConfidence,
+          }),
+        }).catch((err) => console.error('Failed to save progress:', err));
       } else {
         saveLocalProgress(key, updated);
+      }
+
+      // The topic's Mistakes tab reads this log, and until now only Learn Mode wrote to it, so a
+      // confident wrong answer in Smart Practice never reached the one place that calls it out.
+      // A right answer is written too: it is what takes a fixed mistake off that list.
+      const sec = sections.find((s) => String(s.id) === String(item.sectionId));
+      const subjectId = units.find((u) => u.id === sec?.unit_id)?.subject_id;
+      if (subjectId && item.question?.question) {
+        recordAnswer(subjectId, item.sectionId, item.question, correct);
+        if (confidence) recordConfidence(subjectId, item.sectionId, item.question, confidence);
       }
 
       // Update local state
@@ -667,10 +675,13 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
       setSessionResults(prev => [
         ...prev,
         {
+          key,
           sectionId: item.sectionId,
           questionIndex: item.questionIndex,
+          stem: item.question?.question || '',
           correct,
           confidence,
+          retry: !!item.requeued,
         },
       ]);
 
@@ -681,8 +692,10 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         requeuedRef.current.add(key);
         setQueue(prev => [...prev, { ...item, requeued: true }]);
       }
+
+      return updated;
     },
-    [queue, currentIndex, progressMap, isLoggedIn]
+    [queue, currentIndex, progressMap, isLoggedIn, sections, units]
   );
 
   /* ─── Skip question (no recording) ─── */
@@ -859,6 +872,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
             sectionTitle={sectionTitle}
             questionNumber={currentIndex + 1}
             totalQuestions={queue.length}
+            willReturn={!item.requeued}
             onAnswer={handleAnswer}
             onNext={handleNext}
             onSkip={handleSkip}

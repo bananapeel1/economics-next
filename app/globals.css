@@ -1501,14 +1501,14 @@ body {
   .tab-bar {
     padding: 4px 0 8px;
     margin: 0 -14px;
-    padding-left: 14px; padding-right: 58px;
+    padding-left: 14px; padding-right: 30px;
     /* A tapped tab that is only partly visible must slide clear of the chevron too: scrollIntoView
        ('nearest') otherwise counts it as visible. Round-3 note, F096's area. */
-    scroll-padding-inline-end: 58px;
-    /* The 44px chevron sits over the right edge; the strip fades under it and scrolls 44px past its last tab
-       so every tab label can be brought fully clear of it. */
-    mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 52px), transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 52px), transparent 100%);
+    scroll-padding-inline-end: 30px;
+    /* The quiet chevron (.tab-bar-more) sits over the right edge; the strip fades under it and scrolls
+       30px past its last tab so every tab label can be brought fully clear of it. */
+    mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 36px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0px, black 14px, black calc(100% - 36px), transparent 100%);
   }
   .tab-face { padding: 8px 10px; font-size: 12px; }
   .tab-glow { display: none; }
@@ -1549,7 +1549,7 @@ body {
   .lm-nav { flex-wrap: wrap; }
   .lm-nav-back, .lm-nav-next, .lm-nav-complete { width: 100%; justify-content: center; }
   .lm-nav-spacer { display: none; }
-  .lm-resume-banner { flex-direction: column; text-align: center; }
+  .lm-resume-banner { flex-direction: column; text-align: center; padding-left: 52px; }
   .lm-resume-text { text-align: center; min-width: 0; }
   .lm-resume-actions { justify-content: center; }
   .lm-complete-screen { margin: 20px auto; }
@@ -1850,6 +1850,7 @@ body {
 .mistake-wrong-label { color: var(--accent-red); }
 .mistake-correct-label { color: var(--accent-green-light); }
 .mistake-text { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.mistake-why { margin-top: 8px; }
 
 /* ─── Resource Pages (shared) ─── */
 .resource-page { min-height: 100vh; background: var(--bg-primary); color: var(--text-primary); padding: 40px 20px 60px; }
@@ -2075,8 +2076,9 @@ button.sidebar-resource-link {
 
 /* Resume banner */
 .lm-resume-banner {
+  position: relative;
   display: flex; align-items: center; gap: 12px;
-  padding: 14px 18px;
+  padding: 14px 52px 14px 18px;
   background: var(--green-light-6);
   border: 1.5px solid var(--green-light-20);
   border-radius: 12px; margin-bottom: 20px;
@@ -2098,6 +2100,18 @@ button.sidebar-resource-link {
   font-size: 13px; font-weight: 600;
   cursor: pointer; font-family: inherit;
 }
+/* Dismiss (the founder's board, 26 Sep). In the corner, so it sits the same in the row and in the
+   phone's stacked layout; 44px, the platform minimum DECISIONS settled on. */
+.lm-resume-banner-close {
+  position: absolute; top: 4px; right: 4px;
+  min-width: 44px; min-height: 44px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: transparent; border: none; border-radius: 22px;
+  color: var(--accent-green); font-size: 24px; line-height: 1;
+  cursor: pointer; font-family: inherit; transition: background 0.15s;
+}
+.lm-resume-banner-close:hover { background: var(--green-light-20); }
+.lm-resume-banner-close:focus-visible { outline: 2px solid var(--accent-green); outline-offset: 2px; }
 
 /* Progress bar */
 .lm-progress-container {
@@ -4340,6 +4354,21 @@ button.sidebar-resource-link {
 .practice-filter-btn.off-ladder {
   border-style: dashed;
 }
+/* One shared source, printed once above the list (packet 41 Verify B, defect 7). Only rendered
+   when two or more visible questions open with the same sentence-complete extract. */
+.practice-source-card {
+  margin: 0 0 16px; padding: 14px 16px;
+  background: var(--card-bg, rgba(255,255,255,0.03));
+  border: 1px solid var(--border-subtle, rgba(255,255,255,0.10));
+  border-radius: 12px;
+}
+.practice-source-label {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--text-secondary); margin-bottom: 8px;
+}
+.practice-source-text { font-size: 15px; line-height: 1.6; color: var(--text-primary); margin: 0; }
+.practice-source-note { font-size: 13px; color: var(--text-secondary); margin: 8px 0 0; }
+
 .practice-questions-list {
   display: flex;
   flex-direction: column;
@@ -7302,24 +7331,59 @@ a.auth-dropdown-item:visited {
 }
 .spe-access-note-btn:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
 
-/* ── Smart Practice confidence row (F076): asked after the reveal, and it schedules the card ── */
-.spe-qcard-confidence { margin: 14px 0 4px; }
-.spe-qcard-confidence-label {
-  display: block; font-size: 12.5px; font-weight: 600; letter-spacing: .02em;
-  color: var(--text-muted); margin-bottom: 8px;
+/* ── Smart Practice: confidence is given WITH the answer ("Check answer" / "Check — I guessed"),
+   replacing the F076 row that blocked Next after every reveal ── */
+.spe-qcard-guess {
+  padding: 12px 20px; border-radius: 10px; background: transparent;
+  color: var(--text-secondary); border: 1px solid var(--border-primary);
+  font-size: 15px; font-weight: 600; cursor: pointer; font-family: inherit;
 }
-.spe-qcard-confidence-row { display: flex; flex-wrap: wrap; gap: 8px; }
-.spe-qcard-conf-btn {
-  flex: 1 1 auto; min-width: 92px; min-height: 44px; padding: 0 16px;
-  border-radius: 999px; font-size: 14px; font-weight: 600; cursor: pointer;
-  color: var(--text-primary); background: transparent;
-  border: 1px solid var(--border-color, rgba(127, 127, 127, .35));
+.spe-qcard-guess:hover:not(:disabled) { color: var(--text-primary); border-color: var(--text-muted); }
+.spe-qcard-guess:disabled { opacity: .45; cursor: not-allowed; }
+.spe-qcard-check:focus-visible, .spe-qcard-guess:focus-visible, .spe-qcard-next:focus-visible {
+  outline: 2px solid var(--accent-blue-light); outline-offset: 2px;
 }
-.spe-qcard-conf-btn.active {
-  background: var(--rl-green, #10b981); color: #fff; border-color: transparent;
+.spe-qcard-keys { font-size: 12px; color: var(--text-muted); margin: 10px 0 0; }
+@media (hover: none) { .spe-qcard-keys { display: none; } }
+@media (max-width: 480px) {
+  .spe-qcard-actions { flex-wrap: wrap; gap: 10px; }
+  .spe-qcard-check, .spe-qcard-guess { flex: 1 1 auto; padding: 12px 14px; }
 }
-.spe-qcard-conf-btn:focus-visible { outline: 2px solid var(--rl-green, #10b981); outline-offset: 2px; }
-.spe-qcard-next:disabled { opacity: .55; cursor: not-allowed; }
+.spe-qcard-result-next { font-size: 14px; color: var(--text-primary); line-height: 1.55; margin: 0 0 10px; }
+.spe-qcard-result--lucky { background: rgba(245,158,11,.07); border-color: rgba(245,158,11,.3); }
+.spe-qcard-result--lucky .spe-qcard-result-header { color: var(--accent-amber); }
+.spe-qcard-note-link {
+  display: inline-block; margin: 0 0 12px; font-size: 14px; font-weight: 600;
+  color: var(--accent-blue-light); text-decoration: underline; text-underline-offset: 3px;
+}
+
+/* Summary: four outcomes instead of one score */
+.spe-summary-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0 0 18px; text-align: left; }
+.spe-group {
+  padding: 14px; border-radius: 12px; border: 1px solid var(--border-primary);
+  display: flex; flex-direction: column; gap: 2px;
+}
+.spe-group-num { font-size: 26px; font-weight: 800; color: var(--text-primary); line-height: 1.1; }
+.spe-group-label { font-size: 14px; font-weight: 700; color: var(--text-primary); }
+.spe-group-note { font-size: 12.5px; color: var(--text-muted); }
+.spe-group--knew .spe-group-num { color: var(--accent-green); }
+.spe-group--lucky .spe-group-num { color: var(--accent-amber); }
+.spe-group--misconception { border-color: rgba(239,68,68,.35); background: rgba(239,68,68,.05); }
+.spe-group--misconception .spe-group-num { color: var(--accent-red); }
+.spe-summary-retry { font-size: 14px; color: var(--text-secondary); margin: 0 0 18px; }
+.spe-summary-fix { text-align: left; margin: 0 0 24px; }
+.spe-summary-fix-title { font-size: 15px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+.spe-summary-fix-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.spe-summary-fix-item {
+  display: flex; flex-direction: column; gap: 4px; padding: 10px 12px;
+  border-radius: 10px; border: 1px solid var(--border-primary);
+}
+.spe-fix-tag { font-size: 11.5px; font-weight: 700; letter-spacing: .02em; color: var(--text-muted); }
+.spe-fix-tag--misconception { color: var(--accent-red); }
+.spe-fix-stem { font-size: 14px; color: var(--text-primary); line-height: 1.45; }
+.spe-fix-link { font-size: 13px; font-weight: 600; color: var(--accent-blue-light); text-decoration: underline; text-underline-offset: 3px; }
+.spe-summary-fix-more { font-size: 13px; color: var(--text-muted); margin: 10px 0 0; }
+@media (max-width: 400px) { .spe-summary-groups { grid-template-columns: minmax(0, 1fr); } }
 
 /* ── Smart Practice topic picker (F085): explicit select-all, and counts on every chip ── */
 .spe-unit-selectall {
@@ -7456,6 +7520,11 @@ a.auth-dropdown-item:visited {
 .lm-eyebrow-part { text-transform: none; letter-spacing: 0; font-size: 12px; font-weight: 500; color: var(--text-dim); }
 .lm-eyebrow-part::before { content: '·'; margin-right: 8px; color: var(--text-dim); }
 .lm-checkin-intro { font-size: 14px; color: var(--text-tertiary); margin: -8px 0 18px; }
+.lm-checkin-held { margin: 14px 0 4px; padding: 12px 14px; border: 1px dashed var(--border-primary); border-radius: 10px; color: var(--text-tertiary); font-size: 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; }
+.lm-checkin-held p { margin: 0; flex: 1 1 220px; }
+.lm-checkin-skip { background: none; border: none; padding: 10px 4px; min-height: 44px; font: inherit; font-size: 14px; font-weight: 600; color: var(--text-secondary); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.lm-checkin-skip:hover { color: var(--text-primary); }
+.lm-checkin-skip:focus-visible { outline: 2px solid var(--border-primary); outline-offset: 2px; border-radius: 4px; }
 
 /* Chapter dots: one per chapter, clickable once reached (F046) */
 .lm-chapter-dots { display: flex; gap: 6px; margin: -10px 0 18px; }
@@ -7553,13 +7622,19 @@ a.auth-dropdown-item:visited {
 
 /* Tab strip overflow (F096) */
 .tab-bar-wrap { position: relative; }
+/* A quiet chevron, not a button-shaped disc (founder, 26 Sep: the 44px circle over the tabs was
+   "very invasive"). It stays because F096 is real: at 360-390px only four of nine tabs fit, and a fade
+   alone reads as the end of the row. The 44px hit area remains; only the glyph is visible, sitting in
+   the strip's own fade. */
 .tab-bar-more {
   display: none; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
-  width: 44px; height: 44px; border-radius: 22px; border: 1px solid var(--border-primary);
-  background: var(--bg-card); color: var(--text-secondary); font-size: 24px; line-height: 1;
-  align-items: center; justify-content: center; cursor: pointer; z-index: 2;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  width: 36px; height: 44px; border: none; background: none; padding: 0 6px 0 0;
+  color: var(--text-tertiary); font-size: 20px; line-height: 1; font-family: inherit;
+  align-items: center; justify-content: flex-end; cursor: pointer; z-index: 2;
+  -webkit-tap-highlight-color: transparent;
 }
+.tab-bar-more:hover { color: var(--text-secondary); }
+.tab-bar-more:focus-visible { outline: 2px solid var(--border-primary); outline-offset: -2px; border-radius: 6px; }
 
 /* Diagram modal as a sheet (F088, F062) */
 .lm-diagram-modal { flex-direction: column; background: var(--bg-card); border-radius: 12px; padding: 0; overflow: hidden; width: min(90vw, 1000px); }
@@ -7653,7 +7728,13 @@ a.auth-dropdown-item:visited {
      fill-in blank never breaks mid-word; inherited by classify chips it made a long item — "Two-thirds of
      the workforce is employed in services" — overflow 390px and drag the whole document sideways, so every
      later step rendered shifted until the page was scrolled back. Found by the founder on live content. */
-  .lm-word-chip.lm-classify-chip { white-space: normal; text-align: left; max-width: 100%; }
+  /* V042, the same defect one recall type later. A match option is a whole statement too: Verify B
+     measured "Something has changed behind it, and the pressure will outlast the campaign" at 574px
+     in a 326px word bank at 390px, with the first word off the left edge and no horizontal scroll to
+     bring it back — 16 of one section's 28 options. The rule above was written for classify chips
+     only; a match chip carries the same kind of string and gets the same treatment. */
+  .lm-word-chip.lm-classify-chip,
+  .lm-word-chip.lm-match-chip { white-space: normal; text-align: left; max-width: 100%; }
   /* A blank was shrinking inside its flex row and breaking "underproduces" mid-word; the row wraps instead. */
   .lm-fillin-step { flex-wrap: wrap; row-gap: 6px; }
   .lm-fillin-blank { flex-shrink: 0; max-width: 100%; }

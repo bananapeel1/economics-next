@@ -1,0 +1,41 @@
+(node:19192) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+aggregate-supply — packet 44
+  before: 0 BLOCK / 0 DEBT / 2 INFO (0 recoverable)
+  after:  0 BLOCK / 0 DEBT / 2 INFO (0 recoverable)
+  new:    0 BLOCK / 0 DEBT · carried 0 · would clear 0 baselined findings on publish
+  5 blocks · 18 subsections · 32 quiz (3 unpinned) · 9 practice · 34 flashcards · 7 mistakes · 5 diagrams (16 views) · 4 chains · 2 evaluation
+  recalls: 18 of 18 subsections — 4 match, 5 reorder, 5 classify, 4 fillin
+  spine:  40 million × $20,000 = $800bn · SRAS Y = 300 + 5P · AD −60: SR 770 @ 94, LR 800 @ 88
+  pins:   quiz [[3,4,5,6,7],[8,9,10,11,12,13],[14,15,16,17,18,19,20],[21,22,23,24,25],[26,27,28,29,30,31]] · practice [[0,1],[2,3,4],[5,6],[7],[8]]
+
+packet checks
+  SCOPE      2.3.3 only; output gaps (2.3.5), the multiplier and equilibrium real output (2.3.4)
+             and the determinants of AD (2.3.2) each pointed at within a budget, every pointer
+             carrying its topic number; stagflation, full employment, natural rate, Phillips
+             curve, crowding out, supply-side INSTRUMENTS, Unit 3 market-structure words, Assess
+             and Outline banned — each A/B'd against a string it must catch and one it must not
+  NUMBERING  the oracle re-read (17 rows / 14 leaves), every leaf mapped and its own words found
+             in the mapped subsections, the spec's two factor lists matched to :1026-1049, seven
+             headings asserted by line, and "2.4.3" and "2.5.2" asserted ABSENT from the document
+  ARITHMETIC capacity = workers × output per worker and labour = working-age × participation;
+             every SRAS shifter by one rule (share × price change); every LRAS shifter through ONE
+             term; the classical adjustment off BOTH curves, landing ON the LRAS at a lower price
+  PINS       derived from each item's block tag; 5 blocks, each with its own diagram, quiz and
+             practice; no diagramRef; 8 free quiz items against FREE_QUIZ_MAX 10
+  QUIZ       keys dealt from a hash, histogram measured, no length tell, no letter, no ordinal
+             (A/B'd both ways), no near-duplicate stems, nothing tested that is not taught
+  PRACTICE   Appendix 6 parsed; all eight command words and both Calculate tariffs; two-paragraph
+             guidance with a clean opening; points to 6 marks, levels above
+  RECALLS    18 of 18, all four types, one blank per template line, no procedure lists,
+             no shared reorder items, and the shared recall.recoverable measure at 0
+  DIAGRAMS   5 on a 400-unit frame, palette parsed, extent and collisions (lines AND
+             paths, vertical segments included) checked on the emitted SVG with the guard A/B'd, and
+             every figure counted back out of the SVG
+
+bundle written to audit/snapshots/packet-44-bundle__economics__aggregate-supply.json
+
+staged to draft: {"ok":true,"findings":[{"tier":"INFO","rule":"spec.coverage","where":"section","detail":"14 of 14 specification leaves evidenced in the teaching text (100%)","covered":14,"leaves":14,"key":"aggregate-supply|spec.coverage|section|535a98ad"},{"tier":"INFO","rule":"section.counts","where":"section","detail":"5 blocks · 18 subsections · 18 recalls (5 reorder, 4 fill-in, 4 match, 5 classify) · 32 quiz · 9 practice · 5 diagrams · 4 chains","key":"aggregate-supply|section.counts|section|d442622a"}],"summary":{"sectionId":"aggregate-supply","subject":"economics","unitCode":"WEC12","number":"2.3.3","block":0,"debt":0,"info":2},"newBlocks":[],"newDebt":[],"staged":["section_quiz"],"unchanged":["section_content","section_notes","section_practice","section_flashcards","section_diagrams","section_extras","section_common_mistakes"],"wouldStage":["section_quiz"]}

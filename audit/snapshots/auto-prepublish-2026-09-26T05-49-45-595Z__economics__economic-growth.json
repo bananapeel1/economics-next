@@ -1,0 +1,1980 @@
+{
+ "section_id": "economic-growth",
+ "subject": "economics",
+ "label": "auto-prepublish-2026-09-26T05-49-45-595Z",
+ "tables": {
+  "section_content": [
+   {
+    "id": "economic-growth:block:ece2905f",
+    "title": "Actual vs Potential Economic Growth",
+    "sections": [
+     {
+      "id": "economic-growth:sub:actual-economic-growth",
+      "body": [
+       {
+        "text": "**Actual economic growth** is the percentage increase in real GDP over a given period, usually a year. When you hear that \"the UK economy grew by 1.5% last year,\" that is actual growth. It measures the increase in the total output of goods and services that the economy genuinely produced.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Spare capacity exists",
+         "AD increases",
+         "Real GDP rises"
+        ],
+        "result": "Actual growth occurs as unused resources are put to work",
+        "resultType": "good"
+       },
+       {
+        "text": "Actual growth happens when the economy uses more of its existing resources. If there are unemployed workers or idle factories, an increase in aggregate demand can put these to work, raising output without needing the economy's capacity to expand.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should understand that actual growth can happen without any change in the economy's productive potential. It simply means the economy is moving closer to its existing capacity.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Actual Economic Growth",
+      "recall": {
+       "id": "economic-growth:sub:actual-economic-growth:recall",
+       "type": "fillin",
+       "hints": [
+        "re__ ___",
+        "ti__ ______",
+        "re__"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "real GDP",
+        "time period",
+        "real"
+       ],
+       "template": [
+        "Actual growth = percentage increase in ___",
+        "→ Measured over a given ___",
+        "→ Uses ___ GDP not nominal"
+       ]
+      },
+      "keyIdea": "Actual growth is the measured increase in real GDP over time, showing how much more the economy actually produced this year compared to last.",
+      "examMatters": "Examiners expect you to distinguish actual from potential growth and link actual growth to a movement along the PPF or a shift of AD within existing LRAS. Drawing a clear AD/AS diagram with the shift labelled will strengthen your answer significantly.",
+      "realExample": {
+       "text": "**The UK economy** grew by 7.4% in 2021 after contracting sharply during the pandemic. This was largely actual growth as businesses reopened and workers returned to jobs that already existed, using capacity that had been idled by lockdowns.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students write that actual growth requires investment in new capital or technology. Actual growth simply means real GDP has risen, which can happen by employing spare capacity that already exists. Instead write: actual growth occurs when more of the economy's existing resources are utilised, often driven by rising aggregate demand."
+     },
+     {
+      "id": "economic-growth:sub:potential-economic-growth",
+      "body": [
+       {
+        "text": "**Potential economic growth** is an increase in the productive capacity of the economy. It represents a rise in the maximum output the economy could achieve if all resources were fully employed. On an AD/AS diagram, potential growth is shown by a rightward shift of the LRAS curve.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Investment in capital or skills",
+         "Technology improves",
+         "LRAS shifts right"
+        ],
+        "result": "Economy can now produce more at every price level",
+        "resultType": "good"
+       },
+       {
+        "text": "Potential growth comes from improvements in the quantity or quality of factors of production. More workers entering the labour force, better education and training, advances in technology, and increases in the capital stock all expand the economy's productive potential.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should note that potential growth does not guarantee actual growth. The economy's capacity may expand while actual output stays the same if demand is insufficient. Think of it as building a bigger factory but not yet filling orders to use it.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Potential Economic Growth",
+      "recall": {
+       "id": "economic-growth:sub:potential-economic-growth:recall",
+       "type": "reorder",
+       "prompt": "Put these in the correct order for potential economic growth:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Investment in capital or education",
+        "Quality of factors of production improves",
+        "LRAS shifts right",
+        "Economy's maximum output increases"
+       ]
+      },
+      "keyIdea": "Potential growth is an expansion of the economy's maximum productive capacity, meaning it could produce more even if it is not doing so right now.",
+      "examMatters": "When drawing diagrams for potential growth, always shift LRAS to the right and explain why. Examiners reward you for identifying the specific supply-side factor that caused the shift, whether that is investment, education, migration or technological change.",
+      "realExample": {
+       "text": "**China** invested heavily in infrastructure, education and technology between 2000 and 2020, expanding its productive capacity enormously. This potential growth underpinned decades of rapid actual GDP growth, taking hundreds of millions of people out of poverty.",
+       "emoji": "🇨🇳"
+      },
+      "misconception": "Students claim potential growth automatically raises living standards. Potential growth only raises capacity; living standards improve only when that capacity is actually used to produce more goods and services. Instead write: potential growth increases what the economy could produce, but actual living standards depend on whether that capacity is utilised."
+     },
+     {
+      "id": "economic-growth:sub:relationship-actual-potential",
+      "body": [
+       {
+        "text": "You need to understand how actual and potential growth work together. Actual growth on its own eventually hits a ceiling when spare capacity runs out. At that point, further increases in AD cause inflation rather than higher output. Potential growth raises that ceiling, making room for future actual growth.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Potential growth raises LRAS",
+         "AD rises to fill new capacity",
+         "Real GDP increases sustainably"
+        ],
+        "result": "Long-run growth without inflationary pressure",
+        "resultType": "good"
+       },
+       {
+        "text": "On a PPF diagram, actual growth is a movement from a point inside the curve toward the boundary. Potential growth is an outward shift of the entire curve. The ideal scenario for any economy is both happening together: expanding capacity while simultaneously using it.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Most exam questions require you to explain which type of growth a particular policy promotes. A tax cut that boosts consumer spending drives actual growth. A government programme that funds apprenticeships drives potential growth. The best policies target both.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Linking Actual and Potential Growth",
+      "recall": {
+       "id": "economic-growth:sub:relationship-actual-potential:recall",
+       "type": "fillin",
+       "hints": [
+        "to____",
+        "sh___",
+        "pr________ ___________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "toward",
+        "shift",
+        "production possibility"
+       ],
+       "template": [
+        "Actual growth on a PPF = movement ___ the curve",
+        "→ Potential growth = outward ___ of the curve",
+        "→ Both shown on the ___ frontier diagram"
+       ]
+      },
+      "keyIdea": "Sustained long-run growth requires both types: demand-side stimulus for actual growth and supply-side improvement for potential growth.",
+      "examMatters": "High-mark questions often ask you to evaluate whether demand-side or supply-side policies are more effective for growth. You must discuss both types of growth and explain that sustainable growth requires supply-side capacity expansion alongside demand-side stimulus.",
+      "realExample": {
+       "text": "**South Korea** combined heavy investment in education and technology with export-driven demand over several decades. This dual approach ensured potential capacity kept expanding while actual output grew to fill it, transforming Korea from one of the poorest nations to a high-income economy.",
+       "emoji": "🇰🇷"
+      },
+      "misconception": "Students treat actual and potential growth as separate topics that never interact. In reality, actual growth can fund potential growth through tax revenues and profits that finance investment. Instead write: actual and potential growth reinforce each other since higher output today generates the revenue to invest in tomorrow's capacity."
+     }
+    ],
+    "takeaway": [
+     "Actual growth is a rise in real GDP; potential growth is a rise in capacity.",
+     "Actual growth uses spare capacity; potential growth creates new capacity.",
+     "Sustainable long-run growth needs both demand-side and supply-side drivers.",
+     "PPF: actual = move to boundary; potential = outward shift."
+    ],
+    "diagramRef": "ad-as-growth",
+    "quizIndices": [
+     0
+    ]
+   },
+   {
+    "id": "economic-growth:block:e8a4f385",
+    "title": "Output Gaps",
+    "sections": [
+     {
+      "id": "economic-growth:sub:positive-output-gap",
+      "body": [
+       {
+        "text": "A **positive output gap** occurs when actual GDP exceeds potential GDP. The economy is producing more than its long-run sustainable level, which means resources are being overutilised. Workers are doing overtime, factories are running extra shifts, and labour markets are very tight.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "AD exceeds LRAS",
+         "Firms overuse capacity",
+         "Wages and costs rise"
+        ],
+        "result": "Demand-pull inflation accelerates",
+        "resultType": "bad"
+       },
+       {
+        "text": "You should recognise that a positive output gap is not necessarily a good thing despite the name. While unemployment is low and output is high, the overheating economy generates inflationary pressure. Firms compete for scarce workers by bidding up wages, and those higher costs are passed on to consumers.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Positive Output Gap",
+      "recall": {
+       "id": "economic-growth:sub:positive-output-gap:recall",
+       "type": "fillin",
+       "hints": [
+        "ex_____",
+        "fu__",
+        "in___________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "exceeds",
+        "full",
+        "inflationary"
+       ],
+       "template": [
+        "Positive output gap = actual GDP ___ potential GDP",
+        "→ Economy operating beyond ___ capacity",
+        "→ Creates ___ pressure on prices"
+       ]
+      },
+      "keyIdea": "A positive output gap means the economy is producing beyond its sustainable capacity, which puts upward pressure on prices.",
+      "examMatters": "When identifying a positive output gap, examiners want you to explain the consequences clearly: rising inflation, falling real wages, potential current account deterioration. Always link the gap to a specific policy response such as contractionary fiscal or monetary policy.",
+      "realExample": {
+       "text": "**The US economy** in 2022 experienced a positive output gap as massive pandemic stimulus spending collided with supply constraints. Unemployment fell to 3.4% but inflation surged past 9%, forcing the Federal Reserve to raise interest rates aggressively.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students assume a positive output gap means the economy is performing well. Although output is high, the economy is unsustainably overheating and inflation is rising. Instead write: a positive output gap signals overheating where actual GDP exceeds potential GDP, creating inflationary pressure that requires corrective action."
+     },
+     {
+      "id": "economic-growth:sub:negative-output-gap",
+      "body": [
+       {
+        "text": "A **negative output gap** occurs when actual GDP is below potential GDP. The economy has spare capacity: workers who want jobs cannot find them, factories sit partly empty, and businesses operate below their optimal output level.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "AD falls below LRAS",
+         "Spare capacity emerges",
+         "Unemployment rises"
+        ],
+        "result": "Lost output and lower living standards",
+        "resultType": "bad"
+       },
+       {
+        "text": "During a negative output gap, you see rising unemployment, falling consumer confidence and weak business investment. Firms may cut prices to attract scarce customers, which puts downward pressure on inflation. In severe cases, this can lead to deflation.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The policy response to a negative output gap typically involves expansionary measures. Governments may increase spending or cut taxes to boost AD, while central banks may lower interest rates or use quantitative easing to stimulate demand.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Negative Output Gap",
+      "recall": {
+       "id": "economic-growth:sub:negative-output-gap:recall",
+       "type": "reorder",
+       "prompt": "Put these consequences of a negative output gap in logical order:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "AD falls below potential output",
+        "Spare capacity and unemployment rise",
+        "Consumer spending falls further",
+        "Government tax revenue declines"
+       ]
+      },
+      "keyIdea": "A negative output gap means the economy is producing below its capacity, leaving workers unemployed and resources idle.",
+      "examMatters": "Examiners frequently present data showing an economy with spare capacity and ask you to recommend policies. You must identify the negative output gap, explain its consequences, and evaluate whether demand-side or supply-side policies would be most appropriate to close it.",
+      "realExample": {
+       "text": "**The Eurozone** experienced a significant negative output gap during 2012-2013 following the sovereign debt crisis. Unemployment across the bloc exceeded 12%, and countries like Spain and Greece saw youth unemployment above 50%, representing enormous wasted productive potential.",
+       "emoji": "🇪🇺"
+      },
+      "misconception": "Students write that a negative output gap only affects unemployment. It also reduces government tax revenue, increases welfare spending, discourages investment and can trigger a deflationary spiral. Instead write: a negative output gap damages the economy through unemployment, lower tax revenue, higher welfare costs and the risk of deflation."
+     },
+     {
+      "id": "economic-growth:sub:output-gap-implications",
+      "body": [
+       {
+        "text": "The output gap is a key indicator for policymakers because it signals whether the economy needs stimulating or restraining. A negative gap calls for expansionary policy to boost demand. A positive gap calls for contractionary policy to reduce inflationary pressure.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should understand that measuring the output gap is difficult in practice because potential GDP cannot be directly observed. Economists must estimate it using statistical methods, and different estimates can lead to very different policy recommendations. This uncertainty makes policy decisions challenging.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Estimate the output gap",
+         "Choose expansionary or contractionary policy",
+         "Implement with appropriate time lag"
+        ],
+        "result": "Economy moves closer to potential output",
+        "resultType": "neutral"
+       },
+       {
+        "text": "There is always a trade-off in closing the gap. Closing a negative gap too aggressively risks overshooting into a positive gap and triggering inflation. Closing a positive gap too harshly risks plunging the economy into recession. Policymakers aim for a gradual return to potential output.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Implications for Policy",
+      "recall": {
+       "id": "economic-growth:sub:output-gap-implications:recall",
+       "type": "fillin",
+       "hints": [
+        "ex___________",
+        "co_____________",
+        "po________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "expansionary",
+        "contractionary",
+        "potential"
+       ],
+       "template": [
+        "Negative output gap → use ___ policy to boost AD",
+        "→ Positive output gap → use ___ policy to cool AD",
+        "→ Goal is to close the gap and return to ___ output"
+       ]
+      },
+      "keyIdea": "The size and direction of the output gap tells policymakers whether they should stimulate the economy or cool it down.",
+      "examMatters": "Evaluation marks come from discussing the difficulty of measuring the output gap and the risk of policy errors. Examiners reward you for noting that time lags, estimation uncertainty and political constraints all complicate the policy response to output gaps.",
+      "realExample": {
+       "text": "**The Bank of England** misjudged the output gap in 2021, initially believing inflation was transitory because spare capacity remained from the pandemic. When inflation proved persistent, the Bank had to raise rates more sharply than planned, illustrating how output gap miscalculation leads to policy errors.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students assume the output gap can be measured precisely and policies can close it exactly. In reality, potential GDP is estimated with significant uncertainty, and policy operates with time lags. Instead write: output gap estimates are uncertain, which means policy responses may overshoot or undershoot the intended target."
+     }
+    ],
+    "takeaway": [
+     "Positive gap: actual GDP above potential, causing inflation.",
+     "Negative gap: actual GDP below potential, causing unemployment.",
+     "Policy aims to close the gap but estimation errors cause risk.",
+     "Time lags and uncertainty make output gap policy imprecise."
+    ],
+    "diagramRef": "output-gap-diagram",
+    "quizIndices": [
+     1
+    ]
+   },
+   {
+    "id": "economic-growth:block:4ea707a8",
+    "title": "The Business (Trade) Cycle",
+    "sections": [
+     {
+      "id": "economic-growth:sub:boom-phase",
+      "body": [
+       {
+        "text": "A **boom** is a period of rapid economic growth where real GDP is rising significantly. During a boom, consumer spending is strong, business profits are high and unemployment falls to very low levels. Confidence is high across the economy, and firms invest heavily to meet rising demand.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "High consumer confidence",
+         "Strong spending and investment",
+         "Labour market tightens"
+        ],
+        "result": "Wages rise and demand-pull inflation accelerates",
+        "resultType": "neutral"
+       },
+       {
+        "text": "However, you should recognise that booms carry risks. As the economy approaches full capacity, a positive output gap opens. Firms bid up wages to attract scarce workers, costs rise, and inflation accelerates. Asset prices like housing and shares may become inflated beyond their fundamental value.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Booms are not sustainable indefinitely. The inflationary pressure eventually forces central banks to raise interest rates, which chokes off demand and often triggers the next downturn.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Boom",
+      "recall": {
+       "id": "economic-growth:sub:boom-phase:recall",
+       "type": "reorder",
+       "prompt": "Order the events during a boom phase:",
+       "shuffled": [
+        1,
+        3,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Consumer confidence rises",
+        "Spending and investment increase rapidly",
+        "Unemployment falls and wages rise",
+        "Inflation accelerates as output gap turns positive"
+       ]
+      },
+      "keyIdea": "A boom is the peak of the cycle where GDP growth is strong, unemployment is low and confidence is high, but inflation starts to build.",
+      "examMatters": "When analysing a boom, examiners want you to discuss both the benefits and the risks. Strong answers explain how the positive output gap creates inflation and why central banks typically respond by raising interest rates, linking the boom to the next phase of the cycle.",
+      "realExample": {
+       "text": "**Ireland** experienced a dramatic boom between 2000 and 2007, with GDP growth averaging over 6% and unemployment falling to 4%. However, the boom was fuelled by a housing bubble and excessive bank lending, and when it burst, Ireland suffered one of the deepest recessions in Europe.",
+       "emoji": "🇮🇪"
+      },
+      "misconception": "Students describe booms as entirely positive because GDP is growing and unemployment is low. A boom creates inflationary pressure, asset bubbles and unsustainable borrowing that often lead to a painful bust. Instead write: booms raise output and employment in the short run but create inflationary and financial risks that can trigger a severe downturn."
+     },
+     {
+      "id": "economic-growth:sub:recession-phase",
+      "body": [
+       {
+        "text": "A **recession** is technically defined as two consecutive quarters of falling real GDP. During a recession, output declines, businesses see falling revenues and many are forced to lay off workers or close entirely. Consumer confidence collapses, and spending falls further in a self-reinforcing downward spiral.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "AD falls sharply",
+         "Firms cut output and jobs",
+         "Incomes fall, spending drops more"
+        ],
+        "result": "Negative multiplier deepens the downturn",
+        "resultType": "bad"
+       },
+       {
+        "text": "Recessions cause significant economic and social harm. Unemployment rises, government tax revenues fall while welfare spending increases, and inequality often worsens as the most vulnerable workers lose their jobs first. Business investment collapses because firms see no reason to expand capacity when demand is shrinking.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should understand that recessions can vary enormously in severity and duration. A mild recession might last six months with GDP falling by 1%, while a deep recession like 2008-2009 can see GDP fall by 5% or more and take years to recover from.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Recession",
+      "recall": {
+       "id": "economic-growth:sub:recession-phase:recall",
+       "type": "fillin",
+       "hints": [
+        "tw_",
+        "fa______",
+        "un___________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "two",
+        "falling",
+        "unemployment"
+       ],
+       "template": [
+        "A recession = ___ consecutive quarters of decline",
+        "→ Measured by ___ real GDP",
+        "→ Often accompanied by rising ___"
+       ]
+      },
+      "keyIdea": "A recession is two consecutive quarters of negative GDP growth, bringing rising unemployment, falling confidence and business failures.",
+      "examMatters": "When discussing recessions, examiners expect you to explain the multiplier effect that deepens the downturn and to evaluate appropriate policy responses. Always consider whether fiscal or monetary policy is more suitable given the specific circumstances of the recession.",
+      "realExample": {
+       "text": "**The Global Financial Crisis** of 2008-2009 triggered the deepest worldwide recession since the 1930s. The UK economy contracted by 6%, unemployment rose above 8%, and government debt roughly doubled as tax revenues collapsed and bailout costs soared.",
+       "emoji": "🌍"
+      },
+      "misconception": "Students write that recessions are always caused by demand falling. Some recessions are triggered by supply-side shocks such as oil price spikes or pandemics that reduce productive capacity. Instead write: recessions can be demand-driven or supply-driven, and the cause determines the appropriate policy response."
+     },
+     {
+      "id": "economic-growth:sub:recovery-phase",
+      "body": [
+       {
+        "text": "**Recovery** is the phase where real GDP begins to grow again after a recession. Consumer confidence gradually returns, spending increases and businesses start hiring again. The recovery phase typically begins slowly because it takes time for confidence to rebuild after a downturn.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Policy stimulus boosts AD",
+         "Confidence returns gradually",
+         "Output and employment rise"
+        ],
+        "result": "Economy moves back toward potential output",
+        "resultType": "good"
+       },
+       {
+        "text": "The full business cycle has four phases: **boom** (peak output, low unemployment, rising inflation), **downturn** (growth slows, confidence falls), **recession** (output contracts, unemployment rises), and **recovery** (growth resumes, spare capacity absorbed). The cycle then repeats, though each cycle differs in length and severity.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should know that governments and central banks try to smooth the cycle by using counter-cyclical policies. They stimulate the economy during recessions and cool it during booms. However, time lags and political pressures mean that policy intervention is often imperfect, sometimes even destabilising.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Recovery and Stages of the Cycle",
+      "recall": {
+       "id": "economic-growth:sub:recovery-phase:recall",
+       "type": "reorder",
+       "prompt": "Put the four phases of the business cycle in order:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Boom",
+        "Downturn",
+        "Recession",
+        "Recovery"
+       ]
+      },
+      "keyIdea": "Recovery is when GDP starts growing again after a recession, and the full cycle repeats as the economy moves through boom, downturn, recession and recovery.",
+      "examMatters": "Examiners test whether you can identify which phase of the cycle an economy is in from data and recommend appropriate policies. You should link each phase to its key characteristics: output growth rate, unemployment trend, inflation pressure and confidence indicators.",
+      "realExample": {
+       "text": "**The US recovery** after the 2008 financial crisis was the longest in recorded history, lasting over a decade until the pandemic hit in 2020. However, it was unusually slow, with GDP growth averaging only 2.3% compared to 3.6% in previous recoveries, partly because consumer caution and tight bank lending held back spending.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students assume recovery means the economy is back to normal. Recovery simply means GDP is growing again; it may take years before output returns to its pre-recession level and unemployment falls back to normal. Instead write: recovery is the phase of renewed growth, but the economy may still be operating well below its pre-recession peak for an extended period."
+     }
+    ],
+    "takeaway": [
+     "Boom: high growth but inflation risks; recession: falling GDP and rising unemployment.",
+     "Recovery begins slowly as confidence rebuilds after a downturn.",
+     "Counter-cyclical policy aims to smooth the cycle but faces time lags.",
+     "Each cycle differs in length, severity and underlying causes."
+    ],
+    "diagramRef": "trade-cycle-diagram",
+    "quizIndices": [
+     2
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "economic-growth:block:79c58bf0",
+    "title": "Causes of Economic Growth",
+    "sections": [
+     {
+      "id": "economic-growth:sub:demand-side-causes",
+      "body": [
+       {
+        "text": "**Demand-side causes** of economic growth involve increases in the components of aggregate demand: consumption (C), investment (I), government spending (G) and net exports (X-M). When any of these rise, AD shifts right, and if the economy has spare capacity, real GDP increases.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "C, I, G or (X-M) rises",
+         "AD shifts right",
+         "Firms increase output to meet demand"
+        ],
+        "result": "Real GDP rises and unemployment falls",
+        "resultType": "good"
+       },
+       {
+        "text": "Common demand-side drivers include rising consumer confidence, lower interest rates that encourage borrowing, expansionary fiscal policy, a weaker exchange rate that boosts exports, and rising house prices that create a wealth effect. Each works by putting more spending power into the economy.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should understand the key limitation: demand-side growth has a ceiling. Once the economy reaches full capacity, further AD increases cause inflation rather than higher output. This is why demand-side growth alone cannot sustain long-run economic expansion.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Demand-Side Causes",
+      "recall": {
+       "id": "economic-growth:sub:demand-side-causes:recall",
+       "type": "fillin",
+       "hints": [
+        "X-_",
+        "co__________",
+        "mi___"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "X-M",
+        "consumption",
+        "minus"
+       ],
+       "template": [
+        "AD = C + I + G + ___",
+        "→ C = ___, I = investment, G = government spending",
+        "→ Net exports = exports ___ imports"
+       ]
+      },
+      "keyIdea": "Growth driven by rising aggregate demand uses up spare capacity quickly but cannot sustain growth once the economy reaches full employment.",
+      "examMatters": "When explaining demand-side growth, examiners want you to specify which component of AD has changed and why. Vague statements like 'AD increased' score poorly. You should identify whether it was consumption, investment, government spending or net exports, and explain the underlying cause.",
+      "realExample": {
+       "text": "**Australia** went 28 years without a recession from 1991 to 2019, partly because strong demand from China for Australian commodities kept export revenue high. This demand-side boost sustained growth, but it left Australia vulnerable when Chinese demand eventually slowed.",
+       "emoji": "🇦🇺"
+      },
+      "misconception": "Students claim demand-side growth is always inflationary. If the economy has significant spare capacity, rising AD increases output without pushing up prices. Instead write: demand-side growth only becomes inflationary when the economy is operating at or near full capacity, so the impact depends on the starting point."
+     },
+     {
+      "id": "economic-growth:sub:supply-side-causes",
+      "body": [
+       {
+        "text": "**Supply-side causes** of growth increase the economy's productive potential by improving the quantity or quality of factors of production. These include investment in physical capital, improvements in human capital through education and training, technological innovation and institutional reforms that improve efficiency.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Investment in capital, education or technology",
+         "Productivity rises",
+         "LRAS shifts right"
+        ],
+        "result": "Higher potential output at every price level",
+        "resultType": "good"
+       },
+       {
+        "text": "Supply-side growth is crucial for long-run prosperity because it raises the speed limit of the economy. Without it, any attempt to grow faster through demand-side stimulus eventually runs into inflationary bottlenecks. Countries with strong supply-side fundamentals can sustain higher growth rates over decades.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should recognise that supply-side improvements take time. Building infrastructure, educating workers and developing new technologies are slow processes. The benefits may not appear for years, which makes supply-side policies politically difficult to pursue when voters want immediate results.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Supply-Side Causes",
+      "recall": {
+       "id": "economic-growth:sub:supply-side-causes:recall",
+       "type": "reorder",
+       "prompt": "Order these supply-side causes from quickest to slowest effect:",
+       "shuffled": [
+        3,
+        1,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Deregulation of labour markets",
+        "Investment in new machinery",
+        "Education and skills reform",
+        "Major infrastructure projects"
+       ]
+      },
+      "keyIdea": "Growth driven by expanding productive capacity shifts LRAS right, allowing the economy to produce more without generating inflation.",
+      "examMatters": "Examiners often ask you to compare demand-side and supply-side causes of growth. You score highly by explaining that demand-side growth is quicker but limited by capacity, while supply-side growth is slower but raises the economy's long-run potential without inflation.",
+      "realExample": {
+       "text": "**Singapore** transformed from a low-income port city to one of the world's richest countries by investing relentlessly in education, infrastructure and technology. Its productivity-focused supply-side strategy raised LRAS continuously, allowing sustained growth without persistent inflationary pressure.",
+       "emoji": "🇸🇬"
+      },
+      "misconception": "Students list supply-side causes without distinguishing between quantity and quality of resources. An economy can grow by adding more workers or by making existing workers more productive, and the implications are very different. Instead write: supply-side growth comes from increasing either the quantity of resources or their quality through productivity improvements, with the latter being more sustainable."
+     }
+    ],
+    "takeaway": [
+     "Demand-side growth shifts AD right but hits capacity limits.",
+     "Supply-side growth shifts LRAS right, raising potential output.",
+     "Sustainable growth requires both demand and supply-side drivers.",
+     "Supply-side policies are slow but raise the economy's speed limit."
+    ],
+    "diagramRef": "ad-as-shifts",
+    "quizIndices": [
+     3
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "economic-growth:block:3ebcb25d",
+    "title": "Costs and Benefits of Economic Growth",
+    "sections": [
+     {
+      "id": "economic-growth:sub:benefits-growth",
+      "body": [
+       {
+        "text": "The primary benefit of economic growth is higher **real incomes** and improved **living standards**. When GDP rises, there are more goods and services available for the population. Higher incomes allow people to consume more, save more and enjoy a better quality of life.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Real GDP rises",
+         "Incomes and tax revenues increase",
+         "Government funds better services"
+        ],
+        "result": "Higher living standards and reduced poverty",
+        "resultType": "good"
+       },
+       {
+        "text": "Growth also generates higher **tax revenues** without raising tax rates, allowing governments to spend more on healthcare, education and infrastructure. Faster growth reduces **unemployment** because firms need more workers to produce rising output, which reduces poverty and social deprivation.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should note that growth also boosts **business confidence** and encourages investment. When firms expect rising demand, they invest in new capacity, which creates a virtuous cycle of growth, investment and further growth.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Benefits of Economic Growth",
+      "recall": {
+       "id": "economic-growth:sub:benefits-growth:recall",
+       "type": "fillin",
+       "hints": [
+        "ra___",
+        "se_______",
+        "li_____"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "rates",
+        "services",
+        "living"
+       ],
+       "template": [
+        "Growth raises tax revenues without raising tax ___",
+        "→ Allows more spending on public ___",
+        "→ This improves ___ standards over time"
+       ]
+      },
+      "keyIdea": "Growth raises living standards by increasing real incomes, funding public services and creating employment opportunities across the economy.",
+      "examMatters": "When discussing benefits of growth, examiners expect you to go beyond simply stating that GDP rises. Explain the mechanism through which growth improves welfare: higher incomes, more employment, better public services funded by rising tax revenues.",
+      "realExample": {
+       "text": "**India's** economic growth averaging over 6% annually since 2000 has lifted an estimated 270 million people out of extreme poverty. Rising GDP funded massive expansions in electrification, road building and digital infrastructure that transformed daily life for hundreds of millions.",
+       "emoji": "🇮🇳"
+      },
+      "misconception": "Students assume economic growth automatically benefits everyone equally. Growth can widen inequality if the gains are concentrated among the wealthy, skilled workers or specific regions. Instead write: growth raises overall living standards but the distribution of gains depends on government policy, labour market structure and access to education."
+     },
+     {
+      "id": "economic-growth:sub:costs-growth-environment",
+      "body": [
+       {
+        "text": "Economic growth frequently comes at a significant **environmental cost**. Increased production means more energy consumption, more industrial emissions and more natural resource depletion. Climate change, air pollution and deforestation are all linked to rapid industrialisation and GDP growth.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Output rises rapidly",
+         "Resource use and emissions increase",
+         "Environmental degradation worsens"
+        ],
+        "result": "Long-run sustainability is threatened",
+        "resultType": "bad"
+       },
+       {
+        "text": "Growth can also worsen **income inequality**. If the benefits flow mainly to capital owners, highly skilled workers or certain regions, the gap between rich and poor widens. This can create social tension, reduce social mobility and undermine the wellbeing gains that GDP growth is supposed to deliver.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should understand the distinction between GDP growth and genuine improvements in **welfare**. GDP does not account for environmental damage, unpaid caring work, mental health or leisure time. A country can have rising GDP while its citizens feel no happier or more secure.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Environmental and Social Costs",
+      "recall": {
+       "id": "economic-growth:sub:costs-growth-environment:recall",
+       "type": "reorder",
+       "prompt": "Order these costs of growth from most immediate to most long-term:",
+       "shuffled": [
+        2,
+        0,
+        3,
+        1
+       ],
+       "correctOrder": [
+        "Rising pollution levels",
+        "Resource depletion",
+        "Widening income inequality",
+        "Climate change impacts"
+       ]
+      },
+      "keyIdea": "Growth often degrades the environment through pollution and resource depletion, and can worsen inequality if gains are not shared fairly.",
+      "examMatters": "Evaluation marks require you to discuss whether growth is sustainable. Examiners reward you for distinguishing between growth that depletes resources and growth that invests in clean technology. Always consider whether the country has policies in place to manage the environmental costs.",
+      "realExample": {
+       "text": "**China's** rapid growth lifted incomes dramatically but made it the world's largest carbon emitter and left many cities with dangerously polluted air. The government now spends billions on environmental remediation, illustrating how the costs of growth can accumulate and require expensive correction.",
+       "emoji": "🇨🇳"
+      },
+      "misconception": "Students claim growth is always bad for the environment. Green technologies, renewable energy and efficiency improvements allow economies to grow while reducing environmental impact. Instead write: growth can be environmentally damaging, but sustainable growth is possible when combined with green investment, regulation and technological innovation."
+     },
+     {
+      "id": "economic-growth:sub:growth-living-standards",
+      "body": [
+       {
+        "text": "Economists typically use **real GDP per capita** as a proxy for living standards. By dividing total output by population, you get a rough measure of how much output is available per person. Rising real GDP per capita generally indicates improving material living standards.",
+        "type": "paragraph"
+       },
+       {
+        "text": "However, GDP per capita has significant limitations. It says nothing about the **distribution** of income, so a high average can mask extreme poverty alongside extreme wealth. It does not capture **non-material** aspects of wellbeing such as health, education quality, environmental cleanliness or personal safety.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "GDP per capita rises",
+         "Average material standard improves",
+         "But distribution and quality of life may not"
+        ],
+        "result": "GDP is a necessary but insufficient measure of welfare",
+        "resultType": "neutral"
+       },
+       {
+        "text": "Alternative indicators such as the **Human Development Index** (HDI), which combines income, education and life expectancy, or the **Inequality-adjusted HDI** give a more rounded picture. You should be prepared to discuss why GDP alone can be misleading when evaluating whether growth has genuinely improved people's lives.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Growth and Living Standards",
+      "recall": {
+       "id": "economic-growth:sub:growth-living-standards:recall",
+       "type": "fillin",
+       "hints": [
+        "in____",
+        "ed________",
+        "li__ __________"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "income",
+        "education",
+        "life expectancy"
+       ],
+       "template": [
+        "HDI measure 1: ___ per capita (GNI)",
+        "→ HDI measure 2: ___ (years of schooling)",
+        "→ HDI measure 3: ___ (health indicator)"
+       ]
+      },
+      "keyIdea": "GDP per capita is a useful but incomplete measure of living standards because it ignores distribution, quality of life and sustainability.",
+      "examMatters": "Examiners frequently ask whether economic growth necessarily improves living standards. Top answers evaluate both sides: growth provides resources but its benefits depend on distribution, sustainability and whether non-material welfare is also improving. Always mention at least one alternative indicator.",
+      "realExample": {
+       "text": "**Bhutan** deliberately prioritises Gross National Happiness over GDP growth, measuring progress through psychological wellbeing, health, education and environmental quality. Despite modest GDP per capita, Bhutan scores well on life satisfaction, challenging the assumption that GDP growth is the only path to welfare.",
+       "emoji": "🇧🇹"
+      },
+      "misconception": "Students equate rising GDP with rising living standards without qualification. GDP per capita can rise while inequality worsens, the environment degrades and mental health declines. Instead write: GDP per capita is a useful starting point but must be supplemented with measures of distribution, sustainability and non-material wellbeing."
+     }
+    ],
+    "takeaway": [
+     "Growth raises incomes, employment and tax revenues.",
+     "Environmental damage and rising inequality are key costs.",
+     "GDP per capita is useful but ignores distribution and wellbeing.",
+     "Sustainable growth balances output gains with environmental care."
+    ],
+    "quizIndices": [
+     4
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "economic-growth:block:cefc5aa9",
+    "title": "Economic Growth and AD/AS Analysis",
+    "sections": [
+     {
+      "id": "economic-growth:sub:ad-shifts-growth",
+      "body": [
+       {
+        "text": "On an AD/AS diagram, short-run economic growth is shown by a rightward shift of the AD curve. This could result from a rise in consumer spending, increased government expenditure, higher investment or improved net exports. The new equilibrium shows higher real GDP.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Component of AD increases",
+         "AD shifts right",
+         "New equilibrium at higher real GDP"
+        ],
+        "result": "Short-run growth achieved through demand stimulus",
+        "resultType": "good"
+       },
+       {
+        "text": "The crucial insight is that the impact on the price level depends on the economy's starting position. If there is significant spare capacity, the AD shift mostly raises output with little inflation. If the economy is near full capacity, the same AD shift mostly raises prices with little output gain.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should practise drawing this diagram clearly. Label the original and new AD curves, mark the original and new equilibrium points, and show clearly whether the price level has risen, fallen or stayed the same. Diagram quality directly affects your mark.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "AD Shifts and Short-Run Growth",
+      "recall": {
+       "id": "economic-growth:sub:ad-shifts-growth:recall",
+       "type": "fillin",
+       "hints": [
+        "ou____",
+        "pr____",
+        "el______"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "output",
+        "prices",
+        "elastic"
+       ],
+       "template": [
+        "AD shifts right with spare capacity → effect on ___ rises",
+        "→ Effect on ___ stays relatively stable",
+        "→ Economy moves along the ___ section of SRAS"
+       ]
+      },
+      "keyIdea": "A rightward shift of AD increases real output in the short run, but the effect on prices depends on how close the economy is to full capacity.",
+      "examMatters": "Diagram-based questions on AD shifts are extremely common. Examiners reward correctly drawn and fully labelled diagrams that show the starting point, the shift, and the new equilibrium. Always write a sentence explaining what caused the shift and what happened to both real GDP and the price level.",
+      "realExample": {
+       "text": "**Japan's** government launched massive fiscal stimulus packages totalling over 100 trillion yen after 2012 under Abenomics. The rightward AD shift increased real GDP modestly, but because Japan had persistent spare capacity, inflation remained stubbornly below the 2% target.",
+       "emoji": "🇯🇵"
+      },
+      "misconception": "Students draw AD shifting right and assume both output and prices always rise equally. The split between output and price effects depends entirely on how much spare capacity exists. Instead write: when AD shifts right with significant spare capacity, most of the effect falls on output; near full capacity, most falls on the price level."
+     },
+     {
+      "id": "economic-growth:sub:lras-shifts-growth",
+      "body": [
+       {
+        "text": "Long-run economic growth is shown on an AD/AS diagram by a rightward shift of the **LRAS curve**. This represents an increase in the economy's productive potential. It could result from investment in new technology, improved education, infrastructure development or institutional reforms that raise efficiency.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Supply-side improvement occurs",
+         "LRAS shifts right",
+         "Potential output increases"
+        ],
+        "result": "Economy can produce more without inflationary pressure",
+        "resultType": "good"
+       },
+       {
+        "text": "The key advantage of LRAS-driven growth is that it increases output while reducing or stabilising the price level. This is the holy grail of macroeconomic policy: more output, more jobs and lower inflation simultaneously. It is the only sustainable path to permanently higher living standards.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should be able to explain what caused the LRAS shift in any given scenario. If the question mentions new technology, link it to higher productivity. If it mentions immigration, link it to a larger labour force. The examiner wants you to connect the real-world cause to the diagram.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "LRAS Shifts and Long-Run Growth",
+      "recall": {
+       "id": "economic-growth:sub:lras-shifts-growth:recall",
+       "type": "reorder",
+       "prompt": "Order the steps for LRAS-driven growth:",
+       "shuffled": [
+        1,
+        3,
+        0,
+        2
+       ],
+       "correctOrder": [
+        "Supply-side policy implemented",
+        "Productivity or capacity improves",
+        "LRAS shifts right",
+        "Potential output rises at stable prices"
+       ]
+      },
+      "keyIdea": "A rightward shift of LRAS represents an increase in productive capacity, allowing higher output at a lower or stable price level.",
+      "examMatters": "High-mark questions require you to draw a clearly labelled AD/AS diagram showing the LRAS shift and explain both the cause and the consequences. The best answers then evaluate whether the supply-side improvement will be sustained or whether it is a one-off shift.",
+      "realExample": {
+       "text": "**Germany's** Hartz labour market reforms between 2003 and 2005 increased labour market flexibility and workforce participation. This supply-side improvement shifted LRAS right, helping Germany reduce unemployment from 11% to under 5% while maintaining low inflation and strong export performance.",
+       "emoji": "🇩🇪"
+      },
+      "misconception": "Students draw LRAS shifting right and forget to explain the cause. An LRAS shift must be linked to a specific improvement in productive capacity such as technology, education or capital investment. Instead write: always identify the specific supply-side factor that caused the LRAS shift, because examiners award marks for the causal explanation, not just the diagram."
+     },
+     {
+      "id": "economic-growth:sub:combined-ad-as-analysis",
+      "body": [
+       {
+        "text": "The most favourable macroeconomic outcome occurs when **AD and LRAS shift rightward together**. In this scenario, the economy grows without opening a significant output gap in either direction. Output rises, employment increases, and the price level remains stable.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "LRAS shifts right (capacity grows)",
+         "AD shifts right (demand grows)",
+         "Both shifts are proportionate"
+        ],
+        "result": "Balanced growth with stable prices",
+        "resultType": "good"
+       },
+       {
+        "text": "If AD grows faster than LRAS, a positive output gap opens and inflation results. If LRAS grows faster than AD, a negative output gap opens and there is spare capacity. The policy challenge is to ensure that demand growth broadly matches the expansion of supply-side capacity.",
+        "type": "paragraph"
+       },
+       {
+        "text": "You should use this combined framework in essay questions where examiners ask you to evaluate growth strategies. Arguing that a country needs both demand-side and supply-side policies working together demonstrates sophisticated understanding and earns evaluation marks.",
+        "type": "paragraph"
+       }
+      ],
+      "title": "Combined AD and LRAS Shifts",
+      "recall": {
+       "id": "economic-growth:sub:combined-ad-as-analysis:recall",
+       "type": "fillin",
+       "hints": [
+        "po______",
+        "in________",
+        "fu__"
+       ],
+       "prompt": "Complete the chain:",
+       "answers": [
+        "positive",
+        "inflation",
+        "full"
+       ],
+       "template": [
+        "AD grows faster than LRAS → a ___ output gap opens",
+        "→ Demand exceeds supply → ___ results",
+        "→ Economy overheats beyond ___ capacity"
+       ]
+      },
+      "keyIdea": "The best growth outcome is when AD and LRAS shift together, so the economy grows without opening an output gap or generating inflation.",
+      "examMatters": "The highest-level answers combine AD and LRAS shifts on a single diagram and explain the macroeconomic outcome. Examiners particularly reward you for evaluating whether a country's current policy mix achieves this balance or whether one side is growing faster than the other.",
+      "realExample": {
+       "text": "**The United States** in the late 1990s achieved a rare combination of strong growth, low unemployment and low inflation. The technology boom shifted LRAS right through productivity gains while consumer confidence and investment shifted AD right in tandem, producing balanced non-inflationary growth.",
+       "emoji": "🇺🇸"
+      },
+      "misconception": "Students discuss demand-side and supply-side growth as separate alternatives and never combine them. In reality, the best economic outcomes occur when both work together, with supply creating capacity and demand filling it. Instead write: sustainable growth requires AD and LRAS to shift together so that rising capacity is matched by rising demand without inflationary or deflationary gaps."
+     }
+    ],
+    "takeaway": [
+     "AD shifts right for short-run growth; LRAS shifts right for long-run growth.",
+     "Spare capacity determines whether AD shifts raise output or prices.",
+     "Balanced AD and LRAS shifts produce non-inflationary sustained growth.",
+     "Always label diagrams fully and explain the cause of each shift."
+    ],
+    "diagramRef": "ad-as-growth-analysis",
+    "quizIndices": [
+     5
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Actual growth: AD rises along existing LRAS",
+      "Spare capacity is used up",
+      "Potential growth: LRAS shifts right, raising the ceiling"
+     ],
+     "result": "Sustainable growth requires both AD and LRAS to expand",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Actual vs Potential Economic Growth",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Actual economic growth</strong> — the annual percentage increase in real GDP, reflecting how much more output the economy actually produces from one year to the next.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Potential economic growth</strong> — an increase in the productive capacity of the economy, shown by an outward shift of the LRAS curve or the PPF.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Trend growth rate</strong> — the long-run average rate at which the economy's potential output expands, determined by improvements in the quantity and quality of factors of production.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Actual growth occurs when <strong>AD increases</strong> and the economy moves closer to its full capacity, using previously unemployed resources.",
+        "type": "mech"
+       },
+       {
+        "text": "Potential growth occurs when <strong>LRAS shifts right</strong> due to improvements in technology, education, infrastructure, or the labour force, expanding the economy's ceiling.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "An economy can have actual growth <strong>without</strong> potential growth (using up spare capacity) or potential growth <strong>without</strong> actual growth (capacity rises but demand is weak).",
+        "type": "imp"
+       },
+       {
+        "text": "Actual growth links to AD shifts from 2.3.2; potential growth links to LRAS shifts from 2.3.3. Use both to explain sustainable long-run growth.",
+        "type": "link"
+       }
+      ],
+      "title": "HOW THEY DIFFER"
+     }
+    ],
+    "keyIdea": "An economy can grow by using its existing resources more fully (actual growth) or by expanding its total capacity to produce (potential growth) — confusing the two is a common exam mistake.",
+    "takeaway": [
+     "Actual growth = rise in real GDP; potential growth = rise in productive capacity.",
+     "Actual growth uses spare capacity; potential growth expands the capacity ceiling.",
+     "Sustainable long-run growth requires both AD growth and LRAS shifts.",
+     "On a PPF diagram, actual growth moves toward the frontier; potential growth shifts it out."
+    ],
+    "examMatters": "Examiners want you to distinguish clearly between the two types on a diagram. Actual growth is a movement along or toward the LRAS curve; potential growth is a rightward shift of the LRAS curve itself. Always state which type you mean and support it with the correct diagram."
+   },
+   {
+    "meta": "4 concepts",
+    "title": "Output Gaps",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Output gap</strong> — the difference between actual real GDP and the potential (trend) level of GDP; it can be positive or negative.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Positive output gap</strong> — actual GDP exceeds potential GDP; the economy is overheating, with demand outstripping capacity, creating inflationary pressure.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Negative output gap</strong> — actual GDP is below potential GDP; spare capacity exists, unemployment is above the natural rate, and there is downward pressure on inflation.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "A <strong>positive output gap</strong> signals the need for contractionary policy (higher interest rates or lower government spending) to reduce AD and prevent inflation accelerating.",
+        "type": "mech"
+       },
+       {
+        "text": "A <strong>negative output gap</strong> signals the need for expansionary policy (lower interest rates or higher government spending) to boost AD and reduce unemployment.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Estimating the output gap is <strong>difficult in practice</strong> because potential GDP is not directly observable; errors in estimation can lead to inappropriate policy responses.",
+        "type": "imp"
+       },
+       {
+        "text": "Output gaps connect to the business cycle below — booms create positive gaps and recessions create negative gaps — and to the multiplier in 2.3.4, which determines how quickly gaps close.",
+        "type": "link"
+       }
+      ],
+      "title": "POLICY IMPLICATIONS"
+     }
+    ],
+    "formula": {
+     "text": "Output gap = Actual GDP − Potential GDP",
+     "label": "OUTPUT GAP"
+    },
+    "keyIdea": "The output gap measures whether the economy is running above or below its potential — it tells policymakers whether the main risk is inflation (positive gap) or unemployment (negative gap).",
+    "takeaway": [
+     "A positive output gap means overheating and inflationary pressure.",
+     "A negative output gap means spare capacity and higher unemployment.",
+     "Potential GDP is estimated, not observed — policy based on it involves uncertainty.",
+     "Output gaps guide whether expansionary or contractionary policy is appropriate."
+    ],
+    "misconception": "Students say a negative output gap means the economy is shrinking. Wrong because a negative output gap means actual GDP is below potential, not that GDP is falling. The economy could be growing but still have a negative gap if it remains below trend. Instead write: a negative output gap shows the economy is producing below its full capacity, regardless of whether GDP is rising or falling."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Boom: AD grows fast, positive output gap",
+      "Slowdown: growth decelerates",
+      "Recession: negative growth, rising unemployment",
+      "Recovery: AD picks up, gap closes"
+     ],
+     "result": "Cycle repeats around the long-run trend",
+     "resultType": "good"
+    },
+    "meta": "5 concepts",
+    "title": "The Business (Trade) Cycle",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Business (trade) cycle</strong> — the short-to-medium-term fluctuations in real GDP around the long-run trend growth rate, consisting of booms, recessions, and recoveries.",
+        "type": "def"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>Recession</strong> — technically defined as two consecutive quarters of negative real GDP growth; characterised by rising unemployment, falling confidence, and declining investment.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Boom</strong> — a phase of rapid economic growth where actual GDP exceeds potential GDP, creating a positive output gap with rising employment, wages, and inflation.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "During a <strong>boom</strong>, high consumer and business confidence drives strong AD growth, unemployment falls below the natural rate, and demand-pull inflation accelerates.",
+        "type": "mech"
+       },
+       {
+        "text": "During a <strong>recession</strong>, falling confidence reduces consumption and investment, AD contracts, firms cut output and jobs, and the negative output gap widens.",
+        "type": "mech"
+       },
+       {
+        "text": "During <strong>recovery</strong>, lower prices and policy stimulus boost spending, firms begin restocking and hiring, and actual GDP starts closing the negative output gap.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The business cycle creates a <strong>policy dilemma</strong>: booms risk inflation, recessions risk unemployment, and policy responses involve time lags that may destabilise the cycle further.",
+        "type": "imp"
+       }
+      ],
+      "title": "PHASES OF THE CYCLE"
+     },
+     {
+      "items": [
+       {
+        "text": "Business cycle fluctuations are driven by changes in the components of AD (C, I, G, X−M), linking to the multiplier covered in 2.3.4.",
+        "type": "link"
+       },
+       {
+        "text": "Investment is the most <strong>volatile</strong> component of AD and is the main driver of cyclical fluctuations, because firms bring forward or postpone capital spending as their expectations of demand change.",
+        "type": "imp"
+       },
+       {
+        "text": "Business confidence swings more widely than output itself, so investment rises faster than GDP in a boom and falls faster in a downturn.",
+        "type": "mech"
+       }
+      ],
+      "title": "ANALYSIS"
+     }
+    ],
+    "keyIdea": "Real GDP does not grow in a straight line — it fluctuates around the trend in a repeated pattern of boom, slowdown, recession, and recovery, each phase with distinct symptoms and policy challenges.",
+    "takeaway": [
+     "The business cycle has four phases: boom, slowdown, recession, recovery.",
+     "A recession is two consecutive quarters of negative real GDP growth.",
+     "Investment volatility is the main cyclical amplifier.",
+     "Policy lags mean intervention may arrive too late and destabilise the cycle."
+    ],
+    "examMatters": "Examiners expect you to draw the business cycle as fluctuations around an upward-sloping trend line. Label each phase clearly and connect it to the output gap. Marks are awarded for explaining the characteristics of each phase — not just naming them."
+   },
+   {
+    "meta": "4 concepts",
+    "title": "Causes of Economic Growth",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "A rise in <strong>consumer confidence</strong> increases C, boosting AD and causing actual growth as firms increase output to meet higher demand.",
+        "type": "mech"
+       },
+       {
+        "text": "Lower <strong>interest rates</strong> reduce the cost of borrowing, encouraging higher C and I, which raises AD and stimulates short-run growth.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Demand-side growth is <strong>limited by capacity</strong>: once the economy reaches full employment, further AD increases cause inflation rather than real growth.",
+        "type": "imp"
+       }
+      ],
+      "title": "DEMAND-SIDE CAUSES"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Technological innovation</strong> raises productivity, allowing more output from the same inputs and shifting LRAS to the right.",
+        "type": "mech"
+       },
+       {
+        "text": "Investment in <strong>human capital</strong> (education and training) improves labour productivity and quality, increasing potential output over time.",
+        "type": "mech"
+       },
+       {
+        "text": "Growth in the <strong>labour force</strong> (through immigration, higher participation, or population growth) expands the quantity of factor inputs available.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Supply-side growth is <strong>non-inflationary</strong> because it expands capacity alongside output, allowing real GDP to rise without upward pressure on the price level.",
+        "type": "imp"
+       },
+       {
+        "text": "Supply-side causes connect directly to supply-side policies in 2.3.6 — interventionist policies like education spending and market-based policies like deregulation both aim to shift LRAS right.",
+        "type": "link"
+       }
+      ],
+      "title": "SUPPLY-SIDE CAUSES"
+     }
+    ],
+    "keyIdea": "Growth has two engines: demand-side forces that put idle resources to work in the short run, and supply-side forces that expand the economy's productive capacity in the long run.",
+    "takeaway": [
+     "Demand-side growth uses spare capacity; supply-side growth expands capacity itself.",
+     "Demand-side growth is inflationary at full employment; supply-side growth is not.",
+     "Key supply-side drivers: technology, human capital, physical capital, labour force growth.",
+     "Sustainable growth requires both rising AD and expanding LRAS."
+    ],
+    "examMatters": "Examiners reward candidates who distinguish between short-run demand-driven growth and long-run supply-driven growth. Always state which type a policy promotes and whether it risks inflation."
+   },
+   {
+    "meta": "5 concepts",
+    "title": "Costs and Benefits of Economic Growth",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "Higher real GDP per capita means higher <strong>average incomes</strong>, enabling greater consumption and improved material living standards.",
+        "type": "mech"
+       },
+       {
+        "text": "Growth generates higher <strong>tax revenue</strong> without raising tax rates, giving governments more resources for public services and poverty reduction.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Growth creates <strong>employment opportunities</strong>: rising output requires more labour, reducing cyclical unemployment and boosting confidence.",
+        "type": "imp"
+       }
+      ],
+      "title": "BENEFITS OF GROWTH"
+     },
+     {
+      "items": [
+       {
+        "text": "<strong>Environmental degradation</strong>: rapid growth increases resource depletion, pollution, and carbon emissions, creating negative externalities that GDP does not capture.",
+        "type": "imp"
+       },
+       {
+        "text": "<strong>Income inequality</strong>: the benefits of growth may be concentrated among capital owners and skilled workers, widening the gap between rich and poor.",
+        "type": "imp"
+       },
+       {
+        "text": "Rapid demand-side growth can cause <strong>demand-pull inflation</strong>, eroding the purchasing power of fixed incomes and distorting price signals.",
+        "type": "mech"
+       },
+       {
+        "text": "The distinction between GDP growth and welfare improvements links to 2.3.1 measures of living standards — HDI and inequality-adjusted measures capture what GDP misses.",
+        "type": "link"
+       }
+      ],
+      "title": "COSTS OF GROWTH"
+     },
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "Whether growth improves welfare depends on its <strong>composition</strong>: growth driven by arms spending or financial speculation may raise GDP without improving lives.",
+        "type": "imp"
+       },
+       {
+        "text": "<strong>Sustainable growth</strong> balances current output expansion with environmental preservation and resource conservation for future generations.",
+        "type": "mech"
+       },
+       {
+        "text": "The costs of growth provide evaluation for any question recommending expansionary policy — always consider whether the growth is sustainable, equitable, and environmentally responsible.",
+        "type": "link"
+       }
+      ],
+      "title": "EVALUATION"
+     }
+    ],
+    "keyIdea": "Growth raises average living standards and creates jobs, but the gains are not automatic — they may come with environmental degradation, inequality, and diminishing marginal returns to material wealth.",
+    "takeaway": [
+     "Benefits: higher incomes, more tax revenue, lower unemployment.",
+     "Costs: environmental damage, inequality, inflation risk, resource depletion.",
+     "GDP growth does not equal welfare improvement — composition and distribution matter.",
+     "Always evaluate growth policies by asking: sustainable, equitable, inflationary?"
+    ],
+    "misconception": "Students say economic growth is always desirable. Wrong because growth has opportunity costs including environmental damage, inequality, and inflation risk. Instead write: whether growth improves welfare depends on its distribution, sustainability, and the externalities it generates."
+   },
+   {
+    "flow": {
+     "steps": [
+      "AD shifts right: actual growth (may be inflationary)",
+      "LRAS shifts right: potential growth (non-inflationary)",
+      "Both shift together: sustained non-inflationary growth"
+     ],
+     "result": "Long-run prosperity requires demand and supply growing in balance",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Economic Growth and AD/AS Analysis",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "A rightward shift of AD (e.g., from higher C or G) increases real GDP along the SRAS curve, representing <strong>actual growth</strong> — but also raises the price level if the economy is near capacity.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "If AD shifts right <strong>beyond full employment</strong>, the growth is purely inflationary: real GDP cannot sustainably exceed potential output, and the price level rises sharply.",
+        "type": "imp"
+       }
+      ],
+      "title": "AD SHIFTS AND ACTUAL GROWTH"
+     },
+     {
+      "items": [
+       {
+        "text": "A rightward shift of LRAS (e.g., from technological progress or increased labour supply) increases <strong>potential output</strong>, lowering the price level and raising full-employment GDP.",
+        "type": "mech"
+       },
+       {
+        "text": "LRAS growth is <strong>non-inflationary</strong>: the economy's capacity expands, so more output can be produced without putting upward pressure on prices.",
+        "type": "imp"
+       },
+       {
+        "text": "LRAS shifts result from supply-side improvements covered in 2.3.3 and link to supply-side policies in 2.3.6 — always identify the specific cause of the shift.",
+        "type": "link"
+       }
+      ],
+      "title": "LRAS SHIFTS AND POTENTIAL GROWTH"
+     },
+     {
+      "items": [
+       {
+        "text": "When AD and LRAS both shift right together, real GDP rises <strong>without inflation</strong> because the extra demand is matched by extra capacity — this is the ideal growth scenario.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "In practice, AD and LRAS rarely shift at the same rate: if AD grows faster than LRAS, inflation results; if LRAS grows faster, there may be spare capacity and unemployment.",
+        "type": "imp"
+       },
+       {
+        "text": "This analysis is the basis for policy evaluation in 2.3.6: fiscal and monetary policy shift AD, while supply-side policies shift LRAS. The best strategy combines both.",
+        "type": "link"
+       }
+      ],
+      "title": "COMBINED SHIFTS"
+     }
+    ],
+    "keyIdea": "The AD/AS model makes growth visible: a rightward AD shift shows actual growth, a rightward LRAS shift shows potential growth, and only when both move together does the economy achieve sustained, non-inflationary growth.",
+    "takeaway": [
+     "AD shift right = actual growth (may cause inflation near capacity).",
+     "LRAS shift right = potential growth (non-inflationary).",
+     "Ideal outcome: AD and LRAS shift together for sustained, stable growth.",
+     "Always ask whether growth is demand-driven, supply-driven, or both."
+    ],
+    "examMatters": "Examiners award top marks for diagrams that show both AD and LRAS shifting. Draw the initial equilibrium, then show the new equilibrium after both curves shift. Annotate the diagram to show that real GDP rises but the price level stays stable."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "economic-growth:quiz:17e462b4",
+    "options": [
+     "An increase in the productive capacity of the economy",
+     "An increase in real GDP over a given period",
+     "An outward shift of the production possibility frontier",
+     "A rightward shift of the long-run aggregate supply curve"
+    ],
+    "question": "Actual economic growth is best defined as:",
+    "explanation": "Actual economic growth is the annual percentage increase in real GDP - it measures how much more the economy is actually producing. Option A describes potential growth. Options C and D both show potential growth (increased capacity), not actual growth. Actual growth is shown by movement toward the PPF or a rightward shift in AD.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:bf7deee5",
+    "options": [
+     "Demand-pull inflation and falling unemployment",
+     "Rising asset prices and a positive trade balance",
+     "Cyclical unemployment and downward pressure on prices",
+     "A budget surplus and rising government spending"
+    ],
+    "question": "A negative output gap is most likely to be associated with:",
+    "explanation": "A negative output gap means actual GDP < potential GDP, indicating spare capacity. This leads to cyclical (demand-deficient) unemployment and deflationary/disinflationary pressure. Option A describes a positive output gap. Option B is more associated with a boom. Option D is internally contradictory (rising spending typically worsens the fiscal position).",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:b8c3cafa",
+    "options": [
+     "Rising unemployment, falling GDP, increasing spare capacity",
+     "Above-trend growth, rising inflation, falling unemployment",
+     "Negative GDP growth, falling consumer confidence, rising savings",
+     "Below-trend growth, stable prices, rising investment"
+    ],
+    "question": "Which combination of indicators is most consistent with the boom phase of the business cycle?",
+    "explanation": "A boom is characterised by above-trend GDP growth, rising inflationary pressure (demand-pull), and falling unemployment as firms expand output. Option A describes a recession/slump. Option C describes a recession. Option D could describe early recovery but not a boom, as growth would be above trend in a boom.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:856c7c37",
+    "options": [
+     "A movement from a point inside the frontier to a point on the frontier",
+     "A movement along the frontier from one combination to another",
+     "An inward shift of the frontier",
+     "An outward shift of the frontier"
+    ],
+    "question": "On a production possibility frontier diagram, potential economic growth is shown by:",
+    "explanation": "Potential growth increases the economy's maximum productive capacity, shown by the PPF shifting outward - the economy can now produce more of all goods. Option A shows actual growth (using spare capacity). Option B shows reallocation of resources, not growth. Option C shows a decline in productive capacity (e.g. natural disaster).",
+    "correctIndex": 3
+   },
+   {
+    "id": "economic-growth:quiz:3c34bfaa",
+    "options": [
+     "A cut in interest rates by the central bank",
+     "An increase in consumer confidence leading to higher spending",
+     "Investment in education and training improving workforce productivity",
+     "A depreciation of the exchange rate boosting export demand"
+    ],
+    "question": "Which of the following is a supply-side cause of economic growth?",
+    "explanation": "Investment in education and training is a supply-side factor that improves human capital and labour productivity, shifting LRAS to the right (potential growth). Option A is a monetary policy change affecting AD (demand-side). Option B is a demand-side factor increasing C. Option D is a demand-side factor increasing net exports.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:624c3a1e",
+    "options": [
+     "Reduced government tax revenue",
+     "A deterioration in the current account of the balance of payments",
+     "Falling consumer confidence",
+     "An increase in the natural rate of unemployment"
+    ],
+    "question": "A cost of rapid economic growth is most likely to include:",
+    "explanation": "Rapid growth tends to increase import spending faster than export growth (rising incomes lead to more import spending), worsening the current account. Option A is wrong - growth typically increases tax revenue. Option C is wrong - growth usually boosts confidence. Option D is wrong - the natural rate relates to structural factors, not growth speed.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:6b8ce13d",
+    "options": [
+     "Maximises short-run GDP regardless of other consequences",
+     "Is achieved solely through increases in aggregate demand",
+     "Meets present needs without compromising future generations' ability to meet theirs",
+     "Eliminates the business cycle and maintains constant GDP growth"
+    ],
+    "question": "Sustainable economic growth is best described as growth that:",
+    "explanation": "Sustainable growth balances current economic needs with environmental and social considerations for future generations. Option A ignores long-run costs. Option B is only demand-side and likely unsustainable. Option D is unrealistic - the business cycle cannot be completely eliminated, and constant growth is not the goal of sustainability.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:6b46fe83",
+    "options": [
+     "A significant rise in the price level with little change in output",
+     "An increase in real output with relatively little inflationary pressure",
+     "A leftward shift of the long-run aggregate supply curve",
+     "An immediate fall in unemployment to zero"
+    ],
+    "question": "If aggregate demand increases when the economy has a large negative output gap, the most likely result is:",
+    "explanation": "With a large negative output gap, there is significant spare capacity. An increase in AD primarily increases real output rather than prices, because firms can expand production using idle resources. Option A describes what happens near full capacity (positive output gap). Option C is unrelated to AD changes. Option D is extreme and unrealistic - unemployment never reaches zero.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:73981b53",
+    "options": [
+     "Changes in aggregate demand and consumer spending patterns",
+     "Fluctuations in the business cycle over short time periods",
+     "Supply-side factors such as productivity growth and labour force changes",
+     "The government's fiscal policy stance and budget balance"
+    ],
+    "question": "The trend rate of growth is best determined by:",
+    "explanation": "The trend rate of growth represents long-run sustainable growth determined by supply-side factors: productivity improvements, workforce expansion, capital accumulation, and technological progress. Options A and D primarily affect actual growth in the short run. Option B describes cyclical fluctuations around the trend, not the trend itself.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:e5577230",
+    "options": [
+     "Actual growth measures the increase in GDP; potential growth measures the increase in productive capacity",
+     "Actual growth is always higher than potential growth",
+     "Potential growth can only be achieved through government intervention",
+     "There is no meaningful difference between the two"
+    ],
+    "question": "The difference between actual economic growth and potential economic growth is that:",
+    "explanation": "Actual growth is the annual percentage increase in real GDP. Potential growth is the increase in the economy's capacity to produce (shown by an outward shift of the PPF or LRAS). Actual growth can occur by using spare capacity.",
+    "correctIndex": 0
+   },
+   {
+    "id": "economic-growth:quiz:edd7ec91",
+    "options": [
+     "Rising unemployment and falling inflation",
+     "Rising inflation as demand exceeds the economy's sustainable capacity",
+     "Falling GDP and rising saving",
+     "A recession caused by supply-side factors"
+    ],
+    "question": "An economy experiencing a positive output gap is likely to face:",
+    "explanation": "A positive output gap means actual GDP exceeds potential GDP. The economy is overheating, with demand outstripping capacity, putting upward pressure on wages and prices, causing demand-pull inflation.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:8e72be71",
+    "options": [
+     "Higher employment and lower unemployment",
+     "Increased government tax revenue",
+     "Environmental degradation and resource depletion",
+     "Improved living standards for most of the population"
+    ],
+    "question": "Which of the following is a cost of economic growth?",
+    "explanation": "Economic growth often involves increased production which can lead to pollution, deforestation, and resource depletion. These environmental costs reduce the sustainability of growth and may reduce welfare for future generations.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:32300311",
+    "options": [
+     "The pattern of long-run economic growth over centuries",
+     "Short-term fluctuations in real GDP around the long-run trend",
+     "The process of buying and selling goods in international markets",
+     "The cycle of inflation followed by deflation"
+    ],
+    "question": "The business (trade) cycle refers to:",
+    "explanation": "The business cycle describes regular short-term fluctuations in economic activity (boom, slowdown, recession, recovery) around the long-run growth trend. GDP rises above and falls below the trend in a cyclical pattern.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:213c92cd",
+    "options": [
+     "Rising GDP, falling unemployment, rising inflation",
+     "Falling GDP for two or more consecutive quarters, rising unemployment",
+     "Stable GDP with rising investment and consumer confidence",
+     "GDP at its peak with full employment"
+    ],
+    "question": "During the recession phase of the business cycle, which of the following is most likely?",
+    "explanation": "A recession is technically defined as two or more consecutive quarters of falling real GDP. It is characterised by rising unemployment, falling consumer and business confidence, and declining investment and spending.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:4080fdfe",
+    "options": [
+     "Restricts imports to protect domestic industries",
+     "Focuses on increasing exports as the main driver of GDP growth",
+     "Relies primarily on government spending to drive growth",
+     "Encourages domestic consumption as the main source of growth"
+    ],
+    "question": "Export-led growth is a strategy where a country:",
+    "explanation": "Export-led growth focuses on expanding the export sector as the main engine of economic growth. Countries like China and South Korea used this strategy, benefiting from increased AD through rising net exports.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:dcb139ea",
+    "options": [
+     "An increase in consumer spending financed by borrowing",
+     "A cut in interest rates stimulating aggregate demand",
+     "Investment in research and development leading to new technologies",
+     "A temporary government spending boost during a recession"
+    ],
+    "question": "Which of the following would contribute to long-run (potential) economic growth?",
+    "explanation": "Long-run growth requires an increase in productive capacity. R&D investment leads to technological innovation, improving productivity and shifting the LRAS curve to the right, enabling sustained growth.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:af1a7c14",
+    "options": [
+     "Occurs at the fastest possible rate",
+     "Can be maintained over time without depleting resources or causing excessive environmental damage",
+     "Is driven entirely by government spending",
+     "Leads to zero inflation"
+    ],
+    "question": "The concept of sustainable economic growth refers to growth that:",
+    "explanation": "Sustainable growth meets present needs without compromising the ability of future generations to meet theirs. It involves balancing economic expansion with environmental protection and resource conservation.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:e471ace9",
+    "options": [
+     "A leftward shift of the LRAS curve only",
+     "A rightward shift of both AD and LRAS, potentially increasing growth",
+     "A leftward shift of the AD curve",
+     "No change in either AD or LRAS"
+    ],
+    "question": "An increase in net immigration of working-age people would most likely lead to:",
+    "explanation": "Working-age immigrants expand the labour force (shifting LRAS right by increasing productive capacity) and also increase consumer spending (shifting AD right). This can boost both actual and potential growth.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:93e37df8",
+    "options": [
+     "GDP is at its highest point and unemployment is at its lowest",
+     "GDP is falling and unemployment is rising rapidly",
+     "GDP begins to rise again after a trough, with gradually falling unemployment",
+     "GDP growth slows from its peak as the economy begins to overheat"
+    ],
+    "question": "Which of the following best describes the recovery phase of the business cycle?",
+    "explanation": "The recovery (expansion) phase follows the trough of a recession. GDP begins to rise, unemployment gradually falls, consumer and business confidence improve, and spending and investment increase.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:aef53d05",
+    "options": [
+     "GDP per capita always rises with economic growth",
+     "The benefits of growth may be unevenly distributed, increasing income inequality",
+     "Economic growth always reduces pollution",
+     "All citizens benefit equally from higher GDP"
+    ],
+    "question": "One reason why economic growth might not lead to improved living standards for all citizens is:",
+    "explanation": "Economic growth can increase income inequality if the gains go primarily to the wealthy. Without redistribution, many citizens may see little improvement in their living standards despite rising GDP.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:442e5f86",
+    "options": [
+     "The economy moves from a point inside the PPF to a point on the PPF",
+     "The PPF shifts outward",
+     "The LRAS curve shifts to the right",
+     "New natural resources are discovered"
+    ],
+    "question": "Actual economic growth can occur without an increase in potential output if:",
+    "explanation": "Actual growth can occur by reducing unemployment and using spare capacity (moving from inside to on the PPF). This increases actual GDP without increasing the economy's maximum potential output.",
+    "correctIndex": 0
+   },
+   {
+    "id": "economic-growth:quiz:aed0912a",
+    "options": [
+     "High unemployment and low inflation",
+     "Rapid GDP growth, low unemployment, and rising inflationary pressures",
+     "Falling GDP and rising government borrowing",
+     "Stable prices and moderate economic growth"
+    ],
+    "question": "The 'boom' phase of the business cycle is typically characterised by:",
+    "explanation": "During a boom, the economy grows rapidly, unemployment falls to very low levels, consumer and business confidence is high, but demand pressures lead to rising inflation as the economy approaches or exceeds capacity.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:58016118",
+    "options": [
+     "Maximises GDP regardless of distribution",
+     "Benefits all sections of society, particularly the poorest, and reduces inequality",
+     "Is driven entirely by the private sector",
+     "Occurs only in developed economies"
+    ],
+    "question": "Inclusive growth refers to economic growth that:",
+    "explanation": "Inclusive growth ensures that the benefits of economic expansion are shared broadly across society, reducing poverty and inequality. It focuses on equal opportunities and ensuring marginalised groups benefit from growth.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:40f17275",
+    "options": [
+     "Rising inflation and falling unemployment",
+     "Falling inflation and rising unemployment",
+     "Rising inflation and rising unemployment",
+     "Falling inflation and falling unemployment"
+    ],
+    "question": "A negative output gap is most likely to lead to which combination?",
+    "explanation": "A negative output gap means actual output is below potential. There is spare capacity in the economy, which puts downward pressure on prices (lower inflation) and means many resources, including labour, are unemployed.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "economic-growth:practice:726a315a",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "Economic growth is an increase in the real GDP of an economy over time (1 mark). Short-run (actual) growth occurs when the economy makes better use of existing resources, moving closer to the PPF (1 mark). Long-run (potential) growth occurs when the productive capacity of the economy increases, shifting the PPF outward (1 mark). It is typically measured as the annual percentage change in real GDP (1 mark).",
+    "question": "Define the term 'economic growth'. (4 marks)"
+   },
+   {
+    "id": "economic-growth:practice:200cd870",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Cost 1: Environmental degradation (1 mark) — rapid growth often involves increased industrial production and energy consumption, leading to higher carbon emissions, deforestation and pollution (1 mark). This imposes negative externalities on current and future generations (1 mark).\n\nCost 2: Increased income inequality (1 mark) — the benefits of growth may be unevenly distributed, with skilled workers and capital owners gaining disproportionately (1 mark). This can lead to social tension and reduced well-being for those left behind despite rising average income (1 mark).",
+    "question": "Explain two possible costs of rapid economic growth. (6 marks)"
+   },
+   {
+    "id": "economic-growth:practice:91f9ea0c",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define FDI as investment by a foreign firm in productive assets such as factories or infrastructure in another country (2 marks). Importance: brings capital to countries with low domestic savings, financing investment that would otherwise not occur (2 marks); transfers technology, management expertise and skills, raising productivity (2 marks); creates employment and raises incomes, potentially triggering multiplier effects (1 mark). Limitations: profits may be repatriated rather than reinvested locally (1 mark); may exploit cheap labour or environmental regulations, leading to a race to the bottom (1 mark). Judgement: FDI is important but its benefits depend on the host country's institutions, regulatory framework and ability to absorb technology (1 mark).",
+    "question": "Assess the importance of foreign direct investment (FDI) in promoting economic growth in developing countries. (10 marks)"
+   },
+   {
+    "id": "economic-growth:practice:91931ac1",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define economic growth and distinguish between actual and potential growth (2 marks).\n\nFor — growth is desirable: Higher real incomes improve material living standards and reduce absolute poverty (3 marks); growth generates tax revenue, enabling greater public spending on healthcare, education and infrastructure (2 marks); reduces unemployment as firms expand output and hire more workers (2 marks).\n\nAgainst — growth is not always desirable: Environmental costs — growth based on fossil fuels and resource extraction accelerates climate change and biodiversity loss (3 marks); may worsen inequality if gains are concentrated among the wealthy (2 marks); inflationary pressures — if growth exceeds the economy's productive capacity, demand-pull inflation may result (2 marks); diminishing marginal returns to income — beyond a certain level, additional GDP contributes less to happiness (1 mark).\n\nEvaluation: Growth is generally desirable but the composition and sustainability of growth matter as much as its rate (1 mark). Green growth that is inclusive and environmentally sustainable is preferable to growth that depletes natural resources and widens inequality. The desirability of growth also depends on a country's stage of development — for low-income nations, growth is essential; for wealthy nations, the quality of growth is more important (2 marks).",
+    "question": "Evaluate the view that economic growth is always desirable. (20 marks)"
+   },
+   {
+    "id": "economic-growth:practice:4e5bd0cf",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Actual economic growth is an increase in real GDP — the economy produces more output, moving closer to the PPF (1 mark). It can result from using previously unemployed resources (1 mark).\n\nPotential economic growth is an increase in the productive capacity of the economy — the PPF shifts outward (1 mark). It results from improvements in the quantity or quality of factors of production, such as new technology or a growing labour force (1 mark).",
+    "question": "Outline the difference between actual and potential economic growth. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "economic-growth:card:280ed790",
+    "back": "A sustained increase in <strong>real GDP over time</strong>. Short-run growth = using spare capacity (moving toward the PPF). Long-run growth = expanding productive capacity (shifting the PPF outward).",
+    "front": "What is economic growth?"
+   },
+   {
+    "id": "economic-growth:card:b5d60cb2",
+    "back": "<strong>Actual growth</strong>: the rate at which real GDP increases (can use spare capacity). <strong>Potential growth</strong>: the rate at which the economy's productive capacity expands (LRAS shifts right).",
+    "front": "What is the difference between actual and potential growth?"
+   },
+   {
+    "id": "economic-growth:card:aacb2297",
+    "back": "The <strong>regular fluctuations in GDP</strong> around the long-run trend. Four phases: <strong>boom</strong> (peak), <strong>recession</strong> (contraction), <strong>slump</strong> (trough), and <strong>recovery</strong> (expansion).",
+    "front": "What is the business cycle?"
+   },
+   {
+    "id": "economic-growth:card:9129b82c",
+    "back": "GDP grows rapidly, unemployment falls, consumer confidence is high, and <strong>inflationary pressure builds</strong>. Asset prices often rise. The economy may overheat if AD exceeds LRAS.",
+    "front": "What happens during a boom?"
+   },
+   {
+    "id": "economic-growth:card:4baefe8a",
+    "back": "GDP falls for <strong>two or more consecutive quarters</strong>. Unemployment rises, business profits fall, consumer spending drops, and confidence collapses. Government tax revenues decline.",
+    "front": "What happens during a recession?"
+   },
+   {
+    "id": "economic-growth:card:7743322b",
+    "back": "Higher <strong>living standards</strong> (more goods and services), lower <strong>unemployment</strong>, increased <strong>tax revenue</strong> (funding public services). Also attracts investment.",
+    "front": "Name three benefits of economic growth."
+   },
+   {
+    "id": "economic-growth:card:d24fb234",
+    "back": "<strong>Environmental degradation</strong> (pollution, resource depletion), <strong>inequality</strong> (growth may not be evenly shared), and <strong>inflation</strong> if demand grows faster than supply.",
+    "front": "Name three costs of economic growth."
+   },
+   {
+    "id": "economic-growth:card:6728940c",
+    "back": "Economic growth that <strong>meets present needs without compromising</strong> future generations' ability to meet theirs. Requires balancing output with environmental and resource constraints.",
+    "front": "What is sustainable growth?"
+   },
+   {
+    "id": "economic-growth:card:42644eea",
+    "back": "Increases in <strong>productive capacity</strong>: investment in capital, technological innovation, education and training, infrastructure, and institutional improvements (rule of law, property rights).",
+    "front": "What causes long-run economic growth?"
+   },
+   {
+    "id": "economic-growth:card:a44f1d1d",
+    "back": "Increases in <strong>aggregate demand</strong> when there is spare capacity — e.g., lower interest rates, higher consumer confidence, fiscal stimulus. Moves the economy toward its PPF.",
+    "front": "What causes short-run economic growth?"
+   },
+   {
+    "id": "economic-growth:card:9b1b6aa3",
+    "back": "The <strong>average long-run rate</strong> at which potential GDP grows over time. Determined by supply-side factors. Actual growth fluctuates above and below this trend.",
+    "front": "What is the trend rate of growth?"
+   },
+   {
+    "id": "economic-growth:card:a4d09685",
+    "back": "A composite measure of development combining <strong>life expectancy</strong>, <strong>education</strong> (mean and expected years of schooling), and <strong>GNI per capita</strong>. Ranges from 0 to 1.",
+    "front": "What is the Human Development Index (HDI)?"
+   },
+   {
+    "id": "economic-growth:card:2191f594",
+    "back": "Growth may increase <strong>inequality</strong>, be concentrated in polluting industries, not reflect <strong>quality of life</strong> (leisure, health), or be driven by unsustainable debt.",
+    "front": "Why might GDP growth not improve living standards?"
+   },
+   {
+    "id": "economic-growth:card:3830d9f9",
+    "back": "A <strong>negative output gap</strong> — actual GDP is below potential GDP. There is spare capacity, high unemployment, and low inflationary pressure.",
+    "front": "What is the output gap during a recession?"
+   },
+   {
+    "id": "economic-growth:card:957ba2bb",
+    "back": "Investment increases AD in the <strong>short run</strong> (component of C+I+G+(X-M)) and increases LRAS in the <strong>long run</strong> (expanding productive capacity). It drives both actual and potential growth.",
+    "front": "What role does investment play in growth?"
+   },
+   {
+    "id": "economic-growth:card:effcda88",
+    "back": "Output per unit of input — most commonly measured as <strong>output per worker per hour</strong>. Higher productivity means more output from the same resources, driving long-run growth.",
+    "front": "What is productivity?"
+   },
+   {
+    "id": "economic-growth:card:8a0b1697",
+    "back": "Growth often causes <strong>pollution, deforestation, and resource depletion</strong>. However, richer countries may invest more in green technology. The challenge is <strong>decoupling growth from emissions</strong>.",
+    "front": "What is the relationship between growth and the environment?"
+   },
+   {
+    "id": "economic-growth:card:7340809e",
+    "back": "The rate of change in <strong>GDP divided by population</strong>. A better measure of improving living standards than total GDP growth, especially if population is growing quickly.",
+    "front": "What is GDP per capita growth?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "economic-growth:diagram:4ea707a8",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"50\" y1=\"310\" x2=\"470\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"50\" y1=\"310\" x2=\"50\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"342\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Time</text>\n  <text x=\"20\" y=\"170\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,20,170)\">Real GDP</text>\n  <line x1=\"60\" y1=\"260\" x2=\"460\" y2=\"130\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"8,5\"/>\n  <text x=\"468\" y=\"125\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\">Trend</text>\n  <text x=\"468\" y=\"138\" fill=\"#f59e0b\" font-size=\"9\">growth</text>\n  <path d=\"M60 265 C100 250, 130 200, 160 165 C190 130, 210 110, 240 130 C270 150, 290 200, 320 220 C350 240, 360 235, 380 200 C400 165, 420 140, 460 125\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"462\" y=\"118\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">Actual</text>\n  <text x=\"462\" y=\"108\" fill=\"#3b82f6\" font-size=\"9\">GDP</text>\n  <line x1=\"160\" y1=\"165\" x2=\"160\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"240\" y1=\"130\" x2=\"240\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"320\" y1=\"220\" x2=\"320\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"380\" y1=\"200\" x2=\"380\" y2=\"310\" stroke=\"#e8ecf5\" stroke-width=\"0.5\" stroke-dasharray=\"3,3\"/>\n  <text x=\"110\" y=\"300\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">Recovery</text>\n  <text x=\"200\" y=\"300\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Boom</text>\n  <text x=\"280\" y=\"300\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Recession</text>\n  <text x=\"350\" y=\"300\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">Slump</text>\n  <text x=\"430\" y=\"300\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">Recovery</text>\n  <path d=\"M168 158 L172 148\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.5\"/>\n  <text x=\"185\" y=\"140\" fill=\"#ef4444\" font-size=\"9\">Peak</text>\n  <path d=\"M315 225 L319 235\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1.5\"/>\n  <text x=\"330\" y=\"248\" fill=\"#3b82f6\" font-size=\"9\">Trough</text>\n  <text x=\"200\" y=\"60\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\">Positive output gap</text>\n  <path d=\"M200 63 L200 160\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"2,2\" marker-end=\"url(#abc1)\"/>\n  <text x=\"340\" y=\"60\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">Negative output gap</text>\n  <path d=\"M340 63 L340 210\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"2,2\" marker-end=\"url(#abc2)\"/>\n  <defs>\n    <marker id=\"abc1\" markerWidth=\"6\" markerHeight=\"5\" refX=\"6\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L6,2.5 L0,5\" fill=\"#059669\"/></marker>\n    <marker id=\"abc2\" markerWidth=\"6\" markerHeight=\"5\" refX=\"6\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L6,2.5 L0,5\" fill=\"#ef4444\"/></marker>\n  </defs>\n</svg>",
+    "title": "The Business (Trade) Cycle",
+    "checklist": [
+     "Draw an upward-sloping trend line representing long-run potential growth",
+     "Draw actual GDP fluctuating above and below the trend line",
+     "Label all four phases: boom (peak), recession, slump (trough), recovery",
+     "Clearly indicate positive output gap (above trend) and negative output gap (below trend)",
+     "Label axes: Real GDP on y-axis, Time on x-axis",
+     "Show that the cycle repeats over time"
+    ],
+    "description": "The business cycle showing fluctuations in real GDP around the long-run trend rate of growth, with the four phases labelled."
+   },
+   {
+    "id": "economic-growth:diagram:240feab7",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"50\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"50\" y1=\"300\" x2=\"50\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Real GDP (Y)</text>\n  <text x=\"20\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,20,165)\">Price Level (PL)</text>\n  <line x1=\"300\" y1=\"40\" x2=\"300\" y2=\"300\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/>\n  <text x=\"300\" y=\"35\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">LRAS (Yᶠ)</text>\n  <path d=\"M80 270 Q200 240 300 160 Q350 120 380 60\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"385\" y=\"55\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">SRAS</text>\n  <path d=\"M120 80 Q200 200 380 280\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"385\" y=\"278\" fill=\"#ef4444\" font-size=\"10\">AD₁ (neg. gap)</text>\n  <path d=\"M200 60 Q290 170 450 250\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/>\n  <text x=\"453\" y=\"245\" fill=\"#3b82f6\" font-size=\"10\">AD₂ (pos. gap)</text>\n  <circle cx=\"240\" cy=\"220\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"240\" y1=\"220\" x2=\"240\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <text x=\"240\" y=\"315\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\">Y₁</text>\n  <circle cx=\"340\" cy=\"145\" r=\"4\" fill=\"#3b82f6\"/>\n  <line x1=\"340\" y1=\"145\" x2=\"340\" y2=\"300\" stroke=\"#3b82f6\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <text x=\"340\" y=\"315\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\">Y₂</text>\n  <text x=\"300\" y=\"315\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"10\">Yᶠ</text>\n  <path d=\"M245 292 L295 292\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\" marker-end=\"url(#aog1)\"/>\n  <text x=\"270\" y=\"288\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\">Negative gap</text>\n  <path d=\"M335 292 L305 292\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" marker-end=\"url(#aog2)\"/>\n  <text x=\"335\" y=\"288\" text-anchor=\"end\" fill=\"#3b82f6\" font-size=\"8\">Positive gap</text>\n  <defs>\n    <marker id=\"aog1\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#ef4444\"/></marker>\n    <marker id=\"aog2\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#3b82f6\"/></marker>\n  </defs>\n</svg>",
+    "title": "Output Gap Diagram",
+    "checklist": [
+     "Draw LRAS as a vertical line at full employment output (Yfe)",
+     "Draw SRAS as an upward-sloping curve",
+     "Show AD intersecting SRAS to the left of LRAS for a negative gap",
+     "Show AD intersecting SRAS to the right of LRAS for a positive gap",
+     "Clearly label the gap between actual and potential output",
+     "State the consequences: inflation for positive gap, unemployment for negative gap"
+    ],
+    "scenarios": [
+     {
+      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"50\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"50\" y1=\"300\" x2=\"50\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Real GDP (Y)</text>\n  <text x=\"20\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,20,165)\">Price Level</text>\n  <line x1=\"310\" y1=\"40\" x2=\"310\" y2=\"300\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/>\n  <text x=\"310\" y=\"35\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">LRAS</text>\n  <path d=\"M80 270 Q200 240 310 150 Q360 110 390 55\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"395\" y=\"50\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">SRAS</text>\n  <path d=\"M100 80 Q190 200 360 275\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"365\" y=\"273\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"600\">AD</text>\n  <circle cx=\"230\" cy=\"225\" r=\"4\" fill=\"#ef4444\"/>\n  <line x1=\"230\" y1=\"225\" x2=\"230\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <line x1=\"230\" y1=\"225\" x2=\"50\" y2=\"225\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"230\" y=\"315\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"11\">Y₁</text>\n  <text x=\"310\" y=\"315\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"11\">Yᶠ</text>\n  <rect x=\"230\" y=\"292\" width=\"80\" height=\"8\" fill=\"#ef4444\" fill-opacity=\"0.2\" stroke=\"#ef4444\" stroke-width=\"1\"/>\n  <text x=\"270\" y=\"285\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Negative output gap</text>\n  <text x=\"260\" y=\"60\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Actual output (Y₁) &lt; Potential output (Yᶠ)</text>\n  <text x=\"260\" y=\"78\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Spare capacity, cyclical unemployment,</text>\n  <text x=\"260\" y=\"93\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">downward pressure on prices</text>\n</svg>",
+      "label": "Negative Output Gap"
+     },
+     {
+      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"50\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"50\" y1=\"300\" x2=\"50\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Real GDP (Y)</text>\n  <text x=\"20\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,20,165)\">Price Level</text>\n  <line x1=\"260\" y1=\"40\" x2=\"260\" y2=\"300\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/>\n  <text x=\"260\" y=\"35\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"11\" font-weight=\"600\">LRAS</text>\n  <path d=\"M80 275 Q180 250 260 165 Q310 115 350 55\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"355\" y=\"50\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">SRAS</text>\n  <path d=\"M180 55 Q280 170 430 248\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"435\" y=\"245\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">AD</text>\n  <circle cx=\"310\" cy=\"130\" r=\"4\" fill=\"#3b82f6\"/>\n  <line x1=\"310\" y1=\"130\" x2=\"310\" y2=\"300\" stroke=\"#3b82f6\" stroke-width=\"1.5\" stroke-dasharray=\"4,3\"/>\n  <line x1=\"310\" y1=\"130\" x2=\"50\" y2=\"130\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"310\" y=\"315\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"11\">Y₁</text>\n  <text x=\"260\" y=\"315\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"11\">Yᶠ</text>\n  <rect x=\"260\" y=\"292\" width=\"50\" height=\"8\" fill=\"#3b82f6\" fill-opacity=\"0.2\" stroke=\"#3b82f6\" stroke-width=\"1\"/>\n  <text x=\"285\" y=\"285\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">Positive output gap</text>\n  <text x=\"260\" y=\"60\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Actual output (Y₁) &gt; Potential output (Yᶠ)</text>\n  <text x=\"260\" y=\"78\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">Economy overheating, inflationary pressure,</text>\n  <text x=\"260\" y=\"93\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">unsustainable in the long run</text>\n</svg>",
+      "label": "Positive Output Gap"
+     }
+    ],
+    "description": "AD/AS diagram showing positive and negative output gaps relative to the full employment level of output."
+   },
+   {
+    "id": "economic-growth:diagram:1ecb9278",
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"460\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"40\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Capital Goods</text>\n  <text x=\"25\" y=\"170\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,25,170)\">Consumer Goods</text>\n  <path d=\"M80 70 Q120 75 200 120 Q300 185 380 290\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"340\" y=\"270\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">PPF₀</text>\n  <path d=\"M80 55 Q130 58 230 110 Q340 175 430 290\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\" stroke-dasharray=\"8,4\"/>\n  <text x=\"395\" y=\"268\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">PPF₁</text>\n  <circle cx=\"180\" cy=\"200\" r=\"6\" fill=\"#ef4444\"/>\n  <text x=\"195\" y=\"205\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">A</text>\n  <circle cx=\"230\" cy=\"150\" r=\"6\" fill=\"#f59e0b\"/>\n  <text x=\"245\" y=\"148\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\">B</text>\n  <path d=\"M186 195 L224 156\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2\" marker-end=\"url(#appf1)\"/>\n  <text x=\"130\" y=\"160\" fill=\"#f59e0b\" font-size=\"10\">Actual growth</text>\n  <text x=\"130\" y=\"174\" fill=\"#f59e0b\" font-size=\"9\">(A → B: using</text>\n  <text x=\"130\" y=\"186\" fill=\"#f59e0b\" font-size=\"9\">spare capacity)</text>\n  <path d=\"M300 160 Q340 140 370 170\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\" marker-end=\"url(#appf2)\"/>\n  <text x=\"330\" y=\"130\" fill=\"#059669\" font-size=\"10\">Potential growth</text>\n  <text x=\"330\" y=\"144\" fill=\"#059669\" font-size=\"9\">(PPF shifts outward)</text>\n  <text x=\"180\" y=\"230\" fill=\"#ef4444\" font-size=\"9\">Point A: inside PPF</text>\n  <text x=\"180\" y=\"244\" fill=\"#ef4444\" font-size=\"9\">(negative output gap)</text>\n  <defs>\n    <marker id=\"appf1\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#f59e0b\"/></marker>\n    <marker id=\"appf2\" markerWidth=\"8\" markerHeight=\"6\" refX=\"8\" refY=\"3\" orient=\"auto\"><path d=\"M0,0 L8,3 L0,6\" fill=\"#059669\"/></marker>\n  </defs>\n</svg>",
+    "title": "PPF: Actual vs Potential Growth",
+    "checklist": [
+     "Draw PPF as a concave curve from the y-axis to the x-axis",
+     "Label axes with two types of goods (e.g. capital goods and consumer goods)",
+     "Show point inside PPF for negative output gap (actual < potential)",
+     "Show movement towards PPF for actual growth",
+     "Show outward shift of PPF for potential growth",
+     "Explain that actual growth uses spare capacity while potential growth increases capacity"
+    ],
+    "description": "Production Possibility Frontier showing the difference between actual growth (movement toward the frontier) and potential growth (outward shift of the frontier)."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "Actual economic growth is an increase in real GDP — the economy produces more output over a given period.",
+      "This occurs when previously unemployed resources are brought into use, moving the economy from inside the PPF towards the frontier.",
+      "Actual growth is typically driven by increases in aggregate demand — higher consumer spending, investment or government expenditure.",
+      "It reduces the negative output gap (the difference between actual and potential output) and lowers unemployment."
+     ],
+     "title": "Actual growth comes from using idle resources",
+     "result": "Actual growth uses up spare capacity and is driven by demand-side factors, reducing unemployment in the short run."
+    },
+    {
+     "steps": [
+      "Potential growth is an increase in the economy's productive capacity — the maximum output it can sustainably produce.",
+      "It is caused by increases in the quantity or quality of factors of production: more workers, better technology, greater capital stock.",
+      "Potential growth shifts the LRAS curve rightward and the PPF outward.",
+      "It enables actual growth without inflationary pressure, as the economy can produce more output at any given price level."
+     ],
+     "title": "Potential growth expands the economy's productive capacity",
+     "result": "Potential growth is driven by supply-side improvements and is essential for sustainable, non-inflationary long-run growth."
+    },
+    {
+     "steps": [
+      "Economies do not grow at a steady rate — they fluctuate through boom, slowdown, recession and recovery phases.",
+      "In a boom, actual GDP exceeds potential GDP (positive output gap), creating demand-pull inflation and unsustainable growth.",
+      "In a recession, actual GDP falls below potential (negative output gap), causing rising unemployment and falling incomes.",
+      "Government policy aims to smooth these fluctuations, keeping actual growth close to potential and minimising output gaps."
+     ],
+     "title": "The business cycle creates fluctuations around the trend",
+     "result": "The business cycle explains why growth is uneven and why stabilisation policies are needed to manage demand."
+    },
+    {
+     "steps": [
+      "Growth raises real incomes, improves living standards and generates tax revenue for public services.",
+      "Higher employment reduces poverty and social exclusion, and business profits fund further investment.",
+      "However, rapid growth can cause demand-pull inflation, environmental degradation and depletion of non-renewable resources.",
+      "Growth may also widen income inequality if the gains are concentrated among capital owners and high-skilled workers."
+     ],
+     "title": "Economic growth has both benefits and costs",
+     "result": "Economic growth improves material living standards but its desirability depends on whether it is sustainable, inclusive and environmentally responsible."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "GDP growth does not guarantee improved welfare",
+     "content": "Growth that comes with rising inequality, environmental damage or reduced leisure time may not improve overall welfare. If the benefits of growth accrue mainly to the wealthy, median living standards may stagnate even as GDP rises. Sustainable development requires that growth is inclusive and does not deplete natural capital for future generations."
+    },
+    {
+     "title": "Supply-side growth takes time to materialise",
+     "content": "Investment in education, infrastructure and technology may take years or decades to shift LRAS. In the short run, demand management is needed to address cyclical unemployment. Over-reliance on supply-side policies risks neglecting those suffering from current recessions. A balanced approach combining demand and supply-side measures is usually most effective."
+    },
+    {
+     "title": "Output gaps are difficult to measure in real time",
+     "content": "Estimating potential GDP requires assumptions about the natural rate of unemployment and sustainable capacity. These estimates are frequently revised, meaning policymakers may not know the true size or direction of the output gap when making decisions. Incorrect estimates lead to inappropriate policy — tightening too early in a recovery or stimulating an already overheating economy."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "economic-growth:mistake:b9ae2eaf",
+    "title": "Confusing short-run and long-run economic growth",
+    "examTip": "A question about \"the causes of economic growth\" usually wants BOTH: demand-side factors (short-run) AND supply-side factors (long-run).",
+    "mistake": "Students use the terms interchangeably or fail to distinguish between them in essays.",
+    "correction": "Short-run growth = actual GDP increases (using spare capacity), shown by movement towards the PPF or along the AD/AS diagram. Long-run growth = potential GDP increases (expanding productive capacity), shown by outward shift of PPF or rightward shift of LRAS."
+   },
+   {
+    "id": "economic-growth:mistake:17808a49",
+    "title": "Assuming economic growth is always beneficial",
+    "mistake": "Students list only the benefits of growth without considering the costs and trade-offs.",
+    "correction": "Costs of growth include: environmental degradation, inequality (not everyone benefits equally), inflation if demand outstrips supply, depletion of non-renewable resources, and possible worsening of the current account."
+   },
+   {
+    "id": "economic-growth:mistake:89c7bf43",
+    "title": "Not linking growth to the AD/AS model",
+    "mistake": "Students discuss growth in abstract terms without using economic models to support their analysis.",
+    "correction": "Short-run growth: rightward shift of AD (increase in C, I, G, or X-M). Long-run growth: rightward shift of LRAS (improved technology, education, infrastructure). Always draw the diagram."
+   }
+  ]
+ }
+}

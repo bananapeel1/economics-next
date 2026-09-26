@@ -4,6 +4,7 @@ import { BoltIcon, BookAlt, CardsIcon, ChartHistogram, Clipboard, Document, Glos
 import SiteHeader from '@/components/SiteHeader';
 import BusinessScrollBar from './BusinessScrollBar';
 import '@/styles/landing.css';
+import '@/styles/hub-links.css';
 
 export const metadata = {
   title: 'Edexcel IAL Business Studies Notes — Free Revision for Units 1–4 (2026)',
@@ -39,12 +40,12 @@ const unit3Sections = [
   { id: 'decision-making-techniques', number: '3.3.3', title: 'Decision-Making Techniques', meta: 'Decision trees, critical path, data analysis' },
   { id: 'influences-business-decisions', number: '3.3.4', title: 'Influences on Business Decisions', meta: 'Corporate culture, stakeholders, ethics' },
   { id: 'assessing-competitiveness', number: '3.3.5', title: 'Assessing Competitiveness', meta: 'Financial ratios, core competencies' },
-  { id: 'managing-change', number: '3.3.6', title: 'Managing Change', meta: 'Change management, scenario planning' },
+  { id: 'managing-change', number: '3.3.6', title: 'Managing Change', meta: 'Key factors in change, contingency planning' },
 ];
 
 const unit4Sections = [
   { id: 'globalisation', number: '4.3.1', title: 'Globalisation', meta: 'Causes, effects, MNCs, trade blocs' },
-  { id: 'global-markets-expansion', number: '4.3.2', title: 'Global Markets & Expansion', meta: 'Market entry, Ansoff\'s matrix, risk' },
+  { id: 'global-markets-expansion', number: '4.3.2', title: 'Global Markets & Expansion', meta: 'Push & pull factors, markets & locations, mergers' },
   { id: 'global-marketing', number: '4.3.3', title: 'Global Marketing', meta: 'Glocalisation, cultural differences' },
   { id: 'global-industries-mncs', number: '4.3.4', title: 'Global Industries & MNCs', meta: 'Transfer pricing, FDI, ethical issues' },
 ];
@@ -251,7 +252,7 @@ export default function BusinessPage() {
             <div className="elp-unit-block elp-fade-up">
               <div className="elp-unit-label-row">
                 <div className="elp-unit-num">{unit.num}</div>
-                <div className="elp-unit-heading">{unit.heading}</div>
+                <Link href={`/business/unit-${unit.num}`} className="elp-unit-heading elp-unit-heading-link">{unit.heading}</Link>
                 <div className="elp-unit-code">{unit.code}</div>
               </div>
               <p className="elp-unit-desc">{unit.desc}</p>

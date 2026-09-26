@@ -1,0 +1,13 @@
+DIFF  only the panel removed (42 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /business/managing-people-model-answers
+DIFF  only the panel removed (46 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /business/managing-finance-model-answers
+DIFF  only the panel removed (54 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /business/external-influences-model-answers
+FAIL  1 other diffs /economics/supply-model-answers
+       + M Where it tops out instead!
+skip  shell page /economics/market-failure-model-answers
+FAIL  1 other diffs /economics/aggregate-demand-model-answers
+       +   extra
+DIFF  only the panel removed (60 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /economics/economic-growth-model-answers
+DIFF  only the panel removed (51 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /economics/macroeconomic-policies-model-answers
+DIFF  only the panel removed (48 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /economics/market-structures-contestability-model-answers
+DIFF  only the panel removed (47 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /economics/trade-global-economy-model-answers
+31 non-shell pages: {'same': 22, 'panel-only': 7, 'other': 2}

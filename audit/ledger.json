@@ -7592,10 +7592,10 @@
    "rank": 0,
    "text": "Rewrite content[] to teach IAL 4.2.1-4.2.5: block 1 = conditions that prompt trade (push/pull, off-shoring vs outsourcing, PLC extension) + assessing a country as a market; block 2 = assessing a country as a production location + reasons for global mergers/JVs; block 3 = global competitiveness (exchange rates, cost vs differentiation, skill shortages). Reuse the existing flashcards/common_mistakes as the source.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; content[] 5 blocks = 4.3.2 sub-topics 1-5; cost vs differentiation as price/non-price competitiveness in sub skill-shortages body[0]",
    "note": "SPEC NUMBERING: this item cites 4.2.1, 4.2.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7605,10 +7605,10 @@
    "rank": 1,
    "text": "Remove Bartlett & Ghoshal (AQA-only) from the section; demote Ansoff and PESTLE to one-paragraph 'link to Unit 3' callouts rather than full subsections with examMatters claims.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; 0 Bartlett/Ghoshal/transnational hits; PESTLE one sentence (infrastructure-stability body[3], 3.3.1), Ansoff one notes[1] link (3.3.1/4.3.3, bus_spec:1098,1435)",
    "note": null
   },
   {
@@ -7618,10 +7618,10 @@
    "rank": 2,
    "text": "Set quizIndices/practiceIndices on each block so inline quiz and practice match what the block teaches, and ensure every quiz item is covered by content[] so the pre-test gate is fair.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; quizIndices 3-8/9-13/14-18/19-24/25-29 + practiceIndices 0-6 once each; all 30 MCQs read and answerable from their block (Q0-2 from block 0)",
    "note": null
   },
   {
@@ -7631,10 +7631,10 @@
    "rank": 3,
    "text": "Fix practice tariffs and schemes: replace the 6-mark Analyse with an 8-mark Assess, make 4-markers 'Explain one...', anchor the 10- and 20-mark stems to their contexts, delete the Porter's generic strategies instruction, and add levels-based mark schemes (K/App/An/Ev) with a short model answer.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; practice Explain4/Calc4/Discuss8/Assess12x2/Evaluate20x2 = ial-paper-structure.json Units 3-4; stems anchored to Lumora; no generic strategies; Level 1-4 guidance >4 marks. Note: practice[2] has no strong-answer outline",
    "note": null
   },
   {
@@ -7644,10 +7644,10 @@
    "rank": 4,
    "text": "Add retrieval and visuals: fillin recalls for push vs pull and off-shoring vs outsourcing, a reorder recall on a genuine sequence (e.g. staged entry: export -> licence -> JV -> FDI as commitment rises), and a diagram of the control/risk ladder or the country-assessment factor comparison.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; fillin push/pull (pull-factors recall), fillin off-shoring/outsourcing, reorders PLC+exchange-rate genuine; 5 diagrams incl 229d51a0 country comparison, rendered",
    "note": null
   },
   {
@@ -7656,10 +7656,10 @@
    "kind": "accuracy",
    "text": "Strategic Analysis for Global Expansion > pestle-bartlett-ghoshal > body[1], body[2], examMatters, takeaway[2], takeaway[3]: Bartlett & Ghoshal (international / multi-domestic / global / transnational) is not in the Pearson Edexcel IAL Business specification (it is AQA A-level 3.7.7 content). Presenting it with 'Link PESTLE to Bartlett-Ghoshal ... the firm needs a multi-domestic or transnational strategy' as if IAL examiners expect it misdirects revision time and would earn no spec-specific credit on a WBS14 paper.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; pestle-bartlett-ghoshal subsection gone; 0 Bartlett hits in served draft JSON (live data unchanged until publish)",
    "note": "SPEC NUMBERING: this item cites 3.7.7, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7668,10 +7668,10 @@
    "kind": "quiz",
    "text": "q0: Correct answer (index 1) is right, but push/pull factors are never taught in content[]; this can appear in the pre-test gate and the inline quiz for a block that does not mention them. (Indices are 0-based.)",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; push factors taught in block 0 sub push-factors body[0-3]; Q0/Q4 pinned/pooled there",
    "note": null
   },
   {
@@ -7680,10 +7680,10 @@
    "kind": "quiz",
    "text": "q1: Correct (off-shoring), but off-shoring vs outsourcing is not taught anywhere in content[] (only in flashcards/common_mistakes).",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; off-shoring vs outsourcing taught in sub off-shoring-and-outsourcing body[1]; Q2/Q6/Q8",
    "note": null
   },
   {
@@ -7692,10 +7692,10 @@
    "kind": "practice",
    "text": "p1: 6-mark 'Analyse the advantages and disadvantages...' is not an IAL Business tariff (papers use 4 Explain / 8, 10, 12 Assess / 20 Evaluate). Also the stem ignores its own context ('a new overseas market' rather than 'the Indian market for this company'), so application marks cannot be targeted. (Indices 0-based.)",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; no Analyse 6 remains; practice[2] Discuss 8 (SAM tariff) anchored 'impact of this change on Lumora'",
    "note": null
   },
   {
@@ -7704,10 +7704,10 @@
    "kind": "practice",
    "text": "p4: 20-mark Evaluate is the right tariff, but (a) the stem is generic ('a new international market') while IAL 20-markers are anchored to the case ('...for this South Korean company entering Europe'), and (b) the guidance tells students to 'Apply Porter's generic strategies' which is irrelevant to entry-mode choice and is Unit 3 content. Guidance is a bullet list, not a levels-based mark scheme (knowledge/application/analysis/evaluation), so students cannot self-mark.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; 20-markers practice[5]/[6] anchored to Lumora; 'generic strateg' 0 hits; guidance Level 1-4 after a newline-separated scaffold",
    "note": null
   },
   {
@@ -7716,10 +7716,10 @@
    "kind": "structure",
    "text": "Content[] vs assessment mismatch: content teaches entry modes, Ansoff, PESTLE, Bartlett-Ghoshal; quiz[]/flashcards[]/common_mistakes[] cover the real IAL 4.2 bullets (push/pull, off-shoring, PLC extension, country as market/production location, exchange rates, Porter, hedging). Pre-test (3 random MCQs from this bank) and inline quizzes therefore test untaught material for ~80% of items.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; content[] now teaches the 4.3.2 bullets the quiz/flashcards/mistakes test; all 30 MCQs traced to a subsection",
    "note": null
   },
   {
@@ -7728,10 +7728,10 @@
    "kind": "structure",
    "text": "Neither block sets quizIndices or practiceIndices, so InlineQuiz/InlinePractice fall back to default selection; with quiz[0] = push factors and quiz[1] = off-shoring, the first block's inline MCQ is almost certainly on something the block does not mention.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; every block sets quizIndices/practiceIndices; served free tier remaps per block (Q3/Q9/Q14/Q19/Q25), proving the server reads them",
    "note": null
   },
   {
@@ -7740,10 +7740,10 @@
    "kind": "structure",
    "text": "Zero recall widgets in the whole section (0 reorder, 0 fillin): the only retrieval practice inside Learn Mode is two inline MCQs. This section has natural fillin material (push vs pull, off-shoring vs outsourcing, five reasons for global mergers/JVs) that is currently unused.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "scripts/_packet47-content.mjs:266 stability-resources recall is now a classify (3 groups x 2 unambiguous items, served draft); the two-order reorder criterion 'each figure is needed' has 0 hits in script, bundle and served draft; section has 17 recalls (5 fillin, 6 classify, 4 match, 2 reorder), both remaining reorders strictly chronological/causal",
    "note": null
   },
   {
@@ -7752,10 +7752,10 @@
    "kind": "structure",
    "text": "Each block has exactly 2 sections, so every step is the 'last step of a block': each of the two steps stacks NoteSection x2 + InlineQuiz + InlinePractice + ExplainItBack + TakeawayCard, making two very long steps with no lighter step in between.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; blocks have 4/3/3/4/3 subsections, so only one step per block stacks quiz+practice+takeaway",
    "note": null
   },
   {
@@ -7764,10 +7764,10 @@
    "kind": "structure",
    "text": "0 diagrams for a section whose core idea (entry modes rising in control and risk) and secondary idea (Ansoff 2x2) are both inherently diagrammatic; InlineDiagram never renders.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; 5 diagrams, every block diagramId resolves in served draft; all 7 SVG scenarios rasterised and legible",
    "note": null
   },
   {
@@ -7776,11 +7776,11 @@
    "kind": "structure",
    "text": "Section numbering '4.3.2' does not match the IAL spec where 'Global markets and business expansion' is topic 4.2 (4.2.1-4.2.5); 4.3 is Global marketing. Students cross-referencing the spec will be confused (unsure whether the app uses its own numbering scheme deliberately).",
    "packet": 47,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 4.2.1, 4.2.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "Inverted claim, refused on the document (Rule 1). It says '4.3.2' is wrong and the topic is IAL '4.2'. bus_spec.txt:1372 reads '4.3.2 Global markets and business expansion'; :1304 is '4.2 Assessment information'; no '4.2.1'-'4.2.5' exists in the file. contextFor() returns 4.3.2 / WBS14, which the packet-47 runner asserts (scripts/packet-47-global-markets-expansion.mjs §5 and §12). The section number is correct and is kept. (packet 47, 26 Sep 2026)"
   },
   {
    "id": "C-global-markets-expansion-structure-07",
@@ -7788,10 +7788,10 @@
    "kind": "structure",
    "text": "Notes[] (2 notes) duplicate the same off-spec material (entry methods, Ansoff) rather than covering the spec bullets, so Notes tab and Learn tab reinforce the gap instead of filling it.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; notes[] 5 chapters metaed 4.3.2 1a-1d..5a-5b defining the spec bullets; no entry-mode content",
    "note": null
   },
   {
@@ -7800,10 +7800,10 @@
    "kind": "structure",
    "text": "Misconception quality: franchising control (genuine), FDI always best (genuine but repeated verbatim in notes[0].misconception), Ansoff market development vs diversification (genuine); pestle-bartlett-ghoshal misconception is exam technique rather than a conceptual misconception (filler).",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; franchising/FDI/Ansoff/PESTLE-filler misconceptions gone; 16 subsection misconceptions all conceptual; notes carry none, so no duplication",
    "note": null
   },
   {
@@ -7812,10 +7812,10 @@
    "kind": "structure",
    "text": "Flow blocks in exporting-licensing-franchising and ansoff-global-context are descriptive three-step restatements ('Firm wants international revenue -> Low capital -> Licenses IP'), not causal mechanisms; they add length without teaching anything the paragraph did not.",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; named flows gone; only flows are exchange-rates-and-exporters body[2] and skill-shortages body[2], causal with results adding content",
    "note": null
   },
   {
@@ -7824,10 +7824,10 @@
    "kind": "specGap",
    "text": "4.2.1 Conditions that prompt trade: push factors (saturated markets, competition) and pull factors (economies of scale, risk spreading) — only in quiz/flashcards, not taught in content[]",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; push-factors body[1-2] (saturated, competition), pull-factors body[1-3] (sales/profit, scale, risk)",
    "note": "SPEC NUMBERING: this item cites 4.2.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7836,10 +7836,10 @@
    "kind": "specGap",
    "text": "4.2.1 Possibility of off-shoring and outsourcing (and the distinction) — not taught in content[]",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "scripts/_packet47-content.mjs:98 served draft off-shoring body[2] now 'about a sixth of the $34 average cost'; 12-5-1.50=5.50, 5.50/34=16.2%=~1/6; $34 is the post-export avg cost (content:73); 'seventh' 0 hits; distinction taught body[1]",
    "note": "SPEC NUMBERING: this item cites 4.2.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7848,10 +7848,10 @@
    "kind": "specGap",
    "text": "4.2.1 Extending the product life cycle by selling in multiple markets — not taught in content[]",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; extending-the-product-life-cycle body[0-3]",
    "note": "SPEC NUMBERING: this item cites 4.2.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7860,10 +7860,10 @@
    "kind": "specGap",
    "text": "4.2.2 Assessment of a country as a market: levels of disposable income, ease of doing business, infrastructure, political stability, exchange rate — not taught in content[]",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; income-and-ease-of-doing-business body[0-2] + infrastructure-stability-and-exchange-rates body[0-2]: all five factors",
    "note": "SPEC NUMBERING: this item cites 4.2.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7872,10 +7872,10 @@
    "kind": "specGap",
    "text": "4.2.3 Assessment of a country as a production location: costs of production, skills and availability of labour force, infrastructure, location in trade bloc, government incentives, ease of doing business, political stability, natural resources, likely return on investment — not taught in content[]",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; costs-and-labour-force, trade-bloc-incentives-and-infrastructure, stability-resources-and-return-on-investment bodies: all nine factors",
    "note": "SPEC NUMBERING: this item cites 4.2.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7884,10 +7884,10 @@
    "kind": "specGap",
    "text": "4.2.4 Reasons for global mergers or joint ventures: spreading risk over different countries/regions, entering new markets/trade blocs, acquiring national/international brand names/patents, securing resources/supplies, maintaining/increasing global competitiveness — content[] gives generic JV pros/cons only; the five spec reasons are not listed",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; reasons-to-grow-and-compete body[0-3] (4a,4b,4c,4e) + reasons-supplies-knowledge-and-networks body[0] (4d)",
    "note": "SPEC NUMBERING: this item cites 4.2.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7896,10 +7896,10 @@
    "kind": "specGap",
    "text": "4.2.5 Global competitiveness: impact of movements in exchange rates on exporters/importers — not taught in content[]",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; exchange-rates-and-exporters body[0-3] + exchange-rates-importers-and-profits body[0-2]",
    "note": "SPEC NUMBERING: this item cites 4.2.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7908,10 +7908,10 @@
    "kind": "specGap",
    "text": "4.2.5 Competitive advantage through cost competitiveness and differentiation — not taught",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; cost competitiveness defined off-shoring body[0]; price (cost) vs non-price (differentiation) competitiveness in skill-shortages body[0]",
    "note": "SPEC NUMBERING: this item cites 4.2.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -7920,10 +7920,10 @@
    "kind": "specGap",
    "text": "4.2.5 Skill shortages and their impact on international competitiveness — not taught (only a flashcard)",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; skill-shortages-and-competitiveness body[0-2]",
    "note": "SPEC NUMBERING: this item cites 4.2.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -11857,10 +11857,10 @@
    "rank": 0,
    "text": "Fix the fill-in data shape and renderer mismatch: split every template line to one '___' (changes-in-equilibrium, supply-side-shocks), replace compound tokens like 'rises, rises' with single words, and widen word banks beyond the answer list (add 2-3 distractors) so the 5 trivial fill-ins become real decisions; correct the five hint lengths.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle fill-ins (content[1].s3,[3].s0-1,[4].s1): one ___ per template line, single-token answers, 3 distractors each; parsed by lib/recall-widgets.js:140-155; staged draft = API ?draft=1",
    "note": null
   },
   {
@@ -11870,10 +11870,10 @@
    "rank": 1,
    "text": "Re-map inline quiz and practice to their blocks: set content[1].quizIndices to LRAS items (5/12/13/21), content[2] to 2/3/24, content[4] to 7/23/18; either stop sorting practice by marks in LearnModeTab.jsx line 80 or reorder practiceIndices so the SRAS block gets the SRAS movement-vs-shift question and the LRAS block gets the LRAS definition/outline; change practice[0] to a 2-mark 'Define' and practice[4] to 'Explain two factors'.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "real placeChapterItems (lib/checkin-placement.js:48,51) run on served draft (free) and bundle (premium): every chapter's quiz Q3/Q8/Q14/Q21/Q26 and practice P0/P2/P5/P7/P8 on its own chapter topic",
    "note": null
   },
   {
@@ -11883,10 +11883,10 @@
    "rank": 2,
    "text": "Add a fourth diagram titled to match 'Self-Correcting Mechanism' (negative gap closing via SRAS shift right, positive gap via SRAS left) and rename content[3].diagramRef so blocks 3 and 4 stop rendering without a diagram.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle 5 diagrams, all 5 block diagramIds resolve (lib/checkin-placement.js:46); self-correction drawn in 84e3e9ae 'Classical adjustment' (SVG geometry recomputed, AD and SRAS shifts both 60bn); positive-gap half moved to owner per SPEC-OWNERSHIP row 27",
    "note": null
   },
   {
@@ -11896,10 +11896,10 @@
    "rank": 3,
    "text": "Correct the wrong/contradictory real examples: replace the 2022 UK manufacturers SRAS example, reword 'UK 2019 close to macroeconomic equilibrium' to 'close to full-employment output', fix the 'classical economics had not predicted stagflation' attribution, and use a demand-only case (2008-09 confidence collapse) instead of COVID in demand-side-shocks since applying-adas-to-events later says COVID shifted both curves.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "grep of every bundle string: no UK 2022, UK 2019 equilibrium, stagflation or COVID example remains; replacement examples (Kenya mobile money, SkillsFuture, Japan/HK ageing, Gulf migrants, Pakistan/Kenya competition authorities) accurate",
    "note": null
   },
   {
@@ -11909,10 +11909,10 @@
    "rank": 4,
    "text": "De-duplicate: merge block 3 into block 2 (stagflation and AD-right analysis are taught twice), replace the two generic procedure reorders (ad-as-equilibrium, demand-side-shocks) with concrete causal chains, prune the quiz bank duplicates (Q11=Q1, Q13=Q5, Q14=Q4, Q19=Q8, Q24~Q18) and rewrite Q20 to name the Keynesian model; remove the 'SRAS steepens near capacity' takeaway so SRAS and Keynesian LRAS stay distinct.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle: equilibrium/events blocks removed (2.3.3 only); 5 reorders are concrete causal chains; quiz difflib max 0.59 vs 0.74 on pre-packet control; block 0 takeaway has no 'SRAS steepens'",
    "note": null
   },
   {
@@ -11921,10 +11921,10 @@
    "kind": "accuracy",
    "text": "content[0] 'Short-Run Aggregate Supply (SRAS)' > sras-shape-and-slope > realExample: Claims UK manufacturers in early 2022 saw margins boosted and expanded production because wages lagged output prices. 2022 was a cost-push squeeze (energy/input costs rose faster than output prices; UK manufacturing PMI fell below 50 from mid-2022 and output declined). The example illustrates the opposite of what happened.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle content[0].sections[1].realExample is a fictional Tellmar workshop (prices up, contracted wages fixed, output up); no UK 2022 claim anywhere in the bundle",
    "note": null
   },
   {
@@ -11933,10 +11933,10 @@
    "kind": "accuracy",
    "text": "content[2] 'Macroeconomic Equilibrium' > ad-as-equilibrium > realExample: Says the UK in 2019 'was operating close to macroeconomic equilibrium'. An economy is always at AD=AS equilibrium; what is meant is full-employment equilibrium. The section's own misconception two lines later warns that equilibrium is not the same as full employment, so the example teaches the misconception it is correcting.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "'UK 2019 ... macroeconomic equilibrium' absent from every bundle string; the Macroeconomic Equilibrium block is gone (2.3.4 pointer only)",
    "note": null
   },
   {
@@ -11945,10 +11945,10 @@
    "kind": "practice",
    "text": "p0: 'Define the term LRAS (4 marks)' — IAL Economics uses 'Define' for 2-mark items; 4-mark Section A/B items are 'Explain ...'. The guidance also awards marks for 'LRAS is vertical in the classical model' and 'shifts are caused by ...', which are not part of a definition. Mark allocation and mark scheme do not match IAL practice. Because LearnModeTab sorts practice by marks, this LRAS question is the inline practice for the SRAS block.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle practice[0] = 'Define the term aggregate supply. (2 marks)', two 1-mark clauses; no LRAS Define remains; pinned path resolves raw order (lib/checkin-placement.js:51); all 9 tariffs valid per econ_spec.txt:2696-2745",
    "note": null
   },
   {
@@ -11957,10 +11957,10 @@
    "kind": "structure",
    "text": "Inline quiz-to-block mapping is wrong: content[1] (LRAS) has quizIndices [1] which is an SRAS-shift question; content[2] (Equilibrium) gets Q2 (classical LR effect of AD, really LRAS material); content[4] (SR vs LR adjustment) gets Q5 (LRAS determinants). Only blocks 0 and 3 get a topically matching inline MCQ. Q7/Q23/Q24 (self-correction, sticky wages, output gap) are never shown inline.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "placement run on served draft: ch0-ch4 inline quiz = Q3 real output / Q8 energy share / Q14 capacity / Q21 productivity / Q26 labour force, each on its chapter (lib/checkin-placement.js:48)",
    "note": null
   },
   {
@@ -11969,10 +11969,10 @@
    "kind": "structure",
    "text": "Inline practice mapping is by mark size, not topic: LearnModeTab.jsx line 80 sorts practice by marks, so practiceIndices [0..4] resolve to Define-LRAS(4) on the SRAS block, Outline-LRAS(4) on the LRAS block, Explain-SRAS-movement-vs-shift(6) on the Equilibrium block, Assess-supply-side(10) on the Events block, Evaluate(20) on the Adjustment block. The mark ramp is sensible but three of five are off-topic for their block.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "lib/checkin-placement.js:51 resolves practiceIndices against raw practiceData, no marks sort on the pinned path; chapters get Define AS / Calculate energy / Draw classical / Examine education / Evaluate ageing",
    "note": null
   },
   {
@@ -11981,10 +11981,10 @@
    "kind": "structure",
    "text": "Two blocks get no inline diagram: diagramRef 'AD/AS Shifts' (content[3]) and 'Self-Correcting Mechanism' (content[4]) match no diagram title via the substring test in LearnModeTab.jsx lines 97-104 (titles are 'Short-Run Aggregate Supply (SRAS)', 'LRAS: Classical vs Keynesian', 'AD/AS Equilibrium: Multiple Scenarios'). There is no diagram anywhere of the self-correcting mechanism (SRAS shifting to close a gap), which is the most diagram-dependent idea in the section. Renaming content[3].diagramRef to 'AD/AS Equilibrium' would collide with content[2] (usedDiagrams set), so a fourth diagram is needed.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "all 5 blocks pin a diagramId that resolves (lib/checkin-placement.js:46); served draft diagrams byte-equal to packet-44-bundle; no diagramRef title matching left",
    "note": null
   },
   {
@@ -11993,10 +11993,10 @@
    "kind": "structure",
    "text": "Recall duplication caused by odd section counts: blocks 1, 3 and 4 have 3 sections, so the third section is a solo step. For a solo step, the 'immediate' recall (first section of the step) and the next step's 'spaced' recall (last section of the previous step) are the same object — lras-determinants fillin and applying-adas-to-events reorder are each shown twice back-to-back (LearnModeTab.jsx lines 345-402).",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "lib/learn-steps.js:52 one subsection per teach step; :116 spaced recall only from earlier chapters; run on served draft: no spaced pick equals the preceding own recall",
    "note": null
   },
   {
@@ -12005,10 +12005,10 @@
    "kind": "structure",
    "text": "Content repetition across blocks: stagflation is taught with near-identical flow chains in changes-in-equilibrium and supply-side-shocks; the AD-right analysis appears in changes-in-equilibrium and demand-side-shocks; classical vs Keynesian appears in block 1 (shapes) and block 4 (adjustment) with examMatters in keynesian-lras and classical-vs-keynesian-adjustment saying the same thing. Block 3 ('AD/AS Analysis of Macroeconomic Events') is largely a restatement of block 2 and could be merged, cutting the section from 13 to ~10 subsections — relevant given 75% of users never leave step 0.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle: stagflation and AD-right chains gone (grep); classical vs Keynesian taught only in block 2 (keynesian-lras ranges vs two-shapes-compared wage assumption, distinct examMatters)",
    "note": null
   },
   {
@@ -12017,10 +12017,10 @@
    "kind": "structure",
    "text": "Three of six reorders are the same generic exam-procedure list (ad-as-equilibrium, demand-side-shocks, applying-adas-to-events); only sras-shifts, keynesian-lras and self-correcting-mechanism test economics. Recall 'shuffled' arrays reuse two permutations ([2,0,3,1] x3, [3,1,0,2] x2), so a student who notices can solve by pattern.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle 5 reorders (sras-curve, raw-materials-and-energy, classical-lras, education-and-skills, competition-policy) are 4-step economic causal chains; no shuffled field, and lib/recall-widgets.js:15 ignores it",
    "note": null
   },
   {
@@ -12029,10 +12029,10 @@
    "kind": "structure",
    "text": "Fill-in data shape not supported by the renderer: changes-in-equilibrium template lines 0-1 and supply-side-shocks template line 1 contain two '___' with a single compound answer ('rises, rises'); FillInRecall.jsx destructures split('___') into [before, after], dropping the second blank. Five of seven hints have character counts that do not match the answer length (education, stagflation, dilemma, inflationary, intervention).",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "same fix as topFix-01: every fill-in template line has at most one ___, single-token answers, descriptive hints (lib/recall-widgets.js:140-171)",
    "note": null
   },
   {
@@ -12041,10 +12041,10 @@
    "kind": "structure",
    "text": "Section scope vs label: titled '2.3.3 Aggregate Supply' but covers IAL 2.3.1-2.3.3 (AS characteristics, SRAS, LRAS) plus 2.4.3 (equilibrium real national output, blocks 2-3) plus 2.5.2 (output gaps, block 4). Students cross-referencing the spec will not find macro equilibrium or output gaps under 2.3.3.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle teaches 2.3.3 only (econ_spec.txt:1026-1049); equilibrium/output-gap blocks removed; cross-topic mentions are pointers to real headings 2.3.2/2.3.4/2.3.6 (econ_spec.txt:976,1056,1132)",
    "note": "SPEC NUMBERING: this item cites 2.4.3, 2.5.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.3. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -12053,10 +12053,10 @@
    "kind": "structure",
    "text": "Takeaways match their blocks, with one exception: content[0] takeaway 'Near full capacity the SRAS curve becomes steeper' encodes the SRAS/Keynesian-LRAS conflation noted under accuracy. Misconceptions are mostly genuine student errors (higher prices shift SRAS; government spending shifts LRAS; Keynesian AS drawn flat; equilibrium = desirable; output gap = recession); the classical-vs-keynesian-adjustment one ('Keynesians say markets never work') is a straw man rather than an observed error.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle block 0 takeaway no longer says SRAS steepens; 'steep' appears only in the keynesian-lras misconception and mistakes[3] that correct it; 'markets never work' straw man absent",
    "note": null
   },
   {
@@ -12065,10 +12065,10 @@
    "kind": "structure",
    "text": "Difficulty ramp is sensible (SRAS -> LRAS -> equilibrium -> shocks -> adjustment) and pairing classical-lras with keynesian-lras in one step is the right pedagogical choice.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "property preserved: classical-lras and keynesian-lras still paired in block 2 of packet-44-bundle; ramp concept->SRAS->LRAS shapes->LRAS factors, practice tariffs rising to 20 in the last chapter",
    "note": null
   },
   {
@@ -12077,10 +12077,10 @@
    "kind": "specGap",
    "text": "2.3.3 LRAS factor 'changes in relative productivity' (productivity relative to other economies) — not taught; productivity appears only as a diagram annotation and a quiz distractor.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle block 3 'productivity' subsection: output per worker as a term of capacity, mechanism and worked shift (800->824bn); spec bullet is bare 'productivity' (econ_spec.txt:1045), the 'relative' gloss is the item's own",
    "note": null
   },
   {
@@ -12089,10 +12089,10 @@
    "kind": "specGap",
    "text": "2.3.3 LRAS factor 'demographic changes and migration' — only the word 'immigration' inside one bullet in lras-determinants; no treatment of ageing populations, participation rates or emigration.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle block 4 'demography' (ageing, participation rate, birth-rate lag, 784/820bn) and 'net-migration' (inflow, skilled emigration) subsections with mechanism",
    "note": null
   },
   {
@@ -12101,10 +12101,10 @@
    "kind": "specGap",
    "text": "2.3.3 LRAS factor 'changes in government regulations' — only 'deregulation' listed inside the 'Institutional factors' bullet with no explanation of the mechanism (compliance costs, labour-market rules).",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle block 4 'regulations-and-tax': compliance cost (licences, forms per worker hired) vs enabling rules, plus tax as a long-run incentive (scripts/_packet44-content.mjs:517-523)",
    "note": null
   },
   {
@@ -12113,10 +12113,10 @@
    "kind": "specGap",
    "text": "2.3.3 LRAS factor 'competition policy' — named in one bullet, never explained (how contestability raises efficiency/potential output).",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "packet-44-bundle block 4 'competition-policy' (scripts/_packet44-content.mjs:601-610): rivalry -> cut costs/innovate -> output per worker -> LRAS right, with flow and reorder",
    "note": null
   },
   {
@@ -12125,10 +12125,10 @@
    "kind": "specGap",
    "text": "2.3.1 'distinction between movement along and shift of the AS curve' is taught for SRAS only; not stated for LRAS (e.g. that there is no 'movement along' a vertical LRAS).",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "scripts/_packet44-content.mjs:139 movement-and-shift states no output change along a vertical LRAS; diagram 4e583d16 scenario 'Along a vertical LRAS'; quiz Q7",
    "note": null
   },
   {
@@ -12137,11 +12137,11 @@
    "kind": "specGap",
    "text": "2.5.2 (if output gaps are intended to live here) 'difficulties of measuring output gaps' — not taught; the section presents potential output as observable.",
    "packet": 44,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 2.5.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.3. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "Refused on the document, not deferred. The leaf is 2.3.5 · 4d 'Difficulties of measuring output gaps' (econ_spec.txt:1125), owned by economic-growth; the item's '2.5.2' does not exist in econ_spec.txt, and the item itself asks only 'if output gaps are intended to live here'. They are not: per audit/SPEC-OWNERSHIP.md (row added 26 Sep) packet 44 removed the output-gaps subsection from aggregate-supply's draft, so the defect the item describes (this section presenting potential output as observable) no longer exists here, and the leaf is taught by its owner (scripts/_packet43-content.mjs 'measuring-output-gaps', packet 43). Runner assertion: POINTER_ONLY 'output gaps' budget, scripts/_packet44-util.mjs."
   },
   {
    "id": "C-aggregate-supply-specGap-07",
@@ -12149,11 +12149,11 @@
    "kind": "specGap",
    "text": "Unsure: whether the spec's 2.4.3 expectation of showing 'equilibrium in the short run and long run' with SRAS and LRAS on one diagram is examined via the Keynesian curve as well — the section only shows LR adjustment on the classical diagram.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 2.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.3. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "status": "wont-fix",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "Still true: the only SR/LR equilibrium diagram is classical; packet-44-bundle diagram 84e3e9ae 'Keynesian: three ranges' draws LRAS alone, no AD/SRAS/equilibrium; Keynesian outcome only in words (two-shapes-compared body[2]). Proper disposition is wont-fix/reassign like specGap-06: 2.3.4 3b belongs to national-income, whose packet-37 diagram 'The Multiplied Shift of AD' has a 'Three AS shapes' scenario",
+   "note": "Refused on the document, not deferred; reassigned in substance to national-income (packet 37). Round-1 verifier REJECTED the earlier 'fixed' claim and was right: the only diagram with AD, SRAS, LRAS and short/long-run equilibrium points is the classical one (scripts/_packet44-diagrams.mjs:258-272, scenario 'Classical adjustment'); scenario 'Keynesian: three ranges' draws the curve alone, and the Keynesian outcome is words only (two-shapes-compared body[2], scripts/_packet44-content.mjs:393; chain 'Why the same slump looks different on a Keynesian curve', scripts/_packet44-assessment.mjs:323). Why not built here: the phrase 'equilibrium in the short run and long run' is in econ_spec.txt only for firm theory (:1374, :1383), never for AD/AS; the item's '2.4.3' does not exist (UK GCE numbering, noted 13 Sep). 2.3.3 · 3a (:1039-1042) asks only for the Keynesian and classical SHAPES, which this section draws; what an AD shift does to equilibrium output against each shape is 2.3.4 · 3b 'Causes of changes in equilibrium real national output, as a result of shifts in AD and/or AS curves' (:1076-1077), owned by national-income per audit/SPEC-OWNERSHIP.md (row added 26 Sep). national-income teaches it: scripts/_packet37-diagrams.mjs:414-422 'The Multiplied Shift of AD', scenario 'Three AS shapes' (AD shift against flat / upward-sloping / vertical AS, output and price for each), and _packet37-content.mjs:572, :817-818. That section does not use the word 'Keynesian' (its own ban, _packet37-util.mjs:295), so the shape name lives here and the equilibrium outcome there; body[2] here already points to 2.3.4. Runner assertion: POINTER_ONLY 'equilibrium real output' budget, scripts/_packet44-util.mjs:218."
   },
   {
    "id": "C-macroeconomic-objectives-policies-topFix-01",
@@ -12491,10 +12491,10 @@
    "rank": 0,
    "text": "Make diagrams appear in Learn Mode: rename diagramRefs to match titles (e.g. 'trade cycle', 'output gap', 'ppf') or fix the matcher in LearnModeTab.jsx:97-104 to normalise hyphens/spaces; add the PPF diagram to Block 1 and the output-gap diagram to Block 2.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[0,1,3,4].diagramId resolve by id (utils.js:130-135 via checkin-placement.js:46); PPF 27bc75b7 on ch1, output-gap 4696fc39 on Output Gaps; no diagramRef left; staged draft = API ?draft=1",
    "note": null
   },
   {
@@ -12504,10 +12504,10 @@
    "rank": 1,
    "text": "Rewrite the six weak/not-orderable recalls: replace costs-growth-environment and supply-side-causes rankings with classification exercises, fix the cyclic four-phase reorder by anchoring a start point, collapse the duplicated LRAS-chain reorder, and replace trivial collocation fill-ins (actual-economic-growth, relationship-actual-potential, demand-side-causes, benefits-growth, growth-living-standards) with banks where two words genuinely compete.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: all six named recalls replaced; rankings now classify; cyclic reorder impossible (trade-cycle block removed, structure-03 wont-fix); single reorder; named fill-ins now classify/match; all 7 fillins carry 3 authored distractors. New residual in verify-a.md: export-led blank 1 'as an ___' is grammar-determined",
    "note": null
   },
   {
@@ -12517,10 +12517,10 @@
    "rank": 2,
    "text": "Fix practice: remove the Unit 4 FDI question, change 'Define (4 marks)' to a 2-mark define or a 4-mark explain, change 'Outline' to 'Explain', map practice to blocks by topic rather than sorted mark index, and rewrite 10/20-mark guidance as levels-based KAA/evaluation descriptors with a required diagram.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "DB draft (curl :3001 ?draft=1, == packet-43-bundle practice) practice[4] Examine 8 / [6] Evaluate 20 / [8] Discuss 14 guidance para 2 now carries Level 1-3 / 1-4 / 1-4 bands ending in brief assessment / supported judgement / critical assessment, 0 '(n marks)' allocations, ladder hidden from para 0 (InlinePractice.jsx:41-43,166-168); Unit-4 FDI, Define 4, Outline, 'levels-marked', KAA = 0; pins raw-order topical (checkin-placement.js:51). Diagram clause refused per Appendix 6 (econ_spec.txt:2733-2747 credits no diagram under Discuss/Evaluate; NEXT.md:4936 precedent); p6 still says plan a diagram (PPF).",
    "note": null
   },
   {
@@ -12530,10 +12530,10 @@
    "rank": 3,
    "text": "Correct the accuracy slips a teacher would catch: 'movement along the PPF' → 'from inside towards the PPF'; 'elastic section of SRAS' → consistent Keynesian/classical model; 'falling real wages' in a positive gap; standardise cycle-phase names across text, diagram and extras.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: PPF slip fixed everywhere; 0 hits for SRAS/elastic/real wage/boom/slump/trough/cycle incl SVG text; one Keynesian LRAS model across content[0].sections[1], diagram 27bc75b7, practice[9]",
    "note": null
   },
   {
@@ -12543,10 +12543,10 @@
    "rank": 4,
    "text": "Trim redundancy and add missing spec content: merge Block 6 into Blocks 1 and 4, dedupe the quiz bank (Q9/Q20, Q16, Q21, Q23) and replace duplicates with items on export-led growth, trend growth, and impact on firms / current-vs-future living standards, which are currently untaught.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: Block 6 merged away; quiz near-duplicates gone (max Jaccard 0.37); new quiz on export-led q6/q7, trend q27, firms q18, current-vs-future q21, each also taught in content[]",
    "note": null
   },
   {
@@ -12555,10 +12555,10 @@
    "kind": "accuracy",
    "text": "Actual vs Potential Economic Growth > actual-economic-growth > examMatters: Says to 'link actual growth to a movement along the PPF'. Actual growth from spare capacity is a movement from INSIDE the PPF towards it; a movement ALONG the PPF is reallocation, which quiz Q3's own explanation says 'is not growth'. Content contradicts its own quiz.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[0].sections[0].body[1-2]: actual growth = inside PPF towards it, along = reallocation; every 'along' hit (misconception, notes[0], quiz[1], quiz[3], mistakes[0]) consistent; examMatters no longer cites PPF",
    "note": null
   },
   {
@@ -12567,10 +12567,10 @@
    "kind": "practice",
    "text": "p0: 'Define the term economic growth (4 marks)' — IAL Economics 'Define' questions are 2 marks (definition + development). A 4-mark item would be 'Explain...' or a Section A supported MCQ (1 + 3). The guidance awards marks for the actual/potential distinction and measurement method, which a 'define' does not invite. This is also the item Learn Mode surfaces first (sortedPractice index 0, 'worked' mode) so it sets the wrong expectation.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle practice[0] = Define 2 marks 'potential economic growth', 1+1 guidance; first raw-order pin of ch1 (checkin-placement.js:50-51) so it is what Learn Mode serves first",
    "note": null
   },
   {
@@ -12579,10 +12579,10 @@
    "kind": "practice",
    "text": "p2: 'Assess the importance of FDI in promoting economic growth in developing countries (10 marks)' is WEC14 Unit 4 (development/FDI) content, not Unit 2 economic growth. Additionally the guidance is a points list summing to 10 (2+2+2+1+1+1+1), whereas IAL 10-mark 'Assess' is levels-marked (KAA and evaluation levels). Never shown in Learn Mode either (practiceIndices only reach sorted indices 0-2).",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle practice[]: 0 hits for developing countries / Assess / 10 marks; FDI now practice[2] Analyse 6 on potential growth (2.3.5 1d), taught in content[1].sections[0]",
    "note": null
   },
   {
@@ -12591,10 +12591,10 @@
    "kind": "structure",
    "text": "NO diagrams render in Learn Mode for this section. LearnModeTab.jsx:97-104 matches step.diagramRef to diagram titles by case-insensitive substring; block refs are 'ad-as-growth', 'output-gap-diagram', 'trade-cycle-diagram', 'ad-as-shifts', 'ad-as-growth-analysis' (hyphenated) while titles are 'The Business (Trade) Cycle', 'Output Gap Diagram', 'PPF: Actual vs Potential Growth' (spaces). Verified: zero matches for all six blocks. For a topic whose exam value is almost entirely diagrammatic (PPF, AD/AS, trade cycle), students see three well-drawn diagrams only on the Diagrams tab. The PPF diagram, ideal for Block 1, is never referenced by any block; Block 5 has no diagramRef at all.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: 4 of 5 check-ins pin a diagramId that exists in diagrams[] (content[2] decided null); resolved by id at checkin-placement.js:46, not the title matcher",
    "note": null
   },
   {
@@ -12603,10 +12603,10 @@
    "kind": "structure",
    "text": "Block 6 'Economic Growth and AD/AS Analysis' re-teaches Block 1 (actual = AD shift, potential = LRAS shift) and Block 4 (demand-side vs supply-side) a third time, with a duplicated reorder (potential-economic-growth vs lras-shifts-growth) and near-identical flows. 17 subsections / 11 Learn Mode steps for one spec point is long; merging Block 6 into Blocks 1 and 4 would cut ~3 steps without losing content.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: AD/AS analysis block gone (5 blocks); only 1 reorder in section (balance-of-trade chain); AD three-ranges flow (content[0]) and competition flow (content[1]) are distinct",
    "note": null
   },
   {
@@ -12615,11 +12615,11 @@
    "kind": "structure",
    "text": "Sequencing within Block 3: the four-phase overview of the cycle is introduced in the THIRD subsection ('Recovery and Stages of the Cycle', body para 2) after Boom and Recession have already been taught. The overview (and the trade-cycle diagram) should open the block.",
    "packet": 43,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Not built, by Rule 1. The item asks to move the trade cycle's four-phase overview to the top of the 'Business (Trade) Cycle' block. 'cycle', 'boom', 'slump' and 'trough' are each 0 hits in audit/raw/econ_spec.txt; 'recession' has one hit, :902, which is 2.3.1 1g (measures-economic-performance). The block is UK GCE material and is not rebuilt: what 2.3.5 asks about fluctuation is 4a (actual growth against the long-term trend) and 4c (characteristics of positive/negative output gaps), both built in the Output Gaps chapter (scripts/_packet43-content.mjs trendGrowth / positiveGapCharacteristics / negativeGapCharacteristics). The runner re-counts every one of those words in the spec and bans them in student text (scripts/_packet43-util.mjs BANNED). (packet 43, 26 Sep 2026)"
   },
   {
    "id": "C-economic-growth-structure-04",
@@ -12627,10 +12627,10 @@
    "kind": "structure",
    "text": "2-per-step pairing: Block 1 = [actual, potential], [relationship]; Block 2 = [positive, negative], [implications]; Block 3 = [boom, recession], [recovery]; Block 4 = [demand, supply]; Block 5 = [benefits, env costs], [living standards]; Block 6 = [AD, LRAS], [combined]. Pairs are coherent, but every 3-section block ends with a lone-section step carrying diagram + quiz + practice + explain-back + takeaway, making the final step of each block much heavier than the others.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "lib/learn-steps.js:62-80 builds one teach step per subsection plus a separate check-in step carrying diagram/quiz/practice/takeaway, so no lone teaching section is loaded with the chapter-end widgets",
    "note": null
   },
   {
@@ -12639,10 +12639,10 @@
    "kind": "structure",
    "text": "Practice mapping is by sorted-marks index not by topic: Block 3 (trade cycle) gets 'Define economic growth' (4m), Block 4 (causes) gets 'Outline actual vs potential' (4m), Block 5 gets 'Explain two costs' (6m, the only topical match). The 10-mark and 20-mark items are never reached in Learn Mode.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle practiceIndices topical, raw order (checkin-placement.js:50-51): ch1 p0/p1, ch2 p2/p3, ch3 p4/p5, ch4 p6/p7, ch5 p8/p9; 20-mark p6 and 14-mark p8 are first pins so both are served",
    "note": null
   },
   {
@@ -12651,10 +12651,10 @@
    "kind": "structure",
    "text": "quizIndices only reference Q0-Q5; Q6-Q23 appear only in PreTest/PostTest sampling and the Quiz tab. Since the pre-test samples 3 random from 24 mostly-duplicate items, the pre/post comparison is noisy.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle quizIndices chapter-addressed Q3-Q33; pre-test = pretest-pool.js:40-45 first 3 unreserved = Q0-Q2 (chapter-1 items), not random; quiz max Jaccard 0.37. Residual platform-wide: one question per check-in (utils.js:100-117)",
    "note": null
   },
   {
@@ -12663,10 +12663,10 @@
    "kind": "structure",
    "text": "Misconceptions: most are genuine (positive gap = good; recovery = back to normal; demand-side growth always inflationary; growth always harms environment; GDP = living standards). Filler ones: relationship-actual-potential ('students treat them as separate topics that never interact'), lras-shifts-growth ('students forget to explain the cause' — exam-technique, not a misconception), supply-side-causes ('students don't distinguish quantity and quality').",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: all 21 misconceptions read, each a conceptual error (along vs inside PPF, AD always raises output, inflow != FDI, hours != productivity, etc.); technique lives in examMatters",
    "note": null
   },
   {
@@ -12675,10 +12675,10 @@
    "kind": "structure",
    "text": "Takeaways match their blocks. Block 6's fourth takeaway ('Always label diagrams fully...') is exam advice rather than content; Block 5's takeaway omits the current-account cost that quiz Q5 and common_mistakes[1] both treat as a standard cost.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: all 20 takeaways are content; costs chapter takeaway[2] names the balance-of-trade deficit; no label-diagrams exam advice",
    "note": null
   },
   {
@@ -12687,10 +12687,10 @@
    "kind": "structure",
    "text": "Terminology drift between surfaces (content vs diagram vs extras) on cycle phase names, and between quiz Q6 and Q16 on 'sustainable growth' (see accuracy/quiz).",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: 0 cycle-phase names on any surface incl SVG text; 'sustainable' once (definition of potential output); Q6/Q16 conflict gone; 'Keynesian long-run AS' identical in content, diagram 27bc75b7, practice[9]",
    "note": null
   },
   {
@@ -12699,10 +12699,10 @@
    "kind": "structure",
    "text": "Learn Mode fill-ins use a 3-word bank (FillInRecall.jsx:12) so almost every fillin in this section collapses to grammar/elimination; the design, not just this section's authoring, makes 'trivial' the default verdict.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "recall-widgets.js:179-200 fillinChips uses authored distractors; every packet-43-bundle fillin has 3 (6-chip bank); 20 of 21 blanks have a semantically competing chip, the exception (export-led 'an ___') is logged in verify-a.md",
    "note": null
   },
   {
@@ -12711,10 +12711,10 @@
    "kind": "specGap",
    "text": "Export-led growth / importance of international trade for economic growth — in the IAL 'causes of economic growth' bullet; only appears as quiz Q14, never taught in content[] (Australia example touches commodity exports but does not name the concept).",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[0].sections[2] 'International Trade and Export-Led Growth' teaches 1c (injection, scale, foreign currency, competition, risk) plus extras chain 1",
    "note": null
   },
   {
@@ -12723,10 +12723,10 @@
    "kind": "specGap",
    "text": "Trend rate of growth (actual growth vs trend/long-run growth rate) — only in quiz Q8 and the diagram legend; not defined in content.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[4].sections[0] defines trend rate of growth and compares Loriana's actual rates to 2.5% trend (4a)",
    "note": null
   },
   {
@@ -12735,10 +12735,10 @@
    "kind": "specGap",
    "text": "Impact of growth on FIRMS (profits, investment, but also rising costs/wages, competition) — 'impact of economic growth on consumers, firms, government, current and future living standards' is the spec framing; firms get one sentence on 'business confidence'.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[2].sections[1] 'Profits and Investment' teaches increased profits for firms and the costs to firms; practice[4] Examine 8 on benefits for firms",
    "note": null
   },
   {
@@ -12747,10 +12747,10 @@
    "kind": "specGap",
    "text": "Current vs future living standards trade-off (consumption vs capital goods on the PPF; growth today at the cost of tomorrow) — not explicitly framed, though the PPF diagram axes (capital vs consumer goods) would support it.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[3].sections[0] teaches the current vs future living standards trade-off on a capital/consumer PPF; diagram caa798a1 'Today' and 'Ten years on'",
    "note": null
   },
   {
@@ -12759,10 +12759,10 @@
    "kind": "specGap",
    "text": "Current account deterioration as a cost of growth — taught only in quiz Q5, common_mistakes[1] and a positive-output-gap examMatters aside; absent from Block 5 'Costs and Benefits'.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[3].sections[2] 'Balance of Trade Deficits' in the Costs chapter (spec 3a wording), with Loriana bn surplus -> bn deficit",
    "note": null
   },
   {
@@ -12771,10 +12771,10 @@
    "kind": "specGap",
    "text": "Inflation as a cost of growth is in extras/practice but not in Block 5's costs subsection (it is in Block 2's positive-gap subsection, so partially covered).",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[3].sections[4] 'Inflation' sits in the Costs of Growth chapter, tied to demand outgrowing capacity",
    "note": null
   },
   {
@@ -12783,11 +12783,11 @@
    "kind": "specGap",
    "text": "Unsure: the product numbers this '2.3.5'; my recollection is that IAL WEC12 places economic growth under its own heading (causes / output gaps / trade cycle / impact) rather than under 2.3 aggregate supply — verify numbering against the current IAL specification.",
    "packet": 43,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Refused against the document, not built. The item doubted the number ('the product numbers this 2.3.5 ... verify'). audit/raw/econ_spec.txt:1094 reads '2.3.5 Economic growth', its own heading between :1056 '2.3.4 National income' and :1132 '2.3.6 Macroeconomic objectives and policies'; asserted BY LINE in scripts/packet-43-economic-growth.mjs section 2. Nothing renumbered. (packet 43, 26 Sep 2026)"
   },
   {
    "id": "C-types-sizes-businesses-topFix-01",
@@ -13783,10 +13783,10 @@
    "rank": 0,
    "text": "Add diagramRef/quizIndices/practiceIndices to all three blocks (block 0: 'Competitive Labour Market', quiz [0,1], practice [0]; block 1: 'Monopsony', quiz [5,6], practice [3]; block 2: 'Wage Differentials', quiz [7,8,9], practice [1,4]) so the monopsony diagram actually renders and inline MCQs/practice match what was just taught.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "packet-45 bundle content[0..4] all carry diagramId+quizIndices+practiceIndices; placeChapterItems (lib/checkin-placement.js:37-51) run on the ?draft=1 payload places all 5 diagrams by pin and serves an on-topic quiz/practice item per chapter; monopsony diagram moved to 3.3.3 owner (packet 29 diagram geometry verified correct)",
    "note": null
   },
   {
@@ -13796,10 +13796,10 @@
    "rank": 1,
    "text": "Write recalls for all six subsections — reorder for the monopsony construction (faces whole market supply → must raise wage for all → MCL above S → hire where MCL = MRP → pay wage from S), reorder for NMW-in-monopsony, fillin for 'MRP = MPP × MR; hire until MRP = W', fillin for bilateral monopoly/indeterminate wage.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "bundle: 21/21 subsections carry a recall (reorder 6, fillin 4, classify 6, match 5); recall-census --check re-run exit 0, staged recoverable unchanged at 308 so labour-markets adds 0; monopsony/NMW/bilateral recalls are for content moved out under SPEC-OWNERSHIP packet-45 row",
    "note": null
   },
   {
@@ -13809,10 +13809,10 @@
    "rank": 2,
    "text": "Fix wage-differentials keyIdea ('not because markets are failing') and add a short NMW-in-competitive-market paragraph plus determinants of elasticity of demand/supply for labour, so the misconceptions and quiz[2] rest on taught content.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "'not because markets are failing' 0 hits in bundle; elasticity determinants taught content[0].sections[4] and content[1].sections[4]; NMW not added but nothing presupposes it: only mention is 3.3.5 pointer content[3].sections[1].body[3] (econ_spec.txt:1530 = 3.3.5.2b)",
    "note": null
   },
   {
@@ -13822,10 +13822,10 @@
    "rank": 3,
    "text": "Repair the two monopsony SVGs: put Wm on the supply curve, Qc at the true S=MRP intersection, Qmin at the Wmin ∩ S kink, and correct the 'Wmin = MRP' construction note.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "both monopsony SVGs absent from draft (5 diagrams, no MCL/monopsony label); construction now owned by market-structures-contestability, whose live diagrams[7] has Wm (310.8,229.09) on S, MCL=MRP at y=180, competitive S∩MRP at (390.4,212.73), checked numerically",
    "note": null
   },
   {
@@ -13835,10 +13835,10 @@
    "rank": 4,
    "text": "Bring practice in line with IAL command words and marking: Define → 2 marks (or 'Explain', 4); drop 'Outline'; make the 20-mark guidance total 20, structure as KAA/Evaluation levels, and require the monopsony diagram.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "bundle practice = Define 2, Calculate 2, Explain 4, Analyse 6, Examine 8, Discuss 14, Evaluate 20, all legal per econ_spec.txt Appendix 6 (:2696+); no Outline; guidance above 6 marks uses levels with no '(1 mark)'; monopsony essay replaced",
    "note": null
   },
   {
@@ -13847,10 +13847,10 @@
    "kind": "accuracy",
    "text": "content[2] 'Trade Unions and Wage Differentials' > wage-differentials > keyIdea: States wages differ 'not because markets are failing'. The IAL spec explicitly lists geographical and occupational immobility as market failure in labour markets, and the same section's own body calls discrimination 'unjustified' and immobility a 'friction' that stops differentials being competed away. A student who writes 'wage differentials are not a market failure' in an exam loses the evaluation.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "keyIdea gone; content[2].sections[4] and content[4].sections[2] separate market-working pay gaps from immobility failure, consistent with econ_spec.txt:1475-1479 (4a/4b)",
    "note": null
   },
   {
@@ -13859,10 +13859,10 @@
    "kind": "quiz",
    "text": "q2: Correct (index 2) and distractors are fine, but the determinants of elasticity of demand for labour are not taught in any content[] subsection. Because no block has quizIndices, the legacy fallback (components/learn-mode/utils.js distributeItems) shows quiz[0], quiz[1], quiz[2] at steps 0/1/2, so this untaught question is the inline MCQ on the Trade Unions & Wage Differentials step.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "elasticity-of-demand-for-labour item is now quiz[7], taught before it at content[0].sections[4] (four determinants) and pinned to block 0 (quizIndices 3-7)",
    "note": null
   },
   {
@@ -13871,10 +13871,10 @@
    "kind": "structure",
    "text": "No block has diagramRef, quizIndices or practiceIndices, so LearnModeTab.jsx:86 takes the legacy fallback. matchDiagramsToBlocks (utils.js:31) scores by title-word overlap: 'Competitive Labour Market Equilibrium' matches block 0 ('Demand and Supply of Labour') on 'labour' and consumes it; 'Monopsony Labour Market' then scores 0 against 'Wage Determination' and 'Trade Unions and Wage Differentials' and is NEVER shown. The single most examined diagram in the section is invisible in Learn Mode.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "every block pins diagramId; placeChapterItems (lib/checkin-placement.js:37-48) on the served draft returns diagramHow='pin' for all 5 chapters and places all 5 diagrams, so the matchDiagramsToBlocks title fallback never runs",
    "note": null
   },
   {
@@ -13883,10 +13883,10 @@
    "kind": "structure",
    "text": "distributeItems fallback assigns quiz[0], quiz[1], quiz[2] to steps 0/1/2: step 1 (monopsony) gets the MRP = W question, step 2 (unions/differentials) gets the untaught elasticity question. quiz[5..9] (monopsony, NMW, differentials, immobility) never appear inline.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "quizIndices derived from each item's block tag (scripts/_packet45-assessment.mjs:14-19); shipping placement serves ch0 Q3, ch1 Q8, ch2 Q14, ch3 Q20, ch4 Q26, each on its own chapter's topic; no distributeItems fallback",
    "note": null
   },
   {
@@ -13895,10 +13895,10 @@
    "kind": "structure",
    "text": "Practice fallback sorts by marks then takes the first three: step 0 = Define derived demand (worked), step 1 = Outline trade unions (guided) — shown BEFORE trade unions are taught in step 2 — and step 2 = Explain wage differentials. The Assess (10) and Evaluate (20) questions never reach Learn Mode.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "lib/checkin-placement.js:51 + components/learn-mode/utils.js:111-113 resolve raw practiceIndices (no marks sort on pinned path); bundle content[3].practiceIndices=[4,5] serves practice[4] Evaluate 20 (_packet45-assessment.mjs:191) at ch3, visible per lib/ial-commands.js:60; Outline/unions item gone; every served item taught at or before its chapter",
    "note": null
   },
   {
@@ -13907,10 +13907,10 @@
    "kind": "structure",
    "text": "Zero recall objects across all six subsections: the spaced/immediate recall mechanism has nothing to show, so the only retrieval in the whole section is three inline MCQs. This section has several genuinely orderable chains that should be recalls (monopsony construction; NMW-in-monopsony mechanism; derived-demand chain; union wage above equilibrium → move up MRP → lower employment).",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "21/21 subsections in bundle and ?draft=1 content carry a recall object; recall-census --check exit 0",
    "note": null
   },
   {
@@ -13919,10 +13919,10 @@
    "kind": "structure",
    "text": "Block 2 pairing is incoherent: 'Trade Unions' is the bilateral-monopoly counterpart to monopsony and belongs with block 1; 'Wage Differentials' belongs with supply-side immobility. Suggested: Block 1 = competitive market + NMW in a competitive market; Block 2 = monopsony + trade unions/bilateral monopoly; Block 3 = wage differentials + immobility + government policy.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "blocks regrouped: content[3] = trade unions + public-sector pay (3.3.4 2c/3c non-competitive setting); pay differentials moved to content[2].sections[4] in the competitive block, linking forward to immobility in content[4]",
    "note": null
   },
   {
@@ -13931,10 +13931,10 @@
    "kind": "structure",
    "text": "Firm vs market never distinguished: no subsection shows the perfectly competitive firm facing a horizontal labour supply (W = ACL = MCL) hiring where W = MRP, so the jump to 'MCL above supply' in monopsony has no baseline diagram to contrast against.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[2].sections[1] 'One Firm in a Competitive Labour Market' plus diagram 8898e521 scenario 'One firm: a wage-taker': horizontal S at $12, firm demand meets it at 6 (circle incidence checked numerically), alongside the market 'Equilibrium' scenario",
    "note": null
   },
   {
@@ -13943,10 +13943,10 @@
    "kind": "structure",
    "text": "NMW in a COMPETITIVE labour market (wage floor → excess supply → unemployment) is never taught, yet monopsony-power > misconception refers to 'the standard unemployment prediction' as if it had been, and flashcard 'What is the national minimum wage' states it. The student meets the exception before the rule.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "no monopsony misconception and no NMW flashcard in the draft; 'minimum wage' occurs only in the 3.3.5 pointers content[3].sections[1].body[3] and notes[3], so no text presupposes an untaught result",
    "note": null
   },
   {
@@ -13955,10 +13955,10 @@
    "kind": "structure",
    "text": "trade-unions > body flow is a list of three parallel cases (competitive / monopsony / bilateral monopoly), not a causal chain — misuse of the flow type; would confuse a reorder recall if one were later generated from it.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "union flows content[3].sections[0].body[2] (limit entry → fewer → S left) and sections[1].body[2] (floor → move up D → surplus) are causal chains; the other 11 flows were read and none is a parallel list",
    "note": null
   },
   {
@@ -13967,10 +13967,10 @@
    "kind": "structure",
    "text": "demand-for-labour-mrp > misconception ('firms hire workers because they need them') is filler. Real student errors here: confusing a movement along MRP (wage change) with a shift (product demand / productivity); writing MRP = MPP × price when the product market is imperfectly competitive; treating diminishing returns as workers being 'worse'.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "filler gone from every bundle string (0 hits need(ed) them/because..need; sub:demand-for-labour-mrp removed); real errors now taught: shift vs movement _packet45-content.mjs:76, MRP=output x MR not price _packet45-content.mjs:106 + mistakes[2] _packet45-assessment.mjs:255, worse-workers _packet45-content.mjs:110 + _packet45-assessment.mjs:252",
    "note": null
   },
   {
@@ -13979,10 +13979,10 @@
    "kind": "structure",
    "text": "supply-of-labour > examMatters directly contradicts the Notes-tab examMatters for the same subsection (backward-bending 'favourite diagram' vs 'most questions focus on the market supply curve'). Students switching tabs see opposite advice.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "backward-bending/'favourite' advice 0 hits; notes[1] carries no examMatters, and content[1].sections[0].examMatters gives the only advice, so nothing is left to contradict",
    "note": null
   },
   {
@@ -13991,10 +13991,10 @@
    "kind": "structure",
    "text": "Difficulty ramp is otherwise sensible (demand/supply → competitive → monopsony → unions → differentials) and each block's takeaway list faithfully summarises its two subsections.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "not a defect: the draft ramp runs demand → supply → competitive → unions/public → market failure; each block takeaway summarises its own subsections",
    "note": null
   },
   {
@@ -14003,10 +14003,10 @@
    "kind": "specGap",
    "text": "Elasticity of demand for labour and its determinants (labour share of cost, substitutability, PED of product, time) — not taught; tested in quiz[2].",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[0].sections[4] teaches the definition, a worked -0.67 elasticity and four determinants (capital substitutability, share of costs, product PED, time)",
    "note": null
   },
   {
@@ -14015,10 +14015,10 @@
    "kind": "specGap",
    "text": "Elasticity of supply of labour and its determinants (training period, qualifications, mobility, time) — not taught beyond one sentence.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[1].sections[4] teaches the definition, four determinants (training/qualifications, skill specificity, mobility, time) and a worked elastic vs inelastic comparison ($14/44k vs $16/40k)",
    "note": null
   },
   {
@@ -14027,11 +14027,11 @@
    "kind": "specGap",
    "text": "National minimum wage in a competitive labour market (wage floor, excess supply, unemployment diagram) — only the monopsony case is covered.",
    "packet": 45,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Packet 45, 26 Sep: the minimum wage (in a competitive market or any other) is 3.3.5.2b 'minimum wage controls' (econ_spec.txt:1530), owned by government-intervention-firms (packet 48), not a 3.3.4 leaf (3.3.4 = :1447-1479, 17 leaves, none names it). Recorded in audit/SPEC-OWNERSHIP.md (packet 45 row). labour-markets now points at it once, citing 3.3.5 (scripts/_packet45-content.mjs, union-wage body). The defect this item implied (structure-07: text presupposing the competitive result) is removed in the draft; the runner asserts it absent."
   },
   {
    "id": "C-labour-markets-specGap-04",
@@ -14039,11 +14039,11 @@
    "kind": "specGap",
    "text": "Government intervention to reduce labour market failure: maximum wages, public-sector wage setting, policies to tackle geographical/occupational immobility (housing, retraining, relocation grants) — only appears in quiz[9].",
    "packet": 45,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Packet 45, 26 Sep: this item's subject is 3.3.5.2 'Government intervention in labour markets' (econ_spec.txt:1524-1535): maximum wages (:1529) and measures to reduce immobility (:1533) belong to government-intervention-firms (packet 48); SPEC-OWNERSHIP.md row added. Its one clause inside 3.3.4 — public-sector wage setting, 3.3.4.3c (:1473) — IS built in the draft: scripts/_packet45-content.mjs subsection public-sector-pay (pay scales, commissions, budget, state-owned enterprises, below-equilibrium vacancies) and diagram scenario 'Public-sector pay' in scripts/_packet45-diagrams.mjs. Immobility measures are pointed at with a 3.3.5 citation only."
   },
   {
    "id": "C-labour-markets-specGap-05",
@@ -14051,11 +14051,11 @@
    "kind": "specGap",
    "text": "Current labour market issues listed in WEC13 3.4.3 (from my recollection of the spec — treat as 'probable'): skills shortages, ageing population/retirement age, young workers, flexible/temporary/zero-hours working, migration — only migration is touched, via one flow and one misconception.",
    "packet": 45,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "Packet 45, 26 Sep: SPEC NUMBERING — this item cites 3.4.3, UK GCE numbering that does not exist in the IAL spec (runner asserts '3.4.1-3.4.3' absent from econ_spec.txt). By wording: 'skills shortage', 'zero-hours', 'ageing population', 'flexible working' occur nowhere in econ_spec.txt; the only listed labour issue it names that IS spec text is net migration (3.3.4.2c, :1461), taught in the draft (population-and-migration subsection, with size of population and ageing). No 'current labour market issues' requirement exists to build."
   },
   {
    "id": "C-labour-markets-specGap-06",
@@ -14063,10 +14063,10 @@
    "kind": "specGap",
    "text": "Diagram for the individual firm in a perfectly competitive labour market (horizontal supply to the firm, W = MRP) versus the industry — not taught.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "diagram 8898e521 scenarios 'Equilibrium' (market) and 'One firm: a wage-taker' (horizontal S at the market wage, hires where firm demand meets it), taught at content[2].sections[1]; geometry checked numerically",
    "note": null
   },
   {
@@ -14075,11 +14075,11 @@
    "kind": "specGap",
    "text": "Discrimination as a labour-market failure — one sentence only; no analysis of how it distorts demand for labour.",
    "packet": 45,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Packet 45, 26 Sep: 'discrimination' occurs in econ_spec.txt's labour content only at 3.3.5.2b 'measures to reduce discrimination and exploitation' (:1535), owned by government-intervention-firms (packet 48); it is not a 3.3.4 leaf (runner asserts no 'discrimination' inside :1447-1479). The draft bans the word in this section (BANNED_ELSEWHERE, scripts/_packet45-util.mjs) and teaches the 3.3.4 market failures, geographical and occupational immobility (4a/4b). SPEC-OWNERSHIP.md row added."
   },
   {
    "id": "C-labour-markets-specGap-08",
@@ -14087,10 +14087,10 @@
    "kind": "specGap",
    "text": "Unsure: whether WEC13 explicitly requires MRP = MPP × MR theory (the 2018 spec wording I recall is 'demand for labour as derived demand' plus factors influencing demand). Content leans heavily on MRP; not wrong, but examMatters 'Examiners expect you to draw the MRP curve' may overclaim.",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "examiner overclaim gone (0 hits); ch0 built on econ_spec.txt:1451-1457 factors, MRP only as 'Textbooks call it'; MRP = extra output x MR, = price only for a price-taker (_packet45-content.mjs:106, flashcards[4] _packet45-assessment.mjs:210, notes[0]); every other price-times-output line states the given-price assumption",
    "note": null
   },
   {
@@ -14099,11 +14099,11 @@
    "kind": "specGap",
    "text": "Section numbering: the app labels this 3.3.4; in the WEC13 spec I recall the labour market as topic 3.4 (3.4.1 demand, 3.4.2 supply, 3.4.3 wage determination). Unsure — flag for verification against the current spec PDF.",
    "packet": 45,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.4.1, 3.4.2, 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "Packet 45, 26 Sep: SPEC NUMBERING — the item doubts the app's 3.3.4 and recalls '3.4.1/3.4.2/3.4.3'. Checked by wording and line: econ_spec.txt:1447 reads '3.3.4 Labour markets', and '3.4.1', '3.4.2', '3.4.3' occur nowhere in the document (runner scripts/packet-45-labour-markets.mjs §5 asserts both). The app's number is correct; nothing to change."
   },
   {
    "id": "C-causes-effects-globalisation-topFix-01",
@@ -16414,10 +16414,10 @@
    "kind": "specGap",
    "text": "4.3.2 Push factor: competition (domestic competitive pressure pushing firms abroad) — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; push-factors body[2] (competition as a push factor)",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16426,10 +16426,10 @@
    "kind": "specGap",
    "text": "4.3.2 Reason for global M&A/JV: government or legal requirement (e.g. a state requiring a local partner) — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; reasons-competition-law-and-shared-risk body[1] (49% cap, JV the only legal way in)",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16438,10 +16438,10 @@
    "kind": "specThin",
    "text": "4.3.2 Pull factor: increased sales and profitability — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; pull-factors body[1] defines it with worked profit $4.8m -> $9.2m (recomputed: 200,000 x (48-26) = $4.4m)",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16450,10 +16450,10 @@
    "kind": "specThin",
    "text": "4.3.2 Global mergers and takeovers as vehicles for expansion (what they are, distinct from a joint venture) — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; mergers-takeovers-and-joint-ventures body[1-3] defines merger and takeover and distinguishes JV",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16462,10 +16462,10 @@
    "kind": "specThin",
    "text": "4.3.2 Reason for global M&A/JV: accessing supply chains or distribution networks — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 47,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-47",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "served draft ?draft=1 == packet-47-bundle; reasons-supplies-knowledge-and-networks body[2] defines supply chain and distribution network",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16954,10 +16954,10 @@
    "kind": "specThin",
    "text": "3.3.4 1a) Wage rate relative to the price of capital (substituting capital for labour) — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[0].sections[3] explains the wage rate relative to the price of capital: worked $10 break-even, flow and complement caveat",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16966,10 +16966,10 @@
    "kind": "specThin",
    "text": "3.3.4 2c) Size of population as a factor influencing labour supply — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[1].sections[1].body[0] explains size of population: growing vs ageing working-age population shifting supply",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16978,10 +16978,10 @@
    "kind": "specThin",
    "text": "3.3.4 2c) Level of welfare benefits as a factor influencing labour supply — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[1].sections[2].body[1] explains the level of welfare benefits via the gain from working (pay kept minus benefits lost), plus flow and classify recall",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -16990,10 +16990,10 @@
    "kind": "specThin",
    "text": "3.3.4 2c) Government regulations as a factor influencing labour supply — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 45,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-45",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "content[1].sections[3] explains government regulations: licensing, work permits, hours limits, retirement/school-leaving age, plus a worked -12k shift to $14/32k",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {
@@ -17434,10 +17434,10 @@
    "kind": "diagram",
    "text": "A block pins the diagram \"AD/AS Shifts\" and no such diagram exists, so the block renders nothing. equilibrium exists; a shift version does not.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "no block pins by title any more; all 5 diagramIds in packet-44-bundle resolve via lib/checkin-placement.js:46 on the served draft",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {
@@ -17446,10 +17446,10 @@
    "kind": "diagram",
    "text": "A block pins the diagram \"Self-Correcting Mechanism\" and no such diagram exists, so the block renders nothing. not drawn.",
    "packet": 44,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-44",
+   "verified_by": "packet-verifier 2026-09-26 2026-09-25",
+   "evidence": "no block pins by title any more; all 5 diagramIds resolve; the self-correction is drawn in 84e3e9ae 'Classical adjustment' on block 2",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {
@@ -17458,10 +17458,10 @@
    "kind": "diagram",
    "text": "A block pins the diagram \"ad-as-growth\" and no such diagram exists, so the block renders nothing. three separate blocks want an AD/AS growth diagram; one drawing cannot serve all three, because a block pins at most one.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: pin string 'ad-as-growth' gone; ch1 pins diagramId economic-growth:diagram:27bc75b7 = diagrams[0] (PPF + AD scenarios, SVGs parse, geometry checked)",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {
@@ -17470,10 +17470,10 @@
    "kind": "diagram",
    "text": "A block pins the diagram \"ad-as-shifts\" and no such diagram exists, so the block renders nothing. as above.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: 'ad-as-shifts' gone; causes chapter pins diagramId 0d0b3448 = diagrams[1], LRAS1->LRAS2 right shift, 2nd equilibrium right and lower (SVG coords checked)",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {
@@ -17482,10 +17482,10 @@
    "kind": "diagram",
    "text": "A block pins the diagram \"ad-as-growth-analysis\" and no such diagram exists, so the block renders nothing. as above.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: 'ad-as-growth-analysis' and its block are gone (5 blocks); no block carries diagramRef; every diagramId resolves",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {
@@ -19181,11 +19181,11 @@
    "title": "1.3.5's 4m and 8m application marks are re-authored to come from the attached UAE/GCC extract instead of coal and steel; the fix-round-B1 disclaimer note is then removed",
    "file": "data/modelAnswersExpansion.js",
    "packet": 12.7,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null,
+   "note": "Superseded 2026-09-25 by founder decision (DECISIONS.md, Settled): the 8-mark bank question is about production externalities and the extract is about consumption, so it cannot honestly be re-authored against it. Replaced by E043/E044.",
    "added": "2026-09-22"
   },
   {
@@ -19194,10 +19194,10 @@
    "title": "segRole: earned|missed on every criterion, validator rule R7 proved by A/B mutation, and the two roles render visibly differently at 390x844 without relying on colour alone",
    "file": "audit/scripts/validate-model-answers.mjs",
    "packet": 12.7,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-12.7",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "audit/scripts/validate-model-answers.mjs:124-129 R7 exact-literal; in-memory A/B on 57 criteria: control 0/57, absent/null/Missed/miss/bool/empty/padded each 57/57; c7/c8 missed at data/modelAnswersExpansion.js:585-586; at 390x844 solid+EARNED vs dashed+MISSED label, same colour rgb(111,168,255) (MarkedScriptAttempt.jsx:40-41,204-219; model-answers-layout.css:426). Residual: R7 does not catch a role flip",
    "note": null,
    "added": "2026-09-22"
   },
@@ -19206,11 +19206,11 @@
    "kind": "feature",
    "title": "Mode gate: attempt or read-through, remembered per section in localStorage, changeable without losing a draft; read-through never unlocks a score",
    "file": "components/SectionModelAnswersPage.jsx",
-   "packet": 12.7,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "packet": 12.75,
+   "status": "confirmed",
+   "closed_by": "packet-12.75",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "components/PracticeShell.jsx:63-83,342-357,764,850,1005 mode stored per page; Model answers disables ticks and hides Banked/score; browser: draft survived both switches, no student score shown in study",
    "note": null,
    "added": "2026-09-22"
   },
@@ -19219,12 +19219,12 @@
    "kind": "feature",
    "title": "Question navigation: full-width row at >=720px, sticky bottom bar below it, arrow and number keys inert while typing, and an in-flow next-question CTA on scoring",
    "file": "components/MarkedScriptAttempt.jsx",
-   "packet": 12.7,
-   "status": "open",
+   "packet": 12.75,
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null,
+   "note": "Superseded 2026-09-26 by E046: the founder replaced the v6 design with the v7 mockup (audit/specs/packet-12.75-mockup.html), whose navigation is question cards plus a dock at every width, not a row plus a phone-only bar.",
    "added": "2026-09-22"
   },
   {
@@ -19233,10 +19233,10 @@
    "title": "The other 31 section pages still render identically to HEAD and 1.3.5 still persists draft and ticks across reload; both proved by a different method than the one that produced the change",
    "file": "components/SectionModelAnswersPage.jsx",
    "packet": 12.7,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-12.7",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "modelAnswersProps+metadata from git-archive HEAD vs worktree: 31/32 pages byte-identical, only 1.3.5 differs; other render changes gated (SectionModelAnswersPage.jsx:245,498; lib/model-answers-route.js:50-51); browser reload on 1.3.5 restored 6/6 drafts and all ticks (MarkedScriptAttempt.jsx:79-94); spec-coverage zerocov 0, tariff 123 = pre-packet",
    "note": null,
    "added": "2026-09-22"
   },
@@ -19246,8 +19246,8 @@
    "title": "managing-people (packet 30 bundle) contradicts itself on Herzberg's second scale: block a9b9f0ce takeaway[4] says 'Only enrichment, delegation, consultation and empowerment reach Herzberg's second scale' while sub:flexible-working body[2] places flexible working on that scale ('a property of the work rather than of its surroundings') and its recall drills the same. Found by the worksheet's independent cold reader, 23 Sep; it withholds the worksheet decision ws.managing-people.p5.t2.i4.verdict and removes spec leaf 1.3.4 4d from the scorable sheet. Candidate repairs: drop 'Only' from takeaway[4] (notes already state the careful version), or move flexible working off the second scale in sub:flexible-working; founder rules which is the section's teaching. Fix in scripts/packet-30-managing-people.mjs, restage, --dump, then the worksheet re-reads that one decision.",
    "file": "scripts/packet-30-managing-people.mjs",
    "packet": 57,
-   "status": "open",
-   "closed_by": null,
+   "status": "claimed",
+   "closed_by": "packet-57",
    "verified_by": null,
    "evidence": null,
    "note": null,
@@ -19367,6 +19367,188 @@
    "closed_by": "packet-2.91",
    "verified_by": "Verify A (Sonnet, packet 2.91 round 1) 2026-09-25",
    "evidence": "audit/scripts/checkin-attribution.mjs:219-234 loadDatabase() reads supabase.from('sections') then per TABLE_TO_KEY table's data/draft columns, replacing the old audit/content-sections (11 Sep export) / audit/snapshots (218 files) directory reads; loadCorpus:244-248 maps live=r.live, staged=r.draft. Verified live in gate-291 checkout: node audit/scripts/checkin-attribution.mjs --both reports 'sections 43' for live and 'sections 30' for staged (only sections actually holding a draft), matching the current DB, not a stale 218-file count; npm run attribution exits 0.",
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E043",
+   "kind": "feature",
+   "title": "Economics 1.3.5 gains the extract's own Define (2) and Analyse (6) questions in the criteria/script/stimulus shape, tagged to the oracle by wording; the three generic items lose their stimulus and the B1 disclaimer note is removed",
+   "file": "data/modelAnswersExpansion.js",
+   "packet": 12.7,
+   "status": "confirmed",
+   "closed_by": "packet-12.7",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "data/modelAnswersExpansion.js:171-327 Define 2 + Analyse 6 with criteria/script/stimulus, all fields, answers equal md Q1/Q2; specItems exist and match by wording; only the 3 extract items carry stimulus (modelAnswersData.js:290, Expansion:626,770); B1 note gone (SectionModelAnswersPage.jsx:258-264), served page 0 'Read this first'; order 2,6,20 then 4,8,20",
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E044",
+   "kind": "feature",
+   "title": "The extract's Evaluate question is re-tariffed from 10 to 20 marks in both the bank item and content/data-response/econ-u1-market-failure.md, with its answer authored up to a genuine 20-mark exemplar and criteria on the 4/4/6/6 AO split",
+   "file": "content/data-response/econ-u1-market-failure.md",
+   "packet": 12.7,
+   "status": "confirmed",
+   "closed_by": "packet-12.7",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "econ-u1-market-failure.md:32,52 now 20 marks, 9-10 band gone (:68), :74 says 20-mark; bank item Expansion:330-498 criteria :403-424 split 4/4/6/6 = 20; md and bank answers identical after normalisation; examiner read: KAA L4 and Eval L3 met, economics and arithmetic correct, no invented figures",
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E045",
+   "kind": "feature",
+   "title": "Practice shell layout on criteria-bearing pages: extract and work panes side by side filling the viewport below SiteHeader at >=1024px with the page never scrolling on in-pane links; sticky tabs and dock below 1024px; question sets grouped by stimulus",
+   "file": "components/SectionModelAnswersPage.jsx",
+   "packet": 12.75,
+   "status": "confirmed",
+   "closed_by": "packet-12.75",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "components/PracticeShell.jsx:543-550 toQuestion (returns at >=1024 :544; upward-only), queued post-commit from go :561 and goSet :575-576; CDP A/B verify-b1/next-onscreen-cdp.mjs: control (scrollTo stubbed) stem at -1375 at 390, fix 29/29 narrow steps stem on screen (e.g. 2393->79), 1024/1440 window unmoved; earlier: .ps 60-900 at 1440x900, tabs sticky at 60 on 390",
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E046",
+   "kind": "feature",
+   "title": "Navigation: question cards (command, tariff, minutes from lib/exam-timing.js, state), dock with position, marks banked, soft timer and a primary button naming its action; arrow, number and Cmd-Enter keys, inert while typing",
+   "file": "components/SectionModelAnswersPage.jsx",
+   "packet": 12.75,
+   "status": "confirmed",
+   "closed_by": "packet-12.75",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "components/PracticeShell.jsx:552-579 go/goSet (B1 adds only post-commit toQuestion), :745-783 primary+keys, :835-870 cards; lib/practice-shell.js:31-35 minutesFor; B1 re-check: dock Next/Previous/cards/set switch at 320/390/768/1023 all land the new stem on screen (verify-b1/fixed.json); labels Show/Mark/Next: Analyse · 6 marks, keys inert in textarea",
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E047",
+   "kind": "feature",
+   "title": "Links: criterion to model-answer sentence with an earned/missed text label; extract figures derived by lib/stimulus.js figuresIn() and linked both ways by exact text; clicking a figure while writing quotes it at the cursor",
+   "file": "lib/stimulus.js",
+   "packet": 12.75,
+   "status": "confirmed",
+   "closed_by": "packet-12.75",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "lib/stimulus.js figuresIn on real extract finds all 8 spec figures, no years; PracticeShell.jsx:201-226 earned/missed labels, :982 no toggle; browser: both-way links, 32% quoted at caret 22, focus rows 0 writing / 1 after marking",
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E048",
+   "kind": "feature",
+   "title": "Nothing leaks, nothing is lost: no mark scheme or model answer visible in Practise before marking (practice.opening), all of it in the server HTML with a noscript fallback, JSON-LD/title/canonical byte-identical to HEAD, 12.6 drafts survive",
+   "file": "components/SectionModelAnswersPage.jsx",
+   "packet": 12.75,
+   "status": "confirmed",
+   "closed_by": "packet-12.75",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "components/PracticeShell.jsx:291 ps-note now carries data-ps-noscript-show and :798 noscript style adds .ps-pane[data-hidden-sm]{display:flex!important}; re-verified by a different method (served HTML with scripts stripped and <noscript> unwrapped, written into a same-origin page, 390px): 57/57 notes, 57/57 segments, 171/171 criteria, 6/6 answers+examiner notes, extract pane visible (flex, table 322/322 no scroll), no page h-scroll; JS on, fresh storage: 0 answer/note/seg/crit/examiner visible for all 6 questions incl. Extract tab; JSON-LD x4 + title + canonical hashes unchanged from round 0; 12.6-shaped {draft,ticked} record for 2 ids restored into the textarea. Residual (not in title): no-JS reader sees the 3 stems grouped above the extract and the 3 answer blocks below it, unlabelled by question",
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E049",
+   "kind": "feature",
+   "title": "The look: colour from existing globals.css tokens only (zero hex/rgb/hsl literals in new CSS), rl-night pin kept, DM Sans/Serif italic key term/Mono, contrast measured on rendered pixels >=4.5:1, motion off under reduced-motion",
+   "file": "components/model-answers-layout.css",
+   "packet": 12.75,
+   "status": "confirmed",
+   "closed_by": "packet-12.75",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "components/practice-shell.css: zero hex/rgb/hsl literals (grep), tokens + color-mix only, reduced-motion block :338-341; page keeps rl-night pin; computed-colour contrast >=4.5 for every text pair in writing/over-time/marking/study/revealed at 1440 and 390 (control --text-muted read 3.13); DM Serif italic ital axis loaded",
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E050",
+   "kind": "feature",
+   "title": "No text is ever cut, spilled or shortened: audit/scripts/text-fit-sweep.js returns 0 on every state from 320 to 1920px in 5px steps, after first being shown to fail on this page with the card container tier removed",
+   "file": "audit/scripts/text-fit-sweep.js",
+   "packet": 12.75,
+   "status": "confirmed",
+   "closed_by": "packet-12.75",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "components/practice-shell.css:178,196-207 table is a ps-table container that stacks rows at <=420px; independent sweep (headless Chrome CDP setDeviceMetricsOverride on the hydrated page, own XOVER/CUT/OFFVIEW/ELL/CLAMP measure, not text-fit-sweep.js) 320-1920 step 5 x 30 states incl. 9 Extract-tab states (writing/marked focus rows/model answers), note+details open, standalone, 3 light-unpinned: 0 failing widths, 2.37M element checks, signatures prove each state engaged; same measure fails at 320/360 with card+table container tiers removed (audit/runs/packet-12.75/verify-r1/)",
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E051",
+   "kind": "feature",
+   "title": "The other 31 model-answer pages render identically to HEAD (A/B of rendered HTML on at least six), and everything below the question list on 1.3.5 is still present below the shell",
+   "file": "components/SectionModelAnswersPage.jsx",
+   "packet": 12.75,
+   "status": "confirmed",
+   "closed_by": "packet-12.75",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "components/SectionModelAnswersPage.jsx diff vs HEAD is pure insertion gated by hasShell() (lib/practice-shell.js:28); no item outside Econ 1.3.5 has criteria/keyTerm; 7 other served pages have 0 ps classes; practice-shell.css rules all scoped .ps/.ps-page; 1.3.5 #ps-after holds coverage, data-response, CTA",
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E052",
+   "kind": "feature",
+   "title": "keyTerm: optional field, validator rule R8 (exact substring of question), rendered as the serif italic key term; authored for all six 1.3.5 items; question and JSON-LD text unchanged",
+   "file": "audit/scripts/validate-model-answers.mjs",
+   "packet": 12.75,
+   "status": "confirmed",
+   "closed_by": "packet-12.75",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/scripts/validate-model-answers.mjs:94-103 R8 fires on near-miss, wrong case, empty, non-string (checkItem called directly); six 1.3.5 keyTerms each occur once in question; data diff adds only keyTerm lines; served Quiz text = plain question; stem em in DM Serif italic",
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E053",
+   "kind": "feature",
+   "title": "The mid-band 'Why this loses marks' panel renders only for level-banded mark schemes and its ceiling is true of the paragraphs it shows; it no longer sits on the extract Evaluate item quoting an AO3 row its shown paragraphs do not contain",
+   "file": "lib/mid-band-answer.js",
+   "packet": 12.75,
+   "status": "confirmed",
+   "closed_by": "packet-12.75",
+   "verified_by": "brain 2026-09-26 (independent check: pagePanelItem() on the live bank; re-walk audit/runs/packet-12.75/verify-b-fix.md) 2026-09-26",
+   "evidence": "lib/mid-band-answer.js pagePanelItem gated on isLevelBanded; SectionModelAnswersPage.jsx default path uses it. midband-census-after.txt: 8 objectives panels removed, 11 levels kept, 0 other changes. 31-page HTML A/B vs b1942fe: 23 identical, 8 differ only by the removed panel. lib/mid-band-answer.test.mjs 23/23.",
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E054",
+   "kind": "feature",
+   "title": "Markdown data-response pages: Table 1 renders 403px in a 350px column at 390px and the page pans sideways (markdown-page.css gives tables no overflow wrapper); breaks the founder's 26 Sep no-cut-text standard. Evidence: audit/runs/packet-12.7/verify-b.md",
+   "file": "app/data-response/markdown-page.css",
+   "packet": 12.9,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E055",
+   "kind": "feature",
+   "title": "econ-u1-market-failure.md reads inconsistently after 12.7's re-tariff: Common Mistakes says 'cannot reach Level 4' while the new 20-mark note has no levels; Q2 frames MSC>MPC and Q3 MSB<MPB for consumption externalities; a 'Level 3 (5-6)' note on a 6-mark question. Evidence: audit/runs/packet-12.7/verify-b.md",
+   "file": "content/data-response/econ-u1-market-failure.md",
+   "packet": 12.9,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
+   "note": null,
+   "added": "2026-09-25"
+  },
+  {
+   "id": "E056",
+   "kind": "feature",
+   "title": "The 'Practise Market Failure' CTA on the model-answers page (/?section=) lands on the section overview, not the Practice tab its copy promises. Pre-existing. Evidence: audit/runs/packet-12.7/verify-b.md",
+   "file": "components/SectionModelAnswersPage.jsx",
+   "packet": 12.9,
+   "status": "open",
+   "closed_by": null,
+   "verified_by": null,
+   "evidence": null,
    "note": null,
    "added": "2026-09-25"
   }

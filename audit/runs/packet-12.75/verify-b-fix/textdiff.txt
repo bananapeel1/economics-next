@@ -1,0 +1,33 @@
+SAME  text identical (panel nodes before 46 after 46) /business/meeting-customer-needs-model-answers
+SAME  text identical (panel nodes before 0 after 0) /business/the-market-model-answers
+SAME  text identical (panel nodes before 0 after 0) /business/marketing-mix-model-answers
+DIFF  only the panel removed (42 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /business/managing-people-model-answers
+SAME  text identical (panel nodes before 0 after 0) /business/entrepreneurs-leaders-model-answers
+SAME  text identical (panel nodes before 0 after 0) /business/raising-finance-model-answers
+SAME  text identical (panel nodes before 43 after 43) /business/financial-planning-model-answers
+DIFF  only the panel removed (46 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /business/managing-finance-model-answers
+SAME  text identical (panel nodes before 0 after 0) /business/resource-management-model-answers
+DIFF  only the panel removed (54 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /business/external-influences-model-answers
+SAME  text identical (panel nodes before 0 after 0) /economics/introductory-concepts-model-answers
+SAME  text identical (panel nodes before 0 after 0) /economics/demand-model-answers
+SAME  text identical (panel nodes before 49 after 49) /economics/supply-model-answers
+SAME  text identical (panel nodes before 0 after 0) /economics/price-determination-model-answers
+skip  shell page /economics/market-failure-model-answers
+SAME  text identical (panel nodes before 50 after 50) /economics/government-intervention-model-answers
+SAME  text identical (panel nodes before 55 after 55) /economics/economic-performance-model-answers
+DIFF  only the panel removed (44 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /economics/aggregate-demand-model-answers
+SAME  text identical (panel nodes before 46 after 46) /economics/aggregate-supply-model-answers
+SAME  text identical (panel nodes before 40 after 40) /economics/national-income-model-answers
+DIFF  only the panel removed (60 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /economics/economic-growth-model-answers
+DIFF  only the panel removed (51 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /economics/macroeconomic-policies-model-answers
+SAME  text identical (panel nodes before 0 after 0) /economics/types-sizes-businesses-model-answers
+SAME  text identical (panel nodes before 0 after 0) /economics/revenue-costs-profits-model-answers
+DIFF  only the panel removed (48 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /economics/market-structures-contestability-model-answers
+SAME  text identical (panel nodes before 0 after 0) /economics/labour-markets-model-answers
+SAME  text identical (panel nodes before 0 after 0) /economics/government-intervention-firms-model-answers
+SAME  text identical (panel nodes before 42 after 42) /economics/causes-effects-globalisation-model-answers
+DIFF  only the panel removed (47 text nodes, starts "Why this loses marks — a mid-band attempt at the same qu") /economics/trade-global-economy-model-answers
+SAME  text identical (panel nodes before 39 after 39) /economics/balance-payments-exchange-rates-model-answers
+SAME  text identical (panel nodes before 46 after 46) /economics/poverty-inequality-model-answers
+SAME  text identical (panel nodes before 38 after 38) /economics/growth-development-model-answers
+31 non-shell pages: {'same': 23, 'panel-only': 8, 'other': 0}

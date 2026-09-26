@@ -1,0 +1,59 @@
+{
+ "economies-scale-4": {
+  "agreed": [
+   "ECON-3.3.2-3a"
+  ],
+  "rows": [
+   {
+    "id": "ECON-3.3.2-3a",
+    "passes": [
+     1,
+     2
+    ],
+    "wording": "The relationship between long-run cost curves and economies/diseconomies of scale."
+   }
+  ]
+ },
+ "econ-diseconomies-scale-8": {
+  "agreed": [
+   "ECON-3.3.2-3a",
+   "ECON-3.3.2-3f-1",
+   "ECON-3.3.2-3f-2",
+   "ECON-3.3.2-3f-3"
+  ],
+  "rows": [
+   {
+    "id": "ECON-3.3.2-3a",
+    "passes": [
+     1,
+     2
+    ],
+    "wording": "The relationship between long-run cost curves and economies/diseconomies of scale."
+   },
+   {
+    "id": "ECON-3.3.2-3f-1",
+    "passes": [
+     1,
+     2
+    ],
+    "wording": "communication problems"
+   },
+   {
+    "id": "ECON-3.3.2-3f-2",
+    "passes": [
+     1,
+     2
+    ],
+    "wording": "coordination problems"
+   },
+   {
+    "id": "ECON-3.3.2-3f-3",
+    "passes": [
+     1,
+     2
+    ],
+    "wording": "X-inefficiency."
+   }
+  ]
+ }
+}

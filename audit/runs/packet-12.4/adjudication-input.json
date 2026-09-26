@@ -1,0 +1,221 @@
+{
+ "instruction": "For each pair, decide whether the question examines the requirement: does a student have to demonstrate this requirement to answer that question well?",
+ "pairs": [
+  {
+   "ref": "P01",
+   "question": "Evaluate the arguments for and against free trade.",
+   "requirement": {
+    "subtopic": "Restrictions on",
+    "requirement": "Reasons for restrictions on free trade:",
+    "wording": "to protect infant and geriatric industries"
+   }
+  },
+  {
+   "ref": "P02",
+   "question": "Evaluate the extent to which supply-side policies are the most effective way to achieve long-term economic growth.",
+   "requirement": {
+    "subtopic": "Causes of growth",
+    "requirement": "Causes of potential growth:",
+    "wording": "the degree of competition."
+   }
+  },
+  {
+   "ref": "P03",
+   "question": "Examine how a monopsony employer might lead to lower wages and employment.",
+   "requirement": {
+    "subtopic": "The determination",
+    "requirement": "",
+    "wording": "Labour market equilibrium."
+   }
+  },
+  {
+   "ref": "P04",
+   "question": "Examine the potential costs of rapid economic growth.",
+   "requirement": {
+    "subtopic": "Benefits of growth",
+    "requirement": "Possible benefits of growth:",
+    "wording": "lower unemployment"
+   }
+  },
+  {
+   "ref": "P05",
+   "question": "Examine how a negative externality of production leads to market failure.",
+   "requirement": {
+    "subtopic": "Positive and externalities",
+    "requirement": "The use of diagrams, using marginal analysis, to illustrate:",
+    "wording": "the distinction between the market and social optimum positions; identification of the welfare loss or gain areas."
+   }
+  },
+  {
+   "ref": "P06",
+   "question": "Explain what might cause the short-run aggregate supply (SRAS) curve to shift to the left.",
+   "requirement": {
+    "subtopic": "Short-run AS",
+    "requirement": "Factors influencing SRAS. Changes in:",
+    "wording": "costs of raw materials and energy"
+   }
+  },
+  {
+   "ref": "P07",
+   "question": "Evaluate the view that consumer spending is the most important determinant of economic growth.",
+   "requirement": {
+    "subtopic": "Investment (I)",
+    "requirement": "Government policy to promote investment:",
+    "wording": "reductions on the rate of corporation tax."
+   }
+  },
+  {
+   "ref": "P08",
+   "question": "Explain what is meant by the derived demand for labour.",
+   "requirement": {
+    "subtopic": "The demand for",
+    "requirement": "Factors that influence the demand for labour to a particular occupation:",
+    "wording": "demand for the final product (labour as a derived demand)"
+   }
+  },
+  {
+   "ref": "P09",
+   "question": "Evaluate the view that fiscal policy is more effective than monetary policy in reducing unemployment.",
+   "requirement": {
+    "subtopic": "Macroeconomic",
+    "requirement": "Demand-side policies:",
+    "wording": "the distinction between fiscal and monetary policy"
+   }
+  },
+  {
+   "ref": "P10",
+   "question": "Evaluate the arguments for and against free trade.",
+   "requirement": {
+    "subtopic": "Patterns and",
+    "requirement": "Factors influencing patterns of trade between countries and causes of changes in these patterns:",
+    "wording": "changes in comparative advantage"
+   }
+  },
+  {
+   "ref": "P11",
+   "question": "Explain the principle of comparative advantage.",
+   "requirement": {
+    "subtopic": "Specialisation and advantage",
+    "requirement": "The theory of comparative advantage:",
+    "wording": "the distinction between absolute and comparative advantage"
+   }
+  },
+  {
+   "ref": "P12",
+   "question": "Examine the different types of unemployment in an economy.",
+   "requirement": {
+    "subtopic": "Employment and",
+    "requirement": "The causes of unemployment:",
+    "wording": "seasonal"
+   }
+  },
+  {
+   "ref": "P13",
+   "question": "Examine the view that trade is more effective than aid in promoting economic development.",
+   "requirement": {
+    "subtopic": "Measures to",
+    "requirement": "The impact of market-orientated strategies:",
+    "wording": "trade liberalisation"
+   }
+  },
+  {
+   "ref": "P14",
+   "question": "Examine the different types of unemployment in an economy.",
+   "requirement": {
+    "subtopic": "Economic growth",
+    "requirement": "",
+    "wording": "The rate of change of real Gross Domestic Product (GDP) as a measure of economic growth and living standards."
+   }
+  },
+  {
+   "ref": "P15",
+   "question": "Examine why a profit-maximising firm produces where MC = MR.",
+   "requirement": {
+    "subtopic": "Revenue",
+    "requirement": "Formulae to calculate and understand the relationship between:",
+    "wording": "marginal revenue."
+   }
+  },
+  {
+   "ref": "P16",
+   "question": "Examine the potential costs and benefits of a multinational corporation (MNC) setting up operations in a developing country.",
+   "requirement": {
+    "subtopic": "Causes of",
+    "requirement": "FDI by TNCs:",
+    "wording": "the impact of FDI on recipient countries."
+   }
+  },
+  {
+   "ref": "P17",
+   "question": "Examine how depreciation of the exchange rate might affect a country's current account balance.",
+   "requirement": {
+    "subtopic": "Exchange rates",
+    "requirement": "",
+    "wording": "The distinction between devaluation and depreciation of a currency."
+   }
+  },
+  {
+   "ref": "P18",
+   "question": "Examine how depreciation of the exchange rate might affect a country's current account balance.",
+   "requirement": {
+    "subtopic": "Exchange rates",
+    "requirement": "The impact of changes in exchange rates on:",
+    "wording": "the current account of the balance of payments (with reference to Marshall-Lerner condition and to the J-curve effect)"
+   }
+  },
+  {
+   "ref": "P19",
+   "question": "Examine how the circular flow of income model shows the impact of injections and withdrawals on national income.",
+   "requirement": {
+    "subtopic": "National income",
+    "requirement": "",
+    "wording": "The circular flow of income."
+   }
+  },
+  {
+   "ref": "P20",
+   "question": "Examine how a negative externality of production leads to market failure.",
+   "requirement": {
+    "subtopic": "Moral hazard",
+    "requirement": "The impact of moral hazard on consumers, producers, workers and governments in:",
+    "wording": "banking."
+   }
+  },
+  {
+   "ref": "P21",
+   "question": "Examine the potential costs of rapid economic growth.",
+   "requirement": {
+    "subtopic": "Costs of growth",
+    "requirement": "Possible costs of growth:",
+    "wording": "opportunity costs"
+   }
+  },
+  {
+   "ref": "P22",
+   "question": "Examine how a monopsony employer might lead to lower wages and employment.",
+   "requirement": {
+    "subtopic": "The supply of",
+    "requirement": "Factors that influence the supply of labour to a particular occupation:",
+    "wording": "government regulations"
+   }
+  },
+  {
+   "ref": "P23",
+   "question": "Examine why a profit-maximising firm produces where MC = MR.",
+   "requirement": {
+    "subtopic": "Costs",
+    "requirement": "",
+    "wording": "Derivation of short-run cost curves from the assumption of diminishing marginal productivity."
+   }
+  },
+  {
+   "ref": "P24",
+   "question": "Evaluate the view that consumer spending is the most important determinant of economic growth.",
+   "requirement": {
+    "subtopic": "The characteristics",
+    "requirement": "Components of aggregate demand:",
+    "wording": "C + I + G + (X−M) ="
+   }
+  }
+ ]
+}

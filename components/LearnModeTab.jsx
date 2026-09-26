@@ -99,6 +99,13 @@ export default function LearnModeTab({
 }) {
   const [showKeyboardHint, setShowKeyboardHint] = useState(false);
   const [nodePopped, setNodePopped] = useState(false);
+  // Check-in steps whose quick question has been answered (or skipped), keyed by step index. Until
+  // then the check-in shows ONLY the question: on 26 Sep 2026 a read-through found 123 of 199 live
+  // check-ins printing the answer in the diagram above it (audit/CONTENT-GATE.md, the check-in answer
+  // rule). Founder's decision: question first, the rest appears as feedback once answered.
+  const [checkinRevealed, setCheckinRevealed] = useState(() => new Set());
+  useEffect(() => { setCheckinRevealed(new Set()); }, [subjectId, sectionId]);
+  const revealCheckin = (i) => setCheckinRevealed((prev) => (prev.has(i) ? prev : new Set(prev).add(i)));
   // F001/F027: seeded from the local cache so the first paint is instant, then reconciled against
   // the server below, which is the copy that follows the student between devices.
   const [isComplete, setIsComplete] = useState(() => !!readLocalState(subjectId, sectionId)?.completed);
@@ -383,9 +390,18 @@ export default function LearnModeTab({
       onPersistStep?.(target, totalSteps);
     }
     scrollToTop(true);
+    /*
+     * Moving answers the resume question. "You left off at step N" is about the step this visit
+     * opened on; it used to stay up until Continue was pressed, re-labelled with wherever the
+     * student had got to since. Worse after the silent restart below: that lands on step 0 with
+     * `isResuming` still set, so the banner (hidden at step 0) appeared on the first Next as
+     * "You left off at step 2" and followed the student through the topic — on every
+     * mid-section return to a rebuilt section (packets 43 and 44, Verify B).
+     */
+    onResumeDismiss?.();
     // V038: every write stamps the deck this step was reached on.
     onStepChange(target, deckVersion);
-  }, [safeStep, totalSteps, sectionId, onPersistStep, onStepChange, scrollToTop, deckVersion]);
+  }, [safeStep, totalSteps, sectionId, onPersistStep, onStepChange, onResumeDismiss, scrollToTop, deckVersion]);
 
   /*
    * V038, the two ways out of a pointer from another version. Neither resumes: "start again" puts
@@ -636,8 +652,8 @@ export default function LearnModeTab({
   const checkinIntro = (() => {
     if (step?.type !== 'checkin') return '';
     const parts = [
-      currentDiagram && 'the diagram',
       currentQuiz && 'a quick question',
+      currentDiagram && 'the diagram',
       // Named, because a check-in that carries a six-mark calculation and does not say so is
       // the same defect in reverse as promising a diagram there is none of (packet 16).
       currentQuant && 'a calculation',
@@ -681,6 +697,9 @@ export default function LearnModeTab({
             <button className="lm-resume-continue" onClick={onResumeDismiss}>Continue</button>
             <button className="lm-resume-restart" onClick={() => { navigateToStep(0); onResumeDismiss?.(); }}>Start over</button>
           </div>
+          {/* The founder's board, 26 Sep: a banner that shows needs an ×, like the review reminder. */}
+          <button type="button" className="lm-resume-banner-close" onClick={onResumeDismiss}
+            aria-label="Hide this reminder">&times;</button>
         </div>
       )}
 
@@ -810,12 +829,23 @@ export default function LearnModeTab({
                   */}
                 {checkinIntro && <p className="lm-checkin-intro">{checkinIntro}</p>}
                 <div className="lm-content">
-                  {currentDiagram && <InlineDiagram diagram={currentDiagram} sectionId={sectionId} />}
+                  {/* Question first. Everything else on the check-in (the diagram above all) waits until
+                      it is answered or skipped, because it so often states the answer. */}
                   {currentQuiz && (
                     <InlineQuiz key={`quiz-${safeStep}`} question={currentQuiz}
                       subjectId={subjectId} sectionId={sectionId} stepIndex={safeStep}
-                      onResult={onQuizResult} />
+                      onResult={(ok) => { onQuizResult(ok); revealCheckin(safeStep); }} />
                   )}
+                  {currentQuiz && !checkinRevealed.has(safeStep) ? (
+                    <div className="lm-checkin-held">
+                      <p>Answer the question first. {currentDiagram ? 'The diagram and the rest of this check-in' : 'The rest of this check-in'} will appear below.</p>
+                      <button type="button" className="lm-checkin-skip" onClick={() => revealCheckin(safeStep)}>
+                        Skip the question
+                      </button>
+                    </div>
+                  ) : (
+                  <>
+                  {currentDiagram && <InlineDiagram diagram={currentDiagram} sectionId={sectionId} />}
                   {currentQuant && (
                     <CalculationItem key={currentQuant.id} item={currentQuant}
                       onResult={(result) => onQuantResult(currentQuant.id, result)}
@@ -843,6 +873,8 @@ export default function LearnModeTab({
                       rubric={chapterRubric(contentData, step.blockIndex, currentUnit?.code)} />
                   )}
                   {step.takeaway && <TakeawayCard items={step.takeaway} glossaryTerms={glossaryTerms} />}
+                  </>
+                  )}
                 </div>
               </>
             )}
@@ -864,8 +896,14 @@ export default function LearnModeTab({
                     </div>
                   ))}
                   {step.block.examTip && <div className="exam-tip"><div className="exam-tip-label">Exam Tip</div>{step.block.examTip}</div>}
-                  {currentDiagram && <InlineDiagram diagram={currentDiagram} sectionId={sectionId} />}
-                  {currentQuiz && <InlineQuiz key={`quiz-${safeStep}`} question={currentQuiz} subjectId={subjectId} sectionId={sectionId} stepIndex={safeStep} onResult={onQuizResult} />}
+                  {currentQuiz && <InlineQuiz key={`quiz-${safeStep}`} question={currentQuiz} subjectId={subjectId} sectionId={sectionId} stepIndex={safeStep} onResult={(ok) => { onQuizResult(ok); revealCheckin(safeStep); }} />}
+                  {currentDiagram && (!currentQuiz || checkinRevealed.has(safeStep)) && <InlineDiagram diagram={currentDiagram} sectionId={sectionId} />}
+                  {currentDiagram && currentQuiz && !checkinRevealed.has(safeStep) && (
+                    <div className="lm-checkin-held">
+                      <p>Answer the question first. The diagram will appear below.</p>
+                      <button type="button" className="lm-checkin-skip" onClick={() => revealCheckin(safeStep)}>Skip the question</button>
+                    </div>
+                  )}
                   {currentQuant && (
                     <CalculationItem key={currentQuant.id} item={currentQuant}
                       onResult={(result) => onQuantResult(currentQuant.id, result)}

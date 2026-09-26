@@ -1,0 +1,467 @@
+=== C-global-markets-expansion-topFix-01 ===
+{
+  "id": "C-global-markets-expansion-topFix-01",
+  "section": "global-markets-expansion",
+  "kind": "topFix",
+  "rank": 0,
+  "text": "Rewrite content[] to teach IAL 4.2.1-4.2.5: block 1 = conditions that prompt trade (push/pull, off-shoring vs outsourcing, PLC extension) + assessing a country as a market; block 2 = assessing a country as a production location + reasons for global mergers/JVs; block 3 = global competitiveness (exchange rates, cost vs differentiation, skill shortages). Reuse the existing flashcards/common_mistakes as the source.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 4.2.1, 4.2.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-global-markets-expansion-topFix-02 ===
+{
+  "id": "C-global-markets-expansion-topFix-02",
+  "section": "global-markets-expansion",
+  "kind": "topFix",
+  "rank": 1,
+  "text": "Remove Bartlett & Ghoshal (AQA-only) from the section; demote Ansoff and PESTLE to one-paragraph 'link to Unit 3' callouts rather than full subsections with examMatters claims.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-topFix-03 ===
+{
+  "id": "C-global-markets-expansion-topFix-03",
+  "section": "global-markets-expansion",
+  "kind": "topFix",
+  "rank": 2,
+  "text": "Set quizIndices/practiceIndices on each block so inline quiz and practice match what the block teaches, and ensure every quiz item is covered by content[] so the pre-test gate is fair.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-topFix-04 ===
+{
+  "id": "C-global-markets-expansion-topFix-04",
+  "section": "global-markets-expansion",
+  "kind": "topFix",
+  "rank": 3,
+  "text": "Fix practice tariffs and schemes: replace the 6-mark Analyse with an 8-mark Assess, make 4-markers 'Explain one...', anchor the 10- and 20-mark stems to their contexts, delete the Porter's generic strategies instruction, and add levels-based mark schemes (K/App/An/Ev) with a short model answer.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-topFix-05 ===
+{
+  "id": "C-global-markets-expansion-topFix-05",
+  "section": "global-markets-expansion",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "Add retrieval and visuals: fillin recalls for push vs pull and off-shoring vs outsourcing, a reorder recall on a genuine sequence (e.g. staged entry: export -> licence -> JV -> FDI as commitment rises), and a diagram of the control/risk ladder or the country-assessment factor comparison.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-accuracy-01 ===
+{
+  "id": "C-global-markets-expansion-accuracy-01",
+  "section": "global-markets-expansion",
+  "kind": "accuracy",
+  "text": "Strategic Analysis for Global Expansion > pestle-bartlett-ghoshal > body[1], body[2], examMatters, takeaway[2], takeaway[3]: Bartlett & Ghoshal (international / multi-domestic / global / transnational) is not in the Pearson Edexcel IAL Business specification (it is AQA A-level 3.7.7 content). Presenting it with 'Link PESTLE to Bartlett-Ghoshal ... the firm needs a multi-domestic or transnational strategy' as if IAL examiners expect it misdirects revision time and would earn no spec-specific credit on a WBS14 paper.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.7.7, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-global-markets-expansion-quiz-01 ===
+{
+  "id": "C-global-markets-expansion-quiz-01",
+  "section": "global-markets-expansion",
+  "kind": "quiz",
+  "text": "q0: Correct answer (index 1) is right, but push/pull factors are never taught in content[]; this can appear in the pre-test gate and the inline quiz for a block that does not mention them. (Indices are 0-based.)",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-quiz-02 ===
+{
+  "id": "C-global-markets-expansion-quiz-02",
+  "section": "global-markets-expansion",
+  "kind": "quiz",
+  "text": "q1: Correct (off-shoring), but off-shoring vs outsourcing is not taught anywhere in content[] (only in flashcards/common_mistakes).",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-practice-01 ===
+{
+  "id": "C-global-markets-expansion-practice-01",
+  "section": "global-markets-expansion",
+  "kind": "practice",
+  "text": "p1: 6-mark 'Analyse the advantages and disadvantages...' is not an IAL Business tariff (papers use 4 Explain / 8, 10, 12 Assess / 20 Evaluate). Also the stem ignores its own context ('a new overseas market' rather than 'the Indian market for this company'), so application marks cannot be targeted. (Indices 0-based.)",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-practice-02 ===
+{
+  "id": "C-global-markets-expansion-practice-02",
+  "section": "global-markets-expansion",
+  "kind": "practice",
+  "text": "p4: 20-mark Evaluate is the right tariff, but (a) the stem is generic ('a new international market') while IAL 20-markers are anchored to the case ('...for this South Korean company entering Europe'), and (b) the guidance tells students to 'Apply Porter's generic strategies' which is irrelevant to entry-mode choice and is Unit 3 content. Guidance is a bullet list, not a levels-based mark scheme (knowledge/application/analysis/evaluation), so students cannot self-mark.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-structure-01 ===
+{
+  "id": "C-global-markets-expansion-structure-01",
+  "section": "global-markets-expansion",
+  "kind": "structure",
+  "text": "Content[] vs assessment mismatch: content teaches entry modes, Ansoff, PESTLE, Bartlett-Ghoshal; quiz[]/flashcards[]/common_mistakes[] cover the real IAL 4.2 bullets (push/pull, off-shoring, PLC extension, country as market/production location, exchange rates, Porter, hedging). Pre-test (3 random MCQs from this bank) and inline quizzes therefore test untaught material for ~80% of items.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-structure-02 ===
+{
+  "id": "C-global-markets-expansion-structure-02",
+  "section": "global-markets-expansion",
+  "kind": "structure",
+  "text": "Neither block sets quizIndices or practiceIndices, so InlineQuiz/InlinePractice fall back to default selection; with quiz[0] = push factors and quiz[1] = off-shoring, the first block's inline MCQ is almost certainly on something the block does not mention.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-structure-03 ===
+{
+  "id": "C-global-markets-expansion-structure-03",
+  "section": "global-markets-expansion",
+  "kind": "structure",
+  "text": "Zero recall widgets in the whole section (0 reorder, 0 fillin): the only retrieval practice inside Learn Mode is two inline MCQs. This section has natural fillin material (push vs pull, off-shoring vs outsourcing, five reasons for global mergers/JVs) that is currently unused.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-structure-04 ===
+{
+  "id": "C-global-markets-expansion-structure-04",
+  "section": "global-markets-expansion",
+  "kind": "structure",
+  "text": "Each block has exactly 2 sections, so every step is the 'last step of a block': each of the two steps stacks NoteSection x2 + InlineQuiz + InlinePractice + ExplainItBack + TakeawayCard, making two very long steps with no lighter step in between.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-structure-05 ===
+{
+  "id": "C-global-markets-expansion-structure-05",
+  "section": "global-markets-expansion",
+  "kind": "structure",
+  "text": "0 diagrams for a section whose core idea (entry modes rising in control and risk) and secondary idea (Ansoff 2x2) are both inherently diagrammatic; InlineDiagram never renders.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-structure-06 ===
+{
+  "id": "C-global-markets-expansion-structure-06",
+  "section": "global-markets-expansion",
+  "kind": "structure",
+  "text": "Section numbering '4.3.2' does not match the IAL spec where 'Global markets and business expansion' is topic 4.2 (4.2.1-4.2.5); 4.3 is Global marketing. Students cross-referencing the spec will be confused (unsure whether the app uses its own numbering scheme deliberately).",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 4.2.1, 4.2.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-global-markets-expansion-structure-07 ===
+{
+  "id": "C-global-markets-expansion-structure-07",
+  "section": "global-markets-expansion",
+  "kind": "structure",
+  "text": "Notes[] (2 notes) duplicate the same off-spec material (entry methods, Ansoff) rather than covering the spec bullets, so Notes tab and Learn tab reinforce the gap instead of filling it.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-structure-08 ===
+{
+  "id": "C-global-markets-expansion-structure-08",
+  "section": "global-markets-expansion",
+  "kind": "structure",
+  "text": "Misconception quality: franchising control (genuine), FDI always best (genuine but repeated verbatim in notes[0].misconception), Ansoff market development vs diversification (genuine); pestle-bartlett-ghoshal misconception is exam technique rather than a conceptual misconception (filler).",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-structure-09 ===
+{
+  "id": "C-global-markets-expansion-structure-09",
+  "section": "global-markets-expansion",
+  "kind": "structure",
+  "text": "Flow blocks in exporting-licensing-franchising and ansoff-global-context are descriptive three-step restatements ('Firm wants international revenue -> Low capital -> Licenses IP'), not causal mechanisms; they add length without teaching anything the paragraph did not.",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-markets-expansion-specGap-01 ===
+{
+  "id": "C-global-markets-expansion-specGap-01",
+  "section": "global-markets-expansion",
+  "kind": "specGap",
+  "text": "4.2.1 Conditions that prompt trade: push factors (saturated markets, competition) and pull factors (economies of scale, risk spreading) — only in quiz/flashcards, not taught in content[]",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 4.2.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-global-markets-expansion-specGap-02 ===
+{
+  "id": "C-global-markets-expansion-specGap-02",
+  "section": "global-markets-expansion",
+  "kind": "specGap",
+  "text": "4.2.1 Possibility of off-shoring and outsourcing (and the distinction) — not taught in content[]",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 4.2.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-global-markets-expansion-specGap-03 ===
+{
+  "id": "C-global-markets-expansion-specGap-03",
+  "section": "global-markets-expansion",
+  "kind": "specGap",
+  "text": "4.2.1 Extending the product life cycle by selling in multiple markets — not taught in content[]",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 4.2.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-global-markets-expansion-specGap-04 ===
+{
+  "id": "C-global-markets-expansion-specGap-04",
+  "section": "global-markets-expansion",
+  "kind": "specGap",
+  "text": "4.2.2 Assessment of a country as a market: levels of disposable income, ease of doing business, infrastructure, political stability, exchange rate — not taught in content[]",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 4.2.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-global-markets-expansion-specGap-05 ===
+{
+  "id": "C-global-markets-expansion-specGap-05",
+  "section": "global-markets-expansion",
+  "kind": "specGap",
+  "text": "4.2.3 Assessment of a country as a production location: costs of production, skills and availability of labour force, infrastructure, location in trade bloc, government incentives, ease of doing business, political stability, natural resources, likely return on investment — not taught in content[]",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 4.2.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-global-markets-expansion-specGap-06 ===
+{
+  "id": "C-global-markets-expansion-specGap-06",
+  "section": "global-markets-expansion",
+  "kind": "specGap",
+  "text": "4.2.4 Reasons for global mergers or joint ventures: spreading risk over different countries/regions, entering new markets/trade blocs, acquiring national/international brand names/patents, securing resources/supplies, maintaining/increasing global competitiveness — content[] gives generic JV pros/cons only; the five spec reasons are not listed",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 4.2.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-global-markets-expansion-specGap-07 ===
+{
+  "id": "C-global-markets-expansion-specGap-07",
+  "section": "global-markets-expansion",
+  "kind": "specGap",
+  "text": "4.2.5 Global competitiveness: impact of movements in exchange rates on exporters/importers — not taught in content[]",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 4.2.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-global-markets-expansion-specGap-08 ===
+{
+  "id": "C-global-markets-expansion-specGap-08",
+  "section": "global-markets-expansion",
+  "kind": "specGap",
+  "text": "4.2.5 Competitive advantage through cost competitiveness and differentiation — not taught",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 4.2.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-global-markets-expansion-specGap-09 ===
+{
+  "id": "C-global-markets-expansion-specGap-09",
+  "section": "global-markets-expansion",
+  "kind": "specGap",
+  "text": "4.2.5 Skill shortages and their impact on international competitiveness — not taught (only a flashcard)",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 4.2.5, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 4.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-global-markets-expansion-specGap-10 ===
+{
+  "id": "C-global-markets-expansion-specGap-10",
+  "section": "global-markets-expansion",
+  "kind": "specGap",
+  "text": "4.3.2 Push factor: competition (domestic competitive pressure pushing firms abroad) — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+
+=== C-global-markets-expansion-specGap-11 ===
+{
+  "id": "C-global-markets-expansion-specGap-11",
+  "section": "global-markets-expansion",
+  "kind": "specGap",
+  "text": "4.3.2 Reason for global M&A/JV: government or legal requirement (e.g. a state requiring a local partner) — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+
+=== C-global-markets-expansion-specThin-01 ===
+{
+  "id": "C-global-markets-expansion-specThin-01",
+  "section": "global-markets-expansion",
+  "kind": "specThin",
+  "text": "4.3.2 Pull factor: increased sales and profitability — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+
+=== C-global-markets-expansion-specThin-02 ===
+{
+  "id": "C-global-markets-expansion-specThin-02",
+  "section": "global-markets-expansion",
+  "kind": "specThin",
+  "text": "4.3.2 Global mergers and takeovers as vehicles for expansion (what they are, distinct from a joint venture) — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+
+=== C-global-markets-expansion-specThin-03 ===
+{
+  "id": "C-global-markets-expansion-specThin-03",
+  "section": "global-markets-expansion",
+  "kind": "specThin",
+  "text": "4.3.2 Reason for global M&A/JV: accessing supply chains or distribution networks — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 47,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+

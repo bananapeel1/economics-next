@@ -1,0 +1,242 @@
+[
+ {
+  "label": "mobile 390x844",
+  "w": 390,
+  "h": 844,
+  "control": true,
+  "results": [
+   {
+    "name": "Q1 marked+long, deep scroll -> dock Next (go)",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 2393,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 1734,
+     "docH": 2578,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "stemTop": -1375,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": false,
+     "dockTop": -788,
+     "dockBottom": -702,
+     "onScreen": false
+    }
+   }
+  ],
+  "error": "covered: .ps-dock .is-primary undefined by null"
+ },
+ {
+  "label": "mobile 320x640",
+  "w": 320,
+  "h": 640,
+  "control": true,
+  "results": [
+   {
+    "name": "Q1 marked+long, deep scroll -> dock Next (go)",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 2986,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 2295,
+     "docH": 2935,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "stemTop": -1866,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": false,
+     "dockTop": -1217,
+     "dockBottom": -1131,
+     "onScreen": false
+    }
+   }
+  ],
+  "error": "covered: .ps-dock .is-primary undefined by null"
+ },
+ {
+  "label": "tablet 768x1024",
+  "w": 768,
+  "h": 1024,
+  "control": true,
+  "results": [
+   {
+    "name": "Q1 marked+long, deep scroll -> dock Next (go)",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 893,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 893,
+     "docH": 2067,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "stemTop": -580,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": false,
+     "dockTop": -63,
+     "dockBottom": -5,
+     "onScreen": false
+    }
+   }
+  ],
+  "error": "covered: .ps-dock .is-primary undefined by null"
+ },
+ {
+  "label": "edge 1023x800",
+  "w": 1023,
+  "h": 800,
+  "control": true,
+  "results": [
+   {
+    "name": "Q1 marked+long, deep scroll -> dock Next (go)",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 939,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 966,
+     "docH": 2064,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "stemTop": -635,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": false,
+     "dockTop": -118,
+     "dockBottom": -60,
+     "onScreen": false
+    }
+   }
+  ],
+  "error": "covered: .ps-dock .is-primary undefined by null"
+ },
+ {
+  "label": "study 390x844",
+  "w": 390,
+  "h": 844,
+  "control": true,
+  "results": [
+   {
+    "name": "Model answers Q1, deep scroll -> dock Next (go)",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 1168,
+     "q": "Question 1 of 3",
+     "onScreen": false
+    },
+    "after": {
+     "scrollY": 1194,
+     "docH": 5051,
+     "q": "Question 2 of 3",
+     "stemTop": -835,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": false,
+     "dockTop": 785,
+     "dockBottom": 844,
+     "onScreen": false
+    }
+   }
+  ]
+ },
+ {
+  "label": "desktop 1024x800",
+  "w": 1024,
+  "h": 800,
+  "control": true,
+  "results": [
+   {
+    "name": "Desktop Q1 marked -> dock Next (go): window must stay put",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 1958,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "stemTop": 331,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": true,
+     "dockTop": 737,
+     "dockBottom": 800,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Desktop Q2 at scrollY 300 -> dock Next (go): toQuestion must not move window",
+    "tapped": "Show the model answer",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 1958,
+     "q": "Question 2 of 3Banked 0 / 28",
+     "stemTop": 331,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": true,
+     "dockTop": 737,
+     "dockBottom": 800,
+     "onScreen": true
+    }
+   }
+  ]
+ },
+ {
+  "label": "desktop 1440x900",
+  "w": 1440,
+  "h": 900,
+  "control": true,
+  "results": [
+   {
+    "name": "Desktop Q1 marked -> dock Next (go): window must stay put",
+    "tapped": "Next: Analyse · 6 marks→",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 1 of 3Banked 0 / 28Took 00:01",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 2058,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "stemTop": 314,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": true,
+     "dockTop": 837,
+     "dockBottom": 900,
+     "onScreen": true
+    }
+   },
+   {
+    "name": "Desktop Q2 at scrollY 300 -> dock Next (go): toQuestion must not move window",
+    "tapped": "Show the model answer",
+    "before": {
+     "scrollY": 0,
+     "q": "Question 2 of 3Banked 0 / 2800:00 / 08:0",
+     "onScreen": true
+    },
+    "after": {
+     "scrollY": 0,
+     "docH": 2058,
+     "q": "Question 2 of 3Banked 0 / 28",
+     "stemTop": 314,
+     "stemText": "Analyse how the AED 0.25 charge on single-use plas",
+     "stemHit": true,
+     "dockTop": 837,
+     "dockBottom": 900,
+     "onScreen": true
+    }
+   }
+  ]
+ }
+]

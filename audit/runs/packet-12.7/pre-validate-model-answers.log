@@ -1,0 +1,10 @@
+(node:86718) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/data/modelAnswersData.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+model answers: 66 in the bank, 3 carrying the marked-script shape
+  neg-externality-4                             4 marks   4 criteria   4 segments  econ-u1-market-failure
+  negative-externality-tax-8                    8 marks   8 criteria   8 segments  econ-u1-market-failure
+  market-failure-government-intervention-20    20 marks  17 criteria  17 segments  econ-u1-market-failure
+
+0 findings.

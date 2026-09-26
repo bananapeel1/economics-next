@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { DrawerAlt } from './Icons';
 import { SECTION_MODEL_ANSWERS_LINKS } from '@/data/modelAnswersData';
 import Link from 'next/link';
@@ -48,6 +48,38 @@ export default function PracticeQuestionsTab({ questions: allQuestions = [], onA
   const filtered = activeFilter === 'all'
     ? questions
     : questions.filter(q => q.marks === activeFilter);
+
+  /*
+   * ONE SOURCE, PRINTED ONCE (Verify B, packet 41, 22 September 2026).
+   *
+   * Business Units 1 and 2 are entirely source-based, so every item of a section carries the same
+   * extract in its own stem — it has to, because Learn Mode shows a single item with nothing above
+   * it. This tab shows them together, and the walkthrough found the same ~180-word source printed
+   * twelve times: about twelve lines of identical text before one line of task, twelve times over
+   * in one scroll.
+   *
+   * The shared opening is computed FROM THE STEMS, not from a new content field: nothing about the
+   * payload changes, so this is safe for every section already live, and a set of questions with no
+   * common opening (every Economics section) takes the untouched path. It is only treated as a
+   * source when it is sentence-complete and long enough to be one, and only when two or more
+   * questions are visible — filter to a single item and that item prints its source again, which
+   * is right, because then nothing else on screen carries it.
+   */
+  const sharedSource = useMemo(() => {
+    const texts = filtered.map(q => String(q.question || ''));
+    if (texts.length < 2) return '';
+    const first = texts[0];
+    let n = 0;
+    while (n < first.length && texts.every(t => t[n] === first[n])) n += 1;
+    const cut = first.slice(0, n).lastIndexOf('. ');
+    const source = cut > 0 ? first.slice(0, cut + 1).trim() : '';
+    return source.length >= 120 ? source : '';
+  }, [filtered]);
+
+  const stemOf = (text) => {
+    const full = String(text || '');
+    return sharedSource && full.startsWith(sharedSource) ? full.slice(sharedSource.length).trim() : full;
+  };
 
   function toggleGuidance(index) {
     setExpandedIds(prev => {
@@ -126,6 +158,14 @@ export default function PracticeQuestionsTab({ questions: allQuestions = [], onA
         })}
       </div>
 
+      {sharedSource && (
+        <div className="practice-source-card">
+          <div className="practice-source-label">Source A</div>
+          <p className="practice-source-text">{sharedSource.replace(/^Source A\.\s*/, '')}</p>
+          <p className="practice-source-note">Every question below uses this source.</p>
+        </div>
+      )}
+
       <div className="practice-questions-list">
         {filtered.map((q, i) => {
           // An item sitting at a tariff the subject's ladder does not contain is still shown under
@@ -154,7 +194,7 @@ export default function PracticeQuestionsTab({ questions: allQuestions = [], onA
                 )}
               </div>
 
-              <p className="practice-question-text">{q.question}</p>
+              <p className="practice-question-text">{stemOf(q.question)}</p>
 
               <button
                 className={`practice-guidance-toggle ${isExpanded ? 'expanded' : ''}`}

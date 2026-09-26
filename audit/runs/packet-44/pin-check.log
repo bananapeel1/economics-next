@@ -1,0 +1,30 @@
+
+> economics-next@0.1.0 pin-check
+> node audit/scripts/pin-check.mjs --max-broken 15
+
+(node:2909) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/components/learn-mode/utils.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[diagrams] pin "AD/AS Shifts" matched no diagram. Available: Short-Run Aggregate Supply (SRAS) | LRAS: Classical vs Keynesian | AD/AS Equilibrium: Multiple Scenarios
+[diagrams] pin "Self-Correcting Mechanism" matched no diagram. Available: Short-Run Aggregate Supply (SRAS) | LRAS: Classical vs Keynesian | AD/AS Equilibrium: Multiple Scenarios
+[diagrams] pin "ad-as-growth" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "trade-cycle-diagram" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "ad-as-shifts" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+[diagrams] pin "ad-as-growth-analysis" matched no diagram. Available: The Business (Trade) Cycle | Output Gap Diagram | PPF: Actual vs Potential Growth
+pin-check: 1320 pins across 43 section(s)
+
+BLOCK — 4 pin(s) resolve to nothing:
+  aggregate-supply                   diagramRef      AD/AS Analysis of Macroecono   "AD/AS Shifts" matches no diagram title — and the title fallback found nothing either
+  aggregate-supply                   diagramRef      Short-Run vs Long-Run Adjust   "Self-Correcting Mechanism" matches no diagram title — and the title fallback found nothing either
+  economic-growth                    diagramRef      Causes of Economic Growth      "ad-as-shifts" matches no diagram title — and the title fallback found nothing either
+  economic-growth                    diagramRef      Economic Growth and AD/AS An   "ad-as-growth-analysis" matches no diagram title — and the title fallback found nothing either
+
+DEBT — 2 diagramRef(s) match no title; the per-block fallback covers them, so a student still sees a diagram:
+       (--verbose to list them; re-pin by id in that section's packet)
+
+DEBT — 221 pin(s) resolve, but share no vocabulary with their block
+       (--verbose to list them; re-pinning is that section's own packet)
+
+
+pin-check passed: 4 broken pin(s), within the agreed baseline of 15

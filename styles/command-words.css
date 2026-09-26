@@ -1,0 +1,26 @@
+/* /command-words: per-subject command word tables (inside .elp-page, uses its tokens) */
+.cw-wrap { max-width: 900px; margin: 0 auto; }
+.cw-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.cw-table thead th {
+  text-align: left; font-size: 11.5px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase;
+  color: var(--elp-tx-c); padding: 0 12px 10px; border-bottom: 1px solid var(--elp-bd2);
+}
+.cw-table td, .cw-table tbody th { padding: 14px 12px; border-bottom: 1px solid var(--elp-bd); vertical-align: top; text-align: left; }
+.cw-word { font-weight: 700; color: var(--elp-tx); white-space: nowrap; }
+.cw-marks { font-family: var(--elp-mono); color: var(--elp-green); white-space: nowrap; }
+.cw-text { color: var(--elp-tx-b); line-height: 1.55; }
+.cw-not { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.cw-not li {
+  padding: 5px 12px; border-radius: 999px; border: 1px solid var(--elp-bd2);
+  color: var(--elp-tx-b); text-decoration: line-through; text-decoration-color: var(--elp-amber);
+}
+.cw-source { margin-top: 18px; font-size: 13px; color: var(--elp-tx-c); }
+@media (max-width: 600px) {
+  .cw-table thead { display: none; }
+  .cw-table, .cw-table tbody, .cw-table tr { display: block; }
+  .cw-table tr { padding: 14px 0; border-bottom: 1px solid var(--elp-bd); }
+  .cw-table td, .cw-table tbody th { display: block; padding: 0; border: 0; }
+  .cw-table tbody th { display: inline; margin-right: 10px; }
+  .cw-marks { display: inline !important; }
+  .cw-text { margin-top: 6px; }
+}

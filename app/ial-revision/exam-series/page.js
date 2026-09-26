@@ -3,15 +3,17 @@ import SiteHeader from '@/components/SiteHeader';
 import BackToApp from '@/components/BackToApp';
 import { Clipboard } from '@/components/Icons';
 import IALScrollBar from '../IALScrollBar';
+import ExamTimetable from '../ExamTimetable';
+import { oct2026, jan2027, lastJanuaryResults } from '@/data/ialTimetables';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Edexcel IAL Exam Series — January 2027 & June 2026 | Revvy Learn',
-  description: 'How the Edexcel IAL January and June exam series work: session windows, results months, R papers for different time zones, retakes and modular unit planning for International A-Level Economics (WEC11–14) and Business (WBS11–14). Exact timetables are published by Pearson Edexcel.',
+  title: 'Edexcel IAL Exam Series — October, January & June Dates | Revvy Learn',
+  description: 'How the three Edexcel IAL exam series work for Economics (WEC11–14) and Business (WBS11–14), with every paper date for October 2026 and January 2027 from Pearson’s final timetables. Retakes, time zones and modular planning.',
   alternates: { canonical: 'https://revvylearn.com/ial-revision/exam-series' },
   openGraph: {
-    title: 'Edexcel IAL Exam Series — January & June Dates | Revvy Learn',
-    description: 'IAL exam dates, R papers and revision planning for Edexcel International A-Level Economics and Business.',
+    title: 'Edexcel IAL Exam Series — October, January & June Dates | Revvy Learn',
+    description: 'October 2026 and January 2027 IAL Economics and Business exam dates, plus how the three exam series work.',
     url: 'https://revvylearn.com/ial-revision/exam-series',
   },
 };
@@ -26,15 +28,15 @@ export default function ExamSeriesPage() {
         "name": "When are the Edexcel IAL exam dates?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Edexcel IAL exams run in two series each year: January (typically mid-January) and June (typically late May to mid-June). Exact timetables are published by Pearson Edexcel each year. Students can sit any combination of units in either session."
+          "text": "IAL Economics and Business have three exam series each year: January, May/June and October. In the October 2026 series the papers run from 8 to 30 October; in January 2027 from 11 to 21 January. Pearson publishes the final timetable for each series. Students can sit any combination of units in any series."
         }
       },
       {
         "@type": "Question",
-        "name": "What are R papers in IAL exams?",
+        "name": "Do IAL exam start times depend on my country?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "R papers (Reserve papers) are alternative versions of IAL exam papers used in different time zones. They ensure exam integrity by preventing paper leaks when students in earlier time zones finish before those in later zones begin. The content and difficulty are equivalent to the standard paper."
+          "text": "Yes. The timetable lists each paper as a morning or afternoon session, and Pearson publishes separate start times for each time zone. Your exams officer confirms the exact start time at your centre."
         }
       },
       {
@@ -47,10 +49,10 @@ export default function ExamSeriesPage() {
       },
       {
         "@type": "Question",
-        "name": "What is the difference between January and June IAL exams?",
+        "name": "What is the difference between the IAL exam series?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The January and June exam series cover the same units with papers of equal difficulty. The main difference is timing — January exams are typically in mid-January and results arrive in March, while June exams run from late May to mid-June with results in August. Most students use January for AS units and June for A2 units."
+          "text": "All three series cover the same units. The differences are timing: October exams run through October, January exams are in mid-January (January 2026 results reached students on 19 March 2026), and the May/June series is the largest, with results in August. Many students sit AS units early and A2 units in June."
         }
       }
     ]
@@ -78,10 +80,14 @@ export default function ExamSeriesPage() {
         <div className="elp-hero">
           <div className="elp-fade-up">
             <div className="elp-hero-eyebrow">Edexcel IAL Exam Sessions</div>
-            <h1 className="elp-hero-title">January &amp; June<br /><em>exam series</em></h1>
+            <h1 className="elp-hero-title">October, January &amp; June<br /><em>exam series</em></h1>
             <p className="elp-hero-desc">
-              Edexcel IAL offers two exam windows per year, giving international students the flexibility to spread their units across multiple sessions. Here is everything you need to know about the January and June exam series for IAL Economics and Business.
+              IAL Economics and Business can be sat in three exam series a year: October, January and May/June. Below are the October 2026 dates, the January 2027 dates and how to plan your units across the series.
             </p>
+            <div className="elp-hero-actions">
+              <Link href="/ial-revision/january-2027" className="elp-btn-primary">January 2027 timetable &rarr;</Link>
+              <a href="#october-2026" className="elp-btn-secondary">October 2026 dates &darr;</a>
+            </div>
           </div>
         </div>
       </section>
@@ -91,45 +97,54 @@ export default function ExamSeriesPage() {
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />How it works</div>
           <h2 className="elp-s-title">The modular advantage</h2>
           <p className="elp-s-sub" style={{ maxWidth: '720px' }}>
-            Unlike the UK domestic A-Level where all exams are sat in June, IAL is modular. You choose which units to sit in each session. This means you can take Units 1 and 2 (AS) in January and Units 3 and 4 (A2) in June &mdash; or complete everything in one session.
+            IAL is modular: you choose which units to sit in each series. You can take Units 1 and 2 (AS) in one series and Units 3 and 4 (A2) in a later one, or sit everything together.
           </p>
         </div>
 
         <div className="elp-wyg-grid" style={{ maxWidth: '900px', margin: '0 auto' }}>
           <div className="elp-wyg-card elp-fade-up">
+            <div className="elp-wyg-title">October exam series</div>
+            <div className="elp-wyg-desc">Runs through October. In 2026, the Economics and Business papers are from Thursday 8 to Friday 30 October. Useful for retakes and for spreading units across the year.</div>
+          </div>
+          <div className="elp-wyg-card elp-fade-up">
             <div className="elp-wyg-title">January exam series</div>
-            <div className="elp-wyg-desc">Typically mid-January. Results released in March. Popular for sitting AS units (Units 1 &amp; 2) early, giving students more time to focus on A2 content for June. Also used for retakes.</div>
+            <div className="elp-wyg-desc">Mid-January: 11 to 21 January in 2027. {lastJanuaryResults.series} results reached students on {lastJanuaryResults.students}. Popular for sitting AS units early and for retakes.</div>
           </div>
           <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.07s' }}>
             <div className="elp-wyg-title">June exam series</div>
             <div className="elp-wyg-desc">Late May to mid-June. Results released in August. The main exam session &mdash; most students sit their A2 units (Units 3 &amp; 4) here, and many complete all units in this session.</div>
           </div>
           <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.14s' }}>
-            <div className="elp-wyg-title">R papers (time zone variants)</div>
-            <div className="elp-wyg-desc">IAL uses R papers (Reserve papers) as alternative versions for different time zones. Students in East Asia may sit the R paper while those in the Middle East sit the standard paper. Content and difficulty are equivalent.</div>
+            <div className="elp-wyg-title">Start times and time zones</div>
+            <div className="elp-wyg-desc">The timetable gives a morning or afternoon session. Pearson publishes separate start times for each time zone, and your exams officer confirms the exact start time at your centre.</div>
           </div>
           <div className="elp-wyg-card elp-fade-up" style={{ transitionDelay: '.21s' }}>
             <div className="elp-wyg-title">Retake flexibility</div>
-            <div className="elp-wyg-desc">You can retake individual units without retaking the entire qualification. Your best result counts towards your final grade. This makes IAL ideal for students aiming for A* grades.</div>
+            <div className="elp-wyg-desc">You can retake individual units without retaking the whole qualification, in any of the three series.</div>
           </div>
         </div>
       </div>
 
-      <div className="elp-section">
-        <div className="elp-units-header elp-fade-up">
-          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-blue)' }} />Upcoming sessions</div>
-          <h2 className="elp-s-title">Start revising for your next exam</h2>
+      <div className="elp-section" id="october-2026">
+        <div className="elp-units-header">
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-amber)' }} />Next series</div>
+          <h2 className="elp-s-title">October 2026 timetable</h2>
+          <p className="elp-s-sub" style={{ maxWidth: '720px' }}>
+            Every Economics and Business paper in the October 2026 series. Start times depend on your time zone; your exams officer confirms the exact time.
+          </p>
         </div>
-        <div className="elp-wyg-grid" style={{ maxWidth: '700px', margin: '0 auto' }}>
-          <Link href="/ial-revision/june-2026" className="elp-wyg-card elp-fade-up" style={{ textDecoration: 'none' }}>
-            <div className="elp-wyg-title">June 2026 &rarr;</div>
-            <div className="elp-wyg-desc">Revision guide and preparation for the June 2026 IAL exam session.</div>
-          </Link>
-          <Link href="/ial-revision/january-2027" className="elp-wyg-card elp-fade-up" style={{ textDecoration: 'none', transitionDelay: '.07s' }}>
-            <div className="elp-wyg-title">January 2027 &rarr;</div>
-            <div className="elp-wyg-desc">Get ahead with early preparation for the January 2027 session.</div>
-          </Link>
+        <ExamTimetable series={oct2026} />
+      </div>
+
+      <div className="elp-section" id="january-2027">
+        <div className="elp-units-header">
+          <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--elp-green)' }} />After that</div>
+          <h2 className="elp-s-title">January 2027 timetable</h2>
+          <p className="elp-s-sub" style={{ maxWidth: '720px' }}>
+            Both Unit 1 papers are on Monday 11 January, and WBS12 and WEC13 share the morning of Friday 15 January. <Link href="/ial-revision/january-2027">Plan for January 2027 &rarr;</Link>
+          </p>
         </div>
+        <ExamTimetable series={jan2027} />
       </div>
 
       <div className="elp-cta-section">

@@ -1,0 +1,21 @@
+PASS  clean copy exits 0
+PASS  s03-examine-first (exit 1, "20-mark practice item is no chapter's first pin")
+PASS  s09-need-more-workers (exit 1, "firms need workers" filler")
+PASS  s09-mistake-needed-them (exit 1, "is the "firms need workers" filler")
+PASS  s09-no-cut-price-mistake (exit 1, "no mistake names valuing extra output")
+PASS  g08-flashcard (exit 1, "specGap-08: flashcard")
+PASS  g08-notes (exit 1, "specGap-08: notes")
+PASS  g08-body (exit 1, "specGap-08: labour-markets:sub:hiring-rule")
+--- NEW runner against the PRE-FIX modules (the rejected state):
+  - structure-03: the 20-mark practice item is no chapter's first pin, so Learn Mode never serves it (served: [0,2,3,4,6])
+  - structure-09: labour-markets:sub:derived-demand misconception is the "firms need workers" filler
+  - structure-09: mistake "Forgetting that the demand for labour is derived" is the "firms need workers" filler
+  - structure-09: the derived-demand misconception is not the movement-vs-shift error
+  - structure-09: no mistake names valuing extra output at the price when the firm must cut its price
+  - specGap-08: labour-markets:sub:hiring-rule values output at the price without saying the firm sells at a given price
+  - specGap-08: labour-markets:sub:hiring-rule values output at the price without saying the firm sells at a given price
+  - specGap-08: flashcard "What rule does a firm use to decide how many to hire?" values output at the price without saying the firm sells at a given price
+  - specGap-08: flashcard "What is the marginal revenue product (MRP)?" values output at the price without saying the firm sells at a given price
+  - specGap-08: notes "The Demand for Labour" values output at the price without saying the firm sells at a given price
+  - specGap-08: quiz "A worker adds 5 units an hour " values output at the price without saying the firm sells at a given price
+  - specGap-08: diagram "The Demand for Labour" values output at the price without saying the firm sells at a given price

@@ -1,0 +1,11 @@
+{
+ "pass": "1 — the packet author, reading each question TEXT ONLY against Economics 3.3.2's rows of audit/raw/spec-items.json",
+ "recorded": "2026-09-22, before any pass-2 or pass-3 output for 3.3.2 was read",
+ "subject": "economics",
+ "topic": "3.3.2",
+ "note": "E029 re-home. These two items were filed under 3.3.1, whose leaves contain no economies of scale. They are being re-tagged from scratch against 3.3.2; the earlier 3.3.1 verdict of 'no agreed tag' carries no information here.",
+ "tags": {
+  "economies-scale-4": ["ECON-3.3.2-3a"],
+  "econ-diseconomies-scale-8": ["ECON-3.3.2-3a", "ECON-3.3.2-3f-1", "ECON-3.3.2-3f-2", "ECON-3.3.2-3f-3"]
+ }
+}
