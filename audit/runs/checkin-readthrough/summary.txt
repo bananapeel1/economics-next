@@ -1,0 +1,8 @@
+Check-in answer read-through, 26 Sep 2026: all 199 live diagram+quiz check-ins, 43 sections, placement by origin/main code.
+Control: growth-development step 17 (82 vs 85) flagged as a leak by the part-2 reader. Passed.
+
+part1 (measures, business-objectives, revenue-costs, aggregate-demand, globalisation-causes, financial-planning, meeting-needs, types-sizes, role-state): leaks 34 · borderline 2 · clean 14
+part2 (trade, growth-development, globalisation, national-income, consumer-behaviour, global-markets, planning-finance, economic-growth, govt-intervention-firms): leaks 21 · borderline 9 · clean 20
+part3 (government-intervention, market-structures, marketing-mix, price-determination, entrepreneurs, labour-markets, supply, resource-management, introductory): leaks 38 · borderline 3 · clean 9
+part4 (market-failure, balance-payments, macro-objectives, managing-people, aggregate-supply, external-influences, managing-finance, the-market, poverty): leaks 30 · borderline 3 · clean 16
+TOTAL 199: leaks 123 (61%) · borderline 17 · clean 59
