@@ -39,8 +39,8 @@ const unit3Sections = [
   { id: 'types-sizes-businesses', number: '3.3.1', title: 'Types and Sizes of Businesses', meta: 'Objectives, growth, integration' },
   { id: 'revenue-costs-profits', number: '3.3.2', title: 'Revenue, Costs and Profits', meta: 'TR, TC, AR, MR, AC, MC, profit maximisation' },
   { id: 'market-structures-contestability', number: '3.3.3', title: 'Market Structures & Contestability', meta: 'Perfect competition, monopoly, oligopoly' },
-  { id: 'labour-markets', number: '3.3.4', title: 'Labour Markets', meta: 'MRP, wage determination, monopsony' },
-  { id: 'government-intervention-firms', number: '3.3.5', title: 'Government Intervention', meta: 'Competition policy, regulation, privatisation' },
+  { id: 'labour-markets', number: '3.3.4', title: 'Labour Markets', meta: 'Demand and supply of labour, wages, immobility' },
+  { id: 'government-intervention-firms', number: '3.3.5', title: 'Government Intervention', meta: 'Monopoly regulation, competition, wage controls' },
 ];
 
 const unit4Sections = [
