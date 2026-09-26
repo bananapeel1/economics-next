@@ -9,12 +9,12 @@ import RelatedModelAnswers from '@/components/RelatedModelAnswers';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'The 4 Macroeconomic Objectives — Edexcel IAL Economics WEC12 Notes',
-  description: 'Macroeconomic objectives revision for Edexcel IAL Economics Unit 2 (WEC12). Growth, low inflation, low unemployment, balance of payments, a balanced government budget and income equality \u2014 with diagrams, trade-offs and model answers.',
+  title: 'The 6 Macroeconomic Objectives — Edexcel IAL Economics (WEC12) Notes',
+  description: 'The six macroeconomic objectives in Edexcel IAL Economics Unit 2 (spec 2.3.6): growth, low and stable inflation, low unemployment, current account equilibrium, a balanced government budget and greater income equality, plus the four conflicts the spec names.',
   alternates: { canonical: 'https://revvylearn.com/economics/macroeconomic-objectives' },
   openGraph: {
-    title: 'The 4 Macroeconomic Objectives — Edexcel IAL Economics WEC12 Notes | Revvy Learn',
-    description: 'The complete Edexcel IAL Economics guide to macroeconomic objectives: every objective, every measurement, every policy trade-off. Growth, inflation, unemployment, BoP.',
+    title: 'The 6 Macroeconomic Objectives — Edexcel IAL Economics (WEC12) | Revvy Learn',
+    description: 'All six IAL macroeconomic objectives from spec 2.3.6, the four conflicts between them, and how each is measured.',
     url: 'https://revvylearn.com/economics/macroeconomic-objectives',
     type: 'article',
   },
@@ -61,7 +61,7 @@ const OBJECTIVES = [
   {
     slug: 'balance-of-payments',
     number: 4,
-    name: 'Sustainable balance of payments',
+    name: 'Balance of payments equilibrium on the current account',
     shortDef: 'Avoiding large, persistent current account deficits or surpluses.',
     measurement: 'Current account balance as a % of GDP. Tracks trade in goods, trade in services, primary income (investment returns) and secondary income (transfers).',
     detail: 'A deficit means net outflows of money from the country to pay for imports; a surplus means net inflows. Temporary deficits can be normal, but persistent deficits signal loss of competitiveness. The Marshall-Lerner condition and J-curve show how exchange rate depreciation eventually improves the trade balance.',
@@ -71,7 +71,7 @@ const OBJECTIVES = [
   {
     slug: 'income-equality',
     number: 5,
-    name: 'Fair distribution of income',
+    name: 'Greater income equality',
     shortDef: 'Reducing inequality in income and wealth.',
     measurement: 'Lorenz curve and Gini coefficient. A Gini of 0 = perfect equality; 1 = perfect inequality. UK ~0.35, Scandinavian countries lower, US and emerging markets higher.',
     detail: 'Governments redistribute through progressive taxation, welfare benefits and public services. Inequality differs from poverty: a country can be rich overall but still highly unequal, or poor on average but with little inequality.',
@@ -91,25 +91,34 @@ const OBJECTIVES = [
 ];
 
 const TRADE_OFFS = [
+  // The four conflicts named in IAL Economics spec 2.3.6 (2a-d), in spec order, then two more worth knowing.
   {
-    pair: 'Growth vs inflation',
-    body: 'Expansionary fiscal/monetary policy raises AD, boosting output and employment but risking demand-pull inflation. The Phillips Curve shows this trade-off in the short run.',
+    pair: 'Low inflation vs low unemployment',
+    spec: true,
+    body: 'The short-run Phillips curve: tight monetary policy cools inflation but raises unemployment, and boosting demand to cut unemployment risks demand-pull inflation.',
   },
   {
-    pair: 'Growth vs environment',
+    pair: 'Growth vs protection of the environment',
+    spec: true,
     body: 'Rising real GDP typically means rising CO\u2082 emissions, resource use and pollution \u2014 unless accompanied by decoupling and green technology.',
   },
   {
-    pair: 'Growth vs balance of payments',
-    body: 'Higher domestic incomes pull in more imports, worsening the current account.',
+    pair: 'Low inflation vs the current account',
+    spec: true,
+    body: 'Raising interest rates to cut inflation can strengthen the exchange rate, making exports dearer and imports cheaper, which worsens the current account. A weaker currency can help the current account but raises import prices and inflation.',
   },
   {
-    pair: 'Low inflation vs low unemployment',
-    body: 'Classic Phillips Curve trade-off. Tight monetary policy cools inflation but raises unemployment.',
-  },
-  {
-    pair: 'Income equality vs growth',
+    pair: 'Growth vs income equality',
+    spec: true,
     body: 'High redistribution can blunt work incentives; very low redistribution may lead to social tension and under-investment in human capital.',
+  },
+  {
+    pair: 'Growth vs inflation',
+    body: 'Expansionary fiscal/monetary policy raises AD, boosting output and employment but risking demand-pull inflation if growth exceeds productive capacity.',
+  },
+  {
+    pair: 'Growth vs the current account',
+    body: 'Higher domestic incomes pull in more imports, worsening the current account.',
   },
 ];
 
@@ -186,7 +195,7 @@ export default async function MacroObjectivesPillarPage() {
     '@context': 'https://schema.org',
     '@type': 'LearningResource',
     name: 'Macroeconomic Objectives \u2014 Edexcel IAL Economics (WEC12) Complete Guide',
-    description: 'Comprehensive revision notes on the macroeconomic objectives for Edexcel International A-Level Economics Unit 2 (WEC12). Growth, inflation, unemployment, balance of payments, equity and environment with measurement, policy tools and trade-offs.',
+    description: 'Revision notes on the six macroeconomic objectives for Edexcel International A-Level Economics Unit 2 (WEC12, spec 2.3.6): growth, inflation, unemployment, the current account, the government budget and income equality, with measurement, policy tools and the conflicts between them.',
     url: 'https://revvylearn.com/economics/macroeconomic-objectives',
     educationalLevel: 'Advanced Level',
     learningResourceType: 'Revision Notes',
@@ -242,7 +251,7 @@ export default async function MacroObjectivesPillarPage() {
               <span className="eup-unit-code">WEC12</span>
             </div>
             <h1 className="elp-hero-title">Macroeconomic Objectives &mdash;<br /><em style={{ color: 'var(--eup-accent)' }}>every target, every trade-off</em></h1>
-            <p className="elp-hero-desc">The complete Edexcel IAL Economics guide to macroeconomic objectives. Growth, inflation, unemployment, balance of payments, equality and environment &mdash; with measurement, policy tools and trade-offs for WEC12.</p>
+            <p className="elp-hero-desc">All six macroeconomic objectives in IAL Economics spec 2.3.6, how each is measured, the policies used, and the four conflicts between them &mdash; for WEC12.</p>
             <div className="elp-hero-actions">
               <TopicCta slot="hero" href="/economics/unit-2/macroeconomic-objectives-policies" topic="macroeconomic objectives" />
               <a href="#objectives" className="elp-btn-secondary">Jump to objectives</a>
@@ -352,7 +361,7 @@ export default async function MacroObjectivesPillarPage() {
         <div className="elp-fade-up" style={{ marginBottom: 24 }}>
           <div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />The hard part</div>
           <h2 className="elp-s-title">Policy trade-offs and conflicts</h2>
-          <p className="elp-s-sub">Every evaluation question expects you to recognise that objectives conflict. The exam rewards weighing trade-offs over treating objectives in isolation.</p>
+          <p className="elp-s-sub">Every evaluation question expects you to recognise that objectives conflict. The spec names four conflicts (marked &ldquo;Spec 2.3.6&rdquo;); the last two are worth knowing too.</p>
         </div>
         <div className="eup-topic-block elp-fade-up">
           <div className="eup-subtopic-grid">
@@ -360,7 +369,7 @@ export default async function MacroObjectivesPillarPage() {
               <div key={i} className="eup-subtopic-tile">
                 <div className="eup-st-num"><ChartHistogram size={18} /></div>
                 <div className="eup-st-body">
-                  <div className="eup-st-name">{t.pair}</div>
+                  <div className="eup-st-name">{t.pair}{t.spec && <span style={{ marginLeft: 8, fontSize: 11, fontWeight: 600, letterSpacing: '.06em', textTransform: 'uppercase', color: 'var(--eup-accent)' }}>Spec 2.3.6</span>}</div>
                   <div className="eup-st-keywords">{t.body}</div>
                 </div>
               </div>
