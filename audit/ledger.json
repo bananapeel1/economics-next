@@ -6228,11 +6228,11 @@
    "rank": 0,
    "text": "Add a third block 'Corporate influences' teaching short-termism vs long-termism (timescales, quarterly reporting, R&D/training cuts) and evidence-based vs subjective decision-making, so spec 3.4.1 is covered and practice Q3 is no longer testing untaught content.",
    "packet": 53,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "packet 53: the item's content is off-specification. It asks for a 'Corporate influences' block teaching short-termism and evidence-based vs subjective decisions 'so spec 3.4.1 is covered'; 3.4.1 is UK GCE and has no counterpart in bus_spec.txt (see specGap-01/-02). Its structural half (a 3rd block, more steps) is built and claimed under structure-01 and topFix-04: 4 blocks / 13 subsections from 3.3.4's own sub-topics. Its practice half (Q3 no longer tests untaught content) is claimed under practice-01."
   },
   {
    "id": "C-influences-business-decisions-topFix-02",
@@ -6241,10 +6241,10 @@
    "rank": 1,
    "text": "Add internal/external stakeholders with typical objectives and a concrete decision-level conflict to stakeholder-analysis body; rewrite its examMatters to remove 'draw the 2x2 grid' and describe what IAL mark schemes actually reward (identify stakeholders in context, explain conflict with profit objective, justified priority).",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "scripts/_packet53-content.mjs:199-201 internal/external taught on the Ipoh decision; :205 examMatters = stakeholders in context, no grid/examiner claim; :281 conflict with profit + justified priority (draft API == bundle)",
    "note": null
   },
   {
@@ -6254,10 +6254,10 @@
    "rank": 2,
    "text": "Add recall widgets (fillin: Handy type ↔ defining feature; Mendelow quadrant ↔ strategy; Friedman/Freeman) and a Mendelow matrix diagram plus a Handy typology diagram so both blocks' InlineDiagram/recall slots are populated.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "13/13 subsections carry recalls (5 classify/4 match/3 fillin/1 reorder, incl. culture-type fillin+match, shareholder/stakeholder fillin); 4/4 blocks pin diagrams resolved by lib/checkin-placement.js; Mendelow matrix replaced by on-spec 2a diagram (spec names no Mendelow)",
    "note": null
   },
   {
@@ -6267,10 +6267,10 @@
    "rank": 3,
    "text": "Restructure to 3-4 blocks / 4+ steps: split culture from stakeholders; merge the duplicated for/against lists in Ethics and CSR into one subsection and use the freed space for pay & rewards, environmental/animal welfare and a worked evaluation paragraph.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "draft: 4 blocks/13 subsections/17 steps; culture split from stakeholders; for/against list only in CSR body[3]; pay & rewards _packet53-content.mjs:323, worked judgement :169-175; animal welfare wont-fix via specGap-08",
    "note": null
   },
   {
@@ -6280,10 +6280,10 @@
    "rank": 4,
    "text": "Replace quiz Q8 ('3-5 years') with a Mendelow/short-termism question; anchor practice Q3 and Q5 stems to their contexts and drop 'Carroll's CSR pyramid' from Q5 guidance.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "bundle quiz(22)+flashcards(27): 0 hits '3-5 years'; quiz 9-10 test spec 1d; all 7 practice stems anchored to Source A/Orvana; 'Carroll'/'pyramid' 0 hits anywhere in draft",
    "note": null
   },
   {
@@ -6292,10 +6292,10 @@
    "kind": "accuracy",
    "text": "content[0] 'Culture & Stakeholders' > stakeholder-analysis > examMatters: 'Draw the 2x2 grid, place specific stakeholders in quadrants' — IAL Business mark schemes award KAA/evaluation levels for written chains of reasoning and application; a drawn Mendelow grid earns nothing by itself and Mendelow is not named in the Edexcel IAL spec (3.4.3 names internal/external stakeholders, stakeholder objectives, shareholder vs stakeholder conflict). Presenting the grid as the structure examiners 'reward' is misleading.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "_packet53-content.mjs:205 examMatters rewritten; 0 hits 'examiner'/'2x2' in bundle; Mendelow one aside at :201",
    "note": "SPEC NUMBERING: this item cites 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6304,10 +6304,10 @@
    "kind": "accuracy",
    "text": "content[0] > stakeholder-analysis > body[0] and whole section: Body never distinguishes internal vs external stakeholders or lists stakeholder objectives (spec 3.4.3 a, b), yet quiz Q5 and two flashcards test exactly this. Classification of shareholders as internal (used in quiz explanation) is also contested in textbooks; mark schemes generally accept either — the body should say so.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "_packet53-content.mjs:199 internal/external in body; :200 shareholder classification contested, either accepted with reason; objectives subsection lists every group; old 'shareholders internal' quiz explanation gone",
    "note": "SPEC NUMBERING: this item cites 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6316,10 +6316,10 @@
    "kind": "quiz",
    "text": "q7: Tests a specific number ('3-5 years or more') that appears nowhere in content[] (only in a flashcard) and is unsourced ('experts'); not IAL spec content. Distractor 'It happens immediately with new leadership' is implausible. A student who did the Learn Mode content cannot answer this from what was taught. Replace with a question on why culture is hard to change (spec 3.4.2 d) or on Mendelow quadrant strategy.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "old q7/q8 removed (0 hits '3-5 years' in bundle); replacement quiz 9-10 test difficulty of change taught at _packet53-content.mjs:148-151; all 22 items answerable from content[]",
    "note": "SPEC NUMBERING: this item cites 3.4.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6328,10 +6328,10 @@
    "kind": "practice",
    "text": "p2: 'Assess the extent to which short-termism in business decision-making damages long-term business performance' (10 marks): tariff matches IAL 'Assess' (8/10/12), but short-termism vs long-termism (spec 3.4.1) is not taught anywhere in content[] — the student meets it for the first time in the practice question. The stem is also generic rather than anchored to the given company ('...damages the manufacturing company's long-term performance'), which is how Edexcel phrases context questions and what drives application marks.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "short-termism Assess removed (0 hits short-termis in draft/bundle); 7 practice items all 3.3.4 and anchored to Orvana Source A",
    "note": "SPEC NUMBERING: this item cites 3.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6340,10 +6340,10 @@
    "kind": "structure",
    "text": "Each block has exactly 2 subsections, so with 2-per-step pairing the whole section is only 2 steps and each step carries two dense subsections PLUS InlineQuiz, InlinePractice, ExplainItBack and TakeawayCard — very long single screens with nothing between them to break cognitive load. Splitting into 4 single-section steps (or 3-4 blocks) would fix this.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "lib/learn-steps.js buildSteps on served draft: 17 steps (13 single-subsection teach + 4 check-ins)",
    "note": null
   },
   {
@@ -6352,10 +6352,10 @@
    "kind": "structure",
    "text": "Block 1 pairs Corporate Culture with Stakeholder Analysis — two unrelated spec subtopics (3.4.2 and 3.4.3) in one step; Block 2 pairs Ethics with CSR, which overlap so heavily that the for/against lists are duplicated almost verbatim (business-ethics body[2] vs corporate-social-responsibility body[1]/[2]: brand loyalty, attracts talent, reduces regulatory risk, competitive disadvantage).",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "culture (blocks 0-1) and stakeholders (block 2) separated; brand/talent/regulation list appears once (CSR body[3]); ethics subsection now trade-off only",
    "note": "SPEC NUMBERING: this item cites 3.4.2, 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6364,10 +6364,10 @@
    "kind": "structure",
    "text": "Zero recall widgets (no reorder, no fillin) — the section never exercises retrieval inside Learn Mode; the 'spaced'/'immediate' recall mechanism is idle here. Natural fillin candidates: Handy's four types with their distinguishing feature; Mendelow's four quadrant strategies; Friedman/Freeman positions.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "13 recalls across classify/match/fillin/reorder, every widget type read by components/learn-mode/*Recall.jsx",
    "note": null
   },
   {
@@ -6376,10 +6376,10 @@
    "kind": "structure",
    "text": "Zero diagrams although stakeholder-analysis > examMatters tells students to 'draw the 2x2 grid' — Mendelow's matrix and Handy's typology are both obvious diagram candidates; Learn Mode's InlineDiagram slot is empty for both blocks.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "4 diagrams, each block's diagramId resolved as 'pin' by lib/checkin-placement.js on served draft",
    "note": null
   },
   {
@@ -6388,10 +6388,10 @@
    "kind": "structure",
    "text": "Blocks carry no quizIndices/practiceIndices, so which MCQ/practice item lands under each block is left to default selection; e.g. block 1 (culture/stakeholders) could surface the greenwashing MCQ.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "every block carries quizIndices+practiceIndices; placement run lands topical quiz/practice in each of the 4 check-ins",
    "note": null
   },
   {
@@ -6400,10 +6400,10 @@
    "kind": "structure",
    "text": "Misconception quality: corporate-culture ('managers can switch culture overnight') and business-ethics ('ethics always costs with no return') are real; stakeholder-analysis ('Mendelow is static') is filler — the genuinely common student error ('strong culture is always good', which appears in notes[0] and common_mistakes[1]) is not in content[] at all; CSR misconception overclaims (see accuracy).",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "_packet53-content.mjs:48 strong-culture-is-good misconception now in content[]; Mendelow-static filler gone; CSR misconception is 'CSR is charity', no overclaim",
    "note": null
   },
   {
@@ -6412,10 +6412,10 @@
    "kind": "structure",
    "text": "Difficulty ramp: every subsection is definitional + for/against list; evaluation is described ('examiners want both sides') but never modelled with a worked exam paragraph or a judgement criterion ('it depends on…'), which is what separates L3/L4 in IAL mark schemes.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "_packet53-content.mjs:169-175 'Can a Culture Be Changed? A Worked Judgement' models for/against/conditional judgement; examMatters give judgement criteria",
    "note": null
   },
   {
@@ -6424,10 +6424,10 @@
    "kind": "structure",
    "text": "Takeaways: Block 1 takeaways match its sections. Block 2 takeaway[2] (Friedman vs Freeman) references block 1 content — acceptable cross-link but block 2 lacks a takeaway on the profit/ethics trade-off which is the spec's core point.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "_packet53-content.mjs:404 block 4 takeaway[0] 'Ethics often costs profit; size the trade-off before judging it.'",
    "note": null
   },
   {
@@ -6436,11 +6436,11 @@
    "kind": "specGap",
    "text": "3.4.1 Corporate influences (a): corporate timescales — short-termism vs long-termism — entirely absent from content[] (only appears in practice Q3 and extras).",
    "packet": 53,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "packet 53: off-specification. The item cites UK GCE '3.4.1 Corporate influences (a)'. bus_spec.txt has no 3.4.<n> heading (grep -c '3\\.4\\.[0-9]' = 0); IAL 3.3.4 (bus_spec.txt:1184-1211) has three sub-topics, culture / stakeholder-shareholder models / business ethics, and 'short-termis'/'long-termis' are 0 hits in the file. Not taught; banned by scripts/packet-53-influences-business-decisions.mjs §2 (BANNED[0], re-measured against the spec each run). The live practice item on short-termism is replaced (practice-01)."
   },
   {
    "id": "C-influences-business-decisions-specGap-02",
@@ -6448,11 +6448,11 @@
    "kind": "specGap",
    "text": "3.4.1 Corporate influences (b): evidence-based vs subjective (intuitive) decision-making — absent from content[] (extras evaluation 'Data-driven decisions have limits' only).",
    "packet": 53,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "packet 53: off-specification. The item cites UK GCE '3.4.1 (b)' evidence-based vs subjective decision-making. No 3.4.<n> exists in bus_spec.txt; 'subjective' and 'intuiti' are 0 hits; 'evidence-based' occurs only in assessment-objective prose (:1566, :2129), never inside 3.3.4 (:1184-1217) — the runner asserts that. Not taught; banned (BANNED[1])."
   },
   {
    "id": "C-influences-business-decisions-specGap-03",
@@ -6460,10 +6460,10 @@
    "kind": "specGap",
    "text": "3.4.2 Corporate culture (c): how corporate culture is formed (founder, leadership, history, sector, national culture, structure/reward systems) — not taught.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "_packet53-content.mjs:115-120 founder, history, recruitment/promotion/rewards, country/industry in body + reorder recall + diagram 0f4dfd47",
    "note": "SPEC NUMBERING: this item cites 3.4.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6472,10 +6472,10 @@
    "kind": "specGap",
    "text": "3.4.2 Corporate culture (d): difficulties in changing an established culture — only one sentence in the misconception; not developed in the body.",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "_packet53-content.mjs:148-151 loss/proof/systems/time-scale in body + Orvana case + classify recall",
    "note": "SPEC NUMBERING: this item cites 3.4.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6484,10 +6484,10 @@
    "kind": "specGap",
    "text": "3.4.3 Shareholders vs stakeholders (a)(b): internal vs external stakeholders and their objectives — not in body (only flashcards/quiz).",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "_packet53-content.mjs:199-200 internal/external in body + stakeholder-objectives subsection (objectives of each group)",
    "note": "SPEC NUMBERING: this item cites 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6496,10 +6496,10 @@
    "kind": "specGap",
    "text": "3.4.3 (c)(d): stakeholder/shareholder influences on decisions and the conflict between profit-based and wider objectives — treated abstractly via Friedman/Freeman; no concrete decision-level conflict worked through in the body (e.g. relocation, redundancies, price rise).",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "_packet53-content.mjs:270 Ipoh closure worked with figures, flow and softening options; Assess/Evaluate practice built on it",
    "note": "SPEC NUMBERING: this item cites 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6508,10 +6508,10 @@
    "kind": "specGap",
    "text": "3.4.4 Business ethics (a): pay and rewards (executive pay, bonuses, ethics of reward systems) — only a flashcard; not in content[].",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "scripts/_packet53-content.mjs:323-335 pay & rewards taught in content[]; check-in 4 leak closed: scripts/_packet53-assessment.mjs:161 Calculate now asks CEO vs lowest-paid (RM30,000, _packet53-util.mjs:118-121), scheme 160/40/200 printed nowhere in served draft or bundle outside its own scheme; shipping placeChapterItems on served draft still serves it at check-in 4 in independent mode (LearnModeTab.jsx:335-341, scheme hidden until reveal); A/B probe flags 100/6/125 on fix1-before bundle, none after",
    "note": "SPEC NUMBERING: this item cites 3.4.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6520,11 +6520,11 @@
    "kind": "specGap",
    "text": "3.4.4 Business ethics (b): environmental considerations and animal welfare — environment mentioned in passing; animal welfare absent.",
    "packet": 53,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.4.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "packet 53: off-specification as worded. 'animal' is 0 hits in bus_spec.txt; IAL 3.3.4 · 3 has three leaves (3a trade-offs, 3b pay and rewards, 3c CSR). Environmental conduct is taught inside CSR (3c, corporate-social-responsibility body[1]); 'environmental considerations' as its own bullet is 4.3.4 · 2b (bus_spec.txt:1471), a Unit 4 topic. Animal welfare banned (BANNED[2])."
   },
   {
    "id": "C-influences-business-decisions-specGap-09",
@@ -6532,10 +6532,10 @@
    "kind": "specGap",
    "text": "(Unsure whether IAL spec explicitly names Mendelow — I believe it does not; it names Handy for culture.)",
    "packet": 53,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-53",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "bus_spec.txt 0 hits Handy/Mendelow; content uses each once as attributed aside: _packet53-content.mjs:64 'names of the types are what matter, not the writer', :201",
    "note": null
   },
   {

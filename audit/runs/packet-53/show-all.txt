@@ -1,0 +1,369 @@
+=== C-influences-business-decisions-topFix-01 ===
+{
+  "id": "C-influences-business-decisions-topFix-01",
+  "section": "influences-business-decisions",
+  "kind": "topFix",
+  "rank": 0,
+  "text": "Add a third block 'Corporate influences' teaching short-termism vs long-termism (timescales, quarterly reporting, R&D/training cuts) and evidence-based vs subjective decision-making, so spec 3.4.1 is covered and practice Q3 is no longer testing untaught content.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-topFix-02 ===
+{
+  "id": "C-influences-business-decisions-topFix-02",
+  "section": "influences-business-decisions",
+  "kind": "topFix",
+  "rank": 1,
+  "text": "Add internal/external stakeholders with typical objectives and a concrete decision-level conflict to stakeholder-analysis body; rewrite its examMatters to remove 'draw the 2x2 grid' and describe what IAL mark schemes actually reward (identify stakeholders in context, explain conflict with profit objective, justified priority).",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-influences-business-decisions-topFix-03 ===
+{
+  "id": "C-influences-business-decisions-topFix-03",
+  "section": "influences-business-decisions",
+  "kind": "topFix",
+  "rank": 2,
+  "text": "Add recall widgets (fillin: Handy type ↔ defining feature; Mendelow quadrant ↔ strategy; Friedman/Freeman) and a Mendelow matrix diagram plus a Handy typology diagram so both blocks' InlineDiagram/recall slots are populated.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-influences-business-decisions-topFix-04 ===
+{
+  "id": "C-influences-business-decisions-topFix-04",
+  "section": "influences-business-decisions",
+  "kind": "topFix",
+  "rank": 3,
+  "text": "Restructure to 3-4 blocks / 4+ steps: split culture from stakeholders; merge the duplicated for/against lists in Ethics and CSR into one subsection and use the freed space for pay & rewards, environmental/animal welfare and a worked evaluation paragraph.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-influences-business-decisions-topFix-05 ===
+{
+  "id": "C-influences-business-decisions-topFix-05",
+  "section": "influences-business-decisions",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "Replace quiz Q8 ('3-5 years') with a Mendelow/short-termism question; anchor practice Q3 and Q5 stems to their contexts and drop 'Carroll's CSR pyramid' from Q5 guidance.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-influences-business-decisions-accuracy-01 ===
+{
+  "id": "C-influences-business-decisions-accuracy-01",
+  "section": "influences-business-decisions",
+  "kind": "accuracy",
+  "text": "content[0] 'Culture & Stakeholders' > stakeholder-analysis > examMatters: 'Draw the 2x2 grid, place specific stakeholders in quadrants' — IAL Business mark schemes award KAA/evaluation levels for written chains of reasoning and application; a drawn Mendelow grid earns nothing by itself and Mendelow is not named in the Edexcel IAL spec (3.4.3 names internal/external stakeholders, stakeholder objectives, shareholder vs stakeholder conflict). Presenting the grid as the structure examiners 'reward' is misleading.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-accuracy-02 ===
+{
+  "id": "C-influences-business-decisions-accuracy-02",
+  "section": "influences-business-decisions",
+  "kind": "accuracy",
+  "text": "content[0] > stakeholder-analysis > body[0] and whole section: Body never distinguishes internal vs external stakeholders or lists stakeholder objectives (spec 3.4.3 a, b), yet quiz Q5 and two flashcards test exactly this. Classification of shareholders as internal (used in quiz explanation) is also contested in textbooks; mark schemes generally accept either — the body should say so.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-quiz-01 ===
+{
+  "id": "C-influences-business-decisions-quiz-01",
+  "section": "influences-business-decisions",
+  "kind": "quiz",
+  "text": "q7: Tests a specific number ('3-5 years or more') that appears nowhere in content[] (only in a flashcard) and is unsourced ('experts'); not IAL spec content. Distractor 'It happens immediately with new leadership' is implausible. A student who did the Learn Mode content cannot answer this from what was taught. Replace with a question on why culture is hard to change (spec 3.4.2 d) or on Mendelow quadrant strategy.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-practice-01 ===
+{
+  "id": "C-influences-business-decisions-practice-01",
+  "section": "influences-business-decisions",
+  "kind": "practice",
+  "text": "p2: 'Assess the extent to which short-termism in business decision-making damages long-term business performance' (10 marks): tariff matches IAL 'Assess' (8/10/12), but short-termism vs long-termism (spec 3.4.1) is not taught anywhere in content[] — the student meets it for the first time in the practice question. The stem is also generic rather than anchored to the given company ('...damages the manufacturing company's long-term performance'), which is how Edexcel phrases context questions and what drives application marks.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-structure-01 ===
+{
+  "id": "C-influences-business-decisions-structure-01",
+  "section": "influences-business-decisions",
+  "kind": "structure",
+  "text": "Each block has exactly 2 subsections, so with 2-per-step pairing the whole section is only 2 steps and each step carries two dense subsections PLUS InlineQuiz, InlinePractice, ExplainItBack and TakeawayCard — very long single screens with nothing between them to break cognitive load. Splitting into 4 single-section steps (or 3-4 blocks) would fix this.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-influences-business-decisions-structure-02 ===
+{
+  "id": "C-influences-business-decisions-structure-02",
+  "section": "influences-business-decisions",
+  "kind": "structure",
+  "text": "Block 1 pairs Corporate Culture with Stakeholder Analysis — two unrelated spec subtopics (3.4.2 and 3.4.3) in one step; Block 2 pairs Ethics with CSR, which overlap so heavily that the for/against lists are duplicated almost verbatim (business-ethics body[2] vs corporate-social-responsibility body[1]/[2]: brand loyalty, attracts talent, reduces regulatory risk, competitive disadvantage).",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.2, 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-structure-03 ===
+{
+  "id": "C-influences-business-decisions-structure-03",
+  "section": "influences-business-decisions",
+  "kind": "structure",
+  "text": "Zero recall widgets (no reorder, no fillin) — the section never exercises retrieval inside Learn Mode; the 'spaced'/'immediate' recall mechanism is idle here. Natural fillin candidates: Handy's four types with their distinguishing feature; Mendelow's four quadrant strategies; Friedman/Freeman positions.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-influences-business-decisions-structure-04 ===
+{
+  "id": "C-influences-business-decisions-structure-04",
+  "section": "influences-business-decisions",
+  "kind": "structure",
+  "text": "Zero diagrams although stakeholder-analysis > examMatters tells students to 'draw the 2x2 grid' — Mendelow's matrix and Handy's typology are both obvious diagram candidates; Learn Mode's InlineDiagram slot is empty for both blocks.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-influences-business-decisions-structure-05 ===
+{
+  "id": "C-influences-business-decisions-structure-05",
+  "section": "influences-business-decisions",
+  "kind": "structure",
+  "text": "Blocks carry no quizIndices/practiceIndices, so which MCQ/practice item lands under each block is left to default selection; e.g. block 1 (culture/stakeholders) could surface the greenwashing MCQ.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-influences-business-decisions-structure-06 ===
+{
+  "id": "C-influences-business-decisions-structure-06",
+  "section": "influences-business-decisions",
+  "kind": "structure",
+  "text": "Misconception quality: corporate-culture ('managers can switch culture overnight') and business-ethics ('ethics always costs with no return') are real; stakeholder-analysis ('Mendelow is static') is filler — the genuinely common student error ('strong culture is always good', which appears in notes[0] and common_mistakes[1]) is not in content[] at all; CSR misconception overclaims (see accuracy).",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-influences-business-decisions-structure-07 ===
+{
+  "id": "C-influences-business-decisions-structure-07",
+  "section": "influences-business-decisions",
+  "kind": "structure",
+  "text": "Difficulty ramp: every subsection is definitional + for/against list; evaluation is described ('examiners want both sides') but never modelled with a worked exam paragraph or a judgement criterion ('it depends on…'), which is what separates L3/L4 in IAL mark schemes.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-influences-business-decisions-structure-08 ===
+{
+  "id": "C-influences-business-decisions-structure-08",
+  "section": "influences-business-decisions",
+  "kind": "structure",
+  "text": "Takeaways: Block 1 takeaways match its sections. Block 2 takeaway[2] (Friedman vs Freeman) references block 1 content — acceptable cross-link but block 2 lacks a takeaway on the profit/ethics trade-off which is the spec's core point.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-influences-business-decisions-specGap-01 ===
+{
+  "id": "C-influences-business-decisions-specGap-01",
+  "section": "influences-business-decisions",
+  "kind": "specGap",
+  "text": "3.4.1 Corporate influences (a): corporate timescales — short-termism vs long-termism — entirely absent from content[] (only appears in practice Q3 and extras).",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-specGap-02 ===
+{
+  "id": "C-influences-business-decisions-specGap-02",
+  "section": "influences-business-decisions",
+  "kind": "specGap",
+  "text": "3.4.1 Corporate influences (b): evidence-based vs subjective (intuitive) decision-making — absent from content[] (extras evaluation 'Data-driven decisions have limits' only).",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-specGap-03 ===
+{
+  "id": "C-influences-business-decisions-specGap-03",
+  "section": "influences-business-decisions",
+  "kind": "specGap",
+  "text": "3.4.2 Corporate culture (c): how corporate culture is formed (founder, leadership, history, sector, national culture, structure/reward systems) — not taught.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-specGap-04 ===
+{
+  "id": "C-influences-business-decisions-specGap-04",
+  "section": "influences-business-decisions",
+  "kind": "specGap",
+  "text": "3.4.2 Corporate culture (d): difficulties in changing an established culture — only one sentence in the misconception; not developed in the body.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-specGap-05 ===
+{
+  "id": "C-influences-business-decisions-specGap-05",
+  "section": "influences-business-decisions",
+  "kind": "specGap",
+  "text": "3.4.3 Shareholders vs stakeholders (a)(b): internal vs external stakeholders and their objectives — not in body (only flashcards/quiz).",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-specGap-06 ===
+{
+  "id": "C-influences-business-decisions-specGap-06",
+  "section": "influences-business-decisions",
+  "kind": "specGap",
+  "text": "3.4.3 (c)(d): stakeholder/shareholder influences on decisions and the conflict between profit-based and wider objectives — treated abstractly via Friedman/Freeman; no concrete decision-level conflict worked through in the body (e.g. relocation, redundancies, price rise).",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-specGap-07 ===
+{
+  "id": "C-influences-business-decisions-specGap-07",
+  "section": "influences-business-decisions",
+  "kind": "specGap",
+  "text": "3.4.4 Business ethics (a): pay and rewards (executive pay, bonuses, ethics of reward systems) — only a flashcard; not in content[].",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-specGap-08 ===
+{
+  "id": "C-influences-business-decisions-specGap-08",
+  "section": "influences-business-decisions",
+  "kind": "specGap",
+  "text": "3.4.4 Business ethics (b): environmental considerations and animal welfare — environment mentioned in passing; animal welfare absent.",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.4.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.4. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-influences-business-decisions-specGap-09 ===
+{
+  "id": "C-influences-business-decisions-specGap-09",
+  "section": "influences-business-decisions",
+  "kind": "specGap",
+  "text": "(Unsure whether IAL spec explicitly names Mendelow — I believe it does not; it names Handy for culture.)",
+  "packet": 53,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
