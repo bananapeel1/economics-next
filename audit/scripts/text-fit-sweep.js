@@ -10,6 +10,7 @@
  *   BLEED     the element's box extends past its nearest boxed ancestor — one with a border, a
  *             background, clipped overflow, or a button/td/th — by more than 1px horizontally
  *   CLIP      overflow cuts the text and no ellipsis marks it
+ *   VCLIP     text is cut at the bottom: an overflow-hidden box, or a text box hiding part of its contents
  *   ELLIPSIS  the text is shortened with "…"  (a failure unless `allowEllipsis` is set: the founder
  *             asked for no shortened text at all on the practice page)
  *   HSCROLL   any container scrolls sideways, unless it holds a table or code block
@@ -128,6 +129,11 @@ async function textFitSweep({ url, states, themes = ['dark', 'light'], from = 32
         if (cs.textOverflow !== 'ellipsis') bad.push(`CLIP ${label(el)} «${text}»`);
         else if (!allowEllipsis) bad.push(`ELLIPSIS ${label(el)} «${text}»`);
       }
+      // Text cut at the bottom is as untrustworthy as text cut at the side (26 Sep: a read-only answer box
+      // sized by counting line breaks hid the end of the student's answer; the sideways checks cannot see it).
+      if (el.scrollHeight > el.clientHeight + 1 && /hidden|clip/.test(cs.overflowY) && el.tagName !== 'TEXTAREA') {
+        bad.push(`VCLIP ${label(el)} «${text}» ${el.scrollHeight - el.clientHeight}px hidden below`);
+      }
       const box = boxOf(el);
       if (!box) return;
       // A scroller between the text and its box turns spill into scrolling, which HSCROLL judges.
@@ -136,6 +142,9 @@ async function textFitSweep({ url, states, themes = ['dark', 'light'], from = 32
       const b = box.getBoundingClientRect();
       const over = Math.max(r.right - b.right, b.left - r.left);
       if (over > 1) bad.push(`BLEED ${label(el)} «${text}» past ${label(box)} by ${Math.round(over)}px`);
+    });
+    D.querySelectorAll('textarea').forEach((t) => {
+      if (visible(t) && t.scrollHeight > t.clientHeight + 1) bad.push(`VCLIP textarea «${t.value.trim().slice(0, 28)}» ${t.scrollHeight - t.clientHeight}px hidden below`);
     });
     return [...new Set(bad)];
   }

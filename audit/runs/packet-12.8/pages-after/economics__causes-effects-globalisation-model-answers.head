@@ -1,0 +1,73 @@
+title: Causes and Effects of Globalisation — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/causes-effects-globalisation-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Causes and Effects of Globalisation — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 4.3.1 Causes and Effects of Globalisation"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain two causes of globalisation.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "First, trade liberalisation — the reduction of tariffs and trade barriers through organisations like the WTO and regional trade agreements — has made it cheaper and easier for goods to cross borders. K Average global tariff rates fell from over 20% in the 1980s to under 5% by 2020, dramatically increasing the volume of international trade. A Second, technological advances — particularly the internet, containerisation, and cheaper air transport — have reduced the cost and time of moving goods, services, and information across borders. K Containerisation alone reduced shipping costs by over 90%, making it viable for firms to source components globally and sell to international markets. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine the potential costs and benefits of a multinational corporation (MNC) setting up operations in a developing country.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A multinational corporation (MNC) is a firm that operates production or service facilities in more than one country. K When an MNC sets up in a developing country, it brings foreign direct investment (FDI) — capital that flows into the host economy. K The benefits can be significant. MNCs create direct employment — for example, Nike employs over 300,000 workers in Vietnam alone. A They also create indirect jobs through local supply chains and spending by their workforce. An FDI brings technology transfer — local workers gain skills and knowledge that can spread to domestic firms. Tax revenue from MNC operations helps fund public services and infrastructure. An However, MNCs may also impose costs on the host country . Profit repatriation means much of the income generated leaves the country and flows back to shareholders in the MNC's home country — reducing the benefit to the local economy. An MNCs may exploit weak labour regulations , paying low wages and offering poor working conditions — Nike faced sustained criticism over factory conditions in Vietnam. A They may also crowd out local firms that cannot compete with the MNC's scale and resources, reducing domestic entrepreneurship and creating dependency on foreign investment. An"
+   }
+  }
+ ]
+}

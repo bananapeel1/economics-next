@@ -1,0 +1,73 @@
+title: Labour Markets — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/labour-markets-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Labour Markets — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 3.3.4 Labour Markets"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain what is meant by the derived demand for labour.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Derived demand means that labour is not demanded for its own sake but because it is needed to produce goods and services that consumers want . K The demand for workers depends on the demand for the product they make — if product demand rises, firms need more workers to increase output. K For example, if demand for electric vehicles increases, car manufacturers like Tesla will hire more production workers, engineers, and battery technicians — the demand for these workers is derived from consumer demand for EVs. A Conversely, falling demand for print newspapers has reduced the derived demand for journalists and printers in that industry. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine how a monopsony employer might lead to lower wages and employment.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A monopsony is a labour market with a single or dominant employer . Unlike a competitive market where firms are wage-takers, a monopsonist has wage-setting power . K The NHS is often cited as a monopsony employer of nurses in the UK — in many regions, the NHS is the only realistic employer for qualified nursing staff. A The monopsonist faces an upward-sloping labour supply curve — to attract more workers, it must offer higher wages. An Crucially, when it raises the wage for the new worker, it must also raise wages for all existing workers . This means the marginal cost of labour (MCL) is higher than the wage — the cost of hiring one more worker includes both their wage and the wage increase for everyone already employed. An The profit-maximising monopsonist employs workers up to the point where MCL = MRP (marginal revenue product). An However, it then pays the wage on the supply curve — which is lower than MRP. D The result is that both the wage and employment level are lower than they would be in a competitive labour market, where the wage equals MRP. An Workers are paid less than the value of their contribution, and the monopsonist captures the difference as additional profit. An"
+   }
+  }
+ ]
+}

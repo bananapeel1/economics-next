@@ -1,0 +1,96 @@
+title: Supply — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/supply-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is price elasticity of supply (PES)?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "PES measures the responsiveness of quantity supplied to a change in price. It is calculated as % change in quantity supplied ÷ % change in price. If PES > 1, supply is elastic (responsive to price changes). If PES < 1, supply is inelastic (unresponsive). Key factors affecting PES include spare capacity, time period, availability of raw materials, and ease of storing stock."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What causes a shift in the supply curve?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Supply shifts right (increases) when production costs fall, technology improves, subsidies are introduced, or new firms enter the market. Supply shifts left (decreases) when costs rise (e.g. raw materials, wages), indirect taxes are imposed, or regulations increase. A change in price causes a movement along the supply curve, not a shift."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Supply — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 1.3.3 Supply"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain what is meant by price elasticity of supply (PES) and identify two factors that affect it.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Price elasticity of supply (PES) measures the responsiveness of quantity supplied to a change in price. K It is calculated as the percentage change in quantity supplied divided by the percentage change in price. If PES > 1, supply is elastic ; if PES inelastic . K One factor affecting PES is the availability of spare capacity . A Firms with excess capacity (e.g. unused machinery or factory space) can increase output quickly in response to a price rise, making supply more elastic. Conversely, a firm operating at full capacity would struggle to expand output in the short term. A A second factor is the time period . A In the short run , supply tends to be inelastic because it takes time to hire additional workers, source raw materials, or build new production facilities. In the long run , firms can adjust all factors of production, making supply more elastic. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine the effects of a fall in the cost of raw materials on a market.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Supply is the quantity of a good or service that producers are willing and able to offer for sale at each price level in a given time period. K A key non-price determinant of supply is the cost of production — when costs fall, supply increases. K A fall in the cost of raw materials — for example, a decline in global oil prices reducing production costs for plastics manufacturers — means that at every given price, firms can produce more profitably. A This causes the supply curve to shift rightward from S₁ to S₂. D At the original price, there is now excess supply , which puts downward pressure on the market price. The market moves to a new equilibrium with a lower price (P₂ and a higher quantity (Q₂ > Q₁) . An Consumers benefit from the lower price and increased availability of the product, experiencing a rise in consumer surplus . An For firms, the impact on revenue depends on the price elasticity of demand (PED) . If demand is price elastic (PED > 1), the increase in quantity demanded will more than offset the price fall, and total revenue will rise . An However, if demand is inelastic, total revenue may fall despite higher sales volumes. Firms' profit margins may still improve because the cost savings from cheaper raw materials may exceed the reduction in selling price, leaving them better off overall. An"
+   }
+  }
+ ]
+}

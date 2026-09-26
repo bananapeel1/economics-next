@@ -1,0 +1,150 @@
+=== E054 ===
+{
+  "id": "E054",
+  "kind": "feature",
+  "title": "Markdown data-response pages: Table 1 renders 403px in a 350px column at 390px and the page pans sideways (markdown-page.css gives tables no overflow wrapper); breaks the founder's 26 Sep no-cut-text standard. Evidence: audit/runs/packet-12.7/verify-b.md",
+  "file": "app/data-response/markdown-page.css",
+  "packet": 12.8,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-25"
+}
+
+=== E055 ===
+{
+  "id": "E055",
+  "kind": "feature",
+  "title": "econ-u1-market-failure.md reads inconsistently after 12.7's re-tariff: Common Mistakes says 'cannot reach Level 4' while the new 20-mark note has no levels; Q2 frames MSC>MPC and Q3 MSB<MPB for consumption externalities; a 'Level 3 (5-6)' note on a 6-mark question. Evidence: audit/runs/packet-12.7/verify-b.md",
+  "file": "content/data-response/econ-u1-market-failure.md",
+  "packet": 12.8,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-25"
+}
+
+=== E057 ===
+{
+  "id": "E057",
+  "kind": "feature",
+  "title": "paper field on model-answer items and validator rules R9-R13 read from audit/raw/ial-paper-structure.json via lib/ial-paper.js (legal kind/tariff/command word, data-question tariff multiset, 5x4 short answers, essays offered, md data-response file matches the bank); R10 and R13 proved by A/B mutation",
+  "file": "audit/scripts/validate-model-answers.mjs",
+  "packet": 12.8,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E058 ===
+{
+  "id": "E058",
+  "kind": "feature",
+  "title": "Economics 1.3.5 Section C: a five-part data question on Extract A at 2/4/6/8/14 (Define, Explain, Analyse, Examine, Discuss); the soft-drinks Evaluate re-levelled to a 14-mark Discuss; new Explain 4 and Examine 8",
+  "file": "data/modelAnswersExpansion.js",
+  "packet": 12.8,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E059 ===
+{
+  "id": "E059",
+  "kind": "feature",
+  "title": "Economics 1.3.5 Section B: five 4-mark short answers each with its own context, exactly one Draw (model diagram from public/diagrams) and at least one Calculate, aimed at 1.3.5 leaves the data question does not examine",
+  "file": "data/modelAnswersExpansion.js",
+  "packet": 12.8,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E060 ===
+{
+  "id": "E060",
+  "kind": "feature",
+  "title": "Economics 1.3.5 Section D: two 20-mark essays with quoted contexts, the student answers one; the generic 'always necessary' essay plus one new",
+  "file": "data/modelAnswersExpansion.js",
+  "packet": 12.8,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E061 ===
+{
+  "id": "E061",
+  "kind": "feature",
+  "title": "Practice shell shows the paper: section headers in paper order, an honest Section A row linking the topic quiz, contexts above stems, Draw items sketched on paper then marked, essay choice with marks banked for the chosen essay only, a section switcher; 12.75 guarantees hold",
+  "file": "components/PracticeShell.jsx",
+  "packet": 12.8,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E062 ===
+{
+  "id": "E062",
+  "kind": "feature",
+  "title": "econ-u1-market-failure.md states the same five data-question parts as the bank (R13), drops the old 20-mark Q3, absorbs E054 and E055",
+  "file": "content/data-response/econ-u1-market-failure.md",
+  "packet": 12.8,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E063 ===
+{
+  "id": "E063",
+  "kind": "feature",
+  "title": "The SiteHeader height (the CSS custom property rlh-h) is defined from the real header, not left to its 60px fallback; A/B: a 20px taller header still gives an exact-fit desktop frame with no page scroll",
+  "file": "components/practice-shell.css",
+  "packet": 12.8,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+
+=== E064 ===
+{
+  "id": "E064",
+  "kind": "feature",
+  "title": "No regression and no cut text: 31 other pages identical to HEAD, text-fit sweep 0 on every new state 320-1920px both themes after first failing, spec-coverage not lower for 1.3.5 and zerocov 0",
+  "file": "audit/scripts/text-fit-sweep.js",
+  "packet": 12.8,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-26"
+}
+

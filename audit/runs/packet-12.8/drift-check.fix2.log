@@ -1,0 +1,10 @@
+MATCH  (a) 2m Define   md-words=67
+   md==answerParagraphs true · md==script true · tariff 2/2 · question true · examiner note true
+MATCH  (b) 4m Explain  md-words=145
+   md==answerParagraphs true · md==script true · tariff 4/4 · question true · examiner note true
+MATCH  (c) 6m Analyse  md-words=180
+   md==answerParagraphs true · md==script true · tariff 6/6 · question true · examiner note true
+MATCH  (d) 8m Examine  md-words=337
+   md==answerParagraphs true · md==script true · tariff 8/8 · question true · examiner note true
+MATCH  (e) 14m Discuss  md-words=647
+   md==answerParagraphs true · md==script true · tariff 14/14 · question true · examiner note true

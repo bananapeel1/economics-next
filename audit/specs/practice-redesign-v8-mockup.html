@@ -1,0 +1,587 @@
+<title>Market Failure Paper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@1&display=swap">
+<style>
+/* Paper by default (founder, 26 Sep): the exam paper is white. Dark exists only when chosen explicitly. */
+:root{
+  --desk:#e8ebf0; --paper:#ffffff; --sheet-edge:#d6dbe3; --rule:#dde2ea; --hair:#e6e9ef; --tint:#f4f6f9;
+  --ink:#111827; --ink-2:#374151; --muted:#5b6472;
+  --accent:#036a4d; --accent-strong:#02503c; --accent-soft:rgba(5,150,105,.08); --on-accent:#fff;
+  --pen:#9a4708; --pen-soft:rgba(154,71,8,.07);
+  --fig:#1d4ed8; --fig-soft:rgba(29,78,216,.07);
+  --shadow:0 1px 2px rgba(17,24,39,.06),0 8px 24px rgba(17,24,39,.05);
+  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+  --serif:'DM Serif Display',Georgia,'Times New Roman',serif;
+  --lh:32px; --gutter:24px;
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --desk:#0f1117; --paper:#171b28; --sheet-edge:#262c3f; --rule:#2a3045; --hair:#232838; --tint:#1c2132;
+  --ink:#edf0f7; --ink-2:#cdd4e6; --muted:#8e9ab3;
+  --accent:#10b981; --accent-strong:#34d399; --accent-soft:rgba(16,185,129,.1); --on-accent:#04130d;
+  --pen:#dfaa55; --pen-soft:rgba(223,170,85,.08);
+  --fig:#9db8ef; --fig-soft:rgba(96,165,250,.1);
+  --shadow:0 1px 2px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;background:var(--desk);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums;overflow-wrap:break-word}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+.small{font-size:13px;line-height:1.5;color:var(--muted)}
+
+/* ---------- one header ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;display:flex;align-items:center;gap:16px;height:56px;padding:0 var(--gutter);background:var(--paper);border-bottom:1px solid var(--sheet-edge)}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.logo{display:flex;align-items:center;gap:8px;flex:none;color:var(--ink);text-decoration:none;font-weight:700;font-size:15px;letter-spacing:-.01em;border-radius:6px;padding:2px 4px 2px 0}
+.logo:hover .name{text-decoration:underline;text-underline-offset:4px}
+.logo img{display:block;width:28px;height:28px}
+.crumb-sep{color:var(--sheet-edge);flex:none}
+.crumb{display:flex;gap:8px;min-width:0;font-size:13px;color:var(--muted);white-space:nowrap}
+.crumb b{color:var(--ink);font-weight:600}
+.crumb .sep{color:var(--sheet-edge)}
+.top .grow{flex:1}
+.mode{display:flex;gap:2px;padding:3px;border-radius:8px;background:var(--tint);flex:none}
+.mode button{padding:5px 12px;border-radius:6px;font-size:13px;font-weight:600;color:var(--muted);white-space:nowrap}
+.mode button[aria-pressed="true"]{background:var(--paper);color:var(--ink);box-shadow:0 1px 2px rgba(17,24,39,.08)}
+.iconbtn{width:34px;height:34px;display:grid;place-items:center;border-radius:8px;color:var(--muted);flex:none}
+.iconbtn:hover{background:var(--tint)}
+.proto{position:relative;flex:none}
+.proto>button{font-size:13px;color:var(--muted);padding:6px 10px;border-radius:8px;border:1px dashed var(--sheet-edge)}
+.proto .menu{position:absolute;right:0;top:calc(100% + 6px);width:250px;padding:6px;background:var(--paper);border:1px solid var(--sheet-edge);border-radius:10px;box-shadow:var(--shadow);display:grid;z-index:40}
+.proto .menu button{text-align:left;padding:8px 10px;border-radius:6px;font-size:13px;color:var(--ink-2)}
+.proto .menu button:hover{background:var(--tint)}
+
+/* ---------- desk layout ---------- */
+.desk{display:grid;grid-template-columns:232px minmax(0,1fr);gap:28px;padding:28px var(--gutter) 48px;max-width:1500px;margin:0 auto;align-items:start}
+.outline{position:sticky;top:84px;display:grid;gap:22px;font-size:13px}
+.o-sec h3{margin:0 0 6px;font-size:13px;font-weight:600;color:var(--ink);display:flex;justify-content:space-between;gap:8px}
+.o-sec h3 span{color:var(--muted);font-weight:400}
+.o-sec .o-note{color:var(--muted);margin:0 0 6px}
+.o-q{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:8px;align-items:baseline;width:100%;text-align:left;padding:6px 8px;border-radius:6px;color:var(--ink-2)}
+.o-q:hover{background:var(--paper)}
+.o-q[aria-current="true"]{background:var(--paper);color:var(--ink);box-shadow:inset 3px 0 0 var(--accent)}
+.o-q .n{font-weight:600}
+.o-q .s{color:var(--muted);white-space:nowrap}
+.o-q.done .s{color:var(--accent);font-weight:600}
+.o-q.off{opacity:.55}
+.o-link{color:var(--accent);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+.o-total{border-top:1px solid var(--sheet-edge);padding-top:14px;color:var(--ink-2)}
+.o-total b{font-size:20px;font-weight:600;color:var(--ink)}
+
+.work{display:grid;gap:28px;grid-template-columns:minmax(0,1fr);align-items:start;min-width:0}
+.work.with-booklet{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr)}
+.sheet{background:var(--paper);border:1px solid var(--sheet-edge);border-radius:4px;box-shadow:var(--shadow);min-width:0}
+.work:not(.with-booklet) .qpaper{max-width:760px;justify-self:center;width:100%}
+.booklet{position:sticky;top:84px;max-height:calc(100dvh - 112px);overflow:auto;overscroll-behavior:contain}
+
+/* ---------- source booklet ---------- */
+.b-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:18px 32px 0;flex-wrap:wrap}
+.b-head .small b{color:var(--ink-2);font-weight:600}
+.textsize{display:flex;gap:2px}
+.textsize button{font-size:13px;color:var(--muted);padding:2px 8px;border-radius:6px}
+.textsize button:hover{background:var(--tint)}
+.b-body{padding:10px 32px 30px;font-size:var(--bsize,15.5px);line-height:1.7;color:var(--ink-2)}
+.b-body h4{font-size:17px;line-height:1.4;margin:8px 0 14px;color:var(--ink);font-weight:600;text-wrap:balance}
+.b-body p{margin:0 0 14px}
+.fig{font:inherit;color:var(--ink);border-bottom:1.5px dotted color-mix(in srgb,var(--fig) 55%,transparent);padding:0 1px;border-radius:2px}
+.fig:hover{background:var(--fig-soft)}
+.fig.lit{background:var(--fig-soft);color:var(--fig);box-shadow:0 0 0 1px color-mix(in srgb,var(--fig) 40%,transparent)}
+.tcap{font-weight:600;color:var(--ink);font-size:14px;margin:22px 0 8px}
+.twrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-weight:600;color:var(--ink);padding:8px 10px;border-bottom:1.5px solid var(--ink)}
+td{padding:8px 10px;border-bottom:1px solid var(--hair);vertical-align:top}
+td.num,th.num{text-align:right}
+.tsrc{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* ---------- question paper ---------- */
+.qpaper{padding:30px 40px 34px}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1.5px solid var(--ink);padding-bottom:8px;margin-bottom:6px}
+.sec-head h2{margin:0;font-size:20px;font-weight:700;letter-spacing:.01em}
+.sec-head .small{color:var(--ink-2)}
+.instr{margin:0 0 22px;font-size:13px;color:var(--muted)}
+.context{margin:0 0 14px;color:var(--ink-2)}
+.context table{max-width:420px}
+.qline{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:12px;align-items:baseline}
+.qline .num{font-weight:700}
+.qline .stem{margin:0;font-weight:500;text-wrap:pretty}
+.qline .stem em{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.08em}
+.qline .mk{font-weight:700;white-space:nowrap}
+.qbody{margin-left:64px}
+.lined{width:100%;display:block;margin-top:14px;border:0;resize:vertical;outline:none;color:var(--ink);font:400 16px/var(--lh) var(--sans);padding:0 2px;background:
+  repeating-linear-gradient(to bottom,transparent 0,transparent calc(var(--lh) - 1px),var(--rule) calc(var(--lh) - 1px),var(--rule) var(--lh));background-attachment:local}
+.lined:focus{background-color:var(--tint)}
+.script-answer{margin-top:14px;white-space:pre-wrap;color:var(--ink);font:400 16px/var(--lh) var(--sans);padding:0 2px;background:repeating-linear-gradient(to bottom,transparent 0,transparent calc(var(--lh) - 1px),var(--rule) calc(var(--lh) - 1px),var(--rule) var(--lh))}
+.under{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{padding:9px 16px;border-radius:8px;font-weight:600;font-size:14px}
+.btn.primary{background:var(--accent);color:var(--on-accent)}
+.btn.primary:hover{background:var(--accent-strong)}
+.btn.quiet{color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--sheet-edge);text-underline-offset:4px;padding:9px 4px}
+.saved{font-size:13px;color:var(--muted)}
+.total-line{text-align:right;font-weight:700;margin:26px 0 0;font-size:14px}
+.draw{margin-top:16px;padding:18px;border:1.5px dashed var(--sheet-edge);border-radius:6px;color:var(--ink-2);display:grid;gap:10px}
+.essay-pick{display:grid;gap:18px}
+.essay-card{padding:18px 0;border-top:1px solid var(--hair)}
+.essay-card:first-child{border-top:0}
+.quote{margin:0 0 10px;color:var(--ink-2);font-style:italic}
+
+/* ---------- marking: Pearson's own formats ---------- */
+.mark-block{margin-top:26px;padding-top:20px;border-top:1px solid var(--hair)}
+.mark-block h3{margin:0 0 4px;font-size:16px;font-weight:700;display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.score{font-size:20px;font-weight:700}
+.score small{font-size:14px;font-weight:500;color:var(--muted)}
+.ao{margin:14px 0 6px;font-size:13px;color:var(--muted);font-weight:600}
+.pt{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:10px;align-items:start;padding:8px 0;border-bottom:1px solid var(--hair)}
+.pt input{appearance:none;width:18px;height:18px;margin:3px 0 0;border:1.5px solid var(--sheet-edge);border-radius:4px;display:grid;place-items:center;cursor:pointer}
+.pt input:checked{background:var(--accent);border-color:var(--accent)}
+.pt input:checked::after{content:"";width:9px;height:5px;border:solid var(--on-accent);border-width:0 0 2px 2px;transform:translateY(-1px) rotate(-45deg)}
+.pt label{cursor:pointer}
+.pt .see{font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.pt .see:hover{color:var(--ink)}
+.levels{width:100%;border-collapse:collapse;margin-top:6px;font-size:14px}
+.levels td{padding:9px 10px;border-bottom:1px solid var(--hair);vertical-align:top}
+.levels td:first-child{white-space:nowrap;font-weight:600;width:1%}
+.levels td.band{white-space:nowrap;color:var(--muted);width:1%}
+.levels tr{cursor:pointer}
+.levels tr:hover td{background:var(--tint)}
+.levels tr.on td{background:var(--accent-soft)}
+.levels tr.on td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+.pick{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.pick button{min-width:34px;padding:4px 8px;border:1px solid var(--sheet-edge);border-radius:6px;font-size:13px;font-weight:600;color:var(--ink-2);background:var(--paper)}
+.pick button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.indic{margin:10px 0 0;padding-left:18px;color:var(--ink-2);font-size:14px}
+.indic li{margin:3px 0}
+
+/* the model answer as an examiner's exemplar */
+.exemplar{margin-top:26px;padding-top:20px;border-top:1px solid var(--hair)}
+.script{display:grid;grid-template-columns:minmax(0,1fr) 64px;column-gap:14px}
+.script p{margin:0 0 12px;color:var(--ink-2)}
+.seg{border-radius:2px;transition:background .2s}
+.seg.lit{background:var(--accent-soft);box-shadow:0 1.5px 0 var(--accent)}
+.seg.lit.missed{background:var(--pen-soft);box-shadow:0 1.5px 0 var(--pen)}
+.margin{color:var(--pen);font-weight:700;font-size:13px;line-height:1.5;padding-top:3px;border-left:1px solid var(--hair);padding-left:10px}
+.sumline{color:var(--pen);font-weight:700;margin:6px 0 0}
+.examiner{margin-top:14px;padding:12px 14px;background:var(--pen-soft);border-radius:6px;color:var(--ink-2);font-size:14px}
+.examiner b{color:var(--pen);display:block;margin-bottom:4px}
+.note{grid-column:1/-1;margin:-4px 0 12px;font-size:14px;color:var(--ink-2);padding:8px 12px;border-left:2px solid var(--accent);background:var(--tint)}
+.note.missed{border-left-color:var(--pen)}
+.diagram{max-width:420px;margin:6px 0 12px}
+.diagram svg{width:100%;height:auto;display:block}
+
+.pager{display:flex;justify-content:space-between;gap:12px;margin-top:30px;padding-top:16px;border-top:1px solid var(--hair);flex-wrap:wrap}
+.pager button{font-size:14px;font-weight:600;color:var(--ink-2)}
+.pager button:disabled{opacity:.35;cursor:default}
+.pager .next{color:var(--accent)}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,8px);opacity:0;pointer-events:none;background:var(--ink);color:var(--paper);font-size:14px;padding:8px 14px;border-radius:8px;transition:opacity .18s,transform .18s;z-index:50;max-width:calc(100% - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){.toast,.seg{transition:none}}
+
+/* ---------- smaller screens ---------- */
+.m-bar,.m-tabs{display:none}
+@media (max-width:1180px){.work.with-booklet{grid-template-columns:minmax(0,1fr)} .booklet{position:static;max-height:none}}
+@media (max-width:980px){
+  :root{--gutter:16px}
+  .desk{grid-template-columns:minmax(0,1fr);padding-top:12px;gap:14px}
+  .outline{display:none;position:static}
+  .outline.open{display:grid;background:var(--paper);border:1px solid var(--sheet-edge);border-radius:8px;padding:14px}
+  .m-bar{display:flex;gap:10px;align-items:center}
+  .m-bar button{flex:1;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;background:var(--paper);border:1px solid var(--sheet-edge);border-radius:8px;font-weight:600;text-align:left}
+  .m-bar .small{font-weight:400}
+  .m-tabs{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:3px;background:var(--tint);border-radius:8px}
+  .m-tabs button{padding:8px;border-radius:6px;font-weight:600;font-size:14px;color:var(--muted)}
+  .m-tabs button[aria-selected="true"]{background:var(--paper);color:var(--ink);box-shadow:0 1px 2px rgba(17,24,39,.08)}
+  .work.with-booklet .booklet[data-tab="off"],.work.with-booklet .qpaper[data-tab="off"]{display:none}
+  .qpaper{padding:22px 18px 26px}
+  .b-head{padding:16px 18px 0}.b-body{padding:8px 18px 22px}
+  .qline{grid-template-columns:40px minmax(0,1fr) auto;gap:8px}
+  .qbody{margin-left:0}
+  .script{grid-template-columns:minmax(0,1fr) 44px;column-gap:8px}
+}
+@media (max-width:640px){
+  .crumb .hide-sm{display:none}
+  .logo .name,.crumb-sep{display:none}
+  .proto,#theme{display:none}
+  .top{gap:10px}
+  .mode button{padding:5px 9px}
+}
+</style>
+
+<header class="top">
+  <div class="brand">
+    <a class="logo" href="https://revvylearn.com/?section=market-failure" title="Back to Revvy Learn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAARGVYSWZNTQAqAAAACAABh2kABAAAAAEAAAAaAAAAAAADoAEAAwAAAAEAAQAAoAIABAAAAAEAAABAoAMABAAAAAEAAABAAAAAAEZRQrAAAAGdaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJYTVAgQ29yZSA2LjAuMCI+CiAgIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjEyODwvZXhpZjpQaXhlbFhEaW1lbnNpb24+CiAgICAgICAgIDxleGlmOlBpeGVsWURpbWVuc2lvbj4xMjg8L2V4aWY6UGl4ZWxZRGltZW5zaW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KYD2LwAAAFF1JREFUeAHlWmtwVOd5fs5lz9n7Rbu6C0kgbpKRACMQCDCBYMcmNjRx6o5jaqfNJE4nnf5Ipv2R/mg7bWf6o542TieZTKY/YrtJ2yRt3TjjYDemNmDuNwmBbui2uiHtSlrt/Xa2z3fW4JDYCQhr6SQf7Gov5+z53vd73+d93uc7UoEDv8VD/i223TT9vjogb2QhHvdzqPfr4qMjEzj++hBE/j302CrUN9bel6ncFwek0ym8+YNxTFypQCEHJCNBPPuVAHRNL7kT7ksKDF67gfEeByLhPGILBYx123Gdn92PUXIHGEYOl46HkYqokCVAkvNIL1pw6ViI6ZAvuQ9K7oDJ8TkEu2UUaKtUMGCCAJ+GLhUwPTH/m+6AAq5dnENsToNY7LZdVjTvsCCfyyM6q6PnXIgOKC0tKWkExOMJXD2dRC6twu7OY+fv2NF5UIfmzCGTkXD5eAyJZLKkUVBSB/R13cD8mBXZjIGGDQoszgxs7hwaN6h0QA4zwxr6umZ+Mx2Qz2fR9e4iMnEVml7A+u0acllBhAy0dGhQtQIySQUX35kvKTkqWQSMjYQw0asimzZQvQqoWiUjkzWQ5aNmtYqqRphRMNINBIcFFpRmlMgBBnrOzCMxrxHiDKzfRhCUyYAE3vEhqwaat6t8STCcU3Dp3bnSWM+rlIQJLsxH0X8hx9W3wFteQGObwtVOF63nczaTx+pNOk4fySA2L6HnVAYbOsbgcOpIp3OsEkVPWW083+eE3WGDBOUjcVJJHNDXFcbClJU5n8OqNhVWVx6pVAFTU2FoFhWBch+cHglrN2k480Yei7Ma/vs7SagWVoycgbzgDIwP1QI4vDewYp2EzZ3VqKwsv2cnLLsDMtk0uk/GkInaYHMI8LMgm2P4SxLefH0AdpuOp5/bihytbGZqdLEUJmMSRq4WeAiJElOmUCBlpGwh8RyFMx6+DAxeGMXDTyewrqXhnpyw7BgwOhjG1ACNZpjXr+Vqr5AY0gYiC+QEZyVcPF5APJoxwzxQK2HFWhkGv+czDSuGvnCE6QzSxyyjKBrJYajLgle/M43g6NT/XwcUOOFugl9yQYGscIU7FRii/ZPyGLy6iMSMHdFpJwZ6YiIgiIZ5tOxgSWSoy5LMsBehL57pChEE5ivxxOpB3jA5oOHID64zojK3vrnbF8saAbMzCwxXTjYFlNdIqFsvwC9HYMuj61QcdtUHh+bC5ZNxkA4QI/Jo4DHltTIjAlAkOs50gXBD0RW33tNjAhv6zrKPGJi8W7tvHb+MDiig91IYi9MWGLRmbbsK1coZcx2nggkM9xDQ7Da4+BjuNhCayhRzXDPw8GEn2jpV6DZxvGw64lYkiKmLcDEDw2DV0DDaFxefLmksmwMSiTh6TieQigIub8F0QDFU87hyNop80garTiMtCnJJHb3nU1AUmVFgoKwmi/3PWXHwjxwkSAUUDGE+p2rmyXuJILRc/jdyMiZGF2j8+wlyN55YhiqQx/xcBGffuYHQEEsfEd/qAKan5pEKxpFNqhg8J8Ftc0AXkE6jHLqMqycTaGiOwlchDGG/QLArb1DwxJfsePPlBK53sQqw9BcrQtFEURWEqJ1OCV1RnFfEi+K3d/YsfVSyeIaJPjO9gOs9i8z7PKavK6znBjs/rqCUxUIqglQmw1WWYJG4+hYrVFmsKnM/byCRSCFqzKK8Po+OfR60bfNB0zSWPeJBWser31zA9Ag9IIuySGcI+2hzNJ7G/sMyPvvFjjuz+BeOuscIKCAaXURwhIZ3xzF+VcHcuIRYhADFRkeQm4YHVXZ7NhRkBzIsb1RBYKETZNlcTnM6oiFKpRwYZrk8d2IGr3xjCts+HsWhZ1aQ9Wmw2NLYeciBH3+bEZTheYIfmClAYUVOob6p5hfMuvO3S3KAkLLnQhEM9dLwyxlMDSqIzEjIxES9LsBXCazZopHz6/BUSSx9eaK8gJubkMOoEHPkk1hLk9YynDfsKsfeT3nwxg+n8NMfjTNCpvDpz9UQAww2T1Y0bVSYKuTvGvsG8Zs80+GxQNGyvEaWpZP18y7HXTjAQDyRwI3JCAa6Yxgjis+OgOoOgYtlzUKEb2xRyfRsXHELRQ5Bd9OIxYTxxcdNo4tzFE4QnxTxXWI6yExyi1XGp/6gKJEf+Y9JrN8YYzp4zBb5wf02JBZTuDHMzpGiiiIXqCS7ceYnBS7AANZu9KCyxs3qQtC55ezi1T7s+ddiQC6XxsTEDAZ7ZjHeD0TGHZiflpGM0igCnMsnoalNI8mxmKBlMN/TKTYwLNK5HHN/LobB3ghb3Bg/M7hSNLsgqvnNKBDZLKEsoGPL9goEKl1QWQ1SFIa+/ucD/H0Fn/+zBqYMV54VQ1V0CicF1v8cRq4IVkgnMuqsdoXRBvjr4+wVgLUbKlFbVwmL+qul9g91QDQawcjQNFc7QiqrIzbloIQNpBMCyEhs6oD1W3WsadfgKOOKZDNcFYYiV1us/GRwET2XYrhwgsYPpU1mZ4i5mlJwcd3N0maaz1zmd03NGr7w1Sb46Axh7E//dRpvvzaH575ajYZ1VrLJYsBqGiPFoiEeVjFwPos+ltDZYIFgSkewY3R6ZTiqo6hdm8W6jV6sXF0Nt8v7gUHwSw4Ih0PovTKFwa4kQsOkqiELNy7YqWcl2J0G6tczVxnmNS1kaRax2lmzuTGYp7FFliuu9oXTCxQ/EyZJqa1zYu8TFWhu8+DH3w/i2rkM0d0iFo2jSHcZACYTTCRTeOp5PzofLWOkCA0hgu/9Ywi6K8MuUsGm7R40rvbAZuf5/KfQSZquw6CeOHGVx59KI9ibR5K8SNFk6A4JrooUylcmsXazA82ttfD7A7c54jYM6LnSj+P0+MyQC9GwnRIVmxJyd185sI4r3bLDDi/DLGekkUwnkE+IkM4iNBNHb1cE5yhkDPXmYGStcGllqCBAPfflBrR28rdYAiuqNAww9K2qDarES5vE5r0/dAiRg7RZYW5TNCYhkljyRNnMRB04fzRBoWSWkRDBlk4v1rc64fFrpMw5s6LUtiqo32jD/ARw9VQKAxcymJ8tcFFYmYIeTF4z0N3Qhz0H59DSuvaWE245IMeG4uirQYycrYRQb2VOTqZe0k7g2fMZB1R7liAYRzRmLh3nLmFyPIS3jkywq2Ouh7gaig0em42RosMi62a4azYJ8ViKKyzaWWGcyu8sRHhx6WJVkJkWzBx43DLWtrrMY0VOzIXS/JwO45aZVaexxJDxnixGeiIoK59H63YdOx8JoMzvJGYI2sz+olzG7qd0dHzShhP/FcWpN1MkVTJtKiAUdCKZGMG6B1ZyHsWKccsBIgwXIwmEwlFYrWJ1FFOwHJ2aQDfre80KBz+3moaLfBUOKPP7UVOTQ7gsCS3Fei0LekvyQpAQ3Rxh0MR5cbwwyDyPSo4sEI3GWymOOsgVxFu7R0b7w162wxamVZKYksdAV0ocZea7Qt4gETx1Nc/fzMBXZqCi0gG328O5COcKjlFstaenZjF8fRZ9wxKjNUDewYiif8Lz8/Asxnjt98ctB6iKhsefWYPvhi5jss8FXfZC1y3s1DI4ceIGcx/Y2ulHS5ufshTLDC/mcltw6PdW4sAhGWMDFD6Ox8kLJKTiYqWZ3+LBSZuiBqdtMnoBgvzM5Qae/LLfFEfFyqqkw5KcRSqdJHPMoZ/gO9zD1ddFuujkAjIFFQOtrRo2PRRA7TpGERunVJJRQvzJc8stTG7SfXESp47NINgvw6OuQLmHm68p9iRkmdUtUTz5+e23Vl+44ZYDxJu2jevxtb8P4My7/Tj5PxMI9rGEGDr0bAVGLyUxeDmMirpZbOpwYtO2AKrrPObFxWrWs41tbPZinrL+wNkMrp3JITR5E+fFr5u8x3SDqhTwicMu1LcxR6MxGlygXijcQ7DNZzDUF8Nrr8zDSLEkOhT4iUEtJFUtO6wI1DIyCxmGNaOEGJROpTA2MoPzJydx+WwMs1MslQW22RaH+XspaQz1WzJ46NEGdHR+DGU+f3Ey7z3/UhW4+a3g9pMTYZw7Po4zR0MY7eXFuLJZejpTiMPmSaF5kxVbdwWwco0PdrtID6KGRWbt1Tg5BcFrafhXMIg9bO5p3Gsvz+HM63lU1aj4wl+XQbNz5XLFhiYajbJNZum8uIhz/5tFIe5C22Y/trEvWL3JDrs3TyDlPgLptCi1kUgMA9dCOPXOJPqvJCm6UHJTPdCopqg61Sfqhjv2V2D7QytRV19O7dF607Tb/n6oA37+qMXFBfRcnsCJN6bQRfFCSNe5PEM9H4dsTaB2lURkdmHD5kqUl7uY06oJgBYKngLcctz7E4j+k5cXcO4IAYGh/sCeGA4920Biw2OZToIw/cNfXSSttqO60oPDf7ySyrCLMZo1+YVIE0GuZthVXjo3gbPHQxgfZpXKethYORmDBut/Hht2OLHn0TpsbG+Ez+v7eTM+8PUdOeDmmbl8muByA6eOjuH0W2FMDJF8sDkRUZEjAnsr82jdaidWlKOugatB9BaZzyd2dRJ+9sMIjv1nljWaBsensfuQFZ/83QYTNIWz+kmxX3lh0gTF5/+iFpX1Oo0uIEl+MDoUNsP84ukwwlPUEWQ3y6nDFEkDtQa27fVizyOrsLaljqttuznlX/v3rhzw/q+xpITmcOHUKI4dmcLApQypMbe6CEbJfIzEJYk1rTq27SzDelJSu51lkextfCCHl/5ugVFBaYwUezE9iwOH3dh3QHB/popNw7WzSXz3hSAc/iRJUQ0WyEjfPTqJq5eiSEQ02Mn9nVY3+UeGuGNg38FadOxeidraCv4G4f4uxxId8P5Vkqk4+q8yPX42jvPHF0hJWXpYdzMGa7+cQMdeJw4/3wxVFZOT8f0X2EVS3JAteSQyzF1jHp/+Qz+272ULyTpppUx+4W1GwteDRe7B30+yclk15rjuIL4wx0minOUL+NqLm9HQ0PD+ZJbwSvlLjiWcd+sUAXhV1X5s3bkC7Q+R/dWzFyAXTVKrs0pezE5k0fKgEz6/boobBYZ0H1maKriCIAAGV50sMlAto3qFjSlVwIrVdjidGnrPZckNXdQNveaqCxFFY3MjSJSNXKV9XwD+AOvpPYx7dsD715ZJSlxo3lDHVa+CoUQRvCrUHBJcm4F1m12m3ucuU3GNzUs6xopBtcfUAXMW9PdEUdPAfYNq3VSHVzYzvxkx430GQY5cQGX7K5ikySYJwikLfDVpUmJy83sYgqV85MPj9uIzz25E3eoC7KzHfRdYtuao2zHEXT6Z6G4jDgiOIEMjJXVb7chH3PjRtyMYHSAN56zS7B0+9qSXjZGDJIjbYjRcJRsUFL34z8LmJ87jUvc0/2VxgJiR0+nCjk/42bFJ1AYpep5nySTtEqWshQ4QQqlghEIEEeF84LM+GmnDv/0Tt9HHEiyN1BNZdfY/48HGXbyNRuieoqII8+kE4SShEQ72TosvljyWzQFiRtv21sIVYEdHPt91IsF6LpgeUEFyJO4KMWUyUtzGFguZoQ9P/0mAMrqM731jgsqTcIIQTdJ47HMerNsidEZhOCkzHcDgQZqVp+v0LK8kmo2ljWV1QFWNj6tN1CbZmb4OjPVnaIAwgpy+Uzf/ivdtO22s9Qk0tarYfdCBsb48XnpxhKQnYVqlWLN4/IterNogSJWZSUWbGUFCEBEscqljWR0gsrxjfwAaDShQI7h8vLiqWbEF1qzCR/zyVbKPaCaZ4j5AkmrT5MQsU0Lnvp+Cf/nWKCZIj8OhBbLOGXQ8ztW3cCP1PVFYeGFmTEHflaXfV3RbM7RUL/6q81o2VqN6zYR5N+hgF5uVyRz8VbxLzFnAA9tIg+kknQKqwLKJILu5s4us9dV0ghXj12L45t8MQHcnTeFFztohp5rYErOXZxqIwM8mdHasc2jfId4JjLi7sawRIKZitdrQ8UgZ9TyyxIhibosJABObpJv32vHgPjs7QbG7a+DCuzfY1FD7Y1qIUHdoHuQi5ZgfCWBuuByLkwG21xpdJkKAMMDmS1Dt4S72CDfCd2f5e0cvuwPEddp3VcFdnmUZs3G/MIlUgkjI/W5xp4juooTG14uRFAGNNFp1I0126K6fgmSfZbk0uIvshd9ZAZ/LR3GDwogAQQGQxaKAObbAfV1Lu7GqJA6orCYYdpL0cGVDQZau7oTZHInbXwQeiBW/cjGE0LjY8JAoeKh48ZUn8Lf/vA2//6deNGyKICfPU5JLMzKEskQsEOFOXiEqRS6j0nnixipGxl2OZceA4nxk7Hi4iq3wFAVOnTdLJ9DSzhZW5AJHiqLG+WNhKHkvZFuSHWIznA4PnFSAm1Y34OBTVJv7p3H62BjOHp3A7ChvojB8plqkscsUfGLkGsnWYpS6IiWguxglcgD3EDZUo655HNfP836AnjgmR9KobaJIwVweGSAD7OWeIXl+Y0sOG7c03maCrtnRsmGV+XjquRi6Lo7i5FtBXDk9TVBVuFdBbbGBfYNly23n3cmbkjnAYtGxfX8Zhi7GuEWu4RI3TOrX6CYYnnl7BrkEEZ4lbt8TddQiP1i9EQY57E7s2PkAHy0Ih+eYOkFzV7q9swk2m/1ObL7tmJI5QFz1wV3VeO2lLuQndVw9N4/dT6S4dxgnTSb4KXUUVOLo3NsoDr2DIXGTw489+2/X+O7gxNsOKQkI3rxiIODBpt3cLyDQxcM6jvz7NF7nTnA64hJlHR0fd6O8gvtsJRwldYAg8Dv218DiSFLgsOPyOwr6T9vhtpeTDKWw58BKmk5PlHCU2AHA6uYq7vMR+QoKXDYXvA4fI0LBmk0Kd2yK2+IltJ9LUuIhFKTdB6pIYqgKcfvMIlu5gxTHvkN1bJp4E3WJR8kdIOxr31nP3eUFdnFxLETmWB4XKWw2ldj04uXuWRRd6qxHhsbxrReOkAbk8aWvPIZVTSuW+lP3dN59c8A9zfojPPm+pMBHOP97/qnfegf8H4KkvrNcROD0AAAAAElFTkSuQmCC" width="28" height="28" alt=""><span class="name">Revvy Learn</span></a><span class="sep crumb-sep" aria-hidden="true">/</span>
+    <nav class="crumb" aria-label="Breadcrumb"><span class="hide-sm">Economics</span><span class="sep hide-sm">/</span><span class="hide-sm">Unit 1</span><span class="sep hide-sm">/</span><b>1.3.5 Market failure</b></nav>
+  </div>
+  <span class="grow"></span>
+  <div class="proto"><button type="button" id="proto-btn" aria-expanded="false">Prototype</button>
+    <div class="menu" id="proto-menu" hidden>
+      <button type="button" data-jump="6c">6(c) · marked by points</button>
+      <button type="button" data-jump="6a-write">6(a) · writing, with the source booklet</button>
+      <button type="button" data-jump="6e">6(e) · marked by levels (14)</button>
+      <button type="button" data-jump="b2">2 · a Draw question</button>
+      <button type="button" data-jump="d">Section D · choose an essay</button>
+      <button type="button" data-jump="answers">Model answers mode</button>
+      <button type="button" data-jump="reset">Clear all my answers</button>
+    </div>
+  </div>
+  <div class="mode" role="group" aria-label="How to use this paper">
+    <button type="button" id="m-practise" aria-pressed="true">Practise</button>
+    <button type="button" id="m-answers" aria-pressed="false">Model answers</button>
+  </div>
+  <button type="button" class="iconbtn" id="theme" aria-label="Switch between paper and dark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+</header>
+
+<div class="desk">
+  <div class="m-bar"><button type="button" id="m-outline" aria-expanded="false"><span id="m-where"></span><span class="small">All questions ▾</span></button></div>
+  <nav class="outline" id="outline" aria-label="Paper outline"></nav>
+  <main class="work" id="work">
+    <div class="m-tabs" role="tablist" aria-label="View" id="m-tabs" hidden>
+      <button type="button" role="tab" id="t-paper" aria-selected="true">Question paper</button>
+      <button type="button" role="tab" id="t-booklet" aria-selected="false">Source booklet</button>
+    </div>
+    <section class="sheet booklet" id="booklet" aria-label="Source booklet" hidden></section>
+    <section class="sheet qpaper" id="qpaper" aria-live="off"></section>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+const F=(id,t)=>`<button type="button" class="fig" data-fig="${id}">${t}</button>`;
+const S=(id,h)=>`<span class="seg" data-seg="${id}">${h}</span>`;
+
+/* Extract A: content/data-response/econ-u1-market-failure.md, as the page serves it today. */
+const BOOKLET=`<div class="b-head"><span class="small"><b>Source booklet</b> · Extract A</span><span class="textsize"><button type="button" id="ts-down" aria-label="Smaller text">A−</button><button type="button" id="ts-up" aria-label="Larger text">A+</button></span></div>
+<div class="b-body"><h4>Dubai expands single-use plastics ban as Gulf sugar tax debate returns</h4>
+<p>The UAE's federal single-use plastics policy moved into its next phase in 2025. Restaurants, delivery platforms and supermarkets across Dubai and Abu Dhabi must now charge a minimum of ${F('charge','AED 0.25')} per plastic bag. Officials estimate that around ${F('11bn','11 billion')} single-use bags were used each year before the policy began tightening in 2024, and early Dubai Municipality data suggests consumption fell by ${F('45','approximately 45%')} in the first year of the charge.</p>
+<p>A renewed debate has emerged in the Gulf Cooperation Council over excise taxes on sugary drinks. The UAE and Saudi Arabia already apply a ${F('50','50%')} excise on soft drinks and ${F('100','100%')} on energy drinks, introduced in 2017. A 2024 Ministry of Health review reported that per capita consumption of carbonated soft drinks fell by ${F('32','roughly 32%')} over the following seven years, though diabetes prevalence remains high at an estimated ${F('123','12.3%')} of adults. Analysts at Gulf Economic Review argue the rate is under-correcting, given healthcare costs linked to obesity and type-2 diabetes estimated at over ${F('25bn','USD 25 billion')} a year.</p>
+<p>Critics argue the taxes are regressive, hitting lower-income expatriate workers hardest, and that producers have passed the cost on to consumers without reformulating their products.</p>
+<p class="tcap">Table 1: Selected indirect taxes and externalities, UAE market (2024 estimates)</p>
+<div class="twrap"><table><thead><tr><th>Product</th><th>Tax</th><th>External cost per unit</th><th class="num">PED</th></tr></thead><tbody>
+<tr><td>Carbonated soft drinks</td><td>50% excise</td><td>${F('soft-ext','AED 1.20 / litre')}</td><td class="num">${F('soft-ped','−0.6')}</td></tr>
+<tr><td>Energy drinks</td><td>100% excise</td><td>${F('en-ext','AED 2.80 / litre')}</td><td class="num">${F('en-ped','−0.9')}</td></tr>
+<tr><td>Single-use plastic bags</td><td>AED 0.25 / bag</td><td>${F('bag-ext','AED 0.18 / bag')}</td><td class="num">${F('bag-ped','−1.4')}</td></tr>
+<tr><td>Tobacco products</td><td>100% excise</td><td>${F('tob-ext','AED 18 / pack')}</td><td class="num">${F('tob-ped','−0.4')}</td></tr>
+</tbody></table></div><p class="tsrc">Source: composite of published government and industry estimates, 2024.</p></div>`;
+
+const DIAGRAM=`<div class="diagram" role="img" aria-label="Diagram: MPB above MSB; free-market quantity Q1 where MPB meets supply; social optimum Q* where MSB meets supply; the welfare loss triangle between Q* and Q1"><svg viewBox="0 0 420 300"><g fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--ink)">
+<path d="M50 20 V260 H400"/></g>
+<text x="30" y="24" font-size="13" fill="var(--ink)">P</text><text x="392" y="282" font-size="13" fill="var(--ink)">Q</text>
+<path d="M60 250 L380 70" stroke="var(--ink-2)" stroke-width="2" fill="none"/><text x="384" y="68" font-size="12" fill="var(--ink-2)">S = MPC = MSC</text>
+<path d="M60 40 L360 250" stroke="var(--ink)" stroke-width="2" fill="none"/><text x="332" y="236" font-size="12" fill="var(--ink)">MPB</text>
+<path d="M60 90 L330 280" stroke="var(--pen)" stroke-width="2" fill="none"/><text x="250" y="262" font-size="12" fill="var(--pen)">MSB</text>
+<polygon points="171.6,167.2 237.7,130.0 237.7,214.9" fill="var(--pen-soft)" stroke="var(--pen)" stroke-width="1"/>
+<path d="M171.6 167.2 V260 M237.7 130 V260" stroke="var(--muted)" stroke-dasharray="4 4" fill="none"/>
+<text x="164" y="278" font-size="12" fill="var(--ink)">Q*</text><text x="231" y="278" font-size="12" fill="var(--ink)">Q1</text>
+<text x="196" y="178" font-size="11" fill="var(--pen)">welfare loss</text></svg></div>`;
+
+const KAA='Knowledge, application and analysis', EV='Evaluation';
+const L14K=[{l:1,lo:1,hi:3,d:'Isolated or imprecise knowledge; little or no use of the extract.'},{l:2,lo:4,hi:6,d:'Accurate knowledge applied to the extract, with chains of reasoning that are partly developed.'},{l:3,lo:7,hi:8,d:'Precise knowledge, applied to the extract’s own figures, with developed chains of reasoning.'}];
+const L14E=[{l:1,lo:1,hi:2,d:'Generic evaluative comments.'},{l:2,lo:3,hi:4,d:'Evaluation of alternatives, supported by a partly developed chain of reasoning.'},{l:3,lo:5,hi:6,d:'Recognises different viewpoints and uses the evidence critically, reaching a supported judgement.'}];
+const L20K=[{l:1,lo:1,hi:3,d:'Isolated or imprecise knowledge; generic.'},{l:2,lo:4,hi:6,d:'Accurate knowledge with some application; chains partly developed.'},{l:3,lo:7,hi:9,d:'Accurate knowledge applied throughout, with developed chains of reasoning.'},{l:4,lo:10,hi:12,d:'Precise knowledge, applied throughout, with fully developed multi-stage chains.'}];
+const L20E=[{l:1,lo:1,hi:3,d:'Generic evaluative comments.'},{l:2,lo:4,hi:6,d:'Evaluation of alternatives, partly developed.'},{l:3,lo:7,hi:8,d:'Different viewpoints weighed, leading to a supported judgement.'}];
+
+const SECTIONS=[
+ {id:'A',title:'Section A',what:'Multiple choice',marks:6,link:true},
+ {id:'B',title:'Section B',what:'Short answers',marks:20,instr:'Answer ALL questions. Each question has a short context: use it.',qs:[
+  {id:'b1',n:'1',cmd:'Explain',marks:4,context:'Residents living near a busy international airport report disturbed sleep from night-time flights.',
+   stem:'Explain what is meant by a <em>negative externality of production</em>, using the example above.',
+   scheme:{type:'points',groups:[{ao:'Knowledge 2',pts:[['p1','A cost imposed on a third party outside the transaction','m1'],['p2','Not reflected in the market price, so MSC exceeds MPC','m2']]},{ao:'Application 2',pts:[['p3','Identifies the residents as third parties and lost sleep as the external cost','m3'],['p4','Explains that airlines do not pay this cost, so too many night flights are supplied','m4']]}]},
+   model:[['K',S('m1','A negative externality of production is a cost imposed on a third party who is not part of the transaction,')+' '+S('m2','and which is not reflected in the market price, so marginal social cost exceeds marginal private cost.')],['App',S('m3','Here the residents near the airport are the third parties, and their lost sleep is the external cost.')+' '+S('m4','Airlines do not pay for it when they schedule night flights, so more flights are supplied than is socially optimal.')]],
+   summary:'K2 · App2 = 4/4'},
+  {id:'b2',n:'2',cmd:'Draw',marks:4,draw:true,context:'Many young people in the UAE drink energy drinks, which can harm their health and raise public healthcare costs.',
+   stem:'Draw a diagram to show the welfare loss from the <em>over-consumption</em> of energy drinks.',
+   scheme:{type:'points',groups:[{ao:'Knowledge 2 · Application 2',pts:[['p1','Axes labelled price (or costs and benefits) and quantity','d1'],['p2','MSB drawn below MPB','d1'],['p3','Free-market quantity Q1 and social optimum Q* identified','d1'],['p4','Welfare loss triangle shown between Q* and Q1','d1']]}]},
+   model:[['K',S('d1','The diagram below: MSB lies below MPB because consumption harms third parties. The market produces where MPB meets supply (Q1), but the social optimum is where MSB meets supply (Q*). The shaded triangle between Q* and Q1 is the welfare loss.')]],
+   diagram:true, summary:'4/4'},
+  {id:'b3',n:'3',cmd:'Calculate',marks:4,context:'<table><thead><tr><th></th><th class="num">Price per cup</th><th class="num">Cups sold a day</th></tr></thead><tbody><tr><td>Before the charge</td><td class="num">AED 2.00</td><td class="num">400</td></tr><tr><td>After a AED 0.50 charge</td><td class="num">AED 2.50</td><td class="num">300</td></tr></tbody></table>',
+   stem:'Using the data, calculate the <em>price elasticity of demand</em> for the café’s cups. Show your working.',
+   scheme:{type:'points',groups:[{ao:'Knowledge 1 · Application 3',pts:[['p1','Percentage change in quantity: (300 − 400) ÷ 400 = −25%','c1'],['p2','Percentage change in price: 0.50 ÷ 2.00 = +25%','c2'],['p3','PED = % change in quantity ÷ % change in price','c3'],['p4','Answer: −1, with the minus sign','c3']]}]},
+   model:[['App',S('c1','% change in quantity = (300 − 400) ÷ 400 × 100 = −25%.')+' '+S('c2','% change in price = (2.50 − 2.00) ÷ 2.00 × 100 = +25%.')],['K',S('c3','PED = −25% ÷ 25% = −1, so demand is unit elastic.')]],
+   summary:'K1 · App3 = 4/4'},
+  {id:'b4',n:'4',cmd:'Explain',marks:4,context:'In most cities, street lighting is paid for by local government.',
+   stem:'Explain why street lighting is an example of a <em>public good</em>.',
+   scheme:{type:'points',groups:[{ao:'Knowledge 2 · Application 2',pts:[['p1','Non-excludable: people who do not pay cannot be stopped from benefiting','s1'],['p2','So there is a free-rider problem and no firm can charge for it','s1'],['p3','Non-rival: one person’s use does not reduce the light available to others','s2'],['p4','So the market would not provide it, and government does','s2']]}]},
+   model:[['K',S('s1','Street lighting is non-excludable: once a street is lit, nobody can be stopped from using the light, so people can free-ride and no firm could charge for it.')],['App',S('s2','It is also non-rival: one more pedestrian does not reduce the light for anyone else. The market would not supply it, which is why local government pays for it.')]],
+   summary:'K2 · App2 = 4/4'},
+  {id:'b5',n:'5',cmd:'Explain',marks:4,context:'Surveys suggest many consumers underestimate how much sugar their soft drinks contain.',
+   stem:'Explain how <em>imperfect information</em> can lead to market failure.',
+   scheme:{type:'points',groups:[{ao:'Knowledge 2 · Application 2',pts:[['p1','Consumers lack or misjudge information about a product','i1'],['p2','Their demand reflects a higher benefit than they actually receive','i1'],['p3','So consumption is above the socially optimal level','i2'],['p4','Applied: underestimating sugar leads to over-consumption of soft drinks','i2']]}]},
+   model:[['K',S('i1','When consumers underestimate the sugar in their drinks, the benefit they expect is higher than the benefit they actually receive, so demand is too high.')],['App',S('i2','They drink more soft drinks than they would with full information, so consumption is above the socially optimal level and resources are misallocated.')]],
+   summary:'K2 · App2 = 4/4'},
+ ]},
+ {id:'C',title:'Section C',what:'Data question',marks:34,instr:'Answer ALL parts. Read Extract A in the source booklet before you begin.',booklet:true,total:'(Total for Question 6 = 34 marks)',qs:[
+  {id:'6a',n:'6',part:'(a)',cmd:'Define',marks:2,stem:'Define the term ‘<em>negative externality of consumption</em>’, using an example from Extract A.',
+   scheme:{type:'points',groups:[{ao:'Knowledge 2',pts:[['p1','A cost to a third party from consuming a good, not reflected in the price','a1'],['p2','An example from the extract, with its figure','a2']]}]},
+   model:[['K',S('a1','A negative externality of consumption is a spillover cost imposed on a third party when a good is consumed, which is not reflected in the market price.')],['K',S('a2',`In Extract A, using single-use plastic bags creates an external cost of about ${F('bag-ext','AED 0.18 per bag')}, through marine pollution that shoppers do not pay for at the till.`)]],
+   summary:'K2 = 2/2'},
+  {id:'6b',n:'',part:'(b)',cmd:'Explain',marks:4,stem:'With reference to Table 1, explain what is meant by <em>price elastic demand</em>.',
+   scheme:{type:'points',groups:[{ao:'Knowledge 2',pts:[['p1','PED greater than 1 in absolute value','e1'],['p2','Quantity demanded changes proportionately more than price','e1']]},{ao:'Application 2',pts:[['p3','Plastic bags have a PED of −1.4','e2'],['p4','So the charge cuts bag use by proportionately more than it raises the price','e2']]}]},
+   model:[['K',S('e1','Demand is price elastic when its PED is greater than 1 in absolute value: quantity demanded changes by proportionately more than price.')],['App',S('e2',`Table 1 gives plastic bags a PED of ${F('bag-ped','−1.4')}, so the AED 0.25 charge cuts the number of bags used by proportionately more than it raises their price.`)]],
+   summary:'K2 · App2 = 4/4'},
+  {id:'6c',n:'',part:'(c)',cmd:'Analyse',marks:6,stem:'With reference to Extract A, analyse how <em>the AED 0.25 charge</em> on single-use plastic bags is likely to correct the market failure.',
+   scheme:{type:'points',groups:[{ao:'Knowledge 2',pts:[['p1','The failure: MSC above MPC, so bags are over-consumed','c1'],['p2','The charge is an indirect tax that internalises the external cost','c2']]},{ao:'Application 2',pts:[['p3','Uses the PED of −1.4: demand is price elastic','c3'],['p4','Uses the 45% fall in consumption as evidence','c4']]},{ao:'Analysis 2',pts:[['p5','A higher private cost leads shoppers to use fewer bags','c5'],['p6','Quantity moves toward the social optimum; the welfare loss shrinks','c6']]}]},
+   model:[['K',S('c1','A negative externality of consumption means the marginal social cost of a bag exceeds its marginal private cost, so bags are over-consumed.')+' '+S('c2',`The ${F('charge','AED 0.25')} charge is an indirect tax designed to internalise the external cost of about ${F('bag-ext','AED 0.18')} per bag.`)],['App',S('c3',`Table 1 gives bags a PED of ${F('bag-ped','−1.4')}, so demand is price elastic and the charge causes a more than proportionate fall in use.`)+' '+S('c4',`This is consistent with the ${F('45','roughly 45%')} fall Dubai Municipality reported in the first year.`)],['An',S('c5','The charge raises the private cost of a bag closer to its social cost, so shoppers move along the demand curve and use fewer bags.')+' '+S('c6','Quantity falls toward the socially optimal level, shrinking the welfare loss from over-consumption.')]],
+   summary:'K2 · App2 · An2 = 6/6', examiner:'Top answers quantify the response: they link the elasticity of −1.4 to the size of the fall and use the 45% figure. Answers that explain the tax but quote no data stay at 3–4.'},
+  {id:'6d',n:'',part:'(d)',cmd:'Examine',marks:8,stem:'With reference to Table 1, examine why a 100% excise may be <em>less effective</em> at reducing tobacco use than the AED 0.25 charge is at reducing plastic bag use.',
+   scheme:{type:'points',groups:[{ao:'Knowledge 2',pts:[['p1','Effect of an indirect tax depends on PED','x1'],['p2','Inelastic demand: quantity falls proportionately less than price rises','x1']]},{ao:'Application 2',pts:[['p3','Tobacco PED −0.4 against bags −1.4','x2'],['p4','Uses the external cost per unit: AED 18 a pack against AED 0.18 a bag','x2']]},{ao:'Analysis 2',pts:[['p5','Addiction and few substitutes make tobacco demand inelastic','x3'],['p6','So much of the tax raises revenue rather than cutting consumption','x3']]},{ao:'Evaluation 2',pts:[['p7','But the revenue can fund treatment or campaigns that reduce smoking','x4'],['p8','Or effectiveness grows over time as demand becomes more elastic','x4']]}]},
+   model:[['K',S('x1','How much an indirect tax reduces consumption depends on price elasticity: when demand is inelastic, quantity falls by proportionately less than the price rises.')],['App',S('x2',`Table 1 gives tobacco a PED of ${F('tob-ped','−0.4')} against ${F('bag-ped','−1.4')} for bags, and its external cost is far higher, at ${F('tob-ext','AED 18')} a pack.`)],['An',S('x3','Smokers are addicted and have few substitutes, so the 100% excise mostly raises the price paid; consumption falls only a little, and much of the tax becomes revenue rather than a change in behaviour.')],['E',S('x4','However, the revenue can fund treatment and campaigns that reduce smoking, and demand tends to become more elastic over time as smokers find ways to quit, so the excise may work better in the long run than Table 1 suggests.')]],
+   summary:'K2 · App2 · An2 · E2 = 8/8'},
+  {id:'6e',n:'',part:'(e)',cmd:'Discuss',marks:14,stem:'With reference to the information provided, discuss whether the 50% excise is <em>the best way</em> to correct the market failure caused by sugary drink consumption.',
+   scheme:{type:'levels',strands:[{name:KAA,max:8,levels:L14K,indic:['Over-consumption: consumers under-value long-run health costs; MSB below MPB','The excise raises price toward the social optimum','Extract evidence it worked: 32% fall in consumption','PED −0.6: inelastic, so a less than proportionate fall']},{name:EV,max:6,levels:L14E,indic:['Healthcare costs above USD 25 billion and 12.3% diabetes suggest under-correction','Regressive: hits lower-income expatriate workers hardest','Alternatives: reformulation rules, labelling, education','Judgement: necessary but not sufficient on its own']}]},
+   model:[['KAA',S('k1',`Sugary drinks are over-consumed because consumers under-value the long-run health costs, so marginal social benefit lies below marginal private benefit. The 50% excise raises the price toward the social optimum, and Extract A reports a ${F('32','32%')} fall in consumption over seven years.`)],['KAA',S('k2',`But Table 1 puts soft drinks’ PED at ${F('soft-ped','−0.6')}: demand is inelastic, so the tax cuts consumption by proportionately less than it raises the price.`)],['E',S('e1',`The evidence of what remains suggests the tax is under-correcting: healthcare costs linked to obesity and diabetes are still above ${F('25bn','USD 25 billion')} a year and ${F('123','12.3%')} of adults have diabetes.`)],['E',S('e2','It is also regressive, falling hardest on lower-income expatriate workers, and producers have passed the cost on rather than reformulating. Rules on sugar content or clear labelling would act on those causes directly.')],['E',S('e3','So the excise is necessary but not the best way on its own: it works best combined with reformulation rules and better information.')]],
+   summary:'KAA Level 3 (8) · E Level 3 (5) = 13/14', examiner:'A clear, supported judgement that uses the extract on both sides. It reaches only 5 for evaluation because the alternatives are named rather than weighed against the excise.'},
+ ]},
+ {id:'D',title:'Section D',what:'Essay',marks:20,choose:1,instr:'Answer ONE question from this section.',qs:[
+  {id:'d7',n:'7',cmd:'Evaluate',marks:20,quote:'‘Street lighting, flood defences and national defence would not be provided at all if left to the market.’',
+   stem:'Evaluate the view that governments should <em>always</em> provide public goods.',
+   scheme:{type:'levels',strands:[{name:KAA,max:12,levels:L20K,indic:['Non-excludability and non-rivalry; the free-rider problem','Why the market under-provides: no firm can charge users','Government provision funded by taxation','Quasi-public goods, such as toll roads, can be partly excludable']},{name:EV,max:8,levels:L20E,indic:['Government failure: provision may be inefficient or poorly targeted','Private or voluntary provision exists (lighthouses, sponsorship)','Opportunity cost of tax-funded provision','Judgement: government should ensure provision, not always produce it']}]},
+   model:[['KAA',S('g1','A public good is non-excludable and non-rival. Because people who do not pay cannot be excluded, they free-ride, and no firm can earn revenue from providing it, so the market under-provides or fails to provide it at all.')],['KAA',S('g2','Government provision, funded by taxation, overcomes the free-rider problem: flood defences protect every household whether or not it pays.')],['E',S('g3','However, some goods treated as public are quasi-public: roads can be tolled and bridges charged for, so private provision is possible.')],['E',S('g4','Government provision also carries an opportunity cost and a risk of government failure, as spending can be poorly targeted.')],['E',S('g5','On balance, governments should ensure public goods are provided, but not always produce them; contracting private firms can be more efficient.')]],
+   summary:'KAA Level 4 (11) · E Level 3 (7) = 18/20'},
+  {id:'d8',n:'8',cmd:'Evaluate',marks:20,quote:'‘From sugar taxes to plastic bag charges, governments across the Gulf are intervening in markets.’',
+   stem:'Evaluate the view that government intervention is <em>always necessary</em> to correct market failure.',
+   scheme:{type:'levels',strands:[{name:KAA,max:12,levels:L20K,indic:['Market failure as a misallocation of resources','Externalities: firms have no incentive to price external costs','Public goods and the free-rider problem','Intervention tools: taxes, subsidies, regulation, provision']},{name:EV,max:8,levels:L20E,indic:['“Always” versus “sometimes”: the question turns on it','Private solutions: bargaining when property rights are clear','Government failure: unintended consequences, information problems','Judgement conditional on the type of failure']}]},
+   model:[['KAA',S('h1','Market failure is a misallocation of resources. With a negative externality, firms have no incentive to price the external cost, so the market cannot correct itself; intervention such as a tax can.')],['E',S('h2','But the question says “always”. Where property rights are clear and few parties are involved, they can bargain to an efficient outcome without the government.')],['E',S('h3','Intervention can also fail: setting a tax at the right level needs an accurate estimate of the external cost, which governments rarely have.')],['E',S('h4','So intervention is often necessary, especially for public goods and widespread externalities, but not always: the right answer depends on the type of failure and the cost of fixing it.')]],
+   summary:'KAA Level 3 (9) · E Level 3 (7) = 16/20'},
+ ]},
+];
+
+const ORDER=[]; SECTIONS.forEach(s=>(s.qs||[]).forEach(q=>ORDER.push({sec:s,q})));
+const Q=id=>ORDER.find(o=>o.q.id===id);
+const LINES={2:4,4:6,6:9,8:12,14:18,20:24};
+
+/* ---------------- state ---------------- */
+const KEY='revvy-paper-v8';
+function fresh(){
+  const st={mode:'practise',cur:'6c',essay:null,tab:'paper',lit:null,fig:null,bsize:0,qs:{}};
+  ORDER.forEach(({q})=>st.qs[q.id]={phase:'write',draft:'',ticks:[],lv:{}});
+  st.qs.b1={phase:'mark',draft:'A negative externality is a cost to third parties that is not included in the price. The residents lose sleep because of the night flights.',ticks:['p1','p2','p3'],lv:{}};
+  st.qs.b3={phase:'mark',draft:'% change in quantity = -100/400 = -25%\n% change in price = 0.5/2 = 25%\nPED = -25/25 = -1',ticks:['p1','p2','p3','p4'],lv:{}};
+  st.qs['6a']={phase:'mark',draft:'A cost imposed on third parties when a good is consumed, not reflected in the price. For example plastic bags create marine pollution costing AED 0.18 per bag.',ticks:['p1','p2'],lv:{}};
+  st.qs['6c']={phase:'mark',draft:'A negative externality of consumption means the social cost of a bag is higher than the private cost, so too many bags are used.\n\nThe AED 0.25 charge makes each bag more expensive. The extract says the PED for bags is -1.4, so demand is elastic and use falls a lot. Dubai Municipality reported a 45% fall in the first year.\n\nBecause shoppers pay more they use fewer bags, so the market moves closer to the right level.',ticks:['p1','p3','p4','p5'],lv:{}};
+  st.qs['6e']={phase:'write',draft:'The 50% excise raises the price of soft drinks, and the extract shows consumption fell by 32% over seven years. However the PED is only -0.6, so',ticks:[],lv:{}};
+  st.lit='c2';
+  return st;
+}
+let st=fresh();
+try{const s=JSON.parse(localStorage.getItem(KEY)||'null'); if(s&&s.qs) st=Object.assign(fresh(),s,{lit:null,fig:null});}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+const $=s=>document.querySelector(s);
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function got(q){
+  const s=st.qs[q.id]; if(s.phase!=='mark') return null;
+  if(q.scheme.type==='points') return s.ticks.length;
+  return q.scheme.strands.reduce((a,_,i)=>a+(s.lv[i]||0),0);
+}
+function stateText(q){
+  if(st.mode==='answers') return '';
+  const g=got(q), s=st.qs[q.id];
+  if(g!==null) return `${g}/${q.marks}`;
+  if(s.phase==='reveal') return 'answer seen';
+  if(s.draft.trim()) return 'draft';
+  return '';
+}
+
+/* ---------------- outline ---------------- */
+function renderOutline(){
+  let html='', done=0, of=0;
+  SECTIONS.forEach(sec=>{
+    html+=`<div class="o-sec"><h3>${sec.title} <span>${sec.what} · ${sec.marks}</span></h3>`;
+    if(sec.link){ html+=`<p class="o-note">Six 1-mark questions.</p><a class="o-link" href="#" id="quiz-link">Practise them in the topic quiz</a></div>`; return; }
+    if(sec.choose) html+=`<p class="o-note">Answer one of two.</p>`;
+    sec.qs.forEach(q=>{
+      const label=q.part?(q.n?q.n+q.part:q.part):q.n, s=stateText(q), g=got(q);
+      const off=sec.choose&&st.essay&&st.essay!==q.id&&st.mode==='practise';
+      html+=`<button type="button" class="o-q ${g!==null?'done':''} ${off?'off':''}" data-go="${q.id}" ${st.cur===q.id?'aria-current="true"':''}><span class="n">${label}</span><span>${q.cmd} ${q.marks}</span><span class="s">${s}</span></button>`;
+      if(g!==null && !(sec.choose && st.essay && st.essay!==q.id)){ done+=g; of+=q.marks; }
+    });
+    if(sec.choose && st.mode==='practise') of+=0;
+    html+=`</div>`;
+  });
+  html+= st.mode==='practise' ? `<div class="o-total">Your marks so far<br><b>${done}</b> <span class="small">of ${of||0} marked · paper out of 74</span></div>` : `<div class="o-total small">Model answers mode: every answer and mark scheme is open. Nothing is scored.</div>`;
+  $('#outline').innerHTML=html;
+  const {sec,q}=Q(st.cur);
+  $('#m-where').textContent=`${sec.title} · ${q.part?(q.n?q.n+q.part:'6'+q.part):'Question '+q.n}`;
+}
+
+/* ---------------- the paper ---------------- */
+function stemHtml(q){
+  const label=q.part?(q.n?`${q.n} ${q.part}`:q.part):q.n;
+  return `<div class="qline"><span class="num">${label}</span><p class="stem">${q.stem}</p><span class="mk">(${q.marks})</span></div>`;
+}
+function schemeHtml(q,interactive){
+  const s=st.qs[q.id];
+  if(q.scheme.type==='points'){
+    let h=''; let i=0;
+    q.scheme.groups.forEach(g=>{
+      h+=`<p class="ao">${g.ao}</p>`;
+      g.pts.forEach(([pid,t,seg])=>{ i++;
+        const on=s.ticks.includes(pid);
+        h+= interactive
+          ? `<div class="pt"><input type="checkbox" id="ck-${q.id}-${pid}" data-tick="${pid}" ${on?'checked':''}><label for="ck-${q.id}-${pid}">${t}</label><button type="button" class="see" data-see="${seg}" data-pid="${pid}">see it</button></div>`
+          : `<div class="pt"><span aria-hidden="true">·</span><span>${t}</span><button type="button" class="see" data-see="${seg}" data-pid="${pid}">see it</button></div>`;
+      });
+    });
+    return h;
+  }
+  return q.scheme.strands.map((sd,si)=>{
+    const chosen=s.lv[si]||0; const lvChosen=sd.levels.find(l=>chosen>=l.lo&&chosen<=l.hi);
+    return `<p class="ao">${sd.name} · ${sd.max} marks</p>
+      <table class="levels"><tbody>${sd.levels.map(l=>`<tr data-strand="${si}" data-lo="${l.lo}" class="${lvChosen&&lvChosen.l===l.l&&interactive?'on':''}"><td>Level ${l.l}</td><td class="band">${l.lo}–${l.hi}</td><td>${l.d}</td></tr>`).join('')}</tbody></table>
+      ${interactive&&lvChosen?`<div class="pick" role="group" aria-label="Mark within Level ${lvChosen.l}">${Array.from({length:lvChosen.hi-lvChosen.lo+1},(_,k)=>lvChosen.lo+k).map(m=>`<button type="button" data-strand="${si}" data-mark="${m}" aria-pressed="${m===chosen}">${m}</button>`).join('')}</div>`:''}
+      <p class="small" style="margin:10px 0 0">What examiners look for</p><ul class="indic">${sd.indic.map(t=>`<li>${t}</li>`).join('')}</ul>`;
+  }).join('');
+}
+function exemplarHtml(q){
+  const s=st.qs[q.id];
+  const segToPid={}; if(q.scheme.type==='points') q.scheme.groups.forEach(g=>g.pts.forEach(([pid,,seg])=>{ (segToPid[seg]=segToPid[seg]||[]).push(pid); }));
+  let h=`<div class="exemplar"><h3>Model answer <span class="small">as an examiner would mark it</span></h3><div class="script">`;
+  q.model.forEach(([tag,html])=>{
+    let p=html, note='';
+    if(st.lit && html.includes(`data-seg="${st.lit}"`)){
+      const pids=segToPid[st.lit]||[]; const earned=q.scheme.type==='points' && s.phase==='mark' && pids.length && pids.some(x=>s.ticks.includes(x));
+      const missed=q.scheme.type==='points' && s.phase==='mark' && pids.length && !earned;
+      p=html.replace(`class="seg" data-seg="${st.lit}"`,`class="seg lit ${missed?'missed':''}" data-seg="${st.lit}"`);
+      if(s.phase==='mark' && q.scheme.type==='points') note=`<div class="note ${missed?'missed':''}">${earned?'You made this point.':'You missed this point. This is how the model answer earns it.'}</div>`;
+    }
+    h+=`<p>${p}</p><span class="margin">${tag}</span>${note}`;
+  });
+  if(q.diagram) h+=`<div style="grid-column:1/-1">${DIAGRAM}</div>`;
+  h+=`</div><p class="sumline">${q.summary}</p>`;
+  if(q.examiner) h+=`<div class="examiner"><b>Examiner’s comment</b>${q.examiner}</div>`;
+  return h+`</div>`;
+}
+function renderPaper(){
+  const {sec,q}=Q(st.cur), s=st.qs[q.id];
+  let h=`<div class="sec-head"><h2>${sec.title}</h2><span class="small">${sec.what} · ${sec.marks} marks</span></div><p class="instr">${sec.instr||''}</p>`;
+  // Section D: the choice comes first
+  if(sec.choose && st.mode==='practise' && !st.essay){
+    h+=`<div class="essay-pick">${sec.qs.map(e=>`<div class="essay-card"><p class="quote">${e.quote}</p>${stemHtml(e)}<div class="qbody"><div class="actions" style="margin-top:12px"><button type="button" class="btn primary" data-choose="${e.id}">Answer this question</button></div></div></div>`).join('')}</div>`;
+    $('#qpaper').innerHTML=h+pagerHtml(); return;
+  }
+  if(q.quote) h+=`<p class="quote">${q.quote}</p>`;
+  if(q.context) h+=`<div class="context">${q.context}</div>`;
+  h+=stemHtml(q)+`<div class="qbody">`;
+  const lines=LINES[q.marks]||8;
+  if(st.mode==='answers'){
+    h+=`<div class="mark-block"><h3>Mark scheme <span class="small">${q.marks} marks</span></h3>${schemeHtml(q,false)}</div>${exemplarHtml(q)}`;
+  } else if(s.phase==='write'){
+    if(q.draw){
+      h+=`<div class="draw"><b>Draw this on paper.</b><span>Label your axes and curves as you would in the exam, then mark your diagram against the mark scheme.</span><div class="actions"><button type="button" class="btn primary" id="do-mark">I’ve drawn it: mark it</button></div></div>`;
+    } else {
+      h+=`<textarea class="lined" id="answer" aria-label="Your answer to ${q.part?'6'+q.part:'question '+q.n}" style="min-height:calc(var(--lh) * ${lines})" placeholder="">${esc(s.draft)}</textarea>
+        <div class="under"><span class="saved" id="saved">${s.draft.trim()?'Saved':''}</span><div class="actions"><button type="button" class="btn quiet" id="do-reveal">Show the model answer</button><button type="button" class="btn primary" id="do-mark">Mark my answer</button></div></div>`;
+    }
+  } else {
+    const g=got(q);
+    if(!q.draw) h+=`<div class="script-answer" aria-label="Your answer">${esc(s.draft)}</div><div class="under"><span class="saved">Your answer</span><button type="button" class="btn quiet" id="do-edit">Edit my answer</button></div>`;
+    if(s.phase==='mark'){
+      h+=`<div class="mark-block"><h3>Mark scheme <span class="score">${g} <small>/ ${q.marks}</small></span></h3><p class="small" style="margin:0">${q.scheme.type==='points'?'Tick each point your answer makes.':'Choose the level your answer reaches in each part, then a mark within it.'}</p>${schemeHtml(q,true)}</div>`;
+    } else {
+      h+=`<div class="mark-block"><h3>Mark scheme <span class="small">not marked</span></h3>${schemeHtml(q,false)}<div class="actions" style="margin-top:12px"><button type="button" class="btn quiet" id="do-mark">Mark my answer after all</button></div></div>`;
+    }
+    h+=exemplarHtml(q);
+  }
+  h+=`</div>`;
+  if(sec.total && ORDER.filter(o=>o.sec===sec).slice(-1)[0].q.id===q.id) h+=`<p class="total-line">${sec.total}</p>`;
+  $('#qpaper').innerHTML=h+pagerHtml();
+  const ta=$('#answer');
+  if(ta){ ta.addEventListener('input',()=>{s.draft=ta.value; $('#saved').textContent='Saved'; renderOutline(); save();});
+    ['keyup','click','select','focus'].forEach(e=>ta.addEventListener(e,()=>{s.caret=[ta.selectionStart,ta.selectionEnd]}));
+    ta.addEventListener('input',grow); grow.call(ta); }
+  applyFig();
+}
+function grow(){ this.style.height='auto'; this.style.height=Math.max(this.scrollHeight,parseFloat(getComputedStyle(this).minHeight))+'px'; }
+function pagerHtml(){
+  const i=ORDER.findIndex(o=>o.q.id===st.cur), p=ORDER[i-1], n=ORDER[i+1];
+  const lab=o=>o.q.part?(o.q.n?o.q.n+o.q.part:'6'+o.q.part):o.q.n;
+  return `<div class="pager"><button type="button" data-go="${p?p.q.id:''}" ${p?'':'disabled'}>← ${p?lab(p):''}</button><button type="button" class="next" data-go="${n?n.q.id:''}" ${n?'':'disabled'}>${n?`${lab(n)} ${n.q.cmd} →`:'End of paper'}</button></div>`;
+}
+function renderBooklet(){
+  const {sec}=Q(st.cur), show=!!sec.booklet;
+  const b=$('#booklet'); b.hidden=!show; $('#work').classList.toggle('with-booklet',show); $('#m-tabs').hidden=!show;
+  if(show && !b.dataset.built){ b.innerHTML=BOOKLET; b.dataset.built='1'; }
+  document.documentElement.style.setProperty('--bsize',(15.5+st.bsize*1.5)+'px');
+  const small=matchMedia('(max-width:980px)').matches;
+  b.dataset.tab = small&&st.tab!=='booklet'?'off':'on';
+  $('#qpaper').dataset.tab = small&&show&&st.tab!=='paper'?'off':'on';
+  $('#t-paper').setAttribute('aria-selected',String(st.tab==='paper')); $('#t-booklet').setAttribute('aria-selected',String(st.tab==='booklet'));
+}
+function render(){
+  $('#m-practise').setAttribute('aria-pressed',String(st.mode==='practise'));
+  $('#m-answers').setAttribute('aria-pressed',String(st.mode==='answers'));
+  renderOutline(); renderBooklet(); renderPaper();
+}
+function applyFig(){ document.querySelectorAll('.fig').forEach(f=>f.classList.toggle('lit',!!st.fig&&f.dataset.fig===st.fig)); }
+function reveal(el){
+  if(!el) return;
+  const box=el.closest('.booklet');
+  if(box && !matchMedia('(max-width:1180px)').matches){ const r=el.getBoundingClientRect(),br=box.getBoundingClientRect(); box.scrollTo({top:box.scrollTop+(r.top-br.top)-br.height/2,behavior:'smooth'}); }
+  else window.scrollTo({top:Math.max(0,el.getBoundingClientRect().top+window.scrollY-140),behavior:'smooth'});
+}
+let tt; function toast(m){const t=$('#toast'); t.textContent=m; t.classList.add('show'); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove('show'),2200);}
+function go(id){ if(!id||id===st.cur) return; st.cur=id; st.lit=null; st.fig=null; st.tab='paper'; $('#outline').classList.remove('open'); render(); save(); window.scrollTo({top:0}); }
+
+/* ---------------- events ---------------- */
+document.addEventListener('click',e=>{
+  const t=e.target;
+  const goEl=t.closest('[data-go]'); if(goEl){ go(goEl.dataset.go); return; }
+  if(t.closest('#quiz-link')){ e.preventDefault(); toast('Opens this topic in the app; the six-question quiz is in its Quiz tab.'); return; }
+  const fig=t.closest('.fig');
+  if(fig){
+    const inBooklet=!!fig.closest('.booklet'), s=st.qs[st.cur];
+    if(inBooklet && st.mode==='practise' && s.phase==='write' && $('#answer')){
+      const ta=$('#answer'), [a,b]=s.caret||[ta.value.length,ta.value.length], txt=fig.textContent.trim();
+      const before=ta.value.slice(0,a), after=ta.value.slice(b), ins=(before&&!/\s$/.test(before)?' ':'')+txt;
+      ta.value=before+ins+after; s.draft=ta.value; const pos=(before+ins).length; s.caret=[pos,pos]; ta.focus(); ta.setSelectionRange(pos,pos); grow.call(ta);
+      save(); renderOutline(); toast(`Quoted ${txt}`); if(matchMedia('(max-width:980px)').matches){st.tab='paper'; renderBooklet();} return;
+    }
+    st.fig=st.fig===fig.dataset.fig?null:fig.dataset.fig; applyFig();
+    if(st.fig){ const other=document.querySelector(inBooklet?`#qpaper .fig[data-fig="${st.fig}"]`:`#booklet .fig[data-fig="${st.fig}"]`); if(other){ if(!inBooklet&&matchMedia('(max-width:980px)').matches){st.tab='booklet';renderBooklet();} reveal(other);} else if(inBooklet) toast('The model answer for this part does not use that figure.'); }
+    return;
+  }
+  const see=t.closest('[data-see]'); if(see){ st.lit=see.dataset.see; renderPaper(); const el=document.querySelector(`#qpaper [data-seg="${st.lit}"]`); if(el) window.scrollTo({top:Math.max(0,el.getBoundingClientRect().top+window.scrollY-160),behavior:'smooth'}); return; }
+  const seg=t.closest('.seg'); if(seg){ st.lit=st.lit===seg.dataset.seg?null:seg.dataset.seg; renderPaper(); return; }
+  const lv=t.closest('.levels tr'); if(lv && st.mode==='practise' && st.qs[st.cur].phase==='mark'){ const s=st.qs[st.cur]; s.lv[lv.dataset.strand]=+lv.dataset.lo; renderPaper(); renderOutline(); save(); return; }
+  const mk=t.closest('.pick button'); if(mk){ const s=st.qs[st.cur]; s.lv[mk.dataset.strand]=+mk.dataset.mark; renderPaper(); renderOutline(); save(); return; }
+  const ch=t.closest('[data-choose]'); if(ch){ st.essay=ch.dataset.choose; st.cur=ch.dataset.choose; render(); save(); return; }
+  const id=t.closest('button')&&t.closest('button').id;
+  if(id==='do-mark'){ const s=st.qs[st.cur]; if(!s.draft.trim() && !Q(st.cur).q.draw){ toast('Write your answer first, or show the model answer.'); return;} s.phase='mark'; render(); save(); return; }
+  if(id==='do-reveal'){ st.qs[st.cur].phase='reveal'; render(); save(); return; }
+  if(id==='do-edit'){ st.qs[st.cur].phase='write'; render(); save(); $('#answer')&&$('#answer').focus(); return; }
+  if(id==='m-practise'){ st.mode='practise'; st.lit=null; render(); save(); return; }
+  if(id==='m-answers'){ st.mode='answers'; st.lit=null; render(); save(); return; }
+  if(id==='t-paper'){ st.tab='paper'; renderBooklet(); return; }
+  if(id==='t-booklet'){ st.tab='booklet'; renderBooklet(); return; }
+  if(id==='ts-up'){ st.bsize=Math.min(3,st.bsize+1); renderBooklet(); save(); return; }
+  if(id==='ts-down'){ st.bsize=Math.max(-1,st.bsize-1); renderBooklet(); save(); return; }
+  if(id==='m-outline'){ const o=$('#outline'); o.classList.toggle('open'); t.closest('button').setAttribute('aria-expanded',String(o.classList.contains('open'))); return; }
+  if(id==='theme'){ const r=document.documentElement; r.dataset.theme=r.dataset.theme==='dark'?'light':'dark'; return; }
+  if(id==='proto-btn'){ const m=$('#proto-menu'); m.hidden=!m.hidden; $('#proto-btn').setAttribute('aria-expanded',String(!m.hidden)); return; }
+  const j=t.closest('[data-jump]'); if(j){ $('#proto-menu').hidden=true; const k=j.dataset.jump;
+    if(k==='reset'){ st=fresh(); ORDER.forEach(({q})=>st.qs[q.id]={phase:'write',draft:'',ticks:[],lv:{}}); st.cur='b1'; st.lit=null; }
+    if(k==='6c'){ st.mode='practise'; st.cur='6c'; st.qs['6c'].phase='mark'; st.lit='c2'; }
+    if(k==='6a-write'){ st.mode='practise'; st.cur='6a'; st.qs['6a'].phase='write'; }
+    if(k==='6e'){ st.mode='practise'; st.cur='6e'; st.qs['6e'].phase='mark'; if(!st.qs['6e'].lv[0]) st.qs['6e'].lv={0:6,1:3}; }
+    if(k==='b2'){ st.mode='practise'; st.cur='b2'; st.qs.b2.phase='write'; }
+    if(k==='d'){ st.mode='practise'; st.essay=null; st.cur='d7'; }
+    if(k==='answers'){ st.mode='answers'; st.cur='6e'; }
+    render(); save(); window.scrollTo({top:0}); return; }
+});
+document.addEventListener('change',e=>{ const c=e.target.closest('[data-tick]'); if(!c) return; const s=st.qs[st.cur], pid=c.dataset.tick;
+  s.ticks=c.checked?[...new Set([...s.ticks,pid])]:s.ticks.filter(x=>x!==pid);
+  const q=Q(st.cur).q; q.scheme.groups.forEach(g=>g.pts.forEach(([p,,seg])=>{ if(p===pid) st.lit=seg; }));
+  renderPaper(); renderOutline(); save(); document.getElementById(`ck-${st.cur}-${pid}`)&&document.getElementById(`ck-${st.cur}-${pid}`).focus(); });
+document.addEventListener('keydown',e=>{ if(e.target.matches('textarea,input')||e.metaKey||e.ctrlKey||e.altKey) return;
+  const i=ORDER.findIndex(o=>o.q.id===st.cur);
+  if(e.key==='ArrowRight'&&ORDER[i+1]){e.preventDefault();go(ORDER[i+1].q.id);} if(e.key==='ArrowLeft'&&ORDER[i-1]){e.preventDefault();go(ORDER[i-1].q.id);} });
+matchMedia('(max-width:980px)').addEventListener('change',renderBooklet);
+render();
+})();
+</script>

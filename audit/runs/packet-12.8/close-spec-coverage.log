@@ -1,0 +1,89 @@
+
+> economics-next@0.1.0 spec-coverage
+> node audit/scripts/spec-coverage-check.mjs
+
+(node:46300) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/spec-coverage.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+spec-coverage — leaves examined, against 1,165 `kind: 'leaf'` rows in audit/raw/spec-items.json
+  bank 1  data/modelAnswersData.js + modelAnswersExpansion.js
+  bank 2  section_practice, live, from audit/practice-bank.json (taken 2026-09-26T11:36:53.111Z; --check it against the database with dump-practice-bank.mjs)
+  tags    bank 2 tags from audit/practice-spec-items.json, keyed by item id — 7 describe a question no longer in either bank and are not applied
+
+section                               subj   qs  untag  examined  leaves       %
+--------------------------------------------------------------------------------
+assessing-competitiveness             busi    5      3         3      18   16.7%
+business-growth                       busi    5      3         2      16   12.5%
+business-objectives-strategy          busi    9      3         5      11   45.5%
+decision-making-techniques            busi    5      2         3      20   15.0%
+entrepreneurs-leaders                 busi   10      2         9      18   50.0%
+external-influences                   busi   13      0         9      15   60.0%
+financial-planning                    busi    9      1         8      21   38.1%
+global-industries-mncs                busi    5      3         3      24   12.5%
+global-marketing                      busi    5      0         5      13   38.5%
+global-markets-expansion              busi    7      2         6      33   18.2%
+globalisation                         busi    8      1         6      28   21.4%
+influences-business-decisions         busi    7      2         6      15   40.0%
+managing-change                       busi    7      3         4      10   40.0%
+managing-finance                      busi   14      2        12      24   50.0%
+managing-people                       busi   11      2        17      46   37.0%
+marketing-mix-strategy                busi   10      1        14      46   30.4%
+meeting-customer-needs                busi   15      4        16      29   55.2%
+planning-raising-finance              busi    8      0        12      23   52.2%
+resource-management                   busi   12      3        10      28   35.7%
+the-market                            busi    8      5         3      24   12.5%
+aggregate-demand                      econ   11      1         9      31   29.0%
+aggregate-supply                      econ   11      2        12      14   85.7%
+balance-payments-exchange-rates       econ   11      3        10      42   23.8%
+causes-effects-globalisation          econ   10      4         6      22   27.3%
+consumer-behaviour-demand             econ   12      2        11      39   28.2%
+economic-growth                       econ   13      2        16      23   69.6%
+government-intervention               econ   14      1         8      23   34.8%
+government-intervention-firms         econ   11      2        10      33   30.3%
+growth-development                    econ   12      1        15      43   34.9%
+introductory-concepts                 econ    7      0         9      27   33.3%
+labour-markets                        econ    9      2         7      17   41.2%
+macroeconomic-objectives-policies     econ   12      2        12      34   35.3%
+market-failure                        econ   24      1        27      35   77.1%
+market-structures-contestability      econ    9      1        11      54   20.4%
+measures-economic-performance         econ   13      1        16      48   33.3%
+national-income                       econ   11      1        14      19   73.7%
+poverty-inequality                    econ   11      0        12      21   57.1%
+price-determination                   econ   11      2         8      11   72.7%
+revenue-costs-profits                 econ   14      1        13      34   38.2%
+role-state-macroeconomy               econ   10      1        16      38   42.1%
+supply                                econ   10      3         7      19   36.8%
+trade-global-economy                  econ   16      3        16      46   34.8%
+types-sizes-businesses                econ   13      2        12      30   40.0%
+
+per unit
+  business unit 1           59 /   163 leaves    36.2%  (54 questions)
+  business unit 2           51 /   111 leaves    45.9%  (56 questions)
+  business unit 3           23 /    90 leaves    25.6%  (38 questions)
+  business unit 4           20 /    98 leaves    20.4%  (25 questions)
+  economics unit 1          70 /   154 leaves    45.5%  (78 questions)
+  economics unit 2          79 /   169 leaves    46.7%  (71 questions)
+  economics unit 3          53 /   168 leaves    31.5%  (56 questions)
+  economics unit 4          75 /   212 leaves    35.4%  (70 questions)
+
+448 questions across 43 sections; 80 carry no specItems yet.
+430 of 1,165 spec leaves are examined by at least one question — 36.9%.
+
+13 failure(s): tariff ×13
+  tariff  assessing-competitiveness         assessing-competitiveness:0Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  business-growth                   business-growth:0     Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  business-growth                   business-growth:4     Outline 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  decision-making-techniques        decision-making-techniques:0Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  decision-making-techniques        decision-making-techniques:4Outline 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  global-industries-mncs            global-industries-mncs:0Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  global-industries-mncs            global-industries-mncs:4Outline 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  global-marketing                  global-marketing:0    Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  global-marketing                  global-marketing:4    Outline 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  introductory-concepts             introductory-concepts:0Define 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  introductory-concepts             introductory-concepts:1Explain 6 is not an Economics tariff (lib/ial-marking.js)
+  tariff  introductory-concepts             introductory-concepts:2Assess 10 is not an Economics tariff (lib/ial-marking.js)
+  tariff  introductory-concepts             introductory-concepts:4Outline 4 is not an Economics tariff (lib/ial-marking.js)
+
+exit 1

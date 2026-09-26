@@ -1,0 +1,24 @@
+
+> economics-next@0.1.0 validate:model-answers
+> node audit/scripts/validate-model-answers.mjs
+
+(node:95493) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/data/modelAnswersData.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+model answers: 76 in the bank, 13 carrying the marked-script shape
+  neg-externality-4                             4 marks   4 criteria   4 segments  (no stimulus)
+  mf-extract-define-consumption-externality-2   2 marks   2 criteria   2 segments  econ-u1-market-failure
+  mf-extract-explain-tobacco-social-cost-4      4 marks   4 criteria   4 segments  econ-u1-market-failure
+  mf-extract-analyse-plastic-bag-charge-6       6 marks   6 criteria   6 segments  econ-u1-market-failure
+  mf-extract-examine-bag-charge-optimum-8       8 marks   8 criteria   8 segments  econ-u1-market-failure
+  mf-extract-evaluate-soft-drinks-excise-20    14 marks  14 criteria  14 segments  econ-u1-market-failure
+  negative-externality-tax-8                    8 marks   8 criteria   8 segments  (no stimulus)
+  market-failure-government-intervention-20    20 marks  17 criteria  17 segments  (no stimulus)
+  mf-short-draw-vaccination-welfare-loss-4      4 marks   4 criteria   4 segments  (no stimulus)
+  mf-short-calculate-graduate-social-benefit-4  4 marks   4 criteria   4 segments  (no stimulus)
+  mf-short-explain-sea-wall-public-good-4       4 marks   4 criteria   4 segments  (no stimulus)
+  mf-short-explain-pensions-asymmetric-information-4  4 marks   4 criteria   4 segments  (no stimulus)
+  mf-essay-deposit-protection-moral-hazard-20  20 marks  20 criteria  20 segments  (no stimulus)
+
+0 findings.

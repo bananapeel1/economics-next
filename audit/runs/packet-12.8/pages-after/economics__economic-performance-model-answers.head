@@ -1,0 +1,106 @@
+title: Measures of Economic Performance — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/economic-performance-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How does the CPI measure inflation?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The Consumer Price Index (CPI) measures inflation by tracking the prices of a representative basket of approximately 700 goods and services, weighted by typical household spending patterns. The basket is updated annually to reflect changing consumption habits. CPI compares current prices to a base year (index = 100) — if CPI rises from 100 to 103, the inflation rate is 3%."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are the main types of unemployment?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The main types are: cyclical (demand-deficient) unemployment caused by falls in aggregate demand during recessions; structural unemployment from skills mismatches due to changing industry structure; frictional unemployment from workers being between jobs; and seasonal unemployment from time-dependent demand. Each type requires different policy responses."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Measures of Economic Performance — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 2.3.1 Measures of Economic Performance"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain how the Consumer Price Index (CPI) is used to measure inflation.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Inflation is a sustained rise in the general price level of goods and services in an economy over time. K The Consumer Price Index (CPI) is the main measure used to track inflation in the UK. K CPI measures inflation by tracking the prices of a representative basket of approximately 700 goods and services , weighted according to typical household spending patterns . A The basket is updated annually to reflect changing consumption habits — for example, streaming subscriptions have been added in recent years while DVD players have been removed. Prices are compared to a base year (index = 100). If the CPI rises from 100 to 103, this indicates an inflation rate of 3% . A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine the different types of unemployment in an economy.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Unemployment occurs when individuals who are willing and able to work cannot find a job at the prevailing wage rate. K It is measured in the UK using the ILO Labour Force Survey and the claimant count . Understanding the type of unemployment is essential because each has different causes and requires different policy solutions. K Cyclical (demand-deficient) unemployment occurs during economic downturns when aggregate demand falls . K As firms experience lower sales, they reduce output and lay off workers. For example, during the 2008–09 recession, UK unemployment rose from 5.2% to 8% as consumer spending and business investment collapsed. A This type can be addressed through demand-side policies such as cutting interest rates or increasing government spending to boost AD. An Structural unemployment arises from a mismatch between workers' skills and the skills demanded by employers, often caused by long-term changes in the structure of the economy. K For example, the decline of coal mining and manufacturing in northern England left many workers without the skills needed for new service-sector jobs. A Structural unemployment requires supply-side policies such as education, retraining programmes, and subsidies for geographical mobility. An Frictional unemployment is short-term unemployment that occurs when workers are between jobs , searching for a role that matches their skills. K It exists in all economies and is generally considered unavoidable — it can be reduced through better information provision, such as online job platforms, which speed up the matching process. An Seasonal unemployment occurs in industries where demand is time-dependent — for example, agricultural workers after harvest season or hospitality staff after the summer tourism period. A The key analytical insight is that policy-makers must diagnose the type of unemployment correctly before choosing a response: expansionary fiscal or monetary policy is appropriate for cyclical unemployment but would cause inflation without reducing structural unemployment , which requires targeted supply-side reform. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain two limitations of using CPI as a measure of inflation.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "First, the CPI uses a fixed basket of goods that may not reflect individual spending patterns. K A pensioner who spends heavily on heating will experience a different inflation rate than a student spending on rent and transport. The CPI gives an average that may not match any household's actual experience. A Second, the CPI is slow to include new products and may not capture quality improvements . K If a smartphone costs the same as last year but has significantly better features, the true cost per unit of quality has fallen — but the CPI records no change. This means CPI may overstate inflation by ignoring quality-adjusted price falls. A"
+   }
+  }
+ ]
+}

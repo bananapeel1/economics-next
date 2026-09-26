@@ -1,0 +1,93 @@
+title: Revenue, Costs and Profits — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/revenue-costs-profits-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Revenue, Costs and Profits — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 3.3.2 Revenue, Costs and Profits"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain what is meant by economies of scale and give an example.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Economies of scale are the cost advantages that firms gain as output increases — average (unit) costs fall as the scale of production rises. K They arise because fixed costs are spread over a larger output and firms can exploit efficiencies unavailable to smaller producers. K For example, purchasing economies allow large firms like Tesco to negotiate bulk discounts from suppliers — buying 10 million units at a lower price per unit than a small corner shop. A Technical economies enable large car manufacturers like Toyota to invest in robotic assembly lines that reduce labour costs per vehicle — an investment that would be uneconomical for a small producer. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine why a profit-maximising firm produces where MC = MR.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Marginal cost (MC) is the additional cost of producing one more unit, while marginal revenue (MR) is the additional revenue from selling one more unit. K Profit maximisation is the output where the difference between total revenue and total cost is greatest. K If a firm is producing at an output where MC , the additional unit adds more to revenue than to cost — so profit increases if the firm produces more. An The firm should therefore expand output. Conversely, if MC > MR , the last unit produced costs more than it earns — the firm is losing money on that unit and should reduce output. An The only output level where the firm has no incentive to change is where MC = MR . An At this point, the last unit produced adds exactly as much to revenue as it costs — any further expansion would reduce profit, and any contraction would leave potential profit uncaptured. An This rule applies across all market structures : a perfectly competitive firm, a monopolist, or an oligopolist all maximise profit where MC = MR — the difference is only in the shape of their revenue curves. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine the reasons why a firm might experience diseconomies of scale.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Diseconomies of scale occur when a firm grows so large that its long-run average costs begin to rise as output increases. K This means the firm has expanded beyond its minimum efficient scale (MES) — the output level where LRAC is at its lowest. K First, communication problems arise as messages must pass through multiple management layers. Instructions become distorted, decisions are delayed, and departments may work at cross-purposes. An HSBC , operating across 60+ countries with over 200,000 employees, has repeatedly restructured to address sluggish internal communication that delayed responses to market changes. A Second, coordination difficulties increase — ensuring thousands of employees, multiple departments, and global supply chains all work in harmony becomes exponentially harder. An Third, worker alienation may set in — in very large firms, individual workers feel like a small cog in a machine, reducing motivation and productivity. An Without the personal connection to the firm's mission found in smaller businesses, absenteeism rises and effort falls, increasing costs per unit. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain the difference between normal and supernormal profit.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Normal profit is the minimum level of profit needed to keep a firm in the industry — it covers all costs including the opportunity cost of the entrepreneur's time and capital. K It is earned when average revenue (AR) equals average cost (AC) . If profit falls below normal, the firm would be better off leaving the industry and deploying its resources elsewhere. A Supernormal (abnormal) profit is any profit above the normal level — earned when AR > AC . K In perfect competition, supernormal profit attracts new entrants who compete it away. In monopoly, barriers to entry protect supernormal profit in the long run. A"
+   }
+  }
+ ]
+}

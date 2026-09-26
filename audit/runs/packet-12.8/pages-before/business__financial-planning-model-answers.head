@@ -1,0 +1,96 @@
+title: Financial Planning — Exam Questions &amp; Model Answers | Edexcel IAL Business | Revvy Learn
+canonical: https://revvylearn.com/business/financial-planning-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How do you calculate the break-even point?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Break-even output = Fixed Costs ÷ Contribution per Unit, where Contribution per Unit = Selling Price − Variable Cost per Unit. For example, if fixed costs are £10,000, selling price is £25, and variable cost is £15, then contribution = £10 and break-even = 1,000 units."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are the limitations of break-even analysis?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Break-even analysis assumes all output is sold, costs can be neatly split into fixed and variable, prices remain constant, and there is only one product. In reality, businesses face fluctuating demand, semi-variable costs, price changes, and multiple product lines. It also ignores cash flow timing — a business can break even on paper but fail if payments are delayed."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Financial Planning — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Business 2.3.2 Financial Planning"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Discuss (8 marks)",
+   "text": "Discuss the usefulness of break-even analysis for a start-up business.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Break-even analysis identifies the level of output at which total revenue equals total costs (TR = TC), meaning the business makes neither a profit nor a loss. K The break-even point can be calculated as Fixed Costs ÷ Contribution per Unit , where contribution = selling price − variable cost per unit. K For a start-up, break-even analysis is useful because it provides a clear financial target . An For example, a new café could calculate that it needs to sell 200 coffees per day at £3.50 to cover fixed costs (rent, equipment) and variable costs (ingredients, cups). A This target helps the entrepreneur assess whether the business is viable before committing significant capital. It is also valuable when applying for bank loans or investor funding, as it demonstrates the founder's financial literacy and planning capability. An Furthermore, break-even analysis supports pricing decisions — a start-up can model different price points to see how each affects the break-even quantity, helping to choose a price that balances competitiveness with profitability . An However, break-even has significant limitations for start-ups. It assumes that all output is sold , that costs can be neatly separated into fixed and variable, and that prices remain constant . An In reality, a start-up faces highly uncertain demand , may need to offer discounts to attract early customers, and may experience changing supplier costs. The model also ignores cash flow timing — a business can break even on paper but still fail if revenues arrive after expenses are due. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain what is meant by the break-even point and how it is calculated.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The break-even point is the level of output at which total revenue equals total cost — the business makes neither a profit nor a loss . K Any output above the break-even point generates profit; any output below it results in a loss. K It is calculated as: Break-even = Fixed costs ÷ (Selling price – Variable cost per unit) . K For example, if fixed costs are £10,000, the selling price is £20, and the variable cost per unit is £10, the break-even output is £10,000 ÷ (£20 – £10) = 1,000 units . A This tells the business the minimum it must sell to cover all costs."
+   }
+  }
+ ]
+}

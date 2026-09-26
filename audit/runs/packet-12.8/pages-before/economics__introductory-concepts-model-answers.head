@@ -1,0 +1,96 @@
+title: Introductory Concepts — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/introductory-concepts-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is the economic problem of scarcity?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Scarcity is the fundamental economic problem arising because human wants are unlimited but the resources available to satisfy them (land, labour, capital, enterprise) are finite. Because of scarcity, societies must make choices about how to allocate resources, which creates opportunity cost."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do you define opportunity cost for Edexcel IAL Economics?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Opportunity cost is the next best alternative forgone when a choice is made. For example, if a government spends £50bn on a rail project, the opportunity cost is the hospitals, schools, or tax cuts that money could have funded. Always specify \"next best alternative\" — not just \"what you give up.\""
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Introductory Concepts — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 1.3.1 Introductory Concepts"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain what is meant by scarcity and opportunity cost.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Scarcity is the fundamental economic problem — it arises because human wants are unlimited , yet the resources available to satisfy those wants are finite . K Because resources (land, labour, capital, enterprise) are scarce relative to wants, societies must make choices about how to allocate them. K Opportunity cost is the next best alternative forgone when a choice is made. K For example, if the UK government chooses to spend £50bn on the HS2 rail project, the opportunity cost is the hospitals, schools, or tax cuts that money could have funded instead. A Opportunity cost exists because of scarcity — if resources were unlimited, choosing one option would not require giving up another. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine how a production possibility frontier (PPF) diagram can be used to illustrate economic growth.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A production possibility frontier (PPF) shows the maximum output combinations of two goods an economy can produce when all resources are used efficiently. K Economic growth is a sustained increase in real GDP — the total output of goods and services in an economy. K On a PPF diagram, actual economic growth can be illustrated as a movement from a point inside the PPF toward the frontier . This occurs when an economy uses previously unemployed or underused resources — for example, when a recession ends and workers return to employment. An This type of growth does not require an increase in productive capacity; it simply means existing resources are being used more efficiently. An Potential economic growth is shown as an outward shift of the entire PPF . An This occurs when the economy's productive capacity increases — through investment in capital, technological innovation, improved education, or discovery of new resources. For example, China's sustained investment in infrastructure and manufacturing capacity throughout the 2000s shifted its PPF outward dramatically. A An outward shift means the economy can now produce more of both goods than before — representing a genuine increase in the economy's potential output. An The PPF also illustrates why growth involves trade-offs and opportunity cost . If an economy chooses to produce more capital goods today (sacrificing consumer goods), the PPF shifts outward more in the future — illustrating the trade-off between current consumption and future growth . An This helps explain why economies that invest heavily (high savings ratio) tend to grow faster in the long run. An"
+   }
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+title: Consumer Demand — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/demand-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How do you answer a PED question in Edexcel IAL Economics?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Define PED as the responsiveness of quantity demanded to a change in price. State the formula (% change in Qd ÷ % change in P), distinguish between elastic (>1) and inelastic (<1) demand, and apply to a real-world example showing how PED affects a firm's pricing and revenue decisions."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why is price elasticity of demand important to businesses?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "PED determines whether raising prices increases or decreases total revenue. With inelastic demand (PED < 1), a price rise increases revenue. With elastic demand (PED > 1), a price rise decreases revenue as customers switch to substitutes. Businesses use PED to set optimal prices and forecast revenue."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Consumer Demand — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 1.3.2 Consumer Demand"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain what is meant by price elasticity of demand (PED) and why it is important to a firm.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Price elasticity of demand (PED) measures the responsiveness of quantity demanded to a change in price. K It is calculated as the percentage change in quantity demanded divided by the percentage change in price. If PED > 1, demand is price elastic ; if PED price inelastic . K PED is important to firms because it determines the impact of a price change on total revenue . A For example, if a firm sells a product with inelastic demand (e.g. insulin), it can raise prices and increase revenue because the fall in quantity demanded will be proportionally smaller than the price rise. Conversely, a firm selling a product with elastic demand (e.g. a branded chocolate bar with many substitutes) would lose revenue by raising prices, as consumers would switch to alternatives. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine how knowledge of income elasticity of demand (YED) might be useful to a business.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Income elasticity of demand (YED) measures the responsiveness of demand to a change in income , calculated as the percentage change in quantity demanded divided by the percentage change in income. K A positive YED indicates a normal good (demand rises with income), while a negative YED indicates an inferior good (demand falls as income rises). K Knowledge of YED is valuable for forecasting demand during the business cycle . An A firm selling luxury goods with a YED significantly greater than 1 — such as BMW or high-end fashion brands — can expect demand to rise sharply during a boom but fall steeply in a recession. A Conversely, budget retailers like Aldi have products with negative YED — their demand actually increases during recessions as consumers trade down from premium brands. A This information helps businesses plan their product portfolio and investment strategy . A company operating in a high-YED market might diversify into lower-YED product lines to reduce vulnerability to economic downturns. An It also informs marketing budgets — during periods of rising GDP, firms with luxury products should increase advertising spend to capture the surge in demand, while during downturns they should shift focus to value messaging. An Additionally, YED data helps with long-term capacity planning — a firm in a rapidly growing economy should invest in expanding production if its products have high positive YED, as demand will grow faster than income. An"
+   }
+  }
+ ]
+}

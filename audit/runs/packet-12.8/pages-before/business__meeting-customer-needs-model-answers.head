@@ -1,0 +1,122 @@
+title: Meeting Customer Needs — Exam Questions &amp; Model Answers | Edexcel IAL Business | Revvy Learn
+canonical: https://revvylearn.com/business/meeting-customer-needs-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is market segmentation in business?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Market segmentation is dividing a market into distinct groups of consumers who share similar characteristics or needs — for example, by age, income, location, or lifestyle. It allows businesses to target their marketing mix more precisely at each group, increasing the likelihood of meeting customer needs and boosting sales."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why is meeting customer needs important for a business?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Meeting customer needs is essential because it drives sales, builds customer loyalty, and generates repeat business. A business that understands what customers want can design products, set prices, and choose distribution channels that align with those needs, giving it a competitive advantage over rivals that take a less targeted approach."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between primary and secondary market research?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Primary research involves collecting original, first-hand data directly from consumers through methods like surveys, interviews, and focus groups. Secondary research uses existing data that has already been collected by others, such as government statistics, trade reports, and competitor websites. Primary is more specific but expensive; secondary is cheaper but may be outdated or too general."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are the limitations of primary market research?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Primary research is expensive and time-consuming to conduct. Small sample sizes may not be representative of the wider market. Respondents may give socially desirable answers rather than honest opinions. Results can be misinterpreted without proper data analysis expertise. For start-ups with limited budgets, the cost may be prohibitive."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Meeting Customer Needs — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Business 1.3.1 Meeting Customer Needs"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain what is meant by market segmentation and why it is useful to a business.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Market segmentation is the process of dividing a market into distinct groups of consumers who share similar characteristics or needs. K Markets can be segmented by age, income, location, lifestyle, or buying behaviour . K Segmentation is useful because it allows a business to target its marketing mix more precisely at each group, rather than adopting a one-size-fits-all approach. A For example, a car manufacturer can design and promote different models for families (MPVs with large boot space), young professionals (sporty hatchbacks), and luxury buyers (premium saloons with high-end features). A By tailoring products and marketing to each segment's specific needs, the business increases the likelihood of sales and can build stronger customer loyalty , ultimately boosting revenue and market share. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Discuss (8 marks)",
+   "text": "Discuss the benefits and limitations of primary market research for a business launching a new product.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Primary market research involves collecting original, first-hand data directly from consumers or potential customers. K Methods include surveys, interviews, focus groups, observation, and test marketing . K For a business launching a new product, primary research can provide crucial insights into whether the product meets a genuine market need. A key benefit is that the data is specific to the business's needs and up-to-date . A Unlike secondary research (which may be outdated or too general), primary research can be designed to answer the exact questions the business needs answered — for example, a tech start-up could survey 500 potential customers to test reactions to specific product features, pricing, and design before committing to full-scale production. A The data is also exclusive to the firm , giving it a competitive advantage — rivals cannot access the same insights. An This reduces the risk of a costly product launch failure by identifying potential issues early. An However, primary research has significant limitations . It is typically expensive and time-consuming — designing questionnaires, recruiting participants, and analysing results can take weeks or months and cost thousands of pounds. A For a start-up with limited funds, this represents a major opportunity cost . An Furthermore, small sample sizes may not be representative of the wider market, leading to misleading conclusions. Respondents may also give socially desirable answers rather than honest opinions — for example, stating they would buy a product in a survey but not actually purchasing it once launched. An Results may also be misinterpreted if the business lacks expertise in data analysis, leading to flawed product decisions despite the investment in research. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Discuss (8 marks)",
+   "text": "Discuss the advantages and disadvantages of operating in a niche market.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A niche market is a small, specialised segment of a larger market that targets customers with specific needs or preferences . K Lush , for example, operates in the niche of handmade, ethically sourced cosmetics — a segment too small for mass-market giants like Unilever to prioritise. A A key advantage is the ability to charge premium prices . Because niche products are differentiated and face fewer direct substitutes, customers are willing to pay more — increasing profit margins. An There is also less direct competition , as large firms often ignore segments that are too small to justify mass production. This gives the niche firm a more defensible market position. An However, niche markets have significant disadvantages . The limited customer base means the firm may struggle to achieve economies of scale, keeping unit costs high. An The firm is also vulnerable to changes in consumer tastes — if the trend shifts away from ethical cosmetics, Lush's entire business model is at risk. A If a large competitor decides to enter the niche (e.g. The Body Shop expanding its ethical range), the niche firm may lack the resources to compete. An"
+   }
+  }
+ ]
+}

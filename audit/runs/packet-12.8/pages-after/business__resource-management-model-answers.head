@@ -1,0 +1,96 @@
+title: Resource Management — Exam Questions &amp; Model Answers | Edexcel IAL Business | Revvy Learn
+canonical: https://revvylearn.com/business/resource-management-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is lean production?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Lean production aims to minimise waste at every stage of the production process. Key methods include just-in-time (JIT) delivery, kaizen (continuous improvement), cell production, and quality circles. The goal is to reduce costs, improve quality, and increase efficiency by eliminating activities that do not add value for the customer."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are the risks of just-in-time (JIT) production?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "JIT is vulnerable to supply chain disruptions — if a supplier delivers late, the entire production line can halt because there is no buffer stock. It requires reliable, flexible suppliers and a highly organised production schedule. Small businesses may lack the bargaining power to demand frequent small deliveries from suppliers."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Resource Management — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Business 2.3.4 Resource Management"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Discuss (8 marks)",
+   "text": "Discuss the benefits and risks of adopting lean production methods such as just-in-time (JIT).",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Lean production aims to minimise waste at every stage of the production process. Just-in-time (JIT) is a key lean method where materials are delivered only when needed in the production process, eliminating the need to hold large stocks. K A major benefit is the reduction in stockholding costs — the business saves on warehousing, insurance, and the risk of stock becoming obsolete or damaged. A This frees up working capital that can be invested elsewhere in the business, improving cash flow and profitability . Lean methods also encourage a culture of continuous improvement (kaizen) , where employees identify and eliminate inefficiencies. An However, JIT is highly vulnerable to supply chain disruptions . A If a supplier delivers late or a key component is unavailable, the entire production line can halt because there is no buffer stock to absorb the delay. This was demonstrated during the COVID-19 pandemic when global supply chain disruptions caused major production stoppages for manufacturers using JIT. An JIT also requires reliable, flexible suppliers who can deliver small quantities frequently, and a highly organised production schedule. These conditions are easier to achieve for large firms like Toyota (which pioneered JIT) than for small businesses with less bargaining power over suppliers. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain what is meant by capacity utilisation and why low capacity utilisation is a problem.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Capacity utilisation measures how much of a firm's maximum possible output is actually being used, calculated as: (actual output ÷ maximum output) × 100 . K A factory that could produce 10,000 units but only produces 6,000 has capacity utilisation of 60%. A Low capacity utilisation is a problem because fixed costs are spread over fewer units , raising the average cost per unit . K A factory paying £100,000 in rent produces at £10 per unit at full capacity (10,000 units) but £16.67 per unit at 60% (6,000 units). A This makes the firm less competitive and reduces profit margins."
+   }
+  }
+ ]
+}

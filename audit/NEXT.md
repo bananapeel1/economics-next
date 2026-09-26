@@ -39,6 +39,36 @@ section was chosen on that false premise. See `audit/DECISIONS.md` → Settled �
 Also: the 8m and 20m Market Failure answers live in `data/modelAnswersExpansion.js`, which E034/E035's
 `file` field does not name.
 
+## Packet 12.87 spec — RESERVED, launches after 12.86 is committed (26 September 2026)
+
+**Packet 12.87 is claimed. Do not pick it up.** The authoritative spec is `audit/specs/packet-12.87.md`. In one
+line: Extract A (Economics 1.3.5's data question) is rewritten around real, cited figures, with a per-figure source
+record and a validator rule (R15) that fails on any uncited number; the pilot of the founder's 26 Sep "real and
+cited data" ruling for the rollout. Needs 12.85 committed. Ledger E081, E083-E085.
+
+## Packet 12.86 spec — RESERVED, launches after 12.85 is committed (26 September 2026)
+
+**Packet 12.86 is claimed. Do not pick it up.** The authoritative spec is `audit/specs/packet-12.86.md`. In one
+line: the live AI written-practice marker and the AO profile move from Revvy's own per-objective split to the one
+Pearson's sample mark schemes use, per subject (points to 8 marks in Economics; levels for Economics 14 and 20 and
+Business 8 to 20), without mis-counting answers marked under the old table. Ledger E074-E080.
+
+## Packet 12.85 spec — RESERVED, launches after 12.8 is committed (26 September 2026)
+
+**Packet 12.85 is claimed. Do not pick it up.** The authoritative spec is `audit/specs/packet-12.85.md`; the
+approved design is `audit/specs/practice-redesign-v8-mockup.html`. Neither is copied here. In one line: 12.85
+rebuilds the practice page as the exam paper and the examiner's marked script (paper by default, marking in
+Pearson's format with levels for 14 and 20 marks), removes the internal coverage machinery from every
+model-answer page, and cuts the 1.7 MB logo. Ledger E065-E073. It waits for 12.8, which edits the same files.
+
+## Packet 12.8 spec — PASSED and committed (26 September 2026; see "Handoff — packet 12.8 closed (close-out)")
+
+**Packet 12.8 is claimed and running. Do not pick it up.** The authoritative spec is `audit/specs/packet-12.8.md`;
+it is not copied here, because a spec written into NEXT.md is published to every live session. In one line:
+12.8 reshapes Economics 1.3.5 into the WEC11 paper layout (five short answers, a 2/4/6/8/14 data question on
+Extract A, two essays with a choice), teaches the validator and the shell what a paper section is, and
+defines the site header's height. Ledger E054, E055, E057–E064.
+
 ## Packet 12.75 — PASSED 26 September 2026, committed
 
 Gate test/build/validate/drift all 0. E040, E045-E053 confirmed (E053 after the founder's "apply everywhere"
@@ -12008,6 +12038,82 @@ log, until the concurrent `modelAnswersData.js`/market-failure edit is committed
   topic page may lag the API by up to an hour (ISR). Completion-score readings during Verify B were disturbed by peers on
   :3001.
 
+## Handoff — packet 12.8 DID NOT PASS: E057 rejected twice, Verify B found a blocking diagram defect (workflow bookkeeping pass, 26 September 2026)
+
+**Bookkeeping-only pass, per this packet's own harness instructions. Authored, fixed, staged, published,
+restored and committed nothing.** Read `audit/PROTOCOL.md` in full, this packet's spec (`audit/specs/packet-12.8.md`),
+the `## Packet 12.8 spec` reservation block above, this packet's new row in `audit/PROGRESS.md`, the Settled
+list in `audit/DECISIONS.md`, and `audit/CONTENT-GATE.md` including the recall contract, before writing this.
+**No contradiction found** among them for this packet's own scope: the 2026-09-26 "12.8 is the pilot, not the
+retrofit" entry in DECISIONS.md is exactly the resolution `built.md` cites, and this packet's row in
+PROGRESS.md (which did not exist before this pass — `built.md` itself noted "no 12.8 row exists") now matches it.
+
+**Do not pick up packet 12.8 as "done."** Gate: `npm test` 357/357, `npm run build`, `npm run validate`,
+`drift-check.mjs` (5/5 MATCH) all exit 0 on the final fix-round-2 code — re-read directly from
+`audit/runs/packet-12.8/gate-{test,validate,build}.fix2.log` and `drift-check.fix2.log`, not from `built.md`'s
+prose. **Ledger is NOT clear**: 9 of this packet's 10 ids confirmed (E054, E055, E058-E064), **E057 rejected by
+the packet-verifier on both budgeted fix rounds** and left `not-fixed` — independently re-checked here with
+`node audit/scripts/ledger.mjs show <id>` on all 10 ids one at a time and a fresh `ledger.mjs unverified 12.8`
+(exit 2). **`ledger.mjs packet 12.8 --open` is a false green — it prints "0 items" because that command's
+filter matches only `status === 'open'`, and E057's status is `not-fixed`, not `open`.** The task header for
+this packet said it "passes only when `ledger.mjs packet 12.8 --open` is empty" — that is now true and the
+packet is still not done; use `unverified 12.8` to see the real gate. Flag this ledger CLI behaviour to whoever
+next touches `audit/scripts/ledger.mjs`: a `not-fixed` id should either count as "open" for the `--open` filter,
+or the spec/PROTOCOL wording that keys pass/fail on `--open` needs to name `unverified` instead.
+
+### What the next session on 12.8 needs, in order
+
+1. **Fix E057 for real, a third time.** The class of defect (a tariffed task the md file states that the bank
+   does not own, invisible to the validator, visible to the student) has now survived two fix rounds under two
+   different bypasses: round 0's was a sixth `Question (f)` line inside `## Questions`; round 1's was the same
+   line placed outside `## Questions` without the word "question"; round 2's (`mdStrayTariffs`) is bypassed by
+   ordinary prose — any `<...>` construction (`PED < 1`, `MSB < MSC`) that appears before a later blockquote or
+   any `>` character causes `flattenKeepingLines`'s tag-strip regex (`/<[^>]*>/g`, greedy across newlines) to
+   blank everything between them, including a real `(20 marks)` token. The packet-verifier's own recommendation
+   (`verify-a.md`, round 2): strip only real tags with a bounded pattern (`<[A-Za-z/!][^<>\n]*>`) or tokenise
+   with the same markdown parser the page renders through (`react-markdown` + `remark-gfm`), so the check sees
+   what a student sees; treat a number under a `Marks` column and `Marks: n` (either order) as tariffs too.
+   Re-run the A/B with the angle-bracket case (`PED < 1` followed later by a blockquote) as an explicit control,
+   since that is exactly what defeated round 2.
+2. **Fix the Draw item's model diagram before anything ships**, per Verify B step 6 (blocking, not cosmetic):
+   `public/diagrams/positive-externality-consumption.svg`'s marked "social optimum" point and shaded "Deadweight
+   loss" polygon do not sit on or between the MSB/MSC curves the same file draws — a student who copies it to
+   self-mark learns the wrong optimum and the wrong welfare-loss area. Geometry is in `verify-b.md` (curve
+   endpoints, the point coordinates, the polygon vertices) if the next author wants to re-derive rather than
+   re-measure. This is new — packet 12.7's earlier walkthrough did not touch this diagram; it surfaced only once
+   12.8 wired the Draw item to it.
+3. **The 8-mark examine item's marking scheme is a real, flagged mismatch, not yet a ledger id**: the shipped
+   `negative-externality-tax-8` uses a four-level ladder, but the WEC11 SAM's 8-mark Examine is point-marked
+   (K2 A2 An2 E2, per DECISIONS 2026-09-26's "marking follows Pearson's sample mark schemes" ruling) — `built.md`
+   concern 1. The generic 20-mark essay is still marked to Revvy's own AO1/AO2/AO3/AO4 split
+   (`lib/ao-spec.js` ALLOCATION) while the new essay follows the SAM's KAA 12 + evaluation 8 split — `built.md`
+   concern 2, meaning two different marking schemes now coexist on one section. Neither is this packet's own
+   scope to fix (packet 12.8's spec is the paper-layout pilot, not a marking-scheme audit), but whoever scopes
+   the marking-scheme correction DECISIONS.md already settled should know both are live on 1.3.5 right now.
+4. Two non-blocking items Verify B recorded and are safe to leave for now: diagram labels render at 6.6-7.7px
+   at 390px on the same SVG (V037, pre-existing, not solved by this packet); reloading the page lands Section D
+   on the unchosen essay rather than the one the student picked (persistence itself is correct — draft and
+   choice both survive — only which essay is shown first after reload is wrong).
+
+### What this packet proved, worth keeping for whoever picks it up next
+
+`lib/ial-paper.js` (new) is now the single reader of `audit/raw/ial-paper-structure.json`; no number from that
+file is restated in the validator or the shell, so a change to the structure file propagates on its own — this
+is the pattern the rest of the paper-layout rollout (packets 101-124, per DECISIONS 2026-09-26) should reuse
+rather than re-deriving the 2/4/6/8/14 and 5×4 splits per packet. `--rlh-h` was never actually undefined
+(E063's own premise was wrong, corrected in `built.md`); it is defined in `styles/theme-night.css:154-160` and
+the new measurement code is a genuine belt-and-braces fix for the case where the header disagrees with it, not
+a fix for a missing definition.
+
+### Escalate to the founder
+
+Nothing to publish (this packet writes repository data/code files, not live Supabase content — Rule 6 does not
+apply, no publish command is withheld). The one thing worth the founder's attention: this is a pilot section for
+a paper-layout pattern about to be reused on ~23 more topics (packets 101-124), and its own validator has now
+failed to close the same defect class twice. Before that pattern is copied further, E057 needs a fix that a
+third A/B round actually proves closed against the specific bypass this round found, not just the previous
+round's bypass.
+
 ## Handoff — packet 56 (global-industries-mncs) bookkeeping pass, gate passed, STAGED NOT PUBLISHED (26 September 2026)
 
 **Bookkeeping-only pass, per this packet's own harness instructions. Authored, fixed, staged, published,
@@ -12212,3 +12318,81 @@ land with or before it, as the same class of fix has for packets 47/48/50/51/54/
   packet 21's bank-level 35% guard did not travel. One aggregate validator rule plus a class fix, the founder's call;
   no ledger id minted.
 - **DEBT kept:** the step-12 Discuss 8 (flour-mill takeover) sits under a diagram labelled "Buy it: backward vertical".
+## Handoff — packet 12.8 closed (close-out) (workflow bookkeeping pass, 26 September 2026)
+
+**Bookkeeping-only pass, per this close-out's own harness instructions. Authored, fixed, staged, published,
+restored and committed nothing.** Read `audit/PROTOCOL.md`, this packet's spec (`audit/specs/packet-12.8.md`),
+the `## Packet 12.8 spec` reservation block above, this packet's row in `audit/PROGRESS.md` (rewritten by this
+pass to match), the Settled list in `audit/DECISIONS.md` and `audit/CONTENT-GATE.md`, before writing this.
+Verified independently, not from the run's own prose: `node audit/scripts/ledger.mjs packet 12.8` now shows
+**11/11 confirmed** (E054, E055, E057-E064, E082) and a fresh `ledger.mjs packet 12.8 --open` prints **0 items**.
+
+**What changed in this close-out round.** Two items only, per the orchestrator's 26 Sep ruling:
+- **E057**, on the single-source decision (the page renders its Questions from the bank only; the rule is
+  single source, not drift-detection): `app/data-response/[slug]/page.jsx` now inserts the bank's own
+  `## Questions` markup ahead of `## Model Answers`, `content/data-response/econ-u1-market-failure.md`'s
+  `## Questions` section is removed, and `audit/scripts/validate-model-answers.mjs` was rewritten (R13
+  rebuilt on a strict `mdOutline`/`remark-parse` pass; `flattenKeepingLines`/`mdStrayTariffs` deleted; the R9
+  tag-strip narrowed). Both verifiers confirmed this independently — `verify-a-close-1.md` by mutation testing
+  the real validator (30/30 cases) and diffing production builds of all six data-response pages; `verify-b-
+  close-1.md` by an independent bank import compared against served HTML (5/5 exact) and a 320-1920px
+  text-fit sweep (0 failures both pages, both themes).
+- **E082**: `public/diagrams/positive-externality-consumption.svg`'s marked social-optimum point and
+  "Deadweight loss" polygon now sit on the MSB/MSC lines the file itself draws. Confirmed independently by
+  both verifiers with two different methods (SVG line-intersection algebra vs hand arithmetic + real taps in
+  Practise/Model answers/full-size).
+
+**The stated R13 residual (not a rejection, written into `validator-ab.md` and the validator's own header):**
+an unspaced one-line `P<MC…(20 marks)…MR>MC` still defeats the tag-strip, because `stripTags` still runs a
+`<...>`-shaped pattern across the line. No bank `question`/`context` string contains `<` or `>` today, and the
+orchestrator's decision allowed a per-line fix, which has the same hole. Worth closing properly if a future
+bank item ever needs an angle-bracket comparison on one line with a tariff nearby.
+
+**Other diagrams — listed, not fixed here.** `audit/runs/packet-12.8/diagram-geometry-scan.md` (this
+close-out's own report-only artefact, A/B-proven against the pre-fix E082 file) found the same shape of
+defect — a marked point off the curves it should sit on — in 4 other `public/diagrams/*.svg` files, 6 dots in
+all: `negative-externality-consumption.svg` (both dots, 30-46px off; this is the diagram
+`content/data-response/econ-u1-market-failure.md` names under "Diagram Reference" and the one the 12.8 spec
+suggests for a Draw model answer), `negative-externality-production.svg` (both dots, 22-54px off),
+`indirect-tax-pigouvian.svg` (38px, also in that "Diagram Reference"), `ad-as-long-run.svg` (8.5px). Ten more
+files were not measured (curves drawn as `<path>`/Bézier, or too few plain `<line>` segments to test) — see
+the scan's "Not measured" list. None of this was fixed by this packet; flag it to whoever owns diagram content
+next.
+
+**Notes from the run, for whoever picks up 12.85 or touches these files again:**
+- **The E063 premise (built.md) was wrong.** `--rlh-h` is not undefined — it IS set, in
+  `styles/theme-night.css:154` (`.elp-page.elp-page, .rl-night.rl-night { --rlh-h: 60px; }`), and `.rlh` takes
+  its height from it. `components/practice-shell.css`/`PracticeShell.jsx` only read the variable, which is what
+  the brief checked, but the definition lives in theme-night.css. The fix built here does not hardcode a
+  number: it measures the real `.rlh` on mount/resize/`ResizeObserver` and writes an inline `--rlh-h` on `.ps`
+  **only when the measured height disagrees with the declared one** — when they already agree it writes
+  nothing, so a future theme that redefines `--rlh-h` still passes through untouched.
+- **Part (c)'s MSC>MPC sentence was a deliberate change**, not a drive-by edit: E055 named it as the actual
+  inconsistency (Common Mistakes said one thing, the answer said another), and R13/E062 require the md and the
+  bank to state the same words, so the one sentence was changed in both to MSB below MPB (matching the (e)
+  answer and the diagram) — marks, segments and every other sentence in the item are unchanged.
+- **The 8-mark Examine ladder and the two 20-mark essays' differing AO splits are NOT this packet's or this
+  close-out's scope.** `built.md`'s own "Concerns" 1-2 name them: the shipped 8-mark item uses a four-level
+  ladder the SAM does not have for an Examine 8 (which is point-marked K2 A2 An2 E2), and the new 20-mark essay
+  follows the SAM's KAA 12 + evaluation 8 while the generic 20-mark essay still uses Revvy's AO1/2/3/4 split —
+  two schemes live in one section. `audit/specs/packet-12.85.md` names these directly: **E067** ("marking up
+  to 8 marks, in Pearson's format") and **E068** ("marking 14 and 20 marks by levels"). Do not re-open them
+  under 12.8.
+- **`ledger.mjs packet <n> --open` now counts `claimed` and `not-fixed` too**, not only `status === 'open'`
+  (`audit/scripts/ledger.mjs:59-61`, dated 26 Sep and citing this packet's own E057 as the reason the filter
+  was widened). This is already fixed in the tree — the false-green `--open` that packet 12.8's first
+  bookkeeping pass had to hand-flag (see the "DID NOT PASS" handoff above) is closed. `unverified <n>` remains
+  the gate command that matters when in doubt; `--open` is now consistent with it.
+
+**Founder does NOT commit this packet.** Per `audit/PROTOCOL.md`'s gate-the-commit rule, the orchestrating
+session commits with its isolated-index method (temp `GIT_INDEX_FILE` + `commit-tree` + CAS `update-ref`), not
+a plain `git add`/`git commit` in this shared worktree. This close-out pass staged and committed nothing;
+`git status` on `audit/PROGRESS.md`/`audit/NEXT.md` may already show `MM` from other sessions' concurrent
+staged edits — this pass did not `git add` either file.
+
+**Escalate:** nothing new. V037 (diagram label legibility at 390px) remains known and non-blocking, unchanged
+by this close-out. The 4-diagram geometry defects above are new information, not escalated as blocking (they
+are pre-existing content, out of this packet's scope), but worth a founder decision on who owns diagram QA
+going forward given this is now the second packet (12.8, then this close-out) to find one by accident rather
+than by design.
+

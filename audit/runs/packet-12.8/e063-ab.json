@@ -1,0 +1,17 @@
+{
+  "what": "E063 A/B: the desktop frame (.ps) against the real SiteHeader (.rlh), 1440x900, page at scrollY 0, dev server port 3001 restarted by port first; Browser pane tab emulating 1440x900",
+  "where_rlh_gets_its_height": "styles/theme-night.css:154 sets --rlh-h: 60px on .elp-page/.rl-night; :158-160 .rlh { height: var(--rlh-h) }. The header is sized FROM the variable the frame reads. The spec's premise that nothing defines --rlh-h is not true of this tree; components/practice-shell.css and PracticeShell.jsx only read it, but theme-night.css defines it.",
+  "fix": "components/PracticeShell.jsx: measure .rlh (getBoundingClientRect) on mount, on window resize and via ResizeObserver; when the measured height differs from the declared --rlh-h, give the frame the measured height (inline --rlh-h on .ps); when they agree, write nothing.",
+  "scratch_method": "Two scratch changes applied in the live page only, never to a file: (1) --rlh-h: 80px set on the .ps-page wrapper; (2) a <style> '.rlh{height:80px!important}' that bypasses the variable. The pane is hidden, so no frame is rendered and ResizeObserver cannot fire; the measurement was triggered by dispatching a resize event, which runs the same apply() the observer calls.",
+  "measurements": [
+    {"label": "A header as shipped", "headerH": 60, "psTop": 60, "psBottom": 900, "innerH": 900, "gapBelowFrame": 0, "inlineRlh": "(none: inherits)"},
+    {"label": "B1 header 20px taller via --rlh-h (no JS involved)", "headerH": 80, "psTop": 80, "psBottom": 900, "innerH": 900, "gapBelowFrame": 0, "inlineRlh": "(none: inherits)"},
+    {"label": "A again, restored", "headerH": 60, "psTop": 60, "psBottom": 900, "gapBelowFrame": 0},
+    {"label": "B2 header 20px taller via .rlh{height:80px}, before any measurement = the pre-fix behaviour (frame assumes 60)", "headerH": 80, "psTop": 80, "psBottom": 920, "innerH": 900, "gapBelowFrame": -20, "inlineRlh": "(none: inherits)"},
+    {"label": "B2 same, after the shell measured it", "headerH": 80, "psTop": 80, "psBottom": 900, "innerH": 900, "gapBelowFrame": 0, "inlineRlh": "80px"},
+    {"label": "Control: frame forced back to 60px (inline !important) with the header at 80px", "psBottom": 920, "gapBelowFrame": -20},
+    {"label": "Control removed by hand (removeProperty) — TEST ARTEFACT: React still holds 80px in its style object, so it does not re-write a property the test deleted from the DOM; not a product path", "psBottom": 920, "gapBelowFrame": -20, "inlineRlh": "(none)"},
+    {"label": "A scratch style removed, re-measured: measured 60 = declared 60, so the inline value is dropped", "headerH": 60, "psTop": 60, "psBottom": 900, "gapBelowFrame": 0, "inlineRlh": "(none: inherits)"}
+  ],
+  "verdict": "Exact fit (frame bottom = viewport bottom, 0px gap, 0px overflow, scrollY 0) with the header at 60px and at 80px by either route. Without the measurement the 80px header pushes the dock 20px below the fold (B2 before measurement, and the control)."
+}
