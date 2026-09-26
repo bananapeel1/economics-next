@@ -1,0 +1,19 @@
+=== Gate Results for Packet 41 ===
+Date: Tue Sep 22 16:48:03 EEST 2026
+Section: external-influences (Business Unit 2, WBS12, IAL 2.3.5)
+
+GATE CHECKS:
+  npm test: 0
+  npm run build: 0
+  npm run validate: 0
+  npm run exposure: 0
+  npm run recalls: 0
+  check-staged-drafts: 0
+
+ADVISORY CHECKS:
+  npm run contrast: 0
+  npm run spec-items: 0
+  npm run tariff-census: 0
+  npm run pin-check: 0
+
+GATE STATUS: PASS

@@ -4307,6 +4307,21 @@ button.sidebar-resource-link {
 .practice-filter-btn.off-ladder {
   border-style: dashed;
 }
+/* One shared source, printed once above the list (packet 41 Verify B, defect 7). Only rendered
+   when two or more visible questions open with the same sentence-complete extract. */
+.practice-source-card {
+  margin: 0 0 16px; padding: 14px 16px;
+  background: var(--card-bg, rgba(255,255,255,0.03));
+  border: 1px solid var(--border-subtle, rgba(255,255,255,0.10));
+  border-radius: 12px;
+}
+.practice-source-label {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--text-secondary); margin-bottom: 8px;
+}
+.practice-source-text { font-size: 15px; line-height: 1.6; color: var(--text-primary); margin: 0; }
+.practice-source-note { font-size: 13px; color: var(--text-secondary); margin: 8px 0 0; }
+
 .practice-questions-list {
   display: flex;
   flex-direction: column;
@@ -7620,7 +7635,13 @@ a.auth-dropdown-item:visited {
      fill-in blank never breaks mid-word; inherited by classify chips it made a long item — "Two-thirds of
      the workforce is employed in services" — overflow 390px and drag the whole document sideways, so every
      later step rendered shifted until the page was scrolled back. Found by the founder on live content. */
-  .lm-word-chip.lm-classify-chip { white-space: normal; text-align: left; max-width: 100%; }
+  /* V042, the same defect one recall type later. A match option is a whole statement too: Verify B
+     measured "Something has changed behind it, and the pressure will outlast the campaign" at 574px
+     in a 326px word bank at 390px, with the first word off the left edge and no horizontal scroll to
+     bring it back — 16 of one section's 28 options. The rule above was written for classify chips
+     only; a match chip carries the same kind of string and gets the same treatment. */
+  .lm-word-chip.lm-classify-chip,
+  .lm-word-chip.lm-match-chip { white-space: normal; text-align: left; max-width: 100%; }
   /* A blank was shrinking inside its flex row and breaking "underproduces" mid-word; the row wraps instead. */
   .lm-fillin-step { flex-wrap: wrap; row-gap: 6px; }
   .lm-fillin-blank { flex-shrink: 0; max-width: 100%; }

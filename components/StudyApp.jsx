@@ -36,9 +36,11 @@ const allTabs = [
   { id: 'home', label: 'Home', Icon: HomeIcon },
   { id: 'learn-mode', label: 'Learn', Icon: LearnModeIcon },
   { id: 'notes', label: 'Notes', Icon: NotesIcon },
-  /* Diagrams stays Economics-only for now, deliberately. All 23 sections holding diagram rows are
-     Economics; no Business section has one at all, so opening the tab for Business would show an
-     empty tab rather than a missing one. The fix is the content, not the gate — see F114. */
+  /* Diagrams was Economics-only because all 23 sections holding diagram rows were Economics and no
+     Business section had one at all, so opening the tab for Business would have shown an empty tab
+     rather than a missing one: "the fix is the content, not the gate" (F114). Packet 41 wrote the
+     content, so `subjects` is now a FLOOR rather than the whole gate — see the filter below, which
+     also opens the tab for any section whose own payload carries a diagram. */
   { id: 'diagrams', label: 'Diagrams', Icon: ChartHistogram, subjects: ['economics'] },
   { id: 'practice', label: 'Practice', Icon: DrawerAlt },
   { id: 'flashcards', label: 'Flashcards', Icon: CardsBlank, premium: true },
@@ -340,9 +342,6 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
   const [activeSubjectId, setActiveSubjectId] = useState(initialSubjectId);
   const activeSubject = subjects.find(s => s.id === activeSubjectId) || subjects[0];
 
-  // Filter tabs by active subject slug
-  const tabs = allTabs.filter(tab => !tab.subjects || tab.subjects.includes(activeSubject?.slug));
-
   // Filter units and sections by active subject
   const subjectUnits = units.filter(u => u.subject_id === activeSubjectId);
   const subjectSectionIds = new Set(sections.filter(s => subjectUnits.some(u => u.id === s.unit_id)).map(s => s.id));
@@ -469,6 +468,25 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
     if (!rawSectionData?.quiz?.length) return rawSectionData;
     return { ...rawSectionData, quiz: shuffleAllOptions(rawSectionData.quiz) };
   }, [rawSectionData]);
+  /*
+   * Filter tabs by active subject slug — and, for Diagrams, by whether THIS SECTION has any.
+   *
+   * The subject gate above says why it was Economics-only: no Business section had a diagram row,
+   * so opening the tab for Business would have shown an empty tab rather than a missing one, and
+   * "the fix is the content, not the gate". Packet 41 authors eight diagrams for a Business
+   * section, three of which no other surface can reach, so the premise is now false for that
+   * section and true for the other 21. A count, not a subject, is the thing that was actually
+   * being asked about.
+   *
+   * Economics is left exactly as it was — the subject gate still opens the tab there even while
+   * the payload is in flight — so no Economics section can lose a tab it has today. A Business
+   * section gains it only once its own payload carries a diagram. This is why the filter moved
+   * below `sectionData`: it now depends on the section, not only on the subject.
+   */
+  const tabs = allTabs.filter(tab => (tab.id === 'diagrams'
+    ? (tab.subjects.includes(activeSubject?.slug) || (sectionData?.diagrams?.length || 0) > 0)
+    : (!tab.subjects || tab.subjects.includes(activeSubject?.slug))));
+
   /* V007: the paid surfaces are withheld from the server-rendered page and arrive from the entitled
      API. True means "not here yet", which is a different fact from "this section has none". */
   const paidPending = !!sectionData?.paidPending;
