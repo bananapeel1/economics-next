@@ -1,13 +1,14 @@
 import Link from 'next/link';
+import PaperFacts from '@/components/PaperFacts';
 import { BoltIcon, CardsIcon, ChartHistogram, Clipboard, Document, DrawerAlt, LearnMode, NetworkGraph, PenIcon, ProgressChart, Star, Tutor } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Developments in the Global Economy — Edexcel IAL Economics Unit 4 (WEC14) | Revvy Learn',
+  title: 'WEC14 Developments in the Global Economy — Edexcel IAL Economics Unit 4 Notes | Revvy Learn',
   description: 'Revision notes for Edexcel IAL Economics Unit 4 (WEC14): globalisation, international trade, exchange rates, poverty and inequality, the role of the state, and economic development.',
-  openGraph: { title: 'Developments in the Global Economy — Edexcel IAL Economics Unit 4 (WEC14) | Revvy Learn', url: 'https://revvylearn.com/economics/unit-4', type: 'article' },
+  openGraph: { title: 'WEC14 Developments in the Global Economy — Edexcel IAL Economics Unit 4 Notes | Revvy Learn', url: 'https://revvylearn.com/economics/unit-4', type: 'article' },
 };
 
 const UNIT = { number: 4, code: 'WEC14', title: 'Developments in the Global Economy' };
@@ -109,6 +110,8 @@ export default function Unit4Page() {
           </div>
         </div>
       </section>
+
+      <PaperFacts code={UNIT.code} />
 
       <div className="elp-section" id="topics">
         <div className="elp-uh-tight elp-fade-up" style={{ marginBottom: 40 }}><div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All six topics</div><h2 className="elp-s-title">Everything in Unit 4, spec point by spec point</h2><p className="elp-s-sub">Open any topic straight in the app.</p></div>

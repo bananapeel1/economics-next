@@ -1,13 +1,14 @@
 import Link from 'next/link';
+import PaperFacts from '@/components/PaperFacts';
 import { BoltIcon, CardsIcon, ChartHistogram, Clipboard, Document, LearnMode, NetworkGraph, PenIcon, ProgressChart, Settings, Star, Tutor } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Managing Business Activities — Edexcel IAL Business Unit 2 (WBS12) | Revvy Learn',
+  title: 'WBS12 Managing Business Activities — Edexcel IAL Business Unit 2 Notes | Revvy Learn',
   description: 'Complete revision notes for Edexcel IAL Business Unit 2 (WBS12). Raising finance, financial planning, managing finance, resource management and external influences.',
-  openGraph: { title: 'Managing Business Activities — Edexcel IAL Business Unit 2 (WBS12) | Revvy Learn', url: 'https://revvylearn.com/business/unit-2', type: 'article' },
+  openGraph: { title: 'WBS12 Managing Business Activities — Edexcel IAL Business Unit 2 Notes | Revvy Learn', url: 'https://revvylearn.com/business/unit-2', type: 'article' },
 };
 
 const UNIT = { number: 2, code: 'WBS12', title: 'Managing Business Activities' };
@@ -96,6 +97,8 @@ export default function Unit2Page() {
           </div>
         </div>
       </section>
+
+      <PaperFacts code={UNIT.code} />
 
       <div className="elp-section" id="topics">
         <div className="elp-uh-tight elp-fade-up" style={{ marginBottom: 40 }}><div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All five topics</div><h2 className="elp-s-title">Everything in Unit 2, spec point by spec point</h2><p className="elp-s-sub">Open any topic straight in the app.</p></div>

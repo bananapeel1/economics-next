@@ -1,0 +1,17 @@
+/* Unit hub "The WEC11 paper" block (inside .elp-page, uses its tokens) */
+.pf-grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; align-items: start; }
+.pf-sections { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.pf-sections li { display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; align-items: center; background: var(--elp-bg2); border: 1px solid var(--elp-bd); border-radius: 12px; padding: 12px 14px; }
+.pf-letter { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; font-weight: 700; color: var(--elp-green); background: var(--elp-g-bg); border: 1px solid var(--elp-g-bd); }
+.pf-what { color: var(--elp-tx-b); font-size: 14.5px; line-height: 1.45; }
+.pf-marks { font-family: var(--elp-mono); font-size: 13px; color: var(--elp-tx); white-space: nowrap; }
+.pf-side { display: grid; gap: 14px; }
+.pf-box { background: var(--elp-bg2); border: 1px solid var(--elp-bd); border-radius: 12px; padding: 14px 16px; display: grid; gap: 8px; }
+.pf-label { font-size: 11.5px; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--elp-tx-c); }
+.pf-box ul { margin: 0; padding-left: 18px; color: var(--elp-tx-b); font-size: 14px; display: grid; gap: 4px; }
+.pf-box b { color: var(--elp-tx); font-weight: 600; }
+.pf-note { font-size: 12.5px; color: var(--elp-tx-c); margin: 0; }
+.pf-links { display: grid; gap: 8px; }
+.pf-links a { color: var(--elp-green); text-decoration: none; font-weight: 600; font-size: 14px; }
+.pf-links a:hover { text-decoration: underline; }
+@media (max-width: 760px) { .pf-grid { grid-template-columns: 1fr; } }

@@ -1,14 +1,15 @@
 import Link from 'next/link';
+import PaperFacts from '@/components/PaperFacts';
 import { BoltIcon, CardsIcon, ChartHistogram, Clipboard, Document, DrawerAlt, LearnMode, NetworkGraph, PenIcon, ProgressChart, Star, Tutor } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Markets in Action — Edexcel IAL Economics Unit 1 (WEC11) | Revvy Learn',
+  title: 'WEC11 Markets in Action — Edexcel IAL Economics Unit 1 Notes | Revvy Learn',
   description: 'Complete revision notes for Edexcel IAL Economics Unit 1 (WEC11): Markets in Action. Demand, supply, equilibrium, market failure and government intervention with flashcards, quizzes and AI tutor.',
   openGraph: {
-    title: 'Markets in Action — Edexcel IAL Economics Unit 1 (WEC11) | Revvy Learn',
+    title: 'WEC11 Markets in Action — Edexcel IAL Economics Unit 1 Notes | Revvy Learn',
     description: 'Free Edexcel IAL Economics Unit 1 revision notes. Demand, supply, elasticity, market failure and government intervention.',
     url: 'https://revvylearn.com/economics/unit-1',
     type: 'article',
@@ -168,6 +169,8 @@ export default function Unit1Page() {
           </div>
         </div>
       </section>
+
+      <PaperFacts code={UNIT.code} />
 
       {/* TOPICS */}
       <div className="elp-section" id="topics">
