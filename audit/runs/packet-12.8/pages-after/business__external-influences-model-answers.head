@@ -1,0 +1,86 @@
+title: External Influences — Exam Questions &amp; Model Answers | Edexcel IAL Business | Revvy Learn
+canonical: https://revvylearn.com/business/external-influences-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How do interest rates affect businesses?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Higher interest rates increase the cost of borrowing for businesses (higher loan repayments), reduce consumer spending (higher mortgage and credit card costs reduce disposable income), strengthen the exchange rate (making exports more expensive), and increase the incentive to save rather than spend. These effects reduce demand and increase costs for most businesses."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What external factors affect business performance?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Key external influences include: economic factors (interest rates, exchange rates, inflation, unemployment), political and legal factors (legislation, taxation, trade policy), social factors (demographic changes, consumer trends), technological change (automation, e-commerce), and competitive pressures. Businesses must monitor and adapt to these PESTLE factors."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "External Influences — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Business 2.3.5 External Influences"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Evaluate (20 marks)",
+   "text": "Evaluate the impact of an increase in interest rates on a UK retail business.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "An increase in interest rates — the cost of borrowing money — affects businesses through multiple channels: the cost of debt, consumer spending patterns, and the exchange rate. K For a UK retail business, the impact depends on the type of products sold , the firm's financial structure , and the magnitude of the rate rise . An The most significant impact is likely to be a fall in consumer spending . An Higher interest rates increase mortgage repayments for homeowners on variable-rate deals, reducing their disposable income . A Consumers also face higher costs on credit cards and personal loans, further constraining spending power. For a fashion retailer selling non-essential goods, this is particularly damaging — clothing is typically income elastic , meaning demand falls more than proportionally when disposable income drops. An The retailer may see declining footfall and revenue , potentially requiring markdowns to clear unsold stock, which would compress profit margins . An The retail business itself may be directly affected if it has outstanding variable-rate loans . An Higher interest repayments increase fixed costs , raising the break-even point and reducing profitability. An A business planning to expand or invest (e.g. opening new stores, investing in e-commerce) may postpone these plans because the higher cost of borrowing reduces the expected return on investment . A This could limit long-term competitiveness. However, the impact is not uniformly negative . A supermarket selling everyday essentials would be less affected, as demand for food is price and income inelastic — consumers cannot easily cut back on grocery spending. An Furthermore, a luxury retailer targeting wealthy customers may be relatively insulated, as high-income earners are less sensitive to interest rate changes. An The severity also depends on the magnitude of the rate rise — a 0.25% increase has a much smaller effect than a 2% increase — and whether the rise was anticipated by consumers, in which case spending adjustments may already have been made. An On balance, an increase in interest rates is likely to have a negative impact on most UK retail businesses , primarily through reduced consumer spending and higher borrowing costs. The impact is most severe for retailers selling non-essential, income-elastic goods and those with significant debt . However, the effect is moderated by the type of retailer, the size of the rate change, and the overall economic context . Businesses can mitigate the impact through cost control, diversification into online channels , and focusing on value propositions that appeal to more price-conscious consumers. An"
+   }
+  }
+ ]
+}

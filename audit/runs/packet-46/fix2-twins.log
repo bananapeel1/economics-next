@@ -1,0 +1,16 @@
+== /0\.5\s*×\s*20/ 0
+== /50%\s*×\s*20%/ 0
+== /(?<![\d.])50% of (a|its|the)/ 0
+== /falls? by 20%/ 0
+== /(?<![\d.])10%/ 3
+    .content[2].sections[0].recall.template[0] :: It has 30% of its people under 15 and 10% over 64, so ___ of them are of worki
+    .content[6].sections[3].recall.template[2] :: If debt service falls from 25% to 10% of $10bn of export earnings, $___bn 
+    .content[6].sections[3].recall.distractors[2] :: 10%
+== /(?<![\d.])70%/ 0
+== /(?<![\d.])20%/ 5
+    .quiz[11].question :: In the Harrod-Domar model, a country saving 20% of GDP with a capital-output ratio o
+    .quiz[14].question :: An emerging economy's birth rate has fallen: 20% of its people are under 15 and 5% ar
+    .practice[3].question :: A country saves 20% of its GDP and has a capital-output 
+    .practice[3].guidance :: nt answers. Growth = savings ratio ÷ capital-output ratio = 20% ÷ 5 (1 mark) = 4% a year (1 mark). G
+    .mistakes[3].looks_like :: "Saving 20% with a capital-output ratio of 5 giv
+== /(?<![\d.])50%/ 0

@@ -1,0 +1,43 @@
+(node:67908) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/mistakes-shape.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+global-marketing — packet 55
+  before: 9 BLOCK / 28 DEBT / 2 INFO (0 recoverable)
+  after:  0 BLOCK / 1 DEBT / 5 INFO (0 recoverable)
+  new:    0 BLOCK / 0 DEBT · carried 1 (quant.unit) · would clear 31 baselined findings on publish
+  5 blocks · 15 subsections · 25 quiz (3 unpinned, keys 7/6/6/6) · 7 practice · 28 flashcards · 7 mistakes · 5 diagrams (6 views) · 3 chains · 3 evaluation
+  recalls: 15 of 15 subsections — 1 reorder, 7 classify, 3 fillin, 4 match
+  coverage: 13 of 13 specification leaves evidenced in the teaching text (100%)
+  words:  301 311 312 271 306 270 344 306 299 300 297 300 297 314 314
+  pins:   quiz [[3,4,5,6],[7,8,9,10,11],[12,13,14,15,16],[17,18,19,20],[21,22,23,24]] · practice [[5],[3],[0,4],[1,6],[2]]
+  note: "The Marketing Mix in Global Markets": a later pin's key "place" appears on the diagram (served only on a re-pin; DEBT under the question-first rule)
+  note: "Ansoff and Porter in Global Marketing": a later pin's key "market development" appears on the diagram (served only on a re-pin; DEBT under the question-first rule)
+  note: "Ansoff and Porter in Global Marketing": a later pin's key "differentiation focus" appears on the diagram (served only on a re-pin; DEBT under the question-first rule)
+
+packet checks
+  SCOPE      4.3.3 only. Hofstede, Hall's high/low context, "stuck in the middle" and the live
+             anecdotes (Nova, KFC) are banned, each A/B'd both ways and each ban re-measured against
+             bus_spec.txt; Ansoff and Porter taught as 4.3.3 · 1d, with :1435 and :1098-1099 re-read
+  NUMBERING  the oracle re-read (15 rows / 13 leaves), every leaf mapped and its own words found in
+             its subsections, the lettered lines inside 4.3.3 read as a-d / a-c / a, no social media
+             inside the span, five headings asserted by line, and the database's 4.3.3 / WBS14 asserted
+  ARITHMETIC every figure re-derived: campaign saving, price per ml and its fraction words, niche
+             total and revenue, premium, and every quiz key recomputed independently
+  PINS       derived from each item's block tag; five blocks of three subsections, each with its own
+             diagram, quiz and practice; no diagramRef; 8 free quiz items against 10
+  QUIZ       keys dealt from a hash, histogram measured, no length tell, no letter, no ordinal, no
+             near-duplicate stems, nothing tested that no subsection teaches, the sachet asked as two Ps
+  PRACTICE   Appendix 6 parsed including Assess 10/12; the set is ial-paper-structure.json's Units
+             3-4 Section A (4/4/8/12/12) plus two Evaluate essays, all on one source that carries
+             every figure; stems name the firm; openings clean; levels naming K/App/An/Ev above 6
+  RECALLS    15 of 15, all four types, the three-approach fill-in and the glocalisation reorder
+             (sourced from an extras chain, not printed on its own step), recall.recoverable at 0
+  DIAGRAMS   5 on a 400-unit frame, palette parsed, extent, box fit and collisions checked
+             on the emitted SVG with the guard A/B'd, figures counted back out of the SVG, bars in
+             proportion, and no chapter's check-in key printed on its own diagram
+
+bundle written to audit/snapshots/packet-55-bundle__business__global-marketing.json
+
+staged to draft: {"ok":true,"findings":[{"tier":"INFO","rule":"diagram.table-kind","where":"global-marketing:diagram:65dca6dd","detail":"5 rows of text share the same columns — if this is a reference table it should declare kind:\"table\"; if it is a drawn diagram, ignore this","key":"global-marketing|diagram.table-kind|global-marketing:diagram:65dca6dd|b833ee9d"},{"tier":"INFO","rule":"diagram.table-kind","where":"global-marketing:diagram:334f8d61","detail":"4 rows of text share the same columns — if this is a reference table it should declare kind:\"table\"; if it is a drawn diagram, ignore this","key":"global-marketing|diagram.table-kind|global-marketing:diagram:334f8d61|183e20bd"},{"tier":"INFO","rule":"diagram.table-kind","where":"global-marketing:diagram:c5dde9bc","detail":"4 rows of text share the same columns — if this is a reference table it should declare kind:\"table\"; if it is a drawn diagram, ignore this","key":"global-marketing|diagram.table-kind|global-marketing:diagram:c5dde9bc|6df85a6a"},{"tier":"INFO","rule":"spec.coverage","where":"section","detail":"13 of 13 specification leaves evidenced in the teaching text (100%)","covered":13,"leaves":13,"key":"global-marketing|spec.coverage|section|57af15a5"},{"tier":"DEBT","rule":"quant.unit","where":"section","detail":"no quantitative drill template is registered for WBS14","key":"global-marketing|quant.unit|section|ed7c9c70"},{"tier":"INFO","rule":"section.counts","where":"section","detail":"5 blocks · 15 subsections · 15 recalls (1 reorder, 3 fill-in, 4 match, 7 classify) · 25 quiz · 7 practice · 5 diagrams · 3 chains","key":"global-marketing|section.counts|section|25aa2983"}],"summary":{"sectionId":"global-marketing","subject":"business","unitCode":"WBS14","number":"4.3.3","block":0,"debt":1,"info":5},"newBlocks":[],"newDebt":[],"staged":["section_content","section_notes","section_quiz","section_practice","section_flashcards","section_diagrams","section_extras","section_common_mistakes"],"unchanged":[],"wouldStage":["section_content","section_notes","section_quiz","section_practice","section_flashcards","section_diagrams","section_extras","section_common_mistakes"]}

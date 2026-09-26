@@ -1,0 +1,70 @@
+live before round 1 vs live now: 0 differing paths
+
+round-1 draft vs draft now: 7 differing leaf paths; items: .quiz[1]
+  .quiz[1].id
+    - "growth-development:quiz:3f651164"
+    + "growth-development:quiz:37b5e13a"
+  .quiz[1].options[0]
+    - "20%"
+    + "65%"
+  .quiz[1].options[1]
+    - "10%"
+    + "52%"
+  .quiz[1].options[2]
+    - "50%"
+    + "48%"
+  .quiz[1].options[3]
+    - "70%"
+    + "80%"
+  .quiz[1].question
+    - "Copper is 50% of a country's export earnings and its world price falls by 20%. Export earnings fall by:"
+    + "A country earns 80% of its export revenue from copper, and the world copper price falls by 65%. Its export earnings fall by:"
+  .quiz[1].explanation
+    - "The fall in earnings is the good's share of exports times the fall in its price: 0.5 × 20% = 10%. Using the price fall alone assumes copper is all the country exports."
+    + "The fall in earnings is the good's share of exports times the fall in its price: 0.8 × 65% = 52%. Using the price fall alone, 65%, assumes copper is all the country exports; 48% is what earnings fall to, not by; and 80% is copper's share, not the fall."
+
+live now vs draft now: 14 differing leaf paths; items: .quiz[1], .quiz[2]
+  .quiz[1].id
+    - "growth-development:quiz:3f651164"
+    + "growth-development:quiz:37b5e13a"
+  .quiz[1].options[0]
+    - "20%"
+    + "65%"
+  .quiz[1].options[1]
+    - "10%"
+    + "52%"
+  .quiz[1].options[2]
+    - "50%"
+    + "48%"
+  .quiz[1].options[3]
+    - "70%"
+    + "80%"
+  .quiz[1].question
+    - "Copper is 50% of a country's export earnings and its world price falls by 20%. Export earnings fall by:"
+    + "A country earns 80% of its export revenue from copper, and the world copper price falls by 65%. Its export earnings fall by:"
+  .quiz[1].explanation
+    - "The fall in earnings is the good's share of exports times the fall in its price: 0.5 × 20% = 10%. Using the price fall alone assumes copper is all the country exports."
+    + "The fall in earnings is the good's share of exports times the fall in its price: 0.8 × 65% = 52%. Using the price fall alone, 65%, assumes copper is all the country exports; 48% is what earnings fall to, not by; and 80% is copper's share, not the fall."
+  .quiz[2].id
+    - "growth-development:quiz:a315e66b"
+    + "growth-development:quiz:bb8f266a"
+  .quiz[2].options[0]
+    - "45"
+    + "31"
+  .quiz[2].options[1]
+    - "55"
+    + "27"
+  .quiz[2].options[2]
+    - "122"
+    + "133"
+  .quiz[2].options[3]
+    - "82"
+    + "33"
+  .quiz[2].question
+    - "A country has 40% of its people under 15, 5% over 64 and 55% of working age. Its dependency ratio is about:"
+    + "An emerging economy's birth rate has fallen: 20% of its people are under 15 and 5% are over 64. Its dependency ratio is approximately:"
+  .quiz[2].explanation
+    - "The dependency ratio is (young + old) ÷ working age × 100 = 45 ÷ 55 × 100 = 82. Inverting the fraction gives 122."
+    + "Working age is what is left: 100 − 20 − 5 = 75%. The dependency ratio is (young + old) ÷ working age × 100 = 25 ÷ 75 × 100 = 33. Taking working age as 80% forgets to take out the over-64s and gives 31; leaving the over-64s out of the dependants gives 27; dividing the whole population by the working age gives 133."
+
+served draft quiz ids: 68c08c31 37b5e13a bb8f266a 7ff295f1 7a0688e4 68311ebb c36e9ef0 d9da9e60 d922e7dc d15c2db4; isPremium false; counts {"quiz":44,"flashcards":43,"extrasChains":4,"extrasEvaluation":3,"mistakes":7}

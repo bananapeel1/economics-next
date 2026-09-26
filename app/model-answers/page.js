@@ -7,6 +7,17 @@ import LandingScrollBar from '@/components/LandingScrollBar';
 import '@/styles/landing.css';
 import '@/styles/hub-links.css';
 import { MODEL_ANSWER_PAGES, modelAnswersPath } from '@/data/modelAnswerPages';
+import { parseBlocks } from '@/lib/stimulus';
+
+/* Packet 12.8. A short answer or an essay shaped like the paper opens with its own context (a sentence
+   or a small table, `paper.context`); a Calculate question is unanswerable without it. The hub lists
+   every answer, so it carries each one's context too, parsed here on the server. Items without a
+   context are passed through untouched. */
+const ANSWERS = MODEL_ANSWERS.map((a) =>
+  a.paper && typeof a.paper.context === 'string' && a.paper.context.trim()
+    ? { ...a, contextBlocks: parseBlocks(a.paper.context) }
+    : a,
+);
 
 export const metadata = {
   title: 'Edexcel IAL Economics & Business Model Answers | Revvy Learn',
@@ -67,7 +78,7 @@ export default function ModelAnswersRoute() {
       </section>
 
       <div className="elp-section">
-        <ModelAnswersPage answers={MODEL_ANSWERS} sectionsMeta={MODEL_ANSWERS_SECTIONS} />
+        <ModelAnswersPage answers={ANSWERS} sectionsMeta={MODEL_ANSWERS_SECTIONS} />
       </div>
 
       <div className="elp-section" id="by-topic">

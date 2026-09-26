@@ -37,9 +37,10 @@ import { timeLabel, paperLabel } from '@/lib/exam-timing';
 import { midBandAttempt, highestTariffItem, pagePanelItem } from '@/lib/mid-band-answer';
 import MarkedScriptAttempt from '@/components/MarkedScriptAttempt';
 import PracticeShell from '@/components/PracticeShell';
-import { stimulusFor, figuresIn, withFigures, linkFigures } from '@/lib/stimulus';
+import { stimulusFor, figuresIn, withFigures, linkFigures, parseBlocks } from '@/lib/stimulus';
 import {
   hasShell, isShellItem, questionSets, stemParts, cardLabel, minutesFor, focusRowsFor,
+  hasPaper, paperSets, sectionARow,
 } from '@/lib/practice-shell';
 import './model-answers-layout.css';
 
@@ -418,6 +419,17 @@ function shellItem(item, page, figures, midBand) {
       })),
     })),
     examinerHtml: item.examinerCommentary || '',
+    // Packet 12.8, E061. A short answer's or an essay's own context, as blocks (a sentence or a small
+    // table), shown above the stem in every mode. A Draw item is sketched on paper and self-marked;
+    // its model answer is the diagram named by `diagram`, a file in public/diagrams/ (validator R9).
+    context: item.paper && typeof item.paper.context === 'string' && item.paper.context.trim()
+      ? parseBlocks(item.paper.context)
+      : null,
+    draw: item.commandWord === 'Draw',
+    part: item.paper && item.paper.kind === 'data_question' ? String(item.paper.part || '') || null : null,
+    diagram: item.diagram && item.diagram.src
+      ? { src: String(item.diagram.src), alt: String(item.diagram.alt || ''), width: Number(item.diagram.width) || null, height: Number(item.diagram.height) || null }
+      : null,
     markScheme: (item.markScheme || []).map((r) => ({ range: String(r.range ?? ''), desc: String(r.desc ?? '') })),
     focusRows: figures.length ? focusRowsFor(item, figures) : [],
     midBand: midBand
@@ -437,14 +449,26 @@ function shellFor(page, written, heading) {
   // qualifies (both 20s are AO-split; Examine 8 is suppressed by E028), so no panel renders there.
   const midBandItem = highestTariffItem(items, { levelsOnly: true });
   const midBand = midBandItem ? midBandAttempt(midBandItem) : null;
-  const sets = questionSets(items).map((set) => {
+  // Packet 12.8, E061: a page whose items carry `paper` is laid out as its paper's sections; every
+  // other shell page keeps 12.75's grouping by extract, exactly as before.
+  const paperShaped = hasPaper(items);
+  const grouped = paperShaped
+    ? paperSets(items, { subject: page.subject, unit: page.unit })
+    : questionSets(items);
+  const sets = grouped.map((set) => {
     const stim = set.stimulus ? stimulusFor(set.stimulus) : null;
     const figures = stim ? figuresIn(stim.blocks) : [];
     return {
       id: set.id,
       kind: stim ? 'extract' : 'standalone',
       label: set.label,
+      // The extract's own name ("Extract A") for the pane, the tab and the "Uses …" chip. Under the
+      // 12.75 grouping it is the set's label; under the paper's sections the set is "Section C".
+      extractLabel: stim ? (paperShaped ? 'Extract A' : set.label) : null,
       extract: stim ? { href: stim.href, title: stim.title, blocks: withFigures(stim.blocks) } : null,
+      paper: paperShaped
+        ? { kind: set.paperKind, section: set.section, heading: set.heading, note: set.note, total: set.total, choice: set.choice }
+        : null,
       items: set.items.map((it) => shellItem(it, page, figures, midBandItem && it.id === midBandItem.id ? midBand : null)),
     };
   });
@@ -452,6 +476,9 @@ function shellFor(page, written, heading) {
     pageKey: modelAnswersPath(page),
     title: heading,
     backLink: page.backLink,
+    sectionA: paperShaped
+      ? sectionARow({ subject: page.subject, unit: page.unit, sectionId: page.sectionId, topic: page.topic })
+      : null,
     sets,
   };
 }

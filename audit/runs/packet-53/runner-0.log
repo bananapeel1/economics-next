@@ -1,0 +1,31 @@
+
+influences-business-decisions — packet 53
+  before: 12 BLOCK / 20 DEBT / 2 INFO (0 recoverable)
+  after:  4 BLOCK / 5 DEBT / 4 INFO (0 recoverable)
+  new:    4 BLOCK / 5 DEBT · carried 0 () · would clear 28 baselined findings on publish
+  4 blocks · 13 subsections · 22 quiz (3 unpinned, keys 6/6/5/5) · 7 practice · 27 flashcards · 7 mistakes · 4 diagrams (5 views) · 4 chains · 3 evaluation
+  recalls: 13 of 13 subsections — 5 classify, 3 fillin, 4 match, 1 reorder
+  coverage: 15 of 15 specification leaves evidenced in the teaching text (100%)
+  words:  381 336 344 331 351 333 325 290 312 326 349 400 352
+  pins:   quiz [[3,4,5,6],[7,8,9,10],[11,12,13,14,15],[16,17,18,19,20,21]] · practice [[2],[0,5],[3,6],[1,4]]
+  NEW BLOCK quiz.long-correct influences-business-decisions:quiz:c0e9f967: correct option is 68 chars, longest distractor 43
+  NEW BLOCK quiz.long-correct influences-business-decisions:quiz:2182e9de: correct option is 62 chars, longest distractor 41
+  NEW BLOCK quiz.long-correct influences-business-decisions:quiz:8f22c94f: correct option is 65 chars, longest distractor 43
+  NEW BLOCK quiz.long-correct influences-business-decisions:quiz:e6547b2a: correct option is 71 chars, longest distractor 46
+  NEW DEBT  step.words sub:influences-business-decisions:sub:strong-and-weak-cultures: 381 words of teaching text (budget 350)
+  NEW DEBT  step.words sub:influences-business-decisions:sub:why-established-cultures-resist-change: 351 words of teaching text (budget 350)
+  NEW DEBT  step.words sub:influences-business-decisions:sub:pay-and-rewards: 400 words of teaching text (budget 350)
+  NEW DEBT  step.words sub:influences-business-decisions:sub:corporate-social-responsibility: 352 words of teaching text (budget 350)
+  NEW DEBT  reorder.lead sub:influences-business-decisions:sub:how-culture-is-formed:reorder: items share a leading token: ["the"]
+
+10 packet checks failed:
+  - the failed-substitution check no longer fires on: "a cost of RMundefinedm"
+  - quiz.long-correct would fire on "Why can a strong culture become a disadv": key 68 chars against 43
+  - quiz.long-correct would fire on "A firm's staff all share a deep belief i": key 62 chars against 41
+  - quiz.long-correct would fire on "Why might a bonus based only on this yea": key 65 chars against 43
+  - quiz.long-correct would fire on "A company advertises itself as caring fo": key 71 chars against 46
+  - practice "Calculate 4": the task does not name the firm (practice-01, topFix-05 — a generic stem)
+  - strong-and-weak-cultures: 381 words of teaching text against a budget of 350
+  - why-established-cultures-resist-change: 351 words of teaching text against a budget of 350
+  - pay-and-rewards: 400 words of teaching text against a budget of 350
+  - corporate-social-responsibility: 352 words of teaching text against a budget of 350

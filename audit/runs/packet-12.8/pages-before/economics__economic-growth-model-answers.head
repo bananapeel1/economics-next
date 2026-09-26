@@ -1,0 +1,106 @@
+title: Economic Growth — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/economic-growth-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is the difference between actual and potential economic growth?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Actual growth is an increase in real GDP, caused by rising aggregate demand using existing spare capacity. Potential growth is an increase in the economy's productive capacity (LRAS shifts right), caused by supply-side improvements such as better technology, education, or infrastructure. A country can have one without the other."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do supply-side policies promote long-term economic growth?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Supply-side policies increase productive capacity by improving factors of production. Education and training raise human capital and productivity. Deregulation increases competition and efficiency. Lower corporation tax incentivises investment. Infrastructure spending reduces costs. These shift LRAS rightward, enabling non-inflationary growth — but benefits typically take years to materialise."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Economic Growth — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 2.3.5 Economic Growth"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain the difference between actual and potential economic growth.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Actual economic growth is an increase in real GDP , measured by the percentage change in output year on year. K It is caused by an increase in aggregate demand (AD) , which allows the economy to use existing spare capacity — for example, unemployed workers finding jobs and idle factories resuming production. A Potential economic growth is an increase in the productive capacity of the economy — the maximum output it could produce at full employment. K This is represented by a rightward shift of the LRAS curve and is caused by supply-side improvements such as better technology, increased education and training, or investment in infrastructure. A The key distinction is that a country can experience actual growth without potential growth (simply using up spare capacity through rising AD) or potential growth without actual growth (productive capacity expands but AD does not rise sufficiently to utilise it). A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Evaluate (20 marks)",
+   "text": "Evaluate the extent to which supply-side policies are the most effective way to achieve long-term economic growth.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Economic growth is an increase in the real GDP of an economy over time. Long-term (potential) growth requires an increase in the economy's productive capacity , represented by a rightward shift of LRAS. K Supply-side policies are government measures designed to improve the quality and quantity of factors of production, thereby increasing potential output. K This essay will evaluate whether such policies are the most effective route to sustained growth, or whether demand-side measures also play an essential role. Supply-side policies target the root causes of long-term growth by expanding the economy's productive potential. An Investment in education and training raises human capital , making workers more productive — for example, government-funded apprenticeship schemes equip young people with technical skills demanded by growing industries like technology and green energy. A Deregulation removes barriers to entry, increasing competition and incentivising firms to innovate and cut costs, which improves allocative and productive efficiency . An Reductions in corporation tax raise post-tax profits, encouraging greater capital investment in new machinery, technology, and research. A Each of these policies shifts LRAS rightward , enabling the economy to produce more at every price level — crucially, this growth is non-inflationary because it expands capacity rather than simply increasing demand against a fixed supply. An However, Keynesian economists argue that supply-side policies alone are insufficient. An Even if productive capacity expands (LRAS shifts right), this does not guarantee actual growth — aggregate demand must also rise to utilise the new capacity. An During the 2008–09 financial crisis , for example, the UK had adequate productive capacity but suffered a severe recession because AD collapsed — consumer confidence plummeted, banks restricted lending, and firms cut investment. A In such circumstances, fiscal stimulus (increased government spending) and monetary policy (cutting interest rates) were needed to restore demand and prevent prolonged unemployment. An Supply-side improvements would have been irrelevant without sufficient demand to activate the existing capacity. An The effectiveness of supply-side policies depends on several contextual factors . An First, the time horizon matters: supply-side policies such as education reform take years or even decades to yield results, whereas demand-side measures can stimulate growth more quickly. A government facing an imminent recession cannot rely on training programmes alone. An Second, the current state of the economy is critical — if the economy is already near full capacity with low unemployment, demand-side stimulus would simply cause inflation, and supply-side policies are the only way to achieve further growth. Conversely, if there is a large negative output gap , demand-side intervention is the immediate priority. An Third, the type of supply-side policy matters — market-based approaches (deregulation, tax cuts) may increase inequality or reduce public services, while interventionist approaches (education, infrastructure) require significant public expenditure and face opportunity cost constraints. A On balance, supply-side policies are the most effective means of achieving long-term, sustainable economic growth because they expand the economy's productive capacity and raise the trend rate of growth without inflationary pressure. An However, they are not sufficient on their own . In the short to medium term, demand-side management through fiscal and monetary policy is essential to ensure that the economy operates close to its potential and to manage cyclical fluctuations. The most effective approach is a coordinated policy mix — supply-side reforms to build long-term capacity, complemented by demand management to ensure that capacity is utilised. The relative emphasis depends on whether the economy faces a demand-side recession or a supply-side constraint on growth . An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine the potential costs of rapid economic growth.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Economic growth is a sustained increase in real GDP. While generally desirable, rapid growth can generate significant costs that reduce or offset the benefits. K First, if aggregate demand grows faster than productive capacity , the economy overheats — causing demand-pull inflation . An Rising prices erode purchasing power, create uncertainty for businesses, and may require contractionary policy that subsequently causes recession. An This was visible in the UK during 2021–22, when the post-COVID demand surge contributed to inflation exceeding 10%. A Second, rapid growth often causes environmental degradation . Increased production generates pollution, resource depletion, and carbon emissions. An China's rapid industrialisation from the 1990s onwards caused severe air pollution in cities like Beijing and significant water contamination — imposing health costs estimated at 3–6% of GDP. A These environmental costs reduce long-run welfare and may threaten the sustainability of future growth. An Third, growth may increase inequality if the gains are unevenly distributed. An In many countries, growth has disproportionately benefited skilled workers, capital owners, and urban populations — while low-skilled workers, rural communities, and the elderly may see little improvement. An Rising inequality can create social tensions, reduce social mobility, and even undermine future growth if large sections of the population cannot participate in the economy productively. An"
+   }
+  }
+ ]
+}

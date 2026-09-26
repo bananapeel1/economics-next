@@ -1,0 +1,47 @@
+(node:11648) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/learn-steps.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+## new dump (paying, full bank): 41 steps, 44 quiz items
+  step 5/41 ch1: diagram 0a108cf9 · quiz 68c08c31 (array [3])
+  step 11/41 ch2: diagram f219e3f8 · quiz 3f651164 (array [8])
+  step 17/41 ch3: diagram 07db3dbd · quiz bb8f266a (array [14])
+  step 21/41 ch4: diagram 6d233a67 · quiz 7ff295f1 (array [19])
+  step 27/41 ch5: diagram c6653228 · quiz 7a0688e4 (array [24])
+  step 34/41 ch6: diagram 55d963f4 · quiz 68311ebb (array [30])
+  step 41/41 ch7: diagram a5fecaf9 · quiz c36e9ef0 (array [36])
+
+## served ?draft=1 (signed out): 41 steps, 10 quiz items
+  step 5/41 ch1: diagram 0a108cf9 · quiz 68c08c31 (array [0])
+  step 11/41 ch2: diagram f219e3f8 · quiz 3f651164 (array [1])
+  step 17/41 ch3: diagram 07db3dbd · quiz bb8f266a (array [2])
+  step 21/41 ch4: diagram 6d233a67 · quiz 7ff295f1 (array [3])
+  step 27/41 ch5: diagram c6653228 · quiz 7a0688e4 (array [4])
+  step 34/41 ch6: diagram 55d963f4 · quiz 68311ebb (array [5])
+  step 41/41 ch7: diagram a5fecaf9 · quiz c36e9ef0 (array [6])
+
+## served live (signed out): 41 steps, 10 quiz items
+  step 5/41 ch1: diagram 0a108cf9 · quiz 68c08c31 (array [0])
+  step 11/41 ch2: diagram f219e3f8 · quiz 3f651164 (array [1])
+  step 17/41 ch3: diagram 07db3dbd · quiz a315e66b (array [2])
+  step 21/41 ch4: diagram 6d233a67 · quiz 7ff295f1 (array [3])
+  step 27/41 ch5: diagram c6653228 · quiz 7a0688e4 (array [4])
+  step 34/41 ch6: diagram 55d963f4 · quiz 68311ebb (array [5])
+  step 41/41 ch7: diagram a5fecaf9 · quiz c36e9ef0 (array [6])
+
+## chapter-3 check-in as the served draft places it (step 17), every diagram surface, then the quiz
+title: Population Structure and Debt
+description: IAL 4.3.6 · 2a: the age distribution behind the dependency ratio in a young developing economy and in an ageing high-income one, and overseas debt service as a share of export earnings.
+checklist: Dependency ratio = (under 15 + over 64) ÷ working age × 100
+checklist: A young population: 85 dependants per hundred of working age
+checklist: An ageing population: 59 per hundred, most of them old
+checklist: Debt service $1.8bn: 15% of export earnings
+view "A young population": Karanda: a young population | Under 15 | 42% | Aged 15 to 64 | 54% | Over 64 | 4% | (42 + 4) ÷ 54 × 100 = 85 | Almost one dependant for each worker.
+view "An ageing population": An ageing high-income economy | Under 15 | 15% | Aged 15 to 64 | 63% | Over 64 | 22% | (15 + 22) ÷ 63 × 100 = 59 | Fewer dependants, but more of them retired.
+view "Overseas debt service": Debt service and export earnings | Export earnings | $12bn | Debt service | $1.8bn | Left for imports | $10.2bn | $1.8bn ÷ $12bn = 15% of earnings. | Paid in dollars before any import is bought.
+QUIZ growth-development:quiz:bb8f266a: An emerging economy's birth rate has fallen: 20% of its people are under 15 and 5% are over 64. Its dependency ratio is approximately:
+    31
+    27
+    133
+  * 33

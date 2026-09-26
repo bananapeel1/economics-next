@@ -1,0 +1,73 @@
+title: Trade and the Global Economy — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/trade-global-economy-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Trade and the Global Economy — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 4.3.2 Trade and the Global Economy"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Evaluate (20 marks)",
+   "text": "Evaluate the arguments for and against free trade.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Free trade is the exchange of goods and services across borders without government-imposed barriers such as tariffs, quotas, or regulations. K The case for free trade is built on the theory of comparative advantage — that countries should specialise in producing goods with the lowest opportunity cost, then trade. K However, the extent to which free trade benefits all participants is contested. An Free trade delivers substantial benefits. Specialisation according to comparative advantage increases total global output — more goods are produced from the same resources. An Consumers benefit from lower prices (access to cheapest global producers), greater variety , and higher quality driven by international competition. An The EU single market has increased member states' GDP by an estimated 8–9% over 50 years through deeper trade integration. A Competition from abroad forces domestic firms to innovate and improve productivity, benefiting the economy in the long run. An However, free trade can harm certain groups and industries. Developing countries may suffer if forced to compete with established industries in developed economies before they have achieved economies of scale — the infant industry argument suggests temporary protection is needed to allow new industries to grow. K South Korea's industrial policy in the 1960s–80s protected its steel and automobile industries until they could compete globally — without this protection, Samsung and Hyundai may never have developed. A Free trade can also cause structural unemployment in developed countries as manufacturing shifts to lower-cost locations — the decline of steel and textile industries in the UK and US Midwest illustrates this. An The desirability of free trade depends on context . For established economies with competitive industries, free trade is overwhelmingly beneficial — it drives down costs and spurs innovation. An For developing countries, selective, temporary protection may be justified for infant industries, but must be time-limited to avoid creating permanently inefficient firms dependent on protection. An The distributional effects within countries are critical — even when free trade increases total welfare, the gains are unevenly shared, and without compensation for losers (retraining, social safety nets), political opposition to trade can grow, as seen with Brexit and US trade protectionism under recent administrations. A Furthermore, reliance on global supply chains creates vulnerability — as COVID-19 demonstrated when shortages of medical supplies and semiconductors exposed the risks of over-dependence on foreign production. A On balance, free trade is beneficial for the global economy as a whole , but not unconditionally so for every country or group. The strongest case for protection is temporary infant industry support in developing economies. The strongest case against protection is that it raises consumer prices and shelters inefficiency. The optimal approach is managed liberalisation — pursuing free trade while maintaining social safety nets for displaced workers and allowing strategic protection in narrowly defined circumstances. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain the principle of comparative advantage.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Comparative advantage exists when a country can produce a good at a lower opportunity cost than another country. K Even if one country is more efficient at producing everything (absolute advantage), both countries benefit from specialising in the good where their opportunity cost is lowest, then trading. K For example, if the UK has a lower opportunity cost of producing financial services and Bangladesh has a lower opportunity cost of producing textiles, both countries gain by specialising and trading . A Total global output increases because each country focuses resources on what it does relatively best, then exchanges for everything else. A"
+   }
+  }
+ ]
+}

@@ -1,0 +1,46 @@
+
+> economics-next@0.1.0 spec-coverage
+> node audit/scripts/spec-coverage-check.mjs --section market-failure
+
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+spec-coverage — leaves examined, against 1,165 `kind: 'leaf'` rows in audit/raw/spec-items.json
+  bank 1  data/modelAnswersData.js + modelAnswersExpansion.js
+  bank 2  section_practice, read from audit/content-sections/ (the t=0 dump of the published tables — a lower bound, not live; --staged for the rebuilds)
+  note    section_practice has no `spec_items` column: scripts/packet-12-1-spec-items.sql is written and NOT run.
+          Tags for bank 2 come from audit/runs/packet-12.1/section_practice-tags.json.
+
+section                               subj   qs  untag  examined  leaves       %
+--------------------------------------------------------------------------------
+market-failure                        econ   18      1        23      35   65.7%
+
+per unit
+  economics unit 1          23 /    35 leaves    65.7%  (18 questions)
+
+command words in market-failure: Explain 4 ×4 · Evaluate 20 ×3 · Examine 8 ×2 · Define 4 ×1 · Explain 6 ×1 · Analyse 10 ×1 · Outline 4 ×1 · Define 2 ×1 · Analyse 6 ×1 · Discuss 14 ×1 · Draw 4 ×1 · Calculate 4 ×1
+
+unexamined leaves in 1.3.5 (12 of 35):
+  ECON-1.3.5-1b-5     speculation and market bubbles.
+  ECON-1.3.5-2c-1     external benefits of production
+  ECON-1.3.5-2e-1     transport
+  ECON-1.3.5-2e-5     financial.
+  ECON-1.3.5-4b       The significance of information gaps.
+  ECON-1.3.5-4c-1     healthcare
+  ECON-1.3.5-4c-2     education
+  ECON-1.3.5-4c-4     insurance.
+  ECON-1.3.5-5b-1     insurance
+  ECON-1.3.5-6a       How market bubbles may arise.
+  ECON-1.3.5-6b-1     housing
+  ECON-1.3.5-6b-2     stocks and shares.
+
+18 questions across 1 section; 1 carry no specItems yet.
+23 of 1,165 spec leaves are examined by at least one question — 2.0%.
+
+4 failure(s): tariff ×4
+  tariff  market-failure                    market-failure:0      Define 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  market-failure                    market-failure:1      Explain 6 is not an Economics tariff (lib/ial-marking.js)
+  tariff  market-failure                    market-failure:2      Analyse 10 is not an Economics tariff (lib/ial-marking.js)
+  tariff  market-failure                    market-failure:4      Outline 4 is not an Economics tariff (lib/ial-marking.js)
+

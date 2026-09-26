@@ -1,0 +1,722 @@
+
+> economics-next@0.1.0 test
+> node --test lib/content-validator.test.mjs lib/write-path.test.mjs lib/read-path.test.mjs lib/parse-inline-markdown.test.mjs lib/flow-step.test.mjs lib/learn-steps.test.mjs lib/preview-limits.test.mjs lib/pretest-pool.test.mjs lib/recall-widgets.test.mjs lib/practice-tariffs.test.mjs lib/spec-coverage.test.mjs lib/mid-band-answer.test.mjs lib/stimulus.test.mjs lib/practice-shell.test.mjs lib/diagram-enlarge.test.mjs lib/quant-pool.test.mjs audit/scripts/spec-coverage.test.mjs audit/scripts/checkin-attribution.test.mjs lib/learner-banners.test.mjs lib/feedback/feedback.test.mjs
+
+(node:56522) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/learn-steps.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ the clean fixture passes: every pinned item shares vocabulary with its chapter (143.751958ms)
+✔ a wholly unpinned section serves NOTHING rather than an arbitrary item (137.294375ms)
+✔ a pin to another chapter is NOTED, not failed — an author may be right where vocabulary misses (107.408292ms)
+✔ the rule FAILS on an unpinned served item that shares no word with its chapter (5.260083ms)
+✔ the rule would have caught the defect that shipped: positional placement on the real section (2.554958ms)
+✔ a diagram placed by a title match FAILS in a corpus that must decide (the 3.3.1 shape) (135.076208ms)
+✔ the same section with the diagram pinned, and the other chapter decided none, passes (114.143458ms)
+✔ excluding a chapter does not turn a guess elsewhere into a decision (0.931125ms)
+✔ on live the rule LISTS rather than fails: only a publish changes live (0.139208ms)
+✔ the diagram rule catches the placement that shipped on 3.3.1, which the word rule passes (0.732333ms)
+(node:56531) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/spec-coverage.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:56535) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/spec-coverage.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:56541) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/spec-coverage.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:56545) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/spec-coverage.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:56550) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/spec-coverage.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:56552) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/spec-coverage.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:56561) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/spec-coverage.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:56570) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/spec-coverage.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ the clean fixture passes: valid tariffs, real spec ids, an evaluative question (128.599375ms)
+✔ an invented specItems id fails, and fails on the specid rule only (126.873833ms)
+✔ Analyse 8 fails on the tariff rule — Analyse is 6 marks in both IAL subjects (109.442292ms)
+✔ a section with questions but no evaluative question fails on the noeval rule (139.946834ms)
+✔ the real run reports all 43 sections against the 1,165-leaf denominator (133.685ms)
+✔ --section narrows to one section and market-failure reports a real, partial percentage (86.720667ms)
+✔ real ids belonging to ANOTHER section fail on the zerocov rule, and on that rule alone (82.136375ms)
+✔ the zerocov rule is silent when a section has no model answers at all (91.759709ms)
+(node:56524) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ the base fixture is clean apart from INFO (27.250334ms)
+✔ every rule has at least one failing fixture (0.160625ms)
+✔ schema.block fires on its failing fixture (2.914917ms)
+✔ schema.subsection fires on its failing fixture (3.325458ms)
+✔ schema.body-type fires on its failing fixture (6.103958ms)
+✔ schema.flow fires on its failing fixture (8.234375ms)
+✔ schema.lengths fires on its failing fixture (7.538917ms)
+✔ schema.fields fires on its failing fixture (6.995375ms)
+✔ quiz.options fires on its failing fixture (7.958917ms)
+✔ quiz.index fires on its failing fixture (7.649667ms)
+✔ quiz.dup-options fires on its failing fixture (4.711125ms)
+✔ quiz.essay-stem fires on its failing fixture (9.552917ms)
+✔ quiz.long-correct fires on its failing fixture (4.066625ms)
+✔ quiz.hedged fires on its failing fixture (5.022834ms)
+✔ quiz.near-dup fires on its failing fixture (4.927ms)
+✔ quiz.histogram fires on its failing fixture (4.344583ms)
+✔ quiz.letter-in-explanation fires on its failing fixture (3.794334ms)
+✔ reorder.count fires on its failing fixture (5.308458ms)
+✔ reorder.criterion fires on its failing fixture (5.207333ms)
+✔ reorder.criterion fires on its failing fixture (4.355042ms)
+✔ reorder.criterion fires on its failing fixture (4.850792ms)
+✔ reorder.criterion stays quiet on its passing fixture (5.603334ms)
+✔ reorder.criterion stays quiet on its passing fixture (4.294916ms)
+✔ reorder.source fires on its failing fixture (5.54375ms)
+✔ reorder.lead fires on its failing fixture (4.153958ms)
+✔ fillin.blanks fires on its failing fixture (15.173166ms)
+✔ fillin.dup-answers fires on its failing fixture (10.797ms)
+✔ fillin.token fires on its failing fixture (10.283458ms)
+✔ fillin.hint fires on its failing fixture (9.511583ms)
+✔ pins.range fires on its failing fixture (7.119208ms)
+✔ pins.reuse fires on its failing fixture (9.592208ms)
+✔ pins.identity fires on its failing fixture (6.979625ms)
+✔ pins.diagram fires on its failing fixture (6.881459ms)
+✔ pins.diagram stays quiet on its passing fixture (11.903167ms)
+✔ diagram.table-kind fires on its failing fixture (6.397084ms)
+✔ diagram.table-kind stays quiet on its passing fixture (8.692292ms)
+✔ diagram.table-checklist fires on its failing fixture (5.554959ms)
+✔ diagram.table-legible fires on its failing fixture (5.657125ms)
+✔ diagram.table-legible stays quiet on its passing fixture (5.682959ms)
+✔ diagram.table-kind stays quiet on its passing fixture (9.69ms)
+✔ diagram.table-checklist stays quiet on its passing fixture (7.848625ms)
+✔ diagram.table-legible stays quiet on its passing fixture (9.26ms)
+✔ practice.no-command fires on its failing fixture (7.29825ms)
+✔ practice.command fires on its failing fixture (5.935541ms)
+✔ practice.command fires on its failing fixture (7.56975ms)
+✔ practice.tariff fires on its failing fixture (13.227917ms)
+✔ practice.tariff stays quiet on its passing fixture (13.154375ms)
+✔ practice.tariff fires on its failing fixture (16.266125ms)
+✔ practice.tariff stays quiet on its passing fixture (4.517792ms)
+✔ practice.levels fires on its failing fixture (8.812875ms)
+✔ practice.opening fires on its failing fixture (10.376ms)
+✔ practice.opening fires on its failing fixture (5.665333ms)
+✔ practice.opening stays quiet on its passing fixture (14.451875ms)
+✔ section.no-recall fires on its failing fixture (5.387458ms)
+✔ depth.blocks fires on its failing fixture (8.948083ms)
+✔ depth.recalls fires on its failing fixture (9.323041ms)
+✔ depth.quiz fires on its failing fixture (9.48675ms)
+✔ step.words fires on its failing fixture (7.640334ms)
+✔ claim.uncited fires on its failing fixture (6.748167ms)
+✔ claim.uncited stays quiet on its passing fixture (7.356541ms)
+✔ locale.institution fires on its failing fixture (11.08625ms)
+✔ locale.uk fires on its failing fixture (12.121167ms)
+✔ locale.currency fires on its failing fixture (17.84675ms)
+✔ terms.off-spec fires on its failing fixture (5.252041ms)
+✔ terms.later-unit fires on its failing fixture (3.802875ms)
+✔ terms.later-unit stays quiet on its passing fixture (7.767ms)
+✔ spec.uncovered fires on its failing fixture (6.830125ms)
+✔ spec.coverage fires on its failing fixture (6.31175ms)
+✔ quant.unit fires on its failing fixture (5.111167ms)
+✔ quant.unit stays quiet on its passing fixture (7.42475ms)
+✔ flow.separator fires on its failing fixture (8.000292ms)
+✔ section.counts fires on its failing fixture (6.212541ms)
+✔ quiz.explanation-option fires on its failing fixture (6.363666ms)
+✔ quiz.explanation-option stays quiet on its passing fixture (5.755166ms)
+✔ depth.notes-titles fires on its failing fixture (3.644125ms)
+✔ depth.notes-titles stays quiet on its passing fixture (4.96925ms)
+✔ locale.uk stays quiet on its passing fixture (7.02075ms)
+✔ fillin.token stays quiet on its passing fixture (5.634708ms)
+✔ schema.recall-type fires on its failing fixture (8.672875ms)
+✔ recall.why fires on its failing fixture (3.606583ms)
+✔ recall.why fires on its failing fixture (3.630959ms)
+✔ fillin.distractors fires on its failing fixture (4.759875ms)
+✔ fillin.distractors fires on its failing fixture (5.103875ms)
+✔ fillin.distractors stays quiet on its passing fixture (4.02325ms)
+✔ fillin.leak fires on its failing fixture (4.3ms)
+✔ fillin.leak stays quiet on its passing fixture (4.828417ms)
+✔ match.count fires on its failing fixture (4.70825ms)
+✔ match.unique fires on its failing fixture (4.306125ms)
+✔ match.unique fires on its failing fixture (5.3565ms)
+✔ match.prompt fires on its failing fixture (4.832875ms)
+✔ match.prompt stays quiet on its passing fixture (4.187333ms)
+✔ classify.groups fires on its failing fixture (3.625875ms)
+✔ classify.unique fires on its failing fixture (3.707125ms)
+✔ classify.prompt fires on its failing fixture (3.951375ms)
+✔ classify.prompt stays quiet on its passing fixture (3.447292ms)
+✔ extras.shape fires on its failing fixture (3.565375ms)
+✔ extras.shape fires on its failing fixture (3.779833ms)
+✔ recall.recoverable fires on its failing fixture (3.667375ms)
+✔ recall.recoverable fires on its failing fixture (4.137167ms)
+✔ recall.recoverable fires on its failing fixture (3.345417ms)
+✔ recall.recoverable fires on its failing fixture (3.322584ms)
+✔ recall.recoverable fires on its failing fixture (3.972041ms)
+✔ recall.recoverable stays quiet on its passing fixture (3.800875ms)
+✔ recall.recoverable fires on its failing fixture (3.573416ms)
+✔ recall.recoverable fires on its failing fixture (3.370458ms)
+✔ recall.recoverable fires on its failing fixture (3.307958ms)
+✔ recall.recoverable fires on its failing fixture (3.797541ms)
+✔ every finding carries a stable key and a known tier (3.871083ms)
+✔ tariff tables in code equal the census parsed from the specification (1.331041ms)
+✔ generated assets are current with their generators (172.909ms)
+✔ spec-items is mechanically complete against the source text (4.773125ms)
+✔ recall.recoverable is A/B'd against REAL subsections out of the t=0 corpus, not against an invented teach (V029 reason 4) (491.300084ms)
+✔ the recall rules hold their measured floors against the March per-recall verdicts (436.73025ms)
+✔ the later-unit lint is built from spec labels and stays small (5.026958ms)
+✔ a Units 3-4 label that Units 1-2 also teach is not later-unit vocabulary (10.133583ms)
+✔ the assessed-but-never-taught items are seen by Layer 3 (150.20375ms)
+✔ a rewritten item with the same id gets a new key (the verifier's masking case) (7.112542ms)
+✔ reordering items and editing other items leave a key alone (10.193958ms)
+✔ a recall's key follows the recall, not the surrounding teaching text (16.1695ms)
+✔ a section-level finding is re-keyed when its detail changes and term-level ones are not (14.322292ms)
+✔ a UK institution is one finding per sentence, so a new sentence is a new key (6.713959ms)
+✔ locale.uk is a ratio: one UK example among international ones passes, the UK alone fails (6.765542ms)
+✔ every spec-items wording token appears in its cited source lines (the truncation census) (4.236333ms)
+✔ locale.institution does not fire on economics notation that looks like a UK acronym (10.776542ms)
+(node:56525) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/diagram-enlarge.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ every frame in the corpus reaches the 12px floor at the Read stop on a 375px phone (1.011041ms)
+✔ the fixed 220vw it replaces did NOT reach the floor on every frame (0.898209ms)
+✔ rounding never costs the floor: a width one pixel narrower would break it (0.080625ms)
+✔ Read is floored at the pane, so the sheet is never smaller than the room it has (0.079875ms)
+✔ Fit never exceeds the pane it is supposed to fit inside (0.097792ms)
+✔ Closer is strictly larger than Read on every frame in the corpus (0.379334ms)
+✔ Closer is capped as well as Read (0.244ms)
+✔ a pathological frame is capped rather than asking for a metre of scroll (0.173ms)
+✔ unusable geometry returns null, leaving that diagram on the CSS fallback (0.266791ms)
+(node:56526) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/feedback/prompt-policy.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ shows at a moment for a returning student deep enough into a visit (3.039083ms)
+✔ never answers anything that is not a completion moment (0.393666ms)
+✔ phones and tablets never get the card unprompted, and a caller that forgets to say is refused (0.130292ms)
+✔ stays quiet in focus states, on quiet routes, on day one and early in a visit (0.115375ms)
+✔ each outcome has its own cooldown, and each one expires (0.144666ms)
+✔ a submission on another device counts, through the server timestamp (0.072333ms)
+✔ caps impressions per window, and old impressions roll off (0.084125ms)
+✔ state helpers: active days dedupe per local day, outcomes stamp the right field (2.251042ms)
+✔ severity: category sets the floor, reach raises it, two answer-key reports are critical (0.588583ms)
+✔ taxonomy: every surface lists only known categories, and every category has a prompt (1.826833ms)
+(node:56527) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/flow-step.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ the object form is explicit (1.765ms)
+✔ a string splits on a spaced em dash only (0.095ms)
+✔ formulae with hyphens and en dashes are one title (the live regression) (0.105167ms)
+✔ nothing in, nothing out (0.079292ms)
+(node:56528) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/learn-steps.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ one subsection per teach step, one check-in per chapter, in order (4.27275ms)
+✔ every recall is shown on its own teach step exactly once (0.44025ms)
+✔ a spaced recall comes from an earlier chapter, never the current one, and each is spaced at most once (0.723875ms)
+✔ a skipped recall comes back at the next eligible check-in ahead of the default pick (F055) (0.225542ms)
+✔ spaced recalls spread across the earlier chapters instead of exhausting chapter 1 (V034) (0.629167ms)
+✔ a chapter is only drawn from twice once every other eligible chapter has been drawn from (V034) (0.172209ms)
+✔ the immediate showing and the spaced showing are never adjacent steps (0.08875ms)
+✔ a reorder shown the second time starts from a different order, stably (0.757125ms)
+✔ a saved pointer past the end is clamped, not shown as "Step 9 of 5" (0.092125ms)
+✔ the stored high-water mark is clamped too, so a poisoned row heals itself (0.1375ms)
+✔ legacy blocks and empty input are handled (0.118208ms)
+✔ over the 43 live sections: steps = subsections + chapters, and no spaced pick is ever from the current chapter (78.919875ms)
+✔ contentVersion is stable, and differs for any deck a pointer could land in the wrong place in (0.423791ms)
+✔ the localStorage pointer round-trips, and a pre-V038 bare integer reads as no version (0.19025ms)
+✔ a pointer from another version is refused, not clamped into the new deck (6.442542ms)
+✔ a legacy pointer is refused only when something positively says the deck changed (0.208584ms)
+✔ fix round 4: a missing publish date is not an answer, and nothing is claimed on it (0.125667ms)
+✔ the server row may not overrule the fingerprint on the device (Verify A, second gap) (0.074292ms)
+✔ a refused pointer is never the high-water mark the next write builds on (0.054584ms)
+✔ both ways out of the rebuilt notice leave a state that is no longer rebuilt (0.102291ms)
+✔ no student is ever told a topic "has been rebuilt" (72.319667ms)
+✔ a stale saved place restarts the topic instead of asking (0.407208ms)
+✔ the review reminder can be dismissed (0.254083ms)
+✔ every review has a Skip that records nothing (0.220791ms)
+✔ a review does not follow the student into another topic (0.284917ms)
+✔ a sort item can be dragged, by mouse or finger, and the whole group box takes a tap (2.380417ms)
+(node:56532) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/mid-band-answer.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ an item with fewer than two paragraphs yields no panel at all (0.977292ms)
+✔ the closing paragraph is always cut, labelled or not (1.008625ms)
+✔ evaluation, counter-argument and conclusion are cut wherever they sit (0.137875ms)
+✔ a levels scheme is read ordinally: the top level is out of reach, the one below is the ceiling (0.422166ms)
+✔ an objectives scheme puts AO4 out of reach and AO3 at the ceiling (0.172458ms)
+✔ a two-band scheme names no evaluation band rather than inventing one (0.110291ms)
+✔ nothing in the attempt is prose this module wrote (0.084917ms)
+✔ the real market-failure panel is built on Evaluate 20 and loses AO4 (8.119292ms)
+✔ the real 2.3.1 panel is built on Examine 8 and tops out at Level 3 (0.464542ms)
+✔ highestTariffItem ignores items that cannot support a panel, and returns null when none can (0.1415ms)
+✔ markRange reads every shape the bank writes a range in (0.213625ms)
+✔ a panel whose ceiling is the model answer's own band is suppressed (0.17875ms)
+✔ a panel whose ceiling is a band below the model answer survives (0.319ms)
+✔ the rule does not fire on an objectives scheme, where the numbers are not comparable (0.172667ms)
+✔ an item with no likelyScore is not suppressed — the rule needs both numbers (0.153ms)
+✔ a section keeps a panel when a second item can carry an honest one (0.205458ms)
+✔ no page in the real bank shows a panel that tops out in its own band (1.779042ms)
+✔ an AO-split item is not level-banded, and the shell never builds its panel on one (0.570708ms)
+✔ levelsOnly passes over an AO-split 20 to a level-banded item when one can carry a panel (0.229542ms)
+✔ Economics 1.3.5 in the real bank: no item can carry an honest panel once AO-split schemes are excluded (0.500917ms)
+(node:56533) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/parse-inline-markdown.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ star notation is left alone (F073 regression) (1.129959ms)
+✔ ordinary emphasis still renders (0.207833ms)
+✔ markup is escaped before emphasis is added (F071) (0.188459ms)
+✔ empty and non-string input (0.113125ms)
+(node:56534) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/practice-shell.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ the shell renders on a page iff one of its items carries criteria — 1.3.5 alone today (14.677667ms)
+✔ 1.3.5 groups into the extract set first (2, 6, 20) and a standalone set (4, 8, 20) (1.069666ms)
+✔ every keyTerm on 1.3.5 is cut out of its own stem, and the stem reassembles exactly (0.315708ms)
+✔ minutes: the item’s own figure first, else minutesForMarks — never a new formula (0.164792ms)
+✔ AO codes come from the item: Define is AO1 only (0.199375ms)
+✔ card label is the keyTerm, capitalised, never cut (0.102875ms)
+✔ focus rows are derived from the figures the script cites (2.93475ms)
+(node:56537) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/practice-tariffs.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ every tariff a visible question carries has a chip, and the chip counts sum to All Questions (1.960833ms)
+✔ an off-ladder tariff is labelled as one, and an on-ladder tariff is not (0.156542ms)
+✔ Business carries 10 on its own ladder, so the same question gets an ordinary chip (0.092375ms)
+✔ the whole ladder is still offered when the section has no question at that tariff (0.872042ms)
+✔ chips are ascending and unique, with All Questions first (0.138125ms)
+✔ a malformed marks value mints no chip (0.091084ms)
+✔ markFiltersFor is still the bare ladder (0.0855ms)
+(node:56538) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/pretest-pool.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ a reserved question is never asked, even when that makes the pre-test short (1.885042ms)
+✔ a full bank still gives three (0.11925ms)
+✔ the pre-test never asks for more than the payload keeps back (0.0595ms)
+✔ no unreserved question at all means no pre-test, not a spoiled one (0.070416ms)
+✔ questions are matched on collapsed whitespace, the way the callers build them (0.090292ms)
+✔ a signed-out student is never asked a question their check-in will ask (0.33325ms)
+✔ a pre-test with nothing spare stays short rather than borrowing a check-in question (0.162083ms)
+(node:56539) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/preview-limits.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ the exposure numbers are the paywall, so the tests state them rather than import them (2.856583ms)
+✔ every chapter still resolves its own question after the payload is cut down (2.247917ms)
+✔ a flat slice loses every chapter pinned past the cut (0.122708ms)
+✔ sending the right questions without remapping would point chapters at the wrong ones (0.158917ms)
+✔ the Quiz tab always has its preview, drawn from whatever the payload holds (0.120625ms)
+✔ a ten-chapter section serves every chapter, which 8 dedicated tab slots prevented (0.129791ms)
+✔ exposure is bounded however many chapters pin (0.12625ms)
+✔ id pins are left alone, because they survive a slice (0.118125ms)
+✔ a block with no pins, and a section with no quiz, are left as they are (0.147292ms)
+✔ the payload keeps back questions no chapter claimed, for the pre-test (0.16975ms)
+✔ the headroom never pushes the payload past the cap (0.117416ms)
+✔ a bank with nothing spare simply has no headroom, and does not repeat itself (0.079667ms)
+✔ an unpinned section reserves one question per chapter and still keeps the headroom (1.745166ms)
+✔ the cap still wins: a legacy section too big for both gets every question it can (0.294625ms)
+✔ a chapter that pins nothing, beside chapters that do, has a question reserved for it (0.609167ms)
+✔ a chapter with nothing to match keeps its check-in short rather than taking any question (0.317792ms)
+✔ the unpinned chapter of a pinned section resolves, signed out and signed in (0.58375ms)
+✔ the fallback matches on vocabulary and never takes a question a pin claimed (0.230792ms)
+✔ the Quiz tab caps its preview, and takes the number from the shared constant (0.568833ms)
+✔ nothing that serves a student declares a preview number of its own (20.579042ms)
+✔ the shared placement still falls back for a chapter that pins nothing (0.666542ms)
+✔ the component does not place items itself — placement has exactly one home (0.686583ms)
+✔ decidedNoQuestion: only an explicit empty list, with no pin in the other field (0.203042ms)
+✔ client placement: an absent pin falls back, an explicit empty pin asks nothing (1.511417ms)
+✔ signed-out payload: an explicit empty pin reserves nothing and gets no fallback pin (0.474459ms)
+✔ decidedNoDiagram: only an explicit null, and a working ref overrules it (0.081833ms)
+✔ pinned path: an absent diagram pin falls back on a title word, an explicit null shows nothing (0.3325ms)
+✔ the decision survives the step model: buildSteps copies null, not undefined (0.055625ms)
+✔ unpinned path: a decided chapter is not offered to the matcher, and its diagram stays free (0.139875ms)
+✔ the corpus had no null diagramId before 2.91, so no shipped block changes meaning (19.808417ms)
+(node:56540) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/quant-pool.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ every template cites a section heading that exists in its own subject specification (7.596708ms)
+✔ the six areas DRILLS.md names are all registered, and every id is unique (0.128042ms)
+✔ five unit codes carry at least one template (0.858541ms)
+✔ a section gets the templates that claim its number, and only those (0.129791ms)
+✔ the same section number in the other subject does not pick up the drill (0.089709ms)
+✔ the seed is a pure function of section, template and attempt (0.089166ms)
+✔ the same attempt rebuilds the same item; the next attempt redraws it (33.549625ms)
+✔ an unknown template id returns null rather than throwing the step away (0.1ms)
+✔ a drill goes to the check-in of the chapter that teaches it (0.365ms)
+✔ an unmatched drill never lands on the first check-in while there is room elsewhere (0.155375ms)
+✔ the reservation yields before a drill goes unplaced (0.115792ms)
+✔ placement degrades rather than failing (0.093625ms)
+✔ a section with no unit code gets no drill rather than another subject's (0.067542ms)
+✔ a second step built on a wrong first answer scores, and is badged as the own figure rule (0.720583ms)
+✔ every registered template has a step that carries an earlier answer forward (2.126458ms)
+✔ Learn Mode mounts the calculation at its check-ins and names it in the sentence (0.320917ms)
+✔ the Quiz tab mounts the calculation and keeps it out of the quiz score (0.168125ms)
+(node:56543) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/preview-limits.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ no page, component or route reads a paid section table with the anonymous client (38.760667ms)
+✔ the guard catches a file that reads a paid table with the anon client (0.122334ms)
+✔ the three pages that held the leak ship the free surfaces only (0.292833ms)
+✔ publicSectionPayload withholds every paid surface and says so (1.67525ms)
+✔ a withheld paid tab renders the loading card BEFORE entitlement is consulted (0.264959ms)
+✔ the root layout does not read cookies, so the app still prerenders (0.350792ms)
+✔ nothing draws a lock on an entitlement it does not have yet (0.532667ms)
+✔ the section paywall reads the payload, not the client opinion of entitlement (0.225625ms)
+(node:56544) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ F113: the start order is never the answer, never has the first item in place, and differs per recall (4.667458ms)
+✔ F053: the spaced showing is a different puzzle from the first, for every size 3 to 5 (3.421916ms)
+✔ seededPermutation honours a rejection rule and never returns the same reference twice (0.335334ms)
+✔ F056: grading is position-exact with partial credit that counts near misses (0.894667ms)
+✔ F056: a retry keeps correct items locked in place and moves only the others (0.489125ms)
+✔ F051/F112: every segment of a multi-blank or adjacent-blank line is rendered, with a running blank index (0.679917ms)
+✔ F050: a template whose blank count disagrees with its answers is still completable (0.816083ms)
+✔ F054: a letter-prefix or length-revealing hint never reaches the screen; a semantic one does (0.760458ms)
+✔ F054: the chip bank is never a closed set — distractors are authored or drawn from the section (0.758334ms)
+✔ W001: match chips carry every right plus the distractors, and grading is per pair (1.051666ms)
+✔ W002: classify items are flattened with their home group, not shown grouped, and graded per item (0.761666ms)
+✔ over the 43 live sections every reorder gets a legal start order and every fill-in parses with no lost text (40.998667ms)
+(node:56547) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/spec-coverage.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ the control passes: a valid tariff, a real spec id, an evaluative question (9.773375ms)
+✔ an off-ladder tariff fails on the tariff rule only — Analyse is 6 marks in IAL Economics (0.295458ms)
+✔ an invented spec id fails on the specid rule, and the control with a real id does not (0.13175ms)
+✔ an empty specItems array is a failure; an absent one is untagged and is not (0.135083ms)
+✔ questions with no evaluative item fail on noeval; an empty section does not (0.135083ms)
+✔ Business Discuss 8 is not evaluative; Economics Discuss 14 is (0.065458ms)
+✔ the command is derived from the question when the item carries none (0.219625ms)
+✔ the denominator matches a plain count of leaf rows in the oracle, counted here (2.443583ms)
+✔ unexamined + examined is the whole topic, and neither list invents an id (0.525416ms)
+✔ pct is examined/leaves, and a topic with no leaves is 0 rather than NaN (0.267083ms)
+✔ wording comes back for a real id and is empty, not undefined, for an invented one (0.104125ms)
+✔ the real market-failure model answers examine exactly the leaves their own tags name (4.780541ms)
+✔ loadSections returns the 43 audited sections, keyed subject-first (0.425709ms)
+✔ a tag naming a leaf in another topic raises no percentage it cannot list (0.104167ms)
+✔ a mixed tag list counts only the leaves that are this section's (0.061917ms)
+✔ every tag in the real economics bank names a leaf of its own section (2.733625ms)
+(node:56548) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/stimulus.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ figuresIn finds every figure the spec names in the 1.3.5 extract (2.417583ms)
+✔ years are not figures (1.03125ms)
+✔ ids are stable and unique, repeats numbered in document order (2.303625ms)
+✔ table figures carry their row, prose figures do not (0.256583ms)
+✔ a hyphenated word is not a signed figure, and a bare count is not a figure (0.096459ms)
+✔ withFigures keeps every character of the extract (0.303ms)
+✔ linkFigures wraps exact occurrences in text only, never inside a tag, longest first (0.499416ms)
+(node:56549) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ every script or route that writes a content table goes through the guarded client or is allowlisted (299.346791ms)
+✔ every allowlisted route runs the gate and refuses on BLOCK (0.4745ms)
+✔ the client guard refuses a raw write of data on every path to from() (147.848416ms)
+✔ sameJson compares the way jsonb stores, not the way JSON.stringify prints (8.347875ms)
+✔ the section route serves `draft` only outside a production build (0.216791ms)
+ℹ tests 331
+ℹ suites 0
+ℹ pass 331
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2234.9985
+├ ƒ /api/fun/questions
+├ ƒ /api/glossary
+├ ƒ /api/learn-mode/grade-explanation
+├ ƒ /api/learn-mode/state
+├ ƒ /api/past-papers
+├ ƒ /api/pdfs
+├ ƒ /api/practice/progress
+├ ƒ /api/practice/progress-summary
+├ ƒ /api/practice/questions
+├ ƒ /api/progress/content
+├ ƒ /api/progress/dashboard
+├ ƒ /api/progress/flashcards
+├ ƒ /api/progress/quiz
+├ ƒ /api/report
+├ ƒ /api/sections/[id]
+├ ƒ /api/stripe/cancel-offer
+├ ƒ /api/stripe/checkout
+├ ƒ /api/stripe/portal
+├ ƒ /api/stripe/webhook
+├ ƒ /api/subscription
+├ ƒ /api/written-practice/ao-profile
+├ ƒ /api/written-practice/evaluate
+├ ƒ /api/written-practice/progress
+├ ƒ /api/written-practice/progress-summary
+├ ƒ /api/written-practice/questions
+├ ƒ /auth/callback
+├ ○ /business
+├ ● /business/[unit]
+│ ├ /business/meeting-customer-needs-model-answers
+│ ├ /business/the-market-model-answers
+│ ├ /business/marketing-mix-model-answers
+│ └ [+7 more paths]
+├ ● /business/[unit]/[topic]                                1h      1y
+│ ├ /business/unit-1/meeting-customer-needs                 1h      1y
+│ ├ /business/unit-1/the-market                             1h      1y
+│ ├ /business/unit-1/marketing-mix-strategy                 1h      1y
+│ └ [+17 more paths]
+├ ○ /business/unit-1
+├ ○ /business/unit-2
+├ ○ /business/unit-3
+├ ○ /business/unit-4
+├ ○ /command-words
+├ ○ /contact
+├ ○ /data-response
+├ ● /data-response/[slug]
+│ ├ /data-response/econ-u1-market-failure
+│ ├ /data-response/econ-u1-demand-elasticity
+│ ├ /data-response/econ-u1-price-determination
+│ └ [+3 more paths]
+├ ○ /dev/widgets
+├ ○ /economics
+├ ● /economics/[unit]
+│ ├ /economics/introductory-concepts-model-answers
+│ ├ /economics/demand-model-answers
+│ ├ /economics/supply-model-answers
+│ └ [+19 more paths]
+├ ● /economics/[unit]/[topic]                               1h      1y
+│ ├ /economics/unit-1/introductory-concepts                 1h      1y
+│ ├ /economics/unit-1/consumer-behaviour-demand             1h      1y
+│ ├ /economics/unit-1/supply                                1h      1y
+│ └ [+20 more paths]
+├ ○ /economics/aggregate-demand
+├ ○ /economics/globalisation
+├ ○ /economics/macroeconomic-objectives
+├ ○ /economics/market-failure
+├ ○ /economics/unit-1
+├ ○ /economics/unit-2
+├ ○ /economics/unit-3
+├ ○ /economics/unit-4
+├ ƒ /flashcards-practice
+├ ƒ /fun
+├ ○ /glossary
+├ ○ /guides
+├ ● /guides/[slug]
+│ ├ /guides/business-revision-guide
+│ └ /guides/economics-revision-guide
+├ ○ /ial-revision
+├ ○ /ial-revision/exam-series
+├ ○ /ial-revision/january-2027
+├ ○ /ial-revision/june-2026
+├ ƒ /login
+├ ○ /model-answers
+├ ○ /past-papers
+├ ○ /pdfs
+├ ƒ /practice
+├ ƒ /progress
+├ ƒ /settings
+├ ○ /signup
+├ ○ /sitemap.xml
+├ ○ /topic-links
+├ ○ /upgrade
+└ ƒ /written-practice
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+> economics-next@0.1.0 validate
+> node audit/scripts/validate-content.mjs && node audit/scripts/validate-model-answers.mjs
+
+(node:56832) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+section                             unit   block  debt  new-block  new-debt  coverage
+meeting-customer-needs              WBS11      0    12          0        12      100%
+introductory-concepts               WEC11     25    56          0         4       67%
+consumer-behaviour-demand           WEC11      0    10          0        10      100%
+the-market                          WBS11      0     8          0         8      100%
+supply                              WEC11      0    10          0        10      100%
+marketing-mix-strategy              WBS11      0    11          0        11      100%
+price-determination                 WEC11      0     2          0         2      100%
+managing-people                     WBS11      0     0          0         0      100%
+entrepreneurs-leaders               WBS11      0     0          0         0      100%
+market-failure                      WEC11      0     6          0         6      100%
+government-intervention             WEC11      0     0          0         0      100%
+planning-raising-finance            WBS12      0     6          0         6      100%
+measures-economic-performance       WEC12      0    14          0        14      100%
+financial-planning                  WBS12      0     0          0         0      100%
+managing-finance                    WBS12      0     0          0         0      100%
+aggregate-demand                    WEC12      0     0          0         0      100%
+aggregate-supply                    WEC12      0     0          0         0      100%
+resource-management                 WBS12      0     0          0         0      100%
+external-influences                 WBS12      0     0          0         0      100%
+national-income                     WEC12      0     0          0         0      100%
+economic-growth                     WEC12      0     0          0         0      100%
+business-objectives-strategy        WBS13      0     4          0         4      100%
+business-growth                     WBS13     12    19          0         4       75%
+macroeconomic-objectives-policies   WEC12      0     0          0         0      100%
+types-sizes-businesses              WEC13      0    15          0        14      100%
+decision-making-techniques          WBS13     11    26          0         4       60%
+influences-business-decisions       WBS13     12    20          0         4       80%
+revenue-costs-profits               WEC13      0     1          0         0      100%
+assessing-competitiveness           WBS13      5    24          0         5       56%
+market-structures-contestability    WEC13      0     1          0         0      100%
+managing-change                     WBS13     13    23          0         6       80%
+labour-markets                      WEC13     21    20          0         3       82%
+government-intervention-firms       WEC13     67    32          0         3       73%
+globalisation                       WBS14      0     1          0         0      100%
+global-markets-expansion            WBS14      9    38          0        10       52%
+causes-effects-globalisation        WEC14      0     1          0         0      100%
+global-marketing                    WBS14      9    28          0         5       62%
+trade-global-economy                WEC14      0     1          0         0      100%
+global-industries-mncs              WBS14     12    28          0         4       79%
+balance-payments-exchange-rates     WEC14      0     1          0         0      100%
+poverty-inequality                  WEC14     11    26          0         3       76%
+role-state-macroeconomy             WEC14     16    35          0         4       63%
+growth-development                  WEC14     14    43          0         6       67%
+total                                        237   522          0       162
+
+162 findings not in the baseline:
+  (162 new DEBT — rerun with --debt to list them)
+
+by rule:
+  DEBT   practice.opening               126
+  DEBT   schema.lengths                 106
+  DEBT   spec.uncovered                 105
+  BLOCK  claim.uncited                   81
+  BLOCK  locale.institution              76
+  DEBT   step.words                      32
+  BLOCK  practice.tariff                 27
+  DEBT   diagram.table-legible           22
+  DEBT   practice.levels                 21
+  BLOCK  quiz.long-correct               21
+  BLOCK  practice.command                19
+  DEBT   quant.unit                      15
+  DEBT   depth.blocks                    13
+  DEBT   depth.quiz                      13
+  DEBT   fillin.hint                     12
+  DEBT   quiz.histogram                  12
+  DEBT   depth.recalls                   12
+  BLOCK  section.no-recall               11
+  DEBT   fillin.distractors               6
+  DEBT   recall.why                       5
+  DEBT   reorder.criterion                5
+  DEBT   quiz.near-dup                    3
+  DEBT   locale.currency                  3
+  DEBT   locale.uk                        3
+  DEBT   reorder.source                   2
+  DEBT   quiz.hedged                      2
+  BLOCK  fillin.blanks                    1
+  BLOCK  fillin.token                     1
+  DEBT   pins.identity                    1
+  DEBT   fillin.leak                      1
+  DEBT   quiz.letter-in-explanation       1
+  DEBT   depth.notes-titles               1
+(node:56999) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/data/modelAnswersData.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+model answers: 69 in the bank, 6 carrying the marked-script shape
+  neg-externality-4                             4 marks   4 criteria   4 segments  (no stimulus)
+  mf-extract-define-consumption-externality-2   2 marks   2 criteria   2 segments  econ-u1-market-failure
+  mf-extract-analyse-plastic-bag-charge-6       6 marks   6 criteria   6 segments  econ-u1-market-failure
+  mf-extract-evaluate-soft-drinks-excise-20    20 marks  20 criteria  20 segments  econ-u1-market-failure
+  negative-externality-tax-8                    8 marks   8 criteria   8 segments  (no stimulus)
+  market-failure-government-intervention-20    20 marks  17 criteria  17 segments  (no stimulus)
+
+0 findings.
+npm run validate exit code: 0
+
+> economics-next@0.1.0 exposure
+> node audit/scripts/exposure-census.mjs --both --check
+
+(node:57211) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/preview-limits.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+=== LIVE — 43 sections, signed out ===
+chapters served      208 / 213
+items sent           avg 7.72, max 10 of cap 10
+share of the bank    avg 34.32%
+pre-test length      38 threes, 3 twos, 0 ones, 2 with NO pre-test  (headroom 3)
+  of which unpinned  0 of 0 legacy sections have no pre-test
+chapters with no question: 5 across 5 section(s)
+  STARVED (a code defect — a question was there and the chapter did not get it):
+    signed out  0
+    signed in   0
+  DECIDED (a reader found nothing in the bank this chapter teaches; pinned `quizIndices: []`):
+    5 — business-growth (1), global-markets-expansion (1), government-intervention-firms (1), growth-development (1), role-state-macroeconomy (1)
+  UNWRITTEN (content debt — nothing in the section matches that chapter):
+    0
+
+=== DRAFT (staged) — 43 sections, signed out ===
+chapters served      215 / 219
+items sent           avg 7.88, max 10 of cap 10
+share of the bank    avg 33.08%
+pre-test length      38 threes, 3 twos, 0 ones, 2 with NO pre-test  (headroom 3)
+  of which unpinned  0 of 0 legacy sections have no pre-test
+chapters with no question: 4 across 4 section(s)
+  STARVED (a code defect — a question was there and the chapter did not get it):
+    signed out  0
+    signed in   0
+  DECIDED (a reader found nothing in the bank this chapter teaches; pinned `quizIndices: []`):
+    4 — business-growth (1), global-markets-expansion (1), government-intervention-firms (1), role-state-macroeconomy (1)
+  UNWRITTEN (content debt — nothing in the section matches that chapter):
+    0
+npm run exposure exit code: 0
+(node:57981) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+note: packet-31-bundle__business__financial-planning.json has no section_id field; using "financial-planning" from its name
+staged draft vs dumped bundle — 1 section(s), read through http://localhost:3001/api/sections/<id>?draft=1
+
+growth-development             matches
+
+0 section(s) with drift. A NO DRAFT line is not drift — that section holds no
+draft at all and its publish line stages before it publishes.
+Covers every field a signed-out student can reach. An edit to a quiz item, card, chain or
+mistake the anonymous slice does not serve needs an entitled fetch and is NOT covered here.
+check-staged-drafts exit code: 0
+
+=== GATE EXECUTION SUMMARY ===
+
+Main checks:
+npm test                                 exit code: 0
+npm run build                            exit code: 0
+npm run validate                         exit code: 0
+npm run exposure                         exit code: 0
+npm run recalls                          exit code: 0
+node audit/scripts/check-staged-drafts.mjs growth-development  exit code: 0
+
+Advisory checks:
+npm run contrast                         exit code: 0
+npm run spec-items                       exit code: 0
+npm run tariff-census                    exit code: 0
+npm run pin-check                        exit code: 0
+
+=== END GATE EXECUTION ===

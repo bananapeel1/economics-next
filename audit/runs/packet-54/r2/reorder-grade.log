@@ -1,0 +1,8 @@
+(node:72332) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+verifyB-order (loan,interest,gearing,downturn,cover) {"results":[true,true,true,true,true],"correct":5,"oneOff":0,"allCorrect":true}
+old-key (loan,gearing,interest,downturn,cover) {"results":[true,false,false,true,true],"correct":3,"oneOff":2,"allCorrect":false}
+downturn-in-first-year (loan,interest,downturn,gearing,cover) {"results":[true,true,false,false,true],"correct":3,"oneOff":2,"allCorrect":false}
+start first [ 2, 3, 1, 4, 0 ] spaced [ 3, 2, 0, 4, 1 ]

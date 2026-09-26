@@ -44,25 +44,26 @@
       "recall": {
        "id": "decision-making-techniques:sub:moving-averages-extrapolation:recall",
        "type": "fillin",
-       "prompt": "Complete the moving-average rule:",
+       "prompt": "A juice bar in Colombo sold 50, 56, 59 and 65 thousand drinks in weeks 1 to 4. Work out its three-period moving averages:",
        "template": [
-        "A three-period moving average is the ___ of three consecutive figures",
-        "→ It is written against the ___ period of the three",
-        "→ A four-quarter average is ___ so that it lines up with one quarter"
+        "The first three-period moving average = ___ thousand drinks",
+        "→ The next one, a week later = ___ thousand drinks",
+        "→ The first of these averages is plotted against week ___"
        ],
        "answers": [
-        "mean",
-        "middle",
-        "centred"
+        "55",
+        "60",
+        "2"
        ],
        "hints": [
-        "add them up and divide",
-        "not the first and not the last",
-        "placed between two neighbouring averages"
+        "total the opening three weeks, then divide by three",
+        "drop the oldest week and bring in the newest",
+        "the middle of the three weeks it covers"
        ],
        "distractors": [
-        "total",
-        "trend"
+        "165",
+        "57.5",
+        "3"
        ]
       }
      },
@@ -103,19 +104,33 @@
       "examMatters": "Interpreting a scatter graph is a named WBS13 skill (3.3.3.1b): state the direction and strength of the correlation, use the line of best fit to read off a forecast, and say what extrapolating beyond the data assumes.",
       "recall": {
        "id": "decision-making-techniques:sub:correlation-and-forecasting-limits:recall",
-       "type": "reorder",
-       "prompt": "Put the steps of a quantitative sales forecast in the order a forecaster carries them out, from first to last:",
-       "correctOrder": [
-        "Collect the past sales figures, period by period",
-        "Smooth them with a moving average, or plot them against a driver",
-        "Draw the trend line or the line of best fit",
-        "Extend the line into the coming periods"
-       ],
-       "why": [
-        "Nothing can be smoothed or plotted until the figures exist",
-        "Smoothing or plotting turns raw figures into a visible pattern",
-        "The line summarises the pattern the smoothed or plotted data show",
-        "Extrapolation comes last because it extends a line that must already exist"
+       "type": "classify",
+       "prompt": "Sort each pair of variables by the correlation a scatter graph of them would most likely show: positive, negative or none:",
+       "groups": [
+        {
+         "name": "Positive correlation",
+         "items": [
+          "Daily temperature and bottled-water sales at a Dubai kiosk",
+          "Hours of rain and umbrella sales in Mumbai"
+         ],
+         "why": "As one rises the other tends to rise, so the dots climb from bottom-left to top-right"
+        },
+        {
+         "name": "Negative correlation",
+         "items": [
+          "A used car's age and its resale price",
+          "The fare on a bus route and the number of passengers who ride it"
+         ],
+         "why": "As one rises the other tends to fall, so the dots drop from top-left to bottom-right"
+        },
+        {
+         "name": "No correlation",
+         "items": [
+          "A market trader's shoe size and her weekly takings",
+          "The last digit of a customer's phone number and how much they spend"
+         ],
+         "why": "Nothing links the two, so the dots form a shapeless cloud and no line of best fit forecasts anything"
+        }
        ]
       }
      },
@@ -237,25 +252,26 @@
       "recall": {
        "id": "decision-making-techniques:sub:simple-payback:recall",
        "type": "fillin",
-       "prompt": "Complete the payback method:",
+       "prompt": "A phone-repair kiosk in Karachi costs $30,000 and brings net cash inflows of $12,000, $12,000 and $20,000 in years 1 to 3. Work out its payback:",
        "template": [
-        "Payback counts the years until cumulative net cash ___ equal the initial cost",
-        "→ Part-year: full years + amount still to recover ÷ cash inflow in the ___ year",
-        "→ Between two projects, the ___ payback is preferred"
+        "Still to recover at the end of year 2 = $___ thousand",
+        "→ Fraction of year 3 needed = ___",
+        "→ Payback period = ___ years"
        ],
        "answers": [
-        "inflows",
-        "recovery",
-        "shorter"
+        "6",
+        "0.3",
+        "2.3"
        ],
        "hints": [
-        "money coming in, not profit",
-        "the year in which the last dollar comes back",
-        "less time with the money at risk"
+        "the cost minus the first two years' inflows",
+        "what is left, divided by that year's inflow",
+        "whole years plus the fraction"
        ],
        "distractors": [
-        "profits",
-        "longer"
+        "24",
+        "0.5",
+        "3"
        ]
       }
      },
@@ -304,19 +320,26 @@
       "examMatters": "State the formula, show total profit, the average and the percentage. A correct method with one arithmetic slip still earns method marks under the own figure rule (WBS13 mark schemes), so never write the answer alone.",
       "recall": {
        "id": "decision-making-techniques:sub:average-rate-of-return:recall",
-       "type": "reorder",
-       "prompt": "Put the ARR calculation in the order you would work it, from first step to last:",
-       "correctOrder": [
-        "Add up the net cash inflows over the project's life",
-        "Subtract the initial cost to find total profit",
-        "Divide total profit by the number of years",
-        "Express the average annual profit as a percentage of the initial cost"
+       "type": "fillin",
+       "prompt": "A printing press in Lahore costs $60,000 and brings in $132,000 of net cash inflows over its four-year life. Work out its ARR:",
+       "template": [
+        "Total profit over the four years = $___ thousand",
+        "→ Average annual profit = $___ thousand",
+        "→ ARR = ___%"
        ],
-       "why": [
-        "Everything else is built from the total the project brings in",
-        "Profit is what remains once the cost has been recovered",
-        "ARR is an annual figure, so the profit must be spread across the years",
-        "The percentage needs the average, so it comes last"
+       "answers": [
+        "72",
+        "18",
+        "30"
+       ],
+       "hints": [
+        "everything the press brings in, less what it cost",
+        "spread that profit evenly across its life",
+        "the yearly figure as a share of the outlay"
+       ],
+       "distractors": [
+        "120",
+        "33"
        ]
       }
      },
@@ -355,25 +378,25 @@
       "recall": {
        "id": "decision-making-techniques:sub:net-present-value:recall",
        "type": "fillin",
-       "prompt": "Complete the NPV rule:",
+       "prompt": "A coffee roaster in Kampala costs $20,000 and brings net cash inflows of $10,000 in year 1 and $15,000 in year 2. The discount factors at 10% are 0.909 and 0.826. Work out its NPV:",
        "template": [
-        "Present value = cash flow × ___ factor",
-        "→ NPV = total present value − ___ cost",
-        "→ Accept the project when the NPV is ___"
+        "Present value of the year-1 inflow = $___ thousand",
+        "→ Present value of the year-2 inflow = $___ thousand",
+        "→ Net present value = $___ thousand"
        ],
        "answers": [
-        "discount",
-        "initial",
-        "positive"
+        "9.09",
+        "12.39",
+        "1.48"
        ],
        "hints": [
-        "it shrinks a future sum to today's value",
-        "the outlay at the start",
-        "above zero"
+        "that year's cash times its factor",
+        "the year-2 cash times its smaller factor",
+        "everything discounted, less the outlay"
        ],
        "distractors": [
-        "average",
-        "negative"
+        "21.48",
+        "5"
        ]
       }
      },
@@ -404,31 +427,31 @@
       "recall": {
        "id": "decision-making-techniques:sub:comparing-appraisal-techniques:recall",
        "type": "classify",
-       "prompt": "Sort each statement into the technique it describes: payback, ARR or NPV:",
+       "prompt": "Sort each manager's question into the technique that answers it: payback, ARR or NPV:",
        "groups": [
         {
          "name": "Simple payback",
          "items": [
-          "Counts the years until the cash outlay is recovered",
-          "Ignores every cash flow after the recovery point"
+          "A shop owner with an overdraft asks when she will have her $15,000 back",
+          "A lender wants to know how soon the project could repay a two-year loan"
          ],
-         "why": "Payback measures time and liquidity, not return"
+         "why": "Both ask about time until the outlay is recovered, which is a liquidity question"
         },
         {
          "name": "Average rate of return",
          "items": [
-          "Expresses average annual profit as a percentage of the cost",
-          "Treats a dollar in year five like a dollar in year one"
+          "A board wants one yearly percentage to set against its 9% hurdle",
+          "An owner asks whether the machine beats leaving the money in a 5% deposit"
          ],
-         "why": "ARR is an average over the whole life with no weighting for timing"
+         "why": "Both want an average yearly return as a percentage, to compare with a rate"
         },
         {
          "name": "Net present value",
          "items": [
-          "Multiplies each cash flow by a discount factor",
-          "Gives a result in dollars at today's values"
+          "Two projects bring in the same total, one early and one late: which is worth more?",
+          "A finance director asks what cash arriving in year six is worth now"
          ],
-         "why": "NPV converts future cash to present value before subtracting the cost"
+         "why": "Both turn on when the cash arrives, and only discounting prices timing"
         }
        ]
       }
@@ -493,25 +516,31 @@
       "recall": {
        "id": "decision-making-techniques:sub:decision-trees:recall",
        "type": "classify",
-       "prompt": "Sort these features into decision nodes and chance nodes:",
+       "prompt": "An airline in Nairobi is deciding whether to open a route to Kigali. Sort each label into where it belongs on the tree: a branch leaving the square, a branch leaving a circle, or the end of a branch:",
        "groups": [
         {
-         "name": "Decision node",
+         "name": "Branch leaving the square",
          "items": [
-          "Drawn as a square",
-          "The manager chooses which branch to take",
-          "Its branches carry the cost of each option"
+          "Open the Kigali route, cost $2m",
+          "Keep the current timetable, cost $0"
          ],
-         "why": "A decision node is a choice under the manager's control, so its branches are options with costs"
+         "why": "These are the options the managers choose between, so each carries its cost and no probability"
         },
         {
-         "name": "Chance node",
+         "name": "Branch leaving a circle",
          "items": [
-          "Drawn as a circle",
-          "Its branches carry probabilities that add up to 1",
-          "The outcome is decided by events, not by the manager"
+          "Passenger numbers high, 0.65",
+          "Passenger numbers low, 0.35"
          ],
-         "why": "A chance node is uncertainty, so its branches are outcomes with probabilities"
+         "why": "These are outcomes nobody chooses, so each carries a probability, and the pair adds up to 1"
+        },
+        {
+         "name": "End of a branch",
+         "items": [
+          "Revenue of $4.5m over three years",
+          "Revenue of $1.2m over three years"
+         ],
+         "why": "A payoff is what the firm receives if that path happens, so it sits where the path ends"
         }
        ]
       }
@@ -561,19 +590,26 @@
       "examMatters": "Show every product and sum. A Calculate answer with the right EMVs and the wrong final choice still carries method marks under the own figure rule (WBS13 mark schemes). State the choice in words, with the net gain figure that justifies it.",
       "recall": {
        "id": "decision-making-techniques:sub:rolling-back-emv-and-net-gain:recall",
-       "type": "reorder",
-       "prompt": "Put the roll-back steps in the order you would work them, from the right of the tree to the decision:",
-       "correctOrder": [
-        "Start at the payoffs on the right-hand ends",
-        "Calculate the expected value at each chance node",
-        "Subtract the cost of each option to find its net gain",
-        "Choose the option with the highest net gain at the decision node"
+       "type": "fillin",
+       "prompt": "A garment maker in Dhaka can expand (cost $50k: 0.8 chance of $150k, 0.2 chance of $40k) or outsource (cost $10k: 0.5 chance of $90k, 0.5 chance of $50k). Roll the tree back:",
+       "template": [
+        "Expected value of expanding = $___ thousand",
+        "→ Net gain of outsourcing = $___ thousand",
+        "→ The net gain of the option chosen at the square = $___ thousand"
        ],
-       "why": [
-        "Rolling back means the ends are known first",
-        "An expected value needs the payoffs and probabilities on the branches beyond it",
-        "The cost sits on the option branch, so it comes off after the chance node is valued",
-        "The decision is made last, once every option has a net gain"
+       "answers": [
+        "128",
+        "60",
+        "78"
+       ],
+       "hints": [
+        "each payoff times its probability, added",
+        "its expected value less its cost",
+        "compare both options after their costs"
+       ],
+       "distractors": [
+        "70",
+        "95"
        ]
       }
      },
@@ -605,31 +641,31 @@
       "recall": {
        "id": "decision-making-techniques:sub:limitations-of-decision-trees:recall",
        "type": "match",
-       "prompt": "Match each limitation of a decision tree to the way it can mislead a manager:",
+       "prompt": "Match each limitation of a decision tree to the case that exposes it:",
        "pairs": [
         {
          "left": "Probabilities are estimates",
-         "right": "A small change in the odds reverses the choice",
-         "why": "The result inherits the uncertainty of the inputs"
+         "right": "A start-up copied its 0.7 chance of success from a rival's launch in another country",
+         "why": "The odds were borrowed from a different situation, so the expected values built on them are guesses"
         },
         {
          "left": "EMV is a long-run average",
-         "right": "A one-off decision lands on one outcome, not the average",
-         "why": "An average only pays off across many repeats"
+         "right": "A family firm stakes its only factory on a single expansion",
+         "why": "One decision lands on one outcome, and the firm cannot wait for the average to come good"
         },
         {
          "left": "Payoffs are forecasts",
-         "right": "Revenue years ahead turns out lower than the tree assumed",
-         "why": "The payoff was a projection, not a fact"
+         "right": "The high-demand payoff assumes prices hold for the next five years",
+         "why": "A payoff that far ahead is a projection, with every limit of sales forecasting"
         },
         {
          "left": "Qualitative factors are excluded",
-         "right": "The chosen option damages the brand in a way the tree never priced",
+         "right": "Moving production abroad wins on net gain, but the tree has no branch for staff morale",
          "why": "Only what can be given a number appears on the tree"
         }
        ],
        "distractors": [
-        "The tree shows every option on one scale"
+        "Both options have their costs written on the branches from the square"
        ]
       }
      }
@@ -696,25 +732,26 @@
       "recall": {
        "id": "decision-making-techniques:sub:critical-path-analysis:recall",
        "type": "fillin",
-       "prompt": "Complete the critical-path rule:",
+       "prompt": "Three routes run from start to finish of a shop refit in Penang: A–B–E takes 9 days, A–C–E takes 12 days and A–D–E takes 7 days. Complete:",
        "template": [
-        "The critical path is the ___ route through the network",
-        "→ Activities on it have ___ float",
-        "→ A delay to any of them delays the ___ project"
+        "The critical path runs A → ___ → E",
+        "→ The refit cannot finish in fewer than ___ days",
+        "→ Activity B can slip by up to ___ days without delaying the refit"
        ],
        "answers": [
-        "longest",
-        "zero",
-        "whole"
+        "C",
+        "12",
+        "3"
        ],
        "hints": [
-        "not the shortest",
-        "none at all",
-        "every part of it, not just that task"
+        "the middle activity of the route that takes longest",
+        "the length of that route",
+        "the gap between its route and the critical one"
        ],
        "distractors": [
-        "shortest",
-        "most"
+        "D",
+        "9",
+        "5"
        ]
       }
      },
@@ -756,19 +793,27 @@
       "examMatters": "Calculate (4 marks) asks for a float or a node value: show the subtraction with the three numbers named. Identify the critical path by listing its activities and its length, and check that each has zero float.",
       "recall": {
        "id": "decision-making-techniques:sub:est-lft-and-float:recall",
-       "type": "reorder",
-       "prompt": "Put the steps for completing a network in the order you would work them, from first to last:",
-       "correctOrder": [
-        "Forward pass: fill in the earliest start time at every node",
-        "Backward pass: fill in the latest finish time at every node",
-        "Calculate the float of each activity from its EST, LFT and duration",
-        "List the zero-float activities as the critical path"
+       "type": "fillin",
+       "prompt": "A small network: A (3 days) runs node 1 → 2; B (5 days) node 1 → 3; C (4 days) node 2 → 3; D (2 days) node 3 → 4. Complete it:",
+       "template": [
+        "Earliest start time at node 3 = ___",
+        "→ Total float of activity B = ___ days",
+        "→ The critical path is ___"
        ],
-       "why": [
-        "Nothing can be calculated until the earliest times are known",
-        "Latest times are found by working back from the finish the forward pass fixed",
-        "Float needs both an earliest start and a latest finish",
-        "The critical path is read off once every float is known"
+       "answers": [
+        "7",
+        "2",
+        "A–C–D"
+       ],
+       "hints": [
+        "the later of the two routes arriving there",
+        "latest finish at its end, less its duration, less its earliest start",
+        "the activities with no float"
+       ],
+       "distractors": [
+        "5",
+        "0",
+        "B–D"
        ]
       }
      },
@@ -800,25 +845,25 @@
       "recall": {
        "id": "decision-making-techniques:sub:limitations-of-critical-path-analysis:recall",
        "type": "classify",
-       "prompt": "Sort each statement as a strength or a limitation of critical path analysis:",
+       "prompt": "A hospital wing is being built in Karachi from a completed network. Sort each event into what the network could warn the manager about in advance, or what it cannot show:",
        "groups": [
         {
-         "name": "Strength",
+         "name": "The network warns about it",
          "items": [
-          "Shows the minimum time the project can take",
-          "Reveals the float that lets resources be moved",
-          "Identifies the activities that cannot be allowed to slip"
+          "Painting can start three days late without moving the opening date",
+          "A late steel delivery for a zero-float activity will push back the opening",
+          "Electricians can leave a task with float to help on the lift installation"
          ],
-         "why": "These follow directly from drawing the network and finding the longest route"
+         "why": "Float and the critical path come straight out of the network, so these are visible before work starts"
         },
         {
-         "name": "Limitation",
+         "name": "The network cannot show it",
          "items": [
-          "Relies on estimated durations",
-          "Assumes the resources are available when needed",
-          "Says nothing about cost or quality"
+          "The same crane is booked for two critical tasks on one day",
+          "Monsoon rain doubles the time the foundations take",
+          "A cheaper contractor finishes on time but the wiring fails inspection"
          ],
-         "why": "Each is an assumption the network makes and cannot check"
+         "why": "Each breaks an assumption the network makes: resources on hand, durations as estimated, quality taken for granted"
         }
        ]
       }
@@ -878,25 +923,25 @@
       "recall": {
        "id": "decision-making-techniques:sub:contribution-per-unit:recall",
        "type": "fillin",
-       "prompt": "Complete the contribution chain:",
+       "prompt": "A phone-case seller in Manila charges $15 a case; each case costs $6 in materials and packaging. She sells 3,000 a month and her fixed costs are $20,000 a month. Work it through:",
        "template": [
-        "Contribution per unit = selling ___ − variable cost per unit",
-        "→ Total contribution = contribution per unit × ___ sold",
-        "→ Profit = total contribution − ___ costs"
+        "Contribution per case = $___",
+        "→ Total contribution a month = $___ thousand",
+        "→ Profit a month = $___ thousand"
        ],
        "answers": [
-        "price",
-        "units",
-        "fixed"
+        "9",
+        "27",
+        "7"
        ],
        "hints": [
-        "what the customer pays",
-        "the volume",
-        "rent and salaries, whatever the output"
+        "what the buyer pays, less what each case uses up",
+        "per-case figure times cases sold",
+        "what is left once the rent and wages are paid"
        ],
        "distractors": [
-        "average",
-        "marginal"
+        "45",
+        "25"
        ]
       }
      },
@@ -933,18 +978,18 @@
         {
          "name": "Accept",
          "items": [
-          "$55 per room-night against a variable cost of $30, rooms otherwise empty",
-          "A bulk order at $8 a unit when variable cost is $5 and the factory runs at 70% capacity",
-          "A supplier offers a part for $12 that costs $15 in variable cost to make"
+          "A school orders 500 uniforms at $9 each; they cost $6 each in variable cost and the machines stand idle",
+          "A bus company fills empty weekday seats at $3 when each extra rider costs it $0.50",
+          "A supplier offers a bracket for $7 that costs $9 in variable cost to make"
          ],
-         "why": "Each adds contribution without changing fixed costs or displacing other sales"
+         "why": "Each adds contribution, or saves variable cost, without changing fixed costs or displacing other sales"
         },
         {
          "name": "Reject",
          "items": [
-          "$4 a unit against a variable cost of $5",
-          "An order that can be met only with overtime that pushes cost per unit above the price",
-          "A discount that regular customers would learn to wait for"
+          "A retailer offers $5 a unit for a product whose variable cost is $5.40",
+          "A rush order at $9 a unit needs a night shift that lifts variable cost from $6 to $10",
+          "An $8 price to one buyer when regular customers pay $12 and will demand the same"
          ],
          "why": "Each either loses contribution or changes the costs and the sales it was meant to add to"
         }
@@ -1228,7 +1273,7 @@
       "Choose the highest net gain"
      ],
      "result": "The best expected return after cost, with its assumptions visible",
-     "resultType": "neutral"
+     "resultType": "good"
     },
     "takeaway": [
      "Probabilities go on chance branches only and add up to 1; costs go on option branches.",
@@ -1546,10 +1591,10 @@
     "id": "decision-making-techniques:quiz:fb473d08",
     "question": "A project has an NPV of −$15,000 at the firm's cost of capital. The firm should:",
     "options": [
-     "accept it, because it generates revenue",
-     "accept it if the payback period is short",
+     "accept it, because its cash inflows are all positive",
+     "accept it, provided its payback period is short enough",
      "reject it, because it fails to earn the required rate",
-     "accept it only if the ARR is above 10%"
+     "accept it only if its ARR is above the firm's target"
     ],
     "correctIndex": 2,
     "explanation": "A negative NPV means the discounted cash flows are worth less than the cost, so the project earns less than the rate used to discount them."
@@ -1606,10 +1651,10 @@
     "id": "decision-making-techniques:quiz:dbba4f13",
     "question": "In a decision tree, a square node represents:",
     "options": [
-     "an outcome decided by chance",
-     "the payoff at the end of a branch",
-     "a point where the manager chooses between options",
-     "the cost of taking an option"
+     "a point where chance decides the outcome",
+     "the payoff at the end of an outcome branch",
+     "a point where the manager picks one option",
+     "the cost the firm pays to take an option"
     ],
     "correctIndex": 2,
     "explanation": "Squares are decision nodes: the manager picks one of the branches leaving it. Circles are chance nodes, where the outcome is uncertain."
@@ -1628,15 +1673,15 @@
    },
    {
     "id": "decision-making-techniques:quiz:6d3f88f0",
-    "question": "An option costs $200,000 and leads to a 0.6 chance of $500,000 and a 0.4 chance of $100,000. What is its net gain?",
+    "question": "A tea exporter in Mombasa can build a processing line costing $75,000. There is a 0.3 chance of high world prices, with a payoff of $320,000, and a 0.7 chance of low prices, with a payoff of $90,000. What is the net gain of building the line?",
     "options": [
-     "$100,000",
-     "$340,000",
-     "$500,000",
-     "$140,000"
+     "$21,000",
+     "$130,000",
+     "$159,000",
+     "$84,000"
     ],
     "correctIndex": 3,
-    "explanation": "EMV = 0.6 × $500,000 + 0.4 × $100,000 = $340,000. Net gain = $340,000 − $200,000 = $140,000."
+    "explanation": "EMV = 0.3 × $320,000 + 0.7 × $90,000 = $96,000 + $63,000 = $159,000. Net gain = $159,000 − $75,000 = $84,000. $159,000 is the EMV before the cost comes off; $130,000 averages the two payoffs without their probabilities before taking off the cost; $21,000 counts only the high-price branch."
    },
    {
     "id": "decision-making-techniques:quiz:814a2cfe",
@@ -1772,15 +1817,15 @@
    },
    {
     "id": "decision-making-techniques:quiz:c938de69",
-    "question": "A hotel has empty rooms and a variable cost of $30 per room-night. A tour operator offers $55 a night. On contribution grounds the hotel should:",
+    "question": "A coach operator has empty seats on a scheduled run and a variable cost of $4 per passenger. A school offers $9 a seat for a class trip. On contribution grounds the operator should:",
     "options": [
-     "accept, because $55 covers the variable cost and adds $25 of contribution",
-     "reject, because $55 is below the normal room price of $120",
+     "accept, because $9 more than covers the variable cost",
+     "reject, because $9 is below the normal fare of $15",
      "reject, because the offer does not cover fixed costs",
-     "accept only if $55 covers the average total cost per room"
+     "accept only if $9 covers the average total cost per seat"
     ],
     "correctIndex": 0,
-    "explanation": "The rooms are empty, so the fixed costs are paid whether or not the offer is taken. Any price above the $30 variable cost adds contribution."
+    "explanation": "The seats are empty, so the fixed costs of the run are paid whether or not the offer is taken. Any price above the $4 variable cost adds contribution: $9 − $4 = $5 a passenger. The normal fare and average total cost are the wrong yardsticks, because both carry fixed costs the operator pays anyway."
    },
    {
     "id": "decision-making-techniques:quiz:ce3405d9",
@@ -1801,56 +1846,56 @@
     "command": "Calculate",
     "marks": 4,
     "question": "Kopi Kita, a café chain in Kuala Lumpur, sold the following thousands of cups: January 40, February 46, March 43, April 48, May 54, June 50. Calculate the three-period moving average for February, March, April and May, and state what the figures show about the trend. (4 marks)",
-    "guidance": "February: (40 + 46 + 43) ÷ 3 = 43.0 (1 mark). March: (46 + 43 + 48) ÷ 3 = 45.7 (1 mark). April: (43 + 48 + 54) ÷ 3 = 48.3 and May: (48 + 54 + 50) ÷ 3 = 50.7 (1 mark). The averages rise steadily by about 2.6 thousand cups a month, so the underlying trend is upward despite the dips in March and June (1 mark)."
+    "guidance": "Work each average from three consecutive months: total them, divide by three, and write the result against the middle month of the three. Keep the same number of decimal places throughout. When you comment on the trend, read the averages rather than the raw months, because the raw figures still carry the ups and downs the averages remove.\nFebruary: (40 + 46 + 43) ÷ 3 = 43.0 (1 mark). March: (46 + 43 + 48) ÷ 3 = 45.7 (1 mark). April: (43 + 48 + 54) ÷ 3 = 48.3 and May: (48 + 54 + 50) ÷ 3 = 50.7 (1 mark). The averages rise steadily by about 2.6 thousand cups a month, so the underlying trend is upward despite the dips in March and June (1 mark)."
    },
    {
     "id": "decision-making-techniques:practice:a885f9cb",
     "command": "Calculate",
     "marks": 4,
     "question": "Sunrise Bakery in Nairobi is considering an oven costing $120,000. Forecast net cash inflows are $40,000 in year 1, $40,000 in year 2, $50,000 in year 3 and $50,000 in year 4. Calculate the payback period. (4 marks)",
-    "guidance": "Cumulative inflows: $40,000 after year 1 and $80,000 after year 2 (1 mark). Still to recover after year 2: $120,000 − $80,000 = $40,000 (1 mark). Fraction of year 3 needed: $40,000 ÷ $50,000 = 0.8 (1 mark). Payback period = 2.8 years, about 2 years and 10 months (1 mark)."
+    "guidance": "Build a cumulative table before you touch any fraction: add each year's inflow to a running total and stop at the first year in which the total reaches the cost. Work out how much is still to recover at the start of that year, then divide it by that year's inflow, not the previous year's. Give the answer in years and months as well as a decimal.\nCumulative inflows: $40,000 after year 1 and $80,000 after year 2 (1 mark). Still to recover after year 2: $120,000 − $80,000 = $40,000 (1 mark). Fraction of year 3 needed: $40,000 ÷ $50,000 = 0.8 (1 mark). Payback period = 2.8 years, about 2 years and 10 months (1 mark)."
    },
    {
     "id": "decision-making-techniques:practice:19273c8a",
     "command": "Calculate",
     "marks": 4,
     "question": "A courier firm in Lagos plans to buy a delivery van for $50,000. Forecast net cash inflows are $20,000 in year 1, $25,000 in year 2 and $20,000 in year 3. The discount factors at 10% are 0.909 for year 1, 0.826 for year 2 and 0.751 for year 3. Calculate the net present value of the van. (4 marks)",
-    "guidance": "Present value of year 1: $20,000 × 0.909 = $18,180 (1 mark). Years 2 and 3: $25,000 × 0.826 = $20,650 and $20,000 × 0.751 = $15,020 (1 mark). Total present value = $53,850 (1 mark). NPV = $53,850 − $50,000 = +$3,850, so the van earns more than the 10% required rate and passes the test (1 mark)."
+    "guidance": "Set the working out as a table: year, cash flow, discount factor, present value. Multiply across each row, total the present values, and only then deal with the cost of the van, which is paid now and is not discounted. Finish by saying what the sign of your answer means for the decision, not just the number.\nPresent value of year 1: $20,000 × 0.909 = $18,180 (1 mark). Years 2 and 3: $25,000 × 0.826 = $20,650 and $20,000 × 0.751 = $15,020 (1 mark). Total present value = $53,850 (1 mark). NPV = $53,850 − $50,000 = +$3,850, so the van earns more than the 10% required rate and passes the test (1 mark)."
    },
    {
     "id": "decision-making-techniques:practice:94e24a79",
     "command": "Calculate",
     "marks": 4,
-    "question": "The network for fitting out a new Kopi Kita branch has six activities. A: strip out, 2 days, node 1 to node 2. B: wiring, 3 days, node 2 to node 3. C: plumbing, 2 days, node 2 to node 4. D: fit kitchen, 4 days, node 3 to node 5. E: furniture, 3 days, node 4 to node 5. F: final clean, 1 day, node 5 to node 6. The earliest start times at nodes 1 to 6 are 0, 2, 5, 4, 9 and 10; the latest finish times are 0, 2, 5, 6, 9 and 10. Calculate the total float of activity C and identify the critical path. (4 marks)",
-    "guidance": "Total float = LFT at the end node − duration − EST at the start node (1 mark). Activity C: 6 − 2 − 2 = 2 days (1 mark). The critical path is the route of zero-float activities: A, B, D and F (1 mark). Its length is 2 + 3 + 4 + 1 = 10 days, the minimum time for the fit-out (1 mark)."
+    "question": "Sunrise Bakery in Nairobi is installing a new production line. The network has six activities. P: clear the floor, 3 days, node 1 to node 2. Q: order parts, 4 days, node 1 to node 3. R: lay cabling, 2 days, node 2 to node 3. S: build the oven base, 6 days, node 2 to node 4. T: fit the conveyor, 3 days, node 3 to node 4. U: test and train staff, 3 days, node 4 to node 5. The earliest start times at nodes 1 to 5 are 0, 3, 5, 9 and 12; the latest finish times are 0, 3, 6, 9 and 12. Calculate the total float of activity T and identify the critical path. (4 marks)",
+    "guidance": "Write the float formula first and say which node each figure comes from: the latest finish at the node where the activity ends, the earliest start at the node where it begins. Then check every activity, not just the one asked about: the critical path is the route made of the activities with no float, and its length is the sum of their durations.\nTotal float = LFT at the end node − duration − EST at the start node (1 mark). Activity T: 9 − 3 − 5 = 1 day (1 mark). The critical path is the route of zero-float activities: P, S and U (1 mark). Its length is 3 + 6 + 3 = 12 days, the minimum time for the installation (1 mark)."
    },
    {
     "id": "decision-making-techniques:practice:949243ed",
     "command": "Explain",
     "marks": 4,
     "question": "Explain one limitation of using extrapolation to forecast the sales of a newly launched food-delivery app. (4 marks)",
-    "guidance": "Identifies a limitation, for example that extrapolation assumes past patterns will continue (1 mark). Explains why this matters here: a new app has little sales history, so any trend line rests on a few months of unusual launch-period data (1 mark). Develops the consequence: growth driven by launch promotions is extended into a future in which the promotions have ended, so sales are overstated (1 mark). Applies to the context, for example a rival app entering or a change in commission rates breaking the pattern (1 mark)."
+    "guidance": "Start by naming what extrapolation assumes, then ask what is unusual about the sales history of an app that has only just launched. Build one chain: the assumption, why it does not hold for this app, and what goes wrong with the forecast as a result. Keep every step about food delivery, not about forecasting in general.\nIdentifies a limitation, for example that extrapolation assumes past patterns will continue (1 mark). Explains why this matters here: a new app has little sales history, so any trend line rests on a few months of unusual launch-period data (1 mark). Develops the consequence: growth driven by launch promotions is extended into a future in which the promotions have ended, so sales are overstated (1 mark). Applies to the context, for example a rival app entering or a change in commission rates breaking the pattern (1 mark)."
    },
    {
     "id": "decision-making-techniques:practice:3c9190ad",
     "command": "Analyse",
     "marks": 6,
     "question": "Sunrise Bakery is using a decision tree to decide whether to open a second branch in Nairobi. Analyse two limitations of using a decision tree for this decision. (6 marks)",
-    "guidance": "Limitation 1: the probabilities of high and low demand are estimates (1 mark), based on judgement or on data from the first branch that may not apply to a new location (1 mark), so a small change in the estimate could reverse the choice (1 mark).\n\nLimitation 2: the tree compares expected values, which are long-run averages (1 mark); opening one branch is a one-off decision that will land on one outcome (1 mark), so a bakery that could not survive the low-demand branch may rightly refuse the higher net gain (1 mark).\n\nOther valid limitations: the payoffs are forecasts; qualitative factors such as the effect on the existing branch are left out."
+    "guidance": "Choose two different limitations, not one said twice. For each, say what the weakness is, why it matters for a second branch in particular, and what it could do to the decision the bakery reaches. Use the bakery's situation in every chain: a limitation that would read the same for any firm has not been analysed.\nLimitation 1: the probabilities of high and low demand are estimates (1 mark), based on judgement or on data from the first branch that may not apply to a new location (1 mark), so a small change in the estimate could reverse the choice (1 mark).\n\nLimitation 2: the tree compares expected values, which are long-run averages (1 mark); opening one branch is a one-off decision that will land on one outcome (1 mark), so a bakery that could not survive the low-demand branch may rightly refuse the higher net gain (1 mark).\n\nOther valid limitations: the payoffs are forecasts; qualitative factors such as the effect on the existing branch are left out."
    },
    {
     "id": "decision-making-techniques:practice:671dc923",
     "command": "Assess",
     "marks": 12,
     "question": "Palm Bay Hotel in Penang has 40 rooms empty on most weekday nights. Its normal price is $120 a night and the variable cost of a room-night (cleaning, laundry, breakfast) is $30. A tour operator offers to book 30 rooms every Tuesday at $55 a night for a year. Assess whether Palm Bay should accept the offer. (12 marks)",
-    "guidance": "Knowledge and application: contribution per room-night from the offer = $55 − $30 = $25; for 30 rooms that is $750 a night and about $39,000 over 52 Tuesdays, which the hotel would not otherwise earn because the rooms are empty and the fixed costs are paid anyway.\n\nAnalysis: on contribution grounds the offer is worth accepting, because the price exceeds variable cost and capacity is spare, so the contribution goes straight towards fixed costs and profit. Against: the operator's guests may displace weekday guests who would have paid $120, other customers may learn to wait for a discounted rate, a year-long commitment removes the rooms on any Tuesday when demand recovers, and servicing 30 extra rooms may need more staff, so the variable cost per room could be higher than $30.\n\nEvaluation: a strong answer weighs the near-certain contribution against the risk to full-price sales and recommends accepting if the rooms are genuinely empty on Tuesdays, perhaps with a shorter contract or a price review, and rejecting if weekday demand is expected to recover within the year. The judgement should name the condition it rests on. This tariff is levels-marked: the top level needs a supported judgement, not a list of points."
+    "guidance": "Begin with the calculation the data allow, then argue both sides before you judge. Ask what the offer adds on contribution grounds, what could make that figure misleading for this hotel (the rooms, the staff, the guests who pay the normal price) and how long the commitment runs. A judgement that states the condition it depends on is worth more than a list of points on each side.\nKnowledge and application: contribution per room-night from the offer = $55 − $30 = $25; for 30 rooms that is $750 a night and about $39,000 over 52 Tuesdays, which the hotel would not otherwise earn because the rooms are empty and the fixed costs are paid anyway.\n\nAnalysis: on contribution grounds the offer is worth accepting, because the price exceeds variable cost and capacity is spare, so the contribution goes straight towards fixed costs and profit. Against: the operator's guests may displace weekday guests who would have paid $120, other customers may learn to wait for a discounted rate, a year-long commitment removes the rooms on any Tuesday when demand recovers, and servicing 30 extra rooms may need more staff, so the variable cost per room could be higher than $30.\n\nEvaluation: a strong answer weighs the near-certain contribution against the risk to full-price sales and recommends accepting if the rooms are genuinely empty on Tuesdays, perhaps with a shorter contract or a price review, and rejecting if weekday demand is expected to recover within the year. The judgement should name the condition it rests on. This tariff is levels-marked: the top level needs a supported judgement, not a list of points.\nLevels (WBS13 sample assessment materials, Assess 12, paraphrased): Level 1, 1–2 marks: isolated, recall-based knowledge with little or no use of the hotel's case. Level 2, 3–4 marks: knowledge applied to the hotel, with chains of reasoning that are asserted or incomplete and a generic assessment. Level 3, 5–8 marks: accurate knowledge used throughout in context, developed chains of reasoning, and an attempt at assessment using the figures that does not yet weigh the competing arguments. Level 4, 9–12 marks: a coherent chain of reasoning in context and a balanced, wide-ranging assessment using the figures, weighing the arguments on each side and reaching a supported judgement."
    },
    {
     "id": "decision-making-techniques:practice:a2f452e0",
     "command": "Evaluate",
     "marks": 20,
     "question": "A logistics company in Dubai has $5 million to invest and must choose between an automated warehouse system and a fleet of electric delivery vans. Each option costs $5 million and has a four-year life. The warehouse is forecast to bring net cash inflows of $1.6 million in each of the four years. The vans are forecast to bring $2.4 million, $2.0 million, $1.2 million and $0.8 million. The company's cost of capital is 8%, and the discount factors for years 1 to 4 are 0.926, 0.857, 0.794 and 0.735. Evaluate whether the company should invest in the warehouse or the vans. (20 marks)",
-    "guidance": "Knowledge: define investment appraisal and the three techniques, and say what each measures.\n\nApplication and analysis, using the calculations the data allow. Payback: warehouse $5m ÷ $1.6m = 3.1 years; vans $4.4m after two years, then $0.6m ÷ $1.2m = 0.5, so 2.5 years. ARR: both bring in $6.4m in total, a profit of $1.4m, $0.35m a year, 7% for each, so ARR cannot separate them. NPV at 8%: warehouse $1.6m × (0.926 + 0.857 + 0.794 + 0.735) = $5.299m, an NPV of +$0.299m (about +$0.30m); vans $2.222m + $1.714m + $0.953m + $0.588m = $5.477m, an NPV of +$0.477m (about +$0.48m). The vans pay back sooner and have the higher NPV because their cash arrives earlier; the tie on ARR is a reminder that ARR ignores timing.\n\nEvaluation: the figures favour the vans, but a four-year life understates a warehouse system that may run for longer, the vans' later cash flows fall as batteries age, fuel and electricity prices move both forecasts, and the company's need for cash and its competitive position matter. A strong answer recommends the vans on the evidence given, states that the recommendation rests on the forecasts and the four-year horizon, and says what would change it: a longer warehouse life or a fall in electricity costs. This tariff is levels-marked: the top level needs the calculations used in the argument and a justified recommendation."
+    "guidance": "Use every technique the data allow before you judge, and set the results for the two options side by side so the reader can see where the techniques agree and where they do not. Then ask why they differ, what the figures leave out for a logistics firm, and how far the forecasts can be trusted. End with a recommendation that names the evidence it rests on and what would change it.\nKnowledge: define investment appraisal and the three techniques, and say what each measures.\n\nApplication and analysis, using the calculations the data allow. Payback: warehouse $5m ÷ $1.6m = 3.1 years; vans $4.4m after two years, then $0.6m ÷ $1.2m = 0.5, so 2.5 years. ARR: both bring in $6.4m in total, a profit of $1.4m, $0.35m a year, 7% for each, so ARR cannot separate them. NPV at 8%: warehouse $1.6m × (0.926 + 0.857 + 0.794 + 0.735) = $5.299m, an NPV of +$0.299m (about +$0.30m); vans $2.222m + $1.714m + $0.953m + $0.588m = $5.477m, an NPV of +$0.477m (about +$0.48m). The vans pay back sooner and have the higher NPV because their cash arrives earlier; the tie on ARR is a reminder that ARR ignores timing.\n\nEvaluation: the figures favour the vans, but a four-year life understates a warehouse system that may run for longer, the vans' later cash flows fall as batteries age, fuel and electricity prices move both forecasts, and the company's need for cash and its competitive position matter. A strong answer recommends the vans on the evidence given, states that the recommendation rests on the forecasts and the four-year horizon, and says what would change it: a longer warehouse life or a fall in electricity costs. This tariff is levels-marked: the top level needs the calculations used in the argument and a justified recommendation.\nLevels (WBS13 sample assessment materials, Evaluate 20, paraphrased): Level 1, 1–4 marks: isolated knowledge, little or no use of the company's case, and a generic argument that does not connect causes and effects. Level 2, 5–8 marks: knowledge applied to the company, with arguments whose links between cause and effect are incomplete; a comparison or judgement may be attempted but misses the key features of the situation. Level 3, 9–14 marks: accurate knowledge used throughout in context, complete and developed chains of reasoning, and figures or qualitative evidence brought in to support a judgement, with partial awareness of the competing arguments. Level 4, 15–20 marks: coherent chains of reasoning showing a range of causes and effects, figures used well to support judgements, full awareness of the validity and weight of the competing arguments, and a balanced conclusion that makes a recommendation."
    }
   ],
   "flashcards": [
@@ -2005,14 +2050,14 @@
     "scenarios": [
      {
       "label": "Moving average and trend",
-      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker></defs><rect x=\"423.5\" y=\"40\" width=\"56.5\" height=\"260\" fill=\"#475569\" opacity=\"0.18\"/><text x=\"451.8\" y=\"54\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">Forecast</text><line x1=\"70\" y1=\"300\" x2=\"480\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"248\" x2=\"480\" y2=\"248\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"252\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">40</text><line x1=\"70\" y1=\"196\" x2=\"480\" y2=\"196\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"200\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">50</text><line x1=\"70\" y1=\"144\" x2=\"480\" y2=\"144\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"148\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">60</text><line x1=\"70\" y1=\"92\" x2=\"480\" y2=\"92\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"96\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">70</text><line x1=\"70\" y1=\"40\" x2=\"480\" y2=\"40\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"44\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">80</text><text x=\"70\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"100.8\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">F</text><text x=\"131.5\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">M</text><text x=\"162.3\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">A</text><text x=\"193.1\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">M</text><text x=\"223.8\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"254.6\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"285.4\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">A</text><text x=\"316.2\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">S</text><text x=\"346.9\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">O</text><text x=\"377.7\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">N</text><text x=\"408.5\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">D</text><text x=\"439.2\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"470\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">F</text><text x=\"275\" y=\"336\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Month</text><text x=\"26\" y=\"170\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\" transform=\"rotate(-90,26,170)\">Sales (000 cups)</text><polyline points=\"70,248 100.8,216.8 131.5,232.4 162.3,206.4 193.1,175.2 223.8,196 254.6,164.8 285.4,133.6 316.2,154.4 346.9,123.2 377.7,92 408.5,112.8\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><circle cx=\"70\" cy=\"248\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"100.8\" cy=\"216.8\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"131.5\" cy=\"232.4\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"162.3\" cy=\"206.4\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"193.1\" cy=\"175.2\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"223.8\" cy=\"196\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"254.6\" cy=\"164.8\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"285.4\" cy=\"133.6\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"316.2\" cy=\"154.4\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"346.9\" cy=\"123.2\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"377.7\" cy=\"92\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"408.5\" cy=\"112.8\" r=\"3.5\" fill=\"#3b82f6\"/><polyline points=\"100.8,232.4 131.5,218.5 162.3,204.7 193.1,192.5 223.8,178.7 254.6,164.8 285.4,150.9 316.2,137.1 346.9,123.2 377.7,109.3\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\"/><line x1=\"377.7\" y1=\"109.3\" x2=\"470\" y2=\"68.3\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/><line x1=\"84\" y1=\"52\" x2=\"108\" y2=\"52\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><text x=\"114\" y=\"56\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Actual monthly sales</text><line x1=\"84\" y1=\"70\" x2=\"108\" y2=\"70\" stroke=\"#f59e0b\" stroke-width=\"3\"/><text x=\"114\" y=\"74\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Three-period moving average</text><line x1=\"84\" y1=\"88\" x2=\"108\" y2=\"88\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/><text x=\"114\" y=\"92\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Trend, extended into the future</text><text x=\"114\" y=\"108\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">February = (40 + 46 + 43) ÷ 3 = 43.0</text></svg>"
+      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#3b82f6\"/></marker></defs><rect x=\"423.5\" y=\"40\" width=\"56.5\" height=\"260\" fill=\"#475569\" opacity=\"0.18\"/><text x=\"451.8\" y=\"54\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">Forecast</text><line x1=\"70\" y1=\"300\" x2=\"480\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"248\" x2=\"480\" y2=\"248\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"252\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">40</text><line x1=\"70\" y1=\"196\" x2=\"480\" y2=\"196\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"200\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">50</text><line x1=\"70\" y1=\"144\" x2=\"480\" y2=\"144\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"148\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">60</text><line x1=\"70\" y1=\"92\" x2=\"480\" y2=\"92\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"96\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">70</text><line x1=\"70\" y1=\"40\" x2=\"480\" y2=\"40\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"44\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">80</text><text x=\"70\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"100.8\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">F</text><text x=\"131.5\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">M</text><text x=\"162.3\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">A</text><text x=\"193.1\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">M</text><text x=\"223.8\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"254.6\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"285.4\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">A</text><text x=\"316.2\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">S</text><text x=\"346.9\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">O</text><text x=\"377.7\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">N</text><text x=\"408.5\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">D</text><text x=\"439.2\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"470\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">F</text><text x=\"275\" y=\"336\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Month</text><text x=\"26\" y=\"170\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\" transform=\"rotate(-90,26,170)\">Sales (000 cups)</text><polyline points=\"70,248 100.8,216.8 131.5,232.4 162.3,206.4 193.1,175.2 223.8,196 254.6,164.8 285.4,133.6 316.2,154.4 346.9,123.2 377.7,92 408.5,112.8\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><circle cx=\"70\" cy=\"248\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"100.8\" cy=\"216.8\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"131.5\" cy=\"232.4\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"162.3\" cy=\"206.4\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"193.1\" cy=\"175.2\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"223.8\" cy=\"196\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"254.6\" cy=\"164.8\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"285.4\" cy=\"133.6\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"316.2\" cy=\"154.4\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"346.9\" cy=\"123.2\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"377.7\" cy=\"92\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"408.5\" cy=\"112.8\" r=\"3.5\" fill=\"#3b82f6\"/><polyline points=\"100.8,232.4 131.5,218.5 162.3,204.7 193.1,192.5 223.8,178.7 254.6,164.8 285.4,150.9 316.2,137.1 346.9,123.2 377.7,109.3\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\"/><line x1=\"377.7\" y1=\"109.3\" x2=\"470\" y2=\"68.3\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/><line x1=\"84\" y1=\"52\" x2=\"108\" y2=\"52\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><text x=\"114\" y=\"56\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Actual monthly sales</text><line x1=\"84\" y1=\"70\" x2=\"108\" y2=\"70\" stroke=\"#f59e0b\" stroke-width=\"3\"/><text x=\"114\" y=\"74\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Three-period moving average</text><line x1=\"84\" y1=\"102\" x2=\"108\" y2=\"102\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/><text x=\"114\" y=\"106\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Trend, extended into the future</text><text x=\"114\" y=\"122\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">February = (40 + 46 + 43) ÷ 3 = 43.0</text></svg>"
      },
      {
       "label": "Scatter graph and line of best fit",
-      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker></defs><line x1=\"70\" y1=\"300\" x2=\"480\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><text x=\"70\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$0k</text><text x=\"150\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$10k</text><text x=\"230\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$20k</text><text x=\"310\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$30k</text><text x=\"390\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$40k</text><text x=\"470\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$50k</text><line x1=\"70\" y1=\"300\" x2=\"480\" y2=\"300\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"304\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">$100k</text><line x1=\"70\" y1=\"213.3\" x2=\"480\" y2=\"213.3\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"217.3\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">$200k</text><line x1=\"70\" y1=\"126.7\" x2=\"480\" y2=\"126.7\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"130.7\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">$300k</text><line x1=\"70\" y1=\"40\" x2=\"480\" y2=\"40\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"44\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">$400k</text><text x=\"275\" y=\"336\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Advertising spend per month</text><text x=\"26\" y=\"170\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\" transform=\"rotate(-90,26,170)\">Sales per month</text><line x1=\"470\" y1=\"300\" x2=\"470\" y2=\"100.7\" stroke=\"#7a8299\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/><line x1=\"470\" y1=\"100.7\" x2=\"70\" y2=\"100.7\" stroke=\"#7a8299\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/><line x1=\"70\" y1=\"291.3\" x2=\"430\" y2=\"119.7\" stroke=\"#059669\" stroke-width=\"3\"/><line x1=\"430\" y1=\"119.7\" x2=\"470\" y2=\"100.7\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/><circle cx=\"110\" cy=\"279.2\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"150\" cy=\"242.8\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"190\" cy=\"242.8\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"230\" cy=\"208.1\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"270\" cy=\"206.4\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"310\" cy=\"168.3\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"350\" cy=\"163.1\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"390\" cy=\"126.7\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"430\" cy=\"126.7\" r=\"4\" fill=\"#3b82f6\"/><text x=\"76\" y=\"114.7\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"700\" text-anchor=\"start\">Forecast: about $330k of sales at $50k of spend</text><text x=\"330\" y=\"62\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">Positive correlation</text><circle cx=\"96\" cy=\"52\" r=\"4\" fill=\"#3b82f6\"/><text x=\"106\" y=\"56\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">One dot per month</text><line x1=\"84\" y1=\"70\" x2=\"108\" y2=\"70\" stroke=\"#059669\" stroke-width=\"3\"/><text x=\"114\" y=\"74\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Line of best fit</text><line x1=\"84\" y1=\"88\" x2=\"108\" y2=\"88\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/><text x=\"114\" y=\"92\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Extrapolation beyond the data</text></svg>"
+      "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#3b82f6\"/></marker></defs><line x1=\"70\" y1=\"300\" x2=\"480\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><text x=\"70\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$0k</text><text x=\"150\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$10k</text><text x=\"230\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$20k</text><text x=\"310\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$30k</text><text x=\"390\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$40k</text><text x=\"470\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">$50k</text><line x1=\"70\" y1=\"300\" x2=\"480\" y2=\"300\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"304\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">$100k</text><line x1=\"70\" y1=\"213.3\" x2=\"480\" y2=\"213.3\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"217.3\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">$200k</text><line x1=\"70\" y1=\"126.7\" x2=\"480\" y2=\"126.7\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"130.7\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">$300k</text><line x1=\"70\" y1=\"40\" x2=\"480\" y2=\"40\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"44\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">$400k</text><text x=\"275\" y=\"336\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Advertising spend per month</text><text x=\"26\" y=\"170\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\" transform=\"rotate(-90,26,170)\">Sales per month</text><line x1=\"470\" y1=\"300\" x2=\"470\" y2=\"100.7\" stroke=\"#7a8299\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/><line x1=\"470\" y1=\"100.7\" x2=\"70\" y2=\"100.7\" stroke=\"#7a8299\" stroke-width=\"1.5\" stroke-dasharray=\"6,4\"/><line x1=\"70\" y1=\"291.3\" x2=\"430\" y2=\"119.7\" stroke=\"#059669\" stroke-width=\"3\"/><line x1=\"430\" y1=\"119.7\" x2=\"470\" y2=\"100.7\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/><circle cx=\"110\" cy=\"279.2\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"150\" cy=\"242.8\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"190\" cy=\"242.8\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"230\" cy=\"208.1\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"270\" cy=\"206.4\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"310\" cy=\"168.3\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"350\" cy=\"163.1\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"390\" cy=\"126.7\" r=\"4\" fill=\"#3b82f6\"/><circle cx=\"430\" cy=\"126.7\" r=\"4\" fill=\"#3b82f6\"/><text x=\"76\" y=\"114.7\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"700\" text-anchor=\"start\">Forecast: about $330k of sales at $50k of spend</text><text x=\"330\" y=\"62\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">Positive correlation</text><circle cx=\"96\" cy=\"52\" r=\"4\" fill=\"#3b82f6\"/><text x=\"106\" y=\"56\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">One dot per month</text><line x1=\"84\" y1=\"70\" x2=\"108\" y2=\"70\" stroke=\"#059669\" stroke-width=\"3\"/><text x=\"114\" y=\"74\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Line of best fit</text><line x1=\"84\" y1=\"88\" x2=\"108\" y2=\"88\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/><text x=\"114\" y=\"92\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Extrapolation beyond the data</text></svg>"
      }
     ],
-    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker></defs><rect x=\"423.5\" y=\"40\" width=\"56.5\" height=\"260\" fill=\"#475569\" opacity=\"0.18\"/><text x=\"451.8\" y=\"54\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">Forecast</text><line x1=\"70\" y1=\"300\" x2=\"480\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"248\" x2=\"480\" y2=\"248\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"252\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">40</text><line x1=\"70\" y1=\"196\" x2=\"480\" y2=\"196\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"200\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">50</text><line x1=\"70\" y1=\"144\" x2=\"480\" y2=\"144\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"148\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">60</text><line x1=\"70\" y1=\"92\" x2=\"480\" y2=\"92\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"96\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">70</text><line x1=\"70\" y1=\"40\" x2=\"480\" y2=\"40\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"44\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">80</text><text x=\"70\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"100.8\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">F</text><text x=\"131.5\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">M</text><text x=\"162.3\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">A</text><text x=\"193.1\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">M</text><text x=\"223.8\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"254.6\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"285.4\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">A</text><text x=\"316.2\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">S</text><text x=\"346.9\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">O</text><text x=\"377.7\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">N</text><text x=\"408.5\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">D</text><text x=\"439.2\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"470\" y=\"314\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">F</text><text x=\"275\" y=\"336\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Month</text><text x=\"26\" y=\"170\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\" transform=\"rotate(-90,26,170)\">Sales (000 cups)</text><polyline points=\"70,248 100.8,216.8 131.5,232.4 162.3,206.4 193.1,175.2 223.8,196 254.6,164.8 285.4,133.6 316.2,154.4 346.9,123.2 377.7,92 408.5,112.8\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><circle cx=\"70\" cy=\"248\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"100.8\" cy=\"216.8\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"131.5\" cy=\"232.4\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"162.3\" cy=\"206.4\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"193.1\" cy=\"175.2\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"223.8\" cy=\"196\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"254.6\" cy=\"164.8\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"285.4\" cy=\"133.6\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"316.2\" cy=\"154.4\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"346.9\" cy=\"123.2\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"377.7\" cy=\"92\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"408.5\" cy=\"112.8\" r=\"3.5\" fill=\"#3b82f6\"/><polyline points=\"100.8,232.4 131.5,218.5 162.3,204.7 193.1,192.5 223.8,178.7 254.6,164.8 285.4,150.9 316.2,137.1 346.9,123.2 377.7,109.3\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\"/><line x1=\"377.7\" y1=\"109.3\" x2=\"470\" y2=\"68.3\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/><line x1=\"84\" y1=\"52\" x2=\"108\" y2=\"52\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><text x=\"114\" y=\"56\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Actual monthly sales</text><line x1=\"84\" y1=\"70\" x2=\"108\" y2=\"70\" stroke=\"#f59e0b\" stroke-width=\"3\"/><text x=\"114\" y=\"74\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Three-period moving average</text><line x1=\"84\" y1=\"88\" x2=\"108\" y2=\"88\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/><text x=\"114\" y=\"92\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Trend, extended into the future</text><text x=\"114\" y=\"108\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">February = (40 + 46 + 43) ÷ 3 = 43.0</text></svg>"
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#3b82f6\"/></marker></defs><rect x=\"423.5\" y=\"40\" width=\"56.5\" height=\"260\" fill=\"#475569\" opacity=\"0.18\"/><text x=\"451.8\" y=\"54\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">Forecast</text><line x1=\"70\" y1=\"300\" x2=\"480\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><line x1=\"70\" y1=\"248\" x2=\"480\" y2=\"248\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"252\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">40</text><line x1=\"70\" y1=\"196\" x2=\"480\" y2=\"196\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"200\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">50</text><line x1=\"70\" y1=\"144\" x2=\"480\" y2=\"144\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"148\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">60</text><line x1=\"70\" y1=\"92\" x2=\"480\" y2=\"92\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"96\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">70</text><line x1=\"70\" y1=\"40\" x2=\"480\" y2=\"40\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"58\" y=\"44\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">80</text><text x=\"70\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"100.8\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">F</text><text x=\"131.5\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">M</text><text x=\"162.3\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">A</text><text x=\"193.1\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">M</text><text x=\"223.8\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"254.6\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"285.4\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">A</text><text x=\"316.2\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">S</text><text x=\"346.9\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">O</text><text x=\"377.7\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">N</text><text x=\"408.5\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">D</text><text x=\"439.2\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">J</text><text x=\"470\" y=\"319\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">F</text><text x=\"275\" y=\"336\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Month</text><text x=\"26\" y=\"170\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\" transform=\"rotate(-90,26,170)\">Sales (000 cups)</text><polyline points=\"70,248 100.8,216.8 131.5,232.4 162.3,206.4 193.1,175.2 223.8,196 254.6,164.8 285.4,133.6 316.2,154.4 346.9,123.2 377.7,92 408.5,112.8\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><circle cx=\"70\" cy=\"248\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"100.8\" cy=\"216.8\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"131.5\" cy=\"232.4\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"162.3\" cy=\"206.4\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"193.1\" cy=\"175.2\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"223.8\" cy=\"196\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"254.6\" cy=\"164.8\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"285.4\" cy=\"133.6\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"316.2\" cy=\"154.4\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"346.9\" cy=\"123.2\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"377.7\" cy=\"92\" r=\"3.5\" fill=\"#3b82f6\"/><circle cx=\"408.5\" cy=\"112.8\" r=\"3.5\" fill=\"#3b82f6\"/><polyline points=\"100.8,232.4 131.5,218.5 162.3,204.7 193.1,192.5 223.8,178.7 254.6,164.8 285.4,150.9 316.2,137.1 346.9,123.2 377.7,109.3\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"3\"/><line x1=\"377.7\" y1=\"109.3\" x2=\"470\" y2=\"68.3\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/><line x1=\"84\" y1=\"52\" x2=\"108\" y2=\"52\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/><text x=\"114\" y=\"56\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Actual monthly sales</text><line x1=\"84\" y1=\"70\" x2=\"108\" y2=\"70\" stroke=\"#f59e0b\" stroke-width=\"3\"/><text x=\"114\" y=\"74\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Three-period moving average</text><line x1=\"84\" y1=\"102\" x2=\"108\" y2=\"102\" stroke=\"#ef4444\" stroke-width=\"2.5\" stroke-dasharray=\"6,4\"/><text x=\"114\" y=\"106\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Trend, extended into the future</text><text x=\"114\" y=\"122\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">February = (40 + 46 + 43) ÷ 3 = 43.0</text></svg>"
    },
    {
     "id": "decision-making-techniques:diagram:e16f05b3",
@@ -2024,7 +2069,7 @@
      "The payback point is where the cumulative line crosses zero",
      "The part-year is the amount still to recover divided by that year's inflow"
     ],
-    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker></defs><text x=\"250\" y=\"44\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Oven: cost $120,000; net cash inflows $40k, $40k, $50k, $50k</text><line x1=\"70\" y1=\"278.2\" x2=\"470\" y2=\"278.2\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"282.2\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">−$120k</text><line x1=\"70\" y1=\"234.5\" x2=\"470\" y2=\"234.5\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"238.5\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">−$80k</text><line x1=\"70\" y1=\"190.9\" x2=\"470\" y2=\"190.9\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"194.9\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">−$40k</text><line x1=\"70\" y1=\"147.3\" x2=\"470\" y2=\"147.3\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"62\" y=\"151.3\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">$0k</text><line x1=\"70\" y1=\"103.6\" x2=\"470\" y2=\"103.6\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"107.6\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">+$40k</text><line x1=\"70\" y1=\"60\" x2=\"470\" y2=\"60\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"64\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">+$80k</text><line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><text x=\"90\" y=\"316\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">0</text><text x=\"180\" y=\"316\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">1</text><text x=\"270\" y=\"316\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">2</text><text x=\"360\" y=\"316\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">3</text><text x=\"450\" y=\"316\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">4</text><text x=\"470\" y=\"336\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"end\">Year</text><text x=\"26\" y=\"165\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\" transform=\"rotate(-90,26,165)\">Cumulative net cash flow</text><polyline points=\"90,278.2 180,234.5 270,190.9 360,136.4 450,81.8\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"90\" cy=\"278.2\" r=\"4.5\" fill=\"#3b82f6\"/><text x=\"98\" y=\"296.2\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"start\">−$120k</text><circle cx=\"180\" cy=\"234.5\" r=\"4.5\" fill=\"#3b82f6\"/><text x=\"180\" y=\"252.5\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">−$80k</text><circle cx=\"270\" cy=\"190.9\" r=\"4.5\" fill=\"#3b82f6\"/><text x=\"270\" y=\"208.9\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">−$40k</text><circle cx=\"360\" cy=\"136.4\" r=\"4.5\" fill=\"#3b82f6\"/><text x=\"360\" y=\"126.4\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">+$10k</text><circle cx=\"450\" cy=\"81.8\" r=\"4.5\" fill=\"#3b82f6\"/><text x=\"450\" y=\"71.8\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">+$60k</text><circle cx=\"342\" cy=\"147.3\" r=\"6\" fill=\"#ef4444\"/><line x1=\"342\" y1=\"147.3\" x2=\"342\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><text x=\"334\" y=\"336\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"700\" text-anchor=\"end\">Payback = 2 + 40 ÷ 50 = 2.8 years</text><text x=\"354\" y=\"181.3\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">The line crosses zero here:</text><text x=\"354\" y=\"193.3\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">the cost is recovered</text></svg>"
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#3b82f6\"/></marker></defs><text x=\"250\" y=\"44\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Oven: cost $120,000; net cash inflows $40k, $40k, $50k, $50k</text><line x1=\"70\" y1=\"278.2\" x2=\"470\" y2=\"278.2\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"282.2\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">−$120k</text><line x1=\"70\" y1=\"234.5\" x2=\"470\" y2=\"234.5\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"238.5\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">−$80k</text><line x1=\"70\" y1=\"190.9\" x2=\"470\" y2=\"190.9\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"194.9\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">−$40k</text><line x1=\"70\" y1=\"147.3\" x2=\"470\" y2=\"147.3\" stroke=\"#94a3b8\" stroke-width=\"2\"/><text x=\"62\" y=\"151.3\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">$0k</text><line x1=\"70\" y1=\"103.6\" x2=\"470\" y2=\"103.6\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"107.6\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">+$40k</text><line x1=\"70\" y1=\"60\" x2=\"470\" y2=\"60\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2,4\" opacity=\"0.6\"/><text x=\"62\" y=\"64\" fill=\"#94a3b8\" font-size=\"9\" font-weight=\"400\" text-anchor=\"end\">+$80k</text><line x1=\"70\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"30\" stroke=\"#94a3b8\" stroke-width=\"2.5\" marker-end=\"url(#arr)\"/><text x=\"90\" y=\"316\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">0</text><text x=\"180\" y=\"316\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">1</text><text x=\"270\" y=\"316\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">2</text><text x=\"360\" y=\"316\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">3</text><text x=\"450\" y=\"316\" fill=\"#94a3b8\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">4</text><text x=\"470\" y=\"336\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"end\">Year</text><text x=\"26\" y=\"165\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\" transform=\"rotate(-90,26,165)\">Cumulative net cash flow</text><polyline points=\"90,278.2 180,234.5 270,190.9 360,136.4 450,81.8\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/><circle cx=\"90\" cy=\"278.2\" r=\"4.5\" fill=\"#3b82f6\"/><text x=\"98\" y=\"296.2\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"start\">−$120k</text><circle cx=\"180\" cy=\"234.5\" r=\"4.5\" fill=\"#3b82f6\"/><text x=\"180\" y=\"252.5\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">−$80k</text><circle cx=\"270\" cy=\"190.9\" r=\"4.5\" fill=\"#3b82f6\"/><text x=\"270\" y=\"208.9\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">−$40k</text><circle cx=\"360\" cy=\"136.4\" r=\"4.5\" fill=\"#3b82f6\"/><text x=\"360\" y=\"116.4\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">+$10k</text><circle cx=\"450\" cy=\"81.8\" r=\"4.5\" fill=\"#3b82f6\"/><text x=\"450\" y=\"71.8\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">+$60k</text><circle cx=\"342\" cy=\"147.3\" r=\"6\" fill=\"#ef4444\"/><line x1=\"342\" y1=\"147.3\" x2=\"342\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/><text x=\"334\" y=\"336\" fill=\"#ef4444\" font-size=\"11\" font-weight=\"700\" text-anchor=\"end\">Payback = 2 + 40 ÷ 50 = 2.8 years</text><text x=\"354\" y=\"170.3\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">The line crosses zero here:</text><text x=\"354\" y=\"182.3\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">the cost is recovered</text></svg>"
    },
    {
     "id": "decision-making-techniques:diagram:d173e0a4",
@@ -2037,7 +2082,7 @@
      "Payoffs at the end of every outcome branch",
      "EMV at each chance node and net gain (EMV minus cost) for each option, with the choice stated"
     ],
-    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker></defs><rect x=\"44\" y=\"159\" width=\"22\" height=\"22\" fill=\"#8b5cf6\"/><line x1=\"66\" y1=\"170\" x2=\"207\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><line x1=\"66\" y1=\"170\" x2=\"207\" y2=\"240\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><circle cx=\"220\" cy=\"100\" r=\"13\" fill=\"#f59e0b\"/><circle cx=\"220\" cy=\"240\" r=\"13\" fill=\"#f59e0b\"/><line x1=\"233\" y1=\"100\" x2=\"400\" y2=\"58\" stroke=\"#059669\" stroke-width=\"2.5\"/><line x1=\"233\" y1=\"100\" x2=\"400\" y2=\"142\" stroke=\"#059669\" stroke-width=\"2.5\"/><line x1=\"233\" y1=\"240\" x2=\"400\" y2=\"198\" stroke=\"#059669\" stroke-width=\"2.5\"/><line x1=\"233\" y1=\"240\" x2=\"400\" y2=\"282\" stroke=\"#059669\" stroke-width=\"2.5\"/><circle cx=\"400\" cy=\"58\" r=\"4\" fill=\"#059669\"/><circle cx=\"400\" cy=\"142\" r=\"4\" fill=\"#059669\"/><circle cx=\"400\" cy=\"198\" r=\"4\" fill=\"#059669\"/><circle cx=\"400\" cy=\"282\" r=\"4\" fill=\"#059669\"/><text x=\"120\" y=\"168\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"start\">Launch cold brew</text><text x=\"120\" y=\"180\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">cost $200,000</text><text x=\"72\" y=\"232\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"start\">Licence the recipe</text><text x=\"72\" y=\"244\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">cost $20,000</text><text x=\"300\" y=\"68\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">High demand 0.6</text><text x=\"300\" y=\"138\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Low demand 0.4</text><text x=\"300\" y=\"208\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Strong uptake 0.5</text><text x=\"300\" y=\"278\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Weak uptake 0.5</text><text x=\"410\" y=\"62\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">$500,000</text><text x=\"410\" y=\"146\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">$100,000</text><text x=\"410\" y=\"202\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">$250,000</text><text x=\"410\" y=\"286\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">$150,000</text><text x=\"220\" y=\"140\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">EMV $340,000</text><text x=\"220\" y=\"153\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">net gain $140,000</text><text x=\"220\" y=\"284\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">EMV $200,000</text><text x=\"220\" y=\"297\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">net gain $180,000 ✓</text><text x=\"55\" y=\"204\" fill=\"#8b5cf6\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Decision node</text><text x=\"220\" y=\"78\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Chance node</text><text x=\"445\" y=\"40\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Payoffs</text><text x=\"250\" y=\"330\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">Roll back from the right: EMV at each circle, net gain = EMV − cost, choose at the square</text></svg>"
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#3b82f6\"/></marker></defs><rect x=\"44\" y=\"159\" width=\"22\" height=\"22\" fill=\"#8b5cf6\"/><line x1=\"66\" y1=\"170\" x2=\"207\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><line x1=\"66\" y1=\"170\" x2=\"207\" y2=\"240\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><circle cx=\"220\" cy=\"100\" r=\"13\" fill=\"#f59e0b\"/><circle cx=\"220\" cy=\"240\" r=\"13\" fill=\"#f59e0b\"/><line x1=\"233\" y1=\"100\" x2=\"400\" y2=\"58\" stroke=\"#059669\" stroke-width=\"2.5\"/><line x1=\"233\" y1=\"100\" x2=\"400\" y2=\"142\" stroke=\"#059669\" stroke-width=\"2.5\"/><line x1=\"233\" y1=\"240\" x2=\"400\" y2=\"198\" stroke=\"#059669\" stroke-width=\"2.5\"/><line x1=\"233\" y1=\"240\" x2=\"400\" y2=\"282\" stroke=\"#059669\" stroke-width=\"2.5\"/><circle cx=\"400\" cy=\"58\" r=\"4\" fill=\"#059669\"/><circle cx=\"400\" cy=\"142\" r=\"4\" fill=\"#059669\"/><circle cx=\"400\" cy=\"198\" r=\"4\" fill=\"#059669\"/><circle cx=\"400\" cy=\"282\" r=\"4\" fill=\"#059669\"/><text x=\"120\" y=\"168\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"start\">Launch cold brew</text><text x=\"120\" y=\"181\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">cost $200,000</text><text x=\"72\" y=\"232\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"700\" text-anchor=\"start\">Licence the recipe</text><text x=\"72\" y=\"245\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">cost $20,000</text><text x=\"316.5\" y=\"62\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">High demand 0.6</text><text x=\"316.5\" y=\"143\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Low demand 0.4</text><text x=\"316.5\" y=\"200\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Strong uptake 0.5</text><text x=\"316.5\" y=\"284\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Weak uptake 0.5</text><text x=\"410\" y=\"62\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">$500,000</text><text x=\"410\" y=\"146\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">$100,000</text><text x=\"410\" y=\"202\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">$250,000</text><text x=\"410\" y=\"286\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"start\">$150,000</text><text x=\"220\" y=\"140\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">EMV $340,000</text><text x=\"220\" y=\"153\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">net gain $140,000</text><text x=\"220\" y=\"284\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">EMV $200,000</text><text x=\"220\" y=\"297\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">net gain $180,000 ✓</text><text x=\"55\" y=\"204\" fill=\"#8b5cf6\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Decision node</text><text x=\"220\" y=\"78\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Chance node</text><text x=\"445\" y=\"40\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\" class=\"draggable\">Payoffs</text><text x=\"250\" y=\"330\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">Roll back from the right: EMV at each circle, net gain = EMV − cost, choose at the square</text></svg>"
    },
    {
     "id": "decision-making-techniques:diagram:15d823a0",
@@ -2050,7 +2095,7 @@
      "Backward pass: LFT is the lowest of the routes leaving a node",
      "Critical path marked, with its length stated and every activity on it at zero float"
     ],
-    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker></defs><line x1=\"77\" y1=\"175\" x2=\"143\" y2=\"175\" stroke=\"#ef4444\" stroke-width=\"3.5\" marker-end=\"url(#arrRed)\"/><line x1=\"182.8\" y1=\"162.1\" x2=\"257.2\" y2=\"107.9\" stroke=\"#ef4444\" stroke-width=\"3.5\" marker-end=\"url(#arrRed)\"/><line x1=\"182.8\" y1=\"187.9\" x2=\"257.2\" y2=\"242.1\" stroke=\"#3b82f6\" stroke-width=\"2.5\" marker-end=\"url(#arrBlue)\"/><line x1=\"292.8\" y1=\"107.9\" x2=\"367.2\" y2=\"162.1\" stroke=\"#ef4444\" stroke-width=\"3.5\" marker-end=\"url(#arrRed)\"/><line x1=\"292.8\" y1=\"242.1\" x2=\"367.2\" y2=\"187.9\" stroke=\"#3b82f6\" stroke-width=\"2.5\" marker-end=\"url(#arrBlue)\"/><line x1=\"407\" y1=\"175\" x2=\"443\" y2=\"175\" stroke=\"#ef4444\" stroke-width=\"3.5\" marker-end=\"url(#arrRed)\"/><circle cx=\"55\" cy=\"175\" r=\"22\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"33\" y1=\"175\" x2=\"77\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"55\" y1=\"175\" x2=\"55\" y2=\"197\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"55\" y=\"169\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">1</text><text x=\"45\" y=\"190\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">0</text><text x=\"65\" y=\"190\" fill=\"#fb923c\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">0</text><circle cx=\"165\" cy=\"175\" r=\"22\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"143\" y1=\"175\" x2=\"187\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"165\" y1=\"175\" x2=\"165\" y2=\"197\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"165\" y=\"169\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">2</text><text x=\"155\" y=\"190\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">2</text><text x=\"175\" y=\"190\" fill=\"#fb923c\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">2</text><circle cx=\"275\" cy=\"95\" r=\"22\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"253\" y1=\"95\" x2=\"297\" y2=\"95\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"275\" y1=\"95\" x2=\"275\" y2=\"117\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"275\" y=\"89\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">3</text><text x=\"265\" y=\"110\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">5</text><text x=\"285\" y=\"110\" fill=\"#fb923c\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">5</text><circle cx=\"275\" cy=\"255\" r=\"22\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"253\" y1=\"255\" x2=\"297\" y2=\"255\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"275\" y1=\"255\" x2=\"275\" y2=\"277\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"275\" y=\"249\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">4</text><text x=\"265\" y=\"270\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">4</text><text x=\"285\" y=\"270\" fill=\"#fb923c\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">6</text><circle cx=\"385\" cy=\"175\" r=\"22\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"363\" y1=\"175\" x2=\"407\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"385\" y1=\"175\" x2=\"385\" y2=\"197\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"385\" y=\"169\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">5</text><text x=\"375\" y=\"190\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">9</text><text x=\"395\" y=\"190\" fill=\"#fb923c\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">9</text><circle cx=\"465\" cy=\"175\" r=\"22\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"443\" y1=\"175\" x2=\"487\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"465\" y1=\"175\" x2=\"465\" y2=\"197\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"465\" y=\"169\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">6</text><text x=\"455\" y=\"190\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">10</text><text x=\"475\" y=\"190\" fill=\"#fb923c\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">10</text><text x=\"110\" y=\"164\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">A (2)</text><text x=\"200\" y=\"122\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">B (3)</text><text x=\"200\" y=\"236\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">C (2)</text><text x=\"200\" y=\"248\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">float 2</text><text x=\"350\" y=\"122\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">D (4)</text><text x=\"350\" y=\"236\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">E (3)</text><text x=\"350\" y=\"248\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">float 2</text><text x=\"425\" y=\"164\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">F (1)</text><text x=\"40\" y=\"40\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Node: number on top, EST bottom-left, LFT bottom-right</text><text x=\"40\" y=\"56\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Activity (duration in days). Red arrows: the critical path, zero float</text><text x=\"250\" y=\"330\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">Critical path A–B–D–F = 2 + 3 + 4 + 1 = 10 days; float = LFT − duration − EST</text></svg>"
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#3b82f6\"/></marker></defs><line x1=\"77\" y1=\"175\" x2=\"143\" y2=\"175\" stroke=\"#ef4444\" stroke-width=\"3.5\" marker-end=\"url(#arrRed)\"/><line x1=\"182.8\" y1=\"162.1\" x2=\"257.2\" y2=\"107.9\" stroke=\"#ef4444\" stroke-width=\"3.5\" marker-end=\"url(#arrRed)\"/><line x1=\"182.8\" y1=\"187.9\" x2=\"257.2\" y2=\"242.1\" stroke=\"#3b82f6\" stroke-width=\"2.5\" marker-end=\"url(#arrBlue)\"/><line x1=\"292.8\" y1=\"107.9\" x2=\"367.2\" y2=\"162.1\" stroke=\"#ef4444\" stroke-width=\"3.5\" marker-end=\"url(#arrRed)\"/><line x1=\"292.8\" y1=\"242.1\" x2=\"367.2\" y2=\"187.9\" stroke=\"#3b82f6\" stroke-width=\"2.5\" marker-end=\"url(#arrBlue)\"/><line x1=\"407\" y1=\"175\" x2=\"443\" y2=\"175\" stroke=\"#ef4444\" stroke-width=\"3.5\" marker-end=\"url(#arrRed)\"/><circle cx=\"55\" cy=\"175\" r=\"22\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"33\" y1=\"175\" x2=\"77\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"55\" y1=\"175\" x2=\"55\" y2=\"197\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"55\" y=\"169\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">1</text><text x=\"45\" y=\"190\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">0</text><text x=\"65\" y=\"190\" fill=\"#fb923c\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">0</text><circle cx=\"165\" cy=\"175\" r=\"22\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"143\" y1=\"175\" x2=\"187\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"165\" y1=\"175\" x2=\"165\" y2=\"197\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"165\" y=\"169\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">2</text><text x=\"155\" y=\"190\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">2</text><text x=\"175\" y=\"190\" fill=\"#fb923c\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">2</text><circle cx=\"275\" cy=\"95\" r=\"22\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"253\" y1=\"95\" x2=\"297\" y2=\"95\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"275\" y1=\"95\" x2=\"275\" y2=\"117\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"275\" y=\"89\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">3</text><text x=\"265\" y=\"110\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">5</text><text x=\"285\" y=\"110\" fill=\"#fb923c\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">5</text><circle cx=\"275\" cy=\"255\" r=\"22\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"253\" y1=\"255\" x2=\"297\" y2=\"255\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"275\" y1=\"255\" x2=\"275\" y2=\"277\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"275\" y=\"249\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">4</text><text x=\"265\" y=\"270\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">4</text><text x=\"285\" y=\"270\" fill=\"#fb923c\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">6</text><circle cx=\"385\" cy=\"175\" r=\"22\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"363\" y1=\"175\" x2=\"407\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"385\" y1=\"175\" x2=\"385\" y2=\"197\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"385\" y=\"169\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">5</text><text x=\"375\" y=\"190\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">9</text><text x=\"395\" y=\"190\" fill=\"#fb923c\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">9</text><circle cx=\"465\" cy=\"175\" r=\"22\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"443\" y1=\"175\" x2=\"487\" y2=\"175\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"465\" y1=\"175\" x2=\"465\" y2=\"197\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"465\" y=\"169\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">6</text><text x=\"455\" y=\"190\" fill=\"#059669\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">10</text><text x=\"475\" y=\"190\" fill=\"#fb923c\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">10</text><text x=\"110\" y=\"157\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">A (2)</text><text x=\"200\" y=\"122\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">B (3)</text><text x=\"200\" y=\"236\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">C (2)</text><text x=\"200\" y=\"249\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">float 2</text><text x=\"350\" y=\"122\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">D (4)</text><text x=\"350\" y=\"236\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">E (3)</text><text x=\"350\" y=\"249\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"middle\">float 2</text><text x=\"425\" y=\"157\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">F (1)</text><text x=\"40\" y=\"40\" fill=\"#e8ecf5\" font-size=\"10\" font-weight=\"400\" text-anchor=\"start\">Node: number on top, EST bottom-left, LFT bottom-right</text><text x=\"40\" y=\"56\" fill=\"#7a8299\" font-size=\"9\" font-weight=\"400\" text-anchor=\"start\">Activity (duration in days). Red arrows: the critical path, zero float</text><text x=\"250\" y=\"330\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">Critical path A–B–D–F = 2 + 3 + 4 + 1 = 10 days; float = LFT − duration − EST</text></svg>"
    },
    {
     "id": "decision-making-techniques:diagram:d69d82aa",
@@ -2062,7 +2107,7 @@
      "Fixed costs are paid out of total contribution before any profit exists",
      "Profit = total contribution − fixed costs"
     ],
-    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerWidth=\"9\" markerHeight=\"7\" refX=\"9\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,9 3.5,0 7\" fill=\"#3b82f6\"/></marker></defs><line x1=\"60\" y1=\"280\" x2=\"440\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"90\" y=\"205\" width=\"80\" height=\"75\" fill=\"#ef4444\"/><rect x=\"90\" y=\"100\" width=\"80\" height=\"105\" fill=\"#059669\"/><text x=\"130\" y=\"90\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Selling price $6.00</text><text x=\"130\" y=\"250\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">Variable cost</text><text x=\"130\" y=\"263\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">$2.50</text><text x=\"130\" y=\"148\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">Contribution</text><text x=\"130\" y=\"161\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">$3.50</text><text x=\"130\" y=\"300\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Per cup</text><rect x=\"300\" y=\"164.3\" width=\"80\" height=\"115.7\" fill=\"#f59e0b\"/><rect x=\"300\" y=\"100\" width=\"80\" height=\"64.3\" fill=\"#3b82f6\"/><text x=\"340\" y=\"90\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Total contribution $70,000</text><text x=\"340\" y=\"218\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">Fixed costs</text><text x=\"340\" y=\"231\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">$45,000</text><text x=\"340\" y=\"128\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">Profit</text><text x=\"340\" y=\"141\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">$25,000</text><text x=\"340\" y=\"300\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">20,000 cups a month</text><line x1=\"172\" y1=\"150\" x2=\"296\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"234\" y=\"142\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">× 20,000 cups</text><text x=\"250\" y=\"330\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Contribution pays the fixed costs first; whatever is left is profit</text></svg>"
+    "svg": "<svg width=\"500\" height=\"350\" viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"arr\" markerWidth=\"10\" markerHeight=\"7\" refX=\"10\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0,10 3.5,0 7\" fill=\"#94a3b8\"/></marker><marker id=\"arrRed\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#ef4444\"/></marker><marker id=\"arrBlue\" markerUnits=\"userSpaceOnUse\" markerWidth=\"14\" markerHeight=\"11\" refX=\"14\" refY=\"5.5\" orient=\"auto\"><polygon points=\"0 0,14 5.5,0 11\" fill=\"#3b82f6\"/></marker></defs><line x1=\"60\" y1=\"280\" x2=\"440\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"2\"/><rect x=\"90\" y=\"205\" width=\"80\" height=\"75\" fill=\"#ef4444\"/><rect x=\"90\" y=\"100\" width=\"80\" height=\"105\" fill=\"#059669\"/><text x=\"130\" y=\"90\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Selling price $6.00</text><text x=\"130\" y=\"250\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">Variable cost</text><text x=\"130\" y=\"263\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">$2.50</text><text x=\"130\" y=\"148\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">Contribution</text><text x=\"130\" y=\"161\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">$3.50</text><text x=\"130\" y=\"300\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Per cup</text><rect x=\"300\" y=\"164.3\" width=\"80\" height=\"115.7\" fill=\"#f59e0b\"/><rect x=\"300\" y=\"100\" width=\"80\" height=\"64.3\" fill=\"#3b82f6\"/><text x=\"340\" y=\"90\" fill=\"#e8ecf5\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">Total contribution $70,000</text><text x=\"340\" y=\"218\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">Fixed costs</text><text x=\"340\" y=\"231\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">$45,000</text><text x=\"340\" y=\"128\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">Profit</text><text x=\"340\" y=\"141\" fill=\"#ffffff\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">$25,000</text><text x=\"340\" y=\"300\" fill=\"#94a3b8\" font-size=\"11\" font-weight=\"700\" text-anchor=\"middle\">20,000 cups a month</text><line x1=\"172\" y1=\"150\" x2=\"296\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"2\" marker-end=\"url(#arr)\"/><text x=\"234\" y=\"142\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">× 20,000 cups</text><text x=\"250\" y=\"330\" fill=\"#7a8299\" font-size=\"10\" font-weight=\"400\" text-anchor=\"middle\">Contribution pays the fixed costs first; whatever is left is profit</text></svg>"
    }
   ],
   "extras": {

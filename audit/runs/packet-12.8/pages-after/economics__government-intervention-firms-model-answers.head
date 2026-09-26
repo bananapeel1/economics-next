@@ -1,0 +1,73 @@
+title: Government Intervention (Unit 3) — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/government-intervention-firms-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Government Intervention (Unit 3) — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 3.3.5 Government Intervention"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain what is meant by privatisation and give one potential benefit.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Privatisation is the transfer of ownership of a business or industry from the public sector (government) to the private sector . K It means the firm is no longer state-owned but is instead owned by private shareholders who can buy and sell shares on the stock market. K A potential benefit is improved efficiency . Private firms are driven by the profit motive , giving them an incentive to cut costs and increase productivity. A For example, the privatisation of British Telecom (BT) in 1984 led to significant investment in network infrastructure and technological innovation that may not have occurred under slower-moving state ownership. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine how competition policy can be used to prevent the abuse of monopoly power.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Competition policy refers to government laws and regulations designed to promote competition and prevent firms from abusing market power . K In the UK, the Competition and Markets Authority (CMA) is the primary enforcement body, with powers to investigate mergers, prohibit anti-competitive practices, and impose fines. K First, merger control prevents monopoly power from increasing through acquisition. The CMA can block or impose conditions on mergers that would substantially lessen competition. For example, the CMA initially blocked Microsoft's $69bn acquisition of Activision Blizzard in 2023, citing concerns about reduced competition in cloud gaming. A By preventing mergers that create dominant positions, competition policy preserves consumer choice and keeps prices competitive. An Second, anti-cartel enforcement targets illegal collusion between firms. Cartels fix prices, share markets, or rig bids — all of which harm consumers by eliminating competition. An Fines can be substantial — the EU fined a truck cartel €2.93bn for price-fixing. A Third, price regulation (e.g. RPI – X price caps) limits what natural monopolies can charge, ensuring consumers are not exploited while the firm retains incentives to reduce costs. An Each mechanism aims to increase allocative efficiency — ensuring prices reflect costs and output is closer to the social optimum. An"
+   }
+  }
+ ]
+}

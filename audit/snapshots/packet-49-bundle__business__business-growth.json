@@ -1,0 +1,1927 @@
+{
+ "section_id": "business-growth",
+ "subject": "business",
+ "label": "packet-49-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "business-growth:block:f489fa9b",
+    "title": "Why Businesses Grow",
+    "sections": [
+     {
+      "id": "business-growth:sub:internal-economies-of-scale",
+      "title": "Internal Economies of Scale",
+      "keyIdea": "Economies of scale are the fall in cost per unit as a business grows. Internal economies come from the firm's own size: how it buys, produces, manages, borrows and markets.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **objectives of growth** are what a business hopes size will bring. The first is **economies of scale**: as output rises, the **cost per unit** (average cost) falls, because many costs rise more slowly than output does."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Internal economies of scale** arise inside the business, from its own size. Five kinds are usually named. **Purchasing**: large orders win discounts from suppliers. **Technical**: a larger firm can afford bigger, more efficient equipment and spread its cost over more units. **Managerial**: it can employ specialists, such as a full-time buyer or accountant, instead of managers who do a bit of everything."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Financial**: lenders see a large firm as less risky, so it can borrow more, and more cheaply. **Marketing**: the cost of a campaign is spread over more sales, so each sale carries less of it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Tanjong Bakes, a Singapore bakery-café chain, supplies its 40 cafés from one central bakery. Its flour order is large enough to win a discount a single café never could, and the cost of its head-office team and its advertising is shared across every café."
+       },
+       {
+        "type": "paragraph",
+        "text": "Economies of scale lower cost per unit, not total cost. A bigger firm spends more in total; each unit simply costs less to make and sell."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚢",
+       "text": "A shipping line in Hong Kong ordered container ships twice the size of its old ones. Each voyage cost more to run, but it carried so many more containers that the cost of moving each one fell sharply."
+      },
+      "misconception": "Students write that economies of scale mean a bigger firm has lower costs. Its total costs rise as it grows; it is the cost of each unit that falls, and only while output rises faster than costs do.",
+      "examMatters": "Name the particular economy the case gives evidence for, such as bulk buying or a larger machine, and explain how it lowers cost per unit for that business rather than listing all five.",
+      "recall": {
+       "id": "business-growth:sub:internal-economies-of-scale:recall",
+       "type": "match",
+       "prompt": "Match each saving to the internal economy of scale it shows:",
+       "pairs": [
+        {
+         "left": "A supermarket chain pays less per carton of milk because it orders by the lorry-load",
+         "right": "Purchasing economy",
+         "why": "Big orders give the buyer bargaining power, so each unit it buys costs less."
+        },
+        {
+         "left": "A car maker installs a robot line that only pays off at very high output",
+         "right": "Technical economy",
+         "why": "Costly equipment lowers cost per unit when it is spread over a very large output."
+        },
+        {
+         "left": "A hotel group hires a full-time expert to negotiate its energy contracts",
+         "right": "Managerial economy",
+         "why": "Size pays for specialists who do one job well."
+        },
+        {
+         "left": "A large airline pays a lower interest rate than a small one",
+         "right": "Financial economy",
+         "why": "Lenders charge less to a firm they see as a safer borrower."
+        },
+        {
+         "left": "A national television advert costs the same whether it sells for 50 shops or 500",
+         "right": "Marketing economy",
+         "why": "A fixed promotion cost is shared across more sales."
+        }
+       ]
+      }
+     },
+     {
+      "id": "business-growth:sub:external-economies-of-scale",
+      "title": "External Economies of Scale",
+      "keyIdea": "External economies of scale are cost savings a firm gains because its whole industry has grown in an area, not because the firm itself is bigger.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**External economies of scale** come from outside the business. When an industry grows and gathers in one place, every firm there can gain, whatever its own size."
+       },
+       {
+        "type": "paragraph",
+        "text": "The main sources are a **pool of skilled labour**, because workers have already been trained by other firms and local colleges teach the industry's skills; **specialist suppliers** and repair firms that set up nearby because the industry is big enough to support them; and **shared infrastructure**, such as roads, ports and research centres built with the industry in mind."
+       },
+       {
+        "type": "paragraph",
+        "text": "Singapore's food industry supports firms that service ovens, print packaging and train bakers. Tanjong Bakes can hire a qualified pastry chef, or get an oven repaired within a day, because so many food businesses operate nearby. A bakery in a remote town would pay more for both."
+       },
+       {
+        "type": "paragraph",
+        "text": "The difference matters when a firm is deciding how to grow. Internal economies grow with the firm; external economies depend on where it operates and on the health of its industry, neither of which it controls."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔧",
+       "text": "Makers of surgical instruments clustered in one Pakistani city share specialist steel suppliers, polishing workshops and a pool of skilled workers, so even small firms there can produce at low cost."
+      },
+      "misconception": "Students think external economies of scale come from the firm growing larger. They come from the industry growing around it: a small firm in a busy cluster can enjoy them while a large firm in a remote location may not.",
+      "examMatters": "Decide whether a saving comes from the firm's own size or from its industry and location; that reason decides whether it is internal or external, and whether the firm can control it.",
+      "recall": {
+       "id": "business-growth:sub:external-economies-of-scale:recall",
+       "type": "classify",
+       "prompt": "Sort each saving by where it comes from:",
+       "groups": [
+        {
+         "name": "Internal: the firm's own size",
+         "items": [
+          "A discount for ordering flour by the tonne",
+          "A cheaper loan secured on the firm's many buildings",
+          "One head-office accounts team serving every branch"
+         ],
+         "why": "Each saving exists because this business is large, wherever it is located."
+        },
+        {
+         "name": "External: the industry around it",
+         "items": [
+          "A nearby polytechnic produces qualified chefs every year",
+          "Oven engineers open workshops close to the food factories",
+          "A new port road cuts delivery times for every local firm"
+         ],
+         "why": "Each saving exists because the industry is large in that place, whatever this firm's size."
+        }
+       ]
+      }
+     },
+     {
+      "id": "business-growth:sub:market-power-share-and-profitability",
+      "title": "Market Power, Market Share and Profitability",
+      "keyIdea": "Beyond lower costs, firms grow to gain market power over customers and suppliers, a larger market share and brand recognition, and higher profitability.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Economies of scale are one objective of growth. Businesses grow for three further reasons."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Increased market power over customers and suppliers.** A larger firm buys more, so its suppliers depend on its orders and accept lower prices or longer payment terms. With fewer rivals left, customers have fewer alternatives, so the firm can hold or raise its prices."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Increased market share and brand recognition.** Market share is a firm's sales as a percentage of all sales in its market. More outlets and more advertising make its name familiar, and a familiar brand wins customers who would not try an unknown one."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Increased profitability.** Lower costs, firmer prices and more sales can all raise profit. Growth is usually judged on this objective in the end: size that adds nothing to profit has achieved little for the owners."
+       },
+       {
+        "type": "paragraph",
+        "text": "Tanjong Bakes has 8% of Singapore's bakery-café market and makes a profit of S$6m a year. By growing it hopes to bargain harder with its flour supplier, become the chain shoppers think of first, and turn both into higher profit."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚕",
+       "text": "A ride-hailing company in Southeast Asia grew until most drivers in its cities worked through its app. Its size let it set the commission drivers paid, and its name became the word passengers used for booking a ride."
+      },
+      "misconception": "Students treat a bigger market share as the same thing as higher profit. A firm can buy share by cutting prices or spending heavily on promotion and end up less profitable; share helps only if it brings power over prices or lower costs.",
+      "examMatters": "Link each objective to the case: which supplier the firm would have power over, which customers would recognise its brand, and what that would do to its profit.",
+      "recall": {
+       "id": "business-growth:sub:market-power-share-and-profitability:recall",
+       "type": "classify",
+       "prompt": "Sort each gain by the objective of growth it serves:",
+       "groups": [
+        {
+         "name": "Power over customers and suppliers",
+         "items": [
+          "A supplier agrees to wait 90 days for payment to keep a big buyer",
+          "Filmgoers in a town with one cinema left pay dearer tickets"
+         ],
+         "why": "Others depend on the firm, so it can set the terms."
+        },
+        {
+         "name": "Share and a known name",
+         "items": [
+          "The chain takes 12 of every 100 dollars spent in its market, up from 8",
+          "Shoppers pick its bread because they know the label"
+         ],
+         "why": "The firm wins a bigger slice of spending and a name buyers trust."
+        },
+        {
+         "name": "Profitability",
+         "items": [
+          "Costs fall faster than prices, so the margin on each sale widens",
+          "Each new branch adds more to profit than it costs to run"
+         ],
+         "why": "These show the gains reaching the bottom line, which is what growth is finally judged on."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Economies of scale lower cost per unit, not total cost.",
+     "Internal economies come from the firm's size; external ones from its industry.",
+     "Firms also grow for market power, market share, brand recognition and profit."
+    ],
+    "diagramId": "business-growth:diagram:018d62e1",
+    "quizIndices": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "business-growth:block:f0a5bec9",
+    "title": "Organic Growth",
+    "sections": [
+     {
+      "id": "business-growth:sub:organic-and-inorganic-growth",
+      "title": "Organic and Inorganic Growth",
+      "keyIdea": "Organic growth is a business expanding from within, using its own resources. Inorganic growth is expanding by joining with another business through a merger or takeover.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "There are two routes to a bigger business. **Organic growth**, also called internal growth, means expanding from within: selling more, opening new sites or launching new products, using the firm's own resources and profits."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Inorganic growth**, also called external growth, means expanding by combining with another business through a **merger** or a **takeover**. The firm grows at once by acquiring sales, staff and assets that someone else built."
+       },
+       {
+        "type": "paragraph",
+        "text": "The distinction between inorganic and organic growth is about how the extra capacity is obtained, not about how fast it arrives or how it is paid for. A firm that borrows to build its own new factory is still growing organically; a firm that buys a rival with cash it has saved is still growing inorganically."
+       },
+       {
+        "type": "paragraph",
+        "text": "Tanjong Bakes faces exactly this choice. It can open 15 cafés of its own over two years, or buy Golden Crust, a rival chain with 30 cafés, in a single deal."
+       }
+      ],
+      "realExample": {
+       "emoji": "✈️",
+       "text": "Two budget airlines in Southeast Asia chose different routes: one added aircraft and routes step by step from its own profits, while the other bought a smaller rival, with its aircraft and landing slots, in one deal."
+      },
+      "misconception": "Students call any growth paid for with borrowed money inorganic. The route decides it, not the finance: building new outlets of your own with a loan is organic, and buying another business outright is inorganic.",
+      "examMatters": "Classify the growth in the case by whether the business builds the new capacity itself or acquires another business, and quote the evidence in the case that shows which.",
+      "recall": {
+       "id": "business-growth:sub:organic-and-inorganic-growth:recall",
+       "type": "classify",
+       "prompt": "Sort each expansion by the route it takes:",
+       "groups": [
+        {
+         "name": "Organic",
+         "items": [
+          "A noodle chain opens five more branches with its own profits",
+          "A phone maker designs a cheaper model for students",
+          "A bookshop starts selling through its own website"
+         ],
+         "why": "The business builds each new capacity itself, without joining another firm."
+        },
+        {
+         "name": "Inorganic",
+         "items": [
+          "A bank buys a smaller rival together with its branches",
+          "Two insurers agree to combine into one company",
+          "A steel maker buys the mine that supplies its iron ore"
+         ],
+         "why": "The business grows by acquiring, or joining with, a business someone else built."
+        }
+       ]
+      }
+     },
+     {
+      "id": "business-growth:sub:methods-of-organic-growth",
+      "title": "Methods of Growing Organically",
+      "keyIdea": "A business grows organically by adding outlets or capacity, launching new products, entering new markets or selling online, each built with its own resources.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The methods of growing organically all build on what the business already has. **More outlets and capacity**: more shops or branches, a bigger factory, longer opening hours. **New products**: developing items to sell to existing customers."
+       },
+       {
+        "type": "paragraph",
+        "text": "**New markets**: selling existing products to new customers, in a new region, a new country or a new group of buyers. **Selling online**: a website, an app or a delivery platform that reaches customers who never visit a shop."
+       },
+       {
+        "type": "paragraph",
+        "text": "Some firms spread their name faster by letting other businesses run outlets under it, through franchising or licensing; franchising as a form of business is covered in 2.3.1."
+       },
+       {
+        "type": "paragraph",
+        "text": "Tanjong Bakes is using several of these at once. Its plan is 15 new cafés over two years at S$400,000 each, paid for from retained profit. It has added an app for office deliveries, and it has agreed to sell frozen dough to supermarkets, a new market for something it already makes."
+       },
+       {
+        "type": "paragraph",
+        "text": "Each method uses resources the firm already has or can build step by step. That is what makes organic growth controllable, and also what makes it slow."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧋",
+       "text": "A tea-shop chain in Kuala Lumpur grew from 12 outlets to 60 without buying anyone: it opened branches near universities, added a bottled-tea range for supermarkets and launched its own delivery app."
+      },
+      "misconception": "Students think organic growth only means opening more branches. Launching a product, entering a new country and selling online are organic too, because the firm builds each of them itself.",
+      "examMatters": "Choose the method that suits the firm in the case, given its products, customers and resources, and explain why it would work for that firm, rather than listing every method.",
+      "recall": {
+       "id": "business-growth:sub:methods-of-organic-growth:recall",
+       "type": "match",
+       "prompt": "Match each plan to the method of organic growth it uses:",
+       "pairs": [
+        {
+         "left": "A juice maker sells its existing drinks in Nigeria for the first time",
+         "right": "Entering a new market",
+         "why": "The product is unchanged; the customers are new."
+        },
+        {
+         "left": "A gym chain adds yoga classes for the members it already has",
+         "right": "Launching a new product",
+         "why": "Existing customers are offered something the firm did not sell before."
+        },
+        {
+         "left": "A hardware store lets customers order through its own app",
+         "right": "Selling online",
+         "why": "A digital channel reaches buyers who would not come to the shop."
+        },
+        {
+         "left": "A bakery chain builds a second, larger central kitchen",
+         "right": "Adding capacity",
+         "why": "The firm can now produce more of what it already makes."
+        }
+       ]
+      }
+     },
+     {
+      "id": "business-growth:sub:organic-growth-advantages-and-disadvantages",
+      "title": "Organic Growth: Advantages and Disadvantages",
+      "keyIdea": "Organic growth is lower-risk and keeps control and culture intact, but it is slow, limited by the firm's own finance, and may let rivals reach the market first.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Advantages of organic growth.** The owners keep **control**: they choose each new site and product and can pause if one disappoints. Growth builds on what the firm already knows, so the risk of each step is lower. The **culture** stays the same, because no other workforce has to be absorbed. It can often be financed from **retained profit**, so no new debt is needed."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Disadvantages of organic growth.** It is **slow**: each outlet has to be found, fitted out and filled with customers. It is **limited by the finance** the business can generate, so growth may not keep up with the market. Rivals that grow faster, especially by takeover, may win the best sites, the biggest customers and the economies of scale first."
+       },
+       {
+        "type": "flow",
+        "resultType": "neutral",
+        "steps": [
+         {
+          "title": "Profit is kept in the business",
+          "subtitle": "no new debt"
+         },
+         {
+          "title": "A few new cafés open each year",
+          "subtitle": "each one tested before the next"
+         },
+         {
+          "title": "Growth is steady but slow",
+          "subtitle": "rivals may move faster"
+         }
+        ],
+        "result": "Lower risk, paid for in time"
+       },
+       {
+        "type": "paragraph",
+        "text": "For Tanjong Bakes, 15 new cafés keep the risk small and its kitchens working the way they always have. But the plan reaches only 55 cafés in two years, while buying Golden Crust would reach 70 at once."
+       }
+      ],
+      "realExample": {
+       "emoji": "💊",
+       "text": "A family-run pharmacy chain in Nairobi grew only as fast as its profits allowed, opening two or three branches a year. It never took on debt, but a better-funded rival bought up the best high-street sites first."
+      },
+      "misconception": "Students write that organic growth is always the safest choice. Each step is lower-risk, but growing too slowly in a fast-moving market can leave a firm too small to compete, which is a risk of its own.",
+      "examMatters": "Weigh the speed organic growth gives up against the control it keeps, using the case: how fast the market is moving, and whether the firm can fund enough growth from its own profits.",
+      "recall": {
+       "id": "business-growth:sub:organic-growth-advantages-and-disadvantages:recall",
+       "type": "classify",
+       "prompt": "Sort each point about growing organically into an advantage or a disadvantage:",
+       "groups": [
+        {
+         "name": "Advantage",
+         "items": [
+          "A single disappointing branch can be closed without harming the others",
+          "No second workforce with different habits must be merged in",
+          "The expansion can be paid for without a bank loan"
+         ],
+         "why": "Each keeps risk, debt or disruption low because the firm grows one step at a time on its own terms."
+        },
+        {
+         "name": "Disadvantage",
+         "items": [
+          "A quicker rival secures the prime locations",
+          "The pace of expansion is capped by what the firm earns",
+          "Reaching the size the market rewards takes many years"
+         ],
+         "why": "Each is a cost of slowness: the firm can only grow as fast as its own resources allow."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Organic growth builds from within; inorganic growth joins another business.",
+     "Organic methods: outlets and capacity, new products, new markets, online sales.",
+     "Organic growth keeps control and lowers risk, but it is slow."
+    ],
+    "diagramId": "business-growth:diagram:7f6c6b03",
+    "quizIndices": [
+     7,
+     8,
+     9
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "business-growth:block:0601905f",
+    "title": "Mergers and Takeovers",
+    "sections": [
+     {
+      "id": "business-growth:sub:mergers-and-takeovers",
+      "title": "Mergers and Takeovers",
+      "keyIdea": "In a merger two firms agree to combine into one on roughly equal terms; in a takeover one firm buys control of another by acquiring over half of its shares.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Mergers and takeovers** are the two ways of growing inorganically. The distinction between mergers and takeovers is about how control changes. In a **merger**, two businesses agree to join into a single firm, usually on roughly equal terms, and the owners of both swap their shares for shares in the combined business."
+       },
+       {
+        "type": "paragraph",
+        "text": "In a **takeover**, also called an acquisition, one business buys a **controlling interest** in another: more than half of its voting shares. The target's directors may welcome the bid, a friendly takeover, or oppose it, a hostile one. In a hostile bid the buyer goes directly to the shareholders, and normally has to pay them well above what their shares were worth before the bid."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Reasons for mergers and takeovers.** Speed: capacity, customers and staff arrive at once. Market power and market share: a rival bought is a rival removed. Cost savings from combining, such as one head office and bigger orders, sometimes called synergy. Access to products, brands, skills or markets the firm lacks. Securing supplies or outlets. Spreading risk across more than one market."
+       },
+       {
+        "type": "paragraph",
+        "text": "Buying Golden Crust would give Tanjong Bakes 30 cafés, their customers and their bakers at once, lift its share of the market from 8% to 14%, and let one central bakery supply both chains."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏦",
+       "text": "Two regional banks in the Gulf merged to form one of the region's largest lenders. Neither bought the other: the owners of both received shares in the new bank, and branches serving the same neighbourhoods were closed."
+      },
+      "misconception": "Students use \"merger\" and \"takeover\" as if they mean the same thing. A merger is an agreed combination of roughly equal partners; a takeover is one firm buying control of another, which can happen against the target's wishes.",
+      "examMatters": "When firms in the case combine, decide whether it is a merger or a takeover from how control changes, then explain the reason for the deal that the case gives evidence for.",
+      "recall": {
+       "id": "business-growth:sub:mergers-and-takeovers:recall",
+       "type": "reorder",
+       "prompt": "Put the stages of a takeover in order, from choosing a target to the savings it is meant to bring:",
+       "criterion": "chronological: each stage can only happen once the one before it has",
+       "correctOrder": [
+        "A buyer picks out a rival worth owning",
+        "It bids for the shares at a price above their market value",
+        "Enough owners sell, and control passes to the buyer",
+        "The two firms merge their offices, buying and systems",
+        "Costs fall below what the two firms spent apart"
+       ],
+       "why": [
+        "Nothing can be offered until there is a target.",
+        "Owners need a reason to sell, so the bid comes at a premium.",
+        "Only once the buyer holds over half the shares can it run the target.",
+        "Combining operations is possible only after control has passed.",
+        "The savings come from the combined operations, so they arrive last, if at all."
+       ]
+      }
+     },
+     {
+      "id": "business-growth:sub:horizontal-and-vertical-integration",
+      "title": "Horizontal and Vertical Integration",
+      "keyIdea": "Horizontal integration joins firms at the same stage of production. Vertical integration joins firms at different stages: backward towards suppliers, forward towards customers.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Every product passes through **stages of production**: raw materials, processing or manufacturing, distribution, and selling to the consumer. A merger or takeover is classified by where the two businesses sit in that chain."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Horizontal integration** combines two firms at the **same stage** of the same industry, usually rivals. It brings market share, market power and economies of scale most directly, and it is the kind a country's competition authority is most likely to examine."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Vertical integration** combines firms at **different stages** of the same chain. **Backward** vertical integration moves towards the raw materials: owning a supplier secures supplies, controls quality and removes the supplier's profit margin from the buyer's costs. **Forward** vertical integration moves towards the consumer: owning a distributor or retailer secures outlets and brings the firm closer to its customers."
+       },
+       {
+        "type": "paragraph",
+        "text": "For Tanjong Bakes, buying Golden Crust is horizontal, since both run bakery-cafés. Buying Straits Flour Mill, which supplies its flour, would be backward vertical; buying a delivery company that carries its dough to supermarkets would be forward vertical."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌴",
+       "text": "A palm oil refiner in Malaysia bought plantations to secure its supply of fruit, and later bought a cooking-oil brand sold in supermarkets, extending the business in both directions along the same chain."
+      },
+      "misconception": "Students label any takeover of a supplier or customer as horizontal because the two firms already work together. Horizontal means the same stage of production; a supplier or a customer is at a different stage, so the integration is vertical.",
+      "examMatters": "Place both firms in the chain from raw materials to consumer, state which stage each occupies, and name the direction; then explain what that kind of integration gives this particular buyer.",
+      "recall": {
+       "id": "business-growth:sub:horizontal-and-vertical-integration:recall",
+       "type": "classify",
+       "prompt": "A chocolate maker is weighing six deals. Sort each by the direction it moves the firm in the chain:",
+       "groups": [
+        {
+         "name": "Backward, towards its inputs",
+         "items": [
+          "Buying a cocoa plantation in Ghana",
+          "Buying the firm that prints its wrappers"
+         ],
+         "why": "Each target supplies something the chocolate maker uses."
+        },
+        {
+         "name": "Same stage",
+         "items": [
+          "Buying a rival chocolate maker",
+          "Joining with a sweet factory of similar size"
+         ],
+         "why": "Each target makes the same kind of product at the same stage."
+        },
+        {
+         "name": "Forward, towards its buyers",
+         "items": [
+          "Buying a chain of sweet shops",
+          "Buying the wholesaler that delivers to supermarkets"
+         ],
+         "why": "Each target stands between the chocolate maker and the people who eat its products."
+        }
+       ]
+      }
+     },
+     {
+      "id": "business-growth:sub:conglomerates",
+      "title": "Conglomerates",
+      "keyIdea": "A conglomerate is a business that owns firms in unrelated markets. Growing this way spreads risk, but gives little of the cost savings a linked takeover brings.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **conglomerate** is a business made up of firms operating in unrelated markets. **Conglomerate integration** is a merger or takeover between businesses with no link in the chain of production: neither supplies, buys from nor competes with the other."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Why grow this way?** Chiefly to **spread risk**: if demand falls in one market, profits from the others keep the group going. It can also put spare cash to work, or buy a way into a growing market the firm could not enter from scratch."
+       },
+       {
+        "type": "paragraph",
+        "text": "**The drawbacks.** Few cost savings are available, because the businesses share no suppliers, factories or customers. Managers may not understand the markets they have bought into. And investors can often spread their own risk more cheaply by holding shares in several firms, so the stock market may value a conglomerate at less than its parts would be worth separately."
+       },
+       {
+        "type": "paragraph",
+        "text": "If the owners of Tanjong Bakes bought a laundry chain, that would be conglomerate integration. It would protect them if the café market weakened, but the laundries would share nothing with the bakeries except their owners."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏗️",
+       "text": "A family-owned group in Nigeria runs cement plants, sugar refineries and a salt business side by side. A slump in building work hurts one division, while food sales keep the group's cash flowing."
+      },
+      "misconception": "Students assume a conglomerate gains the same economies of scale as a horizontal takeover. With no shared production, suppliers or customers, most of those savings are not available; its main gain is spreading risk.",
+      "examMatters": "When a buyer in the case enters an unrelated market, weigh the risk it spreads against the savings and expertise it gives up, and say which matters more for that business.",
+      "recall": {
+       "id": "business-growth:sub:conglomerates:recall",
+       "type": "fillin",
+       "prompt": "Name the type of integration in each deal:",
+       "template": [
+        "A car maker buying a steel mill is ___ vertical integration.",
+        "A car maker buying a chain of car showrooms is ___ vertical integration.",
+        "A car maker buying a rival car maker is ___ integration."
+       ],
+       "answers": [
+        "backward",
+        "forward",
+        "horizontal"
+       ],
+       "hints": [
+        "moving up the chain to an input it uses",
+        "moving down the chain to where the product is sold",
+        "both firms do the same job in the chain"
+       ],
+       "distractors": [
+        "conglomerate",
+        "organic"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "A merger is agreed between equals; a takeover buys control.",
+     "Horizontal: same stage. Vertical: backward to suppliers, forward to customers.",
+     "A conglomerate spreads risk but shares few cost savings."
+    ],
+    "diagramId": "business-growth:diagram:6e04e372",
+    "quizIndices": [
+     10,
+     11,
+     12,
+     13,
+     14
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "business-growth:block:7b5a9b6e",
+    "title": "Inorganic Growth: Risks and Rewards",
+    "sections": [
+     {
+      "id": "business-growth:sub:financial-risks-and-rewards",
+      "title": "Financial Risks and Rewards of a Takeover",
+      "keyIdea": "A takeover's rewards are the profit and cost savings it adds; its risks are paying too much, the cost of financing the deal, and savings that never appear.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Financial rewards.** The buyer gains the target's profit, plus any cost savings from running the two businesses as one. Greater market power may also raise prices or lower input costs. If these gains are worth more than the deal cost, the owners are better off."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Financial risks.** The buyer usually pays a **premium**: more than the value of the target's net assets, and more than its shares were trading at, to persuade the owners to sell. If the expected profit and savings do not arrive, that premium is lost. A deal financed by **borrowing** adds interest that must be paid whatever happens, and raises gearing. One financed by issuing new shares **dilutes** the existing owners' control and their share of future profit."
+       },
+       {
+        "type": "paragraph",
+        "text": "A worked case. A gym chain pays S$50m for a rival whose net assets are worth S$32m, a premium of S$18m. The rival earns S$4m a year, and combining the two should save S$1m a year. The chain borrows S$30m at 5%, so interest is S$1.5m a year, and the yearly gain after interest is S$3.5m, provided the savings arrive."
+       },
+       {
+        "type": "paragraph",
+        "text": "So the reward is uncertain and arrives over years, while the premium and the debt are fixed on the day the deal is signed."
+       }
+      ],
+      "realExample": {
+       "emoji": "🥟",
+       "text": "A listed food group in Hong Kong paid well above market value for an overseas snack brand. Its sales fell short of the forecast, and within three years the group had written off most of the premium as a loss."
+      },
+      "misconception": "Students assume a takeover pays off if the target is profitable. What matters is whether the profit and savings gained are worth more than the price and the cost of financing it; a profitable target bought for too much can still lose the buyer money.",
+      "examMatters": "Where the case gives figures, set the yearly gain (the target's profit plus any savings, less interest) against the price paid, and judge how certain each part of that gain is.",
+      "recall": {
+       "id": "business-growth:sub:financial-risks-and-rewards:recall",
+       "type": "fillin",
+       "prompt": "Work out the figures for this deal:",
+       "template": [
+        "A firm pays S$45m for a business whose net assets are worth S$30m, so the premium is S$___m.",
+        "It borrows S$20m of the price at 5% a year, so the yearly interest is S$___m."
+       ],
+       "answers": [
+        "15",
+        "1"
+       ],
+       "hints": [
+        "the price paid less the value of what is bought",
+        "the amount borrowed times the rate"
+       ],
+       "distractors": [
+        "75",
+        "4"
+       ]
+      }
+     },
+     {
+      "id": "business-growth:sub:inorganic-growth-advantages-and-disadvantages",
+      "title": "Inorganic Growth: Advantages and Disadvantages",
+      "keyIdea": "Inorganic growth is fast and brings market share, skills and economies of scale at once, but it is costly, risky and hard to integrate.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Advantages of inorganic growth.** It is **fast**: a firm can double in size in one deal. It buys an established **market share**, customers and brand, and may remove a rival. It brings **skills, products or technology** the buyer lacks, and it can deliver economies of scale sooner than building capacity would."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Disadvantages of inorganic growth.** It is **expensive**, and the premium may never be recovered. It is **risky**, because the buyer knows its target less well than its own business. **Integration** is hard: two sets of systems, pay scales and ways of working must become one, and where the two cultures clash, staff leave and the expected savings shrink. A deal between rivals may also be blocked, or allowed only on conditions, by the competition authority."
+       },
+       {
+        "type": "flow",
+        "resultType": "bad",
+        "steps": [
+         {
+          "title": "Takeover completed",
+          "subtitle": "two workforces, two ways of working"
+         },
+         {
+          "title": "Cultures clash",
+          "subtitle": "experienced staff leave"
+         },
+         {
+          "title": "Savings shrink",
+          "subtitle": "customers notice the disruption"
+         }
+        ],
+        "result": "The price paid becomes harder to recover"
+       },
+       {
+        "type": "paragraph",
+        "text": "Golden Crust would take Tanjong Bakes to 70 cafés at once, but its bakers are used to their own recipes and routines, and Tanjong Bakes's standardised kitchens may not suit them."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛫",
+       "text": "When two airlines in Southeast Asia merged, joining their booking systems and pay scales took several years. Cabin crew from each airline kept working different rosters long after the deal."
+      },
+      "misconception": "Students write that takeovers fail mainly because of culture clash. It is one reason among several: paying too much, overestimating the savings and poor planning of the integration are just as common.",
+      "examMatters": "Balance the speed and market share a takeover brings against its cost and the difficulty of combining the two businesses, using what the case says about each firm.",
+      "recall": {
+       "id": "business-growth:sub:inorganic-growth-advantages-and-disadvantages:recall",
+       "type": "classify",
+       "prompt": "Sort each outcome of a takeover into an advantage or a disadvantage for the buyer:",
+       "groups": [
+        {
+         "name": "Advantage",
+         "items": [
+          "Its share of the market doubles in a single deal",
+          "A rival that kept cutting prices disappears",
+          "The target's patented recipes now belong to the buyer"
+         ],
+         "why": "Each gives the buyer size, power or know-how faster than it could build them."
+        },
+        {
+         "name": "Disadvantage",
+         "items": [
+          "Two incompatible computer systems must be joined",
+          "The price includes a large sum above the target's asset value",
+          "The regulator insists that some shops be sold"
+         ],
+         "why": "Each adds cost, risk or conditions that organic growth would have avoided."
+        }
+       ]
+      }
+     },
+     {
+      "id": "business-growth:sub:organic-or-inorganic-worked-judgement",
+      "title": "Organic or Inorganic? A Worked Judgement",
+      "keyIdea": "Choosing between organic and inorganic growth depends on how fast the market is moving, what the firm can afford, and how well the two businesses would fit.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A question on growth often asks for a judgement: should this business grow organically or by taking over another? A strong answer weighs both routes against the firm's circumstances and says what the choice depends on."
+       },
+       {
+        "type": "paragraph",
+        "text": "**For organic growth at Tanjong Bakes.** Fifteen new cafés over two years are paid for from retained profit, with no debt. Each café can be placed where Tanjong Bakes chooses and run its way, and if one site disappoints, the next can be changed."
+       },
+       {
+        "type": "paragraph",
+        "text": "**For the takeover.** Golden Crust brings 30 cafés, a larger share of the market and trained staff at once. Baking for 70 cafés in one central bakery should lower the cost of each loaf, and a rival would be gone."
+       },
+       {
+        "type": "paragraph",
+        "text": "**The judgement.** The takeover is better only if its extra speed and share are worth the premium and the debt. That depends most on whether the savings from combining actually arrive, which depends in turn on how readily the rival's bakers adapt. If rivals are racing for sites, speed matters more and the takeover is stronger; if not, organic growth delivers much of the gain for less risk."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏥",
+       "text": "A pharmacy chain in the Gulf grew organically for years, then bought a smaller rival when a change in health rules opened its market quickly. For that one decision, speed mattered more than control."
+      },
+      "misconception": "Students pick one route and argue it is always better. Neither is: organic growth is safer but slower, inorganic growth faster but riskier, and the right choice changes with the market and the firm.",
+      "examMatters": "End with the condition your judgement depends on, such as whether the savings from combining are likely to be achieved, rather than a flat recommendation.",
+      "recall": {
+       "id": "business-growth:sub:organic-or-inorganic-worked-judgement:recall",
+       "type": "match",
+       "prompt": "Match each situation to the route it most favours, and why:",
+       "pairs": [
+        {
+         "left": "Competitors are snapping up the best locations in a booming market",
+         "right": "Takeover, because speed matters most",
+         "why": "Waiting to build outlets one by one would leave the best sites to rivals."
+        },
+        {
+         "left": "The firm has savings but its bank will not lend it more",
+         "right": "Organic, because no debt is needed",
+         "why": "Growth can be funded from profit the firm already holds."
+        },
+        {
+         "left": "The target's staff work in a completely different way",
+         "right": "Organic, because combining would be hard",
+         "why": "A culture clash would eat into the savings a deal is meant to bring."
+        },
+        {
+         "left": "The firm needs expertise it would take years to develop",
+         "right": "Takeover, because it buys the skill",
+         "why": "Acquiring a business that already has the skill is faster than training it."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Set the profit and savings gained against the price and the cost of finance.",
+     "Takeovers are fast but costly; combining the two firms is where savings are won.",
+     "Culture clash is one reason takeovers disappoint; overpaying is another."
+    ],
+    "diagramId": "business-growth:diagram:27560e61",
+    "quizIndices": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "practiceIndices": [
+     3,
+     5
+    ]
+   },
+   {
+    "id": "business-growth:block:b7c00186",
+    "title": "Problems Arising From Growth",
+    "sections": [
+     {
+      "id": "business-growth:sub:diseconomies-of-scale",
+      "title": "Diseconomies of Scale",
+      "keyIdea": "Diseconomies of scale are rises in cost per unit when a business grows too large, caused by problems of coordination, communication and motivation.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Growth does not lower costs for ever. Beyond some size, **diseconomies of scale** set in: cost per unit starts to **rise** as the business grows, because it becomes harder to run."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Coordination.** With more sites, products and departments, it is harder to keep everyone working to one plan, so duplication and waste creep in. **Communication.** Messages pass through more people and more layers, so they arrive later and are more often misunderstood. **Motivation.** In a very large organisation staff can feel like a small, unnoticed part of the whole, so effort falls and absence and staff turnover rise."
+       },
+       {
+        "type": "paragraph",
+        "text": "Together, economies and diseconomies explain why cost per unit tends to fall as a firm grows, level out, and eventually rise. Growth pays only while the savings from size outweigh the extra cost of managing it."
+       },
+       {
+        "type": "paragraph",
+        "text": "After a takeover, Tanjong Bakes would have 70 cafés and 1,500 staff under two brands. If café managers wait longer for decisions and staff at the former Golden Crust cafés feel overlooked, the cost of each loaf sold could rise even while the central bakery bakes each loaf more cheaply."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏨",
+       "text": "A fast-growing budget hotel group in India opened hundreds of properties in a few years. Standards varied from hotel to hotel, complaints rose, and head office had to hire whole teams just to inspect its own sites."
+      },
+      "misconception": "Students think diseconomies of scale mean total costs rise as a firm grows. Total costs always rise with output; diseconomies mean the cost of each unit rises, because the business has become harder to coordinate and motivate.",
+      "examMatters": "Identify the cause of diseconomies the case gives evidence for, whether coordination, communication or motivation, and explain how it would raise cost per unit for that business.",
+      "recall": {
+       "id": "business-growth:sub:diseconomies-of-scale:recall",
+       "type": "match",
+       "prompt": "Match each problem in a large firm to the cause of diseconomies of scale it shows:",
+       "pairs": [
+        {
+         "left": "Two regional offices each pay a consultant to study the same problem",
+         "right": "Weak coordination",
+         "why": "Nobody sees the whole business, so work is duplicated."
+        },
+        {
+         "left": "A new price list reaches branches a week late and partly wrong",
+         "right": "Slow, distorted communication",
+         "why": "Information loses time and accuracy as it passes through more hands."
+        },
+        {
+         "left": "Factory workers in a 5,000-person firm stop suggesting improvements",
+         "right": "Falling motivation",
+         "why": "People who feel unnoticed put in less effort and ideas."
+        }
+       ]
+      }
+     },
+     {
+      "id": "business-growth:sub:internal-communication",
+      "title": "Internal Communication",
+      "keyIdea": "As a business grows, internal communication gets harder: more layers and more people slow messages down and distort them, and managers lose touch with the front line.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Internal communication** is the passing of information within a business: instructions down, feedback and ideas up, and coordination across departments. A small firm does most of it face to face. Growth makes it harder in three ways."
+       },
+       {
+        "type": "paragraph",
+        "text": "**More layers of hierarchy.** Each extra layer of management between the top and the front line is one more point where a message can be delayed, shortened or misread. **More people and sites.** Information must reach more staff in more places, often in writing, so it travels more slowly and is discussed less. **More specialist departments.** Each develops its own priorities and jargon, so departments talk to each other less."
+       },
+       {
+        "type": "flow",
+        "resultType": "bad",
+        "steps": [
+         {
+          "title": "A new layer of managers",
+          "subtitle": "between head office and the cafés"
+         },
+         {
+          "title": "Messages take longer and lose detail",
+          "subtitle": "front-line problems reach the top late"
+         },
+         {
+          "title": "Decisions are slower and less informed",
+          "subtitle": "mistakes are repeated"
+         }
+        ],
+        "result": "Costs and customer complaints rise"
+       },
+       {
+        "type": "paragraph",
+        "text": "Tanjong Bakes has 3 layers of management today; running 70 cafés would take 5. A café manager who reports that customers dislike a new recipe would then wait while the message passes through two more people before anyone acts on it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Firms respond with clear reporting lines, regular briefings, shared digital systems, and by letting local managers decide without waiting for head office."
+       }
+      ],
+      "realExample": {
+       "emoji": "📡",
+       "text": "A bank in Kenya with branches across the country found that product changes decided in Nairobi reached rural branches weeks late. It set up a weekly video briefing for every branch manager, and complaints about wrong information fell."
+      },
+      "misconception": "Students assume more technology solves communication problems in a large firm. Email and apps move messages faster, but they do not remove layers of hierarchy or make people read and act on what they receive.",
+      "examMatters": "Explain how the growth in the case, whether more layers, more sites or more staff, damages communication, and what that does to decisions, costs or customers for that business.",
+      "recall": {
+       "id": "business-growth:sub:internal-communication:recall",
+       "type": "classify",
+       "prompt": "Sort each change by its likely effect on communication in a growing firm:",
+       "groups": [
+        {
+         "name": "Makes it worse",
+         "items": [
+          "Two more tiers of managers are added between the chief executive and the shops",
+          "Staff at newly opened sites get instructions only by email",
+          "The marketing and finance teams move to different buildings"
+         ],
+         "why": "Each puts more distance, more steps or less discussion between the people who need to share information."
+        },
+        {
+         "name": "Makes it better",
+         "items": [
+          "Store managers may change staff rotas without asking head office",
+          "Every Monday, all branch managers join a short video call",
+          "One shared system shows stock levels at every site"
+         ],
+         "why": "Each shortens the path a message travels or lets people see the same information directly."
+        }
+       ]
+      }
+     },
+     {
+      "id": "business-growth:sub:overtrading",
+      "title": "Overtrading",
+      "keyIdea": "Overtrading is growing faster than working capital can support: the firm pays for stock, staff and sites before customers pay, and runs short of cash while still profitable.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Overtrading** happens when a business expands too quickly for the cash it has available. It takes on more orders, sites or staff than its **working capital** can fund, so it cannot pay suppliers and wages on time, even though it may be making a profit on paper."
+       },
+       {
+        "type": "paragraph",
+        "text": "The cause is timing. Growth means paying out first, for materials, wages and new premises, while the revenue from the extra sales arrives later, especially when customers are given credit. The faster the growth, the larger that gap. Profit is not cash, and a business that cannot pay its bills can fail however full its order book is."
+       },
+       {
+        "type": "paragraph",
+        "text": "Tanjong Bakes's supermarket deal shows the risk. The supermarkets pay for frozen dough 60 days after delivery, but Straits Flour Mill must be paid within 30 days. If Tanjong Bakes also pays for new cafés out of its cash, it could run short of money to pay its suppliers at the very time its sales and profit are rising."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Avoiding it.** Forecast cash flow before expanding; grow in steps; arrange an overdraft or longer-term finance before it is needed; and negotiate shorter credit for customers or longer credit from suppliers."
+       }
+      ],
+      "realExample": {
+       "emoji": "🪑",
+       "text": "A furniture maker in Vietnam won a large order from an overseas retailer that paid 90 days after delivery. It bought timber and hired workers at once, and within two months could not pay its timber supplier, though the order itself was profitable."
+      },
+      "misconception": "Students think only unprofitable firms run out of cash. Overtrading hits firms whose sales and profits are growing, because the cash to fund the growth is paid out before the revenue from it comes in.",
+      "examMatters": "Show the timing gap from the case, when the firm pays out and when it is paid, and explain why that gap matters more the faster the business grows.",
+      "recall": {
+       "id": "business-growth:sub:overtrading:recall",
+       "type": "fillin",
+       "prompt": "Complete each statement about funding growth:",
+       "template": [
+        "A caterer pays for food within 15 days but its office clients pay after 45 days, so each order must be funded for ___ days.",
+        "If those clients paid after 20 days instead, the gap to be funded would shrink to ___ days."
+       ],
+       "answers": [
+        "30",
+        "5"
+       ],
+       "hints": [
+        "the gap between paying out and being paid",
+        "the same subtraction with the shorter wait"
+       ],
+       "distractors": [
+        "60",
+        "35"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Past some size, coordination, communication and motivation push unit costs up.",
+     "More layers and more sites slow messages down and distort them.",
+     "Overtrading: growth outruns cash, and a profitable firm can fail."
+    ],
+    "diagramId": "business-growth:diagram:29e11851",
+    "quizIndices": [
+     20,
+     21,
+     22,
+     23,
+     24
+    ],
+    "practiceIndices": [
+     4,
+     6
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "Why Businesses Grow",
+    "meta": "3.3.2 · 1a",
+    "keyIdea": "The objectives of growth: economies of scale, market power, market share and brand recognition, and profitability.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Economies of scale</strong> — the fall in cost per unit as a business grows."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Internal economies of scale</strong> — savings from the firm's own size: purchasing, technical, managerial, financial, marketing."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>External economies of scale</strong> — savings from the growth of the industry in an area: skilled labour, specialist suppliers, shared infrastructure."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Market share</strong> — a firm's sales ÷ total sales in the market × 100."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Bigger orders, bigger machines, specialist managers, cheaper loans and shared advertising → lower cost per unit."
+       },
+       {
+        "type": "mechanism",
+        "text": "Size → suppliers and customers depend on the firm → market power over prices and terms."
+       },
+       {
+        "type": "link",
+        "text": "Share and brand recognition matter only if they raise profitability."
+       },
+       {
+        "type": "link",
+        "text": "Not every firm aims to grow: how a small business competes is covered in 2.3.5."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Cost per unit falls, not total cost.",
+     "Internal or external: whose size?",
+     "Share is not the same as profit."
+    ]
+   },
+   {
+    "title": "Organic Growth",
+    "meta": "3.3.2 · 1b, 2a-2b",
+    "keyIdea": "Organic growth builds from within; it keeps control and lowers risk but is slow and limited by the firm's own finance.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Organic (internal) growth</strong> — expanding from within, using the firm's own resources."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Inorganic (external) growth</strong> — expanding by merger or takeover."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Methods of growing organically</strong> — more outlets and capacity, new products, new markets, selling online."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "For: control, lower risk, culture unchanged, financed from retained profit."
+       },
+       {
+        "type": "mechanism",
+        "text": "Against: slow, limited by the firm's own finance, rivals may grow faster."
+       },
+       {
+        "type": "link",
+        "text": "Tanjong Bakes: 15 cafés at S$400,000 each, S$6m from retained profit."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "The route decides it, not the finance.",
+     "Four routes, all built from within.",
+     "Safe step by step, slow overall."
+    ]
+   },
+   {
+    "title": "Mergers and Takeovers",
+    "meta": "3.3.2 · 3a",
+    "keyIdea": "Mergers and takeovers, why firms make them, and how integration is classified by the stages of production.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Merger</strong> — two firms agree to combine into one on roughly equal terms."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Takeover</strong> — one firm buys a controlling interest (over half the voting shares) in another; friendly or hostile."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Horizontal integration</strong> — same stage of production. <strong>Vertical integration</strong> — different stages: backward (towards suppliers) or forward (towards customers)."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Conglomerate</strong> — a business owning firms in unrelated markets."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Reasons: speed, market power and share, cost savings from combining, new products or skills, secure supplies or outlets, spreading risk."
+       },
+       {
+        "type": "mechanism",
+        "text": "Backward: secure supply, control quality, remove the supplier's margin. Forward: secure outlets, get closer to customers."
+       },
+       {
+        "type": "link",
+        "text": "A conglomerate spreads risk but shares few cost savings."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "How does control change?",
+     "Place both firms in the chain.",
+     "Unrelated means risk spread, few savings."
+    ]
+   },
+   {
+    "title": "Inorganic Growth: Risks and Rewards",
+    "meta": "3.3.2 · 3a, 3b",
+    "keyIdea": "A takeover adds profit and savings but costs a premium and often debt; whether it beats organic growth depends on speed, finance and fit.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Premium</strong> — the amount paid above the value of the target's net assets (or its share price before the bid)."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Yearly gain</strong> — the target's profit + savings from combining − interest on money borrowed for the deal."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Rewards: added profit, cost savings, market power. Risks: overpaying, interest and gearing, dilution, savings that never arrive."
+       },
+       {
+        "type": "mechanism",
+        "text": "For inorganic growth: fast, instant share, skills. Against: costly, risky, hard to integrate, may be blocked by the competition authority."
+       },
+       {
+        "type": "link",
+        "text": "The judgement turns on whether the savings from combining are achieved."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Gain against price and finance.",
+     "Speed against integration.",
+     "Name the condition."
+    ]
+   },
+   {
+    "title": "Problems Arising From Growth",
+    "meta": "3.3.2 · 4a-4c",
+    "keyIdea": "Growth brings its own problems: diseconomies of scale, harder internal communication and overtrading.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Diseconomies of scale</strong> — a rise in cost per unit as a firm grows too large."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Internal communication</strong> — information passed within the business: down, up and across."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Overtrading</strong> — expanding faster than working capital can support, so the firm runs short of cash."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Causes of diseconomies: weaker coordination, slower and distorted communication, lower motivation."
+       },
+       {
+        "type": "mechanism",
+        "text": "Overtrading: pay out first (stock, wages, sites), get paid later (credit) → cash gap grows with the speed of growth."
+       },
+       {
+        "type": "link",
+        "text": "Overtrading as a cause of business failure also appears in 2.3.3."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Unit costs can rise with size.",
+     "More layers, slower messages.",
+     "Profit is not cash."
+    ]
+   }
+  ],
+  "quiz": [
+   {
+    "id": "business-growth:quiz:70072f60",
+    "question": "As a business grows, economies of scale mean that:",
+    "options": [
+     "its total costs fall",
+     "it must raise its prices",
+     "its cost per unit falls",
+     "its profit must rise"
+    ],
+    "explanation": "Economies of scale describe a fall in the cost of each unit as output rises. Total costs still rise as the firm produces more, prices need not change, and lower unit costs raise profit only if prices and sales hold up.",
+    "correctIndex": 2
+   },
+   {
+    "id": "business-growth:quiz:dbcb064c",
+    "question": "A hospital group spreads the cost of one very expensive scanner across thousands of patients a year. This is:",
+    "options": [
+     "a purchasing economy of scale",
+     "a technical economy of scale",
+     "an external economy of scale",
+     "a diseconomy of scale"
+    ],
+    "explanation": "Spreading the cost of large, specialised equipment over a high output is a technical economy. A purchasing economy comes from bulk-buying discounts, an external economy from the industry around the firm, and a diseconomy is a rise in unit cost.",
+    "correctIndex": 1
+   },
+   {
+    "id": "business-growth:quiz:a7a97615",
+    "question": "Which of these is an external economy of scale?",
+    "options": [
+     "a local college training workers for the whole industry",
+     "a bulk discount on the firm's raw materials",
+     "a lower interest rate on the firm's own loans",
+     "an advertising cost spread over more of its sales"
+    ],
+    "explanation": "An external economy comes from the industry growing in an area, such as a college that trains workers every nearby firm can hire. Bulk discounts, cheaper borrowing and spreading advertising all come from the firm's own size, so they are internal.",
+    "correctIndex": 0
+   },
+   {
+    "id": "business-growth:quiz:0dd6411d",
+    "question": "A bakery chain buys half of everything its flour supplier produces. Which objective of growth does this most help it achieve?",
+    "options": [
+     "market power over a supplier",
+     "brand recognition",
+     "an external economy of scale",
+     "a larger market share"
+    ],
+    "explanation": "A supplier that depends on one buyer for half its sales must accept that buyer's terms, which is market power over a supplier. Shoppers never see the flour contract, so brand recognition is unaffected; the saving comes from the firm's own size, so it is not external; and market share is measured by sales, not purchases.",
+    "correctIndex": 0
+   },
+   {
+    "id": "business-growth:quiz:e17430e0",
+    "question": "A firm sells S$36m a year in a market where S$240m is spent in total. Its market share is:",
+    "options": [
+     "6.7%",
+     "36%",
+     "15%",
+     "85%"
+    ],
+    "explanation": "Market share is the firm's sales divided by all sales in the market, times 100: 36 ÷ 240 × 100. Dividing the market by the firm's sales gives 6.7, a ratio rather than a share; 36 treats the sales figure itself as a percentage; and 85 is the share held by everyone else.",
+    "correctIndex": 2
+   },
+   {
+    "id": "business-growth:quiz:4e48687b",
+    "question": "Why might a firm that doubles its market share by cutting prices become less profitable?",
+    "options": [
+     "its brand becomes less well known",
+     "its cost per unit must rise",
+     "the lower price may cut its profit on each sale",
+     "its suppliers gain power over it"
+    ],
+    "explanation": "Winning share with lower prices can shrink the profit made on every unit by more than the extra sales add. Selling more makes a brand better known, not less; higher output tends to lower unit costs; and a bigger buyer gains power over suppliers rather than losing it.",
+    "correctIndex": 2
+   },
+   {
+    "id": "business-growth:quiz:60dc0f98",
+    "question": "Brand recognition helps a growing firm mainly because:",
+    "options": [
+     "shoppers tend to choose names they already know",
+     "it lowers the cost of its raw materials",
+     "it removes the need to advertise",
+     "it lets the firm borrow more cheaply"
+    ],
+    "explanation": "A familiar name wins customers who would not risk an unknown one, which supports sales and prices. It does not change what inputs cost, a firm still has to advertise to keep its name familiar, and cheaper borrowing is a financial economy of scale.",
+    "correctIndex": 0
+   },
+   {
+    "id": "business-growth:quiz:1baca686",
+    "question": "Which of these is a disadvantage of organic growth?",
+    "options": [
+     "it means absorbing another firm's workforce",
+     "it usually involves paying a premium",
+     "it is limited by the finance the firm can generate",
+     "it removes a competitor from the market"
+    ],
+    "explanation": "Organic growth moves only as fast as the firm's own profit and borrowing allow. Absorbing a workforce and paying a premium are features of a takeover, and removing a rival is an advantage a takeover can bring, not a drawback of growing from within.",
+    "correctIndex": 2
+   },
+   {
+    "id": "business-growth:quiz:fcb33975",
+    "question": "Why is organic growth usually described as lower-risk than a takeover?",
+    "options": [
+     "each step builds on what the firm already knows",
+     "it is always financed by borrowing",
+     "it guarantees economies of scale",
+     "rivals cannot copy it"
+    ],
+    "explanation": "Growing from within extends the firm's existing products, sites and skills one step at a time, so each step is easier to judge and to stop. It is often funded from retained profit rather than loans, it guarantees nothing about unit costs, and rivals can copy a new product or outlet.",
+    "correctIndex": 0
+   },
+   {
+    "id": "business-growth:quiz:2bc817d2",
+    "question": "A market is growing fast and rivals are buying the best sites. The main danger of growing only organically is that the firm:",
+    "options": [
+     "changes its culture too quickly",
+     "pays too much for its growth",
+     "loses control of its new sites",
+     "is left too small to compete"
+    ],
+    "explanation": "Organic growth is slow, so in a fast-moving market a firm that relies on it can be outgrown and lose the best locations. A culture changes little when no other workforce is absorbed, overpaying is a takeover risk, and control is exactly what organic growth keeps.",
+    "correctIndex": 3
+   },
+   {
+    "id": "business-growth:quiz:eed1bd18",
+    "question": "What is the main difference between a merger and a takeover?",
+    "options": [
+     "a merger always joins firms in different industries",
+     "a takeover must be agreed by both boards",
+     "a merger is paid for with borrowed money",
+     "a takeover is one firm buying control of another"
+    ],
+    "explanation": "In a takeover one business buys over half of another's voting shares, while a merger is an agreed combination of roughly equal partners. Mergers can join firms in the same industry, a hostile takeover goes ahead without the target board's agreement, and neither is defined by how it is financed.",
+    "correctIndex": 3
+   },
+   {
+    "id": "business-growth:quiz:76f095ed",
+    "question": "A company buys 55% of a rival's voting shares after the rival's directors rejected its offer. This is:",
+    "options": [
+     "a friendly takeover",
+     "a merger",
+     "organic growth",
+     "a hostile takeover"
+    ],
+    "explanation": "Buying control against the wishes of the target's directors is a hostile takeover. A friendly takeover has the directors' support, a merger is agreed by both sides as equals, and buying another business is inorganic, not organic, growth.",
+    "correctIndex": 3
+   },
+   {
+    "id": "business-growth:quiz:190a209e",
+    "question": "Why does a takeover bidder usually offer more than the target's shares were trading at?",
+    "options": [
+     "because the law sets a minimum premium",
+     "to persuade enough owners to sell",
+     "to cut the interest on its loans",
+     "to avoid gaining economies of scale"
+    ],
+    "explanation": "Owners have no reason to sell for what they could already get on the market, so the bidder offers a premium to win over enough of them. No law fixes the premium, paying more raises rather than cuts the finance needed, and economies of scale are something a buyer wants, not avoids.",
+    "correctIndex": 1
+   },
+   {
+    "id": "business-growth:quiz:ba4c0db3",
+    "question": "Which is most likely to be the main reason for a conglomerate takeover?",
+    "options": [
+     "to secure supplies of raw materials",
+     "to remove a direct competitor",
+     "to gain large purchasing economies",
+     "to spread risk across unrelated markets"
+    ],
+    "explanation": "A conglomerate joins businesses with no link in the chain of production, so its chief gain is that a slump in one market is offset by the others. Securing supplies is backward vertical integration, removing a competitor is horizontal, and unrelated businesses share few inputs to buy in bulk.",
+    "correctIndex": 3
+   },
+   {
+    "id": "business-growth:quiz:a6cdb84e",
+    "question": "Which is most likely to stop a takeover delivering the savings expected from it?",
+    "options": [
+     "the buyer pays for it from retained profit",
+     "the target has a well-known brand",
+     "the market is growing quickly",
+     "the two workforces refuse to adopt one way of working"
+    ],
+    "explanation": "Savings come from running the two businesses as one, which fails if staff keep working in their old, incompatible ways. Paying from retained profit avoids interest, a strong brand is part of what is bought, and a growing market helps rather than hinders the combined firm.",
+    "correctIndex": 3
+   },
+   {
+    "id": "business-growth:quiz:8dec79e5",
+    "question": "A firm pays S$50m for a business whose net assets are worth S$35m. The premium it pays is:",
+    "options": [
+     "S$15m",
+     "S$85m",
+     "S$35m",
+     "S$50m"
+    ],
+    "explanation": "The premium is the price paid less the value of the net assets bought: 50 − 35. Adding the two figures gives 85, and the other two options are simply the asset value and the price, neither of which is the amount paid above what the business is worth.",
+    "correctIndex": 0
+   },
+   {
+    "id": "business-growth:quiz:a8993923",
+    "question": "A takeover paid for by issuing new shares to outside investors mainly risks:",
+    "options": [
+     "a rise in the interest the firm must pay",
+     "diluting the existing owners' control",
+     "the loss of the target's brand",
+     "a fall in the firm's market share"
+    ],
+    "explanation": "New shares mean the existing owners hold a smaller part of the business, and so a smaller say and a smaller share of profit. Interest arises from borrowing, not from selling shares, and neither the target's brand nor the buyer's market share is lost by the choice of finance.",
+    "correctIndex": 1
+   },
+   {
+    "id": "business-growth:quiz:308c8f5a",
+    "question": "A bakery buys the mill that supplies its flour. This is:",
+    "options": [
+     "backward vertical integration",
+     "forward vertical integration",
+     "horizontal integration",
+     "conglomerate integration"
+    ],
+    "explanation": "The mill is an earlier stage of the same chain, so buying it moves the bakery back towards its raw materials. Forward integration would move towards the customer, horizontal would join another bakery, and a conglomerate deal would join an unrelated business.",
+    "correctIndex": 0
+   },
+   {
+    "id": "business-growth:quiz:a45c1ce7",
+    "question": "A drinks maker's takeover of a chain of bars that stock its drinks is:",
+    "options": [
+     "backward vertical integration",
+     "horizontal integration",
+     "forward vertical integration",
+     "conglomerate integration"
+    ],
+    "explanation": "The bars are a later stage of the chain, between the drinks maker and the consumer, so the move is forward. Backward would mean buying a supplier, horizontal another drinks maker, and conglomerate a business outside the chain.",
+    "correctIndex": 2
+   },
+   {
+    "id": "business-growth:quiz:6d33dfc7",
+    "question": "A firm borrows S$5m to build a second factory of its own. This growth is:",
+    "options": [
+     "inorganic, because it is paid for with a loan",
+     "organic, because it builds the capacity itself",
+     "inorganic, because it adds a new site",
+     "horizontal integration"
+    ],
+    "explanation": "Whether growth is organic depends on how the capacity is obtained, not how it is financed: the firm builds the factory itself. A loan or a new site does not make growth inorganic, and integration means joining with another business, which has not happened here.",
+    "correctIndex": 1
+   },
+   {
+    "id": "business-growth:quiz:5e0a5ee6",
+    "question": "Which of these is a cause of diseconomies of scale?",
+    "options": [
+     "bulk discounts on raw materials",
+     "cheaper loans from banks",
+     "spreading advertising over more sales",
+     "messages passing through more layers of management"
+    ],
+    "explanation": "More layers slow and distort communication, one of the problems that can push cost per unit up in a large firm. Bulk discounts, cheaper loans and spreading advertising are all economies of scale, which push cost per unit down.",
+    "correctIndex": 3
+   },
+   {
+    "id": "business-growth:quiz:b7624549",
+    "question": "Adding layers of management to a growing firm is most likely to:",
+    "options": [
+     "lower the cost of each unit it produces",
+     "raise the motivation of front-line staff",
+     "slow decisions as messages pass through more people",
+     "reduce the need for internal communication"
+    ],
+    "explanation": "Each extra layer is another point where information waits or is misread, so decisions take longer. It adds cost rather than lowering it, tends to leave front-line staff feeling further from those who decide, and increases the communication needed.",
+    "correctIndex": 2
+   },
+   {
+    "id": "business-growth:quiz:c79aacc2",
+    "question": "Staff at a firm with 20,000 employees say their effort goes unnoticed, and absence is rising. This is a diseconomy caused by:",
+    "options": [
+     "poor motivation",
+     "poor coordination",
+     "bulk purchasing",
+     "overtrading"
+    ],
+    "explanation": "Feeling like an unnoticed part of a huge organisation lowers effort and raises absence, which is the motivation problem of size. Coordination is about keeping departments working to one plan, bulk purchasing lowers costs, and overtrading is a shortage of cash.",
+    "correctIndex": 0
+   },
+   {
+    "id": "business-growth:quiz:45cef389",
+    "question": "Which action would best help a fast-growing firm avoid overtrading?",
+    "options": [
+     "giving its customers longer to pay",
+     "arranging extra finance before it expands",
+     "buying extra stock well in advance",
+     "recruiting staff ahead of new orders"
+    ],
+    "explanation": "Overtrading is a shortage of cash to fund growth, so securing finance before expanding closes the gap. Longer credit for customers delays cash coming in, while buying stock early and recruiting ahead of orders both pay cash out sooner, and all three make the shortage worse.",
+    "correctIndex": 1
+   },
+   {
+    "id": "business-growth:quiz:9a71eb8f",
+    "question": "A firm's sales and profit are rising fast, but it cannot pay its suppliers on time. The most likely explanation is that:",
+    "options": [
+     "its products have become unprofitable",
+     "it pays out for growth before customers pay it",
+     "it has too few customers",
+     "its prices are too high to sell"
+    ],
+    "explanation": "Growth means paying for materials, wages and premises before the revenue from the extra sales arrives, so a profitable firm can run short of cash. Rising profit rules out unprofitable products, and rising sales rule out too few customers or prices that do not sell.",
+    "correctIndex": 1
+   }
+  ],
+  "practice": [
+   {
+    "id": "business-growth:practice:c274eb07",
+    "command": "Calculate",
+    "marks": 4,
+    "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Calculate the percentage fall in the cost of a loaf at Tanjong Bakes's central bakery if it installs the new ovens. (4 marks)",
+    "guidance": "Find the fall in the cost of one loaf first, then express it as a percentage of the ORIGINAL cost, not the new one. Show each step on its own line and give the answer to one decimal place with its unit.\nFall in cost per loaf: S$0.80 − S$0.62 = S$0.18 (1 mark). Divide by the original cost: S$0.18 ÷ S$0.80 (1 mark). Multiply by 100 (1 mark). Answer: 22.5% (1 mark). Dividing by the new cost of S$0.62 gives about 29%, which overstates the fall."
+   },
+   {
+    "id": "business-growth:practice:38e35a6e",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Explain one disadvantage to Tanjong Bakes of growing organically through Plan A. (4 marks)",
+    "guidance": "The question asks for ONE disadvantage, so choose the one the source gives most evidence for and develop it rather than listing several. Say what the disadvantage is, show it with the source, and explain what it means for the business.\nKnowledge: a disadvantage of organic growth, such as its slow pace or its dependence on the firm's own finance (1 mark). Application: Plan A adds 15 cafés over two years, reaching 55, while Plan B would reach 70 at once (1 mark). Analysis: while Tanjong Bakes grows café by café, Golden Crust remains a rival competing for the same customers and sites (1 mark). Analysis: so Tanjong Bakes gains market share and economies of scale more slowly, which may leave it weaker against rivals that grow faster (1 mark). An answer that lists advantages of Plan B without a disadvantage of Plan A scores the knowledge mark at most."
+   },
+   {
+    "id": "business-growth:practice:6e7d160d",
+    "command": "Discuss",
+    "marks": 8,
+    "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Discuss the likely benefits to Tanjong Bakes of taking over Straits Flour Mill. (8 marks)",
+    "guidance": "Start by identifying what kind of integration this is, then work out what owning its supplier would give the business. Think about how certain each benefit is, and leave space for a brief assessment of how much they matter.\nLevel 1: describes takeovers or integration in general terms, with little use of the source. Level 2: identifies backward vertical integration and a benefit, with some application: Tanjong Bakes spends S$4m a year on flour from the mill. Level 3: analysis of benefits: the mill's profit margin on that flour stays inside Tanjong Bakes; supply of its main input is secured as it grows; quality can be controlled; and flour is no longer bought on 30-day terms from an outside supplier, easing the cash pressure of the supermarket deal. Level 4: a brief assessment weighing these, for example that the benefits depend on how much of the S$4m is the mill's margin, and that running a mill needs skills a café chain may lack. Discuss needs this assessment; it does not need a final recommendation."
+   },
+   {
+    "id": "business-growth:practice:1fe9f97c",
+    "command": "Assess",
+    "marks": 12,
+    "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Assess the financial risks and rewards to Tanjong Bakes of taking over Golden Crust. (12 marks)",
+    "guidance": "Use the source to put figures on both the rewards and the risks, then weigh them against each other. Think about which figures are certain and which depend on things going to plan, because this command word needs a supported judgement rather than a list.\nLevel 1: knowledge of the risks or rewards of a takeover, described generally. Level 2: application to Tanjong Bakes: the premium is S$36m − S$20m = S$16m; interest is 6% of S$24m = S$1.44m a year; the yearly gain is S$3m + S$1.5m − S$1.44m = about S$3.06m. Level 3: analysis of both sides: rewards include Golden Crust's profit, the savings from one central bakery and bulk flour buying, and a market share of 14% that strengthens its position with suppliers; risks include losing the S$16m premium if the savings do not arrive, interest that must be paid even if sales fall, and higher gearing. Level 4: evaluation reaching a supported judgement, for example that the rewards outweigh the risks only if the S$1.5m of savings is achieved, which depends on combining the two chains smoothly.\nA strong answer, in outline: the yearly gain of about S$3.06m looks attractive against a S$6m profit, but part of it rests on savings that are only expected, while the premium and the interest are certain; so the deal is financially sound only if the two chains can be combined as planned."
+   },
+   {
+    "id": "business-growth:practice:24d8faf0",
+    "command": "Assess",
+    "marks": 12,
+    "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Assess the likely problems Tanjong Bakes may face as a result of growing to 70 cafés through Plan B. (12 marks)",
+    "guidance": "Pick out the problems of growth the source gives evidence for, explain how each would affect costs, decisions or cash, and consider how serious and how avoidable each one is. Decide which problem is most important before you write.\nLevel 1: knowledge of problems arising from growth, described generally. Level 2: application to Tanjong Bakes: staff rise from 900 to 1,500 and management layers from 3 to 5; supermarkets pay after 60 days while flour is paid for within 30. Level 3: analysis: more layers slow and distort internal communication, so café problems reach decision-makers later; a larger, two-brand workforce is harder to coordinate and motivate, so diseconomies of scale may raise cost per unit; and paying suppliers and interest before supermarkets pay could leave the firm short of cash, a risk of overtrading. Level 4: evaluation reaching a supported judgement, for example that overtrading is the most urgent risk because it can stop the firm paying its bills, but that it is also the most avoidable, by arranging finance before expanding.\nA strong answer, in outline: communication and diseconomies will raise costs gradually, while a cash shortage could strike quickly; so the most serious problem is overtrading, unless the firm secures extra finance first."
+   },
+   {
+    "id": "business-growth:practice:5cc1b428",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Evaluate whether Tanjong Bakes should grow organically through Plan A or by taking over Golden Crust through Plan B. (20 marks)",
+    "guidance": "Work out what each plan would give the business and what each would cost or risk, using the source. Then weigh the speed and size of Plan B against the control and lower risk of Plan A, and finish with a judgement that says what the choice depends on.\nLevel 1: describes organic and inorganic growth in general terms. Level 2: knowledge and application: Plan A adds 15 cafés for S$6m from retained profit, with no debt; Plan B adds 30 cafés and 6% of the market at once for S$36m, including a S$16m premium and S$24m of borrowing. Level 3: analysis of both sides: Plan B brings market share, market power and economies of scale in the central bakery sooner, and removes a rival; but the premium may not be recovered, interest of S$1.44m a year is payable whatever happens, and combining two workforces may cause diseconomies and communication problems. Plan A keeps control and culture but is slower. Level 4: evaluation reaching a supported judgement, for example that Plan B is better only if the expected S$1.5m of yearly savings is achieved and rivals are competing hard for sites; otherwise Plan A delivers most of the gain for far less risk.\nA strong answer, in outline: Plan B is faster and bigger, Plan A safer and cheaper; the takeover is worth its premium and debt only if the savings from combining arrive, so the decision turns on how well the two chains would fit together."
+   },
+   {
+    "id": "business-growth:practice:4297cf2c",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Evaluate whether growth is likely to increase Tanjong Bakes's profitability. (20 marks)",
+    "guidance": "Consider the ways the source suggests growth could raise profit and the ways it could hold profit back or cut it. Weigh the two, using figures from the source where you can, and finish with a judgement that says what the outcome depends on.\nLevel 1: describes the objectives or problems of growth in general terms. Level 2: knowledge and application: new ovens would cut the cost of a loaf from S$0.80 to S$0.62; a takeover would add S$3m of profit and S$1.5m of savings but cost S$1.44m a year in interest. Level 3: analysis of both sides: economies of scale in the central bakery and bulk flour buying lower cost per unit, and a larger market share gives power over suppliers and a better-known brand; against this, more layers of management and a bigger workforce risk diseconomies of scale, and the gap between paying suppliers and being paid by supermarkets risks overtrading. Level 4: evaluation reaching a supported judgement, for example that growth is likely to raise profitability while the business stays close to its lowest cost per unit, provided it manages communication across the larger business and arranges finance to cover the cash gap.\nA strong answer, in outline: economies of scale and market power push profitability up, diseconomies and financing costs push it down; the balance is likely to be positive for this business, but only if the problems of size are managed as it grows."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "business-growth:flashcard:ddc33a2b",
+    "front": "What are economies of scale?",
+    "back": "The fall in cost per unit as a business grows and its output rises."
+   },
+   {
+    "id": "business-growth:flashcard:6538f9e9",
+    "front": "Do economies of scale lower total cost?",
+    "back": "No. Total costs rise with output; it is the cost of each unit that falls."
+   },
+   {
+    "id": "business-growth:flashcard:cb4022ac",
+    "front": "Name the five internal economies of scale.",
+    "back": "Purchasing, technical, managerial, financial and marketing."
+   },
+   {
+    "id": "business-growth:flashcard:54e41ecd",
+    "front": "What is a purchasing economy of scale?",
+    "back": "A lower price per unit of input, won by buying in bulk."
+   },
+   {
+    "id": "business-growth:flashcard:dbe9f03a",
+    "front": "What is a technical economy of scale?",
+    "back": "Using larger, more efficient equipment whose cost is spread over a large output."
+   },
+   {
+    "id": "business-growth:flashcard:6300b1b3",
+    "front": "What is a financial economy of scale?",
+    "back": "A large firm can borrow more cheaply, because lenders see it as less risky."
+   },
+   {
+    "id": "business-growth:flashcard:283521e7",
+    "front": "What are external economies of scale?",
+    "back": "Cost savings from the growth of the whole industry in an area: skilled labour, specialist suppliers, shared infrastructure."
+   },
+   {
+    "id": "business-growth:flashcard:28d1dc34",
+    "front": "Name the four objectives of growth.",
+    "back": "Economies of scale; market power over customers and suppliers; market share and brand recognition; profitability."
+   },
+   {
+    "id": "business-growth:flashcard:bcff7c37",
+    "front": "How does growth give market power over suppliers?",
+    "back": "A large buyer's orders matter so much to its suppliers that they accept lower prices or longer payment terms."
+   },
+   {
+    "id": "business-growth:flashcard:db2d7908",
+    "front": "How is market share calculated?",
+    "back": "The firm's sales ÷ total sales in the market × 100."
+   },
+   {
+    "id": "business-growth:flashcard:0eaa743a",
+    "front": "What is organic growth?",
+    "back": "Expanding from within, using the firm's own resources: new outlets, capacity, products, markets or online sales."
+   },
+   {
+    "id": "business-growth:flashcard:456aea57",
+    "front": "What is inorganic growth?",
+    "back": "Expanding by joining with another business, through a merger or a takeover."
+   },
+   {
+    "id": "business-growth:flashcard:550327ba",
+    "front": "Is a new factory built with a bank loan organic growth?",
+    "back": "Yes. The route decides it, not the finance: the firm builds the capacity itself."
+   },
+   {
+    "id": "business-growth:flashcard:b28604b0",
+    "front": "Give two advantages and two disadvantages of organic growth.",
+    "back": "For: control is kept, and each step is lower-risk. Against: it is slow, and limited by the firm's own finance."
+   },
+   {
+    "id": "business-growth:flashcard:b8a3730b",
+    "front": "What is the difference between a merger and a takeover?",
+    "back": "A merger is an agreed combination of roughly equal firms; a takeover is one firm buying over half of another's voting shares."
+   },
+   {
+    "id": "business-growth:flashcard:8cc82309",
+    "front": "What is a hostile takeover?",
+    "back": "A takeover the target's directors oppose, won by appealing to the shareholders directly."
+   },
+   {
+    "id": "business-growth:flashcard:d26e1402",
+    "front": "Give four reasons for mergers and takeovers.",
+    "back": "Speed; market power and share; cost savings from combining; gaining products, skills or markets (also securing supplies or outlets, and spreading risk)."
+   },
+   {
+    "id": "business-growth:flashcard:faf35345",
+    "front": "What is horizontal integration?",
+    "back": "Combining two firms at the same stage of production in the same industry."
+   },
+   {
+    "id": "business-growth:flashcard:a4f1f5f9",
+    "front": "What is backward vertical integration?",
+    "back": "Buying a firm at an earlier stage of the chain, such as a supplier, moving towards the raw materials."
+   },
+   {
+    "id": "business-growth:flashcard:707de49c",
+    "front": "What is forward vertical integration?",
+    "back": "Buying a firm at a later stage of the chain, such as a distributor or retailer, moving towards the consumer."
+   },
+   {
+    "id": "business-growth:flashcard:9a925c04",
+    "front": "What is a conglomerate?",
+    "back": "A business made up of firms in unrelated markets. It spreads risk but shares few cost savings."
+   },
+   {
+    "id": "business-growth:flashcard:3535d68b",
+    "front": "What is the premium in a takeover?",
+    "back": "The amount paid above the value of the target's net assets, or above its share price before the bid."
+   },
+   {
+    "id": "business-growth:flashcard:7c1584d4",
+    "front": "Name three financial risks of a takeover.",
+    "back": "Paying too much; interest and higher gearing if it is financed by borrowing; savings from combining that never arrive."
+   },
+   {
+    "id": "business-growth:flashcard:20334ffe",
+    "front": "Give two advantages and two disadvantages of inorganic growth.",
+    "back": "For: fast, and brings market share and skills at once. Against: costly, and hard to integrate two businesses."
+   },
+   {
+    "id": "business-growth:flashcard:bddcd732",
+    "front": "What are diseconomies of scale?",
+    "back": "A rise in cost per unit when a firm grows too large, from weaker coordination, communication and motivation."
+   },
+   {
+    "id": "business-growth:flashcard:1d268404",
+    "front": "Why does growth make internal communication harder?",
+    "back": "More layers of management, more people and sites, and more specialist departments slow messages and distort them."
+   },
+   {
+    "id": "business-growth:flashcard:14cae153",
+    "front": "What is overtrading?",
+    "back": "Expanding faster than working capital can support, so the firm runs short of cash even while profitable."
+   },
+   {
+    "id": "business-growth:flashcard:5ba95fcf",
+    "front": "How can a growing firm avoid overtrading?",
+    "back": "Forecast cash flow, grow in steps, arrange finance before expanding, and manage credit terms with customers and suppliers."
+   }
+  ],
+  "mistakes": [
+   {
+    "id": "business-growth:mistake:6e8c52ae",
+    "title": "Confusing organic and inorganic growth",
+    "mistake": "Calling any expansion paid for with a loan inorganic, or any quick expansion a takeover.",
+    "correction": "The route decides it: building new capacity yourself is organic, however it is financed; joining with another business through a merger or takeover is inorganic.",
+    "examTip": "Quote the evidence in the case that shows whether the business built the capacity itself or acquired it."
+   },
+   {
+    "id": "business-growth:mistake:5fe3b2c3",
+    "title": "Mixing up the types of integration",
+    "mistake": "Calling a takeover of a supplier horizontal because the two firms already work together.",
+    "correction": "Horizontal means the same stage of production. A supplier sits at an earlier stage, so buying it is backward vertical; buying a distributor or retailer is forward vertical.",
+    "examTip": "Place both firms on the chain from raw materials to consumer before naming the type, as the chapter's diagram does."
+   },
+   {
+    "id": "business-growth:mistake:8e0f4df4",
+    "title": "Saying economies of scale lower total costs",
+    "mistake": "Writing that a bigger firm has lower costs because of economies of scale.",
+    "correction": "Total costs rise as output rises. Economies of scale lower the cost of each unit, and only up to the point where diseconomies set in.",
+    "examTip": "Always write \"cost per unit\" or \"average cost\" when you explain an economy of scale."
+   },
+   {
+    "id": "business-growth:mistake:403253a6",
+    "title": "Forgetting that profitable firms can overtrade",
+    "mistake": "Assuming only loss-making firms run out of cash.",
+    "correction": "Growing firms pay for materials, wages and premises before the revenue from their extra sales arrives, so a profitable business can run out of cash.",
+    "examTip": "Show the timing gap from the case: when the firm pays out and when its customers pay."
+   },
+   {
+    "id": "business-growth:mistake:83bc3b60",
+    "title": "Judging a takeover only by the target's profit",
+    "mistake": "Arguing that a takeover is a good idea because the target is profitable.",
+    "correction": "The target's profit and the savings from combining have to be weighed against the price, including any premium, and the cost of financing the deal.",
+    "examTip": "Where the case gives figures, set the yearly gain (profit plus savings, less interest) against the price paid."
+   },
+   {
+    "id": "business-growth:mistake:3aa75bd4",
+    "title": "Blaming every failed takeover on culture clash",
+    "mistake": "Stating that takeovers fail because of culture clash, and stopping there.",
+    "correction": "Culture clash is one reason among several. Overpaying, overestimating the savings and poor planning of the integration are just as common.",
+    "examTip": "Name the reason the case gives evidence for, and explain how it would reduce the savings or raise the costs of the deal."
+   },
+   {
+    "id": "business-growth:mistake:d3369da9",
+    "title": "Stating that growth is always beneficial",
+    "mistake": "Arguing that growth is good for a business without weighing its problems.",
+    "correction": "Growth can bring diseconomies of scale, harder internal communication and overtrading, each of which can wipe out the benefits of size.",
+    "examTip": "Balance the objectives of growth against the problems it brings, and say what the outcome depends on for this business."
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "business-growth:diagram:018d62e1",
+    "title": "Sources of Economies of Scale",
+    "description": "IAL 3.3.2 · 1a: the five internal economies of scale, which come from the firm's own size, and the external economies that come from its industry.",
+    "checklist": [
+     "Purchasing: larger orders win discounts",
+     "Technical: bigger machines spread their cost over more units",
+     "Managerial: size pays for specialists",
+     "Financial: lenders charge a large firm less",
+     "Marketing: one campaign is spread over more sales",
+     "External: skilled workers and specialist suppliers gather where an industry is large"
+    ],
+    "scenarios": [
+     {
+      "label": "Internal and external",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Where lower costs per unit come from</text><rect x=\"14\" y=\"48\" width=\"180\" height=\"56\" rx=\"6\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><text x=\"104\" y=\"70\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">Purchasing</text><text x=\"104\" y=\"90\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">bulk-buying discounts</text><rect x=\"206\" y=\"48\" width=\"180\" height=\"56\" rx=\"6\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><text x=\"296\" y=\"70\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">Technical</text><text x=\"296\" y=\"90\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">bigger, faster machines</text><rect x=\"14\" y=\"116\" width=\"180\" height=\"56\" rx=\"6\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><text x=\"104\" y=\"138\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">Managerial</text><text x=\"104\" y=\"158\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">specialist managers</text><rect x=\"206\" y=\"116\" width=\"180\" height=\"56\" rx=\"6\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><text x=\"296\" y=\"138\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">Financial</text><text x=\"296\" y=\"158\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">cheaper borrowing</text><rect x=\"14\" y=\"184\" width=\"180\" height=\"56\" rx=\"6\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><text x=\"104\" y=\"206\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">Marketing</text><text x=\"104\" y=\"226\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">one campaign, more sales</text><rect x=\"206\" y=\"184\" width=\"180\" height=\"56\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"296\" y=\"206\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">External</text><text x=\"296\" y=\"226\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">a cluster of skills</text><text x=\"200\" y=\"266\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"400\">Blue: internal, from the firm's own size</text><text x=\"200\" y=\"286\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"400\">Green: external, from its industry nearby</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "business-growth:diagram:7f6c6b03",
+    "title": "Methods of Organic Growth",
+    "description": "IAL 3.3.2 · 2a: the methods of growing organically, each built by the business itself rather than acquired.",
+    "checklist": [
+     "More outlets or capacity: new sites, a larger kitchen or factory",
+     "New products for the customers a firm already has",
+     "New markets: the same products for new buyers or places",
+     "Online sales: an app, a website or a delivery platform"
+    ],
+    "scenarios": [
+     {
+      "label": "The four routes",
+      "svg": "<svg width=\"400\" height=\"260\" viewBox=\"0 0 400 260\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Four routes to organic growth</text><rect x=\"14\" y=\"48\" width=\"180\" height=\"70\" rx=\"6\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"104\" y=\"67\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">More outlets</text><text x=\"104\" y=\"87\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">more cafés or</text><text x=\"104\" y=\"107\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">a bigger kitchen</text><rect x=\"206\" y=\"48\" width=\"180\" height=\"70\" rx=\"6\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><text x=\"296\" y=\"67\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">New products</text><text x=\"296\" y=\"87\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">more to sell to</text><text x=\"296\" y=\"107\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">today's customers</text><rect x=\"14\" y=\"138\" width=\"180\" height=\"70\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"104\" y=\"157\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">New markets</text><text x=\"104\" y=\"177\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">the same products</text><text x=\"104\" y=\"197\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">for new buyers</text><rect x=\"206\" y=\"138\" width=\"180\" height=\"70\" rx=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.5\"/><text x=\"296\" y=\"157\" font-size=\"12\" fill=\"#a78bfa\" text-anchor=\"middle\" font-weight=\"600\">Online sales</text><text x=\"296\" y=\"177\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">an app, a website</text><text x=\"296\" y=\"197\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">or a platform</text><text x=\"200\" y=\"238\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Four routes, all built from within</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "business-growth:diagram:6e04e372",
+    "title": "Horizontal, Vertical and Conglomerate Integration",
+    "description": "IAL 3.3.2 · 3a: where Tanjong Bakes's possible takeovers sit in the chain from raw materials to consumer.",
+    "checklist": [
+     "Horizontal: two firms at the same stage, such as Tanjong Bakes and Golden Crust",
+     "Backward vertical: buying a supplier, towards the raw materials",
+     "Forward vertical: buying an outlet, towards the consumer",
+     "Conglomerate: a business with no link to the chain at all"
+    ],
+    "scenarios": [
+     {
+      "label": "The chain",
+      "svg": "<svg width=\"400\" height=\"330\" viewBox=\"0 0 400 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"ch\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#94a3b8\"/></marker><marker id=\"hz\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#34d399\"/></marker></defs><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Where each takeover sits in the chain</text><rect x=\"14\" y=\"44\" width=\"140\" height=\"34\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"84\" y=\"65\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Wheat farms</text><rect x=\"14\" y=\"98\" width=\"140\" height=\"34\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"84\" y=\"119\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Flour mill</text><rect x=\"14\" y=\"152\" width=\"140\" height=\"34\" rx=\"6\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"84\" y=\"173\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">Tanjong Bakes</text><rect x=\"14\" y=\"206\" width=\"140\" height=\"34\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"84\" y=\"227\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Supermarkets</text><rect x=\"14\" y=\"260\" width=\"140\" height=\"34\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"84\" y=\"281\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Consumers</text><line x1=\"84\" y1=\"80\" x2=\"84\" y2=\"96\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#ch)\"/><line x1=\"84\" y1=\"134\" x2=\"84\" y2=\"150\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#ch)\"/><line x1=\"84\" y1=\"188\" x2=\"84\" y2=\"204\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#ch)\"/><line x1=\"84\" y1=\"242\" x2=\"84\" y2=\"258\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#ch)\"/><text x=\"170\" y=\"119\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"600\">Buy it: backward vertical</text><text x=\"205\" y=\"162\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Horizontal</text><line x1=\"158\" y1=\"169\" x2=\"254\" y2=\"169\" stroke=\"#34d399\" stroke-width=\"1.5\" marker-end=\"url(#hz)\"/><rect x=\"258\" y=\"152\" width=\"128\" height=\"34\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"322\" y=\"173\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Golden Crust</text><text x=\"170\" y=\"227\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"600\">Buy them: forward vertical</text><text x=\"322\" y=\"252\" font-size=\"12\" fill=\"#a78bfa\" text-anchor=\"middle\" font-weight=\"600\">Buy it: conglomerate</text><rect x=\"258\" y=\"260\" width=\"128\" height=\"34\" rx=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.5\"/><text x=\"322\" y=\"281\" font-size=\"12\" fill=\"#a78bfa\" text-anchor=\"middle\" font-weight=\"600\">Laundry chain</text><text x=\"200\" y=\"318\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Same stage: horizontal · different stage: vertical</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "business-growth:diagram:27560e61",
+    "title": "Weighing a Takeover",
+    "description": "IAL 3.3.2 · 3a and 3b: the financial rewards of a takeover set against its risks.",
+    "checklist": [
+     "Rewards: the target's profit, savings from combining, market share, skills and brands",
+     "Risks: paying a premium, the cost of the finance, savings that fail to appear, combining two workforces",
+     "Weigh the yearly gain against the price paid"
+    ],
+    "scenarios": [
+     {
+      "label": "Rewards and risks",
+      "svg": "<svg width=\"400\" height=\"250\" viewBox=\"0 0 400 250\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Weighing a takeover</text><rect x=\"14\" y=\"44\" width=\"180\" height=\"34\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"104\" y=\"65\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Rewards</text><rect x=\"206\" y=\"44\" width=\"180\" height=\"34\" rx=\"6\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"1.5\"/><text x=\"296\" y=\"65\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">Risks</text><text x=\"20\" y=\"108\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Profit the target earns</text><text x=\"20\" y=\"128\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Savings from combining</text><text x=\"20\" y=\"148\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Market share gained</text><text x=\"20\" y=\"168\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Skills and brands bought</text><text x=\"212\" y=\"108\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">A premium over its assets</text><text x=\"212\" y=\"128\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">The cost of financing</text><text x=\"212\" y=\"148\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Savings that never arrive</text><text x=\"212\" y=\"168\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Two ways of working</text><text x=\"200\" y=\"228\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">The deal pays only if the rewards outweigh the price</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "business-growth:diagram:29e11851",
+    "title": "Economies and Diseconomies of Scale",
+    "description": "IAL 3.3.2 · 4a: cost per unit falls while economies of scale outweigh the problems of size, reaches a lowest point, and rises once diseconomies of scale take over.",
+    "checklist": [
+     "Left of the lowest point: economies of scale, cost per unit falling",
+     "Right of it: diseconomies of scale, cost per unit rising",
+     "Growth lowers unit costs only up to a point"
+    ],
+    "scenarios": [
+     {
+      "label": "The cost curve",
+      "svg": "<svg width=\"400\" height=\"290\" viewBox=\"0 0 400 290\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Cost per unit as a firm grows</text><line x1=\"60\" y1=\"44\" x2=\"60\" y2=\"250\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"250\" x2=\"372\" y2=\"250\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><polyline points=\"60,60 68.3,89.5 76.7,108.3 85,121.1 93.3,130 101.7,136.4 110,141 118.3,144.3 126.7,146.7 135,148.3 143.3,149.3 151.7,149.8 160,150 168.3,149.9 176.7,149.4 185,148.8 193.3,148 201.7,147 210,145.9 218.3,144.7 226.7,143.3 235,141.9 243.3,140.4 251.7,138.8 260,137.1 268.3,135.4 276.7,133.7 285,131.9 293.3,130 301.7,128.1 310,126.2 318.3,124.2 326.7,122.2 335,120.2 343.3,118.2 351.7,116.1 360,114\" fill=\"none\" stroke=\"#22d3ee\" stroke-width=\"2.5\"/><line x1=\"160\" y1=\"154\" x2=\"160\" y2=\"250\" stroke=\"#475569\" stroke-width=\"1.5\" stroke-dasharray=\"4 4\"/><text x=\"74\" y=\"50\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Cost per unit</text><text x=\"90\" y=\"88\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">Economies of scale</text><text x=\"360\" y=\"88\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"end\" font-weight=\"600\">Diseconomies of scale</text><text x=\"166\" y=\"240\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Lowest cost per unit</text><text x=\"215\" y=\"272\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Output: the size of the firm</text></svg>"
+     }
+    ]
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "From choosing a target to the savings a takeover promises",
+     "steps": [
+      "A buyer picks out a rival worth owning.",
+      "It bids for the shares at a price above their market value.",
+      "Enough owners sell, and control passes to the buyer.",
+      "The two firms merge their offices, buying and systems.",
+      "Costs fall below what the two firms spent apart."
+     ],
+     "result": "Every stage before the last costs money for certain; the saving at the end is only expected."
+    },
+    {
+     "title": "How economies of scale lower cost per unit",
+     "steps": [
+      "The business grows and its output rises.",
+      "It buys in bulk and uses larger, more efficient equipment.",
+      "Fixed costs such as head office and advertising are shared across more units.",
+      "Cost per unit falls."
+     ],
+     "result": "Lower unit costs let the firm cut prices or earn a wider margin."
+    },
+    {
+     "title": "How diseconomies of scale erode the gains of growth",
+     "steps": [
+      "The business keeps growing, adding sites, staff and layers of management.",
+      "Messages slow down and coordination weakens.",
+      "Staff feel distant from decisions, and effort falls.",
+      "Cost per unit starts to rise."
+     ],
+     "result": "Past some size, the costs of managing the business outweigh the savings from its scale."
+    },
+    {
+     "title": "How a profitable firm runs out of cash",
+     "steps": [
+      "Tanjong Bakes wins supermarket orders for frozen dough.",
+      "It pays Straits Flour Mill for extra flour within 30 days.",
+      "The supermarkets pay 60 days after delivery.",
+      "Cash runs short while the orders are still profitable."
+     ],
+     "result": "The faster the orders grow, the larger the gap that has to be financed."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Is bigger always better?",
+     "content": "Not always. Growth lowers cost per unit while economies of scale outweigh the problems of size, and it gives market power, share and brand recognition. But beyond some point, weaker coordination, slower communication and falling motivation push cost per unit back up, and growing too fast can leave a profitable firm short of cash. For Tanjong Bakes, a central bakery supplying 70 cafés should lower the cost of each loaf, but 5 layers of management and 1,500 staff under two brands make the business harder to run. The judgement depends on whether the firm can manage its larger size well enough to keep the savings."
+    },
+    {
+     "title": "Organic or inorganic growth?",
+     "content": "Organic growth keeps control, keeps the culture and avoids a premium, but it is slow and limited by the firm's own profit. Inorganic growth brings size, share and skills at once, but costs more, carries more risk and must combine two businesses. For Tanjong Bakes, Plan A reaches 55 cafés in two years without debt; Plan B reaches 70 at once, with a S$16m premium and S$24m of borrowing. The takeover is the better route only where speed matters more than control and the savings from combining are likely to be achieved."
+    },
+    {
+     "title": "Are takeovers worth the risk?",
+     "content": "The rewards of a takeover, the target's profit and the savings from combining, arrive over years and are not guaranteed. Much of the risk, the premium and the debt, is fixed on the day the deal is signed. A takeover is most likely to pay where the buyer knows the target's market well, pays a price close to what the business is worth, and has a clear plan for combining the two workforces. Where any of those is missing, the premium is often lost."
+    }
+   ]
+  }
+ }
+}

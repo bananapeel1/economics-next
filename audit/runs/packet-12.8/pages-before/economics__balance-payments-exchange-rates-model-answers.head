@@ -1,0 +1,73 @@
+title: Balance of Payments &amp; Exchange Rates — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/balance-payments-exchange-rates-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Balance of Payments & Exchange Rates — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 4.3.3 Balance of Payments & Exchange Rates"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain what is meant by a current account deficit and give one possible cause.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A current account deficit occurs when the value of imports of goods and services exceeds the value of exports , plus net primary and secondary income flows are negative overall. K It means the country is spending more on foreign goods and services than it earns from selling to other countries. K One possible cause is a strong (overvalued) exchange rate . When the pound is strong, UK exports become more expensive for foreign buyers (reducing export demand) while imports become cheaper for UK consumers (increasing import spending). A This combination of falling exports and rising imports widens the current account deficit. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine how depreciation of the exchange rate might affect a country's current account balance.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Depreciation is a fall in the value of a currency relative to others in a floating exchange rate system. K When the pound depreciates, UK exports become cheaper in foreign currency (more competitive) and imports become more expensive in sterling (less competitive). K In theory, this should improve the current account — export volume rises and import volume falls, improving net exports (X – M). An However, this outcome depends on the Marshall-Lerner condition : the current account improves only if the combined PED for exports and imports is greater than 1. K If demand for both is inelastic, depreciation may actually worsen the current account — import spending rises (same volume at higher prices) while export revenue barely increases. An Even when the Marshall-Lerner condition holds, there is a time lag explained by the J-curve effect . K In the short run, existing trade contracts are denominated in pre-depreciation prices, and consumers and firms take time to adjust their purchasing decisions. An After the UK pound fell approximately 15% following the 2016 Brexit referendum , the trade balance initially worsened before gradually improving as exporters gained competitiveness. A The J-curve shows the current account initially deteriorating (short-run inelastic demand) before improving as demand adjusts over 12–24 months. An"
+   }
+  }
+ ]
+}

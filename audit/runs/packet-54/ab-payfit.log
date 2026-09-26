@@ -1,0 +1,25 @@
+=== shopPay=14_000 rivalPay=15_000
+exit 1
+  before: 5 BLOCK / 24 DEBT / 3 INFO (1 recoverable)
+  after:  0 BLOCK / 0 DEBT / 2 INFO (0 recoverable)
+  new:    0 BLOCK / 0 DEBT · carried 0 () · would clear 24 baselined findings on publish
+  5 blocks · 18 subsections · 28 quiz (3 unpinned, keys 7/7/7/7) · 7 practice · 26 flashcards · 8 mistakes · 5 diagrams (8 views) · 4 chains · 3 evaluation
+  - arithmetic: closing the pay gap is not $480,000, the same as the turnover cost, as the text says
+  - arithmetic: this year: shop staff at even the rivals' pay ($36m) do not fit inside 60% of other operating expenses ($10m)
+  - arithmetic: last year: shop staff at even the rivals' pay ($32.4m) do not fit inside 60% of other operating expenses ($9.4m)
+  - arithmetic: the cost of replacing a leaver is not between one month's and one year's pay
+=== shopPay=2_000 rivalPay=2_500
+exit 1
+  before: 5 BLOCK / 24 DEBT / 3 INFO (1 recoverable)
+  after:  0 BLOCK / 0 DEBT / 2 INFO (0 recoverable)
+  new:    0 BLOCK / 0 DEBT · carried 0 () · would clear 24 baselined findings on publish
+  5 blocks · 18 subsections · 28 quiz (3 unpinned, keys 7/7/7/7) · 7 practice · 26 flashcards · 8 mistakes · 5 diagrams (8 views) · 4 chains · 3 evaluation
+  - arithmetic: closing the pay gap is not $480,000, the same as the turnover cost, as the text says
+=== shopPay=2_000 rivalPay=2_200
+exit 0
+  before: 5 BLOCK / 24 DEBT / 3 INFO (1 recoverable)
+  after:  0 BLOCK / 0 DEBT / 2 INFO (0 recoverable)
+  new:    0 BLOCK / 0 DEBT · carried 0 () · would clear 24 baselined findings on publish
+  5 blocks · 18 subsections · 28 quiz (3 unpinned, keys 7/7/7/7) · 7 practice · 26 flashcards · 8 mistakes · 5 diagrams (8 views) · 4 chains · 3 evaluation
+  PINS       derived from each item's block tag; five blocks of three or four subsections, each with
+restored byte for byte

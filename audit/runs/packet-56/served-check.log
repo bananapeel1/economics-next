@@ -1,0 +1,17 @@
+served draft content    == bundle apart from quizIndices (4)
+  leading pin, block 1: served quiz[0] == the bundle's leading item (same id)
+  leading pin, block 2: served quiz[1] == the bundle's leading item (same id)
+  leading pin, block 3: served quiz[2] == the bundle's leading item (same id)
+  leading pin, block 4: served quiz[3] == the bundle's leading item (same id)
+served draft notes      == bundle (4)
+served draft diagrams   == bundle (4)
+served draft practice   == bundle (7)
+served draft quiz       7 served (signed-out slice), 0 differ from the bundle item with the same id
+served draft flashcards 2 served (signed-out slice), 0 differ from the bundle item with the same id
+served draft extras     == the bundle's first 1 chain(s) and 1 evaluation(s) (premium trim)
+  MNCs and the Local Economy       diagram resolves · leading quiz served · practice 0 · recalls fillin,classify,match,classify
+  MNCs and the National Economy    diagram resolves · leading quiz served · practice 1,3,5 · recalls reorder,classify,classify,match,fillin
+  International Business Ethics    diagram resolves · leading quiz served · practice 2,4 · recalls match,classify,match,classify
+  Controlling MNCs                 diagram resolves · leading quiz served · practice 6 · recalls classify,fillin,reorder,classify
+live (no draft) content == the t=0 snapshot: MNC Impact & Ethics | Transfer Pricing & FDI Stakeholders · contentVersionSince 2026-09-25T12:11:56.45+00:00
+exit=0

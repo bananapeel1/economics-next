@@ -1,0 +1,132 @@
+{
+  "id": "C-managing-change-structure-01",
+  "section": "managing-change",
+  "kind": "structure",
+  "text": "Content/assessment mismatch is the core defect: 8 of 10 quiz MCQs (indices 0,2,3,4,5,6,7,8) and practice index 3 test spec content (Handy cultures, Kotter & Schlesinger, transformational leadership, succession planning, business continuity, size of organisation, contingency-planning costs) that the content[] blocks never teach. The PreTest draws 3 random MCQs from this bank, so most students will be pre-tested on things the lesson then ignores, and the PostTest 'improvement' is noise.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-structure-02",
+  "section": "managing-change",
+  "kind": "structure",
+  "text": "Zero recall widgets (0 reorder, 0 fillin) in a section that contains the best genuine sequence in the whole unit: Kotter's 8 steps. Also no fillin for Lewin's driving/restraining forces. Learn Mode steps therefore have no retrieval practice beyond one MCQ per block.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-structure-03",
+  "section": "managing-change",
+  "kind": "structure",
+  "text": "Zero diagrams, yet managing-change-models > examMatters instructs students to 'Draw Lewin's force field diagram'. A force field diagram (driving arrows vs restraining arrows on a line marked 'current state') is the obvious InlineDiagram and would also make the 'reduce restraining forces' insight concrete.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-structure-04",
+  "section": "managing-change",
+  "kind": "structure",
+  "text": "Only 2 blocks x 2 sections = 2 Learn Mode steps for an entire spec topic (3.6.1-3.6.3). No block covers effects of change, key factors in successful change (culture, size, speed) or risk/contingency planning. Suggested structure: Block 1 Causes and types of change; Block 2 Effects and key factors (culture, size, speed, leadership); Block 3 Managing resistance (K&S strategies + Lewin + Kotter); Block 4 Scenario/contingency planning (risk assessment, business continuity, succession, cost/benefit).",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.6.1, 3.6.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.6. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-managing-change-structure-05",
+  "section": "managing-change",
+  "kind": "structure",
+  "text": "realExample misplaced: drivers-and-scenario-planning carries the Toyota kaizen example, which illustrates incremental change (section 1), not drivers or scenario planning. Section 1 already has Kodak; scenario planning has no example at all despite Shell being mentioned in the body.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-structure-06",
+  "section": "managing-change",
+  "kind": "structure",
+  "text": "Both sections in block 'Managing Resistance' use the same Microsoft/Nadella example with the same emoji; the second is a near-repeat of the first. One should be swapped for a resistance-specific case (e.g. a failed IT rollout or a factory automation programme).",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-structure-07",
+  "section": "managing-change",
+  "kind": "structure",
+  "text": "Block 1 title 'Types of Change' does not describe its second section (drivers + scenario planning); takeaway[1] and [2] are about content the title does not signal. Block 2 title 'Managing Resistance' is fine and its takeaways match.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-structure-08",
+  "section": "managing-change",
+  "kind": "structure",
+  "text": "Blocks have no quizIndices/practiceIndices, so the InlineQuiz/InlinePractice shown at the end of each step cannot be aligned to what the step taught; with this quiz bank the block on Kotter/Lewin may surface a succession-planning MCQ.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-structure-09",
+  "section": "managing-change",
+  "kind": "structure",
+  "text": "Terminology drift across surfaces: content says 'disruptive change', notes[0] says 'Disruptive (step) change', flashcards say 'transformational change', quiz explanation says 'evolutionary'. Students revising across tabs see four labels for two concepts.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-structure-10",
+  "section": "managing-change",
+  "kind": "structure",
+  "text": "Misconceptions: scenario-planning-vs-forecasting and resistance-as-signal are genuine. 'Students assume disruptive change is always better' (section 1) and 'Students present Kotter's 8 steps as rigid and linear' (section 4) are weak/filler for an IAL student; notes[0] 'Students treat all change as equally difficult' is filler.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-structure-11",
+  "section": "managing-change",
+  "kind": "structure",
+  "text": "meta.number is '3.3.6' while the IAL spec heading is 3.6 Managing change (unsure whether the app deliberately prefixes unit number; flagging in case it is a typo that mis-sorts the section).",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}

@@ -1,0 +1,5 @@
+quiz[30] (c938de69, coach/school-trip): correctIndex 0 is the only defensible option — $9 − $4 = $5 positive contribution, empty seats mean fixed costs are sunk, so accepting is correct; options 1-3 (normal fare, fixed-cost coverage, average total cost) are each indefensible under contribution reasoning, matching the explanation.
+Explanation is internally consistent and arithmetically correct ($9 − $4 = $5 contribution) and states no hedge in the key ("accept, because $9 more than covers the variable cost").
+Length check: correct option is 53 chars vs. longest distractor at 56 chars (option 3), ratio 0.95 ≤ 1.2 — pass.
+No figure or case overlap: quiz uses coach/$4/$9/$15/$5; practice[6] (671dc923) uses Palm Bay Hotel/$120/$30/$55/$25/30 rooms/52 weeks; diagram[4] (d69d82aa) uses cold-brew coffee/$6.00/$2.50/$3.50/20,000 cups/$70,000/$45,000/$25,000 — no shared numbers or scenario.
+Diagram[4] svg/description/checklist describe only the generic contribution-waterfall mechanic (price → variable cost → contribution → fixed costs → profit) for the coffee case and state no answer to the coach quiz question.

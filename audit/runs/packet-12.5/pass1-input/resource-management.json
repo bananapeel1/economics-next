@@ -1,0 +1,204 @@
+{
+ "section": "resource-management",
+ "subject": "business",
+ "topic": "2.3.4",
+ "title": "Resource Management",
+ "questions": [
+  {
+   "key": "resource-management:practice:474b85cf",
+   "question": "Define the term 'productivity'. (2 marks)"
+  },
+  {
+   "key": "resource-management:practice:05ff2726",
+   "question": "Anvari Cycles employs 120 production workers and makes 3,000 bicycles a month. After a training programme the same workforce makes 3,600 bicycles a month. Calculate the percentage change in labour productivity. (4 marks)"
+  },
+  {
+   "key": "resource-management:practice:ab2c8a54",
+   "question": "Explain one way in which a rise in labour productivity can make a business more competitive. (4 marks)"
+  },
+  {
+   "key": "resource-management:practice:99a69bae",
+   "question": "Anvari Cycles is considering replacing its labour-intensive assembly line with an automated one. Analyse the factors it should take into account. (6 marks)"
+  },
+  {
+   "key": "resource-management:practice:d07a5c0d",
+   "question": "Anvari Cycles makes 3,000 bicycles a month on equipment with a maximum possible output of 4,000. It then closes one line, taking maximum possible output to 3,200, and its monthly output is unchanged. Calculate its capacity utilisation before and after the closure. (4 marks)"
+  },
+  {
+   "key": "resource-management:practice:24e1249f",
+   "question": "Explain one implication for Anvari Cycles of operating at 97.50% of capacity. (4 marks)"
+  },
+  {
+   "key": "resource-management:practice:3ef280eb",
+   "question": "Anvari Cycles uses 300 tyres a day, holds a maximum of 6,000, plans never to hold fewer than 1,200, and its supplier takes 4 days. Construct an inventory control diagram for one full cycle, labelled with these figures. (4 marks)"
+  },
+  {
+   "key": "resource-management:practice:58465766",
+   "question": "Anvari Cycles holds an average of 3,600 tyres at $1.50 a tyre a month. Moving to just-in-time delivery would take the average held to 450, but would leave only 1 day of cover. One stopped day costs $18,000 in lost contribution. Discuss whether Anvari Cycles should adopt just in time. (8 marks)"
+  },
+  {
+   "key": "resource-management:practice:2dd1547c",
+   "question": "Anvari Cycles currently inspects every bicycle at the end of the line, correcting 120 a month at $50 each. It is considering moving to quality assurance, under which the rate would fall to 1.50% and each correction would cost $16. Assess whether it should do so. (10 marks)"
+  },
+  {
+   "key": "resource-management:practice:26cf3c04",
+   "question": "Evaluate whether adopting lean production would be the best way for Anvari Cycles to gain a competitive advantage over Belvar Bikes, whose average cost is $132 a bicycle. (20 marks)"
+  }
+ ],
+ "leaves": [
+  {
+   "id": "BUS-2.3.4-1a-1",
+   "subtopic": "Production,",
+   "requirement": "Methods of production:",
+   "wording": "job"
+  },
+  {
+   "id": "BUS-2.3.4-1a-2",
+   "subtopic": "Production,",
+   "requirement": "Methods of production:",
+   "wording": "batch"
+  },
+  {
+   "id": "BUS-2.3.4-1a-3",
+   "subtopic": "Production,",
+   "requirement": "Methods of production:",
+   "wording": "flow"
+  },
+  {
+   "id": "BUS-2.3.4-1a-4",
+   "subtopic": "Production,",
+   "requirement": "Methods of production:",
+   "wording": "cell."
+  },
+  {
+   "id": "BUS-2.3.4-1b-1",
+   "subtopic": "Production,",
+   "requirement": "Productivity:",
+   "wording": "output per unit of input per time period"
+  },
+  {
+   "id": "BUS-2.3.4-1b-2",
+   "subtopic": "Production,",
+   "requirement": "Productivity:",
+   "wording": "factors influencing productivity"
+  },
+  {
+   "id": "BUS-2.3.4-1b-3",
+   "subtopic": "Production,",
+   "requirement": "Productivity:",
+   "wording": "link between productivity and competitiveness"
+  },
+  {
+   "id": "BUS-2.3.4-1b-4",
+   "subtopic": "Production,",
+   "requirement": "Productivity:",
+   "wording": "ways to improve productivity."
+  },
+  {
+   "id": "BUS-2.3.4-1c-1",
+   "subtopic": "Production,",
+   "requirement": "Efficiency:",
+   "wording": "production at minimum average cost"
+  },
+  {
+   "id": "BUS-2.3.4-1c-2",
+   "subtopic": "Production,",
+   "requirement": "Efficiency:",
+   "wording": "factors influencing efficiency"
+  },
+  {
+   "id": "BUS-2.3.4-1c-3",
+   "subtopic": "Production,",
+   "requirement": "Efficiency:",
+   "wording": "ways to improve efficiency."
+  },
+  {
+   "id": "BUS-2.3.4-1d",
+   "subtopic": "Production,",
+   "wording": "The distinction between labour- and capital-intensive production."
+  },
+  {
+   "id": "BUS-2.3.4-1e",
+   "subtopic": "Production,",
+   "wording": "Competitive advantage from short product lead-in times."
+  },
+  {
+   "id": "BUS-2.3.4-2a",
+   "subtopic": "Capacity",
+   "wording": "Capacity utilisation: current output (divided by) maximum possible output (× 100)."
+  },
+  {
+   "id": "BUS-2.3.4-2b",
+   "subtopic": "Capacity",
+   "wording": "Implications of under- and over-utilisation of capacity."
+  },
+  {
+   "id": "BUS-2.3.4-2c",
+   "subtopic": "Capacity",
+   "wording": "Ways of improving capacity utilisation (under and over utilisation)."
+  },
+  {
+   "id": "BUS-2.3.4-3a",
+   "subtopic": "Inventory control",
+   "wording": "Interpretation of inventory control diagram."
+  },
+  {
+   "id": "BUS-2.3.4-3b",
+   "subtopic": "Inventory control",
+   "wording": "Buffer inventory."
+  },
+  {
+   "id": "BUS-2.3.4-3c",
+   "subtopic": "Inventory control",
+   "wording": "Implications of poor inventory control."
+  },
+  {
+   "id": "BUS-2.3.4-3d",
+   "subtopic": "Inventory control",
+   "wording": "Just in time (JIT)."
+  },
+  {
+   "id": "BUS-2.3.4-3e",
+   "subtopic": "Inventory control",
+   "wording": "Waste minimisation."
+  },
+  {
+   "id": "BUS-2.3.4-3f",
+   "subtopic": "Inventory control",
+   "wording": "Competitive advantage from lean production."
+  },
+  {
+   "id": "BUS-2.3.4-4a-1",
+   "subtopic": "Quality",
+   "requirement": "Quality:",
+   "wording": "control"
+  },
+  {
+   "id": "BUS-2.3.4-4a-2",
+   "subtopic": "Quality",
+   "requirement": "Quality:",
+   "wording": "assurance"
+  },
+  {
+   "id": "BUS-2.3.4-4a-3",
+   "subtopic": "Quality",
+   "requirement": "Quality:",
+   "wording": "circles."
+  },
+  {
+   "id": "BUS-2.3.4-4b",
+   "subtopic": "Quality",
+   "wording": "Total Quality Management (TQM)."
+  },
+  {
+   "id": "BUS-2.3.4-4c",
+   "subtopic": "Quality",
+   "wording": "Continuous improvement (Kaizen)."
+  },
+  {
+   "id": "BUS-2.3.4-4d",
+   "subtopic": "Quality",
+   "wording": "Competitive advantage from quality management."
+  }
+ ]
+}

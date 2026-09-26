@@ -1,0 +1,36 @@
+| # | mutation | applied | findings | verdict | first finding |
+|---|---|---|---|---|---|
+| K0 | control, unmutated clone | - | 0 | PASS | |
+| a1 "## Questions" block restored with a (f) (20 marks) line | md 8ae9cf3d9e | R13(a)x1 | PASS | (a) econ-u1-market-failure.md:26 carries its own "## Questions"; the page renders the questions from the bank' |
+| a2 setext "Questions\n---" before Model Answers | md a99d24f7e1 | R13(a)x1 | PASS | (a) econ-u1-market-failure.md:26 carries its own "## Questions"; the page renders the questions from the bank' |
+| a3 "##   QUESTIONS  ##" (closing hashes, caps) | md 3b7e0137f6 | R13(a)x1 | PASS | (a) econ-u1-market-failure.md:26 carries its own "## QUESTIONS"; the page renders the questions from the bank' |
+| b1 "## Further practice" before Common Mistakes, a (20 marks) task | md 1fae97ebd6 | R13(b)x1 | PASS | (b) econ-u1-market-failure.md:82 has H2 "## Further practice", which is not one of "Stimulus", "Model Answers" |
+| b2 heading inside a blockquote "> ## Extension (20 marks)" | md 5206c3ab8c | R13(b)x1 | PASS | (b) econ-u1-market-failure.md:82 has H2 "## Extension (20 marks)", which is not one of "Stimulus", "Model Answ |
+| b3 heading inside a list item "- ## Extension (20 marks)" | md 5339c063ed | R13(b)x1 | PASS | (b) econ-u1-market-failure.md:82 has H2 "## Extension (20 marks)", which is not one of "Stimulus", "Model Answ |
+| b4 "## Stimulus" repeated at the end | md 0f6a76eba7 | R13(b)x1 | PASS | (b) econ-u1-market-failure.md:96 repeats "## Stimulus" (first at line 5) |
+| b5 "## Common mistakes" renamed (case) | md b3a8af41d6 | R13(b)x1 | PASS | (b) econ-u1-market-failure.md:82 has H2 "## Common mistakes", which is not one of "Stimulus", "Model Answers", |
+| b6 H3 "### Question (f) (20 marks)" inside Stimulus | md 5ae70559ec | R13(b)x1 | PASS | (b) econ-u1-market-failure.md:26 has a sub-heading "### Question (f) (20 marks)" outside "## Model Answers"; o |
+| b7 H2 in Diagram Reference position "## Task 6" | md f94898cfa1 | R13(b)x1 | PASS | (b) econ-u1-market-failure.md:96 has H2 "## Task 6", which is not one of "Stimulus", "Model Answers", "Common  |
+| b8 H5 "##### Extension (20 marks)" inside Common Mistakes | md efd57048db | R13(b)x1 | PASS | (b) econ-u1-market-failure.md:88 has a sub-heading "##### Extension (20 marks)" outside "## Model Answers"; on |
+| bn no-fire: "## Extension" inside a ~~~ fence | md 00c7774bfe | 0 | PASS |  |
+| bn2 no-fire: "\## Extension" backslash-escaped (renders as text) | md 1f29de24a7 | 0 | PASS |  |
+| c1 extra "### Question (f) (20 marks)" at end of Model Answers | md 30839c24ba | R13(c)x1 | PASS | (c) econ-u1-market-failure.md:82 heads Question (f) (20 marks), which no bank data-question item carries |
+| c2 (d) heading tariff 8 -> 10 | md 7fad06d2a7 | R13(c)x1 | PASS | (c) econ-u1-market-failure.md:54 heads Question (d) at 10 marks; the bank's mf-extract-examine-bag-charge-opti |
+| c3 (a) heading removed | md 8f6beba761 | R13(c)x1 | PASS | (c) econ-u1-market-failure.md "## Model Answers" has no "### Question (a) (2 marks)" for mf-extract-define-con |
+| c4 (a)/(b) heading letters swapped | md 19454255cd | R13(c)x1 | PASS | (c) econ-u1-market-failure.md "## Model Answers" heads the parts in the order b, a, c, d, e; the bank's order  |
+| c5 "### Question (F) (20 marks)" upper-case letter | md f590489534 | R13(c)x1 | PASS | (c) econ-u1-market-failure.md:82 "### Question (F) (20 marks)" under "## Model Answers" is not "### Question ( |
+| c6 "#### Extension (20 marks)" inside (e)'s answer | md c7bb1114a7 | R13(c)x1 | PASS | (c) econ-u1-market-failure.md:82 "#### Extension (20 marks)" under "## Model Answers" is not "### Question (x) |
+| c7 (e) heading "### Question (e) (14 marks) and (f) (6 marks)" | md c3df3dab57 | R13(c)x2 | PASS | (c) econ-u1-market-failure.md:66 "### Question (e) (14 marks) and (f) (6 marks)" under "## Model Answers" is n |
+| c8 "### Question (c) (6 marks)" duplicated | md fef9431033 | R13(c)x1 | PASS | (c) econ-u1-market-failure.md:82 heads Question (c) a second time |
+| c9 setext-free: "### Question (b) (4 marks)" -> "### Question (b) (4 _marks_)" | md bd8399c092 | 0 | PASS |  |
+| R residual: free-prose (f) task inside Common Mistakes | md 3665079866 | 0 | PASS |  |
+| k1 bank: part (f) 20 marks added (copy of (e)) | bank 7963b4082b | R1x1 R10x1 R13(c)x1 R8x1 R9x3 | PASS | keyTerm "the most effective way" is not an exact substring of the question |
+| k2 bank: (d) tariff 8 -> 6 | bank dde890d8df | R1x1 R10x1 R13(c)x1 R9x1 | PASS | Examine is not a command word for 6 marks in section C (Analyse) |
+| k3 bank: (b) and (d) letters swapped | bank 51acc965ee | R13(c)x2 | PASS | (c) econ-u1-market-failure.md:36 heads Question (b) at 4 marks; the bank's mf-extract-examine-bag-charge-optim |
+| k4 bank: (c) removed from the data question (paper dropped) | bank fb9947cad8 | R10x1 R13(c)x1 | PASS | data-question tariffs are 2,4,8,14; WEC11/WEC12 is 2,4,6,8,14 |
+| k5 bank: (c) stem edited (single source: validator silent by design) | bank dd82a822b0 | 0 | PASS |  |
+| t1 R9: context "(0 < |PED| < 1)" then (20 marks) then a later ">" line | bank b31e899ca6 | R9x1 | PASS | paper.context states a tariff "20 marks"; the shell prints the tariff from marks, so this reads as a second ta |
+| t2 R9 no-fire: same prose, no tariff | bank 01b239adef | 0 | PASS |  |
+| t3 R9: question "if P < MC" ... (20 marks) ... "MR > MC" on one line | bank e0efcbc349 | R9x1 | PASS | question states a tariff "20 marks"; the shell prints the tariff from marks, so this reads as a second task |
+| t4 R9 (observation): "P<MC ... (20 marks) ... MR>MC" unspaced, one line | bank c248c777e6 | 0 | **MISS** |  |
+| K1 | control after restore | md 84f0155e10 bank 9b42d43e13 | 0 | PASS | |

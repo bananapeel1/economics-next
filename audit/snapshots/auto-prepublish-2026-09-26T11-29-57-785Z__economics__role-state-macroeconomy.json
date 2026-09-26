@@ -1,0 +1,914 @@
+{
+ "section_id": "role-state-macroeconomy",
+ "subject": "economics",
+ "label": "auto-prepublish-2026-09-26T11-29-57-785Z",
+ "tables": {
+  "section_content": [
+   {
+    "id": "role-state-macroeconomy:block:d1cecc10",
+    "title": "Market Failure and the State",
+    "sections": [
+     {
+      "id": "role-state-macroeconomy:sub:public-goods",
+      "body": [
+       {
+        "text": "A **public good** has two defining characteristics: **non-excludability** (once provided, no one can be prevented from using it) and **non-rivalry** (one person's consumption does not reduce availability for others). These properties create the **free rider problem** — rational individuals will not pay voluntarily because they can benefit whether they pay or not.",
+        "type": "paragraph"
+       },
+       {
+        "text": "Because no one can be excluded, a private firm cannot charge a price — there is no revenue mechanism. This is **complete market failure**: the good has clear social value but zero private provision. The state must therefore provide public goods and fund them through taxation, compelling all citizens to contribute.",
+        "type": "paragraph"
+       },
+       {
+        "text": "It is important to distinguish public goods from **goods with external benefits** (which are excludable but under-consumed) and from goods that are simply provided by the government. Many state-provided goods — housing, education — are not public goods because they are both excludable and rivalrous. The test is always the two properties, not who provides the good.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Good is non-excludable and non-rivalrous",
+         "Free rider problem emerges — no one pays voluntarily",
+         "Private firms cannot generate revenue",
+         "Complete market failure — zero private provision"
+        ],
+        "result": "State must provide and fund through taxation",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Public Goods",
+      "keyIdea": "Public goods are non-excludable and non-rivalrous, so the free rider problem causes complete market failure — no private firm will supply them, making state provision essential.",
+      "examMatters": "Examiners test the two characteristics precisely. Always state both non-excludability and non-rivalry, explain how they lead to the free rider problem, and then link to complete market failure. A common error is listing examples without explaining the mechanism — always show the chain of reasoning.",
+      "realExample": {
+       "text": "National defence is the textbook public good. Once an army protects a country, every citizen benefits regardless of whether they pay taxes (non-excludable), and one person being protected does not reduce protection for others (non-rivalrous). No private firm would supply it because free riders would never pay.",
+       "emoji": "🛡️"
+      },
+      "misconception": "Students confuse public goods with goods provided by the public sector. Wrong — the NHS, state schools, and council housing are all excludable and rivalrous, so they are not public goods. Instead write: a public good is defined by non-excludability and non-rivalry, not by who provides it — many government-provided goods do not meet these criteria."
+     },
+     {
+      "id": "role-state-macroeconomy:sub:merit-goods-redistribution",
+      "body": [
+       {
+        "text": "**Goods with external benefits** are goods whose consumption benefits people other than the buyer: a vaccination protects the neighbours, an education raises the productivity of the graduate's colleagues. People **under-consume** them because the buyer weighs only their own benefit and ignores the **external benefit** to third parties; poor information can widen the gap by hiding even the private benefit. The market quantity sits below the social optimum.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The state corrects this through several mechanisms: **subsidies** lower the price to increase consumption, **free provision** removes the price barrier entirely, and **regulation** can mandate consumption (e.g. compulsory education until age 18). Each intervention aims to move consumption from the privately optimal level to the socially optimal level.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The main criticism is **paternalism** — the state is overriding individual preferences, assuming it knows better than citizens what is good for them. Libertarians argue that adults should be free to make their own choices, even poor ones. The counter-argument is that the external benefit is real whatever the individual decides, and that where information is also poor the poorest suffer most, because they lack both the information and the resources to act on it.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Buyers count only their own benefit and ignore the benefit to others",
+         "Consumption falls below the socially optimal level",
+         "State subsidises, provides free, or mandates consumption",
+         "Consumption rises towards the social optimum"
+        ],
+        "result": "Improved welfare outcomes but raises paternalism concerns",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "External Benefits and Redistribution",
+      "keyIdea": "Goods with external benefits are under-consumed because the buyer ignores the benefit to others — the state intervenes through subsidies, free provision, or regulation.",
+      "examMatters": "You should explain precisely why goods with external benefits are under-consumed: the buyer ignores the benefit to third parties, so marginal private benefit sits below marginal social benefit. Information failure can widen the gap but is a separate source of market failure — say so rather than merging the two. Show the divergence between private benefit and social benefit on a diagram, then evaluate the paternalism criticism for top marks.",
+      "realExample": {
+       "text": "**Thailand's Universal Coverage Scheme** provides healthcare at the point of use for a nominal fee, funded from general taxation. Without it, individuals would under-consume healthcare (especially preventive care), because the benefit to others of a treated, vaccinated population never enters a private decision — and many could not pay in any case. Free provision ensures universal access and reduces the long-term social costs of untreated illness.",
+       "emoji": "🏥"
+      },
+      "misconception": "Students say goods with external benefits are the same as public goods. Wrong — healthcare and education are excludable and rival (a hospital bed used by one patient cannot be used by another), so they are private goods; they are under-consumed because the buyer counts only their own benefit, not the benefit to everyone else. Instead write: goods with external benefits suffer from under-consumption, not complete market failure — the market provides them, just not enough of them."
+     }
+    ],
+    "takeaway": [
+     "Public goods: non-excludable + non-rivalrous = free rider problem = complete market failure.",
+     "External benefits: buyers ignore the gain to others, so too little is bought. Subsidise or provide.",
+     "Do not confuse public goods (zero market provision) with goods with external benefits (insufficient market provision).",
+     "Paternalism is the key criticism of intervention of this kind — the state overrides individual choice."
+    ],
+    "diagramId": null,
+    "quizIndices": []
+   },
+   {
+    "id": "role-state-macroeconomy:block:f5a30e42",
+    "title": "Macroeconomic Policy",
+    "sections": [
+     {
+      "id": "role-state-macroeconomy:sub:fiscal-monetary-supply-side",
+      "body": [
+       {
+        "text": "**Fiscal policy** involves changes in government spending (G) and taxation (T) to influence aggregate demand. Expansionary fiscal policy (raising G or cutting T) shifts AD right, stimulating output and employment but risking demand-pull inflation and a rising budget deficit. Contractionary fiscal policy does the reverse. The **fiscal multiplier** means the final change in GDP exceeds the initial injection — but its size is uncertain and depends on leakages.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Monetary policy** is conducted by the central bank, primarily through setting the **base interest rate**. Lower rates reduce the cost of borrowing, stimulate consumption and investment, and shift AD right. Higher rates cool demand and reduce inflationary pressure. The key advantage is independence from political cycles; the key limitation is **time lags** — changes take 18-24 months to fully affect the economy, and rates cannot fall below zero (the zero lower bound).",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Supply-side policies** aim to shift LRAS right by improving the productive capacity of the economy. Market-based approaches include deregulation, privatisation, and trade liberalisation. Interventionist approaches include education and training investment, infrastructure spending, and R&D subsidies. Supply-side policies address the root causes of slow growth but take years to show results and may worsen inequality in the short run.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Economy faces rising inflation",
+         "Central bank raises the base interest rate",
+         "Borrowing becomes more expensive, saving more attractive",
+         "Consumption and investment fall, AD shifts left"
+        ],
+        "result": "Inflation brought under control — but with a time lag of 18-24 months and potential output loss",
+        "resultType": "neutral"
+       }
+      ],
+      "title": "Fiscal, Monetary and Supply-Side Policies",
+      "keyIdea": "Fiscal policy uses government spending and taxation to shift AD, monetary policy uses interest rates to target inflation, and supply-side policies shift LRAS — each has distinct time lags and trade-offs.",
+      "examMatters": "You should compare policy tools on speed, certainty, and side effects. Monetary policy is faster to implement but has long transmission lags; fiscal policy has implementation lags but may be more targeted. Supply-side policies address root causes but take the longest. Structure your answer around these trade-offs.",
+      "realExample": {
+       "text": "The Bank of England raised its base rate from 0.1% in December 2021 to 5.25% by August 2023 — the sharpest tightening cycle in decades — to bring CPI inflation down from a peak of 11.1%. This demonstrated both the power of monetary policy to control inflation and its painful side effects on mortgage holders and economic growth.",
+       "emoji": "🏦"
+      },
+      "misconception": "Students treat fiscal and monetary policy as interchangeable demand-side tools. Wrong — they work through different transmission mechanisms and have different strengths. Instead write: fiscal policy works through government spending and taxation with political control, while monetary policy works through interest rates with central bank independence — they complement each other but serve different purposes."
+     },
+     {
+      "id": "role-state-macroeconomy:sub:income-redistribution-policies",
+      "body": [
+       {
+        "text": "**Progressive taxation** takes a higher proportion of income from higher earners — the UK's 20%/40%/45% income tax bands are a clear example. Combined with **transfer payments** (Universal Credit, pensions, child benefit), the tax-benefit system compresses the post-tax income distribution. **In-kind provision** — free education, healthcare, social housing — provides real benefits that disproportionately help the poorest, bypassing the problem of cash transfers being spent on non-essentials.",
+        "type": "paragraph"
+       },
+       {
+        "text": "The **equity-efficiency trade-off** is the central dilemma. Higher tax rates on the wealthy fund redistribution but may reduce incentives to work, invest, and innovate. The **Laffer curve** formalises this: beyond a certain tax rate, total revenue actually falls because economic activity declines. The optimal rate is debated but is clearly above 0% and below 100%.",
+        "type": "paragraph"
+       },
+       {
+        "text": "**Poverty traps** arise when benefit withdrawal rates create very high **effective marginal tax rates**. If earning an extra pound causes 80p of benefits to be withdrawn, the incentive to work is minimal. **Universal Basic Income (UBI)** is proposed as a solution — a flat payment to all citizens regardless of income, eliminating withdrawal rates entirely. Critics argue UBI is prohibitively expensive and reduces work incentives; supporters cite elimination of poverty traps and administrative simplicity.",
+        "type": "paragraph"
+       },
+       {
+        "type": "flow",
+        "steps": [
+         "Government increases transfer payments to reduce poverty",
+         "Benefits are withdrawn as income rises",
+         "Effective marginal tax rates exceed 70-80%",
+         "Recipients face minimal incentive to increase earnings"
+        ],
+        "result": "Poverty trap — the system designed to help the poor can lock them in poverty",
+        "resultType": "bad"
+       }
+      ],
+      "title": "Income Redistribution Policies",
+      "keyIdea": "Progressive taxation, transfer payments, and in-kind provision redistribute income, but face the equity-efficiency trade-off, the Laffer curve constraint, poverty traps, and the UBI debate.",
+      "examMatters": "Marks follow candidates who can explain why poverty traps exist using effective marginal tax rates, then evaluate solutions. Draw a diagram showing how benefit withdrawal creates a near-flat relationship between gross and net income. Then evaluate UBI as an alternative — acknowledging both its theoretical elegance and practical challenges.",
+      "realExample": {
+       "text": "UK Universal Credit was designed to replace six separate benefits with a single payment, using a consistent 55% taper rate to reduce poverty traps. In practice, implementation failures — the five-week wait, IT problems, and sanctions — meant many claimants faced hardship, demonstrating how policy design and implementation can diverge.",
+       "emoji": "🇬🇧"
+      },
+      "misconception": "Students assume UBI would solve poverty without trade-offs. Wrong — a meaningful UBI (e.g. $1,000/month to every adult) would cost trillions and may still reduce work incentives for some. Instead write: UBI eliminates poverty traps and simplifies administration, but its affordability and impact on labour supply remain deeply contested — pilot evidence is mixed."
+     }
+    ],
+    "takeaway": [
+     "Fiscal policy shifts AD through G and T; monetary policy uses interest rates; supply-side shifts LRAS.",
+     "Each policy tool has different time lags, transmission mechanisms, and trade-offs.",
+     "Redistribution faces the equity-efficiency trade-off, Laffer curve limits, and poverty trap risks.",
+     "UBI is a proposed solution to poverty traps but its cost and labour supply effects are debated."
+    ],
+    "diagramId": "role-state-macroeconomy:diagram:e06d515a",
+    "quizIndices": [
+     1
+    ],
+    "practiceIndices": [
+     1
+    ]
+   }
+  ],
+  "section_notes": [
+   {
+    "flow": {
+     "steps": [
+      "Good is non-excludable and non-rivalrous",
+      "Free rider problem prevents private provision",
+      "Government provides, funded by taxation"
+     ],
+     "result": "State provision corrects a complete market failure",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "Public Goods and Market Failure",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Public good</strong> — a good that is non-excludable (cannot prevent non-payers from consuming it) and non-rivalrous (one person's consumption does not reduce availability for others).",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Free rider problem</strong> — individuals have no incentive to pay for a public good because they can benefit from it without paying; this means private markets under-provide or fail to provide it at all.",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Quasi-public good</strong> — a good that has some but not all characteristics of a pure public good (e.g. roads are non-excludable but can become rivalrous when congested).",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "Because of the free rider problem, the market would provide zero or insufficient amounts of public goods — the state must step in to fund them through <strong>taxation</strong>.",
+        "type": "mech"
+       },
+       {
+        "text": "Examples include national defence, street lighting, and flood defences — goods where exclusion is impossible and consumption is non-rivalrous.",
+        "type": "mech"
+       },
+       {
+        "text": "This links to market failure from Unit 1: public goods represent a complete market failure where the private market produces zero output, justifying government provision.",
+        "type": "link"
+       }
+      ],
+      "title": "IMPLICATIONS"
+     }
+    ],
+    "keyIdea": "The state must provide public goods because the free market will not — non-excludability and non-rivalry mean private firms cannot charge for them, creating a 'free rider' problem that only government can solve.",
+    "takeaway": [
+     "Public goods: non-excludable + non-rivalrous → free rider problem.",
+     "Market provides zero — state must fund through taxation.",
+     "Don't confuse 'public good' (economic concept) with 'publicly provided'."
+    ],
+    "examMatters": "You should explain both characteristics (non-excludability and non-rivalry) and the free rider problem. The best answers give specific examples and explain why the market fails completely — not partially, but completely — for pure public goods.",
+    "misconception": "Students confuse public goods with goods provided by the public sector. A public good is defined by non-excludability and non-rivalry, not by who provides it. Healthcare is provided by the state but is not a public good (it is excludable and rivalrous). Instead write: public goods are defined by their economic characteristics, not by who provides them."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Buyers ignore the benefit their consumption brings to others",
+      "Consumption settles below the socially optimal level",
+      "State subsidises, provides, or mandates consumption"
+     ],
+     "result": "Consumption rises toward the socially optimal level",
+     "resultType": "good"
+    },
+    "meta": "4 concepts",
+    "title": "External Benefits and Redistribution",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>A good with external benefits of consumption</strong> — a good that is under-consumed relative to the socially optimal level because consumers ignore the benefit their consumption brings to others (its positive externality).",
+        "type": "def"
+       },
+       {
+        "text": "<strong>Information failure</strong> — a separate source of market failure: consumers lack full knowledge of a good's benefits (e.g. education, vaccination), which widens the under-consumption of goods with external benefits.",
+        "type": "def"
+       }
+      ],
+      "title": "DEFINITIONS"
+     },
+     {
+      "items": [
+       {
+        "text": "The state can <strong>subsidise</strong> goods with external benefits to lower the price and encourage consumption (e.g. subsidised public transport, free school meals).",
+        "type": "mech"
+       },
+       {
+        "text": "Direct <strong>provision</strong>: the state provides goods with external benefits free at the point of use (e.g. NHS healthcare, state education) to ensure universal access.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Regulation</strong>: the state can make consumption compulsory (e.g. mandatory schooling, seatbelt laws) when a subsidy alone is insufficient.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Intervention of this kind involves a <strong>paternalistic judgement</strong> — the government decides it knows better than individuals. This raises questions about personal freedom and government competence.",
+        "type": "imp"
+       }
+      ],
+      "title": "GOVERNMENT INTERVENTION"
+     }
+    ],
+    "keyIdea": "Goods with external benefits are under-consumed because the buyer ignores the benefit to others — the state subsidises, provides or mandates to close the gap and improve equity.",
+    "takeaway": [
+     "External benefits: under-consumed as buyers ignore the gain to others; poor information adds to it.",
+     "State tools: subsidies, free provision, compulsory consumption.",
+     "Criticism: paternalism — who decides what is 'good' for consumers?"
+    ],
+    "examMatters": "You should explain the positive externality that justifies intervention of this kind — and, separately, any information failure that widens it — then evaluate using the paternalism criticism and government failure risks.",
+    "misconception": "Students confuse goods with external benefits with public goods. Healthcare and education are excludable and rival, like any private good, but are under-consumed because the buyer ignores the benefit to others; poor information can widen the gap. Instead write: goods with external benefits could be provided by the market, but would be under-consumed; public goods cannot be provided by the market at all."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Government identifies macroeconomic problem",
+      "Chooses fiscal, monetary, or supply-side tools",
+      "Trade-offs limit what can be achieved simultaneously"
+     ],
+     "result": "No single policy solves all problems — a balanced approach is needed",
+     "resultType": "neutral"
+    },
+    "meta": "5 concepts",
+    "title": "Government Macroeconomic Intervention",
+    "blocks": [
+     {
+      "items": [
+       {
+        "tag": "exam",
+        "text": "<strong>Fiscal policy</strong> — government adjusts taxation and spending to influence AD, redistribute income, and provide public services.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Monetary policy</strong> — the central bank adjusts interest rates and money supply to control inflation and stabilise the economy.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Supply-side policies</strong> — reforms that increase the productive capacity of the economy (education, deregulation, infrastructure, labour market flexibility).",
+        "type": "mech"
+       }
+      ],
+      "title": "POLICY TOOLS"
+     },
+     {
+      "items": [
+       {
+        "text": "Expansionary policy (boosting AD) reduces unemployment but may cause inflation — the classic <strong>Phillips curve trade-off</strong>.",
+        "type": "mech"
+       },
+       {
+        "text": "Fiscal stimulus works in the short run but may lead to <strong>government debt</strong> that constrains future spending.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "Supply-side policies are the only approach that can achieve growth without inflation in the long run — but they are slow to take effect and politically difficult.",
+        "type": "imp"
+       },
+       {
+        "text": "Policy trade-offs link to macroeconomic objectives from Unit 2: low inflation, low unemployment, economic growth, and current account balance often conflict.",
+        "type": "link"
+       }
+      ],
+      "title": "TRADE-OFFS AND EVALUATION"
+     }
+    ],
+    "keyIdea": "Governments use fiscal, monetary, and supply-side policies to pursue macroeconomic objectives — but trade-offs between objectives mean that achieving all goals simultaneously is rarely possible.",
+    "takeaway": [
+     "Fiscal: direct AD management through taxation and spending.",
+     "Monetary: indirect AD influence through interest rates.",
+     "Supply-side: long-run capacity growth but slow to take effect."
+    ],
+    "examMatters": "You should evaluate policies by considering: time lags, side effects, trade-offs, and whether the problem is demand-side or supply-side. Always conclude with which policy is most appropriate for the specific scenario given.",
+    "misconception": "Students treat fiscal and monetary policy as interchangeable. They target different things: fiscal policy directly changes AD through G and T; monetary policy works indirectly through interest rates affecting C and I. Instead write: fiscal and monetary policy are complementary tools with different mechanisms, time lags, and side effects."
+   },
+   {
+    "flow": {
+     "steps": [
+      "Tax high earners progressively",
+      "Transfer to low-income households",
+      "Trade-off: less inequality but possible disincentive effects"
+     ],
+     "result": "Redistribution reduces inequality but must balance equity against efficiency",
+     "resultType": "neutral"
+    },
+    "meta": "4 concepts",
+    "title": "Income Redistribution Policies",
+    "blocks": [
+     {
+      "items": [
+       {
+        "text": "<strong>Progressive taxation</strong> — higher earners pay a larger proportion of their income in tax, reducing post-tax inequality.",
+        "type": "mech"
+       },
+       {
+        "text": "<strong>Transfer payments</strong> — welfare benefits, pensions, and tax credits transfer income from taxpayers to low-income households.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "<strong>In-kind provision</strong> — free healthcare, education, and housing directly improves the living standards of the poor without cash transfers.",
+        "type": "mech"
+       }
+      ],
+      "title": "TOOLS OF REDISTRIBUTION"
+     },
+     {
+      "items": [
+       {
+        "text": "High marginal tax rates may discourage work effort and enterprise — the <strong>Laffer curve</strong> argument that higher rates can reduce total tax revenue.",
+        "type": "mech"
+       },
+       {
+        "text": "Generous benefits may create a <strong>poverty trap</strong> — where taking a job means losing benefits, making work pay less than staying on welfare.",
+        "type": "mech"
+       },
+       {
+        "tag": "exam",
+        "text": "The challenge is designing redistribution that reduces poverty without destroying incentives to work, save, and invest — Universal Basic Income is one proposed solution.",
+        "type": "imp"
+       },
+       {
+        "text": "This links to government failure: redistribution policies can have unintended consequences (poverty traps, brain drain) that partially offset the intended equity gains.",
+        "type": "link"
+       }
+      ],
+      "title": "THE EQUITY-EFFICIENCY TRADE-OFF"
+     }
+    ],
+    "keyIdea": "Governments redistribute income to reduce poverty and inequality using progressive taxation, transfer payments, and targeted spending — but redistribution creates a trade-off between equity and efficiency.",
+    "takeaway": [
+     "Tools: progressive tax, transfers, in-kind provision.",
+     "Equity-efficiency trade-off: redistribution vs incentives.",
+     "Poverty traps and Laffer curve arguments limit how far redistribution can go."
+    ],
+    "examMatters": "Examiners test the equity-efficiency trade-off. Always acknowledge both sides: redistribution improves equity and can boost AD (higher MPC for poor), but excessive redistribution may damage incentives and reduce total output.",
+    "misconception": "Students say redistribution is always good for the economy. Wrong because high marginal tax rates can discourage enterprise and generous benefits can create poverty traps. Instead write: redistribution improves equity and can boost aggregate demand, but must be designed carefully to avoid disincentive effects that reduce economic efficiency."
+   }
+  ],
+  "section_quiz": [
+   {
+    "id": "role-state-macroeconomy:quiz:1a24c313",
+    "options": [
+     "Paying a nurse's salary in an NHS hospital",
+     "Building a new motorway",
+     "State pension payments to retired citizens",
+     "Purchasing textbooks for state schools"
+    ],
+    "question": "Which of the following is classified as a transfer payment?",
+    "explanation": "Transfer payments are government payments for which no goods or services are received in return. The state pension is a classic example - it redistributes income to retirees. Nurse salaries (current expenditure), motorway building (capital expenditure), and textbook purchases (current expenditure) all involve the government purchasing goods or services.",
+    "correctIndex": 2
+   },
+   {
+    "id": "role-state-macroeconomy:quiz:e358b5a1",
+    "options": [
+     "Tax revenue increases proportionally",
+     "Tax revenue remains unchanged",
+     "Tax revenue decreases as disincentives, avoidance, and evasion increase",
+     "Tax revenue doubles due to the higher rate"
+    ],
+    "question": "According to the Laffer Curve, what happens if a government increases its tax rate when it is already above the revenue-maximising rate (t*)?",
+    "explanation": "On the right side of the Laffer Curve (above t*), further increases in the tax rate actually reduce total tax revenue. This is because the higher rate creates disincentive effects (less work), increases tax avoidance and evasion, causes capital flight, and shrinks the tax base. The loss from the smaller base outweighs the gain from the higher rate.",
+    "correctIndex": 2
+   },
+   {
+    "id": "role-state-macroeconomy:quiz:0c66e5ef",
+    "options": [
+     "The deficit is measured in real terms; the debt is measured in nominal terms",
+     "The deficit is a flow over one year; the debt is a stock of accumulated borrowing",
+     "The deficit includes transfer payments; the debt does not",
+     "The deficit always increases; the debt can only decrease"
+    ],
+    "question": "What is the key distinction between a fiscal deficit and the national debt?",
+    "explanation": "The fiscal deficit is a FLOW variable - the amount by which government spending exceeds tax revenue in a single year. The national debt is a STOCK variable - the total accumulated borrowing from all previous years. Each year's deficit adds to the national debt. Only a surplus (T > G) can reduce the debt.",
+    "correctIndex": 1
+   },
+   {
+    "id": "role-state-macroeconomy:quiz:e9cd5cbb",
+    "options": [
+     "The central bank automatically adjusts interest rates in response to GDP data",
+     "Progressive taxation and welfare benefits automatically reduce the severity of booms and recessions without policy action",
+     "The government automatically passes new spending legislation during recessions",
+     "Exchange rates automatically adjust to offset changes in aggregate demand"
+    ],
+    "question": "Automatic stabilisers help moderate economic fluctuations because:",
+    "explanation": "Automatic stabilisers are built-in features of the fiscal system (progressive income tax and welfare benefits) that moderate fluctuations without deliberate government action. In a recession, tax revenues automatically fall and welfare spending rises, partially cushioning the decline in AD. In a boom, the reverse happens. No new legislation or policy decisions are required.",
+    "correctIndex": 1
+   },
+   {
+    "id": "role-state-macroeconomy:quiz:3ff51d3f",
+    "options": [
+     "The economy has significant spare capacity and unemployment is high",
+     "The government runs a budget surplus",
+     "The economy is near full capacity and government borrowing increases demand for loanable funds",
+     "Interest rates are at the zero lower bound"
+    ],
+    "question": "Crowding out is most likely to occur when:",
+    "explanation": "Crowding out occurs when government borrowing pushes up interest rates, reducing private investment and consumption. This is most significant when the economy is near full capacity, because: (1) there is limited spare saving to fund both government and private borrowing; (2) the supply of loanable funds is relatively inelastic; (3) private investment is most likely to be deterred. When there is spare capacity, crowding out is less likely.",
+    "correctIndex": 2
+   },
+   {
+    "id": "role-state-macroeconomy:quiz:448aeb48",
+    "options": [
+     "The deficit caused by a recession reducing tax revenues",
+     "The deficit that would exist even if the economy were at full employment",
+     "The total national debt divided by GDP",
+     "The deficit arising from automatic stabilisers"
+    ],
+    "question": "The structural deficit is defined as:",
+    "explanation": "The structural deficit is the budget deficit that would persist even if the economy were operating at full employment (potential output). It reflects a fundamental mismatch between long-term spending commitments and the tax base. Unlike the cyclical deficit (which disappears as the economy recovers), the structural deficit requires deliberate policy changes - spending cuts or tax increases - to eliminate.",
+    "correctIndex": 1
+   },
+   {
+    "id": "role-state-macroeconomy:quiz:f86c8392",
+    "options": [
+     "They transfer their headquarters to tax havens",
+     "They set artificially high or low prices on transactions between their own subsidiaries to shift profits to low-tax jurisdictions",
+     "They refuse to pay any taxes in countries where they operate",
+     "They transfer all employees to countries with no income tax"
+    ],
+    "question": "Which statement best describes how TNCs use transfer pricing to reduce their tax liability?",
+    "explanation": "Transfer pricing involves TNCs manipulating the prices charged on transactions between their own subsidiaries in different countries. For example, a subsidiary in a high-tax country might pay an inflated price for services from a subsidiary in a low-tax haven, artificially reducing profits (and tax) in the high-tax country while boosting profits (taxed at a lower rate) in the haven. The arm's length principle is used to combat this.",
+    "correctIndex": 1
+   },
+   {
+    "id": "role-state-macroeconomy:quiz:976749b8",
+    "options": [
+     "Massive fiscal stimulus packages to boost aggregate demand",
+     "Interest rates cut to near-zero by central banks",
+     "Quantitative easing - central banks purchasing government bonds",
+     "Significant increases in income tax rates to rapidly reduce the fiscal deficit"
+    ],
+    "question": "Which of the following was NOT a key policy response to the 2008 financial crisis?",
+    "explanation": "During the 2008 crisis, governments used expansionary measures: fiscal stimulus (increased spending, temporary tax cuts like the UK VAT reduction), near-zero interest rates, QE, and bank bailouts. Raising income tax rates to cut the deficit was NOT part of the immediate response - this would have been contractionary and worsened the recession. Deficit reduction (austerity) came later, from 2010 onwards.",
+    "correctIndex": 3
+   },
+   {
+    "id": "role-state-macroeconomy:quiz:827fbcd2",
+    "options": [
+     "They are impossible to collect efficiently",
+     "They tend to be regressive, taking a larger proportion of income from lower earners",
+     "They cannot be used to correct market failure",
+     "They have no effect on the price level"
+    ],
+    "question": "Which is a key disadvantage of using indirect taxes (such as VAT) as a source of government revenue?",
+    "explanation": "Indirect taxes like VAT are regressive because they take a larger proportion of income from lower earners. A 20% VAT rate applies equally to rich and poor, but since poorer households spend a higher proportion of their income on consumption (rather than saving), the tax burden falls disproportionately on them. This worsens income inequality. However, indirect taxes can be used to correct market failure (e.g. taxes on pollution) and do affect the price level.",
+    "correctIndex": 1
+   },
+   {
+    "id": "role-state-macroeconomy:quiz:071e15ac",
+    "options": [
+     "Policies may become pro-cyclical, amplifying rather than smoothing economic fluctuations",
+     "The government will always run a surplus",
+     "Monetary policy will always be more effective than fiscal policy",
+     "Supply-side policies will have no long-run effect"
+    ],
+    "question": "A government faces inaccurate economic data, time lags, and external shocks. Which problem does this combination most directly create for policymakers?",
+    "explanation": "When data is inaccurate and policies take time to design and implement (time lags), there is a serious risk that policies become pro-cyclical. A government may implement expansionary policy based on data showing a recession, but by the time the policy takes effect, the economy may have already recovered - the stimulus then causes overheating. External shocks compound this by changing conditions unpredictably. The result is that policies amplify rather than smooth the business cycle.",
+    "correctIndex": 0
+   },
+   {
+    "id": "role-state-macroeconomy:quiz:0b0d6852",
+    "options": [
+     "Producers bearing most of the tax burden through lower prices received",
+     "Consumers bearing most of the tax burden through higher prices paid",
+     "The tax burden being shared equally between consumers and producers",
+     "No change in the market price or quantity"
+    ],
+    "question": "When demand for a good is highly price inelastic, the imposition of an indirect tax will result in:",
+    "explanation": "When demand is price inelastic (PED < 1), consumers are unresponsive to price changes - they continue to buy similar quantities even when prices rise. This means producers can pass on most of the tax to consumers through higher prices. The consumer price rises significantly while the producer price falls only slightly. This is why governments place excise duties on goods with inelastic demand (tobacco, alcohol, fuel) - it raises substantial revenue with relatively little reduction in quantity sold.",
+    "correctIndex": 1
+   },
+   {
+    "id": "role-state-macroeconomy:quiz:eb1b45a5",
+    "options": [
+     "To increase tax rates in developing countries above 15%",
+     "To reduce tax competition between countries and limit profit shifting by TNCs to tax havens",
+     "To eliminate all corporation tax and replace it with VAT",
+     "To force all countries to have identical tax systems"
+    ],
+    "question": "Which of the following best explains why the OECD agreed a global minimum corporation tax rate of 15%?",
+    "explanation": "The OECD global minimum tax of 15% aims to reduce the incentive for TNCs to shift profits to tax havens and low-tax jurisdictions. By setting a floor, it limits the 'race to the bottom' in corporation tax rates where countries compete to attract investment by cutting rates ever lower. If a TNC pays less than 15% in any jurisdiction, the home country can top up the tax to 15%. This reduces profit shifting while still allowing countries some flexibility in their tax rates.",
+    "correctIndex": 1
+   }
+  ],
+  "section_practice": [
+   {
+    "id": "role-state-macroeconomy:practice:90c3f4d2",
+    "marks": 4,
+    "command": "Define",
+    "guidance": "Fiscal policy refers to the use of government spending and taxation to influence the level of aggregate demand and the overall performance of the economy (1 mark). Expansionary fiscal policy involves increasing government spending or cutting taxes to stimulate aggregate demand (1 mark). Contractionary fiscal policy involves reducing government spending or raising taxes to reduce aggregate demand (1 mark). Fiscal policy can also be used on the supply side — for example, spending on education and infrastructure to increase the productive capacity of the economy (1 mark).",
+    "question": "Define the term 'fiscal policy'. (4 marks)"
+   },
+   {
+    "id": "role-state-macroeconomy:practice:901afec0",
+    "marks": 6,
+    "command": "Explain",
+    "guidance": "Reason 1: To reduce income inequality (1 mark) — a progressive tax system charges higher marginal rates of tax on higher incomes, so the wealthy pay a proportionately larger share of their income in tax than lower earners (1 mark). The revenue generated can fund transfers and public services that benefit lower-income households, narrowing the income distribution (1 mark).\n\nReason 2: To stabilise aggregate demand as an automatic stabiliser (1 mark) — in an economic expansion, rising incomes push taxpayers into higher tax bands, automatically increasing the tax take and dampening demand (1 mark). In a recession, falling incomes reduce the tax burden, supporting consumer spending and limiting the depth of the downturn (1 mark).",
+    "question": "Explain two reasons why a government might choose to use progressive taxation. (6 marks)"
+   },
+   {
+    "id": "role-state-macroeconomy:practice:1a3fdb45",
+    "marks": 10,
+    "command": "Assess",
+    "guidance": "Define the Laffer curve as a theoretical relationship showing that tax revenue initially rises as the tax rate increases from zero, reaches a maximum at some optimal rate, then declines as further rate increases reduce the incentive to work, invest and comply (2 marks). Validity: at extremely high rates, tax avoidance, evasion and reduced labour supply can genuinely reduce tax revenue — this was arguably the case in the UK in the 1970s with top rates of 83% (2 marks); the concept highlights that there are limits to how much governments can raise rates without damaging the tax base (1 mark). Limitations: the optimal tax rate is unknown and varies between countries, time periods and types of tax — it cannot be precisely identified (2 marks); empirical evidence for the Laffer curve is mixed, and tax cuts in practice have often reduced revenue rather than increased it (2 marks). Judgement: the Laffer curve is a useful conceptual framework but is too imprecise to serve as a reliable guide for specific policy decisions (1 mark).",
+    "question": "Assess the validity of the Laffer curve as a basis for government tax policy. (10 marks)"
+   },
+   {
+    "id": "role-state-macroeconomy:practice:1d5fee2a",
+    "marks": 20,
+    "command": "Evaluate",
+    "guidance": "Introduction: Define TNCs as firms that operate in more than one country through ownership of productive assets, and sustainable economic growth as an increase in real GDP that does not compromise the ability of future generations to meet their needs (2 marks).\n\nFor — control is essential: Transfer pricing allows TNCs to shift profits to low-tax jurisdictions, depriving developing countries of tax revenue needed for public investment (3 marks); TNCs may exploit weak labour and environmental regulations, leading to poor working conditions and environmental degradation (2 marks); TNCs may repatriate profits rather than reinvest locally, limiting the multiplier effect on the domestic economy (2 marks).\n\nAgainst — control may not be essential or may be harmful: TNCs bring FDI, employment, technology and skills that developing countries desperately need — excessive regulation may deter this investment (3 marks); developing countries compete for FDI and may lack the institutional capacity to regulate effectively, leading to government failure (2 marks); some TNCs voluntarily adopt corporate social responsibility practices and contribute to local development (2 marks).\n\nEvaluation: Some degree of regulation is necessary to prevent exploitation and ensure tax compliance (2 marks). However, the challenge is to regulate proportionately — too little regulation allows exploitation, while too much deters the investment that drives growth. International cooperation on issues such as transfer pricing and minimum tax rates may be more effective than unilateral action by developing countries (2 marks).",
+    "question": "Evaluate the view that controlling the activities of transnational corporations is essential for developing countries to achieve sustainable economic growth. (20 marks)"
+   },
+   {
+    "id": "role-state-macroeconomy:practice:caa9fa66",
+    "marks": 4,
+    "command": "Outline",
+    "guidance": "Difference 1: A fiscal deficit (or budget deficit) is a flow concept — it occurs when government spending exceeds tax revenue in a single year (1 mark). The national debt is a stock concept — it is the total accumulated borrowing of the government over many years (1 mark).\n\nDifference 2: A fiscal deficit adds to the national debt each year (1 mark). A government can run a fiscal surplus (revenue exceeds spending) and still have a large national debt from past years of deficits (1 mark).",
+    "question": "Outline two differences between a fiscal deficit and the national debt. (4 marks)"
+   }
+  ],
+  "section_flashcards": [
+   {
+    "id": "role-state-macroeconomy:card:3df243d5",
+    "back": "To <strong>correct market failure</strong>, provide public goods, reduce inequality, stabilise the macroeconomy, and create a legal framework that enables markets to function.",
+    "front": "What is the role of the state in the economy?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:be85546c",
+    "back": "Goods that are <strong>non-excludable and non-rivalrous</strong>. The market will not provide them due to the free rider problem, so the state must — e.g., street lighting, national defence.",
+    "front": "What are public goods?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:215e316a",
+    "back": "The part of the economy <strong>owned and operated by the government</strong> — providing public services like healthcare, education, defence, and infrastructure.",
+    "front": "What is a public sector?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:0466e54f",
+    "back": "The government uses spending and taxation to <strong>smooth the business cycle</strong> — expansionary policy in recessions (boost AD) and contractionary policy in booms (cool AD).",
+    "front": "What is fiscal policy's stabilisation role?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:0e3ac164",
+    "back": "Using <strong>progressive taxes and transfer payments</strong> to reduce inequality — taking from higher earners and redistributing to lower earners through benefits and public services.",
+    "front": "What is redistribution of income?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:2f3acf26",
+    "back": "<strong>Market failure</strong> (externalities, public goods, information failure), <strong>inequality</strong>, <strong>macroeconomic instability</strong>, and the need for <strong>goods with external benefits</strong> (education, healthcare) that markets underprovide.",
+    "front": "What is the case for state intervention?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:fdacd86b",
+    "back": "<strong>Government failure</strong> (unintended consequences, bureaucracy, regulatory capture), <strong>cost to taxpayers</strong>, <strong>moral hazard</strong>, and <strong>crowding out</strong> of private sector investment.",
+    "front": "What is the case against state intervention?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:422dcef0",
+    "back": "When increased government borrowing <strong>raises interest rates</strong>, reducing private sector investment. Government spending replaces rather than adds to total spending.",
+    "front": "What is crowding out?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:364efda6",
+    "back": "Shows the relationship between <strong>tax rates and tax revenue</strong>. Beyond a certain point, higher tax rates <strong>reduce revenue</strong> because they discourage work and investment.",
+    "front": "What is the Laffer curve?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:778246c7",
+    "back": "Government should have a <strong>minimal role</strong> — limited to providing a legal framework, defence, and property rights. Markets self-correct. Associated with <strong>classical/supply-side</strong> economists.",
+    "front": "What is the free market view of the state?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:0f4f4fb2",
+    "back": "Government should <strong>actively manage demand</strong> — especially in recessions when markets fail to self-correct. Fiscal policy is essential to prevent prolonged unemployment.",
+    "front": "What is the Keynesian view of the state?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:469a5dd0",
+    "back": "Because consumers count only their <strong>private benefit</strong>, so <strong>MSB &gt; MPB</strong> and the free market underconsumes. The state provides or subsidises to move consumption towards the social optimum — e.g. education, healthcare.",
+    "front": "Why does the state provide goods with external benefits?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:6dd408c6",
+    "back": "Because consumers bear none of the cost falling on others, so <strong>MSB &lt; MPB</strong> and the free market overconsumes. The state taxes, regulates or bans to move consumption towards the social optimum — e.g. tobacco, alcohol.",
+    "front": "Why does the state act against goods with external costs?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:d81d5537",
+    "back": "Those with <strong>greater ability to pay should pay more</strong> (vertical equity) and those in similar situations should pay similar amounts (horizontal equity). Underpins progressive taxation.",
+    "front": "What is the principal of equity in taxation?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:e7e555e3",
+    "back": "Fiscal mechanisms that <strong>automatically offset fluctuations</strong> without policy changes — e.g., in a recession, tax revenue falls and benefit spending rises, cushioning the downturn.",
+    "front": "What are automatic stabilisers?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:d64d009c",
+    "back": "<strong>Public goods</strong> are non-excludable and non-rivalrous (government must provide). <strong>Private goods</strong> are excludable and rivalrous (provided efficiently by the market).",
+    "front": "What is the difference between a public and a private good?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:e2c5acce",
+    "back": "The <strong>total accumulated borrowing</strong> of the government. Annual budget deficits add to it. High debt may constrain future spending and require austerity to service interest payments.",
+    "front": "What is government debt?"
+   },
+   {
+    "id": "role-state-macroeconomy:card:7b834a73",
+    "back": "When government support (e.g., bank bailouts, generous welfare) encourages <strong>reckless behaviour</strong> because agents know they will be protected from the consequences of their actions.",
+    "front": "What is moral hazard in the context of state intervention?"
+   }
+  ],
+  "section_diagrams": [
+   {
+    "id": "role-state-macroeconomy:diagram:b86db06e",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"460\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Tax Rate (%)</text>\n  <text x=\"22\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,22,165)\">Tax Revenue</text>\n\n  <text x=\"65\" y=\"315\" fill=\"#e8ecf5\" font-size=\"10\">0%</text>\n  <text x=\"445\" y=\"315\" fill=\"#e8ecf5\" font-size=\"10\">100%</text>\n\n  <path d=\"M60 300 Q160 80 260 60 Q360 80 460 300\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/>\n  <text x=\"400\" y=\"200\" fill=\"#3b82f6\" font-size=\"11\" font-weight=\"600\">Laffer Curve</text>\n\n  <line x1=\"260\" y1=\"60\" x2=\"260\" y2=\"300\" stroke=\"#059669\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\"/>\n  <circle cx=\"260\" cy=\"60\" r=\"5\" fill=\"#059669\"/>\n  <text x=\"260\" y=\"48\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"11\" font-weight=\"700\">Maximum Revenue</text>\n  <text x=\"260\" y=\"318\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">t*</text>\n\n  <circle cx=\"160\" cy=\"148\" r=\"4\" fill=\"#e8ecf5\"/>\n  <text x=\"145\" y=\"140\" text-anchor=\"end\" fill=\"#e8ecf5\" font-size=\"10\">A</text>\n  <line x1=\"160\" y1=\"152\" x2=\"160\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"60\" y1=\"148\" x2=\"160\" y2=\"148\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n\n  <circle cx=\"370\" cy=\"148\" r=\"4\" fill=\"#ef4444\"/>\n  <text x=\"385\" y=\"140\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">B</text>\n  <line x1=\"370\" y1=\"152\" x2=\"370\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"60\" y1=\"148\" x2=\"370\" y2=\"148\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n\n  <text x=\"105\" y=\"270\" fill=\"#e8ecf5\" font-size=\"9\">Rate rise</text>\n  <text x=\"105\" y=\"282\" fill=\"#e8ecf5\" font-size=\"9\">increases</text>\n  <text x=\"105\" y=\"294\" fill=\"#e8ecf5\" font-size=\"9\">revenue</text>\n  <path d=\"M155 270 L215 270\" fill=\"none\" stroke=\"#059669\" stroke-width=\"1.5\" marker-end=\"url(#alf1)\"/>\n\n  <text x=\"310\" y=\"270\" fill=\"#e8ecf5\" font-size=\"9\">Rate rise</text>\n  <text x=\"310\" y=\"282\" fill=\"#e8ecf5\" font-size=\"9\">reduces</text>\n  <text x=\"310\" y=\"294\" fill=\"#e8ecf5\" font-size=\"9\">revenue</text>\n  <path d=\"M375 270 L425 270\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"1.5\" marker-end=\"url(#alf2)\"/>\n\n  <text x=\"120\" y=\"85\" fill=\"#e8ecf5\" font-size=\"9\">Points A and B yield</text>\n  <text x=\"120\" y=\"97\" fill=\"#e8ecf5\" font-size=\"9\">the SAME revenue</text>\n  <text x=\"120\" y=\"109\" fill=\"#e8ecf5\" font-size=\"9\">but B has higher rate</text>\n  <path d=\"M155 115 L160 142\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" marker-end=\"url(#alf1)\"/>\n\n  <defs>\n    <marker id=\"alf1\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#059669\"/></marker>\n    <marker id=\"alf2\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#ef4444\"/></marker>\n  </defs>\n</svg>",
+    "title": "The Laffer Curve",
+    "checklist": [
+     "Draw a bell-shaped (inverted U) curve with tax rate on the x-axis and tax revenue on the y-axis",
+     "Label the revenue-maximising rate as t* at the peak of the curve",
+     "Show that at 0% and 100% tax rates, revenue is zero",
+     "Explain that on the left side of t*, rate increases raise revenue",
+     "Explain that on the right side of t*, rate increases reduce revenue (disincentives, avoidance, evasion)",
+     "Note the debate: most economists believe developed economies are below t*, so cuts reduce revenue"
+    ],
+    "scenarios": [
+     {
+      "label": "Economy below t*",
+      "description": "Most developed economies are here. Tax rate increases raise revenue; tax cuts reduce revenue. Standard fiscal analysis applies."
+     },
+     {
+      "label": "Economy above t*",
+      "description": "Rate cuts could increase revenue by widening the tax base. This is the supply-side argument used to justify cutting top marginal rates, though empirical evidence is debated."
+     }
+    ],
+    "description": "Shows the relationship between the tax rate and total tax revenue, illustrating the revenue-maximising rate (t*) and the argument that cutting tax rates above t* can increase total revenue."
+   },
+   {
+    "id": "role-state-macroeconomy:diagram:f2161d44",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"50\" y1=\"300\" x2=\"460\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"50\" y1=\"300\" x2=\"50\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"255\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Time (Years)</text>\n  <text x=\"20\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,20,165)\">% of GDP</text>\n\n  <text x=\"90\" y=\"315\" fill=\"#e8ecf5\" font-size=\"9\">Year 1</text>\n  <text x=\"160\" y=\"315\" fill=\"#e8ecf5\" font-size=\"9\">Year 2</text>\n  <text x=\"230\" y=\"315\" fill=\"#e8ecf5\" font-size=\"9\">Year 3</text>\n  <text x=\"300\" y=\"315\" fill=\"#e8ecf5\" font-size=\"9\">Year 4</text>\n  <text x=\"370\" y=\"315\" fill=\"#e8ecf5\" font-size=\"9\">Year 5</text>\n\n  <rect x=\"75\" y=\"240\" width=\"40\" height=\"60\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.7\"/>\n  <rect x=\"145\" y=\"230\" width=\"40\" height=\"70\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.7\"/>\n  <rect x=\"215\" y=\"245\" width=\"40\" height=\"55\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.7\"/>\n  <rect x=\"285\" y=\"255\" width=\"40\" height=\"45\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.7\"/>\n  <rect x=\"355\" y=\"260\" width=\"40\" height=\"40\" rx=\"3\" fill=\"#ef4444\" opacity=\"0.7\"/>\n\n  <text x=\"95\" y=\"235\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">8%</text>\n  <text x=\"165\" y=\"225\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">10%</text>\n  <text x=\"235\" y=\"240\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">7%</text>\n  <text x=\"305\" y=\"250\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">5%</text>\n  <text x=\"375\" y=\"255\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">4%</text>\n\n  <path d=\"M95 190 L165 150 L235 115 L305 85 L375 65\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/>\n  <circle cx=\"95\" cy=\"190\" r=\"4\" fill=\"#3b82f6\"/>\n  <circle cx=\"165\" cy=\"150\" r=\"4\" fill=\"#3b82f6\"/>\n  <circle cx=\"235\" cy=\"115\" r=\"4\" fill=\"#3b82f6\"/>\n  <circle cx=\"305\" cy=\"85\" r=\"4\" fill=\"#3b82f6\"/>\n  <circle cx=\"375\" cy=\"65\" r=\"4\" fill=\"#3b82f6\"/>\n\n  <text x=\"85\" y=\"183\" text-anchor=\"end\" fill=\"#3b82f6\" font-size=\"8\">50%</text>\n  <text x=\"155\" y=\"143\" text-anchor=\"end\" fill=\"#3b82f6\" font-size=\"8\">60%</text>\n  <text x=\"225\" y=\"108\" text-anchor=\"end\" fill=\"#3b82f6\" font-size=\"8\">67%</text>\n  <text x=\"295\" y=\"78\" text-anchor=\"end\" fill=\"#3b82f6\" font-size=\"8\">72%</text>\n  <text x=\"365\" y=\"58\" text-anchor=\"end\" fill=\"#3b82f6\" font-size=\"8\">76%</text>\n\n  <rect x=\"140\" y=\"37\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#ef4444\" opacity=\"0.7\"/>\n  <text x=\"158\" y=\"47\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">Annual Fiscal Deficit (FLOW)</text>\n\n  <line x1=\"140\" y1=\"60\" x2=\"152\" y2=\"60\" stroke=\"#3b82f6\" stroke-width=\"3\"/>\n  <circle cx=\"146\" cy=\"60\" r=\"3\" fill=\"#3b82f6\"/>\n  <text x=\"158\" y=\"64\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">National Debt (STOCK)</text>\n\n  <text x=\"255\" y=\"170\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" font-style=\"italic\">Even as the deficit falls,</text>\n  <text x=\"255\" y=\"183\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" font-style=\"italic\">debt keeps RISING because</text>\n  <text x=\"255\" y=\"196\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" font-style=\"italic\">any deficit adds to debt</text>\n\n  <path d=\"M290 198 L305 220\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"3,2\" marker-end=\"url(#afd1)\"/>\n  <defs>\n    <marker id=\"afd1\" markerWidth=\"6\" markerHeight=\"4\" refX=\"6\" refY=\"2\" orient=\"auto\"><path d=\"M0,0 L6,2 L0,4\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n</svg>",
+    "title": "Fiscal Deficit vs National Debt",
+    "checklist": [
+     "Clearly distinguish fiscal deficit (annual flow) from national debt (accumulated stock)",
+     "Show that even a falling deficit still adds to the national debt",
+     "Only a surplus (T > G) can reduce the national debt",
+     "Express both measures as % of GDP for meaningful comparison",
+     "Link: each year's deficit is added to the existing stock of debt",
+     "Note that the structural deficit persists even at full employment"
+    ],
+    "scenarios": [
+     {
+      "label": "Deficit reduction (austerity)",
+      "description": "The deficit falls from 10% to 4% of GDP, but the national debt keeps rising because any positive deficit adds to the stock. Only a surplus can reduce the debt level."
+     },
+     {
+      "label": "Surplus achieved",
+      "description": "If T > G, the government can begin repaying debt. The debt-to-GDP ratio falls. However, surpluses are rare and may require contractionary policy that slows growth."
+     }
+    ],
+    "description": "Visual comparison showing the fiscal deficit as an annual flow that accumulates into the national debt stock over time, illustrating how persistent deficits cause rising debt even when the deficit itself is falling."
+   },
+   {
+    "id": "role-state-macroeconomy:diagram:e67d4f90",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"460\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Quantity of Loanable Funds</text>\n  <text x=\"22\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,22,165)\">Real Interest Rate (%)</text>\n\n  <path d=\"M100 260 L420 80\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"430\" y=\"78\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">S (Supply of</text>\n  <text x=\"430\" y=\"92\" fill=\"#059669\" font-size=\"11\" font-weight=\"600\">loanable funds)</text>\n\n  <path d=\"M100 80 L380 270\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"385\" y=\"268\" fill=\"#ef4444\" font-size=\"10\">D₀</text>\n\n  <path d=\"M160 70 L440 260\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"445\" y=\"258\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">D₁</text>\n\n  <circle cx=\"245\" cy=\"168\" r=\"4\" fill=\"#ef4444\"/>\n  <text x=\"236\" y=\"160\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">E₀</text>\n  <line x1=\"245\" y1=\"172\" x2=\"245\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"60\" y1=\"168\" x2=\"245\" y2=\"168\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"245\" y=\"315\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">Q₀</text>\n  <text x=\"53\" y=\"171\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"9\">r₀</text>\n\n  <circle cx=\"290\" cy=\"138\" r=\"4\" fill=\"#3b82f6\"/>\n  <text x=\"300\" y=\"132\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">E₁</text>\n  <line x1=\"290\" y1=\"142\" x2=\"290\" y2=\"300\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"60\" y1=\"138\" x2=\"290\" y2=\"138\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"290\" y=\"315\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"9\">Q₁</text>\n  <text x=\"53\" y=\"141\" text-anchor=\"end\" fill=\"#3b82f6\" font-size=\"9\">r₁</text>\n\n  <path d=\"M310 250 L355 250\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1.5\" marker-end=\"url(#aco1)\"/>\n  <text x=\"332\" y=\"245\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"8\">D shift</text>\n\n  <rect x=\"85\" y=\"45\" width=\"165\" height=\"80\" rx=\"5\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"167\" y=\"60\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"600\">Crowding Out Process:</text>\n  <text x=\"167\" y=\"74\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">1. Gov't borrows more (deficit)</text>\n  <text x=\"167\" y=\"86\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">2. Demand for funds rises (D₀→D₁)</text>\n  <text x=\"167\" y=\"98\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">3. Interest rate rises (r₀→r₁)</text>\n  <text x=\"167\" y=\"110\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">4. Private I and C fall</text>\n\n  <defs>\n    <marker id=\"aco1\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#3b82f6\"/></marker>\n  </defs>\n</svg>",
+    "title": "Crowding Out in the Loanable Funds Market",
+    "checklist": [
+     "Draw the loanable funds market with supply (S) and demand (D) curves",
+     "Show demand shifting right (D0 to D1) when the government increases borrowing",
+     "Show the equilibrium interest rate rising from r0 to r1",
+     "Explain that higher interest rates discourage private investment and consumption",
+     "This partially offsets the expansionary effect of increased government spending",
+     "Note: crowding out is more significant when the economy is near full capacity"
+    ],
+    "scenarios": [
+     {
+      "label": "Near full capacity",
+      "description": "Crowding out is strongest when the economy has little spare capacity. The supply of loanable funds is relatively inelastic, so government borrowing significantly raises interest rates and displaces private investment."
+     },
+     {
+      "label": "Deep recession (spare capacity)",
+      "description": "Crowding out is weak or absent. With low private sector demand for funds, government borrowing has little effect on interest rates. The Keynesian view is that fiscal stimulus is most effective in these conditions."
+     }
+    ],
+    "description": "The loanable funds market showing how increased government borrowing raises interest rates and crowds out (reduces) private sector investment, partially offsetting the expansionary effect of fiscal policy."
+   },
+   {
+    "id": "role-state-macroeconomy:diagram:e06d515a",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"50\" y1=\"300\" x2=\"470\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"50\" y1=\"300\" x2=\"50\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Real GDP (Y)</text>\n  <text x=\"20\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,20,165)\">Price Level (PL)</text>\n\n  <line x1=\"280\" y1=\"40\" x2=\"280\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\" stroke-dasharray=\"6,4\"/>\n  <text x=\"280\" y=\"35\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"10\">LRAS₀</text>\n\n  <line x1=\"380\" y1=\"40\" x2=\"380\" y2=\"300\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"380\" y=\"35\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">LRAS₁</text>\n\n  <path d=\"M70 265 Q180 235 260 165 Q310 125 350 60\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"355\" y=\"55\" fill=\"#e8ecf5\" font-size=\"10\">SRAS</text>\n\n  <path d=\"M90 80 Q180 175 320 270\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\"/>\n  <text x=\"325\" y=\"268\" fill=\"#ef4444\" font-size=\"10\">AD₀</text>\n\n  <path d=\"M155 75 Q245 170 385 265\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"390\" y=\"262\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">AD₁</text>\n\n  <circle cx=\"220\" cy=\"200\" r=\"4\" fill=\"#ef4444\"/>\n  <text x=\"210\" y=\"195\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"10\" font-weight=\"600\">A</text>\n  <line x1=\"220\" y1=\"204\" x2=\"220\" y2=\"300\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"50\" y1=\"200\" x2=\"220\" y2=\"200\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"220\" y=\"315\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"9\">Y₀</text>\n  <text x=\"43\" y=\"203\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"9\">PL₀</text>\n\n  <circle cx=\"285\" cy=\"160\" r=\"4\" fill=\"#3b82f6\"/>\n  <text x=\"296\" y=\"155\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">B</text>\n  <line x1=\"285\" y1=\"164\" x2=\"285\" y2=\"300\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"50\" y1=\"160\" x2=\"285\" y2=\"160\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"285\" y=\"315\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"9\">Y₁</text>\n  <text x=\"43\" y=\"163\" text-anchor=\"end\" fill=\"#3b82f6\" font-size=\"9\">PL₁</text>\n\n  <path d=\"M140 115 L205 190\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"1.5\" marker-end=\"url(#aad1)\"/>\n  <text x=\"90\" y=\"100\" fill=\"#3b82f6\" font-size=\"9\" font-weight=\"600\">Demand-side</text>\n  <text x=\"90\" y=\"112\" fill=\"#3b82f6\" font-size=\"9\" font-weight=\"600\">policy: AD shifts</text>\n  <text x=\"90\" y=\"124\" fill=\"#3b82f6\" font-size=\"9\">Y rises but PL rises</text>\n  <text x=\"90\" y=\"136\" fill=\"#3b82f6\" font-size=\"9\">(inflationary)</text>\n\n  <path d=\"M290 55 L370 55\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2\" marker-end=\"url(#aad2)\"/>\n  <text x=\"395\" y=\"80\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">Supply-side</text>\n  <text x=\"395\" y=\"92\" fill=\"#059669\" font-size=\"9\" font-weight=\"600\">policy: LRAS shifts</text>\n  <text x=\"395\" y=\"104\" fill=\"#059669\" font-size=\"9\">Higher capacity</text>\n  <text x=\"395\" y=\"116\" fill=\"#059669\" font-size=\"9\">(non-inflationary</text>\n  <text x=\"395\" y=\"128\" fill=\"#059669\" font-size=\"9\">growth possible)</text>\n\n  <text x=\"280\" y=\"318\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\">Yᶠ₀</text>\n  <text x=\"380\" y=\"318\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\">Yᶠ₁</text>\n\n  <defs>\n    <marker id=\"aad1\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#3b82f6\"/></marker>\n    <marker id=\"aad2\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#059669\"/></marker>\n  </defs>\n</svg>",
+    "title": "AD/AS: Macroeconomic Policy Effects",
+    "checklist": [
+     "Show AD shifting right from AD0 to AD1 (demand-side policy: fiscal or monetary stimulus)",
+     "Show the short-run effect: higher output (Y0 to Y1) but higher price level (PL0 to PL1)",
+     "Show LRAS shifting right from LRAS0 to LRAS1 (supply-side policy)",
+     "Explain that supply-side shift enables non-inflationary growth",
+     "Contrast: demand-side = inflationary, supply-side = non-inflationary but slower",
+     "Label all curves, axes, equilibrium points, and price levels clearly"
+    ],
+    "scenarios": [
+     {
+      "label": "Demand-side stimulus only",
+      "description": "AD shifts right: output rises from Y0 to Y1 but the price level also rises from PL0 to PL1. This creates demand-pull inflation, especially if the economy is near full capacity. Short-run gain but inflationary trade-off."
+     },
+     {
+      "label": "Combined demand + supply-side",
+      "description": "If LRAS also shifts right (through education, infrastructure, deregulation), the economy can grow without inflation. The new higher capacity (Yf1) accommodates the increased AD. This is the ideal long-run outcome but supply-side policies take years to work."
+     }
+    ],
+    "description": "AD/AS diagram showing the combined effects of expansionary demand-side policies (fiscal and monetary) shifting AD right, and supply-side policies shifting LRAS right, comparing short-run and long-run outcomes."
+   },
+   {
+    "id": "role-state-macroeconomy:diagram:6285bdc1",
+    "svg": "<svg viewBox=\"0 0 500 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',sans-serif\">\n  <line x1=\"60\" y1=\"300\" x2=\"460\" y2=\"300\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"300\" x2=\"60\" y2=\"30\" stroke=\"#e8ecf5\" stroke-width=\"2\"/>\n  <text x=\"260\" y=\"340\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\">Quantity</text>\n  <text x=\"22\" y=\"165\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"12\" transform=\"rotate(-90,22,165)\">Price</text>\n\n  <path d=\"M100 260 L420 60\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\"/>\n  <text x=\"425\" y=\"55\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">S₀</text>\n\n  <path d=\"M100 200 L420 0\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/>\n  <text x=\"425\" y=\"-2\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\">S₁ (+ tax)</text>\n\n  <path d=\"M100 50 L420 280\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2.5\"/>\n  <text x=\"425\" y=\"278\" fill=\"#3b82f6\" font-size=\"10\" font-weight=\"600\">D</text>\n\n  <circle cx=\"268\" cy=\"148\" r=\"4\" fill=\"#059669\"/>\n  <text x=\"278\" y=\"143\" fill=\"#059669\" font-size=\"10\" font-weight=\"600\">E₀</text>\n  <line x1=\"268\" y1=\"152\" x2=\"268\" y2=\"300\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"60\" y1=\"148\" x2=\"268\" y2=\"148\" stroke=\"#059669\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"268\" y=\"315\" text-anchor=\"middle\" fill=\"#059669\" font-size=\"9\">Q₀</text>\n  <text x=\"53\" y=\"151\" text-anchor=\"end\" fill=\"#059669\" font-size=\"9\">P₀</text>\n\n  <circle cx=\"230\" cy=\"170\" r=\"4\" fill=\"#f59e0b\"/>\n  <text x=\"240\" y=\"165\" fill=\"#f59e0b\" font-size=\"10\" font-weight=\"600\">E₁</text>\n  <line x1=\"230\" y1=\"174\" x2=\"230\" y2=\"300\" stroke=\"#f59e0b\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"60\" y1=\"170\" x2=\"230\" y2=\"170\" stroke=\"#ef4444\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"230\" y=\"315\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"9\">Q₁</text>\n  <text x=\"53\" y=\"173\" text-anchor=\"end\" fill=\"#ef4444\" font-size=\"9\">Pc</text>\n\n  <line x1=\"60\" y1=\"210\" x2=\"230\" y2=\"210\" stroke=\"#3b82f6\" stroke-width=\"1\" stroke-dasharray=\"3,3\"/>\n  <text x=\"53\" y=\"213\" text-anchor=\"end\" fill=\"#3b82f6\" font-size=\"9\">Pp</text>\n\n  <line x1=\"235\" y1=\"170\" x2=\"235\" y2=\"210\" stroke=\"#ef4444\" stroke-width=\"2.5\"/>\n  <text x=\"248\" y=\"193\" fill=\"#ef4444\" font-size=\"9\" font-weight=\"600\">Tax</text>\n\n  <rect x=\"62\" y=\"148\" width=\"168\" height=\"22\" fill=\"#ef4444\" opacity=\"0.15\"/>\n  <text x=\"146\" y=\"163\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\" font-weight=\"600\">Consumer burden</text>\n\n  <rect x=\"62\" y=\"170\" width=\"168\" height=\"40\" fill=\"#3b82f6\" opacity=\"0.15\"/>\n  <text x=\"146\" y=\"194\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"8\" font-weight=\"600\">Producer burden</text>\n\n  <polygon points=\"230,170 268,148 268,170\" fill=\"#f59e0b\" opacity=\"0.25\"/>\n  <polygon points=\"230,210 268,148 230,170\" fill=\"#f59e0b\" opacity=\"0.15\"/>\n  <text x=\"280\" y=\"260\" fill=\"#f59e0b\" font-size=\"7\" font-weight=\"600\">Welfare loss</text><line x1=\"288\" y1=\"249\" x2=\"243\" y2=\"194\" stroke=\"#f59e0b\" stroke-width=\"0.8\"/>\n\n  <rect x=\"290\" y=\"45\" width=\"170\" height=\"80\" rx=\"5\" fill=\"none\" stroke=\"#e8ecf5\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/>\n  <text x=\"375\" y=\"60\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"9\" font-weight=\"600\">Tax Incidence:</text>\n  <text x=\"375\" y=\"74\" text-anchor=\"middle\" fill=\"#ef4444\" font-size=\"8\">Consumer pays: P₀ → Pc (higher)</text>\n  <text x=\"375\" y=\"88\" text-anchor=\"middle\" fill=\"#3b82f6\" font-size=\"8\">Producer receives: P₀ → Pp (lower)</text>\n  <text x=\"375\" y=\"102\" text-anchor=\"middle\" fill=\"#f59e0b\" font-size=\"8\">Welfare loss: triangle</text>\n  <text x=\"375\" y=\"116\" text-anchor=\"middle\" fill=\"#e8ecf5\" font-size=\"8\">Burden split depends on PED/PES</text>\n\n  <defs>\n    <marker id=\"ati1\" markerWidth=\"7\" markerHeight=\"5\" refX=\"7\" refY=\"2.5\" orient=\"auto\"><path d=\"M0,0 L7,2.5 L0,5\" fill=\"#e8ecf5\"/></marker>\n  </defs>\n</svg>",
+    "title": "Tax Incidence: Indirect Tax on a Market",
+    "checklist": [
+     "Show S0 shifting up/left to S1 by the amount of the tax (vertical distance = tax per unit)",
+     "Label the original equilibrium (E0) at P0 and Q0",
+     "Label the new equilibrium (E1) with consumer price Pc (higher than P0) and producer price Pp (lower than P0)",
+     "Show the tax wedge between Pc and Pp",
+     "Shade the consumer burden (rectangle above P0 up to Pc) and producer burden (rectangle below P0 down to Pp)",
+     "Mark the welfare loss triangle between the old and new equilibrium",
+     "Note: the split of the tax burden depends on the relative elasticities of demand and supply"
+    ],
+    "scenarios": [
+     {
+      "label": "Inelastic demand (PED < 1)",
+      "description": "Consumers bear most of the tax burden because they are unresponsive to price changes. The price consumers pay rises significantly while the producer price falls only slightly. Examples: taxes on cigarettes, alcohol, fuel."
+     },
+     {
+      "label": "Elastic demand (PED > 1)",
+      "description": "Producers bear most of the tax burden because consumers are highly responsive to price changes and would switch to alternatives. The price consumers pay rises only slightly. Examples: taxes on luxury goods with close substitutes."
+     }
+    ],
+    "description": "Shows how the burden (incidence) of an indirect tax is shared between consumers and producers depending on the relative price elasticities of demand and supply. Illustrates the welfare loss created by the tax."
+   }
+  ],
+  "section_extras": {
+   "chains": [
+    {
+     "steps": [
+      "The Laffer curve illustrates the theoretical relationship between tax rates and tax revenue — starting at zero revenue at 0% and 100% tax rates, with a revenue-maximising rate somewhere in between.",
+      "At low tax rates, increasing rates raises revenue because the tax base remains largely unaffected — people continue working and investing with relatively minor behavioural changes.",
+      "Beyond the revenue-maximising rate, further increases reduce revenue as high rates discourage work, encourage tax avoidance and evasion, and drive economic activity underground or abroad.",
+      "The implication is that cutting very high tax rates could simultaneously increase revenue and improve economic efficiency — though the revenue-maximising rate is unknown and context-dependent."
+     ],
+     "title": "Laffer curve suggests optimal tax rate exists",
+     "result": "The Laffer curve demonstrates that there is a theoretically optimal tax rate that maximises revenue, and exceeding it is counterproductive for both growth and government finances."
+    },
+    {
+     "steps": [
+      "When the government runs a budget deficit (G > T), it must borrow by selling bonds, increasing demand for loanable funds in financial markets.",
+      "Higher demand for loanable funds pushes up interest rates, increasing the cost of borrowing for private firms and households.",
+      "Higher interest rates discourage private investment and consumption, partially or fully offsetting the expansionary effect of the fiscal stimulus.",
+      "This crowding out effect means that fiscal expansion may be less effective than the multiplier analysis suggests, particularly when the economy is near full capacity."
+     ],
+     "title": "Fiscal deficits can crowd out private investment",
+     "result": "Crowding out reduces the effectiveness of fiscal expansion by raising interest rates and displacing private sector spending, weakening the multiplier effect."
+    },
+    {
+     "steps": [
+      "Progressive taxation applies higher marginal tax rates to higher income bands, meaning the proportion of income paid in tax rises with income.",
+      "This redistributes income from higher earners to fund public services and transfer payments that benefit lower-income households, directly reducing post-tax income inequality.",
+      "However, high marginal tax rates may reduce the incentive to work additional hours, take risks through entrepreneurship or invest, potentially reducing aggregate supply and long-run growth.",
+      "The net impact depends on the responsiveness of labour supply and investment to tax rates — if behaviour is relatively unresponsive, progressive taxation achieves redistribution with limited efficiency costs."
+     ],
+     "title": "Progressive taxation reduces inequality but may reduce incentives",
+     "result": "Progressive taxation is an effective tool for reducing inequality, but its impact on work incentives and growth depends on the elasticity of response to tax rate changes."
+    },
+    {
+     "steps": [
+      "Transnational corporations can shift profits, production and headquarters across borders to minimise their tax burden, exploiting differences in national tax systems.",
+      "Transfer pricing — setting artificial prices on intra-firm transactions — allows TNCs to shift profits from high-tax to low-tax jurisdictions, reducing their effective tax rate.",
+      "Tax competition between countries creates a 'race to the bottom' as governments lower corporate tax rates to attract TNC investment, eroding the tax base.",
+      "Individual governments have limited power to regulate TNCs operating across multiple jurisdictions, making international coordination through bodies like the OECD essential but difficult to achieve."
+     ],
+     "title": "Controlling TNCs is difficult due to international mobility",
+     "result": "The international mobility of TNCs undermines national governments' ability to tax and regulate them, requiring coordinated international action that is politically challenging."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "The Laffer curve is theoretically appealing but practically limited",
+     "content": "The revenue-maximising tax rate is unknown and varies by country, tax type and time period. Claims that a country is on the 'wrong side' of the Laffer curve are often politically motivated rather than evidence-based. Most empirical estimates suggest developed countries' income tax rates are below the revenue-maximising point, meaning increases would still raise revenue. The Laffer curve is a useful conceptual tool but should not be used to justify specific tax cuts without strong empirical support."
+    },
+    {
+     "title": "Crowding out depends on economic conditions",
+     "content": "Crowding out is most significant when the economy is at or near full employment and financial markets are functioning normally. In a recession with spare capacity and low interest rates, fiscal expansion is less likely to crowd out private investment — this is the Keynesian case for counter-cyclical fiscal policy. Quantitative easing by central banks can also mitigate crowding out by keeping interest rates low during periods of fiscal expansion."
+    },
+    {
+     "title": "International tax cooperation has made progress but faces limits",
+     "content": "The OECD/G20 Base Erosion and Profit Shifting (BEPS) framework and the global minimum corporate tax rate (Pillar Two) represent significant steps towards coordinated action against TNC tax avoidance. However, implementation varies across countries, and tax havens continue to offer preferential regimes. Small countries that rely on low tax rates to attract investment resist harmonisation, and enforcement requires continuous adaptation to new avoidance strategies."
+    }
+   ]
+  },
+  "section_common_mistakes": [
+   {
+    "id": "role-state-macroeconomy:mistake:99f215e0",
+    "title": "Confusing fiscal deficit with national debt",
+    "examTip": "An analogy: the deficit is how much you overspend this month; the debt is the total balance on your credit card.",
+    "mistake": "Students use \"deficit\" and \"debt\" interchangeably.",
+    "correction": "The fiscal deficit is the annual shortfall (G > T in one year). The national debt is the total accumulated stock of borrowing over all years. A country can reduce its deficit while its debt continues to grow."
+   },
+   {
+    "id": "role-state-macroeconomy:mistake:47aa6961",
+    "title": "Not explaining the Laffer curve correctly",
+    "mistake": "Students draw the Laffer curve but cannot explain why tax revenue falls at high rates.",
+    "correction": "At very high tax rates, revenue falls because: workers reduce effort or emigrate, firms relocate, tax avoidance/evasion increases, and the tax base shrinks. The optimal rate maximises revenue — but its exact position is debated."
+   },
+   {
+    "id": "role-state-macroeconomy:mistake:88177251",
+    "title": "Confusing structural and cyclical deficits",
+    "mistake": "Students do not distinguish between the two types of fiscal deficit.",
+    "correction": "Cyclical deficit = caused by recession (automatic stabilisers increase spending, reduce tax revenue). Structural deficit = persists even at full employment, caused by a fundamental imbalance. Different policy responses are needed."
+   },
+   {
+    "id": "role-state-macroeconomy:mistake:c4e39727",
+    "title": "Ignoring crowding out when evaluating fiscal policy",
+    "mistake": "Students say expansionary fiscal policy always increases output without considering the crowding out effect.",
+    "correction": "Government borrowing may raise interest rates, reducing private sector investment (financial crowding out) and consumption. The net stimulus may be smaller than the initial injection."
+   }
+  ]
+ }
+}

@@ -1,0 +1,383 @@
+=== C-business-growth-topFix-01 ===
+{
+  "id": "C-business-growth-topFix-01",
+  "section": "business-growth",
+  "kind": "topFix",
+  "rank": 0,
+  "text": "Re-align assessment to teaching: either add a block 'Why grow, and what goes wrong' teaching internal/external economies of scale, diseconomies and overtrading (lift from extras.chains[2],[3] and flashcards), or pin quizIndices/practiceIndices per block so PreTest/InlineQuiz only draw from taught items. Right now half the quiz bank and 3/5 practice questions are untaught.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-topFix-02 ===
+{
+  "id": "C-business-growth-topFix-02",
+  "section": "business-growth",
+  "kind": "topFix",
+  "rank": 1,
+  "text": "Replace the demergers subsection (off-spec, and its eBay/Skype example is factually wrong: it was a stake sale, not a demerger) with 'Problems of growth: diseconomies of scale and overtrading', which fixes both the spec gap and the incoherent block-2 pairing.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-topFix-03 ===
+{
+  "id": "C-business-growth-topFix-03",
+  "section": "business-growth",
+  "kind": "topFix",
+  "rank": 2,
+  "text": "Add an InlineDiagram for block 1: supply chain (raw materials > manufacturer > distributor > retailer > consumer) with arrows showing backward vertical, forward vertical and horizontal integration, matching common_mistakes[1].",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-topFix-04 ===
+{
+  "id": "C-business-growth-topFix-04",
+  "section": "business-growth",
+  "kind": "topFix",
+  "rank": 3,
+  "text": "Add recall widgets: a fillin on the four integration types (e.g. 'A car maker buying a steel mill is ___ vertical integration; buying a dealership network is ___; buying a rival car maker is ___') and a reorder of the takeover-to-synergy sequence already given as a flow in external-growth-methods.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-topFix-05 ===
+{
+  "id": "C-business-growth-topFix-05",
+  "section": "business-growth",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "Swap practice idx 2 (Ansoff) and idx 3 (barriers to entry) for on-spec items, e.g. 'Explain one problem a business may face from rapid growth (4)' and 'Assess the financial risks and rewards to [case firm] of a takeover of [target] (10)', and add a levels-style mark scheme (KAA/Evaluation bands) to the 10- and 20-markers so students can self-mark; de-UK the CMA/MegaRetail references for the international audience.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-accuracy-01 ===
+{
+  "id": "C-business-growth-accuracy-01",
+  "section": "business-growth",
+  "kind": "accuracy",
+  "text": "Growth Decisions > demergers-splitting-up > realExample: States 'eBay demerged Skype in 2009, eventually selling it to Microsoft'. eBay did not demerge Skype (shareholders received no Skype shares); it sold a ~65-70% stake to a Silver Lake-led investor group in 2009, and that group sold Skype to Microsoft in 2011 for $8.5bn. This is a divestment/sale, which contradicts the section's own definition of a demerger two paragraphs earlier.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-accuracy-02 ===
+{
+  "id": "C-business-growth-accuracy-02",
+  "section": "business-growth",
+  "kind": "accuracy",
+  "text": "Growth Decisions > demergers-splitting-up (whole subsection incl. examMatters 'Examiners test whether you can evaluate demergers'): Demergers are an Edexcel Economics (WEC13 3.1.3) topic, not a WBS13 3.2 Business growth bullet. The examMatters claim that IAL Business examiners test demergers is, to my knowledge, unfounded and displaces spec content (diseconomies, overtrading, financial risks/rewards of takeovers) that IS examined.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.1.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-business-growth-quiz-01 ===
+{
+  "id": "C-business-growth-quiz-01",
+  "section": "business-growth",
+  "kind": "quiz",
+  "text": "q0: Correct answer (index 1) is right, but internal vs external economies of scale are never taught anywhere in content[] (only in flashcards/extras). Because PreTest draws 3 random MCQs and inline quizzes draw from this bank, students are gated/assessed on untaught material.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-quiz-02 ===
+{
+  "id": "C-business-growth-quiz-02",
+  "section": "business-growth",
+  "kind": "quiz",
+  "text": "q2: Answer correct, but diseconomies of scale are only mentioned in passing (one clause in external-growth misconception and staying-small examMatters); never taught as a concept with causes. Untaught material in the assessment bank.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-quiz-03 ===
+{
+  "id": "C-business-growth-quiz-03",
+  "section": "business-growth",
+  "kind": "quiz",
+  "text": "q3: Answer correct and well-explained, but overtrading does not appear anywhere in content[]. It is a named IAL spec bullet (problems arising from growth) so it should be taught, not just quizzed.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-quiz-04 ===
+{
+  "id": "C-business-growth-quiz-04",
+  "section": "business-growth",
+  "kind": "quiz",
+  "text": "q7: Same as index 3: untaught. Also the explanation only justifies the correct answer and one distractor; 'Rapid recruitment of new staff' as a distractor is fine but should be explained as worsening cash outflow.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-practice-01 ===
+{
+  "id": "C-business-growth-practice-01",
+  "section": "business-growth",
+  "kind": "practice",
+  "text": "p2: 'Assess the usefulness of Ansoff's Matrix for a business deciding on its growth strategy' (10 marks) is a 3.1 Business objectives and strategy question, not 3.2 Business growth; Ansoff is never mentioned in this section's content. Also the question is generic ('a business') while a specific gym-chain context is supplied; IAL would phrase it 'Assess the usefulness of Ansoff's Matrix to the gym chain when deciding its growth strategy'. Mark allocation (10, Assess) is correct for IAL Business.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-practice-02 ===
+{
+  "id": "C-business-growth-practice-02",
+  "section": "business-growth",
+  "kind": "practice",
+  "text": "p3: 'Explain two barriers to entry that might prevent new firms from entering a market' (4 marks) is off-topic for 3.2 Business growth (it is Economics / at best 3.5 competitiveness). Nothing in content[] teaches barriers to entry. Should be replaced with an on-spec 4-marker (e.g. 'Explain one reason why a growing business might experience diseconomies of scale' or 'Explain one problem of rapid growth').",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-structure-01 ===
+{
+  "id": "C-business-growth-structure-01",
+  "section": "business-growth",
+  "kind": "structure",
+  "text": "Assessment/teaching mismatch: 5 of 10 MCQs (idx 0,2,3,7,8) and 3 of 5 practice questions (idx 0,2,3) test economies of scale, diseconomies, overtrading, Ansoff and barriers to entry, none of which are taught in content[]. With quizIndices/practiceIndices null, the PreTest gate (3 random MCQs) and each block's InlineQuiz/InlinePractice can surface untaught questions, which directly feeds the founder's 'pre-test demotivates' hypothesis.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-structure-02 ===
+{
+  "id": "C-business-growth-structure-02",
+  "section": "business-growth",
+  "kind": "structure",
+  "text": "Zero recall widgets in either block: Learn Mode has no retrieval practice at all for this section. Obvious candidates: reorder 'takeover process' (identify target > bid premium > regulator review > integration > synergies realised/lost) from external-growth flow; fillin on the four integration types using the supermarket/food-processor/farm/delivery chain.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-structure-03 ===
+{
+  "id": "C-business-growth-structure-03",
+  "section": "business-growth",
+  "kind": "structure",
+  "text": "Zero diagrams: common_mistakes[1] literally tells students to 'draw a simple supply chain diagram in your head' (raw materials > manufacturing > distribution > retail > consumer) to place the two firms. That should be an actual InlineDiagram on block 1 (with backward/forward/horizontal arrows).",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-structure-04 ===
+{
+  "id": "C-business-growth-structure-04",
+  "section": "business-growth",
+  "kind": "structure",
+  "text": "2-per-step pairing: with 2 sections per block the whole section is 2 steps. Block 1 pairing (organic + external) is coherent. Block 2 pairs 'Reasons for Staying Small' with 'Demergers', which are unrelated concepts; a student gets one step with two disconnected ideas. Replace demergers with 'Problems of growth: diseconomies and overtrading' so block 2 becomes 'When growth goes wrong / when not to grow'.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-structure-05 ===
+{
+  "id": "C-business-growth-structure-05",
+  "section": "business-growth",
+  "kind": "structure",
+  "text": "Difficulty ramp: the section jumps from definitional prose straight to a 20-mark evaluate with no intermediate teaching of the economic logic (why grow: economies of scale, market power; why it hurts: diseconomies, overtrading). The extras.chains[2] and [3] contain exactly this material, so it exists but is paywalled/hidden from the Learn Mode path.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-structure-06 ===
+{
+  "id": "C-business-growth-structure-06",
+  "section": "business-growth",
+  "kind": "structure",
+  "text": "Takeaways: Block 1 takeaway[3] ('culture clash is the primary reason') overclaims relative to the body. Block 2 takeaway[3] tells students to evaluate demergers from stakeholder perspectives, which trains for a question type that WBS13 is unlikely to set.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-structure-07 ===
+{
+  "id": "C-business-growth-structure-07",
+  "section": "business-growth",
+  "kind": "structure",
+  "text": "Misconceptions: organic-growth ('always safest') and staying-small ('means the firm failed') are genuine student errors. external-growth ('bigger is always better') is plausible. demergers ('demergers mean the firm failed') is filler given the topic itself is off-spec.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-structure-08 ===
+{
+  "id": "C-business-growth-structure-08",
+  "section": "business-growth",
+  "kind": "structure",
+  "text": "Notes[] only has 3 entries (Organic, External, Staying Small) so the Notes tab and Learn Mode disagree on scope (notes omit demergers), another sign the demerger subsection was bolted on.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-business-growth-specGap-01 ===
+{
+  "id": "C-business-growth-specGap-01",
+  "section": "business-growth",
+  "kind": "specGap",
+  "text": "3.2.1 Growth (a) Objectives of growth: economies of scale (internal and external, with named types: purchasing, technical, managerial, financial, marketing), increased market power over customers and suppliers, increased market share and brand recognition, increased profitability. Not taught; only in flashcards/extras and quizzed.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.2.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-business-growth-specGap-02 ===
+{
+  "id": "C-business-growth-specGap-02",
+  "section": "business-growth",
+  "kind": "specGap",
+  "text": "3.2.1 Growth (b) Problems arising from growth: diseconomies of scale, internal communication problems, overtrading. Not taught in content[] despite 4 MCQs on it.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.2.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-business-growth-specGap-03 ===
+{
+  "id": "C-business-growth-specGap-03",
+  "section": "business-growth",
+  "kind": "specGap",
+  "text": "3.2.2 Mergers and takeovers (a) Reasons for mergers and takeovers beyond speed: cost synergies, market power, diversification, acquiring capabilities/technology; (d) financial risks and rewards (overpaying, debt/leverage, share price reaction vs synergy gains, EPS); (e) problems of rapid growth. Only speed and culture clash are covered.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.2.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-business-growth-specGap-04 ===
+{
+  "id": "C-business-growth-specGap-04",
+  "section": "business-growth",
+  "kind": "specGap",
+  "text": "3.2.3 Organic growth (a) Methods of growing organically: franchising, licensing, e-commerce/new distribution channels, new markets (geographic/segments), new product development. Only 'new outlets, new areas, new products' listed in one sentence; franchising and e-commerce absent.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.2.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-business-growth-specGap-05 ===
+{
+  "id": "C-business-growth-specGap-05",
+  "section": "business-growth",
+  "kind": "specGap",
+  "text": "3.2.4 Reasons for staying small: small firm survival via product differentiation/USP, flexibility, customer service, e-commerce enabling small firms to compete. E-commerce and USP framing absent; content covers niche, flexibility, personal service, owner choice.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.2.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+
+=== C-business-growth-specGap-06 ===
+{
+  "id": "C-business-growth-specGap-06",
+  "section": "business-growth",
+  "kind": "specGap",
+  "text": "Off-spec content present: Demergers (Edexcel Economics WEC13 3.1.3, not WBS13). Reasonably confident but marked 'verify against the current WBS13 specification'.",
+  "packet": 49,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.1.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+

@@ -29,6 +29,7 @@ import { SECTION, teachingWords } from './_packet14-util.mjs';
 import { buildContent, SUBSECTIONS, NOTES } from './_packet14-content.mjs';
 import { QUIZ, PRACTICE, FLASHCARDS, MISTAKES, EXTRAS } from './_packet14-assessment.mjs';
 import { DIAGRAMS } from './_packet14-diagrams.mjs';
+import { mistakeGaps } from '../lib/mistakes-shape.js';
 
 const args = process.argv.slice(2);
 const STAGE = args.includes('--stage');
@@ -99,6 +100,66 @@ for (const m of must) {
   if (!inBody || !inOther) problems.push(`figure "${m}" is ${inBody ? '' : 'NOT '}in the body and ${inOther ? '' : 'NOT '}in notes/diagrams/assessment`);
 }
 
+/* ── packet 14.1 (26 Sep 2026): the checks later packets added, applied to the pilot ──────────────── */
+
+// Mistakes render through lib/mistakes-shape.js on main; a card missing a field shows an empty box.
+for (const m of bundle.mistakes) { const gaps = mistakeGaps(m); if (gaps.length) problems.push(`mistake "${m.title}" would render without ${gaps.join(', ')}`); }
+
+// The length tell. The validator allows 1.5x; packet 14's own rule 5 says about 1.2x, and a reviewer
+// still finds tells inside 1.5. Counted and printed, and anything above 1.2x is a problem.
+const longest = [];
+bundle.quiz.forEach((q, i) => {
+  const L = q.options.map((o) => o.length);
+  const rest = Math.max(...L.filter((_, j) => j !== q.correctIndex));
+  if (L[q.correctIndex] > rest) longest.push(i);
+  if (L[q.correctIndex] > 1.2 * rest) problems.push(`quiz[${i}] correct option is ${(L[q.correctIndex] / rest).toFixed(2)}x its longest distractor`);
+});
+
+// The collision guard, ported from packet 49 (packet 40's, tolerance 1.2) and run on the EMITTED SVG.
+// Two changes for this section's diagrams: text drawn with a rotate() transform (the y-axis titles) is
+// measured nowhere, because its box is not where x/y says; and the frame is 500 units.
+const TOL = 1.2;
+const estWidth = (t, size) => String(t).length * size * 0.56;
+const attrOf = (s, k) => { const r = s.match(new RegExp(`\\b${k}="([^"]*)"`)); return r ? r[1] : null; };
+const boxesOf = (svg) => [...svg.matchAll(/<text\b([^>]*)>([^<]*)<\/text>/g)]
+  .filter((m) => m[2].trim() && !/rotate\(/.test(m[1]))
+  .map((m) => {
+    const x = parseFloat(attrOf(m[1], 'x')), y = parseFloat(attrOf(m[1], 'y')), size = parseFloat(attrOf(m[1], 'font-size')) || 11;
+    const anchor = attrOf(m[1], 'text-anchor') || 'start', w = estWidth(m[2], size);
+    const left = anchor === 'end' ? x - w : anchor === 'middle' ? x - w / 2 : x;
+    return { body: m[2], x, y, size, left, right: left + w, top: y - size * 0.8, bottom: y + size * 0.25 };
+  });
+const segmentsOf = (svg) => [
+  ...[...svg.matchAll(/<line\b([^>]*)>/g)].map((m) => ({ x1: +attrOf(m[1], 'x1'), y1: +attrOf(m[1], 'y1'), x2: +attrOf(m[1], 'x2'), y2: +attrOf(m[1], 'y2') })),
+  ...[...svg.matchAll(/<(?:polyline|polygon)\b[^>]*\bpoints="([^"]+)"/g)].flatMap((m) => {
+    const p = m[1].trim().split(/\s+/).map((q) => q.split(',').map(Number));
+    return p.slice(1).map((q, i) => ({ x1: p[i][0], y1: p[i][1], x2: q[0], y2: q[1] }));
+  }),
+];
+const collides = (a, b) => Math.abs(a.y - b.y) <= TOL * Math.max(a.size, b.size) && a.left < b.right && b.left < a.right;
+const crossed = (ln, bx) => {
+  const from = Math.max(Math.min(ln.x1, ln.x2), bx.left), to = Math.min(Math.max(ln.x1, ln.x2), bx.right);
+  if (from > to) return false;
+  const yAt = (x) => ln.y1 + ((x - ln.x1) / (ln.x2 - ln.x1)) * (ln.y2 - ln.y1);
+  const ys = ln.x2 === ln.x1 ? [ln.y1, ln.y2] : [yAt(from), yAt(to)];
+  return ys.some((y) => y >= bx.top && y <= bx.bottom) || (Math.min(...ys) < bx.top && Math.max(...ys) > bx.bottom);
+};
+const svgViews = (d) => (d.scenarios?.length ? d.scenarios.map((s) => [`${d.title} / ${s.label}`, s.svg]) : [[d.title, d.svg]]);
+for (const d of bundle.diagrams) for (const [where, svg] of svgViews(d)) {
+  const vbW = Number((svg.match(/viewBox="0 0 ([\d.]+)/) || [])[1]);
+  const boxes = boxesOf(svg);
+  for (let i = 0; i < boxes.length; i += 1) for (let j = i + 1; j < boxes.length; j += 1) if (collides(boxes[i], boxes[j])) problems.push(`${where}: "${boxes[i].body.slice(0, 26)}" (y=${boxes[i].y}) and "${boxes[j].body.slice(0, 26)}" (y=${boxes[j].y}) overlap`);
+  for (const ln of segmentsOf(svg)) for (const bx of boxes) if (crossed(ln, bx)) problems.push(`${where}: a line (${ln.x1},${ln.y1})→(${ln.x2},${ln.y2}) is drawn through "${bx.body.slice(0, 26)}"`);
+  for (const bx of boxes) if (bx.left < -2 || bx.right > vbW + 2) problems.push(`${where}: "${bx.body.slice(0, 30)}" runs from ${Math.round(bx.left)} to ${Math.round(bx.right)} on a ${vbW}-unit frame`);
+}
+{ // A/B: the guard must fire on what it exists for and stay quiet a clear row apart.
+  const mk = (body, x, y, size) => boxesOf(`<text x="${x}" y="${y}" font-size="${size}" text-anchor="start">${body}</text>`)[0];
+  if (!collides(mk('Launch cold brew', 120, 168, 10), mk('cost $200,000', 120, 180, 10))) problems.push('the collision guard does not fire on two 10-unit labels 12 units apart');
+  if (collides(mk('Launch cold brew', 120, 168, 10), mk('cost $200,000', 120, 182, 10))) problems.push('the collision guard fires on two 10-unit labels 14 units apart');
+  if (!crossed({ x1: 233, y1: 100, x2: 400, y2: 58 }, mk('High demand 0.6', 300, 68, 10))) problems.push('the line check does not fire on a label drawn across its branch');
+  if (boxesOf('<text x="26" y="165" font-size="11" transform="rotate(-90,26,165)">Axis</text>').length) problems.push('rotated text is being measured');
+}
+
 /* ── report ────────────────────────────────────────────────────────────────── */
 
 console.log(`=== ${SECTION} — packet 14 ${STAGE ? 'STAGE' : 'dry run'}`);
@@ -108,8 +169,6 @@ const subs = bundle.content.reduce((n, b) => n + b.sections.length, 0);
 const recalls = bundle.content.flatMap((b) => b.sections).filter((s) => s.recall).length;
 console.log(`\ncounts: ${bundle.content.length} blocks · ${subs} subsections · ${recalls} recalls · ${bundle.quiz.length} quiz · ${bundle.practice.length} practice · ${bundle.diagrams.length} diagrams · ${bundle.flashcards.length} cards · ${bundle.mistakes.length} mistakes · ${bundle.extras.chains.length} chains`);
 console.log('pins:'); for (const b of bundle.content) console.log(`  ${b.title.padEnd(24)} diagram ${b.diagramId.split(':').pop()}  quiz [${b.quizIndices.join(',')}]  practice [${b.practiceIndices.join(',')}]`);
-if (problems.length) { console.log('\nPROBLEMS:'); for (const p of problems) console.log(`  - ${p}`); }
-else console.log('\npacket checks: no pounds, no sensitivity analysis, no Outline, no uncited examiner claim, ids unique, worked figures agree across body, notes, diagrams and assessment');
 
 const live = await loadBundle(SECTION);
 const ctx = await contextFor(SECTION);
@@ -125,6 +184,17 @@ for (const f of newBlocks) console.log(`  NEW BLOCK  ${f.rule.padEnd(24)} ${f.de
 for (const f of newDebt) console.log(`  new debt   ${f.rule.padEnd(24)} ${f.detail.slice(0, 140)}`);
 for (const f of carried) console.log(`  carried    ${f.rule.padEnd(24)} ${f.detail.slice(0, 140)}`);
 for (const f of after.findings.filter((x) => x.tier === 'INFO')) console.log(`  info       ${f.rule.padEnd(24)} ${f.detail}`);
+
+// Packet 14.1: a new DEBT and a recoverable recall answer both stop the stage. `recall.recoverable` is
+// INFO in the validator and gated only by `npm run recalls`, which holds a section with no baseline row
+// (this one) to zero; checking it here means the runner fails before the draft is written, not after.
+const recoverable = after.findings.filter((f) => f.rule === 'recall.recoverable');
+for (const f of recoverable) problems.push(`recall.recoverable ${f.where}: ${f.detail.slice(0, 160)}`);
+for (const f of newDebt) problems.push(`new DEBT ${f.rule}: ${f.detail.slice(0, 120)}`);
+console.log(`\nquiz: correct option uniquely longest on ${longest.length} of ${bundle.quiz.length} [${longest.join(',')}]; positions ${[0, 1, 2, 3].map((p) => bundle.quiz.filter((q) => q.correctIndex === p).length).join('·')}`);
+console.log(`check-ins show first: ${bundle.content.map((b) => `${b.title} → quiz[${b.quizIndices[0]}]`).join(' · ')}`);
+if (problems.length) { console.log(`\nPROBLEMS (${problems.length}):`); for (const p of problems) console.log(`  - ${p}`); }
+else console.log('\npacket checks: no pounds, no sensitivity analysis, no Outline, no uncited examiner claim, ids unique, worked figures agree, mistakes whole, no length tell above 1.2x, collision guard clean, 0 recoverable, 0 new DEBT');
 
 if (DUMP) { const p = `audit/snapshots/packet-14-bundle__business__${SECTION}.json`; writeFileSync(p, JSON.stringify({ section_id: SECTION, subject: 'business', label: 'packet-14-bundle', tables: bundle }, null, 1) + '\n'); console.log(`\nbundle written to ${p}`); }
 

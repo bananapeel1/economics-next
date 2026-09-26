@@ -1,0 +1,38 @@
+
+business-growth — packet 49
+  before: 12 BLOCK / 19 DEBT / 3 INFO (1 recoverable)
+  after:  0 BLOCK / 0 DEBT / 5 INFO (0 recoverable)
+  new:    0 BLOCK / 0 DEBT · carried 0 () · would clear 27 baselined findings on publish
+  5 blocks · 15 subsections · 25 quiz (3 unpinned, keys 7/6/6/6) · 7 practice · 28 flashcards · 7 mistakes · 5 diagrams (5 views) · 4 chains · 3 evaluation
+  recalls: 15 of 15 subsections — 4 match, 7 classify, 1 reorder, 3 fillin
+  coverage: 16 of 16 specification leaves evidenced in the teaching text (100%)
+  words:  343 298 308 282 298 333 349 297 304 350 297 308 308 336 330
+  pins:   quiz [[3,4,5,6],[7,8,9],[10,11,12,13,14],[15,16,17,18,19],[20,21,22,23,24]] · practice [[0],[1],[2],[3,5],[4,6]]
+
+packet checks
+  SCOPE      3.3.2 only. Demergers, reasons for staying small, barriers to entry, Ansoff and the UK frame
+             (CMA, MegaRetail) banned, each A/B'd both ways and each ban re-measured against bus_spec.txt;
+             2.3.5 (small business) and 2.3.1 (franchising) are single pointers carrying their numbers;
+             synergy is an aside — once, teaching text only, never assessed
+  NUMBERING  the oracle re-read (18 rows / 16 leaves), every leaf mapped and its own words found in its
+             subsections, three headings asserted by line, "3.2.<n>"/"3.1.3" asserted ABSENT, and the
+             database's own 3.3.2 / WBS13 asserted
+  ARITHMETIC Plan A, the loaf cost fall, the premium, the interest, the yearly gain, the cash gap, the cost
+             curve's minimum, and every recall and quiz figure recomputed independently
+  PINS       derived from each item's block tag; five blocks of three subsections, each with its own
+             diagram, quiz and practice; no diagramRef; 8 free quiz items against 10
+  QUIZ       keys dealt from a hash, histogram measured, no length tell, no letter, no ordinal, no
+             near-duplicate stems, nothing tested that no subsection teaches
+  PRACTICE   Appendix 6 parsed including Assess 12; the set is Units 3-4 Section A (4/4/8/12/12) plus two
+             Evaluate essays on one source that carries every figure; the Calculate figures printed nowhere
+             else; stems name the firm; openings clean; levels naming K/App/An/Ev above 6
+  RECALLS    15 of 15, all four types, the integration fill-in and the takeover reorder (sourced
+             from an extras chain), and the shared recall.recoverable measure at 0
+  DIAGRAMS   5 on a 400-unit frame, palette parsed, extent, box fit, collisions and polyline
+             crossings checked on the emitted SVG with the guards A/B'd, names counted back out of the SVG,
+             the cost curve's minimum re-read from its points, and no chapter's pinned key printed on its
+             own diagram
+
+bundle written to audit/snapshots/packet-49-bundle__business__business-growth.json
+
+staged to draft: {"ok":true,"findings":[{"tier":"INFO","rule":"diagram.table-kind","where":"business-growth:diagram:018d62e1","detail":"6 rows of text share the same columns — if this is a reference table it should declare kind:\"table\"; if it is a drawn diagram, ignore this","key":"business-growth|diagram.table-kind|business-growth:diagram:018d62e1|6db01419"},{"tier":"INFO","rule":"diagram.table-kind","where":"business-growth:diagram:7f6c6b03","detail":"6 rows of text share the same columns — if this is a reference table it should declare kind:\"table\"; if it is a drawn diagram, ignore this","key":"business-growth|diagram.table-kind|business-growth:diagram:7f6c6b03|8ed6efb7"},{"tier":"INFO","rule":"diagram.table-kind","where":"business-growth:diagram:27560e61","detail":"4 rows of text share the same columns — if this is a reference table it should declare kind:\"table\"; if it is a drawn diagram, ignore this","key":"business-growth|diagram.table-kind|business-growth:diagram:27560e61|a880970a"},{"tier":"INFO","rule":"spec.coverage","where":"section","detail":"16 of 16 specification leaves evidenced in the teaching text (100%)","covered":16,"leaves":16,"key":"business-growth|spec.coverage|section|0da9a918"},{"tier":"INFO","rule":"section.counts","where":"section","detail":"5 blocks · 15 subsections · 15 recalls (1 reorder, 3 fill-in, 4 match, 7 classify) · 25 quiz · 7 practice · 5 diagrams · 4 chains","key":"business-growth|section.counts|section|8caebed2"}],"summary":{"sectionId":"business-growth","subject":"business","unitCode":"WBS13","number":"3.3.2","block":0,"debt":0,"info":5},"newBlocks":[],"newDebt":[],"staged":["section_content","section_notes","section_quiz","section_practice","section_flashcards","section_diagrams","section_extras","section_common_mistakes"],"unchanged":[],"wouldStage":["section_content","section_notes","section_quiz","section_practice","section_flashcards","section_diagrams","section_extras","section_common_mistakes"]}

@@ -1,0 +1,35 @@
+
+global-industries-mncs — packet 56
+  before: 12 BLOCK / 28 DEBT / 2 INFO (0 recoverable)
+  after:  0 BLOCK / 1 DEBT / 4 INFO (0 recoverable)
+  new:    0 BLOCK / 0 DEBT · carried 1 (quant.unit) · would clear 35 baselined findings on publish
+  4 blocks · 17 subsections · 25 quiz (3 unpinned, keys 7/6/6/6) · 7 practice · 26 flashcards · 7 mistakes · 4 diagrams (4 views) · 3 chains · 3 evaluation
+  recalls: 17 of 17 subsections — 3 fillin, 8 classify, 4 match, 2 reorder
+  coverage: 24 of 24 specification leaves evidenced in the teaching text (100%)
+  words:  266 284 280 268 290 318 282 243 306 290 286 292 277 272 287 277 300
+  pins:   quiz [[3,4,5,6],[7,8,9,10,11,12],[13,14,15,16,17,18],[19,20,21,22,23,24]] · practice [[0],[1,3,5],[2,4],[6]]
+  note: "MNCs and the National Economy": a later pin's key "$3" appears on the diagram (served only on a re-pin; DEBT under the question-first rule)
+  note: "Controlling MNCs": a later pin's key "political influence" appears on the diagram (served only on a re-pin; DEBT under the question-first rule)
+
+packet checks
+  SCOPE      4.3.4 only. Transfer pricing asserted absent from bus_spec.txt and taught once, inside 1b tax
+             revenues; Economics framing, the named real cases and BEPS/Pillar Two banned, each ban A/B'd
+             both ways and re-measured; the repatriation fallacy banned and its correction asserted
+  NUMBERING  the oracle re-read (30 rows / 24 leaves), every leaf mapped and its own words found in its
+             subsections, seven lines of the span asserted, no 4.3.5, the database's 4.3.4 / WBS14 asserted
+  ARITHMETIC every figure re-derived: wage premium, net flow, profit and tax a pair, tax lost, and every
+             quiz key recomputed independently
+  PINS       derived from each item's block tag; four chapters, each with its own diagram, quiz and practice
+  QUIZ       keys dealt from a hash, histogram measured, no length tell, no letter, no ordinal, no
+             near-duplicate stems, nothing tested that no subsection teaches, retired items absent
+  PRACTICE   Appendix 6 parsed including Assess 10/12; the set is ial-paper-structure.json's Units 3-4
+             Section A (4/4/8/12/12) plus two Evaluate essays, all on one source that carries every figure
+  RECALLS    17 of 17, all four types, the transfer-pricing fill-in and the FDI reorder
+             (sourced from an extras chain, not printed on its own step), recall.recoverable at 0
+  DIAGRAMS   4 on a 400-unit frame, palette parsed, extent, box fit and collisions checked
+             on the emitted SVG with the guard A/B'd, figures counted back out of the SVG, bars in
+             proportion, and no chapter's check-in key printed on its own diagram
+
+bundle written to audit/snapshots/packet-56-bundle__business__global-industries-mncs.json
+
+staged to draft: {"ok":true,"findings":[{"tier":"INFO","rule":"diagram.table-kind","where":"global-industries-mncs:diagram:3f19d889","detail":"4 rows of text share the same columns — if this is a reference table it should declare kind:\"table\"; if it is a drawn diagram, ignore this","key":"global-industries-mncs|diagram.table-kind|global-industries-mncs:diagram:3f19d889|64222c87"},{"tier":"INFO","rule":"diagram.table-kind","where":"global-industries-mncs:diagram:1c047735","detail":"4 rows of text share the same columns — if this is a reference table it should declare kind:\"table\"; if it is a drawn diagram, ignore this","key":"global-industries-mncs|diagram.table-kind|global-industries-mncs:diagram:1c047735|c28ebc0d"},{"tier":"INFO","rule":"spec.coverage","where":"section","detail":"24 of 24 specification leaves evidenced in the teaching text (100%)","covered":24,"leaves":24,"key":"global-industries-mncs|spec.coverage|section|f88fdf28"},{"tier":"DEBT","rule":"quant.unit","where":"section","detail":"no quantitative drill template is registered for WBS14","key":"global-industries-mncs|quant.unit|section|ed7c9c70"},{"tier":"INFO","rule":"section.counts","where":"section","detail":"4 blocks · 17 subsections · 17 recalls (2 reorder, 3 fill-in, 4 match, 8 classify) · 25 quiz · 7 practice · 4 diagrams · 3 chains","key":"global-industries-mncs|section.counts|section|f5a1aa3f"}],"summary":{"sectionId":"global-industries-mncs","subject":"business","unitCode":"WBS14","number":"4.3.4","block":0,"debt":1,"info":4},"newBlocks":[],"newDebt":[],"staged":["section_content","section_notes","section_quiz","section_practice","section_flashcards","section_diagrams","section_extras","section_common_mistakes"],"unchanged":[],"wouldStage":["section_content","section_notes","section_quiz","section_practice","section_flashcards","section_diagrams","section_extras","section_common_mistakes"]}

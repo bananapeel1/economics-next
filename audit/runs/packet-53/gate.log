@@ -1,0 +1,92 @@
+===== GATE RUN FOR PACKET 53: influences-business-decisions =====
+Date: 2026-09-26
+Staged to draft, not published.
+
+=== 1. npm test ===
+EXIT CODE: 1 (FAILED - 3 of 342 tests failed)
+
+FAILURES:
+✖ the real market-failure panel is built on Evaluate 20 and loses AO4 (9.056542ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'unknown'
+  - 'objectives'
+
+✖ 1.3.5 groups into the extract set first (2, 6, 20) and a standalone set (4, 8, 20)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  [actual has items 4, 8, 14 that should not be there]
+
+✖ every tag in the real economics bank names a leaf of its own section
+  AssertionError [ERR_ASSERTION]: a tag on the wrong section is invisible to the id check
+  [mf-short-explain-sea-wall-public-good-4 → ECON-1.3.5-3a]
+
+Summary: tests 342, pass 339, fail 3
+
+=== 2. npm run build ===
+EXIT CODE: 0 (PASSED)
+
+Build completed successfully. All routes prerendered/generated.
+
+=== 3. npm run validate ===
+EXIT CODE: 0 (PASSED)
+
+influences-business-decisions: 0 BLOCK / 0 DEBT / 4 INFO
+All 0 new findings. 143 total DEBT across all sections (baselined).
+
+=== 4. npm run exposure ===
+EXIT CODE: 0 (PASSED)
+
+DRAFT (staged) — 40 sections evaluated, 239 chapters served of 240
+No STARVED chapters (code defect).
+1 DECIDED chapter (business-growth).
+No UNWRITTEN chapters (content debt).
+
+=== 5. npm run recalls ===
+EXIT CODE: 0 (PASSED)
+
+STAGED (draft) — 40 sections
+Recalls answerable by scrolling up: 308 of 999 (31%)
+No section is worse than the baseline.
+
+=== 6. node audit/scripts/check-staged-drafts.mjs influences-business-decisions ===
+EXIT CODE: 0 (PASSED)
+
+influences-business-decisions matches draft API response
+0 sections with drift
+Covers every field a signed-out student can reach
+
+=== ADVISORY ONLY ===
+
+7a. npm run contrast
+EXIT CODE: 0 (PASSED)
+Diagrams palette validation: clean
+
+7b. npm run spec-items
+EXIT CODE: 0 (PASSED)
+audit/raw/spec-items.json matches the specification text
+
+7c. npm run tariff-census
+EXIT CODE: 0 (PASSED)
+audit/raw/tariff-census.json matches the specification text
+
+7d. npm run pin-check
+EXIT CODE: 0 (INFO)
+1499 pins across 43 sections, all resolve
+256 pins share no vocabulary with their block (DEBT, re-pinning is own packet's work)
+
+===== GATE SUMMARY =====
+npm test: 1 (FAILED)
+npm run build: 0 (PASSED)
+npm run validate: 0 (PASSED)
+npm run exposure: 0 (PASSED)
+npm run recalls: 0 (PASSED)
+check-staged-drafts: 0 (PASSED)
+
+ADVISORY:
+npm run contrast: 0
+npm run spec-items: 0
+npm run tariff-census: 0
+npm run pin-check: 0
+
+GATE RESULT: FAILED (npm test exit 1, blocking gate)

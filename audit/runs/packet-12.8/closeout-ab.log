@@ -1,0 +1,30 @@
+| # | mutation | applied (sha) | B close-out findings | A2 round-2 R9 | B first finding |
+|---|---|---|---|---|---|
+| C0 | control: unmutated clone | - | 0 | 0 |  |
+| Ma1 | (a) md carries "## Questions" again (one bank question line) | md efe3a21e876a | R13(a)×1 | 0 | R13 (a) econ-u1-market-failure.md:26 carries its own "## Questions"; the page renders the questions from the bank's data-question items, so the file must not state them |
+| Ma2 | (a) md carries "## questions" (lower case), empty | md 8be518113a6b | R13(a)×1 | 0 | R13 (a) econ-u1-market-failure.md:26 carries its own "## questions"; the page renders the questions from the bank's data-question items, so the file must not state them |
+| Mb1 | (b) new H2 "## Extension task" with a (f) (20 marks) task | md d77678b2a67e | R13(b)×1 | 0 | R13 (b) econ-u1-market-failure.md:82 has H2 "## Extension task", which is not one of "Stimulus", "Model Answers", "Common Mistakes", "Diagram Reference"; the page renders |
+| Mb2 | (b) setext H2 "Extension task\n---" (no # at all) | md ce7e99361004 | R13(b)×1 | 0 | R13 (b) econ-u1-market-failure.md:82 has H2 "## Extension task", which is not one of "Stimulus", "Model Answers", "Common Mistakes", "Diagram Reference"; the page renders |
+| Mb3 | (b) H3 "### Extension (20 marks)" inside Common Mistakes | md a8dc1105bc07 | R13(b)×1 | 0 | R13 (b) econ-u1-market-failure.md:88 has a sub-heading "### Extension (20 marks)" outside "## Model Answers"; only the model answers are headed below H2 |
+| Mb4 | (b) "## Diagram Reference" repeated | md e2c4567a06ad | R13(b)×1 | 0 | R13 (b) econ-u1-market-failure.md:96 repeats "## Diagram Reference" (first at line 88) |
+| Mb5 | (b) second H1 "# Question (f) (20 marks)" at the end | md 52b6e14f1b63 | R13(b)×1 | 0 | R13 (b) econ-u1-market-failure.md:96 has a second H1 "# Question (f) (20 marks)"; the file has one title |
+| Mb6 | no-fire control: "## Extension" inside a fenced code block (the page renders code, not a heading) | md 5d2ef2b29f5a | 0 | 0 |  |
+| Mc1 | (c) extra "### Question (f) (20 marks)" in Model Answers | md 451872a0af5f | R13(c)×1 | 0 | R13 (c) econ-u1-market-failure.md:82 heads Question (f) (20 marks), which no bank data-question item carries |
+| Mc2 | (c) heading tariff drift: (e) headed at 20 marks | md 1a28e40a398f | R13(c)×1 | 0 | R13 (c) econ-u1-market-failure.md:66 heads Question (e) at 20 marks; the bank's mf-extract-evaluate-soft-drinks-excise-20 is 14 |
+| Mc3 | (c) (c) and (d) headings swapped in order | md 5df48742ebcc | R13(c)×1 | 0 | R13 (c) econ-u1-market-failure.md "## Model Answers" heads the parts in the order a, b, d, c, e; the bank's order is a, b, c, d, e |
+| Mc4 | (c) the (b) heading removed | md 87cd27a0745e | R13(c)×1 | 0 | R13 (c) econ-u1-market-failure.md "## Model Answers" has no "### Question (b) (4 marks)" for mf-extract-explain-tobacco-social-cost-4 |
+| Mc5 | (c) "#### Question (f) (20 marks)" (H4) under Model Answers | md 3e370a0e09ba | R13(c)×1 | 0 | R13 (c) econ-u1-market-failure.md:82 "#### Question (f) (20 marks)" under "## Model Answers" is not "### Question (x) (n marks)" for a bank part |
+| Mc6 | (c) "### Question (b) (4 marks)" twice | md 5cf78c9ca335 | R13(c)×1 | 0 | R13 (c) econ-u1-market-failure.md:82 heads Question (b) a second time |
+| Mc7 | (c) heading in emphasis markup "### Question (f) (**20** marks)" (parsed text, not raw) | md dd87e58801ef | R13(c)×1 | 0 | R13 (c) econ-u1-market-failure.md:82 heads Question (f) (20 marks), which no bank data-question item carries |
+| Bk1 | bank: a part (f) added (copy of (e), 20 marks, stimulus unchanged) | bank 08a1d46ad07f | R9×3 R1×1 R10×1 R13(c)×1 | 3 | R9 20 marks is not a data-question tariff of WEC11/WEC12 (2, 4, 6, 8, 14) |
+| Bk2 | bank: (e)'s tariff changed 14 -> 20 | bank 488a63f2d664 | R9×2 R1×1 R10×1 R13(c)×1 | 2 | R9 20 marks is not a data-question tariff of WEC11/WEC12 (2, 4, 6, 8, 14) |
+| Bk3 | bank: (b) and (d) tariffs swapped (multiset unchanged, so R10 stays quiet) | bank 2f7c14ff9a69 | R9×2 R1×2 R13(c)×2 | 2 | R9 Explain is not a command word for 8 marks in section C (Examine) |
+| Bk4 | bank: (c) stem edited (single source: nothing to drift, validator silent; page shows it, see page A/B) | bank a99d64f6d817 | 0 | 0 |  |
+| Bk5 | bank: every paper field stripped (file-side R13) | bank e2ca147d9590 | R13×1 | 0 | R13 econ-u1-market-failure.md letters its questions to the paper layout, but no page's data question claims it, so its page renders no questions; bank items naming it: ec |
+| Bk6 | bank: a second page claims the same stimulus (1.3.5 parts copied to section 9.9.9) | bank 3cca0c796a1c | R11×1 R12×1 R13×1 | 0 | R11 short answers are none; WEC11/WEC12 sets 5 × 4 |
+| T1 | R9 tag strip: short-answer context "(0 < |PED| < 1)" prose, then (20 marks), then a later ">" line | bank b241b2d928b3 | R9×1 | 0 | R9 paper.context states a tariff "20 marks"; the shell prints the tariff from marks, so this reads as a second task |
+| T2 | R9 no-fire control: the same "(0 < |PED| < 1)" and ">" prose with no tariff | bank 5c67f5c798d7 | 0 | 0 |  |
+| T3 | R9 no-fire control: a real tag is still stripped (<span title="(20)">, whose attribute alone would match) | bank de226f72a823 | 0 | 0 |  |
+| T4 | T3 with the tag unstripped (attribute text in the prose) fires, so T3 is not blind | bank 742ecaa51149 | R9×1 | 1 | R9 paper.context states a tariff "(20)"; the shell prints the tariff from marks, so this reads as a second task |
+| R1 | STATED RESIDUAL: a tariffed task as free prose inside Common Mistakes | md cdaecb069d32 | 0 | 0 |  |
+| C1 | control after every restore | - | 0 | 0 |  |

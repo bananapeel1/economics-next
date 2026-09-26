@@ -293,6 +293,14 @@ const BASE_ANSWERS = [
     // No `stimulus`: this answer applies a coal-fired power station, not the attached extract, so
     // packet 12.7 detaches it (DECISIONS 2026-09-25). The extract's own questions carry it instead.
     minutes: 5,
+    // Packet 12.8, E059: one of the five Section B short answers, now with its own short context as
+    // every WEC11 short answer has. The context is the power station the answer already uses, so no
+    // mark and no sentence of the answer changes.
+    paper: {
+      section: 'B',
+      kind: 'short_answer',
+      context: 'Much of the world’s electricity is still generated in coal-fired power stations, which release carbon dioxide and sulphur dioxide as they produce it.',
+    },
   },
 
   // ── 1.3.6 Government Intervention — 8 marks ──

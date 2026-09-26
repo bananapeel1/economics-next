@@ -1,0 +1,106 @@
+title: Managing People — Exam Questions &amp; Model Answers | Edexcel IAL Business | Revvy Learn
+canonical: https://revvylearn.com/business/managing-people-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is Maslow's hierarchy of needs?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Maslow's hierarchy arranges human needs into five levels: physiological (food, shelter), safety (job security), social (belonging, teamwork), esteem (recognition, status), and self-actualisation (reaching full potential). Lower-level needs must be satisfied before higher-level needs become motivating factors for employees."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are the advantages of internal recruitment?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Internal recruitment is faster and cheaper than external recruitment — no advertising or lengthy induction needed. The candidate already knows the company culture and processes. It also motivates existing staff by showing that promotion opportunities exist, improving retention and reducing turnover costs."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Managing People — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Business 1.3.4 Managing People"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain Maslow's hierarchy of needs and its relevance to employee motivation.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Maslow's hierarchy of needs is a motivational theory that arranges human needs into five levels : physiological (food, shelter), safety (job security), social (belonging, teamwork), esteem (recognition, status), and self-actualisation (reaching full potential). K Maslow argued that lower-level needs must be satisfied before higher-level needs become motivating. K For businesses, this means that simply paying a fair wage (physiological/safety) is not enough to fully motivate employees. A Once basic needs are met, managers should focus on creating a positive team environment (social needs), offering praise and promotion opportunities (esteem), and providing challenging, meaningful work (self-actualisation) to maximise motivation and productivity. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Discuss (8 marks)",
+   "text": "Discuss the advantages of internal recruitment compared to external recruitment.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Internal recruitment involves filling a vacancy from within the existing workforce (e.g. through promotion or redeployment), while external recruitment involves hiring from outside the organisation through job advertisements, agencies, or graduate schemes. K A key advantage of internal recruitment is that it is faster and cheaper . A There is no need to advertise externally, screen large numbers of applicants, or conduct lengthy induction training. The internal candidate already understands the company culture, systems, and processes , meaning they can become productive more quickly. An Internal recruitment also motivates existing staff . A When employees see that promotion opportunities exist, they are incentivised to perform well and remain loyal to the company, reducing staff turnover and associated recruitment costs. This links to Maslow's esteem needs — recognition through promotion fulfils employees' desire for status and achievement. An However, internal recruitment has a narrower talent pool , meaning the business may miss out on candidates with fresh perspectives, specialist skills, or experience from other industries. An It can also create a chain reaction of vacancies — promoting one employee creates a gap in their previous role that must also be filled. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Evaluate (20 marks)",
+   "text": "Evaluate the view that financial incentives are the most effective way to motivate employees.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Financial incentives include bonuses, commission, profit sharing, and performance-related pay — they directly link reward to output. K Non-financial incentives include job enrichment, empowerment, recognition, flexible working, and team-building. K The question is whether money alone is sufficient to motivate employees, or whether non-financial factors are equally or more important. Financial incentives can be highly effective, particularly for routine, measurable tasks . An Taylor's Scientific Management argued that workers are primarily motivated by money — they will work harder if paid more per unit. K Commission-based pay in sales roles (e.g. at estate agencies ) directly ties effort to reward, incentivising higher output. A Financial incentives also help with recruitment and retention — competitive salaries attract talent and reduce turnover costs. An However, Herzberg's Two-Factor Theory distinguishes between hygiene factors (pay, conditions) that prevent dissatisfaction, and motivators (responsibility, achievement, recognition) that drive genuine engagement. K Pay only prevents unhappiness — it does not create long-term motivation. Amazon warehouse workers receive competitive wages and productivity bonuses, yet the company experiences annual turnover of ~150% — suggesting financial incentives alone cannot compensate for repetitive, physically demanding work with limited autonomy. A By contrast, Google retains talent through non-financial motivators — creative freedom, development opportunities, team culture, and meaningful projects. A The effectiveness of financial incentives is highly context-dependent . For low-skilled, repetitive work , financial incentives may be the primary motivator — workers have limited scope for job enrichment. An For professional and creative roles , non-financial motivators — autonomy, purpose, mastery — tend to be more powerful, as Maslow's hierarchy suggests that once basic financial needs are met, higher-level needs (esteem, self-actualisation) become the dominant drivers. K The organisational culture also matters — a firm that relies solely on bonuses may create a competitive, individualistic environment that undermines teamwork. An In practice, the most effective approach is a combination — fair pay (hygiene factor) plus meaningful work, recognition, and development opportunities (motivators). An Financial incentives are effective for short-term productivity gains and measurable tasks , but they are not the most effective way to motivate employees in all contexts . For sustained engagement and retention, non-financial factors — particularly autonomy, recognition, and meaningful work — are often more powerful. The best strategy uses competitive pay as a foundation (preventing dissatisfaction) combined with non-financial motivators (driving true engagement). An"
+   }
+  }
+ ]
+}

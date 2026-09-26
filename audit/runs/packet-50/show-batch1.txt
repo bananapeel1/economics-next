@@ -1,0 +1,113 @@
+{
+  "id": "C-managing-change-topFix-01",
+  "section": "managing-change",
+  "kind": "topFix",
+  "rank": 0,
+  "text": "Rewrite 'Drivers of Change and Scenario Planning' (or add a new block) to teach IAL 3.6.3 as the spec means it: risk assessment (natural disasters, IT failure, loss of key staff) -> mitigation (business continuity, succession planning) -> costs vs benefits of contingency planning. Demote Shell-style strategic scenarios to one sentence.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.6.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.6. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-managing-change-topFix-02",
+  "section": "managing-change",
+  "kind": "topFix",
+  "rank": 1,
+  "text": "Add a block on effects of change (competitiveness, productivity, financial performance, stakeholders) and key factors in successful change (organisational culture, size, speed of change, transformational leadership) plus Kotter & Schlesinger's six strategies, so that quiz indices 0,2,3,4,5,6,7,8 and practice index 3 test material the lesson actually teaches; then set quizIndices/practiceIndices per block.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-topFix-03",
+  "section": "managing-change",
+  "kind": "topFix",
+  "rank": 2,
+  "text": "Fix the disruptive/step conflation: rename the type-of-change pair to incremental vs step (transformational) change across content, notes and flashcards; treat disruption as an external cause; reword the section-1 examMatters that tells firms to 'use disruptive change'.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-topFix-04",
+  "section": "managing-change",
+  "kind": "topFix",
+  "rank": 3,
+  "text": "Add recall widgets and a diagram: a reorder recall for Kotter's 8 steps (genuine procedural sequence; use one consistent wording), a fillin for Lewin's driving/restraining forces, and an InlineDiagram of a force field so the 'draw the diagram' advice is backed by one. Move the Toyota example to section 1 and replace the duplicate Nadella example.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-topFix-05",
+  "section": "managing-change",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "Bring practice questions to IAL form: contextual 'Explain one reason... (4)' instead of 'Explain two'; convert the 6-mark Analyse to an 8-mark Assess; anchor the 10- and 20-mark stems to the bank / insurance company; replace the off-spec crisis-management question with a succession-planning or business-continuity question.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-accuracy-01",
+  "section": "managing-change",
+  "kind": "accuracy",
+  "text": "Types of Change > incremental-vs-disruptive-change > examMatters ('use disruptive change when external forces ... make the current model unsustainable'): Conflates two different concepts. The body defines disruptive change as something that 'comes from outside the established players' and 'destroys incumbents' (Christensen), i.e. a market phenomenon done TO a firm. examMatters then tells the student the firm should 'use disruptive change' as a management choice. A firm cannot 'use' disruption; it undertakes step/transformational change in response to it. The notes[] compound this with 'Disruptive (step) change' and the flashcards switch to 'transformational change', so three vocabularies for one idea.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-accuracy-02",
+  "section": "managing-change",
+  "kind": "accuracy",
+  "text": "Types of Change > drivers-and-scenario-planning > body paragraph 3, flow, keyIdea, misconception; notes[2] 'Scenario Planning': 'Scenario planning' is taught as Shell-style strategic foresight (2-4 futures, best/worst/most-likely/wildcard). In IAL 3.6.3 the heading 'Scenario planning' means identifying key risks through risk assessment (natural disasters, IT failure, loss of key staff), planning for risk mitigation (business continuity, succession planning) and the costs/benefits of contingency planning. A student who answers a 3.6.3 question with Shell scenarios will miss the indicative content entirely. The section's own quiz (Q5, Q6, Q9), flashcards (contingency, business continuity, succession, COVID) and practice Q4 use the spec meaning, so the lesson contradicts its own assessment items.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 3.6.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.6. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-managing-change-quiz-01",
+  "section": "managing-change",
+  "kind": "quiz",
+  "text": "q2: Tests Kotter & Schlesinger's six strategies (education/communication, participation, facilitation, negotiation, manipulation/co-optation, coercion), which the content[] never teaches; the lesson teaches Kotter's 8-STEP model, so students will conflate the two Kotters. Answer itself (coercion) is fine as textbook framing, though K&S actually say coercion is appropriate when speed is essential.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-managing-change-quiz-02",
+  "section": "managing-change",
+  "kind": "quiz",
+  "text": "q5: Odd wording: 'inadequate business continuity planning' is a weakness, not a risk, and 'MOST significant' is opinion with no case context. Business continuity planning is also never taught in content[] (only in flashcards). Distractors (poor marketing, excessive diversification) are nonsense for the stem.",
+  "packet": 50,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}

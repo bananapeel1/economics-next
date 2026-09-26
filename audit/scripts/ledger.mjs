@@ -2,7 +2,7 @@
 // Finding ledger CLI. Agents and sessions use this instead of editing audit/ledger.json by hand.
 //
 //   node audit/scripts/ledger.mjs summary                       counts by status, per packet
-//   node audit/scripts/ledger.mjs packet <n> [--open]           list items assigned to packet n
+//   node audit/scripts/ledger.mjs packet <n> [--open]           list items assigned to packet n (--open: not yet confirmed or wont-fix)
 //   node audit/scripts/ledger.mjs show <id> [<id>...]           full record(s)
 //   node audit/scripts/ledger.mjs assign <n> <id>...            set packet for ids (mapping pass only)
 //   node audit/scripts/ledger.mjs claim <n> <id>...             builder says packet n closes these ids
@@ -56,7 +56,10 @@ switch (cmd) {
   case 'packet': {
     const n = Number(ids[0]);
     const onlyOpen = rest.includes('--open');
-    const rows = all().filter((r) => r.packet === n && (!onlyOpen || r.status === 'open'));
+    // --open means "not closed": open, claimed-but-unverified, or verified not-fixed. It once matched only
+    // 'open', so a packet whose verifier rejected an item read clear (packet 12.8, E057, 26 Sep).
+    const NOT_CLOSED = new Set(['open', 'claimed', 'not-fixed']);
+    const rows = all().filter((r) => r.packet === n && (!onlyOpen || NOT_CLOSED.has(r.status)));
     for (const r of rows) console.log(line(r));
     console.log(`\n${rows.length} items`);
     break;

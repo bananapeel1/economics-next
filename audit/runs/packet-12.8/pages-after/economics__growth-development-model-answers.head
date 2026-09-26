@@ -1,0 +1,73 @@
+title: Growth and Development — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/growth-development-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Growth and Development — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 4.3.6 Growth and Development"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain two barriers to economic development in developing countries.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "First, corruption and weak governance divert resources away from productive use. K When government officials embezzle aid money or demand bribes, investment in infrastructure, education, and healthcare is reduced. This discourages foreign investment and prevents the efficient allocation of resources needed for development. A Second, primary product dependency makes countries vulnerable to volatile commodity prices. K Countries like Nigeria , which relies heavily on oil exports, experience boom-and-bust cycles — when oil prices fall, government revenue collapses and development spending is cut. A Reliance on a narrow export base also means the country fails to develop diversified manufacturing and services sectors needed for sustained development."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine the view that trade is more effective than aid in promoting economic development.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Foreign aid is financial or technical assistance from developed to developing countries, while trade involves developing countries exporting goods and services to earn income. K Both aim to promote development, but through different mechanisms. K Trade can be more effective because it provides sustainable, self-generating income rather than dependence on external donors. An Vietnam's integration into global supply chains since the 1990s — exporting textiles, electronics, and agricultural products — has lifted over 40 million people out of poverty and generated tax revenue that funds domestic infrastructure. A Trade also incentivises productivity improvements — firms must become competitive to sell internationally, driving efficiency gains across the economy. An However, trade alone has limitations. Developing countries often face barriers to market access — developed countries' tariffs, quotas, and subsidies (e.g. EU agricultural subsidies) can make it difficult for developing country exports to compete. An Aid is essential in specific contexts — emergency humanitarian aid saves lives during crises, and infrastructure aid (roads, ports, power) builds the foundation that makes trade possible in the first place. An Without basic infrastructure, a country cannot export competitively regardless of trade opportunities. The challenge with aid is dependency and corruption — long-term aid flows can reduce the incentive for governments to reform and may be captured by elites. An"
+   }
+  }
+ ]
+}

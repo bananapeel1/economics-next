@@ -1,0 +1,96 @@
+title: Government Intervention (Unit 1) — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/government-intervention-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How does an indirect tax correct market failure?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "An indirect tax raises the cost of production, shifting the supply curve left. This increases the market price and reduces the quantity consumed, moving output closer to the socially optimal level. The tax internalises the external cost by making the price reflect the true social cost of the good."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are the limitations of indirect taxes as a government intervention?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Indirect taxes may be ineffective if demand is price inelastic, as consumption barely falls. They are regressive — low-income consumers pay a higher proportion of their income. Setting the correct tax rate is difficult due to information failure about the exact size of the externality. Taxes may also encourage black market activity."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Government Intervention (Unit 1) — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 1.3.6 Government Intervention"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine how the imposition of an indirect tax on sugary drinks could reduce market failure.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sugary drinks can be classified as a demerit good — a good that is over-consumed because consumers underestimate the long-term health costs and because consumption generates negative externalities (e.g. increased burden on the NHS from obesity-related illness). K An indirect tax is a government-imposed levy on producers that raises the cost of production. K The UK introduced the Soft Drinks Industry Levy in 2018 as an example of this approach. A The tax shifts the supply curve leftward (from S to S+tax), raising the market price and reducing the equilibrium quantity consumed. An By increasing the private cost, the tax effectively internalises the external cost — making the market price closer to the true social cost of consumption. An This moves output from the free-market quantity (Qm) toward the socially optimal quantity (Qopt) , reducing the welfare loss (deadweight loss) caused by over-consumption. D However, the effectiveness of the tax depends on the price elasticity of demand for sugary drinks. An If demand is price inelastic — for example, among habitual consumers or those with few perceived substitutes — the reduction in quantity consumed will be small, and the tax will primarily raise revenue rather than change behaviour. An Conversely, the UK sugar levy has been credited with encouraging manufacturers to reformulate products with less sugar, reducing consumption even without large price increases — an outcome that extends the policy's impact beyond the simple price mechanism. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain how an indirect tax can be used to correct a negative externality.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "An indirect tax is a tax levied on the sale of goods or services, paid by producers but often passed on to consumers through higher prices. K A negative externality occurs when production or consumption imposes costs on third parties — meaning the social cost exceeds the private cost. K A government can set an indirect tax equal to the external cost per unit. This forces producers to internalise the externality — their private cost now includes the external cost, raising the supply curve to align with the marginal social cost. A Output falls from the free market level to the socially optimal level, and the welfare loss is eliminated. For example, the UK's landfill tax raises the cost of sending waste to landfill, encouraging recycling and reducing environmental damage. A"
+   }
+  }
+ ]
+}

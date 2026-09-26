@@ -1,0 +1,2720 @@
+{
+ "section_id": "poverty-inequality",
+ "subject": "economics",
+ "label": "packet-51-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "poverty-inequality:block:aedb2b62",
+    "title": "Absolute and Relative Poverty",
+    "sections": [
+     {
+      "id": "poverty-inequality:sub:absolute-relative-poverty",
+      "title": "Absolute and Relative Poverty",
+      "keyIdea": "Absolute poverty is too little income to survive decently. Relative poverty is income far below what is typical in your own society.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Absolute poverty** is an income too low to buy the essentials of survival: enough food, safe water, shelter and clothing. It is measured against a fixed line, so it does not depend on how anyone else lives."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Relative poverty** is an income so far below the typical income of the society a person lives in that they cannot take part in its normal way of life. The line is set as a fraction of **median** income — the income of the person in the middle — so it moves whenever the middle moves."
+       },
+       {
+        "type": "paragraph",
+        "text": "The two can move in different directions. If every income in a country rises by the same percentage, some people cross the fixed absolute line, but the gap between the poorest and the middle is unchanged in proportion, so relative poverty stays the same. And a family can escape absolute poverty and still be relatively poor."
+       },
+       {
+        "type": "paragraph",
+        "text": "Relative poverty is **not** the same thing as inequality. It depends on the bottom of the distribution compared with the middle. If the richest pull further ahead while the middle and the bottom stay put, inequality rises but relative poverty does not change."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌏",
+       "text": "China's fast growth over several decades moved a huge share of its people above the international poverty line, while the gap between its cities and its countryside widened. Absolute poverty and inequality were answering different questions."
+      },
+      "misconception": "Students treat relative poverty as another word for inequality and write that relative poverty rose \"because the rich got richer\". A richer top leaves the median, and so the relative line, where it was. Say what happened to the bottom compared with the middle.",
+      "examMatters": "A Define is worth 2 marks: one for the idea, one for the benchmark. For absolute poverty the benchmark is a fixed line of basic needs; for relative poverty, a fraction of median income in that society.",
+      "recall": {
+       "id": "poverty-inequality:sub:absolute-relative-poverty:recall",
+       "type": "fillin",
+       "prompt": "Complete each statement about the two kinds of poverty:",
+       "template": [
+        "A family whose income cannot buy enough to eat or a roof over their heads is in ___ poverty.",
+        "A family that can eat but lives far below the households around it is in ___ poverty.",
+        "Its line is not fixed: it is pegged to the income found at the exact ___ of the ranked list."
+       ],
+       "answers": [
+        "absolute",
+        "relative",
+        "middle"
+       ],
+       "hints": [
+        "judged against a fixed line of survival needs",
+        "judged against the rest of that society",
+        "halfway along, with as many above as below"
+       ],
+       "distractors": [
+        "extreme",
+        "top"
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:measuring-absolute-poverty",
+      "title": "Measuring Absolute Poverty",
+      "keyIdea": "Absolute poverty is measured against a fixed poverty line: how many people fall below it, how far below they fall, and which basic needs they go without.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The World Bank's **international poverty line** is $3.00 a day per person, measured at purchasing power parity (PPP) in 2021 prices, so that a dollar buys the same basket in every country (source: World Bank, \"June 2025 Update to Global Poverty Lines\" factsheet, worldbank.org). It replaced an earlier, lower line when new price data were published."
+       },
+       {
+        "type": "paragraph",
+        "text": "A line becomes a measure in three ways:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Headcount ratio**: the share of the population below the line. In Marenda, 20% of its 20 million people — 4 million — live on less than $3.00 a day.",
+         "**Poverty gap**: how far below the line the poor are. Marenda's poorest tenth lives on $1.80 and the next on $2.60, so their shortfalls are $1.20 and $0.40: an average of $0.80 a day, or about $3.2 million a day across everyone below the line.",
+         "**Multidimensional Poverty Index (MPI)**: counts deprivations directly — in health, schooling and living standards such as clean water and electricity — rather than income."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The headcount alone can mislead: a policy that lifts the people just below the line out of poverty improves the headcount most while leaving the very poorest untouched. The gap shows the depth that the headcount hides."
+       }
+      ],
+      "realExample": {
+       "emoji": "📋",
+       "text": "The global Multidimensional Poverty Index is published by the United Nations Development Programme with the Oxford Poverty and Human Development Initiative. It counts a person as poor if they are deprived in enough of its indicators, such as schooling, child deaths and access to water."
+      },
+      "misconception": "Students quote the poverty line as if it were the measure. The line is only the threshold; the measure is the share below it (the headcount) or the distance below it (the gap). Name which one a figure is.",
+      "examMatters": "In a Calculate on poverty, write the formula in words before the numbers — share below the line, or shortfall below the line — and state the units: per cent of people, or dollars a day.",
+      "recall": {
+       "id": "poverty-inequality:sub:measuring-absolute-poverty:recall",
+       "type": "fillin",
+       "prompt": "Work out these poverty measures for a different country:",
+       "template": [
+        "Of its 50 million people, 8 million live on less than the international line, so its headcount ratio is ___.",
+        "Two poor workers there earn $2.00 and $2.50 a day, so their average shortfall below the $3.00 line is ___ a day.",
+        "A survey that records missing schooling, clean water and electricity instead of income treats poverty as ___."
+       ],
+       "answers": [
+        "16%",
+        "$0.75",
+        "multidimensional"
+       ],
+       "hints": [
+        "people below the line as a share of everyone",
+        "how far each falls short of the line, averaged",
+        "it counts several kinds of deprivation at once"
+       ],
+       "distractors": [
+        "8%",
+        "$1.25",
+        "temporary"
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:measuring-relative-poverty",
+      "title": "Measuring Relative Poverty",
+      "keyIdea": "Relative poverty is measured as the share of people below a line set at a fraction of median income, commonly 50% or 60%.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Measuring relative poverty starts from the whole distribution of incomes, not from a price list of basic needs:"
+       },
+       {
+        "type": "flow",
+        "resultType": "neutral",
+        "steps": [
+         {
+          "title": "Rank every income",
+          "subtitle": "Poorest to richest"
+         },
+         {
+          "title": "Find the median",
+          "subtitle": "The middle income"
+         },
+         {
+          "title": "Set the line",
+          "subtitle": "A fraction of the median"
+         },
+         {
+          "title": "Count below it",
+          "subtitle": "The relative headcount"
+         }
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "In Marenda the median income is $6.00 a day. A line at 60% of it is $3.60, and 30% of people fall below it — more than the 20% below the absolute line, because the relative line is higher."
+       },
+       {
+        "type": "paragraph",
+        "text": "Because the line is tied to the median, the measure reacts only to the bottom compared with the middle. Richer households at the top can gain or lose without changing it at all. That is what makes it a measure of exclusion from ordinary life in that society, rather than of how unequal incomes are overall."
+       }
+      ],
+      "realExample": {
+       "emoji": "🇪🇺",
+       "text": "The European Union's at-risk-of-poverty rate counts people living on less than 60% of their own country's median disposable income, adjusted for household size (source: Eurostat, at-risk-of-poverty rate definition)."
+      },
+      "misconception": "Students set the relative line at a fraction of the mean. It is the median: a few very high incomes lift the mean, so a mean-based line would rise when only the rich gained, which is the confusion with inequality over again.",
+      "examMatters": "When a question gives a median and a percentage, the relative line is the median times that percentage. Show the step: 60% of a $10.00 median is $6.00.",
+      "recall": {
+       "id": "poverty-inequality:sub:measuring-relative-poverty:recall",
+       "type": "reorder",
+       "prompt": "Put the steps a statistics office follows to measure relative poverty in order, from the raw survey to the final figure:",
+       "correctOrder": [
+        "List the survey households from the lowest income to the highest",
+        "Read off the income of the household exactly halfway up that list",
+        "Take the agreed percentage of that middle figure to fix the threshold",
+        "Work out what share of households have incomes under the threshold"
+       ],
+       "criterion": "the order the measure is built in: each step needs the result of the one before",
+       "why": [
+        "Nothing can be read off until the incomes are in order.",
+        "The middle of an ordered list is the median.",
+        "The relative line is defined as a fraction of the median, so it needs the median first.",
+        "Only once the line exists can the households below it be counted."
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Absolute poverty: below a fixed line of basic needs.",
+     "Relative poverty: below a fraction of the median, so it moves with the middle.",
+     "Measures: headcount, poverty gap, and deprivation counts such as the MPI."
+    ],
+    "diagramId": "poverty-inequality:diagram:0788877d",
+    "quizIndices": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "practiceIndices": [
+     0,
+     1
+    ]
+   },
+   {
+    "id": "poverty-inequality:block:14821ed9",
+    "title": "Causes of Changes in Poverty: Growth, Skills, Benefits and Tax",
+    "sections": [
+     {
+      "id": "poverty-inequality:sub:economic-growth",
+      "title": "Economic Growth",
+      "keyIdea": "Growth that raises incomes at the bottom reduces absolute poverty. Whether relative poverty falls depends on who gains compared with the middle.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Economic growth** raises average incomes, and that is the main way absolute poverty has fallen across the world: more jobs, higher wages and more tax revenue for public services. If Marenda's incomes all rise by 25%, the share below $3.00 a day falls from 20% to 10%."
+       },
+       {
+        "type": "paragraph",
+        "text": "The same growth leaves relative poverty where it was. The median rises from $6.00 to $7.50, the relative line rises with it to $4.50, and 30% of people are still below it. Relative poverty falls only if the bottom gains faster than the middle."
+       },
+       {
+        "type": "flow",
+        "resultType": "good",
+        "steps": [
+         {
+          "title": "Output grows",
+          "subtitle": "More jobs and higher wages"
+         },
+         {
+          "title": "Low incomes rise",
+          "subtitle": "People cross the fixed line"
+         },
+         {
+          "title": "Absolute poverty falls",
+          "subtitle": "Relative poverty depends on shares"
+         }
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Growth does not always reach the poor. Labour-intensive growth — factories, farming, tourism — spreads jobs widely; growth from a capital-intensive mine or oil field may create few, and growth concentrated in cities can leave rural households behind."
+       }
+      ],
+      "realExample": {
+       "emoji": "🇻🇳",
+       "text": "Vietnam's rapid growth after its market reforms, much of it in labour-intensive manufacturing and farming, cut the share of its people in extreme poverty dramatically."
+      },
+      "misconception": "Students write that growth reduces \"poverty\" without saying which kind. Evenly shared growth cuts absolute poverty and leaves relative poverty unchanged; growth that bypasses the bottom can leave both unchanged.",
+      "examMatters": "In an Evaluate on growth and poverty, the judgement turns on the pattern of growth: labour-intensive growth that raises wages at the bottom reduces poverty far more than the same growth rate from a mine.",
+      "recall": {
+       "id": "poverty-inequality:sub:economic-growth:recall",
+       "type": "match",
+       "prompt": "Match each pattern of growth to what it does to poverty:",
+       "pairs": [
+        {
+         "left": "Every income rises by a tenth",
+         "right": "Fewer below the fixed line; the share under the median-based line is unchanged",
+         "why": "The absolute line stays put while the relative line rises in step with the median."
+        },
+        {
+         "left": "Only the richest tenth gains",
+         "right": "Both poverty counts stay where they were",
+         "why": "Nobody near either line has more income, and the median has not moved."
+        },
+        {
+         "left": "Pay rises for the poorest, the middle stays flat",
+         "right": "Both poverty counts fall",
+         "why": "The poorest cross the fixed line and close in on the unchanged median."
+        },
+        {
+         "left": "Middle incomes rise, the poorest stand still",
+         "right": "Absolute poverty unchanged, relative poverty rises",
+         "why": "The median-based line climbs away from incomes that did not move."
+        }
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:education-training",
+      "title": "Education and Training",
+      "keyIdea": "Education and training raise the skills and so the earnings of the poor, which lifts them out of poverty slowly but lastingly.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Education and training** raise what a worker can produce and so what employers will pay. A farm labourer who learns to read, a school-leaver who trains as an electrician, and a mother who learns bookkeeping for her stall can each earn more."
+       },
+       {
+        "type": "flow",
+        "resultType": "good",
+        "steps": [
+         {
+          "title": "Skills are gained",
+          "subtitle": "Schooling or training"
+         },
+         {
+          "title": "Better-paid work",
+          "subtitle": "Higher productivity"
+         },
+         {
+          "title": "Household income rises",
+          "subtitle": "Above the poverty line"
+         }
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Because the poorest have the least schooling, spreading it to them narrows the gap between the bottom and the middle, so it can reduce **relative** poverty as well as absolute poverty. Educated parents also tend to keep their own children in school, so the effect carries into the next generation."
+       },
+       {
+        "type": "paragraph",
+        "text": "The limits: the effect takes years to arrive; it needs jobs for the newly skilled to go to; and if only better-off families can afford secondary and university education, it can widen the gap instead."
+       }
+      ],
+      "realExample": {
+       "emoji": "🎓",
+       "text": "Bangladesh paid stipends to girls attending secondary school, which raised enrolment among poor rural families and delayed early marriage."
+      },
+      "misconception": "Students present education as a quick fix. It is slow — a child starting school now reaches the labour market years later — and it raises incomes only if there is demand for the skills it gives.",
+      "examMatters": "For an Explain on education and poverty (4 marks), build the chain: skills, productivity, wages, income against the line. Each link is a mark; \"education is good for the poor\" is none.",
+      "recall": {
+       "id": "poverty-inequality:sub:education-training:recall",
+       "type": "reorder",
+       "prompt": "Put this chain in causal order, from the training course to the household leaving poverty:",
+       "correctOrder": [
+        "A young woman gains nursing skills on a course funded by the state",
+        "Nursing is scarce, qualified work that hospitals value highly",
+        "The town clinic hires her for better-paid work than her old farm job",
+        "Her household income per person climbs above the poverty line"
+       ],
+       "criterion": "cause to effect: each step is caused by the one before it",
+       "why": [
+        "The chain starts with the new skill.",
+        "The skill raises what her work is worth to an employer.",
+        "Because her work is worth more, she is paid more.",
+        "The higher wage lifts the household's income past the line."
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:welfare-benefits",
+      "title": "Welfare Benefits",
+      "keyIdea": "Welfare benefits transfer income straight to poor households, so they cut poverty quickly — if they reach the poor and are large enough.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Welfare benefits** are payments from the state to households: pensions, unemployment pay, child allowances and cash transfers to the poorest. They are the fastest way to change poverty, because they raise income directly rather than waiting for growth or skills."
+       },
+       {
+        "type": "paragraph",
+        "text": "Suppose Marenda pays $0.90 a day to each person in its three poorest tenths. Their incomes rise to $2.70, $3.50 and $4.10. The share below $3.00 falls from 20% to 10%, and — because the median has not moved — the share below the relative line falls from 30% to 20%. The cost is $5.4 million a day."
+       },
+       {
+        "type": "paragraph",
+        "text": "Cutting benefits works the other way: the poorest lose income at once and both measures can rise. That is why poverty often increases when governments cut spending in a crisis."
+       },
+       {
+        "type": "paragraph",
+        "text": "Benefits work only if they reach the poor. Many poor households work informally, have no bank account or identity papers, and never appear on the government's lists, while benefits paid to everyone cost far more per poor person helped."
+       }
+      ],
+      "realExample": {
+       "emoji": "🇧🇷",
+       "text": "Brazil's Bolsa Família pays monthly cash to low-income families on condition that their children attend school and have health check-ups, and it is widely credited with reducing extreme poverty."
+      },
+      "misconception": "Students assume a benefit that lifts a family above the absolute line must also lift it out of relative poverty. The relative line is usually higher; a small benefit can clear one and not the other.",
+      "examMatters": "When a question gives a benefit and a set of incomes, recount both measures: the absolute headcount against the fixed line, and the relative headcount against a median that may or may not have moved.",
+      "recall": {
+       "id": "poverty-inequality:sub:welfare-benefits:recall",
+       "type": "fillin",
+       "prompt": "A government pays a cash benefit in a different country. Complete the working:",
+       "template": [
+        "A widow living on $2.40 a day receives a benefit of $1.00 a day, so her income becomes ___ a day.",
+        "Against a poverty line of $3.00, she is now ___ the line.",
+        "The median of $8.00 is unchanged, so a relative line at 60% of it stands at ___ a day."
+       ],
+       "answers": [
+        "$3.40",
+        "above",
+        "$4.80"
+       ],
+       "hints": [
+        "old income plus the payment",
+        "compare her new income with the fixed threshold",
+        "six tenths of the middle income"
+       ],
+       "distractors": [
+        "$2.60",
+        "below",
+        "$5.60"
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:tax-structure",
+      "title": "Changes in Tax Structure",
+      "keyIdea": "Who pays tax, and on what, changes the income left to the poor. Shifting tax onto spending tends to raise poverty; taxing the rich to pay benefits tends to cut it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **tax structure** is the mix of taxes a government uses and how each falls on rich and poor. Poor households spend almost all of their income, so a tax on spending takes a larger share of their income than of a rich household's. A tax on high incomes, profits or property falls mainly on the better-off. (How taxes are classed as progressive, proportional or regressive is topic 4.3.5.)"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "Raising a sales tax on food, fuel and clothing while cutting the top rate of income tax shifts the burden onto the poor and can push people below the line.",
+         "Raising the income level at which income tax starts leaves more with low earners.",
+         "Taxing the richest to fund benefits cuts poverty twice: in Marenda, a tax of $2.70 a day on each person in the top tenth pays for the $0.90 benefit to the poorest three."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "How far a tax change reaches the poor also depends on who actually pays it. Many poor workers earn too little, or work too informally, to pay income tax at all, so cutting income tax does little for them, while a tax on basic goods reaches every household."
+       }
+      ],
+      "realExample": {
+       "emoji": "🇸🇦",
+       "text": "Saudi Arabia introduced a value added tax and later raised its rate sharply, and set up a monthly \"Citizen's Account\" cash allowance for lower-income households to offset the higher cost of living."
+      },
+      "misconception": "Students assume that any tax cut helps the poor. Cutting income tax helps only those who earn enough to pay it; the poorest gain nothing and may lose if the lost revenue is made up with taxes on spending.",
+      "examMatters": "Name the tax and who pays it. \"Higher taxes reduce poverty\" earns nothing; \"a higher tax on top incomes, spent on transfers to the poorest\" is a chain a mark scheme can reward.",
+      "recall": {
+       "id": "poverty-inequality:sub:tax-structure:recall",
+       "type": "classify",
+       "prompt": "Sort each tax change by its likely effect on the number of people in poverty — likely to raise it or likely to reduce it:",
+       "groups": [
+        {
+         "name": "Likely to raise poverty",
+         "items": [
+          "A new tax on cooking oil, rice and bus fares",
+          "The top income tax rate is cut and a sales tax raised to replace the revenue",
+          "Exemptions on basic foods are removed from the sales tax"
+         ],
+         "why": "Each moves more of the tax burden onto spending on essentials, which is most of what a poor household buys."
+        },
+        {
+         "name": "Likely to reduce poverty",
+         "items": [
+          "The income level where income tax begins is raised",
+          "A tax on large landholdings pays for school meals",
+          "Luxury cars are taxed and the revenue funds cash transfers"
+         ],
+         "why": "Each leaves more with low earners or takes from the better-off to spend on the poor."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Evenly shared growth cuts absolute poverty and leaves relative poverty unchanged.",
+     "Education works slowly; benefits work at once if they reach the poor.",
+     "Taxing spending burdens the poor; taxing the rich for transfers helps them."
+    ],
+    "diagramId": "poverty-inequality:diagram:f5a631aa",
+    "quizIndices": [
+     7,
+     8,
+     9,
+     10
+    ],
+    "practiceIndices": [
+     2,
+     3
+    ]
+   },
+   {
+    "id": "poverty-inequality:block:b31121a7",
+    "title": "Causes of Changes in Poverty: Structural Change, Aid and Conflict",
+    "sections": [
+     {
+      "id": "poverty-inequality:sub:structural-change",
+      "title": "Structural Changes in the Economy",
+      "keyIdea": "Structural change shifts work between industries. It can lift people out of poverty when they move to better jobs, and push them in when their industry shrinks.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Structural change** is a lasting shift in what an economy produces and where people work: from farming to manufacturing, from manufacturing to services, from one region to another. It is driven by new technology, trade and changing demand."
+       },
+       {
+        "type": "paragraph",
+        "text": "It can reduce poverty. When farm workers move to factory jobs that pay more, household incomes rise; this is how much of East Asia's absolute poverty fell."
+       },
+       {
+        "type": "paragraph",
+        "text": "It can also increase poverty. When an industry declines, its workers often cannot move into the growing ones: their skills do not match, the new jobs are in another region, or they are older. If Marenda's textile mills close and the fourth tenth drops from $4.00 to informal work at $2.40 a day, the share below the absolute line rises from 20% to 30%."
+       },
+       {
+        "type": "flow",
+        "resultType": "bad",
+        "steps": [
+         {
+          "title": "An industry declines",
+          "subtitle": "Imports, automation or falling demand"
+         },
+         {
+          "title": "Its workers lose jobs",
+          "subtitle": "Skills fit no local vacancy"
+         },
+         {
+          "title": "Poverty rises locally",
+          "subtitle": "Unemployment or informal work"
+         }
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The poverty is concentrated: whole towns lose their main employer, and local shops and suppliers lose their customers too."
+       }
+      ],
+      "realExample": {
+       "emoji": "⛏️",
+       "text": "When copper prices collapsed and Zambia's mines cut jobs, poverty rose sharply in the Copperbelt towns that had depended on them."
+      },
+      "misconception": "Students treat structural change as unemployment that ends when the economy recovers. It is a mismatch: the lost jobs do not come back, so poverty lasts unless workers retrain or move.",
+      "examMatters": "Define the term before using it: a lasting shift in the industries an economy relies on. Then name the mechanism — mismatched skills or location — and say who is made poor.",
+      "recall": {
+       "id": "poverty-inequality:sub:structural-change:recall",
+       "type": "reorder",
+       "prompt": "Put these events in causal order, from the closure of a coal mine to rising poverty in the town:",
+       "correctOrder": [
+        "Cheaper imported fuel makes the town's coal mine unprofitable and it shuts",
+        "Hundreds of miners find their digging skills are wanted by no employer nearby",
+        "Shops and suppliers lose the miners' spending and lay off staff as well",
+        "More families in the town live on incomes below the poverty line"
+       ],
+       "criterion": "cause to effect: each event is caused by the one before it",
+       "why": [
+        "The shift in the economy comes first: the industry is no longer viable.",
+        "The closure leaves workers whose skills do not match the jobs that exist.",
+        "Their lost income spreads to the businesses they bought from.",
+        "With wages gone across the town, household incomes fall below the line."
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:aid",
+      "title": "Aid",
+      "keyIdea": "Aid can reduce poverty directly, through transfers and services for the poor, or indirectly, through growth. Its effect depends on what it pays for and who controls it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Aid** is money, goods or services given by foreign governments, international organisations or charities, or lent on better-than-market terms. It changes poverty in two ways."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Directly**: food, cash, clinics, vaccines and schools reach poor households now. A donor-funded transfer of $0.60 a day to Marenda's second-poorest tenth lifts it from $2.60 to $3.20, and the share below the absolute line falls from 20% to 10%.",
+         "**Indirectly**: roads, power and irrigation raise output and create jobs, reducing poverty through growth over years."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Aid can also fail the poor. Money can be diverted by corruption, spent on donors' priorities rather than local needs, or tied to buying the donor's own goods. Food aid dumped on local markets can undercut the farmers it was meant to help. How aid works as a development strategy is topic 4.3.6."
+       }
+      ],
+      "realExample": {
+       "emoji": "💉",
+       "text": "Donor-funded vaccination and malaria bed-net programmes, such as those financed by Gavi and the Global Fund, have reduced child deaths in many of the poorest countries."
+      },
+      "misconception": "Students treat every dollar of aid as money handed to the poor. Much of it is not: tied aid must be spent on the donor's own goods, a loan must be repaid, and a dam or road reaches poor households only through the jobs and output it creates.",
+      "examMatters": "Distinguish the direct route from the indirect one, and weigh it by what the aid is spent on and who controls it. That is the evaluation an essay on aid and poverty needs.",
+      "recall": {
+       "id": "poverty-inequality:sub:aid:recall",
+       "type": "match",
+       "prompt": "Match each kind of aid to the way it changes poverty:",
+       "pairs": [
+        {
+         "left": "Monthly cash sent to the phones of poor households",
+         "right": "Raises the income of the poor straight away",
+         "why": "A transfer adds to household income directly."
+        },
+        {
+         "left": "A donor-built dam and irrigation scheme",
+         "right": "Lifts farm output and jobs over several years",
+         "why": "Infrastructure works indirectly, through production."
+        },
+        {
+         "left": "Free grain shipped in and sold cheaply in local markets",
+         "right": "Can lower the prices local farmers receive",
+         "why": "Extra supply pushes down what local growers earn."
+        },
+        {
+         "left": "A loan that must be spent on the donor's own machinery",
+         "right": "Delivers less than its face value to the poor",
+         "why": "Tied aid can cost more than buying elsewhere."
+        }
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:civil-war-conflict",
+      "title": "Civil Wars and Conflict",
+      "keyIdea": "Conflict destroys incomes, assets and services at once, so it can push large numbers of people into absolute poverty very quickly.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Civil wars and conflict** cause poverty through several channels at the same time:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "Incomes collapse: farms cannot be worked, markets close and firms stop trading.",
+         "Assets are destroyed: homes, livestock, tools and roads.",
+         "People are displaced, losing land and work, and many flee abroad as refugees.",
+         "Public services fail: clinics and schools close and spending moves to the army."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "If a war cuts every income in Marenda's poorer half by 30%, the share below the absolute line doubles, from 20% to 40%."
+       },
+       {
+        "type": "paragraph",
+        "text": "The effects last beyond the fighting. Children miss years of school, land mines keep fields unused, and investors stay away, so poverty stays high long after peace. Poverty can in turn feed conflict, by giving young men with no income a reason to join armed groups. How conflict constrains growth and development is topic 4.3.6."
+       }
+      ],
+      "realExample": {
+       "emoji": "🕊️",
+       "text": "Years of conflict in Yemen and South Sudan destroyed livelihoods and markets, leaving large shares of their populations dependent on food aid."
+      },
+      "misconception": "Students assume poverty falls back to its pre-war level as soon as the fighting stops. Children who missed school earn less for the rest of their lives, and homes, tools and roads must be rebuilt, so poverty stays high long after peace.",
+      "examMatters": "In an Analyse, one channel developed in linked stages beats four listed. Displacement, for example: lost land, no income, dependence on aid, children out of school.",
+      "recall": {
+       "id": "poverty-inequality:sub:civil-war-conflict:recall",
+       "type": "fillin",
+       "prompt": "Conflict reaches a farming family in a different country. Complete the working:",
+       "template": [
+        "The family lived on $3.50 a day each; fighting cuts their income by a fifth, to ___ a day.",
+        "Against a $3.00 poverty line, the family is now ___ the line.",
+        "They flee their land and become ___ in a camp across the border."
+       ],
+       "answers": [
+        "$2.80",
+        "below",
+        "refugees"
+       ],
+       "hints": [
+        "take one fifth off the old income",
+        "compare the new income with the fixed threshold",
+        "people who have crossed a border to escape fighting"
+       ],
+       "distractors": [
+        "$3.30",
+        "above",
+        "migrants"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Structural change lifts movers and leaves declining industries poor.",
+     "Aid helps directly or through growth, depending on what it pays for.",
+     "Conflict destroys incomes, assets and services at once."
+    ],
+    "diagramId": "poverty-inequality:diagram:74270c13",
+    "quizIndices": [
+     11,
+     12,
+     13
+    ],
+    "practiceIndices": [
+     4
+    ]
+   },
+   {
+    "id": "poverty-inequality:block:ec0c78b5",
+    "title": "Measuring Inequality",
+    "sections": [
+     {
+      "id": "poverty-inequality:sub:income-wealth-inequality",
+      "title": "Income Inequality and Wealth Inequality",
+      "keyIdea": "Income is a flow received over time; wealth is a stock of assets owned at a point in time. Wealth is almost always far more unequal than income.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Income** is a flow: wages, profits, rent, interest and benefits received over a period, such as a month. **Wealth** is a stock: the value of what a household owns at one moment — land, housing, savings, shares and businesses — minus its debts."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Income inequality** is how unevenly income is shared between people; **wealth inequality** is how unevenly wealth is held. The two are linked: wealth produces income (rent, interest, dividends), and high income can be saved to build wealth."
+       },
+       {
+        "type": "paragraph",
+        "text": "Wealth is far more unequal. In Marenda the richest tenth receives 29.3% of all income but owns 50% of all wealth, while the poorer half receives 22.9% of income and owns just 7% of wealth. Many poor households own almost nothing, and some owe more than they own."
+       },
+       {
+        "type": "paragraph",
+        "text": "The difference matters for policy and for security. A household with wealth can survive losing its income for a while; one with none falls into poverty the moment its income stops."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏠",
+       "text": "Across the countries that report both, the richest tenth of households hold a much larger share of wealth than of income (source: OECD Wealth Distribution Database)."
+      },
+      "misconception": "Students use \"income\" and \"wealth\" as if they were the same. A retired farmer with valuable land and little cash income is income-poor and wealthy; a young doctor with a high salary and a large loan is the reverse.",
+      "examMatters": "A Define of either term needs its flow or stock nature and an example. Then say which one a figure measures, because a Gini coefficient can be calculated for either.",
+      "recall": {
+       "id": "poverty-inequality:sub:income-wealth-inequality:recall",
+       "type": "classify",
+       "prompt": "Sort each item into income (a flow) or wealth (a stock):",
+       "groups": [
+        {
+         "name": "Income",
+         "items": [
+          "The monthly rent a landlord collects",
+          "A nurse's weekly pay",
+          "Interest paid into a savings account this year",
+          "A pension payment received each month"
+         ],
+         "why": "Each is received over a period of time."
+        },
+        {
+         "name": "Wealth",
+         "items": [
+          "The house the landlord owns",
+          "Shares in a listed company",
+          "A farm and its livestock",
+          "The balance in a savings account today"
+         ],
+         "why": "Each is an asset owned at a point in time."
+        }
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:lorenz-curve",
+      "title": "The Lorenz Curve",
+      "keyIdea": "The Lorenz curve plots the cumulative share of income against the cumulative share of people, poorest first. The further it bows below the diagonal, the more unequal.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **Lorenz curve** shows the whole distribution in one line. The horizontal axis is the cumulative percentage of the population, ranked from poorest to richest; the vertical axis is the cumulative percentage of income they receive."
+       },
+       {
+        "type": "flow",
+        "resultType": "neutral",
+        "steps": [
+         {
+          "title": "Rank the population",
+          "subtitle": "Poorest first"
+         },
+         {
+          "title": "Group into equal parts",
+          "subtitle": "Tenths or fifths"
+         },
+         {
+          "title": "Add up income shares",
+          "subtitle": "Cumulatively"
+         },
+         {
+          "title": "Plot the points",
+          "subtitle": "And join them"
+         }
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The diagonal is the **line of equality**: if everyone had the same income, the poorest 40% would have 40% of income. A real curve sags below it. In Marenda the poorest tenth receives 2.4% of income and the poorest half 22.9%, so its curve passes well below the diagonal."
+       },
+       {
+        "type": "paragraph",
+        "text": "Comparing curves: a curve lying entirely inside another shows a more equal distribution. If two curves cross, one society is more equal at the bottom and the other at the top, and no single ranking is possible without a number such as the Gini coefficient."
+       }
+      ],
+      "realExample": {
+       "emoji": "📉",
+       "text": "South Africa's Lorenz curve bows further from the line of equality than almost any other country's, reflecting one of the highest levels of income inequality measured (source: World Bank, Poverty and Inequality Platform)."
+      },
+      "misconception": "Students swap the axes, or draw the curve above the diagonal. People go along the bottom and income up the side, and the curve can never rise above the line of equality, because the poorest x% cannot have more than x% of income.",
+      "examMatters": "A Lorenz diagram earns its marks from labelled axes (cumulative % of population, cumulative % of income), a labelled line of equality, and a curve that starts at the origin and ends at the top corner.",
+      "recall": {
+       "id": "poverty-inequality:sub:lorenz-curve:recall",
+       "type": "reorder",
+       "prompt": "Put the stages of drawing a Lorenz curve and reading a Gini coefficient from it in order, from the survey data to the final number:",
+       "correctOrder": [
+        "Rank the whole surveyed population from the lowest income to the highest",
+        "Split them into equal groups, such as fifths of everyone surveyed",
+        "Add up the share of total income going to each group and all poorer ones",
+        "Plot those cumulative shares against the cumulative share of people and join them",
+        "Divide the area between the diagonal and the curve by the whole area under the diagonal"
+       ],
+       "criterion": "the order the curve and the coefficient are built in: each stage uses the result of the one before",
+       "why": [
+        "Cumulative shares only make sense once people are in order from poorest.",
+        "The ranked population is then cut into equal groups.",
+        "Each point is the running total of income up to that group.",
+        "Those running totals are the points the curve joins.",
+        "The Gini coefficient is read from the finished curve: area A over A plus B."
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:gini-coefficient",
+      "title": "The Gini Coefficient",
+      "keyIdea": "The Gini coefficient is area A (between the diagonal and the Lorenz curve) divided by A + B (the whole area under the diagonal). 0 is perfect equality; 1 is maximum inequality.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **Gini coefficient** turns the Lorenz curve into one number. Call the area between the line of equality and the curve **A**, and the area below the curve **B**. Then Gini = A ÷ (A + B)."
+       },
+       {
+        "type": "paragraph",
+        "text": "At one extreme, the curve lies on the diagonal, A is zero, and so is the coefficient: incomes are identical. At the other, one person receives everything, B shrinks to nothing, and the coefficient reaches one. It is sometimes written as a number from 0 to 100 instead."
+       },
+       {
+        "type": "paragraph",
+        "text": "On a diagram with both axes running from 0 to 1, A + B is always half the square, 0.50. Marenda's areas are A = 0.195 and B = 0.305, so its Gini coefficient is 0.195 ÷ 0.50 = 0.39. Its wealth Gini is 0.65."
+       },
+       {
+        "type": "paragraph",
+        "text": "Its limits: very different distributions can share one coefficient, so it cannot say where in the distribution the inequality lies; it depends on survey data that miss the very richest; and a figure for income tells you nothing about wealth."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌐",
+       "text": "Nordic countries such as Denmark and Norway have some of the lowest income Gini coefficients in the world; South Africa, Namibia and Brazil have some of the highest (source: World Bank, Poverty and Inequality Platform)."
+      },
+      "misconception": "Students read a Gini of 0.4 as \"40% of people are poor\". It is a ratio of two areas and says nothing about how many people are in poverty; a country can have a high Gini and little absolute poverty.",
+      "examMatters": "A Calculate on the Gini coefficient is A ÷ (A + B), with the working. Read the question for which area is given: if only B is given, A is 0.5 minus B on a unit square.",
+      "recall": {
+       "id": "poverty-inequality:sub:gini-coefficient:recall",
+       "type": "fillin",
+       "prompt": "Complete each statement about the Gini coefficient, written on its 0 to 1 scale:",
+       "template": [
+        "If every person in a country received exactly the same income, its Gini coefficient would be ___.",
+        "If a single person received all of a country's income, its Gini coefficient would be ___.",
+        "With area A = 0.12 and area B = 0.38 on a unit square, the Gini coefficient is ___."
+       ],
+       "answers": [
+        "zero",
+        "one",
+        "0.24"
+       ],
+       "hints": [
+        "the Lorenz curve lies on the diagonal",
+        "the curve hugs the bottom and right edges",
+        "A divided by A plus B"
+       ],
+       "distractors": [
+        "0.5",
+        "0.32",
+        "0.76"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Income is a flow; wealth is a stock, and far more unequal.",
+     "The Lorenz curve: cumulative income against cumulative people.",
+     "Gini = A ÷ (A + B): 0 is equality, 1 is maximum inequality."
+    ],
+    "diagramId": "poverty-inequality:diagram:55c3981a",
+    "quizIndices": [
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "practiceIndices": [
+     5
+    ]
+   },
+   {
+    "id": "poverty-inequality:block:2676675b",
+    "title": "Causes of Inequality",
+    "sections": [
+     {
+      "id": "poverty-inequality:sub:income-inequality-within",
+      "title": "Causes of Income Inequality Within a Country",
+      "keyIdea": "Income is unequal within a country because pay differs with skills and bargaining power, some people have no work, and taxes and benefits narrow the gap by different amounts.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The main causes of **income inequality within a country**:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Differences in skills and education**: workers with scarce skills are paid far more than those whose skills are common.",
+         "**Unemployment and informal work**: people without regular jobs earn little or nothing.",
+         "**Bargaining power**: strong trade unions, professional bodies and minimum wages raise some wages; many workers have no one bargaining for them.",
+         "**Discrimination** by gender, ethnicity or caste, which holds some groups in lower-paid work.",
+         "**Income from wealth**: rent, interest and profits flow to those who already own assets.",
+         "**Taxes and benefits**: a system that taxes little and transfers little leaves the gap made by the market in place."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "These causes reinforce one another. A child from a poor family gets less schooling, earns less, owns nothing, and passes the same position on."
+       }
+      ],
+      "realExample": {
+       "emoji": "💻",
+       "text": "In India, the growth of information-technology services raised pay sharply for English-speaking graduates in cities such as Bengaluru, while most rural workers' wages rose far more slowly."
+      },
+      "misconception": "Students explain income inequality by pay differences alone and leave out people with no regular pay. Unemployment and informal work put many incomes near zero, widening the gap from below while high salaries widen it from above.",
+      "examMatters": "For each cause, name the group it affects and the mechanism that widens the gap. Two developed causes beat six listed, and a cause linked to a real economy beats one left abstract.",
+      "recall": {
+       "id": "poverty-inequality:sub:income-inequality-within:recall",
+       "type": "match",
+       "prompt": "Match each cause of income inequality to the way it widens the gap:",
+       "pairs": [
+        {
+         "left": "Few people have trained as engineers",
+         "right": "The scarce skill commands pay far above the average",
+         "why": "Scarcity of a skill raises what employers must pay for it."
+        },
+        {
+         "left": "Many adults can find only casual street work",
+         "right": "Earnings at the bottom are low and irregular",
+         "why": "Unemployment and informal work leave incomes low."
+        },
+        {
+         "left": "Women are kept out of better-paid jobs",
+         "right": "One group is held in lower-paid work regardless of ability",
+         "why": "Discrimination separates pay from productivity."
+        },
+        {
+         "left": "A family owns several rented flats",
+         "right": "Rent adds to income without any extra work",
+         "why": "Wealth produces income for those who already own it."
+        }
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:wealth-inequality-within",
+      "title": "Causes of Wealth Inequality Within a Country",
+      "keyIdea": "Wealth concentrates because it is inherited, because the returns on assets can grow faster than wages, and because only those with spare income can save.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Wealth is more unequal than income for reasons that build on each other:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Inheritance**: land, homes and businesses pass down families, so some start adult life with assets and most with none.",
+         "**Returns on assets**: wealth earns rent, interest, dividends and rising prices. When those returns grow faster than wages, owners pull away from workers.",
+         "**Saving**: only households with income to spare can save; the poor spend everything they earn.",
+         "**Access to credit**: the wealthy can borrow against assets to buy more; the poor have no collateral."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The compounding is powerful. At 6% a year, an asset is worth 5.74 times as much after 30 years; a wage rising 2% a year is only 1.81 times as high."
+       },
+       {
+        "type": "flow",
+        "resultType": "bad",
+        "steps": [
+         {
+          "title": "Assets are inherited",
+          "subtitle": "A head start"
+         },
+         {
+          "title": "Returns are reinvested",
+          "subtitle": "The stock compounds"
+         },
+         {
+          "title": "Owners pull away",
+          "subtitle": "Wealth concentrates"
+         }
+        ]
+       }
+      ],
+      "realExample": {
+       "emoji": "🌾",
+       "text": "Land ownership in much of Latin America remains highly concentrated, a legacy of large colonial-era estates, so rural wealth inequality there is extreme."
+      },
+      "misconception": "Students explain wealth inequality with the same causes as income inequality. Income differences add to it, but wealth also grows by itself, through returns and inheritance, even with no difference in effort or pay.",
+      "examMatters": "Keep the two apart in an answer on causes: name a cause of income inequality and a separate cause of wealth inequality, as the specification lists both.",
+      "recall": {
+       "id": "poverty-inequality:sub:wealth-inequality-within:recall",
+       "type": "reorder",
+       "prompt": "Put this chain in causal order, from a family inheriting property to the gap with a wage-earner widening:",
+       "correctOrder": [
+        "A daughter is left her parents' apartment block, inherited when they die",
+        "Tenants' payments give her a steady flow of money on top of her salary",
+        "She reinvested that money in a second building, which also earns rent",
+        "Her assets pull away from a colleague's pay year after year"
+       ],
+       "criterion": "cause to effect: each step is caused by the one before it",
+       "why": [
+        "Inheritance gives her the asset without earning it.",
+        "The asset produces income: rent.",
+        "Reinvesting that income adds to the stock of assets.",
+        "Compounding returns outpace wage growth, so wealth concentrates."
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:inequality-between-countries",
+      "title": "Causes of Inequality Between Countries",
+      "keyIdea": "Incomes differ between countries mainly because output per worker differs, and that depends on capital, skills, technology, institutions, trade and history.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Average incomes in the richest countries are many times those in the poorest. The causes of **inequality between countries**:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Capital and infrastructure**: workers with machines, power and roads produce far more than those without.",
+         "**Human capital**: schooling, skills and health raise output per worker.",
+         "**Technology**: rich countries use more advanced methods and invent most new ones.",
+         "**Institutions and governance**: secure property rights, honest courts and stable policy encourage investment; corruption and instability deter it.",
+         "**Dependence on primary products**: exporters of crops and minerals face volatile and often weak prices for what they sell.",
+         "**History**: colonial rule shaped many economies around exporting raw materials and left weak institutions.",
+         "**Conflict**, which destroys capital and drives investment away."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Globalisation cuts both ways. Countries that attracted manufacturing and grew exports have closed much of the gap; countries left exporting a single commodity have fallen further behind."
+       }
+      ],
+      "realExample": {
+       "emoji": "🇰🇷",
+       "text": "South Korea, once as poor as many African economies, invested heavily in schooling and industry and became a high-income economy, while countries that stayed dependent on primary exports fell far behind it."
+      },
+      "misconception": "Students compare countries by their Gini coefficients. A Gini coefficient measures inequality within one country; the gap between countries is shown by comparing income per head, and a poor country can have a lower Gini than a rich one.",
+      "examMatters": "In an Examine on causes between countries (8 marks), develop two causes as chains and finish with a brief judgement on which matters more for a named type of economy.",
+      "recall": {
+       "id": "poverty-inequality:sub:inequality-between-countries:recall",
+       "type": "match",
+       "prompt": "Match each cause of the income gap between countries to how it holds output per worker down:",
+       "pairs": [
+        {
+         "left": "Frequent power cuts and unpaved roads",
+         "right": "Each worker has less capital to work with",
+         "why": "Infrastructure is part of the capital that raises output per worker."
+        },
+        {
+         "left": "Judges who can be bribed to ignore contracts",
+         "right": "Investors hold back because returns are insecure",
+         "why": "Weak institutions deter the investment that raises productivity."
+        },
+        {
+         "left": "Nine-tenths of export earnings from one crop",
+         "right": "Earnings swing with a price the country cannot control",
+         "why": "Primary product dependence makes income volatile and planning hard."
+        },
+        {
+         "left": "Most adults left school at eleven",
+         "right": "Workers cannot use more advanced methods",
+         "why": "Low human capital limits the technology a workforce can adopt."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Within a country: skills, jobs, bargaining power, discrimination.",
+     "Wealth grows by inheritance and returns faster than wages.",
+     "Between countries: output per worker, institutions, trade and history."
+    ],
+    "diagramId": "poverty-inequality:diagram:ac0ca03f",
+    "quizIndices": [
+     19,
+     20,
+     21
+    ],
+    "practiceIndices": [
+     6
+    ]
+   },
+   {
+    "id": "poverty-inequality:block:a7634afb",
+    "title": "The Impact of Inequality",
+    "sections": [
+     {
+      "id": "poverty-inequality:sub:enterprise-incentives",
+      "title": "Enterprise and Incentives",
+      "keyIdea": "Some inequality rewards effort, skill and risk-taking. Extreme inequality can blunt incentives and shut the poor out of enterprise altogether.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Incentives**: the prospect of earning more is what persuades people to train, work harder, take responsibility and move to where they are needed. If everyone received the same whatever they did, those incentives would weaken."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Enterprise**: the chance of large profits rewards entrepreneurs for the risk of starting firms, which create jobs and new products. In that sense some inequality is the price of a dynamic economy."
+       },
+       {
+        "type": "paragraph",
+        "text": "Extreme inequality works the other way:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "The poor cannot start businesses: with no savings or collateral they cannot borrow, so talent at the bottom is wasted.",
+         "If the gap looks impossible to cross, working harder seems pointless, and incentives at the bottom weaken.",
+         "Wealth protected by connections rather than competition rewards lobbying instead of enterprise."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "So the impact depends on the degree of inequality and on whether people can move up."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏦",
+       "text": "Microfinance lenders such as Bangladesh's Grameen Bank were set up because the poorest would-be entrepreneurs had no collateral and were refused by ordinary banks."
+      },
+      "misconception": "Students treat enterprise and incentives as one point. Incentives are about whether people train, work and move for higher pay; enterprise is about whether people can start firms, which needs the means to borrow as well as the reward.",
+      "examMatters": "Enterprise and incentives are separate bullets in the specification. Give each its own mechanism, and weigh the positive case against the negative by the degree of inequality.",
+      "recall": {
+       "id": "poverty-inequality:sub:enterprise-incentives:recall",
+       "type": "classify",
+       "prompt": "Sort each statement by whether it shows inequality strengthening or weakening enterprise and incentives:",
+       "groups": [
+        {
+         "name": "Strengthens",
+         "items": [
+          "A mechanic studies at night for the pay rise a qualification brings",
+          "An engineer quits a safe job to start a firm hoping for large profits",
+          "Doctors move to a remote region that pays a higher salary"
+         ],
+         "why": "Each responds to the chance of earning more than others: the incentive case for some inequality."
+        },
+        {
+         "name": "Weakens",
+         "items": [
+          "A gifted seamstress cannot borrow to buy her first machine",
+          "Young people in a slum see no route out and stop looking for work",
+          "A tycoon wins a monopoly licence through friends in government"
+         ],
+         "why": "Each shows extreme inequality locking out talent, blunting effort or rewarding connections instead of enterprise."
+        }
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:savings",
+      "title": "Savings",
+      "keyIdea": "The rich save a larger share of their income than the poor, so inequality can raise total saving — but most poor households cannot save at all.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A poor household spends almost everything on food, rent and school fees; a rich one cannot spend all it earns, so it saves a large share. Moving income from the poor to the rich therefore tends to raise **total savings**, and moving it the other way tends to lower them."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is one argument for tolerating inequality: savings fund the investment that raises growth. It has two weaknesses. The rich may save by buying assets abroad or property, not by funding new productive investment at home. And lower spending by the poor means less demand for firms' output."
+       },
+       {
+        "type": "paragraph",
+        "text": "At the bottom, inequality leaves households with no savings at all. With nothing put by, one illness, harvest failure or job loss pushes a family into poverty or debt to moneylenders, and it cannot save to invest in a child's schooling or a small business."
+       }
+      ],
+      "realExample": {
+       "emoji": "💰",
+       "text": "Household surveys across many countries find that richer households save a far larger share of their income than poorer ones, many of whom save nothing or borrow to get by."
+      },
+      "misconception": "Students treat saving as the same thing as investment and write that more saving means more factories. Saving is income not spent; it adds to capital only if it pays for new machines or buildings at home, not if it buys existing property or goes abroad.",
+      "examMatters": "For a Discuss on the impact of inequality, savings gives a clear two-sided point: more total saving, against savings sent abroad and no buffer at the bottom. Finish with what the outcome depends on.",
+      "recall": {
+       "id": "poverty-inequality:sub:savings:recall",
+       "type": "fillin",
+       "prompt": "Two households in a different country. Complete the working:",
+       "template": [
+        "The first earns $200 a day and saves $50 of it, so it saves ___ of its income.",
+        "The second earns $20 a day and saves $1 of it, so it saves ___ of its income.",
+        "Moving $10 a day from the first household to the second would, on these shares, make total saving ___."
+       ],
+       "answers": [
+        "25%",
+        "5%",
+        "fall"
+       ],
+       "hints": [
+        "saving divided by income, as a percentage",
+        "the same calculation for the poorer household",
+        "the richer household saved a larger share of each dollar"
+       ],
+       "distractors": [
+        "50%",
+        "10%",
+        "rise"
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:education-inequality",
+      "title": "Education",
+      "keyIdea": "In an unequal society poor children get less and worse schooling, so inequality is passed on to the next generation and talent is wasted.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Inequality affects **education** through who can afford it and what it costs to stay in school:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "Fees, uniforms, books and travel cost a poor family a large share of its income.",
+         "Children from poor families are needed to work or care for siblings, so they leave early.",
+         "Poor neighbourhoods have worse schools; rich families buy private schooling and tutoring.",
+         "Hungry or sick children learn less, even when they attend."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "In Marenda, 35% of children from the poorest fifth finish secondary school, against 91% from the richest."
+       },
+       {
+        "type": "paragraph",
+        "text": "Education is also a cause of inequality, so the two feed each other: unequal incomes produce unequal schooling, which produces unequal incomes in the next generation. The economy loses the output of able children who never got the chance."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏫",
+       "text": "In many sub-Saharan African countries, children from the richest fifth of households are several times more likely to complete secondary school than those from the poorest fifth (source: UNESCO, World Inequality Database on Education)."
+      },
+      "misconception": "Students treat education only as a cure for inequality. It is also one of inequality's effects: where schooling is bought, the rich buy more of it, and the gap is handed down.",
+      "examMatters": "This is a two-way link. Say which way the question runs — inequality affecting education — and use the other direction as the consequence that makes it matter.",
+      "recall": {
+       "id": "poverty-inequality:sub:education-inequality:recall",
+       "type": "match",
+       "prompt": "Match each barrier to the way it keeps children from poor families out of education:",
+       "pairs": [
+        {
+         "left": "Exam fees and uniforms at a public school",
+         "right": "The family cannot afford the costs of attending",
+         "why": "Direct costs take a large share of a poor household's income."
+        },
+        {
+         "left": "A twelve-year-old earns money selling water on buses",
+         "right": "The family cannot spare the income to keep the child in class",
+         "why": "The lost earnings of a child are a cost of schooling too."
+        },
+        {
+         "left": "Rich parents pay for private tutors",
+         "right": "Children from better-off homes get ahead in exams",
+         "why": "Spending on extra schooling widens the gap in results."
+        },
+        {
+         "left": "A pupil arrives at school without breakfast",
+         "right": "The child learns less even while attending",
+         "why": "Poor nutrition reduces what a child gets from each lesson."
+        }
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:migration",
+      "title": "Migration",
+      "keyIdea": "Inequality drives migration: from poor regions to richer cities within a country, and from poor countries to rich ones. Migration then feeds back on inequality.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "People move to where incomes are higher, so inequality is a main driver of **migration**:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Within a country**: large gaps between rural and urban incomes pull people from farms to cities, often into informal work and slums.",
+         "**Between countries**: large gaps between national incomes pull workers abroad, legally or illegally."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The effects run both ways. Migrants send **remittances** home, which raise incomes in poor villages and countries and can narrow gaps. But the poorest usually cannot afford to move; those who leave are often the young and skilled — doctors, nurses, engineers — so the sending region loses the people it most needs."
+       },
+       {
+        "type": "paragraph",
+        "text": "In the receiving cities and countries, migration adds workers and output, but it can hold down wages in low-paid jobs and strain housing and services."
+       }
+      ],
+      "realExample": {
+       "emoji": "✈️",
+       "text": "The Philippines has millions of citizens working abroad as nurses, sailors and domestic workers, and the money they send home is a large share of its national income (source: World Bank, remittance data)."
+      },
+      "misconception": "Students count a migrant's pay abroad as income of the place they left. Only the remittances sent home add to incomes there; the pay itself is earned, and mostly spent, where the migrant now works.",
+      "examMatters": "Name the direction — within or between countries — and follow both sides: the pull of higher incomes, then the effect of remittances against the loss of skills.",
+      "recall": {
+       "id": "poverty-inequality:sub:migration:recall",
+       "type": "classify",
+       "prompt": "Sort each move by whether it is migration within a country or between countries:",
+       "groups": [
+        {
+         "name": "Within a country",
+         "items": [
+          "A rice farmer leaves his village for construction work in the capital",
+          "A young woman moves from an inland province to a coastal factory city",
+          "A family leaves a drought-hit district for the outskirts of a regional town"
+         ],
+         "why": "Each responds to income gaps between regions of the same country."
+        },
+        {
+         "name": "Between countries",
+         "items": [
+          "A nurse leaves her country for a hospital job overseas",
+          "A labourer takes a contract on a building site in another country",
+          "An engineer emigrates to a richer country with his family"
+         ],
+         "why": "Each responds to income gaps between countries and crosses a national border."
+        }
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:life-expectancy",
+      "title": "Life Expectancy",
+      "keyIdea": "Poorer people die younger. Inequality in income becomes inequality in health, through diet, housing, dangerous work and access to care.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Life expectancy** is the average number of years a person can expect to live. Within almost every country it rises with income:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "Poor households eat worse, live in crowded and unsafe housing, and more often lack clean water and sanitation.",
+         "They do more dangerous and physically exhausting work.",
+         "They can afford less health care, and delay treatment until illness is serious.",
+         "The stress of insecurity itself is linked to worse health."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "In Marenda, life expectancy in the poorest fifth is 64 years and in the richest 76: a gap of 12 years."
+       },
+       {
+        "type": "paragraph",
+        "text": "Health then feeds back into income. Illness stops people working and eats their savings, so ill-health is both a result of poverty and a cause of it. Countries with more equal incomes and universal health care tend to have smaller gaps in life expectancy."
+       }
+      ],
+      "realExample": {
+       "emoji": "⚕️",
+       "text": "A study of the United States found a gap of about 15 years in life expectancy between the richest and poorest 1% of men (source: Chetty and others, Journal of the American Medical Association)."
+      },
+      "misconception": "Students explain the health gap only by access to doctors. Diet, housing, water, work and stress matter as much, which is why the gap persists even where health care is free.",
+      "examMatters": "Life expectancy is a leaf of its own in 2d. Give the mechanism from low income to shorter lives, then the loop back from ill-health to lower income.",
+      "recall": {
+       "id": "poverty-inequality:sub:life-expectancy:recall",
+       "type": "fillin",
+       "prompt": "Health data from a different country. Complete the working:",
+       "template": [
+        "The poorest fifth live to 58 on average and the richest fifth to 75, a gap of ___ years.",
+        "Across the five groups, life expectancy ___ steadily from the poorest to the richest.",
+        "An illness that stops a parent working can push the family ___ the poverty line."
+       ],
+       "answers": [
+        "17",
+        "rises",
+        "below"
+       ],
+       "hints": [
+        "the richer figure minus the poorer one",
+        "richer people tend to live longer",
+        "the loop from ill-health back to income"
+       ],
+       "distractors": [
+        "133",
+        "falls",
+        "above"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Some inequality rewards effort; extreme inequality locks talent out.",
+     "The rich save more, but the poor are left with no buffer.",
+     "Inequality shortens schooling and lives, and drives migration."
+    ],
+    "diagramId": "poverty-inequality:diagram:359dedd8",
+    "quizIndices": [
+     22,
+     23,
+     24,
+     25
+    ],
+    "practiceIndices": [
+     7
+    ]
+   },
+   {
+    "id": "poverty-inequality:block:25eb4f15",
+    "title": "Development, Economic Change and Capitalism",
+    "sections": [
+     {
+      "id": "poverty-inequality:sub:kuznets-development",
+      "title": "Development and Inequality: the Kuznets Hypothesis",
+      "keyIdea": "The Kuznets hypothesis says inequality first rises as an economy develops, then falls. It is a hypothesis, and the evidence for it is mixed.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Economist Simon Kuznets suggested that as income per head rises, inequality traces an inverted U — the **Kuznets curve**. The reasoning follows the structural change of development:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Early**: most people work in farming on similar low incomes, so inequality is low.",
+         "**Middle**: some move to industry and cities, where pay is higher; a gap opens between the modern and traditional sectors, and inequality rises.",
+         "**Later**: most workers have moved, schooling spreads, wages at the bottom rise and governments build tax and benefit systems, so inequality falls."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The evidence is mixed. Several East Asian economies grew fast with stable or falling inequality, because land reform and mass schooling spread the gains. And inequality has risen again in many high-income countries, which the simple curve does not predict. The pattern depends on policy, not only on the level of income."
+       }
+      ],
+      "realExample": {
+       "emoji": "📈",
+       "text": "Taiwan and South Korea combined rapid industrialisation with land reform and mass schooling, and did not see the sharp rise in inequality the Kuznets curve predicts for that stage."
+      },
+      "misconception": "Students draw the Kuznets curve against time, or as a U. Income per head goes along the horizontal axis and inequality up the vertical, and the curve is an inverted U: inequality rises first, then falls.",
+      "examMatters": "On the impact of development on inequality, the Kuznets curve is the argument; the counter-examples are the evaluation. Draw it with inequality (for example the Gini coefficient) against income per head.",
+      "recall": {
+       "id": "poverty-inequality:sub:kuznets-development:recall",
+       "type": "classify",
+       "prompt": "Sort each description into the stage of the Kuznets hypothesis it belongs to — early, middle or later:",
+       "groups": [
+        {
+         "name": "Early",
+         "items": [
+          "Nearly everyone grows food on small plots for similar low returns",
+          "Few factories exist and towns are small"
+         ],
+         "why": "Before industry, incomes are low and alike, so inequality is low."
+        },
+        {
+         "name": "Middle",
+         "items": [
+          "Factory wages in the cities pull ahead of village incomes",
+          "Workers stream from farms towards the new industrial towns"
+         ],
+         "why": "The move into a higher-paid modern sector opens a gap: inequality rises."
+        },
+        {
+         "name": "Later",
+         "items": [
+          "Most of the labour force is in industry and services",
+          "Secondary schooling reaches nearly all children and pay at the bottom rises"
+         ],
+         "why": "Once most have moved and skills spread, the gap narrows: inequality falls."
+        }
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:economic-change",
+      "title": "Economic Change: Technology, Globalisation and Structural Shifts",
+      "keyIdea": "Economic change reshapes who earns what. New technology and globalisation have raised pay for the skilled and for capital owners faster than for routine workers.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Beyond the level of development, **economic change** alters inequality through what it rewards:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Technology**: computers and automation raise the productivity and pay of skilled workers who use them, and replace routine factory and clerical jobs, widening the gap between skilled and unskilled.",
+         "**Globalisation**: in rich countries, low-skilled workers compete with imports and jobs move abroad; in developing countries that gain factory jobs, workers leaving farming can see incomes rise. Firms and owners who can sell worldwide gain most.",
+         "**Structural shifts** between industries and regions leave some towns thriving and others declining, adding a regional dimension to inequality."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The effect is not fixed. Where schooling keeps up with demand for skills, and where displaced workers retrain, the rise in inequality is smaller."
+       }
+      ],
+      "realExample": {
+       "emoji": "🤖",
+       "text": "The spread of computers and automation has raised demand for highly skilled workers relative to routine manual and clerical workers in many countries, widening pay gaps between them."
+      },
+      "misconception": "Students write that new technology lowers pay for all workers. It changes what employers want: demand rises for the skilled workers who use it and falls for routine work, so the gap widens even if average pay rises.",
+      "examMatters": "Separate the channels. For each change, say who gains and who loses, then judge which matters more in the economy the question names.",
+      "recall": {
+       "id": "poverty-inequality:sub:economic-change:recall",
+       "type": "match",
+       "prompt": "Match each economic change to the group whose income it tends to raise most:",
+       "pairs": [
+        {
+         "left": "Software replaces bank clerks and typists",
+         "right": "Graduates who design and run the new systems",
+         "why": "Technology raises demand for the skills that complement it."
+        },
+        {
+         "left": "A clothing multinational opens factories in a low-wage economy",
+         "right": "Farm workers there who take the new factory jobs",
+         "why": "The new jobs pay more than farming did."
+        },
+        {
+         "left": "A firm can now sell its app to every country at once",
+         "right": "The owners and shareholders of that firm",
+         "why": "A worldwide market multiplies the returns to owning a successful firm."
+        }
+       ]
+      }
+     },
+     {
+      "id": "poverty-inequality:sub:free-market-capitalism",
+      "title": "The Free Market Economy (Capitalism) and Inequality",
+      "keyIdea": "A free market pays people according to what they own and what their work sells for, so it tends to produce inequality. How much depends on what the state does.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "In a **free market economy (capitalism)**, resources are privately owned and incomes are set by markets. That matters for inequality in three ways:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Unequal ownership**: income comes from work and from owning capital, land and firms. Those who own assets receive profits, rent and interest on top of wages; those with nothing to sell but their labour do not.",
+         "**Market rewards**: pay follows what a skill sells for, not need, so people with scarce skills earn far more and those who cannot work earn nothing.",
+         "**Accumulation**: returns on wealth are reinvested and inherited, so gaps can widen over generations."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "In Marenda, the poorer half receives 5% of its income from owning assets; the richest tenth receives 45%."
+       },
+       {
+        "type": "paragraph",
+        "text": "The same system produces the growth that has cut absolute poverty on a huge scale, and its inequality provides incentives. Market economies differ widely in inequality, because taxes, benefits, public services and minimum wages change the outcome. The significance of capitalism is that it creates inequality by its nature; how much remains is a choice."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏙️",
+       "text": "Hong Kong, often ranked among the freest market economies, has one of the highest income Gini coefficients among high-income economies, while Denmark combines a market economy with high taxes and extensive public services and a low one."
+      },
+      "misconception": "Students write that a free market creates inequality only through differences in pay. Ownership is a second source: those who hold shares, savings and property receive income without working for it, and those returns build up across generations.",
+      "examMatters": "In an Evaluate on capitalism and inequality (20 marks), weigh the forces that widen gaps against growth and incentives, and reach a judgement that depends on the role of the state.",
+      "recall": {
+       "id": "poverty-inequality:sub:free-market-capitalism:recall",
+       "type": "classify",
+       "prompt": "Sort each feature of a market economy by whether it tends to widen inequality or can narrow it:",
+       "groups": [
+        {
+         "name": "Tends to widen",
+         "items": [
+          "Profits on a factory go to the family that owns it",
+          "A rare surgical skill is paid many times a cleaner's wage",
+          "Rents from inherited land are reinvested in more land"
+         ],
+         "why": "Each rewards ownership or scarcity, so income flows to those who already have more."
+        },
+        {
+         "name": "Can narrow",
+         "items": [
+          "Growth creates millions of factory jobs for former farm workers",
+          "Competition from new firms cuts the profits of an established monopoly",
+          "Firms bid up wages when workers become scarce"
+         ],
+         "why": "Each spreads the gains of the market more widely or erodes returns at the top."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Kuznets: inequality rises then falls with development, a hypothesis only.",
+     "Technology and globalisation reward skills and ownership.",
+     "Markets create inequality; how much remains depends on the state."
+    ],
+    "diagramId": "poverty-inequality:diagram:cc1139f5",
+    "quizIndices": [
+     26,
+     27,
+     28,
+     29
+    ],
+    "practiceIndices": [
+     8,
+     9
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "Absolute and Relative Poverty",
+    "meta": "4.3.4 · 1a, 1b",
+    "keyIdea": "The two kinds of poverty, the line each is measured against, and the measures built on those lines.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Absolute poverty</strong> — income too low to meet basic needs: food, water, shelter, clothing. Measured against a fixed line."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Relative poverty</strong> — income far below the typical income of one's own society; the line is a fraction (often 50% or 60%) of median income."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Headcount ratio</strong> — the share of people below a line. <strong>Poverty gap</strong> — how far below it they fall. <strong>MPI</strong> — counts deprivations directly."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Marenda: 20% below the $3.00 line; median $6.00 × 60% = $3.60, with 30% below it."
+       },
+       {
+        "type": "mechanism",
+        "text": "Average shortfall of the poor: $0.80 a day."
+       },
+       {
+        "type": "mechanism",
+        "text": "Relative poverty compares the bottom with the middle — it is not a measure of inequality."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Absolute line fixed; relative line moves with the median.",
+     "Headcount counts; the gap measures depth.",
+     "The richest pulling away does not change relative poverty."
+    ]
+   },
+   {
+    "title": "Causes of Changes in Poverty: Growth, Skills, Benefits and Tax",
+    "meta": "4.3.4 · 1c (growth, education and training, welfare benefits, tax structure)",
+    "keyIdea": "Four causes of changes in poverty that work through incomes at the bottom compared with the fixed line and the median.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Welfare benefits</strong> — state payments to households: pensions, unemployment pay, child allowances, cash transfers."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Tax structure</strong> — the mix of taxes and how each falls on rich and poor."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Growth of 25% for all: absolute 20% → 10%; relative 30% → 30%."
+       },
+       {
+        "type": "mechanism",
+        "text": "Benefit of $0.90 to the poorest three tenths: absolute → 10%, relative → 20%; cost $5.4 million a day."
+       },
+       {
+        "type": "link",
+        "text": "Progressive and regressive taxes, and policies to reduce poverty, are topic 4.3.5."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Say which poverty measure a cause changes.",
+     "Skills are slow and lasting; transfers are fast.",
+     "Who pays a tax decides its effect on poverty."
+    ]
+   },
+   {
+    "title": "Causes of Changes in Poverty: Structural Change, Aid and Conflict",
+    "meta": "4.3.4 · 1c (structural change, aid, civil wars and conflict)",
+    "keyIdea": "Three causes of changes in poverty that reshape where people work, what reaches them from abroad, and whether they can earn at all.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Structural change</strong> — a lasting shift in the industries and regions an economy relies on."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Aid</strong> — resources given, or lent on better-than-market terms, by other countries, international bodies or charities."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Mill closures: absolute poverty 20% → 30%. Aid transfer: → 10%. War: → 40%."
+       },
+       {
+        "type": "mechanism",
+        "text": "Conflict: lost incomes, destroyed assets, displacement, collapsed services."
+       },
+       {
+        "type": "link",
+        "text": "Aid as a development strategy and conflict as a constraint on growth are topic 4.3.6."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Structural change creates winners and concentrated losers.",
+     "Aid's effect depends on its type and who controls it.",
+     "Conflict's effects outlast the fighting."
+    ]
+   },
+   {
+    "title": "Measuring Inequality",
+    "meta": "4.3.4 · 2a, 2b",
+    "keyIdea": "The difference between income and wealth, and the two measurements of inequality the specification names.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Income</strong> — a flow received over time. <strong>Wealth</strong> — a stock of assets owned at a point in time, net of debts."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Lorenz curve</strong> — cumulative % of income against cumulative % of population, poorest first."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Gini coefficient</strong> — A ÷ (A + B): 0 perfect equality, 1 maximum inequality."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Rank the population → group into equal parts → add up income shares → plot the points → Gini = A ÷ (A + B)."
+       },
+       {
+        "type": "mechanism",
+        "text": "Marenda: A = 0.195, B = 0.305, Gini 0.39; wealth Gini 0.65."
+       },
+       {
+        "type": "mechanism",
+        "text": "Curves that cross cannot be ranked by eye; the Gini gives one number but hides where the inequality lies."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Wealth is more unequal than income.",
+     "The curve never rises above the line of equality.",
+     "A Gini of 0.4 is a ratio of areas, not a poverty rate."
+    ]
+   },
+   {
+    "title": "Causes of Inequality",
+    "meta": "4.3.4 · 2c",
+    "keyIdea": "Why income and wealth are unequal within a country, and why incomes differ between countries.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Within a country</strong> — skills and education, unemployment, bargaining power, discrimination, income from wealth, taxes and benefits."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Between countries</strong> — capital, human capital, technology, institutions, primary product dependence, history, conflict."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Compounding: 6% for 30 years multiplies an asset by 5.74; 2% multiplies a wage by 1.81."
+       },
+       {
+        "type": "mechanism",
+        "text": "Output per worker is the proximate cause of the gap between countries."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Income gaps come from the labour market and from assets.",
+     "Wealth gaps compound through returns and inheritance.",
+     "Country gaps come from productivity and what sets it."
+    ]
+   },
+   {
+    "title": "The Impact of Inequality",
+    "meta": "4.3.4 · 2d",
+    "keyIdea": "The six impacts of inequality the specification lists: enterprise, incentives, savings, education, migration and life expectancy.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Remittances</strong> — money migrants send home."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Life expectancy</strong> — the average number of years a newborn can expect to live."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Incentives and enterprise: moderate gaps reward effort and risk; extreme gaps lock the poor out of borrowing and starting firms."
+       },
+       {
+        "type": "mechanism",
+        "text": "Savings: the rich save a larger share, but savings may leave the country; the poor have no buffer."
+       },
+       {
+        "type": "mechanism",
+        "text": "Marenda: school completion 35% → 91% and life expectancy 64 → 76 years, poorest to richest fifth."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "The impact depends on how much inequality there is.",
+     "Unequal schooling hands inequality on.",
+     "Poorer people migrate for work and die younger."
+    ]
+   },
+   {
+    "title": "Development, Economic Change and Capitalism",
+    "meta": "4.3.4 · 2e, 2f",
+    "keyIdea": "How development and economic change affect inequality, and why a free market economy tends to produce it.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Kuznets hypothesis</strong> — inequality rises then falls as income per head rises: an inverted U."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Free market economy (capitalism)</strong> — private ownership, with incomes set by markets."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Development: the move from farming to industry opens a gap, which narrows as schooling spreads."
+       },
+       {
+        "type": "mechanism",
+        "text": "Technology and globalisation raise the returns to skills and to owning firms."
+       },
+       {
+        "type": "mechanism",
+        "text": "Asset income: 5% of the poorer half's income against 45% of the richest tenth's."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "The Kuznets curve is a hypothesis with mixed evidence.",
+     "Economic change rewards skills and capital.",
+     "Markets create inequality; policy decides how much stays."
+    ]
+   }
+  ],
+  "quiz": [
+   {
+    "id": "poverty-inequality:quiz:b933c408",
+    "question": "Absolute poverty is best defined as an income that is:",
+    "options": [
+     "below sixty per cent of median income in that country",
+     "lower than the average wage paid in that country",
+     "too low to own any wealth such as land or savings",
+     "too low to meet basic needs such as food and shelter"
+    ],
+    "explanation": "Absolute poverty is judged against a fixed line of survival needs, whatever others earn. A line set as a share of the median is the relative measure; owning no wealth is a different thing again.",
+    "correctIndex": 3
+   },
+   {
+    "id": "poverty-inequality:quiz:892ea7ba",
+    "question": "A relative poverty line is usually set as a fraction of:",
+    "options": [
+     "the cost of a basket of food",
+     "the international poverty line",
+     "median income in that society",
+     "the average wage of full-time workers"
+    ],
+    "explanation": "Relative poverty compares a household with the typical income of its own society, so the line is a share of the median. A food basket and the international line are fixed benchmarks for absolute poverty, and an average wage leaves out everyone who has no wage.",
+    "correctIndex": 2
+   },
+   {
+    "id": "poverty-inequality:quiz:816b556f",
+    "question": "If every income in a country rose by 20%, relative poverty would most likely:",
+    "options": [
+     "fall sharply",
+     "stay the same",
+     "fall slightly",
+     "rise sharply as well"
+    ],
+    "explanation": "The median rises by 20% as well, so the relative line rises with it and the same people stay below it. Absolute poverty, measured against a fixed line, would fall.",
+    "correctIndex": 1
+   },
+   {
+    "id": "poverty-inequality:quiz:7f6f497b",
+    "question": "Which measure shows how far below the poverty line the incomes of poor people fall?",
+    "options": [
+     "the poverty gap",
+     "the headcount ratio",
+     "the Gini coefficient",
+     "the relative poverty line"
+    ],
+    "explanation": "The poverty gap measures depth: the shortfall of poor incomes below the line. The headcount only counts how many are below; the Gini coefficient measures inequality across everyone.",
+    "correctIndex": 0
+   },
+   {
+    "id": "poverty-inequality:quiz:3f017e61",
+    "question": "A country has 40 million people, of whom 6 million live below the international poverty line. Its headcount ratio is:",
+    "options": [
+     "6%",
+     "40%",
+     "85%",
+     "15%"
+    ],
+    "explanation": "The headcount ratio is people below the line divided by the population: 6 ÷ 40 = 0.15, or 15%. Subtracting from 100 gives the share not in poverty.",
+    "correctIndex": 3
+   },
+   {
+    "id": "poverty-inequality:quiz:4f6fa194",
+    "question": "Median income in a country is $12.00 a day. A relative poverty line at 60% of the median is:",
+    "options": [
+     "$4.80",
+     "$7.20",
+     "$12.00",
+     "$20.00"
+    ],
+    "explanation": "The line is the median times the percentage: 0.6 × $12.00 = $7.20. Taking 40% gives $4.80, and dividing by 0.6 gives $20.00.",
+    "correctIndex": 1
+   },
+   {
+    "id": "poverty-inequality:quiz:a5844c24",
+    "question": "The richest tenth doubles its income while every other income stays the same. Relative poverty:",
+    "options": [
+     "rises sharply",
+     "is unchanged",
+     "falls slightly",
+     "rises slightly"
+    ],
+    "explanation": "The median belongs to the middle of the distribution and has not moved, so the relative line and the number below it are unchanged. Inequality has risen, which is a different thing.",
+    "correctIndex": 1
+   },
+   {
+    "id": "poverty-inequality:quiz:a324871d",
+    "question": "Replacing part of the income tax paid by high earners with a higher sales tax on food is most likely to:",
+    "options": [
+     "increase poverty, as the poor spend most income on food",
+     "reduce poverty, as the rich now pay more for their food",
+     "leave poverty unchanged, as total tax revenue is the same",
+     "reduce poverty, as lower income tax raises everyone's wages"
+    ],
+    "explanation": "Poor households spend almost all of their income, much of it on food, so a food tax takes a larger share of their income, while many of them paid little income tax to begin with.",
+    "correctIndex": 0
+   },
+   {
+    "id": "poverty-inequality:quiz:08d06286",
+    "question": "Economic growth is least likely to reduce absolute poverty when it comes mainly from:",
+    "options": [
+     "a capital-intensive oil field employing few workers",
+     "labour-intensive clothing factories hiring widely",
+     "rising yields on small family farms",
+     "new hotel jobs for low-skilled workers"
+    ],
+    "explanation": "Growth reduces poverty through jobs and wages. An oil field adds a great deal of output with few jobs, so its gains reach few poor households unless the state spends the revenue on them.",
+    "correctIndex": 0
+   },
+   {
+    "id": "poverty-inequality:quiz:c0a29d20",
+    "question": "Why do education and training usually reduce poverty only slowly?",
+    "options": [
+     "skills take years and need jobs that use them",
+     "a new skill loses its value within a few years",
+     "schooling raises output but not workers' wages",
+     "the gains go to employers rather than to workers"
+    ],
+    "explanation": "A child starting school reaches the labour market years later, and a skill raises income only if employers need it. Where they do, the skill raises the pay of the worker who has it, not only the output of the firm.",
+    "correctIndex": 0
+   },
+   {
+    "id": "poverty-inequality:quiz:17698217",
+    "question": "A cash benefit lifts the poorest tenth above the absolute poverty line but leaves it below 60% of the unchanged median. The benefit has:",
+    "options": [
+     "reduced relative but not absolute poverty",
+     "reduced both kinds of poverty",
+     "reduced absolute but not relative poverty",
+     "reduced neither kind of poverty"
+    ],
+    "explanation": "The group has crossed the fixed line, so absolute poverty falls, but it is still under the median-based line, so relative poverty is unchanged for that group.",
+    "correctIndex": 2
+   },
+   {
+    "id": "poverty-inequality:quiz:4e6c778a",
+    "question": "Structural change in an economy is most likely to raise poverty when:",
+    "options": [
+     "displaced workers lack skills for the growing industries",
+     "labour moves from farming into better-paid factory jobs",
+     "the service sector grows faster than manufacturing",
+     "new industries pay more than the ones they replace"
+    ],
+    "explanation": "Poverty rises when jobs disappear and the people who lose them cannot move into the industries that are growing, because their skills or location do not match. A shift that workers can follow, into jobs that pay more, raises incomes instead.",
+    "correctIndex": 0
+   },
+   {
+    "id": "poverty-inequality:quiz:fbf5141d",
+    "question": "Which kind of aid reduces poverty most directly?",
+    "options": [
+     "a loan tied to buying the donor's machinery",
+     "cash transfers paid to poor households",
+     "grain sold cheaply in local markets",
+     "funding for a new international airport"
+    ],
+    "explanation": "A transfer raises poor households' income at once. Tied loans deliver less than their face value, cheap grain can undercut local farmers, and an airport helps the poor only indirectly, if at all.",
+    "correctIndex": 1
+   },
+   {
+    "id": "poverty-inequality:quiz:32a90a13",
+    "question": "Why does poverty often stay high for years after a civil war ends?",
+    "options": [
+     "the median income rises sharply once peace returns",
+     "donors withdraw their aid as soon as a peace deal is signed",
+     "lost schooling and destroyed assets take years to rebuild",
+     "refugees who settle abroad send no money home"
+    ],
+    "explanation": "Children who missed school earn less for life, and homes, tools, roads and livestock must be replaced while investors stay cautious, so incomes, the median among them, recover slowly rather than sharply. Aid does not simply stop at peace, and refugees who settle abroad often send money home, which supports incomes there.",
+    "correctIndex": 2
+   },
+   {
+    "id": "poverty-inequality:quiz:295146c3",
+    "question": "Which of these is part of a household's wealth rather than its income?",
+    "options": [
+     "a plot of farmland it owns",
+     "the wages it earns each month",
+     "the rent it receives each year",
+     "a pension it receives each week"
+    ],
+    "explanation": "Wealth is a stock of assets owned at a point in time, such as land. Wages, rent received and pension payments are flows of income over a period.",
+    "correctIndex": 0
+   },
+   {
+    "id": "poverty-inequality:quiz:70d9050e",
+    "question": "On a Lorenz curve diagram, the horizontal axis shows the:",
+    "options": [
+     "cumulative percentage of income",
+     "average income received by each group of people",
+     "cumulative percentage of the population",
+     "percentage of people below the poverty line"
+    ],
+    "explanation": "People go along the horizontal axis, ranked poorest to richest, and the cumulative share of income goes up the vertical axis. Swapping them is the most common drawing error.",
+    "correctIndex": 2
+   },
+   {
+    "id": "poverty-inequality:quiz:e2c627bf",
+    "question": "On a Lorenz diagram, the area between the curve and the line of equality is 0.15 and the area below the curve is 0.35. The Gini coefficient is:",
+    "options": [
+     "0.15",
+     "0.43",
+     "0.70",
+     "0.30"
+    ],
+    "explanation": "The coefficient is the area between the curve and the diagonal divided by the whole area under the diagonal: 0.15 ÷ (0.15 + 0.35) = 0.15 ÷ 0.50 = 0.30. Dividing 0.15 by 0.35 gives 0.43.",
+    "correctIndex": 3
+   },
+   {
+    "id": "poverty-inequality:quiz:4fb3b545",
+    "question": "A Gini coefficient of 0.45 means that:",
+    "options": [
+     "45% of the population lives in absolute poverty",
+     "the richest 45% of people receive all the income",
+     "income is less evenly shared than at a Gini of 0.30",
+     "45% of all income goes to the poorer half"
+    ],
+    "explanation": "The Gini coefficient is a ratio of two areas on the Lorenz diagram, so a higher value means a more unequal distribution. It is not a count of poor people or a share of income.",
+    "correctIndex": 2
+   },
+   {
+    "id": "poverty-inequality:quiz:c8c9356f",
+    "question": "Two countries' Lorenz curves cross. This means that:",
+    "options": [
+     "both countries have the same Gini coefficient",
+     "neither distribution is more equal at every point",
+     "one of the two curves must have been drawn wrongly",
+     "the curve lower at the bottom must have the higher Gini"
+    ],
+    "explanation": "Where curves cross, one country is more equal among poorer groups and the other among richer ones, so the curves alone cannot rank them. Their Gini coefficients may still differ, in either direction.",
+    "correctIndex": 1
+   },
+   {
+    "id": "poverty-inequality:quiz:b247bfe1",
+    "question": "Which is most likely to explain a lasting gap in income per head between two countries?",
+    "options": [
+     "higher prices of goods in the richer one",
+     "a larger population in the richer one",
+     "less capital and skills per worker in the poorer one",
+     "a lower Gini coefficient in the poorer country than the richer one"
+    ],
+    "explanation": "Income per head follows output per worker, which depends on the capital, skills and technology each worker has. Higher prices make a rich country's income go less far, which shrinks the real gap rather than explaining it, and a Gini coefficient describes a distribution; it does not cause the gap.",
+    "correctIndex": 2
+   },
+   {
+    "id": "poverty-inequality:quiz:9f639e4b",
+    "question": "Wealth tends to be more unequal than income mainly because:",
+    "options": [
+     "wages are paid mainly to households that already own land",
+     "poorer households save a larger share of their income",
+     "income is taxed each year while wealth escapes tax",
+     "assets are inherited and earn returns that are reinvested"
+    ],
+    "explanation": "Inheritance gives some a head start, and returns on assets compound when reinvested, so wealth concentrates further than income does. The poor save a smaller share, not a larger one.",
+    "correctIndex": 3
+   },
+   {
+    "id": "poverty-inequality:quiz:2f56c009",
+    "question": "A surgeon and a hospital cleaner earn very different wages mainly because of:",
+    "options": [
+     "the hours each of them works in a week",
+     "the scarcity of the skills each job needs",
+     "the region of the country the hospital is in",
+     "the wealth each of them inherited"
+    ],
+    "explanation": "Few people have the training to operate, so the skill commands a high wage; many can clean. Hours and region matter far less when both work in the same hospital.",
+    "correctIndex": 1
+   },
+   {
+    "id": "poverty-inequality:quiz:6190ae19",
+    "question": "Why might greater income inequality raise total saving in an economy?",
+    "options": [
+     "richer households save a larger share of their income",
+     "poorer households save a larger share of their income",
+     "richer households borrow more than poorer ones do",
+     "interest rates are higher for poorer households"
+    ],
+    "explanation": "A rich household cannot spend all it earns and saves much of it; a poor one spends almost everything. Shifting income towards the rich therefore tends to raise total saving.",
+    "correctIndex": 0
+   },
+   {
+    "id": "poverty-inequality:quiz:cdcbe46e",
+    "question": "Extreme inequality can weaken enterprise mainly because:",
+    "options": [
+     "high profits discourage new firms from entering",
+     "equal wages remove the reward for taking risks",
+     "the poor cannot borrow to start businesses",
+     "saving rises when incomes are more unequal"
+    ],
+    "explanation": "With no savings or collateral, able people in poor households cannot raise money to start firms, so their talent is wasted. Equal wages describe the opposite of inequality.",
+    "correctIndex": 2
+   },
+   {
+    "id": "poverty-inequality:quiz:223fa1b1",
+    "question": "Skilled nurses leaving a poor country to work in richer ones is likely to:",
+    "options": [
+     "lower remittances and improve health care at home",
+     "leave the sending country's economy unaffected",
+     "narrow the gap between the two countries at once",
+     "raise remittances but reduce health care at home"
+    ],
+    "explanation": "Migrants send money home, which raises incomes there, but the sending country loses the skilled workers its clinics need, so the effect on it is mixed.",
+    "correctIndex": 3
+   },
+   {
+    "id": "poverty-inequality:quiz:6cb78e6e",
+    "question": "Within most countries, life expectancy is lower among poorer people mainly because they:",
+    "options": [
+     "have more children on average than richer households",
+     "have worse diets, housing and access to health care",
+     "save a smaller share of their income than the rich",
+     "pay less income tax than richer people do"
+    ],
+    "explanation": "Low income means poorer food, crowded housing, less clean water, more dangerous work and less health care, all of which shorten lives. Larger families, less saving and lower income tax go with low income too, but they are not what shortens lives.",
+    "correctIndex": 1
+   },
+   {
+    "id": "poverty-inequality:quiz:568b105d",
+    "question": "Automation that replaces routine clerical jobs is most likely to:",
+    "options": [
+     "narrow the pay gap between skilled and less-skilled workers",
+     "lower the pay of workers who design the new systems",
+     "reduce the returns to owning the firms that use it",
+     "widen the pay gap between skilled and less-skilled workers"
+    ],
+    "explanation": "Technology raises demand for the skilled workers who build and run it and cuts demand for routine work, so pay at the upper end rises relative to the rest.",
+    "correctIndex": 3
+   },
+   {
+    "id": "poverty-inequality:quiz:771d3a70",
+    "question": "The Kuznets hypothesis suggests that as income per head rises, inequality:",
+    "options": [
+     "falls steadily throughout",
+     "rises steadily throughout",
+     "falls and then rises",
+     "rises and then falls"
+    ],
+    "explanation": "Kuznets proposed an inverted U: inequality grows while workers move from farming to better-paid industry, then narrows once most have moved and schooling spreads.",
+    "correctIndex": 3
+   },
+   {
+    "id": "poverty-inequality:quiz:e93eceed",
+    "question": "Which evidence most weakens the Kuznets hypothesis?",
+    "options": [
+     "fast-growing economies whose inequality stayed low",
+     "rich countries with very little absolute poverty",
+     "poor countries where most people work in farming",
+     "middle-income countries whose inequality has risen"
+    ],
+    "explanation": "The hypothesis predicts rising inequality during industrialisation. Economies that industrialised fast without that rise, through land reform and mass schooling, contradict it.",
+    "correctIndex": 0
+   },
+   {
+    "id": "poverty-inequality:quiz:10bdf123",
+    "question": "In a free market economy, a key reason incomes are unequal is that:",
+    "options": [
+     "wages are highest in the jobs most useful to society",
+     "owners of capital and land receive profit and rent",
+     "goods are rationed by price rather than by need",
+     "taxes are levied only on income from work"
+    ],
+    "explanation": "Income comes from owning assets as well as from work, and ownership is unequal, so owners of capital and land receive profit and rent that others do not. Pay follows the demand for and supply of each skill, not how useful a job is: care work is vital, but many people can do it. Rationing by price decides who gets goods once incomes differ; it does not make incomes differ. Market economies also tax profits, rent and property, not only wages.",
+    "correctIndex": 1
+   }
+  ],
+  "practice": [
+   {
+    "id": "poverty-inequality:practice:058dadf4",
+    "command": "Define",
+    "marks": 2,
+    "question": "Define the term 'relative poverty'. (2 marks)",
+    "guidance": "Two marks means two separate points. Say what the poor are compared with, and then how the benchmark is set — a definition that could equally describe absolute poverty earns only half.\nRelative poverty is having an income so far below the typical income of one's own society that a person cannot share its normal way of life (1 mark). It is measured against a line set as a fraction of median income, commonly 50% or 60% (1 mark). \"Being poorer than the rich\" does not earn the second mark: the comparison is with the median, not the top."
+   },
+   {
+    "id": "poverty-inequality:practice:1138b142",
+    "command": "Calculate",
+    "marks": 2,
+    "question": "In a country, median income is $8.00 a day. The relative poverty line is set at 60% of median income. Calculate the relative poverty line. (2 marks)",
+    "guidance": "Calculate asks for the working as well as the answer. Before any arithmetic, decide which figure the percentage is applied to, and give the answer in the units the question uses.\nRelative poverty line = 60% × median = 0.6 × $8.00 (1 mark) = $4.80 a day (1 mark). Dividing the median by 0.6, or taking 40% of it, are the usual errors."
+   },
+   {
+    "id": "poverty-inequality:practice:fa1a0fe1",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain how an increase in welfare benefits paid to the poorest households could reduce relative poverty. (4 marks)",
+    "guidance": "An Explain wants linked stages. Start from what happens to the incomes of the poorest, then compare them with the benchmark that relative poverty is measured against, and ask whether that benchmark moves.\nKnowledge: relative poverty is income below a line set at a fraction of median income (1 mark). Application: higher benefits raise the incomes of the poorest households directly (1 mark). Analysis: if the median is unchanged, because middle incomes do not receive the benefit, the relative line does not move (1 mark). Analysis: so some households rise above the line and the share in relative poverty falls (1 mark)."
+   },
+   {
+    "id": "poverty-inequality:practice:573def12",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Evaluate the view that economic growth is the most effective way to reduce absolute poverty in developing economies. (20 marks)",
+    "guidance": "An Evaluate wants chains of reasoning, different viewpoints and an informed judgement. Plan the strongest case for growth, then the alternatives the specification lists, and decide in advance what your judgement will turn on — the pattern of growth is the obvious place to start.\nLevel 1 describes growth or poverty with little explanation. Level 2 explains how growth raises jobs, wages and tax revenue so incomes cross the absolute line. Level 3 develops both sides with application: growth has been the main source of falling absolute poverty, but growth from capital-intensive sectors or concentrated in cities may bypass the poor, while benefits, aid, and education and training can reduce poverty more directly or more lastingly. Level 4 reaches a supported judgement: growth is necessary for large, lasting falls in absolute poverty in most developing economies, but whether it is the most effective route depends on how labour-intensive it is and on whether the revenue it raises is spent on the poor."
+   },
+   {
+    "id": "poverty-inequality:practice:918bec7a",
+    "command": "Analyse",
+    "marks": 6,
+    "question": "Analyse how structural changes in an economy may increase absolute poverty. (6 marks)",
+    "guidance": "An Analyse wants depth: one route followed through several linked stages. Decide first what kind of structural change you will use, because the workers affected and the reason they cannot move depend on it.\nKnowledge: structural change is a lasting shift in the industries an economy relies on (1 mark). Application: for example, cheaper imports close a country's textile mills (1 mark). Analysis, first stage: the mill workers lose their jobs, and their skills fit no growing industry nearby (1 mark). Analysis, second stage: they move into informal work or unemployment at much lower incomes (1 mark). Analysis, third stage: shops and suppliers in the mill towns lose customers, spreading the loss of income (1 mark). Analysis, final stage: more households fall below the fixed absolute poverty line (1 mark)."
+   },
+   {
+    "id": "poverty-inequality:practice:3b5f9daf",
+    "command": "Calculate",
+    "marks": 4,
+    "question": "On a Lorenz curve diagram for a country, the area below the Lorenz curve is 0.32. Ten years later it has fallen to 0.27. Calculate the Gini coefficient in each year and the change between them. (4 marks)",
+    "guidance": "Calculate asks for workings. Write the formula for the Gini coefficient in words first, and note which area the question gives you: you need the other one before you can divide.\nArea between the curve and the line of equality = 0.50 − 0.32 = 0.18 (1 mark). Gini = 0.18 ÷ 0.50 = 0.36 (1 mark). Ten years later the area is 0.50 − 0.27 = 0.23, so Gini = 0.23 ÷ 0.50 = 0.46 (1 mark). The Gini coefficient has risen by 0.10, so inequality has increased (1 mark)."
+   },
+   {
+    "id": "poverty-inequality:practice:ee417429",
+    "command": "Examine",
+    "marks": 8,
+    "question": "Examine two causes of inequality in income between countries. (8 marks)",
+    "guidance": "An Examine wants chains of reasoning and a brief assessment, so save room for a judgement. Choose two causes that work through different channels, and for each follow it through to output per worker.\nLevel 1 names causes with little explanation. Level 2 explains one cause in a chain: for example, poorer countries have less capital and infrastructure per worker, so output and wages per worker are lower. Level 3 develops two causes with application — for example, capital and skills per worker, and dependence on volatile primary exports or weak institutions that deter investment. The brief assessment that lifts an answer to the top of the range weighs which cause matters more, and for which kind of economy: a commodity exporter with honest government faces a different binding constraint from a country held back by conflict or corruption."
+   },
+   {
+    "id": "poverty-inequality:practice:90706ba3",
+    "command": "Discuss",
+    "marks": 14,
+    "question": "Discuss the likely impact of high income inequality on enterprise and savings in an economy. (14 marks)",
+    "guidance": "A Discuss wants chains of reasoning, different viewpoints and a critical assessment. Treat enterprise and savings separately, give each a case for inequality and a case against, and decide what your judgement will depend on — the degree of inequality is the obvious place to start.\nLevel 1 describes inequality with little explanation. Level 2 explains one effect: the prospect of large profits rewards entrepreneurs for risk, or richer households save a larger share of income. Level 3 develops both impacts on both sides with application: inequality can reward enterprise and raise total saving, but extreme inequality leaves the poor unable to borrow to start firms, and savings by the rich may leave the country or buy existing assets rather than fund new investment, while the poor have no savings to fall back on. Level 4 reaches a supported judgement: moderate inequality may strengthen incentives and saving, but beyond some point it wastes talent at the bottom, and the outcome depends on access to credit and on where the rich put their savings."
+   },
+   {
+    "id": "poverty-inequality:practice:b45adca3",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Evaluate the view that a free market economy inevitably increases inequality. (20 marks)",
+    "guidance": "An Evaluate wants chains of reasoning, different viewpoints and an informed judgement. Decide first which features of a market economy create inequality, then what can offset them, so that the word \"inevitably\" is what your conclusion tests.\nLevel 1 describes capitalism or inequality with little explanation. Level 2 explains how private ownership and market-set pay lead to unequal incomes. Level 3 develops both sides with application: returns to capital, inheritance and rewards for scarce skills widen gaps, and technology and globalisation have added to them; against that, market-led growth has cut absolute poverty on a huge scale, competition erodes profits, rising demand for labour lifts wages, and market economies with strong taxes, benefits and public services have far lower inequality. Level 4 reaches a supported judgement: a free market tends to create inequality, but how much remains is not inevitable — it depends on what the state does and on access to education."
+   },
+   {
+    "id": "poverty-inequality:practice:037574b8",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Evaluate the extent to which economic development reduces inequality within a country. (20 marks)",
+    "guidance": "An Evaluate wants chains of reasoning, different viewpoints and an informed judgement. Start from the Kuznets hypothesis, because the evaluation of this question is the evidence for and against it.\nLevel 1 describes development with little explanation. Level 2 explains the Kuznets hypothesis: inequality rises as workers move from farming to better-paid industry, then falls as most have moved and schooling spreads. Level 3 develops the evidence on both sides with application: some economies followed the curve, but several East Asian economies industrialised with stable inequality after land reform and mass schooling, and inequality has risen again in many high-income countries as technology and globalisation reward skills and capital. Level 4 reaches a supported judgement: development creates the means to reduce inequality — schooling, tax systems, better jobs — but whether it does depends on policy, not on the level of income alone."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "poverty-inequality:flashcard:ee9652f8",
+    "front": "What is absolute poverty?",
+    "back": "An income too low to meet basic needs — food, safe water, shelter, clothing — measured against a fixed line."
+   },
+   {
+    "id": "poverty-inequality:flashcard:c11e8558",
+    "front": "What is relative poverty?",
+    "back": "An income far below the typical income of one's own society, measured against a line set as a fraction (often 50% or 60%) of median income."
+   },
+   {
+    "id": "poverty-inequality:flashcard:b7c47db9",
+    "front": "What is the World Bank's international poverty line?",
+    "back": "$3.00 a day per person at 2021 purchasing power parity."
+   },
+   {
+    "id": "poverty-inequality:flashcard:86412d05",
+    "front": "What is the headcount ratio?",
+    "back": "The share of the population living below a poverty line."
+   },
+   {
+    "id": "poverty-inequality:flashcard:e104a180",
+    "front": "What does the poverty gap measure?",
+    "back": "The depth of poverty: how far below the poverty line the incomes of poor people fall."
+   },
+   {
+    "id": "poverty-inequality:flashcard:69ce2ccd",
+    "front": "What does the Multidimensional Poverty Index count?",
+    "back": "Deprivations in health, schooling and living standards, such as clean water and electricity, rather than income."
+   },
+   {
+    "id": "poverty-inequality:flashcard:fc367da1",
+    "front": "Why is relative poverty not the same as inequality?",
+    "back": "It compares the bottom with the median. If only the richest gain, inequality rises but the median and relative poverty do not change."
+   },
+   {
+    "id": "poverty-inequality:flashcard:03001ebd",
+    "front": "What does evenly shared growth do to absolute and relative poverty?",
+    "back": "Absolute poverty falls as incomes cross the fixed line; relative poverty is unchanged because the median rises in step."
+   },
+   {
+    "id": "poverty-inequality:flashcard:e69ad36e",
+    "front": "Why do education and training reduce poverty slowly?",
+    "back": "Skills take years to build and raise income only when there are jobs that need them."
+   },
+   {
+    "id": "poverty-inequality:flashcard:6df46688",
+    "front": "How do welfare benefits change poverty?",
+    "back": "They raise the incomes of the poor directly, cutting poverty quickly if they reach the poor and are large enough."
+   },
+   {
+    "id": "poverty-inequality:flashcard:704ceb6b",
+    "front": "How can a change in tax structure raise poverty?",
+    "back": "Shifting tax onto spending on essentials takes a larger share of poor households' income, since they spend almost all of it."
+   },
+   {
+    "id": "poverty-inequality:flashcard:194eaa9a",
+    "front": "How can structural change increase poverty?",
+    "back": "A declining industry leaves workers whose skills and location fit no growing industry, so they fall into unemployment or informal work."
+   },
+   {
+    "id": "poverty-inequality:flashcard:ad233d00",
+    "front": "Give the two routes by which aid can reduce poverty.",
+    "back": "Directly, through transfers and services for the poor; indirectly, through infrastructure that raises output and jobs."
+   },
+   {
+    "id": "poverty-inequality:flashcard:ed0c632c",
+    "front": "Name four channels through which conflict causes poverty.",
+    "back": "Lost incomes, destroyed assets, displacement of people, and collapsed public services."
+   },
+   {
+    "id": "poverty-inequality:flashcard:78d51181",
+    "front": "Distinguish income from wealth.",
+    "back": "Income is a flow received over time; wealth is a stock of assets owned at a point in time, net of debts."
+   },
+   {
+    "id": "poverty-inequality:flashcard:9d55c153",
+    "front": "What does a Lorenz curve plot?",
+    "back": "The cumulative percentage of income against the cumulative percentage of the population, ranked from poorest."
+   },
+   {
+    "id": "poverty-inequality:flashcard:c25841f1",
+    "front": "What is the line of equality?",
+    "back": "The diagonal on a Lorenz diagram, showing a distribution in which everyone has the same income."
+   },
+   {
+    "id": "poverty-inequality:flashcard:2208e25f",
+    "front": "How is the Gini coefficient calculated?",
+    "back": "The area between the line of equality and the Lorenz curve divided by the whole area under the line of equality."
+   },
+   {
+    "id": "poverty-inequality:flashcard:51e2b327",
+    "front": "What do Gini coefficients of 0 and 1 mean?",
+    "back": "Zero: perfect equality. One: a single person receives all the income."
+   },
+   {
+    "id": "poverty-inequality:flashcard:398f7c25",
+    "front": "Give two limitations of the Gini coefficient.",
+    "back": "Different distributions can share one value, so it hides where inequality lies; and survey data miss the very richest."
+   },
+   {
+    "id": "poverty-inequality:flashcard:1b69d1ff",
+    "front": "Give three causes of income inequality within a country.",
+    "back": "Differences in skills and education, unemployment and informal work, and discrimination."
+   },
+   {
+    "id": "poverty-inequality:flashcard:d630cb9c",
+    "front": "Why does wealth concentrate over time?",
+    "back": "It is inherited, and returns on assets can grow faster than wages when reinvested."
+   },
+   {
+    "id": "poverty-inequality:flashcard:0cd98e51",
+    "front": "Give three causes of inequality between countries.",
+    "back": "Differences in capital and skills per worker, weak institutions, and dependence on primary exports."
+   },
+   {
+    "id": "poverty-inequality:flashcard:b364e5b7",
+    "front": "How can inequality strengthen incentives?",
+    "back": "The prospect of higher pay or profit rewards training, effort and risk-taking."
+   },
+   {
+    "id": "poverty-inequality:flashcard:7db970f0",
+    "front": "How can extreme inequality weaken enterprise?",
+    "back": "The poor have no savings or collateral, so they cannot borrow to start firms, and their talent is wasted."
+   },
+   {
+    "id": "poverty-inequality:flashcard:16c83775",
+    "front": "How does inequality affect total saving?",
+    "back": "The rich save a larger share of income, so inequality can raise saving — though it may go abroad, and the poor are left with no buffer."
+   },
+   {
+    "id": "poverty-inequality:flashcard:371b7d56",
+    "front": "How does inequality affect education?",
+    "back": "Poor families afford less and worse schooling, so inequality is handed on to the next generation."
+   },
+   {
+    "id": "poverty-inequality:flashcard:ac2d2457",
+    "front": "How does inequality drive migration?",
+    "back": "Income gaps pull people from poor regions to cities and from poor countries to rich ones."
+   },
+   {
+    "id": "poverty-inequality:flashcard:046e0b7a",
+    "front": "Why is life expectancy lower among the poor?",
+    "back": "Worse diets, housing, water and working conditions, and less access to health care."
+   },
+   {
+    "id": "poverty-inequality:flashcard:b451550d",
+    "front": "State the Kuznets hypothesis.",
+    "back": "As income per head rises, inequality first rises and then falls: an inverted U."
+   },
+   {
+    "id": "poverty-inequality:flashcard:84be9a7a",
+    "front": "Give one piece of evidence against the Kuznets hypothesis.",
+    "back": "Several East Asian economies industrialised fast without inequality rising sharply, after land reform and mass schooling."
+   },
+   {
+    "id": "poverty-inequality:flashcard:bda3fd68",
+    "front": "Why does a free market economy tend to create inequality?",
+    "back": "Incomes follow ownership of assets and the market value of skills, and returns on wealth accumulate."
+   }
+  ],
+  "mistakes": [
+   {
+    "id": "poverty-inequality:mistake:6ea4aee0",
+    "title": "Confusing relative poverty with inequality",
+    "looks_like": "\"The rich got richer, so relative poverty rose.\"",
+    "why": "Relative poverty compares the bottom with the median. A richer top raises inequality and leaves the median, the relative line and the number below it unchanged.",
+    "instead": "Say what happened to incomes at the bottom compared with the middle. Use the Gini coefficient for inequality and the relative headcount for relative poverty."
+   },
+   {
+    "id": "poverty-inequality:mistake:ee2a682b",
+    "title": "Saying growth reduces \"poverty\" without saying which kind",
+    "looks_like": "\"Economic growth reduces poverty.\"",
+    "why": "Evenly shared growth reduces absolute poverty and leaves relative poverty unchanged; growth that bypasses the poor reduces neither.",
+    "instead": "Name the measure — absolute or relative — and the pattern of growth that makes it fall."
+   },
+   {
+    "id": "poverty-inequality:mistake:bb5ca5ba",
+    "title": "Swapping the axes of the Lorenz curve",
+    "looks_like": "Cumulative income along the bottom and population up the side.",
+    "why": "The Lorenz curve ranks people along the horizontal axis and shows the cumulative share of income they receive on the vertical axis.",
+    "instead": "Label the horizontal axis \"cumulative % of population\" and the vertical axis \"cumulative % of income\", then draw the diagonal as the line of equality."
+   },
+   {
+    "id": "poverty-inequality:mistake:1c038e50",
+    "title": "Drawing the Lorenz curve above the line of equality",
+    "looks_like": "A curve that bows up and to the left of the diagonal.",
+    "why": "The poorest x% of people can never receive more than x% of income, so the curve always lies on or below the diagonal.",
+    "instead": "Start at the origin, sag below the diagonal, and finish at the top right corner."
+   },
+   {
+    "id": "poverty-inequality:mistake:d53fbd27",
+    "title": "Reading the Gini coefficient as a poverty rate",
+    "looks_like": "\"A Gini of 0.4 means 40% of people are poor.\"",
+    "why": "The Gini coefficient is a ratio of two areas on the Lorenz diagram. It measures how unequally income is shared, not how many people are poor.",
+    "instead": "Say that a higher coefficient means a more unequal distribution, and use a headcount ratio for the number in poverty."
+   },
+   {
+    "id": "poverty-inequality:mistake:9ef48a8f",
+    "title": "Treating income and wealth as the same",
+    "looks_like": "\"Wealth inequality is when some people earn more than others.\"",
+    "why": "Earnings are income, a flow. Wealth is the stock of assets owned. The two are linked but can differ sharply for the same household.",
+    "instead": "Define each by its flow or stock nature and give an example, then say which one a figure measures."
+   },
+   {
+    "id": "poverty-inequality:mistake:4695f53b",
+    "title": "Drawing the Kuznets curve against time, or as a U",
+    "looks_like": "A U-shaped curve with years along the horizontal axis.",
+    "why": "The hypothesis links inequality to the level of income per head, not to the passing of time, and it has inequality rising first and falling later: an inverted U.",
+    "instead": "Put income per head on the horizontal axis and inequality (for example the Gini coefficient) on the vertical, and draw a hump that rises and then falls."
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "poverty-inequality:diagram:0788877d",
+    "title": "Absolute and Relative Poverty",
+    "description": "IAL 4.3.4 · 1a and 1b: the daily income of each tenth of one economy against a fixed absolute poverty line and a relative line set at 60% of median income — and what happens to each when only the richest gain.",
+    "checklist": [
+     "Each bar is one tenth of the population, poorest on the left",
+     "The absolute line is fixed at $3.00 a day",
+     "The relative line is 60% of median income, so it moves when the median moves",
+     "When only the richest gain, the median does not move"
+    ],
+    "scenarios": [
+     {
+      "label": "Marenda today",
+      "svg": "<svg width=\"400\" height=\"326\" viewBox=\"0 0 400 326\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Marenda: daily income of each tenth</text><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"232\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"232\" x2=\"384\" y2=\"232\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"54\" y=\"236\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">$0</text><text x=\"54\" y=\"146\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">$5</text><text x=\"54\" y=\"56\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">$10</text><rect x=\"65\" y=\"199.6\" width=\"22\" height=\"32.4\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"76\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">1</text><rect x=\"97\" y=\"185.2\" width=\"22\" height=\"46.8\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"108\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">2</text><rect x=\"129\" y=\"174.4\" width=\"22\" height=\"57.6\" rx=\"3\" fill=\"#f87171\"/><text x=\"140\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">3</text><rect x=\"161\" y=\"160\" width=\"22\" height=\"72\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"172\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">4</text><rect x=\"193\" y=\"131.2\" width=\"22\" height=\"100.8\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"204\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">5</text><rect x=\"225\" y=\"116.8\" width=\"22\" height=\"115.2\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"236\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">6</text><rect x=\"257\" y=\"95.2\" width=\"22\" height=\"136.8\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"268\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">7</text><rect x=\"289\" y=\"62.8\" width=\"22\" height=\"169.2\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"300\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">8</text><rect x=\"321\" y=\"52\" width=\"22\" height=\"180\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"332\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">9</text><text x=\"343\" y=\"42\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"end\" font-weight=\"600\">$12.40</text><rect x=\"353\" y=\"52\" width=\"22\" height=\"180\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"364\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">10</text><text x=\"375\" y=\"26\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"end\" font-weight=\"600\">$22.00</text><line x1=\"60\" y1=\"178\" x2=\"380\" y2=\"178\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><line x1=\"60\" y1=\"167.2\" x2=\"380\" y2=\"167.2\" stroke=\"#f87171\" stroke-width=\"2\" stroke-dasharray=\"2 3\"/><text x=\"392\" y=\"266\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Tenths of the population, poorest first</text><text x=\"16\" y=\"290\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">Absolute line $3.00: 20% of people below it</text><text x=\"16\" y=\"308\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"400\">Relative line $3.60 (60% of the $6.00 median): 30%</text></svg>"
+     },
+     {
+      "label": "The richest fifth pulls away",
+      "svg": "<svg width=\"400\" height=\"326\" viewBox=\"0 0 400 326\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">The richest two tenths gain</text><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"232\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"232\" x2=\"384\" y2=\"232\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"54\" y=\"236\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">$0</text><text x=\"54\" y=\"146\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">$5</text><text x=\"54\" y=\"56\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">$10</text><rect x=\"65\" y=\"199.6\" width=\"22\" height=\"32.4\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"76\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">1</text><rect x=\"97\" y=\"185.2\" width=\"22\" height=\"46.8\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"108\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">2</text><rect x=\"129\" y=\"174.4\" width=\"22\" height=\"57.6\" rx=\"3\" fill=\"#f87171\"/><text x=\"140\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">3</text><rect x=\"161\" y=\"160\" width=\"22\" height=\"72\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"172\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">4</text><rect x=\"193\" y=\"131.2\" width=\"22\" height=\"100.8\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"204\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">5</text><rect x=\"225\" y=\"116.8\" width=\"22\" height=\"115.2\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"236\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">6</text><rect x=\"257\" y=\"95.2\" width=\"22\" height=\"136.8\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"268\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">7</text><rect x=\"289\" y=\"62.8\" width=\"22\" height=\"169.2\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"300\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">8</text><rect x=\"321\" y=\"52\" width=\"22\" height=\"180\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"332\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">9</text><text x=\"343\" y=\"42\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"end\" font-weight=\"600\">$16.40</text><rect x=\"353\" y=\"52\" width=\"22\" height=\"180\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"364\" y=\"248\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">10</text><text x=\"375\" y=\"26\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"end\" font-weight=\"600\">$37.00</text><line x1=\"60\" y1=\"178\" x2=\"380\" y2=\"178\" stroke=\"#f59e0b\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><line x1=\"60\" y1=\"167.2\" x2=\"380\" y2=\"167.2\" stroke=\"#f87171\" stroke-width=\"2\" stroke-dasharray=\"2 3\"/><text x=\"392\" y=\"266\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Tenths of the population, poorest first</text><text x=\"16\" y=\"290\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"600\">Gini coefficient 0.39 → 0.49: more unequal</text><text x=\"16\" y=\"308\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"400\">Median still $6.00: relative poverty still 30%</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "poverty-inequality:diagram:f5a631aa",
+    "title": "Growth and Benefits: Which Poverty Falls?",
+    "description": "IAL 4.3.4 · 1c: the share of one economy's people below the absolute and relative lines, before and after growth shared evenly, and before and after a benefit to the poorest paid for by a tax on the richest.",
+    "checklist": [
+     "Amber bars: below the fixed absolute line",
+     "Red bars: below the relative line, 60% of the median",
+     "Evenly shared growth raises the median with everyone else",
+     "A benefit to the poorest leaves the median where it was"
+    ],
+    "scenarios": [
+     {
+      "label": "Growth of 25%",
+      "svg": "<svg width=\"400\" height=\"244\" viewBox=\"0 0 400 244\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"20\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Every income rises by 25%</text><text x=\"16\" y=\"63\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Absolute, before</text><rect x=\"182\" y=\"50\" width=\"80\" height=\"18\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"268\" y=\"63\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">20%</text><text x=\"16\" y=\"97\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Absolute, after</text><rect x=\"182\" y=\"84\" width=\"40\" height=\"18\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"228\" y=\"97\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">10%</text><text x=\"16\" y=\"131\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Relative, before</text><rect x=\"182\" y=\"118\" width=\"120\" height=\"18\" rx=\"3\" fill=\"#f87171\"/><text x=\"308\" y=\"131\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">30%</text><text x=\"16\" y=\"165\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Relative, after</text><rect x=\"182\" y=\"152\" width=\"120\" height=\"18\" rx=\"3\" fill=\"#f87171\"/><text x=\"308\" y=\"165\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">30%</text><text x=\"16\" y=\"200\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">Median $6.00 → $7.50; relative line $3.60 → $4.50</text><text x=\"16\" y=\"218\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Absolute poverty halves; relative is unchanged.</text></svg>"
+     },
+     {
+      "label": "A targeted benefit",
+      "svg": "<svg width=\"400\" height=\"244\" viewBox=\"0 0 400 244\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"20\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">A $0.90 benefit to the poorest three tenths</text><text x=\"16\" y=\"63\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Absolute, before</text><rect x=\"182\" y=\"50\" width=\"80\" height=\"18\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"268\" y=\"63\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">20%</text><text x=\"16\" y=\"97\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Absolute, after</text><rect x=\"182\" y=\"84\" width=\"40\" height=\"18\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"228\" y=\"97\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">10%</text><text x=\"16\" y=\"131\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Relative, before</text><rect x=\"182\" y=\"118\" width=\"120\" height=\"18\" rx=\"3\" fill=\"#f87171\"/><text x=\"308\" y=\"131\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">30%</text><text x=\"16\" y=\"165\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Relative, after</text><rect x=\"182\" y=\"152\" width=\"80\" height=\"18\" rx=\"3\" fill=\"#f87171\"/><text x=\"268\" y=\"165\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">20%</text><text x=\"16\" y=\"200\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">Paid by $2.70 a day from each of the richest tenth</text><text x=\"16\" y=\"218\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">The median stays $6.00, so both measures fall.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "poverty-inequality:diagram:74270c13",
+    "title": "Structural Change, Aid and Conflict",
+    "description": "IAL 4.3.4 · 1c: the share of one economy's people below the absolute poverty line today, and after textile mills close, after a donor-funded cash transfer, and after a civil war.",
+    "checklist": [
+     "Each bar is the share of people living below $3.00 a day",
+     "Mills close: one tenth drops from $4.00 to $2.40 in informal work",
+     "Aid: a $0.60 daily transfer to the second-poorest tenth",
+     "War: every income in the poorer half falls by 30%"
+    ],
+    "scenarios": [
+     {
+      "label": "Three shocks",
+      "svg": "<svg width=\"400\" height=\"244\" viewBox=\"0 0 400 244\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"20\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Marenda: people below $3.00 a day</text><text x=\"16\" y=\"63\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Today</text><rect x=\"182\" y=\"50\" width=\"64\" height=\"18\" rx=\"3\" fill=\"#94a3b8\"/><text x=\"252\" y=\"63\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"600\">20%</text><text x=\"16\" y=\"97\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Textile mills close</text><rect x=\"182\" y=\"84\" width=\"96\" height=\"18\" rx=\"3\" fill=\"#f87171\"/><text x=\"284\" y=\"97\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">30%</text><text x=\"16\" y=\"131\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Donor cash transfer</text><rect x=\"182\" y=\"118\" width=\"32\" height=\"18\" rx=\"3\" fill=\"#34d399\"/><text x=\"220\" y=\"131\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">10%</text><text x=\"16\" y=\"165\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Civil war</text><rect x=\"182\" y=\"152\" width=\"128\" height=\"18\" rx=\"3\" fill=\"#f87171\"/><text x=\"316\" y=\"165\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">40%</text><text x=\"16\" y=\"200\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">War doubles absolute poverty: 20% → 40%</text><text x=\"16\" y=\"218\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">The transfer halves it: 20% → 10%</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "poverty-inequality:diagram:55c3981a",
+    "title": "The Lorenz Curve and the Gini Coefficient",
+    "description": "IAL 4.3.4 · 2a and 2b: one economy's Lorenz curve for income, with the areas the Gini coefficient is calculated from, and its Lorenz curves for income and for wealth compared.",
+    "checklist": [
+     "Horizontal axis: cumulative % of population, poorest first",
+     "Vertical axis: cumulative % of income (or of wealth)",
+     "The diagonal is the line of equality",
+     "A lies between the diagonal and the curve; B lies below the curve"
+    ],
+    "scenarios": [
+     {
+      "label": "Income: areas A and B",
+      "svg": "<svg width=\"400\" height=\"384\" viewBox=\"0 0 400 384\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><path d=\"M 70 300 L 94 294.2 L 118 285.9 L 142 275.7 L 166 262.9 L 190 245 L 214 224.5 L 238 200.2 L 262 170.1 L 286 130.4 L 310 60 L 310 60 L 70 300 Z\" fill=\"#8b5cf6\" fill-opacity=\"0.18\" stroke=\"none\"/><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Marenda: the Lorenz curve for income</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Cumulative % of income</text><line x1=\"70\" y1=\"60\" x2=\"70\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"70\" y1=\"300\" x2=\"310\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"64\" y=\"184\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">50%</text><text x=\"64\" y=\"64\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">100%</text><text x=\"190\" y=\"316\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">50%</text><text x=\"310\" y=\"316\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">100%</text><text x=\"392\" y=\"334\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Cumulative % of population</text><line x1=\"70\" y1=\"300\" x2=\"310\" y2=\"60\" stroke=\"#e2e8f0\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"290.8\" y=\"62.4\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">Line of equality</text><path d=\"M 70 300 L 94 294.2 L 118 285.9 L 142 275.7 L 166 262.9 L 190 245 L 214 224.5 L 238 200.2 L 262 170.1 L 286 130.4 L 310 60\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><text x=\"214\" y=\"190.8\" font-size=\"15\" fill=\"#8b5cf6\" text-anchor=\"middle\" font-weight=\"600\">A</text><text x=\"202\" y=\"271.2\" font-size=\"15\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">B</text><text x=\"302.8\" y=\"285.6\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"end\" font-weight=\"400\">Lorenz curve</text><text x=\"16\" y=\"356\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"start\" font-weight=\"600\">Gini = A ÷ (A + B) = 0.195 ÷ 0.50 = 0.39</text><text x=\"16\" y=\"374\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Poorest half: 22.9% of income.</text></svg>"
+     },
+     {
+      "label": "Income against wealth",
+      "svg": "<svg width=\"400\" height=\"384\" viewBox=\"0 0 400 384\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Income and wealth: two Lorenz curves</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Cumulative % of income</text><line x1=\"70\" y1=\"60\" x2=\"70\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"70\" y1=\"300\" x2=\"310\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"64\" y=\"184\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">50%</text><text x=\"64\" y=\"64\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">100%</text><text x=\"190\" y=\"316\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">50%</text><text x=\"310\" y=\"316\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">100%</text><text x=\"392\" y=\"334\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Cumulative % of population</text><line x1=\"70\" y1=\"300\" x2=\"310\" y2=\"60\" stroke=\"#e2e8f0\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"290.8\" y=\"62.4\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"end\" font-weight=\"400\">Line of equality</text><path d=\"M 70 300 L 94 294.2 L 118 285.9 L 142 275.7 L 166 262.9 L 190 245 L 214 224.5 L 238 200.2 L 262 170.1 L 286 130.4 L 310 60\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><path d=\"M 70 300 L 94 300 L 118 298.8 L 142 296.4 L 166 291.6 L 190 283.2 L 214 271.2 L 238 254.4 L 262 228 L 286 180 L 310 60\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/><text x=\"302.8\" y=\"268.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"end\" font-weight=\"600\">Income</text><text x=\"302.8\" y=\"285.6\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"end\" font-weight=\"600\">Wealth</text><text x=\"16\" y=\"356\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">Gini: income 0.39, wealth 0.65</text><text x=\"16\" y=\"374\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Richest tenth: 29.3% of income, 50% of wealth.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "poverty-inequality:diagram:ac0ca03f",
+    "title": "Why Wealth Concentrates",
+    "description": "IAL 4.3.4 · 2c: an asset earning a steady return that is reinvested, against a wage rising more slowly, over the same years — the compounding behind wealth inequality within a country.",
+    "checklist": [
+     "Assets grow 6% a year when returns are reinvested",
+     "Wages grow 2% a year",
+     "Both start from the same value",
+     "The gap widens faster every year"
+    ],
+    "scenarios": [
+     {
+      "label": "Compounding",
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Assets compound faster than wages</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Value (start = 1)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Years</text><text x=\"48\" y=\"226\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">1</text><text x=\"48\" y=\"126.4\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">4</text><text x=\"148\" y=\"238\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">10</text><text x=\"242\" y=\"238\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">20</text><text x=\"336\" y=\"238\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"middle\" font-weight=\"400\">30</text><path d=\"M 54 222 L 63.4 220 L 72.8 217.9 L 82.2 215.7 L 91.6 213.3 L 101 210.8 L 110.4 208.1 L 119.8 205.3 L 129.2 202.3 L 138.6 199.1 L 148 195.7 L 157.4 192.2 L 166.8 188.4 L 176.2 184.4 L 185.6 180.1 L 195 175.6 L 204.4 170.9 L 213.8 165.8 L 223.2 160.4 L 232.6 154.8 L 242 148.7 L 251.4 142.3 L 260.8 135.6 L 270.2 128.4 L 279.6 120.8 L 289 112.7 L 298.4 104.2 L 307.8 95.1 L 317.2 85.5 L 326.6 75.3 L 336 64.5\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/><path d=\"M 54 222 L 63.4 221.3 L 72.8 220.7 L 82.2 220 L 91.6 219.3 L 101 218.5 L 110.4 217.8 L 119.8 217.1 L 129.2 216.3 L 138.6 215.5 L 148 214.7 L 157.4 213.9 L 166.8 213.1 L 176.2 212.3 L 185.6 211.4 L 195 210.5 L 204.4 209.6 L 213.8 208.7 L 223.2 207.8 L 232.6 206.8 L 242 205.9 L 251.4 204.9 L 260.8 203.9 L 270.2 202.8 L 279.6 201.8 L 289 200.7 L 298.4 199.6 L 307.8 198.5 L 317.2 197.4 L 326.6 196.2 L 336 195.1\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"2.5\"/><text x=\"340\" y=\"68.6\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">×5.74</text><text x=\"340\" y=\"199.1\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"600\">×1.81</text><text x=\"63.4\" y=\"89.2\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"400\">Assets, 6% a year</text><text x=\"223.2\" y=\"175.5\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"400\">Wages, 2% a year</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">After 30 years: assets ×5.74, wages ×1.81</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Owners of wealth pull away from earners.</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "poverty-inequality:diagram:359dedd8",
+    "title": "Inequality, Schooling and Health",
+    "description": "IAL 4.3.4 · 2d: in one economy, the share of children finishing secondary school and life expectancy at birth, for each fifth of the income distribution.",
+    "checklist": [
+     "Each bar is one fifth of households, ranked by income",
+     "Schooling and life expectancy both rise with income",
+     "Unequal schooling hands inequality on to the next generation"
+    ],
+    "scenarios": [
+     {
+      "label": "Schooling",
+      "svg": "<svg width=\"400\" height=\"260\" viewBox=\"0 0 400 260\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"20\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Finishing secondary school, by income</text><text x=\"16\" y=\"63\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Poorest fifth</text><rect x=\"182\" y=\"50\" width=\"56\" height=\"18\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"244\" y=\"63\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"600\">35%</text><text x=\"16\" y=\"97\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Second fifth</text><rect x=\"182\" y=\"84\" width=\"83.2\" height=\"18\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"271.2\" y=\"97\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"600\">52%</text><text x=\"16\" y=\"131\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Middle fifth</text><rect x=\"182\" y=\"118\" width=\"105.6\" height=\"18\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"293.6\" y=\"131\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"600\">66%</text><text x=\"16\" y=\"165\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Fourth fifth</text><rect x=\"182\" y=\"152\" width=\"124.8\" height=\"18\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"312.8\" y=\"165\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"600\">78%</text><text x=\"16\" y=\"199\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Richest fifth</text><rect x=\"182\" y=\"186\" width=\"145.6\" height=\"18\" rx=\"3\" fill=\"#34d399\"/><text x=\"333.6\" y=\"199\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">91%</text><text x=\"16\" y=\"234\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"600\">35% of the poorest fifth, 91% of the richest</text></svg>"
+     },
+     {
+      "label": "Life expectancy",
+      "svg": "<svg width=\"400\" height=\"260\" viewBox=\"0 0 400 260\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"20\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Life expectancy at birth, by income</text><text x=\"16\" y=\"63\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Poorest fifth</text><rect x=\"182\" y=\"50\" width=\"113.8\" height=\"18\" rx=\"3\" fill=\"#f87171\"/><text x=\"301.8\" y=\"63\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">64 yrs</text><text x=\"16\" y=\"97\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Second fifth</text><rect x=\"182\" y=\"84\" width=\"119.1\" height=\"18\" rx=\"3\" fill=\"#22d3ee\"/><text x=\"307.1\" y=\"97\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">67 yrs</text><text x=\"16\" y=\"131\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Middle fifth</text><rect x=\"182\" y=\"118\" width=\"124.4\" height=\"18\" rx=\"3\" fill=\"#22d3ee\"/><text x=\"312.4\" y=\"131\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">70 yrs</text><text x=\"16\" y=\"165\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Fourth fifth</text><rect x=\"182\" y=\"152\" width=\"128\" height=\"18\" rx=\"3\" fill=\"#22d3ee\"/><text x=\"316\" y=\"165\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">72 yrs</text><text x=\"16\" y=\"199\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Richest fifth</text><rect x=\"182\" y=\"186\" width=\"135.1\" height=\"18\" rx=\"3\" fill=\"#22d3ee\"/><text x=\"323.1\" y=\"199\" font-size=\"12\" fill=\"#22d3ee\" text-anchor=\"start\" font-weight=\"600\">76 yrs</text><text x=\"16\" y=\"234\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">A gap of 12 years between poorest and richest</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "poverty-inequality:diagram:cc1139f5",
+    "title": "Development, Capitalism and Inequality",
+    "description": "IAL 4.3.4 · 2e and 2f: the Kuznets hypothesis that inequality rises and then falls as income per head grows, and how much of each group's income comes from owning assets in a market economy.",
+    "checklist": [
+     "Early: most people farm on similar low incomes",
+     "Middle: some move to better-paid industry and the gap widens",
+     "Later: schooling spreads and the gap narrows",
+     "In a market economy, profit, rent and interest go mostly to those who own assets"
+    ],
+    "scenarios": [
+     {
+      "label": "The Kuznets curve",
+      "svg": "<svg width=\"400\" height=\"306\" viewBox=\"0 0 400 306\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"18\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">The Kuznets hypothesis</text><text x=\"8\" y=\"40\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Inequality (Gini)</text><line x1=\"54\" y1=\"48\" x2=\"54\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"222\" x2=\"342\" y2=\"222\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"392\" y=\"256\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">Income per head</text><path d=\"M 54 194.3 L 68.1 173.3 L 82.2 154.5 L 96.3 137.9 L 110.4 123.5 L 124.5 111.3 L 138.6 101.4 L 152.7 93.6 L 166.8 88.1 L 180.9 84.8 L 195 83.7 L 209.1 84.8 L 223.2 88.1 L 237.3 93.6 L 251.4 101.4 L 265.5 111.3 L 279.6 123.5 L 293.7 137.9 L 307.8 154.5 L 321.9 173.3 L 336 194.3\" fill=\"none\" stroke=\"#8b5cf6\" stroke-width=\"2.5\"/><text x=\"87.8\" y=\"205.4\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">Early</text><text x=\"195\" y=\"205.4\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">Middle</text><text x=\"302.2\" y=\"205.4\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"middle\" font-weight=\"400\">Later</text><text x=\"16\" y=\"278\" font-size=\"12\" fill=\"#8b5cf6\" text-anchor=\"start\" font-weight=\"600\">A hypothesis: inequality rises, then falls</text><text x=\"16\" y=\"296\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Some fast growers never saw the rise.</text></svg>"
+     },
+     {
+      "label": "Income from assets",
+      "svg": "<svg width=\"400\" height=\"210\" viewBox=\"0 0 400 210\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"20\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Share of income from owning assets</text><text x=\"16\" y=\"63\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Poorer half</text><rect x=\"182\" y=\"50\" width=\"13.3\" height=\"18\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"201.3\" y=\"63\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"600\">5%</text><text x=\"16\" y=\"97\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Middle four tenths</text><rect x=\"182\" y=\"84\" width=\"40\" height=\"18\" rx=\"3\" fill=\"#60a5fa\"/><text x=\"228\" y=\"97\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"600\">15%</text><text x=\"16\" y=\"131\" font-size=\"12\" fill=\"#e2e8f0\" text-anchor=\"start\" font-weight=\"400\">Richest tenth</text><rect x=\"182\" y=\"118\" width=\"120\" height=\"18\" rx=\"3\" fill=\"#f59e0b\"/><text x=\"308\" y=\"131\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">45%</text><text x=\"16\" y=\"166\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"600\">Profit, rent and interest go mostly to the top</text><text x=\"16\" y=\"184\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Markets pay owners as well as workers.</text></svg>"
+     }
+    ]
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "Why a richer top does not change relative poverty",
+     "steps": [
+      "Marenda's median income is $6.00 a day, so the relative line is $3.60 and 30% of people are below it.",
+      "The richest two tenths gain: their incomes rise to $16.40 and $37.00.",
+      "The Gini coefficient rises from 0.39 to 0.49: inequality has increased.",
+      "The median is still $6.00, so the relative line has not moved.",
+      "The share below it is still 30%: relative poverty is unchanged."
+     ],
+     "result": "Relative poverty compares the bottom with the middle, and inequality measures the whole spread. They can move separately, which is why a question on one should never be answered with the other."
+    },
+    {
+     "title": "Growth or benefits: which poverty falls?",
+     "steps": [
+      "Today 20% of Marenda's people are below $3.00 and 30% below the relative line.",
+      "Growth of 25% for everyone: absolute poverty falls to 10%; relative stays 30%.",
+      "Instead, a $0.90 benefit to the poorest three tenths: absolute falls to 10%, relative to 20%.",
+      "The benefit costs $5.4 million a day, raised by a $2.70 tax on each of the richest tenth."
+     ],
+     "result": "Growth shared evenly moves the bottom up and the median up together. A targeted transfer moves only the bottom, so it can cut relative poverty as well — at a cost someone must pay."
+    },
+    {
+     "title": "How a civil war deepens poverty",
+     "steps": [
+      "Fighting closes markets and stops farming, so incomes collapse.",
+      "Homes, tools, livestock and roads are destroyed.",
+      "Families flee, losing their land and work.",
+      "Clinics and schools close as spending moves to the army.",
+      "In Marenda, a 30% fall in the poorer half's incomes takes absolute poverty from 20% to 40%."
+     ],
+     "result": "Conflict hits every channel of income at once, and its effects on schooling, assets and investment last long after the fighting ends."
+    },
+    {
+     "title": "The Kuznets hypothesis, stage by stage",
+     "steps": [
+      "Most people farm on similar low incomes: inequality is low.",
+      "Industry grows and pays more; some workers move to the towns.",
+      "The gap between modern and traditional sectors widens: inequality rises.",
+      "Most workers have moved, schooling spreads and pay at the bottom rises.",
+      "Tax and benefit systems develop: inequality falls."
+     ],
+     "result": "The curve is a hypothesis about development and inequality. Economies that combined industrialisation with land reform and mass schooling did not see the rise, and inequality has risen again in many rich countries."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Is growth enough to end poverty?",
+     "content": "Growth has done more than anything else to reduce absolute poverty, but it does not reduce relative poverty unless the bottom gains faster than the middle. The pattern of growth matters more than its rate. Labour-intensive growth that raises wages at the bottom cuts poverty far more than growth from a mine or an oil field, and the tax revenue growth brings reduces poverty only if it is spent on the poor."
+    },
+    {
+     "title": "How much inequality is too much?",
+     "content": "Some inequality rewards training, effort and enterprise. Beyond some point, it wastes talent and weakens the economy. Extreme inequality shuts the poor out of credit and schooling, shortens lives and drives out skilled workers. A strong evaluation asks how large the gap is, whether people can move up, and whether the rich earned their position by producing or by owning."
+    },
+    {
+     "title": "Which measure answers the question?",
+     "content": "Absolute poverty, relative poverty, the poverty gap, wealth and the Gini coefficient measure different things, and data on one cannot answer a question about another. Name the measure before judging the trend. A country can cut absolute poverty while inequality rises, and a Gini coefficient for income says nothing about wealth."
+    }
+   ]
+  }
+ }
+}
