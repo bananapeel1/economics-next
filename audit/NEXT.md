@@ -1,5 +1,32 @@
 # Next session brief
 
+## Packet 14.1 — PASSED 26 September 2026, committed, STAGED NOT PUBLISHED (decision-making-techniques)
+
+Spec, acceptance checks and the check-in record: `audit/specs/packet-14.1.md`. Reports: `audit/runs/packet-14.1/`
+(`author.md`, `diagrams.md`, `verify-a.md`, `verify-b.md`, `verify-fix1.md`, `verify-fix2.md`).
+
+**Waiting on the founder, in this order:**
+1. Publish (the permission layer refuses it to a session). Dry run, read it, then the same with `--confirm`:
+   `node scripts/packet-14-decision-making-techniques.mjs --stage && node scripts/publish-section.mjs decision-making-techniques`
+2. After the publish: `npm run recalls` goes red until re-baselined (debt moves draft → data; this section's data may rise
+   only to its draft figure, 0); `node audit/scripts/validate-content.mjs --baseline` WITHOUT `--confirm` and read every
+   key; `node audit/scripts/dump-practice-bank.mjs` (packet 12.5: the practice dump goes stale at every publish; the
+   eight rewritten practice questions are untagged until a reader tags them by the 12.1/12.5 method).
+3. Merge PR #63 (Unit 3 tile + Business hub meta for 3.3.3), CI green.
+4. Re-walk the live section in a fresh tab after publishing (DECISIONS 15 Sep: the database is not proof).
+
+**What the next session must know:**
+- The rebuilt section has **zero reorder recalls**. The four packet 14 wrote each copied the flow printed on its own step,
+  so they were recognition, not recall. `topFix-04` is confirmed on the old evidence, which no longer exists; see DECISIONS.
+  The forecasting sequence is now practised by no recall. A later pass could restore one reorder sourced from an extras
+  chain on a step that does not print the flow.
+- Recorded DEBT, not blocking (question-first): Ch 1's scatter view labels "Positive correlation", the key of quiz[3];
+  Ch 2's quiz[14] stem is guessable ("time value of money" → "Net present value").
+- The branch lacks main's `lib/practice-checklist.js`, so a :3001 walk shows the scaffold fused onto tick box 1 and,
+  on one item, a zero-mark seventh box. Main splits correctly (checked with main's own function).
+- Business 3.3.3's paper-layout practice rebuild is ROLLOUT packet 135, not scheduled. Its eight practice items stay as
+  standalone items at legal WBS13 tariffs.
+
 ## Packet 12.5 — PASSED 26 September 2026, committed
 
 Both practice banks are tagged, per question, keyed by item id: `audit/practice-spec-items.json`, 322 of the 410

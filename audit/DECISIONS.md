@@ -3507,3 +3507,27 @@ September; packet 12.5 confirmed it read-only (PostgREST: "column section_practi
 re-took the dump, whose `sectionGrainColumns` is now `{}`. The script's pre-check was made ENFORCING after Verify A
 round 1 (a `do` block that aborts the transaction if any row holds a value); on empty columns both versions do the
 same thing, so which one was run does not matter.
+
+## 2026-09-26 — packet 14.1: a recall whose answer is printed on its own step is not a recall, even when the audit asked for it
+
+Packet 14 (14 Sep) authored four reorders because `topFix-04` asked for them on "genuine sequences": forecasting steps,
+ARR, rolling back a tree, completing a network. Each one's `correctOrder` was the flow printed in the teaching on the
+SAME step, so `recall.recoverable` scored every item at 0.75-1.00: the student reordered a list they could read by
+scrolling up. Packet 14.1 replaced them with fill-ins that apply the procedure to new figures (roll back a new tree,
+float on a new network) and classifies on new cases. Now 0 of 15 recalls are recoverable, against 33 answers before.
+
+The cost, stated rather than hidden: the section has **no reorder**, `topFix-04`'s confirmed evidence lines no longer
+exist, and the forecasting sequence is practised by no recall. Verify A judged it a regression in letter, a forced
+one, and did not reject on it. **The rule that comes out of it: an audit item asking for a recall TYPE is satisfied by
+the type only if the recall is not answerable from its own step. Where the two conflict, recoverability wins,** because
+`npm run recalls` holds a new section to zero. A reorder can come back where its sequence is taught on another step or
+in an extras chain (`reorder.source` accepts an extras chain anywhere in the section; per-subsection flows only, not
+another subsection's flow, contrary to the rule's own description string).
+
+Two smaller findings from the re-check, for whoever copies packet 14's template next:
+- A practice item under a check-in diagram is held to the same rule as the quick question in practice, even though the
+  written rule names only the quiz: the CPA check-in's Calculate asked the float and critical path of the network the
+  diagram above it labels. Rewritten on its own network. The quiz feedback shown after answering can hand over the
+  first step of the practice below it, too (Ch 5's hotel case); give the quiz its own case.
+- Main's `NotesTab.jsx` styles a notes-chapter flow result red unless `resultType === 'good'`; the body's `FlowChain`
+  handles `neutral`. A notes flow therefore takes `good` or `bad`, never `neutral`.
