@@ -138,9 +138,12 @@ Added to each item of a section's `practice[]`. Every existing field is kept: `i
 - These are the substance a top answer covers. **Levels descriptors are not authored per item**: the card
   reads them from one table keyed on subject and tariff (Econ 14: KAA 8 + E 6; Econ 20: KAA 12 + E 8; from
   `audit/raw/ial-paper-structure.json` → `economics_levels`).
-- **Open dependency:** `ial-paper-structure.json` has no `business_levels` yet. Business 8/10/12/20 (one
-  combined strand) need their descriptors from the Business SAMs, via packet 12.86 or a small read of the
-  SAM PDF. Until they exist, the card shows Business levels items with the level bands and marks only.
+- **Dependency, owned by packet 12.86 (ledger E074):** the Business 8/10/12/20 descriptors (one combined
+  strand), read from the WBS11/WBS13 SAMs and cited, in the same shape as `economics_levels`. The bands are 8:
+  1-2/3-5/6-8 · 10: 1-2/3-4/5-7/8-10 · 12: 1-2/3-4/5-8/9-12 · 20: 1-4/5-8/9-14/15-20. The order is 12.85 →
+  12.88 → 12.86; 12.86's built.md says when they exist. Until then `lib/practice-card.js` carries an interim
+  cited copy: bands plus descriptors **in our own words, never Pearson's text verbatim** (the DECISIONS rule
+  applies to copies too). **13.9 never writes `audit/raw/ial-paper-structure.json`**: 12.85 is editing it.
 
 `modelAnswer.paragraphs`
 - ⛔ 2–8 paragraphs for points-marked items, and up to 10 for levels-marked. Each paragraph has `text` (a
