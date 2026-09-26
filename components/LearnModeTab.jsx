@@ -13,6 +13,8 @@ import { buildSteps, pickSpacedRecall, clampStep, firstStepOfBlock, contentVersi
 import InlineDiagram from './learn-mode/InlineDiagram';
 import InlinePractice from './learn-mode/InlinePractice';
 import InlineQuiz from './learn-mode/InlineQuiz';
+import { signalMoment } from '@/lib/feedback/client';
+import ReportProblem from './feedback/ReportProblem';
 import CalculationItem from './quant/CalculationItem';
 import { templatesForSection, placeQuantItems, quantItem } from '@/lib/quant-pool';
 import { readAnswerLog, orderByPriority } from '@/lib/answer-log';
@@ -524,6 +526,7 @@ export default function LearnModeTab({
       recordReview(subjectId, sectionId, null);
 
       trackFunnel('section_complete', { sectionId, totalSteps });
+      signalMoment('section_complete', { sectionId, title: currentSection?.title ?? null });
       onPersistStep?.(totalSteps - 1, totalSteps, { complete: true });
     }
     setIsComplete(true);
@@ -612,6 +615,21 @@ export default function LearnModeTab({
   const blockCount = step?.blockCount || contentData.length;
   const chapterLabel = step ? `Chapter ${step.blockIndex + 1} of ${blockCount}` : '';
   const spaced = step?.type === 'checkin' ? spacedFor(safeStep) : null;
+  /* One "Report a problem" per step (founder, 25 Sep 2026). A teaching step reports its subsection;
+     a check-in or legacy step reports its chapter. The check-in's question and diagram carry their own. */
+  const stepItem = step?.type === 'teach' ? step.section : contentData?.[step?.blockIndex];
+  const stepReportTarget = step ? {
+    surface: 'learn_step',
+    sectionId,
+    itemId: stepItem?.id ?? null,
+    step: safeStep,
+    label: `Step ${safeStep + 1} of ${totalSteps}`,
+    rendered: {
+      stem: step.type === 'teach'
+        ? (step.section?.title ?? step.blockTitle ?? null)
+        : `Chapter check-in: ${step.blockTitle ?? step.block?.title ?? ''}`,
+    },
+  } : null;
 
   // What this check-in actually carries, in the order the page shows it. A chapter with no diagram
   // must not promise one (see the comment beside the sentence below).
@@ -731,6 +749,8 @@ export default function LearnModeTab({
         <div className="lm-stepper-content">
           <div className="lm-section-counter-row">
             <div className="lm-section-counter">Step {safeStep + 1} of {totalSteps}</div>
+            <div className="lm-counter-actions">
+            {stepReportTarget && <ReportProblem key={step?.key || safeStep} target={stepReportTarget} />}
             <div className="lm-more-menu-wrapper">
               <button className="lm-more-btn" onClick={() => setShowMoreMenu(v => !v)} title="More options" aria-label="More options" aria-expanded={showMoreMenu}>⋯</button>
               {showMoreMenu && (
@@ -744,6 +764,7 @@ export default function LearnModeTab({
                   </button>
                 </div>
               )}
+            </div>
             </div>
           </div>
 
@@ -789,7 +810,7 @@ export default function LearnModeTab({
                   */}
                 {checkinIntro && <p className="lm-checkin-intro">{checkinIntro}</p>}
                 <div className="lm-content">
-                  {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
+                  {currentDiagram && <InlineDiagram diagram={currentDiagram} sectionId={sectionId} />}
                   {currentQuiz && (
                     <InlineQuiz key={`quiz-${safeStep}`} question={currentQuiz}
                       subjectId={subjectId} sectionId={sectionId} stepIndex={safeStep}
@@ -843,7 +864,7 @@ export default function LearnModeTab({
                     </div>
                   ))}
                   {step.block.examTip && <div className="exam-tip"><div className="exam-tip-label">Exam Tip</div>{step.block.examTip}</div>}
-                  {currentDiagram && <InlineDiagram diagram={currentDiagram} />}
+                  {currentDiagram && <InlineDiagram diagram={currentDiagram} sectionId={sectionId} />}
                   {currentQuiz && <InlineQuiz key={`quiz-${safeStep}`} question={currentQuiz} subjectId={subjectId} sectionId={sectionId} stepIndex={safeStep} onResult={onQuizResult} />}
                   {currentQuant && (
                     <CalculationItem key={currentQuant.id} item={currentQuant}

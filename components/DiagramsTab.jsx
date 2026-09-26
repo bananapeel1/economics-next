@@ -2,8 +2,9 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import processSvg from './learn-mode/processSvg';
 import DiagramEnlarge from './learn-mode/DiagramEnlarge';
+import ReportProblem from './feedback/ReportProblem';
 
-export default function DiagramsTab({ data }) {
+export default function DiagramsTab({ data, sectionId }) {
   if (!data || !data.length) {
     return <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No diagrams available.</div>;
   }
@@ -11,13 +12,13 @@ export default function DiagramsTab({ data }) {
   return (
     <div>
       {data.map((diagram, i) => (
-        <DiagramCard key={i} diagram={diagram} />
+        <DiagramCard key={i} diagram={diagram} sectionId={sectionId} />
       ))}
     </div>
   );
 }
 
-function DiagramCard({ diagram }) {
+function DiagramCard({ diagram, sectionId }) {
   const [activeScenario, setActiveScenario] = useState(0);
   const svgRef = useRef(null);
   /* V037. This tab had no enlarge at all — no click handler, no sheet, no hint, `cursor: auto` —
@@ -84,6 +85,19 @@ function DiagramCard({ diagram }) {
               <li key={i}>{item}</li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {sectionId && (
+        <div className="rp-slot">
+          <ReportProblem target={{
+            surface: 'diagram',
+            sectionId,
+            itemId: diagram.id ?? null,
+            label: diagram.title,
+            // The scenario matters only when there is more than one to choose between.
+              rendered: { stem: diagram.title, scenario: scenarios.length > 1 ? (scenarios[activeScenario]?.label ?? null) : null },
+          }} />
         </div>
       )}
 

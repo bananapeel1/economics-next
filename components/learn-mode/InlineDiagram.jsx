@@ -3,12 +3,13 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import processSvg from './processSvg';
 import DiagramLabelDrill from './DiagramLabelDrill';
 import DiagramEnlarge from './DiagramEnlarge';
+import ReportProblem from '@/components/feedback/ReportProblem';
 
 /* The enlarge sheet moved to DiagramEnlarge.jsx (V037), so the Diagrams tab can use the same one.
    It had lived here, which is the whole reason only Learn Mode ever had a way to enlarge. */
 
 /* ── Inline Diagram Card (static — no hover tooltips) ── */
-export default function InlineDiagram({ diagram }) {
+export default function InlineDiagram({ diagram, sectionId }) {
   const [activeScenario, setActiveScenario] = useState(0);
   const [enlarged, setEnlarged] = useState(false);
   const svgRef = useRef(null);
@@ -98,6 +99,19 @@ export default function InlineDiagram({ diagram }) {
               product. The checklist says what a correct diagram contains, which is checkable. */}
             <div className="diagram-checklist-title">What a correct diagram shows</div>
             <ul>{diagram.checklist.map((item, i) => <li key={i}>{item}</li>)}</ul>
+          </div>
+        )}
+
+        {sectionId && (
+          <div className="rp-slot">
+            <ReportProblem target={{
+              surface: 'diagram',
+              sectionId,
+              itemId: diagram.id ?? null,
+              label: diagram.title,
+              // The scenario matters only when there is more than one to choose between.
+              rendered: { stem: diagram.title, scenario: scenarios.length > 1 ? (scenarios[activeScenario]?.label ?? null) : null },
+            }} />
           </div>
         )}
       </div>

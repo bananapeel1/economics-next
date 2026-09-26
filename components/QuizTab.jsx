@@ -8,6 +8,8 @@ import { PREVIEW_LIMITS } from '@/lib/preview-limits';
 import { subjectFrom } from '@/lib/ial-commands';
 import { templatesForSection, quantItem } from '@/lib/quant-pool';
 import CalculationItem from './quant/CalculationItem';
+import ReportProblem from './feedback/ReportProblem';
+import { signalMoment } from '@/lib/feedback/client';
 
 export default function QuizTab({ questions, sectionId, onAskTutor, previewMode = false, totalCount, unitCode, sectionNumber }) {
   const { user } = useAuth();
@@ -97,6 +99,7 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
 
   function handleSubmit() {
     setSubmitted(true);
+    signalMoment('quiz_complete', { sectionId });
 
     const finalScore = displayQuestions.reduce((acc, q, i) => acc + (answers[i] === q.correctIndex ? 1 : 0), 0);
 
@@ -219,6 +222,26 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
               🤖 Ask Tutor to Explain
             </button>
           )}
+          {/* Before "Submit Answers" nothing has been revealed, so the sheet withholds the categories
+              that presume the student has seen the marked answer. */}
+          <div className="rp-slot">
+            <ReportProblem target={{
+              surface: 'quiz',
+              sectionId,
+              itemId: q.id,
+              questionIndex: qIndex,
+              label: `Question ${qIndex + 1} of ${displayQuestions.length}`,
+              rendered: { stem: q.question },
+              answer: submitted
+                ? {
+                    chosen: q.options[answers[qIndex]] ?? null,
+                    marked: q.options[q.correctIndex] ?? null,
+                    correct: answers[qIndex] === q.correctIndex,
+                    revealed: true,
+                  }
+                : { chosen: q.options[answers[qIndex]] ?? null, revealed: false },
+            }} />
+          </div>
         </div>
       ))}
 

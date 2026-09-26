@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { buildQueue, computeNextReview, createDefaultProgress } from '@/lib/spaced-repetition';
 import WrittenQuestionCard from '@/components/written-practice/WrittenQuestionCard';
 import WrittenSummary from '@/components/written-practice/WrittenSummary';
+import { signalMoment } from '@/lib/feedback/client';
 
 /* ─── Subject icon & area maps ─── */
 
@@ -231,6 +232,8 @@ function MarkFilterStep({ questionData, selectedMarks, onSelectMarks, onBack, on
 
 export default function WrittenPracticeEngine({ subjects, units, sections, isLoggedIn }) {
   const [phase, setPhase] = useState('setup');        // 'setup' | 'session' | 'summary'
+  // A finished session is a moment the feedback card may answer (computers only; see lib/feedback).
+  useEffect(() => { if (phase === 'summary') signalMoment('practice_complete', {}); }, [phase]);
   const [setupStep, setSetupStep] = useState(1);      // 1 = subject, 2 = topics, 3 = marks
   const [selectedSubjectSlug, setSelectedSubjectSlug] = useState('');
   const [selectedSectionIds, setSelectedSectionIds] = useState(new Set());

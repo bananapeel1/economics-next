@@ -1,8 +1,9 @@
 "use client";
 import { useState, useEffect, useCallback } from 'react';
+import ReportProblem from '@/components/feedback/ReportProblem';
 
 /* ── Question Card — Smart Practice Engine ── */
-export default function QuestionCard({ question, sectionTitle, questionNumber, totalQuestions, onAnswer, onNext, onSkip }) {
+export default function QuestionCard({ question, sectionId, sectionTitle, questionNumber, totalQuestions, onAnswer, onNext, onSkip }) {
   // F076: confidence is collected AFTER the reveal and is what advances the card, so it is never
   // a prompt whose answer is thrown away. computeNextReview already accepts 'guessed' | 'certain'.
   const [confidence, setConfidence] = useState(null);
@@ -22,6 +23,8 @@ export default function QuestionCard({ question, sectionTitle, questionNumber, t
   useEffect(() => {
     function handleKeyDown(e) {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      // Keys pressed in an open dialog ("Report a problem") belong to it, not to this card.
+      if (e.target.closest?.('[role="dialog"]')) return;
       const optCount = question.options?.length || 4;
 
       // Number keys 1-4 or letter keys A-D to select option.
@@ -166,6 +169,27 @@ export default function QuestionCard({ question, sectionTitle, questionNumber, t
         )}
         <button className="spe-qcard-skip" onClick={onSkip}>Skip</button>
       </div>
+
+      {/* The same quiz items the Quiz tab serves, so a report from here joins the same issue. */}
+      {sectionId && (
+        <div className="rp-slot">
+          <ReportProblem target={{
+            surface: 'quiz',
+            sectionId,
+            itemId: question.id,
+            label: `Smart Practice · ${questionNumber} of ${totalQuestions}`,
+            rendered: { stem: question.question },
+            answer: phase >= 2
+              ? {
+                  chosen: question.options?.[selected] ?? null,
+                  marked: question.options?.[question.correctIndex] ?? null,
+                  correct: isCorrect,
+                  revealed: true,
+                }
+              : { chosen: question.options?.[selected] ?? null, revealed: false },
+          }} />
+        </div>
+      )}
     </div>
   );
 }

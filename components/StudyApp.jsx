@@ -23,6 +23,7 @@ import HomeScreen from './HomeScreen';
 import { SpacedReview, MixedReview, countDueReviews, getDueReviews } from './ReviewMode';
 import { BookAlt, Notes as NotesIcon, ChartHistogram, DrawerAlt, CardsBlank, Quiz as QuizIcon, Mistakes as MistakesIcon, Tutor as TutorIcon, Star, Padlock, LearnMode as LearnModeIcon } from './Icons';
 import { trackFunnel } from '@/lib/funnel';
+import { openFeedback } from '@/lib/feedback/client';
 import { countSteps, clampStep, furthestStep, contentVersion, encodePointer, parsePointer } from '@/lib/learn-steps';
 
 const HomeIcon = () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>;
@@ -1138,8 +1139,8 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       }
       case 'content': return <ContentTab key={activeSection} data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} initialPosition={stepperPositions.current[activeSection] || null} />;
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
-      case 'diagrams': return <DiagramsTab data={sectionData.diagrams} />;
-      case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} sectionNumber={currentSection?.number} unitCode={currentUnit?.code} />;
+      case 'diagrams': return <DiagramsTab data={sectionData.diagrams} sectionId={activeSection} />;
+      case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} sectionId={activeSection} sectionNumber={currentSection?.number} unitCode={currentUnit?.code} />;
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} totalCount={sectionData.counts?.flashcards} sectionId={activeSection} previewMode={isPreview} />;
       /* unitCode and sectionNumber are packet 13.2's: the Quiz tab derives its calculation
          drill from them, the same two fields PracticeQuestionsTab above already takes. */
@@ -1182,6 +1183,8 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
           learnModeCompletions={learnModeCompletions}
           onTabSelect={handleTabSelect}
           onHomeClick={() => setActiveTab('home')}
+          // Close the phone drawer first: it sits above the card (z 200 against 40).
+          onFeedback={() => { setSidebarOpen(false); openFeedback({ sectionId: activeSection }); }}
         />
 
         <div className="main-content">

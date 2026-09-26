@@ -5,6 +5,7 @@ import { AuthProvider } from '@/components/AuthProvider';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import MotionProvider from '@/components/MotionProvider';
 import AnalyticsEvents from '@/components/AnalyticsEvents';
+import FeedbackPrompt from '@/components/feedback/FeedbackPrompt';
 
 export const metadata = {
   metadataBase: new URL('https://revvylearn.com'),
@@ -152,6 +153,9 @@ export default function RootLayout({ children }) {
             <AuthProvider>
               {children}
               <AnalyticsEvents />
+              {/* Renders nothing until a finished task or "Send feedback" asks for it, so it does
+                  not change what any page prerenders. Computers only, unless the student opens it. */}
+              <FeedbackPrompt />
             </AuthProvider>
           </MotionProvider>
         </ThemeProvider>

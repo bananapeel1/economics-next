@@ -2,12 +2,12 @@
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useAuth } from './AuthProvider';
-import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer, BookAlt, BoltIcon, CardsIcon, ProgressChart, PenIcon } from './Icons';
+import { Clipboard, Glossary, Document, CardClub, PdfFile, NetworkGraph, ModelAnswer, BookAlt, BoltIcon, CardsIcon, ProgressChart, PenIcon, Mail } from './Icons';
 import { getStrengthData, nextReviewAt } from '@/lib/strength';
 
 const SidebarHomeIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>;
 
-export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit, learnModeCompletions = {}, onTabSelect, onHomeClick }) {
+export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, sections, units, activeSection, onSectionChange, isOpen, isCollapsed, onToggleCollapse, contentStepInfo, savedProgress, visitedFeatures = {}, onResourceVisit, learnModeCompletions = {}, onTabSelect, onHomeClick, onFeedback }) {
   const { user, isPremium } = useAuth();
   const [moreOpen, setMoreOpen] = useState(false);
 
@@ -255,6 +255,16 @@ export default function Sidebar({ subjects, activeSubjectId, onSubjectChange, se
           Blackjack
         </Link>
       </div>
+
+      {/* Always available, on every device, because the student opens it (components/feedback). */}
+      {onFeedback && (
+        <div className="sidebar-feedback">
+          <button type="button" className="sidebar-resource-link sidebar-content-link" onClick={onFeedback}>
+            <span className="sidebar-resource-icon"><Mail size={16} /></span>
+            Send feedback
+          </button>
+        </div>
+      )}
     </nav>
   );
 }
