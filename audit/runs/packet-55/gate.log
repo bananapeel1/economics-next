@@ -1,0 +1,77 @@
+# Packet 55 gate — global-marketing (WBS14, 4.3.3), staged only (not published)
+# Run date: 2026-09-26
+# Worktree: /Users/arongijsel/Claude APP/economics-next-remediation
+
+## GATE SEQUENCE
+
+### npm test
+EXIT CODE: 0
+(Full output in gate-test.log)
+357/357 tests pass
+
+### npm run build
+EXIT CODE: 0
+(Full output in gate-build.log)
+Build completed successfully. All routes prerendered/generated.
+
+### npm run validate
+EXIT CODE: 0
+(Full output in gate-validate.log)
+143 new DEBT (expected, all from unbuilt sections)
+0 new BLOCK for global-marketing section
+Global-marketing: 9 BLOCK (staged), 28 DEBT (staged) → 0 BLOCK, 1 DEBT (expected, quant.unit already baselined)
+
+### npm run exposure
+EXIT CODE: 0
+(Full output in gate-exposure.log)
+LIVE: chapters served 219/222, no STARVED findings
+DRAFT: chapters served 242/243, no STARVED findings
+
+### npm run recalls
+EXIT CODE: 0
+(Full output in gate-recalls.log)
+LIVE: 308 of 884 answerable (35%)
+DRAFT: 307 of 1031 answerable (30%)
+No section is worse than baseline.
+
+### node audit/scripts/check-staged-drafts.mjs global-marketing
+EXIT CODE: 0
+(Full output in gate-check-staged-drafts.log)
+global-marketing: matches
+0 drift found.
+
+## ADVISORY ONLY (recorded, not blocking)
+
+### npm run contrast
+EXIT CODE: 0
+(Full output in gate-advisory-contrast.log)
+Light mode: pass (953 rules, 12 unresolvable)
+Literals: pass
+Diagrams: pass
+
+### npm run spec-items
+EXIT CODE: 0
+(Full output in gate-advisory-spec-items.log)
+audit/raw/spec-items.json matches the specification text
+
+### npm run tariff-census
+EXIT CODE: 0
+(Full output in gate-advisory-tariff-census.log)
+audit/raw/tariff-census.json matches the specification text
+
+### npm run pin-check
+EXIT CODE: 0
+(Full output in gate-advisory-pin-check.log)
+1499 pins across 43 sections
+256 pins have no vocabulary match with their block (DEBT)
+Passed: every pin resolves
+
+## GATE RESULT
+
+GATE PASSED ✓
+All required commands exited 0.
+No BLOCK findings outside baseline.
+No new issues.
+
+Section staged to draft only (not published).
+Ready for verifier review (Verify A and Verify B).

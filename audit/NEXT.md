@@ -11561,3 +11561,134 @@ This is not run by this pass, which has no authority to publish.
 handoff. Packet 51 (poverty-inequality)'s row already records "GATE DID NOT PASS, STAGED NOT PUBLISHED" from
 its own bookkeeping pass; not re-checked live by this pass (token discipline) since it is not this packet's
 scope.
+
+## Handoff — packet 55 (global-marketing) bookkeeping pass, gate passed, STAGED NOT PUBLISHED (26 September 2026)
+
+**Bookkeeping-only pass, per the packet's own harness instructions. Authored, fixed, staged, published, restored
+and committed nothing.** Read `audit/PROTOCOL.md` in full, this packet's row in `audit/PROGRESS.md`, the Settled
+list in `audit/DECISIONS.md`, and `audit/CONTENT-GATE.md` including the recall and check-in-answer contracts,
+before writing anything. **No `## Packet 55 spec` heading exists anywhere in this file** (confirmed by direct
+grep, 0 hits) — the same gap packets 41/43-53 each hit and normalized; `audit/runs/packet-55/brief.md` and
+`built.md` supplied the scope instead, as `built.md` itself says it read PROTOCOL, the Settled list and
+CONTENT-GATE before building. **No contradiction found** among PROTOCOL, the Settled entries in DECISIONS.md and
+CONTENT-GATE's contracts. CONTENT-GATE's two "check-in answer rule" sections look contradictory read in
+isolation (one says the diagram renders first, the newer one says the question does) but the file reconciles
+this itself at point 4: question-first (PR #43) has been on `origin/main` since 26 Sep and is the rule that
+governs; the older section's substantive leak-classification (near-miss numbers, DEBT vs blocking) still holds.
+
+**Packet 55 (global-marketing, IAL Business 4.3.3, `bus_spec.txt:1424-1446`) is built and ledger-clear — 22
+confirmed, 1 wont-fix (`specGap-06`, correctly — no such leaf), 0 rejected, 0 unverified, 0 open, independently
+recounted by this pass two ways (a direct Python parse of `ledger.json` and a fresh `ledger.mjs unverified 55` →
+"gate clear") — and the packet's own gate PASSED.** STAGED to `draft` only; independently re-confirmed by this
+pass with a fresh `check-staged-drafts.mjs global-marketing` run just now (not just read from the log): 0 drift,
+the staged draft still equals the dumped bundle at bookkeeping time. `npm test` 357/357, `npm run build`,
+`validate`, `exposure`, `recalls` all exit 0 per `audit/runs/packet-55/gate.log`; this pass did not re-run
+`npm test`/`build` itself (another session was actively running `packet-54-assessing-competitiveness.mjs` in
+this same shared worktree at the time — confirmed by `ps aux`, not by reading a handoff — so a rebuild risked
+colliding with it). Old section (2 blocks/4 subsections/0 recalls/9 BLOCK/28 DEBT, taught Hofstede's Cultural
+Dimensions, which the spec does not require) rebuilt to 5 blocks/15 subsections (20 Learn steps)/15 recalls/5
+diagrams (6 views)/25 quiz (3 unpinned pre-test)/7 practice/28 flashcards/7 mistakes/3 chains+3 evaluation; 13/13
+spec leaves evidenced. **0 of 2 fix rounds used** — Verify A confirmed all 22 claimed ids on round 0, with an A/B
+mutation test planting 7 defect classes and catching all 7 (modules restored byte-for-byte after).
+
+**Verify B's own verdict is "PASS for the student flow… with no blocking defect in the packet's content" — worth
+recording precisely rather than as unqualified "clean," the same distinction packet 51's handoff drew.** All 20
+steps and 5 chapter check-ins walked at 390×844, signed out, storage cleared, real taps; question-first confirmed
+live including "Skip the question"; resume pointer never showed N > M or a blank body (4 planted cases); 0
+`<table>` elements; every SVG grid label sits inside its cell, smallest 9.2-9.4px. **One FAIL survives, the same
+carried defect class packets 47/48/50/51 each found for their own unit page — non-blocking for staging, blocking
+for publish:** `app/business/unit-4/page.js:33-39`'s 4.3.3 tile still names the OLD sub-topics ("Hofstede's
+Cultural Dimensions", "Cultural Mistakes & Brand Impact") instead of the rebuilt five chapters (Strategy and
+Approaches / Marketing Mix / Ansoff and Porter / Niche Markets / Cultural and Social Factors); `app/business/
+page.js:48` is already accurate and needs no change. Two check-in takeaways (chapters 4 and 5) state their key
+AFTER the student answers — CONTENT-GATE's rule holds this is DEBT for the later rewrite pass, not a publish
+blocker, and no new ledger id is needed for either (unlike poverty-inequality's packet-51 defects, these are an
+explicitly-deferred category the gate already accounts for, not an untracked scoring bug).
+
+**Boundary against packet 47 (`global-markets-expansion`, published today, commit `d603cbf`, 09:34 UTC)
+independently re-checked by this pass on the actual PUBLISHED bundle**
+(`audit/snapshots/packet-47-bundle__business__global-markets-expansion.json`), not the stale `audit/content-
+sections/business__global-markets-expansion.json` copy (last written 12 Sep, pre-rebuild — a first grep of that
+file by this pass wrongly showed "Apply Porter's generic strategies" still present; re-checking against the
+actual published snapshot showed that phrase is gone and never shipped). The published packet 47 content carries
+8 "Porter" hits, all "Porter's five forces" (a separately co-owned topic, `SPEC-OWNERSHIP.md` row 23, resolved 14
+Sep) and exactly 1 "Ansoff" hit, the one-line pointer `SPEC-OWNERSHIP.md` row 29 describes. No glocalisation,
+niche, 4Ps or Ansoff/Porter Strategic-Matrix material in packet 47. No overlap either direction; the boundary
+holds, and this pass added nothing to and deleted nothing from either section.
+
+**A documentation staleness this pass found and could not fix (not one of the two files this pass may touch):**
+`audit/SPEC-OWNERSHIP.md` row 29 still reads "**Done in the draft, 26 Sep (packet 47), not yet published**" —
+packet 47 published at 09:34 UTC today (commit `d603cbf`), before packet 55's own build session started
+(`audit/runs/packet-55/` timestamps begin ~13:02). The row's substance (the boundary itself) is correct and
+independently confirmed above; only the "not yet published" clause is now stale. The next session touching
+`SPEC-OWNERSHIP.md` should fix that one clause.
+
+**Not committed; not published; not restored** (this pass has no authority to do any of the three and did none).
+`audit/ledger.json` untouched by this pass. `audit/runs/packet-55/*` and the `scripts/_packet55-*.mjs` /
+`scripts/packet-55-global-marketing.mjs` files are staged by the build/verify session, not this pass.
+
+**What the next session on packet 55 needs, in order:**
+1. Fix `app/business/unit-4/page.js:33-39`'s 4.3.3 tile copy to name the five rebuilt chapters instead of
+   Hofstede/cultural mistakes, before or with publish — same fix class as packets 47/48/50/51's unit pages.
+2. Fix the stale "not yet published" clause in `audit/SPEC-OWNERSHIP.md` row 29 (packet 47 is live).
+3. Rule 3 field-compatibility check against a current `origin/main` checkout has not been demonstrated fresh by
+   any pass for this packet — required before publish, not before staging (same gap as packets 40-53).
+4. Publish command, for the founder, not run by any pass so far:
+   ```
+   node scripts/packet-55-global-marketing.mjs --stage && node scripts/publish-section.mjs global-marketing --confirm
+   ```
+   (the `--stage` re-run is precautionary in case the Unit 4 tile fix touches anything staged; re-run
+   `check-staged-drafts` after.)
+
+**Next unclaimed packet — checked live by this pass via `ps aux`, not by reading a handoff:** packet 54
+(assessing-competitiveness) is being actively worked by another session right now (`node scripts/packet-54-
+assessing-competitiveness.mjs` running at the time of this pass) — do not claim it. Packet 56
+(global-industries-mncs) is `not started` in `PROGRESS.md` and not observed running; verify it is still free with
+a fresh check before starting.
+
+**Escalate to the founder:** nothing to publish yet. Packet 55's gate passed and its ledger is clear, but rule 6
+means this pass cannot run the publish command above. One pre-publish fix is needed first (the Unit 4 tile copy,
+item 1 above); it is cosmetic, not a content defect, and does not touch the staged bundle. Once that lands, the
+publish command above is ready. Also worth a look: the `SPEC-OWNERSHIP.md` staleness (item 2) is small but is
+exactly the kind of stale cross-reference that has cost this programme time before when a later packet trusted it
+without checking the underlying commit.
+
+
+## Handoff — packet 55 closed (brain)
+
+Run `wf_9a30df0c-bb5`: PASSED, 0 fix rounds, 6 agents, ~1.33M worker tokens, ~81 min. Ledger read fresh:
+23 items, 22 confirmed, 1 wont-fix (`specGap-06`, no such leaf: `bus_spec.txt:1424-1446` has no (g) and no
+social media), 0 open; `ledger.mjs unverified 55` gate clear.
+
+**Three things done after the run, by the brain, none of them a ledger id:**
+- **Unit 4 tile (the Handoff's one pre-publish fix).** `app/business/unit-4/page.js` 4.3.3 now lists the five
+  rebuilt chapters in the spec's words; Hofstede and "Cultural Mistakes & Brand Impact" are gone. Rendered on
+  :3001, read back with curl (0 "Hofstede"). `app/business/page.js:48` ("Glocalisation, cultural
+  differences") is accurate and was left alone.
+- **Verify B's two cosmetic wordings.** The three-approach fill-in read "a ethnocentric approach"; all three
+  lines now end "the ___ approach". The chapter 4 paragraph opening "It is the second point…" (no numbered
+  points precede it) now opens "Shared values and interests are what create global niches." Re-staged with
+  `--stage --dump` (runner exit 0), `check-staged-drafts global-marketing` 0 drift, both new strings read back
+  from `/api/sections/global-marketing?draft=1` and absent from the non-draft payload. No verifier re-ran on
+  these two strings.
+- **Mistakes-shape A/B** (asked by the board): the 7 shipped cards give 0 gaps from `mistakeGaps()`; an empty
+  `mistake`, and cards whose fields are renamed to names the reader does not know, each fail.
+
+**Check-in answer rule, per check-in (question-first, judged as production renders it):**
+1 clean · 2 clean · 3 clean · 4 leaks (takeaway, after answering: DEBT) · 5 leaks (takeaway, after answering:
+DEBT). Nothing visible before answering states a key at any of the five. Verify B also noted the step-20
+quiz is guessable from its stem wording; that is the later guessability pass, not this rule.
+
+**Waiting on the founder:** the publish, which also retires the live `sr-only` SSR block that still carries
+the old Hofstede section:
+
+```
+node scripts/packet-55-global-marketing.mjs --stage && node scripts/publish-section.mjs global-marketing --confirm
+```
+
+Run it from `/Users/arongijsel/Claude APP/economics-next-remediation`. The Unit 4 tile goes live only with
+the next branch-to-main merge, so until then the unit page lists the old sub-topics over the new section.
+
+**Could not verify:** the Pro surfaces (full quiz bank, the seven mistakes as rendered, the practice mark
+schemes); a verifier reading of the two re-worded strings in place; and Verify B's end-of-section score and
+skipped-recall readings, because packets 48 and 50-54 shared :3001 and its localStorage during the walk.
