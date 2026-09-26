@@ -6545,10 +6545,10 @@
    "rank": 0,
    "text": "Add the missing spec blocks: (a) 'Reading the financial statements' — income statement and statement of financial position, what each stakeholder looks for; (b) 'Human resources measures' — labour productivity, labour turnover, retention, absenteeism formulas with a worked calculation, plus the four HR strategies (financial rewards, ESOP, consultation, empowerment). Move quiz indices 6 and 7 to that block.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "_packet54-util.mjs:145 shop pay $2,000/month: 200x2,000x12=$4.8m fits inside $10m opex; statements + HR measures + 4 strategies blocks served in draft; no $2.4m/14,000 left (curl draft, 0 hits); see verify-a.md round 1",
    "note": null
   },
   {
@@ -6558,10 +6558,10 @@
    "rank": 1,
    "text": "Replace all five practice questions with on-section IAL-style items: 'Calculate the ROCE for X' (4), 'Analyse the impact on X of financing the expansion with a bank loan' (6, gearing), 'Assess the usefulness of ratio analysis to a potential investor in X' (10), 'Evaluate whether X should introduce employee share ownership to reduce labour turnover' (20), each with a levels-based mark scheme.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "_packet54-assessment.mjs:172 Source A now consistent (wage bill $4.8m < $10m opex); :204 P6 L3/strong answer use pay gap $480,000 = 60x$8,000 turnover cost, recomputed by hand; 7 levels-marked on-section items served in draft",
    "note": null
   },
   {
@@ -6571,10 +6571,10 @@
    "rank": 2,
    "text": "Move the VRIO/core-competencies block out (to 3.1.2 distinctive capabilities, or label it 'extension') and delete the claim that examiners reward VRIO; if it stays, add MCQs for it so the inline quiz can match the block.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: VRIO/core-competencies block absent (0 hits VRIO, Examiners, tangible, competitive advantage); draft via curl ?draft=1 matches",
    "note": "SPEC NUMBERING: this item cites 3.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6584,10 +6584,10 @@
    "rank": 3,
    "text": "Fix the factual and consistency errors: Tesla ROCE peaked ~25% in 2022 not 2023 (move to profitability; give gearing its own example such as Evergrande); flashcard net profit margin formula; patents tangible vs intangible in notes; qualify 'current ratio below 1.0' by industry.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: Tesla 0 hits; gearing-ratio realExample KL developer; flashcard 5 profit for the year / revenue; patents 0 hits; current ratio qualified by business type (liquidity para 4, mistake 2)",
    "note": null
   },
   {
@@ -6597,10 +6597,10 @@
    "rank": 4,
    "text": "Add recall widgets — fillin on formulas (ROCE, gearing, capital employed, labour turnover) and one reorder with a genuine causal chain (borrow → gearing rises → fixed interest → downturn cuts profit → insolvency risk) — and set quizIndices/practiceIndices on each block so inline items match what was just taught.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "scripts/_packet54-content.mjs:289 'In the year after those accounts' anchors the downturn to item 3 (:288), so loan>interest>downturn>gearing>cover is no longer defensible; prompt :283 pins first and last, :287-289 chain the middle; body :276 and extras chain _packet54-assessment.mjs:305 narrate the same order; served ?draft=1 equals snapshot (r3/served-vs-snapshot.log); grader r3/reorder-grade.log key 5/5",
    "note": null
   },
   {
@@ -6609,10 +6609,10 @@
    "kind": "accuracy",
    "text": "Financial Ratios > liquidity-gearing-ratios > realExample: Claims Tesla's ROCE went 'from negative figures in 2019 to over 25% by 2023'. Tesla's ROCE peaked around 25% in FY2022 (operating income ~$13.7bn on ~$55bn capital employed); in FY2023 operating income fell to ~$8.9bn on ~$77bn capital employed, roughly 11-12%, after aggressive price cuts. The 2023 date makes the claim wrong, and the example is also about ROCE (profitability) but sits in the liquidity/gearing section, which has no liquidity or gearing example at all.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: Tesla claim gone; liquidity has Lagos supermarket example, gearing-ratio has KL property developer example",
    "note": null
   },
   {
@@ -6621,10 +6621,10 @@
    "kind": "accuracy",
    "text": "Core Competencies > vrio-framework > examMatters: 'Examiners reward structured VRIO analysis' — VRIO is not in the Edexcel IAL Business specification or mark schemes (the spec language in 3.1.2 is 'achieving competitive advantage through distinctive capabilities'). A student gets analysis credit for any coherent chain, but telling them examiners specifically reward VRIO misrepresents how IAL papers mark.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: no vrio-framework field and no examiner-reward claim anywhere (0 hits VRIO/Examiners)",
    "note": "SPEC NUMBERING: this item cites 3.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6633,10 +6633,10 @@
    "kind": "accuracy",
    "text": "flashcards[1] (cross-check): 'Net profit margin = (Operating profit ÷ Revenue) × 100%' is wrong. Edexcel defines net profit margin as net profit (profit for the year, after interest and tax) ÷ revenue; operating profit ÷ revenue is the operating profit margin, which flashcards/content already define separately.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: flashcard 5 = profit for the year / revenue x100, matching bus_spec.txt:2418-2420; mistake 1 names operating margin as 2.3.3 (bus_spec.txt:931-933)",
    "note": null
   },
   {
@@ -6645,10 +6645,10 @@
    "kind": "quiz",
    "text": "q6: Tests spec content (3.5.3 HR measures) that the Learn blocks never teach — labour turnover appears only in flashcards. Because the PreTest draws 3 random MCQs from this bank, a student can be pre-tested on material the section will then never cover, and the post-test cannot show learning gain on it.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: turnover Q17/Q21 pinned to block 3 (quizIndices 17-22), whose labour-turnover-and-retention subsection teaches the formula with a worked example",
    "note": "SPEC NUMBERING: this item cites 3.5.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6657,10 +6657,10 @@
    "kind": "quiz",
    "text": "q7: Same problem: empowerment/HR strategies are spec content (3.5.3) absent from content[]. Distractor 'Zero-hours contracts' is not an HR strategy in the spec list (financial rewards, ESOP, consultation, empowerment) and reads as odd; a better distractor is 'Consultation'.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: empowerment Q25 pinned to block 4, taught in empowerment-strategies; distractor Consultation, zero-hours 0 hits",
    "note": "SPEC NUMBERING: this item cites 3.5.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6669,10 +6669,10 @@
    "kind": "practice",
    "text": "p0: 'Explain two of Porter's Five Forces...' (4 marks) — Five Forces belongs to IAL 3.1.4 (impact of external influences), not assessing competitiveness. IAL 4-mark items are 'Explain one...'; two forces for 4 marks is not the paper's format. Guidance is a content list, not a mark scheme.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: Five Forces 0 hits; P0 is Explain one reason (4) with a point-marked scheme",
    "note": "SPEC NUMBERING: this item cites 3.1.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6681,10 +6681,10 @@
    "kind": "practice",
    "text": "p1: 'Analyse how SwiftDeliver could use Bowman's Strategic Clock...' (6 marks) — Bowman's Strategic Clock is not in the Edexcel IAL Business spec at all (Edexcel uses Porter's generic strategies / strategic matrix). 6-mark Analyse format is right, but the framework is off-spec and the topic is off-section.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: Bowman 0 hits; P2 is an 8-mark Discuss on the case's acid test",
    "note": null
   },
   {
@@ -6693,10 +6693,10 @@
    "kind": "practice",
    "text": "p4: 'Evaluate the most important factors in maintaining a sustainable competitive advantage in a rapidly changing industry.' (20 marks) — the question is generic and does not reference the smartphone context it is given; IAL 20-markers are anchored ('Evaluate whether [the manufacturer] should...'). Guidance is a thorough content outline but has no levels-based mark scheme (knowledge/application/analysis/evaluation) and no indicative judgement. Across all five questions there is zero practice on ratio calculation/interpretation, financial statements or HR measures — none of the section's actual spec content is examined in writing.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: smartphone item gone; P5/P6 Evaluate 20 anchored on Orla with levels and an indicative judgement; P1-P4 and P6 examine ratios, statements and HR (P6 pay-gap defect filed under topFix-02)",
    "note": null
   },
   {
@@ -6705,10 +6705,10 @@
    "kind": "structure",
    "text": "Spec mismatch is structural, not cosmetic: content[] = Block 1 'Financial Ratios' (mostly Unit 2 recap plus ROCE/gearing) + Block 2 'Core Competencies' (VRIO, not Edexcel). The IAL 3.5 content — interpretation of the income statement and statement of financial position, stakeholder interest, HR measures and HR strategies — has no block at all.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: 5 blocks map to 3.3.5 1a-1b, 2a, 2b-2c, 3a-3b, 3c; no Core Competencies block",
    "note": null
   },
   {
@@ -6717,10 +6717,10 @@
    "kind": "structure",
    "text": "Quiz and practice banks are inverted relative to the content: all 10 MCQs are ratios/HR (0 on Block 2's VRIO/competencies), while all 5 practice questions are strategy frameworks (0 on Block 1's ratios). Whatever the InlineQuiz picks for the Core Competencies step cannot match what was just taught.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: all 28 quiz and 7 practice on-content, pinned per block (block0 Q3-6/P0 ... block4 Q23-27/P6)",
    "note": null
   },
   {
@@ -6729,10 +6729,10 @@
    "kind": "structure",
    "text": "Blocks carry no quizIndices, practiceIndices or diagramRef keys, so inline quiz/practice selection for each step is unanchored to the block content.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: every content block carries quizIndices, practiceIndices and diagramId (resolved by lib/checkin-placement.js:45-52)",
    "note": null
   },
   {
@@ -6741,10 +6741,10 @@
    "kind": "structure",
    "text": "Zero recall widgets (0 reorder, 0 fillin across 4 subsections): the only retrieval practice between pre-test and post-test is the single inline MCQ per block. Formula-heavy content is the ideal case for fillin recalls (e.g. ROCE = operating profit ÷ ___ × 100) and none exist.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: 18 recalls on 18 subsections (2 reorder, 7 fillin, 2 match, 7 classify); offline validateSection 0 BLOCK 0 DEBT",
    "note": null
   },
   {
@@ -6753,10 +6753,10 @@
    "kind": "structure",
    "text": "Only 2 steps in total; each step packs two dense sections (7 paragraphs/flows) plus inline quiz, practice, Explain-It-Back and takeaway. Heavy per-step load with no ramp: step 1 is formulas, step 2 is abstract strategy theory, with no bridge explaining why ratios 'assess competitiveness' (notes[0] has the link — 'higher ROCE than rivals attracts investment' — but the Learn content does not).",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: 5 blocks / 18 subsection steps; interpreting-roce-and-margins para 1 bridges ratios to competitiveness; labour-productivity para 4 ties it to cost per unit",
    "note": null
   },
   {
@@ -6765,10 +6765,10 @@
    "kind": "structure",
    "text": "0 diagrams. Not fatal for ratios, but a VRIO decision funnel or a 'gearing amplifies returns/losses' bar comparison would replace two of the text flows.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: 5 diagrams incl. 2e9904d3 Gearing Magnifies Gains and Losses; 21.3c/38c/3.6c/-2c recompute exactly from $20m CE at 8%",
    "note": null
   },
   {
@@ -6777,10 +6777,10 @@
    "kind": "structure",
    "text": "The liquidity-gearing section's realExample is about ROCE; its examMatters is about limitations of ratios in general. The section therefore has no gearing/liquidity example and no gearing-specific exam advice (e.g. link gearing to interest-rate rises or to financing a takeover — classic IAL Unit 3 evaluation).",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: gearing-ratio has its own gearing realExample and gearing-specific examMatters (interest rates, sales stability); ROCE has its own subsection",
    "note": null
   },
   {
@@ -6789,11 +6789,11 @@
    "kind": "structure",
    "text": "Numbering '3.3.5' does not match the IAL spec, where assessing competitiveness is 3.5 (3.5.1-3.5.3); 3.3 is decision-making techniques. Unsure whether the app uses its own outline, but students cross-referencing the spec will be confused.",
    "packet": 54,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.5.1, 3.5.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "Inverted claim, refused on the document: bus_spec.txt:1218 reads '3.3.5 Assessing competitiveness' (between 3.3.4 at :1184 and 3.3.6 at :1255); '3.5.1'-'3.5.3' occur nowhere in bus_spec.txt (0 hits). 3.3.5 is the correct IAL number; renumbering to 3.5 would be the regression. The packet-54 runner asserts the headings by line, asserts the 3.5.x numbers absent, and asserts contextFor = 3.3.5 / WBS13 (scripts/packet-54-assessing-competitiveness.mjs §5, §12). Packet 54, 26 Sep 2026."
   },
   {
    "id": "C-assessing-competitiveness-structure-09",
@@ -6801,10 +6801,10 @@
    "kind": "structure",
    "text": "Takeaways match their blocks, but Block 1 takeaway[0] repeats the 'ROCE is the most important for investors' overclaim and Block 2 takeaway[2] 'always temporary' is over-absolute.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: no 'most important' anywhere; block takeaways carry no absolute claims; the only 'always' is net assets = total equity and misconceptions naming 'always' as the error",
    "note": null
   },
   {
@@ -6813,10 +6813,10 @@
    "kind": "structure",
    "text": "Misconceptions are genuine (ratio-in-isolation, high gearing always bad, resources = advantage, advantage is permanent) — not filler.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: observation, not a defect; the genuine on-spec misconceptions survive (mistake 0 ratio in isolation, mistake 3 + gearing misconception high gearing always bad); the VRIO ones left with the off-spec block",
    "note": null
   },
   {
@@ -6825,10 +6825,10 @@
    "kind": "specGap",
    "text": "3.5.1 Interpretation of financial statements: structure and reading of the statement of comprehensive income (income statement) and statement of financial position (balance sheet) — not taught.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: subsections statement-of-comprehensive-income and statement-of-financial-position teach structure and reading with a worked case",
    "note": "SPEC NUMBERING: this item cites 3.5.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6837,10 +6837,10 @@
    "kind": "specGap",
    "text": "3.5.1 Stakeholder interest in financial statements (what shareholders, lenders, suppliers, employees, managers, government look for) — not taught.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: stakeholder-interest-in-the-statements covers shareholders, lenders, suppliers, employees, managers, government, each tied to a line",
    "note": "SPEC NUMBERING: this item cites 3.5.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6849,10 +6849,10 @@
    "kind": "specGap",
    "text": "3.5.2 Value and limitations of ratio analysis as a developed teaching point — only a one-line examMatters; no body coverage of window dressing, accounting policy differences, backward-looking data, qualitative factors.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: limitations-of-ratio-analysis body covers historical data, window dressing, accounting choices, different businesses, qualitative factors, inflation",
    "note": "SPEC NUMBERING: this item cites 3.5.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6861,10 +6861,10 @@
    "kind": "specGap",
    "text": "3.5.3 Calculation and interpretation of labour productivity, labour turnover and retention, absenteeism — not taught in content (formulas appear only in flashcards/quiz).",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: labour-productivity, labour-turnover-and-retention, absenteeism, limitations-of-these-calculations each with formula and worked calculation (recomputed)",
    "note": "SPEC NUMBERING: this item cites 3.5.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6873,10 +6873,10 @@
    "kind": "specGap",
    "text": "3.5.3 HR strategies to increase productivity and retention and reduce turnover and absenteeism: financial rewards, employee share ownership, consultation, empowerment — not taught in content.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "_packet54-content.mjs:451 financial rewards (+ESOP, consultation, empowerment subsections) taught; pay gap $480k vs turnover $480k is scale-invariant (1.2 months' pay per head each), diagram 5c268d90 bars 240/250/240 one scale (_packet54-diagrams.mjs:279-285)",
    "note": "SPEC NUMBERING: this item cites 3.5.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -6885,10 +6885,10 @@
    "kind": "specGap",
    "text": "Comparison of ROCE with the interest rate on borrowing / with alternative investments — tested in quiz Q10 but not taught in body.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: interpreting-roce-and-margins para 2 teaches ROCE 20% vs 8% borrowing and the reverse case; tested by Q13",
    "note": null
   },
   {
@@ -6897,10 +6897,10 @@
    "kind": "specGap",
    "text": "Out-of-spec content occupying the section: VRIO framework and 'tangible vs intangible competencies' (closest spec hook is 3.1.2 'achieving competitive advantage through distinctive capabilities', a different section). Unsure whether the app deliberately extends beyond spec here.",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "round 2: served ?draft=1 (107,045 B, content/notes/diagrams/practice equal to audit/snapshots/packet-54-bundle) 0 hits VRIO/core competenc/tangible/intangible/distinctive capabilit/Porter/benchmark; served /business/unit-3 card (app/business/unit-3/page.js:129) and /business meta (app/business/page.js:41) 0 hits; live section page still carries old Porter/benchmark text until publish",
    "note": "SPEC NUMBERING: this item cites 3.1.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.5. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -16306,10 +16306,10 @@
    "kind": "specThin",
    "text": "3.3.5 1a Statement of comprehensive income (profit and loss account): key information — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
    "packet": 54,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-54",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json: statement-of-comprehensive-income defines each line (revenue, cost of sales, other operating expenses, interest) with the cascade 40-24-10-0.8=5.2",
    "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
   },
   {

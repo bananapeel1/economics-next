@@ -1,0 +1,55 @@
+=== A: pre-fix bundle (sources as verified in round 0)
+Source A as written: 200 staff × 14000/month × 12 = 33600000 against opex 10000000 (336%); at rivals' pay 36000000
+Source A as written: gap 200 × (15000 − 14000) × 12 = 2400000; turnover 60 × 8000 = 480000; ratio 5.00
+FAIL the wage bill does not fit inside other operating expenses
+READ section_content[4].sections[0].body[2].text: …rivals pay $15,000. Closing the gap for 200 staff would cost about $2.4m a year, far more than the $480,000 that turnover now costs, so a smaller, targeted reward may be better val…
+READ section_notes[4].blocks[1].items[0].text: …Pay gap: $14,000 against $15,000 a month; closing it costs $2.4m a year against $480,000 of turnover.…
+READ section_practice[6].guidance: …urnover it targets; closing the pay gap would cost $2.4m a year, while consulting staff on rotas or letting shop teams set them costs little. Level 4: evaluation — judges whether t…
+READ section_diagrams[4].checklist[2]: …Closing the pay gap costs about five times as much as the turnover…
+
+-- every string comparing a cost with turnover --
+section_content[4].sections[0].body[2].text: 4m a year, far more than the $480,000 that turnover now costs, so a smaller, targeted reward may be better value.
+section_content[4].sections[0].examMatters: A reward that costs more than the turnover it prevents needs another justification, such as better service.
+section_content[4].sections[1].body[2].text: It would pay for itself only if it cut turnover sharply.
+section_quiz[24].explanation: A pay rise goes to everyone, including the many who were never going to leave, so it can cost far more than the turnover it prevents.
+section_practice[6].guidance: Level 3: analysis of both sides — vesting gives staff a reason to stay and ownership may build commitment; but leavers name pay and last-minute rota changes, which the scheme does not touch, shop staff on $14,000 a month may value cash now over shares later, and the scheme costs about as much as the turnover it targets; closing the pay gap would cost $2.
+section_practice[6].guidance: A strong answer, in outline: the scheme would reward staying, but it costs as much as the turnover and misses the two reasons leavers give; start with consultation or empowerment over rotas and a targeted loyalty payment, and use the share scheme later to keep experienced staff, unless the leavers turn out to be the longer-serving staff it is designed to hold.
+section_diagrams[4].checklist[1]: The share scheme costs about as much as the turnover it targets
+section_diagrams[4].checklist[2]: Closing the pay gap costs about five times as much as the turnover
+FAIL section_content[4].sections[0].body[2].text still says "$14,000"
+FAIL section_notes[4].blocks[1].items[0].text still says "$14,000"
+FAIL section_practice[0].question still says "$14,000"
+FAIL section_practice[1].question still says "$14,000"
+FAIL section_practice[2].question still says "$14,000"
+FAIL section_practice[3].question still says "$14,000"
+FAIL section_practice[4].question still says "$14,000"
+FAIL section_practice[5].question still says "$14,000"
+FAIL section_practice[6].question still says "$14,000"
+FAIL section_practice[6].guidance still says "$14,000"
+FAIL section_diagrams[4].checklist[2] still says "five times"
+FAIL section_diagrams[4].scenarios[0].svg still says "$2.4m"
+
+1092 strings read from 8 draft tables; 13 FAIL
+exit 1
+=== B: staged draft, read from the database
+Source A as written: 200 staff × 2000/month × 12 = 4800000 against opex 10000000 (48%); at rivals' pay 5280000
+Source A as written: gap 200 × (2200 − 2000) × 12 = 480000; turnover 60 × 8000 = 480000; ratio 1.00
+ok   section_content[4].sections[0].body[2].text: … rivals pay $2,200. Closing the gap for 200 staff would cost about $480,000 a year, the same as the $480,000 that turnover now costs. No pay rise keeps every leaver, so fewer leave…
+ok   section_notes[4].blocks[1].items[0].text: …Pay gap: $2,000 against $2,200 a month; closing it costs $480,000 a year, the same as the $480,000 turnover costs, so fewer leavers alone cannot repay it.…
+ok   section_practice[6].guidance: …would not repay it; closing the pay gap would cost about the same, $480,000 a year, and does answer the reason most leavers give, while consulting staff on rotas or letting shop te…
+
+-- every string comparing a cost with turnover --
+section_content[4].sections[0].body[2].text: Closing the gap for 200 staff would cost about $480,000 a year, the same as the $480,000 that turnover now costs.
+section_content[4].sections[0].body[2].text: No pay rise keeps every leaver, so fewer leavers alone cannot repay it.
+section_content[4].sections[0].examMatters: A reward that costs more than the turnover it prevents needs another justification, such as better service.
+section_content[4].sections[1].body[2].text: Even if no one left, that saving would not cover it, so the scheme must also be worth something the turnover figure leaves out, such as keeping the most experienced staff.
+section_notes[4].blocks[1].items[0].text: Pay gap: $2,000 against $2,200 a month; closing it costs $480,000 a year, the same as the $480,000 turnover costs, so fewer leavers alone cannot repay it.
+section_quiz[24].explanation: A pay rise goes to everyone, including the many who were never going to leave, so it can cost far more than the turnover it prevents.
+section_practice[6].guidance: Level 3: analysis of both sides — vesting gives staff a reason to stay and ownership may build commitment; but leavers name pay and last-minute rota changes, which the scheme does not touch, shop staff on $2,000 a month may value cash now over shares later, and the scheme costs about as much as the turnover it targets, so even keeping every leaver would not repay it; closing the pay gap would cost about the same, $480,000 a year, and does answer the reason most leavers give, while consulting staff on rotas or letting shop teams set them costs little.
+section_practice[6].guidance: A strong answer, in outline: the scheme would reward staying, but it costs as much as the turnover and misses the two reasons leavers give; matching rivals' pay costs about the same and at least answers pay; start with consultation or empowerment over rotas and a targeted loyalty payment, and use the share scheme later to keep experienced staff, unless the leavers turn out to be the longer-serving staff it is designed to hold.
+section_diagrams[4].checklist[1]: The share scheme and matching rivals' pay each cost about as much as the turnover
+section_diagrams[4].checklist[2]: So fewer leavers alone cannot repay either; a say over rotas costs little
+section_extras.evaluation[2].content: At Orla, leavers named pay and rotas; matching rivals' pay would cost about as much as the turnover itself, so a targeted reward and a say over rotas answer the causes more cheaply, and more directly than shares.
+
+1092 strings read from 8 draft tables; no failure
+exit 0

@@ -1,0 +1,12 @@
+reorders with a loan first: 1
+tables.content.2.sections.1.recall
+ prompt: Put these stages in the order they happen, from signing the loan to the danger it creates.
+  1. The business signs a large loan to build a new factory
+  2. From month one, a fixed interest charge must be paid
+  3. Year-end accounts reveal a higher gearing ratio
+  4. In the year that follows, a downturn cuts its operating profit
+  5. Profit may no longer cover the interest due
+ loan -> interest -> gearing: {"results":[true,true,true,true,true],"correct":5,"oneOff":0,"allCorrect":true}
+ loan -> gearing -> interest: {"results":[true,false,false,true,true],"correct":3,"oneOff":2,"allCorrect":false}
+body: But a second loan-financed bakery would first add interest owed to the bank every month, even in a year when sales fell; then, at the year end, the statement of financial position would show gearing pushed higher.
+extras chain: From a large loan to financial risk","steps":["The business signs a large loan to build a new factory.","From the first month, interest is owed on the loan as a fixed cost, whatever sales do.","At the year end, the statement of financial position shows higher gearing, as more of capital employed is borrowed.","In the year that follows, a downturn cuts operating profit, but the interest does not fall.","Profit may no longer cover the interest due, and the firm is at risk."],"result":"Gearing is a measure of this risk: the higher it is, the less a fall in profit the business can absorb."},{"title":"How a consultation runs","steps":["Managers set out a proposed change, such as a new shift rota.

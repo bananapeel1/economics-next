@@ -1,0 +1,46 @@
+### A: pre-fix bundle (/private/tmp/claude-503/-Users-arongijsel-Claude-APP/cadbc5df-f59d-4f4e-993e-44ea4eeaeee2/scratchpad/before/packet-54-bundle…json)
+correctOrder: ["The business signs a large loan to build a new factory","From month one, a fixed interest charge must be paid","Year-end accounts reveal a higher gearing ratio","In the year that follows, a downturn cuts its operating profit","Profit may no longer cover the interest due"]
+grade key                      {"results":[true,true,true,true,true],"correct":5,"oneOff":0,"allCorrect":true}
+grade old-key                  {"results":[true,false,false,true,true],"correct":3,"oneOff":2,"allCorrect":false}
+grade downturn-in-first-year   {"results":[true,true,false,false,true],"correct":3,"oneOff":2,"allCorrect":false}
+start first [2,3,1,4,0] spaced [3,2,0,4,1]
+FAIL bare relative anchor at $.tables.content[2].sections[1].recall.correctOrder[3]: "In the year that follows, a downturn cuts its operating profit"
+FAIL bare relative anchor at $.tables.content[2].sections[1].recall.why[3]: "Sales fall in the following year, but the interest does not fall with them."
+FAIL bare relative anchor at $.tables.extras.chains[1].steps[3]: "In the year that follows, a downturn cuts operating profit, but the interest does not fall."
+ok   order in $.tables.content[2].sections[1].recall.correctOrder: interest@1 gearing@2 downturn@3
+FAIL downturn element anchored to the accounts at $.tables.content[2].sections[1].recall.correctOrder[3]: "In the year that follows, a downturn cuts its operating profit"
+ok   order in $.tables.content[2].sections[1].recall.why: interest@-1 gearing@2 downturn@3
+FAIL downturn element anchored to the accounts at $.tables.content[2].sections[1].recall.why[3]: "Sales fall in the following year, but the interest does not fall with them."
+ok   order in $.tables.extras.chains[1].steps: interest@1 gearing@2 downturn@3
+FAIL downturn element anchored to the accounts at $.tables.extras.chains[1].steps[3]: "In the year that follows, a downturn cuts operating profit, but the interest does not fall."
+FAIL prose order at $.tables.content[2].sections[1].body[2].text: interest@200 gearing@341 downturn@259 — "nd loan-financed bakery would first add interest owed to the bank every month, even in a year when sales fell; then, at the year end, the statement of financia"
+
+7 FAIL
+### B: re-staged bundle
+correctOrder: ["The business signs a large loan to build a new factory","From month one, a fixed interest charge must be paid","Year-end accounts reveal a higher gearing ratio","In the year after those accounts, a downturn cuts its operating profit","Profit may no longer cover the interest due"]
+grade key                      {"results":[true,true,true,true,true],"correct":5,"oneOff":0,"allCorrect":true}
+grade old-key                  {"results":[true,false,false,true,true],"correct":3,"oneOff":2,"allCorrect":false}
+grade downturn-in-first-year   {"results":[true,true,false,false,true],"correct":3,"oneOff":2,"allCorrect":false}
+start first [2,3,1,4,0] spaced [3,2,0,4,1]
+ok   order in $.tables.content[2].sections[1].recall.correctOrder: interest@1 gearing@2 downturn@3
+ok   downturn element anchored to the accounts at $.tables.content[2].sections[1].recall.correctOrder[3]: "In the year after those accounts, a downturn cuts its operating profit"
+ok   order in $.tables.content[2].sections[1].recall.why: interest@-1 gearing@2 downturn@3
+ok   downturn element anchored to the accounts at $.tables.content[2].sections[1].recall.why[3]: "Sales fall in the year after those accounts, but the interest does not fall with them."
+ok   order in $.tables.extras.chains[1].steps: interest@1 gearing@2 downturn@3
+ok   downturn element anchored to the accounts at $.tables.extras.chains[1].steps[3]: "In the year after those accounts, a downturn cuts operating profit, but the interest does not fall."
+ok   prose order at $.tables.content[2].sections[1].body[2].text: interest@200 gearing@309 downturn@339 — "nd loan-financed bakery would first add interest owed to the bank every month; then, at the year end, the statement of financial position would show gearing pushed higher; and if sales fell in the year after that, the interest would still "
+
+all ok
+### B: served draft :3001 ?draft=1
+correctOrder: ["The business signs a large loan to build a new factory","From month one, a fixed interest charge must be paid","Year-end accounts reveal a higher gearing ratio","In the year after those accounts, a downturn cuts its operating profit","Profit may no longer cover the interest due"]
+grade key                      {"results":[true,true,true,true,true],"correct":5,"oneOff":0,"allCorrect":true}
+grade old-key                  {"results":[true,false,false,true,true],"correct":3,"oneOff":2,"allCorrect":false}
+grade downturn-in-first-year   {"results":[true,true,false,false,true],"correct":3,"oneOff":2,"allCorrect":false}
+start first [2,3,1,4,0] spaced [3,2,0,4,1]
+ok   order in $.content[2].sections[1].recall.why: interest@-1 gearing@2 downturn@3
+ok   downturn element anchored to the accounts at $.content[2].sections[1].recall.why[3]: "Sales fall in the year after those accounts, but the interest does not fall with them."
+ok   order in $.content[2].sections[1].recall.correctOrder: interest@1 gearing@2 downturn@3
+ok   downturn element anchored to the accounts at $.content[2].sections[1].recall.correctOrder[3]: "In the year after those accounts, a downturn cuts its operating profit"
+ok   prose order at $.content[2].sections[1].body[2].text: interest@200 gearing@309 downturn@339 — "nd loan-financed bakery would first add interest owed to the bank every month; then, at the year end, the statement of financial position would show gearing pushed higher; and if sales fell in the year after that, the interest would still "
+
+all ok

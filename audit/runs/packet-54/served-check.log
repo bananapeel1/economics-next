@@ -1,0 +1,22 @@
+== draft54.json keys ['content', 'contentVersionSince', 'counts', 'diagrams', 'extras', 'flashcards', 'isPremium', 'mistakes', 'notes', 'practice', 'quiz']
+ blocks ['Reading the Financial Statements', 'Calculating the Ratios', 'Using Ratios to Make Decisions', 'Measuring the Workforce', 'HR Strategies for Productivity and Retention']
+ subsections 18 recalls Counter({'classify': 7, 'fillin': 7, 'match': 2, 'reorder': 2})
+   Tesla 0
+   VRIO 0
+   Bowman 0
+   £ 0
+   Operating profit ÷ Revenue 0
+   Orla Bakeries 15
+   diagramId 5
+ pins [([0], [0], True), ([1], [1], True), ([2], [2, 3, 5], True), ([3], [4], True), ([4], [6], True)]
+== live54.json keys ['content', 'contentVersionSince', 'counts', 'diagrams', 'extras', 'flashcards', 'isPremium', 'mistakes', 'notes', 'practice', 'quiz']
+ blocks ['Financial Ratios']
+ subsections 2 recalls Counter({'fillin': 1})
+   Tesla 2
+   VRIO 0
+   Bowman 2
+   £ 0
+   Operating profit ÷ Revenue 0
+   Orla Bakeries 0
+   diagramId 0
+ pins [([0], [2], False)]

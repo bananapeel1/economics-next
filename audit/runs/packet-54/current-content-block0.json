@@ -1,0 +1,101 @@
+{
+  "id": "assessing-competitiveness:block:12bef43c",
+  "title": "Financial Ratios",
+  "sections": [
+    {
+      "id": "assessing-competitiveness:sub:profitability-ratios",
+      "body": [
+        {
+          "text": "**Gross profit margin** = (gross profit / revenue) x 100. It shows how much of every pound of revenue is left after direct production costs (cost of sales). A rising gross margin suggests the firm is managing production costs well or gaining pricing power.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**Operating profit margin** = (operating profit / revenue) x 100. This deducts all operating expenses (rent, wages, marketing) from gross profit, showing the profit from core business operations before interest and tax. It is a better measure of management efficiency than gross margin because it includes overhead control.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**ROCE (Return on Capital Employed)** = (operating profit / capital employed) x 100. Capital employed = total equity + non-current liabilities. ROCE measures how effectively the firm uses its long-term finance to generate profit. It is the single most important ratio for investors comparing alternative investments.",
+          "type": "paragraph"
+        },
+        {
+          "type": "flow",
+          "steps": [
+            "Calculate profitability ratios",
+            "Compare year-on-year for trends",
+            "Benchmark against competitors and industry"
+          ],
+          "result": "Context reveals whether performance is genuinely strong or weak",
+          "resultType": "good"
+        }
+      ],
+      "title": "Profitability Ratios",
+      "recall": {
+        "id": "assessing-competitiveness:sub:profitability-ratios:recall",
+        "type": "fillin",
+        "hints": [
+          "the top line of the income statement",
+          "what eats into a margin",
+          "the second word of the ratio name"
+        ],
+        "prompt": "Complete the chain:",
+        "answers": [
+          "revenue",
+          "costs",
+          "employed"
+        ],
+        "template": [
+          "Gross profit margin divides gross profit by ___",
+          "→ A margin that falls while revenue rises points to rising ___",
+          "→ ROCE divides operating profit by capital ___"
+        ]
+      },
+      "keyIdea": "Profitability ratios measure how effectively a firm turns revenue into profit — but a number in isolation means nothing; it must be compared year-on-year, against competitors, or against the industry average.",
+      "examMatters": "Examiners penalise students who calculate correctly but fail to interpret. Always state what the ratio shows, compare it to a benchmark, and explain what might cause the figure. A ratio tells you what is happening — your job is to explain why.",
+      "realExample": {
+        "text": "Apple consistently achieves a gross profit margin of around 45%, compared to Samsung's roughly 35%. This reflects Apple's pricing power — its brand allows premium prices that Samsung's hardware-focused model cannot match, despite Samsung selling more units globally.",
+        "emoji": "🍎"
+      },
+      "misconception": "Students calculate a ratio and declare it 'good' or 'bad' with no comparison. Wrong — a 10% operating margin is excellent in grocery retail (Tesco) but poor in luxury goods (LVMH). Instead write: always compare ratios in context — against the firm's own history, its competitors, and the industry average."
+    },
+    {
+      "id": "assessing-competitiveness:sub:liquidity-gearing-ratios",
+      "body": [
+        {
+          "text": "**Current ratio** = current assets / current liabilities. It measures whether the firm can meet its short-term debts. A ratio of 1.5-2.0 is generally healthy — below 1.0 signals potential cash flow crisis, while much above 2.0 suggests idle resources that could be invested.",
+          "type": "paragraph"
+        },
+        {
+          "text": "**Gearing** = (non-current liabilities / capital employed) x 100. It shows what proportion of long-term finance comes from debt rather than equity. High gearing (above 50%) means the firm is heavily reliant on borrowing, which amplifies both profits and losses — a double-edged sword.",
+          "type": "paragraph"
+        },
+        {
+          "text": "High gearing increases **financial risk** because interest must be paid regardless of profit. In good times, debt magnifies returns to shareholders (because they keep all profit after fixed interest payments). In bad times, the fixed interest burden can push the firm towards insolvency. This is the fundamental trade-off of leverage.",
+          "type": "paragraph"
+        },
+        {
+          "type": "flow",
+          "steps": [
+            "Firm borrows heavily → gearing rises",
+            "Interest payments are fixed obligations",
+            "Profits fall in a downturn"
+          ],
+          "result": "High gearing amplifies losses — the firm may be unable to service its debt",
+          "resultType": "bad"
+        }
+      ],
+      "title": "Liquidity and Gearing Ratios",
+      "keyIdea": "A profitable firm can still collapse if it runs out of cash — liquidity ratios check short-term survival, while gearing measures how dependent the firm is on borrowed money and the financial risk that creates.",
+      "examMatters": "Examiners love to test the limitations of ratios. Always include: ratios show what, not why; they are backward-looking (based on past data); they can be manipulated through accounting choices; and they must be compared in context to have any meaning.",
+      "realExample": {
+        "text": "Tesla's ROCE improved dramatically from negative figures in 2019 to over 25% by 2023 as production scaled up and the firm turned consistently profitable. Investors tracked this ratio as proof that Tesla was transitioning from a cash-burning start-up to an efficient manufacturer.",
+        "emoji": "⚡"
+      },
+      "misconception": "Students say high gearing is always bad. Wrong — in stable industries with predictable cash flows (utilities, supermarkets), high gearing is manageable because revenue is reliable. Instead write: whether high gearing is risky depends on the stability of the firm's revenue — predictable cash flows can safely support more debt."
+    }
+  ],
+  "takeaway": [
+    "Gross margin, operating margin, and ROCE measure profitability — ROCE is the most important for investors.",
+    "Current ratio checks short-term survival; gearing measures financial risk from borrowing.",
+    "Ratios in isolation are meaningless — always compare year-on-year, vs competitors, and vs industry averages."
+  ]
+}

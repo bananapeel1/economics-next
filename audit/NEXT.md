@@ -12402,3 +12402,426 @@ are pre-existing content, out of this packet's scope), but worth a founder decis
 going forward given this is now the second packet (12.8, then this close-out) to find one by accident rather
 than by design.
 
+## Handoff — packet 54 (assessing-competitiveness) bookkeeping pass, gate passed, STAGED NOT PUBLISHED (26 September 2026)
+
+**Bookkeeping-only pass, per this packet's own harness instructions. Authored, fixed, staged, published,
+restored and committed nothing; touched only this row and this section.** Read `audit/PROTOCOL.md` in full,
+this packet's row in `audit/PROGRESS.md`, the Settled list in `audit/DECISIONS.md`, and `audit/CONTENT-GATE.md`
+including the recall and check-in-answer contracts, before writing anything. **No `## Packet 54 spec` heading
+exists anywhere in this file** (confirmed by direct grep, 0 hits) — the same gap packets 41/43-56 each hit and
+normalised; `audit/runs/packet-54/brief.md` and `built.md` supplied the scope instead. **No contradiction found**
+among PROTOCOL, the Settled entries in DECISIONS.md and CONTENT-GATE's contracts, including the two "check-in
+answer rule" sections, which reconcile at point 4 (question-first, PR #43, has been on `origin/main` since 26
+Sep and governs; the older section's leak/DEBT classification still applies to what is now non-blocking).
+
+**Packet 54 (assessing-competitiveness, IAL Business 3.3.5, `bus_spec.txt:1218-1248`) is built and ledger-clear
+— 31 items, 30 confirmed / 1 wont-fix (`structure-08`, correctly — the section's own 3.3.5 numbering is right;
+the 12 ids citing "3.5.x"/"3.1.x" were mapped by wording, not the spec number) / 0 rejected / 0 unverified / 0
+open — independently recounted by this pass two ways: a fresh `node audit/scripts/ledger.mjs packet 54` and a
+fresh `node audit/scripts/ledger.mjs unverified 54` → "gate clear".** STAGED to `draft` only; independently
+re-confirmed by this pass with a fresh `node audit/scripts/check-staged-drafts.mjs assessing-competitiveness`
+run just now (not read from a log): "matches", 0 drift. A direct `curl localhost:3001/api/sections/assessing-
+competitiveness?draft=1` just now returned 200, 106,830 bytes, matching the byte count both Verify A and Verify
+B recorded independently. `npm test` 363/363 and `validate`/`exposure`/`recalls` all exit 0 per
+`audit/runs/packet-54/gate-*.fix1.log`; this pass did not re-run those three itself (another session's dev
+server occupies the shared `:3001`, and re-running risks colliding with whoever runs next). `npm run build`
+exited 0 once, in the round-0 gate (`gate.log`), before the fix round; nothing since has touched a build-time
+file (the fix only edited `_packet54-util.mjs`, a runner-only data source consumed at stage time, not compile
+time), so the round-0 build result still holds.
+
+**One fix round of two used.** Round 0's Verify A found the case's own numbers did not add up: shop pay was
+typed at $14,000/month, so 200 staff cost $33.6m against the case's own $10m opex line — impossible — and every
+downstream claim ("closing the pay gap costs $2.4m, about five times the turnover cost") rested on it. Fixed to
+$2,000/$2,200; the pay-gap became $480,000, equal to the $480,000 turnover cost (not five times it), re-derived
+across content, notes, a diagram, extras and a practice item, including one sibling claim (`employee-share-
+ownership` para 3) the verifier had not named but that stated the same now-false thing (Rule 4: read every
+field, not just the one flagged). Guarded going forward by an accounting-fit inequality in the runner, A/B'd,
+plus an independent script that imports no packet-54 module and recomputes the wage bill from the case's own
+wording (0 FAIL post-fix, 13 FAIL pre-fix). Verify A's round-1 re-check, fresh context, used neither the fix's
+own guard nor its independent script — a third method — and confirmed the fix is scale-invariant, not an
+arithmetic patch that happens to pass.
+
+**Verify B's own verdict is "PASS for the student flow," not the unqualified "clean" a skim might read into a
+passed gate — the same distinction packets 51/55/56 recorded precisely for the same reason.** All 23 Learn
+steps and 5 chapter check-ins walked at 390×844, on an isolated origin (`p54.localhost:3001`) to avoid the
+shared-localStorage trap, storage cleared, real taps. Question-first confirmed live at all 5 check-ins,
+including "Skip the question" tested at check-in 2; resume pointer correct on 4 planted cases (never "step N of
+M" with N>M, never a blank body); 0 `<table>` elements; diagram labels 9.2-9.4px inline, 12.0px in the enlarge
+sheet. **Three non-blocking findings this pass did not fix (outside its authority regardless of size):**
+1. `app/business/unit-3/page.js:129` — a "UNIT OVERVIEW" card the build did NOT touch (the build edited only
+   the 3.3.5 tile at `:50-56`) still reads "Use Porter, ratios and benchmarking to analyse competitive
+   position" — Porter and benchmarking are not in 3.3.5. Same hub-copy defect class packets 47/48/50/51/55/56
+   each carried for their own unit page. Fix before publish, not before staging.
+2. Two DEBT items under CONTENT-GATE's question-first rule (point 3, not blocking): step 12's guided-practice
+   ROCE calculation and step 26's "on your own" Evaluate each sit directly under a diagram that already prints
+   the figure or comparison the practice item asks for.
+3. Step 14's reorder marks a defensible alternative order wrong: taking a loan raises gearing and the interest
+   bill in the same moment, and the step text gives no sequence between them, but only one order is accepted.
+   Content FAIL, non-blocking for staging, **flagged fix-before-publish** by Verify B.
+
+**Rule 3 spot-check by this pass, narrowing but not closing the gap every packet from 40 has left:** a static
+`git show origin/main:<file>` read (not a build, not a render) of the three field classes this bundle's own
+Publish note names — `lib/mistakes-shape.js`'s canonical `title/mistake/correction/examTip` shape,
+`lib/recall-widgets.js`'s `RECALL_TYPES = ['reorder','fillin','match','classify']`, and `diagramId` handling in
+`lib/checkin-placement.js` — found all three present on `origin/main`. A full Rule 3 pass (an actual build and
+render of a current `origin/main` checkout against this bundle) has still not been demonstrated by any pass for
+this packet, same gap as packets 40-56.
+
+**Not committed; not published; not restored** (this pass has no authority to do any of the three and did
+none). `audit/ledger.json` untouched by this pass (it was already unstaged in the working tree before this pass
+started — another session's write, not this one's). `scripts/_packet54-*.mjs`, `scripts/packet-54-assessing-
+competitiveness.mjs` and the two `app/business/*.js` hub edits are staged (index) by the build/verify session,
+not this pass; this pass added nothing to the index.
+
+**What the next session on packet 54 needs, in order, before publish:**
+1. Fix `app/business/unit-3/page.js:129`'s "UNIT OVERVIEW" card copy (Porter/benchmarking) — separate from,
+   and not fixed by, the tile edit at `:50-56` this packet already made.
+2. Fix or accept step 14's reorder (loan → gearing/interest is a simultaneous pair, not a forced sequence) —
+   Verify B flagged this fix-before-publish, not merely DEBT.
+3. Rule 3 field-compatibility needs a real build/render against current `origin/main`, not the source-level
+   spot-check above.
+4. Publish command, for the founder, not run by any pass so far:
+   ```
+   node scripts/packet-54-assessing-competitiveness.mjs --stage && node scripts/publish-section.mjs assessing-competitiveness --confirm
+   ```
+   (re-run `--stage` first if either fix above touches staged content, then re-run `check-staged-drafts`.)
+   `npm run recalls` will need a re-baseline at publish (DECISIONS 2026-09-25: debt moves draft→data).
+
+**Next unclaimed packet — checked live by this pass via `ps aux` just now, not by reading a handoff:** no
+`packet-*.mjs` runner process observed running at all. Packets 41-56 (the traffic-ordered content queue) are
+now each in some built/staged/published state per `PROGRESS.md`, **except packet 49 (business-growth), whose
+row still reads "not started"** even though packet 56's own handoff (above) recorded another session actively
+running `packet-49-business-growth.mjs` at that time. Not observed running now — it may be free, or mid-session
+with its bookkeeping not yet written. Whoever picks up next should check for a live process and for
+`audit/runs/packet-49/` artifacts before assuming either way; PROGRESS is known to lag live packets. With 41-56
+otherwise closed out, packet 57 ("Cross-surface consistency") and 58 ("Re-measure the funnel") are the next
+packets in `PROGRESS.md`'s "Close" section once 49 (and any remaining publishes) are settled.
+
+**Escalate to the founder:** nothing to publish yet. Packet 54's gate passed and its ledger is clear, but rule
+6 means this pass cannot run the publish command above. Two pre-publish fixes are needed first (items 1-2
+above); both are small and neither touches the staged bundle's substance. Also worth a look: packet 49's
+PROGRESS row disagreeing with a peer handoff's live observation is the same shared-worktree bookkeeping-lag
+pattern packets 48/50/53/55 already raised — a sixth data point, and it may be worth deciding whether
+bookkeeping passes should run immediately after a packet's gate rather than queue behind other work.
+
+## Handoff — packet 54 (assessing-competitiveness) BLOCKED, NOT CLOSED — founder fix did not land (brain, 26 September 2026)
+
+**Bookkeeping-only pass, per this packet's own harness instructions. Authored, fixed, staged, published,
+restored and committed nothing; touched only this section and this packet's row in `audit/PROGRESS.md`.**
+Read `audit/PROTOCOL.md`, this packet's row in `audit/PROGRESS.md`, the Settled list in `audit/DECISIONS.md`
+and `audit/CONTENT-GATE.md` before writing anything; re-read `audit/PROGRESS.md` and this file immediately
+before each write, since other sessions edit both live in this shared worktree — between this pass starting
+and this section being appended, `audit/PROGRESS.md`'s own packet-49 row was rewritten by another session from
+"not started" to "BUILT and VERIFIED... STAGED, NOT PUBLISHED", confirmed still intact after this pass's own
+edit landed. This pass's own note in the task heading deliberately departs from the literal "packet 54 closed
+(brain)" wording it was given: the packet is not closed, and a heading claiming otherwise would repeat exactly
+the kind of overstatement this pass exists to correct.
+
+**Verified independently, before writing anything:** `node audit/scripts/ledger.mjs unverified 54` → gate
+clear; `node audit/scripts/check-staged-drafts.mjs assessing-competitiveness` → matches, 0 drift; and the run
+files that exist were read in full: `verify-a.md`, `verify-b.md`, `built.md`. **`verify-b-fix.md` does not
+exist** in `audit/runs/packet-54/` — confirmed by a directory listing, not inferred from the task brief — which
+is itself the central fact of this handoff.
+
+**Packet 54 is built and ledger-clear (31 items, 30 confirmed / 1 wont-fix / 0 rejected / 0 open) and Verify
+A's own defect (the impossible shop-wage figure) is closed and independently re-confirmed scale-invariant.
+That half of the packet is not in question.** What is blocking it: **Verify B (390×844, isolated origin,
+storage cleared, real taps) found two defects and flagged both fix-before-publish**, neither ever opened as a
+ledger id (grepped `audit/ledger.json` for "Porter"/"reorder"/"gearing pushed higher" under packet 54 — 0
+hits; the same un-filed pattern packet 51's own two Verify-B FAILs carried, corrected the same way in that
+packet's own handoff above). **(a)** the `interpreting-liquidity-and-gearing` reorder (Learn step 11 of 18)
+marked a defensible order wrong: "loan → interest → gearing → downturn → cover" scored 3 of 5, because taking
+a loan raises gearing and the interest bill in the same moment and the step text gave no order between them.
+**(b)** the Unit 3 hub's separate "UNIT OVERVIEW" card (`app/business/unit-3/page.js:129`, untouched by the
+original build, which only edited the 3.3.5 tile at `:50-56`) still read "Use Porter, ratios and benchmarking
+to analyse competitive position" — off-spec for 3.3.5.
+
+**Founder ruling, 26 September 2026, relayed by the board session: fix both before publishing.** Nothing was
+published; Rule 6 held throughout — the runner only ever wrote `draft`.
+
+**Fix round (post-founder-decision), per `built.md`'s own account of what was actually done:**
+- **(a)** Both the step-11 body and the reorder items were rewritten so each stage names when it happens
+  (interest owed from month one → gearing read off the year-end statement of financial position → the
+  downturn the following year), the only order those times support — not merely re-labelling the same two
+  items in the founder's order, because a reorder of the old wording would still have had two defensible
+  readings. `scripts/_packet54-content.mjs:276` (body) and `:283-297` (reorder prompt/items/why-lines) were
+  both edited; `scripts/_packet54-assessment.mjs:299-306`'s parallel extras chain was anchored the same way.
+  An independent probe using the shipping grader (`fix2-reorder-probe.mjs`, imports no packet-54 module, calls
+  `gradeReorder` from `lib/recall-widgets.js` on the dumped bundle) gives loan→interest→gearing 5/5
+  `allCorrect` and loan→gearing→interest 3/5. The runner's own topFix-05 check was extended to assert interest
+  before gearing and A/B'd: items swapped back → exit 1; restored → exit 0
+  (`fix2-ab-swapped.log`, `fix2-dryrun.log`).
+- **(b)** `app/business/unit-3/page.js:129`'s second sentence was rewritten to "Use the financial statements,
+  ratio analysis and human resource measures such as labour productivity and labour turnover to analyse
+  competitive position"; every kept term was grepped against `audit/raw/bus_spec.txt:1218-1248` and found
+  present; Porter and benchmarking (0 hits each in the spec span) were removed.
+- Run: `node scripts/packet-54-assessing-competitiveness.mjs --stage` exit 0, 0 BLOCK / 0 DEBT / 2 INFO, staged
+  all 8 tables and re-dumped the bundle; `node audit/scripts/check-staged-drafts.mjs assessing-competitiveness`
+  → "matches", 0 drift; `npm run validate` exit 0.
+
+**Outcome: the fix did not land — the confirmatory re-walk this founder ruling requires was never run, and the
+packet is BLOCKED, not closed.** Per `built.md`'s own "NOT DONE" section, quoted here rather than
+paraphrased: the shared `:3001` dev server kept serving the old sentence with Porter even though the file on
+disk was correct — "this is the known Turbopack stale-RSC problem" — the session killed that server by port
+and cleared `.next/cache`; `preview_start remediation-dev` then refused, saying another chat's
+"remediation-dev" had the port; the permission layer then denied the session's own check of the port, so it
+stopped there. **The blocker, named as the task asked: a contended/stale shared `:3001` dev server that
+refused to regenerate for the acting session, combined with a permission-layer denial of the port check needed
+to diagnose it.** No `verify-b-fix.md` was produced, and neither step 11 nor the hub card was re-walked in a
+browser at 390×844 after the fix.
+
+**This pass independently re-checked the current state, by two methods distinct from `built.md`'s own stalled
+one, without attempting the walkthrough itself (that is outside a bookkeeping mandate):**
+1. `git diff --cached` and `git diff` on `app/business/unit-3/page.js` and the three edited
+   `scripts/_packet54-{content,assessment,util}.mjs` files (plus `scripts/_packet54-diagrams.mjs` and the
+   runner) show both fixes fully staged in git's index, with 0 unstaged lines against the index — the
+   source-level edit did land and is index-clean. `git diff --cached -- app/business/unit-3/page.js` shows the
+   Porter/benchmarking sentence replaced by the corrected one, exactly as `built.md` describes.
+2. A `next-server` process is running again now, at a different pid than `built.md`'s 46965 or `verify-b.md`'s
+   77150 — evidently restarted by some other session since `built.md` was written. A fresh
+   `curl -s http://localhost:3001/business/unit-3 | grep -o "Use [A-Za-z ,]*to analyse competitive position"`
+   run just now returns the corrected sentence, with 0 hits for "Porter" or "benchmarking" anywhere in either
+   `app/business/unit-3/page.js` or `app/business/page.js`. A fresh
+   `curl -s http://localhost:3001/api/sections/assessing-competitiveness?draft=1` parsed directly (not via the
+   runner's own tooling) shows the served draft's `interpreting-liquidity-and-gearing` recall's
+   `correctOrder` is exactly `["...signs a large loan...", "From month one, a fixed interest charge...",
+   "Year-end accounts reveal a higher gearing ratio...", "...a downturn cuts its operating profit...", "Profit
+   may no longer cover the interest due"]` — loan → interest → gearing → downturn → cover, the founder's
+   required order.
+
+**This narrows the blocker but does not close it, and the verdict stays BLOCKED.** The data and the served hub
+copy are correct right now, but that is not the 390×844 real-tap walkthrough (recall-widget interaction, the
+rule-4 neighbour fields, a console check) the founder's ruling requires, and `verify-b-fix.md` still does not
+exist. Whether the dev server is stable enough now for that walkthrough to actually complete is itself
+untested by this pass — it was not this pass's job to try. **The next session on packet 54 needs to run that
+walkthrough (Verify B's own method: isolated origin, storage cleared, real taps, both defects specifically) and
+write `verify-b-fix.md`, then this row can honestly move from BLOCKED to closed.**
+
+**The pointer-versioning ledger item, cited as asked, premise corrected the same way packets 40 and 51 already
+had to correct it:** `node audit/scripts/ledger.mjs packet 5` lists **`V038`** — title starts "Version the
+Learn Mode step pointer" — `status: confirmed`, `closed_by: packet-5`, `verified_by: packet-verifier
+2026-09-21`. V038 was added 2026-09-19 and closed 2026-09-21, both before packet 54 was ever built (26
+September) — **it was not filed by this packet's Verify B**, and `git status` shows no packet-5 file touched
+by this pass or by packet 54's own build/verify/fix sessions. What packet 54's Verify B step 27 *did* do is
+independently exercise V038's fix under this section's own freshly-versioned, 18-recall deck: four planted
+pointer cases (draft resume in-range, the same pointer read on the live 3-step URL, a planted live pointer read
+on the draft — the post-publish case — and a planted out-of-range pointer), and none showed "step N of M" with
+N > M or a blank body — independent confirmation that V038's fix holds for this newly rebuilt section, the
+condition V038's own text names ("must ship BEFORE the packet 5/7 checkpoint publishes any rebuilt section").
+
+**D013 post-publish census step: not applicable to this packet.** Grepped all of packet 54's own run files
+(`brief.md`, `built.md`, `verify-a.md`, `verify-b.md`) for "D013" and "census" — 0 hits naming a D013 step for
+packet 54. (D013 is the packet-37 multiplier-ownership item, `audit/SPEC-OWNERSHIP.md:22`, `national-income`
+vs `aggregate-demand` — unrelated to this section, the same finding packets 40 and 51 already recorded for
+their own packets.)
+
+**Exact publish command for the founder — not ready to run, listed for when the walkthrough above closes the
+packet:**
+```
+node scripts/packet-54-assessing-competitiveness.mjs --stage && node scripts/publish-section.mjs assessing-competitiveness --confirm
+```
+`npm run recalls` will need a re-baseline at publish (DECISIONS 2026-09-25: debt moves draft→data). Re-run
+`--stage` first only if the walkthrough above finds anything still wrong; the fix round already re-staged
+after both edits, and `check-staged-drafts.mjs` matches right now.
+
+**Not committed; not published; not restored** — this pass has no authority to do any of the three and did
+none, nor did it fix, re-stage, re-claim, or attempt the missing walkthrough. `audit/ledger.json` untouched by
+this pass (already unstaged in the working tree before this pass started). `app/business/unit-3/page.js`,
+`app/business/page.js` and the five `scripts/_packet54-*`/`scripts/packet-54-*.mjs` files are staged (index)
+by the build/fix session, not this pass. **Per this packet's own instructions, `audit/PROGRESS.md` (packet 54
+row rewritten) and this section were both left un-staged in the working tree — neither was `git add`ed — because
+a staged snapshot of either shared handoff file has silently dropped concurrent sessions' rows before.**
+`audit/EXAM-PRACTICE.md` not opened.
+
+**Next unclaimed packet — checked live by this pass just now, not by reading a handoff:**
+`git status --short | grep packet-<n>` and `node audit/scripts/ledger.mjs packet <n> --open` for 49, 57, 58:
+- **49 (business-growth):** just closed out by a concurrent session's own bookkeeping pass while this one was
+  running (its `PROGRESS.md` row flipped from "not started" to "BUILT and VERIFIED... STAGED, NOT PUBLISHED"
+  between this pass's own checks). Ledger gate clear. **Not free — done, needs a founder publish decision, not
+  a build or a bookkeeping pass.**
+- **57 (Cross-surface consistency):** no `audit/runs/packet-57/` directory, no `git status` entries, no live
+  process (`ps aux` clean). But `node audit/scripts/ledger.mjs unverified 57` → **"GATE BLOCKED: 2 claimed
+  item(s) not confirmed"**, on top of 21 open items (V064/V065/V067/V068/V070 and others) already pre-seeded
+  into the ledger against this packet number. Two items are claimed but were never confirmed, and nothing is
+  running now to finish that. **Not cleanly free** — looks like a stale, abandoned partial claim; the next
+  session should ask who claimed those 2 items before starting fresh here, not just resume as if nothing
+  happened.
+- **58 (Re-measure the funnel):** no `audit/runs/packet-58/` directory, no `git status` entries, no live
+  process, and `node audit/scripts/ledger.mjs unverified 58` → "gate clear" with **0 items total** — nothing
+  has ever been claimed or scoped against this packet number. `PROGRESS.md` still accurately says "not
+  started". **This is the next free packet.**
+
+**Escalate to the founder:** nothing to publish for packet 54 yet, and nothing new to decide — the ruling
+already given ("fix both before publishing") has been attempted but not confirmed, for an infrastructure
+reason (a contended, Turbopack-stale shared dev server that then hit a permission-layer wall), not a content
+disagreement. The founder does not need to re-decide anything; the next session just needs to get a clean
+390×844 walkthrough of step 11 and the Unit 3 hub past the shared dev server and write `verify-b-fix.md`. Worth
+a look separately: this is at least the second time in this worktree a session has been blocked mid-diagnosis
+by the permission layer denying its own check of a port it had itself just contended for (`built.md`'s
+account) — if that recurs, the shared `:3001` dev server's ownership during fix-and-rewalk rounds may need a
+clearer protocol, not just a restart.
+
+## Handoff — packet 54 verification round 2 (brain)
+
+**Bookkeeping-only pass. Authored, fixed, staged, published, restored and committed nothing; touched only
+this section and packet 54's row in `audit/PROGRESS.md`.** Re-read `audit/PROGRESS.md` and this file
+immediately before each write, per this shared worktree's own rule; both were unchanged since this pass's
+first read, so no concurrent-edit conflict applied this time.
+
+**Result, measured by this pass, not asserted from the task brief:** `node audit/scripts/ledger.mjs
+unverified 54` → "GATE BLOCKED: 1 claimed item(s) not confirmed" (`C-assessing-competitiveness-topFix-05`).
+A fresh `node audit/scripts/ledger.mjs packet 54` recounts 31 items total: 30 `confirmed` / 1 `wont-fix`
+(`structure-08`) / 1 `not-fixed` (`topFix-05`). Reading `audit/ledger.json` directly for the two ids this
+round scoped:
+- **`C-assessing-competitiveness-specGap-07`: `status: confirmed`**, `verified_by: packet-verifier
+  2026-09-26`, evidence citing round 2 specifically — 0 off-spec hits (VRIO / core competenc* / tangible /
+  intangible / distinctive capabilit* / Porter / benchmark*) in the served `?draft=1` bundle and in
+  `audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json`; the Unit 3 hub card
+  (`app/business/unit-3/page.js:129`) and `/business` meta (`app/business/page.js:41`) both serve clean.
+  The same evidence field notes the live (unpublished) section page and the legacy `seed/*unit3*.mjs` files
+  still carry the old Porter/benchmark text — measured, not a defect of this fix; it changes only at
+  publish.
+- **`C-assessing-competitiveness-topFix-05`: `status: not-fixed`**, same verifier stamp, evidence: the
+  fix's own target (Verify B's "loan → interest → gearing → downturn → cover") now grades 5/5 and the old
+  "loan → gearing → interest" key correctly fails 3/5, but `scripts/_packet54-content.mjs:289` ("In the
+  year that follows, a downturn cuts its operating profit") names no antecedent, and body para 3 (`:276`)
+  narrates the downturn before the year-end gearing read, so "loan → interest → downturn → gearing → cover"
+  is equally defensible and grades 3/5, 2 one place off (`audit/runs/packet-54/r2/reorder-grade.log`,
+  `gradeReorder` from `lib/recall-widgets.js` called directly on the served draft — a different method than
+  the fix that produced the reorder text). Suggested anchor, not applied by any pass: "In the year after
+  those accounts...".
+
+**Walkthrough: not run.** `verify-a.md`'s round-2 section states the Browser pane was hidden and a real
+390×844 tap sequence was refused, so the platform grader was called directly on the served JSON instead —
+a legitimate independent check of the grading logic, but not the real-tap walkthrough Verify B's own method
+(`verify-b.md`, round 1) used, and no `verify-b-fix.md` or equivalent round-2 walkthrough file exists in
+`audit/runs/packet-54/`. Gate (round 2, read from `audit/runs/packet-54/r2/gate-*.log` and `gate-exit.txt`):
+`npm test` 368/368 exit 0, `npm run build` exit 0, `npm run validate` exit 0 — validate reads live content,
+not this staged draft, so its pass here says nothing about the recall defect above.
+
+**Every item left unresolved after this round:**
+1. `C-assessing-competitiveness-topFix-05` is open again: the reorder for
+   `interpreting-liquidity-and-gearing` (Learn step 11) still has two defensible orderings under its current
+   wording. Needs a content edit anchoring the downturn item in time, then a fresh grader check plus an
+   actual 390×844 walkthrough of step 11, not just the grader call this round used.
+2. No round-2 walkthrough file exists — the Browser pane being hidden this round is itself unresolved; the
+   next session needs a foreground/attached browser before it can close this packet on the walkthrough leg,
+   not only on the grader leg.
+3. `specGap-07` is confirmed for the *staged draft and the two hub/meta pages only*. The live section page
+   and `seed/*unit3*.mjs` still carry the old Porter/benchmark text; that is expected pre-publish state, not
+   a new defect, but it means `specGap-07`'s confirmation does not extend to what a student sees on the live
+   site today.
+4. Packet 54 stays **STAGED, NOT PUBLISHED, not committed.** Rule 6 (this pass has no authority to publish,
+   restore, or write live content) was not tested against a refusal this round — no publish/restore/write
+   action was attempted, so there is no refused-command text to report.
+5. The `audit/ledger.json` entries for these two ids were already written by the round-2 verifier before
+   this pass started; this pass read and cross-checked them but did not edit `audit/ledger.json`, and per
+   this packet's own instruction did not stage it (no verifier was observed running at read time, but the
+   file was left exactly as found either way).
+
+**This section supersedes the ledger-status claims in the two earlier packet-54 sections above** (`## Handoff
+— packet 54 (assessing-competitiveness) bookkeeping pass, gate passed, STAGED NOT PUBLISHED` and `## Handoff
+— packet 54 (assessing-competitiveness) BLOCKED, NOT CLOSED — founder fix did not land`). Both were accurate
+at the time they were written — round 1 had in fact confirmed all 30 claimed ids including `topFix-05`, and
+the BLOCKED section's own `ledger.mjs unverified 54` → "gate clear" was a true read of the ledger before this
+round ran. But `topFix-05` has since been **re-verified and rejected** on a *different* defect than the one
+either earlier section discussed (Verify B's original "loan → interest → gearing" complaint is closed; the
+new one is "loan → interest → downturn → gearing" against the same reorder widget). Anyone reading this file
+top-to-bottom for packet 54's current state should treat this section, not either earlier one, as the live
+status of `topFix-05` and `specGap-07`.
+
+**Escalate to the founder:** nothing new to decide. The founder's standing ruling ("fix both Verify B defects
+before publishing") has been partially met — the hub-card defect (`specGap-07`) is confirmed fixed in the
+draft, and the original reorder complaint is closed — but the reorder widget itself needs one more content
+edit before the packet can honestly close, plus a real browser walkthrough this round could not run because
+the Browser pane was hidden. No infrastructure blocker (no contended `:3001`, no permission-layer denial) was
+hit by this round.
+
+## Handoff — packet 54 verification round 3 (brain)
+
+**Bookkeeping-only pass. Authored, fixed, staged, published, restored and committed nothing; touched only
+this section, packet 54's row in `audit/PROGRESS.md`, and this pass's own artefact file
+(`audit/runs/packet-54/bookkeeping-round3-2026-09-26.md`).** Re-read `audit/PROGRESS.md` and this file
+immediately before writing, per this shared worktree's own rule; both were unchanged since this pass's
+first read, so no concurrent-edit conflict applied this round.
+
+**Result, measured by this pass, not asserted from the task brief:** `node audit/scripts/ledger.mjs
+unverified 54` → "gate clear: every claimed item is confirmed and no scope is left unclaimed." A fresh
+`node audit/scripts/ledger.mjs packet 54` recounts 31 items total: 30 `confirmed` / 1 `wont-fix`
+(`structure-08`) / 0 `not-fixed` / 0 rejected. Cross-checked by a from-scratch `node` parse of
+`audit/ledger.json`'s own `content`/`feature`/`code`/`marketing` buckets (a different method than the CLI):
+same counts, `{ confirmed: 30, 'wont-fix': 1 }`.
+
+- **`C-assessing-competitiveness-topFix-05`: `status: confirmed`**, `verified_by: packet-verifier
+  2026-09-26` — the same stamp as its `not-fixed` status after round 2, now flipped. Evidence:
+  `scripts/_packet54-content.mjs:289` ("In the year after those accounts, a downturn cuts its operating
+  profit") now anchors the downturn item to `:288`'s "Year-end accounts", so the round-2 alternate order
+  (loan → interest → downturn → gearing → cover) is no longer defensible from the text; the prompt (`:283`)
+  pins the first and last items; body para 3 (`:276`) and the extras chain (`_packet54-assessment.mjs:305`)
+  narrate the same order. This pass `grep`ped both files directly and read `:270-300`/`:295-310` in
+  context to confirm the cited lines say what the evidence claims, rather than trusting the citation.
+- **Grader** (`audit/runs/packet-54/r3/reorder-grade.log`): the key grades `correct:5, oneOff:0,
+  allCorrect:true`; the round-2 alternate, the pre-round-2 key and a further probe each grade 3/5. This
+  pass read `r3/reorder-grade.mjs` itself and confirmed it imports `gradeReorder`/`reorderStartOrder` from
+  `lib/recall-widgets.js` — the shipping grader, untouched by the fix — rather than a reimplementation.
+- **Served draft vs. snapshot** (`r3/served-vs-snapshot.log`): `content`/`notes`/`diagrams`/`practice` are
+  equal; `mistakes` differs (served 2 chars vs. snapshot 3644 chars). Both `verify-a.md` and `verify-b.md`
+  attribute this to the Pro gate on the signed-out `?draft=1` route serving `mistakes: []` by design, not a
+  content mismatch. This pass read that attribution and the comparison script but did not independently
+  fetch the signed-in bundle to confirm it — that one link in the chain rests on the verifiers' evidence,
+  not a fresh check by this pass.
+- **File timestamps**: `stat -f "%Sm"` on the fix files gives `_packet54-content.mjs` 15:33:51,
+  `_packet54-assessment.mjs` 15:33:47, the snapshot 15:34:01 — consistent with `verify-a.md`'s claim that
+  the fix landed at 15:33-15:34, outside the fix loop.
+
+**Walkthrough: `verify-b.md`'s "Targeted re-walk after round 3", 390×844, signed out, storage cleared, real
+taps, isolated origin `p54r3.localhost:3001`.** Verdict: PASS, no blocking defect in the re-walked scope.
+Re-walked: step 11's reorder (correct order now accepted, the round-1 wrong guess and the round-2
+alternate both correctly rejected, judged defensible-from-text as well as by the grader), the Unit 3 hub
+card at 390px (clean of Porter/benchmarking), all five check-in answers (clean), and the original
+acceptance check reproduced (step 14, step 1, resume-pointer cases (a) and (d) only, table check at step
+23 and the resume screen only). **This is a targeted re-walk, not the full 33-step one** — steps 2-10,
+12-13, 15-22, 24-33 and resume-pointer cases (b)/(c) were not re-walked this round, and the two round-1
+DEBT items (step-9 ROCE guided practice sitting under a diagram that prints the same ROCE figure; step-23
+"on your own" Evaluate scaffolded by its diagram) were not re-measured and remain open as non-blocking
+debt, not as part of this round's PASS.
+
+**Gate (round 3, read from `audit/runs/packet-54/r3/gate-*.log` and `gate-exit.txt`):** `npm test` exit 0,
+`npm run build` exit 0, `npm run validate` exit 0 — validate reads live content, not this staged draft, so
+its pass here says nothing new about the draft.
+
+**Every item left unresolved after this round:**
+1. Packet 54 stays **STAGED, NOT PUBLISHED, not committed.** The four fix files
+   (`scripts/_packet54-content.mjs`, `scripts/_packet54-assessment.mjs`,
+   `scripts/packet-54-assessing-competitiveness.mjs`,
+   `audit/snapshots/packet-54-bundle__business__assessing-competitiveness.json`) are `git add`ed
+   (new-file `A` status) but not committed. Committing, publishing and restoring are the founder's calls,
+   not this pass's — rule 6 was not tested against a refusal this round because no publish/restore/write
+   action was attempted.
+2. The `mistakes` field's Pro-gate explanation (served 2 chars vs. snapshot 3644) rests on the two
+   verifiers' evidence; no pass has independently confirmed it against a signed-in fetch.
+3. The full 33-step walkthrough from round 1 (`verify-b.md`'s original walk) has not been re-run against
+   the round-3 content outside the targeted scope above. The two round-1 DEBT items (step-9 and step-23,
+   both practice answers partly readable from the diagram directly above them) are unchanged and unfixed,
+   non-blocking per the 26 Sep question-first rule.
+4. `structure-08` (spec numbering, "3.3.5" vs. the IAL spec's own "3.5") remains `wont-fix`, unchanged.
+5. `audit/ledger.json`'s entry for `topFix-05` was already written by the round-3 verifier before this pass
+   started; this pass read and cross-checked it by an independent method (direct JSON parse, source
+   `grep`, file `stat`) but did not edit `audit/ledger.json` and did not stage it, per this packet's rule 5.
+
+**This section supersedes the round-2 section above** (`## Handoff — packet 54 verification round 2
+(brain)`) **for `topFix-05` specifically.** Round 2 was an accurate read of the ledger at the time it was
+written — `topFix-05` genuinely read `not-fixed` after round 2's re-check found a second defensible
+reorder. A fix for that specific defect (anchoring the downturn item to the year-end gearing report,
+exactly what round 2 suggested) has since landed outside the fix loop, and round 3 confirms it closes the
+path round 2 found, by both the grader and a targeted re-walk. `specGap-07`'s round-2 confirmation is
+untouched and not reopened by this round. Anyone reading this file top-to-bottom for packet 54's current
+state should treat this section as the live status of `topFix-05`, not the round-2 section's `not-fixed`
+claim.
+
+**Escalate to the founder:** nothing new to decide. The founder's standing ruling ("fix both Verify B
+defects before publishing") is now met on the draft: the hub-card defect (`specGap-07`) and the reorder
+defect (`topFix-05`) are both confirmed fixed and re-verified, and all 31 ledger items for this packet are
+`confirmed` or `wont-fix` with none `not-fixed` or open. What remains is the founder's own call to publish
+and commit, and the two DEBT items above if they want them cleaned up before or after publish. No
+infrastructure blocker (no contended `:3001`, no permission-layer denial) was hit by this round.

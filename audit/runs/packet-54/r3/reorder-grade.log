@@ -1,0 +1,8 @@
+reorders served: 2
+correctOrder: ["The business signs a large loan to build a new factory","From month one, a fixed interest charge must be paid","Year-end accounts reveal a higher gearing ratio","In the year after those accounts, a downturn cuts its operating profit","Profit may no longer cover the interest due"]
+key {"results":[true,true,true,true,true],"correct":5,"oneOff":0,"allCorrect":true}
+r2-alt downturn-in-first-year {"results":[true,true,false,false,true],"correct":3,"oneOff":2,"allCorrect":false}
+old key gearing-before-interest {"results":[true,false,false,true,true],"correct":3,"oneOff":2,"allCorrect":false}
+cover-before-downturn {"results":[true,true,true,false,false],"correct":3,"oneOff":2,"allCorrect":false}
+start first [2,3,1,4,0] -> Year-end accounts reveal a higher gearin | In the year after those accounts, a down | From month one, a fixed interest charge  | Profit may no longer cover the interest  | The business signs a large loan to build
+start spaced [3,2,0,4,1] -> In the year after those accounts, a down | Year-end accounts reveal a higher gearin | The business signs a large loan to build | Profit may no longer cover the interest  | From month one, a fixed interest charge 
