@@ -17,6 +17,7 @@ parameters, which is what this is.
   subject: 'economics', unit: 'WEC11', specCode: '1.3.4',
   specTerm: 'indirect taxes',   // REQUIRED; see below
   title: 'Indirect tax in a competitive market',
+  topic: 'Price determination', // the chip beside the title; unguarded, so easy to forget
   prompt: 'The government imposes an indirect tax of **$30 per unit**…',
 
   axes:   { x: { label, max }, y: { label, max } },
@@ -49,9 +50,17 @@ each spec's header carries a WHY-THIS-SECTION note.
 
 **Frame the prompt for the diagram you are actually drawing.** These two drills shade a welfare loss
 in a plain competitive market, so the good is a plain one. A tax on a *demerit* good, or a subsidy on
-a *merit* good, moves output toward the social optimum and needs MPC against MSC — a different
-diagram, and the triangle would not be a loss. Both specs said "demerit"/"merit" until 13.7, and the
-prompt and the mark scheme disagreed with each other.
+a *merit* good, moves output toward the social optimum: the triangle would not be a loss, and the
+diagram needs a SOCIAL curve beside the private one, which neither of these has. Both specs said
+"demerit"/"merit" until 13.7, and the prompt and the mark scheme disagreed with each other.
+
+Name that pair carefully when you write 13.8's externality spec — an earlier draft of this very
+paragraph got it wrong. Merit and demerit goods are a CONSUMPTION case, so the pair is MSB against
+MPB; MSC against MPC is the PRODUCTION case. `econ_spec.txt:740-748` distinguishes external benefits
+and costs of production from those of consumption, and asks for diagrams of the external benefits
+**from consumption** and the external costs **from production**. One nuance already settled in the
+ledger, so do not re-litigate it: mark schemes for demerit-good questions do routinely accept an
+MSC-above-MPC diagram, and telling a student they will be penalised for it is wrong.
 
 `size` is advisory. Direction earns the mark; the drill mentions the gap when it is far out,
 because an examiner marks the shift, not the millimetres.
