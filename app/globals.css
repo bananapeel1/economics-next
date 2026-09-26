@@ -7612,6 +7612,7 @@ a.auth-dropdown-item:visited {
 .lm-practice-mark-btn:disabled { opacity: 0.4; cursor: default; }
 .lm-practice-selfmark { margin-top: 12px; padding: 12px 14px; background: var(--bg-input); border: 1px solid var(--border-primary); border-radius: 10px; }
 .lm-practice-selfmark-title { font-size: 13px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+.lm-practice-compare { margin: 10px 0 0; font-size: 13px; color: var(--text-secondary); }
 .lm-practice-check-marks { font-style: normal; color: var(--text-muted); font-size: 12px; }
 .lm-practice-selfmark-total { margin-top: 10px; font-size: 13px; font-weight: 600; color: var(--text-primary); }
 .lm-practice-selfmark-note { font-weight: 400; color: var(--text-muted); }

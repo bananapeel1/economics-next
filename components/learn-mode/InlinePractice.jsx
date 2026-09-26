@@ -81,6 +81,11 @@ export default function InlinePractice({ question, onAskTutor, mode = 'independe
           Mark my answer
         </button>
       )}
+      {marking && checklist.length === 0 && (
+        <p className="lm-practice-compare" role="status">
+          Compare your answer with the mark scheme {mode === 'independent' ? 'below' : 'above'}: check you made each point it makes.
+        </p>
+      )}
       {marking && checklist.length > 0 && (
         <div className="lm-practice-selfmark" role="region" aria-label="Self-mark checklist">
           <div className="lm-practice-selfmark-title">Tick what your answer includes</div>
