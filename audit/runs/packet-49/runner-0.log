@@ -1,0 +1,27 @@
+
+business-growth — packet 49
+  before: 12 BLOCK / 19 DEBT / 3 INFO (1 recoverable)
+  after:  1 BLOCK / 4 DEBT / 8 INFO (3 recoverable)
+  new:    1 BLOCK / 4 DEBT · carried 0 () · would clear 27 baselined findings on publish
+  5 blocks · 15 subsections · 25 quiz (3 unpinned, keys 7/6/6/6) · 7 practice · 28 flashcards · 7 mistakes · 5 diagrams (5 views) · 4 chains · 3 evaluation
+  recalls: 15 of 15 subsections — 4 match, 6 classify, 4 fillin, 1 reorder
+  coverage: 16 of 16 specification leaves evidenced in the teaching text (100%)
+  words:  354 298 308 282 298 333 352 297 304 354 297 308 308 336 330
+  pins:   quiz [[3,4,5,6],[7,8,9],[10,11,12,13,14],[15,16,17,18,19],[20,21,22,23,24]] · practice [[0],[1],[2],[3,5],[4,6]]
+  NEW BLOCK quiz.long-correct business-growth:quiz:8be31776: correct option is 5 chars, longest distractor 3
+  NEW DEBT  step.words sub:business-growth:sub:internal-economies-of-scale: 354 words of teaching text (budget 350)
+  NEW DEBT  step.words sub:business-growth:sub:mergers-and-takeovers: 352 words of teaching text (budget 350)
+  NEW DEBT  step.words sub:business-growth:sub:financial-risks-and-rewards: 354 words of teaching text (budget 350)
+  NEW DEBT  reorder.lead sub:business-growth:sub:mergers-and-takeovers:reorder: items share a leading token: ["the"]
+
+10 packet checks failed:
+  - bus_spec.txt:1009 is not the 2.3.5 heading the small-business pointer cites
+  - the Calculate item's figure S$0.80 is printed outside its source and scheme
+  - the Calculate item's figure S$0.62 is printed outside its source and scheme
+  - quiz.long-correct would fire on "A firm sells S$30m a year in a market wh": key 5 chars against 3
+  - quiz item(s) pinned to "Inorganic Growth: Risks and Rewards" share no substantive word with the chapter: A drinks maker buys a chain of bars that
+  - internal-economies-of-scale: 354 words of teaching text against a budget of 350
+  - mergers-and-takeovers: 352 words of teaching text against a budget of 350
+  - financial-risks-and-rewards: 354 words of teaching text against a budget of 350
+  - the dashed "lowest cost" marker does not stand at the curve's lowest point
+  - recall.recoverable (the shared measure): 3 recall(s) answerable by scrolling up — sub:business-growth:sub:market-power-share-and-profitability:recall: 2 answers recoverable by scrolling up — line 1 filled reads "market power", which is printed above it verbatim; line 2 filled reads "brand recognition", which is printed above it verbatim | sub:business-growth:sub:horizontal-and-vertical-integration:recall: 2 answers recoverable by scrolling up — line 1 filled reads "backward vertical", which is printed above it verbatim; line 2 filled reads "forward vertical", which is printed above it verbatim | sub:business-growth:sub:overtrading:recall: 1 answer recoverable by scrolling up — line 2 filled reads "working capital", which is printed above it verbatim

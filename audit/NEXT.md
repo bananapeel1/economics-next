@@ -12144,3 +12144,71 @@ full 41-56 range beyond confirming 56 is now closed to this bookkeeping pass and
   practice mark scheme behind "See full guidance".
 - **Not verified:** the end-of-section score and the skipped-recall return timing (eight packets shared `:3001`
   and its localStorage); the Pro surfaces above; and whether the live deployment is at `903b8e8`.
+## Handoff — packet 49 (business-growth) bookkeeping pass, gate passed, STAGED NOT PUBLISHED — what comes next (26 September 2026)
+
+**Bookkeeping-only pass, per this packet's own harness instructions. Authored, fixed, staged, published,
+restored and committed nothing; touched only this row (`PROGRESS.md`) and this section (`NEXT.md`).** Read
+`audit/PROTOCOL.md` in full, `audit/SESSION-PROMPT.md`, this packet's row in `audit/PROGRESS.md`, the Settled
+list in `audit/DECISIONS.md`, and `audit/CONTENT-GATE.md` (the recall contract and both "check-in answer rule"
+sections) before writing anything. **No `## Packet 49 spec` heading exists anywhere in this file** (confirmed
+by direct `grep -c`, 0 hits) — the same gap packets 41/43-56 each hit and normalised, and `audit/runs/packet-49/
+brief.md`/`built.md` already document it as such, quoting the same grep. **No contradiction found** among
+PROTOCOL, the Settled entries in DECISIONS.md and CONTENT-GATE's contracts for this packet's scope; the
+apparent "Packet 49 (traffic order, 27 Opens)" line an earlier handoff used is the Opens-column header, not a
+rival name, exactly as `brief.md` had already worked out.
+
+**Packet 49 (business-growth, IAL Business 3.3.2, `bus_spec.txt:1117-1142`) is built, ledger-clear, and
+Verify A/B-clean. Gate PASSED. Staged to `draft` only; live untouched.** Independently re-confirmed by this
+pass with methods different from the build/verify passes' own: a direct Python parse of `audit/ledger.json`
+(not the `ledger.mjs` CLI's own summary) gives packet 49 exactly 27 items, 23 `confirmed` / 4 `wont-fix` / 0
+`open` / 0 `rejected`; a fresh, unscripted `curl localhost:3001/api/sections/business-growth` (no `draft`)
+still returns the old 2-block "Growth Methods" section, and the same route with `?draft=1` returns the 5
+new chapters ("Why Businesses Grow", "Organic Growth", "Mergers and Takeovers", "Inorganic Growth: Risks and
+Rewards", "Problems Arising From Growth"); the only `auto-prepublish-…business-growth` snapshot is
+`2026-09-25T12-11-43-061Z`, from the 25 Sep checkpoint before this packet, so this packet has published
+nothing. Full detail (ledger id-by-id, gate log breakdown, Verify A/B findings) is in the row this pass
+wrote in `audit/PROGRESS.md` — not repeated here.
+
+**Two things carried forward, neither this pass's to fix:**
+1. The Unit 3 hub tile for 3.3.2 (`app/business/unit-3/page.js:25,29`) still advertises "demergers" and
+   "Demergers & Staying Small," which this rebuild rules off-spec and does not teach — the same hub-copy
+   defect class packets 47/48/50/51/54/55/56 each carried for their own unit page. Fix with or before publish.
+2. `audit/SPEC-OWNERSHIP.md` carries one new row (the staying-small wont-fix reasoning), unstaged, on top of
+   another session's already-staged hunk in the same file (Rule 5) — splice it in by hunk at commit, do not
+   `git add` the whole file.
+
+**Publish command, for the founder, rule 6, not run by any pass so far:**
+```
+node scripts/packet-49-business-growth.mjs --stage && node scripts/publish-section.mjs business-growth --confirm
+```
+
+**Next unclaimed packet.** With packet 49 now bookkept, the traffic-ordered content queue (packets 41-56) is
+fully built/staged/published per `PROGRESS.md`, matching what the immediately-preceding packet-54 handoff
+already expected once 49 landed. This pass did not re-check every one of 41-56 live (out of this pass's own
+scope), so a session picking up next should re-verify rather than trust that count. Per the packet-54 handoff,
+the next packets in `PROGRESS.md`'s "## Close" section are **57 ("Cross-surface consistency")** and **58
+("Re-measure the funnel")**; a fresh `node audit/scripts/ledger.mjs packet 57 --open` (this pass, just now)
+shows 21 open items, `packet 58 --open` shows 0. This pass did not read either packet's scope beyond that
+count — it is a pointer for whoever picks up next, not a brief.
+
+**Escalate to the founder:** nothing to publish yet. Packet 49's gate passed and its ledger is clear, but rule
+6 means this pass cannot run the publish command above, and the Unit 3 hub-page copy (item 1 above) should
+land with or before it, as the same class of fix has for packets 47/48/50/51/54/55/56.
+
+
+
+**Brain, after the run (26 September 2026, Opus 5.5).** Checked after the workflow returned, each by its own method:
+- **Hub copy: PR #61** (`fix/unit3-business-growth-copy`, straight to main as #45 was) replaces the 3.3.2 tile with
+  the five rebuilt chapters in the specification's words and the Business index meta "Organic and inorganic growth,
+  mergers and takeovers". "External growth", "synergies", "diversification" and "culture clash" are each 0 in
+  `bus_spec.txt`. Merge it before or with the publish.
+- **Rule 3, field check against `origin/main` `9407197`:** recalls are match/classify/reorder/fillin only (main lacks
+  only the `diagram` drill), every block pins a real `diagramId`, mistakes are `{id, title, mistake, correction,
+  examTip}`, extras `title/steps/result` and `title/content`. Not done: a build and render of main against the bundle.
+- **The 14 Sep DECISIONS crash note is stale:** production's live Learn Mode for this section renders ("Step 1 of 5"),
+  0 console errors.
+- **The length tell is programme-wide, not this packet's:** the key is the uniquely longest option in 13 of 25 items
+  (52%, chance 25%), and Verify A measured 16 other bundles at 36-64%. The runners carry only the per-item 1.5x rule;
+  packet 21's bank-level 35% guard did not travel. One aggregate validator rule plus a class fix, the founder's call;
+  no ledger id minted.
+- **DEBT kept:** the step-12 Discuss 8 (flour-mill takeover) sits under a diagram labelled "Buy it: backward vertical".

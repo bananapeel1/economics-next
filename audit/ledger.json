@@ -5534,10 +5534,10 @@
    "rank": 0,
    "text": "Re-align assessment to teaching: either add a block 'Why grow, and what goes wrong' teaching internal/external economies of scale, diseconomies and overtrading (lift from extras.chains[2],[3] and flashcards), or pin quizIndices/practiceIndices per block so PreTest/InlineQuiz only draw from taught items. Right now half the quiz bank and 3/5 practice questions are untaught.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:9-212,798-990 economies and problems of growth now taught; every block pins its own quizIndices/practiceIndices (:201,:405,:587,:784,:981); all 25 quiz items taught at or before their pinned chapter (read by eye, served draft byte-equal)",
    "note": null
   },
   {
@@ -5547,10 +5547,10 @@
    "rank": 1,
    "text": "Replace the demergers subsection (off-spec, and its eBay/Skype example is factually wrong: it was a stake sale, not a demerger) with 'Problems of growth: diseconomies of scale and overtrading', which fixes both the spec gap and the incoherent block-2 pairing.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:798-990 'Problems Arising From Growth' chapter (diseconomies :801, communication :852, overtrading :925); 0 hits demerg/eBay/Skype in bundle and in curl ?draft=1",
    "note": null
   },
   {
@@ -5560,10 +5560,10 @@
    "rank": 2,
    "text": "Add an InlineDiagram for block 1: supply chain (raw materials > manufacturer > distributor > retailer > consumer) with arrows showing backward vertical, forward vertical and horizontal integration, matching common_mistakes[1].",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:1818-1830 diagram D2 chain farms>mill>Tanjong Bakes>supermarkets>consumers labelled backward/horizontal/forward/conglomerate, pinned to integration chapter (audit/snapshots/packet-49-bundle__business__business-growth.json:586); backward/forward are labels not arrows",
    "note": null
   },
   {
@@ -5573,10 +5573,10 @@
    "rank": 3,
    "text": "Add recall widgets: a fillin on the four integration types (e.g. 'A car maker buying a steel mill is ___ vertical integration; buying a dealership network is ___; buying a rival car maker is ___') and a reorder of the takeover-to-synergy sequence already given as a flow in external-growth-methods.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:556-557 fillin car maker steel mill/showrooms/rival = backward/forward/horizontal; audit/snapshots/packet-49-bundle__business__business-growth.json:447-448 reorder target>premium bid>control>combine>costs fall",
    "note": null
   },
   {
@@ -5586,10 +5586,10 @@
    "rank": 4,
    "text": "Swap practice idx 2 (Ansoff) and idx 3 (barriers to entry) for on-spec items, e.g. 'Explain one problem a business may face from rapid growth (4)' and 'Assess the financial risks and rewards to [case firm] of a takeover of [target] (10)', and add a levels-style mark scheme (KAA/Evaluation bands) to the 10- and 20-markers so students can self-mark; de-UK the CMA/MegaRetail references for the international audience.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:1538-1580 practice 4 Calc/4 Explain/8 Discuss/12 Assess/12 Assess + 2x20 Evaluate (Units 3-4 layout); :1559 financial risks and rewards of taking over Golden Crust; Level 1-4 schemes; 0 Ansoff/barrier/CMA/MegaRetail",
    "note": null
   },
   {
@@ -5598,11 +5598,11 @@
    "kind": "accuracy",
    "text": "Growth Decisions > demergers-splitting-up > realExample: States 'eBay demerged Skype in 2009, eventually selling it to Microsoft'. eBay did not demerge Skype (shareholders received no Skype shares); it sold a ~65-70% stake to a Silver Lake-led investor group in 2009, and that group sold Skype to Microsoft in 2011 for $8.5bn. This is a divestment/sale, which contradicts the section's own definition of a demerger two paragraphs earlier.",
    "packet": 49,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "packet 49: already resolved before this packet, nothing left to fix. The demergers subsection carrying the eBay/Skype example was removed by packet 13 on 14 Sep (audit/SPEC-OWNERSHIP.md, Demergers row). Measured 26 Sep: the live row's t=0 snapshot (audit/snapshots/2026-09-26-pre-packet-49__business__business-growth.json) has 0 hits for demerg/eBay/Skype, and so does the staged draft (audit/runs/packet-49/served-check.log). The rebuild bans all three so they cannot return (scripts/_packet49-util.mjs BANNED[0], BANNED[1]; A/B in audit/runs/packet-49/ab-mutation.log)."
   },
   {
    "id": "C-business-growth-accuracy-02",
@@ -5610,11 +5610,11 @@
    "kind": "accuracy",
    "text": "Growth Decisions > demergers-splitting-up (whole subsection incl. examMatters 'Examiners test whether you can evaluate demergers'): Demergers are an Edexcel Economics (WEC13 3.1.3) topic, not a WBS13 3.2 Business growth bullet. The examMatters claim that IAL Business examiners test demergers is, to my knowledge, unfounded and displaces spec content (diseconomies, overtrading, financial risks/rewards of takeovers) that IS examined.",
    "packet": 49,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.1.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "packet 49: already resolved before this packet. The item's premise (a live demergers subsection with an examMatters claim that IAL Business examiners test demergers) no longer holds: packet 13 removed the subsection on 14 Sep (audit/SPEC-OWNERSHIP.md, Demergers row; owner types-sizes-businesses). 'demerg' is 0 hits in bus_spec.txt and 0 in the t=0 snapshot of the live row and in the staged draft. Banned by scripts/_packet49-util.mjs BANNED[0]. The item's '3.1.3' is UK GCE numbering (0 hits in bus_spec.txt); the IAL topic is 3.3.2."
   },
   {
    "id": "C-business-growth-quiz-01",
@@ -5622,10 +5622,10 @@
    "kind": "quiz",
    "text": "q0: Correct answer (index 1) is right, but internal vs external economies of scale are never taught anywhere in content[] (only in flashcards/extras). Because PreTest draws 3 random MCQs and inline quizzes draw from this bank, students are gated/assessed on untaught material.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:9-120 internal (five named) and external economies taught in chapter 1; the external-economy quiz item audit/snapshots/packet-49-bundle__business__business-growth.json:1260 is answerable from them",
    "note": null
   },
   {
@@ -5634,10 +5634,10 @@
    "kind": "quiz",
    "text": "q2: Answer correct, but diseconomies of scale are only mentioned in passing (one clause in external-growth misconception and staying-small examMatters); never taught as a concept with causes. Untaught material in the assessment bank.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:801 diseconomies subsection teaches coordination/communication/motivation causes; its quiz items pinned to that chapter (audit/snapshots/packet-49-bundle__business__business-growth.json:981)",
    "note": null
   },
   {
@@ -5646,10 +5646,10 @@
    "kind": "quiz",
    "text": "q3: Answer correct and well-explained, but overtrading does not appear anywhere in content[]. It is a named IAL spec bullet (problems arising from growth) so it should be taught, not just quizzed.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:925 overtrading subsection teaches cause (timing gap), worked case and avoidance",
    "note": null
   },
   {
@@ -5658,10 +5658,10 @@
    "kind": "quiz",
    "text": "q7: Same as index 3: untaught. Also the explanation only justifies the correct answer and one distractor; 'Rapid recruitment of new staff' as a distractor is fine but should be explained as worsening cash outflow.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:1512,1524 overtrading items pinned to chapter 5 which teaches it; both explanations refute all three distractors",
    "note": null
   },
   {
@@ -5670,10 +5670,10 @@
    "kind": "practice",
    "text": "p2: 'Assess the usefulness of Ansoff's Matrix for a business deciding on its growth strategy' (10 marks) is a 3.1 Business objectives and strategy question, not 3.2 Business growth; Ansoff is never mentioned in this section's content. Also the question is generic ('a business') while a specific gym-chain context is supplied; IAL would phrase it 'Assess the usefulness of Ansoff's Matrix to the gym chain when deciding its growth strategy'. Mark allocation (10, Assess) is correct for IAL Business.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "0 hits for Ansoff in audit/snapshots/packet-49-bundle__business__business-growth.json and in served draft; practice bank audit/snapshots/packet-49-bundle__business__business-growth.json:1538-1580 is all 3.3.2 and names the firm",
    "note": null
   },
   {
@@ -5682,10 +5682,10 @@
    "kind": "practice",
    "text": "p3: 'Explain two barriers to entry that might prevent new firms from entering a market' (4 marks) is off-topic for 3.2 Business growth (it is Economics / at best 3.5 competitiveness). Nothing in content[] teaches barriers to entry. Should be replaced with an on-spec 4-marker (e.g. 'Explain one reason why a growing business might experience diseconomies of scale' or 'Explain one problem of rapid growth').",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "0 hits for barrier in audit/snapshots/packet-49-bundle__business__business-growth.json; 4-markers are Calculate (audit/snapshots/packet-49-bundle__business__business-growth.json:1538) and Explain one disadvantage of Plan A (audit/snapshots/packet-49-bundle__business__business-growth.json:1545)",
    "note": null
   },
   {
@@ -5694,10 +5694,10 @@
    "kind": "structure",
    "text": "Assessment/teaching mismatch: 5 of 10 MCQs (idx 0,2,3,7,8) and 3 of 5 practice questions (idx 0,2,3) test economies of scale, diseconomies, overtrading, Ansoff and barriers to entry, none of which are taught in content[]. With quizIndices/practiceIndices null, the PreTest gate (3 random MCQs) and each block's InlineQuiz/InlinePractice can surface untaught questions, which directly feeds the founder's 'pre-test demotivates' hypothesis.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json quiz 25 items each tested concept taught in a subsection at/before its pinned chapter; pins per block :201-988; PreTest takes only unpinned Q0-Q2, taught in chapter 1",
    "note": null
   },
   {
@@ -5706,10 +5706,10 @@
    "kind": "structure",
    "text": "Zero recall widgets in either block: Learn Mode has no retrieval practice at all for this section. Obvious candidates: reorder 'takeover process' (identify target > bid premium > regulator review > integration > synergies realised/lost) from external-growth flow; fillin on the four integration types using the supermarket/food-processor/farm/delivery chain.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json 15 of 15 subsections carry a recall (lines 43..952): 4 match, 7 classify, 1 reorder, 3 fillin; rendered by components/LearnModeTab.jsx:73-76",
    "note": null
   },
   {
@@ -5718,10 +5718,10 @@
    "kind": "structure",
    "text": "Zero diagrams: common_mistakes[1] literally tells students to 'draw a simple supply chain diagram in your head' (raw materials > manufacturing > distribution > retail > consumer) to place the two firms. That should be an actual InlineDiagram on block 1 (with backward/forward/horizontal arrows).",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json diagrams 5, one diagramId per block (:586 etc.), D2 is the supply-chain integration diagram; mistakes[1] audit/snapshots/packet-49-bundle__business__business-growth.json:1738 points to it",
    "note": null
   },
   {
@@ -5730,10 +5730,10 @@
    "kind": "structure",
    "text": "2-per-step pairing: with 2 sections per block the whole section is 2 steps. Block 1 pairing (organic + external) is coherent. Block 2 pairs 'Reasons for Staying Small' with 'Demergers', which are unrelated concepts; a student gets one step with two disconnected ideas. Replace demergers with 'Problems of growth: diseconomies and overtrading' so block 2 becomes 'When growth goes wrong / when not to grow'.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "lib/learn-steps.js:51-65 one step per subsection (no pairing); staying-small and demergers subsections gone; each of 5 chapters is 3 subsections of one 3.3.2 topic",
    "note": null
   },
   {
@@ -5742,10 +5742,10 @@
    "kind": "structure",
    "text": "Difficulty ramp: the section jumps from definitional prose straight to a 20-mark evaluate with no intermediate teaching of the economic logic (why grow: economies of scale, market power; why it hurts: diseconomies, overtrading). The extras.chains[2] and [3] contain exactly this material, so it exists but is paywalled/hidden from the Learn Mode path.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json blocks 0 and 4 teach why-grow and problems-of-growth logic in content; practice pinned by chapter climbs 4>4>8>12>12>20>20",
    "note": null
   },
   {
@@ -5754,10 +5754,10 @@
    "kind": "structure",
    "text": "Takeaways: Block 1 takeaway[3] ('culture clash is the primary reason') overclaims relative to the body. Block 2 takeaway[3] tells students to evaluate demergers from stakeholder perspectives, which trains for a question type that WBS13 is unlikely to set.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:781 block 3 takeaway 'Culture clash is one reason takeovers disappoint; overpaying is another'; no demergers takeaway",
    "note": null
   },
   {
@@ -5766,10 +5766,10 @@
    "kind": "structure",
    "text": "Misconceptions: organic-growth ('always safest') and staying-small ('means the firm failed') are genuine student errors. external-growth ('bigger is always better') is plausible. demergers ('demergers mean the firm failed') is filler given the topic itself is off-spec.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json 15 misconceptions all specific errors with corrections; no demergers one; organic 'always safest' kept; staying-small removed with its off-spec subsection (audit/SPEC-OWNERSHIP.md:30)",
    "note": null
   },
   {
@@ -5778,10 +5778,10 @@
    "kind": "structure",
    "text": "Notes[] only has 3 entries (Organic, External, Staying Small) so the Notes tab and Learn Mode disagree on scope (notes omit demergers), another sign the demerger subsection was bolted on.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:994-1190 notes has 5 entries whose titles equal the 5 content block titles",
    "note": null
   },
   {
@@ -5790,10 +5790,10 @@
    "kind": "specGap",
    "text": "3.2.1 Growth (a) Objectives of growth: economies of scale (internal and external, with named types: purchasing, technical, managerial, financial, marketing), increased market power over customers and suppliers, increased market share and brand recognition, increased profitability. Not taught; only in flashcards/extras and quizzed.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:9-212 chapter 1: five named internal economies, external economies, market power, share and brand, profitability (bus_spec.txt:1121-1125)",
    "note": "SPEC NUMBERING: this item cites 3.2.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -5802,10 +5802,10 @@
    "kind": "specGap",
    "text": "3.2.1 Growth (b) Problems arising from growth: diseconomies of scale, internal communication problems, overtrading. Not taught in content[] despite 4 MCQs on it.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:801,852,925 separate subsections for diseconomies, internal communication, overtrading (bus_spec.txt:1138-1141)",
    "note": "SPEC NUMBERING: this item cites 3.2.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -5814,10 +5814,10 @@
    "kind": "specGap",
    "text": "3.2.2 Mergers and takeovers (a) Reasons for mergers and takeovers beyond speed: cost synergies, market power, diversification, acquiring capabilities/technology; (d) financial risks and rewards (overpaying, debt/leverage, share price reaction vs synergy gains, EPS); (e) problems of rapid growth. Only speed and culture clash are covered.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:433 reasons for M&A (speed, power/share, combining savings, capabilities, supplies/outlets, risk-spreading); audit/snapshots/packet-49-bundle__business__business-growth.json:603 financial risks/rewards incl. premium, interest/gearing, dilution; EPS not an IAL 3.3.2 leaf",
    "note": "SPEC NUMBERING: this item cites 3.2.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -5826,10 +5826,10 @@
    "kind": "specGap",
    "text": "3.2.3 Organic growth (a) Methods of growing organically: franchising, licensing, e-commerce/new distribution channels, new markets (geographic/segments), new product development. Only 'new outlets, new areas, new products' listed in one sentence; franchising and e-commerce absent.",
    "packet": 49,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-49",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-49-bundle__business__business-growth.json:270-284 methods: outlets/capacity, new products, new markets, online; franchising/licensing named with pointer to 2.3.1 (bus_spec.txt:872)",
    "note": "SPEC NUMBERING: this item cites 3.2.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -5838,11 +5838,11 @@
    "kind": "specGap",
    "text": "3.2.4 Reasons for staying small: small firm survival via product differentiation/USP, flexibility, customer service, e-commerce enabling small firms to compete. E-commerce and USP framing absent; content covers niche, flexibility, personal service, owner choice.",
    "packet": 49,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.2.4, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "packet 49: refused on the document. 3.3.2 (bus_spec.txt:1117-1142) has no 'reasons for staying small' requirement: 'staying small' is 0 hits in bus_spec.txt and 'small business' occurs only at :1032, 2.3.5 · 3b 'Ways for a small business to compete in a competitive market', owned by external-influences. So the item's ask (add e-commerce/USP framing to the staying-small subsection) would grow off-specification content. The rebuild removes the live 'Reasons for Staying Small' subsection and holds the topic to one pointer citing 2.3.5 (POINTER_ONLY, scripts/_packet49-util.mjs; the pointer is in the chapter-1 notes). New row in audit/SPEC-OWNERSHIP.md. The item's '3.2.4' is UK GCE numbering."
   },
   {
    "id": "C-business-growth-specGap-06",
@@ -5850,11 +5850,11 @@
    "kind": "specGap",
    "text": "Off-spec content present: Demergers (Edexcel Economics WEC13 3.1.3, not WBS13). Reasonably confident but marked 'verify against the current WBS13 specification'.",
    "packet": 49,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": "SPEC NUMBERING: this item cites 3.1.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.2. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
+   "note": "packet 49: already resolved before this packet. The item's conclusion (demergers are off-specification for 3.3.2) is right and was acted on by packet 13 on 14 Sep (audit/SPEC-OWNERSHIP.md, Demergers row). 0 hits for 'demerg' in bus_spec.txt, in the t=0 snapshot of the live row, and in the staged draft; the rebuild bans it (scripts/_packet49-util.mjs BANNED[0])."
   },
   {
    "id": "C-external-influences-topFix-01",
