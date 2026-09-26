@@ -1,13 +1,14 @@
 import Link from 'next/link';
+import PaperFacts from '@/components/PaperFacts';
 import { BoltIcon, CardsIcon, ChartHistogram, Clipboard, Document, LearnMode, NetworkGraph, PenIcon, ProgressChart, Star, Tutor } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Business Behaviour — Edexcel IAL Economics Unit 3 (WEC13) | Revvy Learn',
+  title: 'WEC13 Business Behaviour — Edexcel IAL Economics Unit 3 Notes | Revvy Learn',
   description: 'Revision notes for all five Edexcel IAL Economics Unit 3 (WEC13) topics: business objectives, revenue and cost analysis, market structures, labour markets and government intervention.',
-  openGraph: { title: 'Business Behaviour — Edexcel IAL Economics Unit 3 (WEC13) | Revvy Learn', url: 'https://revvylearn.com/economics/unit-3', type: 'article' },
+  openGraph: { title: 'WEC13 Business Behaviour — Edexcel IAL Economics Unit 3 Notes | Revvy Learn', url: 'https://revvylearn.com/economics/unit-3', type: 'article' },
 };
 
 const UNIT = { number: 3, code: 'WEC13', title: 'Business Behaviour' };
@@ -104,6 +105,8 @@ export default function Unit3Page() {
           </div>
         </div>
       </section>
+
+      <PaperFacts code={UNIT.code} />
 
       <div className="elp-section" id="topics">
         <div className="elp-uh-tight elp-fade-up" style={{ marginBottom: 40 }}><div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All five topics</div><h2 className="elp-s-title">All five Unit 3 topics, in spec order</h2><p className="elp-s-sub">Open any topic straight in the app.</p></div>

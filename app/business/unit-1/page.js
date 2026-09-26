@@ -1,13 +1,14 @@
 import Link from 'next/link';
+import PaperFacts from '@/components/PaperFacts';
 import { BoltIcon, CardsIcon, ChartHistogram, Clipboard, Document, DrawerAlt, LearnMode, PenIcon, ProgressChart, Star, Tutor } from '@/components/Icons';
 import SiteHeader from '@/components/SiteHeader';
 import UnitScrollBar from '../UnitScrollBar';
 import '@/styles/landing.css';
 
 export const metadata = {
-  title: 'Marketing & People — Edexcel IAL Business Unit 1 (WBS11) | Revvy Learn',
+  title: 'WBS11 Marketing & People — Edexcel IAL Business Unit 1 Notes | Revvy Learn',
   description: 'Complete revision notes for Edexcel IAL Business Unit 1 (WBS11). Meeting customer needs, the market, marketing mix, managing people, entrepreneurs and leaders.',
-  openGraph: { title: 'Marketing & People — Edexcel IAL Business Unit 1 (WBS11) | Revvy Learn', url: 'https://revvylearn.com/business/unit-1', type: 'article' },
+  openGraph: { title: 'WBS11 Marketing & People — Edexcel IAL Business Unit 1 Notes | Revvy Learn', url: 'https://revvylearn.com/business/unit-1', type: 'article' },
 };
 
 const UNIT = { number: 1, code: 'WBS11', title: 'Marketing and People' };
@@ -97,6 +98,8 @@ export default function Unit1Page() {
           </div>
         </div>
       </section>
+
+      <PaperFacts code={UNIT.code} />
 
       <div className="elp-section" id="topics">
         <div className="elp-uh-tight elp-fade-up" style={{ marginBottom: 40 }}><div className="elp-s-eyebrow"><div className="elp-s-eyebrow-dot" style={{ background: 'var(--eup-accent)' }} />All five topics</div><h2 className="elp-s-title">Everything in Unit 1, spec point by spec point</h2><p className="elp-s-sub">Open any topic straight in the app.</p></div>
