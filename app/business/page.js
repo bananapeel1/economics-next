@@ -37,7 +37,7 @@ const unit2Sections = [
 const unit3Sections = [
   { id: 'business-objectives-strategy', number: '3.3.1', title: 'Business Objectives & Strategy', meta: 'Mission, objectives, SWOT, strategy' },
   { id: 'business-growth', number: '3.3.2', title: 'Business Growth', meta: 'Organic and inorganic growth, mergers and takeovers' },
-  { id: 'decision-making-techniques', number: '3.3.3', title: 'Decision-Making Techniques', meta: 'Decision trees, critical path, data analysis' },
+  { id: 'decision-making-techniques', number: '3.3.3', title: 'Decision-Making Techniques', meta: 'Sales forecasting, investment appraisal, decision trees, critical path, contribution' },
   { id: 'influences-business-decisions', number: '3.3.4', title: 'Influences on Business Decisions', meta: 'Corporate culture, stakeholders, ethics' },
   { id: 'assessing-competitiveness', number: '3.3.5', title: 'Assessing Competitiveness', meta: 'Financial statements, ratios, HR measures and strategies' },
   { id: 'managing-change', number: '3.3.6', title: 'Managing Change', meta: 'Key factors in change, contingency planning' },
