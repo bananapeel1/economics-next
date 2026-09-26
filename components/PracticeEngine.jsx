@@ -7,6 +7,8 @@ import QuestionCard from '@/components/practice/QuestionCard';
 import { signalMoment } from '@/lib/feedback/client';
 import { recordAnswer, recordConfidence } from '@/lib/answer-log';
 import SessionSummary from '@/components/practice/SessionSummary';
+import QuantPracticeCard from '@/components/practice/QuantPracticeCard';
+import { quantBanks, quantProgressSection, isQuantProgressSection, sectionFromQuantProgress } from '@/lib/quant-practice';
 
 /** "Next due in 6 hours" / "Next due tomorrow", from a timestamp. Empty string if nothing is scheduled. */
 function formatNextDue(nextReview) {
@@ -135,7 +137,10 @@ function TopicStep({
   onBack,
   onStart,
   loading,
-  progressSummary, accessNote, sessionSize, onSessionSize }) {
+  progressSummary, accessNote, sessionSize, onSessionSize,
+  noun = 'question',          // packet 13.4: 'calculation' in the calculations session
+  sizes = [10, 20, 40],
+}) {
   // F085: every unit used to start collapsed, so the picker opened showing nothing to pick.
   // Open the first unit so the student can see what a topic chip is without hunting.
   const [expandedUnits, setExpandedUnits] = useState(() => {
@@ -257,7 +262,7 @@ function TopicStep({
                         <span className="spe-chip-text">{sec.short_title || sec.title}</span>
                         {prog && prog.total > 0 && (
                           <span className="spe-chip-count">
-                            {prog.total} question{prog.total === 1 ? '' : 's'}
+                            {prog.total} {noun}{prog.total === 1 ? '' : 's'}
                             {typeof prog.due === 'number' ? ` \u00b7 ${prog.due} due` : ''}
                           </span>
                         )}
@@ -290,7 +295,7 @@ function TopicStep({
         <div className="spe-action-bar-inner">
           {/* F084: session length is the student's choice, not a fixed 20. */}
           <div className="spe-session-size" role="group" aria-label="Session length">
-            {[10, 20, 40].map((n) => (
+            {sizes.map((n) => (
               <button
                 key={n}
                 className={`spe-session-size-btn${sessionSize === n ? ' active' : ''}`}
@@ -331,7 +336,15 @@ function TopicStep({
 
 /* ─── PracticeEngine ─── */
 
-export default function PracticeEngine({ subjects, units, sections, isLoggedIn }) {
+/**
+ * `mode="calculations"` is packet 13.4's calculations session (/calculations-practice): the same
+ * setup, queue, card sequence and summary, with only the topics' calculations in the queue. It
+ * does not call the quiz-bank endpoint, so it works signed out — a generated item is not a
+ * content bank and there is nothing to withhold (DECISIONS, 22 September 2026) — with the
+ * schedule in localStorage, exactly as Smart Practice keeps an anonymous schedule.
+ */
+export default function PracticeEngine({ subjects, units, sections, isLoggedIn, mode = 'quiz' }) {
+  const isCalc = mode === 'calculations';
   const [phase, setPhase] = useState('setup');        // 'setup' | 'session' | 'summary'
   // A finished session is a moment the feedback card may answer (computers only; see lib/feedback).
   useEffect(() => { if (phase === 'summary') signalMoment('practice_complete', {}); }, [phase]);
@@ -381,7 +394,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   // Keys already re-queued this session, so a wrong answer comes back exactly once (F077).
   const requeuedRef = useRef(new Set());
   // F084: the student chooses how long a session is instead of always getting 20.
-  const [sessionSize, setSessionSize] = useState(20);
+  const [sessionSize, setSessionSize] = useState(isCalc ? 10 : 20);
   // F078: what the selected topics actually hold, so an empty queue can explain itself.
   const [emptyReason, setEmptyReason] = useState(null);
   const [questionKey, setQuestionKey] = useState(0);
@@ -397,7 +410,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     if (sectionIds.length === 0) return;
 
     try {
-      const res = await fetch(`/api/practice/progress-summary?sections=${sectionIds.join(',')}`);
+      const res = await fetch(`${isCalc ? '/api/calculations-practice' : '/api/practice'}/progress-summary?sections=${sectionIds.join(',')}`);
       const json = await res.json();
       if (!json.summary) return;
 
@@ -406,7 +419,9 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
       // student who has already practised here that nothing has stuck. Their schedule lives in
       // localStorage, so recompute due from that rather than showing a number we know is wrong.
       if (!isLoggedIn) {
-        const local = loadLocalProgress(sectionIds);
+        // A calculation's schedule is keyed `qt-<section>:<slot>` (lib/quant-practice.js).
+        const keyOf = (id) => (isCalc ? quantProgressSection(id) : id);
+        const local = loadLocalProgress(sectionIds.map(keyOf));
         const now = Date.now();
         for (const id of sectionIds) {
           const row = json.summary[id];
@@ -414,7 +429,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
           let attempted = 0;
           let due = 0;
           for (const [key, val] of Object.entries(local)) {
-            if (!key.startsWith(id + ':')) continue;
+            if (!key.startsWith(keyOf(id) + ':')) continue;
             attempted++;
             if (!val?.nextReview || val.nextReview <= now) due++;
           }
@@ -428,7 +443,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     } catch {
       // silently ignore
     }
-  }, [subjects, units, sections, isLoggedIn]);
+  }, [subjects, units, sections, isLoggedIn, isCalc]);
 
   /* ─── Derived data ─── */
 
@@ -521,13 +536,13 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     try {
       const sectionArr = Array.from(selectedSectionIds);
 
-      // 1. Fetch quiz data
+      // 1. Fetch quiz data — not in the calculations session, which has no bank to fetch.
       setAccessNote(null);
       requeuedRef.current = new Set();
-      const qRes = await fetch(
-        `/api/practice/questions?sections=${sectionArr.join(',')}`
-      );
-      const qJson = await qRes.json().catch(() => ({}));
+      const qRes = isCalc
+        ? { ok: true, status: 200 }
+        : await fetch(`/api/practice/questions?sections=${sectionArr.join(',')}`);
+      const qJson = isCalc ? {} : await qRes.json().catch(() => ({}));
 
       if (!qRes.ok) {
         setAccessNote(
@@ -557,6 +572,22 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
       for (const [sectionId, list] of Object.entries(raw)) {
         fetchedQuizData[sectionId] = Array.isArray(list) ? shuffleAllOptions(list) : list;
       }
+      /*
+       * Packet 13.3: calculations join the queue. A topic's drills are derived from its spec
+       * number exactly as Learn Mode derives them (lib/quant-pool.js), so nothing new is fetched —
+       * the items are built in the browser from a seed. They sit under their own `qt-` key, the
+       * way flashcards sit under `fc-`, so their schedules never collide with a quiz question's.
+       */
+      const quantData = quantBanks(sectionArr.map((id) => {
+        const sec = sections.find((s) => String(s.id) === String(id));
+        const unit = units.find((u) => u.id === sec?.unit_id);
+        return sec && unit
+          ? { id: sec.id, subject: unit.subjects?.slug, unitCode: unit.code, number: sec.number }
+          : null;
+      }).filter(Boolean));
+      Object.assign(fetchedQuizData, quantData);
+      const queueSectionIds = isCalc ? Object.keys(quantData) : [...sectionArr, ...Object.keys(quantData)];
+
       setQuizData(fetchedQuizData);
 
       // 2. Fetch progress
@@ -564,7 +595,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
 
       if (isLoggedIn) {
         const pRes = await fetch(
-          `/api/practice/progress?sections=${sectionArr.join(',')}`
+          `/api/practice/progress?sections=${queueSectionIds.join(',')}`
         );
         const pJson = await pRes.json();
         const rows = pJson.progress || [];
@@ -583,7 +614,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
           };
         }
       } else {
-        fetchedProgressMap = loadLocalProgress(sectionArr);
+        fetchedProgressMap = loadLocalProgress(queueSectionIds);
       }
 
       setProgressMap(fetchedProgressMap);
@@ -591,7 +622,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
       // 3. Build queue
       const sessionQueue = buildQueue(
         fetchedProgressMap,
-        sectionArr,
+        queueSectionIds,
         fetchedQuizData,
         sessionSize,
         { includeNotDue: practiseEarly }
@@ -600,7 +631,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
       // F078: an empty queue used to render "No questions available", which reads as missing
       // content. Distinguish having nothing scheduled yet from having everything scheduled.
       if (sessionQueue.length === 0) {
-        const stats = queueStats(fetchedProgressMap, sectionArr, fetchedQuizData);
+        const stats = queueStats(fetchedProgressMap, queueSectionIds, fetchedQuizData);
         setEmptyReason(stats.total === 0 ? { kind: 'no-content', stats } : { kind: 'nothing-due', stats });
       } else {
         setEmptyReason(null);
@@ -616,7 +647,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     } finally {
       setLoading(false);
     }
-  }, [selectedSectionIds, isLoggedIn, sessionSize]);
+  }, [selectedSectionIds, isLoggedIn, sessionSize, sections, units, isCalc]);
 
   /* ─── Answer handler ─── */
 
@@ -672,13 +703,16 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
 
       // Update local state
       setProgressMap(prev => ({ ...prev, [key]: updated }));
+      const isQuant = isQuantProgressSection(item.sectionId);
       setSessionResults(prev => [
         ...prev,
         {
           key,
-          sectionId: item.sectionId,
+          // A calculation's row lives under `qt-<section>`; the summary names and links the topic.
+          sectionId: isQuant ? sectionFromQuantProgress(item.sectionId) : item.sectionId,
           questionIndex: item.questionIndex,
-          stem: item.question?.question || '',
+          kind: isQuant ? 'quant' : 'quiz',
+          stem: item.question?.question || item.question?.title || '',
           correct,
           confidence,
           retry: !!item.requeued,
@@ -799,6 +833,8 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         accessNote={accessNote}
         sessionSize={sessionSize}
         onSessionSize={setSessionSize}
+        noun={isCalc ? 'calculation' : 'question'}
+        sizes={isCalc ? [5, 10, 20] : [10, 20, 40]}
       />
     );
   }
@@ -814,9 +850,11 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
             {accessNote?.kind === 'signed-out' || accessNote?.kind === 'error'
               ? accessNote.message
               : emptyReason?.kind === 'no-content'
-                ? 'These topics have no questions yet.'
+                ? `These topics have no ${isCalc ? 'calculations' : 'questions'} yet.`
                 : emptyReason?.kind === 'nothing-due'
-                  ? `All ${emptyReason.stats.total} questions in these topics are scheduled. ${formatNextDue(emptyReason.stats.nextReview)}`
+                  ? `${emptyReason.stats.total === 1
+                    ? `The only ${isCalc ? 'calculation' : 'question'} in these topics is scheduled.`
+                    : `All ${emptyReason.stats.total} ${isCalc ? 'calculations' : 'questions'} in these topics are scheduled.`} ${formatNextDue(emptyReason.stats.nextReview)}`
                   : 'Nothing to practise in these topics right now.'}
           </p>
           {accessNote?.kind === 'signed-out' && (
@@ -835,7 +873,8 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
     }
 
     const question = item.question;
-    const sectionTitle = getSectionTitle(item.sectionId);
+    const isQuant = question?.kind === 'quant';
+    const sectionTitle = getSectionTitle(isQuant ? sectionFromQuantProgress(item.sectionId) : item.sectionId);
 
     return (
       <div className="spe-session">
@@ -848,7 +887,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
         <div className="spe-session-top">
           <div className="spe-session-top-left">
             <span className="spe-session-dot" />
-            <span className="spe-session-label">Practice</span>
+            <span className="spe-session-label">{isCalc ? 'Calculations' : 'Practice'}</span>
           </div>
           <div className="spe-progress-bar">
             <div
@@ -866,6 +905,21 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
 
         {/* Question with animation key */}
         <div className="spe-question-animate" key={questionKey}>
+          {isQuant ? (
+            <QuantPracticeCard
+              sectionId={sectionFromQuantProgress(item.sectionId)}
+              templateId={question.templateId}
+              progress={progressMap[`${item.sectionId}:${item.questionIndex}`] || null}
+              sectionTitle={sectionTitle}
+              questionNumber={currentIndex + 1}
+              totalQuestions={queue.length}
+              willReturn={!item.requeued}
+              onAnswer={handleAnswer}
+              onNext={handleNext}
+              onSkip={handleSkip}
+              surface={isCalc ? 'calculations' : 'practice'}
+            />
+          ) : (
           <QuestionCard
             question={question}
             sectionId={item.sectionId}
@@ -877,6 +931,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
             onNext={handleNext}
             onSkip={handleSkip}
           />
+          )}
         </div>
       </div>
     );
@@ -886,6 +941,7 @@ export default function PracticeEngine({ subjects, units, sections, isLoggedIn }
   if (phase === 'summary') {
     return (
       <SessionSummary
+        mode={mode}
         results={sessionResults}
         sections={sections}
         totalQuestions={queue.length}

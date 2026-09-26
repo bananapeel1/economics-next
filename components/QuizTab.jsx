@@ -86,7 +86,7 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
   if (!questions || !questions.length) {
     return (
       <div>
-        {quantDrills.map((item) => <QuantCard key={item.template} item={item} onReseed={() => reseed(item.template)} />)}
+        {quantDrills.map((item) => <QuantCard key={item.template} item={item} sectionId={sectionId} onReseed={() => reseed(item.template)} />)}
         <div style={{ color: 'var(--text-muted)', textAlign: 'center', padding: 40 }}>No quiz available.</div>
       </div>
     );
@@ -152,7 +152,7 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
 
   return (
     <div>
-      {quantDrills.map((item) => <QuantCard key={item.template} item={item} onReseed={() => reseed(item.template)} />)}
+      {quantDrills.map((item) => <QuantCard key={item.template} item={item} sectionId={sectionId} onReseed={() => reseed(item.template)} />)}
 
       {bestScore && !submitted && (
         <div className="quiz-best-score">
@@ -287,13 +287,13 @@ export default function QuizTab({ questions, sectionId, onAskTutor, previewMode 
  * The calculation, framed so it cannot be read as question 1 of the quiz. The heading says
  * what it is and the note says what it is not: the score below counts the multiple choice.
  */
-function QuantCard({ item, onReseed }) {
+function QuantCard({ item, onReseed, sectionId }) {
   return (
     <div className="quiz-question">
       <div className="quiz-question-num">Calculation practice · {item.unit} · {item.topic}</div>
       {/* key={item.id}: the card's own contract. Without it "New figures" redrew the question
           and left the previous answers in the boxes with the previous marking under them. */}
-      <CalculationItem key={item.id} item={item} onReseed={onReseed} />
+      <CalculationItem key={item.id} item={item} onReseed={onReseed} track={{ surface: 'quiz', sectionId }} />
       <div className="quiz-explanation">
         Marked on its own, step by step — it is not part of the quiz score below. Every time you
         ask for new figures the method stays and the numbers change.

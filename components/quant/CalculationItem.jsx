@@ -1,6 +1,7 @@
 "use client";
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { markItem } from '@/lib/quant/index.mjs';
+import { trackFunnel } from '@/lib/funnel';
 import styles from './CalculationItem.module.css';
 
 /**
@@ -24,10 +25,26 @@ function Rich({ text }) {
  * because the claim being made to a student — come back and the numbers will have changed —
  * is only visible if they can see it happen.
  */
-export default function CalculationItem({ item, onResult, onReseed }) {
+/*
+ * `track` is packet 13.4's: `{ surface, sectionId, step? }` sends quant_start when the item is
+ * shown and quant_submit / quant_correct on its FIRST marking (lib/funnel.js). Optional, so
+ * /admin/quant — which is not a student — sends nothing.
+ */
+export default function CalculationItem({ item, onResult, onReseed, track }) {
   const [responses, setResponses] = useState({});
   const [result, setResult] = useState(null);
   const [showSolution, setShowSolution] = useState(false);
+  const submitted = useRef(false);
+
+  const surface = track?.surface;
+  useEffect(() => {
+    if (!surface) return;
+    trackFunnel('quant_start', {
+      sectionId: track.sectionId ?? null, step: track.step, surface, template: item.template, marks: item.marks,
+    });
+    // Once per item: callers remount on a new seed (key={item.id}).
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [item.id, surface]);
 
   const set = (id, value) => {
     setResponses((r) => ({ ...r, [id]: value }));
@@ -38,6 +55,12 @@ export default function CalculationItem({ item, onResult, onReseed }) {
     const marked = markItem(item, responses);
     setResult(marked);
     setShowSolution(false);
+    if (surface && !submitted.current) {
+      submitted.current = true;
+      const base = { sectionId: track.sectionId ?? null, step: track.step, surface, template: item.template };
+      trackFunnel('quant_submit', { ...base, awarded: marked.awarded, total: marked.total, usedOfr: !!marked.usedOfr });
+      if (marked.total > 0 && marked.awarded === marked.total) trackFunnel('quant_correct', base);
+    }
     if (onResult) onResult(marked);
   };
 

@@ -36,6 +36,7 @@ export default function CompletionScreen({
   contentData, quizData, scores,
   onNavigateToQuiz, onNavigateToTab,
   onStartMixedReview, onRetry, onScrollTop,
+  calculationCount = 0,
 }) {
   const [completeView, setCompleteView] = useState('main'); // 'main' | 'posttest' | 'drill'
 
@@ -240,6 +241,12 @@ export default function CompletionScreen({
         <a href="/flashcards-practice" className="lm-complete-practice-btn lm-complete-flashcard-btn">
           &#127183; Review flashcards
         </a>
+        {/* Packet 13.4. Arrives with the topic chosen, like Smart Practice above. */}
+        {calculationCount > 0 && (
+          <a href={`/calculations-practice?section=${encodeURIComponent(sectionId)}`} className="lm-complete-practice-btn">
+            &#129518; {calculationCount === 1 ? 'Calculations: this topic\u2019s calculation, new figures each time' : `Calculations: ${calculationCount} on this topic, new figures each time`}
+          </a>
+        )}
       </div>
 
       {completedCount >= 3 && onStartMixedReview && (

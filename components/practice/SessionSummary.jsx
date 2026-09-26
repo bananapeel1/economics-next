@@ -14,7 +14,15 @@ const GROUPS = [
 ];
 
 /* ── Session Summary — Smart Practice Engine ── */
-export default function SessionSummary({ results, sections, onRestart, onChangeTopics }) {
+/* The calculations session (packet 13.4) asks no confidence, so two of the four groups could never
+   fill; it reports the two that can, in its own words. */
+const CALC_GROUPS = [
+  { id: 'knew', label: 'Full marks', note: 'Moved further back in your schedule' },
+  { id: 'gap', label: 'Not yet', note: 'Back sooner, with new figures' },
+];
+
+export default function SessionSummary({ results, sections, onRestart, onChangeTopics, mode = 'quiz' }) {
+  const isCalc = mode === 'calculations';
   // A wrong answer comes back once in the session. The first attempt is what the student knew;
   // the retry is reported separately, so a question does not count twice.
   const firsts = new Map();
@@ -28,8 +36,12 @@ export default function SessionSummary({ results, sections, onRestart, onChangeT
   const totalAnswered = answered.length;
   const fixedOnRetry = [...retries.values()].filter((r) => r.correct).length;
 
+  // A calculation is not asked for confidence (packet 13.3: the working says how sure you could
+  // be), so a wrong one would otherwise fall to classifyAnswer's null-confidence branch and be
+  // filed as "Sure but wrong" — a claim about the student nobody made. It is a gap in the method.
+  const groupOf = (r) => (r.kind === 'quant' && !r.correct ? 'gap' : classifyAnswer(r.correct, r.confidence));
   const byGroup = { knew: [], lucky: [], misconception: [], gap: [] };
-  for (const r of answered) byGroup[classifyAnswer(r.correct, r.confidence)].push(r);
+  for (const r of answered) byGroup[groupOf(r)].push(r);
 
   const known = byGroup.knew.length;
   const knownPct = totalAnswered > 0 ? Math.round((known / totalAnswered) * 100) : 0;
@@ -51,7 +63,7 @@ export default function SessionSummary({ results, sections, onRestart, onChangeT
   // nothing else will flag them.
   const toFix = [...byGroup.misconception, ...byGroup.gap];
 
-  const questionLabel = totalAnswered === 1 ? 'question' : 'questions';
+  const questionLabel = (isCalc ? 'calculation' : 'question') + (totalAnswered === 1 ? '' : 's');
   const topicLabel = uniqueTopics === 1 ? 'topic' : 'topics';
 
   return (
@@ -59,11 +71,13 @@ export default function SessionSummary({ results, sections, onRestart, onChangeT
       <h2 className="spe-summary-heading">{message}</h2>
       <p className="spe-summary-subtitle">
         {totalAnswered} {questionLabel} across {uniqueTopics} {topicLabel}
-        {totalAnswered > 0 && <> &middot; you knew {known} of {totalAnswered} for sure</>}
+        {totalAnswered > 0 && (isCalc
+          ? <> &middot; full marks on {known} of {totalAnswered}</>
+          : <> &middot; you knew {known} of {totalAnswered} for sure</>)}
       </p>
 
       <div className="spe-summary-groups">
-        {GROUPS.map((g) => (
+        {(isCalc ? CALC_GROUPS : GROUPS).map((g) => (
           <div key={g.id} className={`spe-group spe-group--${g.id}`}>
             <span className="spe-group-num">{byGroup[g.id].length}</span>
             <span className="spe-group-label">{g.label}</span>
@@ -84,8 +98,8 @@ export default function SessionSummary({ results, sections, onRestart, onChangeT
           <ul className="spe-summary-fix-list">
             {toFix.slice(0, 8).map((r) => (
               <li key={r.key || `${r.sectionId}:${r.questionIndex}`} className="spe-summary-fix-item">
-                <span className={`spe-fix-tag spe-fix-tag--${classifyAnswer(r.correct, r.confidence)}`}>
-                  {classifyAnswer(r.correct, r.confidence) === 'misconception' ? 'Sure but wrong' : 'Gap'}
+                <span className={`spe-fix-tag spe-fix-tag--${groupOf(r)}`}>
+                  {groupOf(r) === 'misconception' ? 'Sure but wrong' : 'Gap'}
                 </span>
                 <span className="spe-fix-stem">{r.stem}</span>
                 <a className="spe-fix-link" href={`/?section=${r.sectionId}`} target="_blank" rel="noopener noreferrer">

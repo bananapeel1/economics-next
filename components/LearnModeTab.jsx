@@ -329,6 +329,13 @@ export default function LearnModeTab({
     return map;
   }, [flatSteps, currentUnit?.code, currentSection?.number]);
 
+  // How many calculations this topic has in all — the completion screen links the calculations
+  // session with the topic chosen (packet 13.4). All of them, not just the ones placed above.
+  const calculationCount = useMemo(() => {
+    const unitCode = currentUnit?.code || '';
+    return templatesForSection({ subject: subjectFrom(unitCode), unitCode, number: currentSection?.number || '' }).length;
+  }, [currentUnit?.code, currentSection?.number]);
+
   const practiceStepIndices = useMemo(() => Object.keys(practiceMap).map(Number).sort((a, b) => a - b), [practiceMap]);
 
   // F079: every question the check-ins will ask, so the pre-test can avoid them. Declared beside
@@ -593,6 +600,7 @@ export default function LearnModeTab({
         onNavigateToQuiz={onNavigateToQuiz} onNavigateToTab={onNavigateToTab}
         onStartMixedReview={onStartMixedReview}
         onScrollTop={scrollToTop}
+        calculationCount={calculationCount}
         onRetry={() => {
           // F006: clear the scores so the second attempt's number means something, on the server too.
           const fresh = EMPTY_SCORES();
@@ -839,6 +847,7 @@ export default function LearnModeTab({
                   {currentDiagram && <InlineDiagram diagram={currentDiagram} sectionId={sectionId} />}
                   {currentQuant && (
                     <CalculationItem key={currentQuant.id} item={currentQuant}
+                      track={{ surface: 'learn', sectionId, step: safeStep }}
                       onResult={(result) => onQuantResult(currentQuant.id, result)}
                       onReseed={() => setQuantAttempts(a => ({ ...a, [currentQuantTemplate]: currentQuantAttempt + 1 }))} />
                   )}
@@ -897,6 +906,7 @@ export default function LearnModeTab({
                   )}
                   {currentQuant && (
                     <CalculationItem key={currentQuant.id} item={currentQuant}
+                      track={{ surface: 'learn', sectionId, step: safeStep }}
                       onResult={(result) => onQuantResult(currentQuant.id, result)}
                       onReseed={() => setQuantAttempts(a => ({ ...a, [currentQuantTemplate]: currentQuantAttempt + 1 }))} />
                   )}

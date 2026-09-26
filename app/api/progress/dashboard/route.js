@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { createServerClient } from '@/lib/supabase-server';
+import { quantCount, isQuantProgressSection, sectionFromQuantProgress } from '@/lib/quant-practice';
 
 /**
  * GET /api/progress/dashboard
@@ -21,8 +22,10 @@ export async function GET() {
   // 2. Fetch structure: subjects, units, sections
   const [{ data: subjects }, { data: units }, { data: sections }] = await Promise.all([
     db.from('subjects').select('id, name, slug, sort_order').order('sort_order'),
-    db.from('units').select('id, number, title, subject_id').order('number'),
-    db.from('sections').select('id, title, short_title, unit_id, sort_order').order('sort_order'),
+    // `code`, the subject slug and the section `number` are packet 13.4's: they are what a topic's
+    // calculations are derived from (lib/quant-pool.js), and so what counts them.
+    db.from('units').select('id, number, code, title, subject_id, subjects(slug)').order('number'),
+    db.from('sections').select('id, title, short_title, unit_id, sort_order, number').order('sort_order'),
   ]);
 
   // 3. Fetch question counts from section_quiz AND section_flashcards
@@ -45,10 +48,19 @@ export async function GET() {
     fcCounts[row.section_id] = Array.isArray(row.data) ? row.data.length : 0;
   }
 
-  // Total questions per section = quiz + flashcards
+  // Calculations per section (packet 13.4). Not a table: the templates that claim the section's
+  // spec number. A calculation practised in Smart Practice or the calculations session writes a
+  // `qt-` row below, so it has to be in the denominator too or mastery could pass 100%.
+  const quantCounts = {};
+  for (const s of (sections || [])) {
+    const unit = (units || []).find((u) => u.id === s.unit_id);
+    quantCounts[s.id] = unit ? quantCount({ id: s.id, subject: unit.subjects?.slug, unitCode: unit.code, number: s.number }) : 0;
+  }
+
+  // Total questions per section = quiz + flashcards + calculations
   const totalPerSection = {};
   for (const id of sectionIds) {
-    totalPerSection[id] = (quizCounts[id] || 0) + (fcCounts[id] || 0);
+    totalPerSection[id] = (quizCounts[id] || 0) + (fcCounts[id] || 0) + (quantCounts[id] || 0);
   }
 
   // 4. Fetch ALL practice_question_progress for user (quiz + flashcard fc- prefixed)
@@ -87,7 +99,9 @@ export async function GET() {
     sectionStateRows.filter((r) => r.completed_at).map((r) => r.section_id)
   );
   for (const row of progressRows) {
-    const originalId = row.section_id.replace(/^fc-/, '');
+    const originalId = isQuantProgressSection(row.section_id)
+      ? sectionFromQuantProgress(row.section_id)
+      : row.section_id.replace(/^fc-/, '');
     if (!progressBySec[originalId]) {
       progressBySec[originalId] = { mastered: 0, learning: 0 };
     }

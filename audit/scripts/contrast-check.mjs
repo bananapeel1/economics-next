@@ -160,7 +160,30 @@ function parseRules(text) {
   return out;
 }
 
-const rules = parseRules(css.replace(/\/\*[\s\S]*?\*\//g, (m) => m.replace(/[^\n]/g, ' ')));
+/*
+ * V051 (packet 13.3). This read `app/globals.css` and nothing else, so every CSS module sat outside
+ * the guard: the calculation card's method line measured 2.83:1 at 11px in a browser while this
+ * script printed "clean". The modules resolve the same tokens (they have no token blocks of their
+ * own), so they are read here, each rule tagged with the file it came from. Token blocks, theme
+ * pairs and the accepted lists still come from — and apply across — the whole set.
+ */
+const MODULE_DIRS = ['app', 'components'];
+function cssModules(dir) {
+  const out = [];
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) { if (entry.name !== 'node_modules' && !entry.name.startsWith('.')) out.push(...cssModules(full)); }
+    else if (entry.name.endsWith('.module.css')) out.push(full);
+  }
+  return out;
+}
+const blankComments = (text) => text.replace(/\/\*[\s\S]*?\*\//g, (m) => m.replace(/[^\n]/g, ' '));
+const SHEETS = [CSS, ...MODULE_DIRS.flatMap((d) => cssModules(path.join(root, d))).sort()];
+const rules = SHEETS.flatMap((file) => {
+  const text = file === CSS ? css : fs.readFileSync(file, 'utf8');
+  const where = path.relative(root, file).replace(/^app\/globals\.css$/, 'globals.css');
+  return parseRules(blankComments(text)).map((r) => ({ ...r, file: where }));
+});
 
 function decl(body, prop) {
   const re = new RegExp(`(?:^|[;{\\s])${prop}\\s*:\\s*([^;}]+)`, 'i');
@@ -224,14 +247,14 @@ function checkContrast(theme) {
       if (own && own[3] < 1 && backgroundIsElsewhere(fg)) {
         // a translucent overlay carrying white text sits on a dark parent this
         // script cannot see (e.g. a pill inside a gradient hero)
-        unverifiable.push({ sel, line: rule.line, fg: colorRaw });
+        unverifiable.push({ sel, file: rule.file, line: rule.line, fg: colorRaw });
         continue;
       }
       grounds = own ? (own[3] < 1 ? [over(own, page), over(own, card)] : [own]) : [page, card];
     } else if (bgRaw) {
       continue; // gradient or image — a static read would be a guess
     } else if (backgroundIsElsewhere(fg)) {
-      unverifiable.push({ sel, line: rule.line, fg: colorRaw });
+      unverifiable.push({ sel, file: rule.file, line: rule.line, fg: colorRaw });
       continue;
     } else {
       grounds = [page, card];
@@ -243,7 +266,7 @@ function checkContrast(theme) {
       if (cr < need) {
         const key = `${theme}:${sel}`;
         if (ACCEPTED.has(key)) break;
-        fails.push({ sel, line: rule.line, cr, need, fg: colorRaw, bg: `rgb(${bg.slice(0, 3).map(Math.round).join(',')})` });
+        fails.push({ sel, file: rule.file, line: rule.line, cr, need, fg: colorRaw, bg: `rgb(${bg.slice(0, 3).map(Math.round).join(',')})` });
         break;
       }
     }
@@ -277,7 +300,7 @@ function checkLiterals() {
         (r) => r.selector.includes('[data-theme="light"]') && r.selector.includes(rule.selector.split(/[,\s]/)[0])
       );
       if (ACCEPTED_LITERALS.has(rule.selector.trim())) continue;
-      found.push({ sel: rule.selector, line: rule.line, prop, hex, paired });
+      found.push({ sel: rule.selector, file: rule.file, line: rule.line, prop, hex, paired });
     }
   }
   return found;
@@ -336,12 +359,12 @@ const dim = (s) => `\x1b[2m${s}\x1b[0m`;
 for (const theme of THEMES) {
   const { checked, fails, unverifiable } = checkContrast(theme);
   const informational = theme === 'dark' && themeArg !== 'dark';
-  console.log(bold(`\ncontrast — ${theme} mode`) + dim(`  (${checked} rules with a resolvable colour)`));
+  console.log(bold(`\ncontrast — ${theme} mode`) + dim(`  (${checked} rules with a resolvable colour, across ${SHEETS.length} stylesheets)`));
   if (!fails.length) {
     console.log('  ' + green('pass') + dim(' — nothing below its threshold'));
   } else {
     for (const f of fails) {
-      console.log(`  ${red(f.cr.toFixed(2) + ':1')} need ${f.need}  ${dim('globals.css:' + f.line)}  ${f.sel}`);
+      console.log(`  ${red(f.cr.toFixed(2) + ':1')} need ${f.need}  ${dim(f.file + ':' + f.line)}  ${f.sel}`);
       console.log(dim(`         ${f.fg} on ${f.bg}`));
     }
     if (!informational) exit = 1;
@@ -349,7 +372,7 @@ for (const theme of THEMES) {
   if (unverifiable.length) {
     console.log(dim(`  ${unverifiable.length} rules set white text with no background of their own — their fill comes`));
     console.log(dim('  from a sibling rule or a JSX inline style, so only the browser can score them.'));
-    if (VERBOSE) unverifiable.forEach((u) => console.log(dim(`    globals.css:${u.line}  ${u.sel}`)));
+    if (VERBOSE) unverifiable.forEach((u) => console.log(dim(`    ${u.file}:${u.line}  ${u.sel}`)));
   }
   if (theme === 'dark') console.log(dim('  (dark is reported for information; the audit scoped light mode)'));
 }
@@ -360,7 +383,7 @@ if (!literals.length) {
   console.log('  ' + green('pass') + dim(' — every themed colour declaration resolves through a token'));
 } else {
   for (const l of literals) {
-    console.log(`  ${dim('globals.css:' + l.line)}  ${l.sel}  ${l.prop}: ${l.hex}`);
+    console.log(`  ${dim(l.file + ':' + l.line)}  ${l.sel}  ${l.prop}: ${l.hex}`);
   }
   console.log(dim('  Pair it with a [data-theme="light"] rule, or move it onto a token.'));
   exit = 1;
