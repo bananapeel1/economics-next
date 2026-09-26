@@ -60,8 +60,13 @@
 .axisTitle { fill: var(--text-muted); font-family: inherit; font-size: 11.5px; font-weight: 500; pointer-events: none; }
 
 .curve { fill: none; stroke-width: 2.6; stroke-linecap: round; pointer-events: none; }
+/* Colour follows a line's ROLE (lib/diagram/shape.mjs curveMeta), never its name: a labour-demand
+   curve, AR and TR are all "demand" blue; a price, wage or world-price line is "policy" purple;
+   MR is "marginal" pink. Whatever the student moved turns red, whatever it is. */
 .demand { stroke: var(--accent-blue); }
 .supply { stroke: var(--accent-amber); }
+.policy { stroke: var(--accent-purple); }
+.marginal { stroke: var(--accent-pink); }
 .shifted { stroke: var(--accent-red); }
 .ghost { stroke: var(--text-dim); stroke-dasharray: 5 4; stroke-width: 2; opacity: 0.7; }
 
@@ -79,6 +84,8 @@
 .labelOff { fill: var(--accent-red); }
 .demandFill { fill: var(--accent-blue); }
 .supplyFill { fill: var(--accent-amber); }
+.policyFill { fill: var(--accent-purple); }
+.marginalFill { fill: var(--accent-pink); }
 .shiftedFill { fill: var(--accent-red); }
 .ghostFill { fill: var(--text-dim); }
 
@@ -105,6 +112,13 @@
 .nudgeBtn:disabled { opacity: 0.45; cursor: not-allowed; }
 .nudgeBtn:not(:disabled):hover { border-color: var(--accent-green); color: var(--accent-green); }
 .nudgeValue { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--accent-green); }
+.next { border-color: var(--accent-green); color: var(--accent-green); }
+
+/* The canvas's description, for screen readers only; announced as it changes. */
+.srOnly {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 
 /* ── mark scheme ── */
 .scheme { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }

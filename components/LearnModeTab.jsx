@@ -17,6 +17,7 @@ import { signalMoment } from '@/lib/feedback/client';
 import ReportProblem from './feedback/ReportProblem';
 import CalculationItem from './quant/CalculationItem';
 import { templatesForSection, placeQuantItems, quantItem } from '@/lib/quant-pool';
+import { diagramSpecsForSection, authoredDiagramSpecIds, placeDiagramDrills, derivedDiagramRecall, derivedDiagramRecallId } from '@/lib/diagram-pool';
 import { readAnswerLog, orderByPriority } from '@/lib/answer-log';
 import PreTest from './learn-mode/PreTest';
 import { pickPretestQuestions } from '@/lib/pretest-pool';
@@ -336,6 +337,39 @@ export default function LearnModeTab({
     return templatesForSection({ subject: subjectFrom(unitCode), unitCode, number: currentSection?.number || '' }).length;
   }, [currentUnit?.code, currentSection?.number]);
 
+  /* ── Drawing drills (packet 13.7) ──
+   *
+   * Derived like the calculations above (lib/diagram-pool.js): a spec claiming this section's
+   * number puts its drill on the check-in after the chapter that teaches the diagram, in the
+   * spaced-recall slot, and never on a check-in that already carries a calculation. A spec the
+   * content already authors as a recall is left to the authored path. Keyed by flat step index.
+   */
+  const drillMap = useMemo(() => {
+    const map = {};
+    if (!flatSteps.length) return map;
+    const unitCode = currentUnit?.code || '';
+    const authored = authoredDiagramSpecIds(contentData);
+    const forSection = diagramSpecsForSection({
+      subject: subjectFrom(unitCode), unitCode, number: currentSection?.number || '',
+    }).filter((spec) => !authored.has(spec.id));
+    if (!forSection.length) return map;
+    const slots = flatSteps.map((s, i) => ({ s, i })).filter(({ s }) => s.type === 'checkin');
+    const occupied = new Set();
+    slots.forEach(({ i }, ordinal) => { if (quantMap[i]) occupied.add(ordinal); });
+    // A chapter is described by its title and its own diagram's title: the diagram is what a
+    // drawing drill follows, and its title often names the curves where the chapter's does not.
+    const described = slots.map(({ s }) => {
+      const diagramTitle = (diagramsData || []).find((d) => d?.id && d.id === (s.diagramId || s.block?.diagramId))?.title || '';
+      return `${s.blockTitle || s.block?.title || ''} ${diagramTitle}`;
+    });
+    const placed = placeDiagramDrills(forSection, described, occupied);
+    for (const [ordinal, specId] of Object.entries(placed)) {
+      const slot = slots[Number(ordinal)];
+      if (slot) map[slot.i] = forSection.find((spec) => spec.id === specId);
+    }
+    return map;
+  }, [flatSteps, contentData, diagramsData, quantMap, currentUnit?.code, currentSection?.number]);
+
   const practiceStepIndices = useMemo(() => Object.keys(practiceMap).map(Number).sort((a, b) => a - b), [practiceMap]);
 
   // F079: every question the check-ins will ask, so the pre-test can avoid them. Declared beside
@@ -632,7 +666,13 @@ export default function LearnModeTab({
   const progressPct = ((safeStep + 1) / totalSteps) * 100;
   const blockCount = step?.blockCount || contentData.length;
   const chapterLabel = step ? `Chapter ${step.blockIndex + 1} of ${blockCount}` : '';
-  const spaced = step?.type === 'checkin' ? spacedFor(safeStep) : null;
+  // A placed drawing drill IS this check-in's recall; spacedFor is not asked, so the recall it
+  // would have spent here stays available for a later check-in.
+  const drawDrill = step?.type === 'checkin' ? drillMap[safeStep] : null;
+  const spaced = step?.type !== 'checkin' ? null
+    : drawDrill
+      ? { id: derivedDiagramRecallId(drawDrill.id), recall: derivedDiagramRecall(drawDrill.id), drawing: true, fromTitle: drawDrill.title }
+      : spacedFor(safeStep);
   /* One "Report a problem" per step (founder, 25 Sep 2026). A teaching step reports its subsection;
      a check-in or legacy step reports its chapter. The check-in's question and diagram carry their own. */
   const stepItem = step?.type === 'teach' ? step.section : contentData?.[step?.blockIndex];
@@ -659,7 +699,7 @@ export default function LearnModeTab({
       // Named, because a check-in that carries a six-mark calculation and does not say so is
       // the same defect in reverse as promising a diagram there is none of (packet 16).
       currentQuant && 'a calculation',
-      spaced && 'one thing from earlier',
+      spaced && (spaced.drawing ? 'a diagram to draw from memory' : 'one thing from earlier'),
     ].filter(Boolean);
     if (!parts.length) return '';
     const list = parts.length === 1 ? parts[0] : `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}`;
@@ -857,7 +897,7 @@ export default function LearnModeTab({
                   {spaced && (
                     <div className="lm-recall-slot lm-recall-spaced">
                       <div className="lm-spaced-cue">
-                        <span className="lm-spaced-cue-label">Recall from chapter {spaced.fromBlockIndex + 1}</span>
+                        <span className="lm-spaced-cue-label">{spaced.drawing ? 'Draw it from memory' : `Recall from chapter ${spaced.fromBlockIndex + 1}`}</span>
                         <span className="lm-spaced-cue-title">{spaced.fromTitle}</span>
                       </div>
                       <Recall recall={spaced.recall} keyPrefix={`spaced-${step.key}`} showing="spaced" pool={fillinPool}

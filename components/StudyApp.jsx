@@ -8,6 +8,8 @@ import { useClientValue } from '@/lib/use-client-storage';
 import ContentTab from './ContentTab';
 import NotesTab from './NotesTab';
 import DiagramsTab from './DiagramsTab';
+import { diagramSpecsForSection } from '@/lib/diagram-pool';
+import { subjectFrom } from '@/lib/ial-commands';
 import FlashcardsTab from './FlashcardsTab';
 import QuizTab from './QuizTab';
 import TutorTab from './TutorTab';
@@ -483,8 +485,16 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
    * section gains it only once its own payload carries a diagram. This is why the filter moved
    * below `sectionData`: it now depends on the section, not only on the subject.
    */
+  /* Packets 13.7/13.8: a drawing drill is diagram content too. A section whose spec number a
+     drill claims (lib/diagram-pool.js) opens the tab on the same "a count, not a subject" footing
+     as a diagram row — which is how a Business drill reaches the tab at all. */
+  const tabSection = subjectSections.find((s) => s.id === activeSection) || subjectSections[0];
+  const tabUnitCode = units.find((u) => u.id === tabSection?.unit_id)?.code || '';
+  const hasDrawingDrill = diagramSpecsForSection({
+    subject: subjectFrom(tabUnitCode), unitCode: tabUnitCode, number: tabSection?.number || '',
+  }).length > 0;
   const tabs = allTabs.filter(tab => (tab.id === 'diagrams'
-    ? (tab.subjects.includes(activeSubject?.slug) || (sectionData?.diagrams?.length || 0) > 0)
+    ? (tab.subjects.includes(activeSubject?.slug) || (sectionData?.diagrams?.length || 0) > 0 || hasDrawingDrill)
     : (!tab.subjects || tab.subjects.includes(activeSubject?.slug))));
 
   /* V007: the paid surfaces are withheld from the server-rendered page and arrive from the entitled
@@ -1157,7 +1167,7 @@ export default function StudyApp({ subjects, sections, units, initialSectionData
       }
       case 'content': return <ContentTab key={activeSection} data={sectionData.content} glossaryTerms={glossaryTerms} onStepChange={handleStepChange} initialPosition={stepperPositions.current[activeSection] || null} />;
       case 'notes': return <NotesTab data={sectionData.notes} glossaryTerms={glossaryTerms} />;
-      case 'diagrams': return <DiagramsTab data={sectionData.diagrams} sectionId={activeSection} />;
+      case 'diagrams': return <DiagramsTab data={sectionData.diagrams} sectionId={activeSection} unitCode={currentUnit?.code} sectionNumber={currentSection?.number} />;
       case 'practice': return <PracticeQuestionsTab questions={sectionData.practice} onAskTutor={isPremium ? goToTutor : null} sectionId={activeSection} sectionNumber={currentSection?.number} unitCode={currentUnit?.code} />;
       case 'flashcards': return <FlashcardsTab cards={sectionData.flashcards} totalCount={sectionData.counts?.flashcards} sectionId={activeSection} previewMode={isPreview} />;
       /* unitCode and sectionNumber are packet 13.2's: the Quiz tab derives its calculation

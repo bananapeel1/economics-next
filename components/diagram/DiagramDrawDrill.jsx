@@ -1,96 +1,105 @@
 "use client";
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { mark, modelAttempt, applyShifts, buildRegions, intersect, interceptDelta, placeLabels } from '@/lib/diagram/index.mjs';
+import { useEffect, useReducer, useRef, useState } from 'react';
+import {
+  mark, modelAttempt, interceptDelta, placeLabels,
+  plotFor, frame, ticks, segment, scene, labelLayout, lineObstacles, describe, nudgeLabels, keyDirection,
+  drillReducer, initialDrill, stepDone, stepsFor, curveMeta, movableOf, marksFor, unitOf, rangeOf,
+} from '@/lib/diagram/index.mjs';
 import styles from './DiagramDrawDrill.module.css';
 
 /**
- * The drawing drill: the student shifts a curve, marks the new equilibrium and shades an
- * area, and is marked on geometry. No labels to drag onto a finished diagram — nothing is
- * decided until they move something.
+ * The drawing drill: the student moves a line, marks a point and shades an area, and is marked
+ * on geometry. No labels to drag onto a finished diagram — nothing is decided until they move
+ * something. Which lines exist, which may move, which point matters and which steps there are all
+ * come from the spec (lib/diagram/schema.md); this file knows none of it by name.
  *
  * Three input paths, because most of the audience revises on a phone:
  *   drag      pointer events, with capture on the svg so a fast drag cannot escape
- *   tap-nudge tap a curve to select it, then the arrows below the canvas move it by 5
- *   keyboard  focus a curve, then arrow keys — same 5-unit step, for screen readers
+ *   tap-nudge tap a line to select it, then the arrows below the canvas move it one step
+ *   keyboard  focus a line, then arrow keys — same step, for screen readers
  *
- * Two things that look like details and are not:
+ * Things that look like details and are not:
  *   · Only a real drag re-renders on pointerup. Re-rendering unconditionally detached the
  *     node the click event was about to fire on, so shading silently did nothing.
- *   · The drag hit-areas exist only in step 1. They are 22 units wide and sat on top of the
- *     intersection the student has to click in step 2.
+ *   · The click that follows a drag is swallowed. The drag's end advances to the point step, and
+ *     that click would otherwise mark a point wherever the finger or mouse let go.
+ *   · The drag hit-areas exist only in the shift step. They are 22 units wide and sat on top of
+ *     the intersection the student has to click next.
+ *   · A nudge or an arrow key never leaves the shift step — "Next" does (lib/diagram/view.mjs,
+ *     drillReducer). Advancing on the first nudge took the arrows away after one tap.
+ *   · Labels move by `transform`, not by rewriting x/y. getBBox ignores an element's own transform,
+ *     so every re-measure starts from the label's true anchor; moving x/y made each pass measure the
+ *     previous pass's answer, and labels hopped back onto each other on the next render.
  */
 
-const PLOT = { left: 58, right: 22, top: 22, bottom: 48, w: 560, h: 420 };
-const STEP = 5;
+const ROLE_STROKE = { demand: styles.demand, supply: styles.supply, policy: styles.policy, marginal: styles.marginal };
+const ROLE_FILL = { demand: styles.demandFill, supply: styles.supplyFill, policy: styles.policyFill, marginal: styles.marginalFill };
+
+/** A fixed text's box in viewBox units. The y-axis title is rotated, so its box turns with it. */
+function boxOf(node) {
+  const b = node.getBBox();
+  if (node.dataset.fixed !== 'rot') return b;
+  const cx = Number(node.dataset.cx);
+  const cy = Number(node.dataset.cy);
+  return { x: cx + b.y, y: cy - b.x - b.width, width: b.height, height: b.width };
+}
 
 export default function DiagramDrawDrill({ spec, onResult }) {
   const svgRef = useRef(null);
   const dragRef = useRef(null);
-  const [shifts, setShifts] = useState({});
-  const [equilibrium, setEquilibrium] = useState(null);
-  const [shaded, setShaded] = useState([]);
-  const [step, setStep] = useState(1);
-  const [selected, setSelected] = useState(null);
-  const [result, setResult] = useState(null);
+  const swallowClick = useRef(false);
+  const [state, dispatch] = useReducer((s, a) => drillReducer(spec, s, a), undefined, initialDrill);
+  const { shifts, point, shaded, stepIndex, selected, result } = state;
 
-  const xMax = spec.axes.x.max;
-  const yMax = spec.axes.y.max;
-  const plotW = PLOT.w - PLOT.left - PLOT.right;
-  const plotH = PLOT.h - PLOT.top - PLOT.bottom;
-  const X = useCallback((q) => PLOT.left + (q * plotW) / xMax, [plotW, xMax]);
-  const Y = useCallback((p) => PLOT.h - PLOT.bottom - (p * plotH) / yMax, [plotH, yMax]);
-  const toQ = useCallback((x) => ((x - PLOT.left) * xMax) / plotW, [plotW, xMax]);
-  const toP = useCallback((y) => ((PLOT.h - PLOT.bottom - y) * yMax) / plotH, [plotH, yMax]);
+  // The frame follows the canvas's rendered width (view.mjs plotFor): 560 units on a wide column,
+  // 1:1 with CSS pixels on a phone, where the scaled 560 frame drew 4.8px tick labels. Server render
+  // and first paint use the wide frame; the observer swaps it before anything is interactive.
+  const [canvasWidth, setCanvasWidth] = useState(0);
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg || typeof ResizeObserver === 'undefined') return undefined;
+    const ro = new ResizeObserver(([entry]) => setCanvasWidth(Math.round(entry.contentRect.width)));
+    ro.observe(svg);
+    return () => ro.disconnect();
+  }, []);
+  const plot = plotFor(canvasWidth);
 
-  const own = applyShifts(spec.curves, shifts);
-  const before = intersect(spec.curves.D, spec.curves.S);
-  const after = intersect(own.D, own.S);
-  const moved = Object.keys(spec.curves).filter((n) => Math.abs(shifts[n] || 0) >= STEP);
-  const regions = moved.length && after ? buildRegions(spec.regions, spec.curves, own) : null;
+  const steps = stepsFor(spec);
+  const stepKey = steps[stepIndex]?.key;
+  const { X, Y, toQ, toP, xMax, yMax } = frame(spec, plot);
+  const { own, before, after, moved, regions } = scene(spec, shifts);
+  const movable = movableOf(spec);
+  const names = Object.keys(spec.curves);
+  const unit = unitOf(spec);
+  const range = rangeOf(spec);
+  const px = (s) => ({ x1: X(s.q0), y1: Y(s.p0), x2: X(s.qEnd), y2: Y(s.pEnd) });
 
-  const reset = () => {
-    setShifts({}); setEquilibrium(null); setShaded([]); setStep(1); setSelected(null); setResult(null);
+  const doMark = () => {
+    const r = mark(spec, { shifts, equilibrium: point, shaded });
+    dispatch({ type: 'marked', result: r });
+    if (onResult) onResult(r);
   };
 
   const showModel = () => {
     const m = modelAttempt(spec);
-    setShifts(m.shifts); setEquilibrium(m.equilibrium); setShaded(m.shaded);
-    setStep(3); setResult(mark(spec, m));
+    dispatch({ type: 'model', attempt: m, result: mark(spec, m) });
   };
-
-  const doMark = () => {
-    const r = mark(spec, { shifts, equilibrium, shaded });
-    setResult(r);
-    if (onResult) onResult(r);
-  };
-
-  const nudge = (curve, direction) => {
-    if (result) return;
-    setShifts((s) => ({ ...s, [curve]: Math.max(-55, Math.min(55, (s[curve] || 0) + direction * STEP)) }));
-    setEquilibrium(null);
-    if (step === 1) setStep(1);
-  };
-
-  // advance as each step is satisfied, without trapping the student
-  useEffect(() => {
-    if (result) return;
-    if (step === 1 && moved.length) setStep(2);
-    else if (step === 2 && equilibrium) setStep(3);
-  }, [moved.length, equilibrium, step, result]);
 
   const svgPoint = (e) => {
     const rect = svgRef.current.getBoundingClientRect();
-    const k = PLOT.w / rect.width;
+    const k = plot.w / rect.width;
     return { x: (e.clientX - rect.left) * k, y: (e.clientY - rect.top) * k };
   };
 
   const onPointerDown = (e) => {
+    swallowClick.current = false;
     const hit = e.target.closest('[data-curve]');
-    if (!hit || step !== 1 || result) return;
+    if (!hit || stepKey !== 'shift' || result) return;
     const name = hit.dataset.curve;
     const pt = svgPoint(e);
-    dragRef.current = { name, q: toQ(pt.x), p: toP(pt.y), base: shifts[name] || 0, moved: false };
-    setSelected(name);
+    const base = shifts[name] || 0;
+    dragRef.current = { name, q: toQ(pt.x), p: toP(pt.y), base, last: base, moved: false };
+    dispatch({ type: 'select', curve: name });
     svgRef.current.setPointerCapture(e.pointerId);
     e.preventDefault();
   };
@@ -99,94 +108,101 @@ export default function DiagramDrawDrill({ spec, onResult }) {
     const drag = dragRef.current;
     if (!drag) return;
     const pt = svgPoint(e);
-    const delta = interceptDelta(spec.curves[drag.name], toQ(pt.x) - drag.q, toP(pt.y) - drag.p);
-    const next = Math.max(-55, Math.min(55, Math.round((drag.base + delta) / STEP) * STEP));
-    if (next !== (shifts[drag.name] || 0)) {
+    const value = drag.base + interceptDelta(spec.curves[drag.name], toQ(pt.x) - drag.q, toP(pt.y) - drag.p);
+    const next = Math.max(-range, Math.min(range, Math.round(value / unit) * unit));
+    if (next !== drag.last) {
+      drag.last = next;
       drag.moved = true;
-      setShifts((s) => ({ ...s, [drag.name]: next }));
-      setEquilibrium(null);
+      dispatch({ type: 'drag', curve: drag.name, value });
     }
   };
 
-  const onPointerUp = () => { dragRef.current = null; };
+  const onPointerUp = () => {
+    const drag = dragRef.current;
+    dragRef.current = null;
+    if (drag?.moved) {
+      swallowClick.current = true;
+      dispatch({ type: 'dragEnd' });
+    }
+  };
+
+  const onPointerCancel = () => { dragRef.current = null; };
 
   const onSvgClick = (e) => {
+    if (swallowClick.current) { swallowClick.current = false; return; }
     if (result) return;
-    if (step === 2) {
+    if (stepKey === 'point') {
       if (e.target.closest('[data-curve]')) return;
       const pt = svgPoint(e);
       const q = toQ(pt.x);
       const p = toP(pt.y);
       if (q < 0 || q > xMax || p < 0 || p > yMax) return;
       const snap = after && Math.abs(q - after.q) <= spec.tolerance.q && Math.abs(p - after.p) <= spec.tolerance.p;
-      setEquilibrium(snap ? { q: after.q, p: after.p, snapped: true } : { q, p, snapped: false });
-    } else if (step === 3) {
+      dispatch({ type: 'point', point: snap ? { q: after.q, p: after.p, snapped: true } : { q, p, snapped: false } });
+    } else if (stepKey === 'shade') {
       const region = e.target.closest('[data-region]');
       if (!region) return;
-      const key = region.dataset.region;
-      setShaded((list) => (list.includes(key) ? list.filter((k) => k !== key) : [...list, key]));
+      dispatch({ type: 'toggle', region: region.dataset.region });
     }
   };
 
   const onKeyDown = (e) => {
     const hit = e.target.closest('[data-curve]');
-    if (!hit || step !== 1 || result) return;
-    const dir = e.key === 'ArrowUp' || e.key === 'ArrowLeft' ? 1 : e.key === 'ArrowDown' || e.key === 'ArrowRight' ? -1 : 0;
-    if (!dir) return;
+    if (!hit || stepKey !== 'shift' || result) return;
+    const name = hit.dataset.curve;
+    const direction = keyDirection(spec.curves[name], e.key);
+    if (!direction) return;
     e.preventDefault();
-    nudge(hit.dataset.curve, dir);
+    dispatch({ type: 'nudge', curve: name, direction });
   };
 
-  // ── labels: rendered once, measured, then moved so none can overlap ──
+  // ── labels: rendered at their anchors, measured, then moved so none can overlap ──
+  const layout = labelLayout(spec, { own, before, point, moved }, plot);
+  const layoutRef = useRef(layout);
+  layoutRef.current = layout;
+  const linesRef = useRef(null);
+  linesRef.current = lineObstacles(spec, { own, moved, before, point }, plot);
+  const plotRef = useRef(plot);
+  plotRef.current = plot;
+  const layoutKey = `${plot.w}x${plot.h}|` + layout.map((l) => `${l.id}:${l.text}:${l.x.toFixed(1)},${l.y.toFixed(1)}`).join('|');
   const labelRefs = useRef({});
   const [placed, setPlaced] = useState({});
+  const [fontsReady, setFontsReady] = useState(false);
+
   useEffect(() => {
-    const entries = Object.entries(labelRefs.current).filter(([, node]) => node);
-    if (!entries.length) return;
-    const labels = entries.map(([id, node]) => ({
-      id,
-      box: node.getBBox(),
-      slide: node.dataset.slide === 'x'
-        ? { axis: 'x', limit: Number(node.dataset.limit) || PLOT.w - 4 }
-        : node.dataset.slide === 'y'
-          ? { axis: 'y', rows: 5 }
-          : { axis: 'y', rows: 2, both: true, alsoX: true },
-      optional: node.dataset.optional === '1',
-    }));
-    const fixed = [...svgRef.current.querySelectorAll('.' + styles.tick + ', .' + styles.axisTitle)].map((n) => n.getBBox());
-    const out = placeLabels(labels, { bounds: { width: PLOT.w, height: PLOT.h }, fixed });
+    let live = true;
+    document.fonts?.ready?.then(() => { if (live) setFontsReady(true); });
+    return () => { live = false; };
+  }, []);
+
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const labels = layoutRef.current
+      .map((l) => ({ l, node: labelRefs.current[l.id] }))
+      .filter(({ node }) => node)
+      .map(({ l, node }) => ({ id: l.id, box: node.getBBox(), slide: l.slide, optional: l.optional }));
+    if (!labels.length) return;
+    const fixed = [...svg.querySelectorAll('[data-fixed]')].map(boxOf);
+    const out = placeLabels(labels, { bounds: { width: plotRef.current.w, height: plotRef.current.h }, fixed, lines: linesRef.current });
     setPlaced(Object.fromEntries(out.map((p) => [p.id, p])));
-  }, [shifts, equilibrium, shaded, result, step]);
+  }, [layoutKey, fontsReady]);
 
-  const L = (id) => placed[id] || { dx: 0, dy: 0, hidden: false };
-
-  const seg = (curve) => {
-    const qEnd = curve.slope > 0
-      ? Math.min(xMax - 10, (yMax - 2 - curve.intercept) / curve.slope)
-      : Math.min(xMax - 5, (curve.intercept - 5) / -curve.slope);
-    const q0 = curve.intercept < 0 && curve.slope > 0 ? -curve.intercept / curve.slope : 0;
-    return { x1: X(q0), y1: Y(curve.intercept + curve.slope * q0), x2: X(qEnd), y2: Y(curve.intercept + curve.slope * qEnd), qEnd };
-  };
-
-  const prompts = {
-    1: ['Step 1', 'Drag the curve that moves. On a phone, tap it and use the arrows below.'],
-    2: ['Step 2', 'Tap where the market now clears. It snaps if you are close enough.'],
-    3: ['Step 3', 'Tap the area that represents the welfare loss. Tap again to unshade.'],
-  };
   const [promptKey, promptText] = result
     ? ['Marked', 'Every judgement is a number comparison. Reset and try a wrong answer — the feedback changes with the mistake.']
-    : prompts[step];
+    : [`Step ${stepIndex + 1}`, steps[stepIndex].prompt];
 
-  const baseSeg = { D: seg(spec.curves.D), S: seg(spec.curves.S) };
-  const ownSeg = { D: seg(own.D), S: seg(own.S) };
-  const showRegions = (step === 3 || result) && regions;
+  const showRegions = (stepKey === 'shade' || result) && regions;
+  const description = describe(spec, { shifts, point, shaded, moved, regions, result });
+  const nudge = nudgeLabels(selected ? spec.curves[selected] : { slope: 0 });
+  const nextStep = steps[stepIndex + 1];
 
   return (
     <section className={styles.drill} aria-label={spec.title}>
       <div className={styles.meta}>
-        <span className={styles.chip}>{spec.unit} · {spec.specCode}</span>
-        <span className={`${styles.chip} ${styles.grey}`}>{spec.topic}</span>
-        <span className={`${styles.chip} ${styles.marks}`}>{result ? `${result.awarded}/${result.total}` : `${3 + (spec.expect.regions ? 1 : 0)} marks`}</span>
+        {spec.unit && <span className={styles.chip}>{spec.unit} · {spec.specCode}</span>}
+        {spec.topic && <span className={`${styles.chip} ${styles.grey}`}>{spec.topic}</span>}
+        <span className={`${styles.chip} ${styles.marks}`}>{result ? `${result.awarded}/${result.total}` : `${marksFor(spec)} marks`}</span>
       </div>
 
       <p className={styles.prompt}>
@@ -194,16 +210,16 @@ export default function DiagramDrawDrill({ spec, onResult }) {
       </p>
 
       <div className={styles.steps} role="group" aria-label="Steps">
-        {[1, 2, 3].map((n) => (
+        {steps.map((s, i) => (
           <button
-            key={n}
+            key={s.key}
             type="button"
-            className={`${styles.stepBtn} ${step === n ? styles.current : ''} ${(n === 1 && moved.length) || (n === 2 && equilibrium) || (n === 3 && shaded.length) ? styles.done : ''}`}
-            aria-current={step === n}
-            onClick={() => { if (n === 1 || (n === 2 && moved.length) || (n === 3 && equilibrium)) setStep(n); }}
+            className={`${styles.stepBtn} ${stepIndex === i ? styles.current : ''} ${stepDone(spec, state, s.key) ? styles.done : ''}`}
+            aria-current={stepIndex === i ? 'step' : undefined}
+            onClick={() => dispatch({ type: 'goto', index: i })}
           >
-            <span className={styles.stepNum}>{n}</span>
-            {['Shift a curve', 'Mark the equilibrium', 'Shade the loss'][n - 1]}
+            <span className={styles.stepNum}>{i + 1}</span>
+            {s.name}
           </button>
         ))}
       </div>
@@ -212,34 +228,35 @@ export default function DiagramDrawDrill({ spec, onResult }) {
 
       <svg
         ref={svgRef}
-        className={`${styles.plot} ${step === 3 && !result ? styles.shading : ''}`}
-        viewBox={`0 0 ${PLOT.w} ${PLOT.h}`}
-        role="img"
-        aria-label={`${spec.title}. ${moved.length ? `${moved[0]} shifted by ${shifts[moved[0]]}.` : 'No curve moved yet.'} ${equilibrium ? `Equilibrium marked at quantity ${Math.round(equilibrium.q)}, price ${Math.round(equilibrium.p)}.` : ''}`}
+        className={`${styles.plot} ${stepKey === 'shade' && !result ? styles.shading : ''}`}
+        viewBox={`0 0 ${plot.w} ${plot.h}`}
+        role="group"
+        aria-label={description}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
-        onPointerCancel={onPointerUp}
+        onPointerCancel={onPointerCancel}
         onClick={onSvgClick}
         onKeyDown={onKeyDown}
       >
-        {/* grid and axes */}
-        {Array.from({ length: Math.floor(yMax / 20) }, (_, i) => (i + 1) * 20).map((p) => (
+        {/* grid and axes; tick spacing adapts to each axis (view.mjs tickStep) */}
+        {ticks(spec.axes.y, plot).filter((p) => p > 0).map((p) => (
           <line key={`gy${p}`} className={styles.grid} x1={X(0)} y1={Y(p)} x2={X(xMax)} y2={Y(p)} />
         ))}
-        {Array.from({ length: Math.floor(xMax / 20) }, (_, i) => (i + 1) * 20).map((q) => (
+        {ticks(spec.axes.x, plot).filter((q) => q > 0).map((q) => (
           <line key={`gx${q}`} className={styles.grid} x1={X(q)} y1={Y(0)} x2={X(q)} y2={Y(yMax)} />
         ))}
         <line className={styles.axis} x1={X(0)} y1={Y(0)} x2={X(xMax)} y2={Y(0)} />
         <line className={styles.axis} x1={X(0)} y1={Y(0)} x2={X(0)} y2={Y(yMax)} />
-        {Array.from({ length: Math.floor(yMax / 20) + 1 }, (_, i) => i * 20).map((p) => (
-          <text key={`ty${p}`} className={styles.tick} x={X(0) - 8} y={Y(p) + 3.5} textAnchor="end">{p}</text>
+        {ticks(spec.axes.y, plot).map((p) => (
+          <text key={`ty${p}`} data-fixed="" className={styles.tick} x={X(0) - 8} y={Y(p) + 3.5} textAnchor="end">{p}</text>
         ))}
-        {Array.from({ length: Math.floor(xMax / 20) + 1 }, (_, i) => i * 20).map((q) => (
-          <text key={`tx${q}`} className={styles.tick} x={X(q)} y={Y(0) + 16} textAnchor="middle">{q}</text>
+        {ticks(spec.axes.x, plot).map((q) => (
+          <text key={`tx${q}`} data-fixed="" className={styles.tick} x={X(q)} y={Y(0) + 16} textAnchor="middle">{q}</text>
         ))}
-        <text className={styles.axisTitle} x={X(xMax / 2)} y={PLOT.h - 8} textAnchor="middle">{spec.axes.x.label}</text>
-        <text className={styles.axisTitle} transform={`translate(16 ${Y(yMax / 2)}) rotate(-90)`} textAnchor="middle">{spec.axes.y.label}</text>
+        <text data-fixed="" className={styles.axisTitle} x={X(xMax / 2)} y={plot.h - 8} textAnchor="middle">{spec.axes.x.label}</text>
+        <text data-fixed="rot" data-cx={16} data-cy={Y(yMax / 2)} className={styles.axisTitle}
+          transform={`translate(16 ${Y(yMax / 2)}) rotate(-90)`} textAnchor="middle">{spec.axes.y.label}</text>
 
         {/* regions */}
         {showRegions && Object.entries(regions).map(([key, region]) => {
@@ -256,14 +273,18 @@ export default function DiagramDrawDrill({ spec, onResult }) {
           );
         })}
 
-        {/* original curves, ghosted once moved */}
-        {moved.map((name) => (
-          <line key={`ghost${name}`} className={`${styles.curve} ${styles.ghost}`}
-            x1={baseSeg[name].x1} y1={baseSeg[name].y1} x2={baseSeg[name].x2} y2={baseSeg[name].y2} />
+        {/* originals once moved: ghosted, kept solid (MPC under MSC), or not drawn (a price line) */}
+        {moved.map((name) => {
+          const meta = curveMeta(spec, name);
+          if (meta.ghost === 'none') return null;
+          const cls = meta.ghost === 'solid' ? `${styles.curve} ${ROLE_STROKE[meta.role] || ''}` : `${styles.curve} ${styles.ghost}`;
+          return <line key={`ghost${name}`} className={cls} {...px(segment(spec.curves[name], xMax, yMax))} />;
+        })}
+        {names.map((name) => (
+          <line key={`c${name}`}
+            className={`${styles.curve} ${moved.includes(name) ? styles.shifted : ROLE_STROKE[curveMeta(spec, name).role] || ''}`}
+            {...px(segment(own[name], xMax, yMax))} />
         ))}
-        <line className={`${styles.curve} ${styles.demand}`} x1={ownSeg.D.x1} y1={ownSeg.D.y1} x2={ownSeg.D.x2} y2={ownSeg.D.y2} />
-        <line className={`${styles.curve} ${moved.includes('S') ? styles.shifted : styles.supply}`}
-          x1={ownSeg.S.x1} y1={ownSeg.S.y1} x2={ownSeg.S.x2} y2={ownSeg.S.y2} />
 
         {/* guides */}
         {before && <>
@@ -271,54 +292,61 @@ export default function DiagramDrawDrill({ spec, onResult }) {
           <line className={styles.guide} x1={X(before.q)} y1={Y(0)} x2={X(before.q)} y2={Y(before.p)} />
           <circle className={styles.dot} cx={X(before.q)} cy={Y(before.p)} r="4.5" />
         </>}
-        {equilibrium && <>
-          <line className={styles.guide} x1={X(0)} y1={Y(equilibrium.p)} x2={X(equilibrium.q)} y2={Y(equilibrium.p)} />
-          <line className={styles.guide} x1={X(equilibrium.q)} y1={Y(0)} x2={X(equilibrium.q)} y2={Y(equilibrium.p)} />
-          <circle className={`${styles.dot} ${equilibrium.snapped ? '' : styles.dotOff}`} cx={X(equilibrium.q)} cy={Y(equilibrium.p)} r="4.5" />
+        {point && <>
+          <line className={styles.guide} x1={X(0)} y1={Y(point.p)} x2={X(point.q)} y2={Y(point.p)} />
+          <line className={styles.guide} x1={X(point.q)} y1={Y(0)} x2={X(point.q)} y2={Y(point.p)} />
+          <circle className={`${styles.dot} ${point.snapped === false ? styles.dotOff : ''}`} cx={X(point.q)} cy={Y(point.p)} r="4.5" />
         </>}
 
-        {/* drag targets — step 1 only, or they swallow the step-2 click */}
-        {step === 1 && !result && ['D', 'S'].map((name) => (
+        {/* drag targets — shift step only, or they swallow the point step's click */}
+        {stepKey === 'shift' && !result && movable.map((name) => (
           <line key={`hit${name}`} className={`${styles.hit} ${selected === name ? styles.hitOn : ''}`}
             data-curve={name} tabIndex={0} role="button"
-            aria-label={`${name === 'D' ? 'Demand' : 'Supply'} curve. Drag it, or use the arrow keys to shift it.`}
-            x1={ownSeg[name].x1} y1={ownSeg[name].y1} x2={ownSeg[name].x2} y2={ownSeg[name].y2} />
+            aria-label={`${curveMeta(spec, name).name}. Drag it, or use the arrow keys to move it.`}
+            onFocus={() => dispatch({ type: 'select', curve: name })}
+            {...px(segment(own[name], xMax, yMax))} />
         ))}
 
         {/* labels, placed after measurement */}
-        {before && <>
-          <text ref={(n) => { labelRefs.current.P1 = n; }} data-slide="x" data-limit={X(before.q)}
-            className={styles.eqLabel} x={X(0) + 7 + L('P1').dx} y={Y(before.p) - 6 + L('P1').dy}>P₁ {Math.round(before.p)}</text>
-          <text ref={(n) => { labelRefs.current.Q1 = n; }} data-slide="y"
-            className={styles.eqLabel} x={X(before.q) + 6 + L('Q1').dx} y={Y(0) - 7 + L('Q1').dy}>Q₁ {Math.round(before.q)}</text>
-        </>}
-        {equilibrium && <>
-          <text ref={(n) => { labelRefs.current.P2 = n; }} data-slide="x" data-limit={X(equilibrium.q)}
-            className={`${styles.eqLabel} ${equilibrium.snapped ? '' : styles.labelOff}`}
-            x={X(0) + 7 + L('P2').dx} y={Y(equilibrium.p) - 6 + L('P2').dy}>P₂ {Math.round(equilibrium.p)}</text>
-          <text ref={(n) => { labelRefs.current.Q2 = n; }} data-slide="y"
-            className={`${styles.eqLabel} ${equilibrium.snapped ? '' : styles.labelOff}`}
-            x={X(equilibrium.q) + 6 + L('Q2').dx} y={Y(0) - 7 + L('Q2').dy}>Q₂ {Math.round(equilibrium.q)}</text>
-        </>}
-        <text ref={(n) => { labelRefs.current.D = n; }} className={`${styles.curveLabel} ${styles.demandFill}`}
-          x={ownSeg.D.x2 - 6 + L('D').dx} y={ownSeg.D.y2 - 9 + L('D').dy} textAnchor="end">D</text>
-        <text ref={(n) => { labelRefs.current.S = n; }}
-          className={`${styles.curveLabel} ${moved.includes('S') ? styles.shiftedFill : styles.supplyFill}`}
-          x={ownSeg.S.x2 - 6 + L('S').dx} y={ownSeg.S.y2 + (ownSeg.S.qEnd < xMax * 0.85 ? 18 : -9) + L('S').dy} textAnchor="end">
-          S{moved.includes('S') ? '₂' : ''}</text>
-        {moved.includes('S') && (
-          <text ref={(n) => { labelRefs.current.S1 = n; }} className={`${styles.curveLabel} ${styles.ghostFill}`}
-            x={baseSeg.S.x2 - 4 + L('S1').dx} y={baseSeg.S.y2 - 9 + L('S1').dy} textAnchor="end">S₁</text>
-        )}
+        {layout.map((l) => {
+          const at = placed[l.id] || { dx: 0, dy: 0, hidden: false };
+          const cls = l.kind === 'eq'
+            ? `${styles.eqLabel} ${l.off ? styles.labelOff : ''}`
+            : l.kind === 'ghost'
+              ? `${styles.curveLabel} ${l.solid ? ROLE_FILL[l.role] || '' : styles.ghostFill}`
+              : `${styles.curveLabel} ${l.moved ? styles.shiftedFill : ROLE_FILL[l.role] || ''}`;
+          return (
+            <text key={l.id} ref={(n) => { labelRefs.current[l.id] = n; }} className={cls}
+              x={l.x} y={l.y} textAnchor={l.anchor === 'end' ? 'end' : undefined}
+              transform={at.dx || at.dy ? `translate(${at.dx} ${at.dy})` : undefined}
+              visibility={at.hidden ? 'hidden' : undefined}>
+              {l.text}
+            </text>
+          );
+        })}
       </svg>
+      <p className={styles.srOnly} aria-live="polite">{description}</p>
 
       {/* tap-to-nudge: the phone path, and the one a drag cannot replace */}
-      {step === 1 && !result && (
+      {stepKey === 'shift' && !result && (
         <div className={styles.nudge}>
-          <span className={styles.nudgeLabel}>{selected ? `${selected === 'D' ? 'Demand' : 'Supply'} selected` : 'Tap a curve, then:'}</span>
-          <button type="button" className={styles.nudgeBtn} disabled={!selected} onClick={() => nudge(selected, 1)} aria-label="Shift up and left">↖ up / left</button>
-          <button type="button" className={styles.nudgeBtn} disabled={!selected} onClick={() => nudge(selected, -1)} aria-label="Shift down and right">↘ down / right</button>
-          {selected && <span className={styles.nudgeValue}>{shifts[selected] > 0 ? '+' : ''}{shifts[selected] || 0}</span>}
+          <span className={styles.nudgeLabel}>{selected ? `${curveMeta(spec, selected).name} selected` : 'Tap a line, then:'}</span>
+          <button type="button" className={styles.nudgeBtn} disabled={!selected}
+            onClick={() => dispatch({ type: 'nudge', curve: selected, direction: 1 })} aria-label={nudge.upAria}>{nudge.up}</button>
+          <button type="button" className={styles.nudgeBtn} disabled={!selected}
+            onClick={() => dispatch({ type: 'nudge', curve: selected, direction: -1 })} aria-label={nudge.downAria}>{nudge.down}</button>
+          {selected && (
+            <span className={styles.nudgeValue}>
+              {shifts[selected] > 0 ? '+' : ''}{shifts[selected] || 0}
+              {spec.curves[selected].slope === 0 ? ` (at ${own[selected].intercept})` : ''}
+            </span>
+          )}
+          {nextStep && (
+            <button type="button" className={`${styles.nudgeBtn} ${styles.next}`} disabled={!moved.length}
+              onClick={() => dispatch({ type: 'next' })}>
+              Next: {nextStep.name} →
+            </button>
+          )}
         </div>
       )}
 
@@ -340,7 +368,7 @@ export default function DiagramDrawDrill({ spec, onResult }) {
       <div className={styles.actions}>
         <button type="button" className={`${styles.btn} ${styles.primary}`} onClick={doMark} disabled={!!result}>Mark my diagram</button>
         <button type="button" className={styles.btn} onClick={showModel}>Show model answer</button>
-        <button type="button" className={styles.btn} onClick={reset}>Reset</button>
+        <button type="button" className={styles.btn} onClick={() => dispatch({ type: 'reset' })}>Reset</button>
       </div>
     </section>
   );
