@@ -19,6 +19,7 @@
  */
 import { supabase } from './_db.mjs';
 import Stripe from 'stripe';
+import { findLiveSubscription } from '../lib/subscription-sync.js';
 
 const APPLY = process.argv.includes('--apply');
 const STRIPE_RATE_DELAY_MS = 150; // ~6 calls/sec, well under Stripe's limit
@@ -64,23 +65,11 @@ async function main() {
   for (const row of stuck) {
     await sleep(STRIPE_RATE_DELAY_MS);
 
+    // Same pick as the webhook and /api/subscription, so a customer holding two live
+    // subscriptions is repaired onto the one they've paid furthest ahead on.
     let subscription = null;
     try {
-      const active = await stripe.subscriptions.list({
-        customer: row.stripe_customer_id,
-        status: 'active',
-        limit: 10,
-      });
-      if (active.data[0]) {
-        subscription = active.data[0];
-      } else {
-        const trialing = await stripe.subscriptions.list({
-          customer: row.stripe_customer_id,
-          status: 'trialing',
-          limit: 10,
-        });
-        subscription = trialing.data[0] || null;
-      }
+      subscription = await findLiveSubscription(stripe, row.stripe_customer_id);
     } catch (err) {
       console.error(`  [error] Stripe lookup failed for user ${row.user_id} customer ${row.stripe_customer_id}:`, err.message);
       failed++;
