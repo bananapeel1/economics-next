@@ -1,5 +1,45 @@
 # Next session brief
 
+## Packets 13.3–13.8 and V042 — PASSED 26 September 2026, committed (the drills are complete)
+
+One session (Opus 5.5) ran all six drill packets plus V042, as two code commits because the pairs interleave in the
+same files: **e869cc0** `packet-13.3/13.4` (calculations) and **0f8ede4** `packet-13.7/13.8` (drawing). Ledger ids stay per
+packet. Evidence: `audit/runs/packet-13.3/` and `audit/runs/packet-13.7/`, `audit/runs/packet-13.8/`. Reasoning:
+DECISIONS, 26 September ("calculations join the spaced-repetition queue…", "drawing drills are derived…").
+
+**What a student gets.** 22 calculation templates across seven units; a calculation in the Smart Practice queue that
+comes back with new figures; `/calculations-practice` (signed out too); ten drawing drills that appear at the check-in
+after the chapter teaching each diagram and under that diagram in the Diagrams tab, drawn 1:1 on a phone.
+
+**Carry these; each has a reason it was not done here.**
+- **payback: "pick the biggest cash flow" scores the year mark ~4 times in 5** (79% of draws). A heuristic leak check 8
+  cannot see; needs the later cash flows redrawn. Worth a small packet.
+- **No PPF drill; the decision tree is arithmetic only.** The engine draws straight lines; 1.3.1 wants a concave frontier.
+  `audit/runs/packet-13.8/specs.md` lists what the engine would need.
+- **WBS14 still has no calculation** (the only unit without one). The Business exchange-rate template sits on 2.3.5.
+- **Learn Mode's "New figures" is in-memory** — a reload returns the check-in's first draw. The practice queue persists;
+  Learn Mode does not, deliberately (a check-in is not a schedule).
+- **At 390px the break-even chart's "TC₂" label sits on the TR line** where the lines converge; the solver found no clear
+  spot and fell back as designed. Legible (halo), not ideal.
+- **Dark mode**: `npm run contrast --theme dark` lists the modules' `--text-dim`/`--accent-*` rules at 3.4–4.4:1 — the
+  same token class as globals.css's 248, informational by the audit's scope.
+- `components/learn-mode/DiagramRecall.jsx` cites line numbers in DiagramDrawDrill.jsx that moved (comments only).
+- **13.5 and 13.6 never had ledger ids** (built 12 Sep outside the protocol); 13.7's D052–D054 now verify what they became.
+
+**Waiting on the founder.**
+1. **Signed-in check of /practice** (a session cannot sign in): pick Consumer behaviour & demand, start; one card is a
+   price-elasticity calculation; answer it; a `qt-consumer-behaviour-demand` row appears in `practice_question_progress`
+   with `item_id` `consumer-behaviour-demand:quant:ped`.
+2. **Sign-off on the drawing drills' expected areas** — the judgement calls are listed at the end of
+   `audit/runs/packet-13.7/specs-economics.md` and `audit/runs/packet-13.8/specs.md` (DRILLS.md decision 2).
+3. **Free or premium for `/calculations-practice`** — open to all today (DRILLS.md decision 3).
+4. **`exchange-rate-business` on Business 2.3.5** — the spec names exchange rates as an external influence, not as a
+   calculation; if you read 2.3.5 as qualitative only, drop that one export (nothing depends on it).
+
+**Operational note for the next session:** the peers' dev server on :3001 served stale server output for edited client
+components during this packet (server HTML "4 units", client "2"). Verify against a clone on your own port (this packet
+used `.verify-drills` on :3017, launch config `drills-verify`) rather than restarting a server other sessions use.
+
 ## Packet 15.1 spec — re-check and close out packet 15, introductory-concepts (Opus, 26 September 2026)
 
 **Why.** Packet 15 (Economics Unit 1, IAL **1.3.1 Introductory concepts**, `econ_spec.txt:510`, 192 opens,

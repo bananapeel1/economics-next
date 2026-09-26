@@ -3556,3 +3556,113 @@ question is spoiled; the comment is left as history, not fixed in this packet.
 **Page copy follows the publish, not the other way round.** PR #64 rewrites the Unit 1 tile and the index meta
 for the six rebuilt chapters; merged before the publish it would describe chapters production does not have.
 
+## 26 September 2026 — calculations join the spaced-repetition queue, and get their own session (packets 13.3 and 13.4)
+
+**A calculation's schedule is a row in `practice_question_progress` like any other, and no migration was needed.**
+The table multiplexes item kinds through a `section_id` prefix — `<section>` quiz, `fc-` flashcards, `wa-` written — so
+calculations take `qt-<section>`. The key the upsert conflicts on is still `(user_id, section_id, question_index)` with
+`question_index INTEGER NOT NULL` (packet 2 left it there on purpose), so a calculation needs an integer that never moves:
+**FNV-1a of the template id**, not the template's position in any list. A position would shift the day a second template
+claims the same section and hand one student's schedule to a different calculation, silently. `item_id` is packet 2's
+`<section>:quant:<template>`. `lib/quant-practice.test.mjs` pins the hash (computed independently in Python) and asserts
+no two registered templates collide.
+
+**The seed for a review is the schedule's own `nextReview`.** It holds still while the item waits — a reload cannot reroll a
+hard draw — and moves on every answer, right or wrong, so "come back and the numbers will have changed" is true. It sits in
+its own namespace (`…:practice:<nextReview>`), so the first review is never the figures the student just did at a check-in.
+The card builds its item ONCE, at mount: answering writes a new schedule, and a card that rebuilt on every render would swap
+its figures out from under the student as they pressed Mark.
+
+**Full marks is "recalled"; confidence is not asked.** The SM-2 step is binary. A calculation with a wrong step is one the
+student cannot yet do unaided; the own figure rule still awards the marks, which is right, because carrying a figure
+correctly IS the method. The summary therefore files a wrong calculation under "Gaps", never "Sure but wrong" — nobody said
+they were sure.
+
+**Smart Practice stays signed-in only (F086's boundary, unchanged). The calculations session does not.** It never calls the
+quiz-bank endpoint, so a signed-out student gets it with the schedule in localStorage, as Smart Practice already keeps an
+anonymous schedule. That follows the 22 September decision that a generated item is not a content bank — there is nothing
+to withhold — and it is still the founder's to overturn (DRILLS.md decision 3: free or premium).
+
+**The calculations session is Smart Practice's engine in `mode="calculations"`, not a fourth engine.** The three existing
+engines had already drifted once (F084's session length reached one of them). `CalculationsEngine` only narrows the topic
+list to sections a template claims — and the units and subjects to those holding them, or the subject card reads "4 units"
+and opens onto two.
+
+**Rule 1 on DRILLS.md's own list.** Two of the twelve templates it names already existed: "market share and growth"
+(Business 1.3.1) is `percentage-change-business`, and "real vs nominal income" (Economics 2.3.1) is step three of
+`index-numbers`. Registering either again would have put two drills on one chapter teaching the same method. Each was
+replaced by a template for something the specification itself calls a calculation, in a SECTION that had no drill:
+Business income elasticity (WBS11 1.3.2 · 5a, "Calculation of income elasticity of demand" — a unit already reached,
+a section not) and the terms of trade (WEC14 4.3.2 · 3a, "Understanding and calculation of the terms of trade" — also the
+first WEC14 drill). An earlier wording of this entry, and of ledger id D043, said both reached units the registry had not;
+Verify A rejected it, correctly, for the Business half.
+
+**`money()` prints a till's price: `$62.50`, `−$3.10`.** It dropped the trailing zero (`$62.5`, seen at 390px in the new
+session) and put a hyphen after the dollar sign on a negative. `quant-check` check 7 now searches each answer's two-decimal
+form and reads a true minus as a minus; without that, the formatting fix would have blinded the printed-answer check for any
+answer a stem wrote the new way. (A first version searched the ABSOLUTE value of every negative answer, which would have
+failed YED and XED magnitudes where the sign is the answer; narrowed the same hour.)
+
+**`npm run contrast` reads every CSS module (V051).** Four exist; none has a theme pair, all resolve the globals tokens, and
+light mode is clean across all five sheets. Proved by planting a `#d4d4d4` 11px rule in a throwaway module: the widened
+guard fails it (1.37:1 and the literal), the old guard prints "clean" on the same tree. Dark mode stays informational: it
+lists module rules at 3.4–4.4:1 on the shared `--text-dim`/`--accent-*` tokens, the same class as globals.css's 248, and one
+false 1.21:1 where `.primary:hover` inherits its background from `.primary`, which a static read cannot see.
+
+**Funnel events.** `quant_start` (shown), `quant_submit` (FIRST marking — a student correcting a figure and marking again is
+not a second attempt) and `quant_correct` (that marking scored full marks), each with `surface`: learn | quiz | practice |
+calculations. Sent from `CalculationItem`, the only renderer, so no surface can forget them; `/admin/quant` passes no
+`track` and sends none.
+
+**Concentration is a correctness defect, not polish (quant-check check 8).** A numeric step whose most common answer is marked
+correct in more than 25% of draws, or a choice whose right answer is one text or one POSITION in more than 75%, fails —
+three standard errors above the cap, so a 200-draw run is noise-tolerant and `--draws 2000` holds a template to 25%. It
+failed four shipped templates on first run: multiplier (k = 2.5 in 70%: only three clean totals existed), ped (39%),
+payback (36%, and the right choice ALWAYS the middle one), percentage-change-economics (31%, and ALWAYS the first choice).
+`CalculationItem` renders choices in array order, which is why the position cap exists. All four redrawn; their saved
+seeds now rebuild different figures (nothing stores a quant seed except the SM-2 schedule, which stores none). **Carried:**
+in payback the payback year also has the largest cash flow in 79% of draws, so "pick the biggest" scores that mark four
+times in five — a heuristic leak check 8 cannot see; fixing it means redrawing the later cash flows.
+
+## 26 September 2026 — drawing drills are derived, general and legible on a phone (packets 13.7 and 13.8)
+
+**A section's drawing drills are DERIVED from its spec number, like its calculations (22 September), not authored.** A
+spec carries `subject`, `unit`, `specCode`; `lib/diagram-pool.js` puts its drill on the check-in after the chapter that
+teaches the diagram (title words, plurals folded, plus the spec's own `placeWith` and the chapter's diagram title), in
+the check-in's SPACED-RECALL slot, so a check-in carries no more than it did; never on a check-in holding a calculation
+(it moves later, never earlier). PR #37's authored path (`recall: {type:'diagram', specId}`) still works; a spec the
+content authors is not derived again. Why derived: nothing to stage, nothing to publish, and the day a spec is
+registered every section it claims has it — ten specs reached eleven check-ins across ten sections with no content row
+changed.
+
+**The engine accepts named straight lines, horizontal ones included, with or without a shift.** Max price, minimum wage,
+AD/AS, a currency market, a tariff, a break-even chart and monopoly all fit; the two 13.5 specs mark as before on every
+attempt except one class the old engine got WRONG — with demand moved and the loss shaded it built tax regions off a
+curve that never moved, collapsed the triangle to zero area and still awarded M4 (462 of 17,010 attempts in the A/B; now
+correctly 1/4 → 0/4 and 3/4 → 2/4). Accepted as a fix.
+
+**On a phone the canvas is drawn 1:1, not scaled.** Measured at 390px: a 560-unit frame in a 271px canvas at 0.484 — tick
+labels 4.8px. Below 480px the viewBox now equals the canvas width, so text renders at its stylesheet size (10/11.5/15px),
+the margins tighten and the plot turns slightly taller than wide (1.05; at 0.75 or 0.86 the guard found curve labels with
+nowhere to go at the extreme shifts). **This is not the font floor packet 11 rejected (F088):** that raised text inside a
+hand-placed SVG; here the lines are computed from the frame and the labels are placed by the solver on measured boxes,
+and `diagram-check` now proves the 271, 256 and 560 frames.
+
+**A point's dashed guides are line obstacles, owned by that point's labels.** Walked at 390px, "P₁ 70" sat across P₂'s
+guide and read as crossed out. The solver avoids a line only as a preference (a second pass drops the rule so labels never
+overlap), so this cannot fail the guard; `lib/diagram-specs.test.mjs` pins the indirect-tax case instead, A/B'd.
+
+**No PPF drill (rule 1 on DRILLS.md's list).** IAL 1.3.1 · 4a asks for PPFs depicting opportunity cost "using marginal
+analysis", and the product's own PPF checklist says the curve is never straight; a straight-line PPF drill would teach
+constant opportunity cost. The engine would need a curved line type, outward and one-axis stretches, inside/on/outside
+marking and an attainable-area family. **And the decision tree is a calculation**, not a drawing: its marks are expected
+values (packet 13.3's `decision-tree` template); leaf 3a's "construct … diagrams" is still not drilled.
+
+**Business drills reach the Diagrams tab on packet 41's footing** ("a count, not a subject"): a section a drill claims
+opens the tab, as a section with a diagram row already did. Packet 12 (what is sold) is untouched.
+
+**Expected areas are mark-scheme claims, and nobody has signed them off** (DRILLS.md decision 2). Each spec's author listed
+the calls they were unsure of in `audit/runs/packet-13.7/specs-economics.md` and `audit/runs/packet-13.8/specs.md` —
+minimum wage as 3 marks with no area; the max-price welfare triangle; both tariff triangles for M4; "welfare loss" under
+3.3.3 monopoly; the exchange-rate drill crediting only the demand shift. The gate for these specs is honestly "built,
+guarded and walked; not teacher-reviewed".
