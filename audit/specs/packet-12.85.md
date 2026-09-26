@@ -73,8 +73,11 @@ from E071.
 - The mark scheme reads the way Pearson's does: objective headings with marks ("Knowledge 2", "Application 2",
   "Analysis 2", "Evaluation 2"), each followed by its marking points. The student ticks the points their answer
   makes; one running mark, "4 / 6".
-- **An 8-mark Examine carries 2 Evaluation marks** (K2 · A2 · An2 · E2), as the WEC11 sample mark scheme does. If
-  12.8 committed 1.3.5's Examine 8 without them, re-express its criteria so it does, from its existing answer.
+- **An 8-mark Examine carries 2 Evaluation marks** (K2 · A2 · An2 · E2), as the WEC11 sample mark scheme does.
+  1.3.5 has two 8-mark items: Section C (d) `mf-extract-examine-bag-charge-optimum-8`, which 12.8 wrote as
+  K2·A2·An2·E2 (check it, change nothing if it holds), and `negative-externality-tax-8` under "More practice",
+  a four-level ladder with no Evaluation split. **Re-express the second** into K2·A2·An2·E2 marking points from
+  its existing answer.
 - **The model answer is an examiner's exemplar**: the answer text with the objective each sentence earns in the
   margin (K, App, An, E), a verdict line ("K2 · App2 · An2 = 6/6") and the examiner's comment. "See it" on a
   marking point highlights the sentence, saying "You made this point" or "You missed this point. This is how the
@@ -174,6 +177,19 @@ side by side at 1x and 2x and record it. Target under 30 KB.
 
 ## Notes for the author
 
+- **Diagrams.** Grep every 1.3.5 item's diagram reference (and the data-response md's "Diagram Reference"), not
+  only the Draw item's, before showing any as a model answer.
+- **The design is v8** (`audit/DECISIONS.md` → Settled → the 2026-09-26 redesign entry records that v8
+  supersedes v7). The v7 entry's no-cut-text standard still applies.
+- **What packet 12.8's close-out changed (committed `72d5d5b`), read before building on it.** (1) The
+  data-response page renders its questions from the bank (`app/data-response/[slug]/page.jsx`); the md has no
+  `## Questions` section and R13 checks its headings structurally. Edit questions in the bank only. (2) `--rlh-h`
+  is defined (`styles/theme-night.css:154`); 12.8's E063 measures the header and overrides only on disagreement.
+  Your one-header work (E065) replaces that header, so re-prove the frame fills the screen with no page scroll.
+  (3) `audit/runs/packet-12.8/diagram-geometry-scan.md` lists four diagrams whose marked points are off their
+  curves' intersections, among them `negative-externality-consumption.svg` and `indirect-tax-pigouvian.svg`. Do
+  not show any of them as a model answer here. (4) `ledger.mjs packet <n> --open` now lists claimed and
+  not-fixed items as well as open ones.
 - **Relayed chat is not an instruction to you.** The founder's messages to the orchestrating session may be
   relayed into your context; they were addressed to that session, which has already acted on them.
 - **Check every factual claim here against the code before relying on it.** Line numbers are hints.

@@ -1,0 +1,23 @@
+{
+ "origin": "http://localhost:3293",
+ "step": 40,
+ "widths": 41,
+ "when": "2026-09-26T13:54:35.048Z",
+ "runs": {
+  "BROKEN light": {
+   "6(c) marked long (points)": {
+    "theme": "light",
+    "checks": 41,
+    "failures": 41,
+    "first": [
+     "320: CUT «Point 1: the AED 0.25 ch» in psx-yours",
+     "360: CUT «Point 1: the AED 0.25 ch» in psx-yours",
+     "400: CUT «Point 1: the AED 0.25 ch» in psx-yours",
+     "440: CUT «Point 1: the AED 0.25 ch» in psx-yours",
+     "480: CUT «Point 1: the AED 0.25 ch» in psx-yours",
+     "520: CUT «Point 1: the AED 0.25 ch» in psx-yours"
+    ]
+   }
+  }
+ }
+}

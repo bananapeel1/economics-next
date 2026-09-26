@@ -160,21 +160,28 @@ section was chosen on that false premise. See `audit/DECISIONS.md` → Settled �
 Also: the 8m and 20m Market Failure answers live in `data/modelAnswersExpansion.js`, which E034/E035's
 `file` field does not name.
 
-## Packet 12.87 spec — RESERVED, launches after 12.86 is committed (26 September 2026)
+## Packet 12.88 spec — RESERVED, launches next, after 12.85 is committed (26 September 2026)
+
+**Packet 12.88 is claimed. Do not pick it up.** The authoritative spec is `audit/specs/packet-12.88.md`. In one
+line: the four library diagrams whose marked equilibria are not where their curves cross (found by 12.8's scan) are
+redrawn, the scan becomes a build-failing guard that also reads path-drawn curves, and the ten diagrams nobody
+could check are checked. Ledger E094-E097.
+
+## Packet 12.87 spec — RESERVED, launches after 12.86 is committed (26 September 2026; needs only 12.85)
 
 **Packet 12.87 is claimed. Do not pick it up.** The authoritative spec is `audit/specs/packet-12.87.md`. In one
 line: Extract A (Economics 1.3.5's data question) is rewritten around real, cited figures, with a per-figure source
 record and a validator rule (R15) that fails on any uncited number; the pilot of the founder's 26 Sep "real and
 cited data" ruling for the rollout. Needs 12.85 committed. Ledger E081, E083-E085.
 
-## Packet 12.86 spec — RESERVED, launches after 12.85 is committed (26 September 2026)
+## Packet 12.86 spec — RESERVED, launches after 12.88 is committed (26 September 2026; needs only 12.85)
 
 **Packet 12.86 is claimed. Do not pick it up.** The authoritative spec is `audit/specs/packet-12.86.md`. In one
 line: the live AI written-practice marker and the AO profile move from Revvy's own per-objective split to the one
 Pearson's sample mark schemes use, per subject (points to 8 marks in Economics; levels for Economics 14 and 20 and
 Business 8 to 20), without mis-counting answers marked under the old table. Ledger E074-E080.
 
-## Packet 12.85 spec — RESERVED, launches after 12.8 is committed (26 September 2026)
+## Packet 12.85 spec — PASSED and committed (26 September 2026)
 
 **Packet 12.85 is claimed. Do not pick it up.** The authoritative spec is `audit/specs/packet-12.85.md`; the
 approved design is `audit/specs/practice-redesign-v8-mockup.html`. Neither is copied here. In one line: 12.85
@@ -12946,3 +12953,52 @@ defect (`topFix-05`) are both confirmed fixed and re-verified, and all 31 ledger
 `confirmed` or `wont-fix` with none `not-fixed` or open. What remains is the founder's own call to publish
 and commit, and the two DEBT items above if they want them cleaned up before or after publish. No
 infrastructure blocker (no contended `:3001`, no permission-layer denial) was hit by this round.
+## Handoff — packet 12.85 closed, gate passed (workflow bookkeeping pass, 26 September 2026)
+
+**Bookkeeping-only pass, per this packet's own harness instructions. Authored, fixed, staged, published,
+restored and committed nothing.** Read `audit/PROTOCOL.md`, this packet's spec (`audit/specs/packet-12.85.md`),
+the `## Packet 12.85 spec` reservation block above (left unedited — this pass appends only), this packet's row
+in `audit/PROGRESS.md` (rewritten by this pass to match), the Settled list in `audit/DECISIONS.md` and
+`audit/CONTENT-GATE.md`, before writing this. No contradiction found between them, so nothing was escalated.
+
+**Independently re-verified, not from the run's own prose:** `node audit/scripts/ledger.mjs packet 12.85` shows
+**9/9 confirmed** (E065-E073), a fresh `ledger.mjs packet 12.85 --open` prints **0 items**, and
+`ledger.mjs unverified 12.85` prints "gate clear: every claimed item is confirmed and no scope is left
+unclaimed." `public/logo.svg` re-measured directly at 20,901 B (was 1,725,827 B at HEAD) for E073. `gate.log`
+re-read: `npm test`, `npm run build`, `npm run validate`, `npm run exposure`, `npm run recalls` and
+`node audit/scripts/check-staged-drafts.mjs` all exit 0. `verify-a.md`'s independent clip sweep
+(`verify-a-clipsweep.mjs`, a separate script from the builder's own `sweep-run.mjs`) ran 8,612 checks across
+321 widths (320-1920px by 5) × 13 states × paper/dark and found 0 failures, after first showing a broken
+control (a fixed-height marked answer) fail at 41/41 widths — the A/B the no-cut-text standard requires.
+`verify-b.md`'s 23-step 390×844 walkthrough found no blocking defect; the one issue it lists (Q2's model
+diagram, `positive-externality-consumption.svg`, labels at 7.2px at 390px) is explicitly attributed to the
+diagram asset, not this packet's wiring — it is the pre-existing V037-class legibility issue, carried, not
+introduced by 12.85. The four off-geometry diagrams `audit/runs/packet-12.8/diagram-geometry-scan.md` found
+(reassigned to packet 12.88, E094-E097) were checked and are correctly **not** shown as model answers by this
+build.
+
+**Packet 12.85 is done and verified, but NOT committed.** Per `audit/PROTOCOL.md`'s gate-the-commit rule and
+this pass's own rule 5/6, the orchestrating session commits with its isolated-index method (temp
+`GIT_INDEX_FILE` + `commit-tree` + CAS `update-ref`), not a plain `git add`/`git commit` in this shared
+worktree. This pass staged and committed nothing; `git status` on `audit/PROGRESS.md`/`audit/NEXT.md` may
+already show concurrent edits from other sessions — this pass did not `git add` either file.
+
+**What the next packets need, per the reservation blocks already written above:**
+- **Packet 12.86** (`## Packet 12.86 spec`, ledger E074-E080) — the live AI written-practice marker and the AO
+  profile, moved to Pearson's SAM split (points to 8 marks in Economics; levels for Economics 14/20 and
+  Business 8-20) — is marked "launches after 12.85 is committed." It is now unblocked once the orchestrator
+  commits this packet.
+- **Packet 12.88** (`## Packet 12.88 spec`, ledger E094-E097) — the four off-geometry diagrams
+  (`negative-externality-consumption.svg`, `negative-externality-production.svg`,
+  `indirect-tax-pigouvian.svg`, `ad-as-long-run.svg`) plus a build-failing geometry guard — is also marked
+  "launches after 12.85 is committed." Also unblocked once committed. Do not fix these diagrams under any
+  other packet number.
+- **Packet 12.87** (`## Packet 12.87 spec`, ledger E081, E083-E085) — Extract A rewritten around real, cited
+  figures — is marked "launches after 12.86 is committed" but its own body says "Needs 12.85 committed"; that
+  inconsistency between its header and its body is worth a one-line fix by whoever scopes it next, not
+  resolved here (out of this bookkeeping pass's mandate to edit another packet's reservation block).
+
+**Escalate:** nothing new. The commit is the one live blocker — 12.86 and 12.88 cannot start (and 12.87 cannot
+start regardless of which of its two stated preconditions is read) until the orchestrating session commits
+12.85's working tree. No other contradiction, infrastructure blocker or permission-layer denial was hit by
+this pass.

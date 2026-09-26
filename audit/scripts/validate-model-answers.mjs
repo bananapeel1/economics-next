@@ -54,6 +54,19 @@
  *        from the file side a data-response file lettered `Question (x)` that no opted-in page
  *        claims is one too. Free prose inside the allowed sections is NOT scanned (stated residual).
  *
+ * PACKET 12.85 (E068): MARKING BY LEVELS. Pearson's sample mark schemes mark an Economics 14-mark
+ * Discuss and a 20-mark essay by levels in two strands (KAA and Evaluation), not point by point. The
+ * bands live in `audit/raw/ial-paper-structure.json` (`economics_levels`), read through
+ * `lib/ial-paper.js` `levelsFor()`; an item carries only its indicative content and its verdict.
+ *
+ *   R14  an Economics item at 14 or 20 marks that carries `paper`, and ANY item that carries `levels`,
+ *        has `levels.strands` naming exactly the strands the structure file names for its tariff,
+ *        each once, each with a non-empty `indicative` list of non-empty strings; a `verdict` with one
+ *        `{ strand, level, mark }` per strand whose mark is an integer inside that level's band in the
+ *        structure file, the marks summing to at most the tariff; every script segment carrying a
+ *        `strand` the scheme names; and no point-list `criteria`. R5 accepts `levels` in place of
+ *        `criteria` as the marking a script travels with.
+ *
  * R4 READS `lib/ial-marking.js`, THROUGH `lib/practice-tariffs.js`. There is no tariff list in this
  * file and there must never be one. IAL Economics has no 10-mark question and IAL Business has no
  * 14-mark one; a second copy of that fact here would be a second thing to keep in step, and the
@@ -81,7 +94,7 @@ import { fileURLToPath } from 'node:url';
 
 import { MODEL_ANSWERS } from '../../data/modelAnswersData.js';
 import { tariffsFor } from '../../lib/practice-tariffs.js';
-import { paperFor, paperSection, sectionOfKind, commandWordsFor } from '../../lib/ial-paper.js';
+import { paperFor, paperSection, sectionOfKind, commandWordsFor, levelsFor, bandOf } from '../../lib/ial-paper.js';
 // The page's markdown pipeline (react-markdown runs unified + remark-parse + remarkPlugins): R13 reads
 // the outline the page renders, not a regex over the text.
 import { unified } from 'unified';
@@ -116,15 +129,21 @@ export function checkItem(item, { stimuli }) {
   const push = (rule, detail) => out.push({ rule, id, subject: item.subject, detail });
 
   const hasCriteria = Array.isArray(item.criteria) && item.criteria.length > 0;
+  const hasLevels = item.levels !== undefined;
   const hasScript = Array.isArray(item.script) && item.script.length > 0;
 
   // R5 first: it is the only rule that can fire on an item without `criteria`, and it is the reason
-  // half a shape cannot slip through by simply not carrying the half the other rules look at.
-  if (hasCriteria !== hasScript) {
-    push('R5', hasCriteria
-      ? 'carries `criteria` but no `script` — a criterion with nowhere to point is not tickable'
-      : 'carries `script` but no `criteria` — a segmented script with no marks against it renders as prose');
+  // half a shape cannot slip through by simply not carrying the half the other rules look at. Packet
+  // 12.85: `levels` is marking too, so a levels-marked script is whole without `criteria` (R14 then
+  // refuses the two together).
+  if ((hasCriteria || hasLevels) !== hasScript) {
+    push('R5', hasScript
+      ? 'carries `script` but neither `criteria` nor `levels` — a segmented script with no marks against it renders as prose'
+      : `carries \`${hasCriteria ? 'criteria' : 'levels'}\` but no \`script\` — marking with nowhere to point is not usable`);
   }
+
+  // R14 — marking by levels, where Pearson's sample mark schemes mark by levels.
+  checkLevels(item, push);
 
   // R8 — runs on every item, not only the retrofitted ones: `keyTerm` is its own optional field.
   // Exact, case-sensitive substring. A near miss ("negative externalities" against a stem that says
@@ -141,7 +160,7 @@ export function checkItem(item, { stimuli }) {
   // its own opt-in, and a paper-shaped item with no criteria would still sit in a paper section.
   if (item.paper !== undefined) out.push(...checkPaperItem(item, push));
 
-  if (!hasCriteria) return out;
+  if (!hasCriteria && !hasLevels) return out;
 
   // R3 before R2: the seg index is built from the segment ids, so a duplicate id must be reported
   // as a duplicate rather than silently making two criteria resolve to the same place.
@@ -159,6 +178,8 @@ export function checkItem(item, { stimuli }) {
     push('R3', `segment id "${d}" appears ${segIds.filter((s) => s === d).length} times in this item's script`);
   }
 
+  // R1, R2 and R7 read the point list; a levels-marked item has none (R14 says so if it does).
+  if (hasCriteria) {
   // R1 — the criteria are the tariff, broken up. If they are not, the running total the student
   // sees counts against a number the question does not carry.
   const sum = item.criteria.reduce((n, c) => n + (Number(c.marks) || 0), 0);
@@ -181,6 +202,7 @@ export function checkItem(item, { stimuli }) {
       push('R7', `criterion ${c.id || '(no id)'} has segRole ${c.segRole === undefined ? '(absent)' : JSON.stringify(c.segRole)}; it must be 'earned' or 'missed'`);
     }
   }
+  }
 
   // R4 — the tariff itself. Read from lib/ial-marking.js via tariffsFor; never a list here.
   const legal = tariffsFor(item.subject);
@@ -194,6 +216,74 @@ export function checkItem(item, { stimuli }) {
   }
 
   return out;
+}
+
+/**
+ * R14 on one item (packet 12.85, E068). Fires on an Economics 14- or 20-mark item that carries
+ * `paper` (those are marked by levels in the SAMs, so the point list is the wrong shape for them) and
+ * on any item that carries `levels`. Every band edge it tests is read from the structure file through
+ * `levelsFor()`; this function states none.
+ */
+function checkLevels(item, push) {
+  const marks = Number(item.marks);
+  const scheme = levelsFor(item.subject, marks);
+  const required = item.subject === 'economics' && (marks === 14 || marks === 20) && item.paper !== undefined;
+  if (!required && item.levels === undefined) return;
+  const say = (d) => push('R14', d);
+  if (!scheme) {
+    say(`carries \`levels\`, but ial-paper-structure.json has no levels scheme for ${item.subject} at ${marks} marks`);
+    return;
+  }
+  const names = scheme.strands.map((s) => s.strand);
+  if (Array.isArray(item.criteria) && item.criteria.length) {
+    say(`a ${marks}-mark ${item.subject} item is marked by levels (${names.join(' + ')}); it carries a point-list \`criteria\` (${item.criteria.length} points)`);
+  }
+  const strands = item.levels && Array.isArray(item.levels.strands) ? item.levels.strands : null;
+  if (!strands) {
+    say(`a ${marks}-mark ${item.subject} item needs \`levels: { strands: [...] }\` naming ${names.join(' and ')}`);
+  } else {
+    const got = strands.map((s) => s && s.strand);
+    const same = got.length === names.length && names.every((n) => got.filter((g) => g === n).length === 1);
+    if (!same) say(`levels.strands are ${JSON.stringify(got)}; the structure file names ${JSON.stringify(names)}, each once`);
+    for (const s of strands) {
+      const ind = s && s.indicative;
+      if (!Array.isArray(ind) || !ind.length || ind.some((t) => typeof t !== 'string' || !t.trim())) {
+        say(`strand ${JSON.stringify(s && s.strand)} needs a non-empty \`indicative\` list of non-empty strings`);
+      }
+    }
+  }
+  const verdict = Array.isArray(item.verdict) ? item.verdict : null;
+  if (!verdict) {
+    say('needs a `verdict`: one { strand, level, mark } per strand');
+  } else {
+    const vs = verdict.map((v) => v && v.strand);
+    if (vs.length !== names.length || !names.every((n) => vs.filter((g) => g === n).length === 1)) {
+      say(`verdict strands are ${JSON.stringify(vs)}; the scheme's are ${JSON.stringify(names)}, each once`);
+    }
+    let total = 0;
+    for (const v of verdict) {
+      const st = scheme.strands.find((s) => s.strand === (v && v.strand));
+      if (!st) continue;
+      const mark = v.mark;
+      const band = st.levels.find((l) => l.level === v.level);
+      if (!Number.isInteger(mark) || !band) {
+        say(`verdict ${v.strand}: level ${JSON.stringify(v.level)}, mark ${JSON.stringify(mark)} — needs an integer mark and a level the scheme has (${st.levels.map((l) => l.level).join(', ')})`);
+        continue;
+      }
+      if (bandOf(st, mark) !== band) {
+        say(`verdict ${v.strand} Level ${v.level} gives ${mark}, outside that level's band ${band.lo}-${band.hi}`);
+      }
+      total += mark;
+    }
+    if (total > marks) say(`verdict marks sum to ${total}, more than the ${marks}-mark tariff`);
+  }
+  for (const para of item.script || []) {
+    for (const seg of para.segments || []) {
+      if (!names.includes(seg.strand)) {
+        say(`segment ${seg.id} carries strand ${JSON.stringify(seg.strand)}; the margin needs one of ${names.join(', ')}`);
+      }
+    }
+  }
 }
 
 const PAPER_KINDS = ['short_answer', 'data_question', 'essay'];
@@ -497,7 +587,7 @@ export function checkBank(items = MODEL_ANSWERS, opts = {}) {
 }
 
 const findings = checkBank();
-const retrofitted = MODEL_ANSWERS.filter((a) => Array.isArray(a.criteria) && a.criteria.length > 0);
+const retrofitted = MODEL_ANSWERS.filter((a) => (Array.isArray(a.criteria) && a.criteria.length > 0) || a.levels !== undefined);
 
 if (JSON_OUT) {
   console.log(JSON.stringify({
@@ -511,7 +601,10 @@ if (JSON_OUT) {
 console.log(`model answers: ${MODEL_ANSWERS.length} in the bank, ${retrofitted.length} carrying the marked-script shape`);
 for (const item of retrofitted) {
   const segs = (item.script || []).reduce((n, p) => n + (p.segments || []).length, 0);
-  console.log(`  ${String(item.id).padEnd(44)} ${String(item.marks).padStart(2)} marks  ${String(item.criteria.length).padStart(2)} criteria  ${String(segs).padStart(2)} segments  ${item.stimulus || '(no stimulus)'}`);
+  const marking = item.levels
+    ? `${(item.levels.strands || []).map((s) => s.strand).join('+')} levels`.padEnd(11)
+    : `${String(item.criteria.length).padStart(2)} criteria`;
+  console.log(`  ${String(item.id).padEnd(44)} ${String(item.marks).padStart(2)} marks  ${marking}  ${String(segs).padStart(2)} segments  ${item.stimulus || '(no stimulus)'}`);
 }
 
 if (!findings.length) {
