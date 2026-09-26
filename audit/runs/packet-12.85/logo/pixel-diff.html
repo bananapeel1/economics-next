@@ -1,0 +1,8 @@
+<!doctype html><body><pre id=o></pre><script>
+const load=s=>new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=s;});
+(async()=>{const a=await load('logo-orig.svg'),b=await load('logo-new.svg');const out=[];
+for(const px of [18,24,28,30,36,48,56,60]){const d=(img)=>{const c=document.createElement('canvas');c.width=c.height=px;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,px,px);x.drawImage(img,0,0,px,px);return x.getImageData(0,0,px,px).data;};
+const A=d(a),B=d(b);let sum=0,max=0,n=0,big=0;for(let i=0;i<A.length;i+=4){for(let k=0;k<3;k++){const v=Math.abs(A[i+k]-B[i+k]);sum+=v;n++;if(v>max)max=v;} const pd=Math.max(Math.abs(A[i]-B[i]),Math.abs(A[i+1]-B[i+1]),Math.abs(A[i+2]-B[i+2])); if(pd>32)big++;}
+out.push(`${px}px: mean |diff| ${(sum/n).toFixed(2)} / 255, max ${max}, pixels differing by >32 levels: ${big} of ${px*px}`);}
+document.getElementById('o').textContent=out.join('\n');document.title='done';})();
+</script></body>

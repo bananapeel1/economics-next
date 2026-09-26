@@ -1,0 +1,38 @@
+PASS  E070 paper by default although localStorage.theme is "dark"  — html data-theme=dark
+PASS  E070 no rl-night on the page
+PASS  E065 exactly one h1, the heading
+PASS  E065 the logo links back to the app at this topic
+PASS  E065 no SiteHeader on the shell page
+PASS  E065 at 1440x900 the source booklet sheet fits the screen below the header and scrolls inside itself; no sideways page scroll  — {"bottom":872,"vh":900,"sw":1440,"iw":1440,"overflowY":"auto"}
+PASS  E072 practice.opening: no mark scheme, level, indicative content or model answer visible before marking, all 13 questions  — neg-externality-4:0 mf-short-draw-vaccination-welfare-loss-4:0 mf-short-calculate-graduate-social-benefit-4:0 mf-short-explain-sea-wall-public-good-4:0 mf-short-explain-pensions-asymmetric-information-4:0 mf-extract-define-consumption-externality-2:0 mf-extract-explain-tobacco-social-cost-4:0 mf-extract-analyse-plastic-bag-charge-6:0 mf-extract-examine-bag-charge-optimum-8:0 mf-extract-evaluate-soft-drinks-excise-20:0 pick:0 pick:0 negative-externality-tax-8:0
+PASS  E072 all of it is in the DOM (server HTML), hidden: 13 mark schemes and 13 exemplars
+PASS  E065 → and ← move through the paper in order  — mf-short-draw-vaccination-welfare-loss-4 / neg-externality-4
+PASS  E065 arrows are inert while typing
+PASS  E067 a booklet figure clicked while writing is quoted at the cursor  — "Demand is elastic: PED is -1.4 so use falls."
+PASS  E072 the draft is saved under the 12.6 key and shape
+PASS  E067 headings read as Pearson's
+PASS  E067 one running mark after one tick
+PASS  E065 one total: the outline agrees  — Your marks so far 1 of 6 marked · paper out of 74
+PASS  E065 the outline row shows 1/6
+PASS  E067 "See it" on an unticked point: says missed in words, dashed underline  — You missed this point. This is how the model answer earns it.|psx-seg is-lit is-missed|dashed
+PASS  E067 "See it" on a ticked point: says made, solid underline  — You made this point.|solid
+PASS  E067 margin letters and verdict
+PASS  E066 the marked answer is a ruled block that grows: its full text is visible
+PASS  E068 choose a level, then a mark within it; one running total  — 4 / 14|4,5,6 then 11 / 14
+PASS  E068 bands and "What examiners look for" shown
+PASS  E068 verdict line
+PASS  E068 the level choice is stored, extending the record
+PASS  E065 total now 12 of 20  — Your marks so far 12 of 20 marked · paper out of 74
+PASS  E069 Section D opens with both essays and Pearson's instruction
+PASS  E069 the total counts only the chosen essay; the other is dimmed and offers no answer box  — Your marks so far 19 of 40 marked · paper out of 74 ; psx-oq  is-off|0|false
+PASS  E069 Draw: sketch on paper, then mark against the points and the model diagram  — 0|Draw this on paper. ; true|/diagrams/positive-externality-consumption.svg|4
+PASS  E069 Section A: "Six 1-mark questions", a link to the topic, the Quiz tab named
+PASS  E069 Model answers mode shows both essays, nothing scored  — market-failure-government-intervention-20|true ; mf-essay-deposit-protection-moral-hazard-20|true
+PASS  E070 the switch picks dark, writes the site key too, and dark is kept on return  — dark|dark|dark ; after reload dark
+PASS  E070 back to paper writes light
+PASS  E072 drafts survive a reload (in Practise, which the page remembered as Model answers)
+PASS  E065 phones: "All questions" opens the outline  — false|true|Section C · 6(c)All questions ▾ ; open=true
+PASS  E065 phones: Source booklet tab shows the booklet from its top  — true|false|130
+PASS  E072 without JavaScript every question, mark scheme and model answer shows  — 26|13
+console errors: 0 []
+36/36 passed
