@@ -1,0 +1,1352 @@
+{
+ "sections": [
+  {
+   "slug": "economics__1.3.1",
+   "subject": "economics",
+   "topic": "1.3.1",
+   "title": "Introductory Concepts",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by scarcity and opportunity cost.",
+     "specItems": [
+      "ECON-1.3.1-3a",
+      "ECON-1.3.1-3c"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine how a production possibility frontier (PPF) diagram can be used to illustrate economic growth.",
+     "specItems": [
+      "ECON-1.3.1-4a-1",
+      "ECON-1.3.1-4a-5",
+      "ECON-1.3.1-4b"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__1.3.2",
+   "subject": "economics",
+   "topic": "1.3.2",
+   "title": "Consumer Behaviour & Demand",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by price elasticity of demand (PED) and why it is important to a firm.",
+     "specItems": [
+      "ECON-1.3.2-3a",
+      "ECON-1.3.2-3g",
+      "ECON-1.3.2-3j"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine how knowledge of income elasticity of demand (YED) might be useful to a business.",
+     "specItems": [
+      "ECON-1.3.2-3a",
+      "ECON-1.3.2-3h-2",
+      "ECON-1.3.2-3h-3",
+      "ECON-1.3.2-3h-5",
+      "ECON-1.3.2-3j"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__1.3.3",
+   "subject": "economics",
+   "topic": "1.3.3",
+   "title": "Supply",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by price elasticity of supply (PES) and identify two factors that affect it.",
+     "specItems": [
+      "ECON-1.3.3-2a"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the effects of a fall in the cost of raw materials on a market.",
+     "specItems": [
+      "ECON-1.3.3-1b",
+      "ECON-1.3.3-1c-1"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__1.3.4",
+   "subject": "economics",
+   "topic": "1.3.4",
+   "title": "Price Determination",
+   "items": [
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the likely effects of a government-imposed maximum price on a market.",
+     "specItems": [
+      "ECON-1.3.4-1a",
+      "ECON-1.3.4-1c",
+      "ECON-1.3.4-3a"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by equilibrium price and how it is determined in a market.",
+     "specItems": [
+      "ECON-1.3.4-1a",
+      "ECON-1.3.4-1c"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__1.3.5",
+   "subject": "economics",
+   "topic": "1.3.5",
+   "title": "Market Failure",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by a negative externality and give one example.",
+     "specItems": [
+      "ECON-1.3.5-2b"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine how a negative externality of production leads to market failure.",
+     "specItems": [
+      "ECON-1.3.5-2c-3",
+      "ECON-1.3.5-2d-2"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that government intervention is always necessary to correct market failure.",
+     "specItems": [
+      "ECON-1.3.5-1a",
+      "ECON-1.3.5-1b-1",
+      "ECON-1.3.5-1b-2"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__1.3.6",
+   "subject": "economics",
+   "topic": "1.3.6",
+   "title": "Government Intervention",
+   "items": [
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine how the imposition of an indirect tax on sugary drinks could reduce market failure.",
+     "specItems": [
+      "ECON-1.3.6-1a",
+      "ECON-1.3.6-1b-1",
+      "ECON-1.3.6-1c-1"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how an indirect tax can be used to correct a negative externality.",
+     "specItems": [
+      "ECON-1.3.6-1a",
+      "ECON-1.3.6-1b-1"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__2.3.1",
+   "subject": "economics",
+   "topic": "2.3.1",
+   "title": "Measures of Economic Performance",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how the Consumer Price Index (CPI) is used to measure inflation.",
+     "specItems": [
+      "ECON-2.3.1-2a",
+      "ECON-2.3.1-2b"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the different types of unemployment in an economy.",
+     "specItems": [
+      "ECON-2.3.1-3b-1",
+      "ECON-2.3.1-3b-2",
+      "ECON-2.3.1-3b-3",
+      "ECON-2.3.1-3b-4",
+      "ECON-2.3.1-3b-5"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two limitations of using CPI as a measure of inflation.",
+     "specItems": [
+      "ECON-2.3.1-2c"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__2.3.2",
+   "subject": "economics",
+   "topic": "2.3.2",
+   "title": "Aggregate Demand",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two factors that could cause a rightward shift of the aggregate demand (AD) curve.",
+     "specItems": [
+      "ECON-2.3.2-1b-1",
+      "ECON-2.3.2-1c"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine how a reduction in interest rates might increase aggregate demand.",
+     "specItems": [
+      "ECON-2.3.2-2a-2",
+      "ECON-2.3.2-3b-2"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that consumer spending is the most important determinant of economic growth.",
+     "specItems": [
+      "ECON-2.3.2-1a",
+      "ECON-2.3.2-1b-1"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__2.3.3",
+   "subject": "economics",
+   "topic": "2.3.3",
+   "title": "Aggregate Supply",
+   "items": [
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the impact of supply-side policies on long-run aggregate supply (LRAS).",
+     "specItems": [
+      "ECON-2.3.3-3b-2",
+      "ECON-2.3.3-3b-3",
+      "ECON-2.3.3-3b-4",
+      "ECON-2.3.3-3b-6"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what might cause the short-run aggregate supply (SRAS) curve to shift to the left.",
+     "specItems": [
+      "ECON-2.3.3-1c",
+      "ECON-2.3.3-2a-1",
+      "ECON-2.3.3-2a-2",
+      "ECON-2.3.3-2a-3"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__2.3.4",
+   "subject": "economics",
+   "topic": "2.3.4",
+   "title": "National Income",
+   "items": [
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine how the circular flow of income model shows the impact of injections and withdrawals on national income.",
+     "specItems": [
+      "ECON-2.3.4-1a",
+      "ECON-2.3.4-2a",
+      "ECON-2.3.4-2d"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine how the multiplier effect works and why the multiplier may be smaller than expected.",
+     "specItems": [
+      "ECON-2.3.4-4a",
+      "ECON-2.3.4-4b-1",
+      "ECON-2.3.4-4b-2",
+      "ECON-2.3.4-4b-3",
+      "ECON-2.3.4-4b-4"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__2.3.5",
+   "subject": "economics",
+   "topic": "2.3.5",
+   "title": "Economic Growth",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain the difference between actual and potential economic growth.",
+     "specItems": [
+      "ECON-2.3.5-1a",
+      "ECON-2.3.5-1b"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the extent to which supply-side policies are the most effective way to achieve long-term economic growth.",
+     "specItems": [
+      "ECON-2.3.5-1a",
+      "ECON-2.3.5-1b",
+      "ECON-2.3.5-1d-1",
+      "ECON-2.3.5-1d-2",
+      "ECON-2.3.5-1d-4",
+      "ECON-2.3.5-1e"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the potential costs of rapid economic growth.",
+     "specItems": [
+      "ECON-2.3.5-3a-1",
+      "ECON-2.3.5-3a-2",
+      "ECON-2.3.5-3a-3",
+      "ECON-2.3.5-3a-4",
+      "ECON-2.3.5-3a-5"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__2.3.6",
+   "subject": "economics",
+   "topic": "2.3.6",
+   "title": "Macroeconomic Policies",
+   "items": [
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the likely impact of a cut in interest rates on the rate of inflation.",
+     "specItems": [
+      "ECON-2.3.6-1b",
+      "ECON-2.3.6-4a-2",
+      "ECON-2.3.6-4c-1"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that fiscal policy is more effective than monetary policy in reducing unemployment.",
+     "specItems": [
+      "ECON-2.3.6-4a-1",
+      "ECON-2.3.6-4b-1",
+      "ECON-2.3.6-4c-1",
+      "ECON-2.3.6-4e"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "business__1.3.1",
+   "subject": "business",
+   "topic": "1.3.1",
+   "title": "Meeting Customer Needs",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by market segmentation and why it is useful to a business.",
+     "specItems": [
+      "BUS-1.3.1-3c"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Discuss the benefits and limitations of primary market research for a business launching a new product.",
+     "specItems": [
+      "BUS-1.3.1-2a-1",
+      "BUS-1.3.1-2a-2",
+      "BUS-1.3.1-2a-3",
+      "BUS-1.3.1-2b-1",
+      "BUS-1.3.1-2b-2",
+      "BUS-1.3.1-2b-3",
+      "BUS-1.3.1-2b-4"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Discuss the advantages and disadvantages of operating in a niche market.",
+     "specItems": [
+      "BUS-1.3.1-1a-1",
+      "BUS-1.3.1-1a-2"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "business__1.3.3",
+   "subject": "business",
+   "topic": "1.3.3",
+   "title": "Marketing Mix & Strategy",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two elements of the marketing mix that a new clothing brand might use to attract customers.",
+     "specItems": [
+      "BUS-1.3.3-1d"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Discuss how a business might use the product life cycle model to inform its marketing strategy.",
+     "specItems": [
+      "BUS-1.3.3-1b"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "business__1.3.4",
+   "subject": "business",
+   "topic": "1.3.4",
+   "title": "Managing People",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain Maslow's hierarchy of needs and its relevance to employee motivation.",
+     "specItems": [
+      "BUS-1.3.4-4a",
+      "BUS-1.3.4-4b-3"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Discuss the advantages of internal recruitment compared to external recruitment.",
+     "specItems": [
+      "BUS-1.3.4-2a-1"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that financial incentives are the most effective way to motivate employees.",
+     "specItems": [
+      "BUS-1.3.4-4c-1",
+      "BUS-1.3.4-4c-2",
+      "BUS-1.3.4-4c-3",
+      "BUS-1.3.4-4c-4",
+      "BUS-1.3.4-4c-5",
+      "BUS-1.3.4-4d-1",
+      "BUS-1.3.4-4d-6"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "business__1.3.5",
+   "subject": "business",
+   "topic": "1.3.5",
+   "title": "Entrepreneurs & Leaders",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain the role of an entrepreneur in a business.",
+     "specItems": [
+      "BUS-1.3.5-1a",
+      "BUS-1.3.5-1b"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Discuss the qualities needed by an entrepreneur to start a successful business.",
+     "specItems": [
+      "BUS-1.3.5-2a"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "business__2.3.1",
+   "subject": "business",
+   "topic": "2.3.1",
+   "title": "Raising Finance",
+   "items": [
+    {
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Discuss the most appropriate sources of finance for a new start-up business.",
+     "specItems": [
+      "BUS-2.3.1-3a-1",
+      "BUS-2.3.1-3a-2",
+      "BUS-2.3.1-3a-3",
+      "BUS-2.3.1-3a-4",
+      "BUS-2.3.1-3a-5"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain the difference between internal and external sources of finance.",
+     "specItems": [
+      "BUS-2.3.1-2a",
+      "BUS-2.3.1-2b",
+      "BUS-2.3.1-2c",
+      "BUS-2.3.1-3a-1",
+      "BUS-2.3.1-3a-2"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "business__2.3.2",
+   "subject": "business",
+   "topic": "2.3.2",
+   "title": "Financial Planning",
+   "items": [
+    {
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Discuss the usefulness of break-even analysis for a start-up business.",
+     "specItems": [
+      "BUS-2.3.2-3c",
+      "BUS-2.3.2-3e",
+      "BUS-2.3.2-3f"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by the break-even point and how it is calculated.",
+     "specItems": [
+      "BUS-2.3.2-3b-1",
+      "BUS-2.3.2-3c"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "business__2.3.3",
+   "subject": "business",
+   "topic": "2.3.3",
+   "title": "Managing Finance",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by liquidity and why it is important to a business.",
+     "specItems": [
+      "BUS-2.3.3-2b-1",
+      "BUS-2.3.3-2c"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Discuss how a business might improve its cash flow position.",
+     "specItems": [
+      "BUS-2.3.3-2b-2",
+      "BUS-2.3.3-2c"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that cash flow is more important than profit for the survival of a business.",
+     "specItems": [
+      "BUS-2.3.3-2a",
+      "BUS-2.3.3-2c",
+      "BUS-2.3.3-3a-1"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "business__2.3.4",
+   "subject": "business",
+   "topic": "2.3.4",
+   "title": "Resource Management",
+   "items": [
+    {
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Discuss the benefits and risks of adopting lean production methods such as just-in-time (JIT).",
+     "specItems": [
+      "BUS-2.3.4-3d",
+      "BUS-2.3.4-3e",
+      "BUS-2.3.4-3f"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by capacity utilisation and why low capacity utilisation is a problem.",
+     "specItems": [
+      "BUS-2.3.4-2a",
+      "BUS-2.3.4-2c"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "business__2.3.5",
+   "subject": "business",
+   "topic": "2.3.5",
+   "title": "External Influences",
+   "items": [
+    {
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the impact of an increase in interest rates on a UK retail business.",
+     "specItems": [
+      "BUS-2.3.5-1a-3"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__3.3.1",
+   "subject": "economics",
+   "topic": "3.3.1",
+   "title": "Types and Sizes of Businesses",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by economies of scale and give an example.",
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the reasons why a firm might experience diseconomies of scale.",
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__3.3.2",
+   "subject": "economics",
+   "topic": "3.3.2",
+   "title": "Revenue, Costs and Profits",
+   "items": [
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine why a profit-maximising firm produces where MC = MR.",
+     "specItems": [
+      "ECON-3.3.2-1a-3",
+      "ECON-3.3.2-2c-7"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain the difference between normal and supernormal profit.",
+     "specItems": [
+      "ECON-3.3.2-4a"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__3.3.3",
+   "subject": "economics",
+   "topic": "3.3.3",
+   "title": "Market Structures & Contestability",
+   "items": [
+    {
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate whether monopoly is always against the public interest.",
+     "specItems": [
+      "ECON-3.3.3-6d",
+      "ECON-3.3.3-6e",
+      "ECON-3.3.3-6h"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__3.3.4",
+   "subject": "economics",
+   "topic": "3.3.4",
+   "title": "Labour Markets",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by the derived demand for labour.",
+     "specItems": [
+      "ECON-3.3.4-1a-1"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine how a monopsony employer might lead to lower wages and employment.",
+     "specItems": [
+      "ECON-3.3.4-3a"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__3.3.5",
+   "subject": "economics",
+   "topic": "3.3.5",
+   "title": "Government Intervention",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by privatisation and give one potential benefit.",
+     "specItems": [
+      "ECON-3.3.5-1c-3",
+      "ECON-3.3.5-1e-3"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine how competition policy can be used to prevent the abuse of monopoly power.",
+     "specItems": [
+      "ECON-3.3.5-1b-1",
+      "ECON-3.3.5-1b-5",
+      "ECON-3.3.5-1b-6"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__4.3.1",
+   "subject": "economics",
+   "topic": "4.3.1",
+   "title": "Causes and Effects of Globalisation",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two causes of globalisation.",
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the potential costs and benefits of a multinational corporation (MNC) setting up operations in a developing country.",
+     "specItems": [
+      "ECON-4.3.1-2b-2",
+      "ECON-4.3.1-3a-1",
+      "ECON-4.3.1-3b-2"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__4.3.2",
+   "subject": "economics",
+   "topic": "4.3.2",
+   "title": "Trade and the Global Economy",
+   "items": [
+    {
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the arguments for and against free trade.",
+     "specItems": [
+      "ECON-4.3.2-1a",
+      "ECON-4.3.2-5a-1",
+      "ECON-4.3.2-5a-2",
+      "ECON-4.3.2-5c-1"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain the principle of comparative advantage.",
+     "specItems": [
+      "ECON-4.3.2-1b-1",
+      "ECON-4.3.2-1b-2"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__4.3.3",
+   "subject": "economics",
+   "topic": "4.3.3",
+   "title": "Balance of Payments & Exchange Rates",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain what is meant by a current account deficit and give one possible cause.",
+     "specItems": [
+      "ECON-4.3.3-1a-1",
+      "ECON-4.3.3-1b"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine how depreciation of the exchange rate might affect a country's current account balance.",
+     "specItems": [
+      "ECON-4.3.3-2e",
+      "ECON-4.3.3-2f-1"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__4.3.4",
+   "subject": "economics",
+   "topic": "4.3.4",
+   "title": "Poverty and Inequality",
+   "items": [
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine how the Lorenz curve and Gini coefficient are used to measure income inequality.",
+     "specItems": [
+      "ECON-4.3.4-2b-1",
+      "ECON-4.3.4-2b-2"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  },
+  {
+   "slug": "economics__4.3.6",
+   "subject": "economics",
+   "topic": "4.3.6",
+   "title": "Growth and Development",
+   "items": [
+    {
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two barriers to economic development in developing countries.",
+     "specItems": [
+      "ECON-4.3.6-2a-10",
+      "ECON-4.3.6-2a-2",
+      "ECON-4.3.6-2a-3",
+      "ECON-4.3.6-2a-7",
+      "ECON-4.3.6-2a-9"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2"
+     ],
+     "stimulusRef": null
+    },
+    {
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the view that trade is more effective than aid in promoting economic development.",
+     "specItems": [
+      "ECON-4.3.6-3a-1",
+      "ECON-4.3.6-3c-5"
+     ],
+     "kind": "written",
+     "ao": [
+      "AO1",
+      "AO2",
+      "AO3",
+      "AO4"
+     ],
+     "stimulusRef": null
+    }
+   ]
+  }
+ ]
+}

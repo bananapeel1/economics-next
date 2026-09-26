@@ -12,6 +12,7 @@ const BASE_ANSWERS = [
   // ── 1.3.1 Introductory Concepts — 4 marks ──
   {
     id: 'scarcity-opportunity-cost-4',
+    specItems: ['ECON-1.3.1-3a', 'ECON-1.3.1-3c'],
     subject: 'economics',
     unit: 1,
     sectionNumber: '1.3.1',
@@ -45,6 +46,7 @@ const BASE_ANSWERS = [
   // ── 1.3.2 Consumer Behaviour & Demand — 4 marks ──
   {
     id: 'ped-firms-4',
+    specItems: ['ECON-1.3.2-3a', 'ECON-1.3.2-3g', 'ECON-1.3.2-3j'],
     subject: 'economics',
     unit: 1,
     sectionNumber: '1.3.2',
@@ -78,6 +80,7 @@ const BASE_ANSWERS = [
   // ── 1.3.3 Supply — 4 marks ──
   {
     id: 'pes-factors-4',
+    specItems: ['ECON-1.3.3-2a'],
     subject: 'economics',
     unit: 1,
     sectionNumber: '1.3.3',
@@ -111,6 +114,7 @@ const BASE_ANSWERS = [
   // ── 1.3.3 Supply — 8 marks ──
   {
     id: 'supply-shift-8',
+    specItems: ['ECON-1.3.3-1b', 'ECON-1.3.3-1c-1'],
     subject: 'economics',
     unit: 1,
     sectionNumber: '1.3.3',
@@ -163,6 +167,7 @@ const BASE_ANSWERS = [
   // ── 1.3.4 Price Determination — 8 marks ──
   {
     id: 'maximum-price-8',
+    specItems: ['ECON-1.3.4-1a', 'ECON-1.3.4-1c', 'ECON-1.3.4-3a'],
     subject: 'economics',
     unit: 1,
     sectionNumber: '1.3.4',
@@ -215,6 +220,7 @@ const BASE_ANSWERS = [
   // ── 1.3.5 Market Failure — 4 marks ──
   {
     id: 'neg-externality-4',
+    specItems: ['ECON-1.3.5-2b'],
     subject: 'economics',
     unit: 1,
     sectionNumber: '1.3.5',
@@ -226,6 +232,9 @@ const BASE_ANSWERS = [
     type: 'Knowledge & Application',
     commandWord: 'Explain',
     question: 'Explain what is meant by a negative externality and give one example.',
+    // Packet 12.75, E052: the phrase the question hinges on, set in the serif italic. Must be an
+    // exact substring of `question` (validator R8); `question` itself is unchanged.
+    keyTerm: 'negative externality',
     markScheme: [
       { range: '1–2 marks', desc: 'Definition of negative externality (spill-over cost to third parties not reflected in price)' },
       { range: '3–4 marks', desc: 'Clear, developed example with reference to third-party cost and market over-production' },
@@ -244,11 +253,52 @@ const BASE_ANSWERS = [
     ],
     examinerCommentary: 'Full marks require both a precise definition (spill-over cost, third parties, not in price) <em>and</em> a developed example that identifies the specific third-party harm. Vague answers like "pollution affects people" will only reach 2 marks. Linking over-production to the divergence between private and social cost pushes into top-band application.',
     likelyScore: '4 / 4',
+
+    /* ── Packet 12.6, E034/E035. The marked-script shape. ──────────────────────────────────────
+       ADDITIVE. Every field above is untouched; `criteria`/`script`/`stimulus`/`minutes` are new
+       and optional, and an item renders the new way if and only if it carries `criteria` — there
+       is no env var and no feature flag (audit/specs/packet-12.6.md, "The shape").
+
+       The criteria are a RE-EXPRESSION of the two `markScheme` bands above and the annotation
+       chips already inside `answerParagraphs`. No new marking is written here: each criterion's
+       `band` quotes the band it comes from, and each `seg` points at the clause of the script that
+       demonstrates it. `minutes` is `minutesForMarks('economics', 1, 4)` from `lib/exam-timing.js`
+       (4 × 105/80 = 5.25 → 5), not a per-question guess. */
+    criteria: [
+      { id: 'c1', band: '1–2 marks — definition', text: 'Names the spill-over cost as falling on third parties outside the transaction', marks: 1, seg: 'p1a', segRole: 'earned' },
+      { id: 'c2', band: '1–2 marks — definition', text: 'States that the cost is not reflected in the market price', marks: 1, seg: 'p1b', segRole: 'earned' },
+      { id: 'c3', band: '3–4 marks — developed example', text: 'Gives a specific example and identifies the third-party cost it imposes', marks: 1, seg: 'p2a', segRole: 'earned' },
+      { id: 'c4', band: '3–4 marks — developed example', text: 'Links the external cost to market over-production relative to the socially optimal output', marks: 1, seg: 'p2b', segRole: 'earned' },
+    ],
+    script: [
+      {
+        id: 'p1',
+        label: 'Define the term',
+        aos: ['AO1'],
+        segments: [
+          { id: 'p1a', html: 'A <strong>negative externality</strong> is a <strong>spill-over cost</strong> imposed on third parties who are not involved in the transaction between producer and consumer.', note: 'The third-party clause is the first definition mark. "A cost to society" does not earn it — society includes the two parties who chose to trade.' },
+          { id: 'p1b', html: 'It is therefore <strong>not reflected in the market price</strong>.', note: 'The second definition mark. Without this clause the definition tops out at one, because nothing yet says why the market gets the quantity wrong.' },
+        ],
+      },
+      {
+        id: 'p2',
+        label: 'Develop one example',
+        aos: ['AO2'],
+        segments: [
+          { id: 'p2a', html: 'For example, a <strong>coal-fired power station</strong> emits carbon dioxide and sulphur dioxide as by-products of electricity production. Local residents and future generations suffer increased rates of respiratory illness and climate-related damage — costs they bear without compensation.', note: 'A named example AND the harm it does to named third parties. "Pollution affects people" supplies neither and stays in the 1–2 band.' },
+          { id: 'p2b', html: 'Because these social costs are external to the firm&rsquo;s calculations, the market <strong>over-produces</strong> electricity relative to the socially optimal output.', note: 'This is the clause the 3–4 band calls "developed": the example is carried through to over-production rather than left as an illustration.' },
+        ],
+      },
+    ],
+    // No `stimulus`: this answer applies a coal-fired power station, not the attached extract, so
+    // packet 12.7 detaches it (DECISIONS 2026-09-25). The extract's own questions carry it instead.
+    minutes: 5,
   },
 
   // ── 1.3.6 Government Intervention — 8 marks ──
   {
     id: 'indirect-tax-8',
+    specItems: ['ECON-1.3.6-1a', 'ECON-1.3.6-1b-1', 'ECON-1.3.6-1c-1'],
     subject: 'economics',
     unit: 1,
     sectionNumber: '1.3.6',
@@ -301,6 +351,7 @@ const BASE_ANSWERS = [
   // ── 2.3.1 Measures of Economic Performance — 4 marks ──
   {
     id: 'cpi-inflation-4',
+    specItems: ['ECON-2.3.1-2a', 'ECON-2.3.1-2b'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.1',
@@ -334,6 +385,7 @@ const BASE_ANSWERS = [
   // ── 2.3.1 Measures of Economic Performance — 8 marks ──
   {
     id: 'unemployment-types-8',
+    specItems: ['ECON-2.3.1-3b-1', 'ECON-2.3.1-3b-2', 'ECON-2.3.1-3b-3', 'ECON-2.3.1-3b-4', 'ECON-2.3.1-3b-5'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.1',
@@ -385,6 +437,7 @@ const BASE_ANSWERS = [
   // ── 2.3.2 Aggregate Demand — 4 marks ──
   {
     id: 'ad-shift-4',
+    specItems: ['ECON-2.3.2-1b-1', 'ECON-2.3.2-1c'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.2',
@@ -418,6 +471,7 @@ const BASE_ANSWERS = [
   // ── 2.3.3 Aggregate Supply — 8 marks ──
   {
     id: 'supply-side-lras-8',
+    specItems: ['ECON-2.3.3-3b-2', 'ECON-2.3.3-3b-3', 'ECON-2.3.3-3b-4', 'ECON-2.3.3-3b-6'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.3',
@@ -470,6 +524,7 @@ const BASE_ANSWERS = [
   // ── 2.3.4 National Income — 8 marks ──
   {
     id: 'circular-flow-8',
+    specItems: ['ECON-2.3.4-1a', 'ECON-2.3.4-2a', 'ECON-2.3.4-2d'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.4',
@@ -521,6 +576,7 @@ const BASE_ANSWERS = [
   // ── 2.3.5 Economic Growth — 4 marks ──
   {
     id: 'actual-potential-growth-4',
+    specItems: ['ECON-2.3.5-1a', 'ECON-2.3.5-1b'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.5',
@@ -554,6 +610,7 @@ const BASE_ANSWERS = [
   // ── 2.3.5 Economic Growth — 20 marks ──
   {
     id: 'supply-side-growth-20',
+    specItems: ['ECON-2.3.5-1a', 'ECON-2.3.5-1b', 'ECON-2.3.5-1d-1', 'ECON-2.3.5-1d-2', 'ECON-2.3.5-1d-4', 'ECON-2.3.5-1e'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.5',
@@ -611,6 +668,7 @@ const BASE_ANSWERS = [
   // ── 2.3.6 Macroeconomic Policies — 8 marks ──
   {
     id: 'interest-rates-inflation-8',
+    specItems: ['ECON-2.3.6-1b', 'ECON-2.3.6-4a-2', 'ECON-2.3.6-4c-1'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.6',
@@ -663,6 +721,7 @@ const BASE_ANSWERS = [
   // ── 2.3.6 Macroeconomic Policies — 20 marks ──
   {
     id: 'fiscal-vs-monetary-20',
+    specItems: ['ECON-2.3.6-4a-1', 'ECON-2.3.6-4b-1', 'ECON-2.3.6-4c-1', 'ECON-2.3.6-4e'],
     subject: 'economics',
     unit: 2,
     sectionNumber: '2.3.6',

@@ -1,0 +1,91 @@
+diagram pins: 39  resolved: 19  unresolved: 20
+diagrams that exist but no block pins: 62
+
+sections that pin a diagram while holding none (1):
+  business__the-market  (3 pins)
+
+UNRESOLVED (20) — the block renders no diagram:
+  business__the-market                         "demand-curve"                     section has no diagrams at all
+  business__the-market                         "supply-curve"                     section has no diagrams at all
+  business__the-market                         "equilibrium-diagram"              section has no diagrams at all
+  economics__aggregate-demand                  "Aggregate Demand Curve"           no diagram in this section matches
+  economics__aggregate-demand                  "Shifts in Aggregate Demand"       no diagram in this section matches
+  economics__aggregate-supply                  "AD/AS Shifts"                     no diagram in this section matches
+  economics__aggregate-supply                  "Self-Correcting Mechanism"        no diagram in this section matches
+  economics__economic-growth                   "ad-as-growth"                     no diagram in this section matches
+  economics__economic-growth                   "trade-cycle-diagram"              no diagram in this section matches
+  economics__economic-growth                   "ad-as-shifts"                     no diagram in this section matches
+  economics__economic-growth                   "ad-as-growth-analysis"            no diagram in this section matches
+  economics__government-intervention           "Indirect Tax"                     no diagram in this section matches
+  economics__macroeconomic-objectives-policies "supply-side-lras"                 no diagram in this section matches
+  economics__market-failure                    "Deadweight Loss"                  no diagram in this section matches
+  economics__measures-economic-performance     "Demand-Pull and Cost-Push Inflation" no diagram in this section matches
+  economics__national-income                   "National Income Equilibrium"      no diagram in this section matches
+  economics__national-income                   "The Multiplier"                   no diagram in this section matches
+  economics__price-determination               "Consumer Surplus"                 no diagram in this section matches
+  economics__price-determination               "Indirect Tax"                     no diagram in this section matches
+  economics__price-determination               "Subsidy"                          no diagram in this section matches
+
+authored but never pinned (62) — reachable only by the title fallback:
+  economics__aggregate-demand                  The AD Curve
+  economics__aggregate-demand                  The Multiplier Effect
+  economics__aggregate-demand                  Circular Flow of Income with AD Components
+  economics__balance-payments-exchange-rates   Exchange Rate Determination (Floating System)
+  economics__balance-payments-exchange-rates   The J-Curve Effect
+  economics__balance-payments-exchange-rates   The Marshall-Lerner Condition
+  economics__balance-payments-exchange-rates   Balance of Payments Structure
+  economics__balance-payments-exchange-rates   Impact of Depreciation on the Economy
+  economics__causes-effects-globalisation      Indicators of Globalisation Over Time
+  economics__causes-effects-globalisation      FDI Flows: Reasons and Impacts
+  economics__causes-effects-globalisation      Costs vs Benefits of Globalisation
+  economics__consumer-behaviour-demand         PED Values: Visual Comparison
+  economics__consumer-behaviour-demand         YED and XED Interpretation
+  economics__economic-growth                   The Business (Trade) Cycle
+  economics__economic-growth                   PPF: Actual vs Potential Growth
+  economics__government-intervention-firms     Price Regulation of a Monopoly (RPI-X Price Cap)
+  economics__government-intervention-firms     Minimum Wage in a Monopsony Labour Market
+  economics__government-intervention-firms     Effects of Privatisation and Deregulation
+  economics__government-intervention           Tax to Correct Negative Externality
+  economics__growth-development                HDI Components and Measurement
+  economics__growth-development                Harrod-Domar Growth Model
+  economics__growth-development                Lewis Dual-Sector Model
+  economics__growth-development                Prebisch-Singer: Declining Terms of Trade
+  economics__growth-development                Development Strategies Comparison
+  economics__introductory-concepts             Circular Flow of Income
+  economics__introductory-concepts             Economic Systems Comparison
+  economics__labour-markets                    Competitive Labour Market Equilibrium
+  economics__labour-markets                    Monopsony Labour Market
+  economics__labour-markets                    Wage Differentials and Labour Immobility
+  economics__macroeconomic-objectives-policies Supply-Side Policy: LRAS Shift
+  economics__market-failure                    Positive Externality of Consumption
+  economics__market-failure                    Merit & Demerit Goods
+  economics__market-structures-contestability  Perfect Competition — Short-Run Supernormal Profit
+  economics__market-structures-contestability  Perfect Competition — Long-Run Equilibrium
+  economics__market-structures-contestability  Monopoly — Profit-Maximising Equilibrium
+  economics__market-structures-contestability  Monopolistic Competition — Long-Run Equilibrium
+  economics__market-structures-contestability  Oligopoly — The Kinked Demand Curve
+  economics__measures-economic-performance     CPI Basket of Goods
+  economics__measures-economic-performance     Types of Unemployment
+  economics__poverty-inequality                Lorenz Curve and Gini Coefficient
+  economics__poverty-inequality                Absolute vs Relative Poverty
+  economics__poverty-inequality                Kuznets Curve: Inequality and Development
+  economics__price-determination               Consumer & Producer Surplus
+  economics__revenue-costs-profits             Revenue Curves: TR, AR and MR
+  economics__revenue-costs-profits             Short-Run Cost Curves: MC, AC, AVC and AFC
+  economics__revenue-costs-profits             Long-Run Average Cost Curve: Economies and Diseconomies of Scale
+  economics__revenue-costs-profits             Short-Run and Long-Run Shutdown Points
+  economics__role-state-macroeconomy           The Laffer Curve
+  economics__role-state-macroeconomy           Fiscal Deficit vs National Debt
+  economics__role-state-macroeconomy           Crowding Out in the Loanable Funds Market
+  economics__role-state-macroeconomy           AD/AS: Macroeconomic Policy Effects
+  economics__role-state-macroeconomy           Tax Incidence: Indirect Tax on a Market
+  economics__supply                            PES: Visual Comparison
+  economics__supply                            PES Over Time: Short Run vs Long Run
+  economics__trade-global-economy              Comparative Advantage: Numerical Example
+  economics__trade-global-economy              The Effect of a Tariff (Welfare Analysis)
+  economics__trade-global-economy              The Effect of a Quota (Welfare Analysis)
+  economics__trade-global-economy              Terms of Trade: Impact of Changes
+  economics__trade-global-economy              Types of Trading Blocs (Levels of Integration)
+  economics__types-sizes-businesses            Profit Maximisation, Revenue Maximisation and Sales Volume Maximisation
+  economics__types-sizes-businesses            Types of Business Growth (Integration)
+  economics__types-sizes-businesses            Principal-Agent Problem (Divorce of Ownership from Control)

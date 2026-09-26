@@ -1,0 +1,422 @@
+[
+{
+  "id": "C-external-influences-topFix-01",
+  "section": "external-influences",
+  "kind": "topFix",
+  "rank": 0,
+  "text": "Fix the block↔assessment wiring: set each block's quizIndices/practiceIndices to MCQs and practice questions about that block (e.g. Inflation → Q5/practice[4]; Exchange/Interest/Tax → Q0/Q7/Q16/practice[0]; Business Cycle → Q1/Q8/Q13; Legislation → Q9/Q12/Q17; Competitive → Q6). Fix the Q15 '$1 = $1.30' typo and the Q5 double-correct option.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-topFix-02",
+  "section": "external-influences",
+  "kind": "topFix",
+  "rank": 1,
+  "text": "Internationalise for IAL: replace UK statutes, NICs, Bank of England and CMA with generic terms plus one non-UK example per idea; delete the examMatters claims that students 'must know' the Consumer Rights Act provisions and that examiners 'frequently use Porter's Five Forces'.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-topFix-03",
+  "section": "external-influences",
+  "kind": "topFix",
+  "rank": 2,
+  "text": "Teach the missing spec items instead of Economics extras: add subsections on government spending, economic uncertainty, environmental / competition / health-and-safety legislation, and market size / responses to a changing competitive environment; cut cost-push vs demand-pull and the perfect-competition→monopoly taxonomy to asides.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-topFix-04",
+  "section": "external-influences",
+  "kind": "topFix",
+  "rank": 3,
+  "text": "Add retrieval and a diagram: genuine-sequence reorders (interest-rate transmission chain; boom→recession→slump→recovery), a SPICED fillin, and a business-cycle diagram; wire them so the spaced/immediate recall slots are used in every step.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-topFix-05",
+  "section": "external-influences",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "Rewrite practice to IAL formats with levels-based mark schemes (2-mark 'What is meant by', 4-mark 'Explain one', 8-mark 'Analyse', 10/12-mark 'Assess', 20-mark 'Evaluate'), all anchored to a short international case-study extract, and replace the shareholders-vs-stakeholders 20-marker with an external-influences one (e.g. evaluate whether a rise in interest rates is the biggest threat to Business X).",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-accuracy-01",
+  "section": "external-influences",
+  "kind": "accuracy",
+  "text": "Whole section (all 12 subsections) — e.g. Exchange Rates body, Interest Rates body ('Bank of England sets the base rate'), Taxation body ('Employer National Insurance Contributions'), Consumer Protection body ('Consumer Rights Act 2015', 'Trade Descriptions Act', 'Consumer Contracts Regulations'), quiz Q4/Q12/Q14 (CMA, Employment Rights Act): Content is UK-GCE framed and presented as required IAL knowledge. IAL WBS12 questions use international contexts and mark schemes never require UK statute names, NICs, BoE or CMA. For a HK/Malaysia/Pakistan student this is both alienating and misleading about what earns marks.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-accuracy-02",
+  "section": "external-influences",
+  "kind": "accuracy",
+  "text": "Block 'Business Legislation' > consumer-protection-legislation > examMatters: Claims 'You must know the key provisions [of the Consumer Rights Act]... and explain the business's legal obligations'. IAL Business mark schemes credit generic understanding of consumer protection effects on a business, not UK statutory provisions.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-accuracy-03",
+  "section": "external-influences",
+  "kind": "accuracy",
+  "text": "Block 'The Competitive Environment' > competitive-pressures > body + examMatters ('Examiners frequently use Porter's Five Forces as a framework'): Porter's Five Forces is not in the Edexcel IAL Business specification (Unit 2 or elsewhere); the claim that examiners 'frequently use' it is false and steers students to an unrewarded framework.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-accuracy-04",
+  "section": "external-influences",
+  "kind": "accuracy",
+  "text": "Block 'Inflation' > cost-push-demand-pull-inflation > examMatters: 'Stating that inflation increases costs without distinguishing between cost-push and demand-pull shows a lack of analytical depth' — this is an Economics distinction; IAL Business mark schemes for inflation questions reward cost/margin/demand/uncertainty chains applied to the business, not inflation typology.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-quiz-02",
+  "section": "external-influences",
+  "kind": "quiz",
+  "text": "q5: Option 2 'Increasing inventory to prepare for future price rises' is also a legitimate, commonly taught response to anticipated inflation (buying ahead). Two defensible answers; the explanation dismisses it with 'ties up cash', which is a trade-off, not a reason it is wrong.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-quiz-03",
+  "section": "external-influences",
+  "kind": "quiz",
+  "text": "q20: 'Evaluate' is not an MCQ stem; the correct option is the only long, hedged one and the three distractors use 'always'/'no impact' — guessable without knowledge. Same pattern in Q21-Q24.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-practice-01",
+  "section": "external-influences",
+  "kind": "practice",
+  "text": "p3: 'Evaluate the view that businesses should always prioritise shareholders over other stakeholders' (20 marks) is a stakeholders/objectives question (Unit 1 / Unit 3), not external influences. Marks are allocated per point rather than by levels. No case-study context although all IAL 20-markers are data-response. Not linked to any block.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-structure-01",
+  "section": "external-influences",
+  "kind": "structure",
+  "text": "Zero recall exercises across 12 subsections and zero diagrams: Learn Mode for this section is pure reading plus one MCQ per block. Obvious candidates omitted: reorder on the interest-rate transmission chain (rate rise → loan cost up → investment delayed / mortgage cost up → spending down → revenue down), reorder of business-cycle phases, fillin on SPICED, and a business-cycle diagram.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-structure-02",
+  "section": "external-influences",
+  "kind": "structure",
+  "text": "Inline quiz mapping is wrong for every block: Inflation block quizIndices=[0] shows the exchange-rate SPICED MCQ; Exchange/Interest/Tax block quizIndices=[1] shows the recession/luxury-cars MCQ; Business Cycle block quizIndices=[2] shows the interest-rate MCQ; Legislation block quizIndices=[3] shows patents; Competitive Environment block quizIndices=[4] shows the CMA. A student is quizzed on material from a different (sometimes not-yet-read) block.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-structure-03",
+  "section": "external-influences",
+  "kind": "structure",
+  "text": "Inline practice mapping is also wrong: Business Cycle block practiceIndices=[1] is the interest-rates 6-marker; Competitive Environment block practiceIndices=[2] is the environmental-legislation 10-marker. Practice 3 (20-mark stakeholders) and practice 4 (Outline inflation) are attached to no block, so the Inflation block has no written practice even though practice[4] is about inflation.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-structure-04",
+  "section": "external-influences",
+  "kind": "structure",
+  "text": "Only 5 of 25 MCQs are ever surfaced inline; 20 are seen only in the pre-test/post-test lottery. The five hedged 'Evaluate/To what extent' MCQs (Q20-24) can appear in the 3-question pre-test and are guessable, inflating pre-test scores.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-structure-05",
+  "section": "external-influences",
+  "kind": "structure",
+  "text": "Difficulty ramp: the section opens with Economics theory (CPI, cost-push vs demand-pull) before the business-relevant chain, and Block 4 escalates into market-structure taxonomy and Porter's Five Forces — both beyond WBS12 — while the simpler, examinable 'changes in competitive environment → business responses' is never explicitly taught.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-structure-06",
+  "section": "external-influences",
+  "kind": "structure",
+  "text": "Block 1 bundles three spec items (exchange rates, interest rates, taxation) so step 2 is 'taxation' alone with the 'spaced' recall slot unused; Block 3 'Business Legislation' covers only 2 of the 5 spec legislation areas (consumer, employee) yet quiz/practice test environmental and competition law.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-structure-07",
+  "section": "external-influences",
+  "kind": "structure",
+  "text": "Takeaways match their blocks (good), but Block 4 has four takeaways of which two ('Market structure ranges from perfect competition to monopoly', 'Porter's Five Forces reveals all competitive pressures') summarise off-spec material.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-structure-08",
+  "section": "external-influences",
+  "kind": "structure",
+  "text": "Misconceptions: 'inflation is always bad', 'a strong pound is good', 'higher interest rates always bad', 'recessions bad for all', 'legislation just increases costs' are genuine student errors. 'Businesses should pay as little tax as possible by moving abroad' (taxation), 'more competition is always better for consumers' (market-structure) and 'barriers to entry are always created deliberately' (barriers) read as filler/moralising rather than observed misconceptions.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-structure-09",
+  "section": "external-influences",
+  "kind": "structure",
+  "text": "Flow blocks: the cost-push flow ('Oil or raw material prices spike → ...') duplicates the inflation flow in the previous subsection; the business-cycle flow is a good candidate for a diagram rather than a text chain.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-specGap-01",
+  "section": "external-influences",
+  "kind": "specGap",
+  "text": "Taxation AND government spending — the effect of changes in government spending (public contracts, infrastructure, subsidies, austerity) on businesses is not taught at all.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-specGap-02",
+  "section": "external-influences",
+  "kind": "specGap",
+  "text": "The effect of economic uncertainty on the business environment — only touched in extras.evaluation ('Economic cycles are difficult to predict'); no content subsection.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-specGap-03",
+  "section": "external-influences",
+  "kind": "specGap",
+  "text": "Legislation: environmental protection — absent from content although quiz Q9/Q21 and practice[2] test it.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-specGap-04",
+  "section": "external-influences",
+  "kind": "specGap",
+  "text": "Legislation: competition law — absent from content although quiz Q4/Q14 test it (and IAL would frame it generically, not as the CMA).",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-specGap-05",
+  "section": "external-influences",
+  "kind": "specGap",
+  "text": "Legislation: health and safety — absent entirely (content, quiz, practice, flashcards).",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-specGap-06",
+  "section": "external-influences",
+  "kind": "specGap",
+  "text": "Competitive environment: competition and market size — market size (value/volume, growth, saturation) and its effect on a business is not taught.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-specGap-07",
+  "section": "external-influences",
+  "kind": "specGap",
+  "text": "Competitive environment: the effect on businesses of changes in the competitive environment (new entrants, price wars, mergers, disruptive substitutes) and typical business responses — only implicitly via the Netflix example; no explicit treatment.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-specGap-08",
+  "section": "external-influences",
+  "kind": "specGap",
+  "text": "Note: exact IAL sub-numbering (2.3.5 vs GCE 2.5) — unsure; the bullet content above reflects the IAL Business 'External influences' topic as far as I know it.",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+,
+{
+  "id": "C-external-influences-specThin-01",
+  "section": "external-influences",
+  "kind": "specThin",
+  "text": "2.3.5 Legislation: intellectual property rights — patents — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+,
+{
+  "id": "C-external-influences-specThin-02",
+  "section": "external-influences",
+  "kind": "specThin",
+  "text": "2.3.5 Legislation: intellectual property rights — copyright — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+,
+{
+  "id": "C-external-influences-specThin-03",
+  "section": "external-influences",
+  "kind": "specThin",
+  "text": "2.3.5 Legislation: intellectual property rights — trademarks — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 41,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+]

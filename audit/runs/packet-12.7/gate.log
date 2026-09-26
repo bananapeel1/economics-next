@@ -1,0 +1,52 @@
+=== GATE RUN — packet 12.7 ===
+Date: 2026-09-26
+Section: economics__market-failure
+Build environment: Darwin, local worktree
+Spec: audit/specs/packet-12.7.md (rewritten 2026-09-25)
+
+=== GATE RESULTS ===
+
+REQUIRED GATES:
+  npm test                                     EXIT 0 (303/303 tests passed)
+  npm run build                                EXIT 0 (build complete)
+  npm run validate                             EXIT 0 (0 findings on model answers)
+  npm run exposure                             EXIT 0 (DRAFT and LIVE match)
+  npm run recalls                              EXIT 0 (no section worse than baseline)
+  node audit/scripts/check-staged-drafts.mjs market-failure  EXIT 0 (market-failure matches)
+
+ADVISORY GATES (exit codes recorded, failures do not fail the overall gate):
+  npm run contrast                             EXIT 0 (clean)
+  npm run spec-items                           EXIT 0 (matches spec text)
+  npm run tariff-census                        EXIT 0 (matches spec text)
+  npm run pin-check                            EXIT 0 (4 broken pins, within baseline of 15)
+
+CONTENT GATE (skipped — no live content published per built.md):
+  node audit/scripts/validate-content.mjs --baseline  (NOT RUN — no live content written)
+
+=== SUMMARY ===
+
+All required gates PASSED.
+All advisory gates PASSED.
+No defects detected.
+
+Built artifacts:
+  - Two new bank items: Define (2 marks) and Analyse (6 marks)
+  - One new bank item: Evaluate (20 marks)
+  - Removed stimulus from three generic items
+  - Added segRole field to all six marked-script items
+  - Updated component rendering for segRole (earned/missed)
+  - New item order: extract items first (2, 6, 20), then generic items (4, 8, 20)
+  - Market-failure section pages verified as only changed section
+  - Spec coverage unchanged (zerocov still 0)
+
+Staged files (per built.md):
+  - data/modelAnswersExpansion.js (added 2 items, modified 1)
+  - data/modelAnswersData.js (removed stimulus)
+  - content/data-response/econ-u1-market-failure.md (re-tariffed Q3 to 20)
+  - components/SectionModelAnswersPage.jsx (B1 disclaimer removed)
+  - components/model-answers-layout.css (new CSS for segRole)
+  - lib/model-answers-route.js (new writtenFor() partitioning)
+  - audit/scripts/validate-model-answers.mjs (R7 validator rule)
+
+No commits made (per spec "Commit hygiene").
+No staging performed by this gate run (shared index).

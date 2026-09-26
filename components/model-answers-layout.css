@@ -246,3 +246,190 @@
 [data-theme="dark"] .lab-page .ma-ann-green { background: #4ade80; }
 [data-theme="dark"] .lab-page .ma-ann-amber { background: #fbbf24; }
 [data-theme="dark"] .lab-page .ma-ann-purple { background: #c4b5fd; }
+
+/* Stimulus and attempt loop — packet 12.6, E035/E036 ------------------------------------------
+ *
+ * Built at 390px like the rest of this file and with no second breakpoint. Two things here are
+ * deliberate and are the reason the block reads on a phone:
+ *
+ *  1. The extract's table WRAPS to fit its box and never shrinks its type. Packet 41's walkthrough
+ *     rejected a legislation table at 7.11px because the column was narrower than the content and
+ *     the font gave way first; the font still holds at 13px here. What this block said before fix
+ *     round B1 — "four columns of numbers cannot fit 358px at a legible size" — was asserted, never
+ *     measured, and is false: min-content is 310px in a 317px box at 390px viewport. The 460px
+ *     floor it justified hid a whole column. The wrapper keeps `overflow-x` for the viewports where
+ *     min-content really does not fit (measured: below ~330px of box), and now paints an edge
+ *     shadow whenever it is scrollable so the student is told there is more.
+ *  2. A marked segment is marked by a BORDER and a background, not by colour alone — the tick is
+ *     also still visible in the criteria list above it, and `is-marked` adds a text label.
+ *
+ * Every colour is a site token with packet 12.2's literal as the var() fallback, same rule as the
+ * rest of this file: no second palette, no `prefers-color-scheme` block.
+ */
+
+.lab-stimulus {
+  background: var(--lab-surface);
+  border: 1px solid var(--lab-border);
+  border-left: 4px solid var(--lab-flag-border);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+.lab-stimulus-head { margin: 0 0 4px; font-size: 17px; line-height: 1.25; }
+.lab-stimulus-para { margin: 10px 0 0; font-size: 14px; }
+.lab-stimulus-caption { margin: 14px 0 6px; font-size: 13px; }
+/*
+ * Packet 12.6 fix round B1. The wrapper still scrolls — a table narrower than its own min-content
+ * cannot be made to fit at any viewport — but it now SAYS SO. The two `local` layers scroll with
+ * the content and cover the two `scroll` layers when that edge is reached, so an edge shadow is
+ * painted exactly while there is something past that edge, and nothing is painted when there is
+ * not. It is pure CSS, so it is in the server HTML and survives a page whose JavaScript never runs.
+ */
+.lab-stimulus-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background:
+    linear-gradient(to right, var(--lab-surface), rgba(0, 0, 0, 0)) 0 0 / 22px 100% no-repeat local,
+    linear-gradient(to left, var(--lab-surface), rgba(0, 0, 0, 0)) 100% 0 / 22px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, var(--lab-accent), rgba(0, 0, 0, 0)) 0 0 / 11px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, var(--lab-accent), rgba(0, 0, 0, 0)) 100% 0 / 11px 100%
+      no-repeat scroll;
+  /*
+   * The edge glow is `--lab-accent`, NOT a black shadow. A black shadow is the textbook version of
+   * this technique and it is invisible on this page: the card is #1a1d2b in dark mode, so the whole
+   * affordance would exist in the CSS and not on the screen — the light-mode class of defect this
+   * programme lost a day to. The accent is the same colour the marked script uses for "look here".
+   */
+  scrollbar-width: thin;
+}
+.lab-stimulus-table {
+  border-collapse: collapse;
+  font-size: 13px;
+  /*
+   * NO `min-width`. Packet 12.6 set 460px on the belief, written into this file's own comment, that
+   * "four columns of numbers cannot fit 358px at a legible size". Measured at 390x844 on the running
+   * page, the table's min-content width is 310px against a 317px box: the 460px floor was pushing
+   * 143px — the whole "Estimated price elasticity of demand" column, which is the figure the source
+   * file makes the Level 2/Level 3 boundary — off-screen at rest on a phone. The type is unchanged
+   * at 13px body / 12px head; only the floor is gone.
+   */
+  width: 100%;
+  max-width: 100%;
+}
+.lab-stimulus-table th,
+.lab-stimulus-table td {
+  border: 1px solid var(--lab-border);
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+.lab-stimulus-table thead th { background: var(--lab-bg); font-size: 12px; }
+.lab-stimulus-table tbody th { font-weight: 600; }
+
+.lab-attempt {
+  border: 1px solid var(--lab-border);
+  border-radius: 10px;
+  padding: 12px;
+  margin: 10px 0;
+  background: var(--lab-bg);
+}
+.lab-attempt-head { margin: 0 0 8px; font-size: 15px; }
+.lab-attempt-label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.lab-attempt-time { font-weight: 400; color: var(--lab-muted); }
+.lab-attempt-draft {
+  width: 100%;
+  font: inherit;
+  font-size: 15px; /* 16px or larger stops iOS zooming on focus; 15px with the page's own scale is
+                      already above the 12px floor this programme enforces, and the field is not a
+                      tap target that moves the layout when it zooms. */
+  line-height: 1.5;
+  padding: 8px;
+  border: 1px solid var(--lab-border);
+  border-radius: 8px;
+  background: var(--lab-surface);
+  color: var(--lab-text);
+  resize: vertical;
+}
+.lab-attempt-total {
+  margin: 12px 0 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--lab-border);
+  border-left: 4px solid var(--lab-accent);
+  border-radius: 8px;
+  background: var(--lab-surface);
+  font-size: 14px;
+}
+.lab-attempt-total strong { font-size: 16px; }
+.lab-attempt-total span { color: var(--lab-muted); }
+
+.lab-criteria { list-style: none; margin: 0; padding: 0; }
+.lab-criteria-band + .lab-criteria-band { margin-top: 10px; }
+.lab-criteria-band-head {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--lab-muted);
+}
+.lab-criteria-list { list-style: none; margin: 0; padding: 0; }
+.lab-criterion {
+  border: 1px solid var(--lab-border);
+  border-radius: 8px;
+  background: var(--lab-surface);
+  margin-bottom: 6px;
+}
+.lab-criterion > label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 9px 10px;
+  min-height: 44px; /* a real tap target, not a 13px checkbox on its own */
+  cursor: pointer;
+  font-size: 14px;
+}
+.lab-criterion input { margin-top: 3px; width: 18px; height: 18px; flex: none; }
+.lab-criterion-text { flex: 1; }
+.lab-criterion-marks {
+  flex: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lab-muted);
+  white-space: nowrap;
+}
+.lab-criterion.is-ticked { border-color: var(--lab-accent); }
+.lab-criterion.is-ticked .lab-criterion-marks { color: var(--lab-accent); }
+
+.lab-attempt-script { margin-top: 12px; }
+.lab-script-para { margin-top: 10px; }
+.lab-script-para h4 {
+  margin: 0 0 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--lab-muted);
+}
+.lab-script-aos { margin-left: 6px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.lab-script-seg {
+  border-left: 3px solid var(--lab-border);
+  padding: 2px 0 2px 10px;
+  margin-bottom: 8px;
+}
+.lab-script-seg.is-marked {
+  border-left-color: var(--lab-accent);
+  background: var(--lab-surface);
+  border-radius: 0 8px 8px 0;
+  padding-right: 8px;
+}
+/* Packet 12.7, E039: a mark the script MISSED here is told apart from one it earned without colour —
+   a dashed rule instead of a solid one, plus the text label from MarkedScriptAttempt's ROLE_LABEL. */
+.lab-script-seg.is-marked.is-missed { border-left-style: dashed; }
+.lab-script-text { margin: 0; font-size: 14px; }
+.lab-script-claimed {
+  margin: 4px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lab-accent);
+}
+.lab-script-role { text-transform: uppercase; letter-spacing: 0.04em; }
+.lab-script-note { margin: 4px 0 0; font-size: 13px; color: var(--lab-muted); }

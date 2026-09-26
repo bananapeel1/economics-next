@@ -1,0 +1,4 @@
+Comparer A/B (26 Sep): on a copy, added "!" to the kept panel text on economics/supply and a <p> after the first </li> on aggregate-demand. Both caught:
+FAIL  head same, panel before true after true /economics/supply-model-answers
+FAIL  head same, panel before true after false /economics/aggregate-demand-model-answers
+31 non-shell pages: 22 identical, 7 differ ONLY by the removed panel, 2 other differences. Noise control (after vs after-repeat): 2 of 32 differ.

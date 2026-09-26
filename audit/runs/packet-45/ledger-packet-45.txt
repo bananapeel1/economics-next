@@ -1,0 +1,33 @@
+C-labour-markets-topFix-01                     topFix    open       Add diagramRef/quizIndices/practiceIndices to all three blocks (block 0: 'Competitive Labo
+C-labour-markets-topFix-02                     topFix    open       Write recalls for all six subsections — reorder for the monopsony construction (faces whol
+C-labour-markets-topFix-03                     topFix    open       Fix wage-differentials keyIdea ('not because markets are failing') and add a short NMW-in-
+C-labour-markets-topFix-04                     topFix    open       Repair the two monopsony SVGs: put Wm on the supply curve, Qc at the true S=MRP intersecti
+C-labour-markets-topFix-05                     topFix    open       Bring practice in line with IAL command words and marking: Define → 2 marks (or 'Explain',
+C-labour-markets-accuracy-01                   accuracy  open       content[2] 'Trade Unions and Wage Differentials' > wage-differentials > keyIdea: States wa
+C-labour-markets-quiz-01                       quiz      open       q2: Correct (index 2) and distractors are fine, but the determinants of elasticity of dema
+C-labour-markets-structure-01                  structure open       No block has diagramRef, quizIndices or practiceIndices, so LearnModeTab.jsx:86 takes the 
+C-labour-markets-structure-02                  structure open       distributeItems fallback assigns quiz[0], quiz[1], quiz[2] to steps 0/1/2: step 1 (monopso
+C-labour-markets-structure-03                  structure open       Practice fallback sorts by marks then takes the first three: step 0 = Define derived deman
+C-labour-markets-structure-04                  structure open       Zero recall objects across all six subsections: the spaced/immediate recall mechanism has 
+C-labour-markets-structure-05                  structure open       Block 2 pairing is incoherent: 'Trade Unions' is the bilateral-monopoly counterpart to mon
+C-labour-markets-structure-06                  structure open       Firm vs market never distinguished: no subsection shows the perfectly competitive firm fac
+C-labour-markets-structure-07                  structure open       NMW in a COMPETITIVE labour market (wage floor → excess supply → unemployment) is never ta
+C-labour-markets-structure-08                  structure open       trade-unions > body flow is a list of three parallel cases (competitive / monopsony / bila
+C-labour-markets-structure-09                  structure open       demand-for-labour-mrp > misconception ('firms hire workers because they need them') is fil
+C-labour-markets-structure-10                  structure open       supply-of-labour > examMatters directly contradicts the Notes-tab examMatters for the same
+C-labour-markets-structure-11                  structure open       Difficulty ramp is otherwise sensible (demand/supply → competitive → monopsony → unions → 
+C-labour-markets-specGap-01                    specGap   open       Elasticity of demand for labour and its determinants (labour share of cost, substitutabili
+C-labour-markets-specGap-02                    specGap   open       Elasticity of supply of labour and its determinants (training period, qualifications, mobi
+C-labour-markets-specGap-03                    specGap   open       National minimum wage in a competitive labour market (wage floor, excess supply, unemploym
+C-labour-markets-specGap-04                    specGap   open       Government intervention to reduce labour market failure: maximum wages, public-sector wage
+C-labour-markets-specGap-05                    specGap   open       Current labour market issues listed in WEC13 3.4.3 (from my recollection of the spec — tre
+C-labour-markets-specGap-06                    specGap   open       Diagram for the individual firm in a perfectly competitive labour market (horizontal suppl
+C-labour-markets-specGap-07                    specGap   open       Discrimination as a labour-market failure — one sentence only; no analysis of how it disto
+C-labour-markets-specGap-08                    specGap   open       Unsure: whether WEC13 explicitly requires MRP = MPP × MR theory (the 2018 spec wording I r
+C-labour-markets-specGap-09                    specGap   open       Section numbering: the app labels this 3.3.4; in the WEC13 spec I recall the labour market
+C-labour-markets-specThin-01                   specThin  open       3.3.4 1a) Wage rate relative to the price of capital (substituting capital for labour) — n
+C-labour-markets-specThin-02                   specThin  open       3.3.4 2c) Size of population as a factor influencing labour supply — named but never defin
+C-labour-markets-specThin-03                   specThin  open       3.3.4 2c) Level of welfare benefits as a factor influencing labour supply — named but neve
+C-labour-markets-specThin-04                   specThin  open       3.3.4 2c) Government regulations as a factor influencing labour supply — named but never d
+
+31 items

@@ -1,0 +1,32 @@
+C-resource-management-topFix-01                topFix    open       Fix the MCQ bank: redistribute correct answers across indices 0-3 (22/25 currently sit at 
+C-resource-management-topFix-02                topFix    open       Add a stock-control subsection and diagram (buffer stock, re-order level, lead time, max s
+C-resource-management-topFix-03                topFix    open       Correct the Toyota 2021 JIT example (Toyota held chip buffers post-2011 and fared better t
+C-resource-management-topFix-04                topFix    open       Add recall widgets: fillins for the two formulas (capacity utilisation, labour productivit
+C-resource-management-topFix-05                topFix    open       Rework practice to IAL formats: turn Q0 into a 4-mark 'Calculate' with a mini case (includ
+C-resource-management-accuracy-01              accuracy  open       Inventory Management > just-in-time > realExample: Claims Toyota 'had to halt production a
+C-resource-management-quiz-01                  quiz      open       q0: Answer is correct, but this is the inline quiz for Block 0 'Methods of Production' (qu
+C-resource-management-quiz-02                  quiz      open       q24: No error in this item; listed to note the bank-wide problem: 22 of 25 questions have 
+C-resource-management-practice-01              practice  open       p0: 'Define the term capacity utilisation (4 marks)' is not an IAL Business question forma
+C-resource-management-structure-01             structure open       Inline quiz indices for Block 0 and Block 1 are swapped: Block 0 'Methods of Production' s
+C-resource-management-structure-02             structure open       Zero recall objects across all 10 subsections, so Learn Mode has no 'spaced' or 'immediate
+C-resource-management-structure-03             structure open       Zero diagrams. Spec 2.4.3a explicitly requires interpreting stock control diagrams (buffer
+C-resource-management-structure-04             structure open       2-per-step pairing: Block 0 pairs (job/batch/flow + productivity) then (labour-vs-capital 
+C-resource-management-structure-05             structure open       Block 2 is titled 'Inventory Management' but half of it (lean production, kaizen, cell pro
+C-resource-management-structure-06             structure open       Kaizen appears in Block 2 (as a lean technique) and gets its own subsection in Block 3; Bl
+C-resource-management-structure-07             structure open       Practice questions 2, 3, 4 are never surfaced inline (practiceIndices only on blocks 1 and
+C-resource-management-structure-08             structure open       Block 2 takeaway[0] ('JIT eliminates stock-holding costs') contradicts the block's own mis
+C-resource-management-structure-09             structure open       Misconceptions: productivity vs production, JIT = zero stock, lean = JIT, 100% utilisation
+C-resource-management-structure-10             structure open       Difficulty ramp is acceptable (definitions and calculation early, evaluative content later
+C-resource-management-specGap-01               specGap   open       2.4.3a Interpretation of stock control diagrams: buffer stock, re-order level, re-order qu
+C-resource-management-specGap-02               specGap   open       2.4.3b/c Buffer stocks and implications of poor stock control (stock-outs, obsolescence, c
+C-resource-management-specGap-03               specGap   open       2.4.1c Efficiency defined as production at minimum average cost, and factors influencing e
+C-resource-management-specGap-04               specGap   open       2.4.1a Cell production as a method of production - mentioned in one clause under lean and 
+C-resource-management-specGap-05               specGap   open       2.4.1b Factors influencing productivity (training, technology, motivation, working practic
+C-resource-management-specGap-06               specGap   open       2.4.4c Quality circles as a distinct technique - only aliased inside kaizen.
+C-resource-management-specGap-07               specGap   open       2.4.3e/f Waste minimisation and competitive advantage from lean production - competitive a
+C-resource-management-specGap-08               specGap   open       2.4.2b Implications of OVER-utilisation - covered in one paragraph and practice Q4, adequa
+C-resource-management-specGap-09               specGap   open       Spec numbering: content sits under 2.3.4 but IAL Resource management is 2.4 (unsure of app
+C-resource-management-specThin-01              specThin  open       2.3.4 1c) Ways to improve efficiency — named but never defined or explained; a student cou
+C-resource-management-specThin-02              specThin  open       2.3.4 1e) Competitive advantage from short product lead-in times — named but never defined
+
+30 items

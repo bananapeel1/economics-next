@@ -1,0 +1,1677 @@
+{
+ "rule": "a tag is written when at least two of the three passes proposed it",
+ "control": "negative-externality-tax-8",
+ "controlNote": "ran through all three passes; its specItems were NOT rewritten — packet 12.1 owns them",
+ "rows": [
+  {
+   "key": "actual-potential-growth-4",
+   "agreed": [
+    "ECON-2.3.5-1a",
+    "ECON-2.3.5-1b"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.5-1e",
+     "pass": 3
+    },
+    {
+     "id": "ECON-2.3.5-4a",
+     "pass": 3
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-2.3.5-1b",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    2,
+    2,
+    3
+   ]
+  },
+  {
+   "key": "ad-shift-4",
+   "agreed": [
+    "ECON-2.3.2-1b-1",
+    "ECON-2.3.2-1c"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.2-1b-2",
+     "pass": 3
+    },
+    {
+     "id": "ECON-2.3.2-5a-5",
+     "pass": 3
+    }
+   ],
+   "partial": [],
+   "counts": [
+    2,
+    2,
+    4
+   ]
+  },
+  {
+   "key": "aid-vs-trade-development-8",
+   "agreed": [
+    "ECON-4.3.6-3a-1",
+    "ECON-4.3.6-3c-5"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-4.3.6-2a-2",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.6-2a-3",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.6-3b-5",
+     "pass": 3
+    }
+   ],
+   "partial": [],
+   "counts": [
+    2,
+    4,
+    3
+   ]
+  },
+  {
+   "key": "barriers-development-4",
+   "agreed": [
+    "ECON-4.3.6-2a-10",
+    "ECON-4.3.6-2a-2",
+    "ECON-4.3.6-2a-3",
+    "ECON-4.3.6-2a-7",
+    "ECON-4.3.6-2a-9"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-4.3.6-1b",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.6-2a-1",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.6-2a-4",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.6-2a-5",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.6-2a-6",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.6-2a-8",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.6-2b-1",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.6-2b-2",
+     "pass": 2
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-4.3.6-2a-10",
+     "passes": [
+      2,
+      3
+     ]
+    },
+    {
+     "id": "ECON-4.3.6-2a-2",
+     "passes": [
+      2,
+      3
+     ]
+    },
+    {
+     "id": "ECON-4.3.6-2a-3",
+     "passes": [
+      2,
+      3
+     ]
+    },
+    {
+     "id": "ECON-4.3.6-2a-7",
+     "passes": [
+      2,
+      3
+     ]
+    },
+    {
+     "id": "ECON-4.3.6-2a-9",
+     "passes": [
+      2,
+      3
+     ]
+    }
+   ],
+   "counts": [
+    0,
+    7,
+    11
+   ]
+  },
+  {
+   "key": "circular-flow-8",
+   "agreed": [
+    "ECON-2.3.4-1a",
+    "ECON-2.3.4-2a",
+    "ECON-2.3.4-2d"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.4-1b",
+     "pass": 3
+    },
+    {
+     "id": "ECON-2.3.4-3a",
+     "pass": 2
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-2.3.4-2a",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    3,
+    4,
+    3
+   ]
+  },
+  {
+   "key": "consumer-spending-growth-20",
+   "agreed": [
+    "ECON-2.3.2-1a",
+    "ECON-2.3.2-1b-1"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.2-2a-1",
+     "pass": 1
+    },
+    {
+     "id": "ECON-2.3.2-2a-3",
+     "pass": 3
+    },
+    {
+     "id": "ECON-2.3.2-3b-1",
+     "pass": 3
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-2.3.2-1a",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.2-1b-1",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    3,
+    2,
+    2
+   ]
+  },
+  {
+   "key": "costs-benefits-growth-8",
+   "agreed": [
+    "ECON-2.3.5-3a-1",
+    "ECON-2.3.5-3a-2",
+    "ECON-2.3.5-3a-3",
+    "ECON-2.3.5-3a-4",
+    "ECON-2.3.5-3a-5"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.5-1e",
+     "pass": 3
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-2.3.5-3a-1",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.5-3a-2",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.5-3a-3",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.5-3a-4",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.5-3a-5",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    5,
+    5,
+    1
+   ]
+  },
+  {
+   "key": "cpi-inflation-4",
+   "agreed": [
+    "ECON-2.3.1-2a",
+    "ECON-2.3.1-2b"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.1-2c",
+     "pass": 3
+    },
+    {
+     "id": "ECON-2.3.1-2d",
+     "pass": 3
+    },
+    {
+     "id": "ECON-2.3.1-2g-1",
+     "pass": 3
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-2.3.1-2a",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    2,
+    2,
+    4
+   ]
+  },
+  {
+   "key": "cpi-limitations-4",
+   "agreed": [
+    "ECON-2.3.1-2c"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.1-2b",
+     "pass": 3
+    }
+   ],
+   "partial": [],
+   "counts": [
+    1,
+    1,
+    2
+   ]
+  },
+  {
+   "key": "current-account-deficit-4",
+   "agreed": [
+    "ECON-4.3.3-1a-1",
+    "ECON-4.3.3-1b"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-4.3.3-1c",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.3-2c-3",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.3-2f-1",
+     "pass": 3
+    }
+   ],
+   "partial": [],
+   "counts": [
+    2,
+    2,
+    5
+   ]
+  },
+  {
+   "key": "derived-demand-labour-4",
+   "agreed": [
+    "ECON-3.3.4-1a-1"
+   ],
+   "dissent": [],
+   "partial": [],
+   "counts": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "key": "econ-comparative-advantage-4",
+   "agreed": [
+    "ECON-4.3.2-1b-1",
+    "ECON-4.3.2-1b-2"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-4.3.2-1b-3",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.2-2a-2",
+     "pass": 3
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-4.3.2-1b-2",
+     "passes": [
+      1,
+      3
+     ]
+    }
+   ],
+   "counts": [
+    2,
+    1,
+    4
+   ]
+  },
+  {
+   "key": "econ-competition-policy-8",
+   "agreed": [
+    "ECON-3.3.5-1b-1",
+    "ECON-3.3.5-1b-5",
+    "ECON-3.3.5-1b-6"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-3.3.5-1a",
+     "pass": 1
+    },
+    {
+     "id": "ECON-3.3.5-1b-2",
+     "pass": 2
+    },
+    {
+     "id": "ECON-3.3.5-1b-3",
+     "pass": 2
+    },
+    {
+     "id": "ECON-3.3.5-1b-4",
+     "pass": 2
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-3.3.5-1b-1",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-3.3.5-1b-5",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-3.3.5-1b-6",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    4,
+    6,
+    0
+   ]
+  },
+  {
+   "key": "econ-diseconomies-scale-8",
+   "agreed": [],
+   "dissent": [],
+   "partial": [],
+   "counts": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "key": "econ-j-curve-depreciation-8",
+   "agreed": [
+    "ECON-4.3.3-2e",
+    "ECON-4.3.3-2f-1"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-4.3.3-1a-1",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.3-1a-2",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.3-1b",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.3-1c",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.3-2c-3",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.3-2f-2",
+     "pass": 3
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-4.3.3-2e",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    2,
+    2,
+    7
+   ]
+  },
+  {
+   "key": "econ-normal-vs-supernormal-profit-4",
+   "agreed": [
+    "ECON-3.3.2-4a"
+   ],
+   "dissent": [],
+   "partial": [],
+   "counts": [
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "key": "economies-scale-4",
+   "agreed": [],
+   "dissent": [],
+   "partial": [],
+   "counts": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "key": "equilibrium-price-4",
+   "agreed": [
+    "ECON-1.3.4-1a",
+    "ECON-1.3.4-1c"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-1.3.4-1b",
+     "pass": 3
+    },
+    {
+     "id": "ECON-1.3.4-3b",
+     "pass": 3
+    }
+   ],
+   "partial": [],
+   "counts": [
+    2,
+    2,
+    4
+   ]
+  },
+  {
+   "key": "fiscal-vs-monetary-20",
+   "agreed": [
+    "ECON-2.3.6-4a-1",
+    "ECON-2.3.6-4b-1",
+    "ECON-2.3.6-4c-1",
+    "ECON-2.3.6-4e"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.6-1c",
+     "pass": 1
+    },
+    {
+     "id": "ECON-2.3.6-2a",
+     "pass": 1
+    },
+    {
+     "id": "ECON-2.3.6-4c-2",
+     "pass": 2
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-2.3.6-4b-1",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.6-4c-1",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.6-4e",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    6,
+    5,
+    1
+   ]
+  },
+  {
+   "key": "free-trade-protectionism-20",
+   "agreed": [
+    "ECON-4.3.2-1a",
+    "ECON-4.3.2-5a-1",
+    "ECON-4.3.2-5a-2",
+    "ECON-4.3.2-5c-1"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-4.3.2-1b-1",
+     "pass": 1
+    },
+    {
+     "id": "ECON-4.3.2-1b-3",
+     "pass": 1
+    },
+    {
+     "id": "ECON-4.3.2-5a-3",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.2-5a-4",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.2-5a-5",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.2-5a-6",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.2-5c-2",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.2-5c-4",
+     "pass": 2
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-4.3.2-1a",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-4.3.2-5a-1",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-4.3.2-5a-2",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-4.3.2-5c-1",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    6,
+    10,
+    0
+   ]
+  },
+  {
+   "key": "gini-lorenz-inequality-8",
+   "agreed": [
+    "ECON-4.3.4-2b-1",
+    "ECON-4.3.4-2b-2"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-4.3.4-2a",
+     "pass": 1
+    }
+   ],
+   "partial": [],
+   "counts": [
+    3,
+    2,
+    2
+   ]
+  },
+  {
+   "key": "globalisation-definition-4",
+   "agreed": [],
+   "dissent": [
+    {
+     "id": "ECON-4.3.1-2a-1",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.1-2a-2",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.1-2a-3",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.1-2a-4",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.1-2a-5",
+     "pass": 2
+    }
+   ],
+   "partial": [],
+   "counts": [
+    0,
+    5,
+    0
+   ]
+  },
+  {
+   "key": "indirect-tax-8",
+   "agreed": [
+    "ECON-1.3.6-1a",
+    "ECON-1.3.6-1b-1",
+    "ECON-1.3.6-1c-1"
+   ],
+   "dissent": [],
+   "partial": [
+    {
+     "id": "ECON-1.3.6-1c-1",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    3,
+    3,
+    2
+   ]
+  },
+  {
+   "key": "indirect-tax-definition-4",
+   "agreed": [
+    "ECON-1.3.6-1a",
+    "ECON-1.3.6-1b-1"
+   ],
+   "dissent": [],
+   "partial": [
+    {
+     "id": "ECON-1.3.6-1a",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "key": "interest-rates-ad-8",
+   "agreed": [
+    "ECON-2.3.2-2a-2",
+    "ECON-2.3.2-3b-2"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.2-1b-1",
+     "pass": 3
+    },
+    {
+     "id": "ECON-2.3.2-1b-2",
+     "pass": 3
+    },
+    {
+     "id": "ECON-2.3.2-1c",
+     "pass": 1
+    },
+    {
+     "id": "ECON-2.3.2-3c-3",
+     "pass": 3
+    },
+    {
+     "id": "ECON-2.3.2-5a-2",
+     "pass": 2
+    }
+   ],
+   "partial": [],
+   "counts": [
+    3,
+    3,
+    5
+   ]
+  },
+  {
+   "key": "interest-rates-inflation-8",
+   "agreed": [
+    "ECON-2.3.6-1b",
+    "ECON-2.3.6-4a-2",
+    "ECON-2.3.6-4c-1"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.6-4d-2",
+     "pass": 1
+    },
+    {
+     "id": "ECON-2.3.6-4e",
+     "pass": 2
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-2.3.6-1b",
+     "passes": [
+      1,
+      3
+     ]
+    },
+    {
+     "id": "ECON-2.3.6-4a-2",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    4,
+    3,
+    2
+   ]
+  },
+  {
+   "key": "market-failure-government-intervention-20",
+   "agreed": [
+    "ECON-1.3.5-1a",
+    "ECON-1.3.5-1b-1",
+    "ECON-1.3.5-1b-2"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-1.3.5-1b-3",
+     "pass": 2
+    },
+    {
+     "id": "ECON-1.3.5-3b",
+     "pass": 2
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-1.3.5-1a",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-1.3.5-1b-1",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-1.3.5-1b-2",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    3,
+    5,
+    0
+   ]
+  },
+  {
+   "key": "maximum-price-8",
+   "agreed": [
+    "ECON-1.3.4-1a",
+    "ECON-1.3.4-1c",
+    "ECON-1.3.4-3a"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-1.3.4-1b",
+     "pass": 3
+    },
+    {
+     "id": "ECON-1.3.4-3b",
+     "pass": 3
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-1.3.4-1a",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-1.3.4-1c",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-1.3.4-3a",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    3,
+    3,
+    2
+   ]
+  },
+  {
+   "key": "mnc-host-country-8",
+   "agreed": [
+    "ECON-4.3.1-2b-2",
+    "ECON-4.3.1-3a-1",
+    "ECON-4.3.1-3b-2"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-4.3.1-1b",
+     "pass": 1
+    },
+    {
+     "id": "ECON-4.3.1-3a-2",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.1-3b-4",
+     "pass": 2
+    },
+    {
+     "id": "ECON-4.3.1-3b-5",
+     "pass": 3
+    },
+    {
+     "id": "ECON-4.3.1-3b-6",
+     "pass": 2
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-4.3.1-2b-2",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-4.3.1-3a-1",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-4.3.1-3b-2",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    4,
+    6,
+    1
+   ]
+  },
+  {
+   "key": "monopoly-efficiency-20",
+   "agreed": [
+    "ECON-3.3.3-6d",
+    "ECON-3.3.3-6e",
+    "ECON-3.3.3-6h"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-3.3.3-1a-1",
+     "pass": 1
+    },
+    {
+     "id": "ECON-3.3.3-1a-2",
+     "pass": 1
+    },
+    {
+     "id": "ECON-3.3.3-1a-3",
+     "pass": 1
+    },
+    {
+     "id": "ECON-3.3.3-1a-5",
+     "pass": 2
+    },
+    {
+     "id": "ECON-3.3.3-6a",
+     "pass": 1
+    },
+    {
+     "id": "ECON-3.3.3-6c",
+     "pass": 2
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-3.3.3-6d",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-3.3.3-6e",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-3.3.3-6h",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    7,
+    5,
+    0
+   ]
+  },
+  {
+   "key": "monopsony-wages-8",
+   "agreed": [
+    "ECON-3.3.4-3a"
+   ],
+   "dissent": [],
+   "partial": [
+    {
+     "id": "ECON-3.3.4-3a",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "key": "multiplier-effect-8",
+   "agreed": [
+    "ECON-2.3.4-4a",
+    "ECON-2.3.4-4b-1",
+    "ECON-2.3.4-4b-2",
+    "ECON-2.3.4-4b-3",
+    "ECON-2.3.4-4b-4"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.4-4c",
+     "pass": 1
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-2.3.4-4a",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    6,
+    5,
+    4
+   ]
+  },
+  {
+   "key": "neg-externality-4",
+   "agreed": [
+    "ECON-1.3.5-2b"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-1.3.5-1b-1",
+     "pass": 1
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-1.3.5-2b",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    2,
+    1,
+    0
+   ]
+  },
+  {
+   "key": "negative-externality-tax-8",
+   "agreed": [
+    "ECON-1.3.5-1a",
+    "ECON-1.3.5-2b",
+    "ECON-1.3.5-2c-3",
+    "ECON-1.3.5-2d-2",
+    "ECON-1.3.5-2d-3"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-1.3.5-1b-1",
+     "pass": 3
+    },
+    {
+     "id": "ECON-1.3.5-2c-1",
+     "pass": 3
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-1.3.5-1a",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-1.3.5-2b",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-1.3.5-2d-3",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    5,
+    5,
+    4
+   ]
+  },
+  {
+   "key": "ped-firms-4",
+   "agreed": [
+    "ECON-1.3.2-3a",
+    "ECON-1.3.2-3g",
+    "ECON-1.3.2-3j"
+   ],
+   "dissent": [],
+   "partial": [
+    {
+     "id": "ECON-1.3.2-3a",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-1.3.2-3g",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-1.3.2-3j",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    3,
+    3,
+    0
+   ]
+  },
+  {
+   "key": "pes-factors-4",
+   "agreed": [
+    "ECON-1.3.3-2a"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-1.3.3-2c-1",
+     "pass": 2
+    },
+    {
+     "id": "ECON-1.3.3-2c-2",
+     "pass": 2
+    },
+    {
+     "id": "ECON-1.3.3-2c-3",
+     "pass": 2
+    },
+    {
+     "id": "ECON-1.3.3-2c-4",
+     "pass": 2
+    },
+    {
+     "id": "ECON-1.3.3-2c-5",
+     "pass": 2
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-1.3.3-2a",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    1,
+    6,
+    0
+   ]
+  },
+  {
+   "key": "ppf-economic-growth-8",
+   "agreed": [
+    "ECON-1.3.1-4a-1",
+    "ECON-1.3.1-4a-5",
+    "ECON-1.3.1-4b"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-1.3.1-4a-2",
+     "pass": 3
+    },
+    {
+     "id": "ECON-1.3.1-4a-3",
+     "pass": 3
+    },
+    {
+     "id": "ECON-1.3.1-4a-4",
+     "pass": 3
+    },
+    {
+     "id": "ECON-1.3.1-4d",
+     "pass": 3
+    }
+   ],
+   "partial": [],
+   "counts": [
+    3,
+    3,
+    7
+   ]
+  },
+  {
+   "key": "privatisation-definition-4",
+   "agreed": [
+    "ECON-3.3.5-1c-3",
+    "ECON-3.3.5-1e-3"
+   ],
+   "dissent": [],
+   "partial": [
+    {
+     "id": "ECON-3.3.5-1e-3",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "key": "profit-maximisation-mc-mr-8",
+   "agreed": [
+    "ECON-3.3.2-1a-3",
+    "ECON-3.3.2-2c-7"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-3.3.2-1a-1",
+     "pass": 2
+    },
+    {
+     "id": "ECON-3.3.2-2c-1",
+     "pass": 2
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-3.3.2-1a-3",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-3.3.2-2c-7",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    2,
+    4,
+    0
+   ]
+  },
+  {
+   "key": "scarcity-opportunity-cost-4",
+   "agreed": [
+    "ECON-1.3.1-3a",
+    "ECON-1.3.1-3c"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-1.3.1-4a-4",
+     "pass": 3
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-1.3.1-3a",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "key": "sras-shift-4",
+   "agreed": [
+    "ECON-2.3.3-1c",
+    "ECON-2.3.3-2a-1",
+    "ECON-2.3.3-2a-2",
+    "ECON-2.3.3-2a-3"
+   ],
+   "dissent": [],
+   "partial": [],
+   "counts": [
+    4,
+    4,
+    4
+   ]
+  },
+  {
+   "key": "supply-shift-8",
+   "agreed": [
+    "ECON-1.3.3-1b",
+    "ECON-1.3.3-1c-1"
+   ],
+   "dissent": [],
+   "partial": [
+    {
+     "id": "ECON-1.3.3-1b",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    2,
+    2,
+    1
+   ]
+  },
+  {
+   "key": "supply-side-growth-20",
+   "agreed": [
+    "ECON-2.3.5-1a",
+    "ECON-2.3.5-1b",
+    "ECON-2.3.5-1d-1",
+    "ECON-2.3.5-1d-2",
+    "ECON-2.3.5-1d-4",
+    "ECON-2.3.5-1e"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.5-1d-3",
+     "pass": 2
+    },
+    {
+     "id": "ECON-2.3.5-4a",
+     "pass": 3
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-2.3.5-1a",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.5-1b",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.5-1d-1",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.5-1d-2",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.5-1d-4",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    6,
+    7,
+    2
+   ]
+  },
+  {
+   "key": "supply-side-lras-8",
+   "agreed": [
+    "ECON-2.3.3-3b-2",
+    "ECON-2.3.3-3b-3",
+    "ECON-2.3.3-3b-4",
+    "ECON-2.3.3-3b-6"
+   ],
+   "dissent": [
+    {
+     "id": "ECON-2.3.3-1c",
+     "pass": 1
+    },
+    {
+     "id": "ECON-2.3.3-3b-1",
+     "pass": 2
+    }
+   ],
+   "partial": [
+    {
+     "id": "ECON-2.3.3-3b-2",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.3-3b-3",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.3-3b-4",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    5,
+    5,
+    1
+   ]
+  },
+  {
+   "key": "unemployment-types-8",
+   "agreed": [
+    "ECON-2.3.1-3b-1",
+    "ECON-2.3.1-3b-2",
+    "ECON-2.3.1-3b-3",
+    "ECON-2.3.1-3b-4",
+    "ECON-2.3.1-3b-5"
+   ],
+   "dissent": [],
+   "partial": [
+    {
+     "id": "ECON-2.3.1-3b-1",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.1-3b-2",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.1-3b-3",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.1-3b-4",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-2.3.1-3b-5",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    5,
+    5,
+    0
+   ]
+  },
+  {
+   "key": "yed-business-strategy-8",
+   "agreed": [
+    "ECON-1.3.2-3a",
+    "ECON-1.3.2-3h-2",
+    "ECON-1.3.2-3h-3",
+    "ECON-1.3.2-3h-5",
+    "ECON-1.3.2-3j"
+   ],
+   "dissent": [],
+   "partial": [
+    {
+     "id": "ECON-1.3.2-3a",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-1.3.2-3h-2",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-1.3.2-3h-3",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-1.3.2-3h-5",
+     "passes": [
+      1,
+      2
+     ]
+    },
+    {
+     "id": "ECON-1.3.2-3j",
+     "passes": [
+      1,
+      2
+     ]
+    }
+   ],
+   "counts": [
+    5,
+    5,
+    0
+   ]
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+
+> economics-next@0.1.0 validate
+> node audit/scripts/validate-content.mjs && node audit/scripts/validate-model-answers.mjs
+
+(node:22695) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+section                             unit   block  debt  new-block  new-debt  coverage
+meeting-customer-needs              WBS11     25    18          0         4       86%
+introductory-concepts               WEC11     25    56          0         4       67%
+consumer-behaviour-demand           WEC11     17    67          0         4       87%
+the-market                          WBS11     20    54          0         4       88%
+supply                              WEC11     12    37          0         3       95%
+marketing-mix-strategy              WBS11     24    68          0         5       89%
+price-determination                 WEC11     13    45          0         3       91%
+managing-people                     WBS11     35    70          0         4       96%
+entrepreneurs-leaders               WBS11     24    49          0         5      100%
+market-failure                      WEC11      7    43          0         5       89%
+government-intervention             WEC11     15    77          0         4       83%
+planning-raising-finance            WBS12     33    55          0         4       83%
+measures-economic-performance       WEC12     56    91          0         3       88%
+financial-planning                  WBS12     20    61          0         4       95%
+managing-finance                    WBS12     24    53          0         5       88%
+aggregate-demand                    WEC12     27    52          0         6       77%
+aggregate-supply                    WEC12     28    45          0         3       86%
+resource-management                 WBS12     30    17          0         4       86%
+external-influences                 WBS12     45    22          0         5       87%
+national-income                     WEC12     18    43          0         3       84%
+economic-growth                     WEC12     33    64          0         3       83%
+business-objectives-strategy        WBS13     12    18          0         4       64%
+business-growth                     WBS13     12    19          0         4       75%
+macroeconomic-objectives-policies   WEC12     45    62          0         4       88%
+types-sizes-businesses              WEC13     17    24          0         5       73%
+decision-making-techniques          WBS13     11    26          0         4       60%
+influences-business-decisions       WBS13     12    20          0         4       80%
+revenue-costs-profits               WEC13     11    24          0         3       94%
+assessing-competitiveness           WBS13      5    24          0         5       56%
+market-structures-contestability    WEC13      7    42          0         5       81%
+managing-change                     WBS13     13    23          0         6       80%
+labour-markets                      WEC13     21    20          0         3       82%
+government-intervention-firms       WEC13     67    32          0         3       73%
+globalisation                       WBS14     12    24          0         4       82%
+global-markets-expansion            WBS14      9    38          0        10       52%
+causes-effects-globalisation        WEC14     15    25          0         3       86%
+global-marketing                    WBS14      9    28          0         5       62%
+trade-global-economy                WEC14      8    28          0         7       85%
+global-industries-mncs              WBS14     12    28          0         4       79%
+balance-payments-exchange-rates     WEC14      9    32          0         3       81%
+poverty-inequality                  WEC14     11    26          0         3       76%
+role-state-macroeconomy             WEC14     16    35          0         4       63%
+growth-development                  WEC14     14    43          0         6       67%
+total                                        879  1728          0       184
+
+184 findings not in the baseline:
+  (184 new DEBT — rerun with --debt to list them)
+
+by rule:
+  DEBT   fillin.hint                    400
+  BLOCK  claim.uncited                  311
+  DEBT   spec.uncovered                 221
+  BLOCK  quiz.long-correct              177
+  DEBT   schema.lengths                 174
+  DEBT   practice.opening               160
+  BLOCK  locale.institution             160
+  DEBT   fillin.distractors             136
+  DEBT   recall.why                     127
+  BLOCK  practice.tariff                 91
+  DEBT   step.words                      66
+  DEBT   practice.levels                 65
+  BLOCK  practice.command                55
+  DEBT   reorder.criterion               54
+  DEBT   quiz.histogram                  41
+  DEBT   quiz.hedged                     35
+  DEBT   fillin.leak                     30
+  BLOCK  quiz.essay-stem                 28
+  DEBT   quiz.letter-in-explanation      24
+  DEBT   depth.recalls                   23
+  DEBT   reorder.lead                    23
+  BLOCK  section.no-recall               22
+  DEBT   reorder.source                  22
+  DEBT   depth.quiz                      21
+  DEBT   pins.identity                   19
+  BLOCK  pins.diagram                    19
+  DEBT   depth.blocks                    19
+  DEBT   quiz.near-dup                   17
+  DEBT   locale.currency                 16
+  DEBT   locale.uk                       16
+  DEBT   quant.unit                      15
+  BLOCK  fillin.blanks                    8
+  BLOCK  fillin.dup-answers               5
+  DEBT   depth.notes-titles               3
+  BLOCK  fillin.token                     3
+  DEBT   terms.later-unit                 1
+(node:22729) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/data/modelAnswersData.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+model answers: 66 in the bank, 3 carrying the marked-script shape
+  neg-externality-4                             4 marks   4 criteria   4 segments  econ-u1-market-failure
+  negative-externality-tax-8                    8 marks   8 criteria   8 segments  econ-u1-market-failure
+  market-failure-government-intervention-20    20 marks  17 criteria  17 segments  econ-u1-market-failure
+
+0 findings.

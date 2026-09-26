@@ -1,0 +1,38 @@
+
+> economics-next@0.1.0 exposure
+> node audit/scripts/exposure-census.mjs --both --check
+
+(node:30876) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///private/tmp/claude-503/-Users-arongijsel-Claude-APP/b59aa64c-cc17-4f3e-b30e-5789da0476a6/scratchpad/wt-1275/lib/preview-limits.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /private/tmp/claude-503/-Users-arongijsel-Claude-APP/b59aa64c-cc17-4f3e-b30e-5789da0476a6/scratchpad/wt-1275/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+=== LIVE — 43 sections, signed out ===
+chapters served      208 / 213
+items sent           avg 7.72, max 10 of cap 10
+share of the bank    avg 34.32%
+pre-test length      38 threes, 3 twos, 0 ones, 2 with NO pre-test  (headroom 3)
+  of which unpinned  0 of 0 legacy sections have no pre-test
+chapters with no question: 5 across 5 section(s)
+  STARVED (a code defect — a question was there and the chapter did not get it):
+    signed out  0
+    signed in   0
+  DECIDED (a reader found nothing in the bank this chapter teaches; pinned `quizIndices: []`):
+    5 — business-growth (1), global-markets-expansion (1), government-intervention-firms (1), growth-development (1), role-state-macroeconomy (1)
+  UNWRITTEN (content debt — nothing in the section matches that chapter):
+    0
+
+=== DRAFT (staged) — 43 sections, signed out ===
+chapters served      208 / 213
+items sent           avg 7.72, max 10 of cap 10
+share of the bank    avg 34.32%
+pre-test length      38 threes, 3 twos, 0 ones, 2 with NO pre-test  (headroom 3)
+  of which unpinned  0 of 0 legacy sections have no pre-test
+chapters with no question: 5 across 5 section(s)
+  STARVED (a code defect — a question was there and the chapter did not get it):
+    signed out  0
+    signed in   0
+  DECIDED (a reader found nothing in the bank this chapter teaches; pinned `quizIndices: []`):
+    5 — business-growth (1), global-markets-expansion (1), government-intervention-firms (1), growth-development (1), role-state-macroeconomy (1)
+  UNWRITTEN (content debt — nothing in the section matches that chapter):
+    0

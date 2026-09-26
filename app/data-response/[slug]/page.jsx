@@ -11,7 +11,7 @@ const PIECES = {
   'econ-u1-market-failure': {
     subject: 'Economics · Unit 1',
     shortTitle: 'Market Failure',
-    description: 'Free Edexcel IAL Economics Unit 1 data-response practice on market failure. UAE plastics charge and GCC sugar-tax stimulus, 2/6/10-mark ladder with KAA+E model answers.',
+    description: 'Free Edexcel IAL Economics Unit 1 data-response practice on market failure. UAE plastics charge and GCC sugar-tax stimulus, 2/6/20-mark ladder with KAA+E model answers.',
   },
   'econ-u1-demand-elasticity': {
     subject: 'Economics · Unit 1',

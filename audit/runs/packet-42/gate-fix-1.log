@@ -1,0 +1,128 @@
+=== GATE RUN PACKET 42 — fix round 1 (misconception replacements, structure-09) ===
+Tue Sep 22 18:14:20 EEST 2026
+
+=== npm test ===
+EXIT CODE: 0
+✔ every allowlisted route runs the gate and refuses on BLOCK (0.256833ms)
+✔ the client guard refuses a raw write of data on every path to from() (138.232625ms)
+✔ sameJson compares the way jsonb stores, not the way JSON.stringify prints (7.383208ms)
+✔ the section route serves `draft` only outside a production build (0.231875ms)
+ℹ tests 279
+ℹ suites 0
+ℹ pass 279
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1914.492167
+
+=== npm run validate ===
+EXIT CODE: 0
+  DEBT   pins.identity                   19
+  BLOCK  pins.diagram                    19
+  DEBT   depth.blocks                    19
+  DEBT   quiz.near-dup                   17
+  DEBT   locale.currency                 16
+  DEBT   locale.uk                       16
+  DEBT   quant.unit                      15
+  BLOCK  fillin.blanks                    8
+  BLOCK  fillin.dup-answers               5
+  DEBT   depth.notes-titles               3
+  BLOCK  fillin.token                     3
+  DEBT   terms.later-unit                 1
+
+=== npm run exposure ===
+EXIT CODE: 0
+=== DRAFT (staged) — 43 sections, signed out ===
+chapters served      214 / 214
+items sent           avg 7.79, max 10 of cap 10
+share of the bank    avg 35.23%
+pre-test length      38 threes, 3 twos, 0 ones, 2 with NO pre-test  (headroom 3)
+  of which unpinned  0 of 13 legacy sections have no pre-test
+chapters with no question: 0 across 0 section(s)
+  STARVED (a code defect — a question was there and the chapter did not get it):
+    signed out  0
+    signed in   0
+  UNWRITTEN (content debt — nothing in the section matches that chapter):
+    0
+
+=== npm run recalls ===
+EXIT CODE: 0
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+=== LIVE (data) — 21 sections ===
+recalls answerable by scrolling up: 241 of 264 (91%) AT fillin 0.70 · classify 0.75 · reorder 0.75 · match 0.75
+  9 section(s) at 100%, 0 clean
+
+=== STAGED (draft) — 32 sections ===
+recalls answerable by scrolling up: 335 of 803 (42%) AT fillin 0.70 · classify 0.75 · reorder 0.75 · match 0.75
+  3 section(s) at 100%, 6 clean
+
+no section is worse than the baseline.
+
+=== node audit/scripts/check-staged-drafts.mjs resource-management ===
+EXIT CODE: 0
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+note: packet-31-bundle__business__financial-planning.json has no section_id field; using "financial-planning" from its name
+staged draft vs dumped bundle — 1 section(s), read through http://localhost:3001/api/sections/<id>?draft=1
+
+resource-management            matches
+
+0 section(s) with drift. A NO DRAFT line is not drift — that section holds no
+draft at all and its publish line stages before it publishes.
+Covers every field a signed-out student can reach. An edit to a quiz item, card, chain or
+mistake the anonymous slice does not serve needs an entitled fetch and is NOT covered here.
+
+=== npm run build ===
+EXIT CODE: 0
+├ ○ /model-answers
+├ ○ /past-papers
+├ ○ /pdfs
+├ ƒ /practice
+├ ƒ /progress
+├ ƒ /settings
+├ ○ /signup
+├ ○ /sitemap.xml
+├ ○ /topic-links
+├ ○ /upgrade
+└ ƒ /written-practice
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+=== node audit/runs/packet-42/verify-structure-09.mjs <control> ===
+mistakes over HTTP: 0 rows, counts.mistakes 8 — premium-gated, judged from audit/snapshots/packet-42-bundle__business__resource-management.json
+
+SERVED DRAFT (HTTP) — subsections: 26 student-error surfaces · 0 filler claim(s)
+
+DUMPED BUNDLE — mistakes only (premium-gated over HTTP): 8 student-error surfaces · 0 filler claim(s)
+
+drift file vs served draft, misconception fields: 0 of 26
+
+Total Quality Management
+   Students reach for TQM whenever an extract mentions faults, as though it could be switched on this quarter. Its cost arrives first and its return late, which is why it is abandoned more often than disproved. A fault rate that must fall before the next order ships is a different question.
+
+Continuous Improvement (Kaizen)
+   Students dismiss kaizen because no single change is worth much, and a repositioned rack reads as trivial beside a new machine. The size of a step is the point of it, not the objection to it: small enough to try is cheap enough to undo. Judge kaizen on what a year of steps adds up to.
+
+CONTROL (/private/tmp/claude-503/-Users-arongijsel-Claude-APP/0a5e57b2-f68a-43fd-9cd3-15060274afaf/scratchpad/bundle-before.json): 34 student-error surfaces · 4 filler claim(s)
+   content[3].sections[2] (Total Quality Management) still teaches "TQM guarantees zero defects"
+   content[3].sections[2] (Total Quality Management) is 100% of the rejected sentence's own words
+   content[3].sections[3] (Continuous Improvement (Kaizen)) still teaches "kaizen is a one-off project"
+   content[3].sections[3] (Continuous Improvement (Kaizen)) is 100% of the rejected sentence's own words
+
+PASS — served draft 0 filler claim(s), control 4 (must be >= 2)
+EXIT CODE: 0
+
+=== node audit/scripts/ledger.mjs unverified 42 ===
+C-resource-management-structure-09             structure not-fixed  Misconceptions: productivity vs production, JIT = zero stock, lean = JIT, 100% utilisation
+
+GATE BLOCKED: 1 claimed item(s) not confirmed
+EXIT CODE: 2 (expected 2 until Verify A re-runs)

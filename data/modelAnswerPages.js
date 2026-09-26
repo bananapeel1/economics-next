@@ -476,20 +476,33 @@ const AMBIGUOUS = new Set(
  * E021's one title rule: "<Topic> — Exam Questions & Model Answers", so the page can rank for the
  * practice-question family and not only for "model answers". The `<h1>`, the metadata title and the
  * OG title are all built from this, which is why no row carries a title of its own.
+ *
+ * THE SECOND FORM, packet 12.4, E027. A page with no model answers must not promise them. Business
+ * 1.3.2 `the-market` is that page: it titled itself "Exam Questions & Model Answers" over "0
+ * written questions · 0 marks", which is the page telling the student one thing and showing her
+ * another, on the one page whose whole job is an honest empty state.
+ *
+ * `hasAnswers` is passed in rather than looked up, because this file cannot read the bank — the
+ * bank imports it, and the cycle would be real. Every caller already holds the answer: the routes
+ * compute `writtenFor(page)` before they build the metadata, and the component receives `written`.
+ * The DEFAULT IS TRUE so a caller that forgets keeps the 31 existing titles character for
+ * character; only a caller that actually knows the page is empty can ask for the other form.
  */
-export function modelAnswersHeading(page) {
+export function modelAnswersHeading(page, { hasAnswers = true } = {}) {
   const topic = AMBIGUOUS.has(`${page.subject}|${page.topic}`)
     ? `${page.topic} (Unit ${page.unit})`
     : page.topic;
-  return `${topic} — Exam Questions & Model Answers`;
+  return hasAnswers
+    ? `${topic} — Exam Questions & Model Answers`
+    : `${topic} — Model Answers In Progress`;
 }
 
-export function modelAnswersMetaTitle(page) {
-  return `${modelAnswersHeading(page)} | Edexcel IAL ${SUBJECT_LABEL[page.subject]} | Revvy Learn`;
+export function modelAnswersMetaTitle(page, opts) {
+  return `${modelAnswersHeading(page, opts)} | Edexcel IAL ${SUBJECT_LABEL[page.subject]} | Revvy Learn`;
 }
 
-export function modelAnswersOgTitle(page) {
-  return `${modelAnswersHeading(page)} | Revvy Learn`;
+export function modelAnswersOgTitle(page, opts) {
+  return `${modelAnswersHeading(page, opts)} | Revvy Learn`;
 }
 
 /** The row for one URL segment, or null. Used by the two dynamic routes to decide `notFound()`. */

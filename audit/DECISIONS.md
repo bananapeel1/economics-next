@@ -12,6 +12,91 @@ Append only. Every entry needs a date and the packet that made it.
 
 ## Settled
 
+- **2026-09-26 — the mid-band "Why this loses marks" panel renders only for level-banded mark schemes, on
+  every page.** Packet 12.75 built the rule (E053) but its spec confined it to the new practice shell, and
+  its census (`audit/runs/packet-12.75/midband-census.txt`) found the same false panel live on 8 other pages:
+  Economics 2.3.2, 2.3.5, 2.3.6, 3.3.3, 4.3.2 and Business 1.3.4, 2.3.3, 2.3.5. Each prints an objectives-split
+  AO3 row ("chains for and against…") as the ceiling of an attempt whose paragraphs argue one side. **The
+  founder's ruling: apply it everywhere now; a panel that states something false is worse than no panel.**
+  This overrides packet 12.75's E051 ("the other 31 pages render identically to HEAD") for those 8 panels
+  and nothing else; the 11 level-banded panels stay. The spec's expectation that 1.3.5's panel would return
+  to the generic 20-mark item was also wrong: that item is objectives-split too, so 1.3.5 shows none.
+
+- **2026-09-26 — practice follows the real IAL paper layout, for every unit of both subjects.** The founder,
+  after packet 12.7's author noted that a Define 2 / Analyse 6 / Evaluate 20 set is not the shape of any
+  IAL section. Practice sets are shaped like the sections of the real paper for the unit the topic sits in,
+  taken from `audit/PROTOCOL.md` → "Canonical IAL paper structures" (verified against both specifications;
+  never restate from memory):
+
+  | Paper | Sections a topic's practice is shaped like |
+  |---|---|
+  | Economics Units 1-2 (WEC11/12) | B five short answers (20) · C one five-part data question on an extract (34) · D one 20-mark essay chosen from two |
+  | Economics Units 3-4 (WEC13/14) | B one five-part data question on an extract (34) · C two 20-mark essays chosen from three |
+  | Business Units 1-2 (WBS11/12) | A/B source-based short and extended response (30 each) · C one 20-mark essay from sources |
+  | Business Units 3-4 (WBS13/14) | A source-based short and extended response (40) · B and C one 20-mark essay each, from sources |
+
+  **Part-level splits, verified the same day from Pearson's Sample Assessment Materials** (the
+  specifications fix only section totals): `audit/raw/ial-paper-structure.json`, with sources. Economics data
+  question 2+4+6+8+14 = 34 in all four papers (Define/Calculate, Explain, Analyse, Examine, Discuss); Economics
+  short answers 5 × 4 (Draw, Explain, Calculate); essays 20, choose 1 of 2 (Units 1-2) or 2 of 3 (Units 3-4).
+  Business source sets 2+4+6+8+10 = 30 (Units 1-2) and 4+4+8+12+12 = 40 (Units 3-4); Business essays 20, no
+  choice. Section A (six 1-mark MCQs, Economics only) is **not rebuilt on topic pages: the page links the
+  topic's existing quiz as Section A practice.** Full timed mock papers per unit: **not now.** Economics
+  1.3.5's current extract set (2/6/20, packet 12.7) does not match and is reshaped first.
+
+
+- **2026-09-26 — the practice page's design is the v7 mockup, and no text on it is ever cut, spilled or
+  shortened.** After seven iterations the founder signed off `audit/specs/packet-12.75-mockup.html`
+  (published as https://claude.ai/artifact/Tr5PkdbzhVgTk3NFgzgfKL): the site's own DM type and
+  `globals.css` tokens, the extract beside the answer, self-marking against tickable criteria, the question
+  stem in DM Sans with only its key term in DM Serif Display italic. The founder then found question cards
+  cutting "6 marks" to "6 mar" at ~700px, a width between the three that had been spot-checked, and set the
+  standard: *"make sure this text overflowing never happens. I want a reliable, trustworthy feel."* **The
+  standard includes ellipsis: text wraps, or a layout tier removes a secondary element whole, and nothing
+  is ever shortened with "…".** Its check is `audit/scripts/text-fit-sweep.js`, a width sweep from 320 to
+  1920px, proved by A/B (it fails the pre-fix mockup at 650–810px with the card metadata bleeding 151px
+  and the page scrolling sideways, and passes the fixed one on 1,926 checks). Spot-checking breakpoints
+  is not acceptable evidence for this standard. Running the sweep in CI needs a headless browser
+  dependency and is an open founder decision. The shell keeps the `rl-night` dark pin every resource page
+  uses; it is token-only so that can change with one line.
+
+- **2026-09-25 — Economics 1.3.5 practises the extract's own question set, not the bank's generic
+  questions.** Packet 12.7's E038 asked for the bank's 4-mark and 8-mark answers to be re-authored against
+  the attached extract. Reading them showed the 8-mark question is *"Examine how a negative externality of
+  production leads to market failure"*, while the extract (UAE plastics, GCC sugar tax) is entirely about
+  consumption externalities and its own examiner note warns against production examples: the re-authoring
+  would have taught the exact mistake the note names. The extract file `content/data-response/econ-u1-market-failure.md`
+  already carries its own three questions whose model answers use the extract's figures, and that is also
+  where packet 12.6's false premise came from (the extract file's answers were mistaken for the bank's).
+  **The founder's ruling: the 1.3.5 practice page leads with the extract's set — Define (2), Analyse (6),
+  Evaluate (20) — in the criteria/script/stimulus shape. Question 3 is re-tariffed from the file's 10 marks,
+  which is not a legal IAL Economics tariff, to 20.** The bank's three generic 1.3.5 answers stay on the site
+  without an extract attached, because they never used one. E038 is superseded by E043/E044.
+
+
+- **2026-09-22 — packet 12.6 shipped a pilot whose extract its own answers do not use, and 12.7 re-authors
+  rather than grandfathers it.** Economics 1.3.5 was chosen as the marked-script pilot on a claim in
+  `audit/specs/packet-12.6.md` that its three model answers cite the attached extract (`AED 0.18`, `PED -1.4`,
+  `45% fall`). The claim was false: the 4-mark answer applies a coal-fired power station, the 8-mark a steel
+  factory, the 20-mark the UK Soft Drinks Industry Levy, and the extract is UAE plastics / GCC sugar tax. Zero
+  overlap. Packet 12.6's fix round B1 could not re-author (E034 forbids new marking inside that packet) so it
+  replaced its own false student-facing note with an honest one. **The founder's ruling: 12.7 re-authors the
+  application paragraphs of the 1.3.5 4-mark and 8-mark answers against the attached extract, and re-segments
+  them.** The reason is not tidiness — the 65 answers in packet 12.8 are modelled on this section, and a pilot
+  whose flagship interaction is disclaimed by a note teaches the next packet the wrong pattern. The honest note
+  is removed only once the answers actually use the extract, never before.
+
+- **2026-09-22 — a criterion-to-segment link carries a role, because "earned here" and "missed here" are
+  opposite messages.** Packet 12.6's 8-mark Market Failure item is an honest mid-band exemplar (`likelyScore`
+  `5-6 / 8`) whose script stops at Level 3, so criteria `c7` and `c8` — the two Level 4 marks — point at the
+  segments where that assessment *should* have gone, not where it was earned. R1 requires criteria to sum to
+  the tariff, so they cannot simply be dropped, and authoring the missing assessment is new marking. **The
+  founder's ruling: the schema gains `segRole: 'earned' | 'missed'` and the two render differently.** This is
+  not a workaround for one item. Mid-band exemplars are an established pattern here (`lib/mid-band-answer.test.mjs`),
+  so every retrofit in 12.8 will produce criteria of both kinds, and rendering them identically inverts the
+  meaning of the design's central promise. Do not collapse the two roles back into one link type.
+
+
 - **2026-09-15 — the three lenses keep their filled boxes, against F067's fix text.** F067 asked for the Key
   Idea to dominate and, in the same sentence, for Real Example / Misconception / Exam Matters to be demoted to
   a compact style with "no coloured fill". Packet 5 shipped that and a verifier confirmed it. The founder saw
@@ -3290,3 +3375,35 @@ against HEAD before commit. The result:
 `placeChapterItems`, extracted with `git archive`, over the production API and the live tables. None of the
 eight sections uses a decided-empty pin (`quizIndices: []` or `diagramId: null`), so the part of 2.91 that main
 lacks changes nothing for them.
+
+## 2026-09-22 — packet 42: the resource-management MCQ answer-position bias moves from packet 8 to the content packet
+
+**Founder ruling, 22 September 2026: packet 42 takes it.** The entry of 11 September ("deferred from packet 0,
+with reasons") assigned the bank-wide answer-position bias in `resource-management` (22 of 25 at option B) and
+`entrepreneurs-leaders` (20 of 25) to packet 8, "not an in-place fix". That sentence is now superseded for both
+sections, and this entry is the ratification.
+
+Why it was raised. Packet 42's Brief phase stopped on it: `DECISIONS.md:57-59` says packet 8, the ledger assigns
+`C-resource-management-topFix-01`, `-quiz-01` and `-quiz-02` to packet 42, and a brain may not resolve a scope
+question against this file on its own (BRAIN.md hard stop 6). It was right to stop.
+
+Why the ruling goes this way, on the evidence rather than convenience:
+
+- **The twin was already closed by a content packet.** `C-entrepreneurs-leaders-quiz-01` — the other half of the
+  same 11 September sentence, same defect, "20 of 25 MCQs have correctIndex 1" — is `confirmed`, closed by
+  **packet 35 on 18 September** in its from-zero rebuild (25 quiz → 35, pins derived from each item's block tag).
+  Practice outran the note a week ago; only the note was never updated.
+- **Packet 8 holds no scope.** `node audit/scripts/ledger.mjs packet 8 --open` → **0 items**. There is no
+  quiz-hygiene migration left to defer to; the ledger has already distributed this work to the content packets.
+- **The 11 September reasoning does not apply to a rebuild.** Its objection was "not an in-place fix" — correct,
+  because redistributing `correctIndex` across a bank you are keeping means re-ordering options under
+  explanations written against their old positions. Packet 42 does not keep the bank: it authors it from the
+  specification. There is no in-place edit to object to, and no distribution to preserve.
+
+**What this obliges packet 42 to do.** Author the bank with the correct option distributed across indices 0-3 by
+construction, and derive the answer position from the item rather than inheriting it. This does not relax
+packet 26's rule (`DECISIONS.md`, 17 September): an explanation still names an option by its CONTENT, never by
+position, so a redistributed bank must not contain a single positional reference.
+
+**What it does not do.** It says nothing about any other section's bank. A section whose bias is still open stays
+where the ledger puts it.

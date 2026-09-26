@@ -1,0 +1,181 @@
+{
+ "pass": "3 — audit/scripts/tag-lexical.mjs, the deterministic lexical matcher from packet 12.1, rule unchanged and untuned",
+ "subject": "economics",
+ "tags": {
+  "scarcity-opportunity-cost-4": [
+   "ECON-1.3.1-3c",
+   "ECON-1.3.1-4a-4"
+  ],
+  "ppf-economic-growth-8": [
+   "ECON-1.3.1-4a-1",
+   "ECON-1.3.1-4a-2",
+   "ECON-1.3.1-4a-3",
+   "ECON-1.3.1-4a-4",
+   "ECON-1.3.1-4a-5",
+   "ECON-1.3.1-4b",
+   "ECON-1.3.1-4d"
+  ],
+  "ped-firms-4": [],
+  "yed-business-strategy-8": [],
+  "pes-factors-4": [],
+  "supply-shift-8": [
+   "ECON-1.3.3-1c-1"
+  ],
+  "maximum-price-8": [
+   "ECON-1.3.4-1b",
+   "ECON-1.3.4-3b"
+  ],
+  "equilibrium-price-4": [
+   "ECON-1.3.4-1a",
+   "ECON-1.3.4-1b",
+   "ECON-1.3.4-1c",
+   "ECON-1.3.4-3b"
+  ],
+  "neg-externality-4": [],
+  "negative-externality-tax-8": [
+   "ECON-1.3.5-1b-1",
+   "ECON-1.3.5-2c-1",
+   "ECON-1.3.5-2c-3",
+   "ECON-1.3.5-2d-2"
+  ],
+  "market-failure-government-intervention-20": [],
+  "indirect-tax-8": [
+   "ECON-1.3.6-1a",
+   "ECON-1.3.6-1b-1"
+  ],
+  "indirect-tax-definition-4": [
+   "ECON-1.3.6-1b-1"
+  ],
+  "cpi-inflation-4": [
+   "ECON-2.3.1-2b",
+   "ECON-2.3.1-2c",
+   "ECON-2.3.1-2d",
+   "ECON-2.3.1-2g-1"
+  ],
+  "unemployment-types-8": [],
+  "cpi-limitations-4": [
+   "ECON-2.3.1-2b",
+   "ECON-2.3.1-2c"
+  ],
+  "ad-shift-4": [
+   "ECON-2.3.2-1b-1",
+   "ECON-2.3.2-1b-2",
+   "ECON-2.3.2-1c",
+   "ECON-2.3.2-5a-5"
+  ],
+  "interest-rates-ad-8": [
+   "ECON-2.3.2-1b-1",
+   "ECON-2.3.2-1b-2",
+   "ECON-2.3.2-2a-2",
+   "ECON-2.3.2-3b-2",
+   "ECON-2.3.2-3c-3"
+  ],
+  "consumer-spending-growth-20": [
+   "ECON-2.3.2-2a-3",
+   "ECON-2.3.2-3b-1"
+  ],
+  "supply-side-lras-8": [
+   "ECON-2.3.3-3b-6"
+  ],
+  "sras-shift-4": [
+   "ECON-2.3.3-1c",
+   "ECON-2.3.3-2a-1",
+   "ECON-2.3.3-2a-2",
+   "ECON-2.3.3-2a-3"
+  ],
+  "circular-flow-8": [
+   "ECON-2.3.4-1a",
+   "ECON-2.3.4-1b",
+   "ECON-2.3.4-2d"
+  ],
+  "multiplier-effect-8": [
+   "ECON-2.3.4-4b-1",
+   "ECON-2.3.4-4b-2",
+   "ECON-2.3.4-4b-3",
+   "ECON-2.3.4-4b-4"
+  ],
+  "actual-potential-growth-4": [
+   "ECON-2.3.5-1a",
+   "ECON-2.3.5-1e",
+   "ECON-2.3.5-4a"
+  ],
+  "supply-side-growth-20": [
+   "ECON-2.3.5-1e",
+   "ECON-2.3.5-4a"
+  ],
+  "costs-benefits-growth-8": [
+   "ECON-2.3.5-1e"
+  ],
+  "interest-rates-inflation-8": [
+   "ECON-2.3.6-1b",
+   "ECON-2.3.6-4c-1"
+  ],
+  "fiscal-vs-monetary-20": [
+   "ECON-2.3.6-4a-1"
+  ],
+  "economies-scale-4": [],
+  "econ-diseconomies-scale-8": [],
+  "profit-maximisation-mc-mr-8": [],
+  "econ-normal-vs-supernormal-profit-4": [
+   "ECON-3.3.2-4a"
+  ],
+  "monopoly-efficiency-20": [],
+  "derived-demand-labour-4": [
+   "ECON-3.3.4-1a-1"
+  ],
+  "monopsony-wages-8": [],
+  "privatisation-definition-4": [
+   "ECON-3.3.5-1c-3"
+  ],
+  "econ-competition-policy-8": [],
+  "globalisation-definition-4": [],
+  "mnc-host-country-8": [
+   "ECON-4.3.1-3b-5"
+  ],
+  "free-trade-protectionism-20": [],
+  "econ-comparative-advantage-4": [
+   "ECON-4.3.2-1b-1",
+   "ECON-4.3.2-1b-2",
+   "ECON-4.3.2-1b-3",
+   "ECON-4.3.2-2a-2"
+  ],
+  "current-account-deficit-4": [
+   "ECON-4.3.3-1a-1",
+   "ECON-4.3.3-1b",
+   "ECON-4.3.3-1c",
+   "ECON-4.3.3-2c-3",
+   "ECON-4.3.3-2f-1"
+  ],
+  "econ-j-curve-depreciation-8": [
+   "ECON-4.3.3-1a-1",
+   "ECON-4.3.3-1a-2",
+   "ECON-4.3.3-1b",
+   "ECON-4.3.3-1c",
+   "ECON-4.3.3-2c-3",
+   "ECON-4.3.3-2f-1",
+   "ECON-4.3.3-2f-2"
+  ],
+  "gini-lorenz-inequality-8": [
+   "ECON-4.3.4-2b-1",
+   "ECON-4.3.4-2b-2"
+  ],
+  "barriers-development-4": [
+   "ECON-4.3.6-1b",
+   "ECON-4.3.6-2a-1",
+   "ECON-4.3.6-2a-2",
+   "ECON-4.3.6-2a-3",
+   "ECON-4.3.6-2a-4",
+   "ECON-4.3.6-2a-5",
+   "ECON-4.3.6-2a-6",
+   "ECON-4.3.6-2a-7",
+   "ECON-4.3.6-2a-8",
+   "ECON-4.3.6-2a-9",
+   "ECON-4.3.6-2a-10"
+  ],
+  "aid-vs-trade-development-8": [
+   "ECON-4.3.6-3a-1",
+   "ECON-4.3.6-3b-5",
+   "ECON-4.3.6-3c-5"
+  ]
+ }
+}

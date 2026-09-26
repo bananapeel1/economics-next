@@ -1,0 +1,322 @@
+{
+ "page": "/economics/market-failure-model-answers (dev server, port 3001)",
+ "script": "audit/scripts/text-fit-sweep.js, load:'write' (the site sends X-Frame-Options: DENY, so a framed navigation is refused), async state runs with settle()",
+ "range": "320 to 1920 px, step 5 (321 widths); height 900 at >=1024, 844 below",
+ "states": [
+  "Extract A Q1 writing",
+  "Extract A Q1 marking, note open",
+  "Extract A Q1 Model answers, note open",
+  "Extract A Q2 writing",
+  "Extract A Q2 marking, note open",
+  "Extract A Q2 Model answers, note open",
+  "Extract A Q3 writing",
+  "Extract A Q3 marking, note open",
+  "Extract A Q3 Model answers, note open",
+  "Standalone Q1 writing",
+  "Standalone Q1 marking, note open",
+  "Standalone Q1 Model answers, note open",
+  "Standalone Q2 writing",
+  "Standalone Q2 marking, note open",
+  "Standalone Q2 Model answers, note open",
+  "Standalone Q3 writing",
+  "Standalone Q3 marking, note open",
+  "Standalone Q3 Model answers, note open"
+ ],
+ "run_0_discarded": {
+  "what": "first real-page run, synchronous state.run: 5778 checks, all 0 — DISCARDED",
+  "why": "a signature probe at 390 and 1440 showed every state still in its initial render (card 1, 'Your answer', no marking, no note): React applies a click in a microtask, after the synchronous check had already measured. The sweep now awaits each state and a MessageChannel task; a second probe showed all 18 states engaged (set, card, mode, pane head, primary label, open note) at both widths."
+ },
+ "ab_fail_card_container_tier_removed": {
+  "change": "components/practice-shell.css .ps-card: container-type: inline-size removed (then restored byte-for-byte from a copy)",
+  "checks": 5778,
+  "theme": "dark",
+  "failing_widths_per_state": {
+   "dark · Extract A Q1 writing": 31,
+   "dark · Extract A Q1 marking, note open": 31,
+   "dark · Extract A Q1 Model answers, note open": 31,
+   "dark · Extract A Q2 writing": 31,
+   "dark · Extract A Q2 marking, note open": 31,
+   "dark · Extract A Q2 Model answers, note open": 31,
+   "dark · Extract A Q3 writing": 31,
+   "dark · Extract A Q3 marking, note open": 32,
+   "dark · Extract A Q3 Model answers, note open": 31,
+   "dark · Standalone Q1 writing": 31,
+   "dark · Standalone Q1 marking, note open": 31,
+   "dark · Standalone Q1 Model answers, note open": 31,
+   "dark · Standalone Q2 writing": 31,
+   "dark · Standalone Q2 marking, note open": 31,
+   "dark · Standalone Q2 Model answers, note open": 31,
+   "dark · Standalone Q3 writing": 31,
+   "dark · Standalone Q3 marking, note open": 32,
+   "dark · Standalone Q3 Model answers, note open": 31
+  },
+  "sample": [
+   "Extract A Q1 writing 320: BLEED ps-card-meta «2 marks · 3 min» past ps-card by 33px | BLEED ps-card-mm «· 3 min» past ps-card by 33px | BLEED ps-st-long «Draft · 54 words» past ps-card by 43px",
+   "Extract A Q1 marking, note open 320: BLEED ps-card-meta «2 marks · 3 min» past ps-card by 33px | BLEED ps-card-mm «· 3 min» past ps-card by 33px | BLEED ps-st-long «You marked 1 / 2» past ps-card by 43px",
+   "Extract A Q1 Model answers, note open 320: BLEED ps-card-meta «2 marks · 3 min» past ps-card by 33px | BLEED ps-card-mm «· 3 min» past ps-card by 33px | BLEED ps-card-meta «6 marks · 8 min» past ps-card by 33px"
+  ]
+ },
+ "not_measured": [
+  "widths between the 5px steps",
+  "real devices; this is the Browser pane's Chromium",
+  "the 'not started' and 'answer shown without marking' states in light"
+ ],
+ "superseded_runs": {
+  "dark_pinned_final (first)": {
+   "checks": 5778,
+   "ms": 55089,
+   "failures": {
+    "dark · Extract A Q1 writing": 0,
+    "dark · Extract A Q1 marking, note open": 0,
+    "dark · Extract A Q1 Model answers, note open": 0,
+    "dark · Extract A Q2 writing": 0,
+    "dark · Extract A Q2 marking, note open": 0,
+    "dark · Extract A Q2 Model answers, note open": 0,
+    "dark · Extract A Q3 writing": 0,
+    "dark · Extract A Q3 marking, note open": 0,
+    "dark · Extract A Q3 Model answers, note open": 0,
+    "dark · Standalone Q1 writing": 0,
+    "dark · Standalone Q1 marking, note open": 0,
+    "dark · Standalone Q1 Model answers, note open": 0,
+    "dark · Standalone Q2 writing": 0,
+    "dark · Standalone Q2 marking, note open": 0,
+    "dark · Standalone Q2 Model answers, note open": 0,
+    "dark · Standalone Q3 writing": 0,
+    "dark · Standalone Q3 marking, note open": 0,
+    "dark · Standalone Q3 Model answers, note open": 0
+   }
+  },
+  "light_unpinned_final (first)": {
+   "note": "rl-night removed from .resource-page and data-theme='light' forced on every state run (the app resets data-theme to dark after hydration; a first light run that did not force it measured dark tokens and is discarded)",
+   "checks": 5778,
+   "ms": 54890,
+   "failures": {
+    "light · Extract A Q1 writing": 0,
+    "light · Extract A Q1 marking, note open": 0,
+    "light · Extract A Q1 Model answers, note open": 0,
+    "light · Extract A Q2 writing": 0,
+    "light · Extract A Q2 marking, note open": 0,
+    "light · Extract A Q2 Model answers, note open": 0,
+    "light · Extract A Q3 writing": 0,
+    "light · Extract A Q3 marking, note open": 0,
+    "light · Extract A Q3 Model answers, note open": 0,
+    "light · Standalone Q1 writing": 0,
+    "light · Standalone Q1 marking, note open": 0,
+    "light · Standalone Q1 Model answers, note open": 0,
+    "light · Standalone Q2 writing": 0,
+    "light · Standalone Q2 marking, note open": 0,
+    "light · Standalone Q2 Model answers, note open": 0,
+    "light · Standalone Q3 writing": 0,
+    "light · Standalone Q3 marking, note open": 0,
+    "light · Standalone Q3 Model answers, note open": 0
+   }
+  },
+  "dark_pinned_extra_states (first)": {
+   "checks": 3852,
+   "failures": {
+    "dark · Extract A Q1 not started": 0,
+    "dark · Extract A Q1 answer shown without marking": 0,
+    "dark · Extract A Q2 not started": 0,
+    "dark · Extract A Q2 answer shown without marking": 0,
+    "dark · Extract A Q3 not started": 0,
+    "dark · Extract A Q3 answer shown without marking": 0,
+    "dark · Standalone Q1 not started": 0,
+    "dark · Standalone Q1 answer shown without marking": 0,
+    "dark · Standalone Q2 not started": 0,
+    "dark · Standalone Q2 answer shown without marking": 0,
+    "dark · Standalone Q3 not started": 0,
+    "dark · Standalone Q3 answer shown without marking": 0
+   },
+   "engaged_at_390": "every state's pane head and primary label read back as intended (\"Your answer / Show the model answer\"; \"Model answer · not marked / Next: …\")"
+  },
+  "why": "all 0, but run before four later edits (two colour-only contrast fixes, dock action alignment when the dock wraps, and the stable innerHTML cache in PracticeShell.jsx); re-run below on the final code"
+ },
+ "FINAL": {
+  "code": "working tree as handed over (components/PracticeShell.jsx, components/practice-shell.css final)",
+  "dark_pinned": {
+   "checks": 5778,
+   "ms": 61947,
+   "failures": {
+    "dark · Extract A Q1 writing": 0,
+    "dark · Extract A Q1 marking, note open": 0,
+    "dark · Extract A Q1 Model answers, note open": 0,
+    "dark · Extract A Q2 writing": 0,
+    "dark · Extract A Q2 marking, note open": 0,
+    "dark · Extract A Q2 Model answers, note open": 0,
+    "dark · Extract A Q3 writing": 0,
+    "dark · Extract A Q3 marking, note open": 0,
+    "dark · Extract A Q3 Model answers, note open": 0,
+    "dark · Standalone Q1 writing": 0,
+    "dark · Standalone Q1 marking, note open": 0,
+    "dark · Standalone Q1 Model answers, note open": 0,
+    "dark · Standalone Q2 writing": 0,
+    "dark · Standalone Q2 marking, note open": 0,
+    "dark · Standalone Q2 Model answers, note open": 0,
+    "dark · Standalone Q3 writing": 0,
+    "dark · Standalone Q3 marking, note open": 0,
+    "dark · Standalone Q3 Model answers, note open": 0
+   }
+  },
+  "light_unpinned": {
+   "checks": 5778,
+   "ms": 62028,
+   "failures": {
+    "light · Extract A Q1 writing": 0,
+    "light · Extract A Q1 marking, note open": 0,
+    "light · Extract A Q1 Model answers, note open": 0,
+    "light · Extract A Q2 writing": 0,
+    "light · Extract A Q2 marking, note open": 0,
+    "light · Extract A Q2 Model answers, note open": 0,
+    "light · Extract A Q3 writing": 0,
+    "light · Extract A Q3 marking, note open": 0,
+    "light · Extract A Q3 Model answers, note open": 0,
+    "light · Standalone Q1 writing": 0,
+    "light · Standalone Q1 marking, note open": 0,
+    "light · Standalone Q1 Model answers, note open": 0,
+    "light · Standalone Q2 writing": 0,
+    "light · Standalone Q2 marking, note open": 0,
+    "light · Standalone Q2 Model answers, note open": 0,
+    "light · Standalone Q3 writing": 0,
+    "light · Standalone Q3 marking, note open": 0,
+    "light · Standalone Q3 Model answers, note open": 0
+   },
+   "every_state_read_back": "light | unpinned (data-theme=light, rl-night removed) at 390 and 1440"
+  },
+  "dark_pinned_extra": {
+   "checks": 3852,
+   "failures": {
+    "dark · Extract A Q1 not started": 0,
+    "dark · Extract A Q1 answer shown without marking": 0,
+    "dark · Extract A Q2 not started": 0,
+    "dark · Extract A Q2 answer shown without marking": 0,
+    "dark · Extract A Q3 not started": 0,
+    "dark · Extract A Q3 answer shown without marking": 0,
+    "dark · Standalone Q1 not started": 0,
+    "dark · Standalone Q1 answer shown without marking": 0,
+    "dark · Standalone Q2 not started": 0,
+    "dark · Standalone Q2 answer shown without marking": 0,
+    "dark · Standalone Q3 not started": 0,
+    "dark · Standalone Q3 answer shown without marking": 0
+   }
+  },
+  "total_checks": 15408,
+  "engagement_signatures": "every state read back at 390 and 1440 as: theme | pin | set | card | mode | pane head | primary label | open notes — e.g. \"390 Extract A Q3 marking, note open => dark | pinned | Extract A · 3 questions | 3 | Practise | Mark your answer | Next: Standalone questions→ | 1\"; \"390 Standalone Q3 answer shown without marking => … | Model answer · not marked | Finish · 0 of 32 banked | 0\""
+ },
+ "fix_round_1": {
+  "what": "Fix round 1 (verifier rejection E050: Table 1 scrolled sideways with the Extract tab open below 1024px; round 0 never selected that tab).",
+  "server": "mirror of this worktree (rsync, node_modules cloned with cp -c -R) served by next dev on :3017, because the :3001 server owned by another session was serving stale JSX (curl showed none of the edits). Mirror PracticeShell.jsx and practice-shell.css are byte-identical to the worktree (cmp).",
+  "states_file": "audit/runs/packet-12.75/fix1/sweep-states.js (27 idempotent, enforcing states: round 0's 18 plus 9 Extract-tab states)",
+  "ab_fail_stacked_table_tier_removed": {
+   "states": [
+    "Extract A Q1 writing, Extract tab",
+    "Extract A Q2 writing, Extract tab",
+    "Extract A Q3 writing, Extract tab",
+    "Extract A Q1 marking, Extract tab (focus rows)",
+    "Extract A Q2 marking, Extract tab (focus rows)",
+    "Extract A Q3 marking, Extract tab (focus rows)",
+    "Extract A Q1 Model answers, Extract tab",
+    "Extract A Q2 Model answers, Extract tab",
+    "Extract A Q3 Model answers, Extract tab"
+   ],
+   "theme": "dark",
+   "checks": 2889,
+   "result": "every Extract-tab state fails at 10 widths, 320-365, TABLE (wrapper scrolls sideways)",
+   "first": [
+    "320: TABLE hidden 50px",
+    "325: TABLE hidden 45px",
+    "330: TABLE hidden 40px",
+    "335: TABLE hidden 35px",
+    "340: TABLE hidden 30px",
+    "345: TABLE hidden 25px"
+   ]
+  },
+  "ab_restored": {
+   "states": [
+    "Extract A Q1 writing, Extract tab",
+    "Extract A Q2 writing, Extract tab",
+    "Extract A Q3 writing, Extract tab",
+    "Extract A Q1 marking, Extract tab (focus rows)",
+    "Extract A Q2 marking, Extract tab (focus rows)",
+    "Extract A Q3 marking, Extract tab (focus rows)",
+    "Extract A Q1 Model answers, Extract tab",
+    "Extract A Q2 Model answers, Extract tab",
+    "Extract A Q3 Model answers, Extract tab"
+   ],
+   "theme": "dark",
+   "checks": 2889,
+   "result": "all 0"
+  },
+  "FINAL": {
+   "code": "final (includes the focus-row label colour change made after the A/B)",
+   "range": "320-1920 step 5",
+   "dark_pinned": {
+    "checks": 8667,
+    "states": 27,
+    "failures": {
+     "dark · Extract A Q1 writing": 0,
+     "dark · Extract A Q1 writing, Extract tab": 0,
+     "dark · Extract A Q2 writing": 0,
+     "dark · Extract A Q2 writing, Extract tab": 0,
+     "dark · Extract A Q3 writing": 0,
+     "dark · Extract A Q3 writing, Extract tab": 0,
+     "dark · Extract A Q1 marking, note open": 0,
+     "dark · Extract A Q1 marking, Extract tab (focus rows)": 0,
+     "dark · Extract A Q2 marking, note open": 0,
+     "dark · Extract A Q2 marking, Extract tab (focus rows)": 0,
+     "dark · Extract A Q3 marking, note open": 0,
+     "dark · Extract A Q3 marking, Extract tab (focus rows)": 0,
+     "dark · Extract A Q1 Model answers, note open": 0,
+     "dark · Extract A Q1 Model answers, Extract tab": 0,
+     "dark · Extract A Q2 Model answers, note open": 0,
+     "dark · Extract A Q2 Model answers, Extract tab": 0,
+     "dark · Extract A Q3 Model answers, note open": 0,
+     "dark · Extract A Q3 Model answers, Extract tab": 0,
+     "dark · Standalone Q1 writing": 0,
+     "dark · Standalone Q2 writing": 0,
+     "dark · Standalone Q3 writing": 0,
+     "dark · Standalone Q1 marking, note open": 0,
+     "dark · Standalone Q2 marking, note open": 0,
+     "dark · Standalone Q3 marking, note open": 0,
+     "dark · Standalone Q1 Model answers, note open": 0,
+     "dark · Standalone Q2 Model answers, note open": 0,
+     "dark · Standalone Q3 Model answers, note open": 0
+    }
+   },
+   "light_unpinned": {
+    "checks": 8667,
+    "states": 27,
+    "failures": {
+     "light · Extract A Q1 writing": 0,
+     "light · Extract A Q1 writing, Extract tab": 0,
+     "light · Extract A Q2 writing": 0,
+     "light · Extract A Q2 writing, Extract tab": 0,
+     "light · Extract A Q3 writing": 0,
+     "light · Extract A Q3 writing, Extract tab": 0,
+     "light · Extract A Q1 marking, note open": 0,
+     "light · Extract A Q1 marking, Extract tab (focus rows)": 0,
+     "light · Extract A Q2 marking, note open": 0,
+     "light · Extract A Q2 marking, Extract tab (focus rows)": 0,
+     "light · Extract A Q3 marking, note open": 0,
+     "light · Extract A Q3 marking, Extract tab (focus rows)": 0,
+     "light · Extract A Q1 Model answers, note open": 0,
+     "light · Extract A Q1 Model answers, Extract tab": 0,
+     "light · Extract A Q2 Model answers, note open": 0,
+     "light · Extract A Q2 Model answers, Extract tab": 0,
+     "light · Extract A Q3 Model answers, note open": 0,
+     "light · Extract A Q3 Model answers, Extract tab": 0,
+     "light · Standalone Q1 writing": 0,
+     "light · Standalone Q2 writing": 0,
+     "light · Standalone Q3 writing": 0,
+     "light · Standalone Q1 marking, note open": 0,
+     "light · Standalone Q2 marking, note open": 0,
+     "light · Standalone Q3 marking, note open": 0,
+     "light · Standalone Q1 Model answers, note open": 0,
+     "light · Standalone Q2 Model answers, note open": 0,
+     "light · Standalone Q3 Model answers, note open": 0
+    }
+   }
+  },
+  "engaged": "read-back signature per state at 390 and 1440 (108 signatures): every Extract-tab state at 390 had the extract pane shown, the table stacked, 0px sideways; at 1440 the table unstacked (wrapper 616px), 0px sideways; set, card, mode and phase matched the state name; light run unpinned (no .rl-night) with data-theme=light.",
+  "not_measured": "widths between 5px steps; the A+/A- text-size control in the Extract-tab states (table font does not follow it); Standalone has no extract."
+ }
+}

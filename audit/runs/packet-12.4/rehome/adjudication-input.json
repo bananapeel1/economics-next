@@ -1,0 +1,86 @@
+{
+ "instruction": "For each pair, decide whether the question examines the requirement: does a student have to demonstrate this requirement to answer that question well?",
+ "pairs": [
+  {
+   "ref": "R01",
+   "question": "Explain what is meant by economies of scale and give an example.",
+   "requirement": {
+    "subtopic": "Economies and scale",
+    "requirement": "Sources of external economies of scale:",
+    "wording": "access to transport links"
+   }
+  },
+  {
+   "ref": "R02",
+   "question": "Explain what is meant by economies of scale and give an example.",
+   "requirement": {
+    "subtopic": "Economies and",
+    "requirement": "",
+    "wording": "The relationship between long-run cost curves and economies/diseconomies of scale."
+   }
+  },
+  {
+   "ref": "R03",
+   "question": "Examine the reasons why a firm might experience diseconomies of scale.",
+   "requirement": {
+    "subtopic": "Economies and scale",
+    "requirement": "Sources of diseconomies of scale:",
+    "wording": "X-inefficiency."
+   }
+  },
+  {
+   "ref": "R04",
+   "question": "Examine the reasons why a firm might experience diseconomies of scale.",
+   "requirement": {
+    "subtopic": "Economies and scale",
+    "requirement": "Sources of diseconomies of scale:",
+    "wording": "communication problems"
+   }
+  },
+  {
+   "ref": "R05",
+   "question": "Examine the reasons why a firm might experience diseconomies of scale.",
+   "requirement": {
+    "subtopic": "Costs",
+    "requirement": "Formulae to calculate and understand the relationship between:",
+    "wording": "total variable cost"
+   }
+  },
+  {
+   "ref": "R06",
+   "question": "Examine the reasons why a firm might experience diseconomies of scale.",
+   "requirement": {
+    "subtopic": "Economies and scale",
+    "requirement": "Sources of diseconomies of scale:",
+    "wording": "coordination problems"
+   }
+  },
+  {
+   "ref": "R07",
+   "question": "Explain what is meant by economies of scale and give an example.",
+   "requirement": {
+    "subtopic": "Revenue",
+    "requirement": "Formulae to calculate and understand the relationship between:",
+    "wording": "marginal revenue."
+   }
+  },
+  {
+   "ref": "R08",
+   "question": "Examine the reasons why a firm might experience diseconomies of scale.",
+   "requirement": {
+    "subtopic": "Costs",
+    "requirement": "The relationship between:",
+    "wording": "average products and average cost"
+   }
+  },
+  {
+   "ref": "R09",
+   "question": "Examine the reasons why a firm might experience diseconomies of scale.",
+   "requirement": {
+    "subtopic": "Economies and",
+    "requirement": "",
+    "wording": "The relationship between long-run cost curves and economies/diseconomies of scale."
+   }
+  }
+ ]
+}

@@ -105,6 +105,11 @@ from a summary; a wrong version of this table was propagated to 52 agents on 12 
 | Business Units 1 and 2 | A source-based short and extended response (30) · B same format, different sources (30) · C one 20-mark essay from sources (20) |
 | Business Units 3 and 4 | A short and extended response from sources (40) · B one 20-mark essay (20) · C one 20-mark essay (20) |
 
+**Part-level splits** are not in the specifications; they come from Pearson's Sample Assessment Materials and
+live in `audit/raw/ial-paper-structure.json` (read 26 Sep 2026, sources cited in the file). Economics data
+question 2+4+6+8+14; Economics short answers 5 × 4; Business source sets 2+4+6+8+10 (Units 1-2) and
+4+4+8+12+12 (Units 3-4). Read the file; do not restate it.
+
 ## Shipping
 
 A packet that is committed is not shipped. Students see `main`, which Vercel deploys. Ship checkpoints:

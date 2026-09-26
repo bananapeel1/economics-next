@@ -17,14 +17,19 @@ const SLUG = SECTION ? SECTION.split('__').pop() : null
 const FIX = a.fix
 const FILED = a.filedAs || ''
 const DECISION = a.decision || ''
+// 26 Sep (packet 45): a fix can land AFTER the founder has published. Both default to the old behaviour.
+const PUBLISHED = a.published === true
+const STAGE_BOOKS = a.stageBooks !== false
 if (!PACKET || !SECTION || !FIX) throw new Error('args.packet, args.section and args.fix are required')
 const RUN = 'audit/runs/packet-' + PACKET
 
 const COMMON = [
   '',
   'Revvy Learn remediation, packet ' + PACKET + ' (' + SECTION + '). Working directory: ' + ROOT + ',',
-  'branch remediation/2026-09. Run every command from there. The section is STAGED in draft, not',
-  'published; rule 6: you may not publish or write live content. Other sessions edit this worktree live:',
+  'branch remediation/2026-09. Run every command from there. ' + (PUBLISHED
+    ? 'The section is ALREADY PUBLISHED (live data is the pre-fix version); this fix goes to the DRAFT only and the founder re-publishes it.'
+    : 'The section is STAGED in draft, not published.'),
+  'Rule 6: you may not publish or write live content. Other sessions edit this worktree live:',
   'stage explicitly with git add <path>, never git add -A, never touch audit/EXAM-PRACTICE.md, do not commit.',
   'Verify by a DIFFERENT method than the one that produced the thing you check. Grep before read. Write',
   'working output to ' + RUN + '/ and return a short verdict, never content.',
@@ -96,7 +101,9 @@ const books = await agent(COMMON + [
   '     node audit/scripts/check-staged-drafts.mjs ' + SLUG,
   '   and read ' + RUN + '/verify-a.md, verify-b.md, verify-b-fix.md and built.md.',
   '2. Rewrite packet ' + PACKET + '\'s row in audit/PROGRESS.md in the style of the other done content rows:',
-  '   built and verified, staged not published, holds for the packet 5/7 checkpoint; the ledger result;',
+  PUBLISHED
+    ? '   KEEP the row\'s existing PUBLISHED status, time and undo command (the section is live); add this fix as "staged to draft, awaiting the founder\'s re-publish"; the ledger result;'
+    : '   built and verified, staged not published, holds for the packet 5/7 checkpoint; the ledger result;',
   '   the walkthrough result including the defect filed out as ' + FILED + ' and the fix made here;',
   '   the pointer-versioning ledger item this packet\'s Verify B caused to be filed on packet 5 (find it',
   '   with `node audit/scripts/ledger.mjs packet 5` - its title starts "Version the Learn Mode step',
@@ -105,13 +112,14 @@ const books = await agent(COMMON + [
   '   the exact publish command for the founder, the D013 post-publish census step if verify-b.md names',
   '   one, and the next unclaimed packet: check `git status --short | grep packet-<n>` and',
   '   `node audit/scripts/ledger.mjs packet <n> --open` for the next numbers, and report which is free.',
-  '4. git add audit/PROGRESS.md audit/NEXT.md. Do not commit.',
+  STAGE_BOOKS ? '4. git add audit/PROGRESS.md audit/NEXT.md. Do not commit.'
+    : '4. Do NOT git add audit/PROGRESS.md or audit/NEXT.md: a staged copy of a shared handoff file is a snapshot of every session\'s rows and has deleted them before. Leave both in the working tree. Do not commit.',
   'Return the new row verbatim, the heading appended, and the next free packet number with evidence.',
 ].join('\n'), { label: 'books', phase: 'Books', model: 'sonnet', schema: VERDICT })
 
 return {
   packet: PACKET,
-  verdict: passed ? 'CLOSED — staged and verified, awaiting founder commit and the 5/7 checkpoint' : 'NOT CLOSED',
+  verdict: passed ? (PUBLISHED ? 'CLOSED — fix staged to draft and re-walked, awaiting the founder\'s re-publish' : 'CLOSED — staged and verified, awaiting founder commit and the 5/7 checkpoint') : 'NOT CLOSED',
   fix: fixed ? { ok: fixed.ok, summary: fixed.summary, files: fixed.filesTouched } : null,
   rewalk: walk ? { ok: walk.ok, summary: walk.summary } : null,
   books: books ? { ok: books.ok, summary: books.summary } : null,

@@ -1,0 +1,15 @@
+api quiz: 8 served items identical to the bundle, 0 differ
+api flashcards: 2 served items identical to the bundle, 0 differ
+block 1 serves quiz [0] -> the block's own first item
+block 2 serves quiz [1] -> the block's own first item
+block 3 serves quiz [2] -> the block's own first item
+block 4 serves quiz [3] -> the block's own first item
+block 5 serves quiz [4] -> the block's own first item
+section_content: draft == bundle; data (live) still the old content
+section_notes: draft == bundle; data (live) still the old content
+section_quiz: draft == bundle; data (live) still the old content
+section_practice: draft == bundle; data (live) still the old content
+section_flashcards: draft == bundle; data (live) still the old content
+section_diagrams: draft == bundle; data (live) still the old content
+section_extras: draft == bundle; data (live) still the old content
+section_common_mistakes: draft == bundle; data (live) still the old content

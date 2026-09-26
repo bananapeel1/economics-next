@@ -1,0 +1,1391 @@
+{
+ "method": "headless Chrome CDP setDeviceMetricsOverride, hydrated page, own measure",
+ "control": true,
+ "widths": [
+  320,
+  1440,
+  7
+ ],
+ "states": {
+  "Extract Q1 writing · work": {
+   "widthsFailing": 2,
+   "checks": 749,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Your answer",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Your answer",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q1 writing · extract tab": {
+   "widthsFailing": 2,
+   "checks": 1391,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q1 marking + note + details · work": {
+   "widthsFailing": 2,
+   "checks": 1265,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card is-done 132>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card is-done \"You marked 1 / 2\"",
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\""
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card is-done 132>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card is-done \"You marked 1 / 2\"",
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\""
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Marking",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Marking",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q1 marked · extract tab (focus rows)": {
+   "widthsFailing": 2,
+   "checks": 1465,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card is-done 132>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card is-done \"You marked 1 / 2\"",
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\""
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card is-done 132>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card is-done \"You marked 1 / 2\"",
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\""
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 1,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q1 model answers + note + details · work": {
+   "widthsFailing": 2,
+   "checks": 1129,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 281-346"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Model answer",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Model answer",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q1 model answers · extract tab": {
+   "widthsFailing": 2,
+   "checks": 1431,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 281-346"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 1,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 1: Define, 2 ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q2 writing · work": {
+   "widthsFailing": 2,
+   "checks": 749,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Your answer",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Your answer",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q2 writing · extract tab": {
+   "widthsFailing": 2,
+   "checks": 1391,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q2 marking + note + details · work": {
+   "widthsFailing": 2,
+   "checks": 1720,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "XOVER BUTTON.ps-card is-done 132>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 8 min\""
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "XOVER BUTTON.ps-card is-done 132>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 8 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card is-done \"You marked 2 / 6\""
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Marking",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Marking",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q2 marked · extract tab (focus rows)": {
+   "widthsFailing": 2,
+   "checks": 1527,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "XOVER BUTTON.ps-card is-done 132>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 8 min\""
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "XOVER BUTTON.ps-card is-done 132>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 8 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card is-done \"You marked 2 / 6\""
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 1,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q2 model answers + note + details · work": {
+   "widthsFailing": 2,
+   "checks": 1444,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 281-346"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Model answer",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Model answer",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q2 model answers · extract tab": {
+   "widthsFailing": 2,
+   "checks": 1473,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 281-346"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 1,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q3 writing · work": {
+   "widthsFailing": 2,
+   "checks": 749,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Your answer",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Your answer",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q3 writing · extract tab": {
+   "widthsFailing": 2,
+   "checks": 1391,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q3 marking + note + details · work": {
+   "widthsFailing": 2,
+   "checks": 3206,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card is-done 139>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card is-done 139>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Marking",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Marking",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q3 marked · extract tab (focus rows)": {
+   "widthsFailing": 2,
+   "checks": 1732,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card is-done 139>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card is-done 139>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 1,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q3 model answers + note + details · work": {
+   "widthsFailing": 2,
+   "checks": 2440,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 281-346"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Model answer",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Model answer",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Extract Q3 model answers · extract tab": {
+   "widthsFailing": 2,
+   "checks": 1608,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 281-346"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 1,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q1 writing · work": {
+   "widthsFailing": 2,
+   "checks": 605,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "XOVER BUTTON.ps-card 130>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\""
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card 130>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\"",
+     "XOVER BUTTON.ps-card 137>102"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 1: Explain, 4",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 1: Explain, 4",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q1 marking + note + details · work": {
+   "widthsFailing": 2,
+   "checks": 1268,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card is-done 132>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 5 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card is-done \"You marked 2 / 4\"",
+     "XOVER BUTTON.ps-card 130>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\""
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card is-done 132>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 5 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card is-done \"You marked 2 / 4\"",
+     "XOVER BUTTON.ps-card 130>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\""
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 1: Explain, 4",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 1: Explain, 4",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q1 model answers + note + details · work": {
+   "widthsFailing": 2,
+   "checks": 1062,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card 130>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\"",
+     "XOVER BUTTON.ps-card 137>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card 130>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\"",
+     "XOVER BUTTON.ps-card 137>102"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 1: Explain, 4",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 1: Explain, 4",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q2 writing · work": {
+   "widthsFailing": 2,
+   "checks": 605,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "XOVER BUTTON.ps-card 130>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\""
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card 130>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\"",
+     "XOVER BUTTON.ps-card 137>102"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 2: Examine, 8",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 2: Examine, 8",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q2 marking + note + details · work": {
+   "widthsFailing": 2,
+   "checks": 1814,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "XOVER BUTTON.ps-card is-done 132>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 11 min\""
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card is-done 132>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 11 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card is-done \"You marked 2 / 8\""
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 2: Examine, 8",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 2: Examine, 8",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q2 model answers + note + details · work": {
+   "widthsFailing": 2,
+   "checks": 1468,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card 130>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\"",
+     "XOVER BUTTON.ps-card 137>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card 130>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\"",
+     "XOVER BUTTON.ps-card 137>102"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 2: Examine, 8",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 2: Examine, 8",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q3 writing · work": {
+   "widthsFailing": 2,
+   "checks": 605,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "XOVER BUTTON.ps-card 130>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\""
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card 130>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\"",
+     "XOVER BUTTON.ps-card 137>102"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q3 marking + note + details · work": {
+   "widthsFailing": 2,
+   "checks": 2593,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "XOVER BUTTON.ps-card 130>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\""
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card 130>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\"",
+     "XOVER BUTTON.ps-card is-done 139>102"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "Standalone Q3 model answers + note + details · work": {
+   "widthsFailing": 2,
+   "checks": 1932,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card 130>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\"",
+     "XOVER BUTTON.ps-card 137>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card 130>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\"",
+     "XOVER BUTTON.ps-card 137>102"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "dark/pinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "LIGHT unpinned · Extract Q3 writing · extract tab": {
+   "widthsFailing": 2,
+   "checks": 1391,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 8 min\"",
+     "XOVER BUTTON.ps-card 137>102",
+     "OFFVIEW SPAN.ps-card-mm \"· 26 min\" 308-372"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "light/unpinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "Extract A",
+     "extractVisible": true,
+     "notesOpen": 0,
+     "focusRows": 0,
+     "answerVisible": 0,
+     "detailsOpen": 0,
+     "theme": "light/unpinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "LIGHT unpinned · Extract Q2 marking + note": {
+   "widthsFailing": 2,
+   "checks": 1720,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card \"Not started\"",
+     "XOVER BUTTON.ps-card is-done 132>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 8 min\""
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 3 min\"",
+     "XOVER BUTTON.ps-card is-done 132>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card is-done \"· 8 min\"",
+     "CUT SPAN.ps-st-long by BUTTON.ps-card is-done \"You marked 2 / 6\""
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Marking",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "light/unpinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Extract A · 3 questions",
+     "card": "Question 2: Analyse, 6",
+     "tab": "Marking",
+     "extractVisible": true,
+     "notesOpen": 1,
+     "focusRows": 1,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "light/unpinned",
+     "band": ">=1024"
+    }
+   ]
+  },
+  "LIGHT unpinned · Standalone Q3 model answers": {
+   "widthsFailing": 2,
+   "checks": 1932,
+   "fails": {
+    "320": [
+     "XOVER BUTTON.ps-card 123>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card 130>89",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\"",
+     "XOVER BUTTON.ps-card 137>89"
+    ],
+    "360": [
+     "XOVER BUTTON.ps-card 123>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 5 min\"",
+     "XOVER BUTTON.ps-card 130>102",
+     "CUT SPAN.ps-card-mm by BUTTON.ps-card \"· 11 min\"",
+     "XOVER BUTTON.ps-card 137>102"
+    ]
+   },
+   "signatures": [
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "light/unpinned",
+     "band": "<1024"
+    },
+    {
+     "set": "Standalone · 3 questions",
+     "card": "Question 3: Evaluate, ",
+     "tab": "-",
+     "extractVisible": false,
+     "notesOpen": 1,
+     "focusRows": 0,
+     "answerVisible": 1,
+     "detailsOpen": 1,
+     "theme": "light/unpinned",
+     "band": ">=1024"
+    }
+   ]
+  }
+ }
+}

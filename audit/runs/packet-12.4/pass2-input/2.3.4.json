@@ -1,0 +1,131 @@
+{
+ "subject": "economics",
+ "topic": "2.3.4",
+ "title": "National income",
+ "questions": [
+  {
+   "key": "circular-flow-8",
+   "question": "Examine how the circular flow of income model shows the impact of injections and withdrawals on national income."
+  },
+  {
+   "key": "multiplier-effect-8",
+   "question": "Examine how the multiplier effect works and why the multiplier may be smaller than expected."
+  }
+ ],
+ "leaves": [
+  {
+   "id": "ECON-2.3.4-1a",
+   "subtopic": "National income",
+   "requirement": "",
+   "wording": "The circular flow of income."
+  },
+  {
+   "id": "ECON-2.3.4-1b",
+   "subtopic": "National income",
+   "requirement": "",
+   "wording": "The distinction between income and wealth."
+  },
+  {
+   "id": "ECON-2.3.4-2a",
+   "subtopic": "Injections and",
+   "requirement": "",
+   "wording": "The distinction between injections and withdrawals."
+  },
+  {
+   "id": "ECON-2.3.4-2b-1",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "Injections:",
+   "wording": "investment"
+  },
+  {
+   "id": "ECON-2.3.4-2b-2",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "Injections:",
+   "wording": "government expenditure"
+  },
+  {
+   "id": "ECON-2.3.4-2b-3",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "Injections:",
+   "wording": "exports."
+  },
+  {
+   "id": "ECON-2.3.4-2c-1",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "Withdrawals:",
+   "wording": "savings"
+  },
+  {
+   "id": "ECON-2.3.4-2c-2",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "Withdrawals:",
+   "wording": "taxation"
+  },
+  {
+   "id": "ECON-2.3.4-2c-3",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "Withdrawals:",
+   "wording": "imports."
+  },
+  {
+   "id": "ECON-2.3.4-2d",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "",
+   "wording": "The impact of net injections into, and net withdrawals from, the circular flow of income."
+  },
+  {
+   "id": "ECON-2.3.4-3a",
+   "subtopic": "Equilibrium level",
+   "requirement": "",
+   "wording": "The concept of equilibrium level of real national output."
+  },
+  {
+   "id": "ECON-2.3.4-3b",
+   "subtopic": "Equilibrium level of real output",
+   "requirement": "",
+   "wording": "Causes of changes in equilibrium real national output, as a result of shifts in AD and/or AS curves."
+  },
+  {
+   "id": "ECON-2.3.4-4a",
+   "subtopic": "The multiplier",
+   "requirement": "",
+   "wording": "The multiplier and multiplier process."
+  },
+  {
+   "id": "ECON-2.3.4-4b-1",
+   "subtopic": "The multiplier",
+   "requirement": "Marginal propensities and their effects on the multiplier:",
+   "wording": "the marginal propensity to consume (MPC)"
+  },
+  {
+   "id": "ECON-2.3.4-4b-2",
+   "subtopic": "The multiplier",
+   "requirement": "Marginal propensities and their effects on the multiplier:",
+   "wording": "the marginal propensity to save (MPS)"
+  },
+  {
+   "id": "ECON-2.3.4-4b-3",
+   "subtopic": "The multiplier",
+   "requirement": "Marginal propensities and their effects on the multiplier:",
+   "wording": "the marginal propensity to tax (MPT)"
+  },
+  {
+   "id": "ECON-2.3.4-4b-4",
+   "subtopic": "The multiplier",
+   "requirement": "Marginal propensities and their effects on the multiplier:",
+   "wording": "the marginal propensity to import (MPM)."
+  },
+  {
+   "id": "ECON-2.3.4-4c",
+   "subtopic": "The multiplier",
+   "requirement": "",
+   "wording": "Calculations of the multiplier using the formula 1/(1-MPC) and 1/MPW, where MPW = MPS + MPT + MPM."
+  },
+  {
+   "id": "ECON-2.3.4-4d",
+   "subtopic": "The multiplier",
+   "requirement": "",
+   "wording": "The significance of the multiplier for shifts in AD and the level of economic activity."
+  }
+ ]
+}

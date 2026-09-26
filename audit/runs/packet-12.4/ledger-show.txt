@@ -1,0 +1,105 @@
+=== E023 ===
+{
+  "id": "E023",
+  "kind": "feature",
+  "title": "45 untagged Economics items tagged via three passes; content fields provably unchanged; no empty specItems arrays",
+  "file": "data/modelAnswersData.js",
+  "packet": 12.4,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-22"
+}
+
+=== E024 ===
+{
+  "id": "E024",
+  "kind": "feature",
+  "title": "Pass 2 is a genuine separate agent with only question text + oracle rows; tagging-diff.md records all three passes and every dissent",
+  "file": "audit/runs/packet-12.4/tagging-diff.md",
+  "packet": 12.4,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-22"
+}
+
+=== E025 ===
+{
+  "id": "E025",
+  "kind": "feature",
+  "title": "npm run spec-coverage reports non-zero for every Economics section with questions; no id outside the oracle",
+  "file": "audit/scripts/spec-coverage-check.mjs",
+  "packet": 12.4,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-22"
+}
+
+=== E026 ===
+{
+  "id": "E026",
+  "kind": "feature",
+  "title": "Every Economics model-answer page headline matches the computed figure; floor caveat retained where untagged remain",
+  "file": "components/SectionModelAnswersPage.jsx",
+  "packet": 12.4,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-22"
+}
+
+=== E027 ===
+{
+  "id": "E027",
+  "kind": "feature",
+  "title": "the-market stops promising questions it lacks; dead browse link removed or pointed somewhere real",
+  "file": "components/SectionModelAnswersPage.jsx",
+  "packet": 12.4,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-22"
+}
+
+=== E028 ===
+{
+  "id": "E028",
+  "kind": "feature",
+  "title": "Mid-band panel suppressed by a tested named condition where it cannot be a genuine near-miss",
+  "file": "lib/mid-band-answer.js",
+  "packet": 12.4,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null,
+  "added": "2026-09-22"
+}
+
+=== C-trade-global-economy-topFix-05 ===
+{
+  "id": "C-trade-global-economy-topFix-05",
+  "section": "trade-global-economy",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "Realign practice with IAL conventions: 'Define' 2 marks; 'Explain' 4 marks with the tariff diagram required; replace 'Outline' with 'Explain'; present 10- and 20-mark guidance as levels (KAA + Evaluation) with an explicit diagram and application requirement, and add the Appellate Body paralysis to the WTO section as the key contemporary limitation.",
+  "packet": 12.4,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "PARTIAL and reassigned. 39b built the clauses that are true of this specification: Define is 2 marks, Explain is 4 with the tariff item rebuilt from 6, Outline is gone, and the Appellate Body limitation is in the WTO subsection. NOT built, because the finding is wrong about IAL Economics: it asks for '10- and 20-mark guidance as levels' and there is NO 10-mark item in this subject (Appendix 6 and tariff-census.json give 2, 2/4, 4, 4, 6, 8, 14, 20); and it requires a diagram inside an Explain, where Appendix 6 makes Draw the command word that requires one. The levels-marking clause for the 14- and 20-mark items is real work and belongs with the model-answers packets, not here."
+}
+

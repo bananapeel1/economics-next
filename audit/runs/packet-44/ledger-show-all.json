@@ -1,0 +1,329 @@
+{
+  "id": "C-aggregate-supply-topFix-01",
+  "section": "aggregate-supply",
+  "kind": "topFix",
+  "rank": 0,
+  "text": "Fix the fill-in data shape and renderer mismatch: split every template line to one '___' (changes-in-equilibrium, supply-side-shocks), replace compound tokens like 'rises, rises' with single words, and widen word banks beyond the answer list (add 2-3 distractors) so the 5 trivial fill-ins become real decisions; correct the five hint lengths.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-topFix-02",
+  "section": "aggregate-supply",
+  "kind": "topFix",
+  "rank": 1,
+  "text": "Re-map inline quiz and practice to their blocks: set content[1].quizIndices to LRAS items (5/12/13/21), content[2] to 2/3/24, content[4] to 7/23/18; either stop sorting practice by marks in LearnModeTab.jsx line 80 or reorder practiceIndices so the SRAS block gets the SRAS movement-vs-shift question and the LRAS block gets the LRAS definition/outline; change practice[0] to a 2-mark 'Define' and practice[4] to 'Explain two factors'.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-topFix-03",
+  "section": "aggregate-supply",
+  "kind": "topFix",
+  "rank": 2,
+  "text": "Add a fourth diagram titled to match 'Self-Correcting Mechanism' (negative gap closing via SRAS shift right, positive gap via SRAS left) and rename content[3].diagramRef so blocks 3 and 4 stop rendering without a diagram.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-topFix-04",
+  "section": "aggregate-supply",
+  "kind": "topFix",
+  "rank": 3,
+  "text": "Correct the wrong/contradictory real examples: replace the 2022 UK manufacturers SRAS example, reword 'UK 2019 close to macroeconomic equilibrium' to 'close to full-employment output', fix the 'classical economics had not predicted stagflation' attribution, and use a demand-only case (2008-09 confidence collapse) instead of COVID in demand-side-shocks since applying-adas-to-events later says COVID shifted both curves.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-topFix-05",
+  "section": "aggregate-supply",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "De-duplicate: merge block 3 into block 2 (stagflation and AD-right analysis are taught twice), replace the two generic procedure reorders (ad-as-equilibrium, demand-side-shocks) with concrete causal chains, prune the quiz bank duplicates (Q11=Q1, Q13=Q5, Q14=Q4, Q19=Q8, Q24~Q18) and rewrite Q20 to name the Keynesian model; remove the 'SRAS steepens near capacity' takeaway so SRAS and Keynesian LRAS stay distinct.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-accuracy-01",
+  "section": "aggregate-supply",
+  "kind": "accuracy",
+  "text": "content[0] 'Short-Run Aggregate Supply (SRAS)' > sras-shape-and-slope > realExample: Claims UK manufacturers in early 2022 saw margins boosted and expanded production because wages lagged output prices. 2022 was a cost-push squeeze (energy/input costs rose faster than output prices; UK manufacturing PMI fell below 50 from mid-2022 and output declined). The example illustrates the opposite of what happened.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-accuracy-02",
+  "section": "aggregate-supply",
+  "kind": "accuracy",
+  "text": "content[2] 'Macroeconomic Equilibrium' > ad-as-equilibrium > realExample: Says the UK in 2019 'was operating close to macroeconomic equilibrium'. An economy is always at AD=AS equilibrium; what is meant is full-employment equilibrium. The section's own misconception two lines later warns that equilibrium is not the same as full employment, so the example teaches the misconception it is correcting.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-practice-01",
+  "section": "aggregate-supply",
+  "kind": "practice",
+  "text": "p0: 'Define the term LRAS (4 marks)' — IAL Economics uses 'Define' for 2-mark items; 4-mark Section A/B items are 'Explain ...'. The guidance also awards marks for 'LRAS is vertical in the classical model' and 'shifts are caused by ...', which are not part of a definition. Mark allocation and mark scheme do not match IAL practice. Because LearnModeTab sorts practice by marks, this LRAS question is the inline practice for the SRAS block.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-structure-01",
+  "section": "aggregate-supply",
+  "kind": "structure",
+  "text": "Inline quiz-to-block mapping is wrong: content[1] (LRAS) has quizIndices [1] which is an SRAS-shift question; content[2] (Equilibrium) gets Q2 (classical LR effect of AD, really LRAS material); content[4] (SR vs LR adjustment) gets Q5 (LRAS determinants). Only blocks 0 and 3 get a topically matching inline MCQ. Q7/Q23/Q24 (self-correction, sticky wages, output gap) are never shown inline.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-structure-02",
+  "section": "aggregate-supply",
+  "kind": "structure",
+  "text": "Inline practice mapping is by mark size, not topic: LearnModeTab.jsx line 80 sorts practice by marks, so practiceIndices [0..4] resolve to Define-LRAS(4) on the SRAS block, Outline-LRAS(4) on the LRAS block, Explain-SRAS-movement-vs-shift(6) on the Equilibrium block, Assess-supply-side(10) on the Events block, Evaluate(20) on the Adjustment block. The mark ramp is sensible but three of five are off-topic for their block.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-structure-03",
+  "section": "aggregate-supply",
+  "kind": "structure",
+  "text": "Two blocks get no inline diagram: diagramRef 'AD/AS Shifts' (content[3]) and 'Self-Correcting Mechanism' (content[4]) match no diagram title via the substring test in LearnModeTab.jsx lines 97-104 (titles are 'Short-Run Aggregate Supply (SRAS)', 'LRAS: Classical vs Keynesian', 'AD/AS Equilibrium: Multiple Scenarios'). There is no diagram anywhere of the self-correcting mechanism (SRAS shifting to close a gap), which is the most diagram-dependent idea in the section. Renaming content[3].diagramRef to 'AD/AS Equilibrium' would collide with content[2] (usedDiagrams set), so a fourth diagram is needed.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-structure-04",
+  "section": "aggregate-supply",
+  "kind": "structure",
+  "text": "Recall duplication caused by odd section counts: blocks 1, 3 and 4 have 3 sections, so the third section is a solo step. For a solo step, the 'immediate' recall (first section of the step) and the next step's 'spaced' recall (last section of the previous step) are the same object — lras-determinants fillin and applying-adas-to-events reorder are each shown twice back-to-back (LearnModeTab.jsx lines 345-402).",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-structure-05",
+  "section": "aggregate-supply",
+  "kind": "structure",
+  "text": "Content repetition across blocks: stagflation is taught with near-identical flow chains in changes-in-equilibrium and supply-side-shocks; the AD-right analysis appears in changes-in-equilibrium and demand-side-shocks; classical vs Keynesian appears in block 1 (shapes) and block 4 (adjustment) with examMatters in keynesian-lras and classical-vs-keynesian-adjustment saying the same thing. Block 3 ('AD/AS Analysis of Macroeconomic Events') is largely a restatement of block 2 and could be merged, cutting the section from 13 to ~10 subsections — relevant given 75% of users never leave step 0.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-structure-06",
+  "section": "aggregate-supply",
+  "kind": "structure",
+  "text": "Three of six reorders are the same generic exam-procedure list (ad-as-equilibrium, demand-side-shocks, applying-adas-to-events); only sras-shifts, keynesian-lras and self-correcting-mechanism test economics. Recall 'shuffled' arrays reuse two permutations ([2,0,3,1] x3, [3,1,0,2] x2), so a student who notices can solve by pattern.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-structure-07",
+  "section": "aggregate-supply",
+  "kind": "structure",
+  "text": "Fill-in data shape not supported by the renderer: changes-in-equilibrium template lines 0-1 and supply-side-shocks template line 1 contain two '___' with a single compound answer ('rises, rises'); FillInRecall.jsx destructures split('___') into [before, after], dropping the second blank. Five of seven hints have character counts that do not match the answer length (education, stagflation, dilemma, inflationary, intervention).",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-structure-08",
+  "section": "aggregate-supply",
+  "kind": "structure",
+  "text": "Section scope vs label: titled '2.3.3 Aggregate Supply' but covers IAL 2.3.1-2.3.3 (AS characteristics, SRAS, LRAS) plus 2.4.3 (equilibrium real national output, blocks 2-3) plus 2.5.2 (output gaps, block 4). Students cross-referencing the spec will not find macro equilibrium or output gaps under 2.3.3.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.3, 2.5.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.3. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-aggregate-supply-structure-09",
+  "section": "aggregate-supply",
+  "kind": "structure",
+  "text": "Takeaways match their blocks, with one exception: content[0] takeaway 'Near full capacity the SRAS curve becomes steeper' encodes the SRAS/Keynesian-LRAS conflation noted under accuracy. Misconceptions are mostly genuine student errors (higher prices shift SRAS; government spending shifts LRAS; Keynesian AS drawn flat; equilibrium = desirable; output gap = recession); the classical-vs-keynesian-adjustment one ('Keynesians say markets never work') is a straw man rather than an observed error.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-structure-10",
+  "section": "aggregate-supply",
+  "kind": "structure",
+  "text": "Difficulty ramp is sensible (SRAS -> LRAS -> equilibrium -> shocks -> adjustment) and pairing classical-lras with keynesian-lras in one step is the right pedagogical choice.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-specGap-01",
+  "section": "aggregate-supply",
+  "kind": "specGap",
+  "text": "2.3.3 LRAS factor 'changes in relative productivity' (productivity relative to other economies) — not taught; productivity appears only as a diagram annotation and a quiz distractor.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-specGap-02",
+  "section": "aggregate-supply",
+  "kind": "specGap",
+  "text": "2.3.3 LRAS factor 'demographic changes and migration' — only the word 'immigration' inside one bullet in lras-determinants; no treatment of ageing populations, participation rates or emigration.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-specGap-03",
+  "section": "aggregate-supply",
+  "kind": "specGap",
+  "text": "2.3.3 LRAS factor 'changes in government regulations' — only 'deregulation' listed inside the 'Institutional factors' bullet with no explanation of the mechanism (compliance costs, labour-market rules).",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-specGap-04",
+  "section": "aggregate-supply",
+  "kind": "specGap",
+  "text": "2.3.3 LRAS factor 'competition policy' — named in one bullet, never explained (how contestability raises efficiency/potential output).",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-specGap-05",
+  "section": "aggregate-supply",
+  "kind": "specGap",
+  "text": "2.3.1 'distinction between movement along and shift of the AS curve' is taught for SRAS only; not stated for LRAS (e.g. that there is no 'movement along' a vertical LRAS).",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-aggregate-supply-specGap-06",
+  "section": "aggregate-supply",
+  "kind": "specGap",
+  "text": "2.5.2 (if output gaps are intended to live here) 'difficulties of measuring output gaps' — not taught; the section presents potential output as observable.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.5.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.3. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-aggregate-supply-specGap-07",
+  "section": "aggregate-supply",
+  "kind": "specGap",
+  "text": "Unsure: whether the spec's 2.4.3 expectation of showing 'equilibrium in the short run and long run' with SRAS and LRAS on one diagram is examined via the Keynesian curve as well — the section only shows LR adjustment on the classical diagram.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "SPEC NUMBERING: this item cites 2.4.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 2.3.3. Find the requirement by its wording in audit/raw/econ_spec.txt, not by the number. (noted 13 Sep 2026)"
+}
+{
+  "id": "C-aggregate-supply-diagram-01",
+  "section": "aggregate-supply",
+  "kind": "diagram",
+  "text": "A block pins the diagram \"AD/AS Shifts\" and no such diagram exists, so the block renders nothing. equilibrium exists; a shift version does not.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
+}
+{
+  "id": "C-aggregate-supply-diagram-02",
+  "section": "aggregate-supply",
+  "kind": "diagram",
+  "text": "A block pins the diagram \"Self-Correcting Mechanism\" and no such diagram exists, so the block renders nothing. not drawn.",
+  "packet": 44,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
+}

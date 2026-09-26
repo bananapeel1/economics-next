@@ -117,7 +117,9 @@ export default function MatchRecall({ recall, onComplete, onSkip, showing = 'fir
         <div className="lm-word-bank" role="group" aria-label="Options. Choose one for the selected item.">
           {available.map((c) => (
             <span key={c.id} role="button" tabIndex={0} aria-pressed={selectedChip === c.id} aria-label={`Use ${c.text}`}
-              className={`lm-word-chip ${selectedChip === c.id ? 'selected' : ''}`}
+              /* lm-match-chip lets the mobile rule wrap a long option instead of running it off the
+                 left edge of a 326px word bank — V042, Verify B packet 41. */
+              className={`lm-word-chip lm-match-chip ${selectedChip === c.id ? 'selected' : ''}`}
               onClick={() => handleTapChip(c.id)}
               onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); handleTapChip(c.id); } }}>
               {c.text}

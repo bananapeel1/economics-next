@@ -1,0 +1,853 @@
+<title>Market Failure Practice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&display=swap">
+<style>
+/* Tokens are Revvy Learn's own, from app/globals.css ([data-theme="light"] and [data-theme="dark"]).
+   Light on bare :root, dark redefined twice so the viewer's toggle wins both ways. */
+:root{
+  --bg:#f4f6fa; --surface:#ffffff; --inset:#eef1f7; --hover:#f0f3f8;
+  --border:#e5e7eb; --border-strong:#d1d5db;
+  --text:#111827; --text-2:#374151; --text-3:#4b5563; --muted:#5b6472;
+  --accent:#036a4d; --accent-strong:#02503c; --accent-soft:rgba(5,150,105,.08); --accent-line:rgba(5,150,105,.38); --on-accent:#ffffff;
+  --evidence:#1d4ed8; --evidence-soft:rgba(29,78,216,.07); --evidence-line:rgba(29,78,216,.38);
+  --examiner:#9a4708; --examiner-line:rgba(154,71,8,.35);
+  --shadow:0 1px 2px rgba(17,24,39,.05);
+  --serif:'DM Serif Display',Georgia,'Times New Roman',serif;
+  --sans:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --mono:'DM Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --gutter:24px; --read:15.5px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0f1117; --surface:#161a27; --inset:#1c2132; --hover:#1f2537;
+    --border:#262c3f; --border-strong:#353d56;
+    --text:#edf0f7; --text-2:#cdd4e6; --text-3:#9ca6be; --muted:#7f8daa;
+    --accent:#10b981; --accent-strong:#34d399; --accent-soft:rgba(16,185,129,.09); --accent-line:rgba(16,185,129,.45); --on-accent:#03140e;
+    --evidence:#9db8ef; --evidence-soft:rgba(96,165,250,.09); --evidence-line:rgba(96,165,250,.42);
+    --examiner:#dfaa55; --examiner-line:rgba(223,170,85,.38);
+    --shadow:0 1px 2px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0f1117; --surface:#161a27; --inset:#1c2132; --hover:#1f2537;
+  --border:#262c3f; --border-strong:#353d56;
+  --text:#edf0f7; --text-2:#cdd4e6; --text-3:#9ca6be; --muted:#7f8daa;
+  --accent:#10b981; --accent-strong:#34d399; --accent-soft:rgba(16,185,129,.09); --accent-line:rgba(16,185,129,.45); --on-accent:#03140e;
+  --evidence:#9db8ef; --evidence-soft:rgba(96,165,250,.09); --evidence-line:rgba(96,165,250,.42);
+  --examiner:#dfaa55; --examiner-line:rgba(223,170,85,.38);
+  --shadow:0 1px 2px rgba(0,0,0,.3);
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{overflow-wrap:break-word;margin:0;background:var(--bg);color:var(--text);font:400 14px/1.55 var(--sans);-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.01em}
+.label{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+kbd{font:500 10.5px/1 var(--mono);padding:3px 5px;border:1px solid var(--border-strong);border-bottom-width:2px;border-radius:5px;color:var(--text-3);background:var(--surface)}
+
+/* ---------- app frame: one screen on desktop, panes scroll on their own ---------- */
+.app{height:100%;display:grid;grid-template-rows:auto auto 1fr auto;min-height:0}
+
+.topbar{display:flex;align-items:center;gap:16px;padding:0 var(--gutter);height:56px;border-bottom:1px solid var(--border);background:var(--surface)}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand-mark{width:22px;height:22px;border-radius:6px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font:700 12px/1 var(--sans);flex:none}
+.crumbs{display:flex;align-items:center;gap:8px;min-width:0;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden}
+.crumbs b{color:var(--text);font-weight:600;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.crumbs .sep{color:var(--border-strong)}
+.topbar .spacer{flex:1}
+.modes{display:flex;white-space:nowrap;flex:none;padding:3px;border:1px solid var(--border);border-radius:9px;background:var(--inset)}
+.modes button{padding:6px 12px;border-radius:6px;font-size:13px;font-weight:500;color:var(--muted);transition:color .15s,background .15s}
+.modes button[aria-pressed="true"]{background:var(--surface);color:var(--text);box-shadow:var(--shadow)}
+.icon-btn{width:34px;height:34px;border-radius:8px;display:grid;place-items:center;color:var(--text-3);border:1px solid transparent}
+.icon-btn:hover{background:var(--hover);border-color:var(--border)}
+.exit{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-3);padding:6px 10px;border-radius:8px}
+.exit:hover{background:var(--hover)}
+
+/* ---------- question row ---------- */
+.qrow{display:flex;align-items:stretch;gap:12px;padding:12px var(--gutter);border-bottom:1px solid var(--border);background:var(--surface)}
+.qcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;flex:1}
+.qcard{position:relative;min-width:0;overflow:hidden;container-type:inline-size;grid-template-columns:minmax(0,1fr);text-align:left;padding:10px 14px 12px;border:1px solid var(--border);border-radius:10px;background:var(--bg);display:grid;gap:4px;transition:border-color .15s,background .15s}
+.qcard:hover{border-color:var(--border-strong)}
+.qcard[aria-current="step"]{background:var(--surface);border-color:var(--accent-line)}
+.qcard[aria-current="step"]::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2px;border-radius:2px 2px 0 0;background:var(--accent)}
+.qcard .r1,.qcard .r2{min-width:0}
+.qcard .r1{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.qcard .cmd{display:flex;align-items:center;gap:7px;font-weight:600;font-size:13.5px;min-width:0;white-space:nowrap}
+.qcard .cmd .cw{white-space:nowrap}
+.qcard .dot{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--border-strong);flex:none}
+.qcard.is-done .dot{border:0;background:var(--accent);width:14px;height:14px;display:grid;place-items:center}
+.qcard.is-done .dot::after{content:"";width:6px;height:3px;border:solid var(--on-accent);border-width:0 0 1.5px 1.5px;transform:translateY(-1px) rotate(-45deg)}
+.qcard.is-draft .dot{border-color:var(--text-3);background:linear-gradient(90deg,var(--text-3) 50%,transparent 50%)}
+.qcard .meta{color:var(--muted);flex:none;white-space:nowrap}
+.qcard .r2{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;font-size:12.5px;color:var(--text-3)}
+.qcard .r2 .t{min-width:0;flex:1;line-height:1.35}
+.qcard .state{flex:none}
+.qcard .st-short{display:none}
+.sm{display:none}
+/* Tiers by the card's own width. Measured widths: full labels need ~330px, compact ~210px. */
+@container (max-width:330px){
+  .qcard .mm{display:none}
+  .qcard .st-long{display:none}
+  .qcard .st-short{display:inline}
+}
+@container (max-width:210px){
+  .qcard .meta,.qcard .r2 .t{display:none}
+  .qcard .r2{justify-content:flex-start}
+}
+@container (max-width:118px){
+  .qcard .dot{display:none}
+  .qcard .cmd{font-size:12.5px}
+}
+.qcard .state{font:12px var(--mono);color:var(--muted);white-space:nowrap}
+.qcard.is-done .state{color:var(--accent)}
+.banked{margin-left:auto;display:grid;align-content:center;justify-items:end;gap:2px;padding:0 4px 0 16px;border-left:1px solid var(--border);white-space:nowrap}
+.banked .n{font:500 20px/1.1 var(--mono);color:var(--text)}
+.banked .n em{font-style:normal;color:var(--accent)}
+
+/* ---------- main ---------- */
+main{min-height:0;display:grid;grid-template-rows:auto 1fr;gap:14px;padding:16px var(--gutter);max-width:1400px;width:100%;margin:0 auto}
+.qhead{display:grid;gap:10px}
+.eyebrow{display:none;margin:0;font:500 11px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 11.5px/1 var(--mono);padding:5px 8px;border:1px solid var(--border);border-radius:6px;color:var(--text-3);background:var(--surface);display:inline-flex;align-items:center;gap:6px}
+.chip.strong{color:var(--text);border-color:var(--border-strong)}
+.stem{margin:0;font:500 21px/1.42 var(--sans);letter-spacing:-.006em;color:var(--text);text-wrap:balance;max-width:84ch}
+.stem em{font-family:var(--serif);font-weight:400;font-size:1.1em;letter-spacing:0;font-style:italic;color:var(--text);text-decoration:underline;text-decoration-color:var(--border-strong);text-decoration-thickness:1.5px;text-underline-offset:5px;text-decoration-skip-ink:auto}
+.stem{color:var(--text-2)}
+.stem em{line-height:1}
+
+.app{overflow:hidden}
+main>.work{min-height:0;display:flex;flex-direction:column}
+.panes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;min-height:0;flex:1}
+.pane{min-height:0;display:flex;flex-direction:column;border:1px solid var(--border);border-radius:12px;background:var(--surface);overflow:hidden}
+.pane-head{display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0;padding:11px 18px;border-bottom:1px solid var(--border);min-height:46px}
+.pane-body{flex:1;overflow:auto;padding:20px 22px 28px;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){.pane-body{scroll-behavior:auto}}
+.tabs{display:none}
+
+/* ---------- extract ---------- */
+.src{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.textsize{display:flex;border:1px solid var(--border);border-radius:7px;overflow:hidden;flex:none}
+.textsize button{padding:3px 8px;font:500 12px/1.4 var(--sans);color:var(--text-3)}
+.textsize button:hover{background:var(--hover)}
+.textsize button+button{border-left:1px solid var(--border)}
+.extract{font-size:var(--read);line-height:1.7;color:var(--text-2);max-width:66ch}
+.extract h3{font:600 17px/1.35 var(--sans);color:var(--text);margin:0 0 14px;text-wrap:balance}
+.extract p{margin:0 0 14px}
+.fig{font:inherit;color:var(--text);border-bottom:1.5px dotted var(--evidence-line);padding:0 1px;border-radius:2px;transition:background .15s,box-shadow .15s}
+.fig:hover{background:var(--evidence-soft)}
+.fig.is-linked{background:var(--evidence-soft);box-shadow:0 0 0 1px var(--evidence-line);color:var(--evidence)}
+.fig.pulse{animation:pulse .9s ease-out}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--evidence-line)}100%{box-shadow:0 0 0 7px transparent}}
+.tcap{font:600 13px/1.4 var(--sans);color:var(--text);margin:22px 0 10px}
+.twrap{overflow-x:auto;border:1px solid var(--border);border-radius:9px}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:420px}
+th{font:500 11px/1.3 var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;background:var(--inset);border-bottom:1px solid var(--border)}
+td{padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text-2);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right}
+td .fig{font-family:var(--mono);font-size:12.5px}
+tr.is-focus td{background:var(--accent-soft)}
+tr.is-focus td:first-child{box-shadow:inset 2px 0 0 var(--accent)}
+.tsrc{font-size:12px;color:var(--muted);margin:8px 0 0}
+.hint{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:var(--muted);margin-top:22px;padding-top:14px;border-top:1px dashed var(--border)}
+
+/* ---------- work pane ---------- */
+.block+.block{margin-top:26px}
+.bhead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px;margin-bottom:10px}
+.bhead h4{margin:0;font:600 14px/1.3 var(--sans);color:var(--text)}
+.bhead .sub{font-size:12.5px;color:var(--muted)}
+textarea{width:100%;min-height:300px;resize:vertical;padding:16px 18px;border:1px solid var(--border);border-radius:10px;background:var(--inset);color:var(--text);font:400 var(--read)/1.7 var(--sans);transition:border-color .15s,background .15s}
+textarea:focus{outline:none;border-color:var(--accent-line);background:var(--surface)}
+textarea::placeholder{color:var(--muted)}
+.under{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:8px;font-size:12.5px;color:var(--muted)}
+.linkbtn{color:var(--text-3);text-decoration:underline;text-decoration-color:var(--border-strong);text-underline-offset:3px}
+.linkbtn:hover{color:var(--text)}
+.saved{display:inline-flex;align-items:center;gap:6px}
+.saved i{width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:.7}
+
+.yours{border:1px solid var(--border);border-radius:10px;background:var(--inset);padding:14px 16px;font-size:14px;line-height:1.65;color:var(--text-2);white-space:pre-wrap;max-height:9.9em;overflow:hidden;position:relative}
+.yours.open{max-height:none}
+.yours:not(.open)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2.6em;background:linear-gradient(transparent,var(--inset))}
+
+.score{display:flex;align-items:baseline;gap:6px}
+.score .n{font:500 26px/1 var(--mono);color:var(--text);display:inline-block}
+.score .n.bump{animation:bump .28s ease-out}
+.score .of{font:400 14px var(--mono);color:var(--muted)}
+@keyframes bump{0%{transform:translateY(-3px);opacity:.4}100%{transform:none;opacity:1}}
+
+.aogroup+.aogroup{margin-top:14px}
+.aohead{display:flex;justify-content:space-between;margin:0 2px 6px}
+.crit{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:10px;align-items:start;padding:10px 12px;border:1px solid var(--border);border-radius:9px;background:var(--surface);transition:border-color .15s,background .15s}
+.crit+.crit{margin-top:6px}
+.crit:hover{border-color:var(--border-strong)}
+.crit.is-active{border-color:var(--text-3)}
+.crit.is-on{background:var(--accent-soft);border-color:var(--accent-line)}
+.box{width:18px;height:18px;margin-top:1px;border:1.5px solid var(--border-strong);border-radius:5px;display:grid;place-items:center;transition:background .15s,border-color .15s}
+.box svg{width:12px;height:12px;stroke:var(--on-accent);stroke-width:3;fill:none;stroke-dasharray:20;stroke-dashoffset:20;transition:stroke-dashoffset .22s ease-out}
+.crit.is-on .box{background:var(--accent);border-color:var(--accent)}
+.crit.is-on .box svg{stroke-dashoffset:0}
+.crit .txt{font-size:13.5px;line-height:1.5;color:var(--text)}
+.crit .where{display:inline-flex;margin-top:4px;font-size:12px;color:var(--muted);gap:4px}
+.crit .where:hover{color:var(--text)}
+.crit .mk{font:500 12px var(--mono);color:var(--muted);padding-top:2px;white-space:nowrap}
+.crit.ro{grid-template-columns:minmax(0,1fr) auto}
+.crit label{display:contents;cursor:pointer}
+
+.script{border:1px solid var(--border);border-radius:10px;padding:6px 20px 8px;background:var(--surface)}
+.para{padding:14px 0 14px 16px;border-left:2px solid var(--border);margin:8px 0}
+.para .aot{font:500 10.5px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.para p{margin:0;font-size:var(--read);line-height:1.72;color:var(--text-2)}
+.seg{border-radius:3px;transition:background .2s,box-shadow .2s;cursor:pointer}
+.seg:hover{background:var(--hover)}
+.seg.earned{background:var(--accent-soft);box-shadow:0 1.5px 0 var(--accent)}
+.seg.missed{background:var(--inset);box-shadow:0 1.5px 0 var(--text-3);outline:1px dashed var(--border-strong);outline-offset:1px}
+.seg.plain{background:var(--hover);box-shadow:0 1.5px 0 var(--text-3)}
+.note{margin:10px 0 0;padding:10px 12px;border-radius:8px;background:var(--inset);font-size:13px;line-height:1.55;color:var(--text-2);display:grid;gap:4px;animation:rise .2s ease-out}
+.note .tag{font:500 11px/1.2 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.note .tag.earned{color:var(--accent)}
+.note .tag.missed,.note .tag.plain{color:var(--text-3)}
+@keyframes rise{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.note,.score .n.bump,.fig.pulse{animation:none}}
+
+.examiner{margin-top:18px;padding:2px 0 2px 16px;border-left:2px solid var(--examiner-line);font-size:13.5px;line-height:1.6;color:var(--text-2)}
+.examiner .label{color:var(--examiner);display:block;margin-bottom:7px}
+
+/* ---------- dock ---------- */
+.dock{display:flex;align-items:center;gap:18px;padding:12px var(--gutter);border-top:1px solid var(--border);background:var(--surface)}
+.dock .facts{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--text-3);min-width:0}
+.dock .facts b{color:var(--text);font-weight:600}
+.dock .facts .v{width:1px;height:14px;background:var(--border)}
+.timer{font:12.5px var(--mono);color:var(--muted)}
+.timer.over{color:var(--examiner)}
+.keys{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);margin-left:auto}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:9px;font-weight:600;font-size:13.5px;white-space:nowrap;transition:background .15s,border-color .15s,opacity .15s}
+.btn.ghost{border:1px solid var(--border);color:var(--text-2);background:var(--surface)}
+.btn.ghost:hover{border-color:var(--border-strong);background:var(--hover)}
+.btn.ghost:disabled{opacity:.45;cursor:default}
+.btn.primary{background:var(--accent);color:var(--on-accent)}
+.btn.primary:hover{background:var(--accent-strong)}
+.btn .k{font:500 11px var(--mono);opacity:.75}
+.dock .actions{display:flex;gap:8px;min-width:0}
+.btn{min-width:0}
+.btn .bl{overflow:hidden;text-overflow:ellipsis;min-width:0}
+.dock .facts{flex:0 1 auto}
+
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translate(-50%,8px);opacity:0;pointer-events:none;background:var(--text);color:var(--bg);font-size:13px;padding:8px 14px;border-radius:8px;transition:opacity .18s,transform .18s;z-index:30;max-width:calc(100% - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+.proto{position:relative;font-size:12px;flex:none}
+.proto>button{font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:7px 10px;border:1px dashed var(--border-strong);border-radius:7px;background:var(--surface);color:var(--muted)}
+.proto .menu{position:absolute;top:calc(100% + 6px);right:0;z-index:40;min-width:220px;padding:6px;border:1px solid var(--border);border-radius:10px;background:var(--surface);box-shadow:0 8px 24px rgba(0,0,0,.14);display:grid}
+.proto .menu button{text-align:left;padding:8px 10px;border-radius:6px;color:var(--text-2);font-size:13px}
+.proto .menu button:hover{background:var(--hover)}
+.proto .menu .label{padding:8px 10px 4px}
+
+/* ---------- narrower screens ---------- */
+@media (max-width:1180px){.keys{display:none}}
+@media (max-width:900px){.proto{display:none}}
+@media (max-width:1023px){
+  :root{--gutter:16px}
+  .app{height:auto;min-height:100%;display:block;overflow:visible}
+  main>.work{display:block}
+  .topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+  .crumbs .hide-sm{display:none}
+  main{display:block;padding-bottom:12px}
+  .qhead{margin-bottom:12px}
+  .stem{font-size:19px}
+  .tabs{display:grid;grid-template-columns:1fr 1fr;padding:3px;gap:3px;border:1px solid var(--border);border-radius:10px;background:var(--inset);position:sticky;top:calc(56px + env(safe-area-inset-top,0px));z-index:15;margin-bottom:12px}
+  .tabs button{padding:8px;border-radius:7px;font-weight:600;font-size:13px;color:var(--muted)}
+  .tabs button[aria-selected="true"]{background:var(--surface);color:var(--text);box-shadow:var(--shadow)}
+  .panes{display:block}
+  .pane{overflow:visible}
+  .pane[data-hidden-sm="true"]{display:none}
+  .pane-body{overflow:visible;padding:18px 16px 22px}
+  textarea{min-height:240px}
+  .dock{position:sticky;bottom:0;z-index:20;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .dock .facts .hide-sm{display:none}
+  .banked{display:none}
+}
+@media (max-width:640px){
+  .modes button{padding:6px 9px;font-size:12.5px}
+  .exit span{display:none}
+  .qrow{padding:10px 16px}
+  .qcards{gap:6px}
+  .qcard{padding:8px 10px 9px}
+  .qcard .cmd{font-size:13px}
+  .dock .facts{gap:10px;font-size:12.5px}
+  .dock .facts .v{display:none}
+  .btn{padding:9px 12px}
+  .btn .k{display:none}
+  .dock .prev-label{display:none}
+  .timer{display:none}
+}
+@media (max-width:640px){.proto{display:none}}
+@media (max-width:640px){
+  .lg{display:none!important}
+  .sm{display:inline}
+  #theme{display:none}
+  .topbar{gap:10px}
+  .crumbs{display:none}
+  .eyebrow{display:block}
+  .exit{padding:6px}
+  .stem{font-size:18px;line-height:1.45}
+  .chips{gap:5px}
+  table{min-width:0;font-size:12.5px}
+  th{padding:8px 8px;font-size:10px;letter-spacing:.02em}
+  td{padding:8px 8px}
+  td .fig{font-size:12px}
+  .pane-head{padding:10px 14px}
+  .src{display:none}
+}
+@media (max-width:420px){.brand .name{display:none}.pm{display:none}}
+@media (max-width:360px){.qcard{padding:8px 7px 9px}.qcard .cmd{font-size:12px;letter-spacing:-.01em}.qcards{gap:5px}}
+</style>
+
+<div class="app" id="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">R</span>
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <span class="name hide-sm">Revvy Learn</span><span class="sep hide-sm">/</span>
+        <span class="hide-sm">Economics · Unit 1</span><span class="sep hide-sm">/</span>
+        <b>1.3.5 Market failure</b>
+      </nav>
+    </div>
+    <div class="spacer"></div>
+    <div class="proto" id="proto">
+      <button type="button" id="proto-btn" aria-expanded="false">Prototype</button>
+      <div class="menu" id="proto-menu" hidden>
+        <span class="label">Jump to a state</span>
+        <button type="button" data-jump="q2-write">Question 2 · writing</button>
+        <button type="button" data-jump="q2-marked">Question 2 · marking</button>
+        <button type="button" data-jump="q3-new">Question 3 · not started</button>
+        <button type="button" data-jump="study">Model answers mode</button>
+        <button type="button" data-jump="reset">Reset all answers</button>
+      </div>
+    </div>
+    <div class="modes" role="group" aria-label="How to use these questions">
+      <button type="button" id="m-practise" aria-pressed="true">Practise</button>
+      <button type="button" id="m-study" aria-pressed="false"><span class="lg">Model answers</span><span class="sm">Answers</span></button>
+    </div>
+    <button type="button" class="icon-btn" id="theme" aria-label="Switch light or dark theme">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+    <button type="button" class="exit" id="exit" aria-label="Exit practice"><kbd class="lg">esc</kbd><span class="lg">Exit</span><svg class="sm" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </header>
+
+  <div class="qrow">
+    <div class="qcards" id="qcards" role="list" aria-label="Questions"></div>
+    <div class="banked" aria-live="polite">
+      <span class="label">Marks banked</span>
+      <span class="n" id="banked-n"></span>
+    </div>
+  </div>
+
+  <main>
+    <section class="qhead" aria-labelledby="stem">
+      <p class="eyebrow">1.3.5 · Market failure</p>
+      <div class="chips" id="chips"></div>
+      <h1 class="stem" id="stem"></h1>
+    </section>
+
+    <div class="work">
+      <div class="tabs" role="tablist" aria-label="View">
+        <button type="button" role="tab" id="tab-extract" aria-selected="false">Extract</button>
+        <button type="button" role="tab" id="tab-work" aria-selected="true"></button>
+      </div>
+      <div class="panes">
+        <section class="pane" id="pane-extract" aria-label="Extract">
+          <div class="pane-head">
+            <span class="label">Extract A</span>
+                        <div class="textsize" role="group" aria-label="Text size">
+              <button type="button" id="ts-down" aria-label="Smaller text">A−</button>
+              <button type="button" id="ts-up" aria-label="Larger text">A+</button>
+            </div>
+          </div>
+          <div class="pane-body" id="extract-body"></div>
+        </section>
+        <section class="pane" id="pane-work" aria-live="off">
+          <div class="pane-head" id="work-head"></div>
+          <div class="pane-body" id="work-body"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="dock">
+    <div class="facts">
+      <span class="lg">Question <b id="d-q"></b> of 3</span><span class="sm mono"><b id="d-q-sm"></b> / 3</span>
+      <span class="v"></span>
+      <span class="hide-sm">Banked <b id="d-banked"></b></span>
+      <span class="v hide-sm"></span>
+      <span class="timer" id="timer"></span>
+    </div>
+    <div class="keys" aria-hidden="true"><kbd>←</kbd><kbd>→</kbd> questions <span style="width:8px"></span><kbd>⌘</kbd><kbd>↵</kbd> mark</div>
+    <div class="actions">
+      <button type="button" class="btn ghost" id="prev"><span aria-hidden="true">←</span><span class="prev-label">Previous</span></button>
+      <button type="button" class="btn primary" id="primary"></button>
+    </div>
+  </footer>
+</div>
+
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------------------------------------------------------------- content
+   The extract and the three questions are content/data-response/econ-u1-market-failure.md,
+   the file's own question set. Question 3 is re-tariffed from the file's 10 marks (not a legal
+   IAL Economics tariff) to 20, and its criteria follow the 4/4/6/6 AO split for 20 marks. */
+const F = (id, t) => `<button type="button" class="fig" data-fig="${id}">${t}</button>`;
+const S = (id, h) => `<span class="seg" data-seg="${id}">${h}</span>`;
+
+const EXTRACT = `
+<article class="extract">
+  <h3>Dubai expands single-use plastics ban as Gulf sugar tax debate returns</h3>
+  <p>The UAE's federal single-use plastics policy moved into its next phase in 2025. Restaurants, delivery platforms and supermarkets across Dubai and Abu Dhabi must now charge a minimum of ${F('f-charge','AED 0.25 per plastic bag')} and have removed single-use cups, stirrers and cutlery. Officials estimate that around ${F('f-11bn','11 billion')} single-use bags were used each year before the policy began tightening in 2024, and early Dubai Municipality data suggests consumption fell by ${F('f-45','approximately 45%')} in the first year of the charge.</p>
+  <p>At the same time, a policy debate has returned across the Gulf Cooperation Council (GCC) over excise taxes on sugary drinks. The UAE and Saudi Arabia already apply a ${F('f-50','50% excise on soft drinks')} and ${F('f-100','100% on energy drinks')}, introduced in 2017. A 2024 Ministry of Health review reported that per capita consumption of carbonated soft drinks in the UAE fell by ${F('f-32','roughly 32%')} over the seven years after the tax, though diabetes prevalence remains high at an estimated ${F('f-123','12.3%')} of adults. Analysts at Gulf Economic Review argue the current rate is under-correcting, given that healthcare costs linked to obesity and type-2 diabetes in the GCC are estimated at over ${F('f-25bn','USD 25 billion per year')}.</p>
+  <p>Critics, including several regional food and beverage industry groups, argue that the taxes are regressive, hitting lower-income expatriate workers hardest, and that producers have largely passed the cost on to consumers without reformulating their products.</p>
+  <p class="tcap">Table 1: Selected indirect taxes and externalities, UAE market (2024 estimates)</p>
+  <div class="twrap">
+    <table>
+      <thead><tr><th>Product</th><th>Tax rate</th><th>External cost per unit</th><th class="num">PED</th></tr></thead>
+      <tbody>
+        <tr data-row="soft"><td>Carbonated soft drinks</td><td>50% excise</td><td>${F('t-soft-ext','AED 1.20 / litre')}</td><td class="num">${F('t-soft-ped','−0.6')}</td></tr>
+        <tr data-row="energy"><td>Energy drinks</td><td>100% excise</td><td>${F('t-energy-ext','AED 2.80 / litre')}</td><td class="num">${F('t-energy-ped','−0.9')}</td></tr>
+        <tr data-row="bags"><td>Single-use plastic bags</td><td>AED 0.25 / bag</td><td>${F('t-bags-ext','AED 0.18 / bag')}</td><td class="num">${F('t-bags-ped','−1.4')}</td></tr>
+        <tr data-row="tobacco"><td>Tobacco products</td><td>100% excise</td><td>${F('t-tob-ext','AED 18 / pack')}</td><td class="num">${F('t-tob-ped','−0.4')}</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tsrc">Source: composite of published government and industry estimates, 2024.</p>
+</article>`;
+
+const AO = {AO1:'Knowledge', AO2:'Application', AO3:'Analysis', AO4:'Evaluation'};
+
+const QUESTIONS = [
+  {
+    cmd:'Define', marks:2, min:3, ao:['AO1'], short:'Negative externality of consumption', focusRows:['bags'],
+    stem:'Define the term <em>negative externality of consumption</em>, using an example from the extract.',
+    criteria:[
+      {id:'c1', band:'The definition', m:1, t:'Defines it as a cost to third parties from consuming a good, not reflected in the price', seg:'d1'},
+      {id:'c2', band:'The extract’s example', m:1, t:'Illustrates it with a case from the extract, with its figure', seg:'d2'},
+    ],
+    script:[
+      {label:'The definition', html: S('d1','A negative externality of consumption is a spillover cost imposed on a third party when an individual consumes a good, which is not reflected in the market price.')},
+      {label:'The extract’s example', html: S('d2',`In the extract, consuming single-use plastic bags creates an external cost of about ${F('t-bags-ext','AED 0.18 per bag')}, for example pollution of marine environments in the Gulf, which shoppers do not pay at the till.`)},
+    ],
+    notes:{
+      d1:'Both halves earn the mark together: the third party, and a price that ignores them.',
+      d2:'The mark needs the extract’s own case and figure. “Plastic pollution” on its own would not earn it.',
+    },
+    examiner:'Two marks need the concept plus an applied example from the extract. A common mistake is to define a production externality, such as factory emissions, which earns nothing here.',
+  },
+  {
+    cmd:'Analyse', marks:6, min:8, short:'The AED 0.25 bag charge', focusRows:['bags'],
+    stem:'Analyse how <em>the AED 0.25 charge on single-use plastic bags</em> is likely to correct the market failure associated with plastic bag consumption in the UAE.',
+    criteria:[
+      {id:'k1', ao:'AO1', m:1, t:'Explains the failure as marginal social cost above marginal private cost, causing over-consumption', seg:'a1'},
+      {id:'k2', ao:'AO1', m:1, t:'Identifies the charge as an indirect tax that internalises the external cost', seg:'a2'},
+      {id:'p1', ao:'AO2', m:1, t:'Uses the extract’s PED of −1.4 to show demand is price elastic', seg:'b1'},
+      {id:'p2', ao:'AO2', m:1, t:'Uses the 45% fall in consumption as evidence', seg:'b2'},
+      {id:'n1', ao:'AO3', m:1, t:'Links the higher private cost to fewer bags demanded', seg:'c1'},
+      {id:'n2', ao:'AO3', m:1, t:'Carries the chain to the social optimum and a smaller welfare loss', seg:'c2'},
+    ],
+    script:[
+      {ao:['AO1'], html: S('a1','A negative externality of consumption occurs when the marginal social cost (MSC) of a good exceeds its marginal private cost (MPC), leading to over-consumption and allocative inefficiency at the free-market equilibrium.')+' '+S('a2',`The ${F('f-charge','AED 0.25')} charge acts as an indirect (Pigouvian) tax on the consumer, designed to internalise the estimated ${F('t-bags-ext','AED 0.18')} external cost per bag.`)},
+      {ao:['AO2'], html: S('b1',`The extract gives a price elasticity of demand of ${F('t-bags-ped','−1.4')} for single-use plastic bags, so demand is price elastic and the charge causes a more-than-proportionate fall in quantity demanded.`)+' '+S('b2',`This is consistent with the ${F('f-45','roughly 45%')} fall in consumption Dubai Municipality reported in the first year.`)},
+      {ao:['AO3'], html: S('c1','The charge raises the private cost of using a bag closer to its full social cost, so shoppers move along the demand curve and use fewer bags.')+' '+S('c2','Quantity falls towards the socially optimal level, shrinking the welfare-loss triangle from over-consumption and improving allocative efficiency.')},
+    ],
+    notes:{
+      a1:'Sets up the whole answer: MSC above MPC is the gap the charge is meant to close.',
+      a2:'Names the tool and what it targets. The word “internalise” is what earns the mark; “makes bags more expensive” does not.',
+      b1:'The elasticity is the figure that decides how large the response is. Quoting it is the application mark.',
+      b2:'Evidence that the prediction held. Two figures working together is what lifts an answer to Level 3.',
+      c1:'The first link in the chain: price signal to behaviour.',
+      c2:'Carries the chain to its end. Stopping at “fewer bags” leaves this mark on the table.',
+    },
+    examiner:'Level 3 answers (5–6 marks) link the elasticity of −1.4 to the size of the response and use the 45% fall. Level 2 answers (3–4) explain Pigouvian taxes but stay generic and quote no data. Quantifying the impact is what separates them.',
+  },
+  {
+    cmd:'Evaluate', marks:20, min:26, short:'The 50% excise on soft drinks', focusRows:['soft'],
+    stem:'Evaluate the view that the current 50% excise tax on carbonated soft drinks in the UAE is <em>the most effective way</em> to correct the market failure caused by sugary drink consumption.',
+    criteria:[
+      {id:'q1', ao:'AO1', m:2, t:'Explains the failure: consumers under-value the long-run health costs of sugar', seg:'e1'},
+      {id:'q2', ao:'AO1', m:2, t:'Explains how the excise raises price towards the social optimum', seg:'e3'},
+      {id:'q3', ao:'AO2', m:2, t:'Uses the extract’s evidence that the tax worked: the 32% fall and PED of −0.6', seg:'e2'},
+      {id:'q4', ao:'AO2', m:2, t:'Uses the extract’s evidence of what remains: USD 25 billion and 12.3%', seg:'e5'},
+      {id:'q5', ao:'AO3', m:2, t:'Inelastic demand means a less-than-proportionate fall in consumption', seg:'e4'},
+      {id:'q6', ao:'AO3', m:2, t:'The regressive burden and the equity–efficiency trade-off it creates', seg:'e6'},
+      {id:'q7', ao:'AO3', m:2, t:'Compares an alternative policy and explains how it works differently', seg:'e7'},
+      {id:'q8', ao:'AO4', m:2, t:'Identifies government failure in setting the rate', seg:'e8'},
+      {id:'q9', ao:'AO4', m:4, t:'Reaches a supported, conditional judgement', seg:'e9'},
+    ],
+    script:[
+      {ao:['AO1','AO2'], html: S('e1','The 50% excise on carbonated soft drinks is meant to correct a negative externality of consumption, where consumers under-value the long-run health costs of sugar.')+' '+S('e2',`The ${F('f-32','32%')} fall in per capita consumption over seven years, with a PED of ${F('t-soft-ped','−0.6')}, suggests the policy has had a measurable effect.`)+' '+S('e3','The tax raises the price consumers pay, moving private cost closer to social cost and reducing quantity towards the socially optimal level.')},
+      {ao:['AO3','AO2'], html: S('e4','However, a PED of −0.6 is inelastic, so the tax produces a less-than-proportionate fall in quantity demanded.')+' '+S('e5',`Healthcare costs linked to obesity and diabetes are still above ${F('f-25bn','USD 25 billion')} a year and adult diabetes prevalence is around ${F('f-123','12.3%')}, which points to residual over-consumption.`)},
+      {ao:['AO3'], html: S('e6','Second, the tax is regressive. Lower-income expatriate workers spend a larger share of their income on these drinks, so the burden falls hardest on them: an equity–efficiency trade-off the policy does not resolve.')},
+      {ao:['AO3'], html: S('e7','Third, other policies may work better. A reformulation mandate, like the sugar tiers in the UK’s soft drinks levy, acts on supply by cutting sugar per serving; traffic-light labelling and health education target the information failure behind over-consumption.')},
+      {ao:['AO4'], html: S('e8','Setting the “correct” rate needs an accurate estimate of the external cost, which is uncertain. Set too high, the tax creates a welfare loss of its own, which is a form of government failure.')},
+      {ao:['AO4'], html: S('e9','Overall, the excise has reduced consumption but is unlikely to be the single most effective instrument. It is necessary but not sufficient: its success depends on pairing it with reformulation incentives and better information, and on offsetting its regressive impact.')},
+    ],
+    notes:{
+      e1:'Frames the failure precisely: it is the under-valuation, not sugar itself, that the tax is correcting.',
+      e2:'Two figures in one sentence, both used to argue rather than decorate.',
+      e3:'The mechanism, stated once and briefly. The marks at this level are in what follows.',
+      e4:'The first evaluator, built on the same −0.6 the answer used in its favour a paragraph earlier.',
+      e5:'Evidence against the tax, from the same extract. Using figures on both sides is what top answers do.',
+      e6:'A second evaluator of a different kind: fairness, not effectiveness.',
+      e7:'The question says “most effective”, so a comparison is required, not optional.',
+      e8:'Names the reason the “right” rate is hard to find, rather than asserting it.',
+      e9:'A conditional judgement that follows from the paragraphs above. “It depends” with no conditions would not earn these marks.',
+    },
+    examiner:'Top-level answers reach a conditional judgement (“the impact depends on…”) supported by the extract’s data: 32%, −0.6, 12.3% and USD 25 billion. They weigh at least one evaluator such as inelastic demand, regressivity or government failure. A common mistake is arguing the tax “doesn’t work” without engaging with the 32% fall.',
+  },
+];
+
+const SAMPLE = [
+  'A negative externality of consumption is when consuming a good creates a cost for third parties that is not included in the price. For example, plastic bags in the extract cause marine pollution with an external cost of AED 0.18 per bag.',
+  'A negative externality of consumption happens when using a good creates a cost for other people, so the marginal social cost is higher than the marginal private cost and too many bags are used.\n\nThe AED 0.25 charge makes each bag more expensive. The extract says the PED for plastic bags is −1.4, so demand is elastic and the higher price causes a big fall in the number of bags used. Dubai Municipality reported a 45% fall in the first year, which supports this.\n\nBecause shoppers now pay more, they use fewer bags, so the market moves closer to the right level.',
+];
+
+/* ---------------------------------------------------------------- state */
+const KEY = 'revvy-practice-mockup-v7';
+function freshState(){
+  return {
+    mode:'practise', cur:1, activeSeg:null, activeFig:null, tab:'work', textSize:0,
+    qs:[
+      {phase:'marking', draft:SAMPLE[0], ticks:['c1','c2'], time:151, open:false},
+      {phase:'marking', draft:SAMPLE[1], ticks:['k1','p1','p2','n1'], time:412, open:false},
+      {phase:'attempt', draft:'', ticks:[], time:0, open:false},
+    ],
+  };
+}
+let st = freshState();
+try{ const saved = JSON.parse(localStorage.getItem(KEY)||'null'); if(saved && saved.qs && saved.qs.length===3) st = Object.assign(freshState(), saved, {activeSeg:null, activeFig:null}); }catch(e){}
+st.activeSeg = st.cur===1 && st.qs[1].phase==='marking' ? 'a2' : null;
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(st)); }catch(e){} }
+
+const $ = s => document.querySelector(s);
+const q = () => QUESTIONS[st.cur];
+const qs = () => st.qs[st.cur];
+const got = i => st.qs[i].phase==='marking' ? QUESTIONS[i].criteria.filter(c=>st.qs[i].ticks.includes(c.id)).reduce((a,c)=>a+c.m,0) : 0;
+const banked = () => [0,1,2].reduce((a,i)=>a+got(i),0);
+const TOTAL = QUESTIONS.reduce((a,x)=>a+x.marks,0);
+const words = t => (t.trim().match(/\S+/g)||[]).length;
+const fmt = s => `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`;
+const view = () => st.mode==='study' ? 'study' : qs().phase; // attempt | marking | revealed | study
+
+/* ---------------------------------------------------------------- render */
+function renderCards(){
+  $('#qcards').innerHTML = QUESTIONS.map((x,i)=>{
+    const s = st.qs[i];
+    let cls='', state='Not started', short='New';
+    if(st.mode==='study'){ state='Reading'; short='Read'; }
+    else if(s.phase==='marking'){ cls='is-done'; state=`You marked ${got(i)} / ${x.marks}`; short=`${got(i)}/${x.marks}`; }
+    else if(s.phase==='revealed'){ state='Answer shown'; short='Shown'; }
+    else if(words(s.draft)){ cls='is-draft'; state=`Draft · ${words(s.draft)} words`; short='Draft'; }
+    return `<button type="button" role="listitem" class="qcard ${cls}" data-q="${i}" ${i===st.cur?'aria-current="step"':''} title="Question ${i+1}: ${x.cmd}, ${x.marks} marks, ${x.short}. ${state}" aria-label="Question ${i+1}: ${x.cmd}, ${x.marks} marks, about ${x.min} minutes. ${x.short}. ${state}">
+      <span class="r1"><span class="cmd"><span class="dot" aria-hidden="true"></span><span class="cw">${i+1} ${x.cmd}</span></span><span class="meta mono">${x.marks} marks<span class="mm"> · ${x.min} min</span></span></span>
+      <span class="r2"><span class="t">${x.short}</span><span class="state"><span class="st-long">${state}</span><span class="st-short">${short}</span></span></span>
+    </button>`;
+  }).join('');
+  const b = banked();
+  $('#banked-n').innerHTML = `<em>${b}</em> / ${TOTAL}`;
+}
+
+function renderHead(){
+  const x = q();
+  const aos = (x.ao || [...new Set(x.criteria.map(c=>c.ao).filter(Boolean))]).join(' · ');
+  $('#chips').innerHTML = `
+    <span class="chip strong lg">Question ${st.cur+1}</span>
+    <span class="chip strong">${x.marks} marks</span>
+    <span class="chip">${aos}</span>
+    <span class="chip">About ${x.min} min</span>
+    <span class="chip lg"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>Uses Extract A</span>`;
+  $('#stem').innerHTML = x.stem;
+}
+
+function renderExtract(){
+  const b = $('#extract-body');
+  if(!b.dataset.built){ b.innerHTML = EXTRACT + `<p class="hint" id="fig-hint"></p>`; b.dataset.built='1'; }
+  // The relevant table row is only marked once the student has answered: in an exam nothing points at it.
+  const v = view();
+  b.querySelectorAll('tr[data-row]').forEach(tr=>tr.classList.toggle('is-focus', v!=='attempt' && q().focusRows.includes(tr.dataset.row)));
+  $('#fig-hint').innerHTML = v==='attempt'
+    ? `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex:none;margin-top:2px"><path d="M12 5v14M5 12h14"/></svg><span>Click any underlined figure to quote it into your answer at the cursor.</span>`
+    : `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex:none;margin-top:2px"><path d="M9 18l6-6-6-6"/></svg><span>Click a figure to see where the model answer uses it.</span>`;
+  document.documentElement.style.setProperty('--read', (15.5 + st.textSize*1.5)+'px');
+  applyFig();
+}
+
+function critRows(x, s, interactive){
+  const groups = {};
+  x.criteria.forEach(c=>{ const k=c.band||c.ao; (groups[k]=groups[k]||[]).push(c); });
+  return Object.keys(groups).map(ao=>{
+    const tot = groups[ao].reduce((a,c)=>a+c.m,0);
+    return `<div class="aogroup"><div class="aohead"><span class="label">${AO[ao] ? ao+' · '+AO[ao] : ao}</span><span class="label">${tot} mark${tot>1?'s':''}</span></div>` +
+      groups[ao].map(c=>{
+        const on = interactive && s.ticks.includes(c.id);
+        const act = st.activeSeg===c.seg;
+        if(!interactive) return `<div class="crit ro ${act?'is-active':''}"><div><div class="txt">${c.t}</div><button type="button" class="where" data-seg-go="${c.seg}">Show in the model answer ↓</button></div><span class="mk">${c.m} mark${c.m>1?'s':''}</span></div>`;
+        return `<div class="crit ${on?'is-on':''} ${act?'is-active':''}">
+          <label for="ck-${c.id}"><input type="checkbox" id="ck-${c.id}" data-tick="${c.id}" ${on?'checked':''} style="position:absolute;opacity:0;width:1px;height:1px">
+          <span class="box" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span></label>
+          <div><label for="ck-${c.id}"><span class="txt">${c.t}</span></label><br><button type="button" class="where" data-seg-go="${c.seg}">Show in the model answer ↓</button></div>
+          <span class="mk">${c.m} mark${c.m>1?'s':''}</span>
+        </div>`;
+      }).join('') + `</div>`;
+  }).join('');
+}
+
+function scriptHtml(x, s, v){
+  const segCrit = {}; x.criteria.forEach(c=>segCrit[c.seg]=c);
+  return `<div class="script">` + x.script.map(p=>{
+    let html = p.html, note = '';
+    const segs = [...html.matchAll(/data-seg="([^"]+)"/g)].map(m=>m[1]);
+    if(st.activeSeg && segs.includes(st.activeSeg)){
+      const c = segCrit[st.activeSeg];
+      let cls='plain', tag=c ? `Earns ${c.m} mark${c.m>1?'s':''}${c.ao?' · '+c.ao:''}` : 'Model answer';
+      if(v==='marking' && c){ const on = s.ticks.includes(c.id); cls = on?'earned':'missed'; tag = on ? `✓ You earned this · ${c.m} mark${c.m>1?'s':''}` : `○ You missed this · here is how it’s earned`; }
+      html = html.replace(`class="seg" data-seg="${st.activeSeg}"`, `class="seg ${cls}" data-seg="${st.activeSeg}"`);
+      note = `<div class="note"><span class="tag ${cls}">${tag}</span><span>${x.notes[st.activeSeg]||''}</span></div>`;
+    }
+    return `<div class="para"><div class="aot">${p.label || p.ao.map(a=>a+' · '+AO[a]).join('  /  ')}</div><p>${html}</p>${note}</div>`;
+  }).join('') + `</div>` + `<div class="examiner"><span class="label">Examiner’s note</span>${x.examiner}</div>`;
+}
+
+function renderWork(){
+  const x = q(), s = qs(), v = view();
+  const head = $('#work-head'), body = $('#work-body');
+  if(v==='attempt'){
+    head.innerHTML = `<span class="label">Your answer</span><span class="saved mono" id="saved"><i></i>Saved</span>`;
+    body.innerHTML = `
+      <div class="block">
+        <textarea id="answer" aria-label="Your answer" placeholder="Write your answer as you would in the exam.">${esc(s.draft)}</textarea>
+        <div class="under"><span class="mono" id="wc">${words(s.draft)} words</span>
+          <button type="button" class="linkbtn" id="skip">Show the model answer without marking</button></div>
+      </div>`;
+    const ta = $('#answer');
+    ta.addEventListener('input', ()=>{ s.draft = ta.value; $('#wc').textContent = words(s.draft)+' words'; flashSaved(); renderCards(); renderDock(); save(); });
+    ['keyup','click','select','focus'].forEach(e=>ta.addEventListener(e, ()=>{ s.caret=[ta.selectionStart, ta.selectionEnd]; }));
+  } else if(v==='marking'){
+    const g = got(st.cur);
+    head.innerHTML = `<span class="label">Mark your answer</span><span class="score" aria-live="polite"><span class="n" id="score-n">${g}</span><span class="of">/ ${x.marks}</span></span>`;
+    body.innerHTML = `
+      <div class="block">
+        <div class="bhead"><h4>Your answer</h4><span class="sub"><button type="button" class="linkbtn" id="more">${s.open?'Show less':'Show all'}</button> · <button type="button" class="linkbtn" id="edit">Edit</button></span></div>
+        <div class="yours ${s.open?'open':''}">${esc(s.draft)}</div>
+      </div>
+      <div class="block">
+        <div class="bhead"><h4>Tick what your answer did</h4><span class="sub lg">Each tick banks its marks</span></div>
+        ${critRows(x, s, true)}
+      </div>
+      <div class="block">
+        <div class="bhead"><h4>Model answer</h4><span class="sub mono">Full marks · ${x.marks} / ${x.marks}</span></div>
+        ${scriptHtml(x, s, v)}
+      </div>`;
+  } else {
+    head.innerHTML = `<span class="label">${v==='study'?'Model answer':'Model answer · not marked'}</span>${v==='revealed'?'<button type="button" class="linkbtn" id="retry" style="font-size:12.5px">Try it yourself instead</button>':''}`;
+    body.innerHTML = `
+      <div class="block">
+        <div class="bhead"><h4>What earns the marks</h4><span class="sub mono">${x.marks} marks</span></div>
+        ${critRows(x, s, false)}
+      </div>
+      <div class="block">
+        <div class="bhead"><h4>Full-mark answer</h4><span class="sub">Tap a sentence to see why it scores</span></div>
+        ${scriptHtml(x, s, v)}
+      </div>`;
+  }
+  $('#tab-work').textContent = v==='attempt' ? 'Your answer' : v==='marking' ? 'Marking' : 'Model answer';
+  applyFig();
+}
+
+function renderDock(){
+  const x = q(), s = qs(), v = view();
+  $('#d-q').textContent = st.cur+1; $('#d-q-sm').textContent = st.cur+1;
+  $('#d-banked').textContent = `${banked()} / ${TOTAL}`;
+  const t = $('#timer');
+  if(v==='attempt'){ const over = s.time > x.min*60; t.className='timer'+(over?' over':''); t.textContent = `${fmt(s.time)} / ${fmt(x.min*60)}${over?' · over time':''}`; }
+  else if(v==='marking'){ t.className='timer'; t.textContent = `Took ${fmt(s.time)}`; }
+  else t.textContent='';
+  $('#prev').disabled = st.cur===0;
+  const p = $('#primary'), next = QUESTIONS[st.cur+1];
+  if(v==='attempt'){
+    p.innerHTML = words(s.draft) ? `<span class="bl">Mark my answer</span> <span class="k">⌘↵</span>` : `<span class="bl">Show the model answer</span>`; p.removeAttribute('aria-label');
+    p.dataset.act = words(s.draft) ? 'mark' : 'reveal';
+  } else if(next){
+    p.innerHTML = `<span class="bl">Next: ${next.cmd}<span class="pm"> · ${next.marks} marks</span></span> <span aria-hidden="true">→</span>`; p.setAttribute('aria-label', `Next: ${next.cmd}, ${next.marks} marks`); p.dataset.act='next';
+  } else {
+    p.innerHTML = `<span class="bl">${st.mode==='study' ? 'Back to 1.3.5' : `Finish · ${banked()} of ${TOTAL} banked`}</span>`; p.removeAttribute('aria-label'); p.dataset.act='finish';
+  }
+}
+
+function renderTabs(){
+  const small = matchMedia('(max-width:1023px)').matches;
+  $('#tab-extract').setAttribute('aria-selected', String(st.tab==='extract'));
+  $('#tab-work').setAttribute('aria-selected', String(st.tab==='work'));
+  $('#pane-extract').dataset.hiddenSm = String(small && st.tab!=='extract');
+  $('#pane-work').dataset.hiddenSm = String(small && st.tab!=='work');
+}
+
+function renderModes(){
+  $('#m-practise').setAttribute('aria-pressed', String(st.mode==='practise'));
+  $('#m-study').setAttribute('aria-pressed', String(st.mode==='study'));
+}
+
+function render(){ renderModes(); renderCards(); renderHead(); renderExtract(); renderWork(); renderDock(); renderTabs(); }
+
+/* ---------------------------------------------------------------- helpers */
+function esc(t){ return String(t).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+let toastT;
+function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(toastT); toastT=setTimeout(()=>t.classList.remove('show'),2200); }
+let savedT;
+function flashSaved(){ const s=$('#saved'); if(!s) return; s.style.opacity=.45; clearTimeout(savedT); savedT=setTimeout(()=>{ s.style.opacity=1; },450); }
+function applyFig(){
+  document.querySelectorAll('.fig').forEach(f=>f.classList.toggle('is-linked', !!st.activeFig && f.dataset.fig===st.activeFig));
+}
+function go(i){
+  if(i<0 || i>=QUESTIONS.length || i===st.cur) return;
+  st.cur=i; st.activeSeg=null; st.activeFig=null; st.tab = 'work';
+  render(); save();
+  $('#work-body').scrollTop=0; $('#extract-body').scrollTop=0;
+  if(matchMedia('(max-width:1023px)').matches) window.scrollTo({top:0,behavior:'smooth'});
+}
+function reveal(el){
+  // Desktop: move only the pane the element lives in. scrollIntoView would also scroll the locked frame.
+  const smooth = matchMedia('(prefers-reduced-motion:reduce)').matches ? 'auto' : 'smooth';
+  const pane = el.closest('.pane-body');
+  if(pane && !matchMedia('(max-width:1023px)').matches){
+    const r = el.getBoundingClientRect(), pr = pane.getBoundingClientRect();
+    pane.scrollTo({top: pane.scrollTop + (r.top - pr.top) - pr.height/2 + r.height/2, behavior: smooth});
+  } else {
+    // Phone: the page scrolls; clear the sticky top bar and tabs.
+    const y = el.getBoundingClientRect().top + window.scrollY - 140;
+    window.scrollTo({top: Math.max(0,y), behavior: smooth});
+  }
+}
+function focusSeg(id, toggle){
+  st.activeSeg = toggle && st.activeSeg===id ? null : id;
+  renderWork();
+  const el = document.querySelector(`[data-seg="${id}"]`);
+  if(el && st.activeSeg) reveal(el);
+}
+function insertFig(text){
+  const s = qs(), ta = $('#answer'); if(!ta) return;
+  const [a,b] = s.caret || [ta.value.length, ta.value.length];
+  const before = ta.value.slice(0,a), after = ta.value.slice(b);
+  const pad = before && !/\s$/.test(before) ? ' ' : '';
+  const ins = pad + text + (after && !/^[\s.,;:]/.test(after) ? ' ' : '');
+  ta.value = before + ins + after; s.draft = ta.value;
+  const pos = (before+ins).length; s.caret=[pos,pos];
+  ta.focus(); ta.setSelectionRange(pos,pos);
+  $('#wc').textContent = words(s.draft)+' words'; flashSaved(); renderCards(); renderDock(); save();
+}
+
+/* ---------------------------------------------------------------- events */
+document.addEventListener('click', e=>{
+  const card = e.target.closest('[data-q]'); if(card){ go(+card.dataset.q); return; }
+  const fig = e.target.closest('.fig');
+  if(fig){
+    e.stopPropagation();
+    const inExtract = !!fig.closest('#extract-body');
+    if(inExtract && view()==='attempt'){ insertFig(fig.textContent.trim()); toast(`Quoted “${fig.textContent.trim()}”`); if(matchMedia('(max-width:1023px)').matches){ st.tab='work'; renderTabs(); } return; }
+    st.activeFig = st.activeFig===fig.dataset.fig ? null : fig.dataset.fig; applyFig();
+    if(st.activeFig){
+      const other = document.querySelector(inExtract ? `#work-body .fig[data-fig="${st.activeFig}"]` : `#extract-body .fig[data-fig="${st.activeFig}"]`);
+      if(other){
+        if(matchMedia('(max-width:1023px)').matches){ st.tab = inExtract?'work':'extract'; renderTabs(); }
+        reveal(other); other.classList.remove('pulse'); void other.offsetWidth; other.classList.add('pulse');
+      } else if(inExtract){ toast('The model answer for this question doesn’t use that figure'); }
+    }
+    return;
+  }
+  const go2 = e.target.closest('[data-seg-go]'); if(go2){ focusSeg(go2.dataset.segGo, false); return; }
+  const seg = e.target.closest('.seg'); if(seg){ focusSeg(seg.dataset.seg, true); return; }
+  const id = e.target.closest('button')?.id;
+  if(id==='skip'){ qs().phase='revealed'; st.activeSeg=null; render(); save(); return; }
+  if(id==='retry'){ qs().phase='attempt'; render(); save(); $('#answer')?.focus(); return; }
+  if(id==='edit'){ qs().phase='attempt'; render(); save(); $('#answer')?.focus(); return; }
+  if(id==='more'){ qs().open=!qs().open; renderWork(); save(); return; }
+});
+
+document.addEventListener('change', e=>{
+  const t = e.target.closest('[data-tick]'); if(!t) return;
+  const s = qs(), c = t.dataset.tick;
+  s.ticks = t.checked ? [...new Set([...s.ticks, c])] : s.ticks.filter(x=>x!==c);
+  const crit = q().criteria.find(x=>x.id===c);
+  st.activeSeg = crit.seg;
+  renderWork(); renderCards(); renderDock(); save();
+  const n=$('#score-n'); if(n){ n.classList.remove('bump'); void n.offsetWidth; n.classList.add('bump'); }
+  document.getElementById('ck-'+c)?.focus();
+});
+
+$('#primary').addEventListener('click', ()=>{
+  const a = $('#primary').dataset.act, s = qs();
+  if(a==='mark'){ s.phase='marking'; st.activeSeg=null; st.tab='work'; render(); save(); $('#work-body').scrollTop=0; toast('Tick each point your answer made'); }
+  else if(a==='reveal'){ s.phase='revealed'; render(); save(); }
+  else if(a==='next'){ go(st.cur+1); }
+  else toast('In the app this returns you to 1.3.5, with your marks saved');
+});
+$('#prev').addEventListener('click', ()=>go(st.cur-1));
+$('#m-practise').addEventListener('click', ()=>{ st.mode='practise'; st.activeSeg=null; render(); save(); });
+$('#m-study').addEventListener('click', ()=>{ st.mode='study'; st.activeSeg=null; render(); save(); });
+function switchTab(t){
+  if(st.tab===t) return;
+  st.tab=t; renderTabs();
+  // Start the other pane at its top, not at whatever depth the last one was scrolled to.
+  const bar=document.querySelector('.tabs'), top=bar.parentElement.getBoundingClientRect().top+window.scrollY-56;
+  if(window.scrollY>top) window.scrollTo({top, behavior:'auto'});
+}
+$('#tab-extract').addEventListener('click', ()=>switchTab('extract'));
+$('#tab-work').addEventListener('click', ()=>switchTab('work'));
+$('#ts-up').addEventListener('click', ()=>{ st.textSize=Math.min(3,st.textSize+1); renderExtract(); save(); });
+$('#ts-down').addEventListener('click', ()=>{ st.textSize=Math.max(-1,st.textSize-1); renderExtract(); save(); });
+$('#exit').addEventListener('click', ()=>toast('Exit returns to the 1.3.5 page. Your answers are kept.'));
+$('#theme').addEventListener('click', ()=>{
+  const r=document.documentElement, dark = r.dataset.theme ? r.dataset.theme==='dark' : matchMedia('(prefers-color-scheme:dark)').matches;
+  r.dataset.theme = dark ? 'light' : 'dark';
+});
+$('#proto-btn').addEventListener('click', ()=>{ const m=$('#proto-menu'); m.hidden=!m.hidden; $('#proto-btn').setAttribute('aria-expanded', String(!m.hidden)); });
+$('#proto-menu').addEventListener('click', e=>{
+  const j = e.target.closest('[data-jump]')?.dataset.jump; if(!j) return;
+  $('#proto-menu').hidden=true; $('#proto-btn').setAttribute('aria-expanded','false');
+  if(j==='reset'){ st = freshState(); st.cur=0; st.qs.forEach(s=>{s.phase='attempt';s.draft='';s.ticks=[];s.time=0;}); }
+  if(j==='q2-write'){ st.mode='practise'; st.cur=1; st.qs[1].phase='attempt'; }
+  if(j==='q2-marked'){ st.mode='practise'; st.cur=1; st.qs[1].phase='marking'; if(!st.qs[1].draft) st.qs[1].draft=SAMPLE[1]; st.activeSeg='a2'; }
+  if(j==='q3-new'){ st.mode='practise'; st.cur=2; st.qs[2]={phase:'attempt',draft:'',ticks:[],time:0,open:false}; }
+  if(j==='study'){ st.mode='study'; st.cur=1; }
+  st.activeFig=null; if(j!=='q2-marked') st.activeSeg=null; st.tab='work';
+  render(); save();
+});
+
+document.addEventListener('keydown', e=>{
+  const typing = e.target.matches('textarea,input:not([type=checkbox])');
+  if((e.metaKey||e.ctrlKey) && e.key==='Enter'){ if(view()==='attempt' && words(qs().draft)){ e.preventDefault(); $('#primary').click(); } return; }
+  if(typing || e.metaKey || e.ctrlKey || e.altKey) return;
+  if(e.key==='ArrowRight'){ e.preventDefault(); go(st.cur+1); }
+  else if(e.key==='ArrowLeft'){ e.preventDefault(); go(st.cur-1); }
+  else if(/^[1-3]$/.test(e.key)){ e.preventDefault(); go(+e.key-1); }
+  else if(e.key==='Escape'){ if(!$('#proto-menu').hidden){ $('#proto-menu').hidden=true; return; } $('#exit').click(); }
+});
+
+matchMedia('(max-width:1023px)').addEventListener('change', renderTabs);
+
+setInterval(()=>{
+  if(document.hidden || view()!=='attempt') return;
+  qs().time++; renderDock();
+  if(qs().time % 10 === 0) save();
+}, 1000);
+
+render();
+})();
+</script>
