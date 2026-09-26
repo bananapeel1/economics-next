@@ -1,0 +1,20 @@
+api ?draft=1 flashcards: 2 served, 2 identical to the bundle by id, 0 differ (bundle has 37)
+api ?draft=1 diagrams: 7 served, 7 identical to the bundle by id, 0 differ (bundle has 7)
+api ?draft=1 mistakes: 0 served, 0 identical to the bundle by id, 0 differ (bundle has 7)
+api ?draft=1 content: 7 blocks, 35 subsections, 35 recalls; titles Public Expenditure | Public Spending as a Share of GDP | Taxes: Types, Incentives and Revenue | Tax Changes and the Macroeconomy | Fiscal Deficits and the National Debt | Macroeconomic Policies in Use | TNCs and the Limits of Policy
+  block 1: diagramId matches; first pinned quiz served -> the block's own item
+  block 2: diagramId matches; first pinned quiz served -> the block's own item
+  block 3: diagramId matches; first pinned quiz served -> the block's own item
+  block 4: diagramId matches; first pinned quiz served -> the block's own item
+  block 5: diagramId matches; first pinned quiz served -> the block's own item
+  block 6: diagramId matches; first pinned quiz served -> the block's own item
+  block 7: diagramId matches; first pinned quiz served -> the block's own item
+api live content: 2 blocks, first title "Market Failure and the State" (t=0: "Market Failure and the State")
+section_content: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_notes: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_quiz: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_practice: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_flashcards: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_diagrams: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_extras: draft == bundle; data (live) == t=0 snapshot (untouched)
+section_common_mistakes: draft == bundle; data (live) == t=0 snapshot (untouched)

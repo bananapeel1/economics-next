@@ -1,0 +1,31 @@
+C-role-state-macroeconomy-topFix-01            topFix    claimed    Rewrite content[] to the 4.3.5 spec: Block 1 'Public expenditure and taxation' (capital/cu
+C-role-state-macroeconomy-topFix-02            topFix    claimed    Wire the assessment layer to the blocks: add diagramRef ('Laffer'/'Tax Incidence' to block
+C-role-state-macroeconomy-topFix-03            topFix    claimed    Add recall widgets, one per subsection, using genuine sequences already in extras: reorder
+C-role-state-macroeconomy-topFix-04            topFix    claimed    Fix practice tariffs and formats to IAL: practice[0] 'Define fiscal policy (2 marks)' or '
+C-role-state-macroeconomy-topFix-05            topFix    claimed    Internationalise examples and remove UK-only framing (NHS, council housing, 20/40/45 bands
+C-role-state-macroeconomy-accuracy-01          accuracy  claimed    content[0] 'Market Failure and the State' > public-goods, merit-goods-redistribution (whol
+C-role-state-macroeconomy-practice-01          practice  claimed    p0: 'Define the term fiscal policy (4 marks)' does not match IAL command-word conventions:
+C-role-state-macroeconomy-structure-01         structure claimed    Content/assessment mismatch is the defining fault: 0 of 12 MCQs, 4 of 5 practice questions
+C-role-state-macroeconomy-structure-02         structure claimed    Neither block has diagramRef, quizIndices or practiceIndices (content[0] and content[1] ke
+C-role-state-macroeconomy-structure-03         structure claimed    Zero recall widgets (0 reorder, 0 fillin) in a section whose spec is full of genuine seque
+C-role-state-macroeconomy-structure-04         structure claimed    Block ordering/difficulty ramp: block 1 is AS-level Unit 1 content (easy, off-spec), block
+C-role-state-macroeconomy-structure-05         structure claimed    Subsection fiscal-monetary-supply-side compresses three policy tools into three paragraphs
+C-role-state-macroeconomy-structure-06         structure claimed    Takeaways match their blocks, but block 2 takeaway 4 (UBI) elevates an off-spec idea to a 
+C-role-state-macroeconomy-structure-07         structure claimed    Misconceptions: public-goods vs publicly-provided (real, good), merit vs public goods (rea
+C-role-state-macroeconomy-structure-08         structure claimed    notes[] (4 titles) mirror the content[] topics, so the Notes tab has the same spec gap; fl
+C-role-state-macroeconomy-specGap-01           specGap   claimed    4.3.5(a) Public expenditure: distinction between capital expenditure, current expenditure 
+C-role-state-macroeconomy-specGap-02           specGap   claimed    4.3.5(a) Reasons for the changing size and composition of public expenditure in a global c
+C-role-state-macroeconomy-specGap-03           specGap   claimed    4.3.5(a) Significance of differing levels of public expenditure as a proportion of GDP: pr
+C-role-state-macroeconomy-specGap-04           specGap   claimed    4.3.5(b) Taxation: distinction between progressive, proportional and regressive taxes — on
+C-role-state-macroeconomy-specGap-05           specGap   claimed    4.3.5(b) Economic effects of changes in direct and indirect tax rates on: incentives to wo
+C-role-state-macroeconomy-specGap-06           specGap   claimed    4.3.5(c) Public sector finances: automatic stabilisers vs discretionary fiscal policy — ab
+C-role-state-macroeconomy-specGap-07           specGap   claimed    4.3.5(c) Fiscal deficit vs national debt; structural vs cyclical deficits — absent from co
+C-role-state-macroeconomy-specGap-08           specGap   claimed    4.3.5(c) Factors influencing the size of fiscal deficits and national debt; significance o
+C-role-state-macroeconomy-specGap-09           specGap   claimed    4.3.5(d) Use of exchange rate policy and direct controls in different countries — absent.
+C-role-state-macroeconomy-specGap-10           specGap   claimed    4.3.5(d) Measures to control global companies' (TNCs) operations: regulation of transfer p
+C-role-state-macroeconomy-specGap-11           specGap   claimed    4.3.5(d) Problems facing policymakers when applying policies: inaccurate information, risk
+C-role-state-macroeconomy-specGap-12           specGap   claimed    Unsure: whether IAL 4.3.5 expects the loanable-funds crowding-out diagram (diagrams[2]) — 
+C-role-state-macroeconomy-specThin-01          specThin  claimed    4.3.5 3a) The distinction between fiscal deficits and fiscal surpluses — named but never d
+C-role-state-macroeconomy-specThin-02          specThin  claimed    4.3.5 3a) The distinction between a fiscal deficit (annual flow) and the national debt (ac
+
+29 items
