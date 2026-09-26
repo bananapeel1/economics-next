@@ -1,0 +1,1882 @@
+{
+ "section_id": "managing-change",
+ "subject": "business",
+ "label": "packet-50-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "managing-change:block:6649d74b",
+    "title": "Triggers, Effects and Speed of Change",
+    "sections": [
+     {
+      "id": "managing-change:sub:what-triggers-change",
+      "title": "What Triggers Change",
+      "keyIdea": "Change starts with a trigger: something inside the business, such as new owners or falling profit, or something outside it, such as customers, rivals or technology.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Something **triggers** every change, and naming the trigger explains why the change is happening and how urgent it is."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Internal triggers** come from inside the business. **New ownership**: a buyer who has paid for a firm wants a return and often brings its own plans. **Poor business performance**: falling sales, profit or market share force managers to act. **A change in organisational size**: a firm that has grown needs more layers, systems and specialists than it did when it was small. **A new leader**: a chief executive appointed to turn a business round usually arrives with a plan to do exactly that."
+       },
+       {
+        "type": "paragraph",
+        "text": "**External triggers** come from the market and the wider environment: customers who want to buy in a new way, a rival with a cheaper product, a new technology, a change in the law, or a downturn in the economy. A **disruptive technology** that makes the old way of doing business obsolete is an external trigger the firm must respond to, not a choice it made."
+       },
+       {
+        "type": "paragraph",
+        "text": "Harbourline Insurance in Hong Kong has 2,400 staff and 60 branches. Its new chief executive, appointed after two years of falling profit, plans to move claims onto a phone app and close 24 branches, because a new online insurer is winning customers who never visit a branch."
+       }
+      ],
+      "realExample": {
+       "emoji": "📱",
+       "text": "Harbourline's change has three triggers at once: poor performance (two years of falling profit), a new leader, and an external one — customers switching to an insurer they deal with only through an app."
+      },
+      "misconception": "Students treat every change as a free choice by managers. Most change is a response to a trigger the firm did not choose, which is why a firm that ignores the trigger can lose far more than one that changes too early.",
+      "examMatters": "Identify the trigger in the case before discussing the change. The trigger tells you how urgent the change is, and urgency is what decides how fast it can sensibly be made.",
+      "recall": {
+       "id": "managing-change:sub:what-triggers-change:recall",
+       "type": "classify",
+       "prompt": "Sort each trigger by where it comes from: inside the business or outside it.",
+       "groups": [
+        {
+         "name": "Internal trigger",
+         "items": [
+          "A family firm is bought by a private investor",
+          "Profit has fallen for three years in a row",
+          "A bakery that now runs 40 shops still has one manager"
+         ],
+         "why": "Each starts with the firm itself: its owners, its results or its own growth."
+        },
+        {
+         "name": "External trigger",
+         "items": [
+          "A new law bans single-use plastic bags",
+          "A rival launches an app that books appointments in seconds",
+          "Customers start paying by phone instead of in cash"
+         ],
+         "why": "Each starts in the market or the wider environment, which the firm does not control."
+        }
+       ]
+      }
+     },
+     {
+      "id": "managing-change:sub:effects-of-change",
+      "title": "The Effects of Change",
+      "keyIdea": "Change is made to improve productivity, competitiveness and financial performance, but it affects every stakeholder, and the costs usually arrive before the gains.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The point of change is its effect. Four are worth separating."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Productivity.** Harbourline has 600 claims handlers dealing with 90,000 claims a month, 150 each. With the app doing the form-filling, 480 handlers are expected to deal with 96,000 claims, 200 each — a rise of a third."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Competitiveness.** Faster claims and lower costs let the firm match the online insurer on price and service. **Financial performance.** Closing 24 branches cuts rent and staff costs, but the app, the redundancies and the retraining are paid for first. Profit usually dips before it rises."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Stakeholders.** Change is rarely good for everyone. Customers who like a branch lose one; 120 handler posts go; shareholders hope for higher profit later; suppliers of branch services lose contracts."
+       },
+       {
+        "type": "flow",
+        "resultType": "neutral",
+        "steps": [
+         {
+          "title": "Costs first",
+          "subtitle": "new systems, redundancy pay and training"
+         },
+         {
+          "title": "A dip while staff learn",
+          "subtitle": "output and service may fall for a time"
+         },
+         {
+          "title": "Gains later",
+          "subtitle": "higher productivity and lower costs, if the change works"
+         }
+        ],
+        "result": "Judge a change on its effects over time, not in its first few months."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏦",
+       "text": "A bank in Kenya moves account opening to its app. For six months, queries rise and staff are stretched; after a year, each branch worker handles far more customers than before."
+      },
+      "misconception": "Students assume a change that raises productivity must be good for the business as a whole. It can still fail on cost, on customer loyalty or on staff goodwill, so each effect has to be weighed, not just the one the change was aimed at.",
+      "examMatters": "When a case gives output and staff figures, calculate productivity before and after the change and say what the figure leaves out, such as quality or customer satisfaction.",
+      "recall": {
+       "id": "managing-change:sub:effects-of-change:recall",
+       "type": "reorder",
+       "prompt": "Put these in the order they happen, from the trigger to the long-run result of a change:",
+       "criterion": "chronological: each stage follows the one before it in time",
+       "correctOrder": [
+        "A new owner buys a hotel group whose profit has been falling",
+        "The owner announces that every hotel will switch to online check-in",
+        "Costs rise and guest complaints increase while staff learn the system",
+        "Each receptionist serves more guests, and the group becomes cheaper to run"
+       ],
+       "why": [
+        "The trigger comes first: new ownership after poor performance.",
+        "The trigger leads to a decision to change.",
+        "The costs and the learning dip arrive before any gain.",
+        "Productivity and cost gains are the long-run effect, if the change works."
+       ]
+      }
+     },
+     {
+      "id": "managing-change:sub:time-and-speed-of-change",
+      "title": "Time and Speed of Change",
+      "keyIdea": "Incremental change is small and gradual; step change is large and sudden. Speed matters because change too slow loses to rivals and change too fast overwhelms people.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Incremental change** is a series of small adjustments, each building on the last: a new form here, a new product feature there. It is cheaper, less risky and easier for staff to absorb. Continuous improvement, taught under quality management (2.3.4), is incremental change made a habit."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Step change** is a large, sudden shift in what the business does or how it does it, such as Harbourline moving claims to an app and closing 40% of its branches. It costs more, carries more risk and meets more resistance, but it can get a firm to where it needs to be when small adjustments would take too long."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Time and speed** are a key factor in whether change succeeds. The question is how fast the environment is changing compared with how fast the business can change. Harbourline's chief executive wants the change done in 6 months; a gradual plan would take 24."
+       },
+       {
+        "type": "paragraph",
+        "text": "Too slow, and customers leave for the rival before the app is ready. Too fast, and staff have no time to be trained, systems are not tested, mistakes reach customers and resistance hardens. Time to explain, train and test is part of the cost of change."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛒",
+       "text": "A supermarket chain in Pakistan adds self-checkouts to a few stores each year, adjusting as it learns. A rival that installed them in every store in one month faced queues, errors and staff walkouts."
+      },
+      "misconception": "Students recommend introducing change gradually as if slower were always safer, because staff have time to adjust. A gradual plan has its own cost: if customers or rivals are moving faster than the business can change, it loses them before it finishes. The right pace is set by how fast the trigger is moving.",
+      "examMatters": "If a case gives a timetable, judge it against the trigger: how quickly are customers or rivals moving? The best answers weigh the cost of being late against the cost of rushing.",
+      "recall": {
+       "id": "managing-change:sub:time-and-speed-of-change:recall",
+       "type": "fillin",
+       "prompt": "Name the type of change each firm is making — incremental or step:",
+       "template": [
+        "A café adds one new drink to its menu each season and keeps what sells: ___ change.",
+        "A newspaper stops printing overnight and becomes an online-only title: ___ change."
+       ],
+       "answers": [
+        "incremental",
+        "step"
+       ],
+       "hints": [
+        "small adjustments that build on each other",
+        "one large and sudden shift"
+       ],
+       "distractors": [
+        "external",
+        "internal"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Name the trigger first: it explains why and how urgently.",
+     "Costs arrive before gains; judge a change over time.",
+     "Incremental is gradual; step change is large and sudden."
+    ],
+    "diagramId": "managing-change:diagram:0ea0a574",
+    "quizIndices": [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "practiceIndices": [
+     1,
+     2
+    ]
+   },
+   {
+    "id": "managing-change:block:9554fce8",
+    "title": "Culture, Size and Leadership",
+    "sections": [
+     {
+      "id": "managing-change:sub:organisational-culture",
+      "title": "Organisational Culture and Change",
+      "keyIdea": "A culture that values learning and trying new things makes change easier; one that values rules, routine and seniority makes the same change slower and harder.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Organisational culture** is the shared values, beliefs and habits of the people in a business — \"the way things are done here\". It is a key factor in change because a change that fits the culture is carried along by it, and one that clashes with it is resisted by people who believe they are doing their jobs properly."
+       },
+       {
+        "type": "paragraph",
+        "text": "A culture that **eases change** values ideas from anyone, rewards trying new methods, and treats mistakes as something to learn from. Staff expect things to move and are used to being consulted."
+       },
+       {
+        "type": "paragraph",
+        "text": "A culture that **blocks change** values following the rules, doing things the way they have always been done, and deferring to seniority. At Harbourline, claims have been handled the same way for decades; long-serving handlers are proud of catching fraud by talking to customers face to face, and an app that bypasses that skill feels like an insult to it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Culture can itself be one of the things a change has to change, which takes longer than changing a system. The types of company culture, and why an established culture is hard to change, are taught in 3.3.4; here the question is how the culture a firm already has helps or hinders the change it is making."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧪",
+       "text": "A software firm in Singapore lets any team trial a new tool for a month and share what it found. When the firm changed its main system, staff had already tested it and asked for it."
+      },
+      "misconception": "Students treat culture as something managers can announce: \"the culture will now be innovative\". Culture is what people actually do and value, so it changes slowly, through what leaders reward and how they behave, not through a statement.",
+      "examMatters": "Use evidence of the culture from the case — how long staff have served, how decisions are made, how mistakes are treated — and link it to whether this particular change will be accepted.",
+      "recall": {
+       "id": "managing-change:sub:organisational-culture:recall",
+       "type": "classify",
+       "prompt": "Sort each description by whether the culture is likely to ease change or block it.",
+       "groups": [
+        {
+         "name": "Eases change",
+         "items": [
+          "Teams are praised for trying a new method even when it fails",
+          "Junior staff regularly suggest improvements that are adopted",
+          "Staff expect their jobs to look different every few years"
+         ],
+         "why": "Each shows people who value learning and are used to new ways of working."
+        },
+        {
+         "name": "Blocks change",
+         "items": [
+          "Every decision must be approved by the most senior manager",
+          "New ideas are met with \"we tried that years ago\"",
+          "Staff are judged on following procedures exactly"
+         ],
+         "why": "Each shows people who value routine and rules, so a new way of working feels like a threat."
+        }
+       ]
+      }
+     },
+     {
+      "id": "managing-change:sub:size-of-organisation",
+      "title": "Size of Organisation",
+      "keyIdea": "Large organisations have the money and specialists to fund change but many layers and sites to carry it through; small ones can change quickly but may lack the resources.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **size of organisation** changes both how easy change is and how much it costs."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Large organisations** have more layers of management, more sites and more staff to persuade. A message passed down 7 layers at Harbourline is slower and more likely to be distorted than one told to a team directly. Different departments protect their own interests, and a system used by 2,400 people is costly to replace. Against that, a large firm has the cash to pay for new systems, specialists to run the project, and enough scale to try a change in a few branches before rolling it out."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Small organisations** can change quickly. The owner may know every employee, decisions need no committee, and the reasons for a change can be explained face to face. But a small firm may not be able to afford new equipment or outside expertise, and a change that goes wrong affects the whole business rather than one division."
+       },
+       {
+        "type": "flow",
+        "resultType": "neutral",
+        "steps": [
+         {
+          "title": "More layers and sites",
+          "subtitle": "decisions and messages take longer to travel"
+         },
+         {
+          "title": "More people affected",
+          "subtitle": "more to train, more who may resist"
+         },
+         {
+          "title": "More resources",
+          "subtitle": "money and specialists to fund the change"
+         }
+        ],
+        "result": "Size slows change down and pays for it, at the same time."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏪",
+       "text": "A family-run pharmacy in Malaysia switched to digital prescriptions in a weekend after the owner trained all six staff herself. A national chain took two years to make the same change across its stores."
+      },
+      "misconception": "Students assume small firms always find change easy. They decide quickly, but a change that needs money, equipment or skills they lack can be harder for them than for a large firm that can pay for all three.",
+      "examMatters": "Tie size to the specific change: count the layers, sites or staff the case gives, and weigh the slower communication against the resources available to fund and support the change.",
+      "recall": {
+       "id": "managing-change:sub:size-of-organisation:recall",
+       "type": "match",
+       "prompt": "Match each feature of an organisation to its likely effect on a change:",
+       "pairs": [
+        {
+         "left": "Nine layers between the board and the front line",
+         "right": "Messages about the change are slow and get distorted",
+         "why": "Each layer is another point where information is delayed or reworded."
+        },
+        {
+         "left": "Large cash reserves and an in-house IT team",
+         "right": "The firm can pay for and run the new system itself",
+         "why": "Resources are the advantage size brings to change."
+        },
+        {
+         "left": "An owner who works alongside all eight employees",
+         "right": "The reasons for the change can be explained face to face",
+         "why": "In a small firm there is no chain of command for the message to pass through."
+        }
+       ]
+      }
+     },
+     {
+      "id": "managing-change:sub:transformative-leadership",
+      "title": "Transformative Leadership",
+      "keyIdea": "A transformative leader sets out a clear vision of what the business will become, explains why change is needed, and inspires and empowers staff to deliver it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Transformative leadership** is leadership that changes an organisation rather than simply running it. A transformative leader:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**sets out a vision** — a clear picture of what the business will become and why that is worth reaching;",
+         "**explains the need for change** honestly, including what will be lost;",
+         "**inspires** staff through their own example and energy, so people want to change rather than being told to;",
+         "**empowers** staff to decide how to reach the goal, and backs them when they try."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "It is a key factor in change because people follow a leader they trust through a period of uncertainty. Harbourline's new chief executive visits branches, explains that customers are leaving and why the app is the answer, and asks handlers to design how fraud checks will work in it."
+       },
+       {
+        "type": "paragraph",
+        "text": "It has limits. Change that depends on one person can stall if that person leaves, and an inspiring leader with the wrong vision takes the business confidently in the wrong direction. The everyday leadership styles a manager uses are taught in 1.3.4; transformative leadership is about leading a business through change."
+       }
+      ],
+      "realExample": {
+       "emoji": "✈️",
+       "text": "A new chief executive of a loss-making Gulf airline spends her first month working shifts at check-in, then sets one goal — the region's most punctual airline — and lets each airport team decide how to reach it."
+      },
+      "misconception": "Students equate transformative leadership with being charismatic. Charisma may help, but the substance is a vision that makes sense to staff, honest reasons for the change, and trust that lets people take part in it.",
+      "examMatters": "Look for evidence in the case of what the leader actually does — sets a direction, explains, involves — and weigh it against the risk of the change depending on one person.",
+      "recall": {
+       "id": "managing-change:sub:transformative-leadership:recall",
+       "type": "fillin",
+       "prompt": "Name what each leader is doing:",
+       "template": [
+        "The head of a school chain tells staff where the schools will be in five years and why it matters: she is setting out a ___.",
+        "A factory manager lets each shift team decide how it will meet the new safety target: he is using ___."
+       ],
+       "answers": [
+        "vision",
+        "empowerment"
+       ],
+       "hints": [
+        "a picture of the future the business is aiming for",
+        "handing staff the authority to decide how"
+       ],
+       "distractors": [
+        "coercion",
+        "negotiation"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "A change that fits the culture is carried by it.",
+     "Size slows change down and pays for it.",
+     "A transformative leader gives a vision, reasons and trust."
+    ],
+    "diagramId": "managing-change:diagram:90ab1477",
+    "quizIndices": [
+     8,
+     9,
+     10,
+     11,
+     12
+    ],
+    "practiceIndices": [
+     5
+    ]
+   },
+   {
+    "id": "managing-change:block:d40135ee",
+    "title": "Managing Resistance to Change",
+    "sections": [
+     {
+      "id": "managing-change:sub:why-people-resist-change",
+      "title": "Why People Resist Change",
+      "keyIdea": "People resist change when they expect to lose something, when they are uncertain what it means for them, or when they genuinely think it is a mistake.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Resistance to change** is any unwillingness to accept or carry out a change, from quiet foot-dragging to open refusal. Managing it starts with knowing where it comes from. There are three broad sources."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Expected loss.** Staff may lose their job, pay, status or skills that took years to learn. At Harbourline, 120 handler posts are going, and the handlers who stay will see the skill they are proudest of taken over by an app."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Uncertainty.** When people do not know what a change means for them, they tend to assume the worst. Rumours fill the gap left by poor communication, and habit makes the familiar way feel safer than an unknown one."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Genuine disagreement.** Staff may believe the change is wrong — and sometimes they are right. Handlers who warn that an app will miss fraud they would catch in conversation are raising a real risk, not just protecting themselves."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is why resistance is worth listening to before it is overcome: it can reveal a flaw in the plan while there is still time to fix it."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏭",
+       "text": "When a car-parts maker in Thailand announced robots on its welding line, the welders refused overtime. Most feared for their jobs; a few pointed out that the robots could not handle two of the parts, which proved true."
+      },
+      "misconception": "Students describe resistance as irrational stubbornness. It usually has a reason — a real loss, a real uncertainty or a real objection — and treating it as mere stubbornness means the reason is never dealt with.",
+      "examMatters": "Name the likely source of resistance for the group in the case — who loses what, and what they do not know — because the right way to manage it depends on that cause.",
+      "recall": {
+       "id": "managing-change:sub:why-people-resist-change:recall",
+       "type": "classify",
+       "prompt": "Sort each reaction by the source of resistance it shows: expected loss, uncertainty or genuine disagreement.",
+       "groups": [
+        {
+         "name": "Expected loss",
+         "items": [
+          "A supervisor whose team will be merged into another",
+          "A typist whose speed will no longer be needed"
+         ],
+         "why": "Each person stands to lose status or a valued skill."
+        },
+        {
+         "name": "Uncertainty",
+         "items": [
+          "Staff who have heard only rumours about \"restructuring\"",
+          "Workers told a new rota is coming but not what it is"
+         ],
+         "why": "Neither group knows what the change means for them, so they fear the worst."
+        },
+        {
+         "name": "Genuine disagreement",
+         "items": [
+          "Nurses who warn that a new form wastes time with patients",
+          "Engineers who say the new supplier's parts fail tests"
+         ],
+         "why": "Each group objects to the change itself, on grounds that may be correct."
+        }
+       ]
+      }
+     },
+     {
+      "id": "managing-change:sub:ways-to-reduce-resistance",
+      "title": "Ways to Reduce Resistance",
+      "keyIdea": "Managers can explain, involve, support, negotiate, bring resisters inside the project, or, as a last resort, impose the change. Each suits a different cause.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Managing resistance to change** means choosing how to respond to it. Six approaches are used, running from those that build genuine support to those that only force compliance."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Communication and education** — explaining why the change is needed and what it means, early and honestly. Suits resistance caused by missing or wrong information.",
+         "**Involvement** — letting the people affected help design the change. They are more committed to what they helped shape, and they know things managers do not.",
+         "**Support and training** — giving people the skills and time to cope. Suits fear of not being able to do the new job.",
+         "**Negotiation** — agreeing something in return, such as retraining, pay or a guarantee. Suits a group that can block the change and will lose from it.",
+         "**Co-option** — giving a leading resister a visible role in the project, so opposition turns into ownership.",
+         "**Coercion** — requiring the change, with consequences for refusing. Fast, but it breeds resentment and is kept as a last resort."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Harbourline uses several at once: it explains the app to every branch, invites handlers to design the fraud checks, and offers 70 of the 120 affected staff retraining as app-support staff."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚌",
+       "text": "A bus company in Nigeria moving to cashless fares trained every conductor, asked drivers which routes to try first, and agreed with the union that no conductor would lose pay in the first year."
+      },
+      "misconception": "Students treat communication as the answer to every kind of resistance. Explaining a change removes resistance caused by misunderstanding; it does nothing for someone who understands perfectly well that they will lose their job.",
+      "examMatters": "Match each approach you recommend to a cause of resistance in the case, and say what it costs — in time, money or goodwill — rather than listing all six.",
+      "recall": {
+       "id": "managing-change:sub:ways-to-reduce-resistance:recall",
+       "type": "match",
+       "prompt": "Match each situation to the approach that fits it best:",
+       "pairs": [
+        {
+         "left": "Staff believe, wrongly, that half of them will be sacked",
+         "right": "Communication and education",
+         "why": "The resistance rests on wrong information, so accurate information removes it."
+        },
+        {
+         "left": "Staff fear they will not cope with the new software",
+         "right": "Support and training",
+         "why": "The worry is about skills, so giving them the skills addresses it."
+        },
+        {
+         "left": "A union can stop the new shift pattern and its members lose overtime",
+         "right": "Negotiation",
+         "why": "A powerful group that loses out needs something in return."
+        },
+        {
+         "left": "Nurses know the ward routine far better than the planners do",
+         "right": "Involvement",
+         "why": "Their knowledge improves the plan, and helping shape it builds commitment."
+        }
+       ]
+      }
+     },
+     {
+      "id": "managing-change:sub:choosing-an-approach",
+      "title": "Choosing How to Manage Resistance",
+      "keyIdea": "The right approach depends on the cause of resistance, how much time there is, and how much power the resisters have. Most successful changes combine several.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "No single approach suits every change. Three questions decide the choice."
+       },
+       {
+        "type": "paragraph",
+        "text": "**What is causing the resistance?** Misunderstanding calls for communication; fear of not coping calls for training; a real loss calls for negotiation or support to find new work; a real objection calls for involvement, and perhaps a change to the plan."
+       },
+       {
+        "type": "paragraph",
+        "text": "**How much time is there?** Involvement and education take weeks or months. If the change must happen by a legal deadline, managers may have to negotiate quickly or impose it and accept the cost in goodwill."
+       },
+       {
+        "type": "paragraph",
+        "text": "**How much power do the resisters have?** A group that can stop the change, such as specialists nobody else can replace, must be won over or bargained with. A group with little power can be required to comply, but forcing them damages trust that the next change will need."
+       },
+       {
+        "type": "flow",
+        "resultType": "bad",
+        "steps": [
+         {
+          "title": "Change imposed quickly",
+          "subtitle": "no time is spent explaining or involving"
+         },
+         {
+          "title": "Staff comply but resent it",
+          "subtitle": "effort and goodwill fall"
+         },
+         {
+          "title": "Problems are hidden",
+          "subtitle": "staff stop reporting what is going wrong"
+         }
+        ],
+        "result": "Speed bought by coercion is often paid for later, in the next change."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏥",
+       "text": "A hospital in Hong Kong had eight weeks to meet a new records law. It trained all staff, involved the senior nurses in designing the forms, and made the new forms compulsory from the legal deadline."
+      },
+      "misconception": "Students present coercion as simply the wrong answer. Where time is short and the change is essential, requiring it may be the only option; what matters is that managers recognise its cost and use it last, not first.",
+      "examMatters": "A strong answer recommends a combination for the case and justifies it by cause, time and power, rather than naming a single approach as the best one.",
+      "recall": {
+       "id": "managing-change:sub:choosing-an-approach:recall",
+       "type": "fillin",
+       "prompt": "Name the approach each manager is using:",
+       "template": [
+        "The regulator's deadline is in three weeks, so a manager tells the last few staff that using the new system is compulsory: ___.",
+        "A loud critic of the plan is asked to lead the team that tests it and report to the board: ___."
+       ],
+       "answers": [
+        "coercion",
+        "co-option"
+       ],
+       "hints": [
+        "requiring the change with consequences for refusing",
+        "turning an opponent into someone who owns the project"
+       ],
+       "distractors": [
+        "involvement",
+        "education"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Resistance comes from loss, uncertainty or real disagreement.",
+     "Match each approach to the cause it addresses.",
+     "Cause, time and power decide the mix; coercion comes last."
+    ],
+    "diagramId": "managing-change:diagram:1de395c0",
+    "quizIndices": [
+     13,
+     14,
+     15,
+     16,
+     17
+    ],
+    "practiceIndices": [
+     0,
+     6
+    ]
+   },
+   {
+    "id": "managing-change:block:f1dec82f",
+    "title": "Contingency Planning: Identifying Key Risks",
+    "sections": [
+     {
+      "id": "managing-change:sub:risk-assessment",
+      "title": "Contingency Planning and Risk Assessment",
+      "keyIdea": "Contingency planning prepares for events that could stop a business. It starts by identifying key risks through risk assessment: how likely each is, and how harmful.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Contingency planning** is preparing in advance for events that may never happen but would do serious harm if they did. It does not predict the future; it asks \"what if?\" and decides what the business will do. Contingency planning is narrower than scenario planning, which imagines several possible futures for a whole market."
+       },
+       {
+        "type": "paragraph",
+        "text": "The first stage is **identifying key risks through risk assessment**. A business lists the events that could stop it working, then scores each one on two scales: its **likelihood** (how probable it is) and its **impact** (how much damage it would do). Multiplying the two gives a score, and the highest scores are the key risks that deserve a plan first."
+       },
+       {
+        "type": "paragraph",
+        "text": "Three kinds of key risk matter most for almost any business: natural disasters, IT systems failure and the loss of key staff. The next two steps take them in turn."
+       },
+       {
+        "type": "paragraph",
+        "text": "Harbourline scores each risk from 1 to 5 on both scales. A typhoon closing head office is likely but does little lasting damage, because staff can work from home. A failure of the claims system is less likely but would stop every claim being paid. The chief actuary, who prices every policy, might leave, and no one else can do the job yet."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧯",
+       "text": "A hotel group in the Maldives scores every risk it faces each year. A cyclone scores highest for its island resorts; a failure of its booking system scores highest for its city hotels."
+      },
+      "misconception": "Students confuse contingency planning with forecasting. A forecast says what is expected to happen; a contingency plan prepares for things that are not expected but would be serious if they did.",
+      "examMatters": "Where a case gives likelihood and impact, rank the risks by combining the two, and explain why a rare event with a severe impact can matter more than a frequent minor one.",
+      "recall": {
+       "id": "managing-change:sub:risk-assessment:recall",
+       "type": "reorder",
+       "prompt": "Put the stages of a risk assessment in the order a business carries them out:",
+       "criterion": "the order of the process, from the first stage to the last",
+       "correctOrder": [
+        "List every event that could stop the business operating",
+        "Score each event for how likely it is and how much damage it would do",
+        "Rank the events by their combined score",
+        "Plan responses to the highest-ranked risks first"
+       ],
+       "why": [
+        "Nothing can be scored until the risks have been identified.",
+        "Each identified risk is then judged on likelihood and impact.",
+        "The scores are what allow the risks to be ranked.",
+        "The ranking decides where planning effort goes first."
+       ]
+      }
+     },
+     {
+      "id": "managing-change:sub:natural-disasters-and-it-systems-failure",
+      "title": "Natural Disasters and IT Systems Failure",
+      "keyIdea": "Natural disasters can close sites and cut supplies; IT systems failure can stop a business trading at all. Both are key risks because their impact can be sudden and severe.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Natural disasters** are floods, typhoons, earthquakes, droughts and fires. They can close offices and factories, destroy stock, cut power and transport, and stop suppliers delivering. The risk depends on where a business and its suppliers are: a warehouse on a flood plain faces a different risk from one on high ground."
+       },
+       {
+        "type": "paragraph",
+        "text": "**IT systems failure** is the loss of the computer systems a business runs on: a hardware fault, a software error, a power cut, or a cyber attack that locks or steals data. For a business that sells online or keeps its records digitally, an IT failure can stop trading completely, and lost customer data can bring fines and lasting damage to trust."
+       },
+       {
+        "type": "paragraph",
+        "text": "Both kinds of risk rise as a business changes. Harbourline's move to an app makes it more exposed to IT systems failure: once the branches close, a claims system that fails leaves customers with no other way to claim. Two years ago the system was down for 8 days."
+       },
+       {
+        "type": "paragraph",
+        "text": "Identifying the risk means asking what would stop, for how long, and what that would cost — here, about $250,000 a day in lost business and late-payment penalties."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌊",
+       "text": "Floods in a Malaysian industrial park closed a chip supplier for three weeks. Electronics makers across the region that relied on that one supplier had to halt their own production lines."
+      },
+      "misconception": "Students think IT systems failure means a broken computer that someone can fix in an afternoon. The serious risk is losing the system the whole business depends on, or its data, for days — which is why it is treated as a key risk.",
+      "examMatters": "Link the risk to the business in the case: where it is located, how much it depends on its systems, and what stops if the risk happens. A general list of disasters earns little.",
+      "recall": {
+       "id": "managing-change:sub:natural-disasters-and-it-systems-failure:recall",
+       "type": "classify",
+       "prompt": "Sort each event by the kind of key risk it is: natural disaster or IT systems failure.",
+       "groups": [
+        {
+         "name": "Natural disaster",
+         "items": [
+          "An earthquake cracks the walls of a factory",
+          "A drought leaves a brewery short of water",
+          "A typhoon shuts the port a firm exports through"
+         ],
+         "why": "Each is caused by a natural event that damages sites, supplies or transport."
+        },
+        {
+         "name": "IT systems failure",
+         "items": [
+          "Hackers lock a retailer's ordering system and demand payment",
+          "A software update wipes a clinic's appointment records",
+          "An online store's servers crash on its busiest day"
+         ],
+         "why": "Each stops the computer systems the business runs on, or destroys their data."
+        }
+       ]
+      }
+     },
+     {
+      "id": "managing-change:sub:loss-of-key-staff",
+      "title": "Loss of Key Staff",
+      "keyIdea": "Losing a person whose knowledge, skills or relationships nobody else holds can stall a business, whether they leave suddenly or retire as planned.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Key staff** are people the business depends on and cannot easily replace: a founder, a senior manager, a specialist with rare skills, or a salesperson who holds the relationships with the biggest customers."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Loss of key staff** can be sudden — illness, death, or a rival offering more — or planned, such as retirement. Either way, the business may lose knowledge that was never written down, customer relationships, the ability to make certain decisions, and the confidence of investors or lenders."
+       },
+       {
+        "type": "paragraph",
+        "text": "The risk is greatest where one person holds something nobody else does. Harbourline's chief actuary sets the price of every policy using methods nobody else in the firm fully understands. If she left, the firm could keep selling at old prices, but it could not safely price new policies or react to a change in claims."
+       },
+       {
+        "type": "paragraph",
+        "text": "Change raises this risk too. Staff who dislike a change may leave, and the ones most able to leave are often the most skilled, because they are the easiest for rivals to hire."
+       }
+      ],
+      "realExample": {
+       "emoji": "👩‍🍳",
+       "text": "A restaurant group in Dubai lost its head chef to a rival. Three of its restaurants had menus that only she knew how to cook, and sales there fell for months while a replacement learned them."
+      },
+      "misconception": "Students think loss of key staff only means the most senior managers. A technician who alone understands an old system, or a salesperson who holds the largest accounts, can be just as hard to replace.",
+      "examMatters": "Identify who is key in the case and what exactly the business would lose — knowledge, relationships or decision-making — rather than writing that \"staff might leave\".",
+      "recall": {
+       "id": "managing-change:sub:loss-of-key-staff:recall",
+       "type": "match",
+       "prompt": "Match each key person to what the business would chiefly lose if they left:",
+       "pairs": [
+        {
+         "left": "The sales director who handles the three largest clients",
+         "right": "Customer relationships",
+         "why": "The clients deal with her personally and may follow her."
+        },
+        {
+         "left": "The only engineer who understands the old billing software",
+         "right": "Knowledge nobody else holds",
+         "why": "What he knows was never written down or shared."
+        },
+        {
+         "left": "The founder who approves every major decision",
+         "right": "The ability to make decisions",
+         "why": "With everything routed through one person, nobody else is used to deciding."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Score each risk on likelihood and impact, then rank.",
+     "Natural disasters and IT failure can stop trading suddenly.",
+     "Key staff hold what nobody else does."
+    ],
+    "diagramId": "managing-change:diagram:5e6df63e",
+    "quizIndices": [
+     18,
+     19,
+     20,
+     21,
+     22
+    ],
+    "practiceIndices": [
+     3
+    ]
+   },
+   {
+    "id": "managing-change:block:962883af",
+    "title": "Contingency Planning: Mitigating Risk",
+    "sections": [
+     {
+      "id": "managing-change:sub:business-continuity",
+      "title": "Business Continuity",
+      "keyIdea": "Business continuity planning keeps the most important activities running during a disruption, and gets the rest back as quickly as possible.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Once key risks are identified, a business plans for **risk mitigation**: reducing the chance of harm, or reducing the harm if it happens. **Business continuity** is the first of the two ways named."
+       },
+       {
+        "type": "paragraph",
+        "text": "A business continuity plan sets out, for each key risk, how the business will keep its critical activities going. It typically covers:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**critical activities** — which parts of the business must keep running, and how quickly each must be restored;",
+         "**backup systems and data** — copies held at another site, and a standby system that can take over;",
+         "**alternative ways of working** — another site, staff working from home, or a manual fallback;",
+         "**communication** — who tells staff, customers and suppliers what is happening, and how;",
+         "**testing** — rehearsing the plan, because a plan nobody has tried often fails when it is needed."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "For Harbourline, a standby claims system at a second data centre would take over within 1 day if the main one failed. Staff already work from home when a typhoon closes head office, so that risk is largely covered."
+       }
+      ],
+      "realExample": {
+       "emoji": "🖥️",
+       "text": "A bank in Singapore runs two data centres in different parts of the island. When one lost power, the other took over within minutes, and most customers never noticed."
+      },
+      "misconception": "Students think a business continuity plan prevents the disaster. It does not stop the typhoon or the system failure; it limits how long and how badly the business is disrupted when one happens.",
+      "examMatters": "Tie each part of the plan you suggest to a risk the case identifies, and say how quickly it would restore the activity that matters most to this business.",
+      "recall": {
+       "id": "managing-change:sub:business-continuity:recall",
+       "type": "match",
+       "prompt": "Match each threat to the continuity measure that best keeps the business running:",
+       "pairs": [
+        {
+         "left": "The main ordering system is knocked out by a fault",
+         "right": "A standby system at a second site takes over",
+         "why": "A second system means orders continue while the first is repaired."
+        },
+        {
+         "left": "A flood closes the office for a week",
+         "right": "Staff work from home on laptops",
+         "why": "The work moves to where the staff are, not the building."
+        },
+        {
+         "left": "The only supplier of a key part stops delivering",
+         "right": "A second supplier is kept on contract",
+         "why": "Having another source means production does not depend on one firm."
+        }
+       ]
+      }
+     },
+     {
+      "id": "managing-change:sub:succession-planning",
+      "title": "Succession Planning",
+      "keyIdea": "Succession planning identifies the roles the business cannot do without and prepares people to step into them, so that losing a key person does not stop the business.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Succession planning** is the second named way to mitigate risk, and it is the answer to the loss of key staff. It means deciding in advance who could take over each critical role, and preparing them before they are needed."
+       },
+       {
+        "type": "paragraph",
+        "text": "A succession plan starts with the roles whose loss would do the most harm, then looks for people inside the business who could fill them. Those people are developed through training, mentoring, acting as deputy and taking on parts of the role, and the knowledge held by the current post-holder is written down and shared. Where nobody inside is suitable, the plan may be to recruit from outside — which takes longer and carries more risk."
+       },
+       {
+        "type": "paragraph",
+        "text": "Harbourline has no successor for its chief actuary, who retires in 18 months. A deputy would need to be appointed now and shadow her; recruiting an actuary from outside could take most of that time on its own."
+       },
+       {
+        "type": "paragraph",
+        "text": "Succession planning also matters during change. A transformative leader who carries a change personally is a key person too: if the change depends on one chief executive, the board needs to know who could continue it."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏗️",
+       "text": "A construction firm in Kenya has each site manager train a deputy who runs the site one week in four. When a manager fell ill in the middle of a project, the deputy took over the next morning."
+      },
+      "misconception": "Students think succession planning is only about choosing the next chief executive. It applies to any role the business cannot easily fill — a specialist or a key technician as much as a director.",
+      "examMatters": "Identify the key role in the case, say who could fill it and how long they would need to be ready, and weigh the cost of developing a successor against the risk of having none.",
+      "recall": {
+       "id": "managing-change:sub:succession-planning:recall",
+       "type": "reorder",
+       "prompt": "Put the stages of a succession plan in the order they are carried out:",
+       "criterion": "the order of the process, from the first stage to the last",
+       "correctOrder": [
+        "Decide which roles the business could least afford to lose",
+        "Pick out people inside the business who could step into each of them",
+        "Train and mentor them, and let them deputise in the role",
+        "Hand the role over when the post-holder leaves or retires"
+       ],
+       "why": [
+        "The critical roles have to be known before successors can be chosen.",
+        "Candidates are identified for each critical role.",
+        "The chosen people are developed so they are ready in time.",
+        "The handover is the point the preparation was for."
+       ]
+      }
+     },
+     {
+      "id": "managing-change:sub:judging-a-contingency-plan",
+      "title": "Is a Contingency Plan Worth It?",
+      "keyIdea": "Mitigation costs money and time now to avoid a loss that may never come, so how much to plan depends on how likely and how damaging each risk is.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Planning for risk mitigation is not free. Backup systems, second suppliers, deputies and rehearsals all cost money and management time, and the event they prepare for may never happen. So a business has to judge how far each plan is worth it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Harbourline's standby claims system costs $600,000 a year. Without it, an outage like the last one lasts 8 days and costs about $2m; with it, recovery takes 1 day and costs about $250,000. In any year with one such outage, the system saves more than it costs; in a year with none, it is $600,000 spent on something that was not used."
+       },
+       {
+        "type": "paragraph",
+        "text": "The case for a plan is stronger when the risk is likely or its impact severe, when the measure is cheap compared with the loss, and when the business could not survive the loss at all. It is weaker when the risk is rare and minor, or when the plan exists on paper but has never been tested."
+       },
+       {
+        "type": "paragraph",
+        "text": "A small firm cannot plan for everything, so it plans for the few key risks that would close it; a large firm with more exposed customers is expected to plan more widely."
+       }
+      ],
+      "realExample": {
+       "emoji": "⚖️",
+       "text": "A small tour operator in Sri Lanka cannot afford a second office, so it keeps its bookings in cloud storage and has a named deputy for the owner. Those two measures cover the risks that would close it."
+      },
+      "misconception": "Students assume more contingency planning is always better. Planning costs money and attention that could go into the business itself, so it should match the likelihood and impact of each risk.",
+      "examMatters": "When a case gives the cost of a measure and the cost of the loss, compare them and then qualify the comparison: how likely is the loss, and what else — reputation, customers, the law — is at stake?",
+      "recall": {
+       "id": "managing-change:sub:judging-a-contingency-plan:recall",
+       "type": "classify",
+       "prompt": "Sort each fact by whether it strengthens or weakens the case for a contingency plan.",
+       "groups": [
+        {
+         "name": "Strengthens the case",
+         "items": [
+          "The business would close if its only warehouse burned down",
+          "A backup of all records costs very little each month",
+          "The region has had three serious floods in ten years"
+         ],
+         "why": "Each makes the loss more likely, more severe, or cheap to guard against."
+        },
+        {
+         "name": "Weakens the case",
+         "items": [
+          "The event has not happened in the industry for fifty years",
+          "The plan has been written but never rehearsed",
+          "The loss would be a few hours of minor delay"
+         ],
+         "why": "Each makes the plan less needed, or less likely to work when it is."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Continuity plans keep critical activities running.",
+     "Succession plans prepare people for key roles.",
+     "Plan in proportion to likelihood and impact."
+    ],
+    "diagramId": "managing-change:diagram:6fd09dfd",
+    "quizIndices": [
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "practiceIndices": [
+     4
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "Triggers, Effects and Speed of Change",
+    "meta": "3.3.6 · 1c",
+    "keyIdea": "Triggers start change, its effects arrive over time, and speed decides whether it succeeds.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Internal triggers</strong> — new ownership, poor business performance, a change in organisational size, a new leader."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>External triggers</strong> — customers, competitors, technology, the law, the economy."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Incremental change</strong> — small, gradual adjustments. <strong>Step change</strong> — a large, sudden shift."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Productivity: 90,000 ÷ 600 = 150 claims a handler; 96,000 ÷ 480 = 200. A rise of 33.33%."
+       },
+       {
+        "type": "mechanism",
+        "text": "Effects over time: costs first, a dip while staff learn, gains later."
+       },
+       {
+        "type": "link",
+        "text": "Too slow loses customers to rivals; too fast leaves no time to train, test or explain."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Trigger, then effects.",
+     "Costs before gains.",
+     "Speed against urgency."
+    ]
+   },
+   {
+    "title": "Culture, Size and Leadership",
+    "meta": "3.3.6 · 1a, 1b, 1e",
+    "keyIdea": "Culture, size and leadership decide how easily the same change is accepted and carried through.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Organisational culture</strong> — the shared values, beliefs and habits of the people in a business."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Size of organisation</strong> — more layers, sites and staff slow change; more money and specialists fund it."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Transformative leadership</strong> — a leader who sets a vision, explains why, inspires and empowers."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "A change that fits the culture is carried along by it; one that clashes meets resistance from people doing their jobs as they believe is right."
+       },
+       {
+        "type": "mechanism",
+        "text": "A message passed down 7 layers travels slowly and gets distorted."
+       },
+       {
+        "type": "link",
+        "text": "Change led by one person can stall if that person leaves."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Fit the culture or change it slowly.",
+     "Size: slower, better funded.",
+     "Vision, reasons, trust."
+    ]
+   },
+   {
+    "title": "Managing Resistance to Change",
+    "meta": "3.3.6 · 1d",
+    "keyIdea": "Find the cause of resistance, then choose the approach that addresses it, given the time and the power of those resisting.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Sources of resistance</strong> — expected loss, uncertainty, genuine disagreement."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Approaches</strong> — communication and education; involvement; support and training; negotiation; co-option; coercion."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Misunderstanding → communication. Fear of not coping → training. Real loss → negotiation. Real objection → involvement."
+       },
+       {
+        "type": "mechanism",
+        "text": "Little time and an essential change → coercion, at a cost in goodwill."
+       },
+       {
+        "type": "link",
+        "text": "Resistance can reveal a flaw in the plan; listen before overcoming it."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Cause first.",
+     "Combine approaches.",
+     "Coercion last."
+    ]
+   },
+   {
+    "title": "Contingency Planning: Identifying Key Risks",
+    "meta": "3.3.6 · 2a",
+    "keyIdea": "Identify key risks through risk assessment: score likelihood and impact, rank, and plan for the highest first.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Contingency planning</strong> — preparing in advance for events that may not happen but would do serious harm."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Risk assessment</strong> — scoring each risk for likelihood and impact, and ranking them."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Key risks</strong> — natural disasters; IT systems failure; loss of key staff."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Harbourline: typhoon closes head office 4 × 2 = 8; claims system fails 3 × 5 = 15; chief actuary leaves 3 × 4 = 12."
+       },
+       {
+        "type": "mechanism",
+        "text": "A rare event with a severe impact can outrank a frequent minor one."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Likelihood × impact.",
+     "Rank, then plan.",
+     "Tie risks to the firm."
+    ]
+   },
+   {
+    "title": "Contingency Planning: Mitigating Risk",
+    "meta": "3.3.6 · 2b",
+    "keyIdea": "Mitigate key risks with business continuity and succession planning, in proportion to what each risk could cost.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Business continuity</strong> — keeping critical activities running during a disruption: backups, standby systems, alternative sites, communication, testing."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Succession planning</strong> — preparing people in advance to step into roles the business cannot do without."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Standby system: $600,000 a year. One outage cut from 8 days to 1 saves $1.75m."
+       },
+       {
+        "type": "link",
+        "text": "An untested plan often fails when it is needed."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Keep critical activities going.",
+     "Prepare successors early.",
+     "Plan in proportion."
+    ]
+   }
+  ],
+  "quiz": [
+   {
+    "id": "managing-change:quiz:373c2c34",
+    "question": "A business changes the way it works because its profit has fallen for three years. This is:",
+    "options": [
+     "an external trigger",
+     "an internal trigger",
+     "a natural disaster",
+     "a succession plan"
+    ],
+    "explanation": "Falling profit is poor business performance, which starts inside the firm itself. An external trigger comes from customers, rivals, technology or the law; a natural disaster is a key risk, and a succession plan is a way of mitigating the loss of key staff.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-change:quiz:0f58be49",
+    "question": "Which of these is a step change?",
+    "options": [
+     "Moving all sales online and closing half the shops",
+     "Adding one new drink to a menu each season",
+     "Rewording a form after customer feedback",
+     "Shortening a delivery route by a few minutes"
+    ],
+    "explanation": "Moving all sales online and closing half the shops is one large, sudden shift in how the business works. The other three are small adjustments that build on what already exists, which is incremental change.",
+    "correctIndex": 0
+   },
+   {
+    "id": "managing-change:quiz:da5b6878",
+    "question": "Productivity rises when a business:",
+    "options": [
+     "employs more workers for the same output",
+     "produces more output per worker",
+     "raises the price of its product",
+     "closes its most profitable branch"
+    ],
+    "explanation": "Productivity is output per worker, so it rises when each worker produces more. More workers for the same output lowers it, and a higher price or a closed branch changes revenue, not output per worker.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-change:quiz:52c9ff51",
+    "question": "A new online rival is winning customers from an insurer that deals only face to face. For the insurer this is:",
+    "options": [
+     "an internal trigger for change",
+     "an incremental change",
+     "a loss of key staff",
+     "an external trigger for change"
+    ],
+    "explanation": "The pressure comes from the market, a rival the insurer does not control, so it is an external trigger. Internal triggers start inside the firm, such as new owners or falling profit, and a trigger is the reason for a change rather than the change itself.",
+    "correctIndex": 3
+   },
+   {
+    "id": "managing-change:quiz:1acb4ce0",
+    "question": "A team of 40 handles 8,000 claims a month. After a change, 32 staff handle the same 8,000. Output per worker rises by:",
+    "options": [
+     "20%",
+     "8%",
+     "25%",
+     "80%"
+    ],
+    "explanation": "Output per worker is 8,000 ÷ 40 = 200 before and 8,000 ÷ 32 = 250 after. The rise is 50 on 200, which is 25%. Taking the fall in staff, 8 of 40, gives 20%, which measures the workforce and not productivity.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-change:quiz:cbaa14cc",
+    "question": "Why do the costs of a change usually arrive before its gains?",
+    "options": [
+     "New systems, training and redundancy are paid for before output improves",
+     "Rivals copy the change as soon as it is announced",
+     "Suppliers raise their prices once a change is announced",
+     "Wages rise automatically when a change is complete"
+    ],
+    "explanation": "Systems, training and redundancy pay are spent at the start, and output often dips while staff learn the new way of working. The gains in productivity and cost come later, if the change works; the other reasons do not follow from making a change.",
+    "correctIndex": 0
+   },
+   {
+    "id": "managing-change:quiz:987cfee6",
+    "question": "A step change is most likely to be justified when:",
+    "options": [
+     "the firm wants to keep cost and risk as low as it can",
+     "staff have asked for small improvements to one form",
+     "the market is stable and rivals are not changing",
+     "the trigger is urgent and the gap to close is large"
+    ],
+    "explanation": "Step change costs more and meets more resistance, so it is worth it when small adjustments would take too long to close a large gap. Low cost and risk, small requested improvements and a stable market all point to incremental change.",
+    "correctIndex": 3
+   },
+   {
+    "id": "managing-change:quiz:3519f014",
+    "question": "A firm installs a new system in every branch within one month. The most likely problem is that:",
+    "options": [
+     "staff are untrained and errors reach customers",
+     "rivals move faster and win its customers",
+     "the change is too small to make a difference",
+     "the firm responds too slowly to its trigger"
+    ],
+    "explanation": "Rushing leaves no time to train staff or test the system, so mistakes reach customers and resistance hardens. Losing customers to faster rivals and responding too slowly are the risks of change that is too slow, and a change to every branch is not small.",
+    "correctIndex": 0
+   },
+   {
+    "id": "managing-change:quiz:558db071",
+    "question": "Which evidence suggests a firm's culture will make a new way of working harder to introduce?",
+    "options": [
+     "Junior staff often suggest improvements that are adopted",
+     "Long-serving staff take pride in doing things the traditional way",
+     "Teams share what they learned from trials that failed",
+     "Managers consult staff before most decisions"
+    ],
+    "explanation": "Pride in the traditional way means people value routine, so a new method feels like a threat to doing the job properly. Adopting suggestions, learning from failed trials and consulting staff all describe a culture used to new ways of working.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-change:quiz:eac94986",
+    "question": "Why can a change take longer to carry through in a large organisation?",
+    "options": [
+     "It has less money to pay for new systems",
+     "Its owner knows each employee personally",
+     "More layers and staff slow messages and decisions",
+     "It has fewer specialists to run the project"
+    ],
+    "explanation": "Each layer of management delays and rewords the message, and more people have to be persuaded and trained. A large firm usually has more money and specialists, not fewer, and an owner who knows each employee describes a small firm.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-change:quiz:fb66b553",
+    "question": "A small firm may find a change harder than a large one when the change needs:",
+    "options": [
+     "a quick decision by the owner",
+     "the reasons explained face to face",
+     "agreement from a handful of staff",
+     "expensive equipment or specialist skills"
+    ],
+    "explanation": "A small firm decides quickly and can explain a change directly, but it may not be able to pay for new equipment or outside expertise. A quick decision, face-to-face explanation and a handful of staff are all advantages of being small.",
+    "correctIndex": 3
+   },
+   {
+    "id": "managing-change:quiz:c6d401cf",
+    "question": "A transformative leader is most likely to:",
+    "options": [
+     "keep the business running exactly as it is",
+     "make the big decisions alone and in private",
+     "set out a vision and empower staff to reach it",
+     "rely on penalties to make staff comply"
+    ],
+    "explanation": "Transformative leadership changes an organisation: it sets a direction, explains why, and hands staff the authority to decide how. Running things as they are describes managing rather than transforming, and deciding alone or relying on penalties takes the involvement out of it.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-change:quiz:a32ebe72",
+    "question": "What is a limitation of a change that depends on one transformative leader?",
+    "options": [
+     "It may stall if that leader leaves",
+     "It removes the need to explain the reasons",
+     "It makes staff less likely to trust anyone",
+     "It stops the firm from changing its culture"
+    ],
+    "explanation": "People follow a leader they trust, so a change carried by one person can lose momentum if that person goes. A transformative leader explains the reasons, builds trust, and can help a culture change over time.",
+    "correctIndex": 0
+   },
+   {
+    "id": "managing-change:quiz:b7cbc60b",
+    "question": "Staff resist a new rota because they fear they will not cope with its software. The approach that best fits is:",
+    "options": [
+     "support and training",
+     "imposing it with penalties",
+     "co-opting a leading critic",
+     "negotiating a pay deal"
+    ],
+    "explanation": "The worry is about skills, so giving staff the skills and time to use the software addresses its cause. Coercion forces the change without removing the fear, co-option suits a leading opponent, and negotiation suits a powerful group that loses something.",
+    "correctIndex": 0
+   },
+   {
+    "id": "managing-change:quiz:1aba3914",
+    "question": "Staff oppose a change because of a rumour that their office will close, which is untrue. The best response is:",
+    "options": [
+     "imposing it with penalties",
+     "communication and education",
+     "negotiating a pay rise",
+     "co-opting a leading critic"
+    ],
+    "explanation": "The resistance rests on wrong information, so explaining the change accurately removes it. Coercion and negotiation deal with people who understand the change and still oppose it, and co-option brings a leading critic into the project.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-change:quiz:2e2646ec",
+    "question": "Which source of resistance may reveal a real flaw in a plan?",
+    "options": [
+     "fear of losing status",
+     "uncertainty caused by rumours",
+     "habit and comfort with old ways",
+     "genuine disagreement with the change"
+    ],
+    "explanation": "People who object to the change itself may be right, which is why their resistance is worth hearing while the plan can still be fixed. Fear of losing status, uncertainty and habit say something about the people affected rather than about the plan.",
+    "correctIndex": 3
+   },
+   {
+    "id": "managing-change:quiz:53defc9b",
+    "question": "Coercion is usually kept as a last resort because it:",
+    "options": [
+     "wins compliance but damages trust and goodwill",
+     "is the slowest of the six approaches",
+     "needs staff to help design the change",
+     "means paying staff to accept the change"
+    ],
+    "explanation": "Requiring a change is fast, but people who comply without agreeing put in less effort and trust managers less for the next change. It is not slow, it involves no one in the design, and paying staff to accept a change is negotiation.",
+    "correctIndex": 0
+   },
+   {
+    "id": "managing-change:quiz:b2aa46e5",
+    "question": "A group of specialists that nobody else can replace opposes a change. Managers are most likely to need to:",
+    "options": [
+     "impose the change on them quickly",
+     "leave them out until the change is done",
+     "replace them with outside recruits",
+     "win them over or bargain with them"
+    ],
+    "explanation": "A group with the power to stop a change has to be persuaded, involved or offered something in return. Forcing them, excluding them or trying to replace people nobody else can replace all risk the change itself.",
+    "correctIndex": 3
+   },
+   {
+    "id": "managing-change:quiz:7b7e31b0",
+    "question": "Risk one scores likelihood 1 and impact 5. Risk two scores likelihood 3 and impact 2. Using likelihood × impact:",
+    "options": [
+     "risk two ranks higher, scoring 6 against 5",
+     "risk one ranks higher, scoring 5 against 6",
+     "they rank equally, scoring 5 each",
+     "risk one ranks higher, scoring 10 against 6"
+    ],
+    "explanation": "Risk one scores 1 × 5 = 5 and risk two scores 3 × 2 = 6, so the more frequent, moderate risk ranks above the rare, severe one here. A business may still plan for the severe one if it would threaten the whole firm.",
+    "correctIndex": 0
+   },
+   {
+    "id": "managing-change:quiz:5727dfd3",
+    "question": "Contingency planning differs from forecasting because it:",
+    "options": [
+     "predicts what sales will be next year",
+     "sets the budget for each department",
+     "prepares for events that may not happen",
+     "ranks staff by their performance"
+    ],
+    "explanation": "A forecast says what is expected to happen; contingency planning asks \"what if?\" about events that are not expected but would do serious harm. Setting budgets and ranking staff are separate management tasks.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-change:quiz:94c77b50",
+    "question": "Which of these is an IT systems failure?",
+    "options": [
+     "A flood closes the firm's warehouse",
+     "The finance director resigns suddenly",
+     "A cyber attack locks the firm's customer records",
+     "A rival launches a cheaper product"
+    ],
+    "explanation": "A cyber attack stops the computer systems the business runs on, which is an IT systems failure. A flood is a natural disaster, a sudden resignation is a loss of key staff, and a cheaper rival is an external trigger for change rather than a key risk of this kind.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-change:quiz:63af9336",
+    "question": "Why is the loss of key staff a risk even when a retirement has been planned?",
+    "options": [
+     "The department they ran has to be closed",
+     "Their pay continues for a year after they go",
+     "Customers cannot be told who replaces them",
+     "Knowledge that was never written down may leave too"
+    ],
+    "explanation": "A key person often holds knowledge or relationships nobody else has, and a planned departure still takes them away unless a successor has been prepared. Closing a department, paying a retired person and keeping a replacement secret do not follow from a retirement.",
+    "correctIndex": 3
+   },
+   {
+    "id": "managing-change:quiz:b1b1db3f",
+    "question": "A retailer closes its shops and moves all its sales online. Which key risk rises most?",
+    "options": [
+     "loss of key staff",
+     "a flood closing one shop",
+     "IT systems failure",
+     "a drought cutting water supply"
+    ],
+    "explanation": "Once every sale goes through its website, a system that fails leaves customers no other way to buy. Closing the shops removes the risk of a flood closing one, and neither key staff nor water supply becomes more exposed because of the move.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-change:quiz:83c432ff",
+    "question": "Succession planning mainly reduces the risk of:",
+    "options": [
+     "a flood closing head office",
+     "a key role being left empty",
+     "the claims system failing",
+     "customers moving to a rival"
+    ],
+    "explanation": "Succession planning prepares people in advance to step into roles the business cannot do without, which is the answer to the loss of key staff. Floods and system failures are covered by business continuity, and losing customers to a rival is a trigger for change.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-change:quiz:ba99ecdc",
+    "question": "A business continuity plan is designed to:",
+    "options": [
+     "stop a natural disaster happening",
+     "keep critical work going in a disruption",
+     "forecast next year's sales",
+     "choose the next chief executive"
+    ],
+    "explanation": "Business continuity keeps the most important activities running while something is wrong and restores the rest quickly. No plan can stop a disaster, forecasting is a different task, and preparing the next chief executive is succession planning.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-change:quiz:b00fe98b",
+    "question": "A backup system costs $100,000 a year. An outage would cost $900,000 without it and $150,000 with it. In a year with one outage, the backup saves, net of its cost:",
+    "options": [
+     "$750,000",
+     "$650,000",
+     "$800,000",
+     "$900,000"
+    ],
+    "explanation": "The backup cuts the loss from $900,000 to $150,000, a saving of $750,000, and costs $100,000, so the net saving is $650,000. In a year with no outage, the same system is $100,000 spent on something that was not used.",
+    "correctIndex": 1
+   },
+   {
+    "id": "managing-change:quiz:3b7b9f5a",
+    "question": "The case for a contingency plan is weakest when the risk is:",
+    "options": [
+     "likely and its impact severe",
+     "likely and cheap to guard against",
+     "rare and its impact minor",
+     "rare but would close the business"
+    ],
+    "explanation": "A plan costs money and time, so it is least worth it for a risk that seldom happens and does little harm. A likely, severe risk, a cheap safeguard, or a loss the business could not survive all strengthen the case.",
+    "correctIndex": 2
+   },
+   {
+    "id": "managing-change:quiz:ca2a49f3",
+    "question": "What is the main reason for rehearsing a continuity plan before it is needed?",
+    "options": [
+     "Rehearsal stops the disruption from happening",
+     "Rehearsal removes the need to back up data",
+     "Rehearsal lets staff skip other training",
+     "An untried plan often fails when it is needed"
+    ],
+    "explanation": "Testing shows whether the backups, standby systems and contact lists actually work before a real disruption. It does not prevent the disruption, and it depends on the backups rather than replacing them.",
+    "correctIndex": 3
+   }
+  ],
+  "practice": [
+   {
+    "id": "managing-change:practice:15a67962",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Explain one reason why claims handlers at Harbourline may resist the change. (4 marks)",
+    "guidance": "The question asks for ONE reason, so choose the one the source gives most evidence for and develop it rather than listing several. Say which group resists, what they expect to lose or do not know, and finish on what that means for the change.\nKnowledge: a reason people resist change, such as expected loss, uncertainty or genuine disagreement (1 mark). Application: 120 handler posts are going, or long-serving handlers take pride in spotting false claims face to face (1 mark). Analysis: handlers who expect to lose their job, or a skill the app takes over, have a personal reason to oppose it (1 mark). Analysis: so they may work slowly, refuse to help design the app, or leave, which delays the change (1 mark). A second reason earns nothing extra; developing one fully does."
+   },
+   {
+    "id": "managing-change:practice:1bfc78d6",
+    "command": "Calculate",
+    "marks": 4,
+    "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Calculate the percentage change in the number of claims dealt with by each handler per month. (4 marks)",
+    "guidance": "Work out claims per handler before and after the change separately, then compare them. Show each division on its own line, and state the change as a percentage of the figure before.\nBefore: 90,000 ÷ 600 = 150 claims per handler (1 mark). After: 96,000 ÷ 480 = 200 (1 mark). Change: 50 ÷ 150 × 100 (1 mark) = 33.33%, a rise (1 mark). An answer that divides by the figure after the change, or compares total claims, has not measured productivity."
+   },
+   {
+    "id": "managing-change:practice:c14bf0c4",
+    "command": "Discuss",
+    "marks": 8,
+    "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Discuss whether Harbourline should complete the change in 6 months rather than 24. (8 marks)",
+    "guidance": "Start from the trigger: how quickly are customers leaving, and what does that say about urgency? Then set the cost of being late against the cost of rushing for this firm in particular, using what the source says about its staff and systems. Leave space for a brief assessment of the balance.\nLevel 1: states that faster or slower change has advantages, with little use of the source. Level 2: knowledge and application — customers are moving to an online insurer and profit has fallen for two years, so delay costs business; but 120 posts go, handlers are long-serving and proud of their face-to-face skill, and 70 people must be retrained. Level 3: analysis of both sides — 6 months stops the loss of customers sooner, while leaving little time to train staff, test the app or explain the change, so errors reach customers and resistance hardens; 24 months allows training and involvement, while more customers leave in the meantime. Level 4: a brief assessment weighing the two, for example that the answer depends on how fast customers are leaving and whether the app has been tested, and that a middle path such as starting in a few branches may reduce both risks. Discuss needs this assessment; it does not need a final recommendation."
+   },
+   {
+    "id": "managing-change:practice:48a33c8d",
+    "command": "Assess",
+    "marks": 12,
+    "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Assess which of the risks in Source A Harbourline should give priority to in its contingency planning. (12 marks)",
+    "guidance": "Use the scores the source gives, but do not stop at them. Rank the risks, then ask what each score leaves out — how the change alters each risk, and whether any risk could stop the business altogether. Decide before you write what your judgement will turn on.\nLevel 1: knowledge of risk assessment or of the three kinds of key risk, described generally. Level 2: application — typhoon closes head office scores 4 × 2 = 8; claims system fails scores 3 × 5 = 15; chief actuary leaves scores 3 × 4 = 12, so the claims system ranks highest. Level 3: analysis — once branches close, a failed claims system leaves customers no other way to claim, and the last outage lasted 8 days at about $250,000 a day; the chief actuary retires in 18 months with no deputy, so that risk is close to certain in timing and nobody else can price policies; a typhoon is likely but staff can work from home. Level 4: evaluation reaching a supported judgement, for example that the claims system comes first because the change itself raises its impact, with the actuary a close second because the retirement date is known and a successor takes time to prepare.\nA strong answer, in outline: the scores rank the claims system first; the move to an app makes that risk more serious, not less; the actuary's retirement is a known date with no successor, which the score understates; so the claims system comes first and succession planning for the actuary must start at once."
+   },
+   {
+    "id": "managing-change:practice:e2269b82",
+    "command": "Assess",
+    "marks": 12,
+    "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Assess whether the standby claims system is worth its cost to Harbourline. (12 marks)",
+    "guidance": "Compare what the standby system costs with what it would save in an outage like the last one, then ask how often such an outage is likely. Bring in what the figures leave out, and finish with a judgement that says what it depends on.\nLevel 1: knowledge of business continuity or backup systems, described generally. Level 2: application — without the standby system an outage like the last one costs 8 × $250,000 = $2m; with it, recovery within 1 day costs about $250,000, a saving of $1.75m against a cost of $600,000 a year. Level 3: analysis — in a year with one outage the system more than pays for itself; in a year with none it is money spent on something unused; once branches close the claims system is the only way to claim, so the loss in customer trust is larger than the daily figure shows. Level 4: evaluation reaching a supported judgement, for example that the system is worth it because one outage every few years covers its cost and the change raises the impact of failure, provided it is tested.\nA strong answer, in outline: one outage saves $1.75m against a yearly cost of $600,000; the app makes the business depend on the system entirely; so the standby system is worth it if outages happen at least every few years, and only if it is rehearsed so that it works when needed."
+   },
+   {
+    "id": "managing-change:practice:d528c9da",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Evaluate whether the new chief executive's leadership is the most important factor in the success of the change at Harbourline. (20 marks)",
+    "guidance": "Weigh leadership against the other key factors in change the source gives evidence for — the culture, the size of the organisation, and the time allowed — rather than writing about leadership alone. Decide what \"most important\" will depend on, and end with a recommendation that says what would change it.\nLevel 1: describes leadership or other factors in change with little reference to the source. Level 2: knowledge and application — a transformative leader sets a vision and empowers staff; the source shows a culture of long-serving handlers proud of face-to-face checks, 2,400 staff across 7 layers, and a 6-month timetable. Level 3: analysis — leadership that explains why customers are leaving and involves handlers in designing fraud checks can win support; but the culture values the old skill, a message passing down 7 layers is slow and distorted, and a short timetable leaves little time to train and explain; a change carried by one person may stall if she leaves. Level 4: evaluation — judges which factor matters most for this firm, for example that leadership matters most because it is the one factor that can shape the others (explaining, involving, setting the pace), while the culture is the biggest obstacle; the recommendation states the condition that would change it.\nA strong answer, in outline: leadership can set the vision and involve staff; the culture and the size of the firm are the obstacles leadership has to overcome; speed decides whether there is time to do so; so leadership is the most important factor only if the chief executive allows enough time and involves the handlers, and a successor is identified in case she leaves."
+   },
+   {
+    "id": "managing-change:practice:05a88a0e",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Evaluate how Harbourline should manage resistance to the change from its claims handlers. (20 marks)",
+    "guidance": "Identify the causes of resistance the source gives evidence for, because each approach suits a different cause. Then weigh the approaches against the time available and the power the handlers have, and recommend a combination rather than a single answer.\nLevel 1: describes ways of reducing resistance in general terms. Level 2: knowledge and application — 120 posts go (expected loss), handlers are proud of face-to-face fraud checks (loss of a valued skill, and perhaps a genuine objection), and the timetable is 6 months. Level 3: analysis — communication explains why customers are leaving; involvement lets handlers design the app's fraud checks, using what they know; retraining 70 people as app-support staff and supporting the 50 who leave addresses the loss; coercion is quick but damages trust that the next change will need. Level 4: evaluation — judges the best combination for this firm, for example that involvement matters most because the handlers' objection may be right, supported by retraining and honest communication, with coercion kept for the last few if the timetable forces it; the recommendation states what would change it.\nA strong answer, in outline: the causes are job loss and a threatened skill; communication and retraining address the first, involvement the second; coercion is fast but costly in goodwill; so recommend involvement plus retraining, which needs more than a six-month timetable, and use coercion only as a last resort."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "managing-change:flashcard:d6802b17",
+    "front": "What is a trigger for change?",
+    "back": "The event or pressure that starts a change. Internal triggers come from inside the firm; external triggers come from the market and the wider environment."
+   },
+   {
+    "id": "managing-change:flashcard:c7e9cfc9",
+    "front": "Name four internal triggers for change.",
+    "back": "New ownership; poor business performance; a change in organisational size; a new leader."
+   },
+   {
+    "id": "managing-change:flashcard:716521ee",
+    "front": "Name four external triggers for change.",
+    "back": "Customers wanting to buy in a new way; a rival's product; new technology; a change in the law or the economy."
+   },
+   {
+    "id": "managing-change:flashcard:b50ddcf6",
+    "front": "What are the effects of change to consider?",
+    "back": "Productivity, competitiveness, financial performance and the effect on each group of stakeholders."
+   },
+   {
+    "id": "managing-change:flashcard:2e308869",
+    "front": "Why does profit often dip before it rises after a change?",
+    "back": "Systems, training and redundancy are paid for first, and output can fall while staff learn; the gains come later, if the change works."
+   },
+   {
+    "id": "managing-change:flashcard:160a914d",
+    "front": "Incremental change or step change?",
+    "back": "Incremental change is a series of small, gradual adjustments. Step change is a large, sudden shift in what the business does or how it does it."
+   },
+   {
+    "id": "managing-change:flashcard:2990c0f8",
+    "front": "Why does the speed of change matter?",
+    "back": "Too slow and customers or rivals move first; too fast and staff are untrained, systems untested and resistance hardens."
+   },
+   {
+    "id": "managing-change:flashcard:8ca57c0d",
+    "front": "What is organisational culture?",
+    "back": "The shared values, beliefs and habits of the people in a business: \"the way things are done here\"."
+   },
+   {
+    "id": "managing-change:flashcard:cefdb397",
+    "front": "How does culture affect change?",
+    "back": "A change that fits the culture is carried along by it; one that clashes with it is resisted by people who think they are doing their jobs properly."
+   },
+   {
+    "id": "managing-change:flashcard:736cfb59",
+    "front": "How does the size of an organisation affect change?",
+    "back": "More layers, sites and staff slow messages and decisions, but a large firm has the money and specialists to fund the change."
+   },
+   {
+    "id": "managing-change:flashcard:79aae3ab",
+    "front": "What is transformative leadership?",
+    "back": "Leadership that changes an organisation: setting out a vision, explaining why change is needed, inspiring staff and empowering them to deliver it."
+   },
+   {
+    "id": "managing-change:flashcard:d764cadb",
+    "front": "What is a limitation of transformative leadership?",
+    "back": "A change carried by one person can stall if that person leaves, and a confident leader with the wrong vision leads the firm the wrong way."
+   },
+   {
+    "id": "managing-change:flashcard:116329eb",
+    "front": "What are the three sources of resistance to change?",
+    "back": "Expected loss (job, pay, status, skills); uncertainty about what the change means; genuine disagreement with the change."
+   },
+   {
+    "id": "managing-change:flashcard:b5ba6627",
+    "front": "Name the six approaches to managing resistance.",
+    "back": "Communication and education; involvement; support and training; negotiation; co-option; coercion."
+   },
+   {
+    "id": "managing-change:flashcard:d71f43fc",
+    "front": "What decides which approach to resistance to use?",
+    "back": "The cause of the resistance, how much time there is, and how much power the resisters have."
+   },
+   {
+    "id": "managing-change:flashcard:35760e27",
+    "front": "Why is coercion a last resort?",
+    "back": "It is fast, but people who comply without agreeing lose trust and goodwill, which the next change will need."
+   },
+   {
+    "id": "managing-change:flashcard:34ab7f3c",
+    "front": "What is contingency planning?",
+    "back": "Preparing in advance for events that may not happen but would do serious harm if they did."
+   },
+   {
+    "id": "managing-change:flashcard:35820d36",
+    "front": "How are key risks identified?",
+    "back": "Through risk assessment: list the risks, score each for likelihood and impact, multiply, rank, and plan for the highest first."
+   },
+   {
+    "id": "managing-change:flashcard:1d2b6aa2",
+    "front": "What are the three key risks to know?",
+    "back": "Natural disasters; IT systems failure; loss of key staff."
+   },
+   {
+    "id": "managing-change:flashcard:d77495a0",
+    "front": "What is IT systems failure?",
+    "back": "The loss of the computer systems a business runs on, from a fault, a power cut or a cyber attack; it can stop trading and lose data."
+   },
+   {
+    "id": "managing-change:flashcard:3e9d5a50",
+    "front": "Who counts as key staff?",
+    "back": "Anyone the business depends on and cannot easily replace: a founder, a senior manager, a specialist, or the holder of key customer relationships."
+   },
+   {
+    "id": "managing-change:flashcard:08d332b1",
+    "front": "What is risk mitigation?",
+    "back": "Reducing the chance of harm, or the harm done if the event happens. Business continuity and succession planning are two ways."
+   },
+   {
+    "id": "managing-change:flashcard:040a4361",
+    "front": "What does a business continuity plan cover?",
+    "back": "Critical activities and how fast to restore them; backups and standby systems; alternative ways of working; communication; testing."
+   },
+   {
+    "id": "managing-change:flashcard:358c6bd3",
+    "front": "What is succession planning?",
+    "back": "Deciding in advance who could take over each critical role, and preparing them through training, mentoring and deputising."
+   },
+   {
+    "id": "managing-change:flashcard:ef4059e2",
+    "front": "When is a contingency plan most worth its cost?",
+    "back": "When the risk is likely or its impact severe, the measure is cheap compared with the loss, or the business could not survive the loss."
+   }
+  ],
+  "mistakes": [
+   {
+    "id": "managing-change:mistake:cbab6bb3",
+    "title": "Treating resistance as irrational",
+    "mistake": "Writing that staff resist change because they are stubborn, and recommending that managers push harder.",
+    "correction": "Resistance usually has a cause: an expected loss, uncertainty, or a genuine objection that may be right. The response has to fit the cause.",
+    "examTip": "Name the cause of resistance for the group in the case before recommending how to manage it."
+   },
+   {
+    "id": "managing-change:mistake:5c0bf9ee",
+    "title": "Recommending one approach to resistance for every case",
+    "mistake": "Answering that \"communication\" is the way to overcome resistance, whatever the situation.",
+    "correction": "Communication fixes misunderstanding; it does nothing for someone who understands they will lose their job. Most changes need a combination of approaches.",
+    "examTip": "Justify each approach by the cause of resistance, the time available and the power of the people resisting."
+   },
+   {
+    "id": "managing-change:mistake:f5a41b2f",
+    "title": "Treating speed as a strength in itself",
+    "mistake": "Praising a change for being completed quickly without asking what the speed cost.",
+    "correction": "A fast change stops the loss to rivals sooner but leaves little time to train, test and explain, so errors and resistance rise.",
+    "examTip": "Weigh the cost of being late against the cost of rushing, using the trigger in the case to judge urgency."
+   },
+   {
+    "id": "managing-change:mistake:781b67dd",
+    "title": "Mixing up a risk and its mitigation",
+    "mistake": "Listing \"poor business continuity planning\" as one of the key risks a firm faces.",
+    "correction": "The key risks are events: natural disasters, IT systems failure, loss of key staff. Business continuity and succession planning are the responses to them.",
+    "examTip": "Keep the two apart: identify the risk first, then the plan that mitigates it."
+   },
+   {
+    "id": "managing-change:mistake:8987196c",
+    "title": "Ranking risks by likelihood alone",
+    "mistake": "Saying the most frequent risk must be the one to plan for first.",
+    "correction": "Risk assessment combines likelihood with impact. A rare event that would stop the business can outrank a frequent one that does little harm.",
+    "examTip": "Multiply or combine the two scores the case gives, then say what the scores leave out."
+   },
+   {
+    "id": "managing-change:mistake:832e9188",
+    "title": "Assuming every contingency plan is worth having",
+    "mistake": "Recommending that a firm plan for every risk it can think of.",
+    "correction": "Plans cost money and time for events that may never happen, so the effort should match the likelihood and impact of each risk.",
+    "examTip": "Compare the cost of the measure with the loss it prevents, then qualify it: how likely is the loss?"
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "managing-change:diagram:0ea0a574",
+    "title": "How Change Pays Off Over Time",
+    "description": "The unit description's effects of change and 3.3.6 · 1c: output per worker dips while staff learn before any gain arrives, and incremental change moves in small steps where step change makes one large jump.",
+    "checklist": [
+     "The line dips after the change starts: costs and learning come before gains",
+     "The gain is shown as conditional: it arrives only if the change works",
+     "Incremental change climbs in small steps; step change stays flat, then jumps"
+    ],
+    "scenarios": [
+     {
+      "label": "Costs first, gains later",
+      "svg": "<svg width=\"400\" height=\"270\" viewBox=\"0 0 400 270\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Costs first, gains later</text><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"58\" y=\"46\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Output per worker</text><text x=\"370\" y=\"220\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Time</text><path d=\"M 50 110 L 130 110 L 160 150 L 200 160 L 240 130 L 300 80 L 370 60\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/><text x=\"120\" y=\"96\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Change starts</text><text x=\"200\" y=\"184\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"400\">Learning dip</text><text x=\"290\" y=\"64\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"end\" font-weight=\"400\">Gains, if it works</text><text x=\"200\" y=\"252\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Judge a change over time, not in its first months</text></svg>"
+     },
+     {
+      "label": "Two sizes of change",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Incremental change and step change</text><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"200\" x2=\"370\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"58\" y=\"46\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">How far the business has moved</text><text x=\"370\" y=\"220\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Time</text><path d=\"M 50 180 L 100 180 L 100 165 L 150 165 L 150 150 L 200 150 L 200 135 L 250 135 L 250 120 L 300 120 L 300 105 L 370 105\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\"/><path d=\"M 50 186 L 230 186 L 230 80 L 370 80\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"2.5\"/><rect x=\"58\" y=\"236\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#34d399\" stroke=\"#34d399\" stroke-width=\"1\"/><text x=\"80\" y=\"244\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Incremental: small steps that build</text><rect x=\"58\" y=\"256\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#60a5fa\" stroke=\"#60a5fa\" stroke-width=\"1\"/><text x=\"80\" y=\"264\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Step change: one large, sudden shift</text><text x=\"200\" y=\"290\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Bigger and faster costs more and meets more resistance</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "managing-change:diagram:90ab1477",
+    "title": "Size and Leadership in a Change",
+    "description": "3.3.6 · 1b and 1e: the layers a message about a change passes through in a small firm and in Harbourline, and what a transformative leader does to carry people through the change.",
+    "checklist": [
+     "Harbourline has 7 layers from the board to the claims handlers; the small firm has one step",
+     "Each extra layer is another point where the message can be delayed or reworded",
+     "The leader's four actions run from a direction to trusting staff with how to get there"
+    ],
+    "scenarios": [
+     {
+      "label": "Layers of management",
+      "svg": "<svg width=\"400\" height=\"290\" viewBox=\"0 0 400 290\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"ly\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#94a3b8\"/></marker></defs><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">How far a message has to travel</text><text x=\"90\" y=\"52\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"600\">Small firm</text><text x=\"280\" y=\"52\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"600\">Harbourline</text><rect x=\"40\" y=\"64\" width=\"100\" height=\"40\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"90\" y=\"88\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Owner</text><line x1=\"90\" y1=\"106\" x2=\"90\" y2=\"134\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#ly)\"/><rect x=\"40\" y=\"138\" width=\"100\" height=\"40\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"90\" y=\"162\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Six staff</text><rect x=\"200\" y=\"64\" width=\"160\" height=\"22\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"280\" y=\"79\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Board</text><rect x=\"200\" y=\"90\" width=\"160\" height=\"22\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"280\" y=\"105\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Chief executive</text><rect x=\"200\" y=\"116\" width=\"160\" height=\"22\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"280\" y=\"131\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Directors</text><rect x=\"200\" y=\"142\" width=\"160\" height=\"22\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"280\" y=\"157\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Regional heads</text><rect x=\"200\" y=\"168\" width=\"160\" height=\"22\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"280\" y=\"183\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Branch managers</text><rect x=\"200\" y=\"194\" width=\"160\" height=\"22\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><text x=\"280\" y=\"209\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Team leaders</text><rect x=\"200\" y=\"220\" width=\"160\" height=\"22\" rx=\"6\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"280\" y=\"235\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">Claims handlers</text><line x1=\"376\" y1=\"64\" x2=\"376\" y2=\"242\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#ly)\"/><text x=\"200\" y=\"272\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">One step against 6: every layer can delay or reword it</text></svg>"
+     },
+     {
+      "label": "Transformative leadership",
+      "svg": "<svg width=\"400\" height=\"330\" viewBox=\"0 0 400 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"ld\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#94a3b8\"/></marker></defs><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">What a transformative leader does</text><rect x=\"100\" y=\"46\" width=\"200\" height=\"50\" rx=\"6\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><text x=\"200\" y=\"65\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">Set out a vision</text><text x=\"200\" y=\"85\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">where the business is going</text><rect x=\"100\" y=\"110\" width=\"200\" height=\"50\" rx=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.5\"/><text x=\"200\" y=\"129\" font-size=\"12\" fill=\"#a78bfa\" text-anchor=\"middle\" font-weight=\"600\">Explain the need</text><text x=\"200\" y=\"149\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">honestly, including losses</text><rect x=\"100\" y=\"174\" width=\"200\" height=\"50\" rx=\"6\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"200\" y=\"193\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">Inspire</text><text x=\"200\" y=\"213\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">by example and energy</text><rect x=\"100\" y=\"238\" width=\"200\" height=\"50\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"200\" y=\"257\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Empower</text><text x=\"200\" y=\"277\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">staff choose the route</text><line x1=\"200\" y1=\"98\" x2=\"200\" y2=\"107\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#ld)\"/><line x1=\"200\" y1=\"162\" x2=\"200\" y2=\"171\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#ld)\"/><line x1=\"200\" y1=\"226\" x2=\"200\" y2=\"235\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#ld)\"/><text x=\"200\" y=\"316\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">People follow a leader they trust through uncertainty</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "managing-change:diagram:1de395c0",
+    "title": "Forces For and Against the Change",
+    "description": "3.3.6 · 1d: what pushes Harbourline's move to app claims forward, and what holds it back. Managing resistance means weakening what holds it back, not only pushing harder.",
+    "checklist": [
+     "The forces for the change come from customers, costs and the new leader",
+     "The forces against it come from the people the change reaches",
+     "Pushing harder on one side tends to make the other push back harder"
+    ],
+    "scenarios": [
+     {
+      "label": "For and against",
+      "svg": "<svg width=\"400\" height=\"310\" viewBox=\"0 0 400 310\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"fg\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#34d399\"/></marker><marker id=\"fr\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#f87171\"/></marker></defs><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Forces for and against the change</text><text x=\"8\" y=\"52\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">For the change</text><text x=\"200\" y=\"52\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"600\">The change</text><text x=\"242\" y=\"52\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"600\">Against it</text><line x1=\"200\" y1=\"62\" x2=\"200\" y2=\"262\" stroke=\"#94a3b8\" stroke-width=\"3\"/><rect x=\"8\" y=\"66\" width=\"150\" height=\"50\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"83\" y=\"85\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Customers leaving</text><text x=\"83\" y=\"105\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">for an app insurer</text><rect x=\"8\" y=\"136\" width=\"150\" height=\"50\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"83\" y=\"155\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Lower cost</text><text x=\"83\" y=\"175\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">per claim</text><rect x=\"8\" y=\"206\" width=\"150\" height=\"50\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"83\" y=\"225\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">A new chief</text><text x=\"83\" y=\"245\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">executive's vision</text><rect x=\"242\" y=\"66\" width=\"150\" height=\"50\" rx=\"6\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"1.5\"/><text x=\"317\" y=\"85\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">120 posts</text><text x=\"317\" y=\"105\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">going</text><rect x=\"242\" y=\"136\" width=\"150\" height=\"50\" rx=\"6\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"1.5\"/><text x=\"317\" y=\"155\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">Pride in</text><text x=\"317\" y=\"175\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">face-to-face checks</text><rect x=\"242\" y=\"206\" width=\"150\" height=\"50\" rx=\"6\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"1.5\"/><text x=\"317\" y=\"225\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">Rumours and</text><text x=\"317\" y=\"245\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">uncertainty</text><line x1=\"160\" y1=\"91\" x2=\"196\" y2=\"91\" stroke=\"#34d399\" stroke-width=\"1.5\" marker-end=\"url(#fg)\"/><line x1=\"160\" y1=\"161\" x2=\"196\" y2=\"161\" stroke=\"#34d399\" stroke-width=\"1.5\" marker-end=\"url(#fg)\"/><line x1=\"160\" y1=\"231\" x2=\"196\" y2=\"231\" stroke=\"#34d399\" stroke-width=\"1.5\" marker-end=\"url(#fg)\"/><line x1=\"240\" y1=\"91\" x2=\"204\" y2=\"91\" stroke=\"#f87171\" stroke-width=\"1.5\" marker-end=\"url(#fr)\"/><line x1=\"240\" y1=\"161\" x2=\"204\" y2=\"161\" stroke=\"#f87171\" stroke-width=\"1.5\" marker-end=\"url(#fr)\"/><line x1=\"240\" y1=\"231\" x2=\"204\" y2=\"231\" stroke=\"#f87171\" stroke-width=\"1.5\" marker-end=\"url(#fr)\"/><text x=\"200\" y=\"292\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Weaken the forces against; do not only push harder</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "managing-change:diagram:5e6df63e",
+    "title": "Scoring Risks by Likelihood and Impact",
+    "description": "3.3.6 · 2a: identifying key risks through risk assessment. Each risk is placed on a grid by how likely it is and how much damage it would do, and scored by multiplying the two.",
+    "checklist": [
+     "Likelihood runs up the side and impact along the bottom, each from 1 to 5",
+     "Each number in the grid is likelihood multiplied by impact",
+     "The highest score is planned for first; the score still leaves things out"
+    ],
+    "scenarios": [
+     {
+      "label": "Risk grid",
+      "svg": "<svg width=\"400\" height=\"360\" viewBox=\"0 0 400 360\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Harbourline's risk register</text><text x=\"8\" y=\"44\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Likelihood</text><rect x=\"70\" y=\"50\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"70\" y=\"86\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"70\" y=\"122\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"70\" y=\"158\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"70\" y=\"194\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"126\" y=\"50\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"126\" y=\"86\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"126\" y=\"122\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"126\" y=\"158\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"126\" y=\"194\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"182\" y=\"50\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"182\" y=\"86\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"182\" y=\"122\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"182\" y=\"158\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"182\" y=\"194\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"238\" y=\"50\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"238\" y=\"86\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"238\" y=\"122\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"238\" y=\"158\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"238\" y=\"194\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"294\" y=\"50\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"294\" y=\"86\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"294\" y=\"122\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"294\" y=\"158\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><rect x=\"294\" y=\"194\" width=\"56\" height=\"36\" rx=\"0\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1\"/><text x=\"62\" y=\"217\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">1</text><text x=\"62\" y=\"181\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">2</text><text x=\"62\" y=\"145\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">3</text><text x=\"62\" y=\"109\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">4</text><text x=\"62\" y=\"73\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">5</text><text x=\"98\" y=\"246\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">1</text><text x=\"154\" y=\"246\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">2</text><text x=\"210\" y=\"246\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">3</text><text x=\"266\" y=\"246\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">4</text><text x=\"322\" y=\"246\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">5</text><text x=\"210\" y=\"266\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Impact</text><text x=\"154\" y=\"109\" font-size=\"15\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">8</text><text x=\"322\" y=\"145\" font-size=\"15\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">15</text><text x=\"266\" y=\"145\" font-size=\"15\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">12</text><text x=\"70\" y=\"290\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"400\">8 = 4 × 2: Typhoon closes head office</text><text x=\"70\" y=\"310\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"400\">15 = 3 × 5: Claims system fails</text><text x=\"70\" y=\"330\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"400\">12 = 3 × 4: Chief actuary leaves</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "managing-change:diagram:6fd09dfd",
+    "title": "Is the Standby System Worth It?",
+    "description": "3.3.6 · 2b: business continuity. The cost of one claims-system outage without a standby system, against the shorter outage plus a year of the standby system's cost.",
+    "checklist": [
+     "Without a standby system the outage lasts 8 days: 8 × $250,000 = $2m",
+     "With it, 1 day of outage plus $600,000 for the system",
+     "In a year with no outage, the standby system is a cost with nothing to show for it"
+    ],
+    "scenarios": [
+     {
+      "label": "Cost of an outage",
+      "svg": "<svg width=\"400\" height=\"350\" viewBox=\"0 0 400 350\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">One outage, with and without a standby system</text><line x1=\"40\" y1=\"240\" x2=\"370\" y2=\"240\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><rect x=\"80\" y=\"60\" width=\"80\" height=\"180\" rx=\"3\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"1\"/><rect x=\"240\" y=\"217.5\" width=\"80\" height=\"22.5\" rx=\"3\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"1\"/><rect x=\"240\" y=\"163.5\" width=\"80\" height=\"54\" rx=\"3\" fill=\"#60a5fa\" stroke=\"#60a5fa\" stroke-width=\"1\"/><text x=\"120\" y=\"52\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">$2m</text><text x=\"280\" y=\"155.5\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">$850,000</text><text x=\"120\" y=\"260\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">No standby: 8 days</text><text x=\"280\" y=\"260\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Standby: 1 day</text><rect x=\"58\" y=\"282\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"1\"/><text x=\"80\" y=\"290\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Cost of the outage, $250,000 a day</text><rect x=\"58\" y=\"302\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#60a5fa\" stroke=\"#60a5fa\" stroke-width=\"1\"/><text x=\"80\" y=\"310\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Standby system, a year</text><text x=\"200\" y=\"338\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">In a year with one outage, the standby pays for itself</text></svg>"
+     }
+    ]
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "From a trigger to the long-run result of a change",
+     "steps": [
+      "A trigger arrives: new owners, falling profit, or a rival with a better product.",
+      "Managers decide on a change and announce it.",
+      "Costs rise and service may suffer while staff learn the new way of working.",
+      "If the change works, each worker produces more and the business becomes cheaper to run."
+     ],
+     "result": "Judge a change over time: its costs come first and its gains later."
+    },
+    {
+     "title": "Identifying key risks through risk assessment",
+     "steps": [
+      "List every event that could stop the business operating.",
+      "Score each event for likelihood and for impact.",
+      "Rank the events by their combined score.",
+      "Plan responses to the highest-ranked risks first."
+     ],
+     "result": "At Harbourline: typhoon closes head office 8, claims system fails 15, chief actuary leaves 12."
+    },
+    {
+     "title": "How a succession plan is built",
+     "steps": [
+      "Decide which roles the business could least afford to lose.",
+      "Pick out people inside the business who could step into each role.",
+      "Train and mentor them, and let them deputise in the role.",
+      "Hand the role over when the post-holder leaves or retires."
+     ],
+     "result": "A successor prepared in advance turns the loss of a key person from a crisis into a handover."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Fast or gradual change?",
+     "content": "Speed is a trade. Harbourline's chief executive wants the change done in 6 months; the human resources director proposes 24. Faster change stops customers leaving for the online rival sooner. Slower change gives time to train 70 people, test the app and involve handlers in designing it, which reduces errors and resistance. The deciding question is how fast the trigger is moving compared with how fast the business can safely change. Starting in a few branches can buy some of both."
+    },
+    {
+     "title": "Which key factor matters most?",
+     "content": "Culture, size, speed, resistance and leadership all shape whether a change succeeds, and they interact. A strong culture that values the old way makes resistance deeper; a large organisation makes communication slower; a short timetable leaves less room for either to be addressed. Leadership is often the factor that can act on the others, by explaining, involving and setting a realistic pace, which is why a strong answer judges it against the others rather than in isolation."
+    },
+    {
+     "title": "Is contingency planning worth what it costs?",
+     "content": "A plan is paid for now, against a loss that may never come. Harbourline's standby claims system costs $600,000 a year and would cut an outage like the last one from $2m to $250,000. That is worth it if such outages happen every few years and the business could not do without the system; it is less clear for a rare, minor risk. A plan that has never been rehearsed may fail when it is needed, so part of its cost is testing it."
+    }
+   ]
+  }
+ }
+}

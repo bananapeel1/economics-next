@@ -11248,6 +11248,130 @@ Publish (founder only, rule 6):
 node scripts/packet-48-government-intervention-firms.mjs --stage && node scripts/publish-section.mjs government-intervention-firms --confirm
 ```
 
+## Handoff — packet 50 (managing-change) bookkeeping pass, gate passed, STAGED NOT PUBLISHED (26 September 2026)
+
+**Bookkeeping-only pass, per the packet's own harness instructions. Authored, fixed, staged, published,
+restored and committed nothing; ledger.json not written.** Read `audit/PROTOCOL.md`, `audit/SESSION-PROMPT.md`,
+this packet's row in `audit/PROGRESS.md`, the Settled list in `audit/DECISIONS.md`, `audit/CONTENT-GATE.md`,
+and — because no `## Packet 50 spec` heading exists anywhere in `audit/NEXT.md` (confirmed by direct grep,
+0 hits) — `audit/runs/packet-50/brief.md` and `built.md`, which the build session wrote as the spec of record.
+**This is the same missing-document gap packets 41/43/44/45/46/47/48 each hit and normalized (ledger defines
+scope, per PROTOCOL); not a contradiction between authorities**, and the immediately-preceding packet-48
+handoff above had already named packet 50 as one of three "gate-clear but not free to build" sections waiting
+on exactly this kind of pass.
+
+**Packet 50 (managing-change, IAL Business 3.3.6, `bus_spec.txt:1255`) is built, ledger-clear, and Verify
+A/B-clean. Gate PASSED. Staged to `draft` only; live untouched** (re-confirmed: `api-live.json` dumped during
+the build byte-matches the pre-fix draft dump, and the live route still serves the old 2-block section).
+**Ledger: 27 items, 25 confirmed / 2 wont-fix / 0 open / 0 rejected** — re-run fresh by this pass
+(`ledger.mjs unverified 50` → "gate clear"), not read from a log. Both wont-fix items are correctly disposed
+under Rule 1: `structure-11` and `specGap-07` each doubted the section's own "3.3.6" numbering against a UK
+GCE-style "3.6.x" reading; a direct read of `bus_spec.txt:1255` and the surrounding Unit 3 topics (3.3.1 at
+`:1090` through 3.3.5 at `:1218`, no `3.6.x` anywhere in the file) refutes the doubt and keeps the number.
+One fix round of two budgeted: Verify A round 0 rejected `structure-07` (a block title that didn't name its
+own second subsection) and `structure-10` (a relabelled rather than replaced filler misconception); both were
+fixed and reconfirmed on round 1 by a method different from the build runner's own regex checks (an
+independent bundle diff, a fresh `curl localhost:3001/api/sections/managing-change?draft=1`, and a hand read
+of every title/takeaway/misconception) — see `audit/runs/packet-50/verify-a.md`.
+
+**This pass independently re-ran every gate command fresh rather than trusting the packet's own logs**, because
+`audit/runs/packet-50/fix1-gate-test.log` (captured 12:43) shows `npm test` at 339/342 pass — **3 failures**,
+all three in `lib/practice-shell.test.mjs` and `lib/spec-coverage.test.mjs`, all three about Economics 1.3.5
+market-failure content (`mf-short-explain-sea-wall-public-good-4`, the extract/standalone mark grouping) —
+**none touching business or managing-change.** A fresh full `npm test` run by this pass just now: **356/356
+pass, 0 fail.** This matches, independently, the same finding the packet-48 bookkeeping pass above already
+made and evidenced by file mtimes: these three tests were failing transiently because of packet 12.75's
+in-flight edit to `lib/mid-band-answer.test.mjs` / `components/SectionModelAnswersPage.jsx` /
+`app/model-answers/page.js` in this shared worktree, not because of anything packet 50 built, and the suite
+has since stabilised. `npm run build` — fresh run by this pass, exit 0, compiles and prerenders cleanly.
+`npm run validate` — fresh run, **0 new BLOCK repo-wide** (143 new DEBT repo-wide across sections nobody has
+built yet, none of it from this pass); managing-change's own row against **live** data (unpublished, so still
+the old content) shows 0 new BLOCK / 6 new DEBT, expected until publish. `npm run exposure` and `npm run
+recalls` both exit 0 ("no section is worse than the baseline"). `node audit/scripts/check-staged-drafts.mjs
+managing-change` — matches, 0 drift, re-run fresh against the live `:3001` draft, not read from a log.
+
+**Walkthrough (`verify-b.md`, 390×844): clean for the packet's own content bundle.** All 20 Learn Mode steps,
+5 chapter check-ins (all clean against CONTENT-GATE's contract), 5 diagrams (smallest label 9.2px inline /
+12px in the enlarge modal, nothing clipped or overlapping), every resume-pointer edge case (including the
+"step N of M with N > M" class of bug — never reproduced), and the Notes/Practice/Diagrams/Extras tabs all
+pass. One borderline SORT item noted (step 19, defensible either way), non-blocking.
+
+**One defect the walkthrough flagged OUTSIDE this packet's bundle, already the same class packets 47/48 each
+carried and NOT YET on the ledger as its own item:** the hard-coded Unit 3 index
+(`app/business/unit-3/page.js:57-64`) and the business index meta (`app/business/page.js:42`) still describe
+the pre-rebuild section shape — tiles/description naming "Causes of Change", "Barriers to Change", "Scenario
+Planning" and "Leading Change" — while the rebuilt section's five chapters are Triggers/Effects/Speed,
+Culture/Size/Leadership, Managing Resistance, and two Contingency Planning chapters, with no scenario-planning
+chapter at all. Non-blocking while staged (a student cannot reach it without `?draft=1`); **must be fixed with,
+or before, any publish of managing-change** — the next session that touches this section (or the founder,
+before publishing) should add a ledger item for it rather than leave it as a walkthrough footnote.
+
+**Rule 3 (field compatibility) not yet run, same gap as packets 40-48**: nobody has checked that
+`origin/main`'s components can read every field the `managing-change` bundle carries (`diagramId` pins, the
+four recall types match/classify/fillin/reorder, the mistake `title/mistake/correction/examTip` fields). This
+is required before publish, not before staging, and this bookkeeping pass has no authority to run it or to
+publish. Publish command, for the founder, not run by any pass so far:
+```
+node scripts/packet-50-managing-change.mjs --stage && node scripts/publish-section.mjs managing-change --confirm
+```
+(the `--stage` re-run is precautionary in case anything has moved since 26 Sep; `check-staged-drafts` already
+confirms the current draft matches the bundle with 0 drift.)
+
+**Next unclaimed packet, re-checked live by this pass, not chained forward from the prior handoff's numbers**:
+- **Packet 49 (business-growth) is genuinely free** — re-confirmed: 27 items, all `open`, 0 `claimed`; no
+  run folder; `PROGRESS.md` row still "not started". This is the next packet to build.
+- **Packets 52 (role-state-macroeconomy) and 53 (influences-business-decisions) are still gate-clear but not
+  free to build** — re-confirmed with `ledger.mjs unverified 52/53`, both "gate clear". Each needs its own
+  bookkeeping-only pass, like this one, to write up its `PROGRESS.md` row — not a rebuild.
+- **Packet 51 (poverty-inequality) has CHANGED STATE since the packet-48 handoff above was written**: that
+  handoff recorded `unverified 51` as "GATE BLOCKED: 1 claimed item(s) not confirmed" (`topFix-03`). Re-run
+  fresh by this pass, just now: **`unverified 51` → "gate clear: every claimed item is confirmed and no scope
+  is left unclaimed."** Something — almost certainly another session in this shared worktree — confirmed
+  `topFix-03` since that handoff was written. This pass did not open `audit/runs/packet-51/` or verify anything
+  beyond the ledger CLI's own output, so **treat this as "worth a bookkeeping pass to check," not as "done"**;
+  the next session on 51 should re-read its ledger and run folder directly rather than trust either handoff.
+- Packets 54+ not re-checked (token discipline; no reason to expect they moved).
+
+**Escalate to the founder**: nothing new to publish from this pass — packet 50 is staged only, as instructed
+(Rule 6). When ready to publish managing-change, the founder needs: (1) the Unit 3 / business-index copy fix
+above, (2) a Rule 3 field-compatibility check against a current `origin/main` checkout, and (3) the publish
+command above. Also worth flagging again, a fifth data point on the same shared-worktree pattern packet 48's
+handoff raised: this pass's own `fix1-gate-test.log` read as a failing gate at capture time for a reason
+entirely outside the packet's own files, and only a fresh re-run (not the saved log) showed the true state.
+
+## Handoff — packet 50 closed (brain)
+
+Packet 50 is **published and committed**. What happened after the bookkeeping pass above, in order:
+
+- **Hub copy first, straight to main.** `app/business/unit-3/page.js` (the 3.3.6 description, five tiles named
+  after the rebuilt chapters in the specification's words, and the key-concept card, which had called
+  transformative leadership a heading when it is point 1e) and `app/business/page.js:42` went to main as
+  bananapeel1/economics-next#45 from a separate worktree off `origin/main`. Merged and live before the publish:
+  revvylearn.com/business/unit-3 shows "Planning for Risk Mitigation" and no "Scenario Planning".
+- **Rule 3, run rather than reasoned.** HEAD contains all of `origin/main`; `components/`, `lib/learn-steps.js`,
+  `lib/checkin-fallback.js` and `app/api/sections` are byte-identical; #43 reorders the check-in and reads no
+  new field. `components/MistakesTab.jsx` and `lib/mistakes-shape.js` are identical on both.
+- **Question-first, observed.** `next dev` from the #45 worktree (production's code) on its own port and origin,
+  390x844, `?draft=1`: all five check-ins (steps 4/8/12/16/20) hold the diagram until the question is answered
+  or skipped (0 diagram SVGs before, 1 after), and the pre-answer text (chapter title, intro, stem, options)
+  states no answer. This replaces Verify B's walk on :3001, which predated the #43 merge.
+- **Published 10:53 UTC** at the founder's go-ahead in session. Backup
+  `audit/snapshots/auto-prepublish-2026-09-26T10-53-41-936Z__business__managing-change.json`; undo with
+  `node scripts/restore-section.mjs <that file> --confirm`. The publish verified the live row matches the draft
+  and passes the validator (0 BLOCK, 0 DEBT). revvylearn.com's API serves 5 chapters and 5 diagrams.
+- **A deviation, recorded so nobody repeats it.** The re-stage before the publish exited 1 and the publish ran
+  anyway: the session chained the two commands with `;` instead of the approved `&&`. What went live is the
+  draft both verifiers passed; the publish diff matched the dry run id for id. The re-stage had failed on the
+  runner's own check, which grepped `MistakesTab.jsx` for `item.mistake` / `item.correction`. PR #40 replaced
+  those reads with `readMistake()` from `lib/mistakes-shape.js`, so the grep went stale, not the content:
+  `mistakeGaps()` finds no empty box in any of the six cards. The runner now asks `mistakeGaps()` instead
+  (A/B: it flags an empty mistake and an invented field name, and passes a whole card).
+  **The runners for packets 47, 53, 54 and 55 carry the same stale grep** (`grep -l -F "MistakesTab.jsx no
+  longer reads" scripts/*.mjs`) and will fail `--stage` until they are changed the same way.
+- Could not verify: the Pro surfaces (full quiz bank, mistakes, practice mark scheme), which need a signed-in
+  pass on the live section; and Verify B's end-of-section score counts, because peers on :3001 wiped this
+  section's localStorage mid-walk (`audit/runs/packet-50/verify-b.md:5`).
+
 ## Handoff — packet 53 (influences-business-decisions) bookkeeping pass, GATE DID NOT PASS, STAGED NOT PUBLISHED (26 September 2026)
 
 **Bookkeeping-only pass, per the packet's own harness instructions. Authored, fixed, staged, published,

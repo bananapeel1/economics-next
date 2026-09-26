@@ -8214,10 +8214,10 @@
    "rank": 0,
    "text": "Rewrite 'Drivers of Change and Scenario Planning' (or add a new block) to teach IAL 3.6.3 as the spec means it: risk assessment (natural disasters, IT failure, loss of key staff) -> mitigation (business continuity, succession planning) -> costs vs benefits of contingency planning. Demote Shell-style strategic scenarios to one sentence.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:614-956 blocks 'Identifying Key Risks' (risk assessment :618, natural disasters/IT :665, key staff :719) and 'Mitigating Risk' (BC :792, succession :849, cost vs benefit :896); Shell scenarios cut to one sentence :623",
    "note": "SPEC NUMBERING: this item cites 3.6.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.6. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -8227,10 +8227,10 @@
    "rank": 1,
    "text": "Add a block on effects of change (competitiveness, productivity, financial performance, stakeholders) and key factors in successful change (organisational culture, size, speed of change, transformational leadership) plus Kotter & Schlesinger's six strategies, so that quiz indices 0,2,3,4,5,6,7,8 and practice index 3 test material the lesson actually teaches; then set quizIndices/practiceIndices per block.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:67 effects (productivity, competitiveness, financial performance, stakeholders); key factors :133/:206/:260/:326; six approaches :472; all 28 quiz items test taught material; per-block pins :188/:386/:600/:775/:955",
    "note": null
   },
   {
@@ -8240,10 +8240,10 @@
    "rank": 2,
    "text": "Fix the disruptive/step conflation: rename the type-of-change pair to incremental vs step (transformational) change across content, notes and flashcards; treat disruption as an external cause; reword the section-1 examMatters that tells firms to 'use disruptive change'.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:133 incremental vs step (notes :986, card :1600); :26 disruptive technology framed as external trigger; 'use disruptive change' examMatters gone (disrupt 37->8, none as a change type)",
    "note": null
   },
   {
@@ -8253,10 +8253,10 @@
    "rank": 3,
    "text": "Add recall widgets and a diagram: a reorder recall for Kotter's 8 steps (genuine procedural sequence; use one consistent wording), a fillin for Lewin's driving/restraining forces, and an InlineDiagram of a force field so the 'draw the diagram' advice is backed by one. Move the Toyota example to section 1 and replace the duplicate Nadella example.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json 15 recalls (3 reorder :114/:646/:877, 3 fillin); forces diagram 1de395c0 :1786 pinned to resistance block; 0 'draw' instructions; Toyota/Nadella gone, 15/15 examples distinct; Kotter/Lewin clauses refused per DECISIONS remove-not-repair (0 hits in bus_spec)",
    "note": null
   },
   {
@@ -8266,10 +8266,10 @@
    "rank": 4,
    "text": "Bring practice questions to IAL form: contextual 'Explain one reason... (4)' instead of 'Explain two'; convert the 6-mark Analyse to an 8-mark Assess; anchor the 10- and 20-mark stems to the bank / insurance company; replace the off-spec crisis-management question with a succession-planning or business-continuity question.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:1521-1571 practice 4/4/8/12/12+20/20 = ial-paper-structure business.units_3_4 (8=Discuss per SAMs); 'Explain one reason' :1526; all stems Harbourline Insurance; crisis-management Q replaced by risk-priority and BC Assess items",
    "note": null
   },
   {
@@ -8278,10 +8278,10 @@
    "kind": "accuracy",
    "text": "Types of Change > incremental-vs-disruptive-change > examMatters ('use disruptive change when external forces ... make the current model unsustainable'): Conflates two different concepts. The body defines disruptive change as something that 'comes from outside the established players' and 'destroys incumbents' (Christensen), i.e. a market phenomenon done TO a firm. examMatters then tells the student the firm should 'use disruptive change' as a management choice. A firm cannot 'use' disruption; it undertakes step/transformational change in response to it. The notes[] compound this with 'Disruptive (step) change' and the flashcards switch to 'transformational change', so three vocabularies for one idea.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:133 one vocabulary incremental/step across content, notes :986, card :1600, quiz; examMatters telling firms to 'use disruptive change' removed; transformational 19->0",
    "note": null
   },
   {
@@ -8290,10 +8290,10 @@
    "kind": "accuracy",
    "text": "Types of Change > drivers-and-scenario-planning > body paragraph 3, flow, keyIdea, misconception; notes[2] 'Scenario Planning': 'Scenario planning' is taught as Shell-style strategic foresight (2-4 futures, best/worst/most-likely/wildcard). In IAL 3.6.3 the heading 'Scenario planning' means identifying key risks through risk assessment (natural disasters, IT failure, loss of key staff), planning for risk mitigation (business continuity, succession planning) and the costs/benefits of contingency planning. A student who answers a 3.6.3 question with Shell scenarios will miss the indicative content entirely. The section's own quiz (Q5, Q6, Q9), flashcards (contingency, business continuity, succession, COVID) and practice Q4 use the spec meaning, so the lesson contradicts its own assessment items.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:614/:788 scenario territory now teaches 3.3.6 2a/2b risk assessment and mitigation (bus_spec:1265-1271); strategic foresight reduced to one contrast sentence :623",
    "note": "SPEC NUMBERING: this item cites 3.6.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.6. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -8302,10 +8302,10 @@
    "kind": "quiz",
    "text": "q2: Tests Kotter & Schlesinger's six strategies (education/communication, participation, facilitation, negotiation, manipulation/co-optation, coercion), which the content[] never teaches; the lesson teaches Kotter's 8-STEP model, so students will conflate the two Kotters. Answer itself (coercion) is fine as textbook framing, though K&S actually say coercion is appropriate when speed is essential.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:1183 quiz bank replaced, Kotter/Schlesinger 0 hits; coercion/approach items test the six approaches taught at :472",
    "note": null
   },
   {
@@ -8314,10 +8314,10 @@
    "kind": "quiz",
    "text": "q5: Odd wording: 'inadequate business continuity planning' is a weakness, not a risk, and 'MOST significant' is opinion with no case context. Business continuity planning is also never taught in content[] (only in flashcards). Distractors (poor marketing, excessive diversification) are nonsense for the stem.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:1183 COVID/'MOST significant' stem gone (0 MOST/COVID); BC taught :792; risk-vs-mitigation mistake card :1699+; q24/q27 test BC as taught",
    "note": null
   },
   {
@@ -8326,10 +8326,10 @@
    "kind": "structure",
    "text": "Content/assessment mismatch is the core defect: 8 of 10 quiz MCQs (indices 0,2,3,4,5,6,7,8) and practice index 3 test spec content (Handy cultures, Kotter & Schlesinger, transformational leadership, succession planning, business continuity, size of organisation, contingency-planning costs) that the content[] blocks never teach. The PreTest draws 3 random MCQs from this bank, so most students will be pre-tested on things the lesson then ignores, and the PostTest 'improvement' is noise.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:1183-1520 all 28 quiz items read against content, each maps to a taught subsection (triggers, effects, speed, culture, size, leadership, resistance, risk, mitigation); practice all on taught Source A",
    "note": null
   },
   {
@@ -8338,10 +8338,10 @@
    "kind": "structure",
    "text": "Zero recall widgets (0 reorder, 0 fillin) in a section that contains the best genuine sequence in the whole unit: Kotter's 8 steps. Also no fillin for Lewin's driving/restraining forces. Learn Mode steps therefore have no retrieval practice beyond one MCQ per block.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json 15/15 subsections carry a recall: 5 classify, 3 reorder (:114/:646/:877, principle named, one order), 3 fillin (:162 incremental/step), 4 match",
    "note": null
   },
   {
@@ -8350,10 +8350,10 @@
    "kind": "structure",
    "text": "Zero diagrams, yet managing-change-models > examMatters instructs students to 'Draw Lewin's force field diagram'. A force field diagram (driving arrows vs restraining arrows on a line marked 'current state') is the obvious InlineDiagram and would also make the 'reduce restraining forces' insight concrete.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:1743 5 diagrams, all 5 block diagramIds resolve; forces-for/against diagram :1786; 0 'Draw' instructions remain (Lewin 15->0)",
    "note": null
   },
   {
@@ -8362,10 +8362,10 @@
    "kind": "structure",
    "text": "Only 2 blocks x 2 sections = 2 Learn Mode steps for an entire spec topic (3.6.1-3.6.3). No block covers effects of change, key factors in successful change (culture, size, speed) or risk/contingency planning. Suggested structure: Block 1 Causes and types of change; Block 2 Effects and key factors (culture, size, speed, leadership); Block 3 Managing resistance (K&S strategies + Lewin + Kotter); Block 4 Scenario/contingency planning (risk assessment, business continuity, succession, cost/benefit).",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json 5 blocks x 3 subsections = 15 steps; effects :67, key factors :133/:206/:260/:326, contingency :614/:788",
    "note": "SPEC NUMBERING: this item cites 3.6.1, 3.6.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.6. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -8374,10 +8374,10 @@
    "kind": "structure",
    "text": "realExample misplaced: drivers-and-scenario-planning carries the Toyota kaizen example, which illustrates incremental change (section 1), not drivers or scenario planning. Section 1 already has Kodak; scenario planning has no example at all despite Shell being mentioned in the body.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json Toyota 2->0; each subsection has its own fitting example (15/15 distinct); contingency examples :665 onward",
    "note": null
   },
   {
@@ -8386,10 +8386,10 @@
    "kind": "structure",
    "text": "Both sections in block 'Managing Resistance' use the same Microsoft/Nadella example with the same emoji; the second is a near-repeat of the first. One should be swapped for a resistance-specific case (e.g. a failed IT rollout or a factory automation programme).",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json resistance block examples distinct and resistance-specific: Thai welders :429, Nigerian bus conductors :492, HK hospital :567; Nadella 2->0",
    "note": null
   },
   {
@@ -8398,10 +8398,10 @@
    "kind": "structure",
    "text": "Block 1 title 'Types of Change' does not describe its second section (drivers + scenario planning); takeaway[1] and [2] are about content the title does not signal. Block 2 title 'Managing Resistance' is fine and its takeaways match.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:9 block 1 is now 'Triggers, Effects and Speed of Change' over its three subsections What Triggers Change / The Effects of Change / Time and Speed of Change, takeaways[0-2] one per subsection; notes[0] same title (:969); source scripts/_packet50-content.mjs:42 equals the bundle (independent import-and-diff, 0 diffs) and the served draft (curl :3001/api/sections/managing-change?draft=1, 26 Sep 12:46) shows the same five titles; old title only in code comments",
    "note": null
   },
   {
@@ -8410,10 +8410,10 @@
    "kind": "structure",
    "text": "Blocks have no quizIndices/practiceIndices, so the InlineQuiz/InlinePractice shown at the end of each step cannot be aligned to what the step taught; with this quiz bank the block on Kotter/Lewin may surface a succession-planning MCQ.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json pins :188/:386/:600/:775/:955 (5 quiz each) + practice pins, each on-topic; served draft free slice resolves first pins to q3/q8/q13/q18/q23 (lib/checkin-placement.js:48)",
    "note": null
   },
   {
@@ -8422,10 +8422,10 @@
    "kind": "structure",
    "text": "Terminology drift across surfaces: content says 'disruptive change', notes[0] says 'Disruptive (step) change', flashcards say 'transformational change', quiz explanation says 'evolutionary'. Students revising across tabs see four labels for two concepts.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json only incremental/step labels: transformational 19->0, evolutionary 1->0, 'disruptive change' 0; content :133, notes :986, card :1600, quiz[1] expl",
    "note": null
   },
   {
@@ -8434,10 +8434,10 @@
    "kind": "structure",
    "text": "Misconceptions: scenario-planning-vs-forecasting and resistance-as-signal are genuine. 'Students assume disruptive change is always better' (section 1) and 'Students present Kotter's 8 steps as rigid and linear' (section 4) are weak/filler for an IAL student; notes[0] 'Students treat all change as equally difficult' is filler.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:157 the 'X change is always better' misconception is replaced by a genuine pace error (slower is not always safer; pace set by how fast the trigger moves), the Kotter-rigid misconception is gone with Kotter itself, notes carry no misconception field; all 15 served-draft misconceptions read by hand (curl :3001 ?draft=1), none filler; the runner's check at scripts/packet-50-managing-change.mjs:417 is a phrase blocklist, so this verdict rests on reading, not on it",
    "note": null
   },
   {
@@ -8446,11 +8446,11 @@
    "kind": "structure",
    "text": "meta.number is '3.3.6' while the IAL spec heading is 3.6 Managing change (unsure whether the app deliberately prefixes unit number; flagging in case it is a typo that mis-sorts the section).",
    "packet": 50,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Inverted claim, refused on the document (Rule 1). It says the IAL heading is '3.6 Managing change' and doubts the stored '3.3.6'. bus_spec.txt:1255 reads '3.3.6 Manging change' (the spec's own spelling); every Unit 3 topic has the same three-level form (3.3.1 at :1090 ... 3.3.5 at :1218); no '3.6.x' exists anywhere in the file. contextFor() returns 3.3.6 / WBS13, which scripts/packet-50-managing-change.mjs asserts (sections 5 and 12). The number is correct and is kept. (packet 50, 26 Sep 2026)"
   },
   {
    "id": "C-managing-change-specGap-01",
@@ -8458,10 +8458,10 @@
    "kind": "specGap",
    "text": "3.6.1a Causes of change: 'changes in organisational size', 'poor business performance', 'new ownership', 'transformational leadership', 'market and other external factors' are only partly covered by one paragraph of internal/external drivers; new ownership and transformational leadership are absent from content[] (transformational leadership appears only in flashcards/quiz).",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:22 new ownership, poor performance, org size, new leader; :26 external/market triggers; transformative leadership :326",
    "note": "SPEC NUMBERING: this item cites 3.6.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.6. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -8470,10 +8470,10 @@
    "kind": "specGap",
    "text": "3.6.1b Possible effects of change on competitiveness, productivity, financial performance and stakeholders: not taught anywhere in content[], notes[] or flashcards.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:67 subsection teaches productivity, competitiveness, financial performance, stakeholders (unit description bus_spec:1055 'causes and effects of change')",
    "note": "SPEC NUMBERING: this item cites 3.6.1, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.6. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -8482,10 +8482,10 @@
    "kind": "specGap",
    "text": "3.6.2 Key factors in successful change: organisational culture, size of organisation, time/speed of change: absent from content[] (culture and size appear only in flashcards and quiz). 'Managing resistance to change' is covered, but Kotter & Schlesinger's six strategies (the standard mark-scheme content, and what quiz index 2 tests) are not taught.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json culture :206, size :260, time/speed :133; six approaches to resistance :472",
    "note": "SPEC NUMBERING: this item cites 3.6.2, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.6. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -8494,10 +8494,10 @@
    "kind": "specGap",
    "text": "3.6.3a Identifying key risks through risk assessment: natural disasters, IT failure, loss of key staff: absent from content[] (flashcards only).",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json risk assessment :618, natural disasters + IT systems failure :665, loss of key staff :719 (bus_spec:1265-1268)",
    "note": "SPEC NUMBERING: this item cites 3.6.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.6. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -8506,10 +8506,10 @@
    "kind": "specGap",
    "text": "3.6.3b Planning for risk mitigation: business continuity and succession planning: absent from content[] (flashcards only).",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json business continuity :792, succession planning :849 (bus_spec:1269-1271)",
    "note": "SPEC NUMBERING: this item cites 3.6.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.6. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -8518,10 +8518,10 @@
    "kind": "specGap",
    "text": "3.6.3c Costs and benefits of contingency planning: absent from content[]; only notes[2].takeaway[2] mentions limitations, and quiz index 8 tests it.",
    "packet": 50,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-50",
+   "verified_by": "packet-verifier 2026-09-26",
+   "evidence": "audit/snapshots/packet-50-bundle__business__managing-change.json:896 'Is a Contingency Plan Worth It?' teaches cost vs benefit with k vs m/k worked case",
    "note": "SPEC NUMBERING: this item cites 3.6.3, which is UK GCE A-level numbering and does not exist in the IAL spec. The IAL topic for this section is 3.3.6. Find the requirement by its wording in audit/raw/bus_spec.txt, not by the number. (noted 13 Sep 2026)"
   },
   {
@@ -8530,11 +8530,11 @@
    "kind": "specGap",
    "text": "(Exact IAL bullet wording recalled from the 2018 WBS13 spec; wording confidence high, numbering of sub-bullets unsure.)",
    "packet": 50,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Not a finding as stored: the record's text is only a parenthetical ('Exact IAL bullet wording recalled from the 2018 WBS13 spec; wording confidence high, numbering of sub-bullets unsure.') and names no requirement to check or build. The requirements it could refer to are the 10 leaves of 3.3.6 at bus_spec.txt:1259-1271, all taught and asserted by scripts/packet-50-managing-change.mjs section 5 (oracle 12 rows / 10 leaves, 10 of 10 evidenced). Likely a truncated record from the March audit's parse. (packet 50, 26 Sep 2026)"
   },
   {
    "id": "C-global-industries-mncs-topFix-01",
