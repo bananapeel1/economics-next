@@ -1,0 +1,195 @@
+{
+ "section": "managing-finance",
+ "subject": "business",
+ "topic": "2.3.3",
+ "title": "Managing Finance",
+ "questions": [
+  {
+   "key": "managing-finance:practice:00d48f08",
+   "question": "Define the term 'profit for the year'. (2 marks)"
+  },
+  {
+   "key": "managing-finance:practice:160d96f7",
+   "question": "A tile wholesaler reports, for the year: revenue $2,000,000, cost of sales $1,300,000, other operating expenses $500,000, interest $40,000. Calculate the wholesaler's gross profit, operating profit and profit for the year. (4 marks)"
+  },
+  {
+   "key": "managing-finance:practice:b9a597ae",
+   "question": "A tile wholesaler reports, for the year: revenue $2,000,000, cost of sales $1,300,000, other operating expenses $500,000, interest $40,000. Calculate the wholesaler's gross profit margin and its operating profit margin. (4 marks)"
+  },
+  {
+   "key": "managing-finance:practice:4ed495d6",
+   "question": "A tile wholesaler is pushed by a competitor into cutting its prices by 5%. It expects to sell exactly the same quantity of tiles as before. Analyse the likely effect on its profitability. (6 marks)"
+  },
+  {
+   "key": "managing-finance:practice:ee2ad281",
+   "question": "Construct a labelled diagram of the working capital cycle for a wholesaler that buys goods, sells them on credit and collects payment. (4 marks)"
+  },
+  {
+   "key": "managing-finance:practice:3b0709dc",
+   "question": "A wholesaler reports a healthy profit for the year and its bank balance falls over the same period. Explain one reason why this can happen. (4 marks)"
+  },
+  {
+   "key": "managing-finance:practice:347e7d49",
+   "question": "A tile wholesaler's statement of financial position shows: inventory $240,000, trade receivables $150,000, cash $10,000, trade payables $180,000, bank overdraft $50,000, other payables $20,000, non-current assets $900,000, bank loan repayable in five years $500,000. Calculate the wholesaler's current ratio and its acid test ratio. (4 marks)"
+  },
+  {
+   "key": "managing-finance:practice:49e844d2",
+   "question": "A wholesaler with a weak bank balance is advised to negotiate an extra month of credit from its suppliers. Discuss whether this would improve its liquidity. (8 marks)"
+  },
+  {
+   "key": "managing-finance:practice:7113ab2e",
+   "question": "Assess the importance of managing liquidity for a small wholesaler whose sales are growing rapidly. (10 marks)"
+  },
+  {
+   "key": "managing-finance:practice:7f9b7ec3",
+   "question": "A tile wholesaler with rising revenue closes after failing to pay a supplier. Weak cash flow, overestimation of sales, overtrading, poor inventory control are all suggested. Assess the likely internal causes of its failure. (10 marks)"
+  },
+  {
+   "key": "managing-finance:practice:1552c817",
+   "question": "A wholesaler that nearly closed last year after a supplier stopped delivering can either improve its liquidity or improve its profitability over the next twelve months, but does not have the management time to do both. Evaluate which it should prioritise if it is to avoid business failure. (20 marks)"
+  }
+ ],
+ "leaves": [
+  {
+   "id": "BUS-2.3.3-1a-1",
+   "subtopic": "Profit",
+   "requirement": "Calculation of:",
+   "wording": "gross profit"
+  },
+  {
+   "id": "BUS-2.3.3-1a-2",
+   "subtopic": "Profit",
+   "requirement": "Calculation of:",
+   "wording": "operating profit"
+  },
+  {
+   "id": "BUS-2.3.3-1a-3",
+   "subtopic": "Profit",
+   "requirement": "Calculation of:",
+   "wording": "profit for the year (net profit)."
+  },
+  {
+   "id": "BUS-2.3.3-1b",
+   "subtopic": "Profit",
+   "wording": "Ways to increase profits."
+  },
+  {
+   "id": "BUS-2.3.3-1c-1",
+   "subtopic": "Profit",
+   "requirement": "Statement of comprehensive income (profit and loss account):",
+   "wording": "measuring profitability: calculation of gross profit margin, operating profit margin, and profit for the year (net profit) margin"
+  },
+  {
+   "id": "BUS-2.3.3-1c-2",
+   "subtopic": "Profit",
+   "requirement": "Statement of comprehensive income (profit and loss account):",
+   "wording": "ways to improve profitability."
+  },
+  {
+   "id": "BUS-2.3.3-2a",
+   "subtopic": "Liquidity",
+   "wording": "Distinction between profit and cash."
+  },
+  {
+   "id": "BUS-2.3.3-2b-1",
+   "subtopic": "Liquidity",
+   "requirement": "Statement of financial position (balance sheet):",
+   "wording": "measuring liquidity: calculating current ratio and acid test ratio"
+  },
+  {
+   "id": "BUS-2.3.3-2b-2",
+   "subtopic": "Liquidity",
+   "requirement": "Statement of financial position (balance sheet):",
+   "wording": "ways to improve liquidity, including assets, supplier credit terms, factoring, inventory JIT."
+  },
+  {
+   "id": "BUS-2.3.3-2c",
+   "subtopic": "Liquidity",
+   "wording": "Working capital and its management: the importance of cash."
+  },
+  {
+   "id": "BUS-2.3.3-3a-1",
+   "subtopic": "Business failure",
+   "requirement": "Internal causes of business failure:",
+   "wording": "poor management of cash flow"
+  },
+  {
+   "id": "BUS-2.3.3-3a-2",
+   "subtopic": "Business failure",
+   "requirement": "Internal causes of business failure:",
+   "wording": "overestimation of sales"
+  },
+  {
+   "id": "BUS-2.3.3-3a-3",
+   "subtopic": "Business failure",
+   "requirement": "Internal causes of business failure:",
+   "wording": "overtrading"
+  },
+  {
+   "id": "BUS-2.3.3-3a-4",
+   "subtopic": "Business failure",
+   "requirement": "Internal causes of business failure:",
+   "wording": "poor inventory control"
+  },
+  {
+   "id": "BUS-2.3.3-3a-5",
+   "subtopic": "Business failure",
+   "requirement": "Internal causes of business failure:",
+   "wording": "poor marketing"
+  },
+  {
+   "id": "BUS-2.3.3-3a-6",
+   "subtopic": "Business failure",
+   "requirement": "Internal causes of business failure:",
+   "wording": "poor quality."
+  },
+  {
+   "id": "BUS-2.3.3-3b-1",
+   "subtopic": "Business failure",
+   "requirement": "External causes of business failure:",
+   "wording": "market conditions"
+  },
+  {
+   "id": "BUS-2.3.3-3b-2",
+   "subtopic": "Business failure",
+   "requirement": "External causes of business failure:",
+   "wording": "competition"
+  },
+  {
+   "id": "BUS-2.3.3-3b-3",
+   "subtopic": "Business failure",
+   "requirement": "External causes of business failure:",
+   "wording": "economic"
+  },
+  {
+   "id": "BUS-2.3.3-3b-4",
+   "subtopic": "Business failure",
+   "requirement": "External causes of business failure:",
+   "wording": "exchange rates"
+  },
+  {
+   "id": "BUS-2.3.3-3b-5",
+   "subtopic": "Business failure",
+   "requirement": "External causes of business failure:",
+   "wording": "interest rates"
+  },
+  {
+   "id": "BUS-2.3.3-3b-6",
+   "subtopic": "Business failure",
+   "requirement": "External causes of business failure:",
+   "wording": "government regulations"
+  },
+  {
+   "id": "BUS-2.3.3-3b-7",
+   "subtopic": "Business failure",
+   "requirement": "External causes of business failure:",
+   "wording": "supplier problems"
+  },
+  {
+   "id": "BUS-2.3.3-3b-8",
+   "subtopic": "Business failure",
+   "requirement": "External causes of business failure:",
+   "wording": "natural phenomena."
+  }
+ ]
+}

@@ -6,8 +6,10 @@
 //   npm run spec-coverage -- --section market-failure        one section, with its unexamined leaves
 //   npm run spec-coverage -- --baseline                      print the failure keys, do not fail
 //   npm run spec-coverage -- --baseline --confirm            rewrite audit/spec-coverage-baseline.json
-//   npm run spec-coverage -- --staged                        measure the staged rebuilds instead of live
+//   npm run spec-coverage -- --staged                        measure the held drafts where a section has one
+//   npm run spec-coverage -- --t0                            the pre-12.5 view: the t=0 dump, which has no ids
 //   npm run spec-coverage -- --json                          machine-readable, for a test
+//   npm run spec-coverage -- --tags <file> --bank <file>     read other tag/bank files (tests only)
 //
 // Packet 12.1, E002. The flags mirror audit/scripts/validate-content.mjs on purpose: the same hands
 // run both, and a guard with its own dialect gets run less.
@@ -25,14 +27,19 @@
 //
 // THE TWO BANKS, both read-only:
 //   1. data/modelAnswersData.js (+ modelAnswersExpansion.js) — 66 items behind the SEO pages.
-//   2. section_practice — the app's Practice tab. Read from files, never from the database: the t=0
-//      dump in audit/content-sections/, the last file-level snapshot of the published tables,
-//      or with --staged the newest rebuild in audit/snapshots/. Nothing here opens a Supabase
-//      client, so this can run in CI and cannot be the thing that breaks a Vercel build (rule 2).
+//   2. section_practice — the app's Practice tab. Read from files, never from the database:
+//      audit/practice-bank.json, a read-only dump of both banks taken by
+//      audit/scripts/dump-practice-bank.mjs (live = `data`; with --staged, `draft` where a section
+//      holds one). Nothing here opens a Supabase client, so this can run in CI and cannot be the
+//      thing that breaks a Vercel build (rule 2). --t0 reads the 11 September dump in
+//      audit/content-sections/ instead, which is how this guard measured until packet 12.5.
 //
-// TAGS FOR BANK 2 come from audit/runs/packet-12.1/section_practice-tags.json while the
-// `spec_items` column does not exist. The guard says so in its header rather than pretending the
-// column is there and empty — "absent" and "tagged as nothing" are different facts.
+// TAGS FOR BANK 2 come from audit/practice-spec-items.json, keyed by item id (packet 12.5). Not from
+// a column: `section_practice` is ONE ROW PER SECTION with the questions as a JSON array, so the
+// `spec_items` column scripts/packet-12-1-spec-items.sql added holds one value per section and
+// cannot say what a question examines. The ids are content hashes of the question text, so a
+// rewritten question arrives with a new id and reads as untagged rather than inheriting a tag
+// written for different words. An id with no entry is untagged; no entry is ever `[]`.
 //
 // THE THREE FAILURES:
 //   tariff   a (command, marks) pair that is not in lib/ial-marking.js for that subject
@@ -60,6 +67,14 @@ const CONFIRM = args.includes('--confirm');
 const JSON_OUT = args.includes('--json');
 const FIXTURE = (() => { const i = args.indexOf('--fixture'); return i >= 0 ? args[i + 1] : null; })();
 const STAGED = args.includes('--staged');
+const T0 = args.includes('--t0');
+const argPath = (flag, fallback) => {
+  const i = args.indexOf(flag);
+  if (i < 0) return path.join(ROOT, fallback);
+  return path.isAbsolute(args[i + 1]) ? args[i + 1] : path.join(ROOT, args[i + 1]);
+};
+const TAGS_PATH = argPath('--tags', 'audit/practice-spec-items.json');
+const BANK_PATH = argPath('--bank', 'audit/practice-bank.json');
 const BASELINE_PATH = path.join(ROOT, 'audit/spec-coverage-baseline.json');
 
 const read = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
@@ -93,10 +108,20 @@ async function modelAnswerItems() {
 /* ── Bank 2: section_practice, from files ────────────────────────────────────────────────────── */
 
 /**
- * Which file stands for `section_practice`. Never the database: nothing here opens a Supabase
- * client, so the guard runs in CI and cannot be the thing that breaks a Vercel build.
+ * THE DEFAULT SINCE PACKET 12.5 IS audit/practice-bank.json. The reasoning below chose the t=0 dump
+ * while packets 14-31 were held, and it was right then. It stopped being right on 25 September,
+ * when the checkpoint published the held rebuilds: at packet 12.5's census the live bank was 362
+ * questions and the t=0 dump's 215 were mostly gone, so the "lower bound" was a measurement of
+ * questions no student is served. The t=0 dump also carries no item ids, so no tag keyed by id can
+ * reach it. It stays reachable behind --t0 for comparison with older logs, but its numbers are NOT
+ * HEAD's: under --t0 Market Failure loses packet 12.1's four text-keyed t=0 tags (176 -> 175 leaves at
+ * 12.5), and --t0 --staged reads the snapshot bundles, whose items DO carry ids, so 12.5's tags reach
+ * them (180 -> 434 leaves). Compare an old log with --t0 only after allowing for both.
  *
- * DEFAULT IS THE t=0 DUMP, and that choice is load-bearing. `audit/content-sections/` is the last
+ * Which file stands for `section_practice` under --t0. Never the database: nothing here opens a
+ * Supabase client, so the guard runs in CI and cannot be the thing that breaks a Vercel build.
+ *
+ * (Pre-12.5 note, kept for the record) DEFAULT IS THE t=0 DUMP, and that choice is load-bearing. `audit/content-sections/` is the last
  * file-level snapshot of the PUBLISHED tables, and packets 14-31 are staged and not published
  * (NEXT.md, "Nothing in packets 14-18 is live"). Reading the rebuilt bundles by default would have
  * the guard report the fixed content and hide the shipped defect, and NEXT.md is explicit that the
@@ -111,7 +136,7 @@ async function modelAnswerItems() {
  * `--staged` measures the newest bundle in audit/snapshots/ instead, which is what publishing would
  * serve. Run both: the gap between them is the value sitting unshipped.
  */
-function practiceSourceFor(section) {
+function t0SourceFor(section) {
   const t0 = path.join(ROOT, 'audit/content-sections', `${section.subject}__${section.slug}.json`);
   if (STAGED) {
     const dir = path.join(ROOT, 'audit/snapshots');
@@ -125,28 +150,43 @@ function practiceSourceFor(section) {
   return null;
 }
 
+/** The practice bank dump, or null. Read once. */
+const BANK = !T0 && exists(BANK_PATH) ? read(BANK_PATH) : null;
+const BANK_BY_SLUG = new Map((BANK?.sections || []).map((s) => [s.slug, s]));
+
 function practiceRows(section) {
-  const src = practiceSourceFor(section);
+  if (!T0) {
+    const s = BANK_BY_SLUG.get(section.slug);
+    if (!s) return { rows: [], origin: 'missing' };
+    if (STAGED && s.staged) return { rows: s.staged, origin: 'staged (draft)' };
+    return { rows: s.live, origin: STAGED ? 'live (no draft held)' : 'live' };
+  }
+  const src = t0SourceFor(section);
   if (!src) return { rows: [], origin: 'missing' };
   const j = read(src.file);
   const rows = j.practice || j.tables?.practice || [];
   return { rows: Array.isArray(rows) ? rows : [], origin: src.origin };
 }
 
-/** Staged tags, while `section_practice.spec_items` does not exist. */
-function stagedTags() {
-  const p = path.join(ROOT, 'audit/runs/packet-12.1/section_practice-tags.json');
-  if (!exists(p)) return { byQuestion: new Map(), columnPresent: false, file: null };
-  const j = read(p);
-  const byQuestion = new Map((j.rows || []).map((r) => [r.question, r.spec_items]));
-  return { byQuestion, columnPresent: false, file: 'audit/runs/packet-12.1/section_practice-tags.json' };
+/**
+ * Bank 2's tags, keyed by item id. `orphans` counts tag entries whose id is in neither bank of the
+ * dump — a question rewritten or deleted since tagging. They are reported, never applied, and they
+ * are not an error: the item they described no longer exists.
+ */
+function practiceTags() {
+  if (!exists(TAGS_PATH)) return { byId: new Map(), file: null, orphans: 0 };
+  const j = read(TAGS_PATH);
+  const byId = new Map(Object.entries(j.items || {}).map(([id, t]) => [id, t.specItems]));
+  const inBank = new Set((BANK?.sections || []).flatMap((s) => [...s.live, ...(s.staged || [])].map((q) => q.id)));
+  const orphans = BANK ? [...byId.keys()].filter((id) => !inBank.has(id)).length : 0;
+  return { byId, file: path.relative(ROOT, TAGS_PATH), orphans };
 }
 
 /* ── The run ─────────────────────────────────────────────────────────────────────────────────── */
 
 async function collect() {
   const answers = FIXTURE ? [] : await modelAnswerItems();
-  const staged = FIXTURE ? { byQuestion: new Map(), columnPresent: false, file: null } : stagedTags();
+  const tags = FIXTURE ? { byId: new Map(), file: null, orphans: 0 } : practiceTags();
   const fixture = FIXTURE ? read(path.isAbsolute(FIXTURE) ? FIXTURE : path.join(ROOT, FIXTURE)) : null;
   const sections = fixture
     ? fixture.sections.map((s) => ({ slug: s.slug, subject: s.subject, topic: s.topic, title: s.title || s.slug, unit: Number(String(s.topic).split('.')[0]) }))
@@ -154,6 +194,7 @@ async function collect() {
 
   const rows = [];
   const failures = [];
+  let practiceTagged = 0; // section_practice items only; model answers carry their own tags
 
   for (const section of sections) {
     if (ONLY && section.slug !== ONLY) continue;
@@ -174,8 +215,9 @@ async function collect() {
       items = p.rows.map((q, i) => ({
         bank: 'section_practice', ref: `${section.slug}:${i}`, subject: section.subject, topic: section.topic,
         command: q.command, commandWord: q.command, marks: q.marks, question: q.question,
-        specItems: staged.byQuestion.get(q.question), kind: q.kind, ao: q.ao, stimulusRef: q.stimulusRef,
+        specItems: q.id ? tags.byId.get(q.id) : undefined, kind: q.kind, ao: q.ao, stimulusRef: q.stimulusRef,
       }));
+      practiceTagged += items.filter((i) => Array.isArray(i.specItems)).length;
       items = items.concat(
         answers.filter((a) => a.subject === section.subject && a.topic === section.topic),
       );
@@ -231,15 +273,28 @@ async function collect() {
     });
   }
 
-  return { rows, failures, staged, fixture: Boolean(fixture) };
+  return { rows, failures, tags, fixture: Boolean(fixture), practiceTagged };
 }
 
-const { rows, failures, staged, fixture } = await collect();
+const { rows, failures, tags, fixture, practiceTagged: practiceTaggedCount } = await collect();
+
+// What the database said about the section-level columns when the dump was taken — a fact, not a
+// literal. Until packet 12.5 this line was printed behind `if (!columnPresent)` with columnPresent
+// hardcoded false, so it asserted the SQL was unrun for ever, including after it had been run.
+const grainColumns = BANK?.sectionGrainColumns || null;
 
 if (JSON_OUT) {
   console.log(JSON.stringify({
     leafTotal: LEAVES.length,
-    rows: rows.map((r) => ({ slug: r.slug, questions: r.questions, examined: r.examined, leaves: r.leaves, pct: Number(r.pct.toFixed(1)) })),
+    bank2: fixture ? null : {
+      source: T0 ? 'audit/content-sections (t=0)' : path.relative(ROOT, BANK_PATH),
+      taken: T0 ? null : BANK?.taken || null,
+      tagsFile: tags.file,
+      practiceTagged: practiceTaggedCount,
+      orphanTags: tags.orphans,
+      sectionGrainColumns: grainColumns,
+    },
+    rows: rows.map((r) => ({ slug: r.slug, questions: r.questions, untagged: r.untagged, examined: r.examined, leaves: r.leaves, pct: Number(r.pct.toFixed(1)) })),
     failures,
   }, null, 1));
   process.exit(failures.length ? 1 : 0);
@@ -254,10 +309,22 @@ if (!fixture) {
   console.log('');
   console.log(`spec-coverage — leaves examined, against ${LEAVES.length.toLocaleString('en-GB')} \`kind: 'leaf'\` rows in audit/raw/spec-items.json`);
   console.log(`  bank 1  data/modelAnswersData.js + modelAnswersExpansion.js`);
-  console.log(`  bank 2  section_practice, read from ${STAGED ? 'audit/snapshots/ (--staged: what publishing would serve)' : 'audit/content-sections/ (the t=0 dump of the published tables — a lower bound, not live; --staged for the rebuilds)'}`);
-  if (!staged.columnPresent) {
-    console.log(`  note    section_practice has no \`spec_items\` column: scripts/packet-12-1-spec-items.sql is written and NOT run.`);
-    console.log(`          Tags for bank 2 come from ${staged.file || '(no staged file)'}.`);
+  if (T0) {
+    console.log(`  bank 2  section_practice, read from ${STAGED ? 'audit/snapshots/ (--t0 --staged: newest rebuild bundles)' : 'audit/content-sections/ (--t0: the 11 September dump, no item ids, so no tag can apply)'}`);
+  } else if (!BANK) {
+    console.log(`  bank 2  MISSING: ${path.relative(ROOT, BANK_PATH)} does not exist — run node audit/scripts/dump-practice-bank.mjs`);
+  } else {
+    console.log(`  bank 2  section_practice, ${STAGED ? 'held drafts where a section has one, live otherwise' : 'live'}, from ${path.relative(ROOT, BANK_PATH)} (taken ${BANK.taken}; --check it against the database with dump-practice-bank.mjs)`);
+  }
+  console.log(`  tags    bank 2 tags from ${tags.file || '(no tags file)'}, keyed by item id${tags.orphans ? ` — ${tags.orphans} describe a question no longer in either bank and are not applied` : ''}`);
+  if (grainColumns) {
+    const cols = Object.entries(grainColumns);
+    for (const [col, st] of cols) {
+      if (st.nonNull) console.log(`  WARN    section_practice.${col} is a per-SECTION column and ${st.nonNull} row(s) hold a value; it cannot say what a question examines and nothing here reads it`);
+    }
+    if (cols.length && cols.every(([, st]) => !st.nonNull)) {
+      console.log(`  note    section_practice.${cols.map(([c]) => c).join(', ')}: per-section column(s) present and empty at the dump; scripts/packet-12-5-drop-section-grain-columns.sql removes them`);
+    }
   }
   console.log('');
 }

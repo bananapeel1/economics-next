@@ -3,15 +3,65 @@ import path from 'node:path';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import MarkdownPage from '@/components/MarkdownPage';
+import { MODEL_ANSWERS } from '@/data/modelAnswersData';
 import '../markdown-page.css';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'data-response');
+
+/*
+ * THE QUESTIONS COME FROM THE BANK, NOT FROM THE FILE (packet 12.8, E057 close-out).
+ *
+ * A slug whose extract backs the bank's data question — items carrying
+ * `paper.kind === 'data_question'` with `stimulus === slug` — has no `## Questions` in its markdown.
+ * The page writes that section from the bank items (part letter, tariff, stem), in part order, as
+ * the same markdown the file used to carry, spliced in where it used to sit: immediately before
+ * `## Model Answers`. The page therefore cannot state a question the bank does not; the practice
+ * shell and this page read one list. `audit/scripts/validate-model-answers.mjs` R13 holds the
+ * rest of the file's structure to the bank (no `## Questions` of its own, only the allowed
+ * sections, model-answer headings exactly the bank's parts).
+ *
+ * A slug with no bank data question (the other five today) is passed through untouched, so its
+ * rendered HTML is byte-identical to before.
+ */
+function dataQuestionParts(slug) {
+  return MODEL_ANSWERS
+    .filter((i) => i.paper && i.paper.kind === 'data_question' && i.stimulus === slug)
+    .sort((a, b) => String(a.paper.part).localeCompare(String(b.paper.part)));
+}
+
+/** Backslash-escape every ASCII punctuation character (CommonMark §2.4) so a stem renders as text. */
+const mdText = (s) => String(s).replace(/[!-/:-@[-`{-~]/g, '\\$&');
+
+function questionsMarkdown(parts) {
+  const lines = ['## Questions', ''];
+  for (const i of parts) {
+    const marks = Number(i.marks);
+    lines.push(`**Question (${i.paper.part}) (${marks} ${marks === 1 ? 'mark' : 'marks'})** — ${mdText(i.question)}`, '');
+  }
+  return lines.join('\n');
+}
+
+/** Insert the bank's questions before the first `## Model Answers` outside a code fence (else at the end). */
+function withBankQuestions(content, parts) {
+  if (!parts.length) return content;
+  const block = questionsMarkdown(parts);
+  const lines = content.split('\n');
+  let fence = null;
+  for (let n = 0; n < lines.length; n += 1) {
+    const f = lines[n].match(/^ {0,3}(`{3,}|~{3,})/);
+    if (f) { fence = fence === null ? f[1][0] : (f[1][0] === fence ? null : fence); continue; }
+    if (fence === null && /^## +Model Answers\s*$/.test(lines[n])) {
+      return [...lines.slice(0, n), block, ...lines.slice(n)].join('\n');
+    }
+  }
+  return `${content.replace(/\n*$/, '')}\n\n${block}`;
+}
 
 const PIECES = {
   'econ-u1-market-failure': {
     subject: 'Economics · Unit 1',
     shortTitle: 'Market Failure',
-    description: 'Free Edexcel IAL Economics Unit 1 data-response practice on market failure. UAE plastics charge and GCC sugar-tax stimulus, 2/6/20-mark ladder with KAA+E model answers.',
+    description: 'Free Edexcel IAL Economics Unit 1 data-response practice on market failure. UAE plastics charge and GCC sugar-tax stimulus, the five-part 2/4/6/8/14-mark data question with KAA+E model answers.',
   },
   'econ-u1-demand-elasticity': {
     subject: 'Economics · Unit 1',
@@ -75,6 +125,7 @@ export default async function DataResponsePage({ params }) {
   } catch {
     notFound();
   }
+  content = withBankQuestions(content, dataQuestionParts(slug));
 
   const breadcrumbLd = {
     '@context': 'https://schema.org',

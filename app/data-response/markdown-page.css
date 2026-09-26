@@ -96,6 +96,46 @@
   font-size: 0.9375rem;
 }
 
+/* Packet 12.8, E054. A table sits in `.md-table` (components/MarkdownPage.jsx), whose own width a
+   container query can read. At 390px Table 1 of the market-failure piece measured 403px in a 350px
+   column and panned the whole page sideways. Below 600px of container width a table stacks: one
+   block per row, each cell under its column heading (the cell's `data-label`, the same words as the
+   <thead> it replaces). Nothing is cut and nothing scrolls; the headings move, they are not dropped.
+   600px, not the 403px one table needed, because the widest piece (5 columns) needs more, and a
+   threshold that fits every piece is one rule instead of five. */
+.markdown-page .md-table {
+  container-type: inline-size;
+  margin: 0 0 20px;
+}
+.markdown-page .md-table table { margin: 0; }
+.markdown-page th,
+.markdown-page td { overflow-wrap: break-word; }
+@container (max-width: 600px) {
+  .markdown-page .md-table table,
+  .markdown-page .md-table tbody,
+  .markdown-page .md-table tr,
+  .markdown-page .md-table td { display: block; width: auto; }
+  .markdown-page .md-table thead { display: none; }
+  .markdown-page .md-table tr {
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .markdown-page .md-table tr + tr { margin-top: 8px; }
+  .markdown-page .md-table td,
+  .markdown-page .md-table tr:nth-child(even) td { border: 0; padding: 4px 0; background: none; }
+  .markdown-page .md-table td:first-child { color: var(--text-primary); font-weight: 600; }
+  .markdown-page .md-table td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+  }
+}
+
 .markdown-page th,
 .markdown-page td {
   padding: 10px 14px;

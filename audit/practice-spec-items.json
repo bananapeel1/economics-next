@@ -1,0 +1,2367 @@
+{
+ "note": "What each section_practice question examines, keyed by item id (a content hash of the question text, so a rewritten question has a new id and falls back to untagged). Read by npm run spec-coverage and nothing else. An id absent from `items` is NOT TAGGED; no value is ever []. Written by audit/runs/packet-12.5/merge.mjs; do not edit by hand.",
+ "generated": "2026-09-26",
+ "method": "Two-pass agreement (packet 12.1: an independent reader on question text only, then audit/scripts/tag-lexical.mjs blind to it), plus a blind fourth reader with hidden negative controls where the disagreement was structural. Evidence: audit/runs/packet-12.5/.",
+ "census": "audit/runs/packet-12.5/census.json, taken 2026-09-26T11:26:22.806Z: 362 live + 48 staged = 410 items",
+ "items": {
+  "aggregate-demand:practice:00e831f3": {
+   "section": "aggregate-demand",
+   "specItems": [
+    "ECON-2.3.2-2a-2"
+   ],
+   "via": "agreed"
+  },
+  "aggregate-demand:practice:1486e2ca": {
+   "section": "aggregate-demand",
+   "specItems": [
+    "ECON-2.3.2-1b-1",
+    "ECON-2.3.2-2c"
+   ],
+   "via": "agreed"
+  },
+  "aggregate-demand:practice:453db60e": {
+   "section": "aggregate-demand",
+   "specItems": [
+    "ECON-2.3.2-1b-2",
+    "ECON-2.3.2-2a-3"
+   ],
+   "via": "agreed"
+  },
+  "aggregate-demand:practice:54f9ee69": {
+   "section": "aggregate-demand",
+   "specItems": [
+    "ECON-2.3.2-1b-1"
+   ],
+   "via": "agreed"
+  },
+  "aggregate-demand:practice:99c73692": {
+   "section": "aggregate-demand",
+   "specItems": [
+    "ECON-2.3.2-1a"
+   ],
+   "via": "adjudicated"
+  },
+  "aggregate-demand:practice:d9a8da1d": {
+   "section": "aggregate-demand",
+   "specItems": [
+    "ECON-2.3.2-2d"
+   ],
+   "via": "agreed"
+  },
+  "aggregate-demand:practice:e0988928": {
+   "section": "aggregate-demand",
+   "specItems": [
+    "ECON-2.3.2-1b-1"
+   ],
+   "via": "agreed"
+  },
+  "aggregate-supply:practice:1f8184d4": {
+   "section": "aggregate-supply",
+   "specItems": [
+    "ECON-2.3.3-2a-1"
+   ],
+   "via": "agreed"
+  },
+  "aggregate-supply:practice:57d8334d": {
+   "section": "aggregate-supply",
+   "specItems": [
+    "ECON-2.3.3-3a-1",
+    "ECON-2.3.3-3a-2"
+   ],
+   "via": "agreed"
+  },
+  "aggregate-supply:practice:79b81555": {
+   "section": "aggregate-supply",
+   "specItems": [
+    "ECON-2.3.3-3b-3"
+   ],
+   "via": "agreed"
+  },
+  "aggregate-supply:practice:c18dd05f": {
+   "section": "aggregate-supply",
+   "specItems": [
+    "ECON-2.3.3-3b-5"
+   ],
+   "via": "adjudicated"
+  },
+  "aggregate-supply:practice:c2b102ac": {
+   "section": "aggregate-supply",
+   "specItems": [
+    "ECON-2.3.3-3a-2"
+   ],
+   "via": "agreed"
+  },
+  "aggregate-supply:practice:d968ee0b": {
+   "section": "aggregate-supply",
+   "specItems": [
+    "ECON-2.3.3-2a-1"
+   ],
+   "via": "agreed"
+  },
+  "aggregate-supply:practice:ffef2ba6": {
+   "section": "aggregate-supply",
+   "specItems": [
+    "ECON-2.3.3-1a"
+   ],
+   "via": "adjudicated"
+  },
+  "assessing-competitiveness:practice:0b1f6e16": {
+   "section": "assessing-competitiveness",
+   "specItems": [
+    "BUS-3.3.5-2a-1",
+    "BUS-3.3.5-2a-2",
+    "BUS-3.3.5-2b"
+   ],
+   "via": "agreed"
+  },
+  "assessing-competitiveness:practice:0b82e182": {
+   "section": "assessing-competitiveness",
+   "specItems": [
+    "BUS-3.3.5-2a-3",
+    "BUS-3.3.5-2b"
+   ],
+   "via": "adjudicated"
+  },
+  "assessing-competitiveness:practice:3c16388f": {
+   "section": "assessing-competitiveness",
+   "specItems": [
+    "BUS-3.3.5-3a-2"
+   ],
+   "via": "agreed"
+  },
+  "assessing-competitiveness:practice:48b12cde": {
+   "section": "assessing-competitiveness",
+   "specItems": [
+    "BUS-3.3.5-2a-1"
+   ],
+   "via": "agreed"
+  },
+  "assessing-competitiveness:practice:4c229899": {
+   "section": "assessing-competitiveness",
+   "specItems": [
+    "BUS-3.3.5-1a-1",
+    "BUS-3.3.5-1a-2"
+   ],
+   "via": "agreed"
+  },
+  "assessing-competitiveness:practice:6506870e": {
+   "section": "assessing-competitiveness",
+   "specItems": [
+    "BUS-3.3.5-2b",
+    "BUS-3.3.5-2c"
+   ],
+   "via": "agreed"
+  },
+  "assessing-competitiveness:practice:7692303e": {
+   "section": "assessing-competitiveness",
+   "specItems": [
+    "BUS-3.3.5-2a-2"
+   ],
+   "via": "agreed"
+  },
+  "assessing-competitiveness:practice:cca06597": {
+   "section": "assessing-competitiveness",
+   "specItems": [
+    "BUS-3.3.5-3a-2",
+    "BUS-3.3.5-3c-2"
+   ],
+   "via": "agreed"
+  },
+  "assessing-competitiveness:practice:d2d4f752": {
+   "section": "assessing-competitiveness",
+   "specItems": [
+    "BUS-3.3.5-2a-4"
+   ],
+   "via": "agreed"
+  },
+  "balance-payments-exchange-rates:practice:06c5813b": {
+   "section": "balance-payments-exchange-rates",
+   "specItems": [
+    "ECON-4.3.3-2c-3"
+   ],
+   "via": "adjudicated"
+  },
+  "balance-payments-exchange-rates:practice:3d5d52d4": {
+   "section": "balance-payments-exchange-rates",
+   "specItems": [
+    "ECON-4.3.3-2b-1",
+    "ECON-4.3.3-2b-2"
+   ],
+   "via": "agreed"
+  },
+  "balance-payments-exchange-rates:practice:7d575a1b": {
+   "section": "balance-payments-exchange-rates",
+   "specItems": [
+    "ECON-4.3.3-1c"
+   ],
+   "via": "agreed"
+  },
+  "balance-payments-exchange-rates:practice:a0c3e9d8": {
+   "section": "balance-payments-exchange-rates",
+   "specItems": [
+    "ECON-4.3.3-1a-1"
+   ],
+   "via": "agreed"
+  },
+  "balance-payments-exchange-rates:practice:b2134df5": {
+   "section": "balance-payments-exchange-rates",
+   "specItems": [
+    "ECON-4.3.3-1a-1",
+    "ECON-4.3.3-1a-2"
+   ],
+   "via": "agreed"
+  },
+  "balance-payments-exchange-rates:practice:c66d217f": {
+   "section": "balance-payments-exchange-rates",
+   "specItems": [
+    "ECON-4.3.3-2c-1"
+   ],
+   "via": "agreed"
+  },
+  "business-growth:practice:1fe9f97c": {
+   "section": "business-growth",
+   "specItems": [
+    "BUS-3.3.2-3a-5"
+   ],
+   "via": "agreed"
+  },
+  "business-growth:practice:38e35a6e": {
+   "section": "business-growth",
+   "specItems": [
+    "BUS-3.3.2-2b"
+   ],
+   "via": "adjudicated"
+  },
+  "business-growth:practice:4297cf2c": {
+   "section": "business-growth",
+   "specItems": [
+    "BUS-3.3.2-1a-4"
+   ],
+   "via": "agreed"
+  },
+  "business-growth:practice:a7da89e6": {
+   "section": "business-growth",
+   "specItems": [
+    "BUS-3.3.2-3b"
+   ],
+   "via": "adjudicated"
+  },
+  "business-growth:practice:ada57e33": {
+   "section": "business-growth",
+   "specItems": [
+    "BUS-3.3.2-1a-1"
+   ],
+   "via": "agreed"
+  },
+  "business-objectives-strategy:practice:16bfcf20": {
+   "section": "business-objectives-strategy",
+   "specItems": [
+    "BUS-3.3.1-2a-1"
+   ],
+   "via": "adjudicated"
+  },
+  "business-objectives-strategy:practice:17d02d21": {
+   "section": "business-objectives-strategy",
+   "specItems": [
+    "BUS-3.3.1-3a-2"
+   ],
+   "via": "agreed"
+  },
+  "business-objectives-strategy:practice:7c7fc216": {
+   "section": "business-objectives-strategy",
+   "specItems": [
+    "BUS-3.3.1-2c"
+   ],
+   "via": "agreed"
+  },
+  "business-objectives-strategy:practice:8551ae91": {
+   "section": "business-objectives-strategy",
+   "specItems": [
+    "BUS-3.3.1-2a-1"
+   ],
+   "via": "agreed"
+  },
+  "business-objectives-strategy:practice:a41fc5b3": {
+   "section": "business-objectives-strategy",
+   "specItems": [
+    "BUS-3.3.1-1a"
+   ],
+   "via": "agreed"
+  },
+  "business-objectives-strategy:practice:ca45be92": {
+   "section": "business-objectives-strategy",
+   "specItems": [
+    "BUS-3.3.1-2a-2"
+   ],
+   "via": "adjudicated"
+  },
+  "causes-effects-globalisation:practice:2e647efe": {
+   "section": "causes-effects-globalisation",
+   "specItems": [
+    "ECON-4.3.1-1b"
+   ],
+   "via": "agreed"
+  },
+  "causes-effects-globalisation:practice:59513d1d": {
+   "section": "causes-effects-globalisation",
+   "specItems": [
+    "ECON-4.3.1-3a-4"
+   ],
+   "via": "agreed"
+  },
+  "causes-effects-globalisation:practice:afd6b3c7": {
+   "section": "causes-effects-globalisation",
+   "specItems": [
+    "ECON-4.3.1-3a-4"
+   ],
+   "via": "agreed"
+  },
+  "causes-effects-globalisation:practice:c5137f75": {
+   "section": "causes-effects-globalisation",
+   "specItems": [
+    "ECON-4.3.1-1a"
+   ],
+   "via": "agreed"
+  },
+  "causes-effects-globalisation:practice:d705e71a": {
+   "section": "causes-effects-globalisation",
+   "specItems": [
+    "ECON-4.3.1-2b-2"
+   ],
+   "via": "adjudicated"
+  },
+  "consumer-behaviour-demand:practice:0cdc49a5": {
+   "section": "consumer-behaviour-demand",
+   "specItems": [
+    "ECON-1.3.2-3a",
+    "ECON-1.3.2-3h-5",
+    "ECON-1.3.2-3j"
+   ],
+   "via": "adjudicated"
+  },
+  "consumer-behaviour-demand:practice:3b14f765": {
+   "section": "consumer-behaviour-demand",
+   "specItems": [
+    "ECON-1.3.2-3a"
+   ],
+   "via": "adjudicated"
+  },
+  "consumer-behaviour-demand:practice:3f666102": {
+   "section": "consumer-behaviour-demand",
+   "specItems": [
+    "ECON-1.3.2-3d-2"
+   ],
+   "via": "agreed"
+  },
+  "consumer-behaviour-demand:practice:69c1e33b": {
+   "section": "consumer-behaviour-demand",
+   "specItems": [
+    "ECON-1.3.2-2b"
+   ],
+   "via": "agreed"
+  },
+  "consumer-behaviour-demand:practice:78c55b92": {
+   "section": "consumer-behaviour-demand",
+   "specItems": [
+    "ECON-1.3.2-3e"
+   ],
+   "via": "agreed"
+  },
+  "consumer-behaviour-demand:practice:9a655728": {
+   "section": "consumer-behaviour-demand",
+   "specItems": [
+    "ECON-1.3.2-3j"
+   ],
+   "via": "agreed"
+  },
+  "consumer-behaviour-demand:practice:cba90ca6": {
+   "section": "consumer-behaviour-demand",
+   "specItems": [
+    "ECON-1.3.2-2b",
+    "ECON-1.3.2-2d-1"
+   ],
+   "via": "adjudicated"
+  },
+  "consumer-behaviour-demand:practice:edba8869": {
+   "section": "consumer-behaviour-demand",
+   "specItems": [
+    "ECON-1.3.2-1a"
+   ],
+   "via": "agreed"
+  },
+  "decision-making-techniques:practice:5075f3f8": {
+   "section": "decision-making-techniques",
+   "specItems": [
+    "BUS-3.3.3-2a"
+   ],
+   "via": "agreed"
+  },
+  "decision-making-techniques:practice:dd657aab": {
+   "section": "decision-making-techniques",
+   "specItems": [
+    "BUS-3.3.3-2c"
+   ],
+   "via": "agreed"
+  },
+  "decision-making-techniques:practice:fea2b9e6": {
+   "section": "decision-making-techniques",
+   "specItems": [
+    "BUS-3.3.3-2c",
+    "BUS-3.3.3-2e"
+   ],
+   "via": "agreed"
+  },
+  "economic-growth:practice:0f8d861a": {
+   "section": "economic-growth",
+   "specItems": [
+    "ECON-2.3.5-1d-3"
+   ],
+   "via": "agreed"
+  },
+  "economic-growth:practice:1af5fb40": {
+   "section": "economic-growth",
+   "specItems": [
+    "ECON-2.3.5-3a-3"
+   ],
+   "via": "agreed"
+  },
+  "economic-growth:practice:24b001a0": {
+   "section": "economic-growth",
+   "specItems": [
+    "ECON-2.3.5-2a-5"
+   ],
+   "via": "agreed"
+  },
+  "economic-growth:practice:28d84275": {
+   "section": "economic-growth",
+   "specItems": [
+    "ECON-2.3.5-1d-1"
+   ],
+   "via": "agreed"
+  },
+  "economic-growth:practice:2a5b72a5": {
+   "section": "economic-growth",
+   "specItems": [
+    "ECON-2.3.5-4b"
+   ],
+   "via": "agreed"
+  },
+  "economic-growth:practice:bf6d98c2": {
+   "section": "economic-growth",
+   "specItems": [
+    "ECON-2.3.5-4b",
+    "ECON-2.3.5-4c"
+   ],
+   "via": "agreed"
+  },
+  "economic-growth:practice:f21420d8": {
+   "section": "economic-growth",
+   "specItems": [
+    "ECON-2.3.5-1b"
+   ],
+   "via": "agreed"
+  },
+  "economic-growth:practice:f9df166f": {
+   "section": "economic-growth",
+   "specItems": [
+    "ECON-2.3.5-2a-3"
+   ],
+   "via": "agreed"
+  },
+  "entrepreneurs-leaders:practice:20b1bc93": {
+   "section": "entrepreneurs-leaders",
+   "specItems": [
+    "BUS-1.3.5-1d"
+   ],
+   "via": "agreed"
+  },
+  "entrepreneurs-leaders:practice:8a17bf9c": {
+   "section": "entrepreneurs-leaders",
+   "specItems": [
+    "BUS-1.3.5-2b-1"
+   ],
+   "via": "agreed"
+  },
+  "entrepreneurs-leaders:practice:9ef00349": {
+   "section": "entrepreneurs-leaders",
+   "specItems": [
+    "BUS-1.3.5-4a"
+   ],
+   "via": "adjudicated"
+  },
+  "entrepreneurs-leaders:practice:b63619cf": {
+   "section": "entrepreneurs-leaders",
+   "specItems": [
+    "BUS-1.3.5-3c-2"
+   ],
+   "via": "agreed"
+  },
+  "entrepreneurs-leaders:practice:f9434ded": {
+   "section": "entrepreneurs-leaders",
+   "specItems": [
+    "BUS-1.3.5-3b"
+   ],
+   "via": "agreed"
+  },
+  "entrepreneurs-leaders:practice:fcb47f1e": {
+   "section": "entrepreneurs-leaders",
+   "specItems": [
+    "BUS-1.3.5-1c"
+   ],
+   "via": "agreed"
+  },
+  "external-influences:practice:0a4a7ce3": {
+   "section": "external-influences",
+   "specItems": [
+    "BUS-2.3.5-3b"
+   ],
+   "via": "agreed"
+  },
+  "external-influences:practice:1a8db062": {
+   "section": "external-influences",
+   "specItems": [
+    "BUS-2.3.5-1a-3"
+   ],
+   "via": "agreed"
+  },
+  "external-influences:practice:29edd752": {
+   "section": "external-influences",
+   "specItems": [
+    "BUS-2.3.5-1a-2"
+   ],
+   "via": "adjudicated"
+  },
+  "external-influences:practice:42609ea4": {
+   "section": "external-influences",
+   "specItems": [
+    "BUS-2.3.5-1a-1"
+   ],
+   "via": "agreed"
+  },
+  "external-influences:practice:44af3c9a": {
+   "section": "external-influences",
+   "specItems": [
+    "BUS-2.3.5-1a-4"
+   ],
+   "via": "agreed"
+  },
+  "external-influences:practice:4ebdc573": {
+   "section": "external-influences",
+   "specItems": [
+    "BUS-2.3.5-1a-3"
+   ],
+   "via": "agreed"
+  },
+  "external-influences:practice:7d56ec9e": {
+   "section": "external-influences",
+   "specItems": [
+    "BUS-2.3.5-1a-5"
+   ],
+   "via": "agreed"
+  },
+  "external-influences:practice:8331eb87": {
+   "section": "external-influences",
+   "specItems": [
+    "BUS-2.3.5-1a-5"
+   ],
+   "via": "adjudicated"
+  },
+  "external-influences:practice:b6c279c0": {
+   "section": "external-influences",
+   "specItems": [
+    "BUS-2.3.5-1a-2"
+   ],
+   "via": "adjudicated"
+  },
+  "external-influences:practice:ea288577": {
+   "section": "external-influences",
+   "specItems": [
+    "BUS-2.3.5-2a-6"
+   ],
+   "via": "agreed"
+  },
+  "external-influences:practice:f1117796": {
+   "section": "external-influences",
+   "specItems": [
+    "BUS-2.3.5-3a-3"
+   ],
+   "via": "adjudicated"
+  },
+  "external-influences:practice:fcbed8e1": {
+   "section": "external-influences",
+   "specItems": [
+    "BUS-2.3.5-2a-3"
+   ],
+   "via": "agreed"
+  },
+  "financial-planning:practice:3c8bbb72": {
+   "section": "financial-planning",
+   "specItems": [
+    "BUS-2.3.2-3f"
+   ],
+   "via": "agreed"
+  },
+  "financial-planning:practice:4166f834": {
+   "section": "financial-planning",
+   "specItems": [
+    "BUS-2.3.2-3d"
+   ],
+   "via": "agreed"
+  },
+  "financial-planning:practice:6d28546f": {
+   "section": "financial-planning",
+   "specItems": [
+    "BUS-2.3.2-2c"
+   ],
+   "via": "agreed"
+  },
+  "financial-planning:practice:a1118525": {
+   "section": "financial-planning",
+   "specItems": [
+    "BUS-2.3.2-4a"
+   ],
+   "via": "agreed"
+  },
+  "financial-planning:practice:be2a63ae": {
+   "section": "financial-planning",
+   "specItems": [
+    "BUS-2.3.2-3b-1",
+    "BUS-2.3.2-3c"
+   ],
+   "via": "agreed"
+  },
+  "financial-planning:practice:de4233c2": {
+   "section": "financial-planning",
+   "specItems": [
+    "BUS-2.3.2-1b"
+   ],
+   "via": "agreed"
+  },
+  "global-industries-mncs:practice:1a7b024c": {
+   "section": "global-industries-mncs",
+   "specItems": [
+    "BUS-4.3.4-1b-7"
+   ],
+   "via": "agreed"
+  },
+  "global-industries-mncs:practice:2d606643": {
+   "section": "global-industries-mncs",
+   "specItems": [
+    "BUS-4.3.4-1b-7"
+   ],
+   "via": "agreed"
+  },
+  "global-industries-mncs:practice:60f7d479": {
+   "section": "global-industries-mncs",
+   "specItems": [
+    "BUS-4.3.4-1b-7"
+   ],
+   "via": "adjudicated"
+  },
+  "global-industries-mncs:practice:7368bf96": {
+   "section": "global-industries-mncs",
+   "specItems": [
+    "BUS-4.3.4-2c-1",
+    "BUS-4.3.4-2c-2"
+   ],
+   "via": "agreed"
+  },
+  "global-industries-mncs:practice:81609ec0": {
+   "section": "global-industries-mncs",
+   "specItems": [
+    "BUS-4.3.4-2c-2",
+    "BUS-4.3.4-3a-3",
+    "BUS-4.3.4-3a-4",
+    "BUS-4.3.4-3a-5",
+    "BUS-4.3.4-3a-6"
+   ],
+   "via": "agreed"
+  },
+  "global-industries-mncs:practice:cf190259": {
+   "section": "global-industries-mncs",
+   "specItems": [
+    "BUS-4.3.4-1b-3"
+   ],
+   "via": "agreed"
+  },
+  "global-industries-mncs:practice:d9473b03": {
+   "section": "global-industries-mncs",
+   "specItems": [
+    "BUS-4.3.4-1a-2"
+   ],
+   "via": "agreed"
+  },
+  "global-industries-mncs:practice:e0d68349": {
+   "section": "global-industries-mncs",
+   "specItems": [
+    "BUS-4.3.4-2a",
+    "BUS-4.3.4-2c-2"
+   ],
+   "via": "agreed"
+  },
+  "global-marketing:practice:0e286ebe": {
+   "section": "global-marketing",
+   "specItems": [
+    "BUS-4.3.3-1c"
+   ],
+   "via": "agreed"
+  },
+  "global-marketing:practice:2285f98a": {
+   "section": "global-marketing",
+   "specItems": [
+    "BUS-4.3.3-2b"
+   ],
+   "via": "agreed"
+  },
+  "global-marketing:practice:298904e8": {
+   "section": "global-marketing",
+   "specItems": [
+    "BUS-4.3.3-3a-1"
+   ],
+   "via": "agreed"
+  },
+  "global-marketing:practice:5cc86aba": {
+   "section": "global-marketing",
+   "specItems": [
+    "BUS-4.3.3-1b-2"
+   ],
+   "via": "agreed"
+  },
+  "global-marketing:practice:96e37a09": {
+   "section": "global-marketing",
+   "specItems": [
+    "BUS-4.3.3-2a",
+    "BUS-4.3.3-3a-1"
+   ],
+   "via": "adjudicated"
+  },
+  "global-marketing:practice:9be0acd8": {
+   "section": "global-marketing",
+   "specItems": [
+    "BUS-4.3.3-1d"
+   ],
+   "via": "adjudicated"
+  },
+  "global-marketing:practice:b1d02cca": {
+   "section": "global-marketing",
+   "specItems": [
+    "BUS-4.3.3-1d"
+   ],
+   "via": "agreed"
+  },
+  "global-marketing:practice:ca50b59f": {
+   "section": "global-marketing",
+   "specItems": [
+    "BUS-4.3.3-3a-1"
+   ],
+   "via": "agreed"
+  },
+  "global-marketing:practice:cbfe6f22": {
+   "section": "global-marketing",
+   "specItems": [
+    "BUS-4.3.3-1a"
+   ],
+   "via": "agreed"
+  },
+  "global-marketing:practice:d6b36e3a": {
+   "section": "global-marketing",
+   "specItems": [
+    "BUS-4.3.3-2b"
+   ],
+   "via": "agreed"
+  },
+  "global-marketing:practice:e2de8577": {
+   "section": "global-marketing",
+   "specItems": [
+    "BUS-4.3.3-1d"
+   ],
+   "via": "agreed"
+  },
+  "global-markets-expansion:practice:1822cdd4": {
+   "section": "global-markets-expansion",
+   "specItems": [
+    "BUS-4.3.2-4h",
+    "BUS-4.3.2-4i"
+   ],
+   "via": "agreed"
+  },
+  "global-markets-expansion:practice:36cd7cf3": {
+   "section": "global-markets-expansion",
+   "specItems": [
+    "BUS-4.3.2-3a-4"
+   ],
+   "via": "agreed"
+  },
+  "global-markets-expansion:practice:376f0ea7": {
+   "section": "global-markets-expansion",
+   "specItems": [
+    "BUS-4.3.2-5a",
+    "BUS-4.3.2-5b"
+   ],
+   "via": "agreed"
+  },
+  "global-markets-expansion:practice:c301c1f9": {
+   "section": "global-markets-expansion",
+   "specItems": [
+    "BUS-4.3.2-5a"
+   ],
+   "via": "agreed"
+  },
+  "global-markets-expansion:practice:c5410766": {
+   "section": "global-markets-expansion",
+   "specItems": [
+    "BUS-4.3.2-2a-1"
+   ],
+   "via": "agreed"
+  },
+  "globalisation:practice:246f8470": {
+   "section": "globalisation",
+   "specItems": [
+    "BUS-4.3.1-4b"
+   ],
+   "via": "agreed"
+  },
+  "globalisation:practice:2887a183": {
+   "section": "globalisation",
+   "specItems": [
+    "BUS-4.3.1-3c"
+   ],
+   "via": "agreed"
+  },
+  "globalisation:practice:31c6a29d": {
+   "section": "globalisation",
+   "specItems": [
+    "BUS-4.3.1-4b",
+    "BUS-4.3.1-5b"
+   ],
+   "via": "agreed"
+  },
+  "globalisation:practice:324874d0": {
+   "section": "globalisation",
+   "specItems": [
+    "BUS-4.3.1-1a"
+   ],
+   "via": "agreed"
+  },
+  "globalisation:practice:add7e730": {
+   "section": "globalisation",
+   "specItems": [
+    "BUS-4.3.1-3i"
+   ],
+   "via": "agreed"
+  },
+  "globalisation:practice:e5f887dc": {
+   "section": "globalisation",
+   "specItems": [
+    "BUS-4.3.1-2a"
+   ],
+   "via": "agreed"
+  },
+  "globalisation:practice:f3a8feca": {
+   "section": "globalisation",
+   "specItems": [
+    "BUS-4.3.1-2a"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention-firms:practice:4091ed96": {
+   "section": "government-intervention-firms",
+   "specItems": [
+    "ECON-3.3.5-1c-2"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention-firms:practice:52faab11": {
+   "section": "government-intervention-firms",
+   "specItems": [
+    "ECON-3.3.5-1d-4"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention-firms:practice:5aed0eb8": {
+   "section": "government-intervention-firms",
+   "specItems": [
+    "ECON-3.3.5-1c-3"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention-firms:practice:62f1e83d": {
+   "section": "government-intervention-firms",
+   "specItems": [
+    "ECON-3.3.5-1c-3"
+   ],
+   "via": "adjudicated"
+  },
+  "government-intervention-firms:practice:806643be": {
+   "section": "government-intervention-firms",
+   "specItems": [
+    "ECON-3.3.5-2b-4"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention-firms:practice:b9ed67d5": {
+   "section": "government-intervention-firms",
+   "specItems": [
+    "ECON-3.3.5-2b-3"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention-firms:practice:c26187c6": {
+   "section": "government-intervention-firms",
+   "specItems": [
+    "ECON-3.3.5-2b-2"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention:practice:00ec8068": {
+   "section": "government-intervention",
+   "specItems": [
+    "ECON-1.3.6-1a"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention:practice:02af5456": {
+   "section": "government-intervention",
+   "specItems": [
+    "ECON-1.3.6-1a"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention:practice:12fc9522": {
+   "section": "government-intervention",
+   "specItems": [
+    "ECON-1.3.6-1b-8"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention:practice:2c9805a0": {
+   "section": "government-intervention",
+   "specItems": [
+    "ECON-1.3.6-1b-2"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention:practice:8b658000": {
+   "section": "government-intervention",
+   "specItems": [
+    "ECON-1.3.6-1b-3"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention:practice:a7b0c5ca": {
+   "section": "government-intervention",
+   "specItems": [
+    "ECON-1.3.6-1b-1",
+    "ECON-1.3.6-1b-4"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention:practice:ae68cc3d": {
+   "section": "government-intervention",
+   "specItems": [
+    "ECON-1.3.6-1b-2",
+    "ECON-1.3.6-1c-6"
+   ],
+   "via": "adjudicated"
+  },
+  "government-intervention:practice:afdd47b2": {
+   "section": "government-intervention",
+   "specItems": [
+    "ECON-1.3.6-1b-3"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention:practice:b4384a04": {
+   "section": "government-intervention",
+   "specItems": [
+    "ECON-1.3.6-1b-2"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention:practice:d24be652": {
+   "section": "government-intervention",
+   "specItems": [
+    "ECON-1.3.6-1b-1"
+   ],
+   "via": "agreed"
+  },
+  "government-intervention:practice:f5a3aae8": {
+   "section": "government-intervention",
+   "specItems": [
+    "ECON-1.3.6-1b-1"
+   ],
+   "via": "agreed"
+  },
+  "growth-development:practice:058c1489": {
+   "section": "growth-development",
+   "specItems": [
+    "ECON-4.3.6-3a-1"
+   ],
+   "via": "agreed"
+  },
+  "growth-development:practice:0da4f85b": {
+   "section": "growth-development",
+   "specItems": [
+    "ECON-4.3.6-2a-3"
+   ],
+   "via": "agreed"
+  },
+  "growth-development:practice:22aab10e": {
+   "section": "growth-development",
+   "specItems": [
+    "ECON-4.3.6-3d-1",
+    "ECON-4.3.6-3d-2",
+    "ECON-4.3.6-3d-3"
+   ],
+   "via": "agreed"
+  },
+  "growth-development:practice:4e84f98e": {
+   "section": "growth-development",
+   "specItems": [
+    "ECON-4.3.6-2b-1",
+    "ECON-4.3.6-2b-2"
+   ],
+   "via": "agreed"
+  },
+  "growth-development:practice:6b3cce85": {
+   "section": "growth-development",
+   "specItems": [
+    "ECON-4.3.6-1a"
+   ],
+   "via": "agreed"
+  },
+  "growth-development:practice:80f76251": {
+   "section": "growth-development",
+   "specItems": [
+    "ECON-4.3.6-2a-2"
+   ],
+   "via": "agreed"
+  },
+  "growth-development:practice:988c2461": {
+   "section": "growth-development",
+   "specItems": [
+    "ECON-4.3.6-3c-1"
+   ],
+   "via": "agreed"
+  },
+  "growth-development:practice:b7ee254c": {
+   "section": "growth-development",
+   "specItems": [
+    "ECON-4.3.6-1a"
+   ],
+   "via": "agreed"
+  },
+  "growth-development:practice:d4209568": {
+   "section": "growth-development",
+   "specItems": [
+    "ECON-4.3.6-2a-6"
+   ],
+   "via": "adjudicated"
+  },
+  "influences-business-decisions:practice:40e7a94a": {
+   "section": "influences-business-decisions",
+   "specItems": [
+    "BUS-3.3.4-1d"
+   ],
+   "via": "agreed"
+  },
+  "influences-business-decisions:practice:5ef99d03": {
+   "section": "influences-business-decisions",
+   "specItems": [
+    "BUS-3.3.4-3a"
+   ],
+   "via": "agreed"
+  },
+  "influences-business-decisions:practice:ab2cb3b8": {
+   "section": "influences-business-decisions",
+   "specItems": [
+    "BUS-3.3.4-1d"
+   ],
+   "via": "agreed"
+  },
+  "influences-business-decisions:practice:e4be7f26": {
+   "section": "influences-business-decisions",
+   "specItems": [
+    "BUS-3.3.4-2c-1",
+    "BUS-3.3.4-2c-2",
+    "BUS-3.3.4-2d"
+   ],
+   "via": "agreed"
+  },
+  "influences-business-decisions:practice:fd0eb586": {
+   "section": "influences-business-decisions",
+   "specItems": [
+    "BUS-3.3.4-3b"
+   ],
+   "via": "agreed"
+  },
+  "introductory-concepts:practice:0312027b": {
+   "section": "introductory-concepts",
+   "specItems": [
+    "ECON-1.3.1-1b"
+   ],
+   "via": "agreed"
+  },
+  "introductory-concepts:practice:81d54f89": {
+   "section": "introductory-concepts",
+   "specItems": [
+    "ECON-1.3.1-3a"
+   ],
+   "via": "agreed"
+  },
+  "introductory-concepts:practice:b99104dd": {
+   "section": "introductory-concepts",
+   "specItems": [
+    "ECON-1.3.1-5a"
+   ],
+   "via": "agreed"
+  },
+  "introductory-concepts:practice:d0eaebbd": {
+   "section": "introductory-concepts",
+   "specItems": [
+    "ECON-1.3.1-3a",
+    "ECON-1.3.1-4a-3",
+    "ECON-1.3.1-4a-4"
+   ],
+   "via": "agreed"
+  },
+  "introductory-concepts:practice:daea62ef": {
+   "section": "introductory-concepts",
+   "specItems": [
+    "ECON-1.3.1-3c"
+   ],
+   "via": "agreed"
+  },
+  "labour-markets:practice:2b8922f5": {
+   "section": "labour-markets",
+   "specItems": [
+    "ECON-3.3.4-2c-6"
+   ],
+   "via": "agreed"
+  },
+  "labour-markets:practice:71516c3e": {
+   "section": "labour-markets",
+   "specItems": [
+    "ECON-3.3.4-3a"
+   ],
+   "via": "adjudicated"
+  },
+  "labour-markets:practice:a297c181": {
+   "section": "labour-markets",
+   "specItems": [
+    "ECON-3.3.4-4a",
+    "ECON-3.3.4-4b"
+   ],
+   "via": "agreed"
+  },
+  "labour-markets:practice:ee773d09": {
+   "section": "labour-markets",
+   "specItems": [
+    "ECON-3.3.4-1a-1"
+   ],
+   "via": "agreed"
+  },
+  "labour-markets:practice:f62019c4": {
+   "section": "labour-markets",
+   "specItems": [
+    "ECON-3.3.4-2c-2",
+    "ECON-3.3.4-3b"
+   ],
+   "via": "agreed"
+  },
+  "macroeconomic-objectives-policies:practice:32e9a3f7": {
+   "section": "macroeconomic-objectives-policies",
+   "specItems": [
+    "ECON-2.3.6-1e"
+   ],
+   "via": "agreed"
+  },
+  "macroeconomic-objectives-policies:practice:4298961f": {
+   "section": "macroeconomic-objectives-policies",
+   "specItems": [
+    "ECON-2.3.6-4c-1"
+   ],
+   "via": "agreed"
+  },
+  "macroeconomic-objectives-policies:practice:60e19435": {
+   "section": "macroeconomic-objectives-policies",
+   "specItems": [
+    "ECON-2.3.6-1b",
+    "ECON-2.3.6-1c",
+    "ECON-2.3.6-2a"
+   ],
+   "via": "agreed"
+  },
+  "macroeconomic-objectives-policies:practice:821dc50b": {
+   "section": "macroeconomic-objectives-policies",
+   "specItems": [
+    "ECON-2.3.6-4c-1",
+    "ECON-2.3.6-4d-1",
+    "ECON-2.3.6-4d-2"
+   ],
+   "via": "agreed"
+  },
+  "macroeconomic-objectives-policies:practice:bb0746ff": {
+   "section": "macroeconomic-objectives-policies",
+   "specItems": [
+    "ECON-2.3.6-2c"
+   ],
+   "via": "agreed"
+  },
+  "macroeconomic-objectives-policies:practice:be2bc63b": {
+   "section": "macroeconomic-objectives-policies",
+   "specItems": [
+    "ECON-2.3.6-4b-1"
+   ],
+   "via": "agreed"
+  },
+  "macroeconomic-objectives-policies:practice:f7354894": {
+   "section": "macroeconomic-objectives-policies",
+   "specItems": [
+    "ECON-2.3.6-1e"
+   ],
+   "via": "agreed"
+  },
+  "macroeconomic-objectives-policies:practice:fe9adbff": {
+   "section": "macroeconomic-objectives-policies",
+   "specItems": [
+    "ECON-2.3.6-4b-1"
+   ],
+   "via": "agreed"
+  },
+  "managing-change:practice:05a88a0e": {
+   "section": "managing-change",
+   "specItems": [
+    "BUS-3.3.6-1d"
+   ],
+   "via": "agreed"
+  },
+  "managing-change:practice:48a33c8d": {
+   "section": "managing-change",
+   "specItems": [
+    "BUS-3.3.6-2a-2",
+    "BUS-3.3.6-2a-3"
+   ],
+   "via": "agreed"
+  },
+  "managing-change:practice:d528c9da": {
+   "section": "managing-change",
+   "specItems": [
+    "BUS-3.3.6-1e"
+   ],
+   "via": "agreed"
+  },
+  "managing-change:practice:e2269b82": {
+   "section": "managing-change",
+   "specItems": [
+    "BUS-3.3.6-2a-2"
+   ],
+   "via": "agreed"
+  },
+  "managing-finance:practice:00d48f08": {
+   "section": "managing-finance",
+   "specItems": [
+    "BUS-2.3.3-1a-3"
+   ],
+   "via": "agreed"
+  },
+  "managing-finance:practice:1552c817": {
+   "section": "managing-finance",
+   "specItems": [
+    "BUS-2.3.3-2c"
+   ],
+   "via": "agreed"
+  },
+  "managing-finance:practice:160d96f7": {
+   "section": "managing-finance",
+   "specItems": [
+    "BUS-2.3.3-1a-1",
+    "BUS-2.3.3-1a-2",
+    "BUS-2.3.3-1a-3"
+   ],
+   "via": "agreed"
+  },
+  "managing-finance:practice:347e7d49": {
+   "section": "managing-finance",
+   "specItems": [
+    "BUS-2.3.3-2b-1"
+   ],
+   "via": "agreed"
+  },
+  "managing-finance:practice:49e844d2": {
+   "section": "managing-finance",
+   "specItems": [
+    "BUS-2.3.3-2b-2"
+   ],
+   "via": "agreed"
+  },
+  "managing-finance:practice:7113ab2e": {
+   "section": "managing-finance",
+   "specItems": [
+    "BUS-2.3.3-2c"
+   ],
+   "via": "agreed"
+  },
+  "managing-finance:practice:7f9b7ec3": {
+   "section": "managing-finance",
+   "specItems": [
+    "BUS-2.3.3-3a-1",
+    "BUS-2.3.3-3a-2",
+    "BUS-2.3.3-3a-3",
+    "BUS-2.3.3-3a-4"
+   ],
+   "via": "agreed"
+  },
+  "managing-finance:practice:b9a597ae": {
+   "section": "managing-finance",
+   "specItems": [
+    "BUS-2.3.3-1a-1",
+    "BUS-2.3.3-1a-2",
+    "BUS-2.3.3-1c-1"
+   ],
+   "via": "agreed"
+  },
+  "managing-finance:practice:ee2ad281": {
+   "section": "managing-finance",
+   "specItems": [
+    "BUS-2.3.3-2c"
+   ],
+   "via": "agreed"
+  },
+  "managing-people:practice:0e1a636e": {
+   "section": "managing-people",
+   "specItems": [
+    "BUS-1.3.4-3a-2",
+    "BUS-1.3.4-3a-3"
+   ],
+   "via": "agreed"
+  },
+  "managing-people:practice:291ab95e": {
+   "section": "managing-people",
+   "specItems": [
+    "BUS-1.3.4-1c"
+   ],
+   "via": "agreed"
+  },
+  "managing-people:practice:5de81864": {
+   "section": "managing-people",
+   "specItems": [
+    "BUS-1.3.4-4b-4"
+   ],
+   "via": "agreed"
+  },
+  "managing-people:practice:af57b361": {
+   "section": "managing-people",
+   "specItems": [
+    "BUS-1.3.4-2b"
+   ],
+   "via": "agreed"
+  },
+  "managing-people:practice:c62a2831": {
+   "section": "managing-people",
+   "specItems": [
+    "BUS-1.3.4-4c-1"
+   ],
+   "via": "agreed"
+  },
+  "managing-people:practice:cab3d5d7": {
+   "section": "managing-people",
+   "specItems": [
+    "BUS-1.3.4-5b-1",
+    "BUS-1.3.4-5b-3"
+   ],
+   "via": "agreed"
+  },
+  "market-failure:practice:053116dd": {
+   "section": "market-failure",
+   "specItems": [
+    "ECON-1.3.5-1b-2",
+    "ECON-1.3.5-3a-2",
+    "ECON-1.3.5-3b"
+   ],
+   "via": "agreed"
+  },
+  "market-failure:practice:071bf234": {
+   "section": "market-failure",
+   "specItems": [
+    "ECON-1.3.5-2b",
+    "ECON-1.3.5-2c-3"
+   ],
+   "via": "agreed"
+  },
+  "market-failure:practice:0753cacb": {
+   "section": "market-failure",
+   "specItems": [
+    "ECON-1.3.5-2b",
+    "ECON-1.3.5-2c-3"
+   ],
+   "via": "agreed"
+  },
+  "market-failure:practice:0e574dfc": {
+   "section": "market-failure",
+   "specItems": [
+    "ECON-1.3.5-2c-3",
+    "ECON-1.3.5-2d-3"
+   ],
+   "via": "agreed"
+  },
+  "market-failure:practice:1e4d06c6": {
+   "section": "market-failure",
+   "specItems": [
+    "ECON-1.3.5-6b-1",
+    "ECON-1.3.5-6b-2"
+   ],
+   "via": "agreed"
+  },
+  "market-failure:practice:22087c8d": {
+   "section": "market-failure",
+   "specItems": [
+    "ECON-1.3.5-2c-2",
+    "ECON-1.3.5-2d-1"
+   ],
+   "via": "agreed"
+  },
+  "market-failure:practice:c1091515": {
+   "section": "market-failure",
+   "specItems": [
+    "ECON-1.3.5-1b-4",
+    "ECON-1.3.5-5a",
+    "ECON-1.3.5-5b-2"
+   ],
+   "via": "agreed"
+  },
+  "market-failure:practice:c1ff7774": {
+   "section": "market-failure",
+   "specItems": [
+    "ECON-1.3.5-1b-3",
+    "ECON-1.3.5-4b",
+    "ECON-1.3.5-4c-1"
+   ],
+   "via": "agreed"
+  },
+  "market-failure:practice:d6ef6424": {
+   "section": "market-failure",
+   "specItems": [
+    "ECON-1.3.5-2d-2",
+    "ECON-1.3.5-2d-3"
+   ],
+   "via": "agreed"
+  },
+  "market-failure:practice:e4c8dfa8": {
+   "section": "market-failure",
+   "specItems": [
+    "ECON-1.3.5-2c-4"
+   ],
+   "via": "agreed"
+  },
+  "market-structures-contestability:practice:1c200bba": {
+   "section": "market-structures-contestability",
+   "specItems": [
+    "ECON-3.3.3-6d"
+   ],
+   "via": "agreed"
+  },
+  "market-structures-contestability:practice:1c4e5ff3": {
+   "section": "market-structures-contestability",
+   "specItems": [
+    "ECON-3.3.3-5c-3"
+   ],
+   "via": "agreed"
+  },
+  "market-structures-contestability:practice:53e0c0ee": {
+   "section": "market-structures-contestability",
+   "specItems": [
+    "ECON-3.3.3-8d"
+   ],
+   "via": "agreed"
+  },
+  "market-structures-contestability:practice:798d8eec": {
+   "section": "market-structures-contestability",
+   "specItems": [
+    "ECON-3.3.3-2a",
+    "ECON-3.3.3-2b"
+   ],
+   "via": "agreed"
+  },
+  "market-structures-contestability:practice:81b7e011": {
+   "section": "market-structures-contestability",
+   "specItems": [
+    "ECON-3.3.3-5b-5"
+   ],
+   "via": "agreed"
+  },
+  "market-structures-contestability:practice:d07bfd15": {
+   "section": "market-structures-contestability",
+   "specItems": [
+    "ECON-3.3.3-4c",
+    "ECON-3.3.3-4d"
+   ],
+   "via": "agreed"
+  },
+  "market-structures-contestability:practice:fc98f6cf": {
+   "section": "market-structures-contestability",
+   "specItems": [
+    "ECON-3.3.3-5g"
+   ],
+   "via": "agreed"
+  },
+  "marketing-mix-strategy:practice:03fc1e3f": {
+   "section": "marketing-mix-strategy",
+   "specItems": [
+    "BUS-1.3.3-4b-3",
+    "BUS-1.3.3-4b-5"
+   ],
+   "via": "agreed"
+  },
+  "marketing-mix-strategy:practice:37bba410": {
+   "section": "marketing-mix-strategy",
+   "specItems": [
+    "BUS-1.3.3-2a-1",
+    "BUS-1.3.3-2a-2",
+    "BUS-1.3.3-2a-3"
+   ],
+   "via": "agreed"
+  },
+  "marketing-mix-strategy:practice:6e75a277": {
+   "section": "marketing-mix-strategy",
+   "specItems": [
+    "BUS-1.3.3-1e-1",
+    "BUS-1.3.3-1e-2"
+   ],
+   "via": "agreed"
+  },
+  "marketing-mix-strategy:practice:8721716c": {
+   "section": "marketing-mix-strategy",
+   "specItems": [
+    "BUS-1.3.3-1a-3"
+   ],
+   "via": "agreed"
+  },
+  "marketing-mix-strategy:practice:8995c0d8": {
+   "section": "marketing-mix-strategy",
+   "specItems": [
+    "BUS-1.3.3-1a-1",
+    "BUS-1.3.3-1a-2"
+   ],
+   "via": "agreed"
+  },
+  "marketing-mix-strategy:practice:c94a792d": {
+   "section": "marketing-mix-strategy",
+   "specItems": [
+    "BUS-1.3.3-1b"
+   ],
+   "via": "agreed"
+  },
+  "marketing-mix-strategy:practice:f53e371e": {
+   "section": "marketing-mix-strategy",
+   "specItems": [
+    "BUS-1.3.3-5a-2",
+    "BUS-1.3.3-5a-3"
+   ],
+   "via": "agreed"
+  },
+  "measures-economic-performance:practice:57814517": {
+   "section": "measures-economic-performance",
+   "specItems": [
+    "ECON-2.3.1-2g-8"
+   ],
+   "via": "agreed"
+  },
+  "measures-economic-performance:practice:59937d7a": {
+   "section": "measures-economic-performance",
+   "specItems": [
+    "ECON-2.3.1-1h"
+   ],
+   "via": "agreed"
+  },
+  "measures-economic-performance:practice:72b2634c": {
+   "section": "measures-economic-performance",
+   "specItems": [
+    "ECON-2.3.1-2b"
+   ],
+   "via": "agreed"
+  },
+  "measures-economic-performance:practice:77baac54": {
+   "section": "measures-economic-performance",
+   "specItems": [
+    "ECON-2.3.1-3b-4"
+   ],
+   "via": "agreed"
+  },
+  "measures-economic-performance:practice:8f061de4": {
+   "section": "measures-economic-performance",
+   "specItems": [
+    "ECON-2.3.1-1a"
+   ],
+   "via": "agreed"
+  },
+  "measures-economic-performance:practice:9b090272": {
+   "section": "measures-economic-performance",
+   "specItems": [
+    "ECON-2.3.1-2e-2"
+   ],
+   "via": "adjudicated"
+  },
+  "measures-economic-performance:practice:9b4ac64e": {
+   "section": "measures-economic-performance",
+   "specItems": [
+    "ECON-2.3.1-1a",
+    "ECON-2.3.1-1f"
+   ],
+   "via": "agreed"
+  },
+  "measures-economic-performance:practice:b3c1de2a": {
+   "section": "measures-economic-performance",
+   "specItems": [
+    "ECON-2.3.1-4c"
+   ],
+   "via": "agreed"
+  },
+  "measures-economic-performance:practice:c766dcf3": {
+   "section": "measures-economic-performance",
+   "specItems": [
+    "ECON-2.3.1-3a",
+    "ECON-2.3.1-3e"
+   ],
+   "via": "agreed"
+  },
+  "meeting-customer-needs:practice:0a8c6acf": {
+   "section": "meeting-customer-needs",
+   "specItems": [
+    "BUS-1.3.1-3d",
+    "BUS-1.3.1-3f"
+   ],
+   "via": "agreed"
+  },
+  "meeting-customer-needs:practice:0eb9b618": {
+   "section": "meeting-customer-needs",
+   "specItems": [
+    "BUS-1.3.1-1b-1",
+    "BUS-1.3.1-1c"
+   ],
+   "via": "agreed"
+  },
+  "meeting-customer-needs:practice:11062b94": {
+   "section": "meeting-customer-needs",
+   "specItems": [
+    "BUS-1.3.1-3b"
+   ],
+   "via": "adjudicated"
+  },
+  "meeting-customer-needs:practice:45fddeb9": {
+   "section": "meeting-customer-needs",
+   "specItems": [
+    "BUS-1.3.1-3f"
+   ],
+   "via": "agreed"
+  },
+  "meeting-customer-needs:practice:6c32b8a5": {
+   "section": "meeting-customer-needs",
+   "specItems": [
+    "BUS-1.3.1-1a-2"
+   ],
+   "via": "agreed"
+  },
+  "meeting-customer-needs:practice:8ed4a524": {
+   "section": "meeting-customer-needs",
+   "specItems": [
+    "BUS-1.3.1-2a-2",
+    "BUS-1.3.1-2b-1"
+   ],
+   "via": "agreed"
+  },
+  "meeting-customer-needs:practice:b22c3c53": {
+   "section": "meeting-customer-needs",
+   "specItems": [
+    "BUS-1.3.1-3b"
+   ],
+   "via": "agreed"
+  },
+  "meeting-customer-needs:practice:f39deec6": {
+   "section": "meeting-customer-needs",
+   "specItems": [
+    "BUS-1.3.1-1a-3",
+    "BUS-1.3.1-3f"
+   ],
+   "via": "agreed"
+  },
+  "national-income:practice:25dc1f6a": {
+   "section": "national-income",
+   "specItems": [
+    "ECON-2.3.4-1a"
+   ],
+   "via": "agreed"
+  },
+  "national-income:practice:433b13f5": {
+   "section": "national-income",
+   "specItems": [
+    "ECON-2.3.4-4d"
+   ],
+   "via": "agreed"
+  },
+  "national-income:practice:4e76ca1d": {
+   "section": "national-income",
+   "specItems": [
+    "ECON-2.3.4-4b-2",
+    "ECON-2.3.4-4b-3",
+    "ECON-2.3.4-4b-4"
+   ],
+   "via": "agreed"
+  },
+  "national-income:practice:6b719349": {
+   "section": "national-income",
+   "specItems": [
+    "ECON-2.3.4-3a",
+    "ECON-2.3.4-3b"
+   ],
+   "via": "agreed"
+  },
+  "national-income:practice:7389cee5": {
+   "section": "national-income",
+   "specItems": [
+    "ECON-2.3.4-1a"
+   ],
+   "via": "agreed"
+  },
+  "national-income:practice:86fe538f": {
+   "section": "national-income",
+   "specItems": [
+    "ECON-2.3.4-2b-1",
+    "ECON-2.3.4-2b-2",
+    "ECON-2.3.4-2b-3"
+   ],
+   "via": "agreed"
+  },
+  "national-income:practice:b1a76b6e": {
+   "section": "national-income",
+   "specItems": [
+    "ECON-2.3.4-3b"
+   ],
+   "via": "agreed"
+  },
+  "national-income:practice:b4f5c2af": {
+   "section": "national-income",
+   "specItems": [
+    "ECON-2.3.4-3b"
+   ],
+   "via": "agreed"
+  },
+  "planning-raising-finance:practice:0c2a26c6": {
+   "section": "planning-raising-finance",
+   "specItems": [
+    "BUS-2.3.1-3b-5"
+   ],
+   "via": "agreed"
+  },
+  "planning-raising-finance:practice:284a4ffc": {
+   "section": "planning-raising-finance",
+   "specItems": [
+    "BUS-2.3.1-3a-4"
+   ],
+   "via": "agreed"
+  },
+  "planning-raising-finance:practice:5d61421e": {
+   "section": "planning-raising-finance",
+   "specItems": [
+    "BUS-2.3.1-3b-3"
+   ],
+   "via": "agreed"
+  },
+  "planning-raising-finance:practice:853321d9": {
+   "section": "planning-raising-finance",
+   "specItems": [
+    "BUS-2.3.1-4a"
+   ],
+   "via": "agreed"
+  },
+  "planning-raising-finance:practice:d2744d79": {
+   "section": "planning-raising-finance",
+   "specItems": [
+    "BUS-2.3.1-1b"
+   ],
+   "via": "agreed"
+  },
+  "planning-raising-finance:practice:d9f8fce4": {
+   "section": "planning-raising-finance",
+   "specItems": [
+    "BUS-2.3.1-2b"
+   ],
+   "via": "agreed"
+  },
+  "poverty-inequality:practice:037574b8": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-2e"
+   ],
+   "via": "agreed"
+  },
+  "poverty-inequality:practice:058dadf4": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-1a"
+   ],
+   "via": "adjudicated"
+  },
+  "poverty-inequality:practice:1138b142": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-1b"
+   ],
+   "via": "adjudicated"
+  },
+  "poverty-inequality:practice:3b5f9daf": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-2b-1",
+    "ECON-4.3.4-2b-2"
+   ],
+   "via": "agreed"
+  },
+  "poverty-inequality:practice:3d98d47a": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-2c"
+   ],
+   "via": "agreed"
+  },
+  "poverty-inequality:practice:573def12": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-1c-1"
+   ],
+   "via": "agreed"
+  },
+  "poverty-inequality:practice:90706ba3": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-2d-1",
+    "ECON-4.3.4-2d-3"
+   ],
+   "via": "agreed"
+  },
+  "poverty-inequality:practice:918bec7a": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-1c-5"
+   ],
+   "via": "agreed"
+  },
+  "poverty-inequality:practice:b45adca3": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-2f"
+   ],
+   "via": "agreed"
+  },
+  "poverty-inequality:practice:bdfcd97d": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-2c"
+   ],
+   "via": "agreed"
+  },
+  "poverty-inequality:practice:d7ddd1e2": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-2b-2"
+   ],
+   "via": "agreed"
+  },
+  "poverty-inequality:practice:ee417429": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-2c"
+   ],
+   "via": "agreed"
+  },
+  "poverty-inequality:practice:f5fc1fc2": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-1a"
+   ],
+   "via": "adjudicated"
+  },
+  "poverty-inequality:practice:fa1a0fe1": {
+   "section": "poverty-inequality",
+   "specItems": [
+    "ECON-4.3.4-1c-3"
+   ],
+   "via": "agreed"
+  },
+  "price-determination:practice:27631256": {
+   "section": "price-determination",
+   "specItems": [
+    "ECON-1.3.4-3a",
+    "ECON-1.3.4-3b"
+   ],
+   "via": "agreed"
+  },
+  "price-determination:practice:27ab24dd": {
+   "section": "price-determination",
+   "specItems": [
+    "ECON-1.3.4-1a"
+   ],
+   "via": "agreed"
+  },
+  "price-determination:practice:2bf16476": {
+   "section": "price-determination",
+   "specItems": [
+    "ECON-1.3.4-1b"
+   ],
+   "via": "agreed"
+  },
+  "price-determination:practice:4e7c1a8a": {
+   "section": "price-determination",
+   "specItems": [
+    "ECON-1.3.4-4a",
+    "ECON-1.3.4-4b"
+   ],
+   "via": "agreed"
+  },
+  "price-determination:practice:9745da89": {
+   "section": "price-determination",
+   "specItems": [
+    "ECON-1.3.4-4c"
+   ],
+   "via": "agreed"
+  },
+  "price-determination:practice:9ddb825a": {
+   "section": "price-determination",
+   "specItems": [
+    "ECON-1.3.4-1b"
+   ],
+   "via": "agreed"
+  },
+  "price-determination:practice:c2cd718e": {
+   "section": "price-determination",
+   "specItems": [
+    "ECON-1.3.4-1c"
+   ],
+   "via": "agreed"
+  },
+  "resource-management:practice:24e1249f": {
+   "section": "resource-management",
+   "specItems": [
+    "BUS-2.3.4-2b"
+   ],
+   "via": "agreed"
+  },
+  "resource-management:practice:26cf3c04": {
+   "section": "resource-management",
+   "specItems": [
+    "BUS-2.3.4-3f"
+   ],
+   "via": "agreed"
+  },
+  "resource-management:practice:2dd1547c": {
+   "section": "resource-management",
+   "specItems": [
+    "BUS-2.3.4-4a-2"
+   ],
+   "via": "agreed"
+  },
+  "resource-management:practice:3ef280eb": {
+   "section": "resource-management",
+   "specItems": [
+    "BUS-2.3.4-3a",
+    "BUS-2.3.4-3b"
+   ],
+   "via": "agreed"
+  },
+  "resource-management:practice:58465766": {
+   "section": "resource-management",
+   "specItems": [
+    "BUS-2.3.4-3d"
+   ],
+   "via": "agreed"
+  },
+  "resource-management:practice:99a69bae": {
+   "section": "resource-management",
+   "specItems": [
+    "BUS-2.3.4-1d"
+   ],
+   "via": "adjudicated"
+  },
+  "resource-management:practice:d07a5c0d": {
+   "section": "resource-management",
+   "specItems": [
+    "BUS-2.3.4-2a"
+   ],
+   "via": "agreed"
+  },
+  "revenue-costs-profits:practice:37e90b95": {
+   "section": "revenue-costs-profits",
+   "specItems": [
+    "ECON-3.3.2-2c-6"
+   ],
+   "via": "agreed"
+  },
+  "revenue-costs-profits:practice:6fca1574": {
+   "section": "revenue-costs-profits",
+   "specItems": [
+    "ECON-3.3.2-2a",
+    "ECON-3.3.2-2b"
+   ],
+   "via": "agreed"
+  },
+  "revenue-costs-profits:practice:745fd7b6": {
+   "section": "revenue-costs-profits",
+   "specItems": [
+    "ECON-3.3.2-4a"
+   ],
+   "via": "agreed"
+  },
+  "revenue-costs-profits:practice:7a04d18a": {
+   "section": "revenue-costs-profits",
+   "specItems": [
+    "ECON-3.3.2-3b"
+   ],
+   "via": "agreed"
+  },
+  "revenue-costs-profits:practice:84f1fbac": {
+   "section": "revenue-costs-profits",
+   "specItems": [
+    "ECON-3.3.2-1b"
+   ],
+   "via": "agreed"
+  },
+  "revenue-costs-profits:practice:8d4b3b2d": {
+   "section": "revenue-costs-profits",
+   "specItems": [
+    "ECON-3.3.2-1a-1",
+    "ECON-3.3.2-1a-3"
+   ],
+   "via": "agreed"
+  },
+  "revenue-costs-profits:practice:9b1a540d": {
+   "section": "revenue-costs-profits",
+   "specItems": [
+    "ECON-3.3.2-3b"
+   ],
+   "via": "agreed"
+  },
+  "revenue-costs-profits:practice:a2910ca0": {
+   "section": "revenue-costs-profits",
+   "specItems": [
+    "ECON-3.3.2-1a-3"
+   ],
+   "via": "agreed"
+  },
+  "revenue-costs-profits:practice:b99c2f42": {
+   "section": "revenue-costs-profits",
+   "specItems": [
+    "ECON-3.3.2-1b"
+   ],
+   "via": "agreed"
+  },
+  "role-state-macroeconomy:practice:090daf87": {
+   "section": "role-state-macroeconomy",
+   "specItems": [
+    "ECON-4.3.5-4a-1"
+   ],
+   "via": "agreed"
+  },
+  "role-state-macroeconomy:practice:1a3fdb45": {
+   "section": "role-state-macroeconomy",
+   "specItems": [
+    "ECON-4.3.5-2c-2"
+   ],
+   "via": "agreed"
+  },
+  "role-state-macroeconomy:practice:47d949a1": {
+   "section": "role-state-macroeconomy",
+   "specItems": [
+    "ECON-4.3.5-1c-2"
+   ],
+   "via": "agreed"
+  },
+  "role-state-macroeconomy:practice:55198220": {
+   "section": "role-state-macroeconomy",
+   "specItems": [
+    "ECON-4.3.5-4b"
+   ],
+   "via": "agreed"
+  },
+  "role-state-macroeconomy:practice:71027282": {
+   "section": "role-state-macroeconomy",
+   "specItems": [
+    "ECON-4.3.5-2b"
+   ],
+   "via": "agreed"
+  },
+  "role-state-macroeconomy:practice:901afec0": {
+   "section": "role-state-macroeconomy",
+   "specItems": [
+    "ECON-4.3.5-2b"
+   ],
+   "via": "agreed"
+  },
+  "role-state-macroeconomy:practice:9e4b53e9": {
+   "section": "role-state-macroeconomy",
+   "specItems": [
+    "ECON-4.3.5-4c-1",
+    "ECON-4.3.5-4c-2",
+    "ECON-4.3.5-4c-3"
+   ],
+   "via": "agreed"
+  },
+  "role-state-macroeconomy:practice:bac17d38": {
+   "section": "role-state-macroeconomy",
+   "specItems": [
+    "ECON-4.3.5-2c-1",
+    "ECON-4.3.5-2c-2",
+    "ECON-4.3.5-2c-3",
+    "ECON-4.3.5-2c-4"
+   ],
+   "via": "agreed"
+  },
+  "role-state-macroeconomy:practice:bff60644": {
+   "section": "role-state-macroeconomy",
+   "specItems": [
+    "ECON-4.3.5-1a"
+   ],
+   "via": "agreed"
+  },
+  "role-state-macroeconomy:practice:c461627c": {
+   "section": "role-state-macroeconomy",
+   "specItems": [
+    "ECON-4.3.5-2c-4",
+    "ECON-4.3.5-2c-5"
+   ],
+   "via": "agreed"
+  },
+  "role-state-macroeconomy:practice:caa9fa66": {
+   "section": "role-state-macroeconomy",
+   "specItems": [
+    "ECON-4.3.5-3a-3"
+   ],
+   "via": "agreed"
+  },
+  "role-state-macroeconomy:practice:d0a98c94": {
+   "section": "role-state-macroeconomy",
+   "specItems": [
+    "ECON-4.3.5-3c-1",
+    "ECON-4.3.5-3c-2",
+    "ECON-4.3.5-3c-3"
+   ],
+   "via": "agreed"
+  },
+  "supply:practice:034f861e": {
+   "section": "supply",
+   "specItems": [
+    "ECON-1.3.3-2a"
+   ],
+   "via": "adjudicated"
+  },
+  "supply:practice:33fb173c": {
+   "section": "supply",
+   "specItems": [
+    "ECON-1.3.3-1c-3"
+   ],
+   "via": "agreed"
+  },
+  "supply:practice:51200a74": {
+   "section": "supply",
+   "specItems": [
+    "ECON-1.3.3-2d"
+   ],
+   "via": "agreed"
+  },
+  "supply:practice:7b3a88a6": {
+   "section": "supply",
+   "specItems": [
+    "ECON-1.3.3-2a",
+    "ECON-1.3.3-2b-4"
+   ],
+   "via": "adjudicated"
+  },
+  "supply:practice:eb2601cc": {
+   "section": "supply",
+   "specItems": [
+    "ECON-1.3.3-1a"
+   ],
+   "via": "adjudicated"
+  },
+  "the-market:practice:180f11c3": {
+   "section": "the-market",
+   "specItems": [
+    "BUS-1.3.2-5c"
+   ],
+   "via": "agreed"
+  },
+  "the-market:practice:36affbe1": {
+   "section": "the-market",
+   "specItems": [
+    "BUS-1.3.2-3b"
+   ],
+   "via": "agreed"
+  },
+  "the-market:practice:94d35c06": {
+   "section": "the-market",
+   "specItems": [
+    "BUS-1.3.2-4d"
+   ],
+   "via": "agreed"
+  },
+  "trade-global-economy:practice:1162d99f": {
+   "section": "trade-global-economy",
+   "specItems": [
+    "ECON-4.3.2-4c-2"
+   ],
+   "via": "agreed"
+  },
+  "trade-global-economy:practice:22c2ba68": {
+   "section": "trade-global-economy",
+   "specItems": [
+    "ECON-4.3.2-3a"
+   ],
+   "via": "adjudicated"
+  },
+  "trade-global-economy:practice:302d3ddd": {
+   "section": "trade-global-economy",
+   "specItems": [
+    "ECON-4.3.2-5b-1",
+    "ECON-4.3.2-5c-1",
+    "ECON-4.3.2-5c-3"
+   ],
+   "via": "agreed"
+  },
+  "trade-global-economy:practice:3f8a6176": {
+   "section": "trade-global-economy",
+   "specItems": [
+    "ECON-4.3.2-4b-2"
+   ],
+   "via": "agreed"
+  },
+  "trade-global-economy:practice:43762caf": {
+   "section": "trade-global-economy",
+   "specItems": [
+    "ECON-4.3.2-1b-1"
+   ],
+   "via": "agreed"
+  },
+  "trade-global-economy:practice:4893ba66": {
+   "section": "trade-global-economy",
+   "specItems": [
+    "ECON-4.3.2-3a"
+   ],
+   "via": "adjudicated"
+  },
+  "trade-global-economy:practice:6eb4ec12": {
+   "section": "trade-global-economy",
+   "specItems": [
+    "ECON-4.3.2-5b-1"
+   ],
+   "via": "agreed"
+  },
+  "trade-global-economy:practice:d44ea0c1": {
+   "section": "trade-global-economy",
+   "specItems": [
+    "ECON-4.3.2-3c-1",
+    "ECON-4.3.2-3c-3"
+   ],
+   "via": "agreed"
+  },
+  "trade-global-economy:practice:ec756e2f": {
+   "section": "trade-global-economy",
+   "specItems": [
+    "ECON-4.3.2-2b"
+   ],
+   "via": "agreed"
+  },
+  "trade-global-economy:practice:edce18e9": {
+   "section": "trade-global-economy",
+   "specItems": [
+    "ECON-4.3.2-4b-1",
+    "ECON-4.3.2-4b-2"
+   ],
+   "via": "agreed"
+  },
+  "trade-global-economy:practice:fb4ec792": {
+   "section": "trade-global-economy",
+   "specItems": [
+    "ECON-4.3.2-4a"
+   ],
+   "via": "agreed"
+  },
+  "types-sizes-businesses:practice:0bc48d26": {
+   "section": "types-sizes-businesses",
+   "specItems": [
+    "ECON-3.3.1-2f"
+   ],
+   "via": "agreed"
+  },
+  "types-sizes-businesses:practice:3cb79ed0": {
+   "section": "types-sizes-businesses",
+   "specItems": [
+    "ECON-3.3.1-3c-1"
+   ],
+   "via": "adjudicated"
+  },
+  "types-sizes-businesses:practice:40c731df": {
+   "section": "types-sizes-businesses",
+   "specItems": [
+    "ECON-3.3.1-1a-5"
+   ],
+   "via": "agreed"
+  },
+  "types-sizes-businesses:practice:41e40770": {
+   "section": "types-sizes-businesses",
+   "specItems": [
+    "ECON-3.3.1-1a-4"
+   ],
+   "via": "adjudicated"
+  },
+  "types-sizes-businesses:practice:6660d5bb": {
+   "section": "types-sizes-businesses",
+   "specItems": [
+    "ECON-3.3.1-2b-5"
+   ],
+   "via": "agreed"
+  },
+  "types-sizes-businesses:practice:6b1dc648": {
+   "section": "types-sizes-businesses",
+   "specItems": [
+    "ECON-3.3.1-2e"
+   ],
+   "via": "agreed"
+  },
+  "types-sizes-businesses:practice:713cf058": {
+   "section": "types-sizes-businesses",
+   "specItems": [
+    "ECON-3.3.1-2g-1"
+   ],
+   "via": "adjudicated"
+  },
+  "types-sizes-businesses:practice:a5f0810d": {
+   "section": "types-sizes-businesses",
+   "specItems": [
+    "ECON-3.3.1-3b"
+   ],
+   "via": "agreed"
+  },
+  "types-sizes-businesses:practice:aced507f": {
+   "section": "types-sizes-businesses",
+   "specItems": [
+    "ECON-3.3.1-3a-1",
+    "ECON-3.3.1-3a-2"
+   ],
+   "via": "agreed"
+  },
+  "types-sizes-businesses:practice:e2d3c8e3": {
+   "section": "types-sizes-businesses",
+   "specItems": [
+    "ECON-3.3.1-3c-1"
+   ],
+   "via": "adjudicated"
+  },
+  "types-sizes-businesses:practice:fe5c8be5": {
+   "section": "types-sizes-businesses",
+   "specItems": [
+    "ECON-3.3.1-2b-3",
+    "ECON-3.3.1-2b-4"
+   ],
+   "via": "agreed"
+  }
+ }
+}

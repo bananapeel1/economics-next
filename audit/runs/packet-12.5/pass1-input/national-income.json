@@ -1,0 +1,151 @@
+{
+ "section": "national-income",
+ "subject": "economics",
+ "topic": "2.3.4",
+ "title": "National Income",
+ "questions": [
+  {
+   "key": "national-income:practice:25dc1f6a",
+   "question": "Define the term 'circular flow of income'. (2 marks)"
+  },
+  {
+   "key": "national-income:practice:7389cee5",
+   "question": "Explain why national income, national output and national expenditure are equal. (4 marks)"
+  },
+  {
+   "key": "national-income:practice:86fe538f",
+   "question": "An economy has investment of $60bn, government expenditure of $90bn and exports of $50bn. Calculate total injections into the circular flow. (2 marks)"
+  },
+  {
+   "key": "national-income:practice:4e76ca1d",
+   "question": "An economy has a marginal propensity to save of 0.15, a marginal propensity to tax of 0.25 and a marginal propensity to import of 0.10. Government expenditure rises by $80bn. Calculate the resulting change in real national income. (4 marks)"
+  },
+  {
+   "key": "national-income:practice:b4f5c2af",
+   "question": "Draw an AD/AS diagram to show the effect on equilibrium real national output of a rise in government expenditure in an economy with spare productive capacity. (4 marks)"
+  },
+  {
+   "key": "national-income:practice:b1a76b6e",
+   "question": "Analyse the effect of a rise in imports on a country's equilibrium real national output. (6 marks)"
+  },
+  {
+   "key": "national-income:practice:c2d4be5b",
+   "question": "Examine the significance of the size of the multiplier for a government planning to raise its spending. (8 marks)"
+  },
+  {
+   "key": "national-income:practice:6b719349",
+   "question": "Discuss the factors that determine the equilibrium level of real national output in an open economy. (14 marks)"
+  },
+  {
+   "key": "national-income:practice:433b13f5",
+   "question": "Evaluate the view that increasing government expenditure is always an effective way to raise the level of economic activity. (20 marks)"
+  }
+ ],
+ "leaves": [
+  {
+   "id": "ECON-2.3.4-1a",
+   "subtopic": "National income",
+   "wording": "The circular flow of income."
+  },
+  {
+   "id": "ECON-2.3.4-1b",
+   "subtopic": "National income",
+   "wording": "The distinction between income and wealth."
+  },
+  {
+   "id": "ECON-2.3.4-2a",
+   "subtopic": "Injections and",
+   "wording": "The distinction between injections and withdrawals."
+  },
+  {
+   "id": "ECON-2.3.4-2b-1",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "Injections:",
+   "wording": "investment"
+  },
+  {
+   "id": "ECON-2.3.4-2b-2",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "Injections:",
+   "wording": "government expenditure"
+  },
+  {
+   "id": "ECON-2.3.4-2b-3",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "Injections:",
+   "wording": "exports."
+  },
+  {
+   "id": "ECON-2.3.4-2c-1",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "Withdrawals:",
+   "wording": "savings"
+  },
+  {
+   "id": "ECON-2.3.4-2c-2",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "Withdrawals:",
+   "wording": "taxation"
+  },
+  {
+   "id": "ECON-2.3.4-2c-3",
+   "subtopic": "Injections and withdrawals",
+   "requirement": "Withdrawals:",
+   "wording": "imports."
+  },
+  {
+   "id": "ECON-2.3.4-2d",
+   "subtopic": "Injections and withdrawals",
+   "wording": "The impact of net injections into, and net withdrawals from, the circular flow of income."
+  },
+  {
+   "id": "ECON-2.3.4-3a",
+   "subtopic": "Equilibrium level",
+   "wording": "The concept of equilibrium level of real national output."
+  },
+  {
+   "id": "ECON-2.3.4-3b",
+   "subtopic": "Equilibrium level of real output",
+   "wording": "Causes of changes in equilibrium real national output, as a result of shifts in AD and/or AS curves."
+  },
+  {
+   "id": "ECON-2.3.4-4a",
+   "subtopic": "The multiplier",
+   "wording": "The multiplier and multiplier process."
+  },
+  {
+   "id": "ECON-2.3.4-4b-1",
+   "subtopic": "The multiplier",
+   "requirement": "Marginal propensities and their effects on the multiplier:",
+   "wording": "the marginal propensity to consume (MPC)"
+  },
+  {
+   "id": "ECON-2.3.4-4b-2",
+   "subtopic": "The multiplier",
+   "requirement": "Marginal propensities and their effects on the multiplier:",
+   "wording": "the marginal propensity to save (MPS)"
+  },
+  {
+   "id": "ECON-2.3.4-4b-3",
+   "subtopic": "The multiplier",
+   "requirement": "Marginal propensities and their effects on the multiplier:",
+   "wording": "the marginal propensity to tax (MPT)"
+  },
+  {
+   "id": "ECON-2.3.4-4b-4",
+   "subtopic": "The multiplier",
+   "requirement": "Marginal propensities and their effects on the multiplier:",
+   "wording": "the marginal propensity to import (MPM)."
+  },
+  {
+   "id": "ECON-2.3.4-4c",
+   "subtopic": "The multiplier",
+   "wording": "Calculations of the multiplier using the formula 1/(1-MPC) and 1/MPW, where MPW = MPS + MPT + MPM."
+  },
+  {
+   "id": "ECON-2.3.4-4d",
+   "subtopic": "The multiplier",
+   "wording": "The significance of the multiplier for shifts in AD and the level of economic activity."
+  }
+ ]
+}

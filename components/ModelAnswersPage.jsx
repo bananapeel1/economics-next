@@ -88,6 +88,35 @@ function AnnotationLegend({ items }) {
 }
 
 /* ── Answer paragraphs ── */
+/* ── A paper question's own context (packet 12.8) ── The question's data, so it shows whenever the
+   card is open, above the mark scheme. A table stacks one row per block (a cell per line), so it never
+   needs more width than the card has. Rendered only when the server passed `contextBlocks`. */
+function ContextBlock({ blocks }) {
+  if (!blocks || !blocks.length) return null;
+  const inline = (tokens) => tokens.map((t, i) => (t.kind === 'strong' ? <strong key={i}>{t.text}</strong> : t.kind === 'em' ? <em key={i}>{t.text}</em> : <span key={i}>{t.text}</span>));
+  return (
+    <div className="ma-context" style={{ margin: '0 0 16px', padding: '12px 14px', border: '1px solid var(--border-primary)', borderRadius: 10, overflowWrap: 'break-word' }}>
+      <div className="ma-section-title">Context</div>
+      {blocks.map((b, bi) => (b.kind === 'table' ? (
+        <dl key={bi} style={{ margin: '8px 0 0' }}>
+          {b.rows.map((row, r) => (
+            <div key={r} style={{ padding: '8px 0', borderTop: r ? '1px solid var(--border-primary)' : 0 }}>
+              {row.map((cell, c) => (
+                <div key={c} style={{ display: 'flex', flexWrap: 'wrap', gap: '2px 10px' }}>
+                  <dt style={{ color: 'var(--text-tertiary)', fontSize: 13 }}>{b.head[c]}</dt>
+                  <dd style={{ margin: 0, color: 'var(--text-primary)' }}>{cell}</dd>
+                </div>
+              ))}
+            </div>
+          ))}
+        </dl>
+      ) : (
+        <p key={bi} style={{ margin: bi ? '8px 0 0' : '4px 0 0' }}>{inline(b.tokens)}</p>
+      )))}
+    </div>
+  );
+}
+
 function AnswerBlocks({ paragraphs }) {
   return (
     <div className="ma-answer-body">
@@ -372,6 +401,7 @@ export default function ModelAnswersPage({ answers, freeMode = false, sectionsMe
                 </div>
               ) : (
                 <>
+                  <ContextBlock blocks={answer.contextBlocks} />
                   <MarkScheme rows={answer.markScheme} />
                   <PeelGrid peel={answer.peel} />
                   <AnnotationLegend items={answer.annotationLegend} />

@@ -1,0 +1,96 @@
+title: Macroeconomic Policies — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/macroeconomic-policies-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is the difference between fiscal and monetary policy?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Fiscal policy involves government decisions on taxation and public spending to influence aggregate demand. It is set by the government. Monetary policy involves changes to interest rates and the money supply to achieve macroeconomic objectives. In the UK, it is set by the Bank of England's Monetary Policy Committee (MPC), independent of government."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "When is fiscal policy more effective than monetary policy?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Fiscal policy tends to be more effective during severe recessions when interest rates are at the zero lower bound (making further rate cuts ineffective), when unemployment is structural (requiring targeted government spending on retraining), or when monetary policy transmission is weak (e.g. banks not passing on rate cuts to borrowers)."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Macroeconomic Policies — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 2.3.6 Macroeconomic Policies"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine the likely impact of a cut in interest rates on the rate of inflation.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A cut in interest rates is a form of expansionary monetary policy K implemented by a central bank such as the Bank of England. Lower interest rates reduce the cost of borrowing for households and firms, A making mortgages, personal loans and corporate debt cheaper to service. As borrowing becomes cheaper, consumer spending (C) is likely to rise , since households face lower monthly mortgage repayments and therefore have greater disposable income . An Simultaneously, lower rates reduce the cost of investment (I) for firms, as the hurdle rate for profitable projects falls. Since AD = C + I + G + (X − M) , K both effects shift the AD curve rightward. D The rightward shift of AD increases the equilibrium price level , resulting in demand-pull inflation . An The magnitude of this inflationary effect depends on the degree of spare capacity in the economy — if the economy is near full employment , the AS curve becomes inelastic and the price effect is amplified. Conversely, in a deep recession with a large output gap , the rise in AD may largely increase real output rather than prices. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Evaluate (20 marks)",
+   "text": "Evaluate the view that fiscal policy is more effective than monetary policy in reducing unemployment.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Fiscal policy refers to government decisions on taxation and public expenditure to influence aggregate demand, while monetary policy involves the use of interest rates and money supply by a central bank to achieve macroeconomic objectives. K Both policies aim to reduce cyclical unemployment — caused by insufficient AD — by stimulating economic activity. However, their effectiveness varies significantly depending on the type of unemployment , the state of the economic cycle , and prevailing institutional conditions . An A key advantage of fiscal policy is that government spending can directly create employment . An For example, large-scale infrastructure investment — such as the UK's HS2 rail project or post-2009 US stimulus under the American Recovery and Reinvestment Act — directly employs construction workers and generates multiplier effects as their incomes are re-spent in the economy. A Furthermore, fiscal policy can be geographically targeted , directing spending to depressed regions with persistently high unemployment — something monetary policy, which operates economy-wide through interest rates, cannot achieve. An This is particularly valuable when unemployment is structural rather than merely cyclical, requiring investment in retraining or infrastructure rather than a generalised demand boost. An However, critics argue that monetary policy can be more effective in normal conditions because it avoids the problem of crowding out . An When the government borrows to fund fiscal stimulus, it increases demand for loanable funds, pushing up interest rates and discouraging private sector investment — partially offsetting the stimulus effect. An By contrast, a cut in the base rate by the central bank lowers borrowing costs across the economy , stimulating consumption and business investment simultaneously without requiring government to identify specific spending projects or run a deficit. A The relative effectiveness of each policy is highly context-dependent . During the 2008–09 financial crisis, interest rates reached the zero lower bound (ZLB) in many economies, rendering conventional monetary policy ineffective — at 0.5% base rate, further cuts produced negligible stimulative effect. In such circumstances, fiscal policy becomes the primary tool. An Moreover, if unemployment is structural — arising from skills mismatches or technological change — neither policy alone is sufficient; fiscal spending on training and education addresses root causes that a rate cut cannot. An Conversely, during a mild demand-side slowdown with rates well above zero, monetary policy may be preferable due to its greater flexibility, lower time lags , and avoidance of deficit financing. An On balance, fiscal policy is likely more effective in reducing unemployment during severe downturns or when structural unemployment dominates , as it can directly create jobs, target specific groups, and operate independently of interest rate constraints. However, in mild cyclical downturns where monetary space exists, the speed and flexibility of monetary policy give it an edge. The most effective approach is often a coordinated policy mix — monetary policy to stabilise credit conditions and fiscal policy to generate targeted demand and address supply-side structural weaknesses. An"
+   }
+  }
+ ]
+}

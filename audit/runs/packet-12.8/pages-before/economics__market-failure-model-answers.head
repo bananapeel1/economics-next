@@ -1,0 +1,136 @@
+title: Market Failure — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/market-failure-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "How do you explain a negative externality for Edexcel IAL Economics?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Define a negative externality as a spill-over cost imposed on third parties not involved in the transaction. Give a specific example (e.g. factory pollution causing health problems for local residents). Explain that because external costs are not reflected in the market price, the good is over-produced relative to the socially optimal level."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the difference between private costs and social costs?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Private costs are costs borne by the producer or consumer in a transaction. Social costs include private costs plus any external costs imposed on third parties. When social costs exceed private costs, a negative externality exists, and the market over-produces the good because firms only consider their private costs when making production decisions."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Market Failure — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 1.3.5 Market Failure"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Define (2 marks)",
+   "text": "Define the term 'negative externality of consumption', using an example from the stimulus.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A negative externality of consumption is a spillover cost imposed on a third party when an individual consumes a good, which is not reflected in the market price . K In the stimulus, the consumption of single-use plastic bags creates an external cost of approximately AED 0.18 per bag — for example, pollution of marine environments in the Gulf — which consumers do not pay for at the till. E"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Analyse (6 marks)",
+   "text": "Analyse how the AED 0.25 charge on single-use plastic bags is likely to correct the market failure associated with plastic bag consumption in the UAE.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A negative externality of consumption occurs when the marginal social cost (MSC) of a good exceeds its marginal private cost (MPC) , leading to over-consumption and allocative inefficiency at the free-market equilibrium. K The AED 0.25 per bag charge acts as an indirect (Pigouvian) tax on the consumer, designed to internalise the estimated AED 0.18 external cost per bag. K Applied to the UAE case, because the stimulus gives a price elasticity of demand of -1.4 for single-use plastic bags, demand is price elastic. The 0.25 AED charge therefore causes a more-than-proportionate fall in quantity demanded. A This is consistent with the roughly 45% reduction in consumption reported by Dubai Municipality in the first year. A The chain of reasoning is: the charge raises the private cost of consumption closer to the full social cost, which shifts consumer behaviour along the demand curve, An which reduces the quantity consumed towards the socially optimal level , which in turn reduces the welfare loss triangle associated with over-consumption. The result is an improvement in allocative efficiency in the Dubai retail market. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Evaluate (20 marks)",
+   "text": "Evaluate the view that the current 50% excise tax on carbonated soft drinks in the UAE is the most effective way to correct the market failure caused by sugary drink consumption.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A negative externality of consumption is a cost that falls on third parties when a good is consumed and that is not reflected in its market price, so the social cost of consuming the good is greater than the private cost the consumer pays. K Sugary drinks carry such a cost — Table 1 estimates it at AED 1.20 per litre of carbonated soft drink — alongside an information failure : consumers under-value the long-run health costs they will bear themselves. K An excise is an indirect tax that raises the price the consumer pays. The question is not whether the 50% excise works at all but whether it is the most effective way to correct the failure, so it has to be weighed against the alternatives as well as against doing nothing. K There is evidence that the tax has worked. Table 1 gives carbonated soft drinks a price elasticity of demand of -0.6 , so a price rise of up to 50% predicts a fall in quantity demanded of up to about 30% (0.6 × 50%). A The stimulus reports a fall in per capita consumption of roughly 32% over the seven years after 2017 — close to what the elasticity predicts, and consistent with the critics’ claim that producers have largely passed the tax through to consumers. A The chain is: the excise raises the price the consumer pays, so the private cost of each drink moves closer to its full social cost; consumers move along their demand curve and buy fewer drinks; and consumption moves from the free-market quantity towards the social optimum, shrinking the welfare loss that over-consumption creates. An On a diagram, marginal social benefit lies below marginal private benefit by the external cost; the tax shifts supply upwards, and the closer the tax is to AED 1.20 per litre, the closer the new equilibrium lies to the quantity where marginal social benefit equals marginal social cost. D However, a PED of -0.6 also means demand is inelastic : the tax changes behaviour less than proportionately, and around two-thirds of the pre-tax volume is still being drunk. An Gulf Economic Review argues that the rate is under-correcting, pointing to over USD 25 billion a year in healthcare costs linked to obesity and type-2 diabetes and to adult diabetes prevalence of 12.3% . A That evidence is weaker than it looks. Diabetes prevalence is a stock built up over decades, so seven years of lower consumption would not be expected to move it much yet; obesity and diabetes have many causes besides soft drinks, so not all of the USD 25 billion can be laid at the door of the product being taxed; and the part of that bill paid by drinkers themselves is an internal cost, not an externality — only the part passed to third parties, through pooled insurance premiums for example, justifies a corrective tax. An The stronger form of the under-correction argument is therefore about information failure rather than the size of the health bill: a tax set equal to the AED 1.20 external cost corrects the externality, but it does nothing about consumers under-valuing the harm to themselves, and with demand this inelastic a price signal alone moves consumption only a little towards what a fully informed consumer would choose. An Second, the tax is regressive , and the extract’s own figures show why. If the 50% is passed through in full, as the critics say it largely has been, and consumption is about 32% lower, spending on soft drinks is roughly 1.5 × 0.68 ≈ 1.02 times its pre-tax level: consumers are paying about the same total as before for about two-thirds of the drinks. A That is the arithmetic of inelastic demand: when PED is below 1 in absolute value, a price rise increases what consumers spend on the good. The same cash sum is a far larger share of a lower-income expatriate worker’s income than of a high earner’s, so the burden falls hardest on the group the critics name. An This matters for the judgement: the inelastic demand that limits the fall in consumption is the same thing that makes the tax cost low-income drinkers more, so the weaker the behavioural effect, the heavier the regressive burden. The burden could be offset if the revenue funded healthcare or transfers for those workers, but the extract gives no evidence that it does. An Third, the tax may not be the most effective instrument because of what it is levied on. The stimulus reports that producers passed the cost through without significant reformulation. A flat 50% excise is charged on the price of a drink, not on its sugar content, so a producer that halves the sugar in a drink pays the same tax as before and has no reason to do it. An A tax charged per gram of sugar, or tiered by sugar content as in the UK’s Soft Drinks Industry Levy, would give producers that reason, and a reformulated drink cuts sugar intake without raising the price consumers pay — which also avoids the regressive burden above. An Information provision, such as clear sugar labelling and public health education, tackles the information failure directly, but it works slowly and on its own is unlikely to shift consumption as much as a price signal has. Weighed together, the alternatives are complements that repair the tax’s two weaknesses, not replacements for it. An Finally, setting the correct rate is itself a source of government failure . The rate that corrects the externality equals the marginal external cost, AED 1.20 per litre, but a 50% excise is a percentage of the price: it equals AED 1.20 only if a litre sells for AED 2.40 before tax, and the extract gives no price, so whether the current rate under- or over-corrects cannot be read from the data. The AED 1.20 figure is itself a composite estimate, and a percentage tax charges more on a premium brand than on a cheap one with the same sugar content. Set above the external cost, the tax creates a welfare loss of its own through under-consumption; set below it, the market failure persists. An Overall, the 50% excise has cut consumption by about as much as its elasticity predicts, so it is doing part of its job, but it is unlikely to be the most effective way to correct the market failure on its own. Its weaknesses follow from the -0.6 elasticity and from what it is levied on: it leaves most consumption in place, it raises what low-income drinkers spend, and, because it is charged on price rather than sugar, it gives producers no reason to reformulate. An The judgement therefore turns on design rather than on the tax itself: a sugar-based levy, with the revenue used to offset the burden on lower-income workers and backed by labelling and education, would correct more of the failure at a lower cost in equity than the current flat rate. The tax is necessary but not sufficient , and calling it the most effective way would only hold if long-run demand became considerably more elastic than -0.6, so that the price signal alone could carry more of the correction. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain what is meant by a negative externality and give one example.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A negative externality is a spill-over cost imposed on third parties K who are not involved in the transaction between producer and consumer, and is therefore not reflected in the market price . K For example, a coal-fired power station E emits carbon dioxide and sulphur dioxide as by-products of electricity production. Local residents and future generations suffer increased rates of respiratory illness and climate-related damage — costs they bear without compensation. A Because these social costs are external to the firm's calculations, the market over-produces electricity relative to the socially optimal output. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine how a negative externality of production leads to market failure.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A negative externality of production occurs when the production of a good imposes costs on third parties who are not involved in the transaction. K In this case, the marginal social cost (MSC) exceeds the marginal private cost (MPC) — the gap between them represents the external cost. K For example, a steel factory discharging chemical waste into a nearby river imposes costs on downstream fisheries, local residents, and the environment. A The factory only considers its private costs (raw materials, energy, wages) when deciding how much to produce. It does not pay for the pollution damage — this external cost falls on third parties. An Because the market price reflects only private costs, not social costs , the price is too low and output is too high relative to the socially optimal level. An On a diagram, the free market produces at Q₁ (where MPC = MPB) but the social optimum is at Q* (where MSC = MSB). The area between Q* and Q₁, bounded by MSC and MSB, represents the deadweight welfare loss — the excess cost to society from overproduction. D An This is a clear case of market failure because the price mechanism sends the wrong signal — it tells producers to produce more than is socially desirable. An Resources are misallocated because the market does not account for the full cost of production. Government intervention (e.g. a Pigouvian tax equal to the external cost) could internalise the externality and move output toward the social optimum. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Evaluate (20 marks)",
+   "text": "Evaluate the view that government intervention is always necessary to correct market failure.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Market failure occurs when the free market leads to a misallocation of resources — producing too much (negative externalities), too little (positive externalities, merit goods), or none at all (public goods). K The question is whether government intervention is always required to correct these failures, or whether alternative mechanisms — including private bargaining and market-based solutions — can sometimes achieve efficient outcomes without state action. An In many cases, government intervention is essential because the market cannot self-correct . An Public goods such as street lighting and national defence are non-excludable and non-rivalrous — the free rider problem means no private firm can profitably supply them. Only the state can fund provision through taxation. K Similarly, negative externalities require intervention because firms have no incentive to account for external costs. The UK's sugar tax (Soft Drinks Industry Levy), introduced in 2018, successfully reduced sugary drink consumption by 34% and incentivised manufacturers to reformulate products. A Without this intervention, the overconsumption of sugar — and its associated NHS costs — would have continued uncorrected. An However, government intervention is not always required . The Coase theorem suggests that if property rights are well-defined and transaction costs are low, private parties can negotiate an efficient outcome without government involvement. K For example, if a factory pollutes a farmer's land and the farmer has clear legal ownership, they can negotiate compensation or a reduction in pollution — reaching the socially optimal output through bargaining. A In practice, however, transaction costs are often high and property rights unclear, limiting the applicability of this approach. An Even when intervention is attempted, it can lead to government failure — where the intervention makes the allocation of resources worse rather than better . K Governments face information failure — they may not know the exact size of an external cost, leading them to set taxes too high or too low. An Regulatory capture means regulators may serve industry interests rather than the public. An Unintended consequences are common — for example, minimum pricing on alcohol may harm low-income moderate drinkers without significantly reducing problem drinking. A The cost of intervention itself (bureaucracy, enforcement, compliance) may exceed the welfare gain from correcting the failure. An On balance, government intervention is often necessary but not always effective or desirable . For pure public goods and large-scale externalities where private solutions are impractical, intervention is essential. An However, the form and extent of intervention matters — well-designed market-based instruments (tradable permits, targeted taxes) tend to outperform heavy-handed regulation. The key judgement is whether the costs of government failure are likely to be greater or less than the costs of market failure left uncorrected. Where transaction costs are low and property rights clear, private solutions should be tried first. An"
+   }
+  }
+ ]
+}

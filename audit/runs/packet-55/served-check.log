@@ -1,0 +1,22 @@
+served ?draft=1 (signed out):
+  Global Marketing Strategy and Approaches   quiz[0] prac[5] diagram=True recalls=['reorder', 'classify', 'fillin']
+  The Marketing Mix in Global Markets        quiz[1] prac[3] diagram=True recalls=['match', 'fillin', 'classify']
+  Ansoff and Porter in Global Marketing      quiz[2] prac[0, 4] diagram=True recalls=['match', 'classify', 'classify']
+  Global Niche Markets                       quiz[3] prac[1, 6] diagram=True recalls=['classify', 'match', 'fillin']
+  Cultural and Social Factors                quiz[4] prac[2] diagram=True recalls=['classify', 'match', 'classify']
+  hofstede             0
+  high-context         0
+  nova                 0
+  kfc                  0
+  stuck in the middle  0
+  mcdonald             0
+  india                0
+  fillin answers: [['ethnocentric', 'polycentric', 'geocentric'], ['product', 'price'], ['premium', 'specialist']]
+  reorder: [["Research the new market's culture, tastes and rules", 'Decide which parts of the mix stay global and which change', 'Test the adapted product and message with local buyers', 'Launch with the global brand and the local changes']]
+  sachet key: 25% dearer
+  served quiz count (signed-out slice): 8  diagrams: 5
+live (no draft): ['Standardisation vs Adaptation', 'Cultural Influences on Global Marketing']
+bundle (== draft per draft-readback.log): sachet items and keys
+  quiz[7] A detergent brand sells a 1 kg box for $4.00 and a 50 g sachet for $0. -> 25% dearer
+  quiz[8] A shampoo brand starts selling single-use sachets alongside its full b -> product and price
+  correctIndex histogram: Counter({0: 7, 1: 6, 3: 6, 2: 6})

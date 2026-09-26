@@ -1,0 +1,96 @@
+title: Entrepreneurs &amp; Leaders — Exam Questions &amp; Model Answers | Edexcel IAL Business | Revvy Learn
+canonical: https://revvylearn.com/business/entrepreneurs-leaders-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is the role of an entrepreneur?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "An entrepreneur organises the factors of production (land, labour, capital) to create a business, taking on financial risk in hope of profit. Key roles include: risk-taker (investing capital with no guaranteed return), innovator (spotting market gaps and developing new products), and decision-maker (coordinating resources and setting strategic direction)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What qualities make a successful entrepreneur?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Successful entrepreneurs typically demonstrate: willingness to take calculated risks, creativity and innovation, determination and resilience, strong communication and leadership skills, financial awareness, and the ability to spot and exploit market opportunities. They must also be adaptable and willing to learn from failure."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Entrepreneurs & Leaders — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Business 1.3.5 Entrepreneurs & Leaders"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain the role of an entrepreneur in a business.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "An entrepreneur is an individual who organises the factors of production (land, labour, capital) to create a business, taking on financial risk in the hope of making a profit. K The entrepreneur has several key roles. First, they are a risk-taker — they invest their own capital (or borrow funds) with no guarantee of return, accepting the possibility of financial loss. A Second, they are an innovator , identifying gaps in the market or developing new products and processes. For example, an entrepreneur might spot growing demand for plant-based food and launch a vegan restaurant. A Third, they are a decision-maker who coordinates resources, manages staff, and sets the strategic direction of the business. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Discuss (8 marks)",
+   "text": "Discuss the qualities needed by an entrepreneur to start a successful business.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "An entrepreneur is an individual who identifies a business opportunity and takes on financial risk to organise the factors of production and bring a product or service to market. K Success requires a combination of personal qualities that enable the entrepreneur to navigate uncertainty and competition. K First, risk tolerance is essential — starting a business involves investing personal savings, leaving secure employment, and accepting the possibility of failure. An Second, creativity and innovation allow the entrepreneur to identify gaps in the market and develop products that meet unmet needs. An James Dyson spent 15 years and developed over 5,127 prototypes before perfecting his bagless vacuum cleaner — demonstrating both creativity in design and extreme persistence. A Third, resilience is critical because most start-ups face repeated setbacks — rejected pitches, cash flow problems, competitive threats. An An entrepreneur who gives up at the first obstacle will never succeed. Fourth, decision-making under pressure is needed because resources are limited and markets move quickly — the entrepreneur must make judgement calls without complete information. An Finally, leadership and communication skills are important for motivating early employees, convincing investors, and building relationships with customers and suppliers. An"
+   }
+  }
+ ]
+}

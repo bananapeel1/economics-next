@@ -1,0 +1,63 @@
+title: Poverty and Inequality — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/poverty-inequality-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Poverty and Inequality — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 4.3.4 Poverty and Inequality"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine how the Lorenz curve and Gini coefficient are used to measure income inequality.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The Lorenz curve is a graphical representation of income distribution. The horizontal axis shows the cumulative percentage of the population (from poorest to richest), and the vertical axis shows the cumulative percentage of income received. K A 45-degree line represents perfect equality — where each percentile of the population receives the same share of income. The further the Lorenz curve bows below this line, the greater the inequality . K The Gini coefficient quantifies this inequality as a single number between 0 and 1 . It is calculated as the area between the 45° line and the Lorenz curve, divided by the total area under the 45° line . K A Gini of 0 = perfect equality; a Gini of 1 = one person has all income. South Africa has a Gini of approximately 0.63, reflecting extreme inequality, while Sweden has a Gini of approximately 0.27, indicating relatively equal income distribution. A These tools are valuable for comparing inequality between countries and tracking how distribution changes over time within a country. An However, they have limitations. The Gini coefficient does not show where in the distribution inequality occurs — two countries can have the same Gini but very different patterns of inequality (e.g. one with a large middle class vs one with extremes). An Both measures also only capture income inequality , not wealth inequality, which is typically far more concentrated. An They also rely on accurate data — in countries with large informal economies, official income data may understate true inequality. An"
+   }
+  }
+ ]
+}

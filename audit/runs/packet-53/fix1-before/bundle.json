@@ -1,0 +1,1662 @@
+{
+ "section_id": "influences-business-decisions",
+ "subject": "business",
+ "label": "packet-53-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "influences-business-decisions:block:e3cd752a",
+    "title": "Corporate Culture",
+    "sections": [
+     {
+      "id": "influences-business-decisions:sub:strong-and-weak-cultures",
+      "title": "Strong and Weak Cultures",
+      "keyIdea": "Corporate culture is the shared values and habits that decide how things are done in a business. A strong culture is widely shared and deeply held; a weak one is not.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Corporate culture** is the set of values, beliefs and habits that people in a business share: \"the way we do things here\". It shows in how decisions are made and what gets praised or punished, whatever the mission statement says."
+       },
+       {
+        "type": "paragraph",
+        "text": "In a **strong culture** most staff hold the same values and act on them without being told. Decisions are quick because people already agree on what matters, and newcomers pick up the norms fast. In a **weak culture** values vary from one part of the business to another, so behaviour depends on the individual manager and head office has to lean on rules and checks."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orvana, a Malaysian snack maker with 2,400 staff, has a strong culture of thrift. Managers question every expense, and waste on the production line is treated as a personal failing. That keeps costs low, but a proposal that costs money now and pays back later meets suspicion before anyone has read the figures."
+       },
+       {
+        "type": "paragraph",
+        "text": "So strength is not the same as quality. A strong culture magnifies whatever its values are: an advantage while they suit the market, and a brake when the market changes, because shared beliefs make the business slow to respond. When everyone thinks alike, fewer people challenge a poor decision, which is sometimes called groupthink."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏦",
+       "text": "A long-established bank in the Gulf with a strong culture of caution avoided its rivals' riskiest loans, but was years behind them in offering mobile banking."
+      },
+      "misconception": "Students assume a strong culture is always a good culture. Strength measures how widely values are shared, not whether they are the right values: a strong culture of caution or complacency can be harder to fix than a weak one.",
+      "examMatters": "Judge a culture by fit, not by strength. Say whether the values the case describes suit the decision the business now faces, and explain what the strength of the culture does to the speed and quality of that decision.",
+      "recall": {
+       "id": "influences-business-decisions:sub:strong-and-weak-cultures:recall",
+       "type": "classify",
+       "prompt": "Sort each sign by the kind of culture it points to: strong or weak.",
+       "groups": [
+        {
+         "name": "Strong culture",
+         "items": [
+          "Staff at every branch describe the firm in the same words",
+          "A recruit is told within a week how things are done",
+          "Managers act the same way whether or not head office is watching"
+         ],
+         "why": "Values are shared and acted on everywhere, so behaviour is consistent without close supervision."
+        },
+        {
+         "name": "Weak culture",
+         "items": [
+          "Each factory has its own way of treating customers",
+          "Staff check the rule book because there is no shared view",
+          "Two sales teams disagree about what the firm stands for"
+         ],
+         "why": "There is no dominant set of values, so behaviour varies and rules must do the work a culture would do."
+        }
+       ]
+      }
+     },
+     {
+      "id": "influences-business-decisions:sub:power-and-role-cultures",
+      "title": "Power and Role Cultures",
+      "keyIdea": "In a power culture, decisions flow from one person at the centre; in a role culture, they flow from job titles, procedures and rules.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Company cultures are classified into four types by where power sits and how work gets done: **power**, **role**, **task** and **person**. The four are usually credited to the management writer Charles Handy; the names of the types are what matter, not the writer."
+       },
+       {
+        "type": "paragraph",
+        "text": "In a **power culture**, decisions radiate from one person or a small group at the centre, usually the founder or owner. There are few rules; staff succeed by knowing what the centre wants. Decisions are fast, and the business can change direction in a day. The weaknesses grow with size: everything waits for one person, and staff who disagree tend to leave rather than argue."
+       },
+       {
+        "type": "paragraph",
+        "text": "In a **role culture**, power comes from the job, not the person. Written procedures, job descriptions and a clear hierarchy decide who does what. Work is predictable, consistent and easy to check, which suits large and stable operations. It is slow to change, because a new idea must pass every level that could say no."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orvana shows both. Its founder still approves every new flavour personally: a power culture at the top. Its factories run on shift procedures, hygiene checklists and grade-based pay: a role culture on the production line."
+       }
+      ],
+      "realExample": {
+       "emoji": "💊",
+       "text": "A family-owned pharmacy chain in Karachi grew from three shops to sixty. Its owner could no longer check every order, so written stock procedures and area managers took over the decisions she used to make herself."
+      },
+      "misconception": "Students describe a role culture as simply bad because it is bureaucratic. Procedures are what make a large operation safe and consistent; a food factory without them would be a hazard. Its weakness is the speed of change, not the rules themselves.",
+      "examMatters": "Name the type from the evidence in the case (who decides, and by what authority), then explain what that type does to the decision in question. A label with no evidence behind it shows knowledge only.",
+      "recall": {
+       "id": "influences-business-decisions:sub:power-and-role-cultures:recall",
+       "type": "fillin",
+       "prompt": "Name the culture each description shows:",
+       "template": [
+        "A tailor's shop where one person sets every price and approves every hire: a ___ culture.",
+        "A tax office where each clerk handles every form by a written procedure: a ___ culture."
+       ],
+       "answers": [
+        "power",
+        "role"
+       ],
+       "hints": [
+        "authority sits with one individual at the centre",
+        "authority comes from the job title and the rulebook"
+       ],
+       "distractors": [
+        "task",
+        "person"
+       ]
+      }
+     },
+     {
+      "id": "influences-business-decisions:sub:task-and-person-cultures",
+      "title": "Task and Person Cultures",
+      "keyIdea": "In a task culture, power follows expertise and teams form around projects; in a person culture, the organisation exists to serve the individuals in it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "In a **task culture**, teams are formed around a job to be done and broken up when it is finished. Authority comes from expertise, not rank: whoever knows most about the problem leads on it. Task cultures suit work that is new each time, such as product development, consultancy and research, because people with different skills combine quickly. They are expensive to run and harder to control, because no one follows a fixed routine."
+       },
+       {
+        "type": "paragraph",
+        "text": "In a **person culture**, the organisation is a framework that lets skilled individuals do their own work: a partnership of lawyers, architects or doctors sharing premises and support staff. Each professional decides how to work; the organisation serves them rather than the other way round. That keeps experts motivated, but a decision for the whole firm needs the agreement of people who each see themselves as their own boss."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orvana's new chief executive has set up a task culture in one corner of the business: a food scientist, a marketer, a buyer and an engineer who take a new snack from idea to shelf, with no approval from the founder until the final tasting."
+       },
+       {
+        "type": "paragraph",
+        "text": "Most businesses mix types. What matters is whether the type in each part of a business fits the work that part does."
+       }
+      ],
+      "realExample": {
+       "emoji": "🎬",
+       "text": "A film production company in Lagos hires a crew for each film (director, camera, sound, editing) who work as one team for months and then go their separate ways. Each project is run by expertise, not job title."
+      },
+      "misconception": "Students think a task culture has no leaders. It has a leader on every project; they are chosen for what they know about the task, not for their place in the hierarchy.",
+      "examMatters": "If a case describes a business that mixes types, say which part of it has which culture and why that fits, or does not fit, the work there. That is stronger than forcing one label on the whole firm.",
+      "recall": {
+       "id": "influences-business-decisions:sub:task-and-person-cultures:recall",
+       "type": "match",
+       "prompt": "Match each organisation to the culture it most likely has:",
+       "pairs": [
+        {
+         "left": "A software firm that forms a fresh team for each client project",
+         "right": "Task culture",
+         "why": "Teams form around a job and are led by whoever has the expertise it needs."
+        },
+        {
+         "left": "Four dentists sharing one surgery and one receptionist",
+         "right": "Person culture",
+         "why": "The organisation exists to support independent professionals, each deciding how to work."
+        },
+        {
+         "left": "A corner shop whose owner decides everything",
+         "right": "Power culture",
+         "why": "Power radiates from one individual at the centre."
+        },
+        {
+         "left": "A national postal service run by rule books and grades",
+         "right": "Role culture",
+         "why": "Authority comes from the job and the written procedure, not from the individual."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "A strong culture is widely shared; whether it is good depends on its values.",
+     "Power, role, task, person: ask who decides, and by what authority.",
+     "Most firms mix types; judge each part by the work it does."
+    ],
+    "diagramId": "influences-business-decisions:diagram:56c7cc6d",
+    "quizIndices": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "practiceIndices": [
+     2
+    ]
+   },
+   {
+    "id": "influences-business-decisions:block:4f316f11",
+    "title": "Forming and Changing a Culture",
+    "sections": [
+     {
+      "id": "influences-business-decisions:sub:how-culture-is-formed",
+      "title": "How Corporate Culture Is Formed",
+      "keyIdea": "Culture forms from the founder's values, the firm's history, who it hires and promotes, what it rewards, and the country and industry it works in.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "No one writes a culture down and switches it on. It **forms** over years from a handful of sources, and each keeps reinforcing the others."
+       },
+       {
+        "type": "paragraph",
+        "text": "**The founder and leaders.** Early on, the founder's values are the business: what the founder praises, tolerates and punishes becomes normal. Later leaders shape culture most through what they do, not what they say."
+       },
+       {
+        "type": "paragraph",
+        "text": "**History.** Ways of working that once brought success become \"how we do things\", and are defended long after the reason for them has gone."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Recruitment, promotion and rewards.** Firms hire people who seem to fit and promote those who display the existing values. Pay rules show what really counts: a firm that pays bonuses only on volume will have a culture of volume, whatever its posters say about quality."
+       },
+       {
+        "type": "paragraph",
+        "text": "**The country and the industry.** National attitudes to hierarchy and to questioning a boss, and the demands of the sector (safety in a chemical plant, speed in fashion), push a culture in a direction too."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orvana's thrift began with its founder, who started out frying snacks in one rented shop and counted every sen. It spread because careful spenders rose to run departments."
+       }
+      ],
+      "realExample": {
+       "emoji": "✈️",
+       "text": "An airline in the Gulf founded by former military pilots still runs on precise checklists, strict seniority and punctuality: values its founders brought with them, which its training rules have passed on to every later intake."
+      },
+      "misconception": "Students write that culture is formed by the mission statement. A statement records what leaders hope the culture is; the culture itself is formed by what people see being rewarded, tolerated and copied every day.",
+      "examMatters": "When a case asks why a business behaves as it does, trace the behaviour back to a source of culture the case gives evidence for, such as the founder, a past success or the reward system, rather than asserting that \"the culture\" causes it.",
+      "recall": {
+       "id": "influences-business-decisions:sub:how-culture-is-formed:recall",
+       "type": "reorder",
+       "prompt": "Put these in the order a culture forms, from a founder's first choices to a habit nobody questions:",
+       "criterion": "chronological: each stage can only happen once the one before it has",
+       "correctOrder": [
+        "A founder acts on a personal value, such as never wasting money",
+        "Early employees are hired and moved up for sharing that value",
+        "Surviving a hard period, the firm gives the value the credit",
+        "Newcomers absorb the value as simply how things are done"
+       ],
+       "why": [
+        "The founder's behaviour is the first model anyone copies.",
+        "Hiring and advancement spread the value beyond the founder.",
+        "Survival appears to prove the value right, so it becomes worth defending.",
+        "Once it has been proved, nobody questions it, and it passes to each new intake."
+       ]
+      }
+     },
+     {
+      "id": "influences-business-decisions:sub:why-established-cultures-resist-change",
+      "title": "Why an Established Culture Is Hard to Change",
+      "keyIdea": "An established culture resists change because people are invested in it: their status, their skills and their sense of what works all depend on the old ways.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Changing an **established culture** is hard because it is held in thousands of daily habits rather than in any one decision. The difficulties fall into four groups."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Loss.** Managers who rose under the old culture owe their position to it. A change that rewards different behaviour threatens that position, so they have most reason to resist, and most power to slow things down."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Proof.** If the old ways brought success, staff see no reason to drop them. The longer the record of success, the harder the argument for change."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Systems.** Recruitment, promotion, pay and procedures were built around the old culture. Unless they change too, they keep rewarding the old behaviour, and a new values statement is quietly ignored."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Time and scale.** A culture changes only as people change their habits, which takes years, not months. In a large business each site may keep its own version long after head office has moved on."
+       },
+       {
+        "type": "paragraph",
+        "text": "At Orvana, the new chief executive wants product decisions made in teams. Factory managers who built careers on carrying out the founder's instructions see the teams as a loss of control, and the founder, still on the board, points to thirty years of profit as proof that the old way works."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏥",
+       "text": "When two private hospital groups in Kenya merged, doctors at one were used to being consulted on every purchase, while managers at the other bought centrally. Years later, the two sets of hospitals still bought equipment in different ways."
+      },
+      "misconception": "Students suggest a new chief executive or a new values statement can change a culture on its own. Unless recruitment, promotion and rewards change as well, staff keep doing what those systems still reward.",
+      "examMatters": "Name the specific difficulty the case gives evidence for (who stands to lose, what past success is being defended, which system still rewards the old behaviour) and say what it means for how fast the change can happen.",
+      "recall": {
+       "id": "influences-business-decisions:sub:why-established-cultures-resist-change:recall",
+       "type": "classify",
+       "prompt": "Sort each factor by its likely effect on a planned change of culture:",
+       "groups": [
+        {
+         "name": "Makes the change harder",
+         "items": [
+          "Every senior manager was promoted for following the old way",
+          "The old way produced record profits for a decade",
+          "Bonuses are still paid for hitting the old targets"
+         ],
+         "why": "Each gives people a reason, or a reward, to keep the existing culture."
+        },
+        {
+         "name": "Makes the change easier",
+         "items": [
+          "A crisis that every employee can see threatens the firm",
+          "Leaders visibly work in the new way themselves",
+          "Promotion now goes to those who show the new behaviour"
+         ],
+         "why": "Each removes a reason to hold on to the old culture, or rewards the new one."
+        }
+       ]
+      }
+     },
+     {
+      "id": "influences-business-decisions:sub:can-a-culture-be-changed",
+      "title": "Can a Culture Be Changed? A Worked Judgement",
+      "keyIdea": "Whether a culture can be changed depends on how deep the old one runs, how urgent the need is, and whether leaders change the systems as well as the words.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A question on culture often asks for a judgement: can this business change its culture, and should it? A strong answer weighs the difficulties against the conditions that make change possible, and says what the outcome depends on."
+       },
+       {
+        "type": "paragraph",
+        "text": "**For success at Orvana.** The new chief executive has the board's backing and can change what earns a promotion: product managers could advance for launches that sell, not for following instructions. Rivals are launching healthier snacks faster, so staff can see why the old way is no longer enough."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Against.** The founder is still on the board and still admired; factory managers have most to lose; and the thrift that made the firm successful makes spending on experiments feel wrong. A culture built over thirty years will not shift in one."
+       },
+       {
+        "type": "paragraph",
+        "text": "**The judgement.** Change is likely to succeed in the product team, where the chief executive controls who is hired and how they are paid, and to be slow in the factories, where the role culture suits the work anyway. Whether it succeeds overall depends most on whether the founder visibly backs it, because staff copy what the most powerful person does."
+       }
+      ],
+      "realExample": {
+       "emoji": "📱",
+       "text": "A telecoms firm in Pakistan, formerly state-owned, set out to become customer-focused after it was sold. Its sales teams changed within two years once their bonuses depended on customer ratings; back-office departments, whose rewards stayed the same, took far longer."
+      },
+      "misconception": "Students conclude that a culture \"cannot be changed\". It can, but slowly and unevenly: the parts of a business whose systems and leaders change move first, and the rest follow or do not.",
+      "examMatters": "End an evaluation of culture change with the condition it depends on, for example whether leaders change how people are paid and promoted, rather than a flat yes or no. The condition is what makes the judgement a supported one.",
+      "recall": {
+       "id": "influences-business-decisions:sub:can-a-culture-be-changed:recall",
+       "type": "match",
+       "prompt": "Match each difficulty in changing a culture to the action that most directly answers it:",
+       "pairs": [
+        {
+         "left": "Managers fear losing the standing the old culture gave them",
+         "right": "Give them a clear role and reward in the new way of working",
+         "why": "Resistance falls when those with most to lose have something to gain."
+        },
+        {
+         "left": "Staff point to past success as proof the old way works",
+         "right": "Show evidence that customers and rivals have changed",
+         "why": "The argument from success holds only if conditions are the same as before."
+        },
+        {
+         "left": "Pay still follows the old behaviour",
+         "right": "Tie bonuses to the behaviour the new culture needs",
+         "why": "People do what is paid for, so the payment has to change first."
+        },
+        {
+         "left": "Each site keeps its own version of the culture",
+         "right": "Rotate managers between sites and train them together",
+         "why": "Shared experience builds shared habits across locations."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Culture forms from founders, history, hiring, rewards, country and industry.",
+     "Change is resisted by those who lose, by past success and by old systems.",
+     "Change the rewards and the leaders' behaviour, not just the words."
+    ],
+    "diagramId": "influences-business-decisions:diagram:0f4dfd47",
+    "quizIndices": [
+     7,
+     8,
+     9,
+     10
+    ],
+    "practiceIndices": [
+     0,
+     5
+    ]
+   },
+   {
+    "id": "influences-business-decisions:block:40c5142d",
+    "title": "Stakeholder Model Versus Shareholder Model",
+    "sections": [
+     {
+      "id": "influences-business-decisions:sub:internal-and-external-stakeholders",
+      "title": "Internal and External Stakeholders",
+      "keyIdea": "A stakeholder is anyone affected by, or able to affect, a business. Internal stakeholders work within it; external stakeholders are outside it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **stakeholder** is any individual or group with an interest in what a business does, because they are affected by its decisions or can affect them."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Internal stakeholders** are inside the organisation: **employees** and **managers**, and the **owners** of a small business who run it themselves. **External stakeholders** are outside it: **customers**, **suppliers**, **lenders** such as banks, the **local community**, **government**, and pressure groups that campaign on an issue."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Shareholders** are the group textbooks disagree on. They own the company, so many class them as internal; in a large listed company most shareholders never set foot inside it and play no part in running it, so others class them as external. Either is accepted with a reason. What matters more is what they want and how much influence they have."
+       },
+       {
+        "type": "paragraph",
+        "text": "For Orvana, a plan to close its older factory in Ipoh touches internal stakeholders (the 300 people who work there and their managers) and external ones (the site's suppliers, the town's shops, the state government). Influence differs too: a major shareholder can vote against the board, while a local shop can only complain. Planners sometimes map this on Mendelow's grid of power and interest; the influence itself is what counts."
+       }
+      ],
+      "realExample": {
+       "emoji": "⛏️",
+       "text": "When a mining company in Kenya applied to expand a site, the miners, engineers and managers inside it, and the villagers, county officials and financing bank outside it, each wanted something different from the same decision."
+      },
+      "misconception": "Students think external stakeholders have little power because they are outside the business. Customers can buy elsewhere, lenders can refuse credit and government can change the law: an external group is often the most powerful of all.",
+      "examMatters": "Identify the stakeholders this particular decision affects, using the case, rather than listing every group a business could have. Two well-chosen stakeholders developed in context say more than seven names.",
+      "recall": {
+       "id": "influences-business-decisions:sub:internal-and-external-stakeholders:recall",
+       "type": "classify",
+       "prompt": "Sort these stakeholders of a hotel chain into internal and external:",
+       "groups": [
+        {
+         "name": "Internal",
+         "items": [
+          "A receptionist on the night shift",
+          "The head chef",
+          "The finance director"
+         ],
+         "why": "They work within the organisation, so its decisions shape their jobs directly."
+        },
+        {
+         "name": "External",
+         "items": [
+          "A travel agency that books its rooms",
+          "The city authority that licenses its restaurant",
+          "Families living next to one of its hotels"
+         ],
+         "why": "They are outside the organisation but are affected by, or can affect, its decisions."
+        }
+       ]
+      }
+     },
+     {
+      "id": "influences-business-decisions:sub:stakeholder-objectives",
+      "title": "Stakeholder Objectives",
+      "keyIdea": "Each stakeholder group wants something different from a business, and those objectives often pull the same decision in opposite directions.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Every stakeholder has **objectives**: what it wants the business to deliver for it. Knowing them is how you predict who will support a decision and who will fight it."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Shareholders** want a return, through a rising share price and dividends. **Employees** want fair pay, job security, safe conditions and a chance to progress. **Managers** want the business to grow, and their own pay and status with it. **Customers** want value, quality and reliable supply. **Suppliers** want regular orders, fair prices and to be paid on time. **Lenders** want interest paid and loans repaid, so they watch cash flow and risk."
+       },
+       {
+        "type": "paragraph",
+        "text": "**The local community** wants jobs, and wants noise, traffic and pollution kept down. **Government** wants employment, tax revenue and businesses that obey the law."
+       },
+       {
+        "type": "paragraph",
+        "text": "Objectives overlap as well as clash. Everyone at Orvana gains if the business survives and grows. The clashes come over how the gains are shared: a higher dividend, a pay rise and a price cut all come out of the same profit."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛒",
+       "text": "A supermarket chain in Singapore that decides to open around the clock pleases shoppers who work late and owners hoping for more sales, but its night-shift staff want extra pay and the neighbours of its stores want quiet at night."
+      },
+      "misconception": "Students write that employees and shareholders always want opposite things. Both want the business to survive and prosper; they clash over how its rewards are divided, not over whether it succeeds.",
+      "examMatters": "State each stakeholder's objective as it applies to the decision in the case (\"workers at the site want to keep their jobs\") rather than a general list of what that group usually wants.",
+      "recall": {
+       "id": "influences-business-decisions:sub:stakeholder-objectives:recall",
+       "type": "match",
+       "prompt": "Match each stakeholder of a city bus company to the objective it most likely holds:",
+       "pairs": [
+        {
+         "left": "Bus drivers",
+         "right": "Secure jobs and safe working hours",
+         "why": "Employees depend on the business for their income and their working conditions."
+        },
+        {
+         "left": "The bank that financed the new buses",
+         "right": "Repayments made on schedule",
+         "why": "A lender is rewarded by interest and repayment, so it cares most about cash and risk."
+        },
+        {
+         "left": "Passengers",
+         "right": "Frequent, reliable services at a low fare",
+         "why": "Customers want value and dependable supply."
+        },
+        {
+         "left": "The city government",
+         "right": "Fewer cars on the roads and a properly licensed service",
+         "why": "Government weighs the wider effects on the public, and wants the law obeyed."
+        }
+       ]
+      }
+     },
+     {
+      "id": "influences-business-decisions:sub:shareholder-and-stakeholder-models",
+      "title": "The Shareholder Model and the Stakeholder Model",
+      "keyIdea": "The shareholder model says decisions should aim purely at returns to shareholders; the stakeholder model says they should weigh every group the business affects.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "There are two views of whose interests a business should serve when it makes decisions and sets objectives."
+       },
+       {
+        "type": "paragraph",
+        "text": "The **shareholder model**: the business should focus purely on **shareholder returns**, increasing the share price and dividends. Directors act for the owners; other groups are protected by contracts and the law, and anything more spends the owners' money without their consent. The economist Milton Friedman made the best-known case for this view."
+       },
+       {
+        "type": "paragraph",
+        "text": "The **stakeholder model**: the business should **consider all of its stakeholders** in its decisions and objectives, because it depends on all of them: workers' effort, customers' loyalty, suppliers' reliability, the community's tolerance. Ignoring them eventually costs the owners too. The writer most linked with it is R. Edward Freeman."
+       },
+       {
+        "type": "paragraph",
+        "text": "In practice the two are ends of a spectrum rather than a switch. Even a firm run for its shareholders must keep customers and staff; even a firm run for all its stakeholders must make a profit to survive. The real difference shows when their interests clash and the business has to choose whom to put first."
+       }
+      ],
+      "realExample": {
+       "emoji": "☕",
+       "text": "Two coffee chains in Hong Kong face the same rise in rents. One raises prices and cuts staff hours to protect its payout to owners; the other holds prices and hours and accepts a smaller profit to keep its regular customers and experienced baristas."
+      },
+      "misconception": "Students treat the stakeholder model as ignoring profit. It does not: profit is still needed, and shareholders are stakeholders too. The model asks a business to weigh profit against other interests rather than put it above them automatically.",
+      "examMatters": "When you apply either model, show what it would lead the business in the case to decide, and why. A definition of the two models is only the starting point.",
+      "recall": {
+       "id": "influences-business-decisions:sub:shareholder-and-stakeholder-models:recall",
+       "type": "fillin",
+       "prompt": "Name the model each board is following:",
+       "template": [
+        "A board that rejects a safety upgrade because it would shrink this year's payout to the owners follows the ___ model.",
+        "A board that delays a price rise because loyal customers on low incomes would be hurt follows the ___ model."
+       ],
+       "answers": [
+        "shareholder",
+        "stakeholder"
+       ],
+       "hints": [
+        "the owners' return comes before everything else",
+        "every group the decision affects is weighed"
+       ],
+       "distractors": [
+        "customer",
+        "employee"
+       ]
+      }
+     },
+     {
+      "id": "influences-business-decisions:sub:conflict-between-profit-and-wider-objectives",
+      "title": "Conflict Between Profit and Wider Objectives",
+      "keyIdea": "Profit-based objectives serve shareholders; wider objectives serve other stakeholders. One decision can raise profit while costing jobs, suppliers or a community.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The two models matter most where **profit-based (shareholder) objectives** and **wider (stakeholder) objectives** point in different directions. Many decisions do."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orvana can close its older factory in Ipoh and move the work to an automated plant in Johor. The move saves RM9m a year for a one-off cost of RM12m, so yearly profit rises from RM60m to RM69m, and the cost is recovered in about sixteen months."
+       },
+       {
+        "type": "paragraph",
+        "text": "On the shareholder model the decision is straightforward. On the stakeholder model it is not: 300 people lose their jobs, local suppliers lose a customer, the town loses spending, and the staff who remain may fear they are next."
+       },
+       {
+        "type": "flow",
+        "resultType": "bad",
+        "steps": [
+         {
+          "title": "Closure announced",
+          "subtitle": "300 jobs go in Ipoh"
+         },
+         {
+          "title": "Remaining staff fear they are next",
+          "subtitle": "trust in the firm falls"
+         },
+         {
+          "title": "Effort falls and good staff leave",
+          "subtitle": "productivity suffers"
+         }
+        ],
+        "result": "Part of the RM9m saving is lost again"
+       },
+       {
+        "type": "paragraph",
+        "text": "The conflict is not always as sharp as it looks. Retraining, transfers to the new plant or a phased closure cost some of the saving but reduce the damage, and a firm that treats departing staff fairly finds it easier to recruit later. Whether that is worth the cost is the judgement."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧵",
+       "text": "A textile firm in Pakistan that moved spinning to a new plant offered every worker at the old mill a transfer and free transport. Its saving was smaller in the first year, but absence at the new plant stayed low."
+      },
+      "misconception": "Students assume any decision that raises profit must harm other stakeholders. Many conflicts can be softened, and some decisions, such as better safety or less waste, raise profit and serve other groups at the same time.",
+      "examMatters": "Name the stakeholders the decision affects, explain how their objectives clash with the profit objective, and judge whose interest should carry most weight in this case and why. The judgement needs a reason drawn from the case.",
+      "recall": {
+       "id": "influences-business-decisions:sub:conflict-between-profit-and-wider-objectives:recall",
+       "type": "classify",
+       "prompt": "A cement company plans to double output at its quarry. Sort each group by what the plan most likely does to its objectives:",
+       "groups": [
+        {
+         "name": "Gains",
+         "items": [
+          "Owners expecting a bigger dividend",
+          "The haulage firm paid to carry the extra cement",
+          "Quarry workers offered paid overtime"
+         ],
+         "why": "The extra output raises their income, which is the objective each of them holds."
+        },
+        {
+         "name": "Loses",
+         "items": [
+          "Families living beside the quarry road",
+          "A school next to the blasting site",
+          "Farmers whose wells the quarry drains"
+         ],
+         "why": "They bear the dust, noise and water loss without sharing in the extra income."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Internal stakeholders work within the firm; external ones are outside it.",
+     "Shareholder model: returns first. Stakeholder model: weigh every group.",
+     "Profit and wider objectives clash; judge whose interest weighs most here."
+    ],
+    "diagramId": "influences-business-decisions:diagram:4f08818e",
+    "quizIndices": [
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "practiceIndices": [
+     3,
+     6
+    ]
+   },
+   {
+    "id": "influences-business-decisions:block:cb5e175a",
+    "title": "Business Ethics",
+    "sections": [
+     {
+      "id": "influences-business-decisions:sub:trade-offs-between-profit-and-ethics",
+      "title": "Ethics of Strategic Decisions: Profit Against Ethics",
+      "keyIdea": "Business ethics is doing what is morally right, not only what is legal. Strategic decisions often trade profit against ethics, and the trade-off has to be weighed.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Business ethics** are the moral principles that guide how a business behaves: deciding what is right, not only what is legal. A strategy can be lawful and still unethical, such as selling a product known to harm children where no law yet forbids it, or paying suppliers so little that their workers cannot live on it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Strategic decisions often involve a **trade-off between profit and ethics**: the ethical choice costs money, at least at first, and the cheaper choice harms someone."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orvana buys 20,000 tonnes of palm oil a year. Oil certified as grown without clearing rainforest costs RM300 a tonne more: RM6m a year. On its own that cuts profit from RM60m to RM54m, a fall of 10%."
+       },
+       {
+        "type": "paragraph",
+        "text": "The trade-off may be smaller than it looks. A price rise of 1.2% on RM500m of sales would cover the cost if customers accept it; retailers abroad may refuse uncertified oil anyway; and a scandal over forest clearing could cost far more than RM6m. It may also be larger, if rivals using cheaper oil undercut Orvana on price."
+       },
+       {
+        "type": "paragraph",
+        "text": "So the question is rarely \"ethics or profit?\" It is \"how much profit, over what period, for how much ethical gain, and who bears the cost?\""
+       }
+      ],
+      "realExample": {
+       "emoji": "🍫",
+       "text": "A cocoa processor in Ghana pays farmers a premium for cocoa grown without child labour and inspects farms each season. The inspections raise its costs, but they let it sell to chocolate makers that buy only from inspected farms."
+      },
+      "misconception": "Students assume the ethical choice always costs profit in the end. Sometimes it does; sometimes it protects sales and reputation and pays for itself. Which one depends on customers, rivals and the risk of being found out, and that is what has to be weighed.",
+      "examMatters": "Put a size on the trade-off where the case gives figures (the cost as a share of profit, or the price rise needed to cover it), then weigh it against the ethical and commercial gains.",
+      "recall": {
+       "id": "influences-business-decisions:sub:trade-offs-between-profit-and-ethics:recall",
+       "type": "match",
+       "prompt": "Match each ethical decision to the way it most likely costs profit:",
+       "pairs": [
+        {
+         "left": "Paying a garment supplier enough for its workers to earn a living wage",
+         "right": "Each shirt costs more to buy",
+         "why": "The ethical gain is paid for in the price of the input."
+        },
+        {
+         "left": "Refusing to advertise sugary drinks to children",
+         "right": "Sales to a profitable group of buyers are given up",
+         "why": "The cost comes through revenue forgone, not through higher costs."
+        },
+        {
+         "left": "Treating factory waste instead of dumping it",
+         "right": "An extra charge for every tonne disposed of",
+         "why": "Proper disposal is a running cost the cheaper option avoids."
+        },
+        {
+         "left": "Recalling a product with a rare safety fault",
+         "right": "A one-off loss of stock and a fall in this year's profit",
+         "why": "The cost falls at once, while the harm avoided lies in the future."
+        }
+       ]
+      }
+     },
+     {
+      "id": "influences-business-decisions:sub:pay-and-rewards",
+      "title": "Pay and Rewards",
+      "keyIdea": "How a business pays and rewards people is an ethical choice: the gap between top and bottom pay, and what bonuses reward, both shape behaviour and trust.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Pay and rewards** raise ethical questions at both ends of a business: how much directors should be paid, and for what; and whether pay at the bottom is enough to live on and fair between people doing similar work."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orvana's chief executive is paid RM4.8m a year; its median employee earns RM48,000. That is a pay ratio of 100 to 1. The board proposes a RM1.2m bonus if this year's profit target is met, which would take the ratio to 125 to 1."
+       },
+       {
+        "type": "paragraph",
+        "text": "For high executive pay: the job is demanding and leaders are hard to recruit. Against: a very wide gap can damage trust and effort lower down, especially when workers' pay is frozen."
+       },
+       {
+        "type": "paragraph",
+        "text": "**What a reward is tied to matters as much as its size.** A bonus paid only for this year's profit rewards cutting the spending that protects the future (maintenance, training, safety) as well as genuine improvement. Adding targets for safety and customer satisfaction, or paying part of a bonus in shares held for several years, rewards what the business actually wants."
+       },
+       {
+        "type": "flow",
+        "resultType": "bad",
+        "steps": [
+         {
+          "title": "Bonus tied to this year's profit",
+          "subtitle": "nothing else is measured"
+         },
+         {
+          "title": "Maintenance and training are cut",
+          "subtitle": "costs fall and profit rises"
+         },
+         {
+          "title": "The target is met",
+          "subtitle": "the bonus is paid"
+         }
+        ],
+        "result": "Breakdowns and skill gaps arrive later, after the bonus has gone"
+       }
+      ],
+      "realExample": {
+       "emoji": "⚖️",
+       "text": "A listed bank in Nigeria pays half of each director's bonus in shares that cannot be sold for three years, so directors gain only if results hold up."
+      },
+      "misconception": "Students treat pay as an ethical issue only when it is low. How rewards are designed is an ethical choice too: a bonus that pays for hitting a target by any means can encourage harm to customers, staff or the future of the business.",
+      "examMatters": "If the case gives pay figures, calculate the ratio or the percentage rise and use it in the argument. A widening gap measured from the case is application; \"executives are paid too much\" is assertion.",
+      "recall": {
+       "id": "influences-business-decisions:sub:pay-and-rewards:recall",
+       "type": "fillin",
+       "prompt": "Work out the pay ratio:",
+       "template": [
+        "A chief executive paid RM2.4m a year, where the median worker earns RM40,000, has a pay ratio of ___ to 1."
+       ],
+       "answers": [
+        "60"
+       ],
+       "hints": [
+        "divide the top pay by the pay of the middle earner"
+       ],
+       "distractors": [
+        "6",
+        "600"
+       ]
+      }
+     },
+     {
+      "id": "influences-business-decisions:sub:corporate-social-responsibility",
+      "title": "Corporate Social Responsibility (CSR)",
+      "keyIdea": "Corporate social responsibility is a business choosing to take account of its effects on society and the environment, beyond what the law requires.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Corporate social responsibility (CSR)** is a business voluntarily taking responsibility for its effects on society and the environment, beyond what the law requires. Obeying the law is the minimum; CSR is what a business chooses to do on top of it."
+       },
+       {
+        "type": "paragraph",
+        "text": "CSR covers how a business treats its workforce and supply chain, its environmental conduct (emissions, waste, where its raw materials come from) and its part in the community. Where ethics asks whether a particular decision is right, CSR is the business's continuing policy across the whole range of its effects."
+       },
+       {
+        "type": "paragraph",
+        "text": "For Orvana, a CSR policy might commit it to certified palm oil, to less plastic in its packaging and to taking on apprentices in Ipoh even as the old factory closes."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Why firms adopt it.** CSR can protect reputation, win customers and retailers who choose responsible suppliers, attract staff who want to work for such a firm, and reduce the risk of tighter regulation. **The limits.** It costs money that could go to shareholders; its benefits are hard to measure; and a policy that promises more than the business does is soon exposed. That gap, which critics call greenwashing, can do more damage than having no policy at all."
+       }
+      ],
+      "realExample": {
+       "emoji": "🥛",
+       "text": "A dairy company in Kenya pays for vets to visit the smallholder farms that supply it, and publishes an audited account each year of the milk it buys and what it pays. Buyers can check the claims rather than take them on trust."
+      },
+      "misconception": "Students write that CSR is charity. Some CSR is giving, but most is how the business runs its own operations (its sourcing, waste and treatment of staff), and firms adopt it partly because it serves their own interests.",
+      "examMatters": "Judge a CSR policy on whether it changes what the business actually does, and what that costs, not on what it says. Evidence such as audited results or changed sourcing is what makes a CSR claim credible.",
+      "recall": {
+       "id": "influences-business-decisions:sub:corporate-social-responsibility:recall",
+       "type": "classify",
+       "prompt": "Sort each action by whether the law requires it or the business chooses it (CSR):",
+       "groups": [
+        {
+         "name": "Required by law",
+         "items": [
+          "Paying at least the legal minimum wage",
+          "Keeping emissions within the limits of a permit",
+          "Paying the tax that is owed"
+         ],
+         "why": "The business must do these whatever it prefers, so they are the minimum, not CSR."
+        },
+        {
+         "name": "Chosen: CSR",
+         "items": [
+          "Paying cocoa farmers above the market price",
+          "Planting trees to offset the firm's emissions",
+          "Funding scholarships for local students"
+         ],
+         "why": "The business chooses these beyond what the law demands, which is what makes them CSR."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Ethics often costs profit; size the trade-off before judging it.",
+     "Pay is an ethical choice: the size of the gap and what bonuses reward.",
+     "CSR goes beyond the law; judge it by what changes, not what is claimed."
+    ],
+    "diagramId": "influences-business-decisions:diagram:2c03bce8",
+    "quizIndices": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21
+    ],
+    "practiceIndices": [
+     1,
+     4
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "Corporate Culture",
+    "meta": "3.3.4 · 1a-1b",
+    "keyIdea": "Culture is how things are done in a business. Its strength is how widely it is shared; its type is where power sits.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Corporate culture</strong> — the shared values, beliefs and habits that decide how things are done in a business."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Strong culture</strong> — values widely shared and deeply held. <strong>Weak culture</strong> — no dominant set of values; behaviour varies."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Power</strong> — decisions from one central person. <strong>Role</strong> — authority from job titles and procedures. <strong>Task</strong> — project teams led by expertise. <strong>Person</strong> — the organisation serves independent experts."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Strong culture: fast, consistent decisions — and slow to see a changed market if the values no longer fit."
+       },
+       {
+        "type": "mechanism",
+        "text": "Power culture: fast while small; a bottleneck as the firm grows. Role culture: consistent and safe; slow to change."
+       },
+       {
+        "type": "link",
+        "text": "Judge a culture by its fit with the work and the decision, not by its strength alone."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Strong is not the same as good.",
+     "Who decides, and by what authority?",
+     "Most firms mix types."
+    ]
+   },
+   {
+    "title": "Forming and Changing a Culture",
+    "meta": "3.3.4 · 1c-1d",
+    "keyIdea": "Culture forms from a handful of sources that reinforce each other, which is exactly why an established culture is hard to change.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Sources of culture</strong> — the founder and leaders; history and past success; recruitment, promotion and rewards; the country and the industry."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Difficulties in changing culture</strong> — loss of status for those who rose under it; past success as \"proof\"; systems that still reward the old ways; time and scale."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Founder's values → who is hired and promoted → what is rewarded → success seems to prove it → the values are defended."
+       },
+       {
+        "type": "mechanism",
+        "text": "A new values statement with unchanged pay and promotion rules changes little: staff do what is rewarded."
+       },
+       {
+        "type": "link",
+        "text": "Culture is also a key factor in managing change (3.3.6)."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Rewards show what really counts.",
+     "Those who lose, resist.",
+     "Change the systems, not just the words."
+    ]
+   },
+   {
+    "title": "Stakeholder Model Versus Shareholder Model",
+    "meta": "3.3.4 · 2a-2d",
+    "keyIdea": "Who the stakeholders are, what each wants, the two models of whose interests come first, and where profit and wider objectives clash.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Internal stakeholders</strong> — employees and managers (and owner-managers). <strong>External stakeholders</strong> — customers, suppliers, lenders, the local community, government, pressure groups. Shareholders are classed either way, with a reason."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Shareholder model</strong> — the business should focus purely on shareholder returns: share price and dividends."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Stakeholder model</strong> — the business should consider all of its stakeholders in its decisions and objectives."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Conflict: closing the Ipoh factory saves RM9m a year (profit RM60m → RM69m) and costs 300 jobs."
+       },
+       {
+        "type": "mechanism",
+        "text": "Objectives overlap (survival, growth) and clash (how the profit is shared)."
+       },
+       {
+        "type": "link",
+        "text": "Stakeholder conflicts at a global scale are 4.3.4."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Inside or outside?",
+     "Returns first, or every group weighed?",
+     "Whose interest weighs most here?"
+    ]
+   },
+   {
+    "title": "Business Ethics",
+    "meta": "3.3.4 · 3a-3c",
+    "keyIdea": "Ethics asks what is right as well as legal; it often costs profit, shapes how people are paid, and becomes policy as CSR.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Business ethics</strong> — the moral principles that guide how a business behaves: what is right, not only what is legal."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Pay ratio</strong> — the chief executive's pay ÷ the median employee's pay."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Corporate social responsibility (CSR)</strong> — voluntarily taking account of the business's effects on society and the environment, beyond the law."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Trade-off: certified palm oil costs RM6m a year, profit RM60m → RM54m (10%); a 1.2% price rise would cover it."
+       },
+       {
+        "type": "mechanism",
+        "text": "Pay: RM4.8m ÷ RM48,000 = 100 to 1; with the RM1.2m bonus, 125 to 1."
+       },
+       {
+        "type": "link",
+        "text": "A bonus tied only to this year's profit can reward cutting what protects the future."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Size the trade-off.",
+     "What does the bonus reward?",
+     "Judge CSR by what changes."
+    ]
+   }
+  ],
+  "quiz": [
+   {
+    "id": "influences-business-decisions:quiz:9d71e16f",
+    "question": "In which culture do decisions depend mainly on one person at the centre, often the founder?",
+    "options": [
+     "a role culture",
+     "a power culture",
+     "a task culture",
+     "a person culture"
+    ],
+    "explanation": "When decisions radiate from one central individual, the culture is a power culture. A role culture takes its authority from job titles and procedures, a task culture from expertise on a project, and a person culture exists to serve independent professionals.",
+    "correctIndex": 1
+   },
+   {
+    "id": "influences-business-decisions:quiz:637c5544",
+    "question": "A large insurance company where every job follows a written procedure and authority comes from job grade most likely has:",
+    "options": [
+     "a power culture",
+     "a task culture",
+     "a role culture",
+     "a person culture"
+    ],
+    "explanation": "Authority that comes from the job and the procedure, rather than from an individual or from expertise, is what defines a role culture. It suits large, stable operations that need consistency.",
+    "correctIndex": 2
+   },
+   {
+    "id": "influences-business-decisions:quiz:afc94b1d",
+    "question": "A group of specialists is brought together to develop one new product and then disbanded. This is typical of:",
+    "options": [
+     "a role culture",
+     "a task culture",
+     "a power culture",
+     "a person culture"
+    ],
+    "explanation": "Teams formed around a job and broken up when it is done, led by expertise rather than rank, are the mark of a task culture. Nothing here depends on one central figure, on fixed procedures or on serving independent professionals.",
+    "correctIndex": 1
+   },
+   {
+    "id": "influences-business-decisions:quiz:aeec6b7b",
+    "question": "A strong corporate culture is one in which:",
+    "options": [
+     "values are widely shared and deeply held",
+     "the founder makes every important decision",
+     "staff follow a detailed rule book",
+     "profits are higher than rivals'"
+    ],
+    "explanation": "Strength describes how widely and deeply values are shared. It says nothing about who decides, whether there is a rule book, or how profitable the business is; a strong culture can hold values that hurt profit.",
+    "correctIndex": 0
+   },
+   {
+    "id": "influences-business-decisions:quiz:c0e9f967",
+    "question": "Why can a strong culture become a disadvantage?",
+    "options": [
+     "staff disagree about how to treat customers",
+     "each department develops its own values",
+     "decisions take longer because values differ",
+     "shared beliefs slow its response to a changed market"
+    ],
+    "explanation": "When nearly everyone holds the same beliefs, few people question them, so a change in the market is seen late and resisted. Disagreement between staff and departments describes a weak culture, not a strong one.",
+    "correctIndex": 3
+   },
+   {
+    "id": "influences-business-decisions:quiz:2a00d1a8",
+    "question": "In a business with a weak culture, you would most expect:",
+    "options": [
+     "behaviour to vary from one department to another",
+     "staff to act alike without supervision",
+     "newcomers to learn the norms within days",
+     "decisions to be quick because everyone agrees"
+    ],
+    "explanation": "Without a dominant set of values, each part of the business behaves in its own way. Acting alike unsupervised, learning the norms quickly and fast agreement are all signs of a strong culture.",
+    "correctIndex": 0
+   },
+   {
+    "id": "influences-business-decisions:quiz:2182e9de",
+    "question": "A firm's staff all share a deep belief in caution. Calling its culture strong tells you:",
+    "options": [
+     "that the culture will improve its profits",
+     "that the firm has a power culture",
+     "that the culture will be easy to change",
+     "how widely it is held, not whether it is right"
+    ],
+    "explanation": "Strength measures how widely and deeply values are held. Whether caution helps depends on the market; the type of culture is a separate question; and a strongly held belief is harder, not easier, to change.",
+    "correctIndex": 3
+   },
+   {
+    "id": "influences-business-decisions:quiz:73175d27",
+    "question": "A founder-led snack maker grows from 40 staff to 4,000 across six factories. Its culture is most likely to move:",
+    "options": [
+     "from a role culture towards a power culture",
+     "from a person culture towards a task culture",
+     "from a task culture towards a person culture",
+     "from a power culture towards a role culture"
+    ],
+    "explanation": "One person cannot decide everything for thousands of staff, so procedures, job descriptions and layers of managers take over: authority shifts from the founder to the role. Growth rarely pushes a firm the other way.",
+    "correctIndex": 3
+   },
+   {
+    "id": "influences-business-decisions:quiz:a7ed8dfc",
+    "question": "Staff at one branch of a firm rarely question a manager, while staff at another branch in a different country argue openly. The difference most likely comes from:",
+    "options": [
+     "the firm's mission statement",
+     "the size of each branch's budget",
+     "the price of the firm's products",
+     "national attitudes to authority"
+    ],
+    "explanation": "The country a business works in shapes its culture, including how far staff defer to a boss. A single mission statement cannot explain a difference between branches, and budgets and prices do not form attitudes to authority.",
+    "correctIndex": 3
+   },
+   {
+    "id": "influences-business-decisions:quiz:2cdedbc9",
+    "question": "Which of these is a difficulty in changing an established culture?",
+    "options": [
+     "new staff have no habits to unlearn",
+     "a crisis makes the need for change obvious",
+     "managers who rose under the old ways stand to lose status",
+     "leaders start working in the new way themselves"
+    ],
+    "explanation": "People whose position depends on the old culture have most reason to resist, and often most power to do so. The other three make change easier, not harder.",
+    "correctIndex": 2
+   },
+   {
+    "id": "influences-business-decisions:quiz:40759081",
+    "question": "Why does changing a culture usually take years rather than months?",
+    "options": [
+     "it lives in daily habits that change only as people do",
+     "the law requires a long consultation first",
+     "values statements take years to write",
+     "shareholders must approve it at a meeting"
+    ],
+    "explanation": "A culture is held in thousands of everyday habits, and habits change slowly, person by person. No law, drafting process or shareholder vote sets the pace.",
+    "correctIndex": 0
+   },
+   {
+    "id": "influences-business-decisions:quiz:30b3b0e1",
+    "question": "Which objective is a supplier most likely to have?",
+    "options": [
+     "a rising share price",
+     "safe working hours",
+     "less traffic near its homes",
+     "regular orders and prompt payment"
+    ],
+    "explanation": "A supplier depends on the business as a customer, so it wants steady orders and to be paid on time. A rising share price is an owner's objective, safe hours an employee's, and less traffic the local community's.",
+    "correctIndex": 3
+   },
+   {
+    "id": "influences-business-decisions:quiz:1f341a97",
+    "question": "According to the shareholder model, a business should take decisions mainly to:",
+    "options": [
+     "balance the interests of every group it affects",
+     "protect every job it currently provides",
+     "increase the share price and dividends",
+     "keep its prices as low as possible"
+    ],
+    "explanation": "The shareholder model says a business should focus purely on returns to its owners. Weighing every group is the stakeholder model, and protecting jobs or cutting prices would serve employees or customers ahead of owners.",
+    "correctIndex": 2
+   },
+   {
+    "id": "influences-business-decisions:quiz:4a764151",
+    "question": "A board delays closing a loss-making branch so that it can retrain and transfer the branch's staff first. This is most consistent with:",
+    "options": [
+     "the shareholder model",
+     "the stakeholder model",
+     "a power culture",
+     "a person culture"
+    ],
+    "explanation": "Accepting a cost to protect employees means weighing a group other than the owners, which is the stakeholder model. A shareholder-model board would close the branch as soon as that raised returns; the culture types describe where power sits, not whose interests are served.",
+    "correctIndex": 1
+   },
+   {
+    "id": "influences-business-decisions:quiz:a7a5afb8",
+    "question": "How can closing a factory end up costing some of the profit it was meant to raise?",
+    "options": [
+     "the machines in the closed factory lose value",
+     "customers are charged less for the product",
+     "remaining staff lose trust and work less well",
+     "the government must approve every closure"
+    ],
+    "explanation": "Staff who fear they are next may put in less effort or leave, which lowers productivity and eats into the saving. The other options are not effects that follow from closing a site.",
+    "correctIndex": 2
+   },
+   {
+    "id": "influences-business-decisions:quiz:2b573c1d",
+    "question": "A factory plans to run a night shift for the first time. Which group is most likely to object?",
+    "options": [
+     "workers who want paid overtime",
+     "residents living next to the factory",
+     "the firm's shareholders",
+     "the firm's customers"
+    ],
+    "explanation": "Night work brings noise and traffic at night, which conflicts with neighbours' wish for quiet. Workers gain overtime, owners gain output, and customers gain supply.",
+    "correctIndex": 1
+   },
+   {
+    "id": "influences-business-decisions:quiz:0413f06d",
+    "question": "Business ethics is best described as:",
+    "options": [
+     "deciding what is morally right, not only what is legal",
+     "obeying every law that applies to the firm",
+     "making as much profit as the law allows",
+     "giving part of the firm's profit to charity"
+    ],
+    "explanation": "Ethics is about moral principle, which can ask more than the law. Obeying the law is the minimum, profit-seeking within the law is not a moral test, and giving to charity is only one possible expression of ethics.",
+    "correctIndex": 0
+   },
+   {
+    "id": "influences-business-decisions:quiz:12192c13",
+    "question": "A firm switches to responsibly sourced cotton, which costs RM3m more a year. Its profit was RM12m. By what percentage does profit fall?",
+    "options": [
+     "4%",
+     "25%",
+     "33%",
+     "75%"
+    ],
+    "explanation": "The extra cost divided by the original profit, times 100, gives the fall: 3 ÷ 12 × 100. Dividing by the new profit of RM9m overstates it, dividing profit by cost gives a ratio rather than a percentage, and the share of profit that remains is not the fall.",
+    "correctIndex": 1
+   },
+   {
+    "id": "influences-business-decisions:quiz:c8c3700e",
+    "question": "A chief executive is paid RM1.5m a year and the median employee RM50,000. The pay ratio is:",
+    "options": [
+     "30 to 1",
+     "3 to 1",
+     "300 to 1",
+     "50 to 1"
+    ],
+    "explanation": "The ratio divides the chief executive's pay by the median employee's: 1,500,000 ÷ 50,000. Misplacing a zero gives the answers ten times too small or too large.",
+    "correctIndex": 0
+   },
+   {
+    "id": "influences-business-decisions:quiz:8f22c94f",
+    "question": "Why might a bonus based only on this year's profit be judged unethical?",
+    "options": [
+     "it can reward cuts to safety and training",
+     "bonuses based on profit are against the law",
+     "it reduces the dividends paid to owners",
+     "it cannot be paid in shares"
+    ],
+    "explanation": "If only this year's profit counts, cutting spending that protects staff and the business later raises the reward. Profit bonuses are legal, a bonus need not cut dividends, and it can be paid in shares.",
+    "correctIndex": 0
+   },
+   {
+    "id": "influences-business-decisions:quiz:bb6fbf2c",
+    "question": "Which of these is an example of corporate social responsibility?",
+    "options": [
+     "keeping emissions within its permit",
+     "paying the legal minimum wage",
+     "funding a clinic for families near its plantation",
+     "filing its accounts on time"
+    ],
+    "explanation": "CSR is what a business chooses to do beyond the law. Staying within a permit, paying the legal minimum and filing accounts are legal duties, so they are the minimum rather than CSR.",
+    "correctIndex": 2
+   },
+   {
+    "id": "influences-business-decisions:quiz:e6547b2a",
+    "question": "A company advertises itself as caring for the environment while its factories keep polluting. The main risk to the business is that:",
+    "options": [
+     "it will be forced to stop advertising",
+     "exposure costs more trust than making no claim",
+     "its costs will rise immediately",
+     "its shareholders will receive higher dividends"
+    ],
+    "explanation": "A claim the business does not live up to invites scrutiny, and once the gap is exposed customers and retailers trust it less than if it had said nothing. The other outcomes do not follow from the claim.",
+    "correctIndex": 1
+   }
+  ],
+  "practice": [
+   {
+    "id": "influences-business-decisions:practice:066756eb",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year and the median employee earns RM48,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Explain one difficulty Orvana's new chief executive may face in changing its culture. (4 marks)",
+    "guidance": "The question asks for ONE difficulty, so choose the one the source gives most evidence for and develop it rather than listing several. Say who is affected, why they would resist, and what that does to the change.\nKnowledge: a difficulty in changing an established culture, such as resistance from those who gained status under it (1 mark). Application: managers at Orvana were promoted for carrying out the founder's instructions, and the founder still approves every product (1 mark). Analysis: teams deciding for themselves take control away from those managers, so they have reason to slow or block the change (1 mark). Analysis: if the founder or managers overrule the teams, staff learn that the old way still counts and the change stalls (1 mark). An answer that describes what a task culture is, without a difficulty, scores the knowledge mark at most."
+   },
+   {
+    "id": "influences-business-decisions:practice:10a146f7",
+    "command": "Calculate",
+    "marks": 4,
+    "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year and the median employee earns RM48,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Calculate the ratio of Orvana's chief executive's pay to its median employee's pay, before and after the proposed bonus. (4 marks)",
+    "guidance": "Work out each ratio separately, dividing the larger pay by the smaller, and show the division on its own line. Remember that the bonus is added to the existing pay before you divide again, and state both answers in the form \"to 1\".\nBefore: RM4.8m ÷ RM48,000 (1 mark) = 100 to 1 (1 mark). After: RM4.8m + RM1.2m = RM6m (1 mark), and RM6m ÷ RM48,000 = 125 to 1 (1 mark). Dividing the bonus alone by the median pay gives 25 to 1, which is the increase, not the new ratio."
+   },
+   {
+    "id": "influences-business-decisions:practice:2074c7d9",
+    "command": "Discuss",
+    "marks": 8,
+    "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year and the median employee earns RM48,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Discuss the likely effects of Orvana's culture on its decisions as the business grows. (8 marks)",
+    "guidance": "Start by identifying the culture the source describes: who decides, and how widely the values are shared. Then think about what that culture does to decisions now, and what changes as the firm gets bigger. Leave space for a brief assessment of how much it matters.\nLevel 1: describes culture in general terms, with little use of the source. Level 2: identifies a power culture (the founder approves every product) and a strong culture of thrift, with some application to Orvana. Level 3: analysis of effects — decisions reflect one person's judgement and can be fast, and thrift keeps costs low; but with 2,400 staff every product decision waits for the founder, and proposals that cost money now meet suspicion, which slows the new products the chief executive wants. Level 4: a brief assessment weighing these effects, for example that the culture served a small firm well but becomes a constraint as it grows, and that the strength of the thrift culture makes the effect larger. Discuss needs this assessment; it does not need a final recommendation."
+   },
+   {
+    "id": "influences-business-decisions:practice:83856dc7",
+    "command": "Assess",
+    "marks": 12,
+    "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year and the median employee earns RM48,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Assess the likely influence of different stakeholders on Orvana's decision whether to close the Ipoh factory. (12 marks)",
+    "guidance": "Choose the stakeholders the source gives evidence for, say what each wants from this decision, and consider how much each can actually affect it. Decide before you write which group's influence you think will be greatest, because this command word needs a supported judgement rather than a list.\nLevel 1: knowledge of stakeholders or their objectives, described generally. Level 2: application to Orvana — shareholders gain from a RM9m yearly saving that lifts profit from RM60m to RM69m; the 300 workers in Ipoh lose their jobs; the town and local suppliers lose income. Level 3: analysis of both sides — as a listed company, shareholders can vote on the board and sell shares, so their influence is direct; workers and the community can protest, and bad publicity may affect customers and the remaining staff, but their influence is indirect. Level 4: evaluation reaching a supported judgement, for example that shareholders are likely to have the greatest influence because the saving recovers its cost quickly, but that employee and community reaction may shape how the closure is carried out.\nA strong answer, in outline: shareholders favour the saving and have direct power; workers and the town oppose it but mostly through reputation; so shareholders are likely to decide whether the factory closes, and the other stakeholders how."
+   },
+   {
+    "id": "influences-business-decisions:practice:c09f448b",
+    "command": "Assess",
+    "marks": 12,
+    "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year and the median employee earns RM48,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Assess whether Orvana should switch to certified sustainable palm oil. (12 marks)",
+    "guidance": "Start by putting a size on the cost using the source, then compare it with what the business earns and what it might gain. Weigh the ethical case against the commercial one, and decide what your judgement turns on.\nLevel 1: knowledge of business ethics or CSR, described generally. Level 2: application — 20,000 tonnes × RM300 = RM6m a year, cutting profit from RM60m to RM54m, a 10% fall. Level 3: analysis of both sides — certified oil avoids the harm of forest clearing, protects the brand and may be required by retailers abroad, and a 1.2% price rise on RM500m of sales would cover it; against that, shareholders lose RM6m a year if the price cannot rise, and a thrifty culture may resist the cost. Level 4: evaluation reaching a supported judgement, for example that the switch is justified because the cost is small relative to sales and the risk of a sourcing scandal is large, provided rivals do not undercut on price.\nA strong answer, in outline: the cost is a tenth of profit but only a small price rise; the ethical and reputational gains are real; so the switch is worth making, and the judgement depends on whether customers accept the price."
+   },
+   {
+    "id": "influences-business-decisions:practice:1caa10e3",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year and the median employee earns RM48,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Evaluate whether Orvana's new chief executive is likely to succeed in changing its culture. (20 marks)",
+    "guidance": "Identify the culture the chief executive inherits and the one wanted, then weigh the forces working against the change against the conditions that could make it work. Finish with a judgement that says what the outcome depends on.\nLevel 1: describes culture or change in general terms, with little reference to the source. Level 2: knowledge and application — a power culture centred on the founder and a strong culture of thrift, against a wish for a task culture in which specialist teams decide for themselves. Level 3: analysis of both sides — managers promoted for carrying out the founder's instructions lose status; the founder still approves every product and can point to the firm's record; thrift makes experimenting feel wasteful; against this, the chief executive can change who is promoted and how teams are rewarded, and rivals launching new products give a visible reason to change. Level 4: evaluation reaching a supported judgement — for example, that change is likely in the product team, where the chief executive controls hiring and rewards, but slow elsewhere, and that success depends most on whether the founder visibly backs it.\nA strong answer, in outline: the difficulties are status, the founder's authority and a strong opposing culture; the levers are promotion, rewards and a visible need to change; the chief executive is likely to succeed in part of the business, and the founder's support is the condition for wider success."
+   },
+   {
+    "id": "influences-business-decisions:practice:e9f61227",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year and the median employee earns RM48,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Evaluate whether Orvana should follow the shareholder model or the stakeholder model in deciding whether to close the Ipoh factory. (20 marks)",
+    "guidance": "Work out what each model would lead the board to decide, using the source, and what each decision would cost and gain. Then judge which approach serves the business better here, and say what would change your conclusion.\nLevel 1: describes the two models in general terms. Level 2: knowledge and application — the shareholder model supports closure: RM9m a year saved, profit from RM60m to RM69m, the RM12m cost recovered in about sixteen months; the stakeholder model weighs the 300 jobs, local suppliers and the town. Level 3: analysis — closure raises returns but may damage trust among the remaining 2,100 staff and the firm's reputation, eroding part of the saving; a stakeholder approach might close the factory more slowly, with transfers and retraining, at the cost of some of the saving. Level 4: evaluation reaching a supported judgement, for example that the two models point to the same closure but different ways of carrying it out, and that a stakeholder approach protects the saving the shareholder model is after.\nA strong answer, in outline: the shareholder model says close now; the stakeholder model says weigh the jobs and the town; closing with transfers and retraining serves both better than either extreme, unless the firm's survival depends on the full saving at once."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "influences-business-decisions:flashcard:323306f4",
+    "front": "What is corporate culture?",
+    "back": "The shared values, beliefs and habits that decide how things are done in a business."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:1de248ce",
+    "front": "What is a strong culture?",
+    "back": "One where values are widely shared and deeply held, so staff act on them without being told."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:d745a5f5",
+    "front": "What is a weak culture?",
+    "back": "One with no dominant set of values, so behaviour varies between people and departments and rules have to do more of the work."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:b9cb9626",
+    "front": "Is a strong culture always a good thing?",
+    "back": "No. Strength measures how widely values are held, not whether they are right. A strong culture that no longer fits the market makes the firm slow to change."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:23dec794",
+    "front": "What is a power culture?",
+    "back": "Decisions radiate from one person or small group at the centre, usually the founder or owner. Fast while small; a bottleneck as the firm grows."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:822e5ffa",
+    "front": "What is a role culture?",
+    "back": "Authority comes from job titles, procedures and a clear hierarchy. Consistent and safe for large operations; slow to change."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:ac73e019",
+    "front": "What is a task culture?",
+    "back": "Teams form around a project and are led by expertise, not rank. Suits new, varied work; costly and hard to control."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:ae233a7b",
+    "front": "What is a person culture?",
+    "back": "The organisation exists to serve independent professionals, such as a partnership of lawyers or doctors."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:9d9287da",
+    "front": "How is corporate culture formed?",
+    "back": "From the founder and leaders; the firm's history and past success; who it recruits, promotes and rewards; and the country and industry it works in."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:7f3f12b1",
+    "front": "Why do rewards shape culture so strongly?",
+    "back": "People do what is paid for and promoted. A firm that rewards volume gets a culture of volume, whatever it says about quality."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:334e8c17",
+    "front": "Why is an established culture hard to change?",
+    "back": "Those who rose under it lose status; past success seems to prove it right; systems still reward the old ways; and habits change slowly across many people and sites."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:da2371e0",
+    "front": "What makes culture change more likely to succeed?",
+    "back": "A visible need to change, leaders who behave in the new way, and recruitment, promotion and pay rules rewritten to reward the new behaviour."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:2d725a22",
+    "front": "What is a stakeholder?",
+    "back": "Any individual or group with an interest in a business, because they are affected by its decisions or can affect them."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:a7b410b7",
+    "front": "Name the internal stakeholders.",
+    "back": "Employees and managers, and owners who run the business themselves."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:a78fb22e",
+    "front": "Name the external stakeholders.",
+    "back": "Customers, suppliers, lenders, the local community, government and pressure groups."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:307aa0c4",
+    "front": "Are shareholders internal or external?",
+    "back": "Either, with a reason: they own the company, but in a large listed company most play no part in running it."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:80231cd2",
+    "front": "What do shareholders and employees each want?",
+    "back": "Shareholders: a rising share price and dividends. Employees: fair pay, job security, safe conditions and progression."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:5f58b309",
+    "front": "What does the shareholder model say?",
+    "back": "A business should focus purely on shareholder returns — increasing the share price and dividends — in its decisions and objectives."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:e9fb49f7",
+    "front": "What does the stakeholder model say?",
+    "back": "A business should consider all of its stakeholders in its decisions and objectives."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:02e651f3",
+    "front": "Where do profit-based and wider objectives conflict?",
+    "back": "Wherever a decision that raises profit costs another group: closing a site, cutting pay or suppliers' prices, or cheaper but more harmful inputs."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:b0781536",
+    "front": "What is business ethics?",
+    "back": "The moral principles that guide how a business behaves: deciding what is right, not only what is legal."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:c2cc361c",
+    "front": "What is a trade-off between profit and ethics?",
+    "back": "A strategic choice where the ethical option costs profit, at least at first, and the cheaper option harms someone."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:0dc15858",
+    "front": "How do you size an ethical trade-off?",
+    "back": "Express the extra cost as a share of profit, or as the price rise needed to cover it, and weigh that against the gains and risks."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:9117b1d9",
+    "front": "What is a pay ratio?",
+    "back": "The chief executive's pay divided by the median employee's pay, written \"to 1\"."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:3f557347",
+    "front": "Why is the design of a bonus an ethical issue?",
+    "back": "A bonus tied only to one year's profit can reward cutting safety, training and maintenance. Wider targets or deferred shares reward what the business actually wants."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:909d3408",
+    "front": "What is corporate social responsibility (CSR)?",
+    "back": "A business voluntarily taking account of its effects on society and the environment, beyond what the law requires."
+   },
+   {
+    "id": "influences-business-decisions:flashcard:f552b73d",
+    "front": "Why do firms adopt CSR, and what are its limits?",
+    "back": "It can protect reputation, win customers and staff, and reduce regulation risk; but it costs money, is hard to measure, and a claim the firm does not live up to can backfire."
+   }
+  ],
+  "mistakes": [
+   {
+    "id": "influences-business-decisions:mistake:8a537fb9",
+    "title": "Confusing a strong culture with a good one",
+    "mistake": "Writing that a business with a strong culture is bound to perform well.",
+    "correction": "Strength is how widely values are shared. If the values no longer suit the market, a strong culture makes the business slower to change than a weak one would.",
+    "examTip": "Say what the culture's values are and whether they fit the decision in the case, then use its strength to explain how fast it will respond."
+   },
+   {
+    "id": "influences-business-decisions:mistake:339beb5e",
+    "title": "Naming a culture type with no evidence",
+    "mistake": "Stating that a firm \"has a role culture\" and moving straight on.",
+    "correction": "The type is shown by who makes decisions and by what authority. Without that evidence from the case, the label is only knowledge.",
+    "examTip": "Quote the evidence (who approves decisions, what procedures exist) and explain what the type does to the decision asked about."
+   },
+   {
+    "id": "influences-business-decisions:mistake:c7d18907",
+    "title": "Assuming a new leader can switch culture overnight",
+    "mistake": "Arguing that a new chief executive or values statement will change the culture.",
+    "correction": "Culture is held in habits and reinforced by recruitment, promotion and pay. Unless those systems and the leaders' own behaviour change, staff keep the old ways.",
+    "examTip": "Identify which system in the case still rewards the old culture, and make your judgement depend on whether it changes."
+   },
+   {
+    "id": "influences-business-decisions:mistake:1a57fe27",
+    "title": "Listing every stakeholder instead of the ones that matter",
+    "mistake": "Naming employees, customers, suppliers, government, the community and lenders in every answer.",
+    "correction": "Only the stakeholders the decision in the case actually affects are relevant, and each needs its objective and its influence explained.",
+    "examTip": "Choose two or three stakeholders the case gives evidence for and develop each one in context."
+   },
+   {
+    "id": "influences-business-decisions:mistake:8c197cf8",
+    "title": "Treating the stakeholder model as ignoring profit",
+    "mistake": "Writing that a stakeholder-model business does not care about profit.",
+    "correction": "The stakeholder model weighs profit against other interests; the business still needs profit to survive, and shareholders are stakeholders too.",
+    "examTip": "Show what each model would lead the business in the case to decide, rather than describing the models in general."
+   },
+   {
+    "id": "influences-business-decisions:mistake:c1b7568b",
+    "title": "Asserting the ethical choice without sizing its cost",
+    "mistake": "Arguing that a business should \"always do the right thing\" whatever it costs.",
+    "correction": "Ethical choices often cost profit, and whether they pay back depends on customers, rivals and risk. The judgement has to weigh the size of the cost.",
+    "examTip": "Use the case's figures to express the cost as a share of profit or as a price rise, then weigh it."
+   },
+   {
+    "id": "influences-business-decisions:mistake:f45b0dfc",
+    "title": "Describing CSR as charity",
+    "mistake": "Defining CSR as the donations a business makes to good causes.",
+    "correction": "CSR is mostly about how the business runs its own operations, beyond what the law requires: its sourcing, waste and treatment of staff and suppliers.",
+    "examTip": "Judge a CSR policy by what it changes in the business and what that costs, not by what is claimed."
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "influences-business-decisions:diagram:56c7cc6d",
+    "title": "Four Types of Company Culture",
+    "description": "IAL 3.3.4 · 1b: the four classifications of company culture, told apart by where decisions come from.",
+    "checklist": [
+     "Power: decisions radiate from one central person",
+     "Role: authority comes from the job title and the procedure",
+     "Task: teams form around a job and are led by expertise",
+     "Person: the organisation exists to support independent professionals"
+    ],
+    "scenarios": [
+     {
+      "label": "The four types",
+      "svg": "<svg width=\"400\" height=\"290\" viewBox=\"0 0 400 290\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Four cultures: where decisions come from</text><rect x=\"14\" y=\"48\" width=\"180\" height=\"90\" rx=\"6\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"104\" y=\"77\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">Power</text><text x=\"104\" y=\"97\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">One person at</text><text x=\"104\" y=\"117\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">the centre</text><rect x=\"206\" y=\"48\" width=\"180\" height=\"90\" rx=\"6\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><text x=\"296\" y=\"77\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">Role</text><text x=\"296\" y=\"97\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Job titles and</text><text x=\"296\" y=\"117\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">written procedures</text><rect x=\"14\" y=\"154\" width=\"180\" height=\"90\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"104\" y=\"183\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Task</text><text x=\"104\" y=\"203\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Project teams,</text><text x=\"104\" y=\"223\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">led by expertise</text><rect x=\"206\" y=\"154\" width=\"180\" height=\"90\" rx=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.5\"/><text x=\"296\" y=\"183\" font-size=\"12\" fill=\"#a78bfa\" text-anchor=\"middle\" font-weight=\"600\">Person</text><text x=\"296\" y=\"203\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Independent experts</text><text x=\"296\" y=\"223\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">the firm supports</text><text x=\"200\" y=\"274\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Ask who decides, and by what authority</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "influences-business-decisions:diagram:0f4dfd47",
+    "title": "How a Culture Forms and Holds",
+    "description": "IAL 3.3.4 · 1c and 1d: the sources of a corporate culture reinforce each other, which is why an established culture resists change.",
+    "checklist": [
+     "The founder's values are the first model staff copy",
+     "Hiring and promotion spread those values beyond the founder",
+     "Pay and bonuses show what the business really values",
+     "Success seems to prove the values right, so they are defended"
+    ],
+    "scenarios": [
+     {
+      "label": "The reinforcing loop",
+      "svg": "<svg width=\"400\" height=\"290\" viewBox=\"0 0 400 290\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"fl\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#94a3b8\"/></marker></defs><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">How a culture forms and holds</text><rect x=\"20\" y=\"52\" width=\"164\" height=\"56\" rx=\"6\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"1.5\"/><text x=\"102\" y=\"74\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">Founder's values</text><text x=\"102\" y=\"94\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">what is praised</text><rect x=\"216\" y=\"52\" width=\"164\" height=\"56\" rx=\"6\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><text x=\"298\" y=\"74\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">Hiring, promotion</text><text x=\"298\" y=\"94\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">who fits, who leads</text><rect x=\"216\" y=\"176\" width=\"164\" height=\"56\" rx=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.5\"/><text x=\"298\" y=\"198\" font-size=\"12\" fill=\"#a78bfa\" text-anchor=\"middle\" font-weight=\"600\">Pay and bonuses</text><text x=\"298\" y=\"218\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">what is paid for</text><rect x=\"20\" y=\"176\" width=\"164\" height=\"56\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"102\" y=\"198\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Past success</text><text x=\"102\" y=\"218\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">seems to prove it</text><line x1=\"188\" y1=\"80\" x2=\"212\" y2=\"80\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#fl)\"/><line x1=\"298\" y1=\"112\" x2=\"298\" y2=\"172\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#fl)\"/><line x1=\"212\" y1=\"204\" x2=\"188\" y2=\"204\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#fl)\"/><line x1=\"102\" y1=\"172\" x2=\"102\" y2=\"112\" stroke=\"#94a3b8\" stroke-width=\"1.5\" marker-end=\"url(#fl)\"/><text x=\"200\" y=\"270\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Each turn of the loop makes the culture firmer</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "influences-business-decisions:diagram:4f08818e",
+    "title": "Internal and External Stakeholders",
+    "description": "IAL 3.3.4 · 2a: the groups inside the business and those outside it, with shareholders on the boundary.",
+    "checklist": [
+     "Internal stakeholders work within the business: employees and managers",
+     "External stakeholders are outside it: customers, suppliers, lenders, government, the community, pressure groups",
+     "Shareholders own the company; textbooks class them either way, so give a reason"
+    ],
+    "scenarios": [
+     {
+      "label": "Inside and outside",
+      "svg": "<svg width=\"400\" height=\"330\" viewBox=\"0 0 400 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Orvana's stakeholders</text><rect x=\"14\" y=\"44\" width=\"372\" height=\"224\" rx=\"6\" fill=\"none\" stroke=\"#475569\" stroke-width=\"1.5\"/><rect x=\"110\" y=\"100\" width=\"180\" height=\"110\" rx=\"6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"24\" y=\"64\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"600\">External</text><text x=\"200\" y=\"122\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Internal</text><text x=\"200\" y=\"150\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Employees</text><text x=\"200\" y=\"170\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Managers</text><text x=\"200\" y=\"196\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"600\">Shareholders?</text><text x=\"40\" y=\"84\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"400\">Customers</text><text x=\"360\" y=\"84\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"end\" font-weight=\"400\">Suppliers</text><text x=\"28\" y=\"160\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"400\">Lenders</text><text x=\"374\" y=\"160\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"end\" font-weight=\"400\">Government</text><text x=\"40\" y=\"248\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"400\">Local community</text><text x=\"360\" y=\"248\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"end\" font-weight=\"400\">Pressure groups</text><text x=\"200\" y=\"294\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"400\">Shareholders own the firm: class them</text><text x=\"200\" y=\"314\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"middle\" font-weight=\"400\">either way, and give the reason</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "influences-business-decisions:diagram:2c03bce8",
+    "title": "Weighing Profit Against Ethics",
+    "description": "IAL 3.3.4 · 3a and 3b: what certified palm oil does to Orvana's profit, and what the proposed bonus does to the gap between top and median pay.",
+    "checklist": [
+     "Certified oil: profit RM60m → RM54m a year",
+     "Pay: 100 to 1 now, 125 to 1 with the RM1.2m bonus",
+     "Size each trade-off before judging it"
+    ],
+    "scenarios": [
+     {
+      "label": "Profit",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Yearly profit, by palm oil bought</text><line x1=\"60\" y1=\"220\" x2=\"350\" y2=\"220\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><rect x=\"110\" y=\"76\" width=\"60\" height=\"144\" rx=\"3\" fill=\"#60a5fa\" stroke=\"#60a5fa\" stroke-width=\"1\"/><rect x=\"230\" y=\"90.4\" width=\"60\" height=\"129.6\" rx=\"3\" fill=\"#34d399\" stroke=\"#34d399\" stroke-width=\"1\"/><text x=\"140\" y=\"68\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">RM60m</text><text x=\"260\" y=\"82.4\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">RM54m</text><text x=\"140\" y=\"240\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Standard oil</text><text x=\"260\" y=\"240\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Certified oil</text><text x=\"200\" y=\"284\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Certified oil costs RM6m a year more</text></svg>"
+     },
+     {
+      "label": "Pay ratio",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Chief executive pay ÷ median pay</text><line x1=\"60\" y1=\"220\" x2=\"350\" y2=\"220\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><rect x=\"110\" y=\"100\" width=\"60\" height=\"120\" rx=\"3\" fill=\"#60a5fa\" stroke=\"#60a5fa\" stroke-width=\"1\"/><rect x=\"230\" y=\"70\" width=\"60\" height=\"150\" rx=\"3\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"1\"/><text x=\"140\" y=\"92\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">100 to 1</text><text x=\"260\" y=\"62\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">125 to 1</text><text x=\"140\" y=\"240\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Now</text><text x=\"260\" y=\"240\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">With the bonus</text><text x=\"200\" y=\"284\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">A RM1.2m bonus widens the gap</text></svg>"
+     }
+    ]
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "How a founder's value becomes a company culture",
+     "steps": [
+      "A founder acts on a personal value, such as never wasting money.",
+      "Early employees are hired and moved up for sharing that value.",
+      "Surviving a hard period, the firm gives the value the credit.",
+      "Newcomers absorb the value as simply how things are done."
+     ],
+     "result": "By the time the founder has gone, the value no longer needs anyone to enforce it, which is also why it is hard to change."
+    },
+    {
+     "title": "How a factory closure can eat into its own saving",
+     "steps": [
+      "The closure is announced and 300 jobs go in Ipoh.",
+      "Staff at other sites fear they will be next, and trust falls.",
+      "Effort falls and some experienced staff leave for other employers.",
+      "Productivity drops, and part of the expected saving is lost."
+     ],
+     "result": "Profit-based and wider objectives are less opposed than they look: how a closure is handled affects the profit it delivers."
+    },
+    {
+     "title": "From a profit-only bonus to a weaker business",
+     "steps": [
+      "A chief executive's bonus depends only on this year's profit.",
+      "Spending on maintenance, training and safety is cut to hit the target.",
+      "Profit rises this year and the bonus is paid.",
+      "Breakdowns, skill gaps and accidents arrive in later years."
+     ],
+     "result": "The design of a reward is an ethical choice: it decides what behaviour the business pays for."
+    },
+    {
+     "title": "How certified palm oil can pay for itself",
+     "steps": [
+      "Orvana pays RM6m a year more for certified oil.",
+      "It can print the certification on its packs.",
+      "Retailers that buy only from certified suppliers stock its snacks.",
+      "The extra sales, and the scandal avoided, offset part of the cost."
+     ],
+     "result": "The trade-off between profit and ethics is real, but its size depends on how customers and retailers respond."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Is a strong culture an asset or a liability?",
+     "content": "It depends on the values and the market. Orvana's strong culture of thrift kept costs low for thirty years, which was an asset in a price-driven market. The same culture now greets every proposal that costs money today with suspicion, which is a liability when rivals are winning with new products. The strength of a culture multiplies the effect of its values, good or bad. So the judgement is not \"strong or weak?\" but \"do these values fit what the business now has to do, and how quickly could they change if they do not?\""
+    },
+    {
+     "title": "Shareholder model or stakeholder model?",
+     "content": "Applied to Orvana's factory, the two models agree more than they first appear to. The shareholder model says close Ipoh: the RM9m yearly saving recovers its RM12m cost in about sixteen months. The stakeholder model counts the 300 jobs, the suppliers and the town. But a closure handled badly costs trust and productivity among the staff who remain, so a shareholder-minded board has its own reason to offer transfers and retraining. The models differ most when the firm cannot afford the gentler route; where it can, the stakeholder approach often protects the return the shareholder model wants."
+    },
+    {
+     "title": "Is CSR worth what it costs?",
+     "content": "Certified palm oil would cost Orvana RM6m a year, 10% of its profit. Three things decide whether that is worth it. THE CUSTOMERS: if shoppers and retailers will pay a 1.2% higher price, the cost is covered. THE RISK: a sourcing scandal could cost more than years of the premium. THE RIVALS: if competitors undercut on price with cheaper oil, the cost is real and lasting. CSR is most clearly worth it where the risk it removes is large and customers can see what it changes; a policy that promises more than the business does is worse than none."
+    }
+   ]
+  }
+ }
+}

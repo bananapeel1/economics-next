@@ -1,0 +1,25 @@
+8 files measured, 12 dots, 6 more than 3 px from any intersection of two drawn lines.
+| file | dot | nearest intersection of two drawn lines | distance (px) |
+|---|---|---|---|
+| ad-as-long-run.svg | dot (290, 220) | (290.00, 228.53) lras#2 × ad#3 | 8.53 |
+| indirect-tax-pigouvian.svg | dot (250, 140) | (234.58, 175.00) s-tax#3 × d#4 | 38.24 |
+| negative-externality-consumption.svg | dot (310, 222) | (270.00, 200.00) s#2 × mpb#3 | 45.65 |
+| negative-externality-consumption.svg | dot (230, 200) | (226.75, 230.53) s#2 × msb#4 | 30.71 |
+| negative-externality-production.svg | dot (320, 220) | (270.00, 200.00) mpc#2 × d#4 | 53.85 |
+| negative-externality-production.svg | dot (220, 186) | (241.67, 180.00) msc#3 × d#4 | 22.48 |
+
+Not measured (no line curves or no dots): ad-as-short-run.svg (1 non-axis solid <line>, 1 dot(s)); ansoff-matrix.svg (0 non-axis solid <line>, 0 dot(s), has transform); boston-matrix.svg (0 non-axis solid <line>, 0 dot(s), has transform); circular-flow.svg (0 non-axis solid <line>, 0 dot(s)); j-curve-exchange-rate.svg (0 non-axis solid <line>, 2 dot(s)); lorenz-curve.svg (2 non-axis solid <line>, 0 dot(s)); monopoly-pricing.svg (1 non-axis solid <line>, 3 dot(s)); perfect-competition-lr.svg (1 non-axis solid <line>, 1 dot(s)); phillips-curve.svg (1 non-axis solid <line>, 1 dot(s)); product-life-cycle.svg (0 non-axis solid <line>, 0 dot(s))
+
+All dots, measured files:
+  ad-as-long-run.svg  dot (290, 220)  -> (290.00, 228.53) lras#2 × ad#3  8.53
+  consumer-producer-surplus.svg  dot (270, 200)  -> (270.00, 200.00) d#2 × s#3  0.00
+  indirect-tax-pigouvian.svg  dot (270, 200)  -> (270.00, 200.00) s#2 × d#4  0.00
+  indirect-tax-pigouvian.svg  dot (250, 140)  -> (234.58, 175.00) s-tax#3 × d#4  38.24
+  kinked-demand-oligopoly.svg  dot (260, 200)  -> (260.00, 200.00) d#2 × d#3  0.00
+  negative-externality-consumption.svg  dot (310, 222)  -> (270.00, 200.00) s#2 × mpb#3  45.65
+  negative-externality-consumption.svg  dot (230, 200)  -> (226.75, 230.53) s#2 × msb#4  30.71
+  negative-externality-production.svg  dot (320, 220)  -> (270.00, 200.00) mpc#2 × d#4  53.85
+  negative-externality-production.svg  dot (220, 186)  -> (241.67, 180.00) msc#3 × d#4  22.48
+  positive-externality-consumption.svg  dot (238.96, 221.91)  -> (238.96, 221.91) s#2 × mpb#3  0.01
+  positive-externality-consumption.svg  dot (289.78, 186.04)  -> (289.78, 186.04) s#2 × msb#4  0.00
+  supply-demand-equilibrium.svg  dot (270, 200)  -> (270.00, 200.00) d-curve#2 × s-curve#3  0.00

@@ -1,0 +1,300 @@
+=== control (no mutation)
+  mutation diff: data 0 line(s) (both data files), md 0 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 0 finding(s)
+=== R13 V1: sixth question '**Question (f) (20 marks)** — …' in ## Questions (verifier's example)
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 2 finding(s): R13
+  B (current): 4 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md has Question (f) (20 marks), which no bank item carries
+    R13  economics 1.3.5  econ-u1-market-failure.md line 38 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 38 labels a part (f), which is not one of the bank's parts (a, b, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 38 mentions Question (f), which is not one of the bank's parts (a, b, c, d, e)
+=== R13 V2: heading-style sixth question in ## Questions
+  mutation diff: data 0 line(s) (both data files), md 4 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 3 finding(s): R13
+  B (current): 5 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md "## Questions" has a line that is not a question line in the paper form: "### Question (f) (20 marks)"
+    R13  economics 1.3.5  econ-u1-market-failure.md "## Questions" has a line that is not a question line in the paper form: "Evaluate the case for a ban on single-use plastic bags in the UAE."
+    R13  economics 1.3.5  econ-u1-market-failure.md line 38 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 38 labels a part (f), which is not one of the bank's parts (a, b, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 38 mentions Question (f), which is not one of the bank's parts (a, b, c, d, e)
+=== R13 V3: two-line sixth question in ## Questions
+  mutation diff: data 0 line(s) (both data files), md 4 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 3 finding(s): R13
+  B (current): 5 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md "## Questions" has a line that is not a question line in the paper form: "**Question (f) (20 marks)**"
+    R13  economics 1.3.5  econ-u1-market-failure.md "## Questions" has a line that is not a question line in the paper form: "Evaluate the case for a ban on single-use plastic bags in the UAE."
+    R13  economics 1.3.5  econ-u1-market-failure.md line 38 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 38 labels a part (f), which is not one of the bank's parts (a, b, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 38 mentions Question (f), which is not one of the bank's parts (a, b, c, d, e)
+=== R13 V4: sixth question as a numbered list line, the word 'Question' absent
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 1 finding(s): R13
+  B (current): 2 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md "## Questions" has a line that is not a question line in the paper form: "6. Evaluate the case for a ban on single-use plastic bags in the UAE. (20 marks)"
+    R13  economics 1.3.5  econ-u1-market-failure.md line 38 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+=== R13 V5: a second ## Questions section at the end of the file
+  mutation diff: data 0 line(s) (both data files), md 4 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 3 finding(s): R13
+  B (current): 5 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md has 2 "## Questions" sections; it must have exactly one
+    R13  economics 1.3.5  econ-u1-market-failure.md has Question (f) (20 marks), which no bank item carries
+    R13  economics 1.3.5  econ-u1-market-failure.md line 110 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 110 labels a part (f), which is not one of the bank's parts (a, b, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 110 mentions Question (f), which is not one of the bank's parts (a, b, c, d, e)
+=== R13 V6: a sixth question in prose under another heading
+  mutation diff: data 0 line(s) (both data files), md 4 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 1 finding(s): R13
+  B (current): 3 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 110 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 110 labels a part (f), which is not one of the bank's parts (a, b, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 110 mentions Question (f), which is not one of the bank's parts (a, b, c, d, e)
+=== R13 V7: Question (b) stated twice
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 1 finding(s): R13
+  A1 (round 1): 2 finding(s): R13
+  B (current): 2 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md states Question (b) more than once
+    R13  economics 1.3.5  Question (b) wording differs: md "Explain one other external cost of tobacco consumption." / bank "With reference to Table 1, explain why the social cost of consuming a pack of tobacco products is greater than its privat
+=== R13 V8: model-answer heading states (d) at 6 marks
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 1 finding(s): R13
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md "## Model Answers" heads Question (d) at 6 marks, 8 in the bank
+=== R13 V9: a sixth model answer heading
+  mutation diff: data 0 line(s) (both data files), md 4 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 2 finding(s): R13
+  B (current): 4 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md "## Model Answers" has Question (f) (20 marks), which no bank item carries
+    R13  economics 1.3.5  econ-u1-market-failure.md line 94 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 94 labels a part (f), which is not one of the bank's parts (a, b, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 94 mentions Question (f), which is not one of the bank's parts (a, b, c, d, e)
+=== R10 V10: every data-question part's paper field removed (shorts and essays keep theirs)
+  mutation diff: data 5 line(s) (both data files), md 0 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 2 finding(s): R10,R13
+  B (current): 2 finding(s): R10,R13
+    R10  economics 1.3.5  the page carries `paper` but no data-question part; WEC11/WEC12 section C is 2,4,6,8,14
+    R13  econ-u1-market-failure.md  econ-u1-market-failure.md letters its questions to the paper layout, but no page's data question claims it; bank items naming it: economics 1.3.5, none with paper.kind data_question
+=== R11 V11: every short answer's paper field removed
+  mutation diff: data 25 line(s) (both data files), md 0 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 1 finding(s): R11
+  B (current): 1 finding(s): R11
+    R11  economics 1.3.5  short answers are none; WEC11/WEC12 sets 5 × 4
+=== R12 V12: every essay's paper field removed
+  mutation diff: data 10 line(s) (both data files), md 0 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 1 finding(s): R12
+  B (current): 1 finding(s): R12
+    R12  economics 1.3.5  0 essay(s) offered; WEC11/WEC12 offers 2
+=== R13 V13: every paper field on the page removed (page no longer opts in; the lettered md still does)
+  mutation diff: data 40 line(s) (both data files), md 0 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 1 finding(s): R13
+  B (current): 1 finding(s): R13
+    R13  econ-u1-market-failure.md  econ-u1-market-failure.md letters its questions to the paper layout, but no page's data question claims it; bank items naming it: economics 1.3.5, none with paper.kind data_question
+=== R13 V14: '## Extension task' + '**(f) (20 marks)** — Evaluate …' (verifier's first)
+  mutation diff: data 0 line(s) (both data files), md 4 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 2 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 96 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 96 labels a part (f), which is not one of the bank's parts (a, b, c, d, e)
+=== R13 V15: '**Extension (20 marks):** …' (verifier's second)
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 94 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+=== R13 V16: table row '| (f) 20 marks |' (verifier's third)
+  mutation diff: data 0 line(s) (both data files), md 4 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 2 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 96 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 96 labels a part (f), which is not one of the bank's parts (a, b, c, d, e)
+=== R13 V17: tariff as a number word, '(twenty marks)'
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 94 states a tariff "twenty marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+=== R13 V18: printed-paper tariff, bare '(20)', no word 'marks', no part letter
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 94 states a tariff "(20)" outside the bank's question lines and model-answer headings; the page renders it as a task
+=== R13 V19: bracketed tariff '[20]'
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 94 states a tariff "[20]" outside the bank's question lines and model-answer headings; the page renders it as a task
+=== R13 V20: '20-mark task' inside the Common Mistakes list
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 96 states a tariff "20-mark" outside the bank's question lines and model-answer headings; the page renders it as a task
+=== R13 V21: tariff split by markup, '(**20** marks)'
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 94 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+=== R13 V22: tariff split over a line break
+  mutation diff: data 0 line(s) (both data files), md 3 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 94 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+=== R13 V23: tariff written with HTML entities '&#40;20 marks&#41;'
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 94 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+=== R13 V24: tariffed task inside ## Stimulus
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 26 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+=== R13 V25: roman part label '(ii)', no tariff, inside a model answer
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 80 labels a part (ii), which is not one of the bank's parts (a, b, c, d, e)
+=== R13 V26: letter part label '(f)', no tariff, no word 'question'
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md line 80 labels a part (f), which is not one of the bank's parts (a, b, c, d, e)
+=== R13+R9 V27: a sixth task appended to (e)'s question line AND to the bank's (e) question (wording still matches)
+  mutation diff: data 2 line(s) (both data files), md 2 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 3 finding(s): R9,R13
+    R9  mf-extract-evaluate-soft-drinks-excise-20  question states a tariff "20 marks"; the shell prints the tariff from marks, so this reads as a second task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 36 states a tariff "20 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 36 labels a part (f), which is not one of the bank's parts (a, b, c, d, e)
+=== R9 V28: a tariffed task appended to a short answer's paper.context (bank-side twin)
+  mutation diff: data 2 line(s) (both data files), md 0 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 1 finding(s): R9
+    R9  mf-short-explain-sea-wall-public-good-4  paper.context states a tariff "20 marks"; the shell prints the tariff from marks, so this reads as a second task
+=== RESIDUAL V29 (expected 0 on all three): an untariffed, unlettered imperative under a new heading
+  mutation diff: data 0 line(s) (both data files), md 4 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 0 finding(s)
+=== R10 A: part (b) removed from the data question -> multiset 2,6,8,14
+  mutation diff: data 1 line(s) (both data files), md 0 line(s)
+  A (round 0): 2 finding(s): R10,R13
+  A1 (round 1): 5 finding(s): R10,R13
+  B (current): 10 finding(s): R10,R13
+    R10  economics 1.3.5  data-question tariffs are 2,6,8,14; WEC11/WEC12 is 2,4,6,8,14
+    R13  economics 1.3.5  econ-u1-market-failure.md has Question (b) (4 marks), which no bank item carries
+    R13  economics 1.3.5  econ-u1-market-failure.md "## Model Answers" has Question (b) (4 marks), which no bank item carries
+    R13  economics 1.3.5  econ-u1-market-failure.md line 30 states a tariff "4 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 30 labels a part (b), which is not one of the bank's parts (a, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 48 states a tariff "4 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 48 labels a part (b), which is not one of the bank's parts (a, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 98 labels a part (b), which is not one of the bank's parts (a, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 30 mentions Question (b), which is not one of the bank's parts (a, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 48 mentions Question (b), which is not one of the bank's parts (a, c, d, e)
+=== R10 B: part (d) on another extract
+  mutation diff: data 2 line(s) (both data files), md 0 line(s)
+  A (round 0): 1 finding(s): R10
+  A1 (round 1): 1 finding(s): R10
+  B (current): 1 finding(s): R10
+    R10  economics 1.3.5  data-question parts must share one stimulus; they carry ["econ-u1-market-failure","econ-u1-demand-elasticity"]
+=== R10 C: two parts lettered (a)
+  mutation diff: data 2 line(s) (both data files), md 0 line(s)
+  A (round 0): 4 finding(s): R10,R13
+  A1 (round 1): 8 finding(s): R10,R13
+  B (current): 13 finding(s): R10,R13
+    R10  economics 1.3.5  part letter(s) a used more than once
+    R13  economics 1.3.5  Question (a) is 2 marks in econ-u1-market-failure.md, 4 in the bank
+    R13  economics 1.3.5  Question (a) wording differs: md "Define the term 'negative externality of consumption', using an example from the stimulus." / bank "With reference to Table 1, explain why the social cost of consuming a pack of tobacco 
+    R13  economics 1.3.5  econ-u1-market-failure.md has Question (b) (4 marks), which no bank item carries
+    R13  economics 1.3.5  econ-u1-market-failure.md "## Model Answers" heads Question (a) at 2 marks, 4 in the bank
+    R13  economics 1.3.5  econ-u1-market-failure.md "## Model Answers" has Question (b) (4 marks), which no bank item carries
+    R13  economics 1.3.5  econ-u1-market-failure.md line 30 states a tariff "4 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 30 labels a part (b), which is not one of the bank's parts (a, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 48 states a tariff "4 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 48 labels a part (b), which is not one of the bank's parts (a, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 98 labels a part (b), which is not one of the bank's parts (a, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 30 mentions Question (b), which is not one of the bank's parts (a, c, d, e)
+    R13  economics 1.3.5  econ-u1-market-failure.md line 48 mentions Question (b), which is not one of the bank's parts (a, c, d, e)
+=== R13 A: md states (d) as 6 marks
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 1 finding(s): R13
+  A1 (round 1): 1 finding(s): R13
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  Question (d) is 6 marks in econ-u1-market-failure.md, 8 in the bank
+=== R13 B: md (e) wording differs
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 1 finding(s): R13
+  A1 (round 1): 1 finding(s): R13
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  Question (e) wording differs: md "Evaluate whether the current 50% excise tax on carbonated soft drinks in the UAE is the most effective way to correct the market failure caused by sugary drink consumption." / bank "Disc
+=== R13 C: md has no Question (c)
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 1 finding(s): R13
+  A1 (round 1): 1 finding(s): R13
+  B (current): 1 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md has no Question (c) for mf-extract-analyse-plastic-bag-charge-6
+=== R13 D: md numbers a question instead of lettering it
+  mutation diff: data 0 line(s) (both data files), md 2 line(s)
+  A (round 0): 2 finding(s): R13
+  A1 (round 1): 3 finding(s): R13
+  B (current): 4 finding(s): R13
+    R13  economics 1.3.5  econ-u1-market-failure.md numbers its questions (Question 2m); the bank's parts are lettered
+    R13  economics 1.3.5  econ-u1-market-failure.md has no Question (a) for mf-extract-define-consumption-externality-2
+    R13  economics 1.3.5  econ-u1-market-failure.md line 28 states a tariff "2 marks" outside the bank's question lines and model-answer headings; the page renders it as a task
+    R13  economics 1.3.5  econ-u1-market-failure.md line 28 mentions Question 1, which is not one of the bank's parts (a, b, c, d, e)
+=== R9 A: the 14-mark part labelled Evaluate
+  mutation diff: data 2 line(s) (both data files), md 0 line(s)
+  A (round 0): 1 finding(s): R9
+  A1 (round 1): 1 finding(s): R9
+  B (current): 1 finding(s): R9
+    R9  mf-extract-evaluate-soft-drinks-excise-20  Evaluate is not a command word for 14 marks in section C (Discuss)
+=== R9 B: the Draw item names a diagram that is not on disk
+  mutation diff: data 2 line(s) (both data files), md 0 line(s)
+  A (round 0): 1 finding(s): R9
+  A1 (round 1): 1 finding(s): R9
+  B (current): 1 finding(s): R9
+    R9  mf-short-draw-vaccination-welfare-loss-4  a Draw item's model answer is a diagram; diagram.src "/diagrams/no-such-diagram.svg" is not a file in public/diagrams/
+=== R11: four short answers instead of five
+  mutation diff: data 5 line(s) (both data files), md 0 line(s)
+  A (round 0): 1 finding(s): R11
+  A1 (round 1): 1 finding(s): R11
+  B (current): 1 finding(s): R11
+    R11  economics 1.3.5  short answers are 4 + 4 + 4 + 4; WEC11/WEC12 sets 5 × 4
+=== R12: one essay offered instead of two
+  mutation diff: data 5 line(s) (both data files), md 0 line(s)
+  A (round 0): 1 finding(s): R12
+  A1 (round 1): 1 finding(s): R12
+  B (current): 1 finding(s): R12
+    R12  economics 1.3.5  1 essay(s) offered; WEC11/WEC12 offers 2
+=== control after every restore
+  mutation diff: data 0 line(s) (both data files), md 0 line(s)
+  A (round 0): 0 finding(s)
+  A1 (round 1): 0 finding(s)
+  B (current): 0 finding(s)

@@ -5,7 +5,7 @@
 //   node audit/scripts/diagram-check.mjs            exit 1 on failure
 //   node audit/scripts/diagram-check.mjs --verbose  per-spec detail
 //
-// Five checks:
+// Six checks:
 //
 //   1. model        the model attempt scores full marks
 //   2. wrong way    a shift in the opposite direction keeps the curve mark and loses the
@@ -16,11 +16,14 @@
 //                   double-counted and no gap is left unnamed
 //   5. labels       the placement solver never returns two overlapping boxes, at phone width
 //                   and desktop width, at every shift
+//   6. spec code    the section the drill cites exists in the IAL specification, belongs to the
+//                   unit the drill names, and actually covers the thing being drawn
 //
 // Static by design: no browser, no network, no database — the same shape as npm run contrast
 // and npm run quant-check. Text metrics are supplied by the browser at runtime, so the label
 // check uses synthetic boxes to test the ALGORITHM; real metrics are the component's job.
 import { specs, mark, modelAttempt, applyShifts, buildRegions, placeLabels, overlaps, contains, area, intersect } from '../../lib/diagram/index.mjs';
+import { checkSpecCitation } from '../../lib/spec-sections.mjs';
 
 const VERBOSE = process.argv.includes('--verbose');
 const failures = [];
@@ -31,6 +34,16 @@ const SWEEP = [];
 for (let d = -55; d <= 55; d += 5) if (d !== 0) SWEEP.push(d);
 
 for (const spec of specs) {
+  /* 6. spec code. Both specs shipped `1.4.3`, a UK GCE number: in the IAL specification every
+     section number has 3 as its middle digit, so it names nothing in this product and the chip
+     above the drill told a student to revise a section that does not exist. The same class of
+     defect lib/quant-pool.test.mjs found in three of 13.1's four templates, in code that had no
+     equivalent guard until this check. The shape test alone is not enough — `2.3.1` is a real
+     heading and still the wrong one — so the drill also names a phrase the specification uses
+     under its own section, and this asserts the phrase is there. */
+  const citation = checkSpecCitation(spec);
+  if (citation) fail(spec.id, 'spec code', citation);
+
   const target = spec.expect.curve;
   const wanted = spec.expect.direction === 'up' ? 1 : -1;
 

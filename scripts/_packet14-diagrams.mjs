@@ -16,7 +16,7 @@ import { id } from './_packet14-util.mjs';
 const INK = '#e8ecf5', AXIS = '#94a3b8', GRID = '#475569', MUTED = '#7a8299';
 const BLUE = '#3b82f6', GREEN = '#059669', RED = '#ef4444', AMBER = '#f59e0b', PURPLE = '#8b5cf6', ORANGE = '#fb923c';
 const FONT = "font-family=\"'DM Sans',system-ui,sans-serif\"";
-const open = (h = 350) => `<svg width="500" height="${h}" viewBox="0 0 500 ${h}" xmlns="http://www.w3.org/2000/svg" style="font-family:'DM Sans',system-ui,sans-serif;background:transparent"><defs><marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="${AXIS}"/></marker><marker id="arrRed" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="${RED}"/></marker><marker id="arrBlue" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="${BLUE}"/></marker></defs>`;
+const open = (h = 350) => `<svg width="500" height="${h}" viewBox="0 0 500 ${h}" xmlns="http://www.w3.org/2000/svg" style="font-family:'DM Sans',system-ui,sans-serif;background:transparent"><defs><marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="${AXIS}"/></marker><marker id="arrRed" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="11" refX="14" refY="5.5" orient="auto"><polygon points="0 0,14 5.5,0 11" fill="${RED}"/></marker><marker id="arrBlue" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="11" refX="14" refY="5.5" orient="auto"><polygon points="0 0,14 5.5,0 11" fill="${BLUE}"/></marker></defs>`;
 const close = '</svg>';
 const t = (x, y, text, { size = 10, fill = INK, anchor = 'start', weight = 400, cls = '', rotate = null } = {}) =>
   `<text x="${x}" y="${y}" fill="${fill}" font-size="${size}" font-weight="${weight}" text-anchor="${anchor}"${cls ? ` class="${cls}"` : ''}${rotate ? ` transform="rotate(${rotate},${x},${y})"` : ''}>${text}</text>`;
@@ -41,8 +41,8 @@ function timeSeriesSvg() {
   s += `<rect x="${X(12) + 15}" y="40" width="${480 - X(12) - 15}" height="260" fill="${GRID}" opacity="0.18"/>`;
   s += t(r2((X(12) + 15 + 480) / 2), 54, 'Forecast', { size: 9, fill: MUTED, anchor: 'middle' });
   s += line(70, 300, 480, 300, AXIS, 2.5, ' marker-end="url(#arr)"') + line(70, 300, 70, 30, AXIS, 2.5, ' marker-end="url(#arr)"');
-  for (const v of [40, 50, 60, 70, 80]) s += line(70, Y(v), 480, Y(v), GRID, 1, ' stroke-dasharray="2,4" opacity="0.6"') + t(62, Y(v) + 4, String(v), { size: 9, fill: AXIS, anchor: 'end' });
-  months.forEach((m, i) => { s += t(X(i + 1), 314, m, { size: 9, fill: AXIS, anchor: 'middle' }); });
+  for (const v of [40, 50, 60, 70, 80]) s += line(70, Y(v), 480, Y(v), GRID, 1, ' stroke-dasharray="2,4" opacity="0.6"') + t(58, Y(v) + 4, String(v), { size: 9, fill: AXIS, anchor: 'end' });
+  months.forEach((m, i) => { s += t(X(i + 1), 319, m, { size: 9, fill: AXIS, anchor: 'middle' }); });
   s += t(275, 336, 'Month', { size: 11, fill: AXIS, anchor: 'middle', weight: 700 });
   s += t(26, 170, 'Sales (000 cups)', { size: 11, fill: AXIS, anchor: 'middle', weight: 700, rotate: -90 });
   s += `<polyline points="${salesPts}" fill="none" stroke="${BLUE}" stroke-width="2.5"/>`;
@@ -52,8 +52,8 @@ function timeSeriesSvg() {
   // legend, top-left, where the lines sit low
   s += line(84, 52, 108, 52, BLUE, 2.5) + t(114, 56, 'Actual monthly sales', { size: 10 });
   s += line(84, 70, 108, 70, AMBER, 3) + t(114, 74, 'Three-period moving average', { size: 10 });
-  s += line(84, 88, 108, 88, RED, 2.5, dash) + t(114, 92, 'Trend, extended into the future', { size: 10 });
-  s += t(114, 108, 'February = (40 + 46 + 43) ÷ 3 = 43.0', { size: 9, fill: MUTED });
+  s += line(84, 102, 108, 102, RED, 2.5, dash) + t(114, 106, 'Trend, extended into the future', { size: 10 }); // below the 70 gridline (y 92), not on it
+  s += t(114, 122, 'February = (40 + 46 + 43) ÷ 3 = 43.0', { size: 9, fill: MUTED });
   return s + close;
 }
 
@@ -68,8 +68,8 @@ function scatterSvg() {
   const fit = (x) => 110 + 4.4 * x;
   let s = open();
   s += line(70, 300, 480, 300, AXIS, 2.5, ' marker-end="url(#arr)"') + line(70, 300, 70, 30, AXIS, 2.5, ' marker-end="url(#arr)"');
-  for (const x of [0, 10, 20, 30, 40, 50]) s += t(X(x), 314, `$${x}k`, { size: 9, fill: AXIS, anchor: 'middle' });
-  for (const v of [100, 200, 300, 400]) s += line(70, Y(v), 480, Y(v), GRID, 1, ' stroke-dasharray="2,4" opacity="0.6"') + t(62, Y(v) + 4, `$${v}k`, { size: 9, fill: AXIS, anchor: 'end' });
+  for (const x of [0, 10, 20, 30, 40, 50]) s += t(X(x), 319, `$${x}k`, { size: 9, fill: AXIS, anchor: 'middle' });
+  for (const v of [100, 200, 300, 400]) s += line(70, Y(v), 480, Y(v), GRID, 1, ' stroke-dasharray="2,4" opacity="0.6"') + t(58, Y(v) + 4, `$${v}k`, { size: 9, fill: AXIS, anchor: 'end' });
   s += t(275, 336, 'Advertising spend per month', { size: 11, fill: AXIS, anchor: 'middle', weight: 700 });
   s += t(26, 170, 'Sales per month', { size: 11, fill: AXIS, anchor: 'middle', weight: 700, rotate: -90 });
   // reading a forecast at $50k
@@ -99,10 +99,10 @@ function paybackSvg() {
   s += t(470, 336, 'Year', { size: 11, fill: AXIS, anchor: 'end', weight: 700 });
   s += t(26, 165, 'Cumulative net cash flow', { size: 11, fill: AXIS, anchor: 'middle', weight: 700, rotate: -90 });
   s += `<polyline points="${pts}" fill="none" stroke="${BLUE}" stroke-width="3"/>`;
-  cum.forEach((v, i) => { s += `<circle cx="${X(i)}" cy="${Y(v)}" r="4.5" fill="${BLUE}"/>` + t(X(i) + (i === 0 ? 8 : 0), Y(v) + (v < 0 ? 18 : -10), `${v < 0 ? '−' : '+'}$${Math.abs(v)}k`, { size: 10, anchor: i === 0 ? 'start' : 'middle', weight: 700 }); });
+  cum.forEach((v, i) => { s += `<circle cx="${X(i)}" cy="${Y(v)}" r="4.5" fill="${BLUE}"/>` + t(X(i) + (i === 0 ? 8 : 0), Y(v) + (v < 0 ? 18 : i === 3 ? -20 : -10), `${v < 0 ? '−' : '+'}$${Math.abs(v)}k`, { size: 10, anchor: i === 0 ? 'start' : 'middle', weight: 700 }); });
   s += `<circle cx="${r2(xPay)}" cy="${Y(0)}" r="6" fill="${RED}"/>` + line(r2(xPay), Y(0), r2(xPay), 300, RED, 2, dash);
   s += t(r2(xPay) - 8, 336, 'Payback = 2 + 40 ÷ 50 = 2.8 years', { size: 11, fill: RED, anchor: 'end', weight: 700 });
-  s += t(r2(xPay) + 12, Y(0) + 34, 'The line crosses zero here:', { size: 9, fill: MUTED }) + t(r2(xPay) + 12, Y(0) + 46, 'the cost is recovered', { size: 9, fill: MUTED });
+  s += t(r2(xPay) + 12, r2(Y(0) + 23), 'The line crosses zero here:', { size: 9, fill: MUTED }) + t(r2(xPay) + 12, r2(Y(0) + 35), 'the cost is recovered', { size: 9, fill: MUTED });
   return s + close;
 }
 
@@ -119,11 +119,12 @@ function treeSvg() {
   s += line(B.x + 13, B.y, ends[2][0], ends[2][1], GREEN, 2.5) + line(B.x + 13, B.y, ends[3][0], ends[3][1], GREEN, 2.5);
   ends.forEach(([x, y]) => { s += `<circle cx="${x}" cy="${y}" r="4" fill="${GREEN}"/>`; });
   // option branches
-  s += t(120, 168, 'Launch cold brew', { size: 10, weight: 700 }) + t(120, 180, 'cost $200,000', { size: 10, fill: MUTED });
-  s += t(72, 232, 'Licence the recipe', { size: 10, weight: 700 }) + t(72, 244, 'cost $20,000', { size: 10, fill: MUTED });
+  s += t(120, 168, 'Launch cold brew', { size: 10, weight: 700 }) + t(120, 181, 'cost $200,000', { size: 10, fill: MUTED });
+  s += t(72, 232, 'Licence the recipe', { size: 10, weight: 700 }) + t(72, 245, 'cost $20,000', { size: 10, fill: MUTED });
   // chance branches
-  s += t(300, 68, 'High demand 0.6', { size: 10 }) + t(300, 138, 'Low demand 0.4', { size: 10 });
-  s += t(300, 208, 'Strong uptake 0.5', { size: 10 }) + t(300, 278, 'Weak uptake 0.5', { size: 10 });
+  // centred on each branch's midpoint (x 316.5): above a branch that rises, below one that falls
+  s += t(316.5, 62, 'High demand 0.6', { size: 10, anchor: 'middle' }) + t(316.5, 143, 'Low demand 0.4', { size: 10, anchor: 'middle' });
+  s += t(316.5, 200, 'Strong uptake 0.5', { size: 10, anchor: 'middle' }) + t(316.5, 284, 'Weak uptake 0.5', { size: 10, anchor: 'middle' });
   // payoffs
   s += t(410, 62, '$500,000', { size: 11, weight: 700 }) + t(410, 146, '$100,000', { size: 11, weight: 700 });
   s += t(410, 202, '$250,000', { size: 11, weight: 700 }) + t(410, 286, '$150,000', { size: 11, weight: 700 });
@@ -157,12 +158,12 @@ function networkSvg() {
     s += t(cx, cy - 6, n, { size: 11, anchor: 'middle', weight: 700 });
     s += t(cx - 10, cy + 15, String(vals[n][0]), { size: 10, anchor: 'middle', weight: 700, fill: GREEN }) + t(cx + 10, cy + 15, String(vals[n][1]), { size: 10, anchor: 'middle', weight: 700, fill: ORANGE });
   }
-  s += t(110, 164, 'A (2)', { size: 10, anchor: 'middle', weight: 700, fill: RED });
+  s += t(110, 157, 'A (2)', { size: 10, anchor: 'middle', weight: 700, fill: RED });
   s += t(200, 122, 'B (3)', { size: 10, anchor: 'middle', weight: 700, fill: RED });
-  s += t(200, 236, 'C (2)', { size: 10, anchor: 'middle', weight: 700, fill: BLUE }) + t(200, 248, 'float 2', { size: 9, anchor: 'middle', fill: MUTED });
+  s += t(200, 236, 'C (2)', { size: 10, anchor: 'middle', weight: 700, fill: BLUE }) + t(200, 249, 'float 2', { size: 9, anchor: 'middle', fill: MUTED });
   s += t(350, 122, 'D (4)', { size: 10, anchor: 'middle', weight: 700, fill: RED });
-  s += t(350, 236, 'E (3)', { size: 10, anchor: 'middle', weight: 700, fill: BLUE }) + t(350, 248, 'float 2', { size: 9, anchor: 'middle', fill: MUTED });
-  s += t(425, 164, 'F (1)', { size: 10, anchor: 'middle', weight: 700, fill: RED });
+  s += t(350, 236, 'E (3)', { size: 10, anchor: 'middle', weight: 700, fill: BLUE }) + t(350, 249, 'float 2', { size: 9, anchor: 'middle', fill: MUTED });
+  s += t(425, 157, 'F (1)', { size: 10, anchor: 'middle', weight: 700, fill: RED });
   // key
   s += t(40, 40, 'Node: number on top, EST bottom-left, LFT bottom-right', { size: 10 });
   s += t(40, 56, 'Activity (duration in days). Red arrows: the critical path, zero float', { size: 9, fill: MUTED });

@@ -1,0 +1,17 @@
+(node:59319) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+assessing-competitiveness — packet 54
+  before: 5 BLOCK / 24 DEBT / 3 INFO (1 recoverable)
+  after:  0 BLOCK / 0 DEBT / 2 INFO (0 recoverable)
+  new:    0 BLOCK / 0 DEBT · carried 0 () · would clear 24 baselined findings on publish
+  5 blocks · 18 subsections · 28 quiz (3 unpinned, keys 7/7/7/7) · 7 practice · 26 flashcards · 8 mistakes · 5 diagrams (8 views) · 4 chains · 3 evaluation
+  recalls: 18 of 18 subsections — 7 classify, 2 match, 7 fillin, 2 reorder
+  coverage: 18 of 18 specification leaves evidenced in the teaching text (100%)
+  words:  315 327 287 283 291 282 262 322 304 327 255 311 283 299 333 324 275 266
+  pins:   quiz [[3,4,5,6],[7,8,9,10,11],[12,13,14,15,16],[17,18,19,20,21,22],[23,24,25,26,27]] · practice [[0],[1],[2,3,5],[4],[6]]
+
+1 packet check failed:
+  - topFix-05: the borrow → interest → gearing → downturn → risk reorder is missing or out of order

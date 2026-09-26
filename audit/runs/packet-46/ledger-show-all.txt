@@ -1,0 +1,355 @@
+=== C-growth-development-topFix-01 ===
+{
+  "id": "C-growth-development-topFix-01",
+  "section": "growth-development",
+  "kind": "topFix",
+  "rank": 0,
+  "text": "Wire the block metadata: add diagramRef (HDI -> block 1, Harrod-Domar/Prebisch-Singer -> block 1 or a new barriers block, strategies comparison -> block 2), quizIndices and practiceIndices per block, and add one recall per subsection (e.g. fillin on HDI components; reorder on the Harrod-Domar savings->investment->capital->output->income loop; reorder on the Lewis process surplus labour -> migration -> profits -> reinvestment -> turning point).",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-topFix-02 ===
+{
+  "id": "C-growth-development-topFix-02",
+  "section": "growth-development",
+  "kind": "topFix",
+  "rank": 1,
+  "text": "Re-map Block 2 to the spec taxonomy (market-orientated / interventionist / other / international institutions) and add the missing named strategies: privatisation, subsidy removal, floating vs managed exchange rates, joint ventures, Lewis-model industrialisation (own subsection), tourism, primary industries, Fairtrade, debt relief, NGOs.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-topFix-03 ===
+{
+  "id": "C-growth-development-topFix-03",
+  "section": "growth-development",
+  "kind": "topFix",
+  "rank": 2,
+  "text": "Teach what the quiz tests or cut the questions: add capital flight, foreign currency gap, Dutch disease and the Lewis turning point to the Learn content (they are spec items), or remove Q3/Q4/Q7/Q11 from the pre-test pool. Replace Q11's joke distractors.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-topFix-04 ===
+{
+  "id": "C-growth-development-topFix-04",
+  "section": "growth-development",
+  "kind": "topFix",
+  "rank": 3,
+  "text": "Verify Block 3 (Sustainability/EKC/green growth) against the WEC14 spec; if off-spec, demote it to a short evaluation card and reuse the step for 'Factors influencing growth and development' (demographics, property rights, access to credit, infrastructure, non-economic factors), which is currently only in the Notes tab.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-topFix-05 ===
+{
+  "id": "C-growth-development-topFix-05",
+  "section": "growth-development",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "Fix factual/marking errors: Paris Agreement '1.5C commitment' -> 'well below 2C, pursue 1.5C'; convert practice guidance for the 10- and 20-markers to IAL levels (KAA + EV) rather than marks-per-point; change 'Outline' to an IAL command word and 'Define HDI (4)' to a 2-mark define; resolve the 'growth is necessary' contradiction in block 1.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-accuracy-01 ===
+{
+  "id": "C-growth-development-accuracy-01",
+  "section": "growth-development",
+  "kind": "accuracy",
+  "text": "Sustainability > green-growth > realExample: States the Paris Agreement 'committed 196 countries to limiting global warming to 1.5 degrees Celsius'. The Agreement commits parties to hold warming 'well below 2C' and to 'pursue efforts' toward 1.5C. The $100bn/yr climate-finance pledge originated at Copenhagen (2009) and was reaffirmed in the Paris decision text, not established by the Agreement; OECD reports it was first met in 2022, so 'consistently fallen short' is dated.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-accuracy-02 ===
+{
+  "id": "C-growth-development-accuracy-02",
+  "section": "growth-development",
+  "kind": "accuracy",
+  "text": "Sustainability > sustainable-development > examMatters: Claims 'Examiners expect you to ... evaluate the Environmental Kuznets Curve' and green-growth section claims examiners 'want you to evaluate whether green growth is achievable'. I am not aware of EKC, green growth, natural capital or CBDR appearing in WEC14 4.3.6; these examiner expectations look invented. (Sustainability is assessed in Unit 2 as a cost of growth, not here.)",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-quiz-01 ===
+{
+  "id": "C-growth-development-quiz-01",
+  "section": "growth-development",
+  "kind": "quiz",
+  "text": "q3: Correct answer (B) is right, but the Lewis model is never mentioned in any of the six Learn subsections; it exists only in diagram 2, flashcards and extras. Students hit this in the pre-test and inline quiz having never been taught it.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-quiz-02 ===
+{
+  "id": "C-growth-development-quiz-02",
+  "section": "growth-development",
+  "kind": "quiz",
+  "text": "q7: Correct (B), but 'capital flight' is never defined or explained in Learn content (it appears only in practice Q1 guidance). Untaught item in the quiz bank.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-structure-01 ===
+{
+  "id": "C-growth-development-structure-01",
+  "section": "growth-development",
+  "kind": "structure",
+  "text": "Zero recall exercises (meta reorder=0, fillin=0). None of the six subsections has a 'recall' object, so Learn Mode's spaced/immediate recall widgets never fire and the section has no retrieval practice at all between reading and the inline quiz.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-structure-02 ===
+{
+  "id": "C-growth-development-structure-02",
+  "section": "growth-development",
+  "kind": "structure",
+  "text": "No block has diagramRef, quizIndices or practiceIndices (all null). Consequence: the five diagrams (HDI, Harrod-Domar, Lewis, Prebisch-Singer, strategies comparison) never render inline in Learn Mode, and the inline quiz/practice picked for each block is not tied to that block. Block 3 (Sustainability) has no quiz question and no practice question covering it at all, so whatever is shown after that step is off-topic.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-structure-03 ===
+{
+  "id": "C-growth-development-structure-03",
+  "section": "growth-development",
+  "kind": "structure",
+  "text": "Pre-test gate draws 3 random MCQs from a 12-item bank in which 5 items (Q3 Lewis, Q4 aid/Dutch disease, Q7 capital flight, Q11 Dutch disease, Q10 H-D assumptions) test content the section never teaches. A student can legitimately score 0/3 before starting, which matches the founder's 'pre-test demotivates' hypothesis.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-structure-04 ===
+{
+  "id": "C-growth-development-structure-04",
+  "section": "growth-development",
+  "kind": "structure",
+  "text": "Each block has exactly two sections, so the whole section is 3 steps. Each step is ~900-1000 words of prose (2 x 3 paragraphs + flow + example + misconception + examMatters) before any interaction. No difficulty ramp inside a step; the interactive elements are all stacked at the end.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-structure-05 ===
+{
+  "id": "C-growth-development-structure-05",
+  "section": "growth-development",
+  "kind": "structure",
+  "text": "Takeaways match their blocks (checked all 12 bullets) - good. But Block 1's takeaway bullet 3 names 'debt' and bullet 4 'multi-dimensional intervention' while the body's flow only shows the savings-gap loop; the debt/commodity/institution links are asserted, not shown.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-structure-06 ===
+{
+  "id": "C-growth-development-structure-06",
+  "section": "growth-development",
+  "kind": "structure",
+  "text": "Notes tab is broader than Learn content (geography, human capital, disease burden, Washington vs post-Washington Consensus) and diagram 4 uses the spec's strategy taxonomy, whereas the Learn text uses a different (SAP/aid) classification. A student switching tabs sees two different maps of the same topic.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-structure-07 ===
+{
+  "id": "C-growth-development-structure-07",
+  "section": "growth-development",
+  "kind": "structure",
+  "text": "Misconceptions: growth-vs-development, barriers-as-checklist, market-led-universal, dismiss-all-intervention and sustainability-means-no-growth are genuine student errors. 'Students present green growth as a cost-free solution' is filler - no IAL question elicits that error. Every misconception uses the identical 'Wrong - ... Instead write:' template, which reads as generated.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-structure-08 ===
+{
+  "id": "C-growth-development-structure-08",
+  "section": "growth-development",
+  "kind": "structure",
+  "text": "Lewis model and Prebisch-Singer are 'taught' only through a diagram (which cannot render inline) and a quiz question. Lewis is a named spec strategy ('industrialisation: the Lewis model') and should have its own subsection, not be relegated to extras.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-structure-09 ===
+{
+  "id": "C-growth-development-structure-09",
+  "section": "growth-development",
+  "kind": "structure",
+  "text": "Sequencing: Block 3 (sustainability) is the least spec-relevant content but is placed last, where completion-rate data shows the fewest students arrive; meanwhile the spec's core 'other strategies' and 'international institutions' bullets have no block at all.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-specGap-01 ===
+{
+  "id": "C-growth-development-specGap-01",
+  "section": "growth-development",
+  "kind": "specGap",
+  "text": "Measures of development beyond HDI: HDI limitations, other indicators (e.g. MPI, IHDI, Gini, % in agriculture, access to clean water) - only Q0 and Q9 touch this; not taught.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-specGap-02 ===
+{
+  "id": "C-growth-development-specGap-02",
+  "section": "growth-development",
+  "kind": "specGap",
+  "text": "Factors influencing growth and development: foreign currency gap; capital flight; demographic factors (population growth, dependency ratio); access to credit and banking; infrastructure (mentioned only as a strategy); education/skills; absence of property rights (one phrase only); non-economic factors (wars, political instability, geography) - taught only in the Notes tab, not in Learn content.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-specGap-03 ===
+{
+  "id": "C-growth-development-specGap-03",
+  "section": "growth-development",
+  "kind": "specGap",
+  "text": "Market-orientated strategies missing: removal of government subsidies; floating exchange rate systems; privatisation (appear in diagram 4 only).",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-specGap-04 ===
+{
+  "id": "C-growth-development-specGap-04",
+  "section": "growth-development",
+  "kind": "specGap",
+  "text": "Interventionist strategies missing: development of human capital as a strategy; managed exchange rates; promoting joint ventures with global companies (diagram 4 only).",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-specGap-05 ===
+{
+  "id": "C-growth-development-specGap-05",
+  "section": "growth-development",
+  "kind": "specGap",
+  "text": "Other strategies missing entirely: industrialisation via the Lewis model (diagram/quiz only), development of tourism, development of primary industries, Fairtrade schemes, debt relief (flashcards only).",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-specGap-06 ===
+{
+  "id": "C-growth-development-specGap-06",
+  "section": "growth-development",
+  "kind": "specGap",
+  "text": "Role of international institutions and NGOs: World Bank, IMF (beyond SAPs), NGOs - absent from Learn content; app's spec map puts IMF/World Bank in 4.3.5 but practice Q4 tests it here.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-growth-development-specGap-07 ===
+{
+  "id": "C-growth-development-specGap-07",
+  "section": "growth-development",
+  "kind": "specGap",
+  "text": "Unsure: whether sustainability / Environmental Kuznets Curve / green growth is in WEC14 4.3.6 at all - I believe it is not (sustainability of growth is a Unit 2 cost-of-growth point). If confirmed, Block 3 is off-spec and should be cut or demoted.",
+  "packet": 46,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+

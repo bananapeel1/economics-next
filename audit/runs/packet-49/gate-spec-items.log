@@ -1,0 +1,5 @@
+
+> economics-next@0.1.0 spec-items
+> node audit/scripts/build-spec-items.mjs --check
+
+audit/raw/spec-items.json matches the specification text

@@ -91,6 +91,13 @@
 .ps-modes { display: flex; flex: none; padding: 3px; border: 1px solid var(--ps-border); border-radius: 9px; background: var(--ps-inset); }
 .ps-modes button { padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 500; color: var(--ps-text-3); white-space: nowrap; transition: color .15s, background .15s; }
 .ps-modes button[aria-pressed="true"] { background: var(--ps-surface); color: var(--ps-text); box-shadow: 0 0 0 1px var(--ps-border); }
+/* Packet 12.8, E061: the paper's Section A, which this page does not repeat. A full-width line in the
+   top bar, in the server HTML, in every mode. It links the topic in the app and says where the quiz
+   is once it opens; it never claims to land on the quiz (the app has no deep link into it, E056). */
+.ps-seca { flex: 1 1 100%; min-width: 0; font-size: 13px; line-height: 1.5; color: var(--ps-text-3); }
+.ps-seca-h { font-weight: 600; color: var(--ps-text-2); }
+.ps .ps-seca-link { color: var(--ps-text); text-decoration: underline; text-decoration-color: var(--ps-accent-line); text-underline-offset: 3px; font-weight: 500; }
+.ps .ps-seca-link:hover { text-decoration-color: var(--ps-accent); }
 
 /* ---------- question row ---------- */
 .ps-qrow {
@@ -100,7 +107,14 @@
 .ps-setswitch { flex: 1 1 100%; display: flex; gap: 3px; padding: 3px; border: 1px solid var(--ps-border); border-radius: 9px; background: var(--ps-inset); }
 .ps-setswitch button { flex: 1 1 0; min-width: 0; padding: 6px 10px; border-radius: 6px; font-size: 13px; font-weight: 500; color: var(--ps-text-3); text-align: center; }
 .ps-setswitch button[aria-pressed="true"] { background: var(--ps-surface); color: var(--ps-text); box-shadow: 0 0 0 1px var(--ps-border); }
-.ps-cards { list-style: none; padding: 0; flex: 1 1 0; min-width: 0; display: grid; grid-template-columns: repeat(var(--ps-n, 3), minmax(0, 1fr)); gap: 10px; }
+/* Packet 12.8: a paper section can hold five questions. Five equal columns at 320px give each card
+   ~53px, narrower than "Calculate" alone, so the grid holds at most --ps-n columns and never lets a
+   card fall below 112px: below that the cards wrap onto a second row rather than cut their label. */
+.ps-cards {
+  --ps-cgap: 10px;
+  list-style: none; padding: 0; flex: 1 1 0; min-width: 0; display: grid; gap: var(--ps-cgap);
+  grid-template-columns: repeat(auto-fit, minmax(max(112px, calc((100% - (var(--ps-n, 3) - 1) * var(--ps-cgap)) / var(--ps-n, 3))), 1fr));
+}
 .ps-cards > li { min-width: 0; display: grid; }
 .ps-card {
   position: relative; min-width: 0; overflow: hidden; container-type: inline-size;
@@ -143,9 +157,26 @@
 .ps-banked-got { color: var(--ps-accent); }
 
 /* ---------- main: the question and the two panes ---------- */
-.ps-main { min-height: 0; display: flex; flex-direction: column; padding: 16px var(--ps-gutter); max-width: 1400px; width: 100%; margin: 0 auto; }
-.ps-set { flex: 1; min-height: 0; display: grid; grid-template-rows: auto auto minmax(0, 1fr); gap: 14px; }
+/* Packet 12.8. A paper question can open with its own context — a quoted statement or a small table —
+   above the stem, so the question head is no longer always two short lines. On a short desktop
+   window the head would squeeze the answer pane to a sliver (measured: 96px at 1440×900 under the
+   Calculate item's table). The pane now keeps at least 300px, and when head plus pane are taller
+   than the frame, the frame's middle scrolls inside itself — never the page. The panes are placed in
+   the last row by name: the hidden tab bar (display:none on desktop) takes no grid cell, so auto-
+   placement had been putting them in the second, auto-sized track and leaving the 1fr track empty. */
+.ps-main { min-height: 0; display: flex; flex-direction: column; padding: 16px var(--ps-gutter); max-width: 1400px; width: 100%; margin: 0 auto; overflow-y: auto; overscroll-behavior: contain; }
+.ps-set { flex: 1; min-height: 0; display: grid; grid-template-rows: auto auto minmax(300px, 1fr); gap: 14px; }
+.ps-set > .ps-panes { grid-row: 3; }
 .ps-qhead { display: grid; gap: 10px; }
+/* Packet 12.8, E061: each paper section says what it is and what it is worth, above its questions. */
+.ps-sechead { display: grid; gap: 2px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed var(--ps-border); }
+.ps-sechead-t { font: 600 13px/1.4 var(--ps-mono); letter-spacing: .02em; color: var(--ps-text); }
+.ps-sechead-n { font-size: 12.5px; line-height: 1.5; color: var(--ps-text-3); }
+/* A question's own context: the paper prints it above the task, so it sits above the stem. */
+.ps-context { font-size: var(--ps-read); line-height: 1.65; color: var(--ps-text-2); max-width: 84ch; padding: 12px 14px; border: 1px solid var(--ps-border); border-radius: 10px; background: var(--ps-surface); }
+.ps-context-para + .ps-context-para { margin-top: 8px; }
+.ps-context .ps-table-block { margin: 12px 0 0; }
+.ps-context .ps-table-block:first-child { margin-top: 0; }
 .ps-chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .ps-chip { font: 500 11.5px/1.2 var(--ps-mono); padding: 5px 8px; border: 1px solid var(--ps-border); border-radius: 6px; color: var(--ps-text-3); background: var(--ps-surface); }
 .ps-chip.is-strong { color: var(--ps-text); border-color: var(--ps-border-strong); }
@@ -289,6 +320,21 @@ label.ps-crit-text { cursor: pointer; }
 .ps-scheme dd { font-size: 13px; line-height: 1.55; color: var(--ps-text-2); }
 .ps-midband-para { margin-top: 12px; }
 
+/* Packet 12.8, E061: the essay choice and the Draw item's sketch prompt, in place of the text box. */
+.ps-choice { display: grid; gap: 8px; padding: 16px 18px; border: 1px dashed var(--ps-border-strong); border-radius: 10px; background: var(--ps-inset); }
+.ps-choice-t { font-size: var(--ps-read); line-height: 1.6; color: var(--ps-text); }
+.ps-choice .ps-under { margin-top: 4px; }
+.ps-choice .ps-btn { white-space: normal; }
+.ps-draw-note { margin-top: 0; }
+/* The Draw item's model diagram. The SVG asset's own colours are fixed for a light ground (dark ink,
+   no background), so its frame is white in every theme — the one colour in this file that is not a
+   token, because the asset, not the theme, decides it. */
+.ps-diagram-fig { margin: 0 0 14px; }
+.ps-diagram { padding: 12px; border: 1px solid var(--ps-border); border-radius: 10px; background: white; }
+.ps-diagram img { display: block; width: 100%; max-width: 520px; height: auto; margin: 0 auto; }
+.ps-diagram-cap { margin-top: 8px; text-align: center; font-size: 12.5px; }
+.ps .ps-diagram-cap a { color: var(--ps-text-3); text-decoration: underline; text-decoration-color: var(--ps-border-strong); text-underline-offset: 3px; }
+
 /* ---------- dock ---------- */
 .ps-dock { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; padding: 12px var(--ps-gutter); border-top: 1px solid var(--ps-border); background: var(--ps-surface); }
 .ps-facts { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; font-size: 13px; color: var(--ps-text-3); min-width: 0; flex: 0 1 auto; }
@@ -314,7 +360,7 @@ label.ps-crit-text { cursor: pointer; }
 @media (max-width: 1180px) { .ps-keys { display: none; } }
 @media (max-width: 1023px) {
   .ps { --ps-gutter: 16px; height: auto; min-height: 0; display: block; }
-  .ps-main { display: block; padding-bottom: 12px; }
+  .ps-main { display: block; padding-bottom: 12px; overflow: visible; } /* a scroll container here would unstick the tab bar */
   .ps-set { display: block; }
   .ps-qhead { margin-bottom: 12px; }
   .ps-stem { font-size: 19px; }
@@ -338,7 +384,7 @@ label.ps-crit-text { cursor: pointer; }
   .ps-top { gap: 8px 10px; }
   .ps-modes button { padding: 6px 9px; font-size: 12.5px; }
   .ps-qrow { padding: 10px 16px; }
-  .ps-cards { gap: 6px; }
+  .ps-cards { --ps-cgap: 6px; }
   .ps-card { padding: 8px 10px 9px; }
   .ps-card-cmd { font-size: 13px; }
   .ps-facts { gap: 4px 10px; font-size: 12.5px; }
@@ -356,7 +402,7 @@ label.ps-crit-text { cursor: pointer; }
   .ps-scheme > div { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 420px) { .ps-pm { display: none; } }
-@media (max-width: 360px) { .ps-card { padding: 8px 7px 9px; } .ps-card-cmd { font-size: 12px; letter-spacing: -.01em; } .ps-cards { gap: 5px; } }
+@media (max-width: 360px) { .ps-card { padding: 8px 7px 9px; } .ps-card-cmd { font-size: 12px; letter-spacing: -.01em; } .ps-cards { --ps-cgap: 5px; } }
 
 @media (prefers-reduced-motion: reduce) {
   .ps *, .ps *::before, .ps *::after { transition: none !important; }

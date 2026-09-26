@@ -10,6 +10,9 @@ const nextConfig = {
   // without this the routes deploy without their data. Local `next dev` and `next build` do not
   // need it — which is exactly why it has to be written down rather than discovered on Vercel.
   //
+  // Packet 12.8 adds `ial-paper-structure.json`: `lib/ial-paper.js` reads it with readFileSync, the
+  // same way, to lay 1.3.5's practice out as the WEC11 paper.
+  //
   // The t=0 section dump the lab route also traced is NOT here and must not come back: it is
   // frozen since 12 September and no public canonical URL may serve it. That is E017, and the
   // Quick Check block was dropped rather than shipped stale.
@@ -17,11 +20,13 @@ const nextConfig = {
     '/economics/[unit]': [
       './audit/raw/spec-items.json',
       './audit/raw/spec-coverage.json',
+      './audit/raw/ial-paper-structure.json',
       './content/data-response/**',
     ],
     '/business/[unit]': [
       './audit/raw/spec-items.json',
       './audit/raw/spec-coverage.json',
+      './audit/raw/ial-paper-structure.json',
       './content/data-response/**',
     ],
   },

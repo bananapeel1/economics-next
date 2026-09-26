@@ -4,6 +4,28 @@
  * Each answer matches the exact schema in modelAnswersData.js.
  */
 
+/**
+ * Packet 12.8: an item whose model answer exists only as its segmented `script` gets its
+ * `answerParagraphs` (read by the non-shell renderers, the /model-answers hub and the page's JSON-LD)
+ * FROM that script, so the two cannot say different things. An item that passes its own
+ * `answerParagraphs` keeps them.
+ */
+const withParagraphs = (item) => {
+  const paragraphs = item.answerParagraphs || item.script.map((p) => ({
+    label: p.label || null,
+    html: p.segments.map((sg) => sg.html).join(' '),
+  }));
+  // A Draw item's model answer IS its diagram. The shell renders `diagram` itself; the renderers
+  // that only read `answerParagraphs` get it as the first thing in the answer. The asset's colours
+  // are fixed for a light ground, so it sits on white wherever it appears.
+  if (item.diagram && paragraphs.length && !item.answerParagraphs) {
+    const d = item.diagram;
+    const img = `<img src="${d.src}" alt="${d.alt.replace(/"/g, '&quot;')}" width="${d.width}" height="${d.height}" style="display:block;max-width:100%;height:auto;background:white;border-radius:8px;margin:0 0 12px" loading="lazy">`;
+    paragraphs[0] = { ...paragraphs[0], html: `${img}${paragraphs[0].html}` };
+  }
+  return { ...item, answerParagraphs: paragraphs };
+};
+
 export const EXPANSION_ANSWERS = [
 
   // ══════════════════════════════════════════════════════════════
@@ -152,7 +174,36 @@ export const EXPANSION_ANSWERS = [
     likelyScore: '4 / 4',
   },
 
-  /* ══ 1.3.5 Market Failure — the attached extract's own three questions. Packet 12.7, E043/E044. ══
+  /* ══ 1.3.5 Market Failure in the WEC11 paper layout. Packet 12.8, E058-E060. ══════════════════
+
+     DECISIONS 2026-09-26: practice follows the real IAL paper. `audit/raw/ial-paper-structure.json`
+     (read through lib/ial-paper.js; its numbers are not repeated here) gives Economics Unit 1 a
+     Section B of short answers, a Section C five-part data question on an extract, and a Section D
+     of essays with a choice. Every 1.3.5 item that belongs to one of those carries `paper`:
+       { section, kind: 'short_answer' | 'data_question' | 'essay', part?, context? }
+     and `audit/scripts/validate-model-answers.mjs` R9-R13 hold the set to the file. The one 1.3.5
+     item without `paper` (negative-externality-tax-8, an 8-mark Examine with no extract) fits no
+     section of the paper and stays on the page under "More practice".
+
+     MARKING. New and re-levelled items follow the part-level mark schemes in Pearson's Sample
+     Assessment Materials for WEC11 (the source cited in the structure file): short answers are
+     point-marked out of 4 (Draw and Calculate: knowledge 1, application 3; Explain: knowledge 2,
+     application 2); the data question's 2, 4 and 6 are point-marked, the 8 is point-marked
+     knowledge 2 · application 2 · analysis 2 · evaluation 2, and the 14 is level-marked as
+     knowledge/application/analysis 8 plus evaluation 6; the 20-mark essay is level-marked
+     knowledge/application/analysis 12 plus evaluation 8. The level descriptors in `markScheme` are
+     paraphrased, not copied. Their `range` labels deliberately do not start with "Level" or "AO":
+     `lib/mid-band-answer.js` reads a scheme whose rows start "Level" as a single ladder, and these
+     schemes have two ladders, so the mid-band panel would state a ceiling that is not true (E053).
+
+     Everything below is self-marked in the practice shell against its `criteria`. None of it goes
+     through the AI written-practice marker, which excludes Draw and Calculate by design
+     (lib/ao-spec.js). `ao` comes from lib/ao-spec.js: Draw and Calculate have no entry there, so
+     those two items carry no `ao` rather than a hand-typed one.
+
+     ── What packet 12.7 wrote, kept for the items it still describes: ──
+
+     ══ 1.3.5 Market Failure — the attached extract's own three questions. Packet 12.7, E043/E044. ══
 
      DECISIONS 2026-09-25: the 1.3.5 page leads with the question set written for the extract in
      content/data-response/econ-u1-market-failure.md — Define (2), Analyse (6), Evaluate (20) — in the
@@ -204,7 +255,7 @@ export const EXPANSION_ANSWERS = [
       { code: 'K', label: 'Knowledge/Definition', color: 'blue' },
       { code: 'E', label: 'Example', color: 'green' },
     ],
-    examinerCommentary: 'Two marks requires the concept plus an applied example from the stimulus. A common mistake is to define a <em>production</em> externality or confuse it with a negative externality of production like factory emissions.',
+    examinerCommentary: 'Full marks require the concept plus an applied example from the stimulus. A common mistake is to define a <em>production</em> externality or confuse it with a negative externality of production like factory emissions.',
     likelyScore: '2 / 2',
 
     /* The spec for this packet asked for "1 AO1 mark for the definition, 1 AO2 mark for the
@@ -237,7 +288,67 @@ export const EXPANSION_ANSWERS = [
     ],
     stimulus: 'econ-u1-market-failure',
     minutes: 3,
+    // Packet 12.8, E058: part (a) of the WEC11-shaped data question on Extract A. Unchanged otherwise.
+    paper: { section: 'C', kind: 'data_question', part: 'a' },
   },
+
+  // ── 1.3.5 Market Failure — Section C (b), Explain, 4 marks. Packet 12.8, E058 (new). ──
+  withParagraphs({
+    id: 'mf-extract-explain-tobacco-social-cost-4',
+    // 2b "private costs, external costs and social costs"; 2c-4 external costs of consumption;
+    // 2e-2 the health context. Read from audit/raw/spec-items.json by wording.
+    specItems: ['ECON-1.3.5-2b', 'ECON-1.3.5-2c-4', 'ECON-1.3.5-2e-2'],
+    subject: 'economics',
+    unit: 1,
+    sectionNumber: '1.3.5',
+    sectionTitle: 'Market Failure',
+    marks: 4,
+    stimulusRef: null,
+    ao: ['AO1', 'AO2'],
+    kind: 'written',
+    type: 'Data Response — Knowledge & Application',
+    commandWord: 'Explain',
+    question: 'With reference to Table 1, explain why the social cost of consuming a pack of tobacco products is greater than its private cost.',
+    keyTerm: 'social cost',
+    markScheme: [
+      { range: 'Explain (4)', desc: 'Appendix 6: When asking students to explain a term or the characteristics, this requires knowledge, understanding and application.' },
+      { range: 'AO1 (2 marks)', desc: 'Knowledge: private cost as the cost borne by the consumer, and social cost as private cost plus external cost.' },
+      { range: 'AO2 (2 marks)', desc: 'Application: Table 1’s external cost of AED 18 per pack used as the size of the gap, and the third parties who bear it named.' },
+    ],
+    peel: null,
+    annotationLegend: [],
+    examinerCommentary: 'Full marks: both costs are defined and the relationship between them is stated, then Table 1’s AED 18 per pack is used as the size of the gap and the people who bear it are named. An answer that says "smoking harms other people" without the figure misses the first application mark; one that quotes AED 18 without saying who bears it misses the second. Explain asks for no evaluation — whether the 100% excise already covers the AED 18 is a different question.',
+    likelyScore: '4 / 4',
+    criteria: [
+      { id: 'c1', band: 'AO1 — knowledge (2 marks)', text: 'Defines private cost as the cost borne by the consumer who chooses to consume the good', marks: 1, seg: 'p1a', segRole: 'earned' },
+      { id: 'c2', band: 'AO1 — knowledge (2 marks)', text: 'States that social cost is private cost plus external cost, so the gap between them is the external cost', marks: 1, seg: 'p1b', segRole: 'earned' },
+      { id: 'c3', band: 'AO2 — application (2 marks)', text: 'Uses Table 1’s AED 18 per pack as the size of that gap', marks: 1, seg: 'p2a', segRole: 'earned' },
+      { id: 'c4', band: 'AO2 — application (2 marks)', text: 'Names the third parties in this market who bear it, and says the smoker leaves it out of the decision', marks: 1, seg: 'p2b', segRole: 'earned' },
+    ],
+    script: [
+      {
+        id: 'p1',
+        label: 'The two costs',
+        aos: ['AO1'],
+        segments: [
+          { id: 'p1a', html: 'The <strong>private cost</strong> of consuming a good is the cost borne by the consumer who chooses to consume it: for a smoker, the price of the pack and the harm to their own health.', note: 'The first knowledge mark. The harm to the smoker’s own health is part of the private cost — it falls on the person who chose — which is why it cannot be the reason social cost is higher.' },
+          { id: 'p1b', html: 'The <strong>social cost</strong> is the private cost plus the <strong>external cost</strong>, the cost that falls on third parties who did not choose to consume, so social cost is greater than private cost by exactly the external cost.', note: 'The second knowledge mark: the relationship, not just the two words. "Social cost is the cost to society" restates the term and earns nothing.' },
+        ],
+      },
+      {
+        id: 'p2',
+        label: 'Table 1, applied',
+        aos: ['AO2'],
+        segments: [
+          { id: 'p2a', html: 'Table 1 estimates the external cost of tobacco products at <strong>AED 18 per pack</strong>, so the social cost of each pack is AED 18 greater than the private cost the smoker bears.', note: 'Application: the table’s figure used as the size of the gap. The question says "with reference to Table 1", so an answer with no figure from it cannot reach 4.' },
+          { id: 'p2b', html: 'That cost falls on people outside the transaction — non-smokers who breathe second-hand smoke, and those who pay through taxes and insurance premiums to treat smoking-related illness — and the smoker does not count it when deciding how many packs to buy.', note: 'Application: who the third parties are in this market, and why the market ignores them. Naming them is what turns "external cost" from a term into an answer about tobacco.' },
+        ],
+      },
+    ],
+    stimulus: 'econ-u1-market-failure',
+    minutes: 5,
+    paper: { section: 'C', kind: 'data_question', part: 'b' },
+  }),
 
   // ── 1.3.5 Market Failure — Analyse, 6 marks (the extract's Question 2) ──
   {
@@ -269,7 +380,7 @@ export const EXPANSION_ANSWERS = [
     answerParagraphs: [
       {
         label: 'Para 1',
-        html: 'A negative externality of consumption occurs when the <strong>marginal social cost (MSC)</strong> of a good exceeds its <strong>marginal private cost (MPC)</strong>, leading to <strong>over-consumption</strong> and allocative inefficiency at the free-market equilibrium. <span class="ma-ann ma-ann-blue">K</span> The AED 0.25 per bag charge acts as an <strong>indirect (Pigouvian) tax</strong> on the consumer, designed to internalise the estimated AED 0.18 external cost per bag. <span class="ma-ann ma-ann-blue">K</span>',
+        html: 'A negative externality of consumption occurs when consuming a good imposes a cost on third parties, so its <strong>marginal social benefit (MSB)</strong> lies below its <strong>marginal private benefit (MPB)</strong>, leading to <strong>over-consumption</strong> and allocative inefficiency at the free-market equilibrium. <span class="ma-ann ma-ann-blue">K</span> The AED 0.25 per bag charge acts as an <strong>indirect (Pigouvian) tax</strong> on the consumer, designed to internalise the estimated AED 0.18 external cost per bag. <span class="ma-ann ma-ann-blue">K</span>',
       },
       {
         label: 'Para 2',
@@ -292,7 +403,7 @@ export const EXPANSION_ANSWERS = [
        this packet: 2 AO1 · 2 AO2 · 2 AO3; `ao` above matches lib/ao-spec.js). Point-based, because
        lib/ial-marking.js: "Up to and including 6 marks, marking is point-based". */
     criteria: [
-      { id: 'c1', band: 'AO1 — knowledge (2 marks)', text: 'Defines a negative externality of consumption as social cost above private cost, leading to over-consumption', marks: 1, seg: 'p1a', segRole: 'earned' },
+      { id: 'c1', band: 'AO1 — knowledge (2 marks)', text: 'Defines a negative externality of consumption: a third-party cost that puts social benefit below private benefit, leading to over-consumption', marks: 1, seg: 'p1a', segRole: 'earned' },
       { id: 'c2', band: 'AO1 — knowledge (2 marks)', text: 'Explains the charge as an indirect (Pigouvian) tax meant to internalise the external cost', marks: 1, seg: 'p1b', segRole: 'earned' },
       { id: 'c3', band: 'AO2 — application (2 marks)', text: 'Interprets the extract’s PED of -1.4: demand is elastic, so the charge causes a more-than-proportionate fall', marks: 1, seg: 'p2a', segRole: 'earned' },
       { id: 'c4', band: 'AO2 — application (2 marks)', text: 'Uses the reported 45% fall in consumption as the evidence of that response', marks: 1, seg: 'p2b', segRole: 'earned' },
@@ -305,7 +416,7 @@ export const EXPANSION_ANSWERS = [
         label: 'The externality and the charge',
         aos: ['AO1'],
         segments: [
-          { id: 'p1a', html: 'A negative externality of consumption occurs when the <strong>marginal social cost (MSC)</strong> of a good exceeds its <strong>marginal private cost (MPC)</strong>, leading to <strong>over-consumption</strong> and allocative inefficiency at the free-market equilibrium.', note: 'Knowledge: the gap between social and private cost, and the over-consumption it causes. It is the consumer’s act that causes the cost here — a factory example would answer a different question.' },
+          { id: 'p1a', html: 'A negative externality of consumption occurs when consuming a good imposes a cost on third parties, so its <strong>marginal social benefit (MSB)</strong> lies below its <strong>marginal private benefit (MPB)</strong>, leading to <strong>over-consumption</strong> and allocative inefficiency at the free-market equilibrium.', note: 'Knowledge: the gap between private and social benefit, and the over-consumption it causes. MSB below MPB is how the diagram the data-response page names (MPB, MSB, MPC = MSC) shows an external cost of consumption. It is the consumer’s act that causes the cost here — a factory example would answer a different question.' },
           { id: 'p1b', html: 'The AED 0.25 per bag charge acts as an <strong>indirect (Pigouvian) tax</strong> on the consumer, designed to internalise the estimated AED 0.18 external cost per bag.', note: 'Knowledge: what the charge is and what it is for. The charge is above the estimated external cost; whether that over-corrects is evaluation, which Appendix 6 says Analyse does not include, so the answer rightly leaves it alone.' },
         ],
       },
@@ -330,10 +441,115 @@ export const EXPANSION_ANSWERS = [
     ],
     stimulus: 'econ-u1-market-failure',
     minutes: 8,
+    /* Packet 12.8, E058: part (c) of the data question. One change, for E055: this answer framed the
+       consumption externality as MSC > MPC while the (e) answer and the diagram this page names
+       (negative-externality-consumption.svg: MPB, MSB, MPC = MSC) frame it as MSB < MPB. The first
+       sentence of p1a, the matching answer paragraph and c1's wording now use MSB < MPB; the marks,
+       the segments and every other sentence are as packet 12.7 left them. */
+    paper: { section: 'C', kind: 'data_question', part: 'c' },
   },
 
-  // ── 1.3.5 Market Failure — Evaluate, 20 marks (the extract's Question 3, re-tariffed from 10) ──
-  {
+  // ── 1.3.5 Market Failure — Section C (d), Examine, 8 marks. Packet 12.8, E058 (new). ──
+  /* Part (c) rewards the MECHANISM: how the charge moves consumption towards the optimum. This part
+     rewards the LEVEL: whether an AED 0.25 charge against an AED 0.18 external cost lands on the
+     optimum, below it, or cannot be known from the data. The two share the extract, not their marks. */
+  withParagraphs({
+    id: 'mf-extract-examine-bag-charge-optimum-8',
+    // 2d-3 "the distinction between the market and social optimum positions; identification of the
+    // welfare loss or gain areas"; 1a too much or too little consumed compared with the social
+    // optimum; 2c-4 external costs of consumption; 2e-4 the environment context.
+    specItems: ['ECON-1.3.5-2d-3', 'ECON-1.3.5-1a', 'ECON-1.3.5-2c-4', 'ECON-1.3.5-2e-4'],
+    subject: 'economics',
+    unit: 1,
+    sectionNumber: '1.3.5',
+    sectionTitle: 'Market Failure',
+    marks: 8,
+    stimulusRef: null,
+    ao: ['AO1', 'AO2', 'AO3', 'AO4'],
+    kind: 'written',
+    type: 'Data Response — Analysis & Evaluation',
+    commandWord: 'Examine',
+    question: 'With reference to the extract, examine whether the AED 0.25 charge is likely to reduce plastic bag consumption to the socially optimal level.',
+    keyTerm: 'the socially optimal level',
+    markScheme: [
+      { range: 'Examine (8)', desc: 'Appendix 6: Requires knowledge, understanding, application, analysis and evaluation. Requires an explanation which includes a chain of reasoning, and diagrams where appropriate. Focuses on depth rather than breadth. Any relevant data provided needs to be interpreted. There should be a brief assessment of the arguments/factors/evidence.' },
+      { range: 'AO1 (2 marks)', desc: 'Knowledge: the social optimum where marginal social benefit equals marginal social cost, and the rule that a corrective charge equals the marginal external cost there.' },
+      { range: 'AO2 (2 marks)', desc: 'Application: the charge set against Table 1’s estimated external cost (AED 0.25 against AED 0.18), and the scale of the response from the extract’s figures.' },
+      { range: 'AO3 (2 marks)', desc: 'Analysis: why a charge above the external cost pushes consumption below the optimum, and why elastic demand makes that overshoot larger.' },
+      { range: 'AO4 (2 marks)', desc: 'Evaluation: a brief assessment — for example how reliable the AED 0.18 estimate is, or whether substitutes carry external costs of their own.' },
+    ],
+    peel: null,
+    annotationLegend: [],
+    examinerCommentary: 'Full marks. The answer states the rule before using it — a corrective charge should equal the external cost — which is what makes the comparison of AED 0.25 with AED 0.18 an argument rather than an observation. The analysis carries the overshoot through to a welfare loss from under-consumption, and uses the elasticity for a different purpose from part (c): to size the overshoot, not to explain the fall. Two brief assessments, each with a reason, earn the evaluation marks; a verdict with no reason ("it depends") would not.',
+    likelyScore: '8 / 8',
+    criteria: [
+      { id: 'c1', band: 'AO1 — knowledge (2 marks)', text: 'States the social optimum: where marginal social benefit equals marginal social cost', marks: 1, seg: 'p1a', segRole: 'earned' },
+      { id: 'c2', band: 'AO1 — knowledge (2 marks)', text: 'States the rule: a corrective charge equals the marginal external cost at the optimum', marks: 1, seg: 'p1b', segRole: 'earned' },
+      { id: 'c3', band: 'AO2 — application (2 marks)', text: 'Sets the AED 0.25 charge against Table 1’s AED 0.18 external cost, and sizes the gap', marks: 1, seg: 'p2a', segRole: 'earned' },
+      { id: 'c4', band: 'AO2 — application (2 marks)', text: 'Uses the extract’s figures for the scale of the response: 45% of around 11 billion bags', marks: 1, seg: 'p3b', segRole: 'earned' },
+      { id: 'c5', band: 'AO3 — analysis (2 marks)', text: 'Chain: a charge above the external cost makes shoppers give up bags worth more than their social cost, so consumption falls below the optimum', marks: 1, seg: 'p2b', segRole: 'earned' },
+      { id: 'c6', band: 'AO3 — analysis (2 marks)', text: 'Chain: with demand elastic at -1.4, the extra AED 0.07 moves consumption further past the optimum', marks: 1, seg: 'p3a', segRole: 'earned' },
+      { id: 'c7', band: 'AO4 — evaluation (2 marks)', text: 'Assesses the AED 0.18 estimate: if the true external cost is higher, the charge may be close to right', marks: 1, seg: 'p4a', segRole: 'earned' },
+      { id: 'c8', band: 'AO4 — evaluation (2 marks)', text: 'Assesses the 45% fall: switching to substitutes with their own external costs makes the gain smaller than it looks', marks: 1, seg: 'p4b', segRole: 'earned' },
+    ],
+    script: [
+      {
+        id: 'p1',
+        label: 'Where the optimum is',
+        aos: ['AO1'],
+        segments: [
+          { id: 'p1a', html: 'The <strong>socially optimal level</strong> of consumption is where marginal social benefit equals marginal social cost; with a negative externality of consumption the free market goes past it, because shoppers ignore the cost their bags impose on others.', note: 'Knowledge: the optimum defined by the marginal condition, not as "the best amount".' },
+          { id: 'p1b', html: 'A charge brings consumption to the optimum only if it equals the <strong>marginal external cost</strong> there: it then adds the value of the damage each bag does to its price, and no more.', note: 'Knowledge: the rule the rest of the answer tests. Without it, 0.25 against 0.18 is two numbers, not an argument.' },
+        ],
+      },
+      {
+        id: 'p2',
+        label: 'The charge against the damage',
+        aos: ['AO2', 'AO3'],
+        segments: [
+          { id: 'p2a', html: 'Table 1 estimates the external cost at <strong>AED 0.18 per bag</strong>, but the charge is <strong>AED 0.25</strong> — about 40% more than the estimated damage.', note: 'Application: the table’s figure set against the extract’s charge, with the gap sized (0.25 ÷ 0.18 ≈ 1.39).' },
+          { id: 'p2b', html: 'If the estimate is right, the charge over-corrects: a shopper now refuses any bag worth less than AED 0.25 to them, including bags worth between AED 0.18 and AED 0.25, whose benefit was greater than their full social cost. Consumption is pushed below the social optimum, and a welfare loss from under-consumption replaces part of the loss from over-consumption.', note: 'Analysis: the chain from the overshoot to a new welfare loss. It is the step part (c) did not need, because (c) asked how the charge corrects the failure, not whether it lands on the optimum.' },
+        ],
+      },
+      {
+        id: 'p3',
+        label: 'How far past the optimum',
+        aos: ['AO2', 'AO3'],
+        segments: [
+          { id: 'p3a', html: 'Because demand is price elastic (<strong>-1.4</strong>), the extra AED 0.07 on each bag moves consumption further past the optimum than it would if demand were inelastic, so the overshoot is larger in bags, not only in dirhams.', note: 'Analysis: the elasticity used to size the overshoot, a different job from part (c), where it explained the size of the fall.' },
+          { id: 'p3b', html: 'The scale is large: a <strong>45%</strong> fall on the extract’s estimate of around <strong>11 billion</strong> bags a year is roughly 5 billion fewer bags, so even a small overshoot per bag is spread across billions of them.', note: 'Application: two figures from the text combined into one the extract does not print (0.45 × 11 billion ≈ 5 billion).' },
+        ],
+      },
+      {
+        id: 'p4',
+        label: 'A brief assessment',
+        aos: ['AO4'],
+        segments: [
+          { id: 'p4a', html: 'However, AED 0.18 is only an estimate. Plastic bags take hundreds of years to break down and harm marine life and fishing in the Gulf, so the true external cost may be higher than the table suggests; if it is nearer AED 0.25, the charge is close to the optimum rather than beyond it.', note: 'Evaluation: the evidence behind the comparison questioned, with a reason. The extract itself calls the table a composite of estimates.' },
+          { id: 'p4b', html: 'And the 45% fall overstates the gain if shoppers switch to paper bags or buy bin liners to replace the bags they used to reuse, because those carry external costs of their own. The charge probably moves consumption close to the optimum, but the extract’s data cannot show which side of it consumption ends up.', note: 'Evaluation: a second assessment, and a verdict that follows from both — brief, as Examine asks, not a full judgement.' },
+        ],
+      },
+    ],
+    stimulus: 'econ-u1-market-failure',
+    minutes: 11,
+    paper: { section: 'C', kind: 'data_question', part: 'd' },
+  }),
+
+  // ── 1.3.5 Market Failure — Section C (e), Discuss, 14 marks. Packet 12.8, E058: RE-LEVELLED ──
+  /* Packet 12.7 re-tariffed the md file's Question 3 to a 20-mark Evaluate. WEC11's data question
+     ends in a 14-mark Discuss (ial-paper-structure.json), so packet 12.8 re-levels it: the answer is
+     re-written to the length and demand of Appendix 6's Discuss row (econ_spec.txt, "Discuss 14":
+     chains of reasoning in context, the validity and significance of arguments, different viewpoints
+     and/or a critical assessment of the evidence — without the Evaluate row's closing "so that
+     informed judgements may be made"). What went: the government-failure paragraph (setting the rate
+     against the external cost is now part (d)'s whole question, so keeping it would reward the same
+     reasoning twice), the information-provision alternative, and the long conditional verdict.
+
+     THE ID IS KEPT (saved drafts are keyed by it; lib/attempt-storage.js). The criteria ids are NEW
+     (`k1`-`k8`, `e1`-`e6`), so a browser that saved ticks against the old twenty criteria (`c1`-`c20`)
+     finds none of them here and shows 0 until the student marks again, rather than carrying a tick
+     for "AO4 — government failure" onto an unrelated 14-mark criterion. */
+  withParagraphs({
     id: 'mf-extract-evaluate-soft-drinks-excise-20',
     // 2c-4 external costs of consumption; 2e-2 the health context; 1b-3 imperfect market information
     // (consumers under-value the long-run harm); 2d-3 market vs social optimum, welfare loss.
@@ -342,94 +558,39 @@ export const EXPANSION_ANSWERS = [
     unit: 1,
     sectionNumber: '1.3.5',
     sectionTitle: 'Market Failure',
-    marks: 20,
+    marks: 14,
     stimulusRef: null,
     ao: ['AO1', 'AO2', 'AO3', 'AO4'],
     kind: 'written',
-    type: 'Data Response — Evaluation',
-    commandWord: 'Evaluate',
-    question: 'Evaluate the view that the current 50% excise tax on carbonated soft drinks in the UAE is the most effective way to correct the market failure caused by sugary drink consumption.',
-    // Packet 12.75, E052: the phrase the question hinges on, set in the serif italic. Must be an
-    // exact substring of `question` (validator R8); `question` itself is unchanged.
+    type: 'Data Response — Discussion',
+    commandWord: 'Discuss',
+    question: 'Discuss whether the current 50% excise tax on carbonated soft drinks in the UAE is the most effective way to correct the market failure caused by sugary drink consumption.',
     keyTerm: 'the most effective way',
     markScheme: [
-      { range: 'Evaluate (20)', desc: 'Appendix 6: Requires knowledge, understanding, application, analysis and evaluation. Logical and coherent multi-stage chains of reasoning need to be developed with reference to context where appropriate. The validity and significance of arguments/models and concepts should be considered and supported by relevant chains of reasoning. There should also be a recognition of different viewpoints and/or a critical assessment of the evidence so that informed judgements may be made.' },
-      { range: 'AO1 (4 marks)', desc: 'Knowledge: a negative externality of consumption, information failure, an excise as an indirect tax, and the corrective-tax rule on the externality diagram.' },
-      { range: 'AO2 (4 marks)', desc: 'Application: the extract’s figures used, not decorated — PED -0.6 against the 32% fall, the USD 25 bn and 12.3% health figures, and the regressivity point quantified from them.' },
-      { range: 'AO3 (6 marks)', desc: 'Analysis: multi-stage chains for the tax and against it — inelastic demand, information failure, regressivity, and why a tax on price gives producers no reason to reformulate.' },
-      { range: 'AO4 (6 marks)', desc: 'Evaluation: the evidence critically assessed, each counter-argument weighed rather than listed, government failure in setting the rate, and a conditional judgement that states the criterion it rests on.' },
+      { range: 'Discuss (14)', desc: 'Appendix 6: Requires knowledge, understanding, application, analysis and evaluation. Logical and coherent chains of reasoning need to be developed with reference to context where appropriate. The validity and significance of arguments/models and concepts should be considered and supported by relevant chains of reasoning. There should also be a recognition of different viewpoints and/or a critical assessment of the evidence.' },
+      { range: 'KAA · 8 marks', desc: 'Knowledge, application and analysis, marked in three levels. 1–3: isolated or imprecise knowledge, generic material, no chain of reasoning. 4–6: some knowledge applied to the extract, with chains of reasoning that are begun but not fully developed. 7–8: accurate, precise knowledge integrated with the extract’s figures, in logical multi-stage chains.' },
+      { range: 'Evaluation · 6 marks', desc: 'Marked in three levels. 1–2: generic evaluative comment with no reference to the extract. 3–4: some evaluation, partly reasoned, with some reference to the extract. 5–6: evaluation that recognises different viewpoints and/or is critical of the evidence, supported by a logical chain and by the extract.' },
+      { range: 'Indicative content', desc: 'For the tax: PED -0.6 predicts a fall of about 30%, close to the reported 32%; the chain to the social optimum. Against: inelastic demand leaves most consumption in place; the health figures need testing (time lag, other causes, how much of the cost is external); the tax is regressive; a tax on price rather than sugar gives no reason to reformulate.' },
     ],
-    peel: {
-      point: 'The 50% excise has cut consumption by about what its -0.6 elasticity predicts, but it is not the most effective correction on its own.',
-      evidence: 'Per capita consumption fell roughly 32% over seven years; diabetes prevalence is still 12.3% and linked healthcare costs exceed USD 25 billion a year.',
-      explain: 'With inelastic demand the tax leaves about two-thirds of consumption in place, raises what low-income drinkers spend, and — levied on price rather than sugar — gives producers no reason to reformulate.',
-      link: 'A sugar-based levy, with the revenue offsetting the burden and backed by labelling and education, would correct more of the failure at a lower cost in equity: the tax is necessary but not sufficient.',
-    },
-    answerParagraphs: [
-      {
-        label: 'Introduction',
-        html: 'A <strong>negative externality of consumption</strong> is a cost that falls on third parties when a good is consumed and that is not reflected in its market price, so the social cost of consuming the good is greater than the private cost the consumer pays. <span class="ma-ann ma-ann-blue">K</span> Sugary drinks carry such a cost — Table 1 estimates it at AED 1.20 per litre of carbonated soft drink — alongside an <strong>information failure</strong>: consumers under-value the long-run health costs they will bear themselves. <span class="ma-ann ma-ann-blue">K</span> An excise is an indirect tax that raises the price the consumer pays. The question is not whether the 50% excise works at all but whether it is the <strong>most effective</strong> way to correct the failure, so it has to be weighed against the alternatives as well as against doing nothing. <span class="ma-ann ma-ann-blue">K</span>',
-      },
-      {
-        label: 'The case for the tax',
-        html: 'There is evidence that the tax has worked. Table 1 gives carbonated soft drinks a <strong>price elasticity of demand of -0.6</strong>, so a price rise of up to 50% predicts a fall in quantity demanded of up to about 30% (0.6 × 50%). <span class="ma-ann ma-ann-amber">A</span> The stimulus reports a fall in per capita consumption of roughly <strong>32%</strong> over the seven years after 2017 — close to what the elasticity predicts, and consistent with the critics’ claim that producers have largely passed the tax through to consumers. <span class="ma-ann ma-ann-amber">A</span> The chain is: the excise raises the price the consumer pays, so the private cost of each drink moves closer to its full social cost; consumers move along their demand curve and buy fewer drinks; and consumption moves from the free-market quantity towards the social optimum, shrinking the welfare loss that over-consumption creates. <span class="ma-ann ma-ann-green">An</span> On a diagram, marginal social benefit lies below marginal private benefit by the external cost; the tax shifts supply upwards, and the closer the tax is to AED 1.20 per litre, the closer the new equilibrium lies to the quantity where marginal social benefit equals marginal social cost. <span class="ma-ann ma-ann-purple">D</span>',
-      },
-      {
-        label: 'Evaluation — inelastic demand and the health evidence',
-        html: 'However, a PED of -0.6 also means demand is <strong>inelastic</strong>: the tax changes behaviour less than proportionately, and around two-thirds of the pre-tax volume is still being drunk. <span class="ma-ann ma-ann-green">An</span> Gulf Economic Review argues that the rate is under-correcting, pointing to over <strong>USD 25 billion</strong> a year in healthcare costs linked to obesity and type-2 diabetes and to adult diabetes prevalence of <strong>12.3%</strong>. <span class="ma-ann ma-ann-amber">A</span> That evidence is weaker than it looks. Diabetes prevalence is a stock built up over decades, so seven years of lower consumption would not be expected to move it much yet; obesity and diabetes have many causes besides soft drinks, so not all of the USD 25 billion can be laid at the door of the product being taxed; and the part of that bill paid by drinkers themselves is an internal cost, not an externality — only the part passed to third parties, through pooled insurance premiums for example, justifies a corrective tax. <span class="ma-ann ma-ann-green">An</span> The stronger form of the under-correction argument is therefore about information failure rather than the size of the health bill: a tax set equal to the AED 1.20 external cost corrects the externality, but it does nothing about consumers under-valuing the harm to themselves, and with demand this inelastic a price signal alone moves consumption only a little towards what a fully informed consumer would choose. <span class="ma-ann ma-ann-green">An</span>',
-      },
-      {
-        label: 'Evaluation — the tax is regressive',
-        html: 'Second, the tax is <strong>regressive</strong>, and the extract’s own figures show why. If the 50% is passed through in full, as the critics say it largely has been, and consumption is about 32% lower, spending on soft drinks is roughly 1.5 × 0.68 ≈ 1.02 times its pre-tax level: consumers are paying about the same total as before for about two-thirds of the drinks. <span class="ma-ann ma-ann-amber">A</span> That is the arithmetic of inelastic demand: when PED is below 1 in absolute value, a price rise increases what consumers spend on the good. The same cash sum is a far larger share of a lower-income expatriate worker’s income than of a high earner’s, so the burden falls hardest on the group the critics name. <span class="ma-ann ma-ann-green">An</span> This matters for the judgement: the inelastic demand that limits the fall in consumption is the same thing that makes the tax cost low-income drinkers more, so the weaker the behavioural effect, the heavier the regressive burden. The burden could be offset if the revenue funded healthcare or transfers for those workers, but the extract gives no evidence that it does. <span class="ma-ann ma-ann-green">An</span>',
-      },
-      {
-        label: 'Evaluation — the alternatives',
-        html: 'Third, the tax may not be the most effective instrument because of what it is levied on. The stimulus reports that producers passed the cost through without significant reformulation. A flat 50% excise is charged on the price of a drink, not on its sugar content, so a producer that halves the sugar in a drink pays the same tax as before and has no reason to do it. <span class="ma-ann ma-ann-green">An</span> A tax charged per gram of sugar, or tiered by sugar content as in the UK’s Soft Drinks Industry Levy, would give producers that reason, and a reformulated drink cuts sugar intake without raising the price consumers pay — which also avoids the regressive burden above. <span class="ma-ann ma-ann-green">An</span> Information provision, such as clear sugar labelling and public health education, tackles the information failure directly, but it works slowly and on its own is unlikely to shift consumption as much as a price signal has. Weighed together, the alternatives are complements that repair the tax’s two weaknesses, not replacements for it. <span class="ma-ann ma-ann-green">An</span>',
-      },
-      {
-        label: 'Evaluation — government failure',
-        html: 'Finally, setting the correct rate is itself a source of <strong>government failure</strong>. The rate that corrects the externality equals the marginal external cost, AED 1.20 per litre, but a 50% excise is a percentage of the price: it equals AED 1.20 only if a litre sells for AED 2.40 before tax, and the extract gives no price, so whether the current rate under- or over-corrects cannot be read from the data. The AED 1.20 figure is itself a composite estimate, and a percentage tax charges more on a premium brand than on a cheap one with the same sugar content. Set above the external cost, the tax creates a welfare loss of its own through under-consumption; set below it, the market failure persists. <span class="ma-ann ma-ann-green">An</span>',
-      },
-      {
-        label: 'Conclusion',
-        html: 'Overall, the 50% excise has cut consumption by about as much as its elasticity predicts, so it is doing part of its job, but it is unlikely to be the most effective way to correct the market failure on its own. Its weaknesses follow from the -0.6 elasticity and from what it is levied on: it leaves most consumption in place, it raises what low-income drinkers spend, and, because it is charged on price rather than sugar, it gives producers no reason to reformulate. <span class="ma-ann ma-ann-green">An</span> The judgement therefore turns on design rather than on the tax itself: a sugar-based levy, with the revenue used to offset the burden on lower-income workers and backed by labelling and education, would correct more of the failure at a lower cost in equity than the current flat rate. The tax is <strong>necessary but not sufficient</strong>, and calling it the most effective way would only hold if long-run demand became considerably more elastic than -0.6, so that the price signal alone could carry more of the correction. <span class="ma-ann ma-ann-green">An</span>',
-      },
-    ],
-    annotationLegend: [
-      { code: 'K', label: 'Knowledge', color: 'blue' },
-      { code: 'A', label: 'Application', color: 'amber' },
-      { code: 'An', label: 'Analysis chain', color: 'green' },
-      { code: 'D', label: 'Diagram ref.', color: 'purple' },
-    ],
-    examinerCommentary: 'Full marks, because every evaluative point is weighed rather than listed and the judgement follows from the argument before it. The health figures (USD 25 bn, 12.3%) are tested before they are relied on — time lag, attribution, and how much of the bill is external at all — and the regressivity point is quantified from the extract rather than asserted: a 50% price rise on about two-thirds of the volume leaves spending roughly where it was. The conclusion states the criterion it rests on (the -0.6 elasticity, and a tax levied on price rather than sugar) and the condition that would reverse it. Every figure is taken or derived from the extract; none is invented.',
-    likelyScore: '20 / 20',
-
-    /* IAL 20-mark Evaluate: AO1 4 · AO2 4 · AO3 6 · AO4 6 (the same split the generic 20-mark item
-       above uses), twenty one-mark criteria. The answer text is Question 3 of the md file, word for
-       word — it was re-authored to a 20-mark standard in packet 12.7 (E044), not relabelled. Chips in
-       `answerParagraphs` use the bank's existing four codes; evaluation carries no chip of its own
-       anywhere in the bank, so the AO4 marks are named in the criteria, not in the chips. */
+    peel: null,
+    annotationLegend: [],
+    examinerCommentary: 'Top of both levels. Knowledge is precise and every chain runs through the extract’s figures: the -0.6 elasticity is used to predict the fall and the 32% is set against the prediction, rather than both being quoted. The evaluation recognises the opposing viewpoint fairly and is critical of the evidence — the health figures are sized before they are relied on, and the regressivity point is quantified from the extract. A Discuss does not require the long conditional verdict an Evaluate essay does; the short conclusion here follows from the argument and introduces nothing new.',
+    likelyScore: '14 / 14',
     criteria: [
-      { id: 'c1', band: 'AO1 — knowledge (4 marks)', text: 'Defines a negative externality of consumption: a third-party cost the market price leaves out', marks: 1, seg: 'p1a', segRole: 'earned' },
-      { id: 'c2', band: 'AO1 — knowledge (4 marks)', text: 'Names both sources of this failure: an external cost and imperfect information about the harm', marks: 1, seg: 'p1b', segRole: 'earned' },
-      { id: 'c3', band: 'AO1 — knowledge (4 marks)', text: 'Knows an excise as an indirect tax, and reads "most effective" as a comparison with alternatives', marks: 1, seg: 'p1c', segRole: 'earned' },
-      { id: 'c4', band: 'AO1 — knowledge (4 marks)', text: 'Knows the corrective-tax rule on the diagram: a tax equal to the external cost moves output to MSB = MSC', marks: 1, seg: 'p2d', segRole: 'earned' },
-      { id: 'c5', band: 'AO2 — application (4 marks)', text: 'Uses PED -0.6 to predict the size of the fall a 50% tax should cause', marks: 1, seg: 'p2a', segRole: 'earned' },
-      { id: 'c6', band: 'AO2 — application (4 marks)', text: 'Sets the reported 32% fall against that prediction, and reads what it says about pass-through', marks: 1, seg: 'p2b', segRole: 'earned' },
-      { id: 'c7', band: 'AO2 — application (4 marks)', text: 'Uses the under-correction evidence: USD 25 bn a year and 12.3% diabetes prevalence', marks: 1, seg: 'p3b', segRole: 'earned' },
-      { id: 'c8', band: 'AO2 — application (4 marks)', text: 'Quantifies the regressivity from the extract: 1.5 × 0.68 ≈ 1.02, spending roughly unchanged', marks: 1, seg: 'p4a', segRole: 'earned' },
-      { id: 'c9', band: 'AO3 — analysis (6 marks)', text: 'Chain for the tax: higher price, fewer drinks, consumption moves towards the social optimum, smaller welfare loss', marks: 1, seg: 'p2c', segRole: 'earned' },
-      { id: 'c10', band: 'AO3 — analysis (6 marks)', text: 'Chain on inelastic demand: a less-than-proportionate fall leaves most consumption in place', marks: 1, seg: 'p3a', segRole: 'earned' },
-      { id: 'c11', band: 'AO3 — analysis (6 marks)', text: 'Separates the two failures: a tax at the external cost corrects the externality, not the information failure', marks: 1, seg: 'p3d', segRole: 'earned' },
-      { id: 'c12', band: 'AO3 — analysis (6 marks)', text: 'Chain on regressivity: inelastic demand raises spending, a larger share of a low income', marks: 1, seg: 'p4b', segRole: 'earned' },
-      { id: 'c13', band: 'AO3 — analysis (6 marks)', text: 'Chain on design: a tax on price, not sugar, gives producers no reason to reformulate', marks: 1, seg: 'p5a', segRole: 'earned' },
-      { id: 'c14', band: 'AO3 — analysis (6 marks)', text: 'Chain for the alternative: a sugar-based levy cuts sugar intake without raising the price paid', marks: 1, seg: 'p5b', segRole: 'earned' },
-      { id: 'c15', band: 'AO4 — evaluation (6 marks)', text: 'Critically assesses the health evidence: time lag, other causes, and how much of the cost is external', marks: 1, seg: 'p3c', segRole: 'earned' },
-      { id: 'c16', band: 'AO4 — evaluation (6 marks)', text: 'Weighs the equity–efficiency trade-off: the weaker the behavioural effect, the heavier the burden', marks: 1, seg: 'p4c', segRole: 'earned' },
-      { id: 'c17', band: 'AO4 — evaluation (6 marks)', text: 'Weighs the alternatives and judges them complements to the tax, not replacements', marks: 1, seg: 'p5c', segRole: 'earned' },
-      { id: 'c18', band: 'AO4 — evaluation (6 marks)', text: 'Government failure: shows the extract cannot tell whether 50% under- or over-corrects', marks: 1, seg: 'p6a', segRole: 'earned' },
-      { id: 'c19', band: 'AO4 — evaluation (6 marks)', text: 'Reaches a judgement on "most effective" that follows from the argument', marks: 1, seg: 'p7a', segRole: 'earned' },
-      { id: 'c20', band: 'AO4 — evaluation (6 marks)', text: 'States the criterion the judgement rests on and the condition that would reverse it', marks: 1, seg: 'p7b', segRole: 'earned' },
+      { id: 'k1', band: 'Knowledge, application and analysis (8 marks)', text: 'Defines a negative externality of consumption: a third-party cost the market price leaves out', marks: 1, seg: 'p1a', segRole: 'earned' },
+      { id: 'k2', band: 'Knowledge, application and analysis (8 marks)', text: 'Identifies the second source of failure: consumers under-value the harm to themselves', marks: 1, seg: 'p1b', segRole: 'earned' },
+      { id: 'k3', band: 'Knowledge, application and analysis (8 marks)', text: 'Uses PED -0.6 to predict the fall a 50% tax should cause', marks: 1, seg: 'p2a', segRole: 'earned' },
+      { id: 'k4', band: 'Knowledge, application and analysis (8 marks)', text: 'Sets the reported 32% fall against that prediction', marks: 1, seg: 'p2b', segRole: 'earned' },
+      { id: 'k5', band: 'Knowledge, application and analysis (8 marks)', text: 'Chain: higher price, fewer drinks, consumption moves towards the social optimum, a smaller welfare loss', marks: 1, seg: 'p2c', segRole: 'earned' },
+      { id: 'k6', band: 'Knowledge, application and analysis (8 marks)', text: 'Knows the corrective-tax rule on the diagram: MSB below MPB, and a tax near AED 1.20 per litre moves output to MSB = MSC', marks: 1, seg: 'p2d', segRole: 'earned' },
+      { id: 'k7', band: 'Knowledge, application and analysis (8 marks)', text: 'Quantifies the regressivity from the extract: 1.5 × 0.68 ≈ 1.02, spending roughly unchanged', marks: 1, seg: 'p4a', segRole: 'earned' },
+      { id: 'k8', band: 'Knowledge, application and analysis (8 marks)', text: 'Chain on design: a tax on price, not sugar, gives producers no reason to reformulate', marks: 1, seg: 'p5a', segRole: 'earned' },
+      { id: 'e1', band: 'Evaluation (6 marks)', text: 'Reads the same elasticity the other way: demand is inelastic, so most consumption stays', marks: 1, seg: 'p3a', segRole: 'earned' },
+      { id: 'e2', band: 'Evaluation (6 marks)', text: 'Is critical of the health evidence: time lag, other causes, and how much of the cost is external', marks: 1, seg: 'p3b', segRole: 'earned' },
+      { id: 'e3', band: 'Evaluation (6 marks)', text: 'Separates the two failures: a tax at the external cost does not correct the information failure', marks: 1, seg: 'p3c', segRole: 'earned' },
+      { id: 'e4', band: 'Evaluation (6 marks)', text: 'Weighs equity against efficiency: the weaker the behavioural effect, the heavier the regressive burden', marks: 1, seg: 'p4b', segRole: 'earned' },
+      { id: 'e5', band: 'Evaluation (6 marks)', text: 'Weighs the alternative: a sugar-based levy repairs both weaknesses, a complement rather than a replacement', marks: 1, seg: 'p5b', segRole: 'earned' },
+      { id: 'e6', band: 'Evaluation (6 marks)', text: 'Concludes on "most effective" from the argument, recognising the viewpoint on each side', marks: 1, seg: 'p6a', segRole: 'earned' },
     ],
     script: [
       {
@@ -437,9 +598,8 @@ export const EXPANSION_ANSWERS = [
         label: 'Introduction',
         aos: ['AO1'],
         segments: [
-          { id: 'p1a', html: 'A <strong>negative externality of consumption</strong> is a cost that falls on third parties when a good is consumed and that is not reflected in its market price, so the social cost of consuming the good is greater than the private cost the consumer pays.', note: 'Knowledge: the definition, with both clauses — who bears the cost and why the price misses it. It sets up the whole essay: a tax is only corrective if there is a cost the price leaves out.' },
-          { id: 'p1b', html: 'Sugary drinks carry such a cost — Table 1 estimates it at AED 1.20 per litre of carbonated soft drink — alongside an <strong>information failure</strong>: consumers under-value the long-run health costs they will bear themselves.', note: 'Knowledge: two sources of market failure, not one. The distinction pays off in the third paragraph, where it decides what a tax can and cannot correct.' },
-          { id: 'p1c', html: 'An excise is an indirect tax that raises the price the consumer pays. The question is not whether the 50% excise works at all but whether it is the <strong>most effective</strong> way to correct the failure, so it has to be weighed against the alternatives as well as against doing nothing.', note: 'Knowledge, and a reading of the question. "Most effective" is a comparison; an essay that only asks whether the tax works has answered an easier question than the one set.' },
+          { id: 'p1a', html: 'A <strong>negative externality of consumption</strong> is a cost that falls on third parties when a good is consumed and that is not reflected in its market price, so the social cost of consuming the good is greater than the private cost the consumer pays.', note: 'Knowledge: the definition, with both clauses. A tax is only corrective if there is a cost the price leaves out.' },
+          { id: 'p1b', html: 'Sugary drinks carry such a cost — Table 1 estimates it at AED 1.20 per litre of carbonated soft drink — alongside an <strong>information failure</strong>: consumers under-value the long-run health costs they will bear themselves.', note: 'Knowledge: two sources of market failure, not one. The distinction decides, in the third paragraph, what a tax can and cannot correct.' },
         ],
       },
       {
@@ -448,63 +608,52 @@ export const EXPANSION_ANSWERS = [
         aos: ['AO1', 'AO2', 'AO3'],
         segments: [
           { id: 'p2a', html: 'There is evidence that the tax has worked. Table 1 gives carbonated soft drinks a <strong>price elasticity of demand of -0.6</strong>, so a price rise of up to 50% predicts a fall in quantity demanded of up to about 30% (0.6 × 50%).', note: 'Application: the elasticity used to make a prediction, which turns the next figure into a test rather than a quotation.' },
-          { id: 'p2b', html: 'The stimulus reports a fall in per capita consumption of roughly <strong>32%</strong> over the seven years after 2017 — close to what the elasticity predicts, and consistent with the critics’ claim that producers have largely passed the tax through to consumers.', note: 'Application: the 32% set against the prediction. Linking it to pass-through uses a second part of the extract to explain the first.' },
+          { id: 'p2b', html: 'The stimulus reports a fall in per capita consumption of roughly <strong>32%</strong> over the seven years after 2017 — close to what the elasticity predicts.', note: 'Application: the 32% set against the prediction.' },
           { id: 'p2c', html: 'The chain is: the excise raises the price the consumer pays, so the private cost of each drink moves closer to its full social cost; consumers move along their demand curve and buy fewer drinks; and consumption moves from the free-market quantity towards the social optimum, shrinking the welfare loss that over-consumption creates.', note: 'Analysis: a multi-stage chain, each step causing the next, ending at the welfare loss rather than at "people drink less".' },
-          { id: 'p2d', html: 'On a diagram, marginal social benefit lies below marginal private benefit by the external cost; the tax shifts supply upwards, and the closer the tax is to AED 1.20 per litre, the closer the new equilibrium lies to the quantity where marginal social benefit equals marginal social cost.', note: 'Knowledge of the corrective-tax rule, on the diagram the data-response page names (MPB, MSB, MPC = MSC). It also sets up the government-failure paragraph: the rule needs the external cost to be known.' },
+          { id: 'p2d', html: 'On a diagram, marginal social benefit lies below marginal private benefit by the external cost, and the closer the tax is to AED 1.20 per litre, the closer the new equilibrium lies to the quantity where marginal social benefit equals marginal social cost.', note: 'Knowledge of the corrective-tax rule on the diagram the data-response page names (MPB, MSB, MPC = MSC).' },
         ],
       },
       {
         id: 'p3',
-        label: 'Evaluation — inelastic demand and the health evidence',
-        aos: ['AO2', 'AO3', 'AO4'],
+        label: 'Against — inelastic demand and the health evidence',
+        aos: ['AO3', 'AO4'],
         segments: [
-          { id: 'p3a', html: 'However, a PED of -0.6 also means demand is <strong>inelastic</strong>: the tax changes behaviour less than proportionately, and around two-thirds of the pre-tax volume is still being drunk.', note: 'Analysis: the same figure read the other way. Using one number on both sides of the argument is what Appendix 6 means by considering the validity and significance of an argument.' },
-          { id: 'p3b', html: 'Gulf Economic Review argues that the rate is under-correcting, pointing to over <strong>USD 25 billion</strong> a year in healthcare costs linked to obesity and type-2 diabetes and to adult diabetes prevalence of <strong>12.3%</strong>.', note: 'Application: the extract’s case against the tax, stated fairly before it is tested.' },
-          { id: 'p3c', html: 'That evidence is weaker than it looks. Diabetes prevalence is a stock built up over decades, so seven years of lower consumption would not be expected to move it much yet; obesity and diabetes have many causes besides soft drinks, so not all of the USD 25 billion can be laid at the door of the product being taxed; and the part of that bill paid by drinkers themselves is an internal cost, not an externality — only the part passed to third parties, through pooled insurance premiums for example, justifies a corrective tax.', note: 'Evaluation: a critical assessment of the evidence, on three separate grounds. The figure is not dismissed, it is sized — the move that separates weighing from listing.' },
-          { id: 'p3d', html: 'The stronger form of the under-correction argument is therefore about information failure rather than the size of the health bill: a tax set equal to the AED 1.20 external cost corrects the externality, but it does nothing about consumers under-valuing the harm to themselves, and with demand this inelastic a price signal alone moves consumption only a little towards what a fully informed consumer would choose.', note: 'Analysis: the two failures from the introduction pulled apart. It explains why a correctly set tax can still leave the outcome short, which is the argument the think-tank’s figures were reaching for.' },
+          { id: 'p3a', html: 'However, a PED of -0.6 also means demand is <strong>inelastic</strong>: the tax changes behaviour less than proportionately, and around two-thirds of the pre-tax volume is still being drunk.', note: 'Evaluation: the same figure read the other way — the validity of the case for the tax considered, not a new fact.' },
+          { id: 'p3b', html: 'Gulf Economic Review argues that the rate is under-correcting, pointing to over <strong>USD 25 billion</strong> a year in healthcare costs and adult diabetes prevalence of <strong>12.3%</strong>, but that evidence is weaker than it looks: diabetes prevalence is built up over decades, so seven years of lower consumption would not move it much yet; obesity and diabetes have many causes besides soft drinks; and the part of the bill that drinkers pay themselves is an internal cost, not an externality.', note: 'Evaluation: a critical assessment of the evidence on three grounds. The figure is sized, not dismissed — the move that separates weighing from listing.' },
+          { id: 'p3c', html: 'The stronger form of the under-correction argument is about information failure: a tax equal to the AED 1.20 external cost corrects the externality, but it does nothing about consumers under-valuing the harm to themselves.', note: 'Evaluation: the two failures from the introduction pulled apart, which is why a correctly set tax can still leave the outcome short.' },
         ],
       },
       {
         id: 'p4',
-        label: 'Evaluation — the tax is regressive',
+        label: 'Against — the tax is regressive',
         aos: ['AO2', 'AO3', 'AO4'],
         segments: [
-          { id: 'p4a', html: 'Second, the tax is <strong>regressive</strong>, and the extract’s own figures show why. If the 50% is passed through in full, as the critics say it largely has been, and consumption is about 32% lower, spending on soft drinks is roughly 1.5 × 0.68 ≈ 1.02 times its pre-tax level: consumers are paying about the same total as before for about two-thirds of the drinks.', note: 'Application: regressivity quantified from the extract rather than asserted. The arithmetic uses only the 50% rate and the 32% fall, and says "roughly" because the 32% is spread over seven years.' },
-          { id: 'p4b', html: 'That is the arithmetic of inelastic demand: when PED is below 1 in absolute value, a price rise increases what consumers spend on the good. The same cash sum is a far larger share of a lower-income expatriate worker’s income than of a high earner’s, so the burden falls hardest on the group the critics name.', note: 'Analysis: why the arithmetic makes the tax regressive, carried through to the people the extract names.' },
-          { id: 'p4c', html: 'This matters for the judgement: the inelastic demand that limits the fall in consumption is the same thing that makes the tax cost low-income drinkers more, so the weaker the behavioural effect, the heavier the regressive burden. The burden could be offset if the revenue funded healthcare or transfers for those workers, but the extract gives no evidence that it does.', note: 'Evaluation: the equity–efficiency trade-off weighed, not named. The two weaknesses are shown to have one cause, and the offset is made conditional on something the extract does not show.' },
+          { id: 'p4a', html: 'The tax is also <strong>regressive</strong>. If the 50% is passed through in full, as the critics say it largely has been, and consumption is about 32% lower, spending on soft drinks is roughly 1.5 × 0.68 ≈ 1.02 times its pre-tax level: consumers pay about the same total for about two-thirds of the drinks, and that sum is a far larger share of a lower-income expatriate worker’s income than of a high earner’s.', note: 'Application: regressivity quantified from the extract rather than asserted, using only the 50% rate and the 32% fall.' },
+          { id: 'p4b', html: 'The inelastic demand that limits the fall in consumption is the same thing that makes the tax cost low-income drinkers more, so the weaker the behavioural effect, the heavier the regressive burden.', note: 'Evaluation: the equity–efficiency trade-off weighed, not named — the two weaknesses shown to have one cause.' },
         ],
       },
       {
         id: 'p5',
-        label: 'Evaluation — the alternatives',
+        label: 'Against — what the tax is levied on',
         aos: ['AO3', 'AO4'],
         segments: [
-          { id: 'p5a', html: 'Third, the tax may not be the most effective instrument because of what it is levied on. The stimulus reports that producers passed the cost through without significant reformulation. A flat 50% excise is charged on the price of a drink, not on its sugar content, so a producer that halves the sugar in a drink pays the same tax as before and has no reason to do it.', note: 'Analysis: the extract’s "without significant reformulation" explained by the design of the tax, not just reported.' },
-          { id: 'p5b', html: 'A tax charged per gram of sugar, or tiered by sugar content as in the UK’s Soft Drinks Industry Levy, would give producers that reason, and a reformulated drink cuts sugar intake without raising the price consumers pay — which also avoids the regressive burden above.', note: 'Analysis: the alternative carried through its own chain, and tied back to the weakness in the paragraph before.' },
-          { id: 'p5c', html: 'Information provision, such as clear sugar labelling and public health education, tackles the information failure directly, but it works slowly and on its own is unlikely to shift consumption as much as a price signal has. Weighed together, the alternatives are complements that repair the tax’s two weaknesses, not replacements for it.', note: 'Evaluation: the alternatives weighed against the tax and against each other, ending in a verdict on them rather than a list.' },
+          { id: 'p5a', html: 'Finally, the stimulus reports that producers passed the cost through without significant reformulation. A flat 50% excise is charged on the price of a drink, not on its sugar content, so a producer that halves the sugar pays the same tax and has no reason to do it.', note: 'Analysis: the extract’s "without significant reformulation" explained by the design of the tax, not just reported.' },
+          { id: 'p5b', html: 'A tax charged per gram of sugar would give producers that reason, and a reformulated drink cuts sugar intake without raising the price consumers pay — easing the regressive burden too — so it would repair the current tax’s weaknesses rather than replace it.', note: 'Evaluation: the alternative weighed against the tax and tied back to the two weaknesses above.' },
         ],
       },
       {
         id: 'p6',
-        label: 'Evaluation — government failure',
-        aos: ['AO4'],
-        segments: [
-          { id: 'p6a', html: 'Finally, setting the correct rate is itself a source of <strong>government failure</strong>. The rate that corrects the externality equals the marginal external cost, AED 1.20 per litre, but a 50% excise is a percentage of the price: it equals AED 1.20 only if a litre sells for AED 2.40 before tax, and the extract gives no price, so whether the current rate under- or over-corrects cannot be read from the data. The AED 1.20 figure is itself a composite estimate, and a percentage tax charges more on a premium brand than on a cheap one with the same sugar content. Set above the external cost, the tax creates a welfare loss of its own through under-consumption; set below it, the market failure persists.', note: 'Evaluation: government failure made specific to this tax. It also answers the think-tank directly — "under-correcting" cannot be shown from the rate, only argued from other evidence.' },
-        ],
-      },
-      {
-        id: 'p7',
         label: 'Conclusion',
         aos: ['AO4'],
         segments: [
-          { id: 'p7a', html: 'Overall, the 50% excise has cut consumption by about as much as its elasticity predicts, so it is doing part of its job, but it is unlikely to be the most effective way to correct the market failure on its own. Its weaknesses follow from the -0.6 elasticity and from what it is levied on: it leaves most consumption in place, it raises what low-income drinkers spend, and, because it is charged on price rather than sugar, it gives producers no reason to reformulate.', note: 'Evaluation: a judgement on the question as set — "most effective" — drawn from the paragraphs above. Nothing new is introduced here.' },
-          { id: 'p7b', html: 'The judgement therefore turns on design rather than on the tax itself: a sugar-based levy, with the revenue used to offset the burden on lower-income workers and backed by labelling and education, would correct more of the failure at a lower cost in equity than the current flat rate. The tax is <strong>necessary but not sufficient</strong>, and calling it the most effective way would only hold if long-run demand became considerably more elastic than -0.6, so that the price signal alone could carry more of the correction.', note: 'Evaluation: the criterion the judgement rests on, and the condition that would reverse it. A conditional verdict of this kind is what Appendix 6 means by an informed judgement.' },
+          { id: 'p6a', html: 'The excise has cut consumption by about as much as its elasticity predicts, so the view that it works has support, but the extract does not show it to be the most effective way: with demand this inelastic it leaves most consumption in place and costs low-income drinkers most, and because it is levied on price rather than sugar it gives producers no reason to reformulate.', note: 'Evaluation: both viewpoints recognised in one sentence, and the answer to "most effective" drawn from the paragraphs above. Nothing new is introduced.' },
         ],
       },
     ],
     stimulus: 'econ-u1-market-failure',
-    minutes: 26,
-  },
+    minutes: 18,
+    paper: { section: 'C', kind: 'data_question', part: 'e' },
+  }),
 
   // ── 1.3.5 Market Failure — 8 marks ──
   {
@@ -666,7 +815,7 @@ export const EXPANSION_ANSWERS = [
     ],
     peel: {
       point: 'Government intervention can correct externalities, provide public goods, and address information failure.',
-      evidence: 'E.g. the UK\'s sugar tax reduced sugary drink consumption by 34% within two years.',
+      evidence: 'E.g. the UK\'s sugar tax was followed by a fall of about a third in the sugar sold in the drinks it covers, mostly through reformulation.',
       explain: 'Intervention internalises external costs (taxes), funds provision of public goods (taxation), and corrects information asymmetry (regulation, labelling).',
       link: 'However, intervention is not always necessary or effective — private solutions (Coase theorem) may work, and government failure can make outcomes worse.',
     },
@@ -677,7 +826,7 @@ export const EXPANSION_ANSWERS = [
       },
       {
         label: 'Argument 1 — Intervention is necessary',
-        html: 'In many cases, government intervention is essential because the market <strong>cannot self-correct</strong>. <span class="ma-ann ma-ann-green">An</span> <strong>Public goods</strong> such as street lighting and national defence are non-excludable and non-rivalrous — the free rider problem means no private firm can profitably supply them. Only the state can fund provision through taxation. <span class="ma-ann ma-ann-blue">K</span> Similarly, <strong>negative externalities</strong> require intervention because firms have no incentive to account for external costs. The UK\'s <strong>sugar tax</strong> (Soft Drinks Industry Levy), introduced in 2018, successfully reduced sugary drink consumption by 34% and incentivised manufacturers to reformulate products. <span class="ma-ann ma-ann-amber">A</span> Without this intervention, the overconsumption of sugar — and its associated NHS costs — would have continued uncorrected. <span class="ma-ann ma-ann-green">An</span>',
+        html: 'In many cases, government intervention is essential because the market <strong>cannot self-correct</strong>. <span class="ma-ann ma-ann-green">An</span> <strong>Public goods</strong> such as street lighting and national defence are non-excludable and non-rivalrous — the free rider problem means no private firm can profitably supply them. Only the state can fund provision through taxation. <span class="ma-ann ma-ann-blue">K</span> Similarly, <strong>negative externalities</strong> require intervention because firms have no incentive to account for external costs. The UK\'s <strong>sugar tax</strong> (Soft Drinks Industry Levy), announced in 2016 and introduced in 2018, was followed by a fall of about a third in the sugar sold in the drinks it covers, mainly because manufacturers reformulated their products to pay less of it. <span class="ma-ann ma-ann-amber">A</span> Without this intervention, the overconsumption of sugar — and its associated NHS costs — would have continued uncorrected. <span class="ma-ann ma-ann-green">An</span>',
       },
       {
         label: 'Argument 2 — Intervention is not always necessary',
@@ -745,7 +894,7 @@ export const EXPANSION_ANSWERS = [
         segments: [
           { id: 'p2a', html: 'In many cases, government intervention is essential because the market <strong>cannot self-correct</strong>.', note: 'The claim the paragraph then has to earn. On its own it is worth nothing.' },
           { id: 'p2b', html: '<strong>Public goods</strong> such as street lighting and national defence are non-excludable and non-rivalrous — the free rider problem means no private firm can profitably supply them. Only the state can fund provision through taxation.', note: 'Knowledge, and the strongest case for "always": with a pure public good there is no private route at all.' },
-          { id: 'p2c', html: 'The UK&rsquo;s <strong>sugar tax</strong> (Soft Drinks Industry Levy), introduced in 2018, reduced sugary drink consumption by 34% and incentivised manufacturers to reformulate products.', note: 'Two application marks, because it is a named policy with a measured effect and a second-order effect. An example with no number earns one at most.' },
+          { id: 'p2c', html: 'The UK&rsquo;s <strong>sugar tax</strong> (Soft Drinks Industry Levy), announced in 2016 and introduced in 2018, was followed by a fall of about a third in the sugar sold in the drinks it covers, mainly because manufacturers reformulated their products to pay less of it.', note: 'Two application marks, because it is a named policy with a measured effect and a second-order effect. An example with no number earns one at most.' },
           { id: 'p2d', html: 'Without this intervention, the overconsumption of sugar — and its associated health-system costs — would have continued uncorrected.', note: 'The counterfactual. It is what turns an example into an argument, and most scripts leave it out.' },
         ],
       },
@@ -785,7 +934,402 @@ export const EXPANSION_ANSWERS = [
     // No `stimulus`: this answer applies the UK Soft Drinks Industry Levy, not the attached extract,
     // so packet 12.7 detaches it (DECISIONS 2026-09-25). The extract's own questions carry it instead.
     minutes: 26,
+    /* Packet 12.8, E060: one of Section D's two essays, now opening with a short quoted context as
+       every WEC11 essay does. Its marking is untouched (AO1 4 · AO2 4 · AO3 6 · AO4 6, packet 12.6).
+       One factual correction, found by reading the whole entry (rule 4): it said the Soft Drinks
+       Industry Levy "reduced sugary drink consumption by 34%". What fell by about a third was the
+       SUGAR sold in the drinks the levy covers, mostly through reformulation; the volume of those
+       drinks sold did not fall by a third. The answer paragraph, the p2c segment and the PEEL
+       evidence now say that; the two application marks c5 awards (a named policy with a measured
+       effect and a second-order effect) are still earned by the corrected sentence. */
+    paper: {
+      section: 'D',
+      kind: 'essay',
+      context: '‘Many governments now tax sugary drinks, pay for public goods such as flood defences and street lighting, and require financial firms to disclose their fees. Critics argue that some of these interventions cost more than the market failures they were meant to correct.’',
+    },
   },
+
+  /* ── 1.3.5 Market Failure — Section B, short answers. Packet 12.8, E059 (four new). ────────────
+     The fifth is `neg-externality-4`, in data/modelAnswersData.js. Each opens with its own short
+     context (`paper.context`), a sentence or a small table, as the WEC11 SAM's Section B does. They
+     are aimed at 1.3.5 leaves the data question does not examine: external benefits and their
+     diagram (2c-2, 2d-1), private/external/social benefits (2a), public and private goods (3a),
+     and information gaps (4a, 4c). Marked as the SAM marks its short answers; see the note at the
+     top of the 1.3.5 block. */
+
+  // ── Section B · Draw, 4 marks ──
+  withParagraphs({
+    id: 'mf-short-draw-vaccination-welfare-loss-4',
+    // 2c-2 external benefits of consumption; 2d-1 diagram of the external benefits from
+    // consumption; 2d-3 market vs social optimum and the welfare loss area; 2e-2 the health context.
+    specItems: ['ECON-1.3.5-2c-2', 'ECON-1.3.5-2d-1', 'ECON-1.3.5-2d-3', 'ECON-1.3.5-2e-2'],
+    subject: 'economics',
+    unit: 1,
+    sectionNumber: '1.3.5',
+    sectionTitle: 'Market Failure',
+    marks: 4,
+    stimulusRef: null,
+    kind: 'draw',
+    type: 'Short Answer — Diagram',
+    commandWord: 'Draw',
+    question: 'Draw a diagram to illustrate the welfare loss that arises if measles vaccinations are left to the free market.',
+    keyTerm: 'welfare loss',
+    markScheme: [
+      { range: 'Draw (4)', desc: 'Appendix 6: Assesses quantitative skills. Requires students to construct an accurately labelled diagram, using quantitative skills. Students may be required to decide on a type of diagram, or the type required may be stated.' },
+      { range: 'Knowledge (1 mark)', desc: 'Correctly labelled axes, marginal private benefit and marginal private cost (equal to marginal social cost), and the free-market equilibrium where they meet.' },
+      { range: 'Application (3 marks)', desc: 'Marginal social benefit drawn above marginal private benefit; the social optimum where MSB = MSC, at a larger quantity than the market’s; the welfare loss triangle between the two quantities, between MSB and MSC.' },
+    ],
+    peel: null,
+    annotationLegend: [],
+    examinerCommentary: 'All four marks are on the diagram; the sentences under it say what each mark is for and are not needed in the exam. The commonest loss is drawing MSB below MPB — that is the diagram for an external cost of consumption, and it puts the welfare loss on the wrong side of the market quantity. The next is shading the whole area between the curves instead of the triangle between the market quantity and the social optimum.',
+    likelyScore: '4 / 4',
+    diagram: {
+      src: '/diagrams/positive-externality-consumption.svg',
+      alt: 'Positive externality in consumption: MSB lies above MPB, MPC equals MSC, the free-market quantity Q1 is below the social optimum Q*, and the welfare loss is the triangle between Q1 and Q*.',
+      width: 540,
+      height: 400,
+    },
+    criteria: [
+      { id: 'c1', band: 'Knowledge (1 mark)', text: 'Labelled axes, MPB and MPC = MSC, and the free-market quantity where MPB meets MPC', marks: 1, seg: 'p1a', segRole: 'earned' },
+      { id: 'c2', band: 'Application (3 marks)', text: 'MSB drawn above MPB, the gap being the external benefit to people protected by others’ vaccination', marks: 1, seg: 'p1b', segRole: 'earned' },
+      { id: 'c3', band: 'Application (3 marks)', text: 'The social optimum Q* where MSB = MSC, at a larger quantity than the market’s Q1', marks: 1, seg: 'p1c', segRole: 'earned' },
+      { id: 'c4', band: 'Application (3 marks)', text: 'The welfare loss triangle between Q1 and Q*, bounded by MSB above and MSC below', marks: 1, seg: 'p1d', segRole: 'earned' },
+    ],
+    script: [
+      {
+        id: 'p1',
+        label: 'What the diagram shows',
+        aos: [],
+        segments: [
+          { id: 'p1a', html: 'The vertical axis is price, cost and benefit; the horizontal axis is the quantity of vaccinations. Marginal private benefit (<strong>MPB</strong>) slopes down and marginal private cost, which equals marginal social cost (<strong>MPC = MSC</strong>), slopes up; the free market settles where they cross, at quantity <strong>Q1</strong>.', note: 'The knowledge mark: the market as the family that buys a vaccination sees it. MPC = MSC because nothing in the context says producing the vaccine harms anyone.' },
+          { id: 'p1b', html: 'Marginal social benefit (<strong>MSB</strong>) lies above MPB: the vertical gap is the external benefit to people protected by someone else’s vaccination, such as babies too young to be vaccinated.', note: 'The context’s external benefit, drawn. MSB above MPB is what makes this a positive externality of consumption.' },
+          { id: 'p1c', html: 'The social optimum is where MSB = MSC, at <strong>Q*</strong>, to the right of Q1: left to the free market, too few vaccinations are bought.', note: 'Both quantities marked, in the right order. Q* to the right of Q1 is the under-consumption the question is about.' },
+          { id: 'p1d', html: 'The <strong>welfare loss</strong> is the triangle between Q1 and Q*, bounded above by MSB and below by MSC: the vaccinations whose social benefit exceeds their cost but which the market does not provide.', note: 'The mark the question names. Only the triangle between the two quantities is lost; the area to the left of Q1 is benefit the market does deliver.' },
+        ],
+      },
+    ],
+    minutes: 5,
+    paper: {
+      section: 'B',
+      kind: 'short_answer',
+      context: 'Measles spreads easily from person to person. A child who is vaccinated against it is protected, and so are the people around them who cannot be vaccinated, such as babies too young for the vaccine.',
+    },
+  }),
+
+  // ── Section B · Calculate, 4 marks ──
+  withParagraphs({
+    id: 'mf-short-calculate-graduate-social-benefit-4',
+    // 2a "private benefits, external benefits and social benefits"; 2c-2 external benefits of
+    // consumption; 2e-3 the education context.
+    specItems: ['ECON-1.3.5-2a', 'ECON-1.3.5-2c-2', 'ECON-1.3.5-2e-3'],
+    subject: 'economics',
+    unit: 1,
+    sectionNumber: '1.3.5',
+    sectionTitle: 'Market Failure',
+    marks: 4,
+    stimulusRef: null,
+    kind: 'quant',
+    type: 'Short Answer — Calculation',
+    commandWord: 'Calculate',
+    question: 'Using the table, calculate the social benefit of one extra graduate per year, and the external benefit as a percentage of the social benefit.',
+    keyTerm: 'social benefit',
+    markScheme: [
+      { range: 'Calculate (4)', desc: 'Appendix 6: Assesses quantitative skills. Requires a calculation involving several stages based on given data and may involve the use of a prescribed diagram or formula. Calculators may be used. Students are advised to show workings.' },
+      { range: 'Knowledge (1 mark)', desc: 'Social benefit = private benefit + external benefit.' },
+      { range: 'Application (3 marks)', desc: 'Social benefit of USD 16,500; external benefit over social benefit (4,500 ÷ 16,500 × 100); 27.3%. A correct final answer with no working still earns the three.' },
+    ],
+    peel: null,
+    annotationLegend: [],
+    examinerCommentary: 'Full marks with the working shown. The knowledge mark is for the relationship, which is also what tells you which two figures to add. The common slip is dividing by the private benefit instead of the social benefit (4,500 ÷ 12,000 = 37.5%), which answers a different question.',
+    likelyScore: '4 / 4',
+    criteria: [
+      { id: 'c1', band: 'Knowledge (1 mark)', text: 'States that social benefit is private benefit plus external benefit', marks: 1, seg: 'p1a', segRole: 'earned' },
+      { id: 'c2', band: 'Application (3 marks)', text: 'Social benefit: 12,000 + 4,500 = USD 16,500 per year', marks: 1, seg: 'p2a', segRole: 'earned' },
+      { id: 'c3', band: 'Application (3 marks)', text: 'Sets the external benefit over the social benefit: 4,500 ÷ 16,500 × 100', marks: 1, seg: 'p2b', segRole: 'earned' },
+      { id: 'c4', band: 'Application (3 marks)', text: 'External benefit is 27.3% of the social benefit', marks: 1, seg: 'p2c', segRole: 'earned' },
+    ],
+    script: [
+      {
+        id: 'p1',
+        label: 'The relationship',
+        aos: [],
+        segments: [
+          { id: 'p1a', html: '<strong>Social benefit</strong> = private benefit + external benefit. The graduate’s higher earnings are the private benefit; the productivity gain received by employers and co-workers is the external benefit.', note: 'The knowledge mark, and the reason for each figure’s place in the sum.' },
+        ],
+      },
+      {
+        id: 'p2',
+        label: 'The working',
+        aos: [],
+        segments: [
+          { id: 'p2a', html: 'Social benefit = 12,000 + 4,500 = <strong>USD 16,500</strong> per graduate per year.', note: 'First application mark: the first answer the question asks for.' },
+          { id: 'p2b', html: 'External benefit as a percentage of social benefit = 4,500 ÷ 16,500 × 100', note: 'Second application mark: the right denominator. Dividing by 12,000 gives the external benefit as a share of the private benefit, which is not what was asked.' },
+          { id: 'p2c', html: '= <strong>27.3%</strong> (to one decimal place).', note: 'Third application mark. 27% is accepted; 0.273 without the percentage sign is not the form asked for.' },
+        ],
+      },
+    ],
+    minutes: 5,
+    paper: {
+      section: 'B',
+      kind: 'short_answer',
+      context: 'Economists in one country estimate the yearly benefits of one extra university graduate, averaged over the graduate’s working life.\n\n| Benefit per graduate per year | USD |\n|---|---|\n| Higher earnings received by the graduate | 12,000 |\n| Higher productivity of the people the graduate works with, received by their employers and co-workers | 4,500 |',
+    },
+  }),
+
+  // ── Section B · Explain, 4 marks — public goods ──
+  withParagraphs({
+    id: 'mf-short-explain-sea-wall-public-good-4',
+    // 3a the distinction between public and private goods; 3a-1 private goods: rival and
+    // excludable; 3a-2 public goods: non-rival and non-excludable.
+    specItems: ['ECON-1.3.5-3a-1', 'ECON-1.3.5-3a-2'],
+    subject: 'economics',
+    unit: 1,
+    sectionNumber: '1.3.5',
+    sectionTitle: 'Market Failure',
+    marks: 4,
+    stimulusRef: null,
+    ao: ['AO1', 'AO2'],
+    kind: 'written',
+    type: 'Short Answer — Knowledge & Application',
+    commandWord: 'Explain',
+    question: 'Explain why the sea wall is a public good but the sandbags are not.',
+    keyTerm: 'public good',
+    markScheme: [
+      { range: 'Explain (4)', desc: 'Appendix 6: When asking students to explain a term or the characteristics, this requires knowledge, understanding and application.' },
+      { range: 'AO1 (2 marks)', desc: 'Knowledge: a public good is non-rival and non-excludable; a private good is rival and excludable.' },
+      { range: 'AO2 (2 marks)', desc: 'Application: both characteristics shown on the sea wall, and both shown missing from the sandbags.' },
+    ],
+    peel: null,
+    annotationLegend: [],
+    examinerCommentary: 'Full marks: both characteristics are defined, and each is then shown on the context rather than restated. "The sea wall benefits everyone" earns nothing on its own — the marks are for saying why protecting one more house costs its neighbours nothing, and why a household that does not pay cannot be left out.',
+    likelyScore: '4 / 4',
+    criteria: [
+      { id: 'c1', band: 'AO1 — knowledge (2 marks)', text: 'Defines a public good as non-rival and non-excludable', marks: 1, seg: 'p1a', segRole: 'earned' },
+      { id: 'c2', band: 'AO1 — knowledge (2 marks)', text: 'Defines a private good as rival and excludable', marks: 1, seg: 'p1b', segRole: 'earned' },
+      { id: 'c3', band: 'AO2 — application (2 marks)', text: 'Shows both characteristics on the sea wall', marks: 1, seg: 'p2a', segRole: 'earned' },
+      { id: 'c4', band: 'AO2 — application (2 marks)', text: 'Shows the sandbags are rival and excludable', marks: 1, seg: 'p2b', segRole: 'earned' },
+    ],
+    script: [
+      {
+        id: 'p1',
+        label: 'The two kinds of good',
+        aos: ['AO1'],
+        segments: [
+          { id: 'p1a', html: 'A <strong>public good</strong> is non-rival — one person’s use does not reduce what is left for others — and non-excludable — people who do not pay cannot be stopped from benefiting.', note: 'The first knowledge mark: both characteristics, each with what it means.' },
+          { id: 'p1b', html: 'A <strong>private good</strong> is the opposite: rival and excludable.', note: 'The second knowledge mark. The question asks why the sandbags are NOT a public good, so the contrast is part of the answer.' },
+        ],
+      },
+      {
+        id: 'p2',
+        label: 'The context',
+        aos: ['AO2'],
+        segments: [
+          { id: 'p2a', html: 'The sea wall is both: protecting one more house behind it takes no protection away from the houses next to it, and a household that refuses to pay cannot be left unprotected while the houses on either side are kept dry.', note: 'Application: both characteristics shown on the wall, in terms of the houses behind it.' },
+          { id: 'p2b', html: 'A sandbag is rival — a bag piled against one door cannot also protect the house next door — and excludable, because the shop sells it only to people who pay for it, so it is a private good.', note: 'Application: the same two tests applied to the sandbags, with the opposite result.' },
+        ],
+      },
+    ],
+    minutes: 5,
+    paper: {
+      section: 'B',
+      kind: 'short_answer',
+      context: 'A coastal city is building a sea wall that will protect every home and business behind it from flooding. Hardware shops in the city also sell sandbags, which a household can pile against its own door.',
+    },
+  }),
+
+  // ── Section B · Explain, 4 marks — information gaps ──
+  withParagraphs({
+    id: 'mf-short-explain-pensions-asymmetric-information-4',
+    // 4a symmetric and asymmetric information; 4c-3 misallocation in pensions; 1b-3 imperfect
+    // market information as a source of market failure.
+    specItems: ['ECON-1.3.5-4a', 'ECON-1.3.5-4c-3', 'ECON-1.3.5-1b-3'],
+    subject: 'economics',
+    unit: 1,
+    sectionNumber: '1.3.5',
+    sectionTitle: 'Market Failure',
+    marks: 4,
+    stimulusRef: null,
+    ao: ['AO1', 'AO2'],
+    kind: 'written',
+    type: 'Short Answer — Knowledge & Application',
+    commandWord: 'Explain',
+    question: 'Explain how asymmetric information could lead to a misallocation of resources in the market for pensions.',
+    keyTerm: 'asymmetric information',
+    markScheme: [
+      { range: 'Explain (4)', desc: 'Appendix 6: When asking students to explain a term or the characteristics, this requires knowledge, understanding and application. When asking students to explain a reason or impact, this also includes analysis as it requires a two-stage chain of reasoning.' },
+      { range: 'AO1 (2 marks)', desc: 'Knowledge: asymmetric information (one party to a transaction knows more than the other), and what a misallocation of resources is.' },
+      { range: 'AO2 (2 marks)', desc: 'Application: why the pension saver cannot judge the fund, from the context; and where resources go as a result.' },
+    ],
+    peel: null,
+    annotationLegend: [],
+    examinerCommentary: 'Full marks. The definition names who knows more — the provider — rather than saying information is "imperfect", and the application uses both details in the context: fees in long documents, and results revealed only after decades. The last clause is what the question asks for and many answers stop short of: where resources actually go when savers cannot tell good funds from bad.',
+    likelyScore: '4 / 4',
+    criteria: [
+      { id: 'c1', band: 'AO1 — knowledge (2 marks)', text: 'Defines asymmetric information: one party to a transaction knows more than the other', marks: 1, seg: 'p1a', segRole: 'earned' },
+      { id: 'c2', band: 'AO1 — knowledge (2 marks)', text: 'States what a misallocation of resources is: resources going to uses fully informed people would not choose', marks: 1, seg: 'p1b', segRole: 'earned' },
+      { id: 'c3', band: 'AO2 — application (2 marks)', text: 'Uses the context to show why the saver cannot judge the fund: fees in long documents, results only after decades', marks: 1, seg: 'p2a', segRole: 'earned' },
+      { id: 'c4', band: 'AO2 — application (2 marks)', text: 'Says where resources go as a result: into high-fee or unsuitable funds, and too little into pensions', marks: 1, seg: 'p2b', segRole: 'earned' },
+    ],
+    script: [
+      {
+        id: 'p1',
+        label: 'The terms',
+        aos: ['AO1'],
+        segments: [
+          { id: 'p1a', html: '<strong>Asymmetric information</strong> exists when one party to a transaction knows more than the other; here the pension provider knows far more about its fees, risks and likely returns than the saver does.', note: 'The first knowledge mark, with the direction of the gap stated: the seller knows more.' },
+          { id: 'p1b', html: 'Resources are <strong>misallocated</strong> when they go to uses that people would not choose if they were fully informed.', note: 'The second knowledge mark: the yardstick the rest of the answer is measured against.' },
+        ],
+      },
+      {
+        id: 'p2',
+        label: 'The pensions market',
+        aos: ['AO2'],
+        segments: [
+          { id: 'p2a', html: 'Because the fees are set out in long documents and performance is revealed only after decades, a saver cannot compare funds properly and may choose one with high fees and poor returns, or one that takes more risk than they realise.', note: 'Application: both details in the context used to explain why the saver cannot judge.' },
+          { id: 'p2b', html: 'Savings then flow to funds that a fully informed saver would avoid, and some workers, unsure whom to trust, save too little for retirement — so too few resources go into pensions overall, and too many into poorly run funds.', note: 'Application: the misallocation itself, stated for this market. Without it the answer explains the information gap but not what the question asks it to lead to.' },
+        ],
+      },
+    ],
+    minutes: 5,
+    paper: {
+      section: 'B',
+      kind: 'short_answer',
+      context: 'Workers who save for retirement in a private pension fund pay yearly fees that are set out in long documents, and they find out how well the fund has performed only after decades of saving.',
+    },
+  }),
+
+  // ── 1.3.5 Market Failure — Section D essay, Evaluate, 20 marks. Packet 12.8, E060 (new). ──
+  /* The page's other essay (market-failure-government-intervention-20) asks whether intervention is
+     ALWAYS necessary, across every kind of market failure. This one is on a 1.3.5 theme that essay
+     does not touch — moral hazard (1b-4, 5a, 5b-2) — and it is the one place on the page where a
+     policy that corrects one market failure is argued to create another. Marked as the WEC11 SAM
+     marks its essays: knowledge, application and analysis 12, evaluation 8, one mark per criterion.
+
+     THE CONTEXT IS A FACT, CHECKED. In March 2023 two US regional banks failed (Silicon Valley Bank
+     and Signature Bank) and the US authorities protected all of their depositors, including balances
+     above the USD 250,000 standard deposit insurance limit. The deposit insurer (the FDIC) later
+     recovered the cost through a special assessment on larger banks. Nothing else in the answer is a
+     claim about a real bank. */
+  withParagraphs({
+    id: 'mf-essay-deposit-protection-moral-hazard-20',
+    // 1b-4 moral hazard as a source of market failure; 5a how moral hazard can occur; 5b-2 its
+    // impact on consumers, producers, workers and governments in banking.
+    specItems: ['ECON-1.3.5-1b-4', 'ECON-1.3.5-5a', 'ECON-1.3.5-5b-2'],
+    subject: 'economics',
+    unit: 1,
+    sectionNumber: '1.3.5',
+    sectionTitle: 'Market Failure',
+    marks: 20,
+    stimulusRef: null,
+    ao: ['AO1', 'AO2', 'AO3', 'AO4'],
+    kind: 'written',
+    type: 'Evaluation Essay',
+    commandWord: 'Evaluate',
+    question: 'Evaluate the view that government protection of bank deposits does more harm than good because it creates moral hazard.',
+    keyTerm: 'moral hazard',
+    markScheme: [
+      { range: 'Evaluate (20)', desc: 'Appendix 6: Requires knowledge, understanding, application, analysis and evaluation. Logical and coherent multi-stage chains of reasoning need to be developed with reference to context where appropriate. The validity and significance of arguments/models and concepts should be considered and supported by relevant chains of reasoning. There should also be a recognition of different viewpoints and/or a critical assessment of the evidence so that informed judgements arguments may be made.' },
+      { range: 'KAA · 12 marks', desc: 'Knowledge, application and analysis, marked in four levels. 1–3: isolated or imprecise knowledge, generic material, no chain of reasoning. 4–6: some knowledge with limited application; narrow, two-stage chains. 7–9: accurate knowledge applied to some of the question, chains present but not fully developed. 10–12: precise knowledge integrated with the context across the question, in logical multi-stage chains.' },
+      { range: 'Evaluation · 8 marks', desc: 'Marked in three levels. 1–3: generic evaluative comment, no reference to the context, no chain. 4–6: some evaluation of alternative approaches, partly reasoned, with some reference to the context. 7–8: evaluation that recognises different viewpoints and/or is critical of the evidence, leading to an informed judgement supported by a logical chain.' },
+      { range: 'Indicative content', desc: 'Harm: protected depositors stop monitoring; banks keep the gains from risk and pass on the losses; credit misallocated; the 2023 guarantee went beyond the limit. Good: bank runs can bring down solvent banks and spread to firms and workers; small savers cannot monitor anyway. Evaluation: limits, risk-based premiums and capital rules; one-off rescues versus expectations; who bears the cost; short run against long run; a judgement on design.' },
+    ],
+    peel: null,
+    annotationLegend: [],
+    examinerCommentary: 'Top of both levels. The definition of moral hazard is precise, and each side of the argument is a multi-stage chain that ends in an effect on the allocation of resources or on firms and workers, not in "this is bad". The context is used as evidence: the USD 250,000 limit shows how far the 2023 guarantee went, and who held the uninsured deposits is what makes it a moral-hazard case. The evaluation weighs design, expectations, who pays and time rather than listing them, and the conclusion states the criterion the judgement rests on — whether protection is limited, priced and matched by regulation.',
+    likelyScore: '20 / 20',
+    criteria: [
+      { id: 'k1', band: 'Knowledge, application and analysis (12 marks)', text: 'Defines moral hazard: taking more risk because someone else bears part of the cost of losses', marks: 1, seg: 'p1a', segRole: 'earned' },
+      { id: 'k2', band: 'Knowledge, application and analysis (12 marks)', text: 'Explains deposit protection: savers repaid up to a limit if their bank fails', marks: 1, seg: 'p1b', segRole: 'earned' },
+      { id: 'k3', band: 'Knowledge, application and analysis (12 marks)', text: 'Identifies the asymmetric information between depositors and banks', marks: 1, seg: 'p1c', segRole: 'earned' },
+      { id: 'k4', band: 'Knowledge, application and analysis (12 marks)', text: 'Chain: protected depositors stop monitoring, so a risky bank keeps its deposits cheaply', marks: 1, seg: 'p2a', segRole: 'earned' },
+      { id: 'k5', band: 'Knowledge, application and analysis (12 marks)', text: 'Chain: owners keep the gains from risk and pass on the losses, so the bank takes more risk', marks: 1, seg: 'p2b', segRole: 'earned' },
+      { id: 'k6', band: 'Knowledge, application and analysis (12 marks)', text: 'Carries it to a misallocation: credit flows to riskier projects than is efficient', marks: 1, seg: 'p2c', segRole: 'earned' },
+      { id: 'k7', band: 'Knowledge, application and analysis (12 marks)', text: 'Uses the context: the 2023 guarantee covered balances above the USD 250,000 limit', marks: 1, seg: 'p2d', segRole: 'earned' },
+      { id: 'k8', band: 'Knowledge, application and analysis (12 marks)', text: 'Shows why that matters: the large depositors best placed to monitor were protected, signalling future rescues', marks: 1, seg: 'p2e', segRole: 'earned' },
+      { id: 'k9', band: 'Knowledge, application and analysis (12 marks)', text: 'Explains why a bank cannot repay every depositor at once', marks: 1, seg: 'p3a', segRole: 'earned' },
+      { id: 'k10', band: 'Knowledge, application and analysis (12 marks)', text: 'Chain: fear of loss makes each depositor withdraw first, which can bring down a solvent bank', marks: 1, seg: 'p3b', segRole: 'earned' },
+      { id: 'k11', band: 'Knowledge, application and analysis (12 marks)', text: 'Carries the run to other banks and to producers and workers through lost lending', marks: 1, seg: 'p3c', segRole: 'earned' },
+      { id: 'k12', band: 'Knowledge, application and analysis (12 marks)', text: 'Shows protection correcting an information failure for small savers who cannot monitor', marks: 1, seg: 'p3d', segRole: 'earned' },
+      { id: 'e1', band: 'Evaluation (8 marks)', text: 'Design: a limit keeps large, informed depositors exposed, so they still monitor', marks: 1, seg: 'p4a', segRole: 'earned' },
+      { id: 'e2', band: 'Evaluation (8 marks)', text: 'Design: risk-based premiums and capital requirements narrow the gap between risk taken and cost borne', marks: 1, seg: 'p4b', segRole: 'earned' },
+      { id: 'e3', band: 'Evaluation (8 marks)', text: 'Distinguishes a one-off rescue from the expectation of rescue, which is where the harm lies', marks: 1, seg: 'p4c', segRole: 'earned' },
+      { id: 'e4', band: 'Evaluation (8 marks)', text: 'Who pays: the 2023 cost stayed in the banking system, but fell on banks that had not taken the risk', marks: 1, seg: 'p5a', segRole: 'earned' },
+      { id: 'e5', band: 'Evaluation (8 marks)', text: 'Time: the benefit of protection is immediate, the cost of moral hazard builds up slowly', marks: 1, seg: 'p5b', segRole: 'earned' },
+      { id: 'e6', band: 'Evaluation (8 marks)', text: 'Judges that limited, priced protection does more good than harm, and says why', marks: 1, seg: 'p6a', segRole: 'earned' },
+      { id: 'e7', band: 'Evaluation (8 marks)', text: 'Recognises where the view in the question is right: unlimited, after-the-event guarantees', marks: 1, seg: 'p6b', segRole: 'earned' },
+      { id: 'e8', band: 'Evaluation (8 marks)', text: 'States the criterion the judgement rests on: whether protection is limited, priced and matched by regulation', marks: 1, seg: 'p6c', segRole: 'earned' },
+    ],
+    script: [
+      {
+        id: 'p1',
+        label: 'Introduction',
+        aos: ['AO1'],
+        segments: [
+          { id: 'p1a', html: '<strong>Moral hazard</strong> occurs when an economic agent takes greater risks because it knows that some of the cost of things going wrong will be borne by someone else.', note: 'The definition mark. "Someone else bears part of the cost" is the clause the whole essay depends on.' },
+          { id: 'p1b', html: '<strong>Deposit protection</strong> is a promise, usually by a government-backed insurer, that savers will get their money back, up to a limit, if their bank fails.', note: 'Knowledge: what the policy is, including the limit the context turns on.' },
+          { id: 'p1c', html: 'Banking already suffers from <strong>asymmetric information</strong> — depositors cannot see how their bank lends their money — so the question is whether protection makes the resulting risk-taking worse than the failures it prevents.', note: 'Knowledge, and a reading of the question: "more harm than good" is a comparison, so both sides have to be built.' },
+        ],
+      },
+      {
+        id: 'p2',
+        label: 'The case that protection does harm',
+        aos: ['AO2', 'AO3'],
+        segments: [
+          { id: 'p2a', html: 'Protection weakens the discipline depositors would otherwise impose. A saver whose deposit is guaranteed has no reason to check how risky the bank’s lending is, or to move to a safer bank, so a risky bank can keep attracting deposits without paying a higher interest rate for them.', note: 'Analysis: the first link — who stops doing what, and what that lets the bank do.' },
+          { id: 'p2b', html: 'Its managers and shareholders then keep the profits if risky loans pay off, while losses beyond their own capital fall on the insurer, and possibly on taxpayers, if they do not. The bank takes more risk than it would if it bore the whole cost.', note: 'Analysis: moral hazard itself, shown as a mechanism rather than named.' },
+          { id: 'p2c', html: 'Credit flows to riskier projects than is efficient — a misallocation of resources, which is what makes moral hazard a market failure rather than only a risk to the bank.', note: 'Analysis carried to the allocation of resources, the level a market-failure essay is marked at.' },
+          { id: 'p2d', html: 'The 2023 case strengthens the argument. The US authorities protected all deposits at the two failed banks, including balances above the <strong>USD 250,000</strong> limit that deposit insurance normally covers.', note: 'Application: the context used as evidence, with the figure that shows how far the guarantee went.' },
+          { id: 'p2e', html: 'Much of those banks’ funding came from large deposits held by firms — exactly the depositors best placed to monitor a bank — so guaranteeing them after the event signals that even uninsured deposits may be rescued, and future large depositors have less reason to check.', note: 'Application and analysis: why this particular guarantee adds to moral hazard, not just that it was generous.' },
+        ],
+      },
+      {
+        id: 'p3',
+        label: 'The case that protection does good',
+        aos: ['AO1', 'AO3'],
+        segments: [
+          { id: 'p3a', html: 'Against this, a bank lends most of its deposits out as long-term loans, so it can never repay every depositor at once.', note: 'Knowledge: the fact the whole counter-argument rests on.' },
+          { id: 'p3b', html: 'Without protection, a depositor who fears a loss has every reason to withdraw first, and the withdrawals themselves can force even a solvent bank to fail — a <strong>bank run</strong>.', note: 'Analysis: why the market on its own can produce a failure that did not need to happen.' },
+          { id: 'p3c', html: 'A run can spread as depositors wonder which bank is next, and the fall in lending that follows hits producers who cannot borrow to invest or pay suppliers, and the workers whose jobs depend on them.', note: 'Analysis: the impact carried to producers and workers, as specification point 5b asks.' },
+          { id: 'p3d', html: 'Protection also corrects an information failure: an ordinary saver cannot judge a bank’s balance sheet, so a limited guarantee protects the depositors least able to monitor — whose discipline over the bank was weak anyway.', note: 'Analysis: protection as a cure for asymmetric information as well as a cause of moral hazard.' },
+        ],
+      },
+      {
+        id: 'p4',
+        label: 'Evaluation — design',
+        aos: ['AO4'],
+        segments: [
+          { id: 'p4a', html: 'How much harm moral hazard does depends on design. A limit keeps large, informed depositors exposed to losses, so they still have a reason to watch how the bank lends.', note: 'Evaluation: the harm made conditional on something policy controls.' },
+          { id: 'p4b', html: 'Charging banks insurance premiums that rise with the risk they take makes riskier banks pay more for protection, and capital requirements make shareholders lose their own money before the insurer pays. Each narrows the gap between the risk a bank takes and the cost it bears.', note: 'Evaluation of alternative approaches, tied back to the mechanism in the second paragraph.' },
+          { id: 'p4c', html: 'The harm is therefore concentrated in guarantees that go beyond the limit after the event, as in 2023. A one-off rescue may stop a run, but if depositors come to expect one every time, the limit stops meaning anything and the moral hazard it was meant to contain returns.', note: 'Evaluation: a rescue and the expectation of rescue separated — the distinction the judgement turns on.' },
+        ],
+      },
+      {
+        id: 'p5',
+        label: 'Evaluation — who pays, and when',
+        aos: ['AO4'],
+        segments: [
+          { id: 'p5a', html: 'Who bears the cost matters too. In the 2023 case the US deposit insurer recovered its losses through a special charge on larger banks rather than from taxpayers, so the cost stayed in the banking system — but it fell on banks that had not taken the risks, which weakens the link between risk and cost again.', note: 'Evaluation: the evidence assessed from both sides — better than a taxpayer bail-out, still not paid by the risk-taker.' },
+          { id: 'p5b', html: 'The time frame changes the weighing. The benefit of protection is immediate and visible — a run stopped in days — while the cost of moral hazard builds up slowly, through years of riskier lending, and shows only when the next failure comes.', note: 'Evaluation: why the two sides are hard to compare, and why a government may over-weight the benefit.' },
+        ],
+      },
+      {
+        id: 'p6',
+        label: 'Conclusion',
+        aos: ['AO4'],
+        segments: [
+          { id: 'p6a', html: 'On balance, limited and properly priced deposit protection does more good than harm: runs can destroy solvent banks and spread to firms and workers, and the depositors it protects were never able to discipline banks anyway.', note: 'Evaluation: a judgement that answers "more harm than good", with its reason.' },
+          { id: 'p6b', html: 'The view in the question is right about unlimited, after-the-event guarantees like those of 2023, which protect the depositors best placed to monitor and teach every depositor to expect a rescue.', note: 'Evaluation: the opposing view given the ground it wins, not dismissed.' },
+          { id: 'p6c', html: 'The judgement therefore rests on design: protection does more harm than good only when it is unlimited, unpriced and not matched by regulation of the risks banks take.', note: 'Evaluation: the criterion stated, which is what makes the judgement informed rather than asserted.' },
+        ],
+      },
+    ],
+    minutes: 26,
+    paper: {
+      section: 'D',
+      kind: 'essay',
+      context: '‘In March 2023, after two regional banks in the United States failed, the authorities guaranteed all of their customers’ deposits, including balances above the USD 250,000 that deposit insurance normally covers.’',
+    },
+  }),
 
   // ── 1.3.6 Government Intervention — 4 marks ──
   {

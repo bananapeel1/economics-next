@@ -13,6 +13,12 @@
  *
  * The section_practice half is a FILE, not a row. Rule 6: this packet may not write live content,
  * and `spec_items` does not exist as a column until a human runs scripts/packet-12-1-spec-items.sql.
+ *
+ * RETIRED FOR SECTION_PRACTICE BY PACKET 12.5, which deleted section_practice-tags.json. Neither the guard
+ * nor any gate reads it; only packet 12.2's historical probe (audit/runs/packet-12.2/probe-items.mjs)
+ * still names it, so re-run that probe against 94807d3 if it is ever needed. Instead, bank 2's tags now live in audit/practice-spec-items.json, keyed by item id,
+ * for every section and both banks (audit/runs/packet-12.5/merge.mjs). Re-running this script
+ * recreates the file as a historical record of packet 12.1's Market Failure pass; do not commit it.
  */
 
 import fs from 'node:fs';

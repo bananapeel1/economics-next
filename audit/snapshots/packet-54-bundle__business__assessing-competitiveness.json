@@ -1,0 +1,2122 @@
+{
+ "section_id": "assessing-competitiveness",
+ "subject": "business",
+ "label": "packet-54-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "assessing-competitiveness:block:1d1be7dc",
+    "title": "Reading the Financial Statements",
+    "sections": [
+     {
+      "id": "assessing-competitiveness:sub:statement-of-comprehensive-income",
+      "title": "The Statement of Comprehensive Income",
+      "keyIdea": "The statement of comprehensive income shows a year of trading: revenue, and the costs taken from it step by step, down to the profit for the year.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **statement of comprehensive income** (the profit and loss account) records a business's trading over one year. Its key information is a cascade: each line takes one kind of cost away from the line above."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Revenue** — the value of everything sold.",
+         "**Cost of sales** — the direct cost of what was sold. Revenue minus cost of sales is **gross profit**.",
+         "**Other operating expenses** — running costs such as rent, marketing and office salaries. Gross profit minus these is **operating profit**.",
+         "**Interest** — the cost of the firm's borrowing. Operating profit minus interest is the **profit for the year**."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla Bakeries, a Hong Kong bakery chain, sold $40m of bread and cakes this year. Cost of sales was $24m, leaving gross profit of $16m. After $10m of other operating expenses, operating profit was $6m; after $0.8m of interest, the profit for the year was $5.2m."
+       },
+       {
+        "type": "paragraph",
+        "text": "Reading the statement means comparing lines, not quoting them. Revenue rose by a quarter, from $32m, but the profit for the year rose only from $4.8m: costs grew faster than sales, and interest quadrupled."
+       }
+      ],
+      "realExample": {
+       "emoji": "🥐",
+       "text": "A Nairobi café chain reports higher revenue every year, yet its profit for the year stays flat: the rent on its outlets, an operating expense, climbs as fast as its sales."
+      },
+      "misconception": "Students treat revenue and profit as the same thing, or read a rise in revenue as a rise in profit. Revenue is what customers paid; profit is what is left after costs. A firm can sell more and keep less.",
+      "examMatters": "Name the line you are using — gross profit, operating profit or profit for the year — and say which costs have already been taken off it. Using the wrong profit line changes every ratio built on it.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:statement-of-comprehensive-income:recall",
+       "type": "classify",
+       "prompt": "Sort each cost by the line of the statement of comprehensive income it belongs to: cost of sales, other operating expenses or interest.",
+       "groups": [
+        {
+         "name": "Cost of sales",
+         "items": [
+          "Flour, butter and sugar used in the loaves sold",
+          "Pay for the bakers who made the goods sold"
+         ],
+         "why": "They are the direct cost of making what was sold, so they rise and fall with the goods sold."
+        },
+        {
+         "name": "Other operating expenses",
+         "items": [
+          "Monthly charge for the high-street premises",
+          "Advertising on buses and social media"
+         ],
+         "why": "They are the cost of running the business, not of making each item, and are taken off gross profit."
+        },
+        {
+         "name": "Interest",
+         "items": [
+          "The charge on the bank loan for the new bakery",
+          "The charge on money borrowed to buy delivery vans"
+         ],
+         "why": "They are the cost of borrowing, taken off operating profit to reach the profit for the year."
+        }
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:statement-of-financial-position",
+      "title": "The Statement of Financial Position",
+      "keyIdea": "The statement of financial position is a snapshot of one day: what the business owns, what it owes, and the owners' money that funds the difference.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **statement of financial position** (the balance sheet) shows the business on the last day of its financial year. Its key information comes in parts that always balance."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Non-current assets** — kept for more than a year: ovens, vans, a bakery building.",
+         "**Current assets** — turned into cash within a year: inventory, receivables (money customers owe) and cash.",
+         "**Current liabilities** — owed within a year, such as bills from suppliers. **Non-current liabilities** — owed after more than a year, such as long-term bank loans.",
+         "**Total equity** — the owners' money: share capital plus retained profits."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Assets minus liabilities gives **net assets**, and net assets always equal total equity. At the end of this year Orla had non-current assets of $29m and current assets of $6m, against current liabilities of $5m and bank loans of $10m due in later years: net assets of $20m, matched by total equity of $20m."
+       },
+       {
+        "type": "paragraph",
+        "text": "A year earlier its non-current assets were $18.5m and its long-term loans $2.5m. The $10.5m rise is a new central bakery, and the $7.5m of new borrowing shows that most of it was paid for with a loan."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧾",
+       "text": "A Penang electronics distributor holds most of its assets as stock and money owed by customers. On the last day of its year it was owed more by customers than it owed its own suppliers."
+      },
+      "misconception": "Students read the statement of financial position as a record of the whole year. It is a snapshot of one day, so a large payment made the day before, or held back until the day after, changes what it shows.",
+      "examMatters": "When a case gives a statement of financial position, say what a change in a line means for the business — a larger loan means more interest to pay — rather than only reporting that the figure went up.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:statement-of-financial-position:recall",
+       "type": "classify",
+       "prompt": "Sort each item into current assets, current liabilities or non-current liabilities.",
+       "groups": [
+        {
+         "name": "Current assets",
+         "items": [
+          "Bags of flour in the storeroom",
+          "Money in the shop tills at closing time"
+         ],
+         "why": "Both will be used or spent within the year: inventory and cash."
+        },
+        {
+         "name": "Current liabilities",
+         "items": [
+          "A flour supplier's invoice due in thirty days",
+          "An overdraft the bank can call in at any time"
+         ],
+         "why": "Both must be paid within the year."
+        },
+        {
+         "name": "Non-current liabilities",
+         "items": [
+          "A loan repayable in six years",
+          "A mortgage on the central bakery over fifteen years"
+         ],
+         "why": "Both are owed, but not due for more than a year."
+        }
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:stakeholder-interest-in-the-statements",
+      "title": "Stakeholder Interest in the Statements",
+      "keyIdea": "Each stakeholder reads the same two statements for a different reason, so each looks first at the lines that answer its own question.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Stakeholder interest** in the financial statements depends on what each group wants from the business."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Shareholders** and would-be investors read profit for the year and its trend: it decides dividends and the value of their shares.",
+         "**Lenders** such as banks read operating profit against interest, and the assets a loan could be secured on: can the business keep paying?",
+         "**Suppliers** read current assets against current liabilities before giving credit: will they be paid on time?",
+         "**Employees** read revenue and profit for job security and room for a pay rise.",
+         "**Managers** read both statements to judge their own decisions and plan the next ones.",
+         "**Government** reads profit, which its tax is charged on."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla's bank lent more this year, so it will watch whether operating profit of $6m keeps covering interest of $0.8m comfortably. It does, seven and a half times, against twenty-five times a year earlier. Its flour suppliers care more that current liabilities have risen to $5m."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏦",
+       "text": "Before extending a loan to a Dubai catering firm, a bank asks for two years of statements and checks how many times operating profit covers interest, not how fast revenue grew."
+      },
+      "misconception": "Students write that \"stakeholders\" want profit. Groups want different things from the same figures: a supplier cares about being paid next month, a shareholder about profit over years, and an employee may care more about job security than either.",
+      "examMatters": "Name the stakeholder, the statement and line it would read, and the decision it is making. \"The bank would compare operating profit with interest before lending again\" is stronger than \"stakeholders are interested in the accounts\".",
+      "recall": {
+       "id": "assessing-competitiveness:sub:stakeholder-interest-in-the-statements:recall",
+       "type": "match",
+       "prompt": "Match each stakeholder to the question it reads the statements to answer.",
+       "pairs": [
+        {
+         "left": "A bank deciding on a second loan",
+         "right": "Can earnings carry the cost of the debt?",
+         "why": "A lender's risk is not being repaid, so it sets what the firm earns against what the debt costs."
+        },
+        {
+         "left": "A flour mill offering sixty days' credit",
+         "right": "Will the bills due soon be settled on time?",
+         "why": "A supplier is owed money within weeks, so it looks at short-term assets against short-term debts."
+        },
+        {
+         "left": "A family that owns a fifth of the shares",
+         "right": "Is profit growing enough to raise dividends?",
+         "why": "Owners are paid out of profit, and its trend decides what their shares are worth."
+        },
+        {
+         "left": "Shop staff negotiating their wages",
+         "right": "Can the business afford more pay and keep every job?",
+         "why": "Employees' pay and security depend on revenue and profit holding up."
+        }
+       ],
+       "distractors": [
+        "How much tax is due on the year's profit?"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Revenue minus each kind of cost, in turn, gives the three profit lines.",
+     "The balance sheet is one day, and net assets equal total equity.",
+     "Each stakeholder reads the lines that answer its own question."
+    ],
+    "diagramId": "assessing-competitiveness:diagram:87c73972",
+    "quizIndices": [
+     3,
+     4,
+     5,
+     6
+    ],
+    "practiceIndices": [
+     0
+    ]
+   },
+   {
+    "id": "assessing-competitiveness:block:935bb451",
+    "title": "Calculating the Ratios",
+    "sections": [
+     {
+      "id": "assessing-competitiveness:sub:gross-profit-and-profit-for-the-year-margins",
+      "title": "Profitability: Gross Profit and Profit for the Year Margins",
+      "keyIdea": "A margin turns a profit figure into a share of revenue, so firms of different sizes, and one firm in different years, can be compared fairly.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Profit in dollars grows with the size of a business. **Profitability** ratios divide a profit figure by revenue to show how many cents of each dollar of sales are kept."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Gross profit margin** = gross profit ÷ revenue × 100",
+         "**Profit for the year margin** (net profit margin) = profit for the year ÷ revenue × 100"
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla's gross profit margin fell from 45% ($14.4m ÷ $32m) to 40% ($16m ÷ $40m). Each dollar of bread now carries more direct cost: flour prices rose, and a supermarket contract was won at lower prices."
+       },
+       {
+        "type": "paragraph",
+        "text": "Its profit for the year margin fell from 15% to 13%, less than the gross margin, because operating expenses grew more slowly than sales, although interest took a bigger share."
+       },
+       {
+        "type": "paragraph",
+        "text": "The gap between the two margins shows where money goes after production. A gross margin that falls points at buying, making or pricing; a profit for the year margin that falls further points at overheads or interest."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧋",
+       "text": "A Singapore bubble-tea chain keeps a gross margin near 70% because its ingredients are cheap, yet its profit for the year margin is thin: prime outlets and staff absorb most of the difference."
+      },
+      "misconception": "Students think a rise in profit in dollars means the business became more profitable. Orla's profit for the year rose, yet each dollar of sales kept less of it: profit grew while profitability fell.",
+      "examMatters": "Show the working, give the result to one decimal place, and then say what caused the change using the case. A margin quoted without a reason tells a manager nothing.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:gross-profit-and-profit-for-the-year-margins:recall",
+       "type": "classify",
+       "prompt": "Sort each change by the margins it lowers: both margins, or the profit for the year margin only.",
+       "groups": [
+        {
+         "name": "Both margins",
+         "items": [
+          "Flour costs more per loaf",
+          "A promotion cuts the price of every cake",
+          "Bakers on the production line get a pay rise"
+         ],
+         "why": "Each changes gross profit, and whatever changes gross profit carries down to the profit for the year."
+        },
+        {
+         "name": "Profit for the year margin only",
+         "items": [
+          "The landlord raises the charge for each shop",
+          "A new advertising campaign",
+          "The bank raises the interest rate on the loan"
+         ],
+         "why": "Each is an operating expense or interest, taken off below gross profit, so the gross margin is untouched."
+        }
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:liquidity-current-and-acid-test-ratios",
+      "title": "Liquidity: the Current and Acid Test Ratios",
+      "keyIdea": "Liquidity ratios ask whether short-term assets can pay the bills falling due within a year; the acid test asks it without counting stock.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A business can be profitable and still fail if it cannot pay what it owes this month. **Liquidity** ratios compare what will turn into cash within a year with what must be paid within a year."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Current ratio** = current assets ÷ current liabilities",
+         "**Acid test ratio** = (current assets − inventory) ÷ current liabilities"
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The acid test leaves out inventory because stock may be slow to sell, or sell only at a discount, when cash is needed quickly."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla's current ratio fell from 1.5:1 to 1.2:1, and its acid test from 1:1 to 0.7:1: without its stock, it has 70 cents of liquid assets for each dollar due within a year."
+       },
+       {
+        "type": "paragraph",
+        "text": "Whether that is a problem depends on the business. A bakery sells for cash every day and its stock lasts days, so money keeps arriving before bills fall due; many food retailers run an acid test below 1:1 safely. A furniture maker that waits months to sell its stock and be paid could not."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛒",
+       "text": "A Lagos supermarket group runs a current ratio below 1:1 for years without trouble: shoppers pay at the till, while its suppliers wait sixty days to be paid."
+      },
+      "misconception": "Students treat a higher current ratio as always better. A ratio far above what the business needs can mean cash sitting idle or unsold stock piling up — money that could be earning a return elsewhere.",
+      "examMatters": "Say what the figure means for this business before calling it good or bad: compare it with last year and with the kind of business it is, and say whether bills can be met as they fall due.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:liquidity-current-and-acid-test-ratios:recall",
+       "type": "fillin",
+       "prompt": "Complete the two profitability facts from the step before:",
+       "template": [
+        "Gross profit is what remains after ___ is taken off the value of goods sold.",
+        "The profit for the year margin divides the profit for the year by ___."
+       ],
+       "answers": [
+        "cost of sales",
+        "revenue"
+       ],
+       "hints": [
+        "the direct cost of making what was sold",
+        "the top line of the statement"
+       ],
+       "distractors": [
+        "capital employed",
+        "interest"
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:gearing-ratio",
+      "title": "The Gearing Ratio",
+      "keyIdea": "Gearing measures the share of a business's long-term finance that is borrowed; the higher it is, the more of its profit is promised to lenders first.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Capital employed** is the long-term finance a business uses: non-current liabilities plus total equity. The **gearing ratio** shows how much of it is borrowed."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Gearing ratio** = non-current liabilities ÷ capital employed × 100"
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla borrowed to build its central bakery. Its long-term loans rose from $2.5m to $10m and total equity from $17.5m to $20m, so capital employed rose from $20m to $30m and gearing from 12.5% to 33.3%."
+       },
+       {
+        "type": "paragraph",
+        "text": "Borrowed money has to be serviced whatever happens to sales: interest is due every year and the loan must be repaid. Shareholders are paid only from what is left. So a highly geared business carries more **financial risk**; gearing above about 50% is usually described as high."
+       },
+       {
+        "type": "paragraph",
+        "text": "Low gearing is not automatically better. A firm that never borrows may grow more slowly than it could, and its owners must put in all the money themselves."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏗️",
+       "text": "A Kuala Lumpur property developer funds most of each project with bank loans, so a year of slow sales leaves it paying the same interest out of far less revenue."
+      },
+      "misconception": "Students treat high gearing as always bad. Borrowing is cheap finance when the business earns more on the money than it costs, and a firm with steady sales, such as a utility, can carry high gearing safely. The danger is sales that can fall.",
+      "examMatters": "Connect gearing to the case: what the loan was for, what interest rates are doing, and how steady the firm's sales are. The same gearing ratio is more worrying when rates are rising or sales are uncertain.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:gearing-ratio:recall",
+       "type": "fillin",
+       "prompt": "Complete the two liquidity facts from the step before:",
+       "template": [
+        "The acid test ratio does not count ___ among the short-term holdings.",
+        "A current ratio below 1:1 means the bills due within a year are larger than ___."
+       ],
+       "answers": [
+        "inventory",
+        "current assets"
+       ],
+       "hints": [
+        "stock that may be slow to sell",
+        "what the business holds that turns into cash within a year"
+       ],
+       "distractors": [
+        "cash",
+        "receivables",
+        "retained profits"
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:return-on-capital-employed",
+      "title": "Return on Capital Employed (ROCE)",
+      "keyIdea": "ROCE measures the operating profit earned on all the long-term money invested in a business, so it can be compared with what that money could earn elsewhere.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Return on capital employed (ROCE)** links the two statements: operating profit from the statement of comprehensive income, capital employed from the statement of financial position."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**ROCE** = operating profit ÷ capital employed × 100"
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Operating profit is used, not profit for the year, because capital employed includes the lenders' money as well as the owners'. The return is measured before either group is paid."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla's ROCE fell from 25% ($5m ÷ $20m) to 20% ($6m ÷ $30m). Operating profit rose by $1m, but the money tied up in the business rose by $10m: the new bakery has not yet earned as much per dollar as the rest of the business."
+       },
+       {
+        "type": "paragraph",
+        "text": "A falling ROCE after a large investment is common. The new asset counts in full from the day it is bought, while the profit it brings builds up over later years."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚚",
+       "text": "A Karachi logistics firm buys a fleet of new trucks. Its ROCE drops in the year of purchase, then climbs as the trucks win contracts over the following three years."
+      },
+      "misconception": "Students divide profit for the year by capital employed. Capital employed includes lenders' money, so the profit set against it must be the one earned before those lenders are paid: operating profit.",
+      "examMatters": "Say what the ROCE is compared with — last year, a rival, or the interest rate on borrowing. A ROCE on its own says little about whether an investment was worth making.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:return-on-capital-employed:recall",
+       "type": "fillin",
+       "prompt": "Complete the two facts about long-term finance from the step before:",
+       "template": [
+        "Adding total equity to ___ gives the long-term finance a business uses.",
+        "The gearing ratio divides long-term loans by ___."
+       ],
+       "answers": [
+        "non-current liabilities",
+        "capital employed"
+       ],
+       "hints": [
+        "debts not due for more than a year",
+        "the owners' money and the lenders' money together"
+       ],
+       "distractors": [
+        "current liabilities",
+        "revenue"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Margins show how many cents of each dollar of sales are kept as profit.",
+     "The acid test asks the liquidity question without counting stock.",
+     "Gearing and ROCE both divide by capital employed: debt plus equity."
+    ],
+    "diagramId": "assessing-competitiveness:diagram:fc53ab8e",
+    "quizIndices": [
+     7,
+     8,
+     9,
+     10,
+     11
+    ],
+    "practiceIndices": [
+     1
+    ]
+   },
+   {
+    "id": "assessing-competitiveness:block:c5898443",
+    "title": "Using Ratios to Make Decisions",
+    "sections": [
+     {
+      "id": "assessing-competitiveness:sub:interpreting-roce-and-margins",
+      "title": "Interpreting ROCE and Margins to Make Business Decisions",
+      "keyIdea": "A ratio becomes useful when it is compared: with last year, with rivals, and with what the money could cost or earn elsewhere. The comparison points to a decision.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Ratios assess competitiveness because they show whether a business turns its sales and its capital into profit as well as its rivals do. To **interpret ratios to make business decisions**, compare each one with something that gives it meaning:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Over time** — is the business improving or getting worse?",
+         "**Against rivals or the industry average** — is it doing better than firms facing the same conditions?",
+         "**Against the cost of money** — does the return beat what the finance costs, or what the owners could earn by putting their money elsewhere?"
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "That third comparison decides whether borrowing to invest makes sense. Orla pays 8% on its loans. With a ROCE of 20%, each dollar borrowed and invested earns about 20 cents of operating profit and costs 8 cents in interest, so the owners keep the difference. If ROCE fell below 8%, every borrowed dollar would cost more than it earned, and more borrowing would cut the profit left for shareholders."
+       },
+       {
+        "type": "paragraph",
+        "text": "The margins point to different decisions. Orla's gross margin fell because of flour prices and a low-priced contract, so its managers might renegotiate flour supplies or review the contract's price before cutting costs in the shops."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏨",
+       "text": "A Bangkok hotel group earning a ROCE of 6% while its loans cost 9% decides to sell two hotels and repay debt rather than build a third."
+      },
+      "misconception": "Students treat any positive ROCE as proof an investment is worthwhile. A 5% return is poor if the money could earn 6% on deposit, or was borrowed at 8%. The return has to beat the alternatives.",
+      "examMatters": "End an interpretation with the decision it supports: borrow or not, which costs to cut, which price to change. A ratio that is calculated and described but never used for a decision stops halfway.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:interpreting-roce-and-margins:recall",
+       "type": "fillin",
+       "prompt": "Complete the ROCE formula from the last chapter, then apply it:",
+       "template": [
+        "ROCE divides ___ by capital employed.",
+        "Borrowing at 15% to invest where ROCE is 12% ___ the profit left for shareholders."
+       ],
+       "answers": [
+        "operating profit",
+        "reduces"
+       ],
+       "hints": [
+        "the profit before interest is paid to lenders",
+        "the effect when a dollar costs more than it earns"
+       ],
+       "distractors": [
+        "profit for the year",
+        "raises",
+        "revenue"
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:interpreting-liquidity-and-gearing",
+      "title": "Interpreting Liquidity and Gearing to Make Business Decisions",
+      "keyIdea": "Liquidity says whether the business can pay this year's bills; gearing says how much risk its financing carries. Together they shape how the next investment is paid for.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Liquidity and gearing answer different questions, and each points to different decisions."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Weak liquidity** — manage working capital: collect money from customers sooner, hold less stock, agree longer credit with suppliers, or turn a short-term debt into a long-term one.",
+         "**High gearing** — pay for the next project with new shares or retained profit rather than another loan, repay debt, or sell assets the business does not need.",
+         "**Low gearing, and a ROCE above the interest rate** — borrowing to expand is likely to add to the owners' return."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla now has gearing of 33.3% and an acid test of 0.7:1. Neither is alarming for a bakery with daily cash sales and loans costing less than its ROCE. But a second loan-financed bakery would first add interest owed to the bank every month; then, at the year end, the statement of financial position would show gearing pushed higher; and if sales fell in the year after that, the interest would still be owed. Issuing new shares would keep gearing down, at the cost of sharing future profit with more owners."
+       }
+      ],
+      "realExample": {
+       "emoji": "✈️",
+       "text": "A regional airline with gearing near 70% sees fuel prices jump. Its payments to lenders cannot be cut, so it raises money by selling two aircraft and leasing them back rather than borrowing again."
+      },
+      "misconception": "Students recommend \"borrowing more\" or \"issuing shares\" without checking the other ratios. The right source of finance depends on how geared the firm already is, how steady its sales are, and whether its return beats what a loan would cost.",
+      "examMatters": "Use two ratios together. A firm with high gearing and weak liquidity has a sharper problem than either figure shows alone, and a recommendation should say which it fixes first.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:interpreting-liquidity-and-gearing:recall",
+       "type": "reorder",
+       "prompt": "Put these stages in the order they happen, from signing the loan to the danger it creates.",
+       "criterion": "the order in time, from the loan to the risk",
+       "correctOrder": [
+        "The business signs a large loan to build a new factory",
+        "From month one, a fixed interest charge must be paid",
+        "Year-end accounts reveal a higher gearing ratio",
+        "In the year after those accounts, a downturn cuts its operating profit",
+        "Profit may no longer cover the interest due"
+       ],
+       "why": [
+        "The decision comes first: new borrowing adds to non-current liabilities.",
+        "Interest is charged from the start of the loan and is owed whatever sales do.",
+        "Gearing is read off the year-end snapshot, where more of capital employed is now borrowed.",
+        "Sales fall in the year after those accounts, but the interest does not fall with them.",
+        "The fixed charge now takes most or all of a smaller profit, which is the financial risk gearing measures."
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:limitations-of-ratio-analysis",
+      "title": "The Limitations of Ratio Analysis",
+      "keyIdea": "Ratios describe the past in numbers the business prepared itself, so they show that something has changed but rarely why, and never what the numbers leave out.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **limitations of ratio analysis** are what a careful reader states alongside every ratio:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Historical data** — the statements describe a year that has ended, and conditions may already have changed.",
+         "**Window dressing** — a business can make one day's statement of financial position look better, for example by delaying payments until after the year end or selling assets just before it.",
+         "**Different accounting choices** — firms value inventory and spread the cost of assets in different ways, so comparisons between firms may not be like with like.",
+         "**Different businesses** — a ratio that is normal for a bakery may be dangerous for a builder, so comparisons need firms of a similar type.",
+         "**What numbers leave out** — the quality of the product, the brand, staff morale, the skill of managers, and what competitors are about to do.",
+         "**Inflation** — rising prices can make revenue and profit grow in dollars while the business sells no more."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla's ROCE fell after it built its bakery. The ratio alone cannot say whether that was a mistake or an investment that will pay off over the next ten years; the plan behind it can."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔍",
+       "text": "A Jakarta retailer's current ratio looks strong on its reporting date because it held back every payment it could in the final fortnight. A month later, with the bills settled, the ratio is well below its published figure."
+      },
+      "misconception": "Students write that ratios \"prove\" a business is doing well or badly. They are evidence to be questioned: they show what changed, while the cause and the future have to come from elsewhere in the case.",
+      "examMatters": "When asked how useful ratios are, apply the limitations to the case in front of you — which figure could be window-dressed, what the ratios cannot see — rather than listing every limitation you know.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:limitations-of-ratio-analysis:recall",
+       "type": "classify",
+       "prompt": "Sort each problem by the limitation it shows: out-of-date figures, figures the business can shape, or what the numbers leave out.",
+       "groups": [
+        {
+         "name": "Out-of-date figures",
+         "items": [
+          "A ratio from twelve months ago used to judge a firm after a fire",
+          "Last year's margins used to set prices after flour costs doubled"
+         ],
+         "why": "The statements describe a period that has ended, so later changes are missing."
+        },
+        {
+         "name": "Figures the business can shape",
+         "items": [
+          "Paying no suppliers in the week before the reporting date",
+          "Choosing a longer life for ovens so that yearly costs look smaller"
+         ],
+         "why": "The business chose the timing or the accounting method, which moves the ratio without changing the business."
+        },
+        {
+         "name": "What the numbers leave out",
+         "items": [
+          "A loyal customer base built over thirty years",
+          "A head baker about to leave for a rival"
+         ],
+         "why": "Neither appears in either statement, yet both affect how competitive the business will be."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Compare every ratio with last year, with rivals, and with the cost of money.",
+     "Borrowing adds to the owners' return only while ROCE beats the interest rate.",
+     "Ratios show what changed, not why, and leave out much that matters."
+    ],
+    "diagramId": "assessing-competitiveness:diagram:2e9904d3",
+    "quizIndices": [
+     12,
+     13,
+     14,
+     15,
+     16
+    ],
+    "practiceIndices": [
+     2,
+     3,
+     5
+    ]
+   },
+   {
+    "id": "assessing-competitiveness:block:dbf191aa",
+    "title": "Measuring the Workforce",
+    "sections": [
+     {
+      "id": "assessing-competitiveness:sub:labour-productivity",
+      "title": "Labour Productivity",
+      "keyIdea": "Labour productivity measures output per worker over a period. Higher productivity spreads each wage over more output, lowering the labour cost of every unit.",
+      "body": [
+       {
+        "type": "bullets",
+        "items": [
+         "**Labour productivity** = output per period ÷ number of employees"
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "It is calculated for a period — a week, a month, a year — and for a group whose output can be counted: loaves baked, calls answered, rooms cleaned."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla's central bakery made 128,000 loaves a month with 40 bakers last year: 3,200 each. This year 50 bakers made 150,000: 3,000 each. Output rose, but productivity fell by about 6%."
+       },
+       {
+        "type": "paragraph",
+        "text": "Interpreting it means asking why. New bakers still learning, old ovens beside new ones, or flour arriving short on some days would each lower output per worker. The decision depends on the cause: training, new equipment, or better planning."
+       },
+       {
+        "type": "paragraph",
+        "text": "Productivity matters for competitiveness because wages are paid per worker, not per loaf. If each baker earns the same and makes fewer loaves, the labour cost of every loaf rises."
+       }
+      ],
+      "realExample": {
+       "emoji": "☎️",
+       "text": "A Manila call centre measures calls resolved per agent per shift. When it doubled its agents in one month, calls per agent fell for six weeks while the new staff learned the systems."
+      },
+      "misconception": "Students confuse productivity with total output. A firm that hires more staff can produce more in total while each worker produces less; productivity is output per worker, not output overall.",
+      "examMatters": "Give the figure with its unit — loaves per baker per month — and compare it with an earlier period or a similar business before saying what it shows.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:labour-productivity:recall",
+       "type": "classify",
+       "prompt": "Sort each change by its likely effect on output per baker: raises labour productivity or lowers it.",
+       "groups": [
+        {
+         "name": "Raises it",
+         "items": [
+          "Faster ovens bake more trays in each shift",
+          "The same number of loaves made by a smaller team",
+          "Better scheduling ends waiting for dough to prove"
+         ],
+         "why": "Each lets the same workers produce more, or fewer workers produce the same."
+        },
+        {
+         "name": "Lowers it",
+         "items": [
+          "Twenty new starters still being trained",
+          "A mixer breaks down for a week",
+          "Deliveries of ingredients come late on several days"
+         ],
+         "why": "Each cuts output without cutting the number of workers."
+        }
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:labour-turnover-and-retention",
+      "title": "Labour Turnover and Retention",
+      "keyIdea": "Labour turnover compares the staff who leave with the average workforce; retention asks how many of those there at the start of a year are still there at its end.",
+      "body": [
+       {
+        "type": "bullets",
+        "items": [
+         "**Labour turnover** = number of staff leaving ÷ average number of staff employed × 100",
+         "**Retention rate** = staff employed at the start of the period who are still employed at its end ÷ staff employed at the start × 100"
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The two are not mirror images. Turnover counts every leaver, including new starters who went within weeks; retention follows only the people who were already there. A firm can lose many new recruits and still keep its experienced staff."
+       },
+       {
+        "type": "paragraph",
+        "text": "In Orla's shops, 27 of an average 180 staff left last year: turnover of 15%. This year 60 of 200 left: 30%. Of the 190 staff employed at the start of this year, 152 were still there at the end, a retention rate of 80%, down from 90%."
+       },
+       {
+        "type": "paragraph",
+        "text": "Each leaver costs $8,000 to replace in advertising, interviews and training, so turnover cost about $480,000 this year against $216,000 the year before, before counting slower service while new staff learn. Some turnover helps: it brings in new ideas and lets poor performers go."
+       }
+      ],
+      "realExample": {
+       "emoji": "🍔",
+       "text": "A fast-food chain in Riyadh finds that most of its leavers quit within their first three months. It pairs each new starter with an experienced worker, and within a year far fewer quit early."
+      },
+      "misconception": "Students assume retention is simply 100% minus labour turnover. The two use different groups of staff — all leavers against the average workforce, or only those present at the start — so they can move apart.",
+      "examMatters": "Put a cost on turnover where the case allows — leavers × the cost of replacing one — and weigh it against what it would cost to keep staff. The comparison is what turns a percentage into a decision.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:labour-turnover-and-retention:recall",
+       "type": "fillin",
+       "prompt": "Complete the two productivity facts from the step before:",
+       "template": [
+        "Labour productivity divides ___ by the number of employees.",
+        "If staff numbers rise faster than the loaves they make, labour productivity ___."
+       ],
+       "answers": [
+        "output",
+        "falls"
+       ],
+       "hints": [
+        "what the workers produce in the period",
+        "the direction when each worker produces less"
+       ],
+       "distractors": [
+        "revenue",
+        "rises",
+        "wages"
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:absenteeism",
+      "title": "Absenteeism",
+      "keyIdea": "Absenteeism measures the share of possible working days lost because staff were absent. A rising rate adds cost and is often a sign of deeper problems at work.",
+      "body": [
+       {
+        "type": "bullets",
+        "items": [
+         "**Absenteeism** = number of staff days lost to absence ÷ total possible staff working days × 100"
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Possible working days are the number of staff multiplied by the days each is due to work. In Orla's shops, 200 staff each due to work 250 days give 50,000 possible days. 2,500 were lost to absence: a rate of 5%, up from 3% (1,350 of 45,000)."
+       },
+       {
+        "type": "paragraph",
+        "text": "Absence costs twice. The absent worker may still be paid, and someone else must cover the shift, often on overtime, or the shop runs short-staffed and queues grow. Frequent short absences are also an early warning: they tend to rise with low morale, poor management or stressful shift patterns, the same causes that later push people to quit."
+       },
+       {
+        "type": "paragraph",
+        "text": "The decision depends on the pattern. Absence concentrated in one shop points to its manager; absence on particular days points to rotas; long absences may be genuine illness that needs support rather than pressure."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏥",
+       "text": "A private hospital in Doha finds that absence among night-shift nurses is double the day-shift rate. It changes the rota so no one works more than three nights in a row, and absence falls."
+      },
+      "misconception": "Students treat every absence as a discipline problem. Much absence is genuine illness, and penalising it can make staff come to work sick or quit altogether; the rate shows how much time is lost, not why.",
+      "examMatters": "Link absenteeism to cost and to the other measures in the case. A rise alongside rising turnover suggests one cause behind both, and a strategy aimed at that cause.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:absenteeism:recall",
+       "type": "fillin",
+       "prompt": "Complete the two labour turnover facts from the step before:",
+       "template": [
+        "Labour turnover divides the number of ___ in a period by the average number of staff employed.",
+        "A shop with an average of 40 staff, 10 of whom go during the year, has labour turnover of ___."
+       ],
+       "answers": [
+        "leavers",
+        "25%"
+       ],
+       "hints": [
+        "the staff who went during the period",
+        "ten out of forty, as a percentage"
+       ],
+       "distractors": [
+        "absences",
+        "20%",
+        "40%"
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:limitations-of-these-calculations",
+      "title": "The Limitations of These Calculations",
+      "keyIdea": "Workforce measures show how much output, staff and time a business has gained or lost, but not why, and each can hide the detail that matters for a decision.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Labour productivity, labour turnover, retention and absenteeism share the **limitations of these calculations**:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**They show what, not why** — a turnover rate does not say whether staff left for pay, for a bad manager or to study.",
+         "**Averages hide differences** — one badly run shop can push up a chain's absence rate while every other shop is fine.",
+         "**Quantity is not quality** — more loaves per baker is no gain if more are burnt; a call centre that answers calls faster may solve fewer problems.",
+         "**Who leaves matters** — losing the weakest performer and losing the best baker count the same in a turnover rate.",
+         "**Some output is hard to count** — a manager's or a designer's productivity has no simple unit.",
+         "**Definitions differ** — firms count leavers, absence or staff numbers in different ways, so comparing with other businesses can mislead."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "So Orla's managers would read the figures beside other evidence: exit interviews with leavers, staff surveys, and the pattern by shop and shift."
+       }
+      ],
+      "realExample": {
+       "emoji": "💻",
+       "text": "A software firm in Bengaluru reports falling labour turnover. Exit interviews show the problem it hides: the staff still going are its most skilled engineers, hired away by rivals."
+      },
+      "misconception": "Students treat a lower labour turnover rate as always good news. Very low turnover can mean no new ideas and no room to promote, and a fall means little if the few who still go are the best staff.",
+      "examMatters": "When a question asks how useful the data are, pair each figure with what it cannot show in this case, and name the extra evidence — exit interviews, surveys, shop-by-shop figures — that would fill the gap.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:limitations-of-these-calculations:recall",
+       "type": "classify",
+       "prompt": "Sort each problem by the limitation it shows: an average hides detail, quantity is not quality, or who leaves matters.",
+       "groups": [
+        {
+         "name": "An average hides detail",
+         "items": [
+          "Nine shops with almost no absence and one with a great deal",
+          "One chain-wide productivity figure mixing new and old bakeries"
+         ],
+         "why": "One figure for the whole business blends very different parts of it."
+        },
+        {
+         "name": "Quantity is not quality",
+         "items": [
+          "More cakes per baker, but more returned by customers",
+          "Calls answered sooner, but more customers ringing back"
+         ],
+         "why": "The measure counts output, not whether it was any good."
+        },
+        {
+         "name": "Who leaves matters",
+         "items": [
+          "Turnover falls while the top two bakers resign",
+          "Turnover rises as weak performers are let go"
+         ],
+         "why": "A turnover rate counts heads, not the value of the people behind them."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Productivity is output per worker, not output in total.",
+     "Put a cost on turnover and absence before choosing a response.",
+     "The figures show how much, not why: add exit interviews and surveys."
+    ],
+    "diagramId": "assessing-competitiveness:diagram:f21a47cf",
+    "quizIndices": [
+     17,
+     18,
+     19,
+     20,
+     21,
+     22
+    ],
+    "practiceIndices": [
+     4
+    ]
+   },
+   {
+    "id": "assessing-competitiveness:block:d8c5ea9b",
+    "title": "HR Strategies for Productivity and Retention",
+    "sections": [
+     {
+      "id": "assessing-competitiveness:sub:financial-rewards",
+      "title": "Financial Rewards",
+      "keyIdea": "Financial rewards pay staff more, or pay them for results, attendance or loyalty. They act quickly, but the cost rises with every worker and the effect can fade.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Financial rewards** are the most direct human resource strategy: change what people are paid, or what they are paid for."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Higher basic pay** — matching or beating rivals removes one reason to leave, reducing labour turnover.",
+         "**Bonuses tied to output** — a payment for each unit above a target, or a team bonus, links pay to productivity.",
+         "**Attendance and loyalty payments** — a bonus for a full month's attendance targets absenteeism; a payment after a set length of service targets retention.",
+         "**Profit-related pay** — a share of profit gives staff a stake in results."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla pays shop staff $2,000 a month; its two largest rivals pay $2,200. Closing the gap for 200 staff would cost about $480,000 a year, the same as the $480,000 that turnover now costs. No pay rise keeps every leaver, so fewer leavers alone cannot repay it. The case for it rests on what else it brings, such as experienced staff who serve customers better; a smaller reward aimed at the staff most likely to leave costs less."
+       },
+       {
+        "type": "paragraph",
+        "text": "The limits: pay rises are hard to reverse, an output bonus can reward speed over quality, and money does little if people are going because of how they are managed."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧺",
+       "text": "A laundry chain in Cairo pays each team a monthly bonus if it hits its target with no complaints. Output per worker rises, and the no-complaints condition stops quality being traded for speed."
+      },
+      "misconception": "Students assume paying more always solves turnover and absence. If staff quit because of poor managers or unpredictable shifts, a pay rise raises costs without removing the cause; pay works best when pay is the reason.",
+      "examMatters": "Cost the reward where you can and set it against the cost of the problem it targets. A reward that costs more than the turnover it prevents needs another justification, such as better service.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:financial-rewards:recall",
+       "type": "match",
+       "prompt": "Match each financial reward to the problem it targets most directly.",
+       "pairs": [
+        {
+         "left": "A payment for every tray baked above the shift target",
+         "right": "Low output per worker",
+         "why": "It pays for extra output, so it aims at productivity."
+        },
+        {
+         "left": "A bonus for a month with no days off sick",
+         "right": "Days lost to absence",
+         "why": "It rewards attendance, so it aims at absenteeism."
+        },
+        {
+         "left": "A cash award after two years of service",
+         "right": "Experienced staff drifting away",
+         "why": "It is paid only for staying, so it aims at retention."
+        },
+        {
+         "left": "Basic pay raised to the level rival chains offer",
+         "right": "Staff quitting for better-paid jobs",
+         "why": "It removes the pay gap that pulls staff to rivals, so it aims at turnover."
+        }
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:employee-share-ownership",
+      "title": "Employee Share Ownership",
+      "keyIdea": "Employee share ownership gives or sells staff shares in the business, so they gain when it does well. Shares that vest only after years of service also reward staying.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "In an **employee share ownership** scheme, staff receive shares free, as part of a bonus, or buy them at a discount. As owners, they receive dividends and gain if the share price rises."
+       },
+       {
+        "type": "paragraph",
+        "text": "The aim is to make employees think like owners: if the business does well, so do they, which can lift effort, co-operation and productivity. Schemes often make shares **vest** only after a set period — two or three years — and anyone who quits earlier forfeits them, which gives staff a strong reason to stay."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla's directors are considering a scheme costing about $500,000 a year, close to the $480,000 that labour turnover cost this year. Even if no one left, that saving would not cover it, so the scheme must also be worth something the turnover figure leaves out, such as keeping the most experienced staff."
+       },
+       {
+        "type": "paragraph",
+        "text": "The limits. Each worker's shares are a small part of the whole, so one person's effort barely moves the share price and the link between effort and reward is weak. Share prices can fall for reasons staff do not control. Issuing new shares dilutes existing owners, and in a family company, giving shares to staff means sharing control."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛠️",
+       "text": "A Singapore engineering firm gives every employee shares that vest after three years. Resignations fall sharply in the second and third years of service, then return to normal once the shares are theirs."
+      },
+      "misconception": "Students assume share ownership makes every employee work harder. The reward depends on the whole company's results, so it mainly builds loyalty and long-term commitment rather than day-to-day effort.",
+      "examMatters": "Say what the scheme is for in this case — keeping staff, or raising effort — and whether its design (vesting, size of award) fits that aim. Weigh it against simpler rewards that act faster.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:employee-share-ownership:recall",
+       "type": "fillin",
+       "prompt": "Complete the two facts about employee share ownership:",
+       "template": [
+        "Shares that are forfeited by anyone who leaves within three years are designed mainly to raise ___.",
+        "Issuing new shares to staff shrinks the slice of profit that goes to each existing ___."
+       ],
+       "answers": [
+        "retention",
+        "shareholder"
+       ],
+       "hints": [
+        "keeping the people already employed",
+        "someone who already owns part of the company"
+       ],
+       "distractors": [
+        "productivity",
+        "supplier",
+        "absenteeism"
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:consultation-strategies",
+      "title": "Consultation Strategies",
+      "keyIdea": "Consultation means asking staff for their views before a decision is made. Managers still decide, but decisions improve and staff feel heard.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Consultation strategies** give employees a voice before managers decide: staff meetings, suggestion schemes, surveys, and elected staff representatives or committees that meet managers regularly."
+       },
+       {
+        "type": "paragraph",
+        "text": "It works on several measures at once. Staff who are asked about changes that affect them — new rotas, new equipment, new targets — are more likely to accept them, so fewer quit in frustration and fewer take days off when morale is low. The people doing the work often know where time is wasted, so their suggestions can raise productivity."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla's leavers were asked why they went. Most mentioned pay, but many said that shift rotas were changed at a day's notice without anyone asking them. Consulting shop staff before rotas are set costs little compared with a pay rise."
+       },
+       {
+        "type": "paragraph",
+        "text": "The limits. Consultation is slower than simply deciding. It raises expectations, and staff who are asked and then ignored may be more frustrated than if they had never been asked. Managers keep the final decision, so staff gain influence, not control."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧵",
+       "text": "A Colombo garment factory sets up a monthly committee of elected machinists and managers. Its first change, moving breaks out of the hottest hour, costs nothing, and afternoon absence falls."
+      },
+      "misconception": "Students treat consultation and empowerment as the same thing. In consultation employees are asked for opinions and the choice stays with management; in empowerment employees themselves choose, within agreed limits.",
+      "examMatters": "Say who decides and how often staff are consulted in the case. Consultation that is regular and acted on is a strategy; a single survey is not.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:consultation-strategies:recall",
+       "type": "reorder",
+       "prompt": "Put the stages of a consultation in the order it runs, from the managers' proposal to staff hearing the outcome.",
+       "criterion": "the order a consultation runs",
+       "correctOrder": [
+        "Managers set out a proposed change to the shift rota",
+        "Staff give their views through their representatives",
+        "Weighing those views, managers make the decision",
+        "The decision and the reasons for it are explained to staff"
+       ],
+       "why": [
+        "Consultation starts from a proposal, before anything is decided.",
+        "Views can only be given once there is a proposal to respond to.",
+        "The decision comes after the views, and it is still the managers' to make.",
+        "Feedback closes the loop: staff see how their views were used, which keeps them taking part."
+       ]
+      }
+     },
+     {
+      "id": "assessing-competitiveness:sub:empowerment-strategies",
+      "title": "Empowerment Strategies",
+      "keyIdea": "Empowerment gives staff the authority to make decisions about their own work within agreed limits, so problems are solved where they happen.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Empowerment strategies** go further than consultation: employees are given the authority to decide, not only to advise. A shop team might set its own rota, decide how to handle a complaint, or reorder stock without waiting for a manager."
+       },
+       {
+        "type": "paragraph",
+        "text": "Empowered staff can act at once, so customers are served faster and managers are freed for other work. Control over one's own work motivates many people, which can raise productivity and make them less likely to quit or to take unnecessary days off."
+       },
+       {
+        "type": "paragraph",
+        "text": "Orla could let each shop's team agree its own rota within the hours the shop must be staffed — the very decision its leavers complained about."
+       },
+       {
+        "type": "paragraph",
+        "text": "The limits. Empowerment needs training and trust: staff given decisions without the skills or information to make them may make costly mistakes. Some employees do not want the responsibility. Managers must accept losing some control, and in a large chain, standards can drift between shops."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛎️",
+       "text": "A hotel in Mauritius lets front-desk staff spend up to a set amount to put right any guest complaint without asking a manager. Complaints are settled faster, and staff say they feel trusted."
+      },
+      "misconception": "Students think empowerment means managers stop managing. Managers still set the limits of each decision and provide targets, training and support; what changes is who makes the decision within those limits.",
+      "examMatters": "Judge empowerment against the workforce in the case: its skills, experience and turnover. It suits settled, trained teams better than a workforce where most staff are new.",
+      "recall": {
+       "id": "assessing-competitiveness:sub:empowerment-strategies:recall",
+       "type": "classify",
+       "prompt": "Sort each change by the strategy it uses: consultation (staff advise, managers decide) or empowerment (staff decide).",
+       "groups": [
+        {
+         "name": "Consultation",
+         "items": [
+          "Shop staff are surveyed before new opening hours are chosen",
+          "Bakers' representatives comment on the plan for a new oven line",
+          "A suggestion box that managers review every month"
+         ],
+         "why": "Staff give views, but managers keep the decision."
+        },
+        {
+         "name": "Empowerment",
+         "items": [
+          "Counter staff draw up next week's working timetable themselves",
+          "Counter staff may refund an unhappy customer on the spot",
+          "Bakers choose the order in which to bake the day's batches"
+         ],
+         "why": "Staff make the decision themselves, within limits managers have set."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Match the strategy to the cause, not only to the measure that moved.",
+     "Money acts fast but costs more with every worker.",
+     "Consultation gives staff a voice; empowerment gives them the decision."
+    ],
+    "diagramId": "assessing-competitiveness:diagram:5c268d90",
+    "quizIndices": [
+     23,
+     24,
+     25,
+     26,
+     27
+    ],
+    "practiceIndices": [
+     6
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "Reading the Financial Statements",
+    "meta": "3.3.5 · 1a-1b",
+    "keyIdea": "Two statements: a year of trading down to the profit for the year, and one day's snapshot of what is owned, owed and owned by the owners.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Statement of comprehensive income</strong> — revenue − cost of sales = gross profit; − other operating expenses = operating profit; − interest = profit for the year."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Statement of financial position</strong> — non-current assets + current assets − current liabilities − non-current liabilities = net assets = total equity (share capital + retained profits)."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Stakeholder interest</strong> — shareholders read profit and its trend; lenders, operating profit against interest; suppliers, current assets against current liabilities; employees, revenue and profit; government, profit."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Orla: revenue $32m → $40m; profit for the year $4.8m → $5.2m; interest $0.2m → $0.8m."
+       },
+       {
+        "type": "mechanism",
+        "text": "Non-current assets $18.5m → $29m, loans $2.5m → $10m: the bakery was mostly borrowed for."
+       },
+       {
+        "type": "link",
+        "text": "Compare lines and years; a single figure quoted alone says little."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Three profit lines, three kinds of cost.",
+     "Net assets equal total equity.",
+     "Each reader, its own lines."
+    ]
+   },
+   {
+    "title": "Calculating the Ratios",
+    "meta": "3.3.5 · 2a",
+    "keyIdea": "Six calculations from the two statements: two margins, two liquidity ratios, gearing and ROCE.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Gross profit margin</strong> = gross profit ÷ revenue × 100. <strong>Profit for the year margin</strong> = profit for the year ÷ revenue × 100."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Current ratio</strong> = current assets ÷ current liabilities. <strong>Acid test</strong> = (current assets − inventory) ÷ current liabilities."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Capital employed</strong> = non-current liabilities + total equity. <strong>Gearing</strong> = non-current liabilities ÷ capital employed × 100."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>ROCE</strong> = operating profit ÷ capital employed × 100."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Orla: gross margin 45% → 40%; profit for the year margin 15% → 13%."
+       },
+       {
+        "type": "mechanism",
+        "text": "Current 1.5:1 → 1.2:1; acid test 1:1 → 0.7:1; gearing 12.5% → 33.3%; ROCE 25% → 20%."
+       },
+       {
+        "type": "link",
+        "text": "ROCE uses operating profit because capital employed includes the lenders' money."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Margins: profit ÷ revenue.",
+     "Acid test: leave out inventory.",
+     "Gearing and ROCE: ÷ capital employed."
+    ]
+   },
+   {
+    "title": "Using Ratios to Make Decisions",
+    "meta": "3.3.5 · 2b-2c",
+    "keyIdea": "Compare each ratio over time, with rivals and with the cost of money, act on what the comparison shows, and state what the ratios cannot see.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Interpreting ratios</strong> — comparing a ratio with last year, with rivals or the industry, and with the cost of finance, to support a decision."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Window dressing</strong> — timing transactions so one day's statement of financial position looks better than the business really is."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Limitations of ratio analysis</strong> — historical data; window dressing; different accounting choices; different kinds of business; qualitative factors left out; inflation."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "ROCE 20% against borrowing at 8%: each borrowed dollar earns about 20 cents and costs 8."
+       },
+       {
+        "type": "mechanism",
+        "text": "Weak liquidity → manage working capital. High gearing → shares or retained profit, not another loan."
+       },
+       {
+        "type": "link",
+        "text": "A falling ROCE after a large investment may be timing, not failure."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Compare, then decide.",
+     "ROCE against the interest rate.",
+     "What changed, not why."
+    ]
+   },
+   {
+    "title": "Measuring the Workforce",
+    "meta": "3.3.5 · 3a-3b",
+    "keyIdea": "Four workforce measures, each calculated and interpreted for a decision, and the limits of what they can show.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Labour productivity</strong> = output per period ÷ number of employees."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Labour turnover</strong> = staff leaving ÷ average number of staff × 100. <strong>Retention</strong> = staff there at the start and still there at the end ÷ staff at the start × 100."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Absenteeism</strong> = staff days lost to absence ÷ total possible staff working days × 100."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Orla: 3,200 → 3,000 loaves per baker a month; turnover 15% → 30%; retention 90% → 80%; absenteeism 3% → 5%."
+       },
+       {
+        "type": "mechanism",
+        "text": "Turnover cost: leavers × $8,000 = $216,000 → $480,000."
+       },
+       {
+        "type": "link",
+        "text": "Limitations: what not why; averages hide detail; quantity not quality; who leaves matters; definitions differ."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Per worker, per period.",
+     "Cost it before choosing.",
+     "Add the evidence the figures miss."
+    ]
+   },
+   {
+    "title": "HR Strategies for Productivity and Retention",
+    "meta": "3.3.5 · 3c",
+    "keyIdea": "Four strategies to raise productivity and retention and cut turnover and absenteeism: financial rewards, employee share ownership, consultation and empowerment.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Financial rewards</strong> — higher basic pay, output bonuses, attendance and loyalty payments, profit-related pay."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Employee share ownership</strong> — shares given or sold to staff, often vesting only after years of service."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Consultation</strong> — staff give views before managers decide. <strong>Empowerment</strong> — staff make decisions about their own work within agreed limits."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "Pay gap: $2,000 against $2,200 a month; closing it costs $480,000 a year, the same as the $480,000 turnover costs, so fewer leavers alone cannot repay it."
+       },
+       {
+        "type": "mechanism",
+        "text": "Vesting shares reward staying; one worker's effort barely moves the share price."
+       },
+       {
+        "type": "link",
+        "text": "Leavers' complaints about rotas point to consultation or empowerment before more pay."
+       }
+      ]
+     }
+    ],
+    "takeaway": [
+     "Match strategy to cause.",
+     "Cost it against the problem.",
+     "Voice or decision."
+    ]
+   }
+  ],
+  "quiz": [
+   {
+    "id": "assessing-competitiveness:quiz:dc06d923",
+    "question": "Which line of the statement of comprehensive income is left once cost of sales is taken off revenue?",
+    "options": [
+     "Operating profit",
+     "Profit for the year",
+     "Gross profit",
+     "Total equity"
+    ],
+    "explanation": "Revenue less cost of sales is gross profit. Operating profit comes only after other operating expenses are also deducted, profit for the year after interest as well, and total equity belongs to the statement of financial position.",
+    "correctIndex": 2
+   },
+   {
+    "id": "assessing-competitiveness:quiz:c073c197",
+    "question": "On a statement of financial position, net assets are always equal to:",
+    "options": [
+     "current assets",
+     "revenue",
+     "capital employed",
+     "total equity"
+    ],
+    "explanation": "Assets minus liabilities is what belongs to the owners, which is total equity. Capital employed adds the long-term loans to that, current assets are only part of what is owned, and revenue comes from the other statement.",
+    "correctIndex": 3
+   },
+   {
+    "id": "assessing-competitiveness:quiz:a8994f17",
+    "question": "A bank deciding whether to lend to a business would look most closely at:",
+    "options": [
+     "how many staff the business employs",
+     "the number of products it sells",
+     "whether operating profit comfortably covers interest",
+     "how much it spends on advertising"
+    ],
+    "explanation": "A lender wants to know whether it will be repaid, so it sets the profit earned before interest against the interest due. Headcount, product range and marketing spending say little about that on their own.",
+    "correctIndex": 2
+   },
+   {
+    "id": "assessing-competitiveness:quiz:d59e3e9d",
+    "question": "Revenue is $5m, cost of sales is $2m and other operating expenses are $1.5m. Operating profit is:",
+    "options": [
+     "$1.5m",
+     "$3m",
+     "$3.5m",
+     "$0.5m"
+    ],
+    "explanation": "Revenue less cost of sales gives gross profit of $3m; taking off the other operating expenses leaves $1.5m. Stopping at gross profit, or deducting only the operating expenses from revenue, gives the wrong line.",
+    "correctIndex": 0
+   },
+   {
+    "id": "assessing-competitiveness:quiz:8aea1fac",
+    "question": "Which of these appears on the statement of financial position rather than the statement of comprehensive income?",
+    "options": [
+     "Cost of sales for the year",
+     "Interest paid on loans",
+     "Inventory held at the year end",
+     "Revenue from sales"
+    ],
+    "explanation": "Stock held on one day is an asset, so it belongs to the statement of financial position. The other three are flows over the whole year, recorded in the statement of comprehensive income.",
+    "correctIndex": 2
+   },
+   {
+    "id": "assessing-competitiveness:quiz:fc11683e",
+    "question": "A supplier deciding whether to offer 60 days' credit is most interested in:",
+    "options": [
+     "the value of the firm's buildings",
+     "the size of the firm's share capital",
+     "current assets compared with current liabilities",
+     "its revenue growth over five years"
+    ],
+    "explanation": "A supplier is owed money within weeks, so it wants to know whether short-term assets can meet short-term debts. Property, the owners' original investment and long-run growth matter far less for a bill due in two months.",
+    "correctIndex": 2
+   },
+   {
+    "id": "assessing-competitiveness:quiz:36488042",
+    "question": "A firm's total assets are $50m and its total liabilities are $32m. Its total equity is:",
+    "options": [
+     "$82m",
+     "$18m",
+     "$32m",
+     "$50m"
+    ],
+    "explanation": "Net assets, what is owned less what is owed, always equal total equity: fifty less thirty-two. Adding the totals, or quoting either one, ignores that the owners' stake is what remains once every debt is taken off.",
+    "correctIndex": 1
+   },
+   {
+    "id": "assessing-competitiveness:quiz:2285c744",
+    "question": "A firm's gross profit margin is unchanged, but its profit for the year margin falls. The most likely cause is:",
+    "options": [
+     "higher overheads or interest",
+     "dearer raw materials",
+     "a cut in its selling prices",
+     "a rise in its cost of sales"
+    ],
+    "explanation": "Anything that changed gross profit relative to revenue would have moved the gross margin as well. Since that margin held, the extra cost sits below gross profit, in operating expenses or interest.",
+    "correctIndex": 0
+   },
+   {
+    "id": "assessing-competitiveness:quiz:8fc7e6a8",
+    "question": "Revenue is $2m and gross profit is $0.7m. The gross profit margin is:",
+    "options": [
+     "65%",
+     "0.35%",
+     "53.8%",
+     "35%"
+    ],
+    "explanation": "Gross profit divided by revenue, times one hundred: 0.7 over 2 is 35%. The other answers come from giving the share taken by costs, leaving out the ×100, or dividing by cost of sales instead of revenue.",
+    "correctIndex": 3
+   },
+   {
+    "id": "assessing-competitiveness:quiz:9fc207ea",
+    "question": "Current assets are $700,000, including inventory of $200,000. Current liabilities are $400,000. The acid test ratio is:",
+    "options": [
+     "1.75:1",
+     "1.25:1",
+     "0.5:1",
+     "3.5:1"
+    ],
+    "explanation": "The acid test takes the stock out before dividing: $500,000 of liquid assets against $400,000 due. Keeping the stock in gives the current ratio instead, and dividing by the stock itself measures nothing useful.",
+    "correctIndex": 1
+   },
+   {
+    "id": "assessing-competitiveness:quiz:d97b2634",
+    "question": "Non-current liabilities are $9m and total equity is $21m. The gearing ratio is:",
+    "options": [
+     "42.9%",
+     "30%",
+     "70%",
+     "233.3%"
+    ],
+    "explanation": "Capital employed is the loans plus equity, $30m, and nine of that thirty is borrowed. Dividing the loans by equity alone overstates gearing, and the other two figures turn the ratio upside down.",
+    "correctIndex": 1
+   },
+   {
+    "id": "assessing-competitiveness:quiz:48ade470",
+    "question": "Operating profit is $3.6m, non-current liabilities are $6m and total equity is $24m. ROCE is:",
+    "options": [
+     "15%",
+     "60%",
+     "1.2%",
+     "12%"
+    ],
+    "explanation": "Capital employed is $30m, so ROCE is 3.6 over 30, times one hundred. Dividing by equity alone, or by the loans alone, leaves out part of the long-term money the profit was earned on.",
+    "correctIndex": 3
+   },
+   {
+    "id": "assessing-competitiveness:quiz:21dcf9e3",
+    "question": "Which of these would reduce a company's gearing ratio?",
+    "options": [
+     "Taking a new bank loan to buy machinery",
+     "Paying a larger dividend out of reserves",
+     "Replacing a share issue with a ten-year loan",
+     "Issuing new shares to repay part of a loan"
+    ],
+    "explanation": "Repaying debt with money raised from new shares cuts non-current liabilities and adds to equity, so a smaller share of capital employed is borrowed. More borrowing, or shrinking the owners' funds, pushes gearing up.",
+    "correctIndex": 3
+   },
+   {
+    "id": "assessing-competitiveness:quiz:ee1d2da0",
+    "question": "A firm's ROCE is 7% and it can borrow at 9%. Borrowing more to expand would most likely:",
+    "options": [
+     "reduce the profit left for shareholders",
+     "raise the return to its shareholders",
+     "improve its acid test ratio",
+     "lower its gearing ratio"
+    ],
+    "explanation": "Each borrowed dollar costs nine cents a year and earns about seven, so the owners bear the shortfall. New borrowing also raises gearing rather than lowering it, and does nothing lasting for liquidity.",
+    "correctIndex": 0
+   },
+   {
+    "id": "assessing-competitiveness:quiz:46761f03",
+    "question": "A bakery chain has an acid test ratio of 0.7:1. The best reason this may not be a concern is that:",
+    "options": [
+     "its gross profit margin beats the industry average",
+     "its gearing ratio is below 50%",
+     "it sells for cash daily and its stock lasts only days",
+     "its buildings have risen in value"
+    ],
+    "explanation": "Money arrives from customers every day, faster than bills fall due, so a low acid test is normal in food retailing. Profitability, borrowing and property values do not tell you whether this month's bills can be paid.",
+    "correctIndex": 2
+   },
+   {
+    "id": "assessing-competitiveness:quiz:d1be5eb3",
+    "question": "A firm delays paying its suppliers until just after its year end, so its current ratio looks stronger. This is an example of:",
+    "options": [
+     "historical data",
+     "inflation distorting the figures",
+     "a change in accounting policy",
+     "window dressing"
+    ],
+    "explanation": "Timing a payment to flatter one day's statement is window dressing. The figures are not out of date, rising prices play no part, and the accounting method is unchanged; only the timing moved.",
+    "correctIndex": 3
+   },
+   {
+    "id": "assessing-competitiveness:quiz:164c19df",
+    "question": "Why is comparing the current ratio of a supermarket with that of a house builder of limited use?",
+    "options": [
+     "Supermarkets do not publish their accounts",
+     "The ratio cannot be calculated for builders",
+     "Their normal trading cycles are very different",
+     "Builders have no current liabilities"
+    ],
+    "explanation": "A supermarket sells stock for cash within days while a builder may wait months to sell a house and be paid, so each has a different normal level. The other claims are untrue: both publish accounts and both owe short-term debts.",
+    "correctIndex": 2
+   },
+   {
+    "id": "assessing-competitiveness:quiz:cfde10f9",
+    "question": "A shop employs an average of 40 staff and 8 leave during the year. Its labour turnover is:",
+    "options": [
+     "16%",
+     "25%",
+     "20%",
+     "8%"
+    ],
+    "explanation": "Leavers divided by the average workforce, times one hundred: 8 out of 40. Dividing by the 32 who stayed overstates it, and quoting the number of leavers is a count, not a rate.",
+    "correctIndex": 2
+   },
+   {
+    "id": "assessing-competitiveness:quiz:05a125a0",
+    "question": "A team of 12 cleaners cleans 1,440 rooms a week. Labour productivity is:",
+    "options": [
+     "1,440 rooms per week",
+     "120 rooms per cleaner per week",
+     "12 rooms per cleaner per week",
+     "17,280 rooms per week"
+    ],
+    "explanation": "Output divided by the number of workers: 1,440 rooms shared among 12 cleaners. Total output is not productivity, and multiplying the two figures has no meaning.",
+    "correctIndex": 1
+   },
+   {
+    "id": "assessing-competitiveness:quiz:7f66961e",
+    "question": "Of 60 staff employed at the start of a year, 45 are still employed at its end. The retention rate is:",
+    "options": [
+     "75%",
+     "25%",
+     "133.3%",
+     "45%"
+    ],
+    "explanation": "Retention is the share of the starting staff who stayed: 45 out of 60. A quarter is the share who went, and dividing the other way round gives a figure above one hundred.",
+    "correctIndex": 0
+   },
+   {
+    "id": "assessing-competitiveness:quiz:cbeb7c06",
+    "question": "Staff are due to work 20,000 days in total and 800 days are lost to absence. Absenteeism is:",
+    "options": [
+     "0.04%",
+     "4%",
+     "25%",
+     "8%"
+    ],
+    "explanation": "Days lost over possible days, times one hundred: 800 out of 20,000. Leaving out the ×100 or dividing the other way round gives the other figures.",
+    "correctIndex": 1
+   },
+   {
+    "id": "assessing-competitiveness:quiz:815a4c46",
+    "question": "Labour turnover is calculated as:",
+    "options": [
+     "staff joining ÷ average number of staff × 100",
+     "staff leaving ÷ average number of staff × 100",
+     "days lost to absence ÷ possible days × 100",
+     "output ÷ number of employees"
+    ],
+    "explanation": "Turnover measures how many people went against the size of the workforce. Counting new joiners measures recruitment, and the other two formulas are absenteeism and productivity.",
+    "correctIndex": 1
+   },
+   {
+    "id": "assessing-competitiveness:quiz:deb9554d",
+    "question": "After a chain installs faster ovens, output per baker rises but complaints about burnt bread double. This shows that productivity figures:",
+    "options": [
+     "cannot be calculated for bakers",
+     "overstate output in every case",
+     "depend on the exchange rate",
+     "measure quantity, not quality"
+    ],
+    "explanation": "Output per worker counts how much is made, not whether it is any good, so it can rise while customers are worse served. Bakers' output is easily counted, and nothing here concerns currencies.",
+    "correctIndex": 3
+   },
+   {
+    "id": "assessing-competitiveness:quiz:9f06806d",
+    "question": "Why might an employee share ownership scheme do little to raise day-to-day effort?",
+    "options": [
+     "one worker's effort barely moves the share price",
+     "employees receive no dividends on their shares",
+     "the scheme lowers the firm's gearing",
+     "shares are given only to managers"
+    ],
+    "explanation": "The reward depends on the whole company's results, so one person working harder changes it very little. Employee shareholders do receive dividends, gearing is beside the point, and schemes usually cover all staff.",
+    "correctIndex": 0
+   },
+   {
+    "id": "assessing-competitiveness:quiz:ff22fad6",
+    "question": "The main risk of raising basic pay to cut labour turnover is that:",
+    "options": [
+     "staff start taking more days off sick",
+     "output per worker falls straight away",
+     "managers can no longer consult staff",
+     "the cost rises for staff who would have stayed anyway"
+    ],
+    "explanation": "A pay rise goes to everyone, including the many who were never going to leave, so it can cost far more than the turnover it prevents. It does not by itself raise absence, cut output or stop consultation.",
+    "correctIndex": 3
+   },
+   {
+    "id": "assessing-competitiveness:quiz:f7fb042c",
+    "question": "Which HR strategy gives employees the authority to make decisions about their own work?",
+    "options": [
+     "Consultation",
+     "Empowerment",
+     "Financial rewards",
+     "Employee share ownership"
+    ],
+    "explanation": "Handing staff the decision itself, within agreed limits, is empowerment. Consultation asks for their views while managers still decide, and the other two change what staff receive rather than what they control.",
+    "correctIndex": 1
+   },
+   {
+    "id": "assessing-competitiveness:quiz:047acb2d",
+    "question": "Shares that employees lose if they leave within three years are designed mainly to:",
+    "options": [
+     "improve retention",
+     "reduce absenteeism",
+     "raise output per worker",
+     "lower the wage bill"
+    ],
+    "explanation": "The reward is kept only by staying, so its target is keeping existing staff. It does little for attendance or daily output, and it adds to employment costs rather than cutting them.",
+    "correctIndex": 0
+   },
+   {
+    "id": "assessing-competitiveness:quiz:ca4470f1",
+    "question": "Managers ask shop staff for their views on new opening hours, then make the decision themselves. This is:",
+    "options": [
+     "consultation",
+     "empowerment",
+     "employee share ownership",
+     "a financial reward"
+    ],
+    "explanation": "Staff give views and managers keep the decision, which is consultation. Had staff chosen the hours themselves it would be empowerment; nothing here changes their pay or gives them shares.",
+    "correctIndex": 0
+   }
+  ],
+  "practice": [
+   {
+    "id": "assessing-competitiveness:practice:4c229899",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Explain one reason why the bank that lends to Orla Bakeries would be interested in its statement of comprehensive income. (4 marks)",
+    "guidance": "Pick one thing the bank needs to know and the line of the statement that tells it. Use the source to show what that line says about this business, then finish on what it means for the bank's decision.\nKnowledge: a lender needs to know whether interest and repayments will be met, which depends on the profit the business earns (1 mark). Application: operating profit this year is $6m ($40m − $24m − $10m) against interest of $0.8m (1 mark). Analysis: operating profit covers the interest seven and a half times, so even a large fall in profit would leave the interest payable (1 mark). Analysis: but interest has risen from $0.2m and the cover has fallen from twenty-five times, so the bank would watch the trend before lending again (1 mark). An answer about the loan's security or the assets on the statement of financial position has answered about the other statement and earns only the knowledge mark."
+   },
+   {
+    "id": "assessing-competitiveness:practice:d2d4f752",
+    "command": "Calculate",
+    "marks": 4,
+    "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Calculate Orla Bakeries's return on capital employed (ROCE) for this year. (4 marks)",
+    "guidance": "Work out capital employed from the two figures that make it up, then find the profit line that comes before interest. Show each step on its own line and give the answer as a percentage.\nCapital employed = non-current liabilities + total equity = $10m + $20m = $30m (1 mark). Operating profit = $40m − $24m − $10m = $6m (1 mark). ROCE = $6m ÷ $30m × 100 (1 mark) = 20% (1 mark). Using profit for the year ($5.2m) gives 17.3% and earns only the capital employed and method marks."
+   },
+   {
+    "id": "assessing-competitiveness:practice:7692303e",
+    "command": "Discuss",
+    "marks": 8,
+    "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Discuss the significance for Orla Bakeries of the fall in its acid test ratio. (8 marks)",
+    "guidance": "Calculate the ratio for both years from the source, then ask what kind of business this is and how quickly its money comes in. Weigh what makes the fall worrying against what makes it normal here, and leave room for a brief assessment of how significant it is.\nLevel 1: states that liquidity has worsened, with little use of the source. Level 2: knowledge and application — the acid test fell from 1:1 (($4.5m − $1.5m) ÷ $3m) to 0.7:1 (($6m − $2.5m) ÷ $5m), so there are 70 cents of liquid assets for each dollar due within a year. Level 3: analysis of both sides — current liabilities have grown faster than liquid assets, and with a larger loan and a second bakery planned the firm has less room if a bill falls due early; but a bakery sells for cash every day and its stock lasts days, so money arrives faster than bills fall due, and the supermarket contract may bring steady receipts. Level 4: a brief assessment weighing these, for example that the fall matters less for a cash business than the figure suggests, but that it would become serious if the second loan-financed bakery added to short-term debts. Discuss needs this assessment; it does not need a final recommendation."
+   },
+   {
+    "id": "assessing-competitiveness:practice:6506870e",
+    "command": "Assess",
+    "marks": 12,
+    "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Assess the usefulness of ratio analysis to a potential investor in Orla Bakeries. (12 marks)",
+    "guidance": "Decide what an investor wants to know, and which ratios from the source answer it. Build the case for what the ratios reveal and the case for what they cannot show about this business, and decide before you write what your judgement will turn on.\nLevel 1: knowledge of ratios or of their limitations, described generally. Level 2: application — ROCE fell from 25% to 20% and the profit for the year margin from 15% to 13%, while gearing rose from 12.5% to 33.3%; an investor can see profitability falling and financial risk rising. Level 3: analysis of both sides — the ratios allow quick comparison with last year and with other bakery chains and show where to ask questions, such as the low-priced supermarket contract; but they are historical, the new bakery may lift ROCE as its profits build up, one day's statement can be window-dressed, and they say nothing about the brand, the rising staff turnover or the contract's future. Level 4: evaluation reaching a supported judgement, for example that the ratios are useful for identifying what to investigate — margins and the loan — but not sufficient to decide, because the return on the new bakery depends on plans the ratios cannot show.\nA strong answer, in outline: the ratios show falling profitability and rising gearing, which an investor must know; but a ROCE still well above the cost of borrowing, and a new asset not yet earning in full, mean the fall may be temporary; the ratios are useful for framing the questions, and the answer depends on the new bakery's plans and the staff problems they cannot measure."
+   },
+   {
+    "id": "assessing-competitiveness:practice:3c16388f",
+    "command": "Assess",
+    "marks": 12,
+    "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Assess the usefulness to Orla Bakeries's managers of its labour turnover and absenteeism figures. (12 marks)",
+    "guidance": "Calculate both measures for both years from the source first, then ask what they tell managers and what they hide. Test them against the other evidence in the source, and reach a judgement on how far the figures alone can guide a decision.\nLevel 1: knowledge of labour turnover or absenteeism, described generally. Level 2: application — turnover rose from 15% (27 of 180) to 30% (60 of 200), and absenteeism from 3% to 5% of possible days; at $8,000 a leaver, turnover cost $480,000 this year against $216,000. Level 3: analysis of both sides — the figures show a problem growing fast, put a cost on it that can be set against the cost of a remedy, and the two rising together suggest a shared cause; but they do not say why staff go or stay away, whether leavers were new or experienced, or which shops are affected, and the leavers' comments about pay and rotas supply what the figures cannot. Level 4: evaluation reaching a supported judgement, for example that the figures are useful as a warning and for costing a response, but that choosing the response needs the reasons behind them, which the source's exit comments begin to give.\nA strong answer, in outline: both measures doubled or nearly so, and turnover alone now costs close to half a million dollars a year, which justifies acting; but the rates cannot show why or where, so they are most useful combined with the leavers' reasons, which point at pay and rotas."
+   },
+   {
+    "id": "assessing-competitiveness:practice:0b82e182",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Evaluate whether Orla Bakeries should finance its second new bakery with another bank loan. (20 marks)",
+    "guidance": "Start with what another loan would do to the firm's gearing, interest and liquidity, using the source. Compare the return the business earns with what the loan would cost, consider the alternatives, and finish with a recommendation that says what would change it.\nLevel 1: describes loans or gearing with little reference to the source. Level 2: knowledge and application — gearing is already 33.3% ($10m of $30m), up from 12.5%; ROCE is 20% against a borrowing rate of 8%; interest has risen to $0.8m, covered seven and a half times; the acid test is 0.7:1. Level 3: analysis of both sides — while ROCE exceeds 8%, each borrowed dollar adds to shareholders' profit, and a loan keeps control with the current owners; against that, a second loan could take gearing towards 50%, make interest a larger fixed cost when margins are already falling, and leave little room if the supermarket contract were lost; new shares or retained profit would avoid that at the cost of sharing ownership or waiting. Level 4: evaluation — weighs the size of the new loan against the firm's falling margins, falling ROCE and staff problems, considers that the first bakery has not yet shown its full return, and reaches a recommendation with the conditions that would change it.\nA strong answer, in outline: a loan is cheaper than the return the business earns and keeps control with the owners; but gearing is already a third, margins are falling and the first bakery has not yet proved itself; recommend waiting for the first bakery's results, or using a mix of retained profit and a smaller loan, unless ROCE recovers and the supermarket contract is secured for several years."
+   },
+   {
+    "id": "assessing-competitiveness:practice:cca06597",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Evaluate whether Orla Bakeries should introduce the employee share ownership scheme to reduce labour turnover. (20 marks)",
+    "guidance": "Be clear about what the scheme is meant to fix and what the source says is causing the problem. Compare its cost with the cost of the turnover it targets, weigh it against the other strategies the source points to, and finish with a recommendation that says what would change it.\nLevel 1: describes employee share ownership in general terms. Level 2: knowledge and application — turnover is 30%, 60 leavers at $8,000 each, costing $480,000 a year; the scheme would cost about $500,000 a year, and its shares are lost by anyone who leaves within three years, which targets retention. Level 3: analysis of both sides — vesting gives staff a reason to stay and ownership may build commitment; but leavers name pay and last-minute rota changes, which the scheme does not touch, shop staff on $2,000 a month may value cash now over shares later, and the scheme costs about as much as the turnover it targets, so even keeping every leaver would not repay it; closing the pay gap would cost about the same, $480,000 a year, and does answer the reason most leavers give, while consulting staff on rotas or letting shop teams set them costs little. Level 4: evaluation — judges whether the scheme addresses the causes the source gives, compares it with cheaper strategies, and reaches a recommendation with conditions.\nA strong answer, in outline: the scheme would reward staying, but it costs as much as the turnover and misses the two reasons leavers give; matching rivals' pay costs about the same and at least answers pay; start with consultation or empowerment over rotas and a targeted loyalty payment, and use the share scheme later to keep experienced staff, unless the leavers turn out to be the longer-serving staff it is designed to hold."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "assessing-competitiveness:flashcard:78252a3e",
+    "front": "What does the statement of comprehensive income show?",
+    "back": "A year of trading: revenue − cost of sales = gross profit; − other operating expenses = operating profit; − interest = profit for the year."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:629e893d",
+    "front": "What does the statement of financial position show?",
+    "back": "One day's snapshot: assets and liabilities, and the net assets they leave, which always equal total equity (share capital + retained profits)."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:29527914",
+    "front": "Current or non-current?",
+    "back": "Current assets turn into cash, and current liabilities are due, within a year. Non-current assets are kept, and non-current liabilities are due, after more than a year."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:7df19e28",
+    "front": "Which stakeholders read which lines?",
+    "back": "Shareholders: profit for the year and its trend. Lenders: operating profit against interest. Suppliers: current assets against current liabilities. Employees: revenue and profit. Government: profit."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:0217e2bb",
+    "front": "State the formula for the gross profit margin.",
+    "back": "Gross profit ÷ revenue × 100."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:e3319daa",
+    "front": "State the formula for the profit for the year margin.",
+    "back": "Profit for the year ÷ revenue × 100. Profit for the year is what is left after interest; it is also called net profit."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:3025cf73",
+    "front": "State the formula for the current ratio.",
+    "back": "Current assets ÷ current liabilities."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:36eb59f9",
+    "front": "State the formula for the acid test ratio.",
+    "back": "(Current assets − inventory) ÷ current liabilities. Stock is left out because it may be slow to turn into cash."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:8a6e2038",
+    "front": "What is capital employed?",
+    "back": "The long-term finance a business uses: non-current liabilities + total equity."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:91f87ded",
+    "front": "State the formula for the gearing ratio.",
+    "back": "Non-current liabilities ÷ capital employed × 100. Above about 50% is usually described as high."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:1e7b86d4",
+    "front": "State the formula for ROCE.",
+    "back": "Operating profit ÷ capital employed × 100."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:4500a286",
+    "front": "Why does ROCE use operating profit?",
+    "back": "Capital employed includes the lenders' money, so the return is measured before interest is paid to them."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:226493ed",
+    "front": "When does borrowing add to the owners' return?",
+    "back": "When the business earns more on the money (ROCE) than the loan costs in interest. Below that rate, each borrowed dollar loses money for the owners."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:b47238aa",
+    "front": "Why can an acid test below 1:1 be safe?",
+    "back": "A business that sells for cash daily and holds stock only briefly, such as a bakery or supermarket, receives money faster than its bills fall due."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:579480b1",
+    "front": "Give four limitations of ratio analysis.",
+    "back": "Historical data; window dressing; different accounting choices between firms; qualitative factors left out. Also: comparing different kinds of business, and inflation."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:66631551",
+    "front": "What is window dressing?",
+    "back": "Timing transactions so that one day's statement of financial position looks better, such as delaying payments to suppliers until after the year end."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:72554957",
+    "front": "State the formula for labour productivity.",
+    "back": "Output per period ÷ number of employees."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:768b7f4b",
+    "front": "State the formula for labour turnover.",
+    "back": "Number of staff leaving ÷ average number of staff employed × 100."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:878fb755",
+    "front": "How is the retention rate calculated?",
+    "back": "Staff employed at the start of the period who are still employed at its end ÷ staff employed at the start × 100."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:a7b757a5",
+    "front": "State the formula for absenteeism.",
+    "back": "Staff days lost to absence ÷ total possible staff working days × 100."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:770cd855",
+    "front": "What are the costs of high labour turnover?",
+    "back": "Recruitment, interviews and training for each replacement, lower output and slower service while new staff learn, and the loss of experienced people."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:890b8e04",
+    "front": "Give three limitations of the HR calculations.",
+    "back": "They show what, not why; averages hide differences between shops or teams; they count quantity, not quality. Also: who leaves matters, and definitions differ between firms."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:5ff2d5c9",
+    "front": "What financial rewards can target turnover, absence and productivity?",
+    "back": "Higher basic pay (turnover); attendance bonuses (absenteeism); loyalty payments after set service (retention); output bonuses (productivity); profit-related pay."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:f3fc324e",
+    "front": "How does employee share ownership aim to keep staff?",
+    "back": "Shares often vest only after two or three years, and anyone who leaves earlier forfeits them, so staying pays."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:43202655",
+    "front": "Consultation or empowerment?",
+    "back": "Consultation: staff give views, managers decide. Empowerment: staff decide about their own work within agreed limits."
+   },
+   {
+    "id": "assessing-competitiveness:flashcard:6c6d243e",
+    "front": "What are the limits of empowerment?",
+    "back": "Staff need training, information and trust; some do not want responsibility; managers lose some control; standards can drift between branches."
+   }
+  ],
+  "mistakes": [
+   {
+    "id": "assessing-competitiveness:mistake:a137d697",
+    "title": "Quoting a ratio with nothing to compare it with",
+    "mistake": "Calculating a ROCE of 20% and calling it \"good\".",
+    "correction": "A ratio means something only against last year, a rival, the industry or the cost of borrowing. 20% is strong against an 8% loan and weak if rivals earn 30%.",
+    "examTip": "Every time you calculate a ratio, write the comparison and the decision it points to in the next sentence."
+   },
+   {
+    "id": "assessing-competitiveness:mistake:aea0111b",
+    "title": "Using operating profit for the profit for the year margin",
+    "mistake": "Calculating the profit for the year margin as operating profit ÷ revenue.",
+    "correction": "Operating profit ÷ revenue is the operating profit margin, a Unit 2 ratio (2.3.3). The profit for the year margin uses profit for the year, after interest has been taken off.",
+    "examTip": "Write the formula with its profit line named before you put numbers in."
+   },
+   {
+    "id": "assessing-competitiveness:mistake:32806904",
+    "title": "Treating a current ratio below 1:1 as a crisis",
+    "mistake": "Writing that any business with a current ratio below 1:1 cannot pay its debts.",
+    "correction": "Businesses that sell for cash daily and hold stock briefly, such as bakeries and supermarkets, often run below 1:1 safely. A builder or furniture maker could not.",
+    "examTip": "Say what kind of business it is and how fast its money comes in before judging its liquidity."
+   },
+   {
+    "id": "assessing-competitiveness:mistake:d8438326",
+    "title": "Treating high gearing as always bad",
+    "mistake": "Recommending that any highly geared firm repay its loans.",
+    "correction": "Borrowing adds to the owners' return while ROCE beats the interest rate, and firms with steady sales carry high gearing safely. The danger is gearing combined with sales that can fall.",
+    "examTip": "Set ROCE against the interest rate and ask how steady sales are before judging gearing."
+   },
+   {
+    "id": "assessing-competitiveness:mistake:ec3ae096",
+    "title": "Using profit for the year in ROCE",
+    "mistake": "Dividing profit for the year by capital employed.",
+    "correction": "Capital employed includes the lenders' money, so ROCE uses operating profit, earned before interest is paid to them.",
+    "examTip": "Check that the profit line and the capital figure cover the same providers of finance."
+   },
+   {
+    "id": "assessing-competitiveness:mistake:064a05ba",
+    "title": "Assuming retention is 100% minus labour turnover",
+    "mistake": "Writing that turnover of 30% means retention of 70%.",
+    "correction": "Turnover counts every leaver against the average workforce; retention follows only staff present at the start. New starters who leave quickly raise turnover without touching retention.",
+    "examTip": "Calculate each from its own formula, and use the gap between them to say who is leaving."
+   },
+   {
+    "id": "assessing-competitiveness:mistake:e8803107",
+    "title": "Recommending a pay rise for every staffing problem",
+    "mistake": "Answering every question on turnover or absence with \"pay staff more\".",
+    "correction": "Pay works when pay is the cause. If staff leave over management or rotas, consultation or empowerment may work better and cost far less.",
+    "examTip": "Find the cause in the case first, then match the strategy to it and cost it against the problem."
+   },
+   {
+    "id": "assessing-competitiveness:mistake:a3102a29",
+    "title": "Treating consultation and empowerment as the same thing",
+    "mistake": "Describing a staff survey as \"empowering\" employees.",
+    "correction": "In consultation staff give views and managers decide; in empowerment staff make the decision themselves within agreed limits.",
+    "examTip": "Ask who makes the final decision in the case: that tells you which strategy it is."
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "assessing-competitiveness:diagram:87c73972",
+    "title": "Reading the Two Financial Statements",
+    "description": "IAL 3.3.5 · 1a and 1b: the key information in Orla's statement of comprehensive income, line by line, and in its statement of financial position at the year end.",
+    "checklist": [
+     "Revenue, less cost of sales, less other operating expenses, less interest: three profit lines",
+     "The statement of financial position is one day: what is owned against what is owed",
+     "Both sides balance: net assets equal total equity"
+    ],
+    "scenarios": [
+     {
+      "label": "From revenue to profit",
+      "svg": "<svg width=\"400\" height=\"290\" viewBox=\"0 0 400 290\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Orla: from revenue to profit, this year</text><text x=\"16\" y=\"60\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">Revenue</text><rect x=\"170\" y=\"48\" width=\"170\" height=\"14\" rx=\"2\" fill=\"#60a5fa\" stroke=\"#60a5fa\" stroke-width=\"1\"/><text x=\"346\" y=\"60\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">$40m</text><text x=\"16\" y=\"88\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">− Cost of sales</text><rect x=\"238\" y=\"76\" width=\"102\" height=\"14\" rx=\"2\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"1\"/><text x=\"346\" y=\"88\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">$24m</text><text x=\"16\" y=\"116\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">= Gross profit</text><rect x=\"170\" y=\"104\" width=\"68\" height=\"14\" rx=\"2\" fill=\"#34d399\" stroke=\"#34d399\" stroke-width=\"1\"/><text x=\"244\" y=\"116\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">$16m</text><text x=\"16\" y=\"144\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">− Operating expenses</text><rect x=\"195.5\" y=\"132\" width=\"42.5\" height=\"14\" rx=\"2\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"1\"/><text x=\"244\" y=\"144\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">$10m</text><text x=\"16\" y=\"172\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">= Operating profit</text><rect x=\"170\" y=\"160\" width=\"25.5\" height=\"14\" rx=\"2\" fill=\"#34d399\" stroke=\"#34d399\" stroke-width=\"1\"/><text x=\"201.5\" y=\"172\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">$6m</text><text x=\"16\" y=\"200\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">− Interest</text><rect x=\"192.1\" y=\"188\" width=\"3.4\" height=\"14\" rx=\"2\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"1\"/><text x=\"201.5\" y=\"200\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">$0.8m</text><text x=\"16\" y=\"228\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">= Profit for the year</text><rect x=\"170\" y=\"216\" width=\"22.1\" height=\"14\" rx=\"2\" fill=\"#34d399\" stroke=\"#34d399\" stroke-width=\"1\"/><text x=\"198.1\" y=\"228\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">$5.2m</text><text x=\"200\" y=\"270\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Each line takes off one kind of cost</text></svg>"
+     },
+     {
+      "label": "Owned and owed",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">What it owns, and how that is funded</text><rect x=\"16\" y=\"50\" width=\"176\" height=\"157.4\" rx=\"3\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><text x=\"104\" y=\"122.7\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">Non-current assets</text><text x=\"104\" y=\"142.7\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">$29m</text><rect x=\"16\" y=\"207.4\" width=\"176\" height=\"32.6\" rx=\"3\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"1.5\"/><text x=\"104\" y=\"227.7\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"middle\" font-weight=\"600\">Current assets $6m</text><rect x=\"208\" y=\"50\" width=\"176\" height=\"27.1\" rx=\"3\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"1.5\"/><text x=\"296\" y=\"67.6\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">Current liabilities $5m</text><rect x=\"208\" y=\"77.1\" width=\"176\" height=\"54.3\" rx=\"3\" fill=\"none\" stroke=\"#f87171\" stroke-width=\"1.5\"/><text x=\"296\" y=\"98.3\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">Non-current liabilities</text><text x=\"296\" y=\"118.3\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">$10m</text><rect x=\"208\" y=\"131.4\" width=\"176\" height=\"108.6\" rx=\"3\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"1.5\"/><text x=\"296\" y=\"179.7\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">Total equity</text><text x=\"296\" y=\"199.7\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">$20m</text><text x=\"104\" y=\"262\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Assets $35m</text><text x=\"296\" y=\"262\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Liabilities + equity $35m</text><text x=\"200\" y=\"290\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Net assets $20m = total equity $20m</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "assessing-competitiveness:diagram:fc53ab8e",
+    "title": "Six Ratios Over Two Years",
+    "description": "IAL 3.3.5 · 2a: Orla's profitability, liquidity, gearing and ROCE, last year against this year.",
+    "checklist": [
+     "Both margins and ROCE fell: 45% → 40%, 15% → 13%, 25% → 20%",
+     "The acid test fell below 1:1, to 0.7:1; the current ratio to 1.2:1",
+     "Gearing rose from 12.5% to 33.3%, still below the usual 50% mark"
+    ],
+    "scenarios": [
+     {
+      "label": "Profitability",
+      "svg": "<svg width=\"400\" height=\"270\" viewBox=\"0 0 400 270\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Orla: profitability and ROCE</text><rect x=\"60\" y=\"41\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"80\" y=\"50\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Last year</text><rect x=\"170.5\" y=\"41\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"190.5\" y=\"50\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">This year</text><line x1=\"24\" y1=\"214\" x2=\"380\" y2=\"214\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><rect x=\"53\" y=\"88\" width=\"34\" height=\"126\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"70\" y=\"82\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">45%</text><rect x=\"93\" y=\"102\" width=\"34\" height=\"112\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"110\" y=\"96\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">40%</text><text x=\"90\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Gross profit</text><text x=\"90\" y=\"250\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">margin</text><rect x=\"173\" y=\"172\" width=\"34\" height=\"42\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"190\" y=\"166\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">15%</text><rect x=\"213\" y=\"177.6\" width=\"34\" height=\"36.4\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"230\" y=\"171.6\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">13%</text><text x=\"210\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Profit for the</text><text x=\"210\" y=\"250\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">year margin</text><rect x=\"293\" y=\"144\" width=\"34\" height=\"70\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"310\" y=\"138\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">25%</text><rect x=\"333\" y=\"158\" width=\"34\" height=\"56\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"350\" y=\"152\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">20%</text><text x=\"330\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">ROCE</text></svg>"
+     },
+     {
+      "label": "Liquidity",
+      "svg": "<svg width=\"400\" height=\"270\" viewBox=\"0 0 400 270\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Orla: liquidity</text><rect x=\"60\" y=\"41\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"80\" y=\"50\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Last year</text><rect x=\"170.5\" y=\"41\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"190.5\" y=\"50\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">This year</text><line x1=\"24\" y1=\"214\" x2=\"380\" y2=\"214\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"24\" y1=\"144\" x2=\"380\" y2=\"144\" stroke=\"#f87171\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text x=\"380\" y=\"138\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"end\" font-weight=\"400\">1:1</text><rect x=\"83\" y=\"109\" width=\"34\" height=\"105\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"100\" y=\"103\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">1.5:1</text><rect x=\"123\" y=\"130\" width=\"34\" height=\"84\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"140\" y=\"124\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">1.2:1</text><text x=\"120\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Current ratio</text><rect x=\"263\" y=\"144\" width=\"34\" height=\"70\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"280\" y=\"138\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">1:1</text><rect x=\"303\" y=\"165\" width=\"34\" height=\"49\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"320\" y=\"159\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">0.7:1</text><text x=\"300\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Acid test ratio</text></svg>"
+     },
+     {
+      "label": "Gearing",
+      "svg": "<svg width=\"400\" height=\"270\" viewBox=\"0 0 400 270\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Orla: gearing</text><rect x=\"60\" y=\"41\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"80\" y=\"50\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Last year</text><rect x=\"170.5\" y=\"41\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"190.5\" y=\"50\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">This year</text><line x1=\"24\" y1=\"214\" x2=\"380\" y2=\"214\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"24\" y1=\"97.3\" x2=\"380\" y2=\"97.3\" stroke=\"#f87171\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><text x=\"380\" y=\"91.3\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"end\" font-weight=\"400\">Usually called high</text><rect x=\"173\" y=\"184.8\" width=\"34\" height=\"29.2\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"190\" y=\"178.8\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">12.5%</text><rect x=\"213\" y=\"136.2\" width=\"34\" height=\"77.8\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"230\" y=\"130.2\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">33.3%</text><text x=\"210\" y=\"234\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Gearing ratio</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "assessing-competitiveness:diagram:2e9904d3",
+    "title": "Gearing Magnifies Gains and Losses",
+    "description": "IAL 3.3.5 · 2b: two firms with the same capital employed and the same ROCE, one lightly and one heavily geared, in a good year and a bad one.",
+    "checklist": [
+     "In the good year the heavily geared firm makes more for each dollar its owners put in",
+     "In the bad year the same firm cannot cover its interest, and its owners make a loss",
+     "The interest is the same in both years; that fixed cost is what magnifies the swing"
+    ],
+    "scenarios": [
+     {
+      "label": "Good year and bad year",
+      "svg": "<svg width=\"400\" height=\"290\" viewBox=\"0 0 400 290\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Gearing magnifies gains and losses</text><rect x=\"60\" y=\"41\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#60a5fa\" stroke=\"#60a5fa\" stroke-width=\"1\"/><text x=\"80\" y=\"50\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Low gearing, 10%</text><rect x=\"217.5\" y=\"41\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"1\"/><text x=\"237.5\" y=\"50\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">High gearing, 60%</text><line x1=\"24\" y1=\"170\" x2=\"380\" y2=\"170\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><rect x=\"66\" y=\"114.6\" width=\"40\" height=\"55.4\" rx=\"2\" fill=\"#60a5fa\" stroke=\"#60a5fa\" stroke-width=\"1\"/><text x=\"86\" y=\"108.6\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">21.3c</text><rect x=\"114\" y=\"71.2\" width=\"40\" height=\"98.8\" rx=\"2\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"1\"/><text x=\"134\" y=\"65.2\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">38c</text><text x=\"110\" y=\"222\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Good year: ROCE 20%</text><rect x=\"246\" y=\"160.6\" width=\"40\" height=\"9.4\" rx=\"2\" fill=\"#60a5fa\" stroke=\"#60a5fa\" stroke-width=\"1\"/><text x=\"266\" y=\"154.6\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">3.6c</text><rect x=\"294\" y=\"170\" width=\"40\" height=\"5.2\" rx=\"2\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"1\"/><text x=\"314\" y=\"189.2\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">−2c</text><text x=\"290\" y=\"222\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Bad year: ROCE 4%</text><text x=\"200\" y=\"250\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">Profit for owners per $1 they put in</text><text x=\"200\" y=\"276\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">$20m capital employed, borrowing at 8%</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "assessing-competitiveness:diagram:f21a47cf",
+    "title": "The Workforce Over Two Years",
+    "description": "IAL 3.3.5 · 3a: Orla's labour productivity, labour turnover, retention and absenteeism, last year against this year.",
+    "checklist": [
+     "Output per baker fell even though total output rose",
+     "Turnover doubled while retention fell by ten points: the two measure different groups of staff",
+     "Absenteeism rose alongside turnover, which suggests a shared cause"
+    ],
+    "scenarios": [
+     {
+      "label": "Four measures",
+      "svg": "<svg width=\"400\" height=\"330\" viewBox=\"0 0 400 330\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Orla: the workforce, over two years</text><rect x=\"60\" y=\"37\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"80\" y=\"46\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Last year</text><rect x=\"170.5\" y=\"37\" width=\"14\" height=\"8\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"190.5\" y=\"46\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">This year</text><text x=\"16\" y=\"72\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">Loaves per baker a month</text><rect x=\"16\" y=\"82\" width=\"256\" height=\"12\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"278\" y=\"92\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">3,200</text><rect x=\"16\" y=\"100\" width=\"240\" height=\"12\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"262\" y=\"110\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">3,000</text><text x=\"16\" y=\"134\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">Labour turnover</text><rect x=\"16\" y=\"144\" width=\"42\" height=\"12\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"64\" y=\"154\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">15%</text><rect x=\"16\" y=\"162\" width=\"84\" height=\"12\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"106\" y=\"172\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">30%</text><text x=\"16\" y=\"196\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">Retention rate</text><rect x=\"16\" y=\"206\" width=\"252\" height=\"12\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"274\" y=\"216\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">90%</text><rect x=\"16\" y=\"224\" width=\"224\" height=\"12\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"246\" y=\"234\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">80%</text><text x=\"16\" y=\"258\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">Absenteeism</text><rect x=\"16\" y=\"268\" width=\"84\" height=\"12\" rx=\"2\" fill=\"#a78bfa\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"106\" y=\"278\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">3%</text><rect x=\"16\" y=\"286\" width=\"140\" height=\"12\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"162\" y=\"296\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">5%</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "assessing-competitiveness:diagram:5c268d90",
+    "title": "What Each HR Response Would Cost",
+    "description": "IAL 3.3.5 · 3c: the yearly cost of three responses to Orla's staff turnover, set against what the turnover itself costs.",
+    "checklist": [
+     "Turnover costs $480,000 a year: leavers × the cost of replacing one",
+     "The share scheme and matching rivals' pay each cost about as much as the turnover",
+     "So fewer leavers alone cannot repay either; a say over rotas costs little"
+    ],
+    "scenarios": [
+     {
+      "label": "Cost per year",
+      "svg": "<svg width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Orla: what each response costs a year</text><text x=\"16\" y=\"58\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">What turnover costs now</text><rect x=\"16\" y=\"66\" width=\"240\" height=\"14\" rx=\"2\" fill=\"#f87171\" stroke=\"#f87171\" stroke-width=\"1\"/><text x=\"264\" y=\"78\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">$480,000</text><text x=\"16\" y=\"110\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">The share scheme</text><rect x=\"16\" y=\"118\" width=\"250\" height=\"14\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"274\" y=\"130\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">$500,000</text><text x=\"16\" y=\"162\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">Matching rivals' pay</text><rect x=\"16\" y=\"170\" width=\"240\" height=\"14\" rx=\"2\" fill=\"#f59e0b\" stroke=\"#f59e0b\" stroke-width=\"1\"/><text x=\"264\" y=\"182\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">$480,000</text><text x=\"16\" y=\"214\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">Asking staff about rotas</text><rect x=\"16\" y=\"222\" width=\"10\" height=\"14\" rx=\"2\" fill=\"#34d399\" stroke=\"#34d399\" stroke-width=\"1\"/><text x=\"34\" y=\"234\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">little cash cost</text><text x=\"200\" y=\"286\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"400\">Set each cost against the cause of the problem</text></svg>"
+     }
+    ]
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "From revenue to profit for the year",
+     "steps": [
+      "Start from revenue: $40m of sales.",
+      "Take off cost of sales ($24m) to reach gross profit of $16m.",
+      "Take off other operating expenses ($10m) to reach operating profit of $6m.",
+      "Take off interest ($0.8m) to reach the profit for the year: $5.2m."
+     ],
+     "result": "Each line removes one kind of cost; the margin on each line shows where the money went."
+    },
+    {
+     "title": "From a large loan to financial risk",
+     "steps": [
+      "The business signs a large loan to build a new factory.",
+      "From the first month, interest is owed on the loan as a fixed cost, whatever sales do.",
+      "At the year end, the statement of financial position shows higher gearing, as more of capital employed is borrowed.",
+      "In the year after those accounts, a downturn cuts operating profit, but the interest does not fall.",
+      "Profit may no longer cover the interest due, and the firm is at risk."
+     ],
+     "result": "Gearing is a measure of this risk: the higher it is, the less a fall in profit the business can absorb."
+    },
+    {
+     "title": "How a consultation runs",
+     "steps": [
+      "Managers set out a proposed change, such as a new shift rota.",
+      "Staff give their views, directly or through their representatives.",
+      "Weighing those views, managers make the decision.",
+      "The decision and the reasons for it are explained to staff."
+     ],
+     "result": "Staff influence the decision without making it; skipping the feedback stage is what makes consultation feel empty."
+    },
+    {
+     "title": "From high turnover to a dearer loaf",
+     "steps": [
+      "Experienced staff leave faster than before.",
+      "Their replacements must be recruited and trained, at a cost for each.",
+      "New staff work more slowly while they learn, so output per worker falls.",
+      "With the same pay per worker and less output, the labour cost of each loaf rises."
+     ],
+     "result": "Turnover and productivity are linked: a staffing problem becomes a cost problem, and then a competitiveness problem."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "Is a falling ROCE a bad sign?",
+     "content": "Not always. Orla's ROCE fell from 25% to 20% in the year its new bakery was built, because the bakery counts in full as capital employed before its profits build up. Three things decide it. THE CAUSE: a new investment not yet earning in full, or falling margins in the existing business? THE COMPARISON: still well above the 8% cost of borrowing, and how does it compare with rivals? THE TREND: does it recover next year as the bakery's output grows? A falling ROCE with falling margins, as here, needs both questions answered."
+    },
+    {
+     "title": "Borrow or issue shares?",
+     "content": "A loan keeps control with the current owners and costs only the interest, which adds to their return while ROCE beats the interest rate. But interest is due whatever happens to sales, so borrowing is riskier for a firm that is already geared, whose margins are falling or whose sales can fall. New shares carry no fixed cost but share future profit and control. The deciding questions are how geared the firm already is, how steady its sales are, and how much the owners value control."
+    },
+    {
+     "title": "Which HR strategy fits the problem?",
+     "content": "Match the strategy to the cause. Where staff leave for better pay elsewhere, financial rewards work, but a pay rise goes to everyone, including those who would have stayed. Where they leave because they are not listened to, consultation costs little; where decisions that affect them could be theirs, empowerment goes further, provided they are trained. Employee share ownership rewards staying over years, so it suits keeping experienced staff more than stopping new starters leaving. At Orla, leavers named pay and rotas; matching rivals' pay would cost about as much as the turnover itself, so a targeted reward and a say over rotas answer the causes more cheaply, and more directly than shares."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+  "what": "E054 A/B on /data-response/econ-u1-market-failure with audit/scripts/text-fit-sweep.js (load:'write'), 320-1920 step 5, one state (the page as loaded)",
+  "fail_first": {
+    "how": "'.markdown-page .md-table{container-type:normal!important}' injected (the stacking container removed), dark",
+    "checks": 321,
+    "failing_widths": 21,
+    "first": ["320: PAGE scrollWidth=423", "325: PAGE scrollWidth=423", "330: PAGE scrollWidth=423", "335: PAGE scrollWidth=423", "340: PAGE scrollWidth=423", "345: PAGE scrollWidth=423"],
+    "at_390": { "td_display": "table-cell", "table_container_width": 344, "table_sideways_px": 59 }
+  },
+  "fixed": {
+    "checks": 642,
+    "failures": { "dark": 0, "light": 0 },
+    "at_390": { "td_display": "block", "table_container_width": 344, "table_sideways_px": 0 }
+  },
+  "other_five_pieces": {
+    "how": "same sweep, dark only, step 10 (161 widths each), page HTML written into the frame from the market-failure page's tab",
+    "failures": { "econ-u1-demand-elasticity": 0, "econ-u1-price-determination": 0, "bus-u1-marketing-mix": 0, "bus-u1-meeting-customer-needs": 0, "bus-u1-the-market": 0 }
+  }
+}

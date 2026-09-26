@@ -42,15 +42,15 @@ const movingAverages = (() => {
     examMatters: 'A Calculate question (4 marks, WBS13 Appendix 6) wants the method shown: the three figures added, the division by three, and the answer against the right period. Round consistently, usually to one decimal place, and state the units.',
     recall: recall(sid, {
       type: 'fillin',
-      prompt: 'Complete the moving-average rule:',
+      prompt: 'A juice bar in Colombo sold 50, 56, 59 and 65 thousand drinks in weeks 1 to 4. Work out its three-period moving averages:',
       template: [
-        'A three-period moving average is the ___ of three consecutive figures',
-        '→ It is written against the ___ period of the three',
-        '→ A four-quarter average is ___ so that it lines up with one quarter',
+        'The first three-period moving average = ___ thousand drinks',
+        '→ The next one, a week later = ___ thousand drinks',
+        '→ The first of these averages is plotted against week ___',
       ],
-      answers: ['mean', 'middle', 'centred'],
-      hints: ['add them up and divide', 'not the first and not the last', 'placed between two neighbouring averages'],
-      distractors: ['total', 'trend'],
+      answers: ['55', '60', '2'],
+      hints: ['total the opening three weeks, then divide by three', 'drop the oldest week and bring in the newest', 'the middle of the three weeks it covers'],
+      distractors: ['165', '57.5', '3'],
     }),
   };
 })();
@@ -76,19 +76,12 @@ const scatterAndExtrapolation = (() => {
     misconception: 'Students treat a strong correlation as proof that one variable causes the other. It is evidence of a link, no more. Write: the correlation suggests a relationship; a causal mechanism and a check for third factors are needed before acting on it.',
     examMatters: 'Interpreting a scatter graph is a named WBS13 skill (3.3.3.1b): state the direction and strength of the correlation, use the line of best fit to read off a forecast, and say what extrapolating beyond the data assumes.',
     recall: recall(sid, {
-      type: 'reorder',
-      prompt: 'Put the steps of a quantitative sales forecast in the order a forecaster carries them out, from first to last:',
-      correctOrder: [
-        'Collect the past sales figures, period by period',
-        'Smooth them with a moving average, or plot them against a driver',
-        'Draw the trend line or the line of best fit',
-        'Extend the line into the coming periods',
-      ],
-      why: [
-        'Nothing can be smoothed or plotted until the figures exist',
-        'Smoothing or plotting turns raw figures into a visible pattern',
-        'The line summarises the pattern the smoothed or plotted data show',
-        'Extrapolation comes last because it extends a line that must already exist',
+      type: 'classify',
+      prompt: 'Sort each pair of variables by the correlation a scatter graph of them would most likely show: positive, negative or none:',
+      groups: [
+        { name: 'Positive correlation', items: ['Daily temperature and bottled-water sales at a Dubai kiosk', 'Hours of rain and umbrella sales in Mumbai'], why: 'As one rises the other tends to rise, so the dots climb from bottom-left to top-right' },
+        { name: 'Negative correlation', items: ['A used car\'s age and its resale price', 'The fare on a bus route and the number of passengers who ride it'], why: 'As one rises the other tends to fall, so the dots drop from top-left to bottom-right' },
+        { name: 'No correlation', items: ['A market trader\'s shoe size and her weekly takings', 'The last digit of a customer\'s phone number and how much they spend'], why: 'Nothing links the two, so the dots form a shapeless cloud and no line of best fit forecasts anything' },
       ],
     }),
   };
@@ -150,15 +143,15 @@ const payback = (() => {
     examMatters: 'A Calculate question (4 marks) is marked on the cumulative table and the part-year fraction as much as on the answer, so show them, then give the result in years and months (WBS13 Appendix 6: workings should be given).',
     recall: recall(sid, {
       type: 'fillin',
-      prompt: 'Complete the payback method:',
+      prompt: 'A phone-repair kiosk in Karachi costs $30,000 and brings net cash inflows of $12,000, $12,000 and $20,000 in years 1 to 3. Work out its payback:',
       template: [
-        'Payback counts the years until cumulative net cash ___ equal the initial cost',
-        '→ Part-year: full years + amount still to recover ÷ cash inflow in the ___ year',
-        '→ Between two projects, the ___ payback is preferred',
+        'Still to recover at the end of year 2 = $___ thousand',
+        '→ Fraction of year 3 needed = ___',
+        '→ Payback period = ___ years',
       ],
-      answers: ['inflows', 'recovery', 'shorter'],
-      hints: ['money coming in, not profit', 'the year in which the last dollar comes back', 'less time with the money at risk'],
-      distractors: ['profits', 'longer'],
+      answers: ['6', '0.3', '2.3'],
+      hints: ['the cost minus the first two years\' inflows', 'what is left, divided by that year\'s inflow', 'whole years plus the fraction'],
+      distractors: ['24', '0.5', '3'],
     }),
   };
 })();
@@ -189,20 +182,16 @@ const arr = (() => {
     misconception: 'Students divide total profit by the investment and call the answer ARR. That is the return over the whole life, not per year; divide by the number of years first, or the figure means nothing against an annual interest rate.',
     examMatters: 'State the formula, show total profit, the average and the percentage. A correct method with one arithmetic slip still earns method marks under the own figure rule (WBS13 mark schemes), so never write the answer alone.',
     recall: recall(sid, {
-      type: 'reorder',
-      prompt: 'Put the ARR calculation in the order you would work it, from first step to last:',
-      correctOrder: [
-        'Add up the net cash inflows over the project\'s life',
-        'Subtract the initial cost to find total profit',
-        'Divide total profit by the number of years',
-        'Express the average annual profit as a percentage of the initial cost',
+      type: 'fillin',
+      prompt: 'A printing press in Lahore costs $60,000 and brings in $132,000 of net cash inflows over its four-year life. Work out its ARR:',
+      template: [
+        'Total profit over the four years = $___ thousand',
+        '→ Average annual profit = $___ thousand',
+        '→ ARR = ___%',
       ],
-      why: [
-        'Everything else is built from the total the project brings in',
-        'Profit is what remains once the cost has been recovered',
-        'ARR is an annual figure, so the profit must be spread across the years',
-        'The percentage needs the average, so it comes last',
-      ],
+      answers: ['72', '18', '30'],
+      hints: ['everything the press brings in, less what it cost', 'spread that profit evenly across its life', 'the yearly figure as a share of the outlay'],
+      distractors: ['120', '33'],
     }),
   };
 })();
@@ -228,15 +217,15 @@ const npv = (() => {
     examMatters: 'Set the working out as a table: year, cash flow, discount factor, present value, with the cost in year 0 at a factor of 1. The paper supplies the factors (WBS13, 3.3.3.2c); the skill is applying them and interpreting the sign.',
     recall: recall(sid, {
       type: 'fillin',
-      prompt: 'Complete the NPV rule:',
+      prompt: 'A coffee roaster in Kampala costs $20,000 and brings net cash inflows of $10,000 in year 1 and $15,000 in year 2. The discount factors at 10% are 0.909 and 0.826. Work out its NPV:',
       template: [
-        'Present value = cash flow × ___ factor',
-        '→ NPV = total present value − ___ cost',
-        '→ Accept the project when the NPV is ___',
+        'Present value of the year-1 inflow = $___ thousand',
+        '→ Present value of the year-2 inflow = $___ thousand',
+        '→ Net present value = $___ thousand',
       ],
-      answers: ['discount', 'initial', 'positive'],
-      hints: ['it shrinks a future sum to today\'s value', 'the outlay at the start', 'above zero'],
-      distractors: ['average', 'negative'],
+      answers: ['9.09', '12.39', '1.48'],
+      hints: ['that year\'s cash times its factor', 'the year-2 cash times its smaller factor', 'everything discounted, less the outlay'],
+      distractors: ['21.48', '5'],
     }),
   };
 })();
@@ -260,11 +249,11 @@ const comparingTechniques = (() => {
     examMatters: 'A 20-mark Evaluate on an investment decision (WBS13 Section B or C) is levels-marked: calculate what the data allow, compare the methods, bring in non-financial factors, and end with a recommendation that states the criterion it rests on.',
     recall: recall(sid, {
       type: 'classify',
-      prompt: 'Sort each statement into the technique it describes: payback, ARR or NPV:',
+      prompt: 'Sort each manager\'s question into the technique that answers it: payback, ARR or NPV:',
       groups: [
-        { name: 'Simple payback', items: ['Counts the years until the cash outlay is recovered', 'Ignores every cash flow after the recovery point'], why: 'Payback measures time and liquidity, not return' },
-        { name: 'Average rate of return', items: ['Expresses average annual profit as a percentage of the cost', 'Treats a dollar in year five like a dollar in year one'], why: 'ARR is an average over the whole life with no weighting for timing' },
-        { name: 'Net present value', items: ['Multiplies each cash flow by a discount factor', 'Gives a result in dollars at today\'s values'], why: 'NPV converts future cash to present value before subtracting the cost' },
+        { name: 'Simple payback', items: ['A shop owner with an overdraft asks when she will have her $15,000 back', 'A lender wants to know how soon the project could repay a two-year loan'], why: 'Both ask about time until the outlay is recovered, which is a liquidity question' },
+        { name: 'Average rate of return', items: ['A board wants one yearly percentage to set against its 9% hurdle', 'An owner asks whether the machine beats leaving the money in a 5% deposit'], why: 'Both want an average yearly return as a percentage, to compare with a rate' },
+        { name: 'Net present value', items: ['Two projects bring in the same total, one early and one late: which is worth more?', 'A finance director asks what cash arriving in year six is worth now'], why: 'Both turn on when the cash arrives, and only discounting prices timing' },
       ],
     }),
   };
@@ -292,10 +281,11 @@ const constructingTrees = (() => {
     examMatters: 'Construct (4 marks) means an accurately labelled diagram (WBS13 Appendix 6): squares and circles in the right places, probabilities on chance branches adding to 1, costs on option branches, payoffs at the ends. Label everything, since the marks sit on the labelled elements.',
     recall: recall(sid, {
       type: 'classify',
-      prompt: 'Sort these features into decision nodes and chance nodes:',
+      prompt: 'An airline in Nairobi is deciding whether to open a route to Kigali. Sort each label into where it belongs on the tree: a branch leaving the square, a branch leaving a circle, or the end of a branch:',
       groups: [
-        { name: 'Decision node', items: ['Drawn as a square', 'The manager chooses which branch to take', 'Its branches carry the cost of each option'], why: 'A decision node is a choice under the manager\'s control, so its branches are options with costs' },
-        { name: 'Chance node', items: ['Drawn as a circle', 'Its branches carry probabilities that add up to 1', 'The outcome is decided by events, not by the manager'], why: 'A chance node is uncertainty, so its branches are outcomes with probabilities' },
+        { name: 'Branch leaving the square', items: ['Open the Kigali route, cost $2m', 'Keep the current timetable, cost $0'], why: 'These are the options the managers choose between, so each carries its cost and no probability' },
+        { name: 'Branch leaving a circle', items: ['Passenger numbers high, 0.65', 'Passenger numbers low, 0.35'], why: 'These are outcomes nobody chooses, so each carries a probability, and the pair adds up to 1' },
+        { name: 'End of a branch', items: ['Revenue of $4.5m over three years', 'Revenue of $1.2m over three years'], why: 'A payoff is what the firm receives if that path happens, so it sits where the path ends' },
       ],
     }),
   };
@@ -327,20 +317,16 @@ const rollingBack = (() => {
     misconception: 'Students compare EMVs and pick the biggest. The cost of the option has not been paid yet at the chance node, so the comparison is between net gains. In the cold-brew tree the higher EMV belongs to the option that loses.',
     examMatters: 'Show every product and sum. A Calculate answer with the right EMVs and the wrong final choice still carries method marks under the own figure rule (WBS13 mark schemes). State the choice in words, with the net gain figure that justifies it.',
     recall: recall(sid, {
-      type: 'reorder',
-      prompt: 'Put the roll-back steps in the order you would work them, from the right of the tree to the decision:',
-      correctOrder: [
-        'Start at the payoffs on the right-hand ends',
-        'Calculate the expected value at each chance node',
-        'Subtract the cost of each option to find its net gain',
-        'Choose the option with the highest net gain at the decision node',
+      type: 'fillin',
+      prompt: 'A garment maker in Dhaka can expand (cost $50k: 0.8 chance of $150k, 0.2 chance of $40k) or outsource (cost $10k: 0.5 chance of $90k, 0.5 chance of $50k). Roll the tree back:',
+      template: [
+        'Expected value of expanding = $___ thousand',
+        '→ Net gain of outsourcing = $___ thousand',
+        '→ The net gain of the option chosen at the square = $___ thousand',
       ],
-      why: [
-        'Rolling back means the ends are known first',
-        'An expected value needs the payoffs and probabilities on the branches beyond it',
-        'The cost sits on the option branch, so it comes off after the chance node is valued',
-        'The decision is made last, once every option has a net gain',
-      ],
+      answers: ['128', '60', '78'],
+      hints: ['each payoff times its probability, added', 'its expected value less its cost', 'compare both options after their costs'],
+      distractors: ['70', '95'],
     }),
   };
 })();
@@ -365,14 +351,14 @@ const treeLimits = (() => {
     examMatters: 'Analyse (6 marks) asks for two limitations developed in context (WBS13 Appendix 6). Tie each to the case: which probability is a guess here, which payoff is furthest ahead, whether this firm could survive the worst branch.',
     recall: recall(sid, {
       type: 'match',
-      prompt: 'Match each limitation of a decision tree to the way it can mislead a manager:',
+      prompt: 'Match each limitation of a decision tree to the case that exposes it:',
       pairs: [
-        { left: 'Probabilities are estimates', right: 'A small change in the odds reverses the choice', why: 'The result inherits the uncertainty of the inputs' },
-        { left: 'EMV is a long-run average', right: 'A one-off decision lands on one outcome, not the average', why: 'An average only pays off across many repeats' },
-        { left: 'Payoffs are forecasts', right: 'Revenue years ahead turns out lower than the tree assumed', why: 'The payoff was a projection, not a fact' },
-        { left: 'Qualitative factors are excluded', right: 'The chosen option damages the brand in a way the tree never priced', why: 'Only what can be given a number appears on the tree' },
+        { left: 'Probabilities are estimates', right: 'A start-up copied its 0.7 chance of success from a rival\'s launch in another country', why: 'The odds were borrowed from a different situation, so the expected values built on them are guesses' },
+        { left: 'EMV is a long-run average', right: 'A family firm stakes its only factory on a single expansion', why: 'One decision lands on one outcome, and the firm cannot wait for the average to come good' },
+        { left: 'Payoffs are forecasts', right: 'The high-demand payoff assumes prices hold for the next five years', why: 'A payoff that far ahead is a projection, with every limit of sales forecasting' },
+        { left: 'Qualitative factors are excluded', right: 'Moving production abroad wins on net gain, but the tree has no branch for staff morale', why: 'Only what can be given a number appears on the tree' },
       ],
-      distractors: ['The tree shows every option on one scale'],
+      distractors: ['Both options have their costs written on the branches from the square'],
     }),
   };
 })();
@@ -402,15 +388,15 @@ const cpaNature = (() => {
     examMatters: 'The paper gives a network to complete and interpret (WBS13, 3.3.3.4b). Be able to say what a node\'s three numbers mean, why the longest route is the critical one, and what float lets a manager do.',
     recall: recall(sid, {
       type: 'fillin',
-      prompt: 'Complete the critical-path rule:',
+      prompt: 'Three routes run from start to finish of a shop refit in Penang: A–B–E takes 9 days, A–C–E takes 12 days and A–D–E takes 7 days. Complete:',
       template: [
-        'The critical path is the ___ route through the network',
-        '→ Activities on it have ___ float',
-        '→ A delay to any of them delays the ___ project',
+        'The critical path runs A → ___ → E',
+        '→ The refit cannot finish in fewer than ___ days',
+        '→ Activity B can slip by up to ___ days without delaying the refit',
       ],
-      answers: ['longest', 'zero', 'whole'],
-      hints: ['not the shortest', 'none at all', 'every part of it, not just that task'],
-      distractors: ['shortest', 'most'],
+      answers: ['C', '12', '3'],
+      hints: ['the middle activity of the route that takes longest', 'the length of that route', 'the gap between its route and the critical one'],
+      distractors: ['D', '9', '5'],
     }),
   };
 })();
@@ -440,20 +426,16 @@ const completingNetwork = (() => {
     misconception: 'Students take the lowest figure forward or the highest backward where two arrows meet. Forward means highest, because the node waits for the slowest route; backward means lowest, because the node must finish in time for the tightest route ahead.',
     examMatters: 'Calculate (4 marks) asks for a float or a node value: show the subtraction with the three numbers named. Identify the critical path by listing its activities and its length, and check that each has zero float.',
     recall: recall(sid, {
-      type: 'reorder',
-      prompt: 'Put the steps for completing a network in the order you would work them, from first to last:',
-      correctOrder: [
-        'Forward pass: fill in the earliest start time at every node',
-        'Backward pass: fill in the latest finish time at every node',
-        'Calculate the float of each activity from its EST, LFT and duration',
-        'List the zero-float activities as the critical path',
+      type: 'fillin',
+      prompt: 'A small network: A (3 days) runs node 1 → 2; B (5 days) node 1 → 3; C (4 days) node 2 → 3; D (2 days) node 3 → 4. Complete it:',
+      template: [
+        'Earliest start time at node 3 = ___',
+        '→ Total float of activity B = ___ days',
+        '→ The critical path is ___',
       ],
-      why: [
-        'Nothing can be calculated until the earliest times are known',
-        'Latest times are found by working back from the finish the forward pass fixed',
-        'Float needs both an earliest start and a latest finish',
-        'The critical path is read off once every float is known',
-      ],
+      answers: ['7', '2', 'A–C–D'],
+      hints: ['the later of the two routes arriving there', 'latest finish at its end, less its duration, less its earliest start', 'the activities with no float'],
+      distractors: ['5', '0', 'B–D'],
     }),
   };
 })();
@@ -478,10 +460,10 @@ const cpaLimits = (() => {
     examMatters: 'For a Discuss (8 marks) on CPA, weigh the limits against the purpose: the more uncertain the durations and the more shared the resources, the less the network can promise, but even then it shows which slips matter.',
     recall: recall(sid, {
       type: 'classify',
-      prompt: 'Sort each statement as a strength or a limitation of critical path analysis:',
+      prompt: 'A hospital wing is being built in Karachi from a completed network. Sort each event into what the network could warn the manager about in advance, or what it cannot show:',
       groups: [
-        { name: 'Strength', items: ['Shows the minimum time the project can take', 'Reveals the float that lets resources be moved', 'Identifies the activities that cannot be allowed to slip'], why: 'These follow directly from drawing the network and finding the longest route' },
-        { name: 'Limitation', items: ['Relies on estimated durations', 'Assumes the resources are available when needed', 'Says nothing about cost or quality'], why: 'Each is an assumption the network makes and cannot check' },
+        { name: 'The network warns about it', items: ['Painting can start three days late without moving the opening date', 'A late steel delivery for a zero-float activity will push back the opening', 'Electricians can leave a task with float to help on the lift installation'], why: 'Float and the critical path come straight out of the network, so these are visible before work starts' },
+        { name: 'The network cannot show it', items: ['The same crane is booked for two critical tasks on one day', 'Monsoon rain doubles the time the foundations take', 'A cheaper contractor finishes on time but the wiring fails inspection'], why: 'Each breaks an assumption the network makes: resources on hand, durations as estimated, quality taken for granted' },
       ],
     }),
   };
@@ -509,15 +491,15 @@ const contributionPerUnit = (() => {
     examMatters: 'A 4-mark Calculate can ask for contribution per unit, total contribution or the resulting profit; write the formula, substitute the figures and state the units. A Define (2 marks) needs the price-minus-variable-cost idea and what contribution goes towards.',
     recall: recall(sid, {
       type: 'fillin',
-      prompt: 'Complete the contribution chain:',
+      prompt: 'A phone-case seller in Manila charges $15 a case; each case costs $6 in materials and packaging. She sells 3,000 a month and her fixed costs are $20,000 a month. Work it through:',
       template: [
-        'Contribution per unit = selling ___ − variable cost per unit',
-        '→ Total contribution = contribution per unit × ___ sold',
-        '→ Profit = total contribution − ___ costs',
+        'Contribution per case = $___',
+        '→ Total contribution a month = $___ thousand',
+        '→ Profit a month = $___ thousand',
       ],
-      answers: ['price', 'units', 'fixed'],
-      hints: ['what the customer pays', 'the volume', 'rent and salaries, whatever the output'],
-      distractors: ['average', 'marginal'],
+      answers: ['9', '27', '7'],
+      hints: ['what the buyer pays, less what each case uses up', 'per-case figure times cases sold', 'what is left once the rent and wages are paid'],
+      distractors: ['45', '25'],
     }),
   };
 })();
@@ -544,8 +526,8 @@ const contributionDecisions = (() => {
       type: 'classify',
       prompt: 'Decide whether each offer should be accepted or rejected on contribution grounds:',
       groups: [
-        { name: 'Accept', items: ['$55 per room-night against a variable cost of $30, rooms otherwise empty', 'A bulk order at $8 a unit when variable cost is $5 and the factory runs at 70% capacity', 'A supplier offers a part for $12 that costs $15 in variable cost to make'], why: 'Each adds contribution without changing fixed costs or displacing other sales' },
-        { name: 'Reject', items: ['$4 a unit against a variable cost of $5', 'An order that can be met only with overtime that pushes cost per unit above the price', 'A discount that regular customers would learn to wait for'], why: 'Each either loses contribution or changes the costs and the sales it was meant to add to' },
+        { name: 'Accept', items: ['A school orders 500 uniforms at $9 each; they cost $6 each in variable cost and the machines stand idle', 'A bus company fills empty weekday seats at $3 when each extra rider costs it $0.50', 'A supplier offers a bracket for $7 that costs $9 in variable cost to make'], why: 'Each adds contribution, or saves variable cost, without changing fixed costs or displacing other sales' },
+        { name: 'Reject', items: ['A retailer offers $5 a unit for a product whose variable cost is $5.40', 'A rush order at $9 a unit needs a night shift that lifts variable cost from $6 to $10', 'An $8 price to one buyer when regular customers pay $12 and will demand the same'], why: 'Each either loses contribution or changes the costs and the sales it was meant to add to' },
       ],
     }),
   };
@@ -691,7 +673,7 @@ export const NOTES = [
       ] },
     ],
     formula: { label: 'EXPECTED MONETARY VALUE', text: 'EMV = Σ (probability × payoff); net gain = EMV − cost of the option' },
-    flow: { steps: ['Draw squares, circles, probabilities, costs and payoffs', 'EMV at each chance node', 'Net gain = EMV − option cost', 'Choose the highest net gain'], result: 'The best expected return after cost, with its assumptions visible', resultType: 'neutral' },
+    flow: { steps: ['Draw squares, circles, probabilities, costs and payoffs', 'EMV at each chance node', 'Net gain = EMV − option cost', 'Choose the highest net gain'], result: 'The best expected return after cost, with its assumptions visible', resultType: 'good' },
     takeaway: [
       'Probabilities go on chance branches only and add up to 1; costs go on option branches.',
       'Roll back from right to left; compare net gains, not EMVs.',

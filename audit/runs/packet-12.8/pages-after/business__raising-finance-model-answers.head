@@ -1,0 +1,96 @@
+title: Raising Finance — Exam Questions &amp; Model Answers | Edexcel IAL Business | Revvy Learn
+canonical: https://revvylearn.com/business/raising-finance-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What are the main sources of finance for a start-up?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Key sources include: personal savings (no interest or loss of ownership), bank loans (larger sums but require collateral and fixed repayments), venture capital/angel investors (substantial funding plus expertise but require equity stake), crowdfunding (raises awareness but uncertain outcome), and government grants (free money but competitive and restrictive)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why might banks be reluctant to lend to start-ups?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Start-ups have no trading history to demonstrate profitability, a high failure rate (around 60% fail within three years), limited collateral to secure the loan, and uncertain cash flows making repayment risky. Banks prefer lending to established businesses with proven revenue streams and valuable assets."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Raising Finance — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Business 2.3.1 Raising Finance"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Discuss (8 marks)",
+   "text": "Discuss the most appropriate sources of finance for a new start-up business.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A start-up business typically has limited trading history , no proven revenue stream, and higher risk — all of which restrict its financing options. K Personal savings are often the most accessible source because they do not require approval from a third party and involve no interest payments or loss of ownership . A However, the amount available is limited by the entrepreneur's personal wealth, which may be insufficient to cover start-up costs such as premises, equipment, and initial stock. An Bank loans provide a larger lump sum, but banks may be reluctant to lend to start-ups due to the high failure rate — approximately 60% of UK start-ups fail within the first three years. A If approved, the entrepreneur must provide collateral (personal assets as security) and make fixed monthly repayments regardless of whether the business is generating revenue, creating cash flow pressure in the early months. An Venture capital or angel investment offers substantial funding and often includes business expertise and mentoring . A However, investors typically demand an equity stake , meaning the entrepreneur loses a share of ownership and future profits. This trade-off may be worthwhile if the investor's contacts and experience significantly increase the business's chances of survival. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain the difference between internal and external sources of finance.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Internal sources of finance come from within the business — they do not require borrowing or selling shares. K Examples include retained profit (reinvesting earnings), sale of assets (selling unused equipment), and reducing working capital (running down stock levels). A External sources come from outside the business and involve either borrowing or giving up equity. K Examples include bank loans (fixed repayment schedule with interest), share capital (selling ownership stakes), and venture capital (investment from specialist firms in exchange for equity). A Internal finance avoids interest payments and loss of control, but may be limited in amount. External finance provides larger sums but comes with obligations."
+   }
+  }
+ ]
+}

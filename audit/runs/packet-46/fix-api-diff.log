@@ -1,0 +1,28 @@
+before the fix: draft vs live differing paths = 0
+live before vs live after (the fix round must not touch live): 0 differing paths
+
+after the fix: served live vs served draft, 7 differing leaf paths:
+.quiz[2].id
+  live : "growth-development:quiz:a315e66b"
+  draft: "growth-development:quiz:bb8f266a"
+.quiz[2].options[0]
+  live : "45"
+  draft: "31"
+.quiz[2].options[1]
+  live : "55"
+  draft: "27"
+.quiz[2].options[2]
+  live : "122"
+  draft: "133"
+.quiz[2].options[3]
+  live : "82"
+  draft: "33"
+.quiz[2].question
+  live : "A country has 40% of its people under 15, 5% over 64 and 55% of working age. Its dependency ratio is about:"
+  draft: "An emerging economy's birth rate has fallen: 20% of its people are under 15 and 5% are over 64. Its dependency ratio is approximately:"
+.quiz[2].explanation
+  live : "The dependency ratio is (young + old) ÷ working age × 100 = 45 ÷ 55 × 100 = 82. Inverting the fraction gives 122."
+  draft: "Working age is what is left: 100 − 20 − 5 = 75%. The dependency ratio is (young + old) ÷ working age × 100 = 25 ÷ 75 × 100 = 33. Taking working age as 80% forgets to take out the over-64s and gives 31; leaving the over-64s out of the dependants gives 27; dividing the whole population by the working age gives 133."
+
+top-level keys that differ: quiz
+draft isPremium false, counts {"quiz":44,"flashcards":43,"extrasChains":4,"extrasEvaluation":3,"mistakes":7}; served quiz ids: 68c08c31 3f651164 bb8f266a 7ff295f1 7a0688e4 68311ebb c36e9ef0 d9da9e60 d922e7dc d15c2db4

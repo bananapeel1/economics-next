@@ -41,16 +41,12 @@ const socialScience = (() => {
     misconception: 'Students write that economics is not a real science because its forecasts are often wrong. Accuracy is not what makes a subject scientific; method is. Write instead: economics is scientific in method but cannot run controlled experiments, so its evidence is weaker and its predictions carry more uncertainty.',
     examMatters: 'A Define (2 marks, WEC11 Appendix 6) on "social science" needs the subject — human behaviour — and the method, in one sentence. The inability to run controlled experiments is the point to add when a question asks why economic predictions are uncertain.',
     recall: recall(sid, {
-      type: 'fillin',
-      prompt: 'Complete the description of economics as a social science:',
-      template: [
-        'Economics is a ___ science: its subject is human behaviour',
-        '→ It cannot conduct controlled ___, because history runs only once',
-        '→ So its theories are tested against the ___ that history supplies',
+      type: 'classify',
+      prompt: 'Sort each piece of research into whether an economist can actually carry it out:',
+      groups: [
+        { name: 'Possible', items: ['Compare two similar cities that chose different rent rules', 'Study what happened after a country cut its sales tax', 'Track how spending changed when a new bus route opened'], why: 'Each uses evidence that history has already supplied: a comparison, a past episode or a natural experiment' },
+        { name: 'Not possible', items: ['Run last year again with a higher interest rate', 'Freeze every other market while one tax changes', 'Rewind a decade and replay it without the financial crisis'], why: 'Each needs a controlled experiment: rerunning history under different conditions, or holding the rest of an economy still while one thing changes' },
       ],
-      answers: ['social', 'experiments', 'evidence'],
-      hints: ['the kind of science that studies people rather than matter', 'what a chemist can repeat and an economist cannot', 'what a theory is checked against'],
-      distractors: ['natural', 'opinions'],
     }),
   };
 })();
@@ -77,17 +73,17 @@ const modelsAndCeterisParibus = (() => {
     examMatters: 'State ceteris paribus explicitly whenever a chain of reasoning is written out: "a fall in price raises quantity demanded, ceteris paribus". It signals that the other influences are held constant deliberately rather than forgotten.',
     recall: recall(sid, {
       type: 'reorder',
-      prompt: 'Put the stages of building an economic model in the order an economist works through them, from first to last:',
+      prompt: 'An economist studies how drivers respond to fuel prices. Put the stages of the study in the order they are carried out, from first to last:',
       correctOrder: [
-        'Watch what people, firms or governments actually do',
-        'Set aside every influence but the one being studied',
-        'Work out what the model predicts will happen',
-        'Compare the prediction with the evidence and revise',
+        'Observe how drivers behave when fuel prices change',
+        'Assume incomes and bus fares stay constant',
+        'Derive the prediction that dearer fuel means less driving',
+        'Test that prediction against next year\'s fuel sales, and revise',
       ],
       why: [
         'There is nothing to model until the behaviour has been observed',
-        'Ceteris paribus is what turns messy behaviour into a workable relationship',
-        'A model earns its keep by producing a prediction that could be wrong',
+        'Holding the other influences constant (ceteris paribus) is what isolates the effect of the fuel price',
+        'Only once the model is set up can it produce a prediction that could turn out wrong',
         'Testing comes last because it needs a prediction to test',
       ],
     }),
@@ -149,8 +145,8 @@ const valueJudgements = (() => {
       type: 'match',
       prompt: 'Match each policy disagreement to the value judgement underneath it:',
       pairs: [
-        { left: 'Keep or remove a fuel subsidy', right: 'Living costs today against emissions tomorrow', why: 'Both sides accept the subsidy lowers costs and raises fuel use; they weigh present and future differently' },
-        { left: 'Impose or drop a tariff on imported steel', right: 'Jobs in one industry against prices for everyone', why: 'The effects are agreed; the disagreement is over whose interests count more' },
+        { left: 'Ban single-use plastic bags', right: 'Shoppers\' convenience against litter in rivers and seas', why: 'Both sides accept what the ban does; they weigh a small daily cost against damage borne by others' },
+        { left: 'Cap rents in the capital city', right: 'Lower rents for tenants now against fewer homes built later', why: 'The effects are agreed; the disagreement is over whether today\'s tenants or tomorrow\'s count for more' },
         { left: 'Raise the minimum wage', right: 'Higher pay for those in work against the risk to those seeking it', why: 'The dispute is about which group\'s position should be protected first' },
         { left: 'Fund a new hospital or a new port', right: 'Health now against the growth that pays for health later', why: 'Both are defensible uses of the same money; the choice is about priority' },
       ],
@@ -210,10 +206,10 @@ const renewableResources = (() => {
       type: 'match',
       prompt: 'Match each resource to the reason it falls where it does:',
       pairs: [
-        { left: 'Crude oil', right: 'Fixed stock formed over geological time', why: 'Nothing replaces what is extracted within any human timescale' },
-        { left: 'A managed forest', right: 'Regrows, if felling matches replanting', why: 'It is renewable at a rate, and only at that rate' },
-        { left: 'Sunlight on a solar farm', right: 'Arrives whether or not it is used', why: 'A flow resource: using it today takes nothing from tomorrow' },
-        { left: 'An overfished tuna stock', right: 'Renewable, but used above its sustainable rate', why: 'The category is renewable; the outcome is depletion, because the rate is wrong' },
+        { left: 'A coal seam', right: 'Once burned, it is gone for good', why: 'A non-renewable stock: every tonne used is one fewer left for anyone' },
+        { left: 'A cocoa farm that replants as it harvests', right: 'Lasts only while harvesting keeps pace with regrowth', why: 'Renewable, and used no faster than it regrows' },
+        { left: 'Wind over a coastal ridge', right: 'No amount of use today can reduce it', why: 'A flow resource: it arrives whether or not it is used' },
+        { left: 'Groundwater pumped faster than rain refills it', right: 'Renewable in principle, running down in practice', why: 'The category is renewable; the outcome is depletion, because the rate is too high' },
       ],
       distractors: ['Not a resource at all, because it has no market price'],
     }),
@@ -242,18 +238,18 @@ const opportunityCost = (() => {
     examMatters: 'A question asking for *the* opportunity cost of a decision in a data response wants one named alternative from the data, not a list and not the price. Naming what the resource would otherwise have done is the mark.',
     recall: recall(sid, {
       type: 'reorder',
-      prompt: 'Put the chain from scarcity to opportunity cost in the order the reasoning runs, from first to last:',
+      prompt: 'A farmer with one field would like to grow maize, cassava and cotton. Put her reasoning in the order it runs, from first to last:',
       correctOrder: [
-        'Wants are greater than the resources available',
-        'A choice between competing uses becomes unavoidable',
-        'Picking one use means turning down the others',
-        'The best of those turned down is the opportunity cost',
+        'Her wants are greater than one field can supply',
+        'She cannot grow all three, so a choice has to be made',
+        'Planting maize means rejecting both cassava and cotton',
+        'Cassava, the better of the two rejected crops, is the opportunity cost',
       ],
       why: [
         'Scarcity is the starting condition; nothing follows without it',
-        'If resources were sufficient there would be nothing to choose between',
+        'If the field could grow everything there would be nothing to choose between',
         'A choice is only a choice because alternatives are rejected',
-        'The cost is the best of the rejected uses, which is why it is the last link',
+        'The cost is the best of the rejected uses, not all of them, which is why it is the last link',
       ],
     }),
   };
@@ -279,16 +275,12 @@ const freeAndEconomicGoods = (() => {
     misconception: 'Students call anything with a zero price a free good — school meals, wi-fi, healthcare. Price is not the test. Write instead: a free good has zero opportunity cost, while a zero-priced good still used scarce resources, so someone else has paid for it.',
     examMatters: 'Multiple-choice items here almost always offer a zero-priced service as a distractor. Ask whether one more unit would use resources that had another use; if so, the good is economic.',
     recall: recall(sid, {
-      type: 'fillin',
-      prompt: 'Complete the distinction between the two kinds of good:',
-      template: [
-        'An ___ good is scarce, so making one more unit has a positive opportunity cost',
-        '→ A ___ good is not scarce, so nothing at all is forgone in providing it',
-        '→ The test is opportunity cost, not the ___ the consumer is charged',
+      type: 'classify',
+      prompt: 'Sort each item into a free good or an economic good, using opportunity cost as the test:',
+      groups: [
+        { name: 'Free good', items: ['Snow on a remote mountainside', 'Desert sand where nobody builds', 'Wind drying laundry on a line'], why: 'Supplying one more unit uses no resource that had another use, so nothing is forgone' },
+        { name: 'Economic good', items: ['A school lunch the pupil does not pay for', 'Bottled water sold at a beach kiosk', 'A library computer with no charge to use', 'Tap water a charity supplies free to a village'], why: 'Each uses resources with other uses, so its opportunity cost is positive whatever the user is charged' },
       ],
-      answers: ['economic', 'free', 'price'],
-      hints: ['the kind almost every good belongs to', 'air to breathe and sunlight are the standard examples', 'what a zero-priced hospital visit misleads students about'],
-      distractors: ['public', 'value'],
     }),
   };
 })();
@@ -316,11 +308,11 @@ const readingThePPF = (() => {
     examMatters: 'A Draw (4 marks, WEC11 Appendix 6) asks for an accurately labelled diagram: both axes named with their good and units, the curve bowed outward, and any point the question names marked and identified.',
     recall: recall(sid, {
       type: 'classify',
-      prompt: 'Sort each point on Maraya\'s frontier by where it lies and what that means:',
+      prompt: 'Maraya\'s frontier runs A (0, 40), B (10, 38), C (20, 33), D (30, 25), E (40, 14), F (50, 0), written (consumer, capital) in thousands. Sort each combination by where it lies:',
       groups: [
-        { name: 'On the frontier', items: ['C: 20 consumer, 33 capital', 'E: 40 consumer, 14 capital'], why: 'Every resource is employed and well used, so more of one good now costs some of the other' },
-        { name: 'Inside the frontier', items: ['G: 20 consumer, 20 capital', 'A point with 10 consumer and 25 capital'], why: 'Resources are unemployed or misallocated, so more of both goods is possible with what already exists' },
-        { name: 'Beyond the frontier', items: ['H: 40 consumer, 32 capital', 'A point with 50 consumer and 10 capital'], why: 'It exceeds what today\'s resources and technology can produce, whatever combination is chosen' },
+        { name: 'On the frontier', items: ['(10, 38)', '(40, 14)'], why: 'Each matches the frontier exactly: every resource is employed and well used, so more of one good now costs some of the other' },
+        { name: 'Inside the frontier', items: ['(30, 15)', '(40, 5)'], why: 'Each has less capital than the frontier allows at that level of consumer goods (25 and 14), so resources are unemployed or misallocated' },
+        { name: 'Beyond the frontier', items: ['(20, 40)', '(50, 5)'], why: 'Each asks for more capital than the frontier allows at that level of consumer goods (33 and 0), which today\'s resources cannot produce' },
       ],
     }),
   };
@@ -350,15 +342,15 @@ const marginalOpportunityCost = (() => {
     examMatters: 'A Calculate (2 or 4 marks, WEC11 Appendix 6) wants both subtractions shown, then the division, then the answer with its unit — "0.8 capital goods per consumer good", not a bare 0.8.',
     recall: recall(sid, {
       type: 'fillin',
-      prompt: 'Complete the calculation of opportunity cost from C to D on Maraya\'s frontier:',
+      prompt: 'A neighbouring economy, Tamar, moves along its frontier from 15 thousand consumer and 50 thousand capital goods to 25 thousand consumer and 44 thousand capital goods. Complete the calculation:',
       template: [
-        'Consumer goods gained = 30 − 20 = ___ thousand',
-        '→ Capital goods given up = 33 − 25 = ___ thousand',
-        '→ Opportunity cost per consumer good = given up ÷ gained = ___ capital goods',
+        'Consumer goods gained = ___ thousand',
+        '→ Capital goods given up = ___ thousand',
+        '→ Opportunity cost of one extra consumer good = ___ capital goods',
       ],
-      answers: ['10', '8', '0.8'],
-      hints: ['the gain along the horizontal axis', 'the fall along the vertical axis', 'given up divided by gained'],
-      distractors: ['1.25', '5'],
+      answers: ['10', '6', '0.6'],
+      hints: ['the change along the horizontal axis', 'the fall along the vertical axis', 'what is given up divided by what is gained'],
+      distractors: ['1.67', '16'],
     }),
   };
 })();
@@ -388,7 +380,7 @@ const movementsAndShifts = (() => {
       prompt: 'Sort each change into whether it moves the economy along its frontier or shifts the frontier itself:',
       groups: [
         { name: 'Movement, frontier unchanged', items: ['Idle factories reopen after a recession', 'Land is switched from cotton to grain', 'Unemployed workers are matched to vacancies'], why: 'The quantity and quality of resources are the same; only the use they are put to has changed' },
-        { name: 'Shift of the frontier', items: ['A new copper deposit is discovered', 'An earthquake destroys a third of the ports', 'Free secondary schooling raises workforce skills'], why: 'Each changes the resources or the technology available, so it changes what the economy is capable of producing' },
+        { name: 'Shift of the frontier', items: ['A new copper deposit is discovered', 'A flood washes away a quarter of the farmland', 'Free secondary schooling raises workforce skills'], why: 'Each changes the resources or the technology available, so it changes what the economy is capable of producing' },
       ],
     }),
   };
@@ -416,18 +408,18 @@ const capitalAndConsumerGoods = (() => {
     examMatters: 'On an Evaluate about growth, the capital trade-off gives a ready-made judgement: the gain arrives later and is uncertain, the sacrifice is immediate, and the balance depends on how poor the economy is now.',
     recall: recall(sid, {
       type: 'reorder',
-      prompt: 'Put the consequences of choosing more capital goods in the order they occur, from first to last:',
+      prompt: 'A farming economy spends a year digging irrigation canals instead of growing extra food. Put what follows in the order it happens, from first to last:',
       correctOrder: [
-        'A point with more capital and fewer consumer goods is chosen',
-        'Households consume less this year than they could have',
-        'Extra machines and infrastructure raise output per worker',
-        'The frontier shifts outward, so more of both goods becomes possible',
+        'Workers move from harvesting crops to digging canals',
+        'Consumption of food falls this year',
+        'Watered fields raise output per farmer',
+        'The whole frontier moves outward in the years that follow',
       ],
       why: [
-        'The choice of combination comes first; everything else follows from it',
-        'The sacrifice is immediate, because the resources are used on capital instead',
-        'Capital raises productivity only once it is built and in use',
-        'A higher output per worker is what moves the frontier, so it comes last',
+        'Choosing capital goods means moving resources away from consumer goods first',
+        'The sacrifice is immediate, because those workers are no longer producing food',
+        'The canals raise productivity only once they are built and in use',
+        'Higher output per worker is what moves the frontier, so it comes last',
       ],
     }),
   };
@@ -464,8 +456,8 @@ const specialisation = (() => {
       type: 'classify',
       prompt: 'Sort each consequence of the division of labour into a benefit or a risk:',
       groups: [
-        { name: 'Benefit', items: ['Workers become faster at a repeated task', 'Less time is lost switching between jobs', 'Narrow tasks can be mechanised'], why: 'Each raises output from the same workers and hours — the productivity gain Smith described' },
-        { name: 'Risk', items: ['Repetitive work lowers motivation', 'One missing supplier halts the whole chain', 'A worker whose single task disappears has little to move to'], why: 'Each is a cost of narrowing: the gain in output is bought with dependence and fragility' },
+        { name: 'Benefit', items: ['A tailor who only sews collars gets quicker with every shirt', 'A baker no longer stops kneading to serve customers', 'Wrapping sweets, now one simple motion, is done by a machine'], why: 'Each raises output from the same workers and hours — the productivity gain Smith described' },
+        { name: 'Risk', items: ['A clerk stamping forms all day stops noticing errors', 'A strike at one parts maker stops a car assembly line', 'A packer trained for one task has no work once a machine does it'], why: 'Each is a cost of narrowing: the gain in output is bought with dependence and fragility' },
       ],
     }),
   };
@@ -492,17 +484,15 @@ const functionsOfMoney = (() => {
     misconception: 'Students say money has value because it is backed by gold or printed by a government. It is accepted because everyone expects everyone else to accept it. Write instead: money works while confidence holds, which is why inflation destroys the store of value first.',
     examMatters: 'Questions on money in this topic are about the four functions and their link to specialisation, not about monetary policy. Naming the function and the barrier it removes is the analysis.',
     recall: recall(sid, {
-      type: 'fillin',
-      prompt: 'Complete the four functions of money:',
-      template: [
-        'Money is a medium of ___, so no double coincidence of wants is needed',
-        '→ It is a ___ of value, so every good carries a price on one scale',
-        '→ It is a ___ of value, so worth can be kept and spent later',
-        '→ It is a method of ___ payment, so debts can be settled in the future',
+      type: 'match',
+      prompt: 'Match each situation to the function of money it depends on:',
+      pairs: [
+        { left: 'A tailor pays a baker in cash instead of in shirts', right: 'Medium of exchange', why: 'The baker accepts money without needing to want shirts, so no double coincidence of wants is required' },
+        { left: 'A shopper weighs a phone against a bicycle by their prices', right: 'Measure of value', why: 'Two unlike goods become comparable because both are priced on one scale' },
+        { left: 'A family puts aside part of this month\'s wage for next year\'s fees', right: 'Store of value', why: 'The money keeps its worth while it is held, so spending can wait' },
+        { left: 'A farmer buys seed now and agrees to pay after the harvest', right: 'Method of deferred payment', why: 'The debt is fixed in money today and settled in money later' },
       ],
-      answers: ['exchange', 'measure', 'store', 'deferred'],
-      hints: ['what barter cannot arrange without a coincidence of wants', 'what makes two different goods comparable', 'what lets money be held rather than spent at once', 'what makes credit and wage contracts possible'],
-      distractors: ['barter', 'interest'],
+      distractors: ['A double coincidence of wants'],
     }),
   };
 })();
@@ -531,11 +521,11 @@ const financialMarkets = (() => {
       type: 'match',
       prompt: 'Match each role of financial markets to what it lets someone do:',
       pairs: [
-        { left: 'Facilitate saving', right: 'A household puts aside income safely and earns a return', why: 'The first role is providing somewhere for unspent income to go' },
-        { left: 'Make funds available', right: 'A firm borrows to buy a machine before it has saved the cost', why: 'Savings are lent on, so investment need not wait for accumulated profit' },
-        { left: 'Provide a forward market', right: 'An importer fixes the price of a currency for delivery in six months', why: 'A future price is agreed now, which transfers the risk of it moving' },
-        { left: 'Provide a market for equities', right: 'A company raises capital by issuing shares it never repays', why: 'Equity is permanent capital, and it is saleable, which is why investors accept it' },
-        { left: 'Facilitate exchange of goods', right: 'A buyer and a distant seller settle through a letter of credit', why: 'Payment systems let trade happen between parties who cannot check each other' },
+        { left: 'Facilitate saving', right: 'A nurse pays into a pension that grows until she retires', why: 'The first role is providing somewhere for unspent income to go' },
+        { left: 'Make funds available', right: 'A young couple takes out a mortgage to buy a flat', why: 'Savings are lent on, so investment need not wait for accumulated profit' },
+        { left: 'Provide a forward market', right: 'A coffee roaster agrees today the price of beans delivered in March', why: 'A future price is agreed now, which transfers the risk of it moving' },
+        { left: 'Provide a market for equities', right: 'A start-up sells a fifth of itself to outside investors', why: 'Equity is permanent capital, and it is saleable, which is why investors accept it' },
+        { left: 'Facilitate exchange of goods', right: 'An exporter in Lagos is paid by a buyer in Dubai through their banks', why: 'Payment systems let trade happen between parties who cannot check each other' },
       ],
     }),
   };
@@ -564,11 +554,11 @@ const threeSystems = (() => {
     examMatters: 'A question naming a country expects it to be placed on the spectrum with a reason, not sorted into a box. Saying which decisions are left to markets and which are taken by the state is what earns the application mark.',
     recall: recall(sid, {
       type: 'classify',
-      prompt: 'Sort each feature into the economic system it belongs to:',
+      prompt: 'Each description is of a whole economy. Sort each into the economic system it describes:',
       groups: [
-        { name: 'Free market', items: ['Resources owned privately', 'Profit guides what is produced', 'Buyers and sellers decide'], why: 'Ownership is private and decisions are decentralised, taken by the people trading' },
-        { name: 'Command', items: ['The state owns the means of production', 'A planning authority sets output targets', 'Prices are set administratively'], why: 'Ownership and decision-making are both central, so the plan replaces the market' },
-        { name: 'Mixed', items: ['A private sector alongside state provision', 'Regulation of privately owned firms'], why: 'Both mechanisms operate at once, which is what every real economy does' },
+        { name: 'Free market', items: ['Bakers, builders and banks all choose their own prices and output', 'A bicycle shortage ends when new firms chase the profit'], why: 'Private owners take the decisions, and prices and profit coordinate them with no plan' },
+        { name: 'Command', items: ['A ministry tells every factory how many tractors to make this year', 'Farms, mines and mills all belong to the government', 'Shop prices are fixed by the plan, whatever buyers want'], why: 'The state owns the resources and a plan, not the market, decides output and prices' },
+        { name: 'Mixed', items: ['Most shops are private, but the state funds the schools and taxes incomes', 'Private drug firms need a state agency\'s approval to sell'], why: 'A private sector and the state both allocate resources, which is what every real economy does' },
       ],
     }),
   };
@@ -597,15 +587,12 @@ const systemsEvaluated = (() => {
     misconception: 'Students argue that one system is simply better. No real economy has chosen either extreme. Write instead: each performs well against different criteria, so the comparison must say which criterion is being used — efficiency, equity, stability or choice.',
     examMatters: 'On a 20-mark Evaluate a one-sided answer cannot reach the top levels. Build on conditions — where competition is weak the market case is weaker, where information is dispersed the planning case is — and let the judgement follow.',
     recall: recall(sid, {
-      type: 'match',
-      prompt: 'Match each outcome to the system whose weakness produces it:',
-      pairs: [
-        { left: 'Queues for some goods beside unsold stocks of others', right: 'Command: planners cannot know dispersed preferences', why: 'The information needed sits with millions of buyers and never reaches the plan' },
-        { left: 'A life-saving treatment unavailable to those who cannot pay', right: 'Free market: allocation follows income, not need', why: 'A market serves demand backed by money, which need alone is not' },
-        { left: 'Little pressure to cut costs or improve quality', right: 'Command: no competition and no profit motive', why: 'Without a rival to lose customers to, there is nothing forcing improvement' },
-        { left: 'A factory polluting a river it does not pay for', right: 'Free market: costs falling on third parties are ignored', why: 'The firm\'s own costs do not include the damage, so its decision does not account for it' },
+      type: 'classify',
+      prompt: 'Sort each outcome by the economic system whose weakness most likely produced it:',
+      groups: [
+        { name: 'Free market weakness', items: ['A new drug is priced beyond most patients\' reach', 'A tannery pours waste into a river used downstream', 'A boom ends in a slump that closes factories'], why: 'Each follows from allocation by income and private cost: need without money goes unmet, harm to others is left out, and output swings' },
+        { name: 'Command economy weakness', items: ['A factory meets its tonnage target with nails nobody can use', 'Bread runs out every afternoon while unsold coats pile up', 'A state car maker sells one model, unchanged for twenty years'], why: 'Each follows from planning without prices, profit or rivals: the plan cannot know what buyers want, and nothing forces improvement' },
       ],
-      distractors: ['Mixed: both mechanisms operating at once'],
     }),
   };
 })();
@@ -631,17 +618,15 @@ const roleOfTheState = (() => {
     misconception: 'Students treat state intervention as automatically correcting a market failure. Write instead: intervention is justified where the market outcome is inadequate *and* the state can improve on it — government failure means the second half cannot be assumed.',
     examMatters: 'An Evaluate on intervention is strongest when the counter-argument is government failure rather than a general preference for markets: name the specific information the state would need and say why it may not have it.',
     recall: recall(sid, {
-      type: 'fillin',
-      prompt: 'Complete the four roles of the state in a mixed economy:',
-      template: [
-        'It handles ___ of goods no firm can charge for, such as defence',
-        '→ It uses ___ to set the rules firms operate under, such as pollution limits',
-        '→ It carries out ___ through taxes and transfers between income groups',
-        '→ It attempts ___ of output and employment across the economic cycle',
+      type: 'match',
+      prompt: 'Match each government action to the role of the state it carries out:',
+      pairs: [
+        { left: 'Spraying against mosquitoes across a whole city, paid from taxes', right: 'Provision', why: 'No resident can be excluded from the benefit, so no firm could charge for it' },
+        { left: 'Banning a pesticide found in river water', right: 'Regulation', why: 'The market carries on; the state changes the rules it operates under' },
+        { left: 'Paying pensions from a tax on the highest incomes', right: 'Redistribution', why: 'Income moves from higher to lower earners through taxes and transfers' },
+        { left: 'Raising public spending as a recession deepens', right: 'Stabilisation', why: 'The aim is to moderate the swing in output and employment' },
       ],
-      answers: ['provision', 'regulation', 'redistribution', 'stabilisation'],
-      hints: ['supplying what no one can be excluded from using', 'changing the rules rather than replacing the market', 'moving income from higher to lower earners', 'moderating the swings a market economy produces'],
-      distractors: ['nationalisation', 'privatisation'],
+      distractors: ['Nationalisation of every firm'],
     }),
   };
 })();

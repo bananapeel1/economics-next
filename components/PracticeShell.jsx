@@ -68,9 +68,14 @@ function readPrefs(pageKey) {
     const raw = window.localStorage.getItem(MODE_PREFIX + pageKey);
     if (!raw) return null;
     const p = JSON.parse(raw);
+    const essays = {};
+    if (p?.essays && typeof p.essays === 'object') {
+      for (const [k, v] of Object.entries(p.essays)) if (typeof v === 'string') essays[k] = v;
+    }
     return {
       mode: p?.mode === 'answers' ? 'answers' : 'practise',
       textSize: Number.isInteger(p?.textSize) ? Math.max(-1, Math.min(3, p.textSize)) : 0,
+      essays,
     };
   } catch {
     return null;
@@ -203,6 +208,63 @@ function Extract({ extract, focusRows, activeFig, onFigure, writing }) {
         <Link href={extract.href}>The full data-response piece</Link>
         {' — the same extract with its own question ladder.'}
       </p>
+    </div>
+  );
+}
+
+/* ── A question's own context (packet 12.8, E061) ──────────────────────────────────────────────
+
+   A short answer or an essay opens with its own context — a sentence, a quoted statement, or a small
+   table — exactly as the paper prints it above the task. It is the question's data, not its answer,
+   so it shows in every mode and is in the server HTML. A table uses the extract's markup and
+   classes, so it stacks under its own column headings below 420px of its own width rather than
+   scrolling sideways (the no-cut-text rule, DECISIONS 2026-09-26). */
+
+function Inline({ tokens, keyPrefix }) {
+  return tokens.map((t, i) => {
+    if (t.kind === 'strong') return <strong key={`${keyPrefix}-${i}`}>{t.text}</strong>;
+    if (t.kind === 'em') return <em key={`${keyPrefix}-${i}`}>{t.text}</em>;
+    return <span key={`${keyPrefix}-${i}`}>{t.text}</span>;
+  });
+}
+
+function ContextBlocks({ blocks, id }) {
+  return (
+    <div className="ps-context" id={id}>
+      {blocks.map((b, bi) =>
+        b.kind === 'table' ? (
+          <div className="ps-table-block ps-context-table" key={`b${bi}`}>
+            <div className="ps-twrap">
+              <table className="ps-table">
+                <thead>
+                  <tr>
+                    {b.head.map((h, j) => <th key={`h${j}`} scope="col">{h}</th>)}
+                  </tr>
+                </thead>
+                <tbody>
+                  {b.rows.map((row, r) => (
+                    <tr key={`r${r}`}>
+                      {row.map((cell, c) => {
+                        const inner = (
+                          <>
+                            <span className="ps-tlabel">{b.head[c] || ''}</span>
+                            <span className="ps-tval">{cell}</span>
+                          </>
+                        );
+                        return c === 0 ? <th key={`c${c}`} scope="row">{inner}</th> : <td key={`c${c}`}>{inner}</td>;
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ) : (
+          <p className="ps-context-para" key={`b${bi}`}>
+            <Inline tokens={b.tokens} keyPrefix={`${id}-${bi}`} />
+          </p>
+        ),
+      )}
     </div>
   );
 }
@@ -393,13 +455,18 @@ function AnswerPanels({ item, view, state, activeSeg, onTick, onShow, onSeg, onF
   const score = item.criteria.reduce((n, c) => (state.ticked.includes(c.id) ? n + Number(c.marks || 0) : n), 0);
   return (
     <div className="ps-answer" hidden={view === 'attempt'} data-ps-noscript-show="">
-      {marking && (
+      {marking && !item.draw && (
         <div className="ps-block">
           <div className="ps-bhead">
             <h3>Your answer</h3>
             <button type="button" className="ps-linkbtn" onClick={onEdit}>Edit your answer</button>
           </div>
           <div className="ps-yours">{state.draft}</div>
+        </div>
+      )}
+      {marking && item.draw && (
+        <div className="ps-block">
+          <p className="ps-small ps-draw-note">Your sketch is on your paper. Hold it beside the model diagram below and tick each point it shows.</p>
         </div>
       )}
       <div className="ps-block">
@@ -424,6 +491,19 @@ function AnswerPanels({ item, view, state, activeSeg, onTick, onShow, onSeg, onF
             Select a sentence to see why it scores
           </span>
         </div>
+        {item.diagram && (
+          <figure className="ps-diagram-fig">
+            {/* The asset's colours are fixed for a light ground; its frame is light in every theme. */}
+            <div className="ps-diagram">
+              <img src={item.diagram.src} alt={item.diagram.alt} width={item.diagram.width || undefined} height={item.diagram.height || undefined} loading="lazy" />
+            </div>
+            {/* On a phone the diagram is drawn at about half size, so its labels are small; the file
+                itself opens full size in a new tab, where it can be zoomed. */}
+            <figcaption className="ps-diagram-cap">
+              <a href={item.diagram.src} target="_blank" rel="noopener">Open the diagram full size</a>
+            </figcaption>
+          </figure>
+        )}
         <Script item={item} view={view} ticked={state.ticked} activeSeg={activeSeg} onSeg={onSeg} onFigure={onFigure} />
       </div>
       {item.examinerHtml && (
@@ -463,6 +543,10 @@ export default function PracticeShell({ shell }) {
   const [tab, setTab] = useState('work');
   const [toast, setToast] = useState('');
   const [loaded, setLoaded] = useState(false);
+  // Packet 12.8, E061: the essay a student has chosen in each essay section with a choice, by set id.
+  const [essays, setEssays] = useState({});
+  // Packet 12.8, E063: the site header's measured height (px), or null until it has been measured.
+  const [headerH, setHeaderH] = useState(null);
 
   const rootRef = useRef(null);
   // Work that needs the NEXT render's DOM (scroll a pane, focus the box, pulse a figure). It runs in
@@ -497,20 +581,58 @@ export default function PracticeShell({ shell }) {
       setMode(prefs.mode);
       setTextSize(prefs.textSize);
     }
-    setAttempts((prev) => {
-      const next = { ...prev };
-      for (const it of allItems) {
-        const saved = readAttempt(it.id);
-        if (saved) next[it.id] = { draft: saved.draft, ticked: saved.ticked, phase: saved.phase, time: saved.time };
-      }
-      return next;
-    });
+    const saved = {};
+    for (const it of allItems) {
+      const a = readAttempt(it.id);
+      if (a) saved[it.id] = { draft: a.draft, ticked: a.ticked, phase: a.phase, time: a.time };
+    }
+    setAttempts((prev) => ({ ...prev, ...saved }));
+    // An essay section's choice: the one this browser recorded, else the essay the student already
+    // started (a draft saved before the choice existed — 12.6/12.75 drafts are keyed by item id),
+    // else none until she picks.
+    const chosen = { ...(prefs?.essays || {}) };
+    for (const st of sets) {
+      if (!st.paper?.choice) continue;
+      if (chosen[st.id] && st.items.some((it) => it.id === chosen[st.id])) continue;
+      delete chosen[st.id];
+      const started = st.items.find((it) => saved[it.id] && (saved[it.id].phase !== 'attempt' || words(saved[it.id].draft)));
+      if (started) chosen[st.id] = started.id;
+    }
+    setEssays(chosen);
     setLoaded(true);
-  }, [pageKey, allItems]);
+  }, [pageKey, allItems, sets]);
 
   useEffect(() => {
-    if (loaded) writePrefs(pageKey, { mode, textSize });
-  }, [loaded, pageKey, mode, textSize]);
+    if (loaded) writePrefs(pageKey, { mode, textSize, essays });
+  }, [loaded, pageKey, mode, textSize, essays]);
+
+  // E063. The frame fills the viewport below `SiteHeader`, so it needs the header's real height.
+  // WHERE `.rlh` GETS ITS HEIGHT: styles/theme-night.css sets `--rlh-h: 60px` on `.rl-night` (and
+  // `.elp-page`), and `.rlh { height: var(--rlh-h) }` — the header is sized FROM the variable, and the
+  // frame reads the same variable, so the two agree by construction for as long as nobody sizes the
+  // header another way. This measures the header and steps in only when they disagree (a restyle that
+  // sets `.rlh`'s height directly, a banner inside it, a second line): the frame is then given the
+  // measured height, so the dock never lands below the fold. When they agree nothing is written and the
+  // inherited variable applies, which is also the server render. A ResizeObserver catches a change to
+  // the header itself; the resize listener catches a change that comes with the window.
+  useEffect(() => {
+    const header = document.querySelector('.rlh');
+    if (!header) return undefined;
+    const apply = () => {
+      const h = header.getBoundingClientRect().height;
+      const declared = parseFloat(getComputedStyle(header).getPropertyValue('--rlh-h'));
+      const next = h > 0 && !(Math.abs(h - declared) <= 0.5) ? h : null;
+      setHeaderH((prev) => (prev === next ? prev : next));
+    };
+    apply();
+    window.addEventListener('resize', apply);
+    const ro = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(apply);
+    ro?.observe(header);
+    return () => {
+      window.removeEventListener('resize', apply);
+      ro?.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     if (!loaded) return;
@@ -564,10 +686,10 @@ export default function PracticeShell({ shell }) {
   );
 
   const goSet = useCallback(
-    (i) => {
+    (i, at = 0) => {
       if (i < 0 || i >= sets.length || i === setIdx) return;
       setSetIdx(i);
-      setCur(0);
+      setCur(at === 'last' ? sets[i].items.length - 1 : 0);
       setActiveSeg(null);
       setActiveFig(null);
       setTab('work');
@@ -575,19 +697,40 @@ export default function PracticeShell({ shell }) {
       later(scrollPanesTop);
       later(toQuestion);
     },
-    [sets.length, setIdx, scrollPanesTop, toQuestion, later],
+    [sets, setIdx, scrollPanesTop, toQuestion, later],
   );
+
+  // Packet 12.8, E061: ← and → walk every question in paper order, across sections — the last part
+  // of Section C is followed by the first essay of Section D, as on the paper.
+  const next = useCallback(() => {
+    if (cur + 1 < set.items.length) go(cur + 1);
+    else goSet(setIdx + 1);
+  }, [cur, set.items.length, go, goSet, setIdx]);
+  const prev = useCallback(() => {
+    if (cur > 0) go(cur - 1);
+    else goSet(setIdx - 1, 'last');
+  }, [cur, go, goSet, setIdx]);
+
+  // An essay section with a choice: which essay is this student's, and is this one locked behind the
+  // choice? Model answers mode shows every essay; only Practise asks her to choose.
+  const choiceIn = (s) => (s.paper?.choice ? essays[s.id] || null : null);
+  const gatedFor = (s, it) => !!s.paper?.choice && choiceIn(s) !== it.id;
+  const choose = useCallback((s, it) => {
+    setEssays((prevChoice) => ({ ...prevChoice, [s.id]: it.id }));
+    later(() => textareas.current[it.id]?.focus({ preventScroll: true }));
+  }, [later]);
+  const gated = !study && gatedFor(set, item);
 
   // A soft timer against the allocation: it counts, it never blocks and it never submits.
   useEffect(() => {
-    if (view !== 'attempt') return undefined;
+    if (view !== 'attempt' || gated) return undefined;
     const t = setInterval(() => {
       if (document.hidden) return;
       dirty.current.add(item.id);
       setAttempts((prev) => ({ ...prev, [item.id]: { ...prev[item.id], time: prev[item.id].time + 1 } }));
     }, 1000);
     return () => clearInterval(t);
-  }, [view, item.id]);
+  }, [view, item.id, gated]);
 
   // Linked figures inside the model-answer HTML are not React-managed; mark them by hand.
   useEffect(() => {
@@ -596,13 +739,17 @@ export default function PracticeShell({ shell }) {
     });
   }, [activeFig, cur, setIdx, view]);
 
+  // Marks banked in a set. In an essay section with a choice only the chosen essay counts, and the
+  // total is the paper's section total, not the sum of every essay offered (E061).
   const banked = (s) =>
     s.items.reduce((n, it) => {
+      if (s.paper?.choice && choiceIn(s) !== it.id) return n;
       const a = attempts[it.id];
       if (a.phase !== 'marking') return n;
       return n + it.criteria.reduce((m, c) => (a.ticked.includes(c.id) ? m + Number(c.marks || 0) : m), 0);
     }, 0);
-  const setTotal = set.items.reduce((n, it) => n + Number(it.marks || 0), 0);
+  const totalOf = (s) => (s.paper && Number.isFinite(s.paper.total) ? s.paper.total : s.items.reduce((n, it) => n + Number(it.marks || 0), 0));
+  const setTotal = totalOf(set);
 
   const mark = useCallback(() => {
     update(item.id, { phase: 'marking' });
@@ -730,20 +877,26 @@ export default function PracticeShell({ shell }) {
   const nextItem = set.items[cur + 1];
   const nextSet = sets[setIdx + 1];
   let primary;
-  if (view === 'attempt') {
+  if (view === 'attempt' && gated) {
+    primary = { act: 'choose', label: 'Answer this essay' };
+  } else if (view === 'attempt' && item.draw) {
+    // A Draw item is sketched on paper, so there is no draft to wait for: marking is always offered.
+    primary = { act: 'mark', label: 'Mark my sketch', kbd: true };
+  } else if (view === 'attempt') {
     primary = words(state.draft)
       ? { act: 'mark', label: 'Mark my answer', kbd: true }
       : { act: 'reveal', label: 'Show the model answer' };
   } else if (nextItem) {
     primary = { act: 'next', label: `Next: ${nextItem.commandWord}`, extra: ` · ${marksLabel(nextItem.marks)}` };
   } else if (nextSet) {
-    primary = { act: 'nextset', label: `Next: ${nextSet.label} questions` };
+    primary = { act: 'nextset', label: nextSet.paper ? `Next: ${nextSet.label}` : `Next: ${nextSet.label} questions` };
   } else {
     primary = { act: 'finish', label: study ? 'Finish' : `Finish · ${banked(set)} of ${setTotal} banked` };
   }
 
   const onPrimary = () => {
     if (primary.act === 'mark') mark();
+    else if (primary.act === 'choose') choose(set, item);
     else if (primary.act === 'reveal') showAnswer();
     else if (primary.act === 'next') go(cur + 1);
     else if (primary.act === 'nextset') goSet(setIdx + 1);
@@ -753,17 +906,18 @@ export default function PracticeShell({ shell }) {
     }
   };
 
-  // Keyboard: ← → move, number keys jump, ⌘/Ctrl+↵ marks. All inert while typing except ⌘/Ctrl+↵,
-  // and inert when focus is somewhere else on the page (the coverage list below, a link).
+  // Keyboard: ← → move through every question in paper order, number keys jump within the current
+  // section, ⌘/Ctrl+↵ marks. All inert while typing except ⌘/Ctrl+↵, and inert when focus is
+  // somewhere else on the page (the coverage list below, a link).
   const keyState = useRef({});
-  keyState.current = { view, draft: state.draft, cur, n: set.items.length, go, mark };
+  keyState.current = { view, draft: state.draft, draw: item.draw, gated, cur, n: set.items.length, go, next, prev, mark };
   useEffect(() => {
     const onKey = (e) => {
       const k = keyState.current;
       const target = e.target;
       const typing = target instanceof Element && target.matches('textarea, input:not([type=checkbox]), select, [contenteditable="true"]');
       if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
-        if (k.view === 'attempt' && words(k.draft)) {
+        if (k.view === 'attempt' && !k.gated && (words(k.draft) || k.draw)) {
           e.preventDefault();
           k.mark();
         }
@@ -774,10 +928,10 @@ export default function PracticeShell({ shell }) {
       if (!inShell) return;
       if (e.key === 'ArrowRight') {
         e.preventDefault();
-        k.go(k.cur + 1);
+        k.next();
       } else if (e.key === 'ArrowLeft') {
         e.preventDefault();
-        k.go(k.cur - 1);
+        k.prev();
       } else if (/^[1-9]$/.test(e.key) && Number(e.key) <= k.n) {
         e.preventDefault();
         k.go(Number(e.key) - 1);
@@ -787,9 +941,10 @@ export default function PracticeShell({ shell }) {
     return () => document.removeEventListener('keydown', onKey);
   }, []);
 
-  const cardState = (it) => {
+  const cardState = (it, s) => {
     const a = attempts[it.id];
     if (study) return { cls: '', long: 'Reading', short: 'Read' };
+    if (s.paper?.choice && choiceIn(s) && choiceIn(s) !== it.id) return { cls: '', long: 'Not your choice', short: 'Other' };
     if (a.phase === 'marking') {
       const got = it.criteria.reduce((m, c) => (a.ticked.includes(c.id) ? m + Number(c.marks || 0) : m), 0);
       return { cls: 'is-done', long: `You marked ${got} / ${it.marks}`, short: `${got}/${it.marks}` };
@@ -809,7 +964,7 @@ export default function PracticeShell({ shell }) {
       ref={rootRef}
       className={study ? 'ps is-study' : 'ps'}
       aria-label="Practice"
-      style={{ '--ps-read': `${15.5 + textSize * 1.5}px` }}
+      style={{ '--ps-read': `${15.5 + textSize * 1.5}px`, ...(headerH ? { '--rlh-h': `${headerH}px` } : {}) }}
     >
       <noscript>
         <style>{`.ps [data-ps-noscript-show][hidden]{display:block!important}.ps [data-ps-js-only]{display:none!important}.ps{height:auto!important;display:block!important}.ps .ps-panes{display:block!important}.ps .ps-pane-body{overflow:visible!important}.ps .ps-pane[data-hidden-sm]{display:flex!important}.ps .ps-pane+.ps-pane{margin-top:16px}`}</style>
@@ -829,21 +984,35 @@ export default function PracticeShell({ shell }) {
             Model answers
           </button>
         </div>
+        {shell.sectionA && (
+          <p className="ps-seca">
+            <span className="ps-seca-h">{shell.sectionA.heading}</span>
+            {' '}
+            <Link href={shell.sectionA.href} className="ps-seca-link">{shell.sectionA.linkText}</Link>
+            <span className="ps-seca-note">{` ${shell.sectionA.note}`}</span>
+          </p>
+        )}
       </div>
 
       <div className="ps-qrow" data-ps-js-only="">
         {sets.length > 1 && (
-          <div className="ps-setswitch" role="group" aria-label="Question sets">
+          <div className="ps-setswitch" role="group" aria-label={sets[0].paper ? 'Paper sections' : 'Question sets'}>
             {sets.map((s, i) => (
-              <button type="button" key={s.id} aria-pressed={i === setIdx} onClick={() => goSet(i)}>
-                {`${s.label} · ${s.items.length} question${s.items.length === 1 ? '' : 's'}`}
+              <button
+                type="button"
+                key={s.id}
+                aria-pressed={i === setIdx}
+                aria-label={s.paper ? `${s.paper.heading}, ${s.items.length} question${s.items.length === 1 ? '' : 's'}` : undefined}
+                onClick={() => goSet(i)}
+              >
+                {s.paper ? s.label : `${s.label} · ${s.items.length} question${s.items.length === 1 ? '' : 's'}`}
               </button>
             ))}
           </div>
         )}
         <ol className="ps-cards" aria-label="Questions" style={{ '--ps-n': set.items.length }}>
           {set.items.map((it, i) => {
-            const st = cardState(it);
+            const st = cardState(it, set);
             return (
               <li key={it.id}>
                 <button
@@ -856,7 +1025,7 @@ export default function PracticeShell({ shell }) {
                   <span className="ps-card-r1">
                     <span className="ps-card-cmd">
                       <span className="ps-dot" aria-hidden="true" />
-                      <span>{`${i + 1} ${it.commandWord}`}</span>
+                      <span>{`${it.part ? `(${it.part})` : i + 1} ${it.commandWord}`}</span>
                     </span>
                     <span className="ps-card-meta">
                       {marksLabel(it.marks)}
@@ -893,20 +1062,41 @@ export default function PracticeShell({ shell }) {
           return (
             <div className="ps-set" data-set={s.id} key={s.id} hidden={!currentSet} data-ps-noscript-show="">
               <div className="ps-qheads">
+                {s.paper && (
+                  <div className="ps-sechead">
+                    <h2 className="ps-sechead-t">{s.paper.heading}</h2>
+                    <p className="ps-sechead-n">{s.paper.note}</p>
+                  </div>
+                )}
                 {s.items.map((it, i) => (
                   <div className="ps-qhead" key={it.id} hidden={!(currentSet && i === cur)} data-ps-noscript-show="">
                     <p className="ps-chips">
-                      <span className="ps-chip is-strong">{`${s.label}, question ${i + 1}`}</span>
+                      <span className="ps-chip is-strong">
+                        {it.part
+                          ? `${s.label}, part (${it.part})`
+                          : s.paper?.kind === 'essay'
+                            ? `${s.label}, essay ${i + 1} of ${s.items.length}`
+                            : `${s.label}, question ${i + 1}`}
+                      </span>
                       <span className="ps-chip is-strong">{marksLabel(it.marks)}</span>
                       {it.ao.length > 0 && <span className="ps-chip">{it.ao.join(' · ')}</span>}
                       <span className="ps-chip">{`About ${it.minutes} min`}</span>
-                      {extractSet && <span className="ps-chip">{`Uses ${s.label}`}</span>}
+                      {extractSet && <span className="ps-chip">{`Uses ${s.extractLabel}`}</span>}
                     </p>
-                    <h2 className="ps-stem">
-                      {it.stem.before}
-                      {it.stem.term ? <em>{it.stem.term}</em> : null}
-                      {it.stem.after}
-                    </h2>
+                    {it.context && <ContextBlocks blocks={it.context} id={`ps-ctx-${it.id}`} />}
+                    {s.paper ? (
+                      <h3 className="ps-stem">
+                        {it.stem.before}
+                        {it.stem.term ? <em>{it.stem.term}</em> : null}
+                        {it.stem.after}
+                      </h3>
+                    ) : (
+                      <h2 className="ps-stem">
+                        {it.stem.before}
+                        {it.stem.term ? <em>{it.stem.term}</em> : null}
+                        {it.stem.after}
+                      </h2>
+                    )}
                   </div>
                 ))}
               </div>
@@ -914,7 +1104,7 @@ export default function PracticeShell({ shell }) {
               {extractSet && (
                 <div className="ps-tabs" role="tablist" aria-label="View" data-ps-js-only="">
                   <button type="button" role="tab" aria-selected={currentSet && tab === 'extract'} onClick={() => switchTab('extract')}>
-                    {s.label}
+                    {s.extractLabel}
                   </button>
                   <button type="button" role="tab" aria-selected={!(currentSet && tab === 'extract')} onClick={() => switchTab('work')}>
                     {currentSet ? workLabel : 'Your answer'}
@@ -926,11 +1116,11 @@ export default function PracticeShell({ shell }) {
                 {extractSet && (
                   <section
                     className="ps-pane ps-pane-extract"
-                    aria-label={s.label}
+                    aria-label={s.extractLabel}
                     data-hidden-sm={currentSet && tab !== 'extract' ? 'true' : 'false'}
                   >
                     <div className="ps-pane-head">
-                      <span className="ps-label">{s.label}</span>
+                      <span className="ps-label">{s.extractLabel}</span>
                       <span className="ps-textsize" role="group" aria-label="Text size" data-ps-js-only="">
                         <button type="button" aria-label="Smaller text" onClick={() => setTextSize((v) => Math.max(-1, v - 1))}>A−</button>
                         <button type="button" aria-label="Larger text" onClick={() => setTextSize((v) => Math.min(3, v + 1))}>A+</button>
@@ -977,29 +1167,65 @@ export default function PracticeShell({ shell }) {
                       return (
                         <div className="ps-work" data-item={it.id} key={it.id} hidden={!isCur} data-ps-noscript-show="">
                           <div className="ps-attempt" hidden={v !== 'attempt'} data-ps-js-only="">
-                            <textarea
-                              ref={(el) => {
-                                textareas.current[it.id] = el;
-                              }}
-                              className="ps-draft"
-                              aria-label={`Your answer to question ${i + 1}`}
-                              placeholder="Write your answer as you would in the exam. It stays in this browser."
-                              value={a.draft}
-                              spellCheck
-                              onChange={(e) => update(it.id, { draft: e.target.value })}
-                              onSelect={(e) => {
-                                caret.current[it.id] = [e.currentTarget.selectionStart, e.currentTarget.selectionEnd];
-                              }}
-                            />
-                            <div className="ps-under">
-                              <span className="ps-mono">{`${words(a.draft)} word${words(a.draft) === 1 ? '' : 's'}`}</span>
-                              <button type="button" className="ps-linkbtn" onClick={showAnswer}>
-                                Show the model answer without marking
-                              </button>
-                            </div>
-                            <p className="ps-small">
-                              Saved in this browser only, against this question. Nothing is sent anywhere.
-                            </p>
+                            {!study && gatedFor(s, it) ? (
+                              // E061: Section D offers a choice. Read both, pick one; only its marks bank.
+                              <div className="ps-choice">
+                                <p className="ps-choice-t">
+                                  {choiceIn(s)
+                                    ? `You chose essay ${s.items.findIndex((x) => x.id === choiceIn(s)) + 1}. Only that essay’s marks are banked.`
+                                    : `In the exam you answer ${s.paper.choice.answer === 1 ? 'one' : s.paper.choice.answer} of these ${s.paper.choice.offered === 2 ? 'two' : s.paper.choice.offered} essays. Read the question, then choose the one you will attempt.`}
+                                </p>
+                                <div className="ps-under">
+                                  <button type="button" className="ps-btn is-ghost" onClick={() => choose(s, it)}>
+                                    {choiceIn(s) ? 'Answer this essay instead' : 'Answer this essay'}
+                                  </button>
+                                  <button type="button" className="ps-linkbtn" onClick={showAnswer}>
+                                    Show the model answer without marking
+                                  </button>
+                                </div>
+                                {choiceIn(s) ? (
+                                  <p className="ps-small">Switching keeps both drafts in this browser; only the essay you are answering counts towards the section.</p>
+                                ) : null}
+                              </div>
+                            ) : it.draw ? (
+                              // E061: a Draw item is sketched on paper, then self-marked. No text box.
+                              <div className="ps-choice ps-sketch">
+                                <p className="ps-choice-t">Sketch the diagram on paper, as you would in the exam. Label the axes, every curve and every point you use.</p>
+                                <p className="ps-small">When it is done, mark it: the next screen lists what earns each mark, and the model diagram is shown after you tick.</p>
+                                <div className="ps-under">
+                                  <button type="button" className="ps-btn is-ghost" onClick={mark}>Mark my sketch</button>
+                                  <button type="button" className="ps-linkbtn" onClick={showAnswer}>
+                                    Show the model answer without marking
+                                  </button>
+                                </div>
+                              </div>
+                            ) : (
+                              <>
+                                <textarea
+                                  ref={(el) => {
+                                    textareas.current[it.id] = el;
+                                  }}
+                                  className="ps-draft"
+                                  aria-label={`Your answer to question ${i + 1}`}
+                                  placeholder="Write your answer as you would in the exam. It stays in this browser."
+                                  value={a.draft}
+                                  spellCheck
+                                  onChange={(e) => update(it.id, { draft: e.target.value })}
+                                  onSelect={(e) => {
+                                    caret.current[it.id] = [e.currentTarget.selectionStart, e.currentTarget.selectionEnd];
+                                  }}
+                                />
+                                <div className="ps-under">
+                                  <span className="ps-mono">{`${words(a.draft)} word${words(a.draft) === 1 ? '' : 's'}`}</span>
+                                  <button type="button" className="ps-linkbtn" onClick={showAnswer}>
+                                    Show the model answer without marking
+                                  </button>
+                                </div>
+                                <p className="ps-small">
+                                  Saved in this browser only, against this question. Nothing is sent anywhere.
+                                </p>
+                              </>
+                            )}
                           </div>
                           <AnswerPanels
                             item={it}
@@ -1052,7 +1278,7 @@ export default function PracticeShell({ shell }) {
           <span>mark</span>
         </div>
         <div className="ps-actions">
-          <button type="button" className="ps-btn is-ghost" disabled={cur === 0} onClick={() => go(cur - 1)} aria-label="Previous question">
+          <button type="button" className="ps-btn is-ghost" disabled={cur === 0 && setIdx === 0} onClick={prev} aria-label="Previous question">
             <span aria-hidden="true">←</span>
             <span className="ps-prev-label">Previous</span>
           </button>

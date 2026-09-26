@@ -1,0 +1,137 @@
+
+> economics-next@0.1.0 spec-coverage
+> node audit/scripts/spec-coverage-check.mjs
+
+(node:30867) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/spec-coverage.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+spec-coverage — leaves examined, against 1,165 `kind: 'leaf'` rows in audit/raw/spec-items.json
+  bank 1  data/modelAnswersData.js + modelAnswersExpansion.js
+  bank 2  section_practice, read from audit/content-sections/ (the t=0 dump of the published tables — a lower bound, not live; --staged for the rebuilds)
+  note    section_practice has no `spec_items` column: scripts/packet-12-1-spec-items.sql is written and NOT run.
+          Tags for bank 2 come from audit/runs/packet-12.1/section_practice-tags.json.
+
+section                               subj   qs  untag  examined  leaves       %
+--------------------------------------------------------------------------------
+assessing-competitiveness             busi    5      5         0      18    0.0%
+business-growth                       busi    5      5         0      16    0.0%
+business-objectives-strategy          busi    5      5         0      11    0.0%
+decision-making-techniques            busi    5      5         0      20    0.0%
+entrepreneurs-leaders                 busi    7      5         3      18   16.7%
+external-influences                   busi    6      5         1      15    6.7%
+financial-planning                    busi    7      5         4      21   19.0%
+global-industries-mncs                busi    5      5         0      24    0.0%
+global-marketing                      busi    5      5         0      13    0.0%
+global-markets-expansion              busi    5      5         0      33    0.0%
+globalisation                         busi    5      5         0      28    0.0%
+influences-business-decisions         busi    5      5         0      15    0.0%
+managing-change                       busi    5      5         0      10    0.0%
+managing-finance                      busi    8      5         5      24   20.8%
+managing-people                       busi    8      5        10      46   21.7%
+marketing-mix-strategy                busi    7      5         2      46    4.3%
+meeting-customer-needs                busi    8      5        10      29   34.5%
+planning-raising-finance              busi    7      5         8      23   34.8%
+resource-management                   busi    7      5         5      28   17.9%
+the-market                            busi    5      5         0      24    0.0%
+aggregate-demand                      econ    8      5         5      31   16.1%
+aggregate-supply                      econ    7      5         8      14   57.1%
+balance-payments-exchange-rates       econ    7      5         4      42    9.5%
+causes-effects-globalisation          econ    7      6         3      22   13.6%
+consumer-behaviour-demand             econ    7      5         6      39   15.4%
+economic-growth                       econ    8      5        11      23   47.8%
+government-intervention               econ    7      5         3      23   13.0%
+government-intervention-firms         econ    7      5         5      33   15.2%
+growth-development                    econ    7      5         7      43   16.3%
+introductory-concepts                 econ    7      5         5      27   18.5%
+labour-markets                        econ    7      5         2      17   11.8%
+macroeconomic-objectives-policies     econ    7      5         6      34   17.6%
+market-failure                        econ   18      1        23      35   65.7%
+market-structures-contestability      econ    6      5         3      54    5.6%
+measures-economic-performance         econ    8      5         8      48   16.7%
+national-income                       econ    7      5         8      19   42.1%
+poverty-inequality                    econ    6      5         2      21    9.5%
+price-determination                   econ    7      5         3      11   27.3%
+revenue-costs-profits                 econ    9      5         7      34   20.6%
+role-state-macroeconomy               econ    5      5         0      38    0.0%
+supply                                econ    7      5         3      19   15.8%
+trade-global-economy                  econ    7      5         6      46   13.0%
+types-sizes-businesses                econ    5      5         0      30    0.0%
+
+per unit
+  business unit 1           25 /   163 leaves    15.3%  (35 questions)
+  business unit 2           23 /   111 leaves    20.7%  (35 questions)
+  business unit 3            0 /    90 leaves     0.0%  (30 questions)
+  business unit 4            0 /    98 leaves     0.0%  (20 questions)
+  economics unit 1          43 /   154 leaves    27.9%  (53 questions)
+  economics unit 2          46 /   169 leaves    27.2%  (45 questions)
+  economics unit 3          17 /   168 leaves    10.1%  (34 questions)
+  economics unit 4          22 /   212 leaves    10.4%  (39 questions)
+
+291 questions across 43 sections; 212 carry no specItems yet.
+176 of 1,165 spec leaves are examined by at least one question — 15.1%.
+
+123 failure(s): tariff ×123
+  tariff  entrepreneurs-leaders             entrepreneurs-leaders:0Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  entrepreneurs-leaders             entrepreneurs-leaders:1Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  entrepreneurs-leaders             entrepreneurs-leaders:4Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  external-influences               external-influences:0 Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  external-influences               external-influences:1 Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  external-influences               external-influences:4 Outline 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  financial-planning                financial-planning:0  Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  financial-planning                financial-planning:1  Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  financial-planning                financial-planning:4  Outline 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  managing-finance                  managing-finance:0    Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  managing-finance                  managing-finance:1    Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  managing-finance                  managing-finance:4    Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  managing-people                   managing-people:0     Outline 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  managing-people                   managing-people:1     Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  managing-people                   managing-people:4     Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  marketing-mix-strategy            marketing-mix-strategy:0Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  marketing-mix-strategy            marketing-mix-strategy:1Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  marketing-mix-strategy            marketing-mix-strategy:4Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  meeting-customer-needs            meeting-customer-needs:0Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  meeting-customer-needs            meeting-customer-needs:1Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  meeting-customer-needs            meeting-customer-needs:4Outline 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  planning-raising-finance          planning-raising-finance:0Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  planning-raising-finance          planning-raising-finance:1Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  planning-raising-finance          planning-raising-finance:4Outline 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  resource-management               resource-management:0 Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  resource-management               resource-management:1 Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  resource-management               resource-management:4 Outline 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  the-market                        the-market:0          Define 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  the-market                        the-market:1          Explain 6 is not a Business tariff (lib/ial-marking.js)
+  tariff  the-market                        the-market:2          Analyse 10 is not a Business tariff (lib/ial-marking.js)
+  tariff  the-market                        the-market:4          Outline 4 is not a Business tariff (lib/ial-marking.js)
+  tariff  aggregate-demand                  aggregate-demand:0    Define 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  aggregate-demand                  aggregate-demand:1    Explain 6 is not an Economics tariff (lib/ial-marking.js)
+  tariff  aggregate-demand                  aggregate-demand:2    Analyse 10 is not an Economics tariff (lib/ial-marking.js)
+  tariff  aggregate-demand                  aggregate-demand:4    Outline 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  aggregate-supply                  aggregate-supply:0    Define 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  aggregate-supply                  aggregate-supply:1    Explain 6 is not an Economics tariff (lib/ial-marking.js)
+  tariff  aggregate-supply                  aggregate-supply:2    Assess 10 is not an Economics tariff (lib/ial-marking.js)
+  tariff  aggregate-supply                  aggregate-supply:4    Outline 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  balance-payments-exchange-rates   balance-payments-exchange-rates:0Define 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  balance-payments-exchange-rates   balance-payments-exchange-rates:1Explain 6 is not an Economics tariff (lib/ial-marking.js)
+  tariff  balance-payments-exchange-rates   balance-payments-exchange-rates:2Assess 10 is not an Economics tariff (lib/ial-marking.js)
+  tariff  balance-payments-exchange-rates   balance-payments-exchange-rates:4Outline 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  causes-effects-globalisation      causes-effects-globalisation:0Define 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  causes-effects-globalisation      causes-effects-globalisation:1Explain 6 is not an Economics tariff (lib/ial-marking.js)
+  tariff  causes-effects-globalisation      causes-effects-globalisation:2Assess 10 is not an Economics tariff (lib/ial-marking.js)
+  tariff  causes-effects-globalisation      causes-effects-globalisation:4Outline 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  consumer-behaviour-demand         consumer-behaviour-demand:0Define 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  consumer-behaviour-demand         consumer-behaviour-demand:1Explain 6 is not an Economics tariff (lib/ial-marking.js)
+  tariff  consumer-behaviour-demand         consumer-behaviour-demand:2Analyse 10 is not an Economics tariff (lib/ial-marking.js)
+  tariff  consumer-behaviour-demand         consumer-behaviour-demand:4Outline 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  economic-growth                   economic-growth:0     Define 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  economic-growth                   economic-growth:1     Explain 6 is not an Economics tariff (lib/ial-marking.js)
+  tariff  economic-growth                   economic-growth:2     Assess 10 is not an Economics tariff (lib/ial-marking.js)
+  tariff  economic-growth                   economic-growth:4     Outline 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  government-intervention           government-intervention:0Define 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  government-intervention           government-intervention:1Explain 6 is not an Economics tariff (lib/ial-marking.js)
+  tariff  government-intervention           government-intervention:2Assess 10 is not an Economics tariff (lib/ial-marking.js)
+  tariff  government-intervention           government-intervention:4Outline 4 is not an Economics tariff (lib/ial-marking.js)
+  tariff  government-intervention-firms     government-intervention-firms:0Define 4 is not an Economics tariff (lib/ial-marking.js)
+  … and 63 more
+

@@ -1,0 +1,96 @@
+title: Marketing Mix — Exam Questions &amp; Model Answers | Edexcel IAL Business | Revvy Learn
+canonical: https://revvylearn.com/business/marketing-mix-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What are the 4Ps of the marketing mix?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The 4Ps are Product (design, features, quality, branding), Price (pricing strategy — penetration, skimming, competitive, cost-plus), Place (distribution channels — online, retail, wholesale), and Promotion (advertising, sales promotions, PR, social media marketing). Businesses must coordinate all four elements for an effective marketing strategy."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How should a new business use the marketing mix?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A new business should focus on building awareness through targeted Promotion (social media, influencer marketing). Price strategy might use penetration pricing to attract initial customers. Place should prioritise online channels to minimise costs. The Product must have a clear USP to differentiate from established competitors."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Marketing Mix — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Business 1.3.3 Marketing Mix"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain two elements of the marketing mix that a new clothing brand might use to attract customers.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The marketing mix consists of the 4Ps: Product, Price, Place, and Promotion . K First, promotion would be critical for a new clothing brand, as it needs to build brand awareness among its target market. A The brand could use social media marketing — such as Instagram and TikTok influencer collaborations — to reach younger demographics cost-effectively, generating interest and driving traffic to its website. A Second, price could be used strategically through penetration pricing — setting initially low prices to attract customers and build market share. K For a new brand competing against established rivals, competitive pricing gives consumers an incentive to trial the product , and once brand loyalty is established, prices can be gradually raised. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Discuss (8 marks)",
+   "text": "Discuss how a business might use the product life cycle model to inform its marketing strategy.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The product life cycle (PLC) model identifies four stages a product passes through: introduction, growth, maturity, and decline . K At each stage, sales volume, competition, and profitability differ — requiring distinct marketing strategies. K During introduction , sales are low and costs high (R&D, launch marketing). The firm invests heavily in promotion to build awareness — using advertising, free samples, or introductory pricing. An In the growth phase, sales rise rapidly as the product gains acceptance. The firm expands distribution channels and may adjust pricing as competitors enter. An At maturity , sales peak but growth slows as the market saturates. Competition intensifies, putting pressure on margins. An Firms use extension strategies to prolong this stage — Apple , for example, releases new iPhone colours, camera upgrades, and software features to maintain interest without redesigning the core product. A In decline , the firm may reduce marketing spend and harvest remaining profits , or withdraw the product entirely and redirect resources to new launches. An"
+   }
+  }
+ ]
+}

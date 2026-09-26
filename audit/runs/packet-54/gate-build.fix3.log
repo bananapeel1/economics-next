@@ -1,0 +1,149 @@
+
+> economics-next@0.1.0 build
+> next build
+
+▲ Next.js 16.2.0 (Turbopack)
+- Environments: .env.local
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+✓ Compiled successfully in 6.5s
+  Running TypeScript ...
+  Finished TypeScript in 133ms ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/172) ...
+  Generating static pages using 7 workers (43/172) 
+  Generating static pages using 7 workers (86/172) 
+  Generating static pages using 7 workers (129/172) 
+✓ Generating static pages using 7 workers (172/172) in 1644ms
+  Finalizing page optimization ...
+
+Route (app)                                         Revalidate  Expire
+┌ ƒ /
+├ ○ /_not-found
+├ ƒ /admin
+├ ƒ /admin/command-words
+├ ƒ /admin/diagram-drills
+├ ƒ /admin/diagrams
+├ ƒ /admin/glossary
+├ ƒ /admin/inbox
+├ ƒ /admin/past-papers
+├ ƒ /admin/pdfs
+├ ƒ /admin/quant
+├ ƒ /admin/sections
+├ ƒ /admin/sections/[id]
+├ ƒ /admin/widgets
+├ ƒ /api/admin/command-words
+├ ƒ /api/admin/diagrams
+├ ƒ /api/admin/glossary
+├ ƒ /api/admin/inbox/[id]
+├ ƒ /api/admin/past-papers
+├ ƒ /api/admin/pdfs
+├ ƒ /api/admin/sections/[id]/[type]
+├ ƒ /api/chat
+├ ƒ /api/events
+├ ƒ /api/feedback
+├ ƒ /api/flashcards-practice/cards
+├ ƒ /api/flashcards-practice/progress
+├ ƒ /api/flashcards-practice/progress-summary
+├ ƒ /api/fun/progress
+├ ƒ /api/fun/questions
+├ ƒ /api/glossary
+├ ƒ /api/learn-mode/grade-explanation
+├ ƒ /api/learn-mode/state
+├ ƒ /api/past-papers
+├ ƒ /api/pdfs
+├ ƒ /api/practice/progress
+├ ƒ /api/practice/progress-summary
+├ ƒ /api/practice/questions
+├ ƒ /api/progress/content
+├ ƒ /api/progress/dashboard
+├ ƒ /api/progress/flashcards
+├ ƒ /api/progress/quiz
+├ ƒ /api/report
+├ ƒ /api/sections/[id]
+├ ƒ /api/stripe/cancel-offer
+├ ƒ /api/stripe/checkout
+├ ƒ /api/stripe/portal
+├ ƒ /api/stripe/webhook
+├ ƒ /api/subscription
+├ ƒ /api/written-practice/ao-profile
+├ ƒ /api/written-practice/evaluate
+├ ƒ /api/written-practice/progress
+├ ƒ /api/written-practice/progress-summary
+├ ƒ /api/written-practice/questions
+├ ƒ /auth/callback
+├ ○ /business
+├ ● /business/[unit]
+│ ├ /business/meeting-customer-needs-model-answers
+│ ├ /business/the-market-model-answers
+│ ├ /business/marketing-mix-model-answers
+│ └ [+7 more paths]
+├ ● /business/[unit]/[topic]                                1h      1y
+│ ├ /business/unit-1/meeting-customer-needs                 1h      1y
+│ ├ /business/unit-1/the-market                             1h      1y
+│ ├ /business/unit-1/marketing-mix-strategy                 1h      1y
+│ └ [+17 more paths]
+├ ○ /business/unit-1
+├ ○ /business/unit-2
+├ ○ /business/unit-3
+├ ○ /business/unit-4
+├ ○ /command-words
+├ ○ /contact
+├ ○ /data-response
+├ ● /data-response/[slug]
+│ ├ /data-response/econ-u1-market-failure
+│ ├ /data-response/econ-u1-demand-elasticity
+│ ├ /data-response/econ-u1-price-determination
+│ └ [+3 more paths]
+├ ○ /dev/widgets
+├ ○ /economics
+├ ● /economics/[unit]
+│ ├ /economics/introductory-concepts-model-answers
+│ ├ /economics/demand-model-answers
+│ ├ /economics/supply-model-answers
+│ └ [+19 more paths]
+├ ● /economics/[unit]/[topic]                               1h      1y
+│ ├ /economics/unit-1/introductory-concepts                 1h      1y
+│ ├ /economics/unit-1/consumer-behaviour-demand             1h      1y
+│ ├ /economics/unit-1/supply                                1h      1y
+│ └ [+20 more paths]
+├ ○ /economics/aggregate-demand
+├ ○ /economics/globalisation
+├ ○ /economics/macroeconomic-objectives
+├ ○ /economics/market-failure
+├ ○ /economics/unit-1
+├ ○ /economics/unit-2
+├ ○ /economics/unit-3
+├ ○ /economics/unit-4
+├ ƒ /flashcards-practice
+├ ƒ /fun
+├ ○ /glossary
+├ ○ /guides
+├ ● /guides/[slug]
+│ ├ /guides/business-revision-guide
+│ └ /guides/economics-revision-guide
+├ ○ /ial-revision
+├ ○ /ial-revision/exam-series
+├ ○ /ial-revision/january-2027
+├ ○ /ial-revision/june-2026
+├ ƒ /login
+├ ○ /model-answers
+├ ○ /past-papers                                            1h      1y
+├ ○ /pdfs
+├ ƒ /practice
+├ ƒ /progress
+├ ƒ /settings
+├ ○ /signup
+├ ○ /sitemap.xml
+├ ○ /topic-links
+├ ○ /upgrade
+└ ƒ /written-practice
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

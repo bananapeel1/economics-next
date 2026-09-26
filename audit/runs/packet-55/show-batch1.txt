@@ -1,0 +1,103 @@
+=== C-global-marketing-topFix-01 ===
+{
+  "id": "C-global-marketing-topFix-01",
+  "section": "global-marketing",
+  "kind": "topFix",
+  "rank": 0,
+  "text": "Add a content section teaching the three spec approaches (domestic/ethnocentric, mixed/geocentric, international/polycentric) plus short sections applying Ansoff's Matrix and Porter's Strategic Matrix to global marketing, and a niche-markets section; until then, remove quiz indices 1,3,4,6,8 from the bank so the PreTest and InlineQuiz only test taught material.",
+  "packet": 55,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-marketing-topFix-02 ===
+{
+  "id": "C-global-marketing-topFix-02",
+  "section": "global-marketing",
+  "kind": "topFix",
+  "rank": 1,
+  "text": "Replace the Hofstede section with a spec-aligned 'Language, translation, branding and social media' section using verified examples (drop the Chevrolet Nova myth from flashcards[11]/common_mistakes[4]; replace the KFC anecdote), and demote Hofstede to the existing extras chain.",
+  "packet": 55,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-marketing-topFix-03 ===
+{
+  "id": "C-global-marketing-topFix-03",
+  "section": "global-marketing",
+  "kind": "topFix",
+  "rank": 2,
+  "text": "Fix quiz index 2 (sachets: accept Product or rewrite the stem to ask about 'price point', e.g. 'selling at a lower unit price to match low incomes') and rewrite quiz index 7's absurd distractors; retire the white-colour trivia item (index 5).",
+  "packet": 55,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-marketing-topFix-04 ===
+{
+  "id": "C-global-marketing-topFix-04",
+  "section": "global-marketing",
+  "kind": "topFix",
+  "rank": 3,
+  "text": "Add recall widgets and one diagram: a fillin on the three approach names (template 'A ___ approach applies the home-market mix abroad; a ___ approach adapts fully per country; a ___ approach mixes the two'), a reorder on the glocalisation decision process (audit culture → decide which 4Ps to standardise vs adapt → test locally → launch), and a standardisation–adaptation spectrum or Ansoff grid diagram.",
+  "packet": 55,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-marketing-topFix-05 ===
+{
+  "id": "C-global-marketing-topFix-05",
+  "section": "global-marketing",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "Convert practice guidance into IAL levels mark schemes (K/A/An/E with level descriptors), change practice[3] to 'Explain one way...' (4 marks), fix the product-development conflation in its guidance, and repair the practice[4] India context so it does not contradict the section's own McDonald's example.",
+  "packet": 55,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-marketing-accuracy-01 ===
+{
+  "id": "C-global-marketing-accuracy-01",
+  "section": "global-marketing",
+  "kind": "accuracy",
+  "text": "content[1] 'Cultural Influences on Global Marketing' > hofstede-dimensions > realExample: The KFC 'eat your fingers off' story is an unverified marketing legend (hedged with 'reportedly' but then built on as fact). More importantly it is presented as the Hofstede example yet applies no Hofstede dimension; it invokes 'high-context' (Edward Hall's framework, not Hofstede's) and asserts a translation error was inappropriate 'in a collectivist culture', which is a non-sequitur. Students copying this into an exam would show confused theory.",
+  "packet": 55,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-global-marketing-quiz-01 ===
+{
+  "id": "C-global-marketing-quiz-01",
+  "section": "global-marketing",
+  "kind": "quiz",
+  "text": "q2: Two options are defensible. Sachets are a packaging/size change (Product) that enables a lower price point (Price); Edexcel textbooks describe sachet strategies under product adaptation as often as under pricing. The explanation itself says 'by selling smaller quantities' (a product change). correctIndex=1 (Price) will be marked wrong for a student who reasonably answers Product.",
+  "packet": 55,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+

@@ -1,0 +1,411 @@
+=== C-role-state-macroeconomy-topFix-01 ===
+{
+  "id": "C-role-state-macroeconomy-topFix-01",
+  "section": "role-state-macroeconomy",
+  "kind": "topFix",
+  "rank": 0,
+  "text": "Rewrite content[] to the 4.3.5 spec: Block 1 'Public expenditure and taxation' (capital/current/transfer; size as % GDP effects; progressive/proportional/regressive; effects of direct vs indirect tax changes incl. Laffer and incidence). Block 2 'Public sector finances' (automatic stabilisers vs discretionary; deficit vs debt; structural vs cyclical; factors and significance). Block 3 'Policy in a global context' (five tools incl. exchange rate policy and direct controls; TNC/transfer-pricing controls and limits; inaccurate information, uncertainty, external shocks). Move public/merit goods to the Unit 1 sections.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-topFix-02 ===
+{
+  "id": "C-role-state-macroeconomy-topFix-02",
+  "section": "role-state-macroeconomy",
+  "kind": "topFix",
+  "rank": 1,
+  "text": "Wire the assessment layer to the blocks: add diagramRef ('Laffer'/'Tax Incidence' to block 1, 'Fiscal Deficit' to block 2, 'AD/AS'/'Crowding Out' to block 3), quizIndices ([0,1,8,10], [2,3,5,4], [6,7,9,11]) and practiceIndices so the inline quiz/practice and pre/post-test measure what was just taught.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-topFix-03 ===
+{
+  "id": "C-role-state-macroeconomy-topFix-03",
+  "section": "role-state-macroeconomy",
+  "kind": "topFix",
+  "rank": 2,
+  "text": "Add recall widgets, one per subsection, using genuine sequences already in extras: reorder 'crowding out' (deficit → bond sales → demand for loanable funds up → interest rate up → private I falls), reorder 'automatic stabiliser in recession' (incomes fall → tax take falls, benefits rise → AD cushioned), fillin 'deficit is a ___ (flow); debt is a ___ (stock); a ___ (surplus) is needed to reduce debt', fillin regressive/proportional/progressive definitions.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-topFix-04 ===
+{
+  "id": "C-role-state-macroeconomy-topFix-04",
+  "section": "role-state-macroeconomy",
+  "kind": "topFix",
+  "rank": 3,
+  "text": "Fix practice tariffs and formats to IAL: practice[0] 'Define fiscal policy (2 marks)' or 'Explain… (4 marks)'; practice[1] to 4 marks or 'Analyse (6)'; practice[4] 'Distinguish between/Explain' not 'Outline'; convert practice[2] and [3] guidance to levels-based KAA/Evaluation descriptors.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-topFix-05 ===
+{
+  "id": "C-role-state-macroeconomy-topFix-05",
+  "section": "role-state-macroeconomy",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "Internationalise examples and remove UK-only framing (NHS, council housing, 20/40/45 bands, England's age-18 rule, ECB-contradicting 'cannot fall below zero'): add e.g. Singapore/Hong Kong tax structures, an IMF-programme fiscal deficit case (Pakistan/Sri Lanka), and a non-UK central bank cycle; cut UBI to one sentence.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-accuracy-01 ===
+{
+  "id": "C-role-state-macroeconomy-accuracy-01",
+  "section": "role-state-macroeconomy",
+  "kind": "accuracy",
+  "text": "content[0] 'Market Failure and the State' > public-goods, merit-goods-redistribution (whole block): Public goods and merit goods are Unit 1 market-failure content (IAL 1.3.3 public goods, 1.3.4 information gaps), not 4.3.5 'Role of the state in the macroeconomy'. Presenting them as the first half of this spec point misdirects revision. Note also Edexcel IAL does not use the term 'merit good' in its spec (it uses information gaps/externalities); the term is fine as vocabulary but should not be framed as the examiner's expected answer.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-practice-01 ===
+{
+  "id": "C-role-state-macroeconomy-practice-01",
+  "section": "role-state-macroeconomy",
+  "kind": "practice",
+  "text": "p0: 'Define the term fiscal policy (4 marks)' does not match IAL command-word conventions: 'Define' is a 2-mark item; 4 marks would be 'Explain'. The guidance then awards marks for expansionary/contractionary/supply-side uses, which are not part of a definition.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-structure-01 ===
+{
+  "id": "C-role-state-macroeconomy-structure-01",
+  "section": "role-state-macroeconomy",
+  "kind": "structure",
+  "text": "Content/assessment mismatch is the defining fault: 0 of 12 MCQs, 4 of 5 practice questions, 5 of 5 diagrams and 4 of 4 extras chains cover 4.3.5 spec material that the four content[] subsections never teach; conversely nothing in quiz/practice tests public goods, merit goods, poverty traps or UBI. Pre-test (3 random MCQs) and post-test therefore measure nothing the section teaches.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-structure-02 ===
+{
+  "id": "C-role-state-macroeconomy-structure-02",
+  "section": "role-state-macroeconomy",
+  "kind": "structure",
+  "text": "Neither block has diagramRef, quizIndices or practiceIndices (content[0] and content[1] keys are only title/sections/takeaway). InlineDiagram cannot substring-match any of the 5 diagrams, so Learn Mode shows none of them; inline quiz/practice selection falls back to arbitrary items unrelated to the block just read.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-structure-03 ===
+{
+  "id": "C-role-state-macroeconomy-structure-03",
+  "section": "role-state-macroeconomy",
+  "kind": "structure",
+  "text": "Zero recall widgets (0 reorder, 0 fillin) in a section whose spec is full of genuine sequences (crowding-out chain, automatic-stabiliser chain, deficit-to-debt accumulation, transfer-pricing mechanism) and definitional contrasts ideal for fillin. Learn Mode is two text-only steps.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-structure-04 ===
+{
+  "id": "C-role-state-macroeconomy-structure-04",
+  "section": "role-state-macroeconomy",
+  "kind": "structure",
+  "text": "Block ordering/difficulty ramp: block 1 is AS-level Unit 1 content (easy, off-spec), block 2 jumps to a compressed whole-course policy overview. There is no build from 'what the state spends and taxes' through 'public finances' to 'policy in a global context', which is the spec's own ramp.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-structure-05 ===
+{
+  "id": "C-role-state-macroeconomy-structure-05",
+  "section": "role-state-macroeconomy",
+  "kind": "structure",
+  "text": "Subsection fiscal-monetary-supply-side compresses three policy tools into three paragraphs with a flow only for monetary tightening; spec 4.3.5(d) needs five tools (adds exchange rate policy, direct controls) plus TNC controls plus policymaker problems. This one subsection would need to become a block.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-structure-06 ===
+{
+  "id": "C-role-state-macroeconomy-structure-06",
+  "section": "role-state-macroeconomy",
+  "kind": "structure",
+  "text": "Takeaways match their blocks, but block 2 takeaway 4 (UBI) elevates an off-spec idea to a headline point.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-structure-07 ===
+{
+  "id": "C-role-state-macroeconomy-structure-07",
+  "section": "role-state-macroeconomy",
+  "kind": "structure",
+  "text": "Misconceptions: public-goods vs publicly-provided (real, good), merit vs public goods (real), fiscal/monetary interchangeable (plausible), 'UBI solves poverty without trade-offs' (filler; not a misconception IAL students hold or are examined on). A real 4.3.5 misconception (deficit = debt; falling deficit = falling debt; indirect taxes are neutral) is only in the quiz explanations.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-structure-08 ===
+{
+  "id": "C-role-state-macroeconomy-structure-08",
+  "section": "role-state-macroeconomy",
+  "kind": "structure",
+  "text": "notes[] (4 titles) mirror the content[] topics, so the Notes tab has the same spec gap; flashcards[] include 'demerit good', 'moral hazard', 'principal [sic] of equity in taxation' which are not taught in either.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specGap-01 ===
+{
+  "id": "C-role-state-macroeconomy-specGap-01",
+  "section": "role-state-macroeconomy",
+  "kind": "specGap",
+  "text": "4.3.5(a) Public expenditure: distinction between capital expenditure, current expenditure and transfer payments — not taught (only in quiz[0] explanation).",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specGap-02 ===
+{
+  "id": "C-role-state-macroeconomy-specGap-02",
+  "section": "role-state-macroeconomy",
+  "kind": "specGap",
+  "text": "4.3.5(a) Reasons for the changing size and composition of public expenditure in a global context (ageing populations, demand for services, crises) — absent.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specGap-03 ===
+{
+  "id": "C-role-state-macroeconomy-specGap-03",
+  "section": "role-state-macroeconomy",
+  "kind": "specGap",
+  "text": "4.3.5(a) Significance of differing levels of public expenditure as a proportion of GDP: productivity and growth, living standards, crowding out, level of taxation, equality — absent (crowding out only in diagrams/extras).",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specGap-04 ===
+{
+  "id": "C-role-state-macroeconomy-specGap-04",
+  "section": "role-state-macroeconomy",
+  "kind": "specGap",
+  "text": "4.3.5(b) Taxation: distinction between progressive, proportional and regressive taxes — only 'progressive' taught; regressive appears only in quiz[8]; proportional nowhere.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specGap-05 ===
+{
+  "id": "C-role-state-macroeconomy-specGap-05",
+  "section": "role-state-macroeconomy",
+  "kind": "specGap",
+  "text": "4.3.5(b) Economic effects of changes in direct and indirect tax rates on: incentives to work, tax revenues (Laffer), income distribution, real output and employment, price level, trade balance, FDI flows — only Laffer and incentives touched; tax incidence/price level only in diagrams[4]/quiz[10]; trade balance and FDI absent.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specGap-06 ===
+{
+  "id": "C-role-state-macroeconomy-specGap-06",
+  "section": "role-state-macroeconomy",
+  "kind": "specGap",
+  "text": "4.3.5(c) Public sector finances: automatic stabilisers vs discretionary fiscal policy — absent from content.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specGap-07 ===
+{
+  "id": "C-role-state-macroeconomy-specGap-07",
+  "section": "role-state-macroeconomy",
+  "kind": "specGap",
+  "text": "4.3.5(c) Fiscal deficit vs national debt; structural vs cyclical deficits — absent from content (diagram[1], quiz[2],[5], practice[4] only).",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specGap-08 ===
+{
+  "id": "C-role-state-macroeconomy-specGap-08",
+  "section": "role-state-macroeconomy",
+  "kind": "specGap",
+  "text": "4.3.5(c) Factors influencing the size of fiscal deficits and national debt; significance of their size (interest payments, crowding out, credit ratings, intergenerational equity, inflation risk) — absent.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specGap-09 ===
+{
+  "id": "C-role-state-macroeconomy-specGap-09",
+  "section": "role-state-macroeconomy",
+  "kind": "specGap",
+  "text": "4.3.5(d) Use of exchange rate policy and direct controls in different countries — absent.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specGap-10 ===
+{
+  "id": "C-role-state-macroeconomy-specGap-10",
+  "section": "role-state-macroeconomy",
+  "kind": "specGap",
+  "text": "4.3.5(d) Measures to control global companies' (TNCs) operations: regulation of transfer pricing; limits to government ability to control TNCs — absent from content (extras chain 4, quiz[6],[11], practice[3] only).",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specGap-11 ===
+{
+  "id": "C-role-state-macroeconomy-specGap-11",
+  "section": "role-state-macroeconomy",
+  "kind": "specGap",
+  "text": "4.3.5(d) Problems facing policymakers when applying policies: inaccurate information, risks and uncertainties, external shocks — absent from content (quiz[9] only).",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specGap-12 ===
+{
+  "id": "C-role-state-macroeconomy-specGap-12",
+  "section": "role-state-macroeconomy",
+  "kind": "specGap",
+  "text": "Unsure: whether IAL 4.3.5 expects the loanable-funds crowding-out diagram (diagrams[2]) — it is not a listed spec diagram; AD/AS and Laffer are the safer choices.",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+
+=== C-role-state-macroeconomy-specThin-01 ===
+{
+  "id": "C-role-state-macroeconomy-specThin-01",
+  "section": "role-state-macroeconomy",
+  "kind": "specThin",
+  "text": "4.3.5 3a) The distinction between fiscal deficits and fiscal surpluses — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+
+=== C-role-state-macroeconomy-specThin-02 ===
+{
+  "id": "C-role-state-macroeconomy-specThin-02",
+  "section": "role-state-macroeconomy",
+  "kind": "specThin",
+  "text": "4.3.5 3a) The distinction between a fiscal deficit (annual flow) and the national debt (accumulated stock) — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 52,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+

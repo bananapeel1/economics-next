@@ -1,0 +1,401 @@
+{
+  "id": "C-government-intervention-firms-topFix-01",
+  "section": "government-intervention-firms",
+  "kind": "topFix",
+  "rank": 0,
+  "text": "Replace quiz[5] (Laffer), quiz[6] (occupational immobility), quiz[7] (poverty trap) with on-spec MCQs on mergers/SLC, predatory pricing vs abuse of dominance, and quality standards/performance targets; then add quizIndices, practiceIndices and diagramRef to each block so pre-test and inline items match what the step teaches.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-topFix-02",
+  "section": "government-intervention-firms",
+  "kind": "topFix",
+  "rank": 1,
+  "text": "Fix the diagrams: redraw diagrams[0] as a natural-monopoly price-cap diagram (falling LRAC, P=MC vs P=AC caps, Preg not below AC, MC=MR dashed lines at the true intersection); retitle/replace diagrams[2] so privatisation is not shown as a competitive supply shift; add the competitive-market NMW diagram the examMatters demands; draw the kinked post-NMW MCL in diagrams[1].",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-topFix-03",
+  "section": "government-intervention-firms",
+  "kind": "topFix",
+  "rank": 2,
+  "text": "Add the missing spec content as a new block ('Promoting competition and contestability': deregulation, competitive tendering, promotion of small business; 'Protecting suppliers': monopsony buyers) plus a short 'impact on prices, profit, efficiency, quality, choice' summary table; consider moving the minimum-wage subsection to 3.3.4.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-topFix-04",
+  "section": "government-intervention-firms",
+  "kind": "topFix",
+  "rank": 3,
+  "text": "Add recall exercises: fillin on RPI-X (RPI 5%, X 2% → ?%), reorder on merger-control procedure and on the Averch-Johnson causal chain.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-topFix-05",
+  "section": "government-intervention-firms",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "De-UK and de-GCE the exam framing: change '25-mark essay' to '20-mark Evaluate'; say 'competition authorities (e.g. CMA, CCCS, KFTC, HK Competition Commission)'; add 2-3 Asia/ME examples (CCCS Grab-Uber 2018 fine, KFTC Google 2021); rewrite practice mark schemes as IAL KAA + Evaluation levels, fix 'Define (4 marks)' and 'Outline'.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-accuracy-01",
+  "section": "government-intervention-firms",
+  "kind": "accuracy",
+  "text": "content[1] Regulation of Monopoly > privatisation-nationalisation > examMatters: \"This is a classic 25-mark essay topic\" — 25-mark essays are UK GCE 9EC0 Papers 1/2 Section C. IAL WEC13 essays (Section C) are 20 marks; the highest IAL tariff is 20 ('Evaluate'). Sets wrong exam expectations for the target audience.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-accuracy-02",
+  "section": "government-intervention-firms",
+  "kind": "accuracy",
+  "text": "diagrams[0] 'Price Regulation of a Monopoly (RPI-X Price Cap)' svg: Geometry contradicts the intended teaching. The regulated price line Preg is at y=170 while the AC curve at Qreg (x=268) is at y≈115 — i.e. AC is ABOVE Preg, so the regulated firm is drawn making a loss, with no mention of this anywhere in checklist/description (the SVG comment even says 'above AC'). Also the MC=MR point is marked at (200,226) but the MC and MR paths actually intersect near (232,228), so the Qm/Pm dashed lines hang in space. The AC is U-shaped, not the falling LRAC of a natural monopoly, which is the case regulators actually price-cap.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-accuracy-03",
+  "section": "government-intervention-firms",
+  "kind": "accuracy",
+  "text": "diagrams[2] 'Effects of Privatisation and Deregulation': Represents privatisation as a rightward supply shift in a competitive S/D market ('new entry + efficiency gains'). This directly contradicts content[1] > privatisation-nationalisation body[1] ('privatising a natural monopoly simply replaces a public monopoly with a private one') and conflates privatisation with deregulation — exactly the confusion common_mistakes[1] warns against. E1 is also mis-plotted (S1 and D cross near (272,165), not (260,150)).",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-quiz-01",
+  "section": "government-intervention-firms",
+  "kind": "quiz",
+  "text": "q5: Not 3.3.5 content (fiscal policy / macro). With the pre-test drawing 3 random MCQs from this bank, students can be tested on it before seeing anything on government intervention in firms. Also appears in inline quiz rotation for a section that never mentions it.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-quiz-02",
+  "section": "government-intervention-firms",
+  "kind": "quiz",
+  "text": "q6: Belongs to 3.3.4 Labour Markets (labour immobility policies), not taught anywhere in this section's content[]. Off-topic for pre-test and inline quiz.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-quiz-03",
+  "section": "government-intervention-firms",
+  "kind": "quiz",
+  "text": "q7: Welfare/tax content (macro / UK-style 'poverty trap'), not in 3.3.5 and not taught in this section. Off-topic for pre-test.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-structure-01",
+  "section": "government-intervention-firms",
+  "kind": "structure",
+  "text": "Zero recall exercises (0 reorder, 0 fillin) — the section has no retrieval practice at all between steps; the only checks are 3 inline MCQs. Obvious candidates exist: a fillin on RPI-X arithmetic; a reorder on the merger-control procedure (notification → Phase 1 → SLC test → Phase 2 → remedies/decision), which is a genuine procedural sequence; a reorder on the Averch-Johnson chain (guaranteed return on capital → incentive to over-invest → inflated capital base → productive inefficiency).",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-structure-02",
+  "section": "government-intervention-firms",
+  "kind": "structure",
+  "text": "No block carries diagramRef / quizIndices / practiceIndices, so LearnModeTab.jsx:117-121 falls back to distributeItems()/matchDiagramsToBlocks(). Result (3 steps, 1 block each): step 0 'Competition Policy' gets quiz[0] (RPI-X arithmetic) + practice 'Define privatisation' — both untaught at that point; step 1 'Regulation of Monopoly' gets practice 'Outline regulatory capture' (taught in block 3); step 2 gets 'Explain two objectives of competition policy' (block 1). All three inline practice items are on the wrong block.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-structure-03",
+  "section": "government-intervention-firms",
+  "kind": "structure",
+  "text": "diagrams[2] 'Effects of Privatisation and Deregulation' shares no title word with any block title ('Competition Policy', 'Regulation of Monopoly', 'Government Failure and Minimum Wages'), so matchDiagramsToBlocks() never places it — it is invisible in Learn Mode and only visible on the Diagrams tab.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-structure-04",
+  "section": "government-intervention-firms",
+  "kind": "structure",
+  "text": "Pre-test contamination: 3 of 10 MCQs are off-topic (Q5 Laffer, Q6 occupational immobility, Q7 poverty trap); P(at least one off-topic in a 3-question pre-test) = 1 - C(7,3)/C(10,3) ≈ 71%. This is a concrete mechanism behind the founder's 'pre-test demotivates' hypothesis for this section.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-structure-05",
+  "section": "government-intervention-firms",
+  "kind": "structure",
+  "text": "Block 3 'Government Failure and Minimum Wages' pairs two unrelated topics into one step. Government failure is Unit 1 content used here as an evaluation lens (fine) and minimum wage is 3.3.4 Labour Markets content; neither is a 3.3.5 bullet. The spec's own 3.3.5 hook for labour is 'protect suppliers and employees: restricting monopsony power of firms', which is only obliquely covered.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-structure-06",
+  "section": "government-intervention-firms",
+  "kind": "structure",
+  "text": "The section is not organised around the spec's logic (why intervene → tools: mergers / monopoly control / promoting competition & contestability / protecting suppliers & employees → impacts on prices, profit, efficiency, quality, choice → limits: regulatory capture, asymmetric information). There is no summary of 'impact on prices/profit/efficiency/quality/choice' (spec 3.3.5b), so a student cannot easily answer the standard 'assess the impact of X on consumers/firms' data-response question.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-structure-07",
+  "section": "government-intervention-firms",
+  "kind": "structure",
+  "text": "Difficulty ramp is inverted: the most technical material (RPI-X vs rate-of-return, Averch-Johnson, information asymmetry) sits mid-section, while the closing block depends on 3.3.4 prerequisites (MRPL, MCL, ACL) that are assumed rather than recapped.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-structure-08",
+  "section": "government-intervention-firms",
+  "kind": "structure",
+  "text": "Takeaways match their blocks and misconceptions are genuine student errors (dominance vs abuse; RPI-X 'prices always fall'; privatisation 'always improves efficiency'; always-draw-competitive-model) — these are good. Flashcards drift off-section (consumer sovereignty, contestable market, deadweight loss, dynamic efficiency are 3.3.3), low priority.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-specGap-01",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "3.3.5a control of monopolies: quality standards and performance targets — not mentioned anywhere in content[] (only price regulation and, via quiz[1], profit regulation).",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-specGap-02",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "3.3.5a promote competition and contestability: promotion of small business — absent.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-specGap-03",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "3.3.5a promote competition and contestability: deregulation — appears only in flashcards, common_mistakes[1] and diagrams[2]; never taught in content[].",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-specGap-04",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "3.3.5a promote competition and contestability: competitive tendering for government contracts — only in quiz[8]; not taught.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-specGap-05",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "3.3.5a protect suppliers and employees: restricting monopsony power of firms (as buyers, e.g. supermarket-supplier codes) — only the NMW/labour-monopsony angle is covered; the supplier-protection angle is absent.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-specGap-06",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "3.3.5b impact of government intervention on prices, profit, efficiency, quality, choice — no explicit treatment; partially implied in RPI-X and privatisation sections but never framed as the spec's five impacts.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-specGap-07",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "3.3.5c limits to intervention: regulatory capture and asymmetric information — covered (government-failure-intervention; price-cap-regulation body[2]; quiz[9]). No gap.",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-specGap-08",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "Unsure: whether IAL 3.3.5 explicitly lists 'nationalisation' under protecting suppliers/employees (I believe it does, and it is covered).",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-government-intervention-firms-specGap-09",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "3.3.5 1c) Trade liberalisation — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+{
+  "id": "C-government-intervention-firms-specGap-10",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "3.3.5 1d) Local sourcing of raw materials and components — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+{
+  "id": "C-government-intervention-firms-specGap-11",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "3.3.5 1d) Employment legislation to protect workers from exploitation — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+{
+  "id": "C-government-intervention-firms-specGap-12",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "3.3.5 2b) Direct taxes on firms and employment (e.g. national insurance contributions, corporation tax) and their labour market effects — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+{
+  "id": "C-government-intervention-firms-specGap-13",
+  "section": "government-intervention-firms",
+  "kind": "specGap",
+  "text": "3.3.5 2b) Measures to reduce discrimination — not in the teaching content. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}
+{
+  "id": "C-government-intervention-firms-specThin-01",
+  "section": "government-intervention-firms",
+  "kind": "specThin",
+  "text": "3.3.5 2b) Measures to reduce exploitation of workers — named but never defined or explained; a student could not answer an exam question from it. (spec-coverage audit, 12 Sep 2026)",
+  "packet": 48,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/spec-coverage.json, which checked all 43 sections requirement-by-requirement against the verbatim spec. Not represented by any existing ledger item for this section."
+}

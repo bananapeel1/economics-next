@@ -1,0 +1,63 @@
+title: Market Structures &amp; Contestability — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/market-structures-contestability-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Market Structures & Contestability — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 3.3.3 Market Structures & Contestability"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Evaluate (20 marks)",
+   "text": "Evaluate whether monopoly is always against the public interest.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A monopoly exists where a single firm dominates a market, typically defined as having over 25% market share in UK competition law. K The conventional view is that monopoly leads to higher prices, lower output, and inefficiency compared to competitive markets. However, this view is incomplete — monopoly can also deliver benefits that competitive markets cannot. An Monopolies are allocatively inefficient — they produce where MC K They may also be productively inefficient — without competitive pressure, there is little incentive to minimise costs ( X-inefficiency ). An Monopolists can also restrict output to maintain high prices, creating a deadweight welfare loss — lost consumer and producer surplus that benefits nobody. An For example, concerns about energy companies charging excessive prices during the 2022 energy crisis led to calls for windfall taxes — evidence that monopoly power can harm consumers when demand is inelastic. A However, monopoly can serve the public interest in several ways. Supernormal profits fund innovation — Schumpeter argued that only firms with market power have the resources and incentive for large-scale R&D. K Google reinvests billions into AI, search improvements, and free services (Maps, Gmail, YouTube), delivering enormous consumer value despite its 90%+ search market share. A Economies of scale in natural monopolies (water, rail networks) mean a single firm produces at lower average cost than multiple competing firms could — duplication would waste resources. An In these cases, monopoly is the most efficient market structure , provided it is properly regulated. An Whether monopoly harms the public interest depends on several factors. Contestability matters — if barriers to entry are low, even a monopolist must keep prices competitive to deter entrants. An Regulation matters — price caps (RPI – X) and quality standards can constrain the worst excesses of monopoly while preserving scale benefits. K The source of monopoly power matters — a monopoly earned through continuous innovation (Apple, Google) is very different from one maintained through anti-competitive practices or regulatory capture. An Dynamic efficiency must be weighed against static inefficiency — a firm that is allocatively inefficient today but invests heavily in R&D may deliver greater welfare over time. An Monopoly is not always against the public interest . While the standard model predicts higher prices and allocative inefficiency, the reality depends on contestability, regulation, and whether the firm reinvests profits in innovation. Natural monopolies and innovation-driven monopolies can benefit consumers more than fragmented competition. The key policy question is not whether to eliminate monopoly but how to regulate it effectively — ensuring firms pass on efficiency gains to consumers while maintaining incentives for investment and innovation. An"
+   }
+  }
+ ]
+}

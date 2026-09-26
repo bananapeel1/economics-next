@@ -1,0 +1,35 @@
+C-government-intervention-firms-topFix-01      topFix    open       Replace quiz[5] (Laffer), quiz[6] (occupational immobility), quiz[7] (poverty trap) with o
+C-government-intervention-firms-topFix-02      topFix    open       Fix the diagrams: redraw diagrams[0] as a natural-monopoly price-cap diagram (falling LRAC
+C-government-intervention-firms-topFix-03      topFix    open       Add the missing spec content as a new block ('Promoting competition and contestability': d
+C-government-intervention-firms-topFix-04      topFix    open       Add recall exercises: fillin on RPI-X (RPI 5%, X 2% → ?%), reorder on merger-control proce
+C-government-intervention-firms-topFix-05      topFix    open       De-UK and de-GCE the exam framing: change '25-mark essay' to '20-mark Evaluate'; say 'comp
+C-government-intervention-firms-accuracy-01    accuracy  open       content[1] Regulation of Monopoly > privatisation-nationalisation > examMatters: "This is 
+C-government-intervention-firms-accuracy-02    accuracy  open       diagrams[0] 'Price Regulation of a Monopoly (RPI-X Price Cap)' svg: Geometry contradicts t
+C-government-intervention-firms-accuracy-03    accuracy  open       diagrams[2] 'Effects of Privatisation and Deregulation': Represents privatisation as a rig
+C-government-intervention-firms-quiz-01        quiz      open       q5: Not 3.3.5 content (fiscal policy / macro). With the pre-test drawing 3 random MCQs fro
+C-government-intervention-firms-quiz-02        quiz      open       q6: Belongs to 3.3.4 Labour Markets (labour immobility policies), not taught anywhere in t
+C-government-intervention-firms-quiz-03        quiz      open       q7: Welfare/tax content (macro / UK-style 'poverty trap'), not in 3.3.5 and not taught in 
+C-government-intervention-firms-structure-01   structure open       Zero recall exercises (0 reorder, 0 fillin) — the section has no retrieval practice at all
+C-government-intervention-firms-structure-02   structure open       No block carries diagramRef / quizIndices / practiceIndices, so LearnModeTab.jsx:117-121 f
+C-government-intervention-firms-structure-03   structure open       diagrams[2] 'Effects of Privatisation and Deregulation' shares no title word with any bloc
+C-government-intervention-firms-structure-04   structure open       Pre-test contamination: 3 of 10 MCQs are off-topic (Q5 Laffer, Q6 occupational immobility,
+C-government-intervention-firms-structure-05   structure open       Block 3 'Government Failure and Minimum Wages' pairs two unrelated topics into one step. G
+C-government-intervention-firms-structure-06   structure open       The section is not organised around the spec's logic (why intervene → tools: mergers / mon
+C-government-intervention-firms-structure-07   structure open       Difficulty ramp is inverted: the most technical material (RPI-X vs rate-of-return, Averch-
+C-government-intervention-firms-structure-08   structure open       Takeaways match their blocks and misconceptions are genuine student errors (dominance vs a
+C-government-intervention-firms-specGap-01     specGap   open       3.3.5a control of monopolies: quality standards and performance targets — not mentioned an
+C-government-intervention-firms-specGap-02     specGap   open       3.3.5a promote competition and contestability: promotion of small business — absent.
+C-government-intervention-firms-specGap-03     specGap   open       3.3.5a promote competition and contestability: deregulation — appears only in flashcards, 
+C-government-intervention-firms-specGap-04     specGap   open       3.3.5a promote competition and contestability: competitive tendering for government contra
+C-government-intervention-firms-specGap-05     specGap   open       3.3.5a protect suppliers and employees: restricting monopsony power of firms (as buyers, e
+C-government-intervention-firms-specGap-06     specGap   open       3.3.5b impact of government intervention on prices, profit, efficiency, quality, choice — 
+C-government-intervention-firms-specGap-07     specGap   open       3.3.5c limits to intervention: regulatory capture and asymmetric information — covered (go
+C-government-intervention-firms-specGap-08     specGap   open       Unsure: whether IAL 3.3.5 explicitly lists 'nationalisation' under protecting suppliers/em
+C-government-intervention-firms-specGap-09     specGap   open       3.3.5 1c) Trade liberalisation — not in the teaching content. (spec-coverage audit, 12 Sep
+C-government-intervention-firms-specGap-10     specGap   open       3.3.5 1d) Local sourcing of raw materials and components — not in the teaching content. (s
+C-government-intervention-firms-specGap-11     specGap   open       3.3.5 1d) Employment legislation to protect workers from exploitation — not in the teachin
+C-government-intervention-firms-specGap-12     specGap   open       3.3.5 2b) Direct taxes on firms and employment (e.g. national insurance contributions, cor
+C-government-intervention-firms-specGap-13     specGap   open       3.3.5 2b) Measures to reduce discrimination — not in the teaching content. (spec-coverage 
+C-government-intervention-firms-specThin-01    specThin  open       3.3.5 2b) Measures to reduce exploitation of workers — named but never defined or explaine
+
+33 items

@@ -1,0 +1,96 @@
+title: National Income — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/national-income-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is the circular flow of income model?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The circular flow of income shows how money flows between households and firms. Households provide factors of production to firms and receive factor incomes (wages, rent, interest, profit). Households spend income on goods and services. Injections (investment, government spending, exports) add to the flow; withdrawals (saving, taxation, imports) remove from it."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What happens when injections exceed withdrawals?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "When total injections (I + G + X) exceed total withdrawals (S + T + M), national income rises. This increase is amplified by the multiplier effect — each round of spending generates further income and consumption. Conversely, when withdrawals exceed injections, national income contracts. Equilibrium occurs when injections equal withdrawals."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "National Income — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 2.3.4 National Income"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine how the circular flow of income model shows the impact of injections and withdrawals on national income.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The circular flow of income model shows how money flows between households and firms in an economy. K Households provide factors of production (land, labour, capital, enterprise) to firms and receive factor incomes (rent, wages, interest, profit) in return. Households then spend this income on goods and services produced by firms, completing the flow. K Injections are additions to the circular flow that increase national income. They consist of investment (I) by firms, government spending (G) , and export revenue (X) . K For example, government spending on the NHS pays wages to doctors and nurses, adding income to the flow. A Withdrawals (or leakages) are removals from the circular flow: saving (S) , taxation (T) , and import spending (M) . K When households save rather than spend, that income does not flow back to firms, reducing overall economic activity. An When injections exceed withdrawals (I + G + X > S + T + M), national income rises . An This increase is amplified by the multiplier effect — an initial injection of spending generates successive rounds of income and re-spending. For example, a £1bn increase in government infrastructure spending creates jobs and wages, which are partly re-spent on goods and services, creating further income for other firms and workers. A Conversely, when withdrawals exceed injections , national income contracts — firms receive less revenue, reduce output, and may lay off workers, leading to a negative multiplier effect. An The economy reaches equilibrium when total injections equal total withdrawals, and national income is stable. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine how the multiplier effect works and why the multiplier may be smaller than expected.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The multiplier effect describes how an initial change in spending leads to a larger final change in national income . K The multiplier is calculated as 1 / (1 – MPC) , where MPC is the marginal propensity to consume. If MPC = 0.8, the multiplier is 5 — an initial £1bn injection leads to a £5bn increase in GDP. K The mechanism works through successive rounds of spending . When the government invests £1bn in infrastructure, construction workers receive income. A If their MPC is 0.8, they spend £800m — which becomes income for retailers, suppliers, and service providers. Those recipients then spend 80% of their new income (£640m), and so on. An Each round generates new income, creating a cumulative increase far larger than the initial injection. An However, the multiplier is often smaller than theory suggests because of leakages from the circular flow. An In each round, income leaks out through savings (reducing re-spending), taxation (government takes a share), and imports (spending on foreign goods does not generate domestic income). An In an open economy like the UK — with high income tax, high import penetration, and a modest savings rate — the multiplier may be closer to 1.3–1.5 rather than the theoretical 5. A Additionally, if the economy is near full capacity , extra spending may cause inflation rather than increasing real output, further reducing the effective multiplier. An"
+   }
+  }
+ ]
+}

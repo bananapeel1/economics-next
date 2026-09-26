@@ -6,11 +6,62 @@ Append only. Every entry needs a date and the packet that made it.
 
 - **IAL teacher for sign-off** — not named, not booked. Blocks the section-complete packets. ~20-40 hours.
 - **Freemium boundary** — the paid tier is currently the worst-verified content. Decide before packet 8.
-- **Business extract sourcing** — 6 exist in `content/data-response/`, 20 sections need them. Author, adapt or
-  license, and answer the copyright question. Blocks Business practice work.
 - **Freeze date** — proposed 1 November. Anything later is for the June cohort, not January.
 
 ## Settled
+
+- **2026-09-26 — the rollout covers the top 25 topics, and every extract uses real, cited data.** The
+  founder, answering the two open rollout decisions in `audit/ROLLOUT.md`: *"real and cited data, top 25
+  topics. when you have done that i will reevaluate and say if we do all 43"*. **(1) Scope:** the 25 busiest
+  topics by students (`secRows[].users`, `audit/raw/funnel_aggregates.json`), which is every topic with 15 or
+  more: 1.3.5 (packet 12.8) and packets 101-124 in the ROLLOUT queue, about 83% of students, ~183 new answers,
+  19 extracts to write, 2 pages to create. Packets 125-142 are **not cancelled, only not scheduled**; the founder
+  re-decides after the 25 are done. Do not start them, and do not re-raise the question before then.
+  **(2) Data:** every figure in an extract or source set is real and traceable to a named, dated, public source
+  (statistics office, central bank, ministry, international body, company report, reputable press), cited on
+  the page with enough detail to find it. Where a figure is rounded or adapted, the citation says "adapted
+  from". No invented organisations, reports or quotes, and no "composite of estimates" lines. The extract's
+  prose is our own writing around cited figures; nothing is copied from the source beyond a short attributed
+  quote. Verify A checks each figure against its source. **This applies to the six existing extracts too**
+  (all six cite a "composite", "synthesis" or "indicative" source today): each is re-sourced by the packet that
+  uses it, and Extract A (1.3.5, `econ-u1-market-failure`) by its own item, E081. This also settles the open
+  "Business extract sourcing" question: author around cited real figures, not adapt or license articles.
+- **2026-09-26 — the practice page is redesigned as the exam paper and the examiner's marked script, on
+  paper by default.** The founder, after reviewing the v7 shell on the #38 preview at desktop width: *"it just
+  feels like very vibe-coded AI slop… I want it to look more practical and trustworthy."* Measured on one
+  1440px screen in the marking state: 26 bordered boxes, 13 font sizes (most at 12px), 30 monospace text runs,
+  five bands of chrome before the question, and figures that disagree ("Marks banked 1/28" above, "6 written
+  questions · 60 marks" below). **The founder's rulings:** (1) the attempt looks like the Pearson paper (part
+  numbers, marks in brackets, ruled answer space sized to the tariff, the extract as a source-booklet page,
+  the paper's outline as navigation, one header, three type sizes, monospace only for figures, almost no
+  boxes); (2) the review looks like Pearson's published "exemplars with examiner commentaries" (margin marks,
+  the mark scheme in Pearson's own format); (3) **the practice surface is light paper by default**, dark
+  optional through the site's theme, which lifts the `rl-night` pin on this page; (4) **everything below the
+  practice area goes**: the coverage panel with spec ids, the method notes, the duplicate data-response card and
+  the gradient call-to-action. Coverage remains an internal report (`npm run spec-coverage`).
+
+- **2026-09-26 — marking follows Pearson's sample mark schemes, everywhere, including the live AI marker.**
+  `lib/ao-spec.js` ALLOCATION calls its split "Revvy's own… neither specification publishes a per-objective
+  split". The specifications do not; **Pearson's sample assessment materials do** (WEC11 mark scheme, read 26
+  Sep): up to 8 marks are marked point by point by objective, and an 8-mark part carries **Evaluation 2**
+  (ALLOCATION[8] gives it 0); 14-mark parts are marked by **levels: KAA 8 (Levels 1-3) + Evaluation 6 (Levels
+  1-3)**; 20-mark essays by **levels: KAA 12 (Levels 1-4) + Evaluation 8 (Levels 1-3)** (ALLOCATION[20] is
+  4/4/6/6, and packet 12.7's spec wrongly repeated it). **The founder's ruling: correct ALLOCATION to the SAM
+  mark schemes with the source cited; long answers are marked by level with indicative content, not by
+  ticking a dozen points; the AI written-practice marker follows the corrected table.** Its own packet, verified
+  like any other; the 14- and 20-mark answers packet 12.8 is writing now will be re-expressed as levels there.
+
+
+- **2026-09-26 — packet 12.8 is the 1.3.5 paper-layout pilot, not the retrofit of every other answer.**
+  Earlier text plans 12.8 as retrofitting the ~65 remaining model answers to the 12.6 shape (the 2026-09-22
+  entry above, "the 65 answers in packet 12.8 are modelled on this section", and packet 12.6's PROGRESS row,
+  "Packet 12.8 retrofits the rest"). The founder's ruling the same day that practice follows the real IAL
+  paper layout replaced that plan: retrofitting the old answers one-for-one would build the wrong shape.
+  **Packet 12.8 now reshapes Economics 1.3.5 into the WEC11 layout and teaches the validator and the shell
+  what a paper section is (`audit/specs/packet-12.8.md`); the rollout to every other topic, in the paper
+  shape, follows in per-topic packets after it, busiest topics first.** Wherever older text names 12.8 as the
+  retrofit, this entry wins.
+
 
 - **2026-09-26 — the mid-band "Why this loses marks" panel renders only for level-banded mark schemes, on
   every page.** Packet 12.75 built the rule (E053) but its spec confined it to the new practice shell, and
@@ -21,6 +72,7 @@ Append only. Every entry needs a date and the packet that made it.
   This overrides packet 12.75's E051 ("the other 31 pages render identically to HEAD") for those 8 panels
   and nothing else; the 11 level-banded panels stay. The spec's expectation that 1.3.5's panel would return
   to the generic 20-mark item was also wrong: that item is objectives-split too, so 1.3.5 shows none.
+
 
 - **2026-09-26 — practice follows the real IAL paper layout, for every unit of both subjects.** The founder,
   after packet 12.7's author noted that a Define 2 / Analyse 6 / Evaluate 20 set is not the shape of any
@@ -59,6 +111,7 @@ Append only. Every entry needs a date and the packet that made it.
   is not acceptable evidence for this standard. Running the sweep in CI needs a headless browser
   dependency and is an open founder decision. The shell keeps the `rl-night` dark pin every resource page
   uses; it is token-only so that can change with one line.
+
 
 - **2026-09-25 — Economics 1.3.5 practises the extract's own question set, not the bank's generic
   questions.** Packet 12.7's E038 asked for the bank's 4-mark and 8-mark answers to be re-authored against
@@ -3407,3 +3460,99 @@ position, so a redistributed bank must not contain a single positional reference
 
 **What it does not do.** It says nothing about any other section's bank. A section whose bias is still open stays
 where the ledger puts it.
+
+## 2026-09-26 — packet 51: the poverty-inequality rebuild supersedes packet 2.91's chapter 1 diagram
+
+**Packet 2.91 pinned the Lorenz curve to `poverty-inequality` chapter 1, "Types of Poverty", and decided chapter 2
+("Causes and Consequences") has no diagram** (`audit/runs/packet-2.91/`, row 17-18). Neither chapter exists after
+packet 51: the section is now seven chapters built to IAL 4.3.4 (`audit/raw/econ_spec.txt:1788-1817`), and each
+carries an authored `diagramId` for the diagram it teaches. The Lorenz curve ("The Lorenz Curve and the Gini
+Coefficient") is pinned to chapter 4, "Measuring Inequality", the chapter that teaches it; chapter 1, "Absolute and
+Relative Poverty", shows the absolute/relative poverty diagram it is named for. This applies 2.91's own rule (show the
+diagram the chapter is named for, or the one only it teaches); it does not change the rule. The runner pins chapter
+*i* to `DIAGRAMS[i]` (`scripts/packet-51-poverty-inequality.mjs:55`) and refuses a chapter without its own diagram
+(`:192-198`); the result is in `audit/snapshots/packet-51-bundle__economics__poverty-inequality.json`.
+
+## 2026-09-26 — packet 12.5: practice tags live in a file keyed by item id, not in `section_practice`
+
+**`section_practice` is one row per SECTION, not per question.** 43 rows; a section's questions are the jsonb
+array in `data` (live) and `draft` (staged). `scripts/packet-12-1-spec-items.sql` was written as if each row were
+a question, so the `spec_items` and `kind` columns it added — which the founder ran on 22 September — hold one
+value per section and cannot say what a question examines. Packet 12.5's spec rested on the same reading ("215
+rows, 5 per section"; "match rows by item_id"). Measured at the census (`audit/runs/packet-12.5/census.json`):
+362 live questions and 48 staged in 6 held drafts, every one carrying an id `<slug>:practice:<hash8>` that is a
+hash of the question text.
+
+**Ruled by the founder in session, 26 September:** per-question tags live in `audit/practice-spec-items.json`,
+keyed by item id, committed and read only by `npm run spec-coverage`. The two per-section columns are dropped by
+`scripts/packet-12-5-drop-section-grain-columns.sql`, which the founder runs. Why a file rather than a new table:
+the guard never opens a Supabase client (it runs in CI and cannot break a Vercel build), the tags are audit
+metadata no component reads, and a file is reviewed in a diff. Why not inside each question's JSON (the shape
+`lib/exam-item.js` documents): every `--stage` from a runner rewrites the practice array from source and would
+strip the tags silently.
+
+**What follows from keying by a text hash.** A rewritten question arrives with a new id and reads as untagged
+instead of inheriting a tag written for other words; the guard counts the old entry as an orphan and does not
+apply it. So a content packet that rewrites practice questions LOWERS its section's measured coverage until the
+new questions are tagged by the method (two passes, or a blind reader where the disagreement is structural) —
+by a reader who did not write them. That drop is honest, not a regression to be patched by copying old tags.
+
+**The guard's bank 2 moved from the t=0 dump to `audit/practice-bank.json`.** The t=0 dump (11 September, 215
+questions, no ids) stopped describing the live bank when the 25 September checkpoint published the rebuilds, and no
+id-keyed tag can reach it. `audit/scripts/dump-practice-bank.mjs` re-takes the dump read-only; `--check` says
+whether it is stale. Re-run it after a publish. `--t0` keeps the old view for comparison with earlier logs.
+
+**The drop has been run.** The founder ran `scripts/packet-12-5-drop-section-grain-columns.sql` in Supabase on 26
+September; packet 12.5 confirmed it read-only (PostgREST: "column section_practice.spec_items does not exist") and
+re-took the dump, whose `sectionGrainColumns` is now `{}`. The script's pre-check was made ENFORCING after Verify A
+round 1 (a `do` block that aborts the transaction if any row holds a value); on empty columns both versions do the
+same thing, so which one was run does not matter.
+
+## 2026-09-26 — packet 14.1: a recall whose answer is printed on its own step is not a recall, even when the audit asked for it
+
+Packet 14 (14 Sep) authored four reorders because `topFix-04` asked for them on "genuine sequences": forecasting steps,
+ARR, rolling back a tree, completing a network. Each one's `correctOrder` was the flow printed in the teaching on the
+SAME step, so `recall.recoverable` scored every item at 0.75-1.00: the student reordered a list they could read by
+scrolling up. Packet 14.1 replaced them with fill-ins that apply the procedure to new figures (roll back a new tree,
+float on a new network) and classifies on new cases. Now 0 of 15 recalls are recoverable, against 33 answers before.
+
+The cost, stated rather than hidden: the section has **no reorder**, `topFix-04`'s confirmed evidence lines no longer
+exist, and the forecasting sequence is practised by no recall. Verify A judged it a regression in letter, a forced
+one, and did not reject on it. **The rule that comes out of it: an audit item asking for a recall TYPE is satisfied by
+the type only if the recall is not answerable from its own step. Where the two conflict, recoverability wins,** because
+`npm run recalls` holds a new section to zero. A reorder can come back where its sequence is taught on another step or
+in an extras chain (`reorder.source` accepts an extras chain anywhere in the section; per-subsection flows only, not
+another subsection's flow, contrary to the rule's own description string).
+
+Two smaller findings from the re-check, for whoever copies packet 14's template next:
+- A practice item under a check-in diagram is held to the same rule as the quick question in practice, even though the
+  written rule names only the quiz: the CPA check-in's Calculate asked the float and critical path of the network the
+  diagram above it labels. Rewritten on its own network. The quiz feedback shown after answering can hand over the
+  first step of the practice below it, too (Ch 5's hotel case); give the quiz its own case.
+- Main's `NotesTab.jsx` styles a notes-chapter flow result red unless `resultType === 'good'`; the body's `FlowChain`
+  handles `neutral`. A notes flow therefore takes `good` or `bad`, never `neutral`.
+
+## 26 September 2026 — packet 15.1, introductory-concepts re-checked against today's rules (Opus 5.5)
+
+**A section built before a rule existed is re-checked against the rule, not grandfathered.** Packet 15 was
+verified on 15 September. Against the rules added since, its bundle carried nine one-paragraph practice
+guidances (`practice.opening`, which printed the full scheme and the answer above the answer box), no
+"(n marks)" points, 26 recall answers recoverable against its census baseline of 9, and two chapters with
+`diagramId: undefined`. None of it was visible to the checks that passed it on the 15th.
+
+**The recoverable count at zero is a floor, not a clearance, and Verify A proved it twice here.** Round 1: the
+lexical measure read 0 while three reorders still paraphrased the flow printed in their own subsection and
+two match pairs were in the body in other words. Round 2: 0 again, with six more recalls whose answers were
+the step's own bold headings, bullets and worked figures. What cleared it was a reader, and a single fix
+shape: **ask for the taught idea applied to a new case** (a farmer with one field, an irrigation economy,
+another economy's frontier figures, new policies and resources), never the step's own examples. A reorder
+may still follow its subsection's flow (CONTENT-GATE, reorder rule); it must not reuse its wording.
+
+**The runner's comment that the three unpinned quiz items "ARE the pre-test" is out of date.** Main's
+`lib/pretest-pool.js` now takes the first unreserved items of what the student is sent, excluding only the
+check-in questions, so a signed-out student's pre-test here is quiz items 0, 2 and 4 (chapters 1-2). No
+question is spoiled; the comment is left as history, not fixed in this packet.
+
+**Page copy follows the publish, not the other way round.** PR #64 rewrites the Unit 1 tile and the index meta
+for the six rebuilt chapters; merged before the publish it would describe chapters production does not have.
+

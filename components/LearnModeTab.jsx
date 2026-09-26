@@ -25,6 +25,7 @@ import ReorderRecall from './learn-mode/ReorderRecall';
 import FillInRecall from './learn-mode/FillInRecall';
 import MatchRecall from './learn-mode/MatchRecall';
 import ClassifyRecall from './learn-mode/ClassifyRecall';
+import DiagramRecall from './learn-mode/DiagramRecall';
 import { recallId } from '@/lib/learn-steps';
 import ExplainItBackUpgraded from './learn-mode/ExplainItBackUpgraded';
 import { NoteSection, TakeawayCard } from './notes';
@@ -60,10 +61,11 @@ function PracticeWithheld() {
 }
 
 /**
- * One recall widget, by type (packet 7: four types, lib/recall-widgets.js). `showing` is 'first' on
- * the recall's own step and 'spaced' on a later check-in; every widget derives its own seeded order
- * from it. `pool` is the section's other fill-in answers, the distractor source for a fill-in that
- * carries none of its own.
+ * One recall widget, by type: packet 7's four, plus the drawing drill from 13.7
+ * (lib/recall-widgets.js). `showing` is 'first' on the recall's own step and 'spaced' on a later
+ * check-in; every widget derives its own seeded order from it — the drill has no order to seed, so
+ * it ignores `showing`. `pool` is the section's other fill-in answers, the distractor source for a
+ * fill-in that carries none of its own.
  */
 function Recall({ recall, keyPrefix, showing = 'first', pool, onComplete, onSkip }) {
   if (!recall || typeof recall !== 'object') return null;
@@ -72,6 +74,7 @@ function Recall({ recall, keyPrefix, showing = 'first', pool, onComplete, onSkip
   if (recall.type === 'fillin') return <FillInRecall key={keyPrefix} {...props} pool={pool} />;
   if (recall.type === 'match') return <MatchRecall key={keyPrefix} {...props} />;
   if (recall.type === 'classify') return <ClassifyRecall key={keyPrefix} {...props} />;
+  if (recall.type === 'diagram') return <DiagramRecall key={keyPrefix} {...props} />;
   return null;
 }
 

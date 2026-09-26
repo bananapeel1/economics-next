@@ -1,0 +1,2669 @@
+{
+ "taken": "2026-09-26T11:54:11.703Z",
+ "note": "section_practice, both banks, read-only dump for npm run spec-coverage. live = `data`, staged = `draft` (null when nothing is held). Written by audit/scripts/dump-practice-bank.mjs; do not edit by hand.",
+ "sectionGrainColumns": {},
+ "sections": [
+  {
+   "slug": "aggregate-demand",
+   "live": [
+    {
+     "id": "aggregate-demand:practice:99c73692",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term ‘aggregate demand’. (2 marks)"
+    },
+    {
+     "id": "aggregate-demand:practice:453db60e",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw an aggregate demand diagram to show the effect of a fall in consumer confidence. (4 marks)"
+    },
+    {
+     "id": "aggregate-demand:practice:1486e2ca",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "An economy has disposable income of $900bn and a savings ratio of 18%. Investment is $200bn, government expenditure is $250bn, exports are $300bn and imports are $360bn. Calculate aggregate demand. (4 marks)"
+    },
+    {
+     "id": "aggregate-demand:practice:00e831f3",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how a rise in interest rates is likely to affect consumption. (4 marks)"
+    },
+    {
+     "id": "aggregate-demand:practice:0a380144",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse two factors that might cause a fall in investment in an economy. (6 marks)"
+    },
+    {
+     "id": "aggregate-demand:practice:54f9ee69",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the likely effects on aggregate demand of an increase in government expenditure on infrastructure. (8 marks)"
+    },
+    {
+     "id": "aggregate-demand:practice:e0988928",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the impact of a depreciation of a country’s currency on its aggregate demand. (14 marks)"
+    },
+    {
+     "id": "aggregate-demand:practice:d9a8da1d",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that a rising savings ratio is always bad for an economy’s aggregate demand. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "aggregate-supply",
+   "live": [
+    {
+     "id": "aggregate-supply:practice:ffef2ba6",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'aggregate supply'. (2 marks)"
+    },
+    {
+     "id": "aggregate-supply:practice:d93fd134",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain why the short-run aggregate supply curve slopes upward. (4 marks)"
+    },
+    {
+     "id": "aggregate-supply:practice:d968ee0b",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "Energy and raw materials make up 40% of firms' costs. Their price rises by 15%. Calculate the percentage change in firms' unit costs. (2 marks)"
+    },
+    {
+     "id": "aggregate-supply:practice:1f8184d4",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Imported inputs make up 25% of firms' costs and energy makes up 20%. The currency depreciates so that imported inputs cost 12% more, while the price of energy falls by 5%. Calculate the overall change in unit costs and state the direction in which the SRAS curve shifts. (4 marks)"
+    },
+    {
+     "id": "aggregate-supply:practice:daae41f5",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse the likely effect of a depreciation of a country's currency on its short-run aggregate supply. (6 marks)"
+    },
+    {
+     "id": "aggregate-supply:practice:c2b102ac",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a diagram to show the classical long-run aggregate supply curve and the effect of a fall in aggregate demand in the short run and in the long run. (4 marks)"
+    },
+    {
+     "id": "aggregate-supply:practice:57d8334d",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss whether the classical or the Keynesian shape of the long-run aggregate supply curve better describes an economy in a deep downturn. (14 marks)"
+    },
+    {
+     "id": "aggregate-supply:practice:79b81555",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the likely effects of increased spending on education and training on an economy's long-run aggregate supply. (8 marks)"
+    },
+    {
+     "id": "aggregate-supply:practice:c18dd05f",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that an ageing population will inevitably reduce a country's long-run aggregate supply. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "assessing-competitiveness",
+   "live": [
+    {
+     "id": "assessing-competitiveness:practice:88178688",
+     "command": "Define",
+     "marks": 4,
+     "question": "Define the term 'competitive advantage' and give one example of how a business might achieve it. (4 marks)"
+    },
+    {
+     "id": "assessing-competitiveness:practice:53a6b7ba",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "SwiftDeliver is a parcel delivery company competing primarily on low prices, but losing customers to competitors offering faster, more reliable services at slightly higher prices. Analyse how Bowman's Strategic Clock could help SwiftDeliver reposition itself. (6 marks)"
+    },
+    {
+     "id": "assessing-competitiveness:practice:0b1f6e16",
+     "command": "Assess",
+     "marks": 12,
+     "question": "A regional bakery reports a gross profit margin of 42% (industry average 38%) and a profit-for-the-year margin of 3% (industry average 9%). Its current ratio has fallen from 1.8 to 0.9 in two years. Assess what these figures tell the directors about the business. (12 marks)"
+    },
+    {
+     "id": "assessing-competitiveness:practice:ad075e4e",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "A leading smartphone manufacturer has seen its global market share decline from 25% to 15% over four years as Chinese competitors offer comparable technology at significantly lower prices. Evaluate the most important factors in maintaining a sustainable competitive advantage in a rapidly changing industry. (20 marks)"
+    },
+    {
+     "id": "assessing-competitiveness:practice:48b12cde",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A business has revenue of $800,000, cost of sales of $460,000 and operating expenses of $260,000. Calculate its gross profit margin and its profit-for-the-year margin. (4 marks)"
+    }
+   ],
+   "staged": [
+    {
+     "id": "assessing-competitiveness:practice:4c229899",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Explain one reason why the bank that lends to Orla Bakeries would be interested in its statement of comprehensive income. (4 marks)"
+    },
+    {
+     "id": "assessing-competitiveness:practice:d2d4f752",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Calculate Orla Bakeries's return on capital employed (ROCE) for this year. (4 marks)"
+    },
+    {
+     "id": "assessing-competitiveness:practice:7692303e",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Discuss the significance for Orla Bakeries of the fall in its acid test ratio. (8 marks)"
+    },
+    {
+     "id": "assessing-competitiveness:practice:6506870e",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Assess the usefulness of ratio analysis to a potential investor in Orla Bakeries. (12 marks)"
+    },
+    {
+     "id": "assessing-competitiveness:practice:3c16388f",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Assess the usefulness to Orla Bakeries's managers of its labour turnover and absenteeism figures. (12 marks)"
+    },
+    {
+     "id": "assessing-competitiveness:practice:0b82e182",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Evaluate whether Orla Bakeries should finance its second new bakery with another bank loan. (20 marks)"
+    },
+    {
+     "id": "assessing-competitiveness:practice:cca06597",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Orla Bakeries runs a central bakery and 24 shops in Hong Kong. Extracts from its accounts, with last year in brackets: revenue $40m ($32m); cost of sales $24m ($17.6m); other operating expenses $10m ($9.4m); interest $0.8m ($0.2m); non-current assets $29m ($18.5m); current assets $6m ($4.5m), including inventory $2.5m ($1.5m); current liabilities $5m ($3m); non-current liabilities, all bank loans at 8% a year, $10m ($2.5m); total equity $20m ($17.5m). This year it built a new central bakery, financed mainly by a bank loan, and won a supermarket contract at lower prices than its shops charge. Its shops employed an average of 200 staff (180), of whom 60 (27) left during the year; replacing each leaver costs $8,000. Absence lost 2,500 of 50,000 possible working days (1,350 of 45,000). Its 50 bakers made 150,000 loaves a month (40 bakers, 128,000). Shop staff earn $2,000 a month; the two largest rival chains pay $2,200. Most leavers named pay as a reason, and many said shift rotas were changed at a day's notice without anyone asking them. The directors are considering an employee share ownership scheme costing about $500,000 a year, whose shares are lost by anyone who leaves within three years, and a second new bakery, also to be financed by a bank loan. Evaluate whether Orla Bakeries should introduce the employee share ownership scheme to reduce labour turnover. (20 marks)"
+    }
+   ]
+  },
+  {
+   "slug": "balance-payments-exchange-rates",
+   "live": [
+    {
+     "id": "balance-payments-exchange-rates:practice:a0c3e9d8",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'current account of the balance of payments'. (2 marks)"
+    },
+    {
+     "id": "balance-payments-exchange-rates:practice:b2134df5",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "An economy records a current account balance of −$25bn and a capital account balance of $2bn. Calculate the balance on its financial account. (2 marks)"
+    },
+    {
+     "id": "balance-payments-exchange-rates:practice:7d575a1b",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how an expenditure-reducing policy improves a deficit on the current account. (4 marks)"
+    },
+    {
+     "id": "balance-payments-exchange-rates:practice:c66d217f",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse the effect of a rise in relative interest rates on the exchange rate of a floating currency. (6 marks)"
+    },
+    {
+     "id": "balance-payments-exchange-rates:practice:06c5813b",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a demand and supply diagram for a currency to show the effect of a rise in demand for that economy's exports. (4 marks)"
+    },
+    {
+     "id": "balance-payments-exchange-rates:practice:03c617fc",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "An economy's currency falls from $0.50 to $0.40. Price elasticity of demand for its exports is 0.9 and for its imports 0.5. Exports and imports were each 600bn naro. Calculate the new trade balance in domestic currency. (4 marks)"
+    },
+    {
+     "id": "balance-payments-exchange-rates:practice:3d5d52d4",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the case for a government defending its exchange rate by raising interest rates rather than by selling foreign currency reserves. (8 marks)"
+    },
+    {
+     "id": "balance-payments-exchange-rates:practice:f73ef866",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the factors that determine an economy's international competitiveness. (14 marks)"
+    },
+    {
+     "id": "balance-payments-exchange-rates:practice:e96295a6",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that reducing the value of its currency is the most effective way for an economy to improve its international competitiveness. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "business-growth",
+   "live": [
+    {
+     "id": "business-growth:practice:ada57e33",
+     "command": "Define",
+     "marks": 4,
+     "question": "Define the term 'economies of scale' and give two examples. (4 marks)"
+    },
+    {
+     "id": "business-growth:practice:a7da89e6",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "MegaRetail, a large UK supermarket chain, is considering acquiring a struggling organic food delivery company that has 50,000 loyal subscribers but has been loss-making for two years. Analyse the risks and benefits of this proposed acquisition. (6 marks)"
+    },
+    {
+     "id": "business-growth:practice:f80c553b",
+     "command": "Assess",
+     "marks": 10,
+     "question": "A successful chain of 20 gyms in southern England is considering its growth options for the next five years. Assess the usefulness of Ansoff's Matrix for this decision. (10 marks)"
+    },
+    {
+     "id": "business-growth:practice:0a54e79a",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "A mid-sized online fashion retailer with strong brand recognition among 18-30 year olds wants to double its revenue within three years. Evaluate whether organic growth or inorganic growth is the better strategy for achieving this goal. (20 marks)"
+    },
+    {
+     "id": "business-growth:practice:8a97264a",
+     "command": "Outline",
+     "marks": 4,
+     "question": "Outline two barriers to entry that might prevent new firms from entering a market. (4 marks)"
+    }
+   ],
+   "staged": [
+    {
+     "id": "business-growth:practice:c274eb07",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Calculate the percentage fall in the cost of a loaf at Tanjong Bakes's central bakery if it installs the new ovens. (4 marks)"
+    },
+    {
+     "id": "business-growth:practice:38e35a6e",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Explain one disadvantage to Tanjong Bakes of growing organically through Plan A. (4 marks)"
+    },
+    {
+     "id": "business-growth:practice:6e7d160d",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Discuss the likely benefits to Tanjong Bakes of taking over Straits Flour Mill. (8 marks)"
+    },
+    {
+     "id": "business-growth:practice:1fe9f97c",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Assess the financial risks and rewards to Tanjong Bakes of taking over Golden Crust. (12 marks)"
+    },
+    {
+     "id": "business-growth:practice:24d8faf0",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Assess the likely problems Tanjong Bakes may face as a result of growing to 70 cafés through Plan B. (12 marks)"
+    },
+    {
+     "id": "business-growth:practice:5cc1b428",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Evaluate whether Tanjong Bakes should grow organically through Plan A or by taking over Golden Crust through Plan B. (20 marks)"
+    },
+    {
+     "id": "business-growth:practice:4297cf2c",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Tanjong Bakes is a chain of 40 bakery-cafés in Singapore with 900 staff and a central bakery that supplies every café. Last year its sales were S$60m and its profit S$6m, and it held 8% of the country's bakery-café market. The central bakery makes 20,000 loaves a day at a cost of S$0.80 a loaf; new ovens would let it make 50,000 a day at S$0.62 a loaf. The directors are choosing between two ways to grow. Plan A is to open 15 cafés over two years, each costing S$400,000, paid for from retained profit. Plan B is to take over Golden Crust, a rival with 30 cafés and 6% of the market, for S$36m. Golden Crust's net assets are worth S$20m and it makes a profit of S$3m a year; combining the two chains is expected to save S$1.5m a year. Tanjong Bakes would borrow S$24m of the price at 6% a year. After the takeover the business would have 1,500 staff and 5 layers of management instead of 3. Tanjong Bakes has also agreed to sell frozen dough to supermarkets, which pay 60 days after delivery, while its flour supplier, Straits Flour Mill, must be paid within 30 days. The mill, which Tanjong Bakes pays S$4m a year, is for sale. Evaluate whether growth is likely to increase Tanjong Bakes's profitability. (20 marks)"
+    }
+   ]
+  },
+  {
+   "slug": "business-objectives-strategy",
+   "live": [
+    {
+     "id": "business-objectives-strategy:practice:b6b8622f",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'corporate objective'. (2 marks)"
+    },
+    {
+     "id": "business-objectives-strategy:practice:a41fc5b3",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how a corporate objective is developed from a mission statement. (4 marks)"
+    },
+    {
+     "id": "business-objectives-strategy:practice:8551ae91",
+     "command": "Construct",
+     "marks": 4,
+     "question": "Construct Ansoff's Matrix, labelling both dimensions and naming all four cells. (4 marks)"
+    },
+    {
+     "id": "business-objectives-strategy:practice:16bfcf20",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Adisa Home makes household appliances and takes $100m a year, 48% of it from water heaters in a market growing at 2% a year where it holds 32%. It is choosing between taking its existing heaters into a neighbouring country and developing a solar water heater for the customers it already has. Assess which of the two it should pursue. (12 marks)"
+    },
+    {
+     "id": "business-objectives-strategy:practice:ca45be92",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Adisa Home is deciding whether to defend its broad low-cost position in water heaters or build a narrow position in off-grid pumps for remote farms. Analyse the implications of choosing the narrow position. (6 marks)"
+    },
+    {
+     "id": "business-objectives-strategy:practice:24797798",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Adisa Home's revenue by line is: water heaters $48m, refrigerators $30m, air conditioners $18m and solar pumps $4m. Adisa Home holds 6% of the air conditioner market. Calculate (a) the percentage of total revenue coming from air conditioners and solar pumps together, and (b) the total value of the air conditioner market. (4 marks)"
+    },
+    {
+     "id": "business-objectives-strategy:practice:7c7fc216",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Adisa Home is choosing between committing $25m to a second production line and running a four-week discount to clear refrigerator stock. Discuss the effects of these two decisions on the firm's human, physical and financial resources. (8 marks)"
+    },
+    {
+     "id": "business-objectives-strategy:practice:d003feb6",
+     "command": "Construct",
+     "marks": 4,
+     "question": "Construct a SWOT grid for Adisa Home, labelling both dimensions and placing one item in each of the four cells. (4 marks)"
+    },
+    {
+     "id": "business-objectives-strategy:practice:17d02d21",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Adisa Home holds 6% of a $300m air conditioner market growing at 14% a year, and is considering committing $25m to a second production line to expand that share. Evaluate whether the external environment supports this decision. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "causes-effects-globalisation",
+   "live": [
+    {
+     "id": "causes-effects-globalisation:practice:2e647efe",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'foreign direct investment'. (2 marks)"
+    },
+    {
+     "id": "causes-effects-globalisation:practice:c5137f75",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "An economy exports $66.0bn and imports $54.0bn in a year when its GDP is $150.0bn. Ten years earlier the same figures were $20.0bn, $16.0bn and $72.0bn. Calculate trade as a proportion of GDP in each year, and the change between them. (4 marks)"
+    },
+    {
+     "id": "causes-effects-globalisation:practice:c770c668",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain one factor that has contributed to increased globalisation in the last fifty years. (4 marks)"
+    },
+    {
+     "id": "causes-effects-globalisation:practice:d705e71a",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse the impact of foreign direct investment by a transnational company on a developing economy that receives it. (6 marks)"
+    },
+    {
+     "id": "causes-effects-globalisation:practice:afd6b3c7",
+     "command": "Draw",
+     "marks": 4,
+     "question": "A country's demand for a device is 100,000 units at $150 and 260,000 units at $70, and demand is linear. Draw a diagram showing the consumer surplus at each price and label the gain. (4 marks)"
+    },
+    {
+     "id": "causes-effects-globalisation:practice:59513d1d",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the benefits of globalisation for consumers in a small open economy. (8 marks)"
+    },
+    {
+     "id": "causes-effects-globalisation:practice:5ad189fe",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the costs of globalisation for an economy that has recently opened to trade and foreign investment. (14 marks)"
+    },
+    {
+     "id": "causes-effects-globalisation:practice:ee33979b",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that the benefits of globalisation for a developing economy outweigh the costs. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "consumer-behaviour-demand",
+   "live": [
+    {
+     "id": "consumer-behaviour-demand:practice:41b1028e",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'utility'. (2 marks)"
+    },
+    {
+     "id": "consumer-behaviour-demand:practice:edba8869",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two reasons why a consumer may not aim to maximise utility. (4 marks)"
+    },
+    {
+     "id": "consumer-behaviour-demand:practice:69c1e33b",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two causes of a rightward shift in the demand curve for electric vehicles. (4 marks)"
+    },
+    {
+     "id": "consumer-behaviour-demand:practice:cba90ca6",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a demand diagram to show the effect on the market for coach travel of a fall in the price of air travel on the same route. (4 marks)"
+    },
+    {
+     "id": "consumer-behaviour-demand:practice:3b14f765",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'price elasticity of demand' (PED). (2 marks)"
+    },
+    {
+     "id": "consumer-behaviour-demand:practice:1ec25ef0",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "The demand schedule in this chapter's diagram gives Tafari's daily ticket sales at each fare. Using the $20 and $22 rows — 400 tickets and 320 tickets — calculate the price elasticity of demand and state what it shows. (4 marks)"
+    },
+    {
+     "id": "consumer-behaviour-demand:practice:3f666102",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse two factors that influence the price elasticity of demand for a branded soft drink. (6 marks)"
+    },
+    {
+     "id": "consumer-behaviour-demand:practice:78c55b92",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Read the $10 and $12 rows off the demand schedule in this chapter's diagram — 800 tickets a day and 720 a day. Calculate total revenue at each fare and state which fare a revenue-maximising operator should choose. (4 marks)"
+    },
+    {
+     "id": "consumer-behaviour-demand:practice:0cdc49a5",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the significance of income elasticity of demand for a supermarket group planning for a period of falling real incomes. (8 marks)"
+    },
+    {
+     "id": "consumer-behaviour-demand:practice:9a655728",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate whether a government should place an indirect tax on a good with price inelastic demand. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "decision-making-techniques",
+   "live": [
+    {
+     "id": "decision-making-techniques:practice:dd657aab",
+     "command": "Define",
+     "marks": 4,
+     "question": "Define the term 'net present value' (NPV) and explain why a positive NPV is desirable. (4 marks)"
+    },
+    {
+     "id": "decision-making-techniques:practice:5075f3f8",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "ThermoTech is deciding between two production machines. Machine A costs £200,000 with a payback period of 2 years. Machine B costs £350,000 with a payback of 3.5 years but generates significantly higher cash flows in years 4-8. Analyse the limitations of using payback period to evaluate this decision. (6 marks)"
+    },
+    {
+     "id": "decision-making-techniques:practice:0434c043",
+     "command": "Assess",
+     "marks": 10,
+     "question": "A hotel chain is deciding whether to build a new luxury resort (60% chance of high demand yielding £8m profit, 40% chance of low demand yielding £2m, costing £4m) or renovate existing hotels (certain return of £3m, costing £1.5m). Assess the value of decision tree analysis for this investment decision. (10 marks)"
+    },
+    {
+     "id": "decision-making-techniques:practice:fea2b9e6",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "A logistics company must choose between investing £5 million in an automated warehouse system or £5 million in a fleet of electric delivery vehicles. Both have a 10-year expected life and the company's cost of capital is 8%. Evaluate which method of investment appraisal would be most useful for this decision. (20 marks)"
+    },
+    {
+     "id": "decision-making-techniques:practice:ef16797f",
+     "command": "Outline",
+     "marks": 4,
+     "question": "Outline two benefits of using sensitivity analysis alongside investment appraisal. (4 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "economic-growth",
+   "live": [
+    {
+     "id": "economic-growth:practice:833c6065",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'potential economic growth'. (2 marks)"
+    },
+    {
+     "id": "economic-growth:practice:f21420d8",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how an increase in exports may lead to actual economic growth. (4 marks)"
+    },
+    {
+     "id": "economic-growth:practice:28d84275",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse how foreign direct investment may increase an economy's potential growth. (6 marks)"
+    },
+    {
+     "id": "economic-growth:practice:0f8d861a",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Loriana has 20 million workers, each producing $25,000 of output a year. Next year its labour force grows by 0.5% and output per worker by 2%. Calculate the percentage growth in Loriana's productive capacity, to two decimal places. (4 marks)"
+    },
+    {
+     "id": "economic-growth:practice:f9df166f",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the likely benefits of economic growth for firms. (8 marks)"
+    },
+    {
+     "id": "economic-growth:practice:24b001a0",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "Tax revenue in an economy is 20% of GDP. Real GDP rises from $490bn to $507.4bn and no tax rate changes. Calculate the increase in tax revenue. (2 marks)"
+    },
+    {
+     "id": "economic-growth:practice:2b0652fa",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate whether economic growth is always desirable for an economy. (20 marks)"
+    },
+    {
+     "id": "economic-growth:practice:1af5fb40",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain why rapid economic growth may lead to a balance of trade deficit. (4 marks)"
+    },
+    {
+     "id": "economic-growth:practice:bf6d98c2",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss whether a positive output gap is a problem for an economy. (14 marks)"
+    },
+    {
+     "id": "economic-growth:practice:2a5b72a5",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw an AD/AS diagram, using a Keynesian long-run aggregate supply curve, to show an economy with a negative output gap. (4 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "entrepreneurs-leaders",
+   "live": [
+    {
+     "id": "entrepreneurs-leaders:practice:fcb47f1e",
+     "command": "Define",
+     "marks": 2,
+     "question": "A workshop's owner describes one of her machinists as 'an intrapreneur'. Define the term 'intrapreneurship'. (2 marks)"
+    },
+    {
+     "id": "entrepreneurs-leaders:practice:20b1bc93",
+     "command": "Explain",
+     "marks": 4,
+     "question": "A cabinetmaker earning $36,000 a year decides not to set up on her own, although she has the savings and the skills to do so. Explain one barrier to entrepreneurship that this suggests. (4 marks)"
+    },
+    {
+     "id": "entrepreneurs-leaders:practice:8a17bf9c",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Altan Furniture is a small workshop making one design of wooden chair. Its fixed costs are $80,000 a year and each chair costs $10 to make. Demand is Q = 12,000 − 200P, where Q is chairs a year and P is the price in dollars. The founder decides to make 20 chairs on each of 200 working days rather than 25. Analyse this decision as an example of profit satisficing. (6 marks)"
+    },
+    {
+     "id": "entrepreneurs-leaders:practice:8ee25f9a",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Altan Furniture is a small workshop making one design of wooden chair. Its fixed costs are $80,000 a year and each chair costs $10 to make. Demand is Q = 12,000 − 200P, where Q is chairs a year and P is the price in dollars. Calculate the price at which the workshop maximises profit, and the profit it earns there. (4 marks)"
+    },
+    {
+     "id": "entrepreneurs-leaders:practice:be694fc0",
+     "command": "Construct",
+     "marks": 4,
+     "question": "Altan Furniture is a small workshop making one design of wooden chair. Its fixed costs are $80,000 a year and each chair costs $10 to make. Demand is Q = 12,000 − 200P, where Q is chairs a year and P is the price in dollars. Construct a diagram showing the workshop's profit at each price, labelling the range within which it survives and the price at which profit is maximised. (4 marks)"
+    },
+    {
+     "id": "entrepreneurs-leaders:practice:b63619cf",
+     "command": "Assess",
+     "marks": 10,
+     "question": "Altan Furniture is a small workshop making one design of wooden chair. Its fixed costs are $80,000 a year and each chair costs $10 to make. Demand is Q = 12,000 − 200P, where Q is chairs a year and P is the price in dollars. A retailer offers to take 8,000 chairs a year if the workshop prices at $20. Assess whether the founder should accept in order to build market share. (10 marks)"
+    },
+    {
+     "id": "entrepreneurs-leaders:practice:9ef00349",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "A cabinetmaker can earn $36,000 managing a larger workshop, $24,000 taking a supplier's agency, or $18,000 working at the bench. She instead runs her own workshop, earning $45,000. Discuss whether this was the right decision. (8 marks)"
+    },
+    {
+     "id": "entrepreneurs-leaders:practice:f9434ded",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Altan Furniture is a small workshop making one design of wooden chair. Its fixed costs are $80,000 a year and each chair costs $10 to make. Demand is Q = 12,000 − 200P, where Q is chairs a year and P is the price in dollars. Evaluate the view that a small business should always pursue profit maximisation. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "external-influences",
+   "live": [
+    {
+     "id": "external-influences:practice:42609ea4",
+     "command": "Define",
+     "marks": 2,
+     "question": "Source A. Marang Seating makes office and café chairs, buys its timber and fabric abroad, and sells at home and for export. Last year it sold 20,000 chairs at $200 each. Cost of sales was $2,400,000, of which $1,600,000 was timber and fabric invoiced abroad at $1 = 4.00 units. Other operating expenses were $1,200,000, including $150,000 of compliance spending. It owes $1,500,000 at 6%. $1,000,000 of its revenue is exported and $600,000 is sold to government offices and schools. It competes with 40 small workshops and 2 large importers. Define the term 'inflation'. (2 marks)"
+    },
+    {
+     "id": "external-influences:practice:29edd752",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Source A. Marang Seating makes office and café chairs, buys its timber and fabric abroad, and sells at home and for export. Last year it sold 20,000 chairs at $200 each. Cost of sales was $2,400,000, of which $1,600,000 was timber and fabric invoiced abroad at $1 = 4.00 units. Other operating expenses were $1,200,000, including $150,000 of compliance spending. It owes $1,500,000 at 6%. $1,000,000 of its revenue is exported and $600,000 is sold to government offices and schools. It competes with 40 small workshops and 2 large importers. The home currency moves to $1 = 3.20 units. Calculate the new home-currency cost of the imported timber and fabric, and the percentage by which it has risen. (4 marks)"
+    },
+    {
+     "id": "external-influences:practice:b6c279c0",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Source A. Marang Seating makes office and café chairs, buys its timber and fabric abroad, and sells at home and for export. Last year it sold 20,000 chairs at $200 each. Cost of sales was $2,400,000, of which $1,600,000 was timber and fabric invoiced abroad at $1 = 4.00 units. Other operating expenses were $1,200,000, including $150,000 of compliance spending. It owes $1,500,000 at 6%. $1,000,000 of its revenue is exported and $600,000 is sold to government offices and schools. It competes with 40 small workshops and 2 large importers. Analyse the likely effect on Marang Seating's operating profit of a 20% fall in the home currency. (6 marks)"
+    },
+    {
+     "id": "external-influences:practice:4ebdc573",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Source A. Marang Seating makes office and café chairs, buys its timber and fabric abroad, and sells at home and for export. Last year it sold 20,000 chairs at $200 each. Cost of sales was $2,400,000, of which $1,600,000 was timber and fabric invoiced abroad at $1 = 4.00 units. Other operating expenses were $1,200,000, including $150,000 of compliance spending. It owes $1,500,000 at 6%. $1,000,000 of its revenue is exported and $600,000 is sold to government offices and schools. It competes with 40 small workshops and 2 large importers. Its borrowing rate rises by 3 percentage points and its orders fall 10%. Calculate its operating profit and the profit left after interest. (4 marks)"
+    },
+    {
+     "id": "external-influences:practice:44af3c9a",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Source A. Marang Seating makes office and café chairs, buys its timber and fabric abroad, and sells at home and for export. Last year it sold 20,000 chairs at $200 each. Cost of sales was $2,400,000, of which $1,600,000 was timber and fabric invoiced abroad at $1 = 4.00 units. Other operating expenses were $1,200,000, including $150,000 of compliance spending. It owes $1,500,000 at 6%. $1,000,000 of its revenue is exported and $600,000 is sold to government offices and schools. It competes with 40 small workshops and 2 large importers. Explain one way in which a cut in government spending could affect Marang Seating. (4 marks)"
+    },
+    {
+     "id": "external-influences:practice:1a8db062",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Marang Seating makes office and café chairs, buys its timber and fabric abroad, and sells at home and for export. Last year it sold 20,000 chairs at $200 each. Cost of sales was $2,400,000, of which $1,600,000 was timber and fabric invoiced abroad at $1 = 4.00 units. Other operating expenses were $1,200,000, including $150,000 of compliance spending. It owes $1,500,000 at 6%. $1,000,000 of its revenue is exported and $600,000 is sold to government offices and schools. It competes with 40 small workshops and 2 large importers. A rise in interest rates, a fall in the home currency and a downturn in the economy are all thought possible next year. Evaluate whether the rise in interest rates is the greatest threat to Marang Seating. (20 marks)"
+    },
+    {
+     "id": "external-influences:practice:7d56ec9e",
+     "command": "Construct",
+     "marks": 4,
+     "question": "Source A. Marang Seating makes office and café chairs, buys its timber and fabric abroad, and sells at home and for export. Last year it sold 20,000 chairs at $200 each. Cost of sales was $2,400,000, of which $1,600,000 was timber and fabric invoiced abroad at $1 = 4.00 units. Other operating expenses were $1,200,000, including $150,000 of compliance spending. It owes $1,500,000 at 6%. $1,000,000 of its revenue is exported and $600,000 is sold to government offices and schools. It competes with 40 small workshops and 2 large importers. Construct a labelled diagram of the business cycle showing the four phases an economy passes through. (4 marks)"
+    },
+    {
+     "id": "external-influences:practice:8331eb87",
+     "command": "Assess",
+     "marks": 10,
+     "question": "Source A. Marang Seating makes office and café chairs, buys its timber and fabric abroad, and sells at home and for export. Last year it sold 20,000 chairs at $200 each. Cost of sales was $2,400,000, of which $1,600,000 was timber and fabric invoiced abroad at $1 = 4.00 units. Other operating expenses were $1,200,000, including $150,000 of compliance spending. It owes $1,500,000 at 6%. $1,000,000 of its revenue is exported and $600,000 is sold to government offices and schools. It competes with 40 small workshops and 2 large importers. Assess how Marang Seating should prepare for a downturn in the economy. (10 marks)"
+    },
+    {
+     "id": "external-influences:practice:ea288577",
+     "command": "Define",
+     "marks": 2,
+     "question": "Source A. Marang Seating makes office and café chairs, buys its timber and fabric abroad, and sells at home and for export. Last year it sold 20,000 chairs at $200 each. Cost of sales was $2,400,000, of which $1,600,000 was timber and fabric invoiced abroad at $1 = 4.00 units. Other operating expenses were $1,200,000, including $150,000 of compliance spending. It owes $1,500,000 at 6%. $1,000,000 of its revenue is exported and $600,000 is sold to government offices and schools. It competes with 40 small workshops and 2 large importers. Define the term 'patent'. (2 marks)"
+    },
+    {
+     "id": "external-influences:practice:fcbed8e1",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Source A. Marang Seating makes office and café chairs, buys its timber and fabric abroad, and sells at home and for export. Last year it sold 20,000 chairs at $200 each. Cost of sales was $2,400,000, of which $1,600,000 was timber and fabric invoiced abroad at $1 = 4.00 units. Other operating expenses were $1,200,000, including $150,000 of compliance spending. It owes $1,500,000 at 6%. $1,000,000 of its revenue is exported and $600,000 is sold to government offices and schools. It competes with 40 small workshops and 2 large importers. It must fit dust extraction and buy certified timber to meet new environmental requirements. Discuss whether this legislation will harm the business. (8 marks)"
+    },
+    {
+     "id": "external-influences:practice:f1117796",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Source A. Marang Seating makes office and café chairs, buys its timber and fabric abroad, and sells at home and for export. Last year it sold 20,000 chairs at $200 each. Cost of sales was $2,400,000, of which $1,600,000 was timber and fabric invoiced abroad at $1 = 4.00 units. Other operating expenses were $1,200,000, including $150,000 of compliance spending. It owes $1,500,000 at 6%. $1,000,000 of its revenue is exported and $600,000 is sold to government offices and schools. It competes with 40 small workshops and 2 large importers. A large importer cuts its price to $170. Analyse the effect on Marang Seating of matching that price. (6 marks)"
+    },
+    {
+     "id": "external-influences:practice:0a4a7ce3",
+     "command": "Assess",
+     "marks": 10,
+     "question": "Source A. Marang Seating makes office and café chairs, buys its timber and fabric abroad, and sells at home and for export. Last year it sold 20,000 chairs at $200 each. Cost of sales was $2,400,000, of which $1,600,000 was timber and fabric invoiced abroad at $1 = 4.00 units. Other operating expenses were $1,200,000, including $150,000 of compliance spending. It owes $1,500,000 at 6%. $1,000,000 of its revenue is exported and $600,000 is sold to government offices and schools. It competes with 40 small workshops and 2 large importers. Assess the ways in which Marang Seating could compete against the large importers without matching their prices. (10 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "financial-planning",
+   "live": [
+    {
+     "id": "financial-planning:practice:4166f834",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'margin of safety'. (2 marks)"
+    },
+    {
+     "id": "financial-planning:practice:de4233c2",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A bottling plant has fixed costs of $36,000 a month and a variable cost of $3.60 a case. Calculate its total cost and its average cost at an output of 25,000 cases. (4 marks)"
+    },
+    {
+     "id": "financial-planning:practice:6d28546f",
+     "command": "Explain",
+     "marks": 4,
+     "question": "A bottling plant is launching a flavour that has never been sold in its region. Explain one difficulty it will face in forecasting sales of the new flavour. (4 marks)"
+    },
+    {
+     "id": "financial-planning:practice:be2a63ae",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A bottling plant sells at $6 a case with a variable cost of $3.60 a case and fixed costs of $36,000 a month. Calculate its break-even point, and calculate the new break-even point if the variable cost rises to $4. (4 marks)"
+    },
+    {
+     "id": "financial-planning:practice:a1118525",
+     "command": "Construct",
+     "marks": 4,
+     "question": "A plant opens month 1 with $30,000. It expects receipts of $72,000, $120,000 and $129,600 and payments of $108,000, $122,400 and $108,000 over three months. Construct a cash-flow forecast showing net cash flow and the closing balance for each month. (4 marks)"
+    },
+    {
+     "id": "financial-planning:practice:a65c1fd9",
+     "command": "Assess",
+     "marks": 10,
+     "question": "A bottling plant budgets historically: each line is last year's actual figure adjusted for expected changes. Its finance manager has found a service contract for equipment sold two years ago, and proposes moving the whole firm to zero-based budgeting from next year. Assess whether the plant should do so. (10 marks)"
+    },
+    {
+     "id": "financial-planning:practice:3c8bbb72",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "A bottling plant sells at $6 a case, with a variable cost of $3.60 and fixed costs of $36,000 a month. It breaks even at 15,000 cases and currently produces 20,000. Its owner discounts heavily on orders above a hundred cases and is considering a second production line. Evaluate the usefulness of break-even analysis to the owner in making that decision. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "global-industries-mncs",
+   "live": [
+    {
+     "id": "global-industries-mncs:practice:55dd5619",
+     "command": "Define",
+     "marks": 4,
+     "question": "Define the term 'multinational corporation' (MNC) and explain two benefits it might bring to a developing host country. (4 marks)"
+    },
+    {
+     "id": "global-industries-mncs:practice:7368bf96",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "GlobalTextiles is a European clothing retailer sourcing 80% of its products from factories in Bangladesh and Cambodia. An investigation revealed some supplier factories pay below the living wage and require 60+ hour weeks. Analyse the ethical concerns associated with these supply chain practices. (6 marks)"
+    },
+    {
+     "id": "global-industries-mncs:practice:60f7d479",
+     "command": "Assess",
+     "marks": 10,
+     "question": "A major technology MNC generates significant revenue from sales in several African countries but reports most of its profits in a low-tax European jurisdiction using transfer pricing between subsidiaries. Assess the impact of transfer pricing on host countries. (10 marks)"
+    },
+    {
+     "id": "global-industries-mncs:practice:cb24c38c",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate whether the growth of multinational corporations has been a positive or negative development for the global economy. (20 marks)"
+    },
+    {
+     "id": "global-industries-mncs:practice:0ca37dbe",
+     "command": "Outline",
+     "marks": 4,
+     "question": "Outline two reasons why a multinational corporation might locate manufacturing operations in a developing country. (4 marks)"
+    }
+   ],
+   "staged": [
+    {
+     "id": "global-industries-mncs:practice:d9473b03",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Explain one way Korvane's factory could affect local businesses in Kestria. (4 marks)"
+    },
+    {
+     "id": "global-industries-mncs:practice:cf190259",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Explain one impact of Korvane's factory on Kestria's balance of payments. (4 marks)"
+    },
+    {
+     "id": "global-industries-mncs:practice:e0d68349",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Discuss the stakeholder conflicts Korvane faces over conditions in its supplier factories. (8 marks)"
+    },
+    {
+     "id": "global-industries-mncs:practice:2d606643",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Assess the impact of Korvane's transfer pricing on Kestria's tax revenues. (12 marks)"
+    },
+    {
+     "id": "global-industries-mncs:practice:ae159de5",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Assess whether Korvane should spend $6m on cleaner equipment at its factory in Kestria. (12 marks)"
+    },
+    {
+     "id": "global-industries-mncs:practice:1a7b024c",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Evaluate whether Kestria's government should offer Korvane a 5-year tax holiday to attract its second factory. (20 marks)"
+    },
+    {
+     "id": "global-industries-mncs:practice:81609ec0",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Korvane is a sportswear MNC with its head office in Europe. It spent $120m building a shoe factory in Kestria, a lower-income country, where it employs 4,000 workers at $300 a month; local factories pay an average of $240. The factory buys $18m a year of materials and services from local firms, and two local shoemakers say they have lost skilled staff to it. Each year it exports $200m of shoes, imports $80m of components and sends $30m of profit to its head office. Kestria taxes company profits at 25%. The factory makes a pair for $20 and sells it for $22 to Korvane Trading, a subsidiary in Vessia, where profits are taxed at 5%; unrelated firms trade similar pairs at $30. It sells 5,000,000 pairs a year. Residents complain of dye in the river and smoke from the boilers; cleaner equipment would cost $6m. Korvane also buys clothing from 40 supplier factories in Kestria, and an inspection found children working at 3 of them, although its supplier code bans child labour. A video from one of them was shared widely on social media. Its \"eco\" range contains 10% recycled material. Korvane now plans a second factory costing $80m and employing 2,500 people, and is choosing between Kestria and a neighbouring country; Kestria's government is considering a 5-year tax holiday to win it. Evaluate whether pressure from consumers, pressure groups and social media is more likely than legal control to end child labour at Korvane's suppliers. (20 marks)"
+    }
+   ]
+  },
+  {
+   "slug": "global-marketing",
+   "live": [
+    {
+     "id": "global-marketing:practice:cbfe6f22",
+     "command": "Define",
+     "marks": 4,
+     "question": "Define the term 'glocalisation' and give one example. (4 marks)"
+    },
+    {
+     "id": "global-marketing:practice:96e37a09",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "BellaVita is an Italian cosmetics brand expanding into the Middle East and East Asia. Its marketing features European models and emphasises Italian luxury heritage. Analyse the challenges of marketing in culturally diverse markets. (6 marks)"
+    },
+    {
+     "id": "global-marketing:practice:d6b36e3a",
+     "command": "Assess",
+     "marks": 10,
+     "question": "A Swiss watchmaker produces handmade luxury timepieces priced between £10,000 and £50,000, selling through exclusive retailers in 30 countries to approximately 5,000 buyers per year. Assess the extent to which a global niche strategy can be more profitable than a mass market approach. (10 marks)"
+    },
+    {
+     "id": "global-marketing:practice:298904e8",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "A major American fast-food chain has seen strong success in Japan and the UK but significant difficulties in India and several African markets. Evaluate the extent to which cultural differences are the most significant barrier to successful global marketing. (20 marks)"
+    },
+    {
+     "id": "global-marketing:practice:e2de8577",
+     "command": "Outline",
+     "marks": 4,
+     "question": "Outline two ways Ansoff's Matrix can be applied to international business expansion. (4 marks)"
+    }
+   ],
+   "staged": [
+    {
+     "id": "global-marketing:practice:b1d02cca",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Source A. Serana is a Singaporean skincare brand sold in 6 countries. It runs one advertising campaign in all of them, which cost $1.2m; a separate campaign for each country would cost about $450,000. Its directors now plan to enter Zarand, a hot, dry country where most people are Muslim and speak their own language. In Zarand most skincare is bought in small family shops and online, and cheap local creams are popular. Spoken in Zarand's language, the name Serana sounds close to the word for \"slippery\". Serana also makes a halal-certified, alcohol-free serum for Muslim buyers. It estimates the number of likely buyers in five countries at 40,000, 25,000, 60,000, 15,000, 20,000. Each buyer uses 3 bottles a year at $30 a bottle, against $20 for a mass-market serum. Its current options include taking its existing moisturiser to Zarand, and launching a new hair-care range there. Explain one way Ansoff's matrix could help Serana decide whether to enter Zarand. (4 marks)"
+    },
+    {
+     "id": "global-marketing:practice:0c787994",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Source A. Serana is a Singaporean skincare brand sold in 6 countries. It runs one advertising campaign in all of them, which cost $1.2m; a separate campaign for each country would cost about $450,000. Its directors now plan to enter Zarand, a hot, dry country where most people are Muslim and speak their own language. In Zarand most skincare is bought in small family shops and online, and cheap local creams are popular. Spoken in Zarand's language, the name Serana sounds close to the word for \"slippery\". Serana also makes a halal-certified, alcohol-free serum for Muslim buyers. It estimates the number of likely buyers in five countries at 40,000, 25,000, 60,000, 15,000, 20,000. Each buyer uses 3 bottles a year at $30 a bottle, against $20 for a mass-market serum. Its current options include taking its existing moisturiser to Zarand, and launching a new hair-care range there. Calculate the annual revenue Serana would earn from its serum if every likely buyer in the five countries bought it. (4 marks)"
+    },
+    {
+     "id": "global-marketing:practice:ca50b59f",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Source A. Serana is a Singaporean skincare brand sold in 6 countries. It runs one advertising campaign in all of them, which cost $1.2m; a separate campaign for each country would cost about $450,000. Its directors now plan to enter Zarand, a hot, dry country where most people are Muslim and speak their own language. In Zarand most skincare is bought in small family shops and online, and cheap local creams are popular. Spoken in Zarand's language, the name Serana sounds close to the word for \"slippery\". Serana also makes a halal-certified, alcohol-free serum for Muslim buyers. It estimates the number of likely buyers in five countries at 40,000, 25,000, 60,000, 15,000, 20,000. Each buyer uses 3 bottles a year at $30 a bottle, against $20 for a mass-market serum. Its current options include taking its existing moisturiser to Zarand, and launching a new hair-care range there. Discuss the cultural and social factors Serana should consider before launching in Zarand. (8 marks)"
+    },
+    {
+     "id": "global-marketing:practice:0e286ebe",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Serana is a Singaporean skincare brand sold in 6 countries. It runs one advertising campaign in all of them, which cost $1.2m; a separate campaign for each country would cost about $450,000. Its directors now plan to enter Zarand, a hot, dry country where most people are Muslim and speak their own language. In Zarand most skincare is bought in small family shops and online, and cheap local creams are popular. Spoken in Zarand's language, the name Serana sounds close to the word for \"slippery\". Serana also makes a halal-certified, alcohol-free serum for Muslim buyers. It estimates the number of likely buyers in five countries at 40,000, 25,000, 60,000, 15,000, 20,000. Each buyer uses 3 bottles a year at $30 a bottle, against $20 for a mass-market serum. Its current options include taking its existing moisturiser to Zarand, and launching a new hair-care range there. Assess whether Serana should adapt its marketing mix for Zarand or keep its standard global mix. (12 marks)"
+    },
+    {
+     "id": "global-marketing:practice:9be0acd8",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Serana is a Singaporean skincare brand sold in 6 countries. It runs one advertising campaign in all of them, which cost $1.2m; a separate campaign for each country would cost about $450,000. Its directors now plan to enter Zarand, a hot, dry country where most people are Muslim and speak their own language. In Zarand most skincare is bought in small family shops and online, and cheap local creams are popular. Spoken in Zarand's language, the name Serana sounds close to the word for \"slippery\". Serana also makes a halal-certified, alcohol-free serum for Muslim buyers. It estimates the number of likely buyers in five countries at 40,000, 25,000, 60,000, 15,000, 20,000. Each buyer uses 3 bottles a year at $30 a bottle, against $20 for a mass-market serum. Its current options include taking its existing moisturiser to Zarand, and launching a new hair-care range there. Assess whether Serana should compete in Zarand on low price or on being different. (12 marks)"
+    },
+    {
+     "id": "global-marketing:practice:5cc86aba",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Serana is a Singaporean skincare brand sold in 6 countries. It runs one advertising campaign in all of them, which cost $1.2m; a separate campaign for each country would cost about $450,000. Its directors now plan to enter Zarand, a hot, dry country where most people are Muslim and speak their own language. In Zarand most skincare is bought in small family shops and online, and cheap local creams are popular. Spoken in Zarand's language, the name Serana sounds close to the word for \"slippery\". Serana also makes a halal-certified, alcohol-free serum for Muslim buyers. It estimates the number of likely buyers in five countries at 40,000, 25,000, 60,000, 15,000, 20,000. Each buyer uses 3 bottles a year at $30 a bottle, against $20 for a mass-market serum. Its current options include taking its existing moisturiser to Zarand, and launching a new hair-care range there. Evaluate whether a mixed/geocentric approach is the most suitable marketing approach for Serana. (20 marks)"
+    },
+    {
+     "id": "global-marketing:practice:2285f98a",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Serana is a Singaporean skincare brand sold in 6 countries. It runs one advertising campaign in all of them, which cost $1.2m; a separate campaign for each country would cost about $450,000. Its directors now plan to enter Zarand, a hot, dry country where most people are Muslim and speak their own language. In Zarand most skincare is bought in small family shops and online, and cheap local creams are popular. Spoken in Zarand's language, the name Serana sounds close to the word for \"slippery\". Serana also makes a halal-certified, alcohol-free serum for Muslim buyers. It estimates the number of likely buyers in five countries at 40,000, 25,000, 60,000, 15,000, 20,000. Each buyer uses 3 bottles a year at $30 a bottle, against $20 for a mass-market serum. Its current options include taking its existing moisturiser to Zarand, and launching a new hair-care range there. Evaluate whether Serana should give priority to the global niche for its serum rather than to launching its moisturiser in Zarand. (20 marks)"
+    }
+   ]
+  },
+  {
+   "slug": "global-markets-expansion",
+   "live": [
+    {
+     "id": "global-markets-expansion:practice:eeb846bc",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Source A. Lumora makes rice cookers in Singapore. For three years its home sales have been flat at 400,000 a year at $50 each, and two low-priced importers now share the same supermarket shelves. Its fixed costs are $4.8m a year and each cooker costs $26 in materials, labour and energy. The directors plan to export 200,000 cookers a year to Belmar, where household disposable income is $4,000 and rising 7% a year, three supermarket chains sell most small appliances, and foreign firms may own no more than 49% of a distribution business. They are also choosing a site for a new $20m factory expected to earn $3m a year. Inside the trade bloc that includes Belmar, labour would cost $6 a cooker and freight $1. Outside it, labour would cost $4 and freight $2, cookers entering the bloc pay a 10% tariff, and the government offers a $5m grant. Other costs are $10 a cooker at either site. The exchange rate is $1 = 4 units of Belmar's currency, and engineers and technicians are in short supply in Singapore. Explain one push factor that may have led Lumora to plan exports. (4 marks)"
+    },
+    {
+     "id": "global-markets-expansion:practice:3aadae2a",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Source A. Lumora makes rice cookers in Singapore. For three years its home sales have been flat at 400,000 a year at $50 each, and two low-priced importers now share the same supermarket shelves. Its fixed costs are $4.8m a year and each cooker costs $26 in materials, labour and energy. The directors plan to export 200,000 cookers a year to Belmar, where household disposable income is $4,000 and rising 7% a year, three supermarket chains sell most small appliances, and foreign firms may own no more than 49% of a distribution business. They are also choosing a site for a new $20m factory expected to earn $3m a year. Inside the trade bloc that includes Belmar, labour would cost $6 a cooker and freight $1. Outside it, labour would cost $4 and freight $2, cookers entering the bloc pay a 10% tariff, and the government offers a $5m grant. Other costs are $10 a cooker at either site. The exchange rate is $1 = 4 units of Belmar's currency, and engineers and technicians are in short supply in Singapore. Calculate the change in Lumora's average cost per cooker if it produces 600,000 a year instead of 400,000. (4 marks)"
+    },
+    {
+     "id": "global-markets-expansion:practice:c301c1f9",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Source A. Lumora makes rice cookers in Singapore. For three years its home sales have been flat at 400,000 a year at $50 each, and two low-priced importers now share the same supermarket shelves. Its fixed costs are $4.8m a year and each cooker costs $26 in materials, labour and energy. The directors plan to export 200,000 cookers a year to Belmar, where household disposable income is $4,000 and rising 7% a year, three supermarket chains sell most small appliances, and foreign firms may own no more than 49% of a distribution business. They are also choosing a site for a new $20m factory expected to earn $3m a year. Inside the trade bloc that includes Belmar, labour would cost $6 a cooker and freight $1. Outside it, labour would cost $4 and freight $2, cookers entering the bloc pay a 10% tariff, and the government offers a $5m grant. Other costs are $10 a cooker at either site. The exchange rate is $1 = 4 units of Belmar's currency, and engineers and technicians are in short supply in Singapore. The exchange rate moves to $1 = 5 units of Belmar's currency. Discuss the likely impact of this change on Lumora. (8 marks)"
+    },
+    {
+     "id": "global-markets-expansion:practice:c5410766",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Lumora makes rice cookers in Singapore. For three years its home sales have been flat at 400,000 a year at $50 each, and two low-priced importers now share the same supermarket shelves. Its fixed costs are $4.8m a year and each cooker costs $26 in materials, labour and energy. The directors plan to export 200,000 cookers a year to Belmar, where household disposable income is $4,000 and rising 7% a year, three supermarket chains sell most small appliances, and foreign firms may own no more than 49% of a distribution business. They are also choosing a site for a new $20m factory expected to earn $3m a year. Inside the trade bloc that includes Belmar, labour would cost $6 a cooker and freight $1. Outside it, labour would cost $4 and freight $2, cookers entering the bloc pay a 10% tariff, and the government offers a $5m grant. Other costs are $10 a cooker at either site. The exchange rate is $1 = 4 units of Belmar's currency, and engineers and technicians are in short supply in Singapore. Assess the attractiveness of Belmar as a market for Lumora. (12 marks)"
+    },
+    {
+     "id": "global-markets-expansion:practice:1822cdd4",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Lumora makes rice cookers in Singapore. For three years its home sales have been flat at 400,000 a year at $50 each, and two low-priced importers now share the same supermarket shelves. Its fixed costs are $4.8m a year and each cooker costs $26 in materials, labour and energy. The directors plan to export 200,000 cookers a year to Belmar, where household disposable income is $4,000 and rising 7% a year, three supermarket chains sell most small appliances, and foreign firms may own no more than 49% of a distribution business. They are also choosing a site for a new $20m factory expected to earn $3m a year. Inside the trade bloc that includes Belmar, labour would cost $6 a cooker and freight $1. Outside it, labour would cost $4 and freight $2, cookers entering the bloc pay a 10% tariff, and the government offers a $5m grant. Other costs are $10 a cooker at either site. The exchange rate is $1 = 4 units of Belmar's currency, and engineers and technicians are in short supply in Singapore. Assess the reasons why Lumora might form a joint venture with a distributor in Belmar. (12 marks)"
+    },
+    {
+     "id": "global-markets-expansion:practice:36cd7cf3",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Lumora makes rice cookers in Singapore. For three years its home sales have been flat at 400,000 a year at $50 each, and two low-priced importers now share the same supermarket shelves. Its fixed costs are $4.8m a year and each cooker costs $26 in materials, labour and energy. The directors plan to export 200,000 cookers a year to Belmar, where household disposable income is $4,000 and rising 7% a year, three supermarket chains sell most small appliances, and foreign firms may own no more than 49% of a distribution business. They are also choosing a site for a new $20m factory expected to earn $3m a year. Inside the trade bloc that includes Belmar, labour would cost $6 a cooker and freight $1. Outside it, labour would cost $4 and freight $2, cookers entering the bloc pay a 10% tariff, and the government offers a $5m grant. Other costs are $10 a cooker at either site. The exchange rate is $1 = 4 units of Belmar's currency, and engineers and technicians are in short supply in Singapore. Evaluate which of the two sites Lumora should choose for its new factory. (20 marks)"
+    },
+    {
+     "id": "global-markets-expansion:practice:376f0ea7",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Lumora makes rice cookers in Singapore. For three years its home sales have been flat at 400,000 a year at $50 each, and two low-priced importers now share the same supermarket shelves. Its fixed costs are $4.8m a year and each cooker costs $26 in materials, labour and energy. The directors plan to export 200,000 cookers a year to Belmar, where household disposable income is $4,000 and rising 7% a year, three supermarket chains sell most small appliances, and foreign firms may own no more than 49% of a distribution business. They are also choosing a site for a new $20m factory expected to earn $3m a year. Inside the trade bloc that includes Belmar, labour would cost $6 a cooker and freight $1. Outside it, labour would cost $4 and freight $2, cookers entering the bloc pay a 10% tariff, and the government offers a $5m grant. Other costs are $10 a cooker at either site. The exchange rate is $1 = 4 units of Belmar's currency, and engineers and technicians are in short supply in Singapore. Evaluate whether exchange rate movements or skill shortages pose the greater threat to Lumora's international competitiveness. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "globalisation",
+   "live": [
+    {
+     "id": "globalisation:practice:324874d0",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'emerging economy'. (2 marks)"
+    },
+    {
+     "id": "globalisation:practice:e5f887dc",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Calculate Meridian Components' landed cost a unit in its export market, and the percentage of its factory cost that is imported. (4 marks)"
+    },
+    {
+     "id": "globalisation:practice:31c6a29d",
+     "command": "Construct",
+     "marks": 4,
+     "question": "Meridian Components' export market applies a 20% tariff to firms outside its trading bloc and none to members. Construct a bar chart comparing Meridian's landed cost inside and outside the bloc with the domestic producer's price of $48. Label the axes and the size of the tariff. (4 marks)"
+    },
+    {
+     "id": "globalisation:practice:2887a183",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain one way in which the low cost of shipping a unit has affected where Meridian Components produces. (4 marks)"
+    },
+    {
+     "id": "globalisation:practice:041fa3cf",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse the implications for Meridian Components of buying in its main module rather than making it. (6 marks)"
+    },
+    {
+     "id": "globalisation:practice:246f8470",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Discuss the likely effects on businesses in Harbour Foods' country of introducing the proposed tariff. (8 marks)"
+    },
+    {
+     "id": "globalisation:practice:f3a8feca",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Assess whether Astra Appliances should build a plant in the emerging economy rather than continue exporting to the region. (12 marks)"
+    },
+    {
+     "id": "globalisation:practice:add7e730",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that increased globalisation has been beneficial for businesses in developing and emerging economies. Use Kesari Rubber and Solavi Foods in your answer. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "government-intervention",
+   "live": [
+    {
+     "id": "government-intervention:practice:00ec8068",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain why a government might intervene in a market in which a good is produced with an external cost. (4 marks)"
+    },
+    {
+     "id": "government-intervention:practice:f5a3aae8",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A specific tax of $15 a tonne is imposed on Osira coal. The price buyers pay rises from $60 to $70 and the quantity traded falls from 60 to 50 tonnes a day. Calculate the consumer incidence of the tax and the revenue the government collects. (4 marks)"
+    },
+    {
+     "id": "government-intervention:practice:d24be652",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a diagram to show the effect of a specific indirect tax of $15 a tonne on a market in which production generates an external cost of $15 a tonne. (4 marks)"
+    },
+    {
+     "id": "government-intervention:practice:b4384a04",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a diagram to show the effect of a subsidy of $12 a consultation on a market in which consumption generates an external benefit of $12 a consultation. (4 marks)"
+    },
+    {
+     "id": "government-intervention:practice:2c9805a0",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'subsidy'. (2 marks)"
+    },
+    {
+     "id": "government-intervention:practice:afdd47b2",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "In Osira flats the market rent is $500 a month. A maximum price of $400 is imposed, at which quantity demanded is 250 flats and quantity supplied is 150. Calculate the excess demand created. (2 marks)"
+    },
+    {
+     "id": "government-intervention:practice:8b658000",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse the effects of a guaranteed minimum price on producers and consumers in an agricultural market. (6 marks)"
+    },
+    {
+     "id": "government-intervention:practice:a7b0c5ca",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine whether a government should use an indirect tax or a system of tradeable pollution permits to reduce emissions from an industry. (8 marks)"
+    },
+    {
+     "id": "government-intervention:practice:12fc9522",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how the provision of information by a government can increase the quantity consumed of a good that generates external benefits. (4 marks)"
+    },
+    {
+     "id": "government-intervention:practice:ae68cc3d",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss whether a government facing high fuel prices should subsidise fuel or use the money in some other way. (14 marks)"
+    },
+    {
+     "id": "government-intervention:practice:3b785d74",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'government failure'. (2 marks)"
+    },
+    {
+     "id": "government-intervention:practice:02af5456",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that government intervention to correct market failure inevitably leads to government failure. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "government-intervention-firms",
+   "live": [
+    {
+     "id": "government-intervention-firms:practice:9e7a9330",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "A water company's price is capped at $40 a unit. Inflation, measured by consumer prices, is 3% and the regulator sets X at 1%. Calculate the maximum price the company may charge next year. (2 marks)"
+    },
+    {
+     "id": "government-intervention-firms:practice:62f1e83d",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the case for privatising a state-owned natural monopoly. (20 marks)"
+    },
+    {
+     "id": "government-intervention-firms:practice:5aed0eb8",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'privatisation'. (2 marks)"
+    },
+    {
+     "id": "government-intervention-firms:practice:4091ed96",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two ways in which deregulation may increase competition in a market. (4 marks)"
+    },
+    {
+     "id": "government-intervention-firms:practice:52faab11",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse the likely effects on domestic consumers and producers of barriers to entry of foreign firms. (6 marks)"
+    },
+    {
+     "id": "government-intervention-firms:practice:c94a9d57",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine two limits to the effectiveness of a regulator in controlling a monopoly. (8 marks)"
+    },
+    {
+     "id": "government-intervention-firms:practice:c26187c6",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the likely effects of an increase in the minimum wage on a labour market. (20 marks)"
+    },
+    {
+     "id": "government-intervention-firms:practice:806643be",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the effectiveness of measures to reduce occupational immobility of labour. (14 marks)"
+    },
+    {
+     "id": "government-intervention-firms:practice:b9ed67d5",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how an increase in employers' national insurance contributions is likely to affect employment. (4 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "growth-development",
+   "live": [
+    {
+     "id": "growth-development:practice:6b3cce85",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'Human Development Index'. (2 marks)"
+    },
+    {
+     "id": "growth-development:practice:b7ee254c",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "A country's life expectancy at birth is 66 years. Calculate its HDI health index, using the goalposts of 20 and 85 years. (2 marks)"
+    },
+    {
+     "id": "growth-development:practice:80f76251",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how dependence on primary products can constrain a developing economy's growth, with reference to the Prebisch-Singer hypothesis. (4 marks)"
+    },
+    {
+     "id": "growth-development:practice:0da4f85b",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A country saves 20% of its GDP and has a capital-output ratio of 5. Its population grows by 2.5% a year. Calculate, using the Harrod-Domar model, its annual rate of growth of GDP and of GDP per head. (4 marks)"
+    },
+    {
+     "id": "growth-development:practice:d4209568",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse how a high dependency ratio may constrain growth and development in a developing economy. (6 marks)"
+    },
+    {
+     "id": "growth-development:practice:4e84f98e",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the impact of corruption and poor governance on growth and development in developing economies. (8 marks)"
+    },
+    {
+     "id": "growth-development:practice:058c1489",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the likely impact of trade liberalisation on growth and development in a developing economy. (14 marks)"
+    },
+    {
+     "id": "growth-development:practice:c3abc972",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that interventionist strategies are more effective than market-orientated strategies in promoting growth and development in developing economies. (20 marks)"
+    },
+    {
+     "id": "growth-development:practice:988c2461",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the extent to which industrialisation, as described by the Lewis dual-sector model, can promote development in a developing economy. (20 marks)"
+    },
+    {
+     "id": "growth-development:practice:22aab10e",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the role of the World Bank, the International Monetary Fund and non-government organisations in promoting growth and development. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "influences-business-decisions",
+   "live": [
+    {
+     "id": "influences-business-decisions:practice:ab2cb3b8",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year; the median employee earns RM48,000, and the lowest-paid factory workers earn RM30,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Explain one difficulty Orvana's new chief executive may face in changing its culture. (4 marks)"
+    },
+    {
+     "id": "influences-business-decisions:practice:fd0eb586",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year; the median employee earns RM48,000, and the lowest-paid factory workers earn RM30,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Calculate the ratio of Orvana's chief executive's pay to the pay of its lowest-paid factory workers, before and after the proposed bonus. (4 marks)"
+    },
+    {
+     "id": "influences-business-decisions:practice:dd3795d4",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year; the median employee earns RM48,000, and the lowest-paid factory workers earn RM30,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Discuss the likely effects of Orvana's culture on its decisions as the business grows. (8 marks)"
+    },
+    {
+     "id": "influences-business-decisions:practice:03dea180",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year; the median employee earns RM48,000, and the lowest-paid factory workers earn RM30,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Assess the likely influence of different stakeholders on Orvana's decision whether to close the Ipoh factory. (12 marks)"
+    },
+    {
+     "id": "influences-business-decisions:practice:5ef99d03",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year; the median employee earns RM48,000, and the lowest-paid factory workers earn RM30,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Assess whether Orvana should switch to certified sustainable palm oil. (12 marks)"
+    },
+    {
+     "id": "influences-business-decisions:practice:40e7a94a",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year; the median employee earns RM48,000, and the lowest-paid factory workers earn RM30,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Evaluate whether Orvana's new chief executive is likely to succeed in changing its culture. (20 marks)"
+    },
+    {
+     "id": "influences-business-decisions:practice:e4be7f26",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Orvana is a Malaysian snack maker listed on the stock exchange, with 2,400 staff and yearly sales of RM500m. Its founder built the business from one rented shop and still approves every new product; managers who carried out the founder's instructions have been promoted, and a culture of thrift runs through the firm. A new chief executive from outside the company wants new products developed by teams of specialists who decide for themselves. The board is considering closing the older factory in Ipoh, where 300 people work, and moving production to an automated plant in Johor: this would save RM9m a year for a one-off cost of RM12m. Profit last year was RM60m. Orvana buys 20,000 tonnes of palm oil a year, and certified sustainable oil costs RM300 a tonne more. The chief executive is paid RM4.8m a year; the median employee earns RM48,000, and the lowest-paid factory workers earn RM30,000. The board proposes a RM1.2m bonus for the chief executive if this year's profit target is met. Evaluate whether Orvana should follow the shareholder model or the stakeholder model in deciding whether to close the Ipoh factory. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "introductory-concepts",
+   "live": [
+    {
+     "id": "introductory-concepts:practice:daea62ef",
+     "command": "Define",
+     "marks": 4,
+     "question": "Define the term 'opportunity cost'. (4 marks)"
+    },
+    {
+     "id": "introductory-concepts:practice:81d54f89",
+     "command": "Explain",
+     "marks": 6,
+     "question": "Explain two reasons why the basic economic problem is relevant to both individuals and governments. (6 marks)"
+    },
+    {
+     "id": "introductory-concepts:practice:d0eaebbd",
+     "command": "Assess",
+     "marks": 10,
+     "question": "Assess the usefulness of a production possibility frontier (PPF) diagram in illustrating the basic economic problem. (10 marks)"
+    },
+    {
+     "id": "introductory-concepts:practice:b99104dd",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that specialisation and the division of labour always lead to improved economic outcomes. (20 marks)"
+    },
+    {
+     "id": "introductory-concepts:practice:0312027b",
+     "command": "Outline",
+     "marks": 4,
+     "question": "Outline two assumptions commonly made when constructing economic models. (4 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "labour-markets",
+   "live": [
+    {
+     "id": "labour-markets:practice:ee773d09",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'derived demand' as it applies to labour. (2 marks)"
+    },
+    {
+     "id": "labour-markets:practice:c0aa3062",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "A worker adds 6 units of output an hour, each unit sells for $5, and the wage is $25 an hour. The firm can sell any amount at this price. Calculate the value of the worker's extra output per hour and state whether a profit-maximising firm would employ the worker. (2 marks)"
+    },
+    {
+     "id": "labour-markets:practice:eef2f34c",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two factors that influence the elasticity of supply of labour to an occupation. (4 marks)"
+    },
+    {
+     "id": "labour-markets:practice:f62019c4",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse the likely effects of a net inflow of migrant workers on the equilibrium wage and employment in an occupation. (6 marks)"
+    },
+    {
+     "id": "labour-markets:practice:71516c3e",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that wage rates are determined only by the demand for and supply of labour. (20 marks)"
+    },
+    {
+     "id": "labour-markets:practice:2b8922f5",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the likely effects on employment of a trade union negotiating a wage above the equilibrium wage. (8 marks)"
+    },
+    {
+     "id": "labour-markets:practice:a297c181",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the likely consequences of geographical and occupational immobility of labour for an economy. (14 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "macroeconomic-objectives-policies",
+   "live": [
+    {
+     "id": "macroeconomic-objectives-policies:practice:32e9a3f7",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'balanced government budget'. (2 marks)"
+    },
+    {
+     "id": "macroeconomic-objectives-policies:practice:f7354894",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "A government collects $228bn in tax revenue and spends $260bn. Calculate its budget balance and state whether it is a deficit or a surplus. (2 marks)"
+    },
+    {
+     "id": "macroeconomic-objectives-policies:practice:be2bc63b",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how an increase in government spending affects aggregate demand. (4 marks)"
+    },
+    {
+     "id": "macroeconomic-objectives-policies:practice:fe9adbff",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw an AD/AS diagram to show the effect of a $16bn increase in government spending on an economy with an upward-sloping short-run aggregate supply curve. (4 marks)"
+    },
+    {
+     "id": "macroeconomic-objectives-policies:practice:4298961f",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse how an increase in a central bank's policy interest rate reduces the rate of inflation. (6 marks)"
+    },
+    {
+     "id": "macroeconomic-objectives-policies:practice:821dc50b",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the case for an independent central bank setting interest rates rather than the government. (8 marks)"
+    },
+    {
+     "id": "macroeconomic-objectives-policies:practice:39f05efb",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A worker receives $200 a week in benefits. They are offered a job paying $250 a week. Benefits are withdrawn at 80 cents for every dollar earned, and income tax of 10% is paid on the wage. Calculate the increase in the worker's weekly income from taking the job, and the effective marginal deduction rate. (4 marks)"
+    },
+    {
+     "id": "macroeconomic-objectives-policies:practice:3928565b",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss whether interventionist supply-side policies are more effective than free-market supply-side policies in raising an economy's productive capacity. (14 marks)"
+    },
+    {
+     "id": "macroeconomic-objectives-policies:practice:bb0746ff",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain why an economy with an inflation rate above that of its trading partners may develop a current account deficit. (4 marks)"
+    },
+    {
+     "id": "macroeconomic-objectives-policies:practice:60e19435",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate whether a government should prioritise low inflation over low unemployment. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "managing-change",
+   "live": [
+    {
+     "id": "managing-change:practice:15a67962",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Explain one reason why claims handlers at Harbourline may resist the change. (4 marks)"
+    },
+    {
+     "id": "managing-change:practice:1bfc78d6",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Calculate the percentage change in the number of claims dealt with by each handler per month. (4 marks)"
+    },
+    {
+     "id": "managing-change:practice:c14bf0c4",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Discuss whether Harbourline should complete the change in 6 months rather than 24. (8 marks)"
+    },
+    {
+     "id": "managing-change:practice:48a33c8d",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Assess which of the risks in Source A Harbourline should give priority to in its contingency planning. (12 marks)"
+    },
+    {
+     "id": "managing-change:practice:e2269b82",
+     "command": "Assess",
+     "marks": 12,
+     "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Assess whether the standby claims system is worth its cost to Harbourline. (12 marks)"
+    },
+    {
+     "id": "managing-change:practice:d528c9da",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Evaluate whether the new chief executive's leadership is the most important factor in the success of the change at Harbourline. (20 marks)"
+    },
+    {
+     "id": "managing-change:practice:05a88a0e",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Source A. Harbourline Insurance is a Hong Kong insurer with 2,400 staff, 60 branches and 7 layers of management. Many of its claims handlers have worked there for decades and take pride in spotting false claims by talking to customers face to face. After two years of falling profit, and with a new online insurer winning customers who never visit a branch, the board appointed a new chief executive. She plans to move claims onto a phone app and close 24 of the 60 branches. At present 600 handlers deal with 90,000 claims a month; after the change, 480 handlers are expected to deal with 96,000. Of the 120 handler posts that go, 70 people will retrain as app-support staff and 50 will leave. The chief executive wants the change completed in 6 months; the human resources director has proposed 24. The firm's risk register scores each risk from 1 to 5 for likelihood and for impact: typhoon closes head office (likelihood 4, impact 2); claims system fails (likelihood 3, impact 5); chief actuary leaves (likelihood 3, impact 4). The chief actuary, who prices every policy, retires in 18 months and has no deputy. Two years ago the claims system was down for 8 days, and each day without it costs about $250,000. A standby system at a second data centre would restore it within 1 day and would cost $600,000 a year. Evaluate how Harbourline should manage resistance to the change from its claims handlers. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "managing-finance",
+   "live": [
+    {
+     "id": "managing-finance:practice:00d48f08",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'profit for the year'. (2 marks)"
+    },
+    {
+     "id": "managing-finance:practice:160d96f7",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A tile wholesaler reports, for the year: revenue $2,000,000, cost of sales $1,300,000, other operating expenses $500,000, interest $40,000. Calculate the wholesaler's gross profit, operating profit and profit for the year. (4 marks)"
+    },
+    {
+     "id": "managing-finance:practice:b9a597ae",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A tile wholesaler reports, for the year: revenue $2,000,000, cost of sales $1,300,000, other operating expenses $500,000, interest $40,000. Calculate the wholesaler's gross profit margin and its operating profit margin. (4 marks)"
+    },
+    {
+     "id": "managing-finance:practice:4ed495d6",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "A tile wholesaler is pushed by a competitor into cutting its prices by 5%. It expects to sell exactly the same quantity of tiles as before. Analyse the likely effect on its profitability. (6 marks)"
+    },
+    {
+     "id": "managing-finance:practice:ee2ad281",
+     "command": "Construct",
+     "marks": 4,
+     "question": "Construct a labelled diagram of the working capital cycle for a wholesaler that buys goods, sells them on credit and collects payment. (4 marks)"
+    },
+    {
+     "id": "managing-finance:practice:3b0709dc",
+     "command": "Explain",
+     "marks": 4,
+     "question": "A wholesaler reports a healthy profit for the year and its bank balance falls over the same period. Explain one reason why this can happen. (4 marks)"
+    },
+    {
+     "id": "managing-finance:practice:347e7d49",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A tile wholesaler's statement of financial position shows: inventory $240,000, trade receivables $150,000, cash $10,000, trade payables $180,000, bank overdraft $50,000, other payables $20,000, non-current assets $900,000, bank loan repayable in five years $500,000. Calculate the wholesaler's current ratio and its acid test ratio. (4 marks)"
+    },
+    {
+     "id": "managing-finance:practice:49e844d2",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "A wholesaler with a weak bank balance is advised to negotiate an extra month of credit from its suppliers. Discuss whether this would improve its liquidity. (8 marks)"
+    },
+    {
+     "id": "managing-finance:practice:7113ab2e",
+     "command": "Assess",
+     "marks": 10,
+     "question": "Assess the importance of managing liquidity for a small wholesaler whose sales are growing rapidly. (10 marks)"
+    },
+    {
+     "id": "managing-finance:practice:7f9b7ec3",
+     "command": "Assess",
+     "marks": 10,
+     "question": "A tile wholesaler with rising revenue closes after failing to pay a supplier. Weak cash flow, overestimation of sales, overtrading, poor inventory control are all suggested. Assess the likely internal causes of its failure. (10 marks)"
+    },
+    {
+     "id": "managing-finance:practice:1552c817",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "A wholesaler that nearly closed last year after a supplier stopped delivering can either improve its liquidity or improve its profitability over the next twelve months, but does not have the management time to do both. Evaluate which it should prioritise if it is to avoid business failure. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "managing-people",
+   "live": [
+    {
+     "id": "managing-people:practice:291ab95e",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'redundancy'. (2 marks)"
+    },
+    {
+     "id": "managing-people:practice:af57b361",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A firm recruits a supervisor on a salary of $36,000, working 200 days a year. It pays $1,200 to advertise the post, an agency fee of 15% of the salary, 20 hours of managers' time at $45 an hour, 5 days of induction, a $600 external course, and loses 10 days of the new supervisor's output. Calculate the total cost of recruiting, selecting and training this one supervisor, and express it as a percentage of the salary. (4 marks)"
+    },
+    {
+     "id": "managing-people:practice:0e1a636e",
+     "command": "Construct",
+     "marks": 4,
+     "question": "A clothing manufacturer has 31 staff organised with a span of control of 5 across 3 levels. Construct an organisational chart for this firm, labelling the span of control and the chain of command. (4 marks)"
+    },
+    {
+     "id": "managing-people:practice:e3d11086",
+     "command": "Explain",
+     "marks": 4,
+     "question": "A clothing manufacturer with 31 staff removes two levels from its hierarchy, keeping every member of staff. Explain one effect of this on the firm's wage bill. (4 marks)"
+    },
+    {
+     "id": "managing-people:practice:5de81864",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse how Herzberg's two-factor theory explains why a pay rise may fail to improve a workforce's performance. (6 marks)"
+    },
+    {
+     "id": "managing-people:practice:c62a2831",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "A clothing manufacturer pays its machinists a basic wage of $360 a week and is considering moving them onto piecework at $1.50 a garment. Discuss the likely effects of this change. (8 marks)"
+    },
+    {
+     "id": "managing-people:practice:cab3d5d7",
+     "command": "Assess",
+     "marks": 10,
+     "question": "A founder whose clothing firm has grown from four staff to thirty-one still authorises every discount personally. Assess whether the firm should move to a democratic leadership style. (10 marks)"
+    },
+    {
+     "id": "managing-people:practice:fcfaa3b5",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that the most important factor in motivating a workforce is pay. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "market-failure",
+   "live": [
+    {
+     "id": "market-failure:practice:93c7e203",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'market failure'. (2 marks)"
+    },
+    {
+     "id": "market-failure:practice:071bf234",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how an external cost of production causes the social cost of a good to exceed its private cost. (4 marks)"
+    },
+    {
+     "id": "market-failure:practice:0e574dfc",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "In a market for cement, the marginal private cost is given by MPC = 10 + 0.5Q and the marginal private benefit by MPB = 60 − 0.5Q, where Q is tonnes a day. Production imposes an external cost of $10 a tonne. Calculate the market quantity, the socially optimal quantity and the welfare loss. (4 marks)"
+    },
+    {
+     "id": "market-failure:practice:0753cacb",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "In the same cement market, 50 tonnes a day are produced and each tonne imposes an external cost of $10. Calculate the total external cost borne by third parties each day. (2 marks)"
+    },
+    {
+     "id": "market-failure:practice:d6ef6424",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a diagram, using marginal analysis, to show the welfare loss arising from an external cost of production. (4 marks)"
+    },
+    {
+     "id": "market-failure:practice:22087c8d",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a diagram, using marginal analysis, to show the effect of the external benefits arising from the consumption of education. (4 marks)"
+    },
+    {
+     "id": "market-failure:practice:e4c8dfa8",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse the external costs arising from the consumption of car journeys in a congested city. (6 marks)"
+    },
+    {
+     "id": "market-failure:practice:053116dd",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain why public goods may not be provided by the private sector. (4 marks)"
+    },
+    {
+     "id": "market-failure:practice:c1ff7774",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the effects of imperfect market information on the allocation of resources in healthcare. (8 marks)"
+    },
+    {
+     "id": "market-failure:practice:c1091515",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the impact of moral hazard in banking on consumers, producers, workers and governments. (14 marks)"
+    },
+    {
+     "id": "market-failure:practice:1e4d06c6",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that market bubbles in housing cause more damage than bubbles in stocks and shares. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "market-structures-contestability",
+   "live": [
+    {
+     "id": "market-structures-contestability:practice:798d8eec",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Five firms in a market hold these shares: Firm A 28%, Firm B 22%, Firm C 14%, Firm D 9%, Firm E 7%. Calculate the three-firm and five-firm concentration ratios, and state what the pair of figures shows about this market that either one alone does not. (4 marks)"
+    },
+    {
+     "id": "market-structures-contestability:practice:0027c583",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a diagram to show a perfectly competitive firm in long-run equilibrium, labelling the price, the output and the area of profit. (4 marks)"
+    },
+    {
+     "id": "market-structures-contestability:practice:d07bfd15",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain why a firm in monopolistic competition produces at an output below the one at which its average cost would be lowest. (4 marks)"
+    },
+    {
+     "id": "market-structures-contestability:practice:81b7e011",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'sunk cost'. (2 marks)"
+    },
+    {
+     "id": "market-structures-contestability:practice:1c4e5ff3",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse why a cartel agreement between a small number of firms is difficult to sustain. (6 marks)"
+    },
+    {
+     "id": "market-structures-contestability:practice:fc98f6cf",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the costs and benefits of non-price competition to consumers. (8 marks)"
+    },
+    {
+     "id": "market-structures-contestability:practice:1c200bba",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that a monopoly always acts against the interests of consumers. (20 marks)"
+    },
+    {
+     "id": "market-structures-contestability:practice:53e0c0ee",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the significance of sunk costs for the contestability of a market. (14 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "marketing-mix-strategy",
+   "live": [
+    {
+     "id": "marketing-mix-strategy:practice:b35e3a8d",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'marketing objective'. (2 marks)"
+    },
+    {
+     "id": "marketing-mix-strategy:practice:8995c0d8",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A business sells 60,000 bottles in a year. The whole market buys 500,000 bottles. Calculate its market share, and calculate its revenue if each bottle sells for $20. (4 marks)"
+    },
+    {
+     "id": "marketing-mix-strategy:practice:c94a792d",
+     "command": "Construct",
+     "marks": 4,
+     "question": "Construct a product life cycle diagram for a product now in maturity, showing both sales and profit and marking where an extension strategy would be applied. (4 marks)"
+    },
+    {
+     "id": "marketing-mix-strategy:practice:6e75a277",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Discuss whether a business entering the reusable bottle market should adopt a niche strategy rather than a mass market one. (8 marks)"
+    },
+    {
+     "id": "marketing-mix-strategy:practice:37bba410",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain one way in which improving the aesthetics of a product may affect the other two elements of the design mix. (4 marks)"
+    },
+    {
+     "id": "marketing-mix-strategy:practice:8721716c",
+     "command": "Assess",
+     "marks": 10,
+     "question": "Assess whether building a strong brand is the best use of a marketing budget for a business selling reusable bottles. (10 marks)"
+    },
+    {
+     "id": "marketing-mix-strategy:practice:03fc1e3f",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate which pricing strategy a business should adopt when launching a reusable bottle into a market where several established rivals already sell a similar product. (20 marks)"
+    },
+    {
+     "id": "marketing-mix-strategy:practice:f53e371e",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "A producer can reach consumers at $19.20 through a retailer, keeping $4 a unit, or sell directly at $20 and keep $12. Analyse the factors the producer should consider before choosing to sell directly. (6 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "measures-economic-performance",
+   "live": [
+    {
+     "id": "measures-economic-performance:practice:8f061de4",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term ‘gross domestic product’ (GDP). (2 marks)"
+    },
+    {
+     "id": "measures-economic-performance:practice:9b4ac64e",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "A country’s real GDP was $520bn in year 2 and $507bn in year 3. Calculate its rate of economic growth in year 3. (2 marks)"
+    },
+    {
+     "id": "measures-economic-performance:practice:59937d7a",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two reasons why a rise in real GDP per capita may not mean that living standards have improved. (4 marks)"
+    },
+    {
+     "id": "measures-economic-performance:practice:72b2634c",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A consumer price index is built from four groups with weights of 30, 25, 20, 25 and price indices of 108, 104, 112, 100. Calculate the index and the rate of inflation if the base year index was 100. (4 marks)"
+    },
+    {
+     "id": "measures-economic-performance:practice:9b090272",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw an accurately labelled aggregate demand and aggregate supply diagram to show the effect of a sharp rise in imported energy costs on the price level and real output. (4 marks)"
+    },
+    {
+     "id": "measures-economic-performance:practice:57814517",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse how a rise in a country’s inflation rate relative to its trading partners affects its current account. (6 marks)"
+    },
+    {
+     "id": "measures-economic-performance:practice:c766dcf3",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the relationship between the unemployment rate, the employment rate and the economic inactivity rate as measures of the labour market. (8 marks)"
+    },
+    {
+     "id": "measures-economic-performance:practice:77baac54",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two causes of unemployment that would not be removed by a rise in aggregate demand. (4 marks)"
+    },
+    {
+     "id": "measures-economic-performance:practice:1f722213",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the costs of unemployment to an economy. (14 marks)"
+    },
+    {
+     "id": "measures-economic-performance:practice:b3c1de2a",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate whether a persistent current account deficit should be a matter of concern for a government. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "meeting-customer-needs",
+   "live": [
+    {
+     "id": "meeting-customer-needs:practice:98b42c70",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'niche market'. (2 marks)"
+    },
+    {
+     "id": "meeting-customer-needs:practice:b455326f",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain one benefit to a business of operating in a niche market. (4 marks)"
+    },
+    {
+     "id": "meeting-customer-needs:practice:6c32b8a5",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "The chilled-juice market was worth $32 million last year and $40 million this year. Zuri Juice sold $6 million this year. Calculate Zuri's market share and the market's growth rate. (4 marks)"
+    },
+    {
+     "id": "meeting-customer-needs:practice:0eb9b618",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse one way in which the growth of online retailing has affected competition in a market you have studied. (6 marks)"
+    },
+    {
+     "id": "meeting-customer-needs:practice:8ed4a524",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Zuri Juice surveyed 600 shoppers and 18% said they would buy a high-juice bottle weekly at $1.20. Its target market holds 500,000 shoppers. Discuss the usefulness of this research in estimating likely demand. (8 marks)"
+    },
+    {
+     "id": "meeting-customer-needs:practice:b6acf450",
+     "command": "Assess",
+     "marks": 10,
+     "question": "Zuri Juice has one month and a small budget before it decides whether to launch a new bottle. Assess the most appropriate method of primary research for it to use. (10 marks)"
+    },
+    {
+     "id": "meeting-customer-needs:practice:1be1c7a6",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain one reason why a business might use secondary research before commissioning primary research. (4 marks)"
+    },
+    {
+     "id": "meeting-customer-needs:practice:11062b94",
+     "command": "Construct",
+     "marks": 4,
+     "question": "Construct a market map for the chilled-juice market using price and juice content as the two axes, plotting Tamu ($0.70, 15%), Mkali ($0.85, 35%), Zuri ($1.20, 45%), Safi ($1.60, 40%) and Halo ($1.90, 85%), and mark one gap. (4 marks)"
+    },
+    {
+     "id": "meeting-customer-needs:practice:b22c3c53",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Zuri Juice has mapped the chilled-juice market on price against juice content and found an empty position at about 80% juice for $1.20. Discuss the usefulness of that market map in deciding whether to launch there. (8 marks)"
+    },
+    {
+     "id": "meeting-customer-needs:practice:45fddeb9",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain one way in which a business could add value to a product. (4 marks)"
+    },
+    {
+     "id": "meeting-customer-needs:practice:f39deec6",
+     "command": "Assess",
+     "marks": 10,
+     "question": "Assess whether branding is the most effective way for a small food or drink business to add value. (10 marks)"
+    },
+    {
+     "id": "meeting-customer-needs:practice:0a8c6acf",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate whether adding value or charging a lower price is the better way for a business to build a competitive advantage. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "national-income",
+   "live": [
+    {
+     "id": "national-income:practice:25dc1f6a",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'circular flow of income'. (2 marks)"
+    },
+    {
+     "id": "national-income:practice:7389cee5",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain why national income, national output and national expenditure are equal. (4 marks)"
+    },
+    {
+     "id": "national-income:practice:86fe538f",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "An economy has investment of $60bn, government expenditure of $90bn and exports of $50bn. Calculate total injections into the circular flow. (2 marks)"
+    },
+    {
+     "id": "national-income:practice:4e76ca1d",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "An economy has a marginal propensity to save of 0.15, a marginal propensity to tax of 0.25 and a marginal propensity to import of 0.10. Government expenditure rises by $80bn. Calculate the resulting change in real national income. (4 marks)"
+    },
+    {
+     "id": "national-income:practice:b4f5c2af",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw an AD/AS diagram to show the effect on equilibrium real national output of a rise in government expenditure in an economy with spare productive capacity. (4 marks)"
+    },
+    {
+     "id": "national-income:practice:b1a76b6e",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse the effect of a rise in imports on a country's equilibrium real national output. (6 marks)"
+    },
+    {
+     "id": "national-income:practice:c2d4be5b",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the significance of the size of the multiplier for a government planning to raise its spending. (8 marks)"
+    },
+    {
+     "id": "national-income:practice:6b719349",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the factors that determine the equilibrium level of real national output in an open economy. (14 marks)"
+    },
+    {
+     "id": "national-income:practice:433b13f5",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that increasing government expenditure is always an effective way to raise the level of economic activity. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "planning-raising-finance",
+   "live": [
+    {
+     "id": "planning-raising-finance:practice:d9f8fce4",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'retained profit'. (2 marks)"
+    },
+    {
+     "id": "planning-raising-finance:practice:0c2a26c6",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A business can buy a machine for $40,000 or lease it for $900 a month over 48 months. Calculate the additional cost of leasing rather than buying. (4 marks)"
+    },
+    {
+     "id": "planning-raising-finance:practice:5d61421e",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain one advantage and one disadvantage for a technology start-up of using venture capital as a source of finance. (4 marks)"
+    },
+    {
+     "id": "planning-raising-finance:practice:284a4ffc",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "A founder who owns all 120,000 shares in her company raises $60,000 by issuing 30,000 new shares to a business angel. Analyse the impact of this decision on the founder. (6 marks)"
+    },
+    {
+     "id": "planning-raising-finance:practice:853321d9",
+     "command": "Assess",
+     "marks": 10,
+     "question": "A profitable partnership running three restaurants plans to open ten more and needs finance it cannot generate itself. Assess whether it should incorporate as a private limited company. (10 marks)"
+    },
+    {
+     "id": "planning-raising-finance:practice:d2744d79",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that a detailed business plan is the most important factor in determining whether a new business succeeds. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "poverty-inequality",
+   "live": [
+    {
+     "id": "poverty-inequality:practice:058dadf4",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'relative poverty'. (2 marks)"
+    },
+    {
+     "id": "poverty-inequality:practice:1138b142",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "In a country, median income is $8.00 a day. The relative poverty line is set at 60% of median income. Calculate the relative poverty line. (2 marks)"
+    },
+    {
+     "id": "poverty-inequality:practice:fa1a0fe1",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how an increase in welfare benefits paid to the poorest households could reduce relative poverty. (4 marks)"
+    },
+    {
+     "id": "poverty-inequality:practice:573def12",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that economic growth is the most effective way to reduce absolute poverty in developing economies. (20 marks)"
+    },
+    {
+     "id": "poverty-inequality:practice:918bec7a",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse how structural changes in an economy may increase absolute poverty. (6 marks)"
+    },
+    {
+     "id": "poverty-inequality:practice:3b5f9daf",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "On a Lorenz curve diagram for a country, the area below the Lorenz curve is 0.32. Ten years later it has fallen to 0.27. Calculate the Gini coefficient in each year and the change between them. (4 marks)"
+    },
+    {
+     "id": "poverty-inequality:practice:ee417429",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine two causes of inequality in income between countries. (8 marks)"
+    },
+    {
+     "id": "poverty-inequality:practice:90706ba3",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the likely impact of high income inequality on enterprise and savings in an economy. (14 marks)"
+    },
+    {
+     "id": "poverty-inequality:practice:b45adca3",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that a free market economy inevitably increases inequality. (20 marks)"
+    },
+    {
+     "id": "poverty-inequality:practice:037574b8",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the extent to which economic development reduces inequality within a country. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "price-determination",
+   "live": [
+    {
+     "id": "price-determination:practice:27ab24dd",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'equilibrium price'. (2 marks)"
+    },
+    {
+     "id": "price-determination:practice:c2cd718e",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain why a market tends to move towards its equilibrium price when the price is initially below it. (4 marks)"
+    },
+    {
+     "id": "price-determination:practice:9ddb825a",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse the effect on the equilibrium price and quantity of rice of a poor harvest combined with rising incomes among consumers. (6 marks)"
+    },
+    {
+     "id": "price-determination:practice:a389ce73",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a demand and supply diagram showing consumer surplus and producer surplus at the market equilibrium. (4 marks)"
+    },
+    {
+     "id": "price-determination:practice:4e7c1a8a",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A specific tax of $3 per unit raises the price buyers pay from $10 to $12 and reduces the quantity traded from 600 to 500 units. Calculate the consumer incidence of the tax and the revenue the government collects. (4 marks)"
+    },
+    {
+     "id": "price-determination:practice:4a98a59e",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a demand and supply diagram to show the effect of a specific subsidy of $3 per unit on the price paid by consumers and the price received by producers. (4 marks)"
+    },
+    {
+     "id": "price-determination:practice:9745da89",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the effects of a subsidy on cooking fuel on consumers, producers and the government. (8 marks)"
+    },
+    {
+     "id": "price-determination:practice:27631256",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss how effectively the price mechanism allocates resources in local, national and global markets. (14 marks)"
+    },
+    {
+     "id": "price-determination:practice:2bf16476",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that changes in supply, rather than changes in demand, are the main cause of changes in the price of agricultural commodities. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "resource-management",
+   "live": [
+    {
+     "id": "resource-management:practice:474b85cf",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'productivity'. (2 marks)"
+    },
+    {
+     "id": "resource-management:practice:05ff2726",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Anvari Cycles employs 120 production workers and makes 3,000 bicycles a month. After a training programme the same workforce makes 3,600 bicycles a month. Calculate the percentage change in labour productivity. (4 marks)"
+    },
+    {
+     "id": "resource-management:practice:ab2c8a54",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain one way in which a rise in labour productivity can make a business more competitive. (4 marks)"
+    },
+    {
+     "id": "resource-management:practice:99a69bae",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Anvari Cycles is considering replacing its labour-intensive assembly line with an automated one. Analyse the factors it should take into account. (6 marks)"
+    },
+    {
+     "id": "resource-management:practice:d07a5c0d",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Anvari Cycles makes 3,000 bicycles a month on equipment with a maximum possible output of 4,000. It then closes one line, taking maximum possible output to 3,200, and its monthly output is unchanged. Calculate its capacity utilisation before and after the closure. (4 marks)"
+    },
+    {
+     "id": "resource-management:practice:24e1249f",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain one implication for Anvari Cycles of operating at 97.50% of capacity. (4 marks)"
+    },
+    {
+     "id": "resource-management:practice:3ef280eb",
+     "command": "Construct",
+     "marks": 4,
+     "question": "Anvari Cycles uses 300 tyres a day, holds a maximum of 6,000, plans never to hold fewer than 1,200, and its supplier takes 4 days. Construct an inventory control diagram for one full cycle, labelled with these figures. (4 marks)"
+    },
+    {
+     "id": "resource-management:practice:58465766",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Anvari Cycles holds an average of 3,600 tyres at $1.50 a tyre a month. Moving to just-in-time delivery would take the average held to 450, but would leave only 1 day of cover. One stopped day costs $18,000 in lost contribution. Discuss whether Anvari Cycles should adopt just in time. (8 marks)"
+    },
+    {
+     "id": "resource-management:practice:2dd1547c",
+     "command": "Assess",
+     "marks": 10,
+     "question": "Anvari Cycles currently inspects every bicycle at the end of the line, correcting 120 a month at $50 each. It is considering moving to quality assurance, under which the rate would fall to 1.50% and each correction would cost $16. Assess whether it should do so. (10 marks)"
+    },
+    {
+     "id": "resource-management:practice:26cf3c04",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate whether adopting lean production would be the best way for Anvari Cycles to gain a competitive advantage over Belvar Bikes, whose average cost is $132 a bicycle. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "revenue-costs-profits",
+   "live": [
+    {
+     "id": "revenue-costs-profits:practice:a2910ca0",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'marginal revenue'. (2 marks)"
+    },
+    {
+     "id": "revenue-costs-profits:practice:8d4b3b2d",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Nadira Textiles faces the demand curve P = 40 − 2Q, where Q is rolls a day. Calculate its total revenue at 6 rolls, its marginal revenue at that output, and the output at which total revenue is greatest. (4 marks)"
+    },
+    {
+     "id": "revenue-costs-profits:practice:84f1fbac",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "Nadira Textiles cuts its price from $10 to $8 a roll and the quantity it sells rises from 15 to 16 rolls a day. Calculate the price elasticity of demand. (2 marks)"
+    },
+    {
+     "id": "revenue-costs-profits:practice:b99c2f42",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain why a firm facing inelastic demand for its product would not raise its total revenue by cutting its price. (4 marks)"
+    },
+    {
+     "id": "revenue-costs-profits:practice:6fca1574",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse how the law of diminishing returns shapes a firm's short-run marginal cost curve. (6 marks)"
+    },
+    {
+     "id": "revenue-costs-profits:practice:37e90b95",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a short-run cost diagram showing average cost, average variable cost and marginal cost, and label the two points at which marginal cost crosses an average. (4 marks)"
+    },
+    {
+     "id": "revenue-costs-profits:practice:9b1a540d",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain why a firm with a high minimum efficient scale relative to the size of its market is likely to face few competitors. (4 marks)"
+    },
+    {
+     "id": "revenue-costs-profits:practice:7a04d18a",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the effects on a firm of growing beyond its minimum efficient scale. (8 marks)"
+    },
+    {
+     "id": "revenue-costs-profits:practice:239a6d28",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss whether a firm making a loss should continue to produce in the short run. (14 marks)"
+    },
+    {
+     "id": "revenue-costs-profits:practice:745fd7b6",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that a firm earning only normal profit is performing badly. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "role-state-macroeconomy",
+   "live": [
+    {
+     "id": "role-state-macroeconomy:practice:bff60644",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'transfer payments'. (2 marks)"
+    },
+    {
+     "id": "role-state-macroeconomy:practice:47d949a1",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how an increase in government borrowing to finance public expenditure may lead to crowding out. (4 marks)"
+    },
+    {
+     "id": "role-state-macroeconomy:practice:f07a01d3",
+     "command": "Calculate",
+     "marks": 2,
+     "question": "A country's income tax charges nothing on the first $5,000 of income, 10% on income between $5,000 and $25,000, and 30% on income above $25,000. Calculate the average rate of income tax paid by a person earning $40,000. (2 marks)"
+    },
+    {
+     "id": "role-state-macroeconomy:practice:71027282",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A country's income tax charges nothing on the first $5,000 of income, 10% on income between $5,000 and $25,000, and 30% on income above $25,000. Calculate the average rate of income tax paid at incomes of $20,000 and $80,000, and use your answers to state whether the tax is progressive. (4 marks)"
+    },
+    {
+     "id": "role-state-macroeconomy:practice:c461627c",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse how an increase in the rate of an indirect tax may affect the price level and real output in an economy. (6 marks)"
+    },
+    {
+     "id": "role-state-macroeconomy:practice:bac17d38",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the likely economic effects of a significant cut in the rates of direct taxation. (20 marks)"
+    },
+    {
+     "id": "role-state-macroeconomy:practice:d0a98c94",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the significance of a large national debt for an economy. (8 marks)"
+    },
+    {
+     "id": "role-state-macroeconomy:practice:55198220",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the effectiveness of the demand-side policies used in response to the global financial crisis of 2008. (14 marks)"
+    },
+    {
+     "id": "role-state-macroeconomy:practice:090daf87",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the policies a government might use to reduce a large fiscal deficit. (20 marks)"
+    },
+    {
+     "id": "role-state-macroeconomy:practice:9e4b53e9",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the measures governments can use to control the activities of transnational corporations (TNCs). (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "supply",
+   "live": [
+    {
+     "id": "supply:practice:eb2601cc",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'supply'. (2 marks)"
+    },
+    {
+     "id": "supply:practice:b789b5b4",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a supply curve and show an extension of supply following a rise in price. (4 marks)"
+    },
+    {
+     "id": "supply:practice:33fb173c",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain how the imposition of a specific tax of $3 per unit affects the supply curve for a good. (4 marks)"
+    },
+    {
+     "id": "supply:practice:e8bcd031",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse two factors that could cause the supply curve for cement to shift to the left. (6 marks)"
+    },
+    {
+     "id": "supply:practice:7b3a88a6",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "The price of a good rises from $8 to $10. Quantity supplied rises from 400 to 460 units a week. Calculate the price elasticity of supply and interpret the value. (4 marks)"
+    },
+    {
+     "id": "supply:practice:206acf7a",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the factors that influence the price elasticity of supply of fresh cut flowers. (8 marks)"
+    },
+    {
+     "id": "supply:practice:51200a74",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the significance of the distinction between the short run and the long run for the price elasticity of supply of a mineral such as lithium. (14 marks)"
+    },
+    {
+     "id": "supply:practice:034f861e",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that price elasticity of supply is the most important factor determining how far the price of rice rises when demand increases in a developing economy. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "the-market",
+   "live": [
+    {
+     "id": "the-market:practice:74201d9d",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'demand'. (2 marks)"
+    },
+    {
+     "id": "the-market:practice:d8bf4222",
+     "command": "Discuss",
+     "marks": 8,
+     "question": "Discuss whether marketing is the most important factor influencing demand for a soft drinks producer. (8 marks)"
+    },
+    {
+     "id": "the-market:practice:1f51e1de",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two factors that could cause a fall in the supply of bottled drinks. (4 marks)"
+    },
+    {
+     "id": "the-market:practice:36affbe1",
+     "command": "Construct",
+     "marks": 4,
+     "question": "Construct a demand and supply diagram to show the effect on the market for bottled drinks of a drought that damages the fruit harvest. (4 marks)"
+    },
+    {
+     "id": "the-market:practice:4b269f6a",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "The demand schedule in this chapter's diagram gives Maji's weekly sales at each price. Using the $20 and $25 rows — 300 cases and 150 cases — calculate the price elasticity of demand and state what it shows. (4 marks)"
+    },
+    {
+     "id": "the-market:practice:94d35c06",
+     "command": "Assess",
+     "marks": 10,
+     "question": "Assess the importance of price elasticity of demand to a business deciding whether to raise its prices. (10 marks)"
+    },
+    {
+     "id": "the-market:practice:180f11c3",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse the significance of income elasticity of demand to a drinks producer whose products have values of +2, +0.5 and −0.5. (6 marks)"
+    },
+    {
+     "id": "the-market:practice:0c514523",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate whether a drinks producer should concentrate its range on products with income elastic demand. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "trade-global-economy",
+   "live": [
+    {
+     "id": "trade-global-economy:practice:43762caf",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'comparative advantage'. (2 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:4893ba66",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "A country's export price index rises from 100 to 126 while its import price index rises from 100 to 105. Calculate its terms of trade and state whether they have improved or deteriorated. (4 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:22c2ba68",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two factors that may cause a deterioration in a country's terms of trade. (4 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:ec756e2f",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse two factors that may change the pattern of trade between countries. (6 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:d44ea0c1",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the impact of an improvement in a country's terms of trade on its export revenues and its balance of trade. (8 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:2b04d16c",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that specialisation and free trade always raise a country's living standards. (20 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:1162d99f",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define trade diversion. (2 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:edce18e9",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain the difference between a free-trade area and a customs union. (4 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:6eb4ec12",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two effects of imposing a tariff on an imported good. (4 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:f0094eb8",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse two costs to a country of joining a trading bloc. (6 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:302d3ddd",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the impact of a tariff on consumers, producers and the government. (8 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:fb4ec792",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two ways in which the WTO supports trade liberalisation. (4 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:ce0fca64",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse two reasons why a government might restrict free trade. (6 marks)"
+    },
+    {
+     "id": "trade-global-economy:practice:3f8a6176",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate whether a country should join a customs union. (20 marks)"
+    }
+   ],
+   "staged": null
+  },
+  {
+   "slug": "types-sizes-businesses",
+   "live": [
+    {
+     "id": "types-sizes-businesses:practice:41e40770",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'co-operative'. (2 marks)"
+    },
+    {
+     "id": "types-sizes-businesses:practice:40c731df",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two reasons why two firms might form a joint venture rather than merge. (4 marks)"
+    },
+    {
+     "id": "types-sizes-businesses:practice:6b1dc648",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two reasons why some firms tend to remain small. (4 marks)"
+    },
+    {
+     "id": "types-sizes-businesses:practice:fe5c8be5",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain the difference between forward and backward vertical integration. (4 marks)"
+    },
+    {
+     "id": "types-sizes-businesses:practice:6660d5bb",
+     "command": "Analyse",
+     "marks": 6,
+     "question": "Analyse the likely impact on consumers of a horizontal merger between two firms in the same market. (6 marks)"
+    },
+    {
+     "id": "types-sizes-businesses:practice:15b1dd6c",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine two constraints on the growth of a business. (8 marks)"
+    },
+    {
+     "id": "types-sizes-businesses:practice:0bc48d26",
+     "command": "Discuss",
+     "marks": 14,
+     "question": "Discuss the impact of the growth of firms on workers and consumers. (14 marks)"
+    },
+    {
+     "id": "types-sizes-businesses:practice:4e3aff14",
+     "command": "Define",
+     "marks": 2,
+     "question": "Define the term 'demerger'. (2 marks)"
+    },
+    {
+     "id": "types-sizes-businesses:practice:713cf058",
+     "command": "Explain",
+     "marks": 4,
+     "question": "Explain two possible reasons why a firm might choose to demerge. (4 marks)"
+    },
+    {
+     "id": "types-sizes-businesses:practice:e2d3c8e3",
+     "command": "Calculate",
+     "marks": 4,
+     "question": "Imani Ceramics faces the demand curve P = 60 − 2Q, where Q is output in thousands of units a month, and a constant marginal cost of $20. Calculate her profit-maximising output and the price she would charge. (4 marks)"
+    },
+    {
+     "id": "types-sizes-businesses:practice:3cb79ed0",
+     "command": "Draw",
+     "marks": 4,
+     "question": "Draw a diagram showing a firm's average revenue, marginal revenue and marginal cost curves, and label the profit-maximising output and price. (4 marks)"
+    },
+    {
+     "id": "types-sizes-businesses:practice:a5f0810d",
+     "command": "Examine",
+     "marks": 8,
+     "question": "Examine the significance of the divorce of ownership from control for the objectives a large firm pursues. (8 marks)"
+    },
+    {
+     "id": "types-sizes-businesses:practice:aced507f",
+     "command": "Evaluate",
+     "marks": 20,
+     "question": "Evaluate the view that large firms pursue revenue maximisation rather than profit maximisation. (20 marks)"
+    }
+   ],
+   "staged": null
+  }
+ ]
+}

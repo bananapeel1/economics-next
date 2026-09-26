@@ -1,0 +1,22 @@
+(node:19727) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/arongijsel/Claude%20APP/economics-next-remediation/lib/recall-widgets.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/arongijsel/Claude APP/economics-next-remediation/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+managing-change — packet 50
+  before: 13 BLOCK / 23 DEBT / 2 INFO (0 recoverable)
+  after:  0 BLOCK / 0 DEBT / 4 INFO (1 recoverable)
+  new:    0 BLOCK / 0 DEBT · carried 0 () · would clear 30 baselined findings on publish
+  5 blocks · 15 subsections · 28 quiz (3 unpinned, keys 7/7/7/7) · 7 practice · 25 flashcards · 6 mistakes · 5 diagrams (7 views) · 3 chains · 3 evaluation
+  recalls: 15 of 15 subsections — 5 classify, 3 reorder, 3 fillin, 4 match
+  coverage: 10 of 10 specification leaves evidenced in the teaching text (100%)
+  words:  347 296 308 342 331 312 313 319 306 329 329 291 287 325 331
+  pins:   quiz [[3,4,5,6,7],[8,9,10,11,12],[13,14,15,16,17],[18,19,20,21,22],[23,24,25,26,27]] · practice [[1,2],[5],[0,6],[3],[4]]
+
+6 packet checks failed:
+  - structure-10: a filler misconception survives (fix round 1: the relabelled step-change one counts)
+  - structure-07: the round-0 block 1 title survived
+  - structure-07: block 1 title "Why Change Happens and How Fast" does not signal its what-triggers-change subsection
+  - structure-07: block 1 title "Why Change Happens and How Fast" does not signal its effects-of-change subsection
+  - structure-07: block 1 title "Why Change Happens and How Fast" does not signal its time-and-speed-of-change subsection
+  - recall.recoverable (the shared measure): 1 recall(s) answerable by scrolling up — sub:managing-change:sub:time-and-speed-of-change:recall: 1 answer recoverable by scrolling up — line 1 filled reads "incremental change.", which is printed above it verbatim

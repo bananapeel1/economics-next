@@ -42,26 +42,27 @@
       "examMatters": "A Define (2 marks, WEC11 Appendix 6) on \"social science\" needs the subject — human behaviour — and the method, in one sentence. The inability to run controlled experiments is the point to add when a question asks why economic predictions are uncertain.",
       "recall": {
        "id": "introductory-concepts:sub:economics-as-a-social-science:recall",
-       "type": "fillin",
-       "prompt": "Complete the description of economics as a social science:",
-       "template": [
-        "Economics is a ___ science: its subject is human behaviour",
-        "→ It cannot conduct controlled ___, because history runs only once",
-        "→ So its theories are tested against the ___ that history supplies"
-       ],
-       "answers": [
-        "social",
-        "experiments",
-        "evidence"
-       ],
-       "hints": [
-        "the kind of science that studies people rather than matter",
-        "what a chemist can repeat and an economist cannot",
-        "what a theory is checked against"
-       ],
-       "distractors": [
-        "natural",
-        "opinions"
+       "type": "classify",
+       "prompt": "Sort each piece of research into whether an economist can actually carry it out:",
+       "groups": [
+        {
+         "name": "Possible",
+         "items": [
+          "Compare two similar cities that chose different rent rules",
+          "Study what happened after a country cut its sales tax",
+          "Track how spending changed when a new bus route opened"
+         ],
+         "why": "Each uses evidence that history has already supplied: a comparison, a past episode or a natural experiment"
+        },
+        {
+         "name": "Not possible",
+         "items": [
+          "Run last year again with a higher interest rate",
+          "Freeze every other market while one tax changes",
+          "Rewind a decade and replay it without the financial crisis"
+         ],
+         "why": "Each needs a controlled experiment: rerunning history under different conditions, or holding the rest of an economy still while one thing changes"
+        }
        ]
       }
      },
@@ -103,17 +104,17 @@
       "recall": {
        "id": "introductory-concepts:sub:models-assumptions-ceteris-paribus:recall",
        "type": "reorder",
-       "prompt": "Put the stages of building an economic model in the order an economist works through them, from first to last:",
+       "prompt": "An economist studies how drivers respond to fuel prices. Put the stages of the study in the order they are carried out, from first to last:",
        "correctOrder": [
-        "Watch what people, firms or governments actually do",
-        "Set aside every influence but the one being studied",
-        "Work out what the model predicts will happen",
-        "Compare the prediction with the evidence and revise"
+        "Observe how drivers behave when fuel prices change",
+        "Assume incomes and bus fares stay constant",
+        "Derive the prediction that dearer fuel means less driving",
+        "Test that prediction against next year's fuel sales, and revise"
        ],
        "why": [
         "There is nothing to model until the behaviour has been observed",
-        "Ceteris paribus is what turns messy behaviour into a workable relationship",
-        "A model earns its keep by producing a prediction that could be wrong",
+        "Holding the other influences constant (ceteris paribus) is what isolates the effect of the fuel price",
+        "Only once the model is set up can it produce a prediction that could turn out wrong",
         "Testing comes last because it needs a prediction to test"
        ]
       }
@@ -125,6 +126,7 @@
      "Models simplify deliberately; they are judged by how well they explain.",
      "Ceteris paribus holds everything else constant so one relationship can be isolated."
     ],
+    "diagramId": null,
     "quizIndices": [
      1,
      0,
@@ -234,14 +236,14 @@
        "prompt": "Match each policy disagreement to the value judgement underneath it:",
        "pairs": [
         {
-         "left": "Keep or remove a fuel subsidy",
-         "right": "Living costs today against emissions tomorrow",
-         "why": "Both sides accept the subsidy lowers costs and raises fuel use; they weigh present and future differently"
+         "left": "Ban single-use plastic bags",
+         "right": "Shoppers' convenience against litter in rivers and seas",
+         "why": "Both sides accept what the ban does; they weigh a small daily cost against damage borne by others"
         },
         {
-         "left": "Impose or drop a tariff on imported steel",
-         "right": "Jobs in one industry against prices for everyone",
-         "why": "The effects are agreed; the disagreement is over whose interests count more"
+         "left": "Cap rents in the capital city",
+         "right": "Lower rents for tenants now against fewer homes built later",
+         "why": "The effects are agreed; the disagreement is over whether today's tenants or tomorrow's count for more"
         },
         {
          "left": "Raise the minimum wage",
@@ -266,6 +268,7 @@
      "Watch for should, ought, fair, too and unacceptable: they signal normative.",
      "Economists often agree on the effects and disagree on what should be done."
     ],
+    "diagramId": null,
     "quizIndices": [
      3,
      4,
@@ -373,24 +376,24 @@
        "prompt": "Match each resource to the reason it falls where it does:",
        "pairs": [
         {
-         "left": "Crude oil",
-         "right": "Fixed stock formed over geological time",
-         "why": "Nothing replaces what is extracted within any human timescale"
+         "left": "A coal seam",
+         "right": "Once burned, it is gone for good",
+         "why": "A non-renewable stock: every tonne used is one fewer left for anyone"
         },
         {
-         "left": "A managed forest",
-         "right": "Regrows, if felling matches replanting",
-         "why": "It is renewable at a rate, and only at that rate"
+         "left": "A cocoa farm that replants as it harvests",
+         "right": "Lasts only while harvesting keeps pace with regrowth",
+         "why": "Renewable, and used no faster than it regrows"
         },
         {
-         "left": "Sunlight on a solar farm",
-         "right": "Arrives whether or not it is used",
-         "why": "A flow resource: using it today takes nothing from tomorrow"
+         "left": "Wind over a coastal ridge",
+         "right": "No amount of use today can reduce it",
+         "why": "A flow resource: it arrives whether or not it is used"
         },
         {
-         "left": "An overfished tuna stock",
-         "right": "Renewable, but used above its sustainable rate",
-         "why": "The category is renewable; the outcome is depletion, because the rate is wrong"
+         "left": "Groundwater pumped faster than rain refills it",
+         "right": "Renewable in principle, running down in practice",
+         "why": "The category is renewable; the outcome is depletion, because the rate is too high"
         }
        ],
        "distractors": [
@@ -436,18 +439,18 @@
       "recall": {
        "id": "introductory-concepts:sub:opportunity-cost:recall",
        "type": "reorder",
-       "prompt": "Put the chain from scarcity to opportunity cost in the order the reasoning runs, from first to last:",
+       "prompt": "A farmer with one field would like to grow maize, cassava and cotton. Put her reasoning in the order it runs, from first to last:",
        "correctOrder": [
-        "Wants are greater than the resources available",
-        "A choice between competing uses becomes unavoidable",
-        "Picking one use means turning down the others",
-        "The best of those turned down is the opportunity cost"
+        "Her wants are greater than one field can supply",
+        "She cannot grow all three, so a choice has to be made",
+        "Planting maize means rejecting both cassava and cotton",
+        "Cassava, the better of the two rejected crops, is the opportunity cost"
        ],
        "why": [
         "Scarcity is the starting condition; nothing follows without it",
-        "If resources were sufficient there would be nothing to choose between",
+        "If the field could grow everything there would be nothing to choose between",
         "A choice is only a choice because alternatives are rejected",
-        "The cost is the best of the rejected uses, which is why it is the last link"
+        "The cost is the best of the rejected uses, not all of them, which is why it is the last link"
        ]
       }
      },
@@ -485,26 +488,28 @@
       "examMatters": "Multiple-choice items here almost always offer a zero-priced service as a distractor. Ask whether one more unit would use resources that had another use; if so, the good is economic.",
       "recall": {
        "id": "introductory-concepts:sub:free-goods-and-economic-goods:recall",
-       "type": "fillin",
-       "prompt": "Complete the distinction between the two kinds of good:",
-       "template": [
-        "An ___ good is scarce, so making one more unit has a positive opportunity cost",
-        "→ A ___ good is not scarce, so nothing at all is forgone in providing it",
-        "→ The test is opportunity cost, not the ___ the consumer is charged"
-       ],
-       "answers": [
-        "economic",
-        "free",
-        "price"
-       ],
-       "hints": [
-        "the kind almost every good belongs to",
-        "air to breathe and sunlight are the standard examples",
-        "what a zero-priced hospital visit misleads students about"
-       ],
-       "distractors": [
-        "public",
-        "value"
+       "type": "classify",
+       "prompt": "Sort each item into a free good or an economic good, using opportunity cost as the test:",
+       "groups": [
+        {
+         "name": "Free good",
+         "items": [
+          "Snow on a remote mountainside",
+          "Desert sand where nobody builds",
+          "Wind drying laundry on a line"
+         ],
+         "why": "Supplying one more unit uses no resource that had another use, so nothing is forgone"
+        },
+        {
+         "name": "Economic good",
+         "items": [
+          "A school lunch the pupil does not pay for",
+          "Bottled water sold at a beach kiosk",
+          "A library computer with no charge to use",
+          "Tap water a charity supplies free to a village"
+         ],
+         "why": "Each uses resources with other uses, so its opportunity cost is positive whatever the user is charged"
+        }
        ]
       }
      }
@@ -569,31 +574,31 @@
       "recall": {
        "id": "introductory-concepts:sub:the-ppf-model:recall",
        "type": "classify",
-       "prompt": "Sort each point on Maraya's frontier by where it lies and what that means:",
+       "prompt": "Maraya's frontier runs A (0, 40), B (10, 38), C (20, 33), D (30, 25), E (40, 14), F (50, 0), written (consumer, capital) in thousands. Sort each combination by where it lies:",
        "groups": [
         {
          "name": "On the frontier",
          "items": [
-          "C: 20 consumer, 33 capital",
-          "E: 40 consumer, 14 capital"
+          "(10, 38)",
+          "(40, 14)"
          ],
-         "why": "Every resource is employed and well used, so more of one good now costs some of the other"
+         "why": "Each matches the frontier exactly: every resource is employed and well used, so more of one good now costs some of the other"
         },
         {
          "name": "Inside the frontier",
          "items": [
-          "G: 20 consumer, 20 capital",
-          "A point with 10 consumer and 25 capital"
+          "(30, 15)",
+          "(40, 5)"
          ],
-         "why": "Resources are unemployed or misallocated, so more of both goods is possible with what already exists"
+         "why": "Each has less capital than the frontier allows at that level of consumer goods (25 and 14), so resources are unemployed or misallocated"
         },
         {
          "name": "Beyond the frontier",
          "items": [
-          "H: 40 consumer, 32 capital",
-          "A point with 50 consumer and 10 capital"
+          "(20, 40)",
+          "(50, 5)"
          ],
-         "why": "It exceeds what today's resources and technology can produce, whatever combination is chosen"
+         "why": "Each asks for more capital than the frontier allows at that level of consumer goods (33 and 0), which today's resources cannot produce"
         }
        ]
       }
@@ -638,25 +643,25 @@
       "recall": {
        "id": "introductory-concepts:sub:opportunity-cost-marginal-analysis:recall",
        "type": "fillin",
-       "prompt": "Complete the calculation of opportunity cost from C to D on Maraya's frontier:",
+       "prompt": "A neighbouring economy, Tamar, moves along its frontier from 15 thousand consumer and 50 thousand capital goods to 25 thousand consumer and 44 thousand capital goods. Complete the calculation:",
        "template": [
-        "Consumer goods gained = 30 − 20 = ___ thousand",
-        "→ Capital goods given up = 33 − 25 = ___ thousand",
-        "→ Opportunity cost per consumer good = given up ÷ gained = ___ capital goods"
+        "Consumer goods gained = ___ thousand",
+        "→ Capital goods given up = ___ thousand",
+        "→ Opportunity cost of one extra consumer good = ___ capital goods"
        ],
        "answers": [
         "10",
-        "8",
-        "0.8"
+        "6",
+        "0.6"
        ],
        "hints": [
-        "the gain along the horizontal axis",
+        "the change along the horizontal axis",
         "the fall along the vertical axis",
-        "given up divided by gained"
+        "what is given up divided by what is gained"
        ],
        "distractors": [
-        "1.25",
-        "5"
+        "1.67",
+        "16"
        ]
       }
      },
@@ -711,7 +716,7 @@
          "name": "Shift of the frontier",
          "items": [
           "A new copper deposit is discovered",
-          "An earthquake destroys a third of the ports",
+          "A flood washes away a quarter of the farmland",
           "Free secondary schooling raises workforce skills"
          ],
          "why": "Each changes the resources or the technology available, so it changes what the economy is capable of producing"
@@ -757,18 +762,18 @@
       "recall": {
        "id": "introductory-concepts:sub:capital-and-consumer-goods:recall",
        "type": "reorder",
-       "prompt": "Put the consequences of choosing more capital goods in the order they occur, from first to last:",
+       "prompt": "A farming economy spends a year digging irrigation canals instead of growing extra food. Put what follows in the order it happens, from first to last:",
        "correctOrder": [
-        "A point with more capital and fewer consumer goods is chosen",
-        "Households consume less this year than they could have",
-        "Extra machines and infrastructure raise output per worker",
-        "The frontier shifts outward, so more of both goods becomes possible"
+        "Workers move from harvesting crops to digging canals",
+        "Consumption of food falls this year",
+        "Watered fields raise output per farmer",
+        "The whole frontier moves outward in the years that follow"
        ],
        "why": [
-        "The choice of combination comes first; everything else follows from it",
-        "The sacrifice is immediate, because the resources are used on capital instead",
-        "Capital raises productivity only once it is built and in use",
-        "A higher output per worker is what moves the frontier, so it comes last"
+        "Choosing capital goods means moving resources away from consumer goods first",
+        "The sacrifice is immediate, because those workers are no longer producing food",
+        "The canals raise productivity only once they are built and in use",
+        "Higher output per worker is what moves the frontier, so it comes last"
        ]
       }
      }
@@ -850,18 +855,18 @@
         {
          "name": "Benefit",
          "items": [
-          "Workers become faster at a repeated task",
-          "Less time is lost switching between jobs",
-          "Narrow tasks can be mechanised"
+          "A tailor who only sews collars gets quicker with every shirt",
+          "A baker no longer stops kneading to serve customers",
+          "Wrapping sweets, now one simple motion, is done by a machine"
          ],
          "why": "Each raises output from the same workers and hours — the productivity gain Smith described"
         },
         {
          "name": "Risk",
          "items": [
-          "Repetitive work lowers motivation",
-          "One missing supplier halts the whole chain",
-          "A worker whose single task disappears has little to move to"
+          "A clerk stamping forms all day stops noticing errors",
+          "A strike at one parts maker stops a car assembly line",
+          "A packer trained for one task has no work once a machine does it"
          ],
          "why": "Each is a cost of narrowing: the gain in output is bought with dependence and fragility"
         }
@@ -903,29 +908,32 @@
       "examMatters": "Questions on money in this topic are about the four functions and their link to specialisation, not about monetary policy. Naming the function and the barrier it removes is the analysis.",
       "recall": {
        "id": "introductory-concepts:sub:money-and-exchange:recall",
-       "type": "fillin",
-       "prompt": "Complete the four functions of money:",
-       "template": [
-        "Money is a medium of ___, so no double coincidence of wants is needed",
-        "→ It is a ___ of value, so every good carries a price on one scale",
-        "→ It is a ___ of value, so worth can be kept and spent later",
-        "→ It is a method of ___ payment, so debts can be settled in the future"
-       ],
-       "answers": [
-        "exchange",
-        "measure",
-        "store",
-        "deferred"
-       ],
-       "hints": [
-        "what barter cannot arrange without a coincidence of wants",
-        "what makes two different goods comparable",
-        "what lets money be held rather than spent at once",
-        "what makes credit and wage contracts possible"
+       "type": "match",
+       "prompt": "Match each situation to the function of money it depends on:",
+       "pairs": [
+        {
+         "left": "A tailor pays a baker in cash instead of in shirts",
+         "right": "Medium of exchange",
+         "why": "The baker accepts money without needing to want shirts, so no double coincidence of wants is required"
+        },
+        {
+         "left": "A shopper weighs a phone against a bicycle by their prices",
+         "right": "Measure of value",
+         "why": "Two unlike goods become comparable because both are priced on one scale"
+        },
+        {
+         "left": "A family puts aside part of this month's wage for next year's fees",
+         "right": "Store of value",
+         "why": "The money keeps its worth while it is held, so spending can wait"
+        },
+        {
+         "left": "A farmer buys seed now and agrees to pay after the harvest",
+         "right": "Method of deferred payment",
+         "why": "The debt is fixed in money today and settled in money later"
+        }
        ],
        "distractors": [
-        "barter",
-        "interest"
+        "A double coincidence of wants"
        ]
       }
      },
@@ -966,27 +974,27 @@
        "pairs": [
         {
          "left": "Facilitate saving",
-         "right": "A household puts aside income safely and earns a return",
+         "right": "A nurse pays into a pension that grows until she retires",
          "why": "The first role is providing somewhere for unspent income to go"
         },
         {
          "left": "Make funds available",
-         "right": "A firm borrows to buy a machine before it has saved the cost",
+         "right": "A young couple takes out a mortgage to buy a flat",
          "why": "Savings are lent on, so investment need not wait for accumulated profit"
         },
         {
          "left": "Provide a forward market",
-         "right": "An importer fixes the price of a currency for delivery in six months",
+         "right": "A coffee roaster agrees today the price of beans delivered in March",
          "why": "A future price is agreed now, which transfers the risk of it moving"
         },
         {
          "left": "Provide a market for equities",
-         "right": "A company raises capital by issuing shares it never repays",
+         "right": "A start-up sells a fifth of itself to outside investors",
          "why": "Equity is permanent capital, and it is saleable, which is why investors accept it"
         },
         {
          "left": "Facilitate exchange of goods",
-         "right": "A buyer and a distant seller settle through a letter of credit",
+         "right": "An exporter in Lagos is paid by a buyer in Dubai through their banks",
          "why": "Payment systems let trade happen between parties who cannot check each other"
         }
        ]
@@ -1052,33 +1060,32 @@
       "recall": {
        "id": "introductory-concepts:sub:free-market-command-and-mixed:recall",
        "type": "classify",
-       "prompt": "Sort each feature into the economic system it belongs to:",
+       "prompt": "Each description is of a whole economy. Sort each into the economic system it describes:",
        "groups": [
         {
          "name": "Free market",
          "items": [
-          "Resources owned privately",
-          "Profit guides what is produced",
-          "Buyers and sellers decide"
+          "Bakers, builders and banks all choose their own prices and output",
+          "A bicycle shortage ends when new firms chase the profit"
          ],
-         "why": "Ownership is private and decisions are decentralised, taken by the people trading"
+         "why": "Private owners take the decisions, and prices and profit coordinate them with no plan"
         },
         {
          "name": "Command",
          "items": [
-          "The state owns the means of production",
-          "A planning authority sets output targets",
-          "Prices are set administratively"
+          "A ministry tells every factory how many tractors to make this year",
+          "Farms, mines and mills all belong to the government",
+          "Shop prices are fixed by the plan, whatever buyers want"
          ],
-         "why": "Ownership and decision-making are both central, so the plan replaces the market"
+         "why": "The state owns the resources and a plan, not the market, decides output and prices"
         },
         {
          "name": "Mixed",
          "items": [
-          "A private sector alongside state provision",
-          "Regulation of privately owned firms"
+          "Most shops are private, but the state funds the schools and taxes incomes",
+          "Private drug firms need a state agency's approval to sell"
          ],
-         "why": "Both mechanisms operate at once, which is what every real economy does"
+         "why": "A private sector and the state both allocate resources, which is what every real economy does"
         }
        ]
       }
@@ -1123,32 +1130,27 @@
       "examMatters": "On a 20-mark Evaluate a one-sided answer cannot reach the top levels. Build on conditions — where competition is weak the market case is weaker, where information is dispersed the planning case is — and let the judgement follow.",
       "recall": {
        "id": "introductory-concepts:sub:advantages-and-disadvantages-of-systems:recall",
-       "type": "match",
-       "prompt": "Match each outcome to the system whose weakness produces it:",
-       "pairs": [
+       "type": "classify",
+       "prompt": "Sort each outcome by the economic system whose weakness most likely produced it:",
+       "groups": [
         {
-         "left": "Queues for some goods beside unsold stocks of others",
-         "right": "Command: planners cannot know dispersed preferences",
-         "why": "The information needed sits with millions of buyers and never reaches the plan"
+         "name": "Free market weakness",
+         "items": [
+          "A new drug is priced beyond most patients' reach",
+          "A tannery pours waste into a river used downstream",
+          "A boom ends in a slump that closes factories"
+         ],
+         "why": "Each follows from allocation by income and private cost: need without money goes unmet, harm to others is left out, and output swings"
         },
         {
-         "left": "A life-saving treatment unavailable to those who cannot pay",
-         "right": "Free market: allocation follows income, not need",
-         "why": "A market serves demand backed by money, which need alone is not"
-        },
-        {
-         "left": "Little pressure to cut costs or improve quality",
-         "right": "Command: no competition and no profit motive",
-         "why": "Without a rival to lose customers to, there is nothing forcing improvement"
-        },
-        {
-         "left": "A factory polluting a river it does not pay for",
-         "right": "Free market: costs falling on third parties are ignored",
-         "why": "The firm's own costs do not include the damage, so its decision does not account for it"
+         "name": "Command economy weakness",
+         "items": [
+          "A factory meets its tonnage target with nails nobody can use",
+          "Bread runs out every afternoon while unsold coats pile up",
+          "A state car maker sells one model, unchanged for twenty years"
+         ],
+         "why": "Each follows from planning without prices, profit or rivals: the plan cannot know what buyers want, and nothing forces improvement"
         }
-       ],
-       "distractors": [
-        "Mixed: both mechanisms operating at once"
        ]
       }
      },
@@ -1187,29 +1189,32 @@
       "examMatters": "An Evaluate on intervention is strongest when the counter-argument is government failure rather than a general preference for markets: name the specific information the state would need and say why it may not have it.",
       "recall": {
        "id": "introductory-concepts:sub:the-role-of-the-state:recall",
-       "type": "fillin",
-       "prompt": "Complete the four roles of the state in a mixed economy:",
-       "template": [
-        "It handles ___ of goods no firm can charge for, such as defence",
-        "→ It uses ___ to set the rules firms operate under, such as pollution limits",
-        "→ It carries out ___ through taxes and transfers between income groups",
-        "→ It attempts ___ of output and employment across the economic cycle"
-       ],
-       "answers": [
-        "provision",
-        "regulation",
-        "redistribution",
-        "stabilisation"
-       ],
-       "hints": [
-        "supplying what no one can be excluded from using",
-        "changing the rules rather than replacing the market",
-        "moving income from higher to lower earners",
-        "moderating the swings a market economy produces"
+       "type": "match",
+       "prompt": "Match each government action to the role of the state it carries out:",
+       "pairs": [
+        {
+         "left": "Spraying against mosquitoes across a whole city, paid from taxes",
+         "right": "Provision",
+         "why": "No resident can be excluded from the benefit, so no firm could charge for it"
+        },
+        {
+         "left": "Banning a pesticide found in river water",
+         "right": "Regulation",
+         "why": "The market carries on; the state changes the rules it operates under"
+        },
+        {
+         "left": "Paying pensions from a tax on the highest incomes",
+         "right": "Redistribution",
+         "why": "Income moves from higher to lower earners through taxes and transfers"
+        },
+        {
+         "left": "Raising public spending as a recession deepens",
+         "right": "Stabilisation",
+         "why": "The aim is to moderate the swing in output and employment"
+        }
        ],
        "distractors": [
-        "nationalisation",
-        "privatisation"
+        "Nationalisation of every firm"
        ]
       }
      }
@@ -1721,7 +1726,7 @@
     "question": "Why can economists rarely conduct controlled experiments?",
     "options": [
      "An economy cannot be re-run with one variable changed",
-     "Governments do not allow economic experiments",
+     "Economists are not trained in scientific methods of any kind",
      "Economic data are too expensive to collect",
      "Economic theories are too complicated to test"
     ],
@@ -1733,7 +1738,7 @@
     "question": "The ceteris paribus assumption is used in economics to:",
     "options": [
      "guarantee that a model's predictions come true",
-     "remove the need to test a model against evidence",
+     "remove the need to test a model's predictions against real-world evidence",
      "prove that the model being used is realistic",
      "isolate one variable by holding the others constant"
     ],
@@ -1758,7 +1763,7 @@
     "options": [
      "Taxes on high earners are unfairly low",
      "A minimum wage above the market wage reduces employment in that market",
-     "Economic growth matters more than protecting the environment",
+     "Economic growth matters more than protecting the natural environment for future generations",
      "The distribution of income is too unequal"
     ],
     "correctIndex": 1,
@@ -1853,7 +1858,7 @@
     "question": "Which question does the economic problem of \"how to produce\" address?",
     "options": [
      "Which combination of resources and techniques is used",
-     "Who receives the goods that are eventually made",
+     "Who receives the goods and services that the economy eventually makes",
      "Whether the economy is growing or shrinking",
      "Which goods society chooses to make at all"
     ],
@@ -1866,7 +1871,7 @@
     "options": [
      "the combination is unattainable",
      "technology has improved",
-     "the economy is producing efficiently",
+     "the economy is producing efficiently with all of its resources",
      "resources are unemployed or misallocated"
     ],
     "correctIndex": 3,
@@ -1960,7 +1965,7 @@
     "id": "introductory-concepts:quiz:7b206b58",
     "question": "Why does a production possibility frontier slope downward?",
     "options": [
-     "Because consumers prefer one good to the other",
+     "Because consumers always prefer one of the two goods to the other",
      "Because opportunity cost is constant",
      "Because technology is improving over time",
      "Because resources are scarce and already fully used"
@@ -1987,7 +1992,7 @@
      "Output per worker tends to fall",
      "Work becomes repetitive, which can lower motivation and quality",
      "Firms can no longer use machinery",
-     "Training costs rise because each worker learns every task"
+     "Training costs rise because each worker must now learn every single task"
     ],
     "correctIndex": 1,
     "explanation": "Narrow, repeated tasks are monotonous, which raises turnover and can reduce quality. Output per worker rises, machinery becomes easier, and training per worker becomes cheaper."
@@ -1997,7 +2002,7 @@
     "question": "Specialisation and the division of labour are most likely to lead to:",
     "options": [
      "a fall in total output",
-     "greater self-sufficiency for each worker",
+     "greater self-sufficiency for each worker and each household",
      "higher output and greater dependence on exchange",
      "the end of structural unemployment"
     ],
@@ -2034,7 +2039,7 @@
     "options": [
      "Facilitating saving",
      "Providing a forward market in currencies",
-     "Making funds available to businesses",
+     "Making funds available to businesses that want to expand",
      "Providing a market for equities"
     ],
     "correctIndex": 1,
@@ -2095,63 +2100,63 @@
     "command": "Explain",
     "marks": 4,
     "question": "Explain one assumption commonly made when constructing economic models. (4 marks)",
-    "guidance": "Knowledge: a model is a simplified representation of an economic relationship, built by assuming away the influences not being studied. Application: name one assumption and say what it sets aside — ceteris paribus, that all other influences are held constant; or that buyers know every price in the market; or that agents act in their own interest. Analysis: develop it in two stages — the assumption is what lets the model produce a definite prediction from one variable, and it is also the limit on that prediction, because a conclusion only holds while the assumption does. A candidate who defines the assumption without saying what it buys and what it costs has answered half the question."
+    "guidance": "Pick one assumption and stay with it. Say what it is, then say what it lets the model do and what it costs the model: an assumption is useful because it simplifies, and limited for exactly the same reason.\nKnowledge: a model is a simplified representation of an economic relationship, built by assuming away the influences not being studied (1 mark). Application: one named assumption and what it sets aside, such as ceteris paribus, holding every other influence constant; or that buyers know every price in the market; or that agents act in their own interest (1 mark). Analysis, first stage: the assumption is what lets the model produce a definite prediction from a change in one variable (1 mark). Analysis, second stage: it is also the limit on that prediction, because the conclusion holds only while the assumption does (1 mark). Defining the assumption without saying what it buys and what it costs answers half the question."
    },
    {
     "id": "introductory-concepts:practice:d0317032",
     "command": "Explain",
     "marks": 4,
     "question": "Explain, using one example of each, the difference between a positive and a normative statement. (4 marks)",
-    "guidance": "Knowledge: a positive statement is an objective claim about what is, which evidence could confirm or refute; a normative statement is a claim about what ought to be and rests on a value judgement. Application: a worked pair — \"a 20% tax on sugary drinks reduced their sales by 8%\" is positive and could be checked against sales data; \"the tax on sugary drinks ought to be higher\" is normative and no data settles it. Analysis: explain why the second cannot be tested — it depends on the weight given to health against freedom of choice and the cost to poorer households — and note that a positive statement may still turn out to be false, because testable is not the same as true."
+    "guidance": "Define each kind of statement by the test that tells them apart, not by whether you agree with it. Then give one example of each that you could put to that test, and say why one of them passes it and the other cannot.\nKnowledge: a positive statement is an objective claim about what is, which evidence could confirm or refute (1 mark); a normative statement is a claim about what ought to be and rests on a value judgement (1 mark). Application: a worked pair, such as \"a 20% tax on sugary drinks reduced their sales by 8%\", which could be checked against sales data, and \"the tax on sugary drinks ought to be higher\", which no data settles (1 mark). Analysis: the second cannot be tested because it depends on the weight given to health against freedom of choice and the cost to poorer households, while the first may still turn out false, because testable is not the same as true (1 mark)."
    },
    {
     "id": "introductory-concepts:practice:daea62ef",
     "command": "Define",
     "marks": 2,
     "question": "Define the term 'opportunity cost'. (2 marks)",
-    "guidance": "The value of the next best alternative forgone when a choice is made. Both halves are needed: it is the next best alternative, singular, not every alternative given up, and it is a value forgone rather than the money paid — a student who revises instead of taking a paid shift bears the forgone wages as the cost. A definition that says only \"what you give up\" is incomplete."
+    "guidance": "A definition of this term has two parts, and a vague phrase earns neither. Be precise about how many alternatives count, and about whether the cost has to be money.\nThe next best alternative (1 mark) forgone when a choice is made (1 mark). It is the next best alternative, singular, not every alternative given up, and it is a value forgone rather than the money paid: a student who revises instead of taking a paid shift bears the forgone wages as the cost. \"What you give up\" alone is incomplete."
    },
    {
     "id": "introductory-concepts:practice:81d54f89",
     "command": "Explain",
     "marks": 4,
     "question": "Explain two reasons why the basic economic problem affects both households and governments. (4 marks)",
-    "guidance": "Knowledge: the basic economic problem is scarcity — unlimited wants meeting finite resources — which forces every economic agent to choose. Application: one reason for each agent. A household has a finite income and unlimited wants, so spending on school fees means not buying a motorcycle. A government has a finite tax revenue and competing demands, so funding a hospital means not funding a port. Analysis: both chains end in the same place — the choice cannot be avoided, and whichever option is rejected is the opportunity cost. The mark is for showing scarcity operating on both agents, not for defining it twice."
+    "guidance": "Start from what the basic economic problem is, then take each agent in turn. For each one, name the limited resource it works with and the choice that limit forces on it.\nKnowledge: the basic economic problem is scarcity, unlimited wants meeting finite resources, which forces every economic agent to choose (1 mark). Application to a household: a finite income against unlimited wants, so spending on school fees means not buying a motorcycle (1 mark). Application to a government: a finite tax revenue against competing demands, so funding a hospital means not funding a port (1 mark). Analysis: both chains end in the same place: the choice cannot be avoided, and whichever option is rejected is the opportunity cost (1 mark). The marks are for showing scarcity operating on both agents, not for defining it twice."
    },
    {
     "id": "introductory-concepts:practice:91e2bfe8",
     "command": "Calculate",
     "marks": 4,
     "question": "Maraya can produce 30 thousand consumer goods and 25 thousand capital goods (point D), or 40 thousand consumer goods and 14 thousand capital goods (point E). Calculate the opportunity cost of one extra consumer good in moving from D to E. (4 marks)",
-    "guidance": "Show the working in three stages. Consumer goods gained = 40 − 30 = 10 thousand. Capital goods given up = 25 − 14 = 11 thousand. Opportunity cost per consumer good = 11 ÷ 10 = 1.1 capital goods. State the unit: the answer is 1.1 capital goods per consumer good, not a bare 1.1. A candidate who divides the other way round (10 ÷ 11 = 0.91) has calculated the opportunity cost of a capital good instead, which the question did not ask for."
+    "guidance": "Work out what is gained and what is given up separately before dividing, and decide which good goes on top of the fraction by asking what the cost is measured in. Show every stage, and finish with the unit.\nConsumer goods gained = 40 − 30 = 10 thousand (1 mark). Capital goods given up = 25 − 14 = 11 thousand (1 mark). Opportunity cost per consumer good = 11 ÷ 10 = 1.1 (1 mark). The unit: 1.1 capital goods per consumer good, not a bare 1.1 (1 mark). Dividing the other way round (10 ÷ 11 = 0.91) gives the opportunity cost of a capital good instead, which the question did not ask for."
    },
    {
     "id": "introductory-concepts:practice:bc232b6c",
     "command": "Draw",
     "marks": 4,
     "question": "Draw a production possibility frontier for an economy producing capital goods and consumer goods, and mark a point that shows productive inefficiency. (4 marks)",
-    "guidance": "Label both axes with the good and its units. Draw the curve bowed outward from the origin (concave), meeting each axis, and never straight or wavy. Mark a point clearly inside the curve and label it — that is the productively inefficient point, where resources are unemployed or misallocated. A brief annotation showing that more of both goods is available from that point demonstrates why it is inefficient. Marks are lost for unlabelled axes and for a curve that bows the wrong way."
+    "guidance": "A Draw question is marked on the labels as much as on the shape. Decide what each axis measures before you draw, think about which way the curve bows and why, and ask where a point must sit if resources are going unused.\nBoth axes labelled with the good and its units (1 mark). A curve bowed outward from the origin, concave, meeting each axis, never straight or wavy (1 mark). A point clearly inside the curve (1 mark), labelled as productively inefficient, where resources are unemployed or misallocated, with a brief annotation that more of both goods is available from it (1 mark). Marks are lost for unlabelled axes and for a curve that bows the wrong way."
    },
    {
     "id": "introductory-concepts:practice:d0eaebbd",
     "command": "Examine",
     "marks": 8,
     "question": "Examine the usefulness of a production possibility frontier diagram in illustrating the basic economic problem. (8 marks)",
-    "guidance": "Knowledge and application: the PPF shows scarcity as the boundary itself, choice as the need to pick a point on it, and opportunity cost as the amount of one good given up for the other. Points inside show unemployed or misallocated resources; points beyond show what is unattainable; a shift shows growth or decline. Analysis: develop at least two of those with a chain, for example that the concave shape carries a substantive claim — resources are imperfectly substitutable, so each extra unit costs more than the last. Examination: weigh the limits. The model handles two goods where a real economy produces millions; it assumes a fixed stock of resources and fixed technology at a moment when both change continuously; and it shows what is possible, not what is chosen or desirable, so it cannot say which point on the curve is the right one. Conclude on the condition: it is a clear teaching and analytical device for scarcity, choice and opportunity cost, and it is not a description of a real economy."
+    "guidance": "Examine asks what the diagram shows well and where it stops being useful, so plan both halves before you write. Take scarcity, choice and opportunity cost one at a time and ask how the diagram shows each, then ask what a real economy has that the diagram leaves out.\nKnowledge and application: the PPF shows scarcity as the boundary itself, choice as the need to pick a point on it, and opportunity cost as the amount of one good given up for the other. Points inside show unemployed or misallocated resources; points beyond show what is unattainable; a shift shows growth or decline. Analysis: develop at least two of those with a chain, for example that the concave shape carries a substantive claim: resources are imperfectly substitutable, so each extra unit costs more than the last. Examination: weigh the limits. The model handles two goods where a real economy produces millions; it assumes a fixed stock of resources and fixed technology at a moment when both change continuously; and it shows what is possible, not what is chosen or desirable, so it cannot say which point on the curve is the right one. Conclude on the condition: it is a clear teaching and analytical device for scarcity, choice and opportunity cost, and it is not a description of a real economy."
    },
    {
     "id": "introductory-concepts:practice:b99104dd",
     "command": "Evaluate",
     "marks": 20,
     "question": "Evaluate the view that specialisation and the division of labour always lead to improved economic outcomes. (20 marks)",
-    "guidance": "The word \"always\" is what the answer must judge, and a conclusion that does not address it cannot reach the top levels. Knowledge, application and analysis: define specialisation and the division of labour; set out the gains with Adam Smith's three reasons — dexterity from repetition, time saved not switching tasks, and the mechanisation a narrow task permits — and chain each to higher output per worker, lower unit costs, lower prices and higher real incomes. Apply to a worker, a firm and a country. Evaluation: set against this the monotony that lowers motivation and quality, the over-dependence that lets one broken link halt a chain, the structural unemployment that follows when a narrow task disappears, and for a country the exposure to a fall in the price of its single export. The judgement should be conditional rather than absolute: the gains hold where exchange is reliable, where specialised resources can be redeployed, and where the risk of dependence is bearable — and \"always\" fails precisely where those conditions fail. Say which condition matters most and why."
+    "guidance": "The word \"always\" is what the answer must judge, so decide early what your judgement will depend on. Build the case for the gains as chains, build the case against as fully, apply both to a worker, a firm and a country, and state the conditions under which the gains hold.\nKnowledge, application and analysis: define specialisation and the division of labour; set out the gains with Adam Smith's three reasons, dexterity from repetition, time saved not switching tasks, and the mechanisation a narrow task permits, and chain each to higher output per worker, lower unit costs, lower prices and higher real incomes. Apply to a worker, a firm and a country. Evaluation: set against this the monotony that lowers motivation and quality, the over-dependence that lets one broken link halt a chain, the structural unemployment that follows when a narrow task disappears, and for a country the exposure to a fall in the price of its single export. The judgement should be conditional rather than absolute: the gains hold where exchange is reliable, where specialised resources can be redeployed, and where the risk of dependence is bearable, and \"always\" fails precisely where those conditions fail. Say which condition matters most and why. A conclusion that does not address \"always\" cannot reach the top level."
    },
    {
     "id": "introductory-concepts:practice:53d5f238",
     "command": "Analyse",
     "marks": 6,
     "question": "Analyse two ways in which the state allocates resources in a mixed economy. (6 marks)",
-    "guidance": "Build two chains of reasoning, each naming a role and following it through. Provision: some goods cannot profitably be supplied privately because no one can be excluded from using them — defence, street lighting, flood barriers — so the state funds them from taxation and resources are directed to them that the market would not have directed. Regulation: a rule such as a pollution limit forces a firm to bear a cost it previously imposed on others, so its costs rise, its output falls, and resources move away from the activity. Redistribution and stabilisation are equally acceptable choices. The marks are for the chains, not the list: a named role with two linked steps beats four roles asserted."
+    "guidance": "Analyse asks for depth, so choose two roles of the state and follow each one through to where resources end up, rather than listing several. For each, ask what the market would have done on its own and what the state changes.\nFirst way, knowledge: provision, because some goods cannot profitably be supplied privately when no one can be excluded from using them, such as defence, street lighting and flood barriers (1 mark). Application and analysis: the state funds them from taxation (1 mark), so resources are directed to them that the market would not have directed (1 mark). Second way, knowledge: regulation, such as a pollution limit (1 mark). Application and analysis: it forces a firm to bear a cost it previously imposed on others, so its costs rise and its output falls (1 mark), and resources move away from the activity (1 mark). Redistribution and stabilisation are equally acceptable choices. A named role with two linked steps beats four roles asserted."
    }
   ],
   "flashcards": [

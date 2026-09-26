@@ -1,0 +1,106 @@
+title: Aggregate Demand — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/aggregate-demand-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What are the components of aggregate demand?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Aggregate demand (AD) = C + I + G + (X − M), where C is consumer spending, I is investment by firms, G is government spending, and (X − M) is net exports (exports minus imports). A change in any component shifts the AD curve."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What causes the AD curve to shift right?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "AD shifts right when total spending increases. Common causes include: lower interest rates (increases C and I), tax cuts (increases disposable income and C), increased government spending (G rises), a weaker exchange rate (boosts X, reduces M), or rising consumer confidence (increases C)."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Aggregate Demand — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 2.3.2 Aggregate Demand"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain two factors that could cause a rightward shift of the aggregate demand (AD) curve.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Aggregate demand (AD) is the total planned expenditure in an economy at a given price level, consisting of AD = C + I + G + (X − M) . K First, a cut in income tax would increase households' disposable income , leading to a rise in consumer spending (C) . A With more income available after tax, consumers can afford to spend more on goods and services, shifting AD rightward. A Second, a fall in the exchange rate would make exports cheaper for foreign buyers and imports more expensive for domestic consumers. A This would increase net exports (X − M) , as export demand rises and import spending falls, shifting AD to the right. A"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine how a reduction in interest rates might increase aggregate demand.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Aggregate demand (AD) is the total demand for goods and services at a given price level, comprising C + I + G + (X – M) . K Interest rates represent the cost of borrowing and the reward for saving. A reduction in the base rate by the central bank transmits through several channels to increase AD. K First, lower rates reduce mortgage and loan repayments , increasing households' disposable income. An With more money available, consumer spending (C) rises. The incentive to save also falls — the opportunity cost of spending decreases — so consumers are more likely to spend rather than save. An For example, when the Bank of England cut rates to 0.1% during COVID-19 , it aimed to support household spending during the downturn. A Second, lower borrowing costs make investment projects more profitable . Firms compare the expected rate of return on investment with the interest rate — when the rate falls, more projects become viable. An Business investment (I) increases in new machinery, technology, and expansion. This effect is amplified by the accelerator — rising output encourages even more investment. An Third, lower interest rates tend to cause the exchange rate to depreciate — hot money flows out seeking higher returns abroad. An A weaker pound makes exports cheaper for foreign buyers and imports more expensive for domestic consumers, improving net exports (X – M) . An Through these three channels — higher consumption, higher investment, and improved net exports — the AD curve shifts to the right. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Evaluate (20 marks)",
+   "text": "Evaluate the view that consumer spending is the most important determinant of economic growth.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Consumer spending (C) is typically the largest component of aggregate demand, accounting for approximately 63% of UK GDP . A Economic growth can be driven in the short run by increases in AD and in the long run by improvements in productive capacity. The question is whether consumption — though the largest AD component — is truly the most important driver of growth, or whether other factors are more significant. An In the short run, consumer spending is arguably the most powerful driver of growth because of its sheer size. An When consumer confidence rises — due to wage growth, low unemployment, or rising house prices — the multiplier effect amplifies the increase in spending across the economy. K The UK's post-COVID recovery in 2021 was largely driven by a surge in consumer spending as households released savings accumulated during lockdowns. A Conversely, a collapse in consumer confidence — as during the 2008 financial crisis — can single-handedly trigger a recession, regardless of government or investment spending. An However, long-run sustainable growth depends more on investment (I) and supply-side improvements than on consumption. An Investment in capital, technology, and infrastructure shifts the LRAS curve right , increasing the economy's productive capacity without causing inflation. K China's extraordinary growth from 1990 to 2020 was driven by massive capital investment (often 40–45% of GDP), not consumption. A Furthermore, consumption-led growth can be unsustainable if financed by debt — the UK's pre-2008 growth was partly fuelled by rising household debt, which proved fragile. An The relative importance of consumer spending depends on the time horizon and stage of the business cycle . An In a recession with a negative output gap, stimulating consumer spending is the fastest way to restore growth — the Keynesian argument for demand management. An However, at or near full employment, further increases in C simply cause demand-pull inflation without increasing real output. An In developing economies, the binding constraint is often capital formation , not demand — investment in education, infrastructure, and technology matters more than consumption. An Net exports also matter — export-led growth strategies (South Korea, Germany) suggest that (X – M) can be a more important growth driver than domestic consumption in certain contexts. A On balance, consumer spending is the most important short-run determinant of economic growth due to its size and multiplier effects. However, it is not the most important for long-run, sustainable growth , which depends on investment, human capital, and technological progress. The most effective growth strategy combines demand-side support (maintaining consumer confidence and spending) with supply-side investment in productive capacity. An"
+   }
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+title: Aggregate Supply — Exam Questions &amp; Model Answers | Edexcel IAL Economics | Revvy Learn
+canonical: https://revvylearn.com/economics/aggregate-supply-model-answers
+{
+ "@context": "https://schema.org",
+ "@type": "EducationalOrganization",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "description": "Revision platform for Edexcel International A-Level Economics and Business. Notes, diagrams and practice questions are free. Flashcards, quizzes and the AI tutor unlock with Pro.",
+ "sameAs": [
+  "https://instagram.com/revvylearn"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Free",
+   "price": "0",
+   "priceCurrency": "GBP",
+   "description": "Edexcel IAL Economics and Business revision notes, diagrams and practice questions, with no subscription"
+  },
+  {
+   "@type": "Offer",
+   "category": "Educational Resources",
+   "name": "Revvy Learn Pro",
+   "description": "Subscription unlocking flashcards, quizzes and the AI tutor"
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Revvy Learn",
+ "url": "https://revvylearn.com",
+ "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://revvylearn.com/glossary?q={search_term_string}",
+  "query-input": "required name=search_term_string"
+ }
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is the difference between SRAS and LRAS?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Short-run aggregate supply (SRAS) shows the total output firms are willing to supply at different price levels, given fixed input costs. Long-run aggregate supply (LRAS) represents the economy's maximum productive capacity at full employment. SRAS can shift due to input cost changes; LRAS shifts when the productive capacity of the economy changes (e.g. through investment, education, or technological progress)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do supply-side policies shift LRAS?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Supply-side policies increase the economy's productive potential. Education and training raise human capital and labour productivity. Deregulation increases competition and efficiency. Lower corporation tax incentivises investment in capital. Infrastructure spending reduces transport costs. All these increase potential output, shifting LRAS rightward and enabling non-inflationary growth."
+   }
+  }
+ ]
+}
+---
+{
+ "@context": "https://schema.org",
+ "@type": "Quiz",
+ "name": "Aggregate Supply — Exam Questions & Model Answers",
+ "about": {
+  "@type": "Thing",
+  "name": "Edexcel IAL Economics 2.3.3 Aggregate Supply"
+ },
+ "educationalLevel": "International A Level",
+ "hasPart": [
+  {
+   "@type": "Question",
+   "name": "Examine (8 marks)",
+   "text": "Examine the impact of supply-side policies on long-run aggregate supply (LRAS).",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Supply-side policies are government measures designed to increase the productive potential of the economy by improving the quality and quantity of factors of production. K Long-run aggregate supply (LRAS) represents the economy's maximum output at full employment of resources. K Interventionist supply-side policies include government investment in education and training , which raises human capital . A A more skilled workforce is more productive — each worker produces more output per hour — which increases the economy's productive capacity . An Similarly, investment in infrastructure (e.g. transport networks) reduces firms' costs and improves efficiency, further expanding potential output. An On a diagram, LRAS shifts rightward from LRAS₁ to LRAS₂, enabling the economy to produce more at every price level. D Market-based supply-side policies such as deregulation and reducing corporation tax work by increasing incentives and competition. A Deregulation removes barriers to entry, increasing competition and driving firms to innovate and cut costs. Lower corporation tax raises post-tax profits, incentivising greater investment in capital equipment and technology. An The resulting rightward shift of LRAS enables non-inflationary economic growth — real GDP rises without upward pressure on the price level — and can reduce structural unemployment by addressing skills gaps and labour market rigidities. An However, these benefits are typically long-term , taking years to materialise, and may involve short-term costs such as government spending on education or transition periods after deregulation. An"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Explain (4 marks)",
+   "text": "Explain what might cause the short-run aggregate supply (SRAS) curve to shift to the left.",
+   "answerCount": 1,
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The short-run aggregate supply (SRAS) curve shows the total output firms are willing to supply when some costs (e.g. wages) are fixed. K SRAS shifts left when production costs rise across the economy — at every price level, firms supply less because it is less profitable. K For example, a sharp rise in oil prices increases energy and transport costs for firms across all sectors, reducing SRAS. A Similarly, a weaker exchange rate increases the cost of imported raw materials, or a rise in the national minimum wage increases labour costs. A In each case, higher costs shift SRAS left, causing cost-push inflation and potentially stagflation."
+   }
+  }
+ ]
+}
