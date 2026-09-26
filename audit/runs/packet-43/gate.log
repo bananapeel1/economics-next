@@ -1,0 +1,24 @@
+# Packet 43 — economic-growth — Gate run, 2026-09-26
+
+## Core gate checks (exit codes)
+
+npm test                          0 (303/303 pass)
+npm run build                     0 (site builds cleanly)
+npm run validate                  0 (0 BLOCK, 0 new DEBT vs baseline)
+npm run exposure                  0 (0 starved chapters)
+npm run recalls                   0 (0 worse than baseline)
+node check-staged-drafts.mjs      0 (staged draft matches API, 0 drift)
+
+## Advisory checks (exit codes only)
+
+npm run contrast                  0 (theme tokens clean)
+npm run spec-items                0 (spec-items.json canonical)
+npm run tariff-census             0 (tariff-census.json canonical)
+npm run pin-check                 0 (4 broken pins, within baseline of 15)
+
+## Summary
+
+All gates green. The section is staged and ready for the next phase (Verify A/B/handoff).
+No publish executed (per task scope: stage only, do not publish).
+No commit executed (per PROTOCOL: gate passes, then Verify A, then handoff).
+

@@ -12491,10 +12491,10 @@
    "rank": 0,
    "text": "Make diagrams appear in Learn Mode: rename diagramRefs to match titles (e.g. 'trade cycle', 'output gap', 'ppf') or fix the matcher in LearnModeTab.jsx:97-104 to normalise hyphens/spaces; add the PPF diagram to Block 1 and the output-gap diagram to Block 2.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[0,1,3,4].diagramId resolve by id (utils.js:130-135 via checkin-placement.js:46); PPF 27bc75b7 on ch1, output-gap 4696fc39 on Output Gaps; no diagramRef left; staged draft = API ?draft=1",
    "note": null
   },
   {
@@ -12504,10 +12504,10 @@
    "rank": 1,
    "text": "Rewrite the six weak/not-orderable recalls: replace costs-growth-environment and supply-side-causes rankings with classification exercises, fix the cyclic four-phase reorder by anchoring a start point, collapse the duplicated LRAS-chain reorder, and replace trivial collocation fill-ins (actual-economic-growth, relationship-actual-potential, demand-side-causes, benefits-growth, growth-living-standards) with banks where two words genuinely compete.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: all six named recalls replaced; rankings now classify; cyclic reorder impossible (trade-cycle block removed, structure-03 wont-fix); single reorder; named fill-ins now classify/match; all 7 fillins carry 3 authored distractors. New residual in verify-a.md: export-led blank 1 'as an ___' is grammar-determined",
    "note": null
   },
   {
@@ -12517,10 +12517,10 @@
    "rank": 2,
    "text": "Fix practice: remove the Unit 4 FDI question, change 'Define (4 marks)' to a 2-mark define or a 4-mark explain, change 'Outline' to 'Explain', map practice to blocks by topic rather than sorted mark index, and rewrite 10/20-mark guidance as levels-based KAA/evaluation descriptors with a required diagram.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "DB draft (curl :3001 ?draft=1, == packet-43-bundle practice) practice[4] Examine 8 / [6] Evaluate 20 / [8] Discuss 14 guidance para 2 now carries Level 1-3 / 1-4 / 1-4 bands ending in brief assessment / supported judgement / critical assessment, 0 '(n marks)' allocations, ladder hidden from para 0 (InlinePractice.jsx:41-43,166-168); Unit-4 FDI, Define 4, Outline, 'levels-marked', KAA = 0; pins raw-order topical (checkin-placement.js:51). Diagram clause refused per Appendix 6 (econ_spec.txt:2733-2747 credits no diagram under Discuss/Evaluate; NEXT.md:4936 precedent); p6 still says plan a diagram (PPF).",
    "note": null
   },
   {
@@ -12530,10 +12530,10 @@
    "rank": 3,
    "text": "Correct the accuracy slips a teacher would catch: 'movement along the PPF' → 'from inside towards the PPF'; 'elastic section of SRAS' → consistent Keynesian/classical model; 'falling real wages' in a positive gap; standardise cycle-phase names across text, diagram and extras.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: PPF slip fixed everywhere; 0 hits for SRAS/elastic/real wage/boom/slump/trough/cycle incl SVG text; one Keynesian LRAS model across content[0].sections[1], diagram 27bc75b7, practice[9]",
    "note": null
   },
   {
@@ -12543,10 +12543,10 @@
    "rank": 4,
    "text": "Trim redundancy and add missing spec content: merge Block 6 into Blocks 1 and 4, dedupe the quiz bank (Q9/Q20, Q16, Q21, Q23) and replace duplicates with items on export-led growth, trend growth, and impact on firms / current-vs-future living standards, which are currently untaught.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: Block 6 merged away; quiz near-duplicates gone (max Jaccard 0.37); new quiz on export-led q6/q7, trend q27, firms q18, current-vs-future q21, each also taught in content[]",
    "note": null
   },
   {
@@ -12555,10 +12555,10 @@
    "kind": "accuracy",
    "text": "Actual vs Potential Economic Growth > actual-economic-growth > examMatters: Says to 'link actual growth to a movement along the PPF'. Actual growth from spare capacity is a movement from INSIDE the PPF towards it; a movement ALONG the PPF is reallocation, which quiz Q3's own explanation says 'is not growth'. Content contradicts its own quiz.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[0].sections[0].body[1-2]: actual growth = inside PPF towards it, along = reallocation; every 'along' hit (misconception, notes[0], quiz[1], quiz[3], mistakes[0]) consistent; examMatters no longer cites PPF",
    "note": null
   },
   {
@@ -12567,10 +12567,10 @@
    "kind": "practice",
    "text": "p0: 'Define the term economic growth (4 marks)' — IAL Economics 'Define' questions are 2 marks (definition + development). A 4-mark item would be 'Explain...' or a Section A supported MCQ (1 + 3). The guidance awards marks for the actual/potential distinction and measurement method, which a 'define' does not invite. This is also the item Learn Mode surfaces first (sortedPractice index 0, 'worked' mode) so it sets the wrong expectation.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle practice[0] = Define 2 marks 'potential economic growth', 1+1 guidance; first raw-order pin of ch1 (checkin-placement.js:50-51) so it is what Learn Mode serves first",
    "note": null
   },
   {
@@ -12579,10 +12579,10 @@
    "kind": "practice",
    "text": "p2: 'Assess the importance of FDI in promoting economic growth in developing countries (10 marks)' is WEC14 Unit 4 (development/FDI) content, not Unit 2 economic growth. Additionally the guidance is a points list summing to 10 (2+2+2+1+1+1+1), whereas IAL 10-mark 'Assess' is levels-marked (KAA and evaluation levels). Never shown in Learn Mode either (practiceIndices only reach sorted indices 0-2).",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle practice[]: 0 hits for developing countries / Assess / 10 marks; FDI now practice[2] Analyse 6 on potential growth (2.3.5 1d), taught in content[1].sections[0]",
    "note": null
   },
   {
@@ -12591,10 +12591,10 @@
    "kind": "structure",
    "text": "NO diagrams render in Learn Mode for this section. LearnModeTab.jsx:97-104 matches step.diagramRef to diagram titles by case-insensitive substring; block refs are 'ad-as-growth', 'output-gap-diagram', 'trade-cycle-diagram', 'ad-as-shifts', 'ad-as-growth-analysis' (hyphenated) while titles are 'The Business (Trade) Cycle', 'Output Gap Diagram', 'PPF: Actual vs Potential Growth' (spaces). Verified: zero matches for all six blocks. For a topic whose exam value is almost entirely diagrammatic (PPF, AD/AS, trade cycle), students see three well-drawn diagrams only on the Diagrams tab. The PPF diagram, ideal for Block 1, is never referenced by any block; Block 5 has no diagramRef at all.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: 4 of 5 check-ins pin a diagramId that exists in diagrams[] (content[2] decided null); resolved by id at checkin-placement.js:46, not the title matcher",
    "note": null
   },
   {
@@ -12603,10 +12603,10 @@
    "kind": "structure",
    "text": "Block 6 'Economic Growth and AD/AS Analysis' re-teaches Block 1 (actual = AD shift, potential = LRAS shift) and Block 4 (demand-side vs supply-side) a third time, with a duplicated reorder (potential-economic-growth vs lras-shifts-growth) and near-identical flows. 17 subsections / 11 Learn Mode steps for one spec point is long; merging Block 6 into Blocks 1 and 4 would cut ~3 steps without losing content.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: AD/AS analysis block gone (5 blocks); only 1 reorder in section (balance-of-trade chain); AD three-ranges flow (content[0]) and competition flow (content[1]) are distinct",
    "note": null
   },
   {
@@ -12615,11 +12615,11 @@
    "kind": "structure",
    "text": "Sequencing within Block 3: the four-phase overview of the cycle is introduced in the THIRD subsection ('Recovery and Stages of the Cycle', body para 2) after Boom and Recession have already been taught. The overview (and the trade-cycle diagram) should open the block.",
    "packet": 43,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Not built, by Rule 1. The item asks to move the trade cycle's four-phase overview to the top of the 'Business (Trade) Cycle' block. 'cycle', 'boom', 'slump' and 'trough' are each 0 hits in audit/raw/econ_spec.txt; 'recession' has one hit, :902, which is 2.3.1 1g (measures-economic-performance). The block is UK GCE material and is not rebuilt: what 2.3.5 asks about fluctuation is 4a (actual growth against the long-term trend) and 4c (characteristics of positive/negative output gaps), both built in the Output Gaps chapter (scripts/_packet43-content.mjs trendGrowth / positiveGapCharacteristics / negativeGapCharacteristics). The runner re-counts every one of those words in the spec and bans them in student text (scripts/_packet43-util.mjs BANNED). (packet 43, 26 Sep 2026)"
   },
   {
    "id": "C-economic-growth-structure-04",
@@ -12627,10 +12627,10 @@
    "kind": "structure",
    "text": "2-per-step pairing: Block 1 = [actual, potential], [relationship]; Block 2 = [positive, negative], [implications]; Block 3 = [boom, recession], [recovery]; Block 4 = [demand, supply]; Block 5 = [benefits, env costs], [living standards]; Block 6 = [AD, LRAS], [combined]. Pairs are coherent, but every 3-section block ends with a lone-section step carrying diagram + quiz + practice + explain-back + takeaway, making the final step of each block much heavier than the others.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "lib/learn-steps.js:62-80 builds one teach step per subsection plus a separate check-in step carrying diagram/quiz/practice/takeaway, so no lone teaching section is loaded with the chapter-end widgets",
    "note": null
   },
   {
@@ -12639,10 +12639,10 @@
    "kind": "structure",
    "text": "Practice mapping is by sorted-marks index not by topic: Block 3 (trade cycle) gets 'Define economic growth' (4m), Block 4 (causes) gets 'Outline actual vs potential' (4m), Block 5 gets 'Explain two costs' (6m, the only topical match). The 10-mark and 20-mark items are never reached in Learn Mode.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle practiceIndices topical, raw order (checkin-placement.js:50-51): ch1 p0/p1, ch2 p2/p3, ch3 p4/p5, ch4 p6/p7, ch5 p8/p9; 20-mark p6 and 14-mark p8 are first pins so both are served",
    "note": null
   },
   {
@@ -12651,10 +12651,10 @@
    "kind": "structure",
    "text": "quizIndices only reference Q0-Q5; Q6-Q23 appear only in PreTest/PostTest sampling and the Quiz tab. Since the pre-test samples 3 random from 24 mostly-duplicate items, the pre/post comparison is noisy.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle quizIndices chapter-addressed Q3-Q33; pre-test = pretest-pool.js:40-45 first 3 unreserved = Q0-Q2 (chapter-1 items), not random; quiz max Jaccard 0.37. Residual platform-wide: one question per check-in (utils.js:100-117)",
    "note": null
   },
   {
@@ -12663,10 +12663,10 @@
    "kind": "structure",
    "text": "Misconceptions: most are genuine (positive gap = good; recovery = back to normal; demand-side growth always inflationary; growth always harms environment; GDP = living standards). Filler ones: relationship-actual-potential ('students treat them as separate topics that never interact'), lras-shifts-growth ('students forget to explain the cause' — exam-technique, not a misconception), supply-side-causes ('students don't distinguish quantity and quality').",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: all 21 misconceptions read, each a conceptual error (along vs inside PPF, AD always raises output, inflow != FDI, hours != productivity, etc.); technique lives in examMatters",
    "note": null
   },
   {
@@ -12675,10 +12675,10 @@
    "kind": "structure",
    "text": "Takeaways match their blocks. Block 6's fourth takeaway ('Always label diagrams fully...') is exam advice rather than content; Block 5's takeaway omits the current-account cost that quiz Q5 and common_mistakes[1] both treat as a standard cost.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: all 20 takeaways are content; costs chapter takeaway[2] names the balance-of-trade deficit; no label-diagrams exam advice",
    "note": null
   },
   {
@@ -12687,10 +12687,10 @@
    "kind": "structure",
    "text": "Terminology drift between surfaces (content vs diagram vs extras) on cycle phase names, and between quiz Q6 and Q16 on 'sustainable growth' (see accuracy/quiz).",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: 0 cycle-phase names on any surface incl SVG text; 'sustainable' once (definition of potential output); Q6/Q16 conflict gone; 'Keynesian long-run AS' identical in content, diagram 27bc75b7, practice[9]",
    "note": null
   },
   {
@@ -12699,10 +12699,10 @@
    "kind": "structure",
    "text": "Learn Mode fill-ins use a 3-word bank (FillInRecall.jsx:12) so almost every fillin in this section collapses to grammar/elimination; the design, not just this section's authoring, makes 'trivial' the default verdict.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "recall-widgets.js:179-200 fillinChips uses authored distractors; every packet-43-bundle fillin has 3 (6-chip bank); 20 of 21 blanks have a semantically competing chip, the exception (export-led 'an ___') is logged in verify-a.md",
    "note": null
   },
   {
@@ -12711,10 +12711,10 @@
    "kind": "specGap",
    "text": "Export-led growth / importance of international trade for economic growth — in the IAL 'causes of economic growth' bullet; only appears as quiz Q14, never taught in content[] (Australia example touches commodity exports but does not name the concept).",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[0].sections[2] 'International Trade and Export-Led Growth' teaches 1c (injection, scale, foreign currency, competition, risk) plus extras chain 1",
    "note": null
   },
   {
@@ -12723,10 +12723,10 @@
    "kind": "specGap",
    "text": "Trend rate of growth (actual growth vs trend/long-run growth rate) — only in quiz Q8 and the diagram legend; not defined in content.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[4].sections[0] defines trend rate of growth and compares Loriana's actual rates to 2.5% trend (4a)",
    "note": null
   },
   {
@@ -12735,10 +12735,10 @@
    "kind": "specGap",
    "text": "Impact of growth on FIRMS (profits, investment, but also rising costs/wages, competition) — 'impact of economic growth on consumers, firms, government, current and future living standards' is the spec framing; firms get one sentence on 'business confidence'.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[2].sections[1] 'Profits and Investment' teaches increased profits for firms and the costs to firms; practice[4] Examine 8 on benefits for firms",
    "note": null
   },
   {
@@ -12747,10 +12747,10 @@
    "kind": "specGap",
    "text": "Current vs future living standards trade-off (consumption vs capital goods on the PPF; growth today at the cost of tomorrow) — not explicitly framed, though the PPF diagram axes (capital vs consumer goods) would support it.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[3].sections[0] teaches the current vs future living standards trade-off on a capital/consumer PPF; diagram caa798a1 'Today' and 'Ten years on'",
    "note": null
   },
   {
@@ -12759,10 +12759,10 @@
    "kind": "specGap",
    "text": "Current account deterioration as a cost of growth — taught only in quiz Q5, common_mistakes[1] and a positive-output-gap examMatters aside; absent from Block 5 'Costs and Benefits'.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[3].sections[2] 'Balance of Trade Deficits' in the Costs chapter (spec 3a wording), with Loriana bn surplus -> bn deficit",
    "note": null
   },
   {
@@ -12771,10 +12771,10 @@
    "kind": "specGap",
    "text": "Inflation as a cost of growth is in extras/practice but not in Block 5's costs subsection (it is in Block 2's positive-gap subsection, so partially covered).",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle content[3].sections[4] 'Inflation' sits in the Costs of Growth chapter, tied to demand outgrowing capacity",
    "note": null
   },
   {
@@ -12783,11 +12783,11 @@
    "kind": "specGap",
    "text": "Unsure: the product numbers this '2.3.5'; my recollection is that IAL WEC12 places economic growth under its own heading (causes / output gaps / trade cycle / impact) rather than under 2.3 aggregate supply — verify numbering against the current IAL specification.",
    "packet": 43,
-   "status": "open",
+   "status": "wont-fix",
    "closed_by": null,
    "verified_by": null,
    "evidence": null,
-   "note": null
+   "note": "Refused against the document, not built. The item doubted the number ('the product numbers this 2.3.5 ... verify'). audit/raw/econ_spec.txt:1094 reads '2.3.5 Economic growth', its own heading between :1056 '2.3.4 National income' and :1132 '2.3.6 Macroeconomic objectives and policies'; asserted BY LINE in scripts/packet-43-economic-growth.mjs section 2. Nothing renumbered. (packet 43, 26 Sep 2026)"
   },
   {
    "id": "C-types-sizes-businesses-topFix-01",
@@ -17458,10 +17458,10 @@
    "kind": "diagram",
    "text": "A block pins the diagram \"ad-as-growth\" and no such diagram exists, so the block renders nothing. three separate blocks want an AD/AS growth diagram; one drawing cannot serve all three, because a block pins at most one.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: pin string 'ad-as-growth' gone; ch1 pins diagramId economic-growth:diagram:27bc75b7 = diagrams[0] (PPF + AD scenarios, SVGs parse, geometry checked)",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {
@@ -17470,10 +17470,10 @@
    "kind": "diagram",
    "text": "A block pins the diagram \"ad-as-shifts\" and no such diagram exists, so the block renders nothing. as above.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: 'ad-as-shifts' gone; causes chapter pins diagramId 0d0b3448 = diagrams[1], LRAS1->LRAS2 right shift, 2nd equilibrium right and lower (SVG coords checked)",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {
@@ -17482,10 +17482,10 @@
    "kind": "diagram",
    "text": "A block pins the diagram \"ad-as-growth-analysis\" and no such diagram exists, so the block renders nothing. as above.",
    "packet": 43,
-   "status": "open",
-   "closed_by": null,
-   "verified_by": null,
-   "evidence": null,
+   "status": "confirmed",
+   "closed_by": "packet-43",
+   "verified_by": "packet-verifier 2026-09-25",
+   "evidence": "packet-43-bundle: 'ad-as-growth-analysis' and its block are gone (5 blocks); no block carries diagramRef; every diagramId resolves",
    "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
   },
   {

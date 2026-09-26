@@ -10465,6 +10465,75 @@ pass); 12.75 rebuilds this shell, so it may be moot, but check before assuming i
 **No SQL, no DB write, no live content published by this packet.** All changes are in code/data files; the
 "CONTENT GATE" step was correctly skipped per `gate.log`.
 
+## Handoff — what comes next (packet 43 bookkeeping pass, 26 September 2026)
+
+**Packet 43 (economic-growth, IAL 2.3.5) PASSED the gate, 1 fix round of 2 budgeted, ledger clear: 26
+confirmed / 2 wont-fix / 0 open.** STAGED to `draft` only; live `data` and git HEAD are both untouched;
+nothing committed. Full detail in the `PROGRESS.md` row for 43; artefacts in `audit/runs/packet-43/`. This
+was a bookkeeping-only pass: no code, content, test or script file was touched, and `audit/ledger.json` was
+read but not written — only this section and the matching `PROGRESS.md` row.
+
+**No contradiction found** among `audit/PROTOCOL.md`, the Settled entries in `audit/DECISIONS.md`, and
+`audit/CONTENT-GATE.md`'s recall contract. One documented, non-blocking gap, already handled by the build
+session and independently re-confirmed here rather than taken on trust: **no `## Packet 43 spec` heading
+exists anywhere in this file** — only the packet-42 handoff naming 43 as free (old lines ~348/551). This is
+the same situation packet 41 hit and normalized (`PROTOCOL.md`'s own rule: the ledger, not this file, defines
+scope), and both `audit/runs/packet-43/brief.md` §0 and `built.md`'s opening section found and recorded it
+the same way before this pass re-checked it. Not a contradiction between authorities; a missing document,
+already worked around twice now.
+
+**Independently re-verified this pass, by a method different from whatever produced the existing logs**:
+`node audit/scripts/ledger.mjs unverified 43` run fresh → gate clear. `npm run attribution` run fresh → no
+failures, UNDECIDED 0. `node audit/scripts/validate-content.mjs` run fresh → economic-growth's live row (33
+BLOCK / 64 DEBT / 83%) is byte-identical to both the pre-fix and post-fix logs in `audit/runs/packet-43/`,
+confirming the fix round changed nothing live. The staged bundle's `diagramId` field was read directly
+(parsed as JSON, not via the attribution script's own summary) on both the snapshot file and a fresh `curl
+"localhost:3001/api/sections/economic-growth?draft=1"`: all 5 chapters carry the key explicitly, 4 with an
+id and 1 ("The Benefits of Growth") with `null`, matching packet 2.91's rule. `audit/raw/econ_spec.txt:1094`
+was read directly and reads "2.3.5 Economic growth", its own heading between 2.3.4 (`:1056`) and 2.3.6
+(`:1132`) — confirming `specGap-07`'s wont-fix disposition rather than trusting the ledger note.
+
+**ANOTHER SESSION IS CONCURRENTLY BUILDING PACKET 44 (aggregate-supply) IN THIS SAME WORKTREE, right now.**
+`audit/runs/packet-44/verify-a.md` is timestamped minutes after packet 43's own, and a read-only check this
+pass (`ledger.mjs unverified 44` → gate clear; `audit/runs/packet-44/gate.log` → test/build/validate/
+exposure/recalls/check-staged-drafts all exit 0) shows it has very likely also passed its own gate at
+essentially the same time as this one. **Do not treat `PROGRESS.md` row 44 ("not started") as current** —
+it is exactly as stale as row 43 was before this pass, for the same reason: whoever built 44 has probably not
+written its own handoff yet either. Check `audit/runs/packet-44/` and re-run `ledger.mjs unverified 44`
+yourself before assuming anything about it, including whether it is free, in progress, or already waiting on
+its own bookkeeping pass. **Packet 45 (labour-markets) had no `audit/runs/packet-45/` directory as of this
+check** and is the honest fallback if both 43 and 44 turn out closed by the time you read this — but
+re-check live state; do not chain this claim forward the way the 42→43 handoff's "28 open" figure was chained
+and went stale within the same day.
+
+**Carried forward, not this pass's to fix — both pre-existing and platform-wide, found by packet 43's own
+Verify B and confirmed non-blocking:**
+- `InlinePractice.jsx`'s `checklistFrom` splits guidance only on "(n marks)", so a scaffold paragraph fuses
+  onto mark point 1 and a 0-mark caveat sentence becomes a tickable box. On economic-growth's practice[0]
+  (Define, 2 marks) this reads as "3 boxes for a 2-mark item." Not new, not scoped to this section.
+- `LearnModeTab.jsx:659` shows the "You left off at step N" banner whenever `isResuming && safeStep > 0`,
+  with no dismissal path for a session that begins at stored step 0 — so the banner appears on the very next
+  tap after any auto-restart and cannot be cleared. Reproduces on the LIVE page today, unrelated to this
+  packet — but **publishing packet 43 changes the step count 23→26, which will auto-restart every student
+  mid-section and land all of them in this banner.** Worth its own packet before any further step-count-
+  changing publish, not just this one.
+- Rule 3 (origin/main field compatibility) is reasoned but not empirically run against an actual `origin/main`
+  checkout for this section — the same gap packets 40-42 carried. `diagramId: null` is not read by main's
+  pre-2.91 code, but all 4 of this section's diagrams are claimed by pins, so main's title-fallback has
+  nothing unclaimed to place; reasoning only, not measured on main. Confirm before publish.
+- Not staged for commit by this pass, and not this pass's to stage: `audit/ledger.json` (411 insertions /
+  229 deletions in the working tree as of this check, shared with other sessions), the packet-43 script
+  files and both snapshots (already `git add`-staged by the build session, not by this pass), and everything
+  under `audit/runs/packet-43/` and `audit/runs/packet-44/`.
+
+**Escalate to the founder**: nothing blocking from this packet itself. When ready to publish, per the
+packet 5/7 checkpoint: commit the staged packet-43 files (script modules + both snapshots, listed in the
+`PROGRESS.md` row), run Rule 3's field check against an actual `origin/main` checkout rather than reasoning
+about it, then `node scripts/publish-section.mjs economic-growth --confirm`. Separately, the two carried-
+forward platform bugs above (self-mark checklist box count, resume-banner dismissal) are real and
+reproducible today; neither blocks this packet, but the banner one gets worse with every step-count-changing
+publish and is worth a packet of its own.
+
 ## Handoff — what comes next (packet 44 bookkeeping pass, 26 September 2026)
 
 **Packet 44 (aggregate-supply, IAL Economics 2.3.3) PASSED the gate, 25 confirmed / 2 wont-fix / 0 open,
@@ -10527,6 +10596,16 @@ two printed-answer-in-caption items, then `node scripts/publish-section.mjs aggr
 Separately: the national-income non-draft-serves-draft question above should be resolved before that
 section (or any section that depends on it, like this one's `specGap-07` disposition) is treated as safe to
 publish.
+
+## Packet 43 published (26 September 2026, brain)
+
+- **Published 05:49 UTC by the founder**, from the verified draft: `node scripts/publish-section.mjs economic-growth --confirm`. Backup `audit/snapshots/auto-prepublish-2026-09-26T05-49-45-595Z__economics__economic-growth.json`; undo `node scripts/restore-section.mjs <that file> --confirm`. The trade-cycle chapter's removal (Rule 1, `structure-03` wont-fix: `cycle`/`boom`/`slump`/`trough` are 0 in `econ_spec.txt`) went live with it; the founder published after being shown it as a scope call.
+- **Rule 3 was run, not reasoned**, against `origin/main` `1704a9f` before the publish. Placement (`lib/checkin-fallback.js`, `lib/learn-steps.js`) and the Match, FillIn, Reorder and InlinePractice renderers are identical to this branch's, so main handles `diagramId: null`. `ClassifyRecall.jsx` differs only by PR #34's drag-and-drop and reads the same `recall.groups`/`recall.prompt`; the Report buttons main added read only null-safe fields. **Main is now AHEAD of this branch in those renderers** (PR #34, the feedback system), so a walkthrough on this branch no longer sees exactly what production renders.
+- **Post-publish:** `npm run recalls` exit 0 (this section 15 → 0 answerable by scrolling up, so nothing forced a re-baseline); live validator 0 BLOCK / 0 DEBT / 100%; live title-matched diagrams 3 → 1 (only introductory-concepts, packet 15, remains); production `/api/sections/economic-growth` serves the 5 new chapters.
+- **The topic page lags a publish by up to an hour.** `app/economics/[unit]/[topic]/page.jsx` is ISR with `revalidate = 3600` and nothing revalidates on demand, so the cached page's server-rendered Notes show the old section until the copy goes stale and a visit regenerates it. Learn Mode reads the API and is current at once. At 05:54 UTC production still served its 05:41 render.
+- **Still open:** the commit (packet 43's five scripts and two snapshots are staged in the shared index; its 26 ledger confirmations are unstaged among other sessions' ledger changes). Two pre-existing platform defects from Verify B, neither in the ledger: the "You left off at step N" banner firing after an auto-restart (`LearnModeTab.jsx:659`, `isResuming && safeStep > 0`, identical on main), which this publish triggers for every mid-section student; and `InlinePractice.jsx`'s `checklistFrom` fusing the scaffold onto mark point 1 and offering a 0-mark caveat as a tickbox.
+- **PROGRESS `Opens` is traffic, not an item count** (students who opened the section, `audit/raw/funnel_aggregates.json`). Handoffs had overwritten it with ledger counts in 11 rows; restored on 25 Sep with a note under the table after packet 43's first Brief stopped on the misreading. Never write a ledger count into it.
+
 
 ## Handoff — packet 44 closed (brain)
 

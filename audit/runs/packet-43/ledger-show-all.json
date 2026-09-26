@@ -1,0 +1,341 @@
+{
+  "id": "C-economic-growth-topFix-01",
+  "section": "economic-growth",
+  "kind": "topFix",
+  "rank": 0,
+  "text": "Make diagrams appear in Learn Mode: rename diagramRefs to match titles (e.g. 'trade cycle', 'output gap', 'ppf') or fix the matcher in LearnModeTab.jsx:97-104 to normalise hyphens/spaces; add the PPF diagram to Block 1 and the output-gap diagram to Block 2.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-topFix-02",
+  "section": "economic-growth",
+  "kind": "topFix",
+  "rank": 1,
+  "text": "Rewrite the six weak/not-orderable recalls: replace costs-growth-environment and supply-side-causes rankings with classification exercises, fix the cyclic four-phase reorder by anchoring a start point, collapse the duplicated LRAS-chain reorder, and replace trivial collocation fill-ins (actual-economic-growth, relationship-actual-potential, demand-side-causes, benefits-growth, growth-living-standards) with banks where two words genuinely compete.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-topFix-03",
+  "section": "economic-growth",
+  "kind": "topFix",
+  "rank": 2,
+  "text": "Fix practice: remove the Unit 4 FDI question, change 'Define (4 marks)' to a 2-mark define or a 4-mark explain, change 'Outline' to 'Explain', map practice to blocks by topic rather than sorted mark index, and rewrite 10/20-mark guidance as levels-based KAA/evaluation descriptors with a required diagram.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-topFix-04",
+  "section": "economic-growth",
+  "kind": "topFix",
+  "rank": 3,
+  "text": "Correct the accuracy slips a teacher would catch: 'movement along the PPF' → 'from inside towards the PPF'; 'elastic section of SRAS' → consistent Keynesian/classical model; 'falling real wages' in a positive gap; standardise cycle-phase names across text, diagram and extras.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-topFix-05",
+  "section": "economic-growth",
+  "kind": "topFix",
+  "rank": 4,
+  "text": "Trim redundancy and add missing spec content: merge Block 6 into Blocks 1 and 4, dedupe the quiz bank (Q9/Q20, Q16, Q21, Q23) and replace duplicates with items on export-led growth, trend growth, and impact on firms / current-vs-future living standards, which are currently untaught.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-accuracy-01",
+  "section": "economic-growth",
+  "kind": "accuracy",
+  "text": "Actual vs Potential Economic Growth > actual-economic-growth > examMatters: Says to 'link actual growth to a movement along the PPF'. Actual growth from spare capacity is a movement from INSIDE the PPF towards it; a movement ALONG the PPF is reallocation, which quiz Q3's own explanation says 'is not growth'. Content contradicts its own quiz.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-practice-01",
+  "section": "economic-growth",
+  "kind": "practice",
+  "text": "p0: 'Define the term economic growth (4 marks)' — IAL Economics 'Define' questions are 2 marks (definition + development). A 4-mark item would be 'Explain...' or a Section A supported MCQ (1 + 3). The guidance awards marks for the actual/potential distinction and measurement method, which a 'define' does not invite. This is also the item Learn Mode surfaces first (sortedPractice index 0, 'worked' mode) so it sets the wrong expectation.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-practice-02",
+  "section": "economic-growth",
+  "kind": "practice",
+  "text": "p2: 'Assess the importance of FDI in promoting economic growth in developing countries (10 marks)' is WEC14 Unit 4 (development/FDI) content, not Unit 2 economic growth. Additionally the guidance is a points list summing to 10 (2+2+2+1+1+1+1), whereas IAL 10-mark 'Assess' is levels-marked (KAA and evaluation levels). Never shown in Learn Mode either (practiceIndices only reach sorted indices 0-2).",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-structure-01",
+  "section": "economic-growth",
+  "kind": "structure",
+  "text": "NO diagrams render in Learn Mode for this section. LearnModeTab.jsx:97-104 matches step.diagramRef to diagram titles by case-insensitive substring; block refs are 'ad-as-growth', 'output-gap-diagram', 'trade-cycle-diagram', 'ad-as-shifts', 'ad-as-growth-analysis' (hyphenated) while titles are 'The Business (Trade) Cycle', 'Output Gap Diagram', 'PPF: Actual vs Potential Growth' (spaces). Verified: zero matches for all six blocks. For a topic whose exam value is almost entirely diagrammatic (PPF, AD/AS, trade cycle), students see three well-drawn diagrams only on the Diagrams tab. The PPF diagram, ideal for Block 1, is never referenced by any block; Block 5 has no diagramRef at all.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-structure-02",
+  "section": "economic-growth",
+  "kind": "structure",
+  "text": "Block 6 'Economic Growth and AD/AS Analysis' re-teaches Block 1 (actual = AD shift, potential = LRAS shift) and Block 4 (demand-side vs supply-side) a third time, with a duplicated reorder (potential-economic-growth vs lras-shifts-growth) and near-identical flows. 17 subsections / 11 Learn Mode steps for one spec point is long; merging Block 6 into Blocks 1 and 4 would cut ~3 steps without losing content.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-structure-03",
+  "section": "economic-growth",
+  "kind": "structure",
+  "text": "Sequencing within Block 3: the four-phase overview of the cycle is introduced in the THIRD subsection ('Recovery and Stages of the Cycle', body para 2) after Boom and Recession have already been taught. The overview (and the trade-cycle diagram) should open the block.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-structure-04",
+  "section": "economic-growth",
+  "kind": "structure",
+  "text": "2-per-step pairing: Block 1 = [actual, potential], [relationship]; Block 2 = [positive, negative], [implications]; Block 3 = [boom, recession], [recovery]; Block 4 = [demand, supply]; Block 5 = [benefits, env costs], [living standards]; Block 6 = [AD, LRAS], [combined]. Pairs are coherent, but every 3-section block ends with a lone-section step carrying diagram + quiz + practice + explain-back + takeaway, making the final step of each block much heavier than the others.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-structure-05",
+  "section": "economic-growth",
+  "kind": "structure",
+  "text": "Practice mapping is by sorted-marks index not by topic: Block 3 (trade cycle) gets 'Define economic growth' (4m), Block 4 (causes) gets 'Outline actual vs potential' (4m), Block 5 gets 'Explain two costs' (6m, the only topical match). The 10-mark and 20-mark items are never reached in Learn Mode.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-structure-06",
+  "section": "economic-growth",
+  "kind": "structure",
+  "text": "quizIndices only reference Q0-Q5; Q6-Q23 appear only in PreTest/PostTest sampling and the Quiz tab. Since the pre-test samples 3 random from 24 mostly-duplicate items, the pre/post comparison is noisy.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-structure-07",
+  "section": "economic-growth",
+  "kind": "structure",
+  "text": "Misconceptions: most are genuine (positive gap = good; recovery = back to normal; demand-side growth always inflationary; growth always harms environment; GDP = living standards). Filler ones: relationship-actual-potential ('students treat them as separate topics that never interact'), lras-shifts-growth ('students forget to explain the cause' — exam-technique, not a misconception), supply-side-causes ('students don't distinguish quantity and quality').",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-structure-08",
+  "section": "economic-growth",
+  "kind": "structure",
+  "text": "Takeaways match their blocks. Block 6's fourth takeaway ('Always label diagrams fully...') is exam advice rather than content; Block 5's takeaway omits the current-account cost that quiz Q5 and common_mistakes[1] both treat as a standard cost.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-structure-09",
+  "section": "economic-growth",
+  "kind": "structure",
+  "text": "Terminology drift between surfaces (content vs diagram vs extras) on cycle phase names, and between quiz Q6 and Q16 on 'sustainable growth' (see accuracy/quiz).",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-structure-10",
+  "section": "economic-growth",
+  "kind": "structure",
+  "text": "Learn Mode fill-ins use a 3-word bank (FillInRecall.jsx:12) so almost every fillin in this section collapses to grammar/elimination; the design, not just this section's authoring, makes 'trivial' the default verdict.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-specGap-01",
+  "section": "economic-growth",
+  "kind": "specGap",
+  "text": "Export-led growth / importance of international trade for economic growth — in the IAL 'causes of economic growth' bullet; only appears as quiz Q14, never taught in content[] (Australia example touches commodity exports but does not name the concept).",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-specGap-02",
+  "section": "economic-growth",
+  "kind": "specGap",
+  "text": "Trend rate of growth (actual growth vs trend/long-run growth rate) — only in quiz Q8 and the diagram legend; not defined in content.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-specGap-03",
+  "section": "economic-growth",
+  "kind": "specGap",
+  "text": "Impact of growth on FIRMS (profits, investment, but also rising costs/wages, competition) — 'impact of economic growth on consumers, firms, government, current and future living standards' is the spec framing; firms get one sentence on 'business confidence'.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-specGap-04",
+  "section": "economic-growth",
+  "kind": "specGap",
+  "text": "Current vs future living standards trade-off (consumption vs capital goods on the PPF; growth today at the cost of tomorrow) — not explicitly framed, though the PPF diagram axes (capital vs consumer goods) would support it.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-specGap-05",
+  "section": "economic-growth",
+  "kind": "specGap",
+  "text": "Current account deterioration as a cost of growth — taught only in quiz Q5, common_mistakes[1] and a positive-output-gap examMatters aside; absent from Block 5 'Costs and Benefits'.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-specGap-06",
+  "section": "economic-growth",
+  "kind": "specGap",
+  "text": "Inflation as a cost of growth is in extras/practice but not in Block 5's costs subsection (it is in Block 2's positive-gap subsection, so partially covered).",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-specGap-07",
+  "section": "economic-growth",
+  "kind": "specGap",
+  "text": "Unsure: the product numbers this '2.3.5'; my recollection is that IAL WEC12 places economic growth under its own heading (causes / output gaps / trade cycle / impact) rather than under 2.3 aggregate supply — verify numbering against the current IAL specification.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": null
+}
+{
+  "id": "C-economic-growth-diagram-01",
+  "section": "economic-growth",
+  "kind": "diagram",
+  "text": "A block pins the diagram \"ad-as-growth\" and no such diagram exists, so the block renders nothing. three separate blocks want an AD/AS growth diagram; one drawing cannot serve all three, because a block pins at most one.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
+}
+{
+  "id": "C-economic-growth-diagram-02",
+  "section": "economic-growth",
+  "kind": "diagram",
+  "text": "A block pins the diagram \"ad-as-shifts\" and no such diagram exists, so the block renders nothing. as above.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
+}
+{
+  "id": "C-economic-growth-diagram-03",
+  "section": "economic-growth",
+  "kind": "diagram",
+  "text": "A block pins the diagram \"ad-as-growth-analysis\" and no such diagram exists, so the block renders nothing. as above.",
+  "packet": 43,
+  "status": "open",
+  "closed_by": null,
+  "verified_by": null,
+  "evidence": null,
+  "note": "Added 13 Sep 2026 from audit/raw/diagram-pins-2026-09-13.json (F052/F109 measurement). Check npm run diagrams after authoring."
+}

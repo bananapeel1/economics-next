@@ -1,0 +1,2515 @@
+{
+ "section_id": "economic-growth",
+ "subject": "economics",
+ "label": "packet-43-bundle",
+ "tables": {
+  "content": [
+   {
+    "id": "economic-growth:block:ef97361e",
+    "title": "Actual and Potential Growth",
+    "sections": [
+     {
+      "id": "economic-growth:sub:actual-and-potential-growth",
+      "title": "Actual and Potential Growth",
+      "keyIdea": "Actual growth is a rise in the real output an economy produces; potential growth is a rise in the output it could produce with all its resources in use.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Actual growth** is an increase in real GDP: more goods and services produced than last year, measured at constant prices. **Potential growth** is an increase in an economy's productive capacity — the real output it could produce if all its resources were fully and efficiently employed."
+       },
+       {
+        "type": "paragraph",
+        "text": "On a production possibility frontier the two look different. An economy with idle workers and machines sits at a point **inside** the frontier. Actual growth that uses those idle resources is a movement from inside the PPF **towards** the frontier. Potential growth is an **outward shift** of the frontier itself."
+       },
+       {
+        "type": "paragraph",
+        "text": "A movement **along** the frontier is neither: it is a reallocation — more of one good, less of the other — not growth."
+       },
+       {
+        "type": "paragraph",
+        "text": "The two can diverge. In Loriana, an economy that assembles electronics for export and imports much of its fuel and machinery, potential output grows at a steady 2.5% a year. In Year 3 its capacity was $500bn, but real GDP was only $490bn: $10bn of output the economy could have produced and did not. Actual growth can outrun potential growth while that slack lasts; after that, only potential growth lets output keep rising."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏭",
+       "text": "When lockdowns ended, many economies grew unusually fast for a year or so as shops, factories and workers that had stood idle came back into use. Most of that was actual growth recovering lost ground, not new capacity."
+      },
+      "misconception": "Students describe actual growth as \"a movement along the PPF\". A movement along the frontier moves resources from one good to another with the economy already at full capacity, so total output cannot rise. Actual growth that uses spare capacity is a movement from inside the frontier towards it.",
+      "examMatters": "Appendix 6 gives Define 2 marks for the meaning of a term, so \"potential growth\" needs both halves: an increase in productive capacity, and what capacity means — the output possible with all resources employed.",
+      "recall": {
+       "id": "economic-growth:sub:actual-and-potential-growth:recall",
+       "type": "classify",
+       "prompt": "Sort each change by what it does to Loriana's production possibilities:",
+       "groups": [
+        {
+         "name": "Actual growth only",
+         "items": [
+          "Laid-off factory workers are rehired as orders return",
+          "Hotels that stood half empty fill up again"
+         ],
+         "why": "Each puts resources that already existed back to work, so output rises towards the frontier without moving it."
+        },
+        {
+         "name": "Potential growth",
+         "items": [
+          "A new port doubles how many containers can be handled",
+          "Workers learn to operate faster machinery"
+         ],
+         "why": "Each raises what the economy COULD produce with everything employed, which shifts the frontier outward."
+        },
+        {
+         "name": "Neither — a reallocation",
+         "items": [
+          "Farmland is switched from rice to palm oil at full employment"
+         ],
+         "why": "With every resource already in use, more of one good means less of another: a movement along the frontier, not growth."
+        }
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:actual-growth-from-aggregate-demand",
+      "title": "Actual Growth and Aggregate Demand",
+      "keyIdea": "A rise in any component of aggregate demand raises real output — as long as there is spare capacity for firms to produce more.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Aggregate demand has four components: consumption, investment, government spending and net exports, AD = C + I + G + (X − M). In Year 3 Loriana's were $300bn, $70bn, $100bn and $180bn − $160bn, which sum to $490bn — exactly its real GDP that year."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Actual growth is caused by an increase in any of the four.** Households spend more, firms buy more machinery, the government builds more or foreign buyers order more, and firms respond by producing more. The multiplier, topic 2.3.4, means the final rise in AD is larger than the first round of spending."
+       },
+       {
+        "type": "paragraph",
+        "text": "Whether the extra spending becomes extra output depends on where the economy stands. On a Keynesian long-run AS curve (topic 2.3.3) there are three ranges:"
+       },
+       {
+        "type": "flow",
+        "resultType": "neutral",
+        "steps": [
+         {
+          "title": "Plenty of spare capacity",
+          "subtitle": "the curve is flat: AD rises, output rises, the price level does not"
+         },
+         {
+          "title": "Capacity running short",
+          "subtitle": "the curve rises: output and the price level both rise"
+         },
+         {
+          "title": "Full capacity",
+          "subtitle": "the curve is vertical: only the price level rises"
+         }
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "So demand can close a gap between actual and potential output, but it cannot push output past capacity for long. Loriana's $10bn of slack in Year 3 was room for AD-led growth; the same rise in AD at full capacity would have been inflation."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛍️",
+       "text": "Household spending is the largest component of AD in most economies, which is why a change in consumer confidence moves real GDP so quickly — a rise feeds straight into retail sales, services and the jobs that supply them."
+      },
+      "misconception": "Students write that a rise in AD always raises real output. It does only while there is spare capacity. Near full capacity most of the rise shows up as a higher price level, and at full capacity all of it does.",
+      "examMatters": "An Explain asking HOW a component causes growth is a reason, so Appendix 6 wants a two-stage chain: the component rises, AD shifts right, and with spare capacity firms raise output.",
+      "recall": {
+       "id": "economic-growth:sub:actual-growth-from-aggregate-demand:recall",
+       "type": "match",
+       "prompt": "Match each event to the component of aggregate demand it raises first:",
+       "pairs": [
+        {
+         "left": "A mobile network buys new transmission masts",
+         "right": "Investment (I)",
+         "why": "Spending by firms on capital goods is investment, whatever the goods are for."
+        },
+        {
+         "left": "Tourists from abroad book more hotel rooms in Loriana",
+         "right": "Net exports (X − M)",
+         "why": "A foreign buyer paying for a domestic service is an export, even though the service is used inside the country."
+        },
+        {
+         "left": "The government hires more teachers",
+         "right": "Government spending (G)",
+         "why": "Wages the state pays for services it provides are government spending on goods and services."
+        },
+        {
+         "left": "Households spend more of their income on meals out",
+         "right": "Consumption (C)",
+         "why": "Spending by households on goods and services for their own use is consumption."
+        }
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:export-led-growth",
+      "title": "International Trade and Export-Led Growth",
+      "keyIdea": "Export-led growth is growth driven by selling to the rest of the world, whose demand is not limited by how much the home economy can spend.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Export-led growth** is growth in which rising exports are the main driver. Exports are an injection into the circular flow, so a rise in export demand raises AD: a $10bn increase in foreign orders is $10bn more AD before any multiplier effect."
+       },
+       {
+        "type": "paragraph",
+        "text": "International trade matters for growth for reasons beyond that first injection:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**A bigger market.** A small economy selling only at home runs out of buyers; selling to the world, its firms can keep expanding.",
+         "**Economies of scale.** Longer production runs lower average cost, which makes the exports more competitive still.",
+         "**Foreign currency.** Export earnings pay for imported machinery and technology the economy cannot make itself, which raises capacity too.",
+         "**Competition.** Firms that sell abroad must match the best producers anywhere, which pushes their productivity up."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The strategy has a weakness built into it. Growth that depends on foreign demand stops when that demand does: a downturn in the economies that buy the exports, a rise in the exchange rate or new trade barriers abroad all reach the exporter's output directly."
+       }
+      ],
+      "realExample": {
+       "emoji": "🚢",
+       "text": "South Korea, Taiwan and Singapore grew rapidly for decades by making manufactures for world markets rather than only for their own households, and Vietnam has since followed a similar route with electronics assembly."
+      },
+      "misconception": "Students define export-led growth as \"exporting more than you import\". It is about what DRIVES growth, not the trade balance: an exporter importing components and machinery on a large scale can run a trade deficit while its growth is still led by exports.",
+      "examMatters": "An Explain question on why trade matters for growth wants the reason, not a list of exporters: name one mechanism — market size, scale, foreign currency for capital goods — and follow it to higher output (Appendix 6: a two-stage chain for a reason).",
+      "recall": {
+       "id": "economic-growth:sub:export-led-growth:recall",
+       "type": "fillin",
+       "prompt": "Loriana's electronics firms win large new orders from abroad. Complete the reasoning:",
+       "template": [
+        "Because the orders come from abroad, they add to spending on Loriana's output as an ___.",
+        "Longer production runs let firms benefit from ___, which cuts their average cost.",
+        "The foreign currency earned can pay for imported ___, which raises capacity as well as output."
+       ],
+       "answers": [
+        "injection",
+        "economies of scale",
+        "capital goods"
+       ],
+       "hints": [
+        "the opposite of a withdrawal such as saving or imports",
+        "what falls as output grows when the business is bigger",
+        "machinery and equipment used to make other things"
+       ],
+       "distractors": [
+        "withdrawal",
+        "diseconomies of scale",
+        "consumer goods"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Actual growth is more real output; potential growth is more capacity.",
+     "Actual growth from spare capacity moves from inside the PPF towards it.",
+     "Any AD component can cause actual growth, while spare capacity lasts.",
+     "Export-led growth is driven by world demand, and depends on it."
+    ],
+    "diagramId": "economic-growth:diagram:27bc75b7",
+    "quizIndices": [
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "practiceIndices": [
+     0,
+     1
+    ]
+   },
+   {
+    "id": "economic-growth:block:23985659",
+    "title": "The Causes of Potential Growth",
+    "sections": [
+     {
+      "id": "economic-growth:sub:investment-and-fdi",
+      "title": "Domestic Investment and FDI",
+      "keyIdea": "Investment adds to the stock of capital, so the same workers can produce more. It raises demand today and capacity tomorrow.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Domestic investment** is spending by firms on capital goods — factories, machinery, vehicles, software. Each addition to the capital stock gives workers more and better tools, so the economy can produce more: long-run AS shifts right and the frontier moves out."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Foreign direct investment (FDI)** is investment by a firm based abroad in productive assets it controls — building a plant, buying a controlling stake in a local firm. As a cause of potential growth it adds to capacity like domestic investment, and it often brings two things with it that local firms could not easily supply:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Technology and methods** the host economy did not have, which local suppliers and workers learn from.",
+         "**Finance on a scale** domestic savings could not provide, so projects happen that otherwise would not."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Investment works on both sides of the economy, at different times. The spending is part of AD the moment it happens, so it adds to actual growth now. The capacity it creates arrives only when the plant opens, which is when it adds to potential growth."
+       },
+       {
+        "type": "paragraph",
+        "text": "Not every inflow counts. A foreign buyer purchasing an existing office block changes who owns it, not what the economy can produce."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔬",
+       "text": "Penang in Malaysia hosts semiconductor plants built by foreign firms such as Intel. They brought capital, production methods and training that grew a cluster of local suppliers around them."
+      },
+      "misconception": "Students treat any money arriving from abroad as investment that raises growth. What raises capacity is new productive assets. Buying shares with no control adds no machine, and a foreign takeover of an existing firm adds capacity only if the new owner then invests or brings better methods.",
+      "examMatters": "When a question names FDI, say which side of the economy you are on. The spending raises AD now; the plant raises capacity later. Mixing the two in one sentence loses the chain Appendix 6 asks an Analyse answer for.",
+      "recall": {
+       "id": "economic-growth:sub:investment-and-fdi:recall",
+       "type": "classify",
+       "prompt": "Sort each change by whether it raises Loriana's capacity or changes ownership only:",
+       "groups": [
+        {
+         "name": "Raises capacity",
+         "items": [
+          "A Japanese car maker builds a new assembly plant in Loriana",
+          "A local bank installs software that processes loans twice as fast",
+          "A shipping line from abroad adds cranes to an under-equipped port"
+         ],
+         "why": "Each adds new capital that lets the same workers produce more, which is what shifts long-run AS."
+        },
+        {
+         "name": "Changes ownership only",
+         "items": [
+          "A foreign pension fund buys shares in a Lorianan supermarket chain",
+          "An investor from abroad buys an existing office tower"
+         ],
+         "why": "Nothing new is built or installed; the same assets produce the same output under a different owner."
+        }
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:innovation",
+      "title": "Innovation",
+      "keyIdea": "Innovation is putting new ideas to work — new products and new processes. A new process lets the same resources produce more.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Innovation** is the commercial use of a new idea. It comes in two forms that matter differently for growth:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Process innovation** — a new way of making an existing good or delivering a service. Output per worker rises, so capacity rises with no extra workers or machines.",
+         "**Product innovation** — a new good or service. It creates new markets and new spending, and often a new industry of suppliers around it."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Of the four causes of potential growth, innovation is the one without an obvious limit. An economy can only add so many workers, and piling ever more machines onto the same workers yields less and less from each one. A better method of production can be used again and again without being used up."
+       },
+       {
+        "type": "paragraph",
+        "text": "Innovation depends on the other causes. It usually needs investment to put it to use, skilled workers to operate it, and competition to force firms to adopt it instead of waiting. That is why the causes are best explained as linked rather than as a list."
+       }
+      ],
+      "realExample": {
+       "emoji": "📱",
+       "text": "Mobile money services such as M-Pesa in Kenya let traders and farmers pay, get paid and save by phone without a bank branch nearby. The same people could now trade with customers they could not reach before."
+      },
+      "misconception": "Students equate innovation with new gadgets. Much of the innovation that raises growth is invisible to consumers — a better way of routing deliveries, scheduling a factory or approving a loan — and it raises output per worker without any new product appearing.",
+      "examMatters": "If you use innovation as your cause of potential growth, name the process and the output it raises. \"Technology improves\" is an assertion; \"a faster loading method lets the same dock workers handle more containers\" is a chain.",
+      "recall": {
+       "id": "economic-growth:sub:innovation:recall",
+       "type": "classify",
+       "prompt": "Sort each innovation by whether it is mainly a new PRODUCT or a new PROCESS:",
+       "groups": [
+        {
+         "name": "Process innovation",
+         "items": [
+          "A garment factory switches to computer-guided cutting that wastes less cloth",
+          "A courier firm uses software to plan routes that save a third of the driving",
+          "A hospital introduces a scheduling system that treats more patients a day"
+         ],
+         "why": "Each produces something that already existed, with fewer resources per unit — output per worker rises."
+        },
+        {
+         "name": "Product innovation",
+         "items": [
+          "A food firm launches a drink that did not exist before",
+          "A bank offers a savings account that works only through a phone"
+         ],
+         "why": "Each is a new thing to buy. It creates new demand and new markets rather than a cheaper way to make an old one."
+        }
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:labour-force-and-net-migration",
+      "title": "A Growing Labour Force and Net Migration",
+      "keyIdea": "More people able and willing to work means more potential output. Net migration is one of the ways the labour force grows.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **labour force** is everyone of working age who is either in work or looking for it. If it grows, the economy can produce more even with unchanged technology and capital per worker, so potential output rises."
+       },
+       {
+        "type": "paragraph",
+        "text": "It can grow in three ways:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Natural increase** — more young people reaching working age than older people retiring.",
+         "**Higher participation** — more of the existing population choosing to work, for example as childcare becomes easier to find.",
+         "**Net migration** — more workers arriving from abroad than leaving. Migrants of working age add to the labour force at once, without the years of schooling a new generation needs first."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "In Year 3 Loriana has 20 million workers. A labour force growing 0.5% a year adds about 100,000 people a year able to produce."
+       },
+       {
+        "type": "paragraph",
+        "text": "A larger labour force raises TOTAL output. Whether it raises output per person — the thing that decides living standards — depends on how productive the extra workers are and how much capital each one has."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏗️",
+       "text": "In Gulf economies such as Qatar and the United Arab Emirates, migrant workers make up the great majority of the labour force. Construction and services there could not have been staffed from the national population alone."
+      },
+      "misconception": "Students assume a bigger labour force automatically raises living standards. It raises total real GDP, but if the extra workers have less capital each, or are less productive, real GDP per head can stay flat or even fall.",
+      "examMatters": "Name the cause precisely: this cause is growth in the SIZE of the labour force, including net migration. An answer about better-trained workers is making the productivity point, which is a different cause.",
+      "recall": {
+       "id": "economic-growth:sub:labour-force-and-net-migration:recall",
+       "type": "fillin",
+       "prompt": "Two economies each have 10 million workers. In Economy X, 200,000 more people arrive to work than leave. In Economy Y, the same workers learn to produce more each hour. Complete:",
+       "template": [
+        "Economy X's potential output grows because of ___.",
+        "Economy Y's potential output grows because of higher ___.",
+        "Only Y is certain to raise real output per ___."
+       ],
+       "answers": [
+        "net migration",
+        "productivity",
+        "worker"
+       ],
+       "hints": [
+        "arrivals minus departures",
+        "output for each unit of input",
+        "what the total is divided by in Y's case"
+       ],
+       "distractors": [
+        "natural increase",
+        "participation",
+        "firm"
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:degree-of-competition",
+      "title": "The Degree of Competition",
+      "keyIdea": "Where firms face strong competition, they must cut costs and improve products to survive, which raises the economy's capacity over time.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **degree of competition** is how strongly firms in a market are pressed by rivals. It is a cause of potential growth because it changes what firms do with the resources they have."
+       },
+       {
+        "type": "flow",
+        "resultType": "good",
+        "steps": [
+         {
+          "title": "Rivals can take customers",
+          "subtitle": "a firm that does not improve loses sales"
+         },
+         {
+          "title": "Firms cut waste and adopt better methods",
+          "subtitle": "costs fall and productivity rises"
+         },
+         {
+          "title": "Weaker firms shrink or exit",
+          "subtitle": "their workers and capital move to better users"
+         },
+         {
+          "title": "Capacity rises",
+          "subtitle": "the same resources produce more"
+         }
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Where competition is weak — a protected monopoly, a market closed to imports — a firm can survive while producing inefficiently, and has little reason to spend on new methods. Its workers and machines produce less than they could."
+       },
+       {
+        "type": "paragraph",
+        "text": "Governments raise the degree of competition by removing barriers to entry, opening markets to trade and acting against firms that collude. Topic 2.3.6 treats these as supply-side policies; here the point is the mechanism they rely on."
+       }
+      ],
+      "realExample": {
+       "emoji": "📶",
+       "text": "When India opened its mobile telecoms market to new entrants, competition drove call and data prices down sharply and pushed operators to extend their networks to millions of new customers."
+      },
+      "misconception": "Students treat competition as something that only lowers prices for consumers. The growth effect is on the SUPPLY side: firms pressed by rivals become more productive, which is why the degree of competition is listed as a cause of potential growth.",
+      "examMatters": "Competition as a cause needs its mechanism spelled out, because on its own it sounds like a market-structure point. Link it to productivity or innovation, then to capacity, then to long-run AS.",
+      "recall": {
+       "id": "economic-growth:sub:degree-of-competition:recall",
+       "type": "match",
+       "prompt": "Match each market change to the way it raises capacity:",
+       "pairs": [
+        {
+         "left": "A state airline loses its monopoly on domestic routes",
+         "right": "It must cut costs or lose passengers to new carriers",
+         "why": "The threat of losing customers is what forces a former monopolist to use its resources better."
+        },
+        {
+         "left": "Tariffs on imported steel are removed",
+         "right": "Local mills must match foreign producers' efficiency",
+         "why": "Opening to trade brings the most efficient producers anywhere into the market, raising the bar for local firms."
+        },
+        {
+         "left": "The least efficient bakeries in a town close after a rival opens",
+         "right": "Their premises and staff move to more productive uses",
+         "why": "Exit is part of the mechanism: resources leave firms that used them badly."
+        }
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:productivity-and-the-growth-rate",
+      "title": "Productivity and the Rate of Growth",
+      "keyIdea": "Productivity is output per worker. Over the long run it decides how fast potential output grows — and small differences compound into large ones.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Labour productivity** is output per worker (or per worker-hour). Capacity is the number of workers times what each can produce. In Year 3 Loriana's 20 million workers each produce $25,000 a year: 20 million × $25,000 = $500bn, its potential output."
+       },
+       {
+        "type": "paragraph",
+        "text": "Next year the labour force grows 0.5% and productivity grows 2%, so capacity becomes 20.1 million × $25,500 = $512.55bn: growth of 2.51%, almost exactly its 2.5% trend. Four fifths of it came from productivity."
+       },
+       {
+        "type": "paragraph",
+        "text": "That is why productivity matters so much for the **rate** of growth. The labour force can only grow so fast. Productivity growth has no such ceiling, and it compounds:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "At about 2.5% a year, output doubles in about 28 years.",
+         "If productivity growth halved to 1%, growth would be about 1.5% and doubling would take about 46 years."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The other causes — investment, innovation, a skilled labour force and competition — mostly raise growth BY raising productivity, which is why it is the thread that links them."
+       }
+      ],
+      "realExample": {
+       "emoji": "🇯🇵",
+       "text": "Japan's working-age population has been shrinking for decades, so most of its growth has had to come from raising output per worker rather than from adding workers."
+      },
+      "misconception": "Students write that productivity rises when people work longer hours. Longer hours raise output per worker per year but not output per HOUR. Productivity growth that lasts comes from better tools, skills and methods, not from more hours.",
+      "examMatters": "Calculate questions on productivity are multi-stage (Appendix 6): workers times output per worker gives capacity, and the percentage change gives growth. Show each stage, because marks follow the workings.",
+      "recall": {
+       "id": "economic-growth:sub:productivity-and-the-growth-rate:recall",
+       "type": "fillin",
+       "prompt": "An economy has 5 million workers each producing $30,000 a year. Complete:",
+       "template": [
+        "Its productive capacity is $___bn.",
+        "If output per worker rises 3% and the labour force does not change, capacity becomes $___bn.",
+        "The growth came entirely from higher ___."
+       ],
+       "answers": [
+        "150",
+        "154.5",
+        "productivity"
+       ],
+       "hints": [
+        "multiply the number of workers by what each produces",
+        "with no extra workers, capacity grows at the same rate as output per worker",
+        "output per worker"
+       ],
+       "distractors": [
+        "35",
+        "153",
+        "employment"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Four causes: investment and FDI, innovation, the labour force, competition.",
+     "Investment raises AD when it is spent and capacity when it is installed.",
+     "A bigger labour force raises total output; per head depends on productivity.",
+     "Productivity growth decides the long-run rate, and it compounds."
+    ],
+    "diagramId": "economic-growth:diagram:0d0b3448",
+    "quizIndices": [
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ],
+    "practiceIndices": [
+     2,
+     3
+    ]
+   },
+   {
+    "id": "economic-growth:block:13f1dd78",
+    "title": "The Benefits of Growth",
+    "sections": [
+     {
+      "id": "economic-growth:sub:living-standards-and-unemployment",
+      "title": "Living Standards and Unemployment",
+      "keyIdea": "Growth in real output raises the goods and services available per person, and firms producing more need more workers.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Higher living standards.** When real GDP grows faster than the population, real output per head rises: on average each person has more goods and services. That is the most direct benefit of growth and the reason governments pursue it. How far a rise in real GDP per head reflects living standards — distribution, leisure, the quality of what is produced — is topic 2.3.1's question."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Lower unemployment.** Firms hire workers because they want to produce. When real output grows, firms need more workers, so unemployment tends to fall."
+       },
+       {
+        "type": "paragraph",
+        "text": "The link depends on how fast output grows compared with the economy's capacity. In Year 2 and Year 3 Loriana grew 1.5% a year — positive growth, but below its 2.5% trend. Productivity growth meant firms could produce that extra output without hiring everyone the growing labour force added, so unemployment rose. When growth rose to 3.5% a year from Year 4, unemployment fell."
+       },
+       {
+        "type": "paragraph",
+        "text": "So the benefit is not \"growth reduces unemployment\" in all cases: growth reduces unemployment when it is fast enough to absorb both the new workers and the productivity gains."
+       }
+      ],
+      "realExample": {
+       "emoji": "🇸🇬",
+       "text": "Singapore went from the income per head of a developing economy to among the highest in the world within two generations, as decades of rapid growth raised real output per person."
+      },
+      "misconception": "Students write that any positive growth lowers unemployment. Growth below the rate at which capacity is growing can leave unemployment RISING, because productivity and a growing labour force let output rise without enough extra jobs.",
+      "examMatters": "For living standards, say \"real GDP per head\" rather than \"GDP\": the two words that are missing are exactly the two that make the benefit true.",
+      "recall": {
+       "id": "economic-growth:sub:living-standards-and-unemployment:recall",
+       "type": "classify",
+       "prompt": "Each economy grows. Sort them by what is most likely to happen to unemployment:",
+       "groups": [
+        {
+         "name": "Unemployment likely to fall",
+         "items": [
+          "Growth is well above its trend rate for three years in a row",
+          "Output rises quickly as idle factories reopen after a downturn"
+         ],
+         "why": "Output is rising faster than capacity, so firms must take on more workers to produce it."
+        },
+        {
+         "name": "Unemployment may rise",
+         "items": [
+          "Growth is positive but well below its trend rate",
+          "Output rises slowly while new machines let each worker produce much more"
+         ],
+         "why": "Capacity and output per worker are rising faster than output, so firms can meet demand without hiring the workers the economy is adding."
+        }
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:profits-and-investment",
+      "title": "Profits and Investment",
+      "keyIdea": "Growing incomes mean growing sales, so profits rise; and firms expecting demand to keep growing invest to meet it.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Increased profits for firms.** As real incomes rise, households spend more, so most firms sell more. Because many costs — premises, equipment, management — do not rise in step with sales, profit per unit tends to rise as well as total profit."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Higher levels of investment.** Firms invest when they expect the extra capacity to be used and paid for. Growth supplies both conditions: rising sales make expansion necessary, and rising profits provide the retained earnings to fund it and the confidence to borrow."
+       },
+       {
+        "type": "paragraph",
+        "text": "The two benefits feed each other, and they feed back into growth. Investment is a component of AD, so it adds to output as it is spent; and the new capital adds to capacity when it is installed. Faster growth today tends to raise potential growth tomorrow."
+       },
+       {
+        "type": "paragraph",
+        "text": "Growth does not benefit every firm equally. When growth runs ahead of capacity, wages and input prices rise, squeezing margins; growing markets attract new entrants and imports; and firms whose products people buy less of as they get richer can see sales fall."
+       }
+      ],
+      "realExample": {
+       "emoji": "📈",
+       "text": "Share prices of retailers, banks and builders tend to move with forecasts of economic growth, because investors know those firms' profits depend on how fast household incomes rise."
+      },
+      "misconception": "Students assume growth is good news for every firm. Rising wages and material costs, new rivals attracted by the growing market, and falling demand for goods people buy less of as incomes rise can all leave individual firms worse off.",
+      "examMatters": "An Examine answer on the benefits for firms needs a chain AND a brief assessment (Appendix 6). The assessment is usually that costs rise too, or that the benefit depends on the kind of good the firm sells.",
+      "recall": {
+       "id": "economic-growth:sub:profits-and-investment:recall",
+       "type": "classify",
+       "prompt": "Loriana's economy grows quickly for three years. Sort each firm by what growth is likely to do to its profits:",
+       "groups": [
+        {
+         "name": "Profits likely to rise",
+         "items": [
+          "A chain of restaurants in the capital",
+          "A car dealership selling mid-priced models",
+          "A builder of new apartment blocks"
+         ],
+         "why": "Each sells things households buy more of as their real incomes rise, so sales grow faster than costs."
+        },
+        {
+         "name": "Profits may be squeezed",
+         "items": [
+          "A low-cost bus operator whose passengers switch to cars",
+          "A factory whose skilled workers are being hired away by expanding rivals"
+         ],
+         "why": "Growth either moves demand away from what the firm sells or raises what it must pay for inputs — the costs of growth reaching the firm."
+        }
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:tax-revenues-and-public-services",
+      "title": "Tax Revenues and Public Services",
+      "keyIdea": "Growth raises tax revenue without any rise in tax rates, which lets a government improve public services without taking a bigger share of incomes.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Increased tax revenues.** Taxes are levied on incomes, profits and spending, and growth raises all three. So revenue rises even when no tax RATE changes. Loriana collects taxes worth 20% of GDP: as real GDP grew from $490bn in Year 3 to $507.4bn in Year 4, revenue rose from $98bn to $101.5bn with no tax increase at all."
+       },
+       {
+        "type": "paragraph",
+        "text": "Some spending falls at the same time. Where a government pays unemployment support, fewer people out of work means less spent on it, so the budget can improve from both sides."
+       },
+       {
+        "type": "paragraph",
+        "text": "**Improved public services.** That extra revenue can pay for more and better schools, hospitals, roads and water systems — or the same services with lower tax rates, or less borrowing. Growth is how a government expands public services without asking households to give up a larger share of their income."
+       },
+       {
+        "type": "paragraph",
+        "text": "The benefit is possible, not automatic. A government can spend the extra revenue badly, or on things that do not improve services, and some public spending — on pensions, for instance — rises with an ageing population whatever the growth rate."
+       }
+      ],
+      "realExample": {
+       "emoji": "🛣️",
+       "text": "Indonesia and India have both used the revenue of growing economies to fund large programmes of road, port and rail building, which then add to the capacity those economies grow from."
+      },
+      "misconception": "Students write that tax revenue rises during growth because the government raises taxes. Revenue rises because the tax BASE grows — more income, more profit, more spending — at unchanged rates.",
+      "examMatters": "A Calculate question on tax revenue usually gives a share of GDP and two GDP figures. Apply the share to each figure and subtract; say that no tax rate changed, because that is the economics behind the arithmetic.",
+      "recall": {
+       "id": "economic-growth:sub:tax-revenues-and-public-services:recall",
+       "type": "fillin",
+       "prompt": "Taxes in an economy raise 20% of GDP. Real GDP grows from $200bn to $210bn and no tax rate changes. Complete:",
+       "template": [
+        "Tax revenue rises from $40bn to $___bn.",
+        "The government's revenue grew because its ___ grew, with every rate unchanged.",
+        "Spending on unemployment support is likely to ___ at the same time."
+       ],
+       "answers": [
+        "42",
+        "tax base",
+        "fall"
+       ],
+       "hints": [
+        "apply the same share to the new GDP figure",
+        "the incomes, profits and spending that taxes are charged on",
+        "fewer people need it when firms are hiring"
+       ],
+       "distractors": [
+        "50",
+        "tax rate",
+        "rise"
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Six possible benefits, from living standards to public services.",
+     "Growth lowers unemployment only when it outpaces capacity growth.",
+     "Profits and investment rise together, and investment feeds future growth.",
+     "Tax revenue rises with the tax base, with no rise in tax rates."
+    ],
+    "diagramId": null,
+    "quizIndices": [
+     15,
+     16,
+     17,
+     18,
+     19
+    ],
+    "practiceIndices": [
+     4,
+     5
+    ]
+   },
+   {
+    "id": "economic-growth:block:435b356d",
+    "title": "The Costs of Growth",
+    "sections": [
+     {
+      "id": "economic-growth:sub:opportunity-costs",
+      "title": "Opportunity Costs",
+      "keyIdea": "Faster growth tomorrow usually means consuming less today: resources used for capital goods are not available for consumer goods.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "Growth has an **opportunity cost** — what must be given up to get it. An economy at full capacity that wants more capital goods (machines, infrastructure, training) must produce fewer consumer goods now."
+       },
+       {
+        "type": "paragraph",
+        "text": "On a frontier with capital goods on one axis and consumer goods on the other, an economy choosing point **B** (more capital goods) rather than point **A** (more consumer goods) gives up consumer goods today. The reward comes later: more capital means a frontier that shifts further out, so future consumption can be higher than it would have been."
+       },
+       {
+        "type": "paragraph",
+        "text": "This is a trade-off between **current and future living standards**. Households alive today accept lower consumption so that they, or the next generation, can consume more later. How far to trade one against the other is a judgement, not a calculation, and it is one reason governments and households disagree about how fast to grow."
+       },
+       {
+        "type": "paragraph",
+        "text": "The opportunity cost also falls on other uses of resources. Land used for factories is not available for farming or parks; hours spent working are not available for leisure. A rise in real GDP that comes from longer working weeks has been bought with time."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏗️",
+       "text": "China's very high rate of investment for several decades meant households consumed a much smaller share of national output than in most economies — a deliberate choice of future capacity over present consumption."
+      },
+      "misconception": "Students assume choosing more capital goods leaves living standards permanently lower. It lowers consumption NOW; because the frontier then shifts out further, consumption later can be higher than it would otherwise have been.",
+      "examMatters": "Opportunity cost is the cost of growth that needs a diagram most. Two points on one frontier, labelled, with the consumer goods given up marked, earns what a paragraph alone struggles to.",
+      "recall": {
+       "id": "economic-growth:sub:opportunity-costs:recall",
+       "type": "match",
+       "prompt": "Match each growth decision to what it costs today:",
+       "pairs": [
+        {
+         "left": "A government builds a new rail line instead of cutting taxes",
+         "right": "Households have less income to spend now",
+         "why": "Resources used for the railway are not available to produce the consumer goods lower taxes would have bought."
+        },
+        {
+         "left": "A family business keeps its profits in the firm to buy machinery",
+         "right": "The owners take less out to spend",
+         "why": "Retained profit invested in capital goods is profit not spent on consumption."
+        },
+        {
+         "left": "Farmland near a city is rezoned for factories",
+         "right": "Less food is grown near the city",
+         "why": "The land cannot be used for both; the forgone crop is the opportunity cost of the factories."
+        },
+        {
+         "left": "Workers take on a second shift to raise output",
+         "right": "Less leisure time",
+         "why": "Output from longer hours is bought with hours no longer free, a cost GDP does not record."
+        }
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:environmental-costs",
+      "title": "Environmental Costs",
+      "keyIdea": "Producing more usually means using more resources and creating more waste — unless growth changes HOW goods are produced.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Environmental costs** of growth come in two kinds:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Pollution** — emissions to air and water, waste and noise. These are external costs: they fall on people other than the producer and are not in the market price.",
+         "**Depletion** — using up non-renewable resources such as oil and minerals, or renewable ones faster than they regrow, such as forests and fish stocks."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Neither is subtracted from real GDP. A factory that pollutes a river adds its output to GDP and nothing is taken off for the damage, so growth measured by GDP overstates the gain in welfare."
+       },
+       {
+        "type": "paragraph",
+        "text": "The link between growth and damage is not fixed. It depends on the resources used per unit of output, which can fall: cleaner technologies, a shift from industry towards services, and regulation can all let output rise while emissions fall. Growth also pays for cleaner technology, which a poorer economy may not be able to afford."
+       },
+       {
+        "type": "paragraph",
+        "text": "So the cost is a POSSIBLE cost. Growth driven by heavy industry and fossil fuels is likely to be costly to the environment; growth driven by services and cleaner production need not be."
+       }
+      ],
+      "realExample": {
+       "emoji": "🌫️",
+       "text": "Rapid industrial growth in cities such as Delhi and Beijing has been accompanied by severe air pollution. Beijing's air has improved markedly since coal burning and heavy industry were moved out of the city."
+      },
+      "misconception": "Students write that growth always harms the environment. The damage depends on what is produced and how: output per unit of resource can rise, and some economies have grown while cutting emissions.",
+      "examMatters": "Name the environmental cost precisely — which pollution, which resource — and say why the market does not price it. A general \"growth is bad for the planet\" earns little in an Examine or Discuss answer.",
+      "recall": {
+       "id": "economic-growth:sub:environmental-costs:recall",
+       "type": "classify",
+       "prompt": "Sort each consequence of Loriana's growth into the kind of environmental cost it is:",
+       "groups": [
+        {
+         "name": "Pollution",
+         "items": [
+          "Smog from new power stations drifts over the capital",
+          "A river downstream of new factories can no longer be fished",
+          "Landfill sites fill with packaging from rising retail sales"
+         ],
+         "why": "Each is waste put into the air, water or land that harms people who did not produce or buy the output."
+        },
+        {
+         "name": "Depletion",
+         "items": [
+          "Offshore gas fields are emptied faster to supply industry",
+          "Forest is cleared for plantations faster than it can regrow"
+         ],
+         "why": "Each uses up a resource faster than it can be replaced, leaving less for future production."
+        }
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:balance-of-trade-deficits",
+      "title": "Balance of Trade Deficits",
+      "keyIdea": "Rising incomes pull in imports, and when growth outpaces trading partners' growth, the balance of trade can fall into deficit.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **balance of trade** is the value of exports of goods and services minus the value of imports. Growth tends to push it towards deficit for three reasons:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Imports rise with income.** Households spend part of any rise in income on imported goods, and faster-growing firms buy more imported materials and machinery.",
+         "**Exports are diverted.** Firms that can sell everything at home in a fast-growing market have less reason to sell abroad.",
+         "**Prices rise.** If growth runs ahead of capacity and domestic prices rise faster than trading partners', exports become less competitive and imports more so."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "In Year 3 Loriana exported $180bn and imported $160bn, a trade surplus of $20bn. By Year 7, after four years of growth above trend, exports were $196bn but imports had risen to $204bn: a **balance of trade deficit** of $8bn."
+       },
+       {
+        "type": "paragraph",
+        "text": "A deficit has to be financed — by borrowing from abroad or selling assets to foreign owners — so a persistent one can become a constraint on growth itself. Whether it matters depends on what the imports are: machinery that raises capacity is a different matter from consumer goods."
+       }
+      ],
+      "realExample": {
+       "emoji": "🇵🇰",
+       "text": "Pakistan has repeatedly seen imports of fuel and machinery surge during spells of rapid growth, widening its trade deficit until foreign currency ran short and growth had to be slowed."
+      },
+      "misconception": "Students treat a trade deficit as a sign that an economy is doing badly. During rapid growth it is often the opposite: imports rise BECAUSE incomes and investment are rising. The question is whether it can be financed and whether it persists.",
+      "examMatters": "Keep the direction of each effect clear: rising incomes raise imports (M up); diverted output and higher prices lower exports (X down). Both widen the deficit, but by different routes, and an Explain answer should name one fully.",
+      "recall": {
+       "id": "economic-growth:sub:balance-of-trade-deficits:recall",
+       "type": "reorder",
+       "prompt": "Put the causal chain from rapid growth to a balance of trade deficit in order, from cause to effect:",
+       "correctOrder": [
+        "Loriana's real GDP climbs well above its trend",
+        "Shoppers and factories buy more foreign-made goods",
+        "Spending abroad outpaces what foreigners spend on Lorianan output",
+        "The surplus on traded goods and services turns negative"
+       ],
+       "why": [
+        "The chain starts with growth itself: higher real incomes.",
+        "Part of every extra dollar of income is spent on imports, and growing firms buy imported inputs.",
+        "Exports depend on OTHER economies' incomes, so they do not rise in step with domestic ones.",
+        "When imports outgrow exports for long enough, the balance turns negative."
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:increased-inequality",
+      "title": "Increased Inequality",
+      "keyIdea": "Growth raises average income, but the gains can go mainly to some people, regions or skills — widening the gap even as most incomes rise.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Increased inequality** is a possible cost of growth: the gap between higher and lower incomes widens. Growth does not arrive evenly."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**By skill.** Growth driven by new technology raises the pay of workers who can use it faster than the pay of those it replaces.",
+         "**By ownership.** Rising profits go to those who own firms and shares, who are mostly already better off.",
+         "**By region.** Growth concentrates where firms, ports and cities already are, so some regions pull ahead of others."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Inequality can widen while nearly everyone gets richer. If the poorest fifth's income rises 5% and the richest fifth's rises 20%, both are better off than before, but the distance between them has grown. Whether that is a cost depends on why inequality matters to you: people judge their living standards partly against others, and a widening gap can weaken support for the policies that sustain growth."
+       },
+       {
+        "type": "paragraph",
+        "text": "The cost is not inevitable. Growth that creates many jobs for lower-paid workers, or that is paired with spending on education, can narrow the gap."
+       }
+      ],
+      "realExample": {
+       "emoji": "🗺️",
+       "text": "China's rapid growth widened the income gap between its richer coastal provinces and poorer inland ones for many years, even as incomes rose across the country."
+      },
+      "misconception": "Students write that if inequality increases, the poor must be worse off. Inequality is about the GAP: the poorest can be better off in absolute terms while their share of total income falls.",
+      "examMatters": "Say which kind of inequality you mean — between skills, owners and workers, or regions — and give the mechanism. It turns an assertion into analysis.",
+      "recall": {
+       "id": "economic-growth:sub:increased-inequality:recall",
+       "type": "fillin",
+       "prompt": "In an economy, the poorest fifth's real income rises from $4,000 to $4,200, and the richest fifth's from $40,000 to $48,000. Complete, about the poorest fifth and then the two together:",
+       "template": [
+        "Their ___ income has risen, while their share of the total has fallen.",
+        "The gap between the two groups has ___.",
+        "So growth has made the distribution of income more ___, even though both groups gained."
+       ],
+       "answers": [
+        "absolute",
+        "widened",
+        "unequal"
+       ],
+       "hints": [
+        "measured on its own, not compared with anyone else's",
+        "compare $36,000 with the new difference",
+        "the opposite of evenly spread"
+       ],
+       "distractors": [
+        "relative",
+        "narrowed",
+        "equal"
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:inflation-from-growth",
+      "title": "Inflation",
+      "keyIdea": "When aggregate demand grows faster than the economy's capacity, firms cannot raise output fast enough, so prices rise instead.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "**Inflation** is a cost of growth when growth runs faster than capacity. Actual growth driven by rising AD can use up spare capacity; once it is used up, extra demand meets firms that cannot produce more, so they raise prices. This is demand-pull inflation, which topic 2.3.1 defines."
+       },
+       {
+        "type": "paragraph",
+        "text": "Rapid growth also raises costs. Firms competing for scarce workers bid up wages, and materials and energy become dearer as more is demanded. Firms pass the higher costs on in prices."
+       },
+       {
+        "type": "paragraph",
+        "text": "The inflation in turn damages growth. It erodes the real value of savings and fixed incomes, makes exports less competitive, and — when it is unpredictable — makes firms wary of the long-term investment that future growth depends on. Governments and central banks respond by slowing demand, which slows growth."
+       },
+       {
+        "type": "paragraph",
+        "text": "Growth driven by rising capacity has the opposite effect. When potential output grows, the same demand meets a larger capacity and the price level falls, or rises more slowly. That is why the SOURCE of growth decides whether inflation is a cost of it."
+       }
+      ],
+      "realExample": {
+       "emoji": "🇹🇷",
+       "text": "Economies that push growth well beyond capacity with cheap credit, as Turkey did, have tended to end up with high inflation and a falling currency, which then forced growth to slow."
+      },
+      "misconception": "Students write that economic growth causes inflation. Growth driven by rising capacity can LOWER inflation; it is demand growing faster than capacity that raises the price level.",
+      "examMatters": "Tie the inflation cost to capacity every time: \"growth above the trend rate uses up spare capacity, so further increases in AD raise the price level\" is the chain; \"growth causes inflation\" is not.",
+      "recall": {
+       "id": "economic-growth:sub:inflation-from-growth:recall",
+       "type": "classify",
+       "prompt": "Sort each source of growth by what it is likely to do to inflation:",
+       "groups": [
+        {
+         "name": "Likely to add to inflation",
+         "items": [
+          "Credit-fuelled household spending in an economy already at full capacity",
+          "A surge in government spending when unemployment is already very low"
+         ],
+         "why": "Each raises AD when output cannot rise much further, so the extra demand is met by higher prices."
+        },
+        {
+         "name": "Likely to ease inflation",
+         "items": [
+          "A wave of investment that doubles the output of the steel industry",
+          "A new process that lets each factory worker produce a quarter more"
+         ],
+         "why": "Each raises capacity, so the same demand meets more supply and upward pressure on prices falls."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "Five possible costs: opportunity, environment, trade, inequality, inflation.",
+     "More capital goods now means fewer consumer goods now, and more later.",
+     "Rising incomes pull in imports, pushing the balance of trade into deficit.",
+     "Inflation is a cost when demand outgrows capacity, not of growth as such."
+    ],
+    "diagramId": "economic-growth:diagram:caa798a1",
+    "quizIndices": [
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26
+    ],
+    "practiceIndices": [
+     6,
+     7
+    ]
+   },
+   {
+    "id": "economic-growth:block:e8a4f385",
+    "title": "Output Gaps",
+    "sections": [
+     {
+      "id": "economic-growth:sub:actual-growth-and-the-trend",
+      "title": "Actual Growth and the Long-Term Trend",
+      "keyIdea": "The trend rate of growth is how fast potential output grows over the long run. Actual growth is faster in some years and slower in others.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **trend rate of growth** is the average rate at which an economy's real output grows over a long period — in practice, the rate at which its productive capacity grows. Actual growth in any one year can be above or below it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Loriana's potential output grows at a steady 2.5% a year. Its actual growth does not:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "Year 2 and Year 3: 1.5% a year — below trend.",
+         "Year 4 to Year 7: 3.5% a year — above trend.",
+         "Year 8 and Year 9: 1.5% a year — below trend again."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The difference between the actual growth rate and the trend rate tells you which way the economy is moving relative to capacity. Growth below trend means output is falling further behind what the economy could produce, even though it is still growing. Growth above trend means output is catching up with capacity, and can overtake it."
+       },
+       {
+        "type": "paragraph",
+        "text": "Over the nine years actual output starts and ends exactly on the trend: the years above and below trend cancel out. That is what \"trend\" means — the path the ups and downs are around."
+       }
+      ],
+      "realExample": {
+       "emoji": "📉",
+       "text": "Many high-income economies have seen their trend rate of growth fall over recent decades as productivity growth slowed, so a growth rate once thought weak is now close to their long-run average."
+      },
+      "misconception": "Students assume that positive growth means an economy is doing well against its capacity. Growth of 1.5% in an economy whose trend is 2.5% loses ground against capacity every year it continues.",
+      "examMatters": "When a question gives a growth rate, compare it with the trend before judging it. \"Growth slowed from 3.5% to 1.5%\" means little until you say whether 1.5% is above or below trend.",
+      "recall": {
+       "id": "economic-growth:sub:actual-growth-and-the-trend:recall",
+       "type": "fillin",
+       "prompt": "An economy's trend rate of growth is 3%. Complete:",
+       "template": [
+        "A year of 1% growth makes the shortfall of output against capacity ___.",
+        "In a year when it grows 5%, output moves ___ capacity.",
+        "Over many years, actual growth averages out at about ___%."
+       ],
+       "answers": [
+        "larger",
+        "towards",
+        "3"
+       ],
+       "hints": [
+        "capacity grows faster than output that year",
+        "growth faster than capacity closes the distance",
+        "the long-run rate"
+       ],
+       "distractors": [
+        "smaller",
+        "away from",
+        "1"
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:positive-and-negative-output-gaps",
+      "title": "Positive and Negative Output Gaps",
+      "keyIdea": "An output gap is the difference between actual and potential output. Negative means output is below capacity; positive means it is above.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "The **output gap** is actual real output minus potential output, usually given as a percentage of potential output."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "A **negative output gap**: actual output is BELOW potential. In Year 3 Loriana produced $490bn against a capacity of $500bn — a gap of −$10bn, or −2%.",
+         "A **positive output gap**: actual output is ABOVE potential. In Year 7 it produced $562.9bn against $551.9bn — a gap of +2%."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Output above \"potential\" sounds impossible, but potential output is what the economy can produce at a sustainable rate of use. For a while it can produce more — overtime, extra shifts, machines run without maintenance, people who would not normally work drawn in. It cannot keep it up, which is why a positive gap does not last."
+       },
+       {
+        "type": "paragraph",
+        "text": "The sign of the gap and the growth rate are different things. Loriana's gap was negative in Year 3 while it was growing at 1.5%. A negative output gap is not a recession, which topic 2.3.1 defines as two consecutive quarters of negative growth."
+       }
+      ],
+      "realExample": {
+       "emoji": "🧮",
+       "text": "International organisations such as the IMF and the OECD publish estimated output gaps for many economies, and central banks use such estimates when deciding whether demand needs to be restrained or supported."
+      },
+      "misconception": "Students read a negative output gap as a sign that the economy is shrinking. It means output is below capacity; the economy can be growing, only more slowly than its capacity is.",
+      "examMatters": "State the gap with its sign and its reference: \"actual output is 2% below potential output\" is complete; \"the output gap is 2%\" leaves the reader to guess the direction.",
+      "recall": {
+       "id": "economic-growth:sub:positive-and-negative-output-gaps:recall",
+       "type": "match",
+       "prompt": "Match each economy to its output gap:",
+       "pairs": [
+        {
+         "left": "Capacity $400bn, real GDP $392bn",
+         "right": "Negative gap of 2%",
+         "why": "Actual is below potential by $8bn, which is 2% of $400bn."
+        },
+        {
+         "left": "Capacity $400bn, real GDP $408bn",
+         "right": "Positive gap of 2%",
+         "why": "Actual exceeds potential by $8bn — possible for a while through overtime and extra shifts."
+        },
+        {
+         "left": "Capacity $400bn, real GDP $400bn",
+         "right": "Zero: the two are equal",
+         "why": "Actual output equals potential, so there is no gap."
+        },
+        {
+         "left": "Capacity $400bn, real GDP $380bn",
+         "right": "Negative gap of 5%",
+         "why": "A $20bn shortfall against $400bn of capacity is 5%."
+        }
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:characteristics-of-a-positive-gap",
+      "title": "Characteristics of a Positive Output Gap",
+      "keyIdea": "In a positive output gap, the economy is running hotter than it can sustain: jobs are plentiful, but prices and wages are under upward pressure.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **positive output gap** has a recognisable set of characteristics, all following from demand pressing against capacity:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Low unemployment and labour shortages.** Firms struggle to recruit and pay overtime to the workers they have.",
+         "**Rising inflation.** Demand exceeds what firms can supply at current prices, and wages and input costs rise.",
+         "**Very high use of capacity.** Machinery runs continuously, maintenance is postponed, and delivery times lengthen.",
+         "**A worsening trade balance.** Domestic firms cannot meet demand, so more of it goes to imports."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "Several look like success, and in the short run some are: more people are in work and incomes are rising. The problem is that they cannot last. Postponed maintenance and exhausted workers cut future output, and the rising inflation usually leads the central bank to raise interest rates, slowing demand."
+       },
+       {
+        "type": "paragraph",
+        "text": "A positive gap is therefore a warning as much as a result. Economies that let it grow large tend to face a sharper slowdown later than those whose output stays close to capacity."
+       }
+      ],
+      "realExample": {
+       "emoji": "👷",
+       "text": "As economies reopened after the pandemic, many reported record job vacancies, lengthening delivery times and rising inflation — the signs of demand running ahead of what their capacity could supply."
+      },
+      "misconception": "Students treat a positive output gap as good news because output and employment are high. It is output ABOVE what the economy can sustain, and it brings inflation and a slowdown with it.",
+      "examMatters": "In a data question, a positive gap is usually shown indirectly — vacancies rising, inflation above target, capacity use at a high. Identify it from the indicators and name the gap.",
+      "recall": {
+       "id": "economic-growth:sub:characteristics-of-a-positive-gap:recall",
+       "type": "classify",
+       "prompt": "Sort each indicator by the kind of output gap it points to:",
+       "groups": [
+        {
+         "name": "Positive output gap",
+         "items": [
+          "Firms report record difficulty filling vacancies",
+          "Delivery times lengthen as factories run all night",
+          "Wage settlements rise faster than a year ago"
+         ],
+         "why": "Each shows demand pressing against the economy's capacity to supply it."
+        },
+        {
+         "name": "Negative output gap",
+         "items": [
+          "Factories run one shift instead of three",
+          "Firms cut prices to shift unsold stock"
+         ],
+         "why": "Each shows capacity going unused because demand is too weak to employ it."
+        }
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:characteristics-of-a-negative-gap",
+      "title": "Characteristics of a Negative Output Gap",
+      "keyIdea": "In a negative output gap, resources stand idle: unemployment is high, inflation is low, and firms have spare capacity.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "A **negative output gap** has the opposite characteristics, all following from demand too weak to use the economy's capacity:"
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**Higher unemployment.** Firms produce less than they could, so they need fewer workers.",
+         "**Low or falling inflation.** With spare capacity and unsold stock, firms have little power to raise prices and workers little power to push up wages.",
+         "**Spare capacity.** Factories run below capacity, offices and shops stand empty.",
+         "**Weak investment.** Firms that already have unused machines have little reason to buy more."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The cost is output lost for good: Loriana's $10bn gap in Year 3 is goods and services that were never produced. A long negative gap can also lower capacity itself, as unemployed workers lose skills and firms cancel investment."
+       },
+       {
+        "type": "paragraph",
+        "text": "The same fact creates room for growth. An economy with a negative gap can grow faster than its trend for a while without inflation — which is what Loriana did from Year 4 — because AD can rise into the flat range of the Keynesian long-run AS curve."
+       }
+      ],
+      "realExample": {
+       "emoji": "🏚️",
+       "text": "After financial crises, many economies have run below capacity for years, with unemployment high, inflation low and investment weak, even as their output slowly recovered."
+      },
+      "misconception": "Students write that a negative output gap means prices are falling. Inflation is LOWER than it would be, and may be falling, but the price level usually keeps rising slowly; falling prices are a separate and rarer problem.",
+      "examMatters": "The strongest point about a negative gap is that it leaves room: AD can rise without inflation. It is the link between chapter 1's AD-led growth and this chapter, and it is often the evaluation an answer needs.",
+      "recall": {
+       "id": "economic-growth:sub:characteristics-of-a-negative-gap:recall",
+       "type": "fillin",
+       "prompt": "An economy has a large negative output gap. Complete the description:",
+       "template": [
+        "Unemployment is likely to be ___ than it would be at full capacity.",
+        "Inflation is likely to be ___, because firms cannot easily raise prices.",
+        "A rise in aggregate demand is likely to raise real ___ more than prices."
+       ],
+       "answers": [
+        "higher",
+        "low",
+        "output"
+       ],
+       "hints": [
+        "firms producing less need fewer workers",
+        "spare capacity weakens pricing power",
+        "there are idle resources to put to work"
+       ],
+       "distractors": [
+        "lower",
+        "accelerating",
+        "wages"
+       ]
+      }
+     },
+     {
+      "id": "economic-growth:sub:measuring-output-gaps",
+      "title": "Why Output Gaps Are Hard to Measure",
+      "keyIdea": "Actual output can be measured; potential output cannot be observed, only estimated — so every output gap is an estimate, and estimates differ.",
+      "body": [
+       {
+        "type": "paragraph",
+        "text": "An output gap is actual output minus potential output. The first can be measured; the second cannot. **Potential output is never observed** — it is what the economy COULD produce — so it has to be estimated, and every estimate rests on assumptions."
+       },
+       {
+        "type": "bullets",
+        "items": [
+         "**The trend is uncertain.** Estimates project past growth forward, but the trend rate can change — when productivity growth slows, for example — and the change is only visible years later.",
+         "**Data are revised.** First estimates of GDP are often revised, so the actual output figure moves too.",
+         "**Hidden slack.** Workers who have given up looking, or who work fewer hours than they want, are spare capacity that unemployment figures miss.",
+         "**Methods disagree.** Different statistical methods give different answers for the same year."
+        ]
+       },
+       {
+        "type": "paragraph",
+        "text": "The size of the error matters. In Year 5 Loriana produced $525.3bn. If capacity has grown at 2.5% since Year 3, the gap is 0%. If it has grown at 2%, the gap is +1%; at 3%, −1%. The same economy could need restraining, nothing, or support."
+       }
+      ],
+      "realExample": {
+       "emoji": "🔍",
+       "text": "Estimates of output gaps made at the time are often revised substantially once later data arrive, and the estimates published by different official bodies for the same economy and year can disagree on whether the gap was positive or negative."
+      },
+      "misconception": "Students treat the output gap as a figure that is measured like GDP. Only actual output is measured; potential output is an estimate, so a gap reported to one decimal place carries far more uncertainty than it appears to.",
+      "examMatters": "Measurement difficulty is the evaluation most output-gap questions invite. Name one specific difficulty and say what it does to a policy decision — a gap wrongly estimated as negative invites stimulus into an economy already at capacity.",
+      "recall": {
+       "id": "economic-growth:sub:measuring-output-gaps:recall",
+       "type": "match",
+       "prompt": "Match each difficulty to how it can mislead an estimate of the output gap:",
+       "pairs": [
+        {
+         "left": "Productivity growth has quietly slowed",
+         "right": "Capacity is overstated, so the gap looks more negative than it is",
+         "why": "An estimate that projects the old, faster trend forward puts potential output too high."
+        },
+        {
+         "left": "Many part-time workers want full-time hours",
+         "right": "Spare capacity is missed, so the gap looks smaller than it is",
+         "why": "Underemployed workers are unused labour that the unemployment rate does not count."
+        },
+        {
+         "left": "Last year's GDP is later revised up",
+         "right": "Actual output was higher, so the gap was less negative",
+         "why": "A revision moves the measured half of the calculation, not only the estimated half."
+        }
+       ]
+      }
+     }
+    ],
+    "takeaway": [
+     "The trend rate is how fast capacity grows over the long run.",
+     "Output gap = actual minus potential output, as a share of potential.",
+     "Positive gap: labour shortages and inflation. Negative: idle resources.",
+     "Potential output is estimated, never observed, so every gap is uncertain."
+    ],
+    "diagramId": "economic-growth:diagram:4696fc39",
+    "quizIndices": [
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33
+    ],
+    "practiceIndices": [
+     8,
+     9
+    ]
+   }
+  ],
+  "notes": [
+   {
+    "title": "Actual and Potential Growth",
+    "meta": "2.3.5 · 1a-1c",
+    "keyIdea": "Two kinds of growth, one picture of each, and what drives the first.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Actual growth</strong> — an increase in real GDP."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Potential growth</strong> — an increase in productive capacity: the real output possible with all resources employed."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Export-led growth</strong> — growth driven mainly by rising exports."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "<strong>On the PPF</strong> — actual growth from spare capacity is a move from inside the frontier towards it; potential growth shifts the frontier out; a move along it is reallocation."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>AD = C + I + G + (X − M)</strong> — $300bn + $70bn + $100bn + ($180bn − $160bn) = $490bn in Loriana, Year 3."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Three ranges</strong> — on a Keynesian long-run AS curve, extra AD raises output where the curve is flat, output and prices where it rises, and only prices where it is vertical."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Why trade matters</strong> — a bigger market, economies of scale, foreign currency for capital goods, and competition."
+       }
+      ]
+     },
+     {
+      "title": "WHERE IT GOES NEXT",
+      "items": [
+       {
+        "type": "link",
+        "text": "The multiplier behind the size of an AD shift is topic 2.3.4."
+       },
+       {
+        "type": "link",
+        "text": "Chapter 2 is what makes potential output grow."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title": "The Causes of Potential Growth",
+    "meta": "2.3.5 · 1d, 1e",
+    "keyIdea": "The four causes of potential growth, and the productivity thread that links them.",
+    "blocks": [
+     {
+      "title": "THE FOUR CAUSES",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Domestic investment and foreign direct investment (FDI)</strong>"
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Innovation</strong>"
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Growth in size of labour force, including net migration</strong>"
+       },
+       {
+        "type": "definition",
+        "text": "<strong>The degree of competition</strong>"
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "<strong>Investment, twice</strong> — the spending is AD now; the new capital is capacity when installed. FDI adds technology and finance local firms lack."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Process innovation</strong> — the same resources produce more, and an idea is not used up."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Net migration</strong> — adds working-age people at once. Total output rises; output per head depends on productivity."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Competition</strong> — rivals force firms to cut waste and adopt better methods; weak firms exit."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Productivity</strong> — 20 million × $25,000 = $500bn. With 0.5% more workers and 2% more output each, capacity grows about 2.5% and doubles in about 28 years."
+       }
+      ]
+     },
+     {
+      "title": "WHERE IT GOES NEXT",
+      "items": [
+       {
+        "type": "link",
+        "text": "The shapes of the long-run AS curve are topic 2.3.3."
+       },
+       {
+        "type": "link",
+        "text": "Chapter 3 is what growth brings; chapter 4 what it costs."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title": "The Benefits of Growth",
+    "meta": "2.3.5 · 2a",
+    "keyIdea": "Six possible benefits, in three linked pairs.",
+    "blocks": [
+     {
+      "title": "THE SIX",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Higher living standards</strong>"
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Lower unemployment</strong>"
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Increased profits for firms</strong>"
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Higher levels of investment</strong>"
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Increased tax revenues</strong>"
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Improved public services</strong>"
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "<strong>Per head</strong> — living standards rise when real GDP grows faster than the population."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Jobs follow output</strong> — but growth below trend (1.5% against 2.5%) can leave unemployment rising."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Profits then investment</strong> — rising sales raise profits, and firms expecting growth invest, which adds to capacity."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>The tax base</strong> — at 20% of GDP, revenue rose from $98bn to $101.5bn with no rise in tax rates."
+       }
+      ]
+     },
+     {
+      "title": "WHERE IT GOES NEXT",
+      "items": [
+       {
+        "type": "link",
+        "text": "Whether real GDP per head measures living standards is topic 2.3.1."
+       },
+       {
+        "type": "link",
+        "text": "Every benefit is POSSIBLE: chapter 4 is what can offset it."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title": "The Costs of Growth",
+    "meta": "2.3.5 · 3a",
+    "keyIdea": "Five possible costs, each with the condition under which it bites.",
+    "blocks": [
+     {
+      "title": "THE FIVE",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Opportunity costs</strong>"
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Environmental costs</strong>"
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Balance of trade deficits</strong>"
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Increased inequality</strong>"
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Inflation</strong>"
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "<strong>Current against future</strong> — more capital goods now means fewer consumer goods now and a frontier further out later."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Environment</strong> — pollution and depletion are not subtracted from GDP; the damage per unit of output can fall."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Trade</strong> — imports rise with income: Loriana's $20bn surplus in Year 3 became a $8bn deficit by Year 7."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Inequality</strong> — the gap can widen while nearly everyone gets richer."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Inflation</strong> — when AD grows faster than capacity; capacity-led growth eases it."
+       }
+      ]
+     },
+     {
+      "title": "WHERE IT GOES NEXT",
+      "items": [
+       {
+        "type": "link",
+        "text": "Demand-pull inflation is defined in topic 2.3.1."
+       },
+       {
+        "type": "link",
+        "text": "Chapter 5 is how to tell whether growth is running ahead of capacity."
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Output Gaps",
+    "meta": "2.3.5 · 4a-4d",
+    "keyIdea": "Actual against trend, the sign of the gap, what each gap looks like, and why it is an estimate.",
+    "blocks": [
+     {
+      "title": "DEFINITIONS",
+      "items": [
+       {
+        "type": "definition",
+        "text": "<strong>Trend rate of growth</strong> — the long-run growth rate of potential output: 2.5% a year in Loriana."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Output gap</strong> — actual output minus potential output, as a percentage of potential."
+       },
+       {
+        "type": "definition",
+        "text": "<strong>Negative output gap</strong> — actual output below potential. <strong>Positive output gap</strong> — actual output above it."
+       }
+      ]
+     },
+     {
+      "title": "MECHANISMS",
+      "items": [
+       {
+        "type": "mechanism",
+        "text": "<strong>Below trend, gap widens</strong> — 1.5% growth took Loriana to $490bn against $500bn in Year 3: −2%."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Above trend, gap closes and turns</strong> — 3.5% a year took it to +2% by Year 7."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Positive gap</strong> — labour shortages, rising inflation, capacity at full stretch, imports rising."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>Negative gap</strong> — unemployment, low inflation, idle capacity, weak investment."
+       },
+       {
+        "type": "mechanism",
+        "text": "<strong>An estimate</strong> — assume a 2%, 2.5% or 3% trend and Year 5's gap is +1%, 0% or −1%."
+       }
+      ]
+     },
+     {
+      "title": "WHERE IT GOES NEXT",
+      "items": [
+       {
+        "type": "link",
+        "text": "A negative gap is not a recession: recession, two consecutive quarters of negative growth, is topic 2.3.1."
+       },
+       {
+        "type": "link",
+        "text": "What governments do about a gap is topic 2.3.6."
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "quiz": [
+   {
+    "id": "economic-growth:quiz:31e8cd1c",
+    "question": "Which of these is an example of potential economic growth?",
+    "options": [
+     "A rise in real output as laid-off workers are rehired",
+     "A rise in the output the economy could produce with every resource employed",
+     "A switch of resources from one good to another at full employment",
+     "A rise in the price level with no change in real output"
+    ],
+    "explanation": "Potential growth is a rise in productive capacity, which is what the economy could produce with everything employed. Rehiring idle workers raises actual output towards capacity without raising capacity, and switching resources between goods at full employment is a reallocation.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:c1c2dac2",
+    "question": "On a production possibility frontier, actual growth that uses spare capacity is shown by:",
+    "options": [
+     "a movement along the frontier",
+     "an outward shift of the frontier",
+     "a movement from inside the frontier towards it",
+     "an inward shift of the frontier"
+    ],
+    "explanation": "An economy with idle resources sits inside its frontier, and putting them to work moves it towards the frontier. A movement along the frontier is a reallocation at full capacity, and an outward shift is potential growth.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:68969ea3",
+    "question": "With spare capacity in the economy, a rise in which of these would cause actual growth through aggregate demand?",
+    "options": [
+     "Import purchases",
+     "Household saving",
+     "Income tax paid",
+     "Export sales"
+    ],
+    "explanation": "Exports are a component of aggregate demand, so more foreign orders mean more demand for domestic output, which firms with spare capacity can meet by producing more. Imports, saving and taxes are withdrawals: a rise in any of them reduces aggregate demand.",
+    "correctIndex": 3
+   },
+   {
+    "id": "economic-growth:quiz:755b43d9",
+    "question": "Real GDP rises by 3% in a year in which productive capacity rises by 2.5%. This is:",
+    "options": [
+     "potential growth faster than actual growth",
+     "actual growth faster than potential growth",
+     "a movement along the production possibility frontier",
+     "a rise in the price level with no rise in output"
+    ],
+    "explanation": "Real GDP measures actual output and capacity measures potential output, so output rising faster than capacity means actual growth is outrunning potential growth. It can do so only while there is spare capacity to use up.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:0ac27e6f",
+    "question": "Which is most likely to raise real output WITHOUT raising the price level?",
+    "options": [
+     "A rise in aggregate demand when the economy is at full capacity",
+     "A rise in aggregate demand when capacity is running short",
+     "A rise in aggregate demand when there is plenty of spare capacity",
+     "A fall in aggregate demand when there is plenty of spare capacity"
+    ],
+    "explanation": "Where the Keynesian long-run AS curve is flat, firms have idle workers and machines and can supply more at the same prices. At full capacity extra demand can only raise prices, and where capacity is running short it raises both output and prices.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:cbc15351",
+    "question": "Consumption is $300bn, investment $70bn, government spending $100bn, exports $180bn and imports $160bn. Aggregate demand is:",
+    "options": [
+     "$810bn",
+     "$490bn",
+     "$650bn",
+     "$470bn"
+    ],
+    "explanation": "Aggregate demand adds consumption, investment and government spending to net exports, which is exports minus imports: 300 plus 70 plus 100 plus 20. Adding imports instead of subtracting them, or leaving them out, counts foreign-produced goods as domestic demand.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:c4253660",
+    "question": "Export-led growth is growth that is:",
+    "options": [
+     "measured by the size of the trade surplus",
+     "caused by replacing imports with domestic goods",
+     "limited to economies that export raw materials",
+     "driven mainly by rising sales to other economies"
+    ],
+    "explanation": "The phrase describes what drives growth: foreign demand for the economy's output. It says nothing about the trade balance, and a heavy exporter that imports many components can run a deficit while its growth is still export-led.",
+    "correctIndex": 3
+   },
+   {
+    "id": "economic-growth:quiz:d6ef5156",
+    "question": "Which is a reason international trade can raise an economy's rate of growth?",
+    "options": [
+     "Export earnings pay for imported capital goods",
+     "Imports add directly to aggregate demand",
+     "Exports shrink the size of the market firms serve",
+     "Trade removes the need for domestic investment"
+    ],
+    "explanation": "Foreign currency earned by exporting pays for machinery and technology the economy cannot make itself, which raises capacity as well as output. Imports are a withdrawal from aggregate demand, and selling abroad enlarges rather than shrinks the market.",
+    "correctIndex": 0
+   },
+   {
+    "id": "economic-growth:quiz:9cee760b",
+    "question": "Which is foreign direct investment that raises an economy's productive capacity?",
+    "options": [
+     "A foreign fund buying shares with no control of the firm",
+     "A foreign buyer purchasing an existing office tower",
+     "Foreign tourists spending more on hotel rooms",
+     "A foreign firm building a new factory in the country"
+    ],
+    "explanation": "Direct investment means a foreign firm acquiring productive assets it controls, and a new factory is new capital that raises capacity. Buying shares without control, or buying an asset that already exists, changes ownership without adding to what the economy can produce.",
+    "correctIndex": 3
+   },
+   {
+    "id": "economic-growth:quiz:7cb81ec6",
+    "question": "Investment spending affects economic growth because it:",
+    "options": [
+     "raises AD when spent and capacity when installed",
+     "raises capacity only after the loan is repaid",
+     "raises AD but never affects capacity",
+     "lowers AD because it is financed by saving"
+    ],
+    "explanation": "Spending on capital goods is a component of aggregate demand the moment it happens, which adds to actual growth. The capital itself adds to capacity once it is working, which is potential growth.",
+    "correctIndex": 0
+   },
+   {
+    "id": "economic-growth:quiz:76728e32",
+    "question": "Which of these is a process innovation?",
+    "options": [
+     "A firm launches a new flavour of soft drink",
+     "A retailer opens a second shop in another city",
+     "A factory adopts a method that cuts waste per unit",
+     "A bank raises the interest rate it pays savers"
+    ],
+    "explanation": "A process innovation is a new way of producing something that already exists, so a method that uses less material per unit raises output per unit of input. A new drink is a product innovation, and a second shop or a higher interest rate is not an innovation at all.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:8514a018",
+    "question": "Net migration of working-age people into an economy is most likely to:",
+    "options": [
+     "lower its productive capacity",
+     "raise its output per worker automatically",
+     "raise its total potential output",
+     "leave its potential output unchanged"
+    ],
+    "explanation": "More people able and willing to work means the economy can produce more in total. Whether output per worker rises depends on how productive the new workers are and how much capital each has, so it is not automatic.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:74b0d449",
+    "question": "How does a greater degree of competition raise potential growth?",
+    "options": [
+     "Firms must raise productivity or lose customers to rivals",
+     "Prices rise, so firms can afford more investment",
+     "Firms merge, so they can share their spare capacity",
+     "Consumers spend more, so aggregate demand rises"
+    ],
+    "explanation": "Where rivals can take their customers, firms have to cut waste and adopt better methods, and weak firms exit, releasing resources to better users. That raises what the economy can produce, which is a supply-side effect rather than a rise in spending.",
+    "correctIndex": 0
+   },
+   {
+    "id": "economic-growth:quiz:dcfa5fa9",
+    "question": "An economy has 20 million workers, each producing $25,000 of output a year. Its productive capacity is:",
+    "options": [
+     "$50bn",
+     "$500bn",
+     "$5,000bn",
+     "$250bn"
+    ],
+    "explanation": "Capacity is the number of workers times output per worker: 20 million times $25,000 is $500,000 million, which is $500bn. The other figures come from slipping a power of ten or halving one of the two inputs.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:04326a31",
+    "question": "The labour force grows by 0.5% a year and output per worker by 2% a year. Potential output grows by about:",
+    "options": [
+     "2.5%",
+     "2%",
+     "1.5%",
+     "0.5%"
+    ],
+    "explanation": "Capacity is workers times output per worker, so its growth rate is roughly the sum of the two growth rates. Reading only the productivity figure, or only the labour force figure, leaves out half of what raises capacity.",
+    "correctIndex": 0
+   },
+   {
+    "id": "economic-growth:quiz:5436ff05",
+    "question": "Real GDP rises by 3% while the population rises by 4%. Real GDP per head has:",
+    "options": [
+     "risen by 3%",
+     "fallen",
+     "risen by 7%",
+     "not changed"
+    ],
+    "explanation": "Output per person falls when the number of people grows faster than output, so the average person has fewer goods and services than before despite the rise in real GDP. That is why living standards are judged per head.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:796b54b9",
+    "question": "An economy grows at 1.5% a year while its trend rate is 2.5%. Unemployment is most likely to:",
+    "options": [
+     "fall, because output is still growing",
+     "stay unchanged, because growth is positive",
+     "fall, because productivity is rising",
+     "rise, because output grows more slowly than capacity"
+    ],
+    "explanation": "Capacity grows because the labour force and output per worker grow. When output grows more slowly than that, firms can meet demand without taking on all the workers the economy is adding, so unemployment rises even though output is growing.",
+    "correctIndex": 3
+   },
+   {
+    "id": "economic-growth:quiz:af9fd489",
+    "question": "Tax revenue is 20% of GDP. Real GDP rises from $490bn to $507.4bn and no tax rate changes. Revenue rises by about:",
+    "options": [
+     "$3.5bn",
+     "$17.4bn",
+     "$101.5bn",
+     "$0"
+    ],
+    "explanation": "The same share applied to a larger GDP raises more revenue, an increase of $3.5bn. The tax base grew, so revenue rose with no change in any tax rate; the rise in GDP itself is not the rise in revenue.",
+    "correctIndex": 0
+   },
+   {
+    "id": "economic-growth:quiz:a0f6c03c",
+    "question": "Why does economic growth tend to raise levels of investment?",
+    "options": [
+     "Interest rates always fall when output grows",
+     "Firms expect rising sales to use new capacity",
+     "Consumer spending falls, which frees up funds",
+     "Governments require firms to invest more"
+    ],
+    "explanation": "Firms invest when they expect extra capacity to be used and paid for, and rising sales supply that expectation along with the profits to fund it. Nothing guarantees that interest rates fall during growth.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:09dc944d",
+    "question": "Which benefit could a growing economy's government gain without raising any tax rate?",
+    "options": [
+     "A fall in the price level",
+     "More revenue to spend on public services",
+     "A larger surplus on the balance of trade",
+     "Lower real incomes for taxpayers"
+    ],
+    "explanation": "Revenue rises because incomes, profits and spending — what is taxed — are all larger, and that revenue can pay for better schools, hospitals and roads. Growth does not normally lower the price level or improve the trade balance, and it raises rather than lowers real incomes.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:af1f90f4",
+    "question": "An economy at full capacity chooses to produce more capital goods. The opportunity cost is:",
+    "options": [
+     "the extra capital goods it produces",
+     "the money spent on the capital goods",
+     "the consumer goods it will gain in future",
+     "the consumer goods it can no longer produce now"
+    ],
+    "explanation": "Opportunity cost is the next best alternative given up. At full capacity, resources moved to capital goods come out of consumer goods, so today's forgone consumption is the cost; the future consumption is the reward.",
+    "correctIndex": 3
+   },
+   {
+    "id": "economic-growth:quiz:d1e42bbf",
+    "question": "Choosing more capital goods today is most likely to mean:",
+    "options": [
+     "higher consumption now and higher consumption later",
+     "lower consumption now and lower consumption later",
+     "no change in consumption at any time",
+     "lower consumption now and higher consumption later"
+    ],
+    "explanation": "Fewer consumer goods can be produced while resources go to capital goods, but the extra capital shifts the frontier further out, so more can be consumed later. It is a trade-off between current and future living standards.",
+    "correctIndex": 3
+   },
+   {
+    "id": "economic-growth:quiz:1dacb1e0",
+    "question": "Why does real GDP overstate the gain from growth that pollutes?",
+    "options": [
+     "Real GDP counts the pollution twice",
+     "Real GDP leaves out all factory output",
+     "Pollution lowers the measured price level",
+     "The damage is not subtracted from measured output"
+    ],
+    "explanation": "Real GDP adds up the value of goods and services produced and takes nothing off for the harm pollution does to people who did not produce or buy the output. The output is counted in full while the damage is left out.",
+    "correctIndex": 3
+   },
+   {
+    "id": "economic-growth:quiz:583a2055",
+    "question": "Rapid growth is most likely to worsen the balance of trade because:",
+    "options": [
+     "rising incomes raise spending on exports",
+     "growth lowers the price of domestic goods",
+     "rising incomes raise spending on imports",
+     "growth cuts imports of machinery"
+    ],
+    "explanation": "Households spend part of any rise in income on goods from abroad, and growing firms buy imported materials and machinery. Exports depend on the incomes of other economies, so they do not rise in step with domestic incomes.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:27dd3a53",
+    "question": "Exports rise from $180bn to $196bn and imports from $160bn to $204bn. The balance of trade has moved from:",
+    "options": [
+     "a $20bn surplus to an $8bn deficit",
+     "a $20bn deficit to an $8bn surplus",
+     "a $20bn surplus to a $28bn deficit",
+     "an $8bn surplus to a $20bn deficit"
+    ],
+    "explanation": "The balance is exports minus imports: $180bn minus $160bn is a surplus of $20bn, and $196bn minus $204bn is a deficit of $8bn. The $28bn figure is the size of the swing, not the deficit.",
+    "correctIndex": 0
+   },
+   {
+    "id": "economic-growth:quiz:c64e10ef",
+    "question": "Growth raises the poorest fifth's income by 5% and the richest fifth's by 20%. Which statement is correct?",
+    "options": [
+     "Both are better off and inequality has increased",
+     "The poorest fifth are worse off than before",
+     "Inequality has fallen because both groups gained",
+     "Neither group's real income has changed"
+    ],
+    "explanation": "Both groups' incomes rose, so both are better off than before, but the richer group's rose faster, so the gap between them widened. Inequality is about the spread of incomes, not whether the lowest incomes rose.",
+    "correctIndex": 0
+   },
+   {
+    "id": "economic-growth:quiz:32a87bcc",
+    "question": "Growth is most likely to bring rising inflation when:",
+    "options": [
+     "productive capacity grows faster than demand",
+     "there is a large amount of spare capacity",
+     "aggregate demand grows faster than capacity",
+     "output per worker rises faster than wages"
+    ],
+    "explanation": "Once spare capacity is used up, extra demand meets firms that cannot produce more, so they raise prices. Capacity growing faster than demand, plenty of spare capacity, or productivity outpacing wages all ease the pressure on prices instead.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:4b79d826",
+    "question": "The trend rate of growth is best described as:",
+    "options": [
+     "the long-run growth rate of productive capacity",
+     "the growth rate in the most recent year",
+     "the highest growth rate the economy has reached",
+     "the growth rate of the price level"
+    ],
+    "explanation": "The trend is the average path over a long period, which is the rate at which potential output grows. Any one year can be above or below it, and the price level is a different measure altogether.",
+    "correctIndex": 0
+   },
+   {
+    "id": "economic-growth:quiz:3acf4470",
+    "question": "Potential output is $500bn and actual output is $490bn. The output gap is:",
+    "options": [
+     "positive, 2% of potential output",
+     "negative, 10% of potential output",
+     "positive, $10bn",
+     "negative, 2% of potential output"
+    ],
+    "explanation": "The gap is actual minus potential output: $490bn minus $500bn is minus $10bn, and $10bn is 2% of $500bn. Actual output below potential makes it a negative gap.",
+    "correctIndex": 3
+   },
+   {
+    "id": "economic-growth:quiz:9dfc6e79",
+    "question": "An economy's output gap is negative and getting larger. Which must be true?",
+    "options": [
+     "Actual output is growing more slowly than potential output",
+     "Real output is falling",
+     "The economy has had two quarters of negative growth",
+     "Inflation is rising rapidly"
+    ],
+    "explanation": "A negative gap widens whenever output grows more slowly than capacity, which can happen while output is still rising. Falling output is one way for it to widen, not the only one, and weak demand usually slows inflation rather than raising it.",
+    "correctIndex": 0
+   },
+   {
+    "id": "economic-growth:quiz:a49364b6",
+    "question": "Which combination is most consistent with a positive output gap?",
+    "options": [
+     "High unemployment and falling inflation",
+     "Spare capacity and weak investment",
+     "Labour shortages and rising inflation",
+     "Unsold stock and widespread price cuts"
+    ],
+    "explanation": "In a positive gap demand is pressing against capacity, so firms struggle to recruit and costs and prices rise. High unemployment, idle capacity and unsold stock are the marks of a negative gap.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:d0d88d46",
+    "question": "A large negative output gap is most likely to allow:",
+    "options": [
+     "the price level to rise without any rise in demand",
+     "output to stay above capacity permanently",
+     "aggregate demand to rise without much rise in the price level",
+     "unemployment to fall with no rise in output"
+    ],
+    "explanation": "With idle workers and machines, firms can meet extra demand by producing more rather than by raising prices, because the Keynesian long-run AS curve is flat there. That room is why an economy can grow faster than its trend for a while without inflation.",
+    "correctIndex": 2
+   },
+   {
+    "id": "economic-growth:quiz:7d427c2a",
+    "question": "Output gaps are hard to measure mainly because:",
+    "options": [
+     "actual output is never measured",
+     "potential output can only be estimated",
+     "real GDP ignores the price level",
+     "capacity is set by the government"
+    ],
+    "explanation": "Actual output is measured, if imperfectly; potential output is what the economy could produce and is never observed, so it has to be estimated from assumptions about the trend. Real GDP is adjusted for prices, which is what makes it real.",
+    "correctIndex": 1
+   },
+   {
+    "id": "economic-growth:quiz:baa2f89f",
+    "question": "Assuming capacity has grown at 2%, 2.5% or 3% a year gives the same year's output gap as +1%, 0% or −1%. This shows that:",
+    "options": [
+     "actual output was measured three times",
+     "the gap depends on how capacity is estimated",
+     "the economy grew at three different rates",
+     "the output gap is always zero on average"
+    ],
+    "explanation": "The actual output figure is the same in every case; only the assumed growth of capacity differs. Because potential output is estimated, a different assumption produces a different gap, and even a different sign.",
+    "correctIndex": 1
+   }
+  ],
+  "practice": [
+   {
+    "id": "economic-growth:practice:833c6065",
+    "command": "Define",
+    "marks": 2,
+    "question": "Define the term 'potential economic growth'. (2 marks)",
+    "guidance": "A definition has two parts to it, so say what increases and then say what that thing means. Be careful not to define actual growth by mistake: the two terms are the pair most often swapped.\nAn increase in an economy's productive capacity (1 mark), meaning the real output it could produce if all its resources were fully and efficiently employed (1 mark). \"An increase in real GDP\" defines actual growth and earns nothing here; \"when LRAS shifts right\" or \"when the PPF shifts out\" describes how it is shown, which can support a definition but does not replace one."
+   },
+   {
+    "id": "economic-growth:practice:f21420d8",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain how an increase in exports may lead to actual economic growth. (4 marks)",
+    "guidance": "This asks for an impact, so it needs a chain of two linked steps, not a single assertion. Decide which part of aggregate demand exports belong to before you start, and say what has to be true of the economy for extra demand to become extra output.\nKnowledge and understanding: exports are a component of aggregate demand, so a rise in exports raises AD (1 mark). Application: foreign buyers ordering more means domestic firms receive more orders for their output (1 mark). Analysis, first stage: where there is spare capacity, firms meet the orders by producing more, so real output rises (1 mark). Analysis, second stage: the incomes earned are partly spent again, so AD and output rise by more than the first rise in exports — the multiplier of topic 2.3.4 (1 mark). An answer that says exports rise so GDP rises has the knowledge and none of the chain."
+   },
+   {
+    "id": "economic-growth:practice:28d84275",
+    "command": "Analyse",
+    "marks": 6,
+    "question": "Analyse how foreign direct investment may increase an economy's potential growth. (6 marks)",
+    "guidance": "Analyse asks for depth rather than breadth, so choose one route by which FDI raises capacity and follow it all the way, rather than listing several. Keep the two sides of the economy separate: the spending is demand today, and the thing it builds is capacity later — potential growth is about the second.\nKnowledge and understanding: foreign direct investment is investment by a foreign firm in productive assets it controls, such as a new plant (1 mark). Application: it adds to the host economy's stock of capital, often bringing technology and finance local firms could not supply (1 mark). Analysis, first stage: with more and better capital, each worker can produce more, so labour productivity rises (2 marks). Analysis, second stage: higher productivity raises the output the economy could produce with all resources employed, so long-run aggregate supply shifts right and the frontier moves out (2 marks). Credit is available for a second route, such as local suppliers adopting the foreign firm's methods, if it is carried through to capacity. A foreign purchase of existing shares or buildings adds no capacity and earns nothing."
+   },
+   {
+    "id": "economic-growth:practice:0f8d861a",
+    "command": "Calculate",
+    "marks": 4,
+    "question": "Loriana has 20 million workers, each producing $25,000 of output a year. Next year its labour force grows by 0.5% and output per worker by 2%. Calculate the percentage growth in Loriana's productive capacity, to two decimal places. (4 marks)",
+    "guidance": "Productive capacity is the number of workers multiplied by what each produces, so work out this year's figure and next year's figure separately before comparing them. Keep the units straight throughout: workers are in millions and output per worker is in dollars.\nStage 1 — this year's capacity: 20 million × $25,000 = $500bn (1 mark). Stage 2 — next year's inputs: 20.1 million workers and $25,500 per worker (1 mark). Stage 3 — next year's capacity: 20.1 million × $25,500 = $512.55bn (1 mark). Stage 4 — growth: ($512.55bn − $500bn) ÷ $500bn × 100 = 2.51% (1 mark). Adding the two growth rates gives 2.5%, which is close but not the answer to two decimal places; the product of the two growth factors is exact."
+   },
+   {
+    "id": "economic-growth:practice:f9df166f",
+    "command": "Examine",
+    "marks": 8,
+    "question": "Examine the likely benefits of economic growth for firms. (8 marks)",
+    "guidance": "Examine asks for a chain of reasoning and a brief assessment, so develop one or two benefits fully rather than listing several, and then say what might limit them. Think about which firms gain most, and about what happens to firms' costs as well as their sales.\nLevel 1 asserts that growth is good for firms, with no mechanism and no qualification. Level 2 explains one benefit as a chain: rising real incomes raise household spending, so most firms sell more, and because many costs do not rise in step with sales, profits rise. Level 3 develops a second chain and connects the two: firms expecting growth to continue invest to meet future demand, funded by the higher retained profits, and the investment raises both demand now and the firms' capacity later. The brief assessment that lifts an answer to the top of the range recognises that the benefits are uneven and can be offset: when growth runs ahead of capacity, wages and input costs rise and squeeze margins; a growing market attracts new entrants and imports; and firms selling goods people buy less of as they get richer may lose sales."
+   },
+   {
+    "id": "economic-growth:practice:24b001a0",
+    "command": "Calculate",
+    "marks": 2,
+    "question": "Tax revenue in an economy is 20% of GDP. Real GDP rises from $490bn to $507.4bn and no tax rate changes. Calculate the increase in tax revenue. (2 marks)",
+    "guidance": "Work out revenue at each level of GDP using the same share, then compare the two, rather than trying to find the increase in one step. Set out each line so that the method is visible.\nRevenue before: 20% × $490bn = $98bn; revenue after: 20% × $507.4bn = $101.5bn (1 mark). Increase: $101.5bn − $98bn = $3.5bn (1 mark). An answer of $17.4bn has found the rise in GDP, not in revenue."
+   },
+   {
+    "id": "economic-growth:practice:2b0652fa",
+    "command": "Evaluate",
+    "marks": 20,
+    "question": "Evaluate whether economic growth is always desirable for an economy. (20 marks)",
+    "guidance": "Evaluate asks you to reach a judgement supported by multi-stage chains, so decide early what your judgement will depend on — the source of the growth, how fast it is compared with capacity, who receives the gains. A judgement with no stated conditions is an assertion. Plan where a diagram would make one of your chains clearer.\nLevel 1 lists benefits or costs of growth with little support. Level 2 explains one side with chains: rising real GDP per head raises living standards; firms producing more need more workers, so unemployment falls; rising profits fund investment; a larger tax base raises revenue with no change in tax rates, paying for improved public services. Level 3 develops both sides, the costs as fully as the benefits: at full capacity, more capital goods now means fewer consumer goods now, the opportunity cost of future growth, shown with two points on a production possibility frontier; pollution and depletion are not subtracted from GDP; rising incomes pull in imports, pushing the balance of trade into deficit; gains can concentrate among some skills, owners or regions, increasing inequality; and demand growing faster than capacity brings inflation. Level 4 reaches a supported judgement by questioning the word \"always\". Growth driven by rising capacity raises output while easing inflation, whereas growth driven by demand beyond capacity does not last; growth that changes how goods are produced can cut the damage per unit of output; and the benefits and costs fall on different people and at different times. A judgement naming the kind of growth that is desirable and the conditions under which it is not, supported by the chains above it, is what the command word asks for; a list of benefits followed by a list of costs is not."
+   },
+   {
+    "id": "economic-growth:practice:1af5fb40",
+    "command": "Explain",
+    "marks": 4,
+    "question": "Explain why rapid economic growth may lead to a balance of trade deficit. (4 marks)",
+    "guidance": "This asks for a reason, so build a two-step chain from growth to the trade balance. Be clear which of the two flows — exports or imports — your chain moves, and in which direction.\nKnowledge and understanding: the balance of trade is the value of exports minus the value of imports (1 mark). Application: rapid growth means real incomes are rising quickly (1 mark). Analysis, first stage: households spend part of their extra income on imported goods, and expanding firms buy more imported materials and machinery, so imports rise (1 mark). Analysis, second stage: exports depend on other economies' incomes and do not rise in step, so imports outgrow exports and the balance moves into deficit (1 mark). A developed alternative — domestic prices rising faster than trading partners', making exports less competitive — earns the same credit if carried through to the balance."
+   },
+   {
+    "id": "economic-growth:practice:bf6d98c2",
+    "command": "Discuss",
+    "marks": 14,
+    "question": "Discuss whether a positive output gap is a problem for an economy. (14 marks)",
+    "guidance": "Discuss asks for chains of reasoning and for different viewpoints to be recognised, so set out what a positive gap looks like and then weigh the view that it is a problem against the view that it is not. The strongest answers ask how large the gap is, how long it lasts, and how sure anyone can be that it exists.\nLevel 1 states that a positive gap means actual output is above potential output, with little development. Level 2 explains how that is possible for a while — through overtime, extra shifts and postponed maintenance — and follows one consequence as a chain. Level 3 develops the problems as chains: demand pressing against capacity raises wages and input costs, so inflation rises and erodes real incomes and savings; domestic firms cannot meet demand, so imports rise and the balance of trade worsens; postponed maintenance and exhausted workers reduce future output; and the central bank is likely to raise interest rates, slowing the economy sharply. Level 4 recognises the other viewpoint: in the short run employment and incomes are high, a small gap may close on its own, and some of the pressure may prompt investment that raises capacity. The critical assessment the top level needs should turn on measurement: potential output is estimated, not observed, so a gap reported as positive may be smaller, or even negative, once capacity is re-estimated — and policy taken against a gap that does not exist does harm of its own."
+   },
+   {
+    "id": "economic-growth:practice:2a5b72a5",
+    "command": "Draw",
+    "marks": 4,
+    "question": "Draw an AD/AS diagram, using a Keynesian long-run aggregate supply curve, to show an economy with a negative output gap. (4 marks)",
+    "guidance": "Decide first which shape of aggregate supply curve you need and where on it an economy with spare capacity sits. Label the axes before anything else, and mark full-capacity output so that the gap has two ends to measure between.\nAxes labelled price level (vertical) and real output (horizontal) (1 mark). A Keynesian long-run AS curve drawn flat, then rising, then vertical at full-capacity output, labelled Yf (1 mark). AD drawn crossing the AS curve to the left of Yf, with the equilibrium output labelled Ye (1 mark). The distance between Ye and Yf identified as the negative output gap (1 mark). Placing AD where it crosses the vertical section shows an economy at full capacity, with no negative gap."
+   }
+  ],
+  "flashcards": [
+   {
+    "id": "economic-growth:flashcard:b26fe1ef",
+    "front": "Define actual economic growth.",
+    "back": "An increase in real GDP — more goods and services produced, measured at constant prices."
+   },
+   {
+    "id": "economic-growth:flashcard:272a3c65",
+    "front": "Define potential economic growth.",
+    "back": "An increase in productive capacity: the real output an economy could produce if all its resources were fully and efficiently employed."
+   },
+   {
+    "id": "economic-growth:flashcard:9b5a8eff",
+    "front": "How is actual growth from spare capacity shown on a PPF?",
+    "back": "As a movement from a point inside the frontier towards it. A movement ALONG the frontier is reallocation, not growth."
+   },
+   {
+    "id": "economic-growth:flashcard:0cadecf5",
+    "front": "How is potential growth shown?",
+    "back": "As an outward shift of the production possibility frontier, or a rightward shift of the long-run aggregate supply curve."
+   },
+   {
+    "id": "economic-growth:flashcard:6c84ef58",
+    "front": "What causes actual growth?",
+    "back": "An increase in any component of aggregate demand — consumption, investment, government spending or net exports — while there is spare capacity to meet it."
+   },
+   {
+    "id": "economic-growth:flashcard:e2860cac",
+    "front": "Why does it matter whether there is spare capacity when AD rises?",
+    "back": "With spare capacity, extra demand raises output; near full capacity it raises output and prices; at full capacity only prices."
+   },
+   {
+    "id": "economic-growth:flashcard:a81276b8",
+    "front": "What is export-led growth?",
+    "back": "Growth driven mainly by rising exports — foreign demand for the economy's output."
+   },
+   {
+    "id": "economic-growth:flashcard:f92e6975",
+    "front": "Give three reasons trade matters for growth.",
+    "back": "A bigger market than the home economy; economies of scale from longer production runs; foreign currency to pay for imported capital goods. Competition with the best producers abroad is a fourth."
+   },
+   {
+    "id": "economic-growth:flashcard:bb6247f1",
+    "front": "Name the four causes of potential growth.",
+    "back": "Domestic investment and foreign direct investment; innovation; growth in the size of the labour force, including net migration; the degree of competition."
+   },
+   {
+    "id": "economic-growth:flashcard:233c5312",
+    "front": "What is foreign direct investment?",
+    "back": "Investment by a foreign firm in productive assets it controls, such as a new plant. It adds capital, and often brings technology and finance."
+   },
+   {
+    "id": "economic-growth:flashcard:c6bd4d54",
+    "front": "Why does investment affect both actual and potential growth?",
+    "back": "The spending is part of aggregate demand when it happens; the capital adds to capacity once it is installed."
+   },
+   {
+    "id": "economic-growth:flashcard:27fe0858",
+    "front": "Distinguish process from product innovation.",
+    "back": "Process innovation is a new way of producing an existing good, raising output per unit of input. Product innovation is a new good or service."
+   },
+   {
+    "id": "economic-growth:flashcard:3267fdbe",
+    "front": "How does net migration affect potential output?",
+    "back": "Working-age migrants add to the labour force at once, raising total potential output. Output per head depends on their productivity."
+   },
+   {
+    "id": "economic-growth:flashcard:9f3e0afa",
+    "front": "How does the degree of competition raise potential growth?",
+    "back": "Firms facing rivals must cut waste and adopt better methods or lose customers; weak firms exit and their resources move to better users."
+   },
+   {
+    "id": "economic-growth:flashcard:c8772f4f",
+    "front": "Why does productivity matter for the RATE of growth?",
+    "back": "The labour force can only grow so fast; productivity growth has no such ceiling, and it compounds. At about 2.5% a year output doubles in about 28 years; at about 1.5%, about 46."
+   },
+   {
+    "id": "economic-growth:flashcard:48bb6f21",
+    "front": "List the six possible benefits of growth.",
+    "back": "Higher living standards; lower unemployment; increased profits for firms; higher levels of investment; increased tax revenues; improved public services."
+   },
+   {
+    "id": "economic-growth:flashcard:09c70b07",
+    "front": "Why does tax revenue rise during growth?",
+    "back": "Incomes, profits and spending — the tax base — all grow, so revenue rises even with no change in tax rates."
+   },
+   {
+    "id": "economic-growth:flashcard:dd2653b8",
+    "front": "List the five possible costs of growth.",
+    "back": "Opportunity costs; environmental costs; balance of trade deficits; increased inequality; inflation."
+   },
+   {
+    "id": "economic-growth:flashcard:aba22333",
+    "front": "What is the opportunity cost of growth?",
+    "back": "Producing more capital goods now means fewer consumer goods now — current living standards given up for higher future ones."
+   },
+   {
+    "id": "economic-growth:flashcard:42787e95",
+    "front": "Why can growth lead to a balance of trade deficit?",
+    "back": "Rising incomes raise spending on imports, output is diverted from exports to the home market, and domestic prices may rise faster than trading partners'."
+   },
+   {
+    "id": "economic-growth:flashcard:476eb379",
+    "front": "When is inflation a cost of growth?",
+    "back": "When aggregate demand grows faster than capacity. Growth that comes from rising capacity can ease inflation instead."
+   },
+   {
+    "id": "economic-growth:flashcard:68ea0f19",
+    "front": "What is the trend rate of growth?",
+    "back": "The long-run average growth rate of an economy's productive capacity. Actual growth is above it in some years and below it in others."
+   },
+   {
+    "id": "economic-growth:flashcard:f472e2e9",
+    "front": "Define the output gap.",
+    "back": "Actual output minus potential output, usually as a percentage of potential output. Negative when actual is below potential; positive when it is above."
+   },
+   {
+    "id": "economic-growth:flashcard:a7305093",
+    "front": "Is a negative output gap the same as falling output?",
+    "back": "No. The gap widens whenever output grows more slowly than capacity, which can happen while output is still rising."
+   },
+   {
+    "id": "economic-growth:flashcard:d11aaaa9",
+    "front": "Characteristics of a positive output gap?",
+    "back": "Labour shortages, rising inflation, capacity used at full stretch, lengthening delivery times, rising imports."
+   },
+   {
+    "id": "economic-growth:flashcard:1d4d36da",
+    "front": "Characteristics of a negative output gap?",
+    "back": "Higher unemployment, low inflation, spare capacity, weak investment."
+   },
+   {
+    "id": "economic-growth:flashcard:306ad848",
+    "front": "Why are output gaps hard to measure?",
+    "back": "Potential output is never observed and must be estimated; the trend rate can change unnoticed; GDP data are revised; some spare capacity is hidden from the unemployment figures."
+   }
+  ],
+  "diagrams": [
+   {
+    "id": "economic-growth:diagram:27bc75b7",
+    "title": "Actual and Potential Growth",
+    "description": "IAL 2.3.5 · 1a, 1b: actual growth as a move from inside the PPF towards it, potential growth as an outward shift, and an increase in AD with and without spare capacity.",
+    "checklist": [
+     "Actual growth drawn from a point INSIDE the frontier towards it, not along it",
+     "Potential growth drawn as an outward shift of the whole frontier",
+     "On AD/AS, the AD shift labelled AD₁ to AD₂ with both equilibria marked",
+     "With spare capacity output rises and the price level does not; near capacity the price level rises"
+    ],
+    "scenarios": [
+     {
+      "label": "On the PPF",
+      "svg": "<svg width=\"400\" height=\"356\" viewBox=\"0 0 400 356\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"g1\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#34d399\"/></marker><marker id=\"b1\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#60a5fa\"/></marker></defs><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Actual and potential growth on the PPF</text><line x1=\"60\" y1=\"58\" x2=\"60\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"270\" x2=\"380\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"24\" y=\"46\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Capital goods</text><text x=\"380\" y=\"300\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Consumer goods</text><text x=\"52\" y=\"286\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">0</text><path d=\"M 280 270 L 279.8 263.3 L 279.3 256.7 L 278.5 250 L 277.3 243.4 L 275.8 236.8 L 273.9 230.3 L 271.7 223.9 L 269.2 217.5 L 266.4 211.2 L 263.3 204.9 L 259.8 198.8 L 256 192.8 L 251.9 186.9 L 247.6 181.2 L 242.9 175.6 L 238 170.1 L 232.8 164.8 L 227.3 159.6 L 221.6 154.6 L 215.6 149.8 L 209.3 145.2 L 202.9 140.7 L 196.2 136.5 L 189.3 132.5 L 182.2 128.7 L 174.9 125.1 L 167.5 121.7 L 159.9 118.5 L 152.1 115.6 L 144.2 112.9 L 136.1 110.5 L 128 108.3 L 119.7 106.4 L 111.4 104.7 L 102.9 103.3 L 94.4 102.1 L 85.9 101.2 L 77.3 100.5 L 68.6 100.1 L 60 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><path d=\"M 324 270 L 323.8 262 L 323.2 254 L 322.2 246 L 320.7 238.1 L 318.9 230.2 L 316.7 222.4 L 314.1 214.6 L 311.1 207 L 307.7 199.4 L 303.9 191.9 L 299.7 184.6 L 295.2 177.4 L 290.3 170.3 L 285.1 163.4 L 279.5 156.7 L 273.6 150.1 L 267.3 143.7 L 260.7 137.5 L 253.9 131.5 L 246.7 125.8 L 239.2 120.2 L 231.5 114.9 L 223.4 109.8 L 215.2 105 L 206.7 100.4 L 197.9 96.1 L 189 92 L 179.9 88.2 L 170.5 84.7 L 161 81.5 L 151.4 78.6 L 141.6 76 L 131.7 73.7 L 121.6 71.6 L 111.5 69.9 L 101.3 68.5 L 91 67.4 L 80.7 66.6 L 70.4 66.2 L 60 66\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"284\" y=\"258\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">PPF₁</text><text x=\"328\" y=\"258\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"400\">PPF₂</text><line x1=\"156.4\" y1=\"195.5\" x2=\"211.6\" y2=\"152.8\" stroke=\"#34d399\" stroke-width=\"2\" marker-end=\"url(#g1)\"/><line x1=\"215.6\" y1=\"149.8\" x2=\"242.7\" y2=\"128.8\" stroke=\"#60a5fa\" stroke-width=\"2\" marker-end=\"url(#b1)\"/><circle cx=\"156.4\" cy=\"195.5\" r=\"4\" fill=\"#34d399\"/><circle cx=\"215.6\" cy=\"149.8\" r=\"4\" fill=\"#e8ecf5\"/><circle cx=\"246.7\" cy=\"125.8\" r=\"4\" fill=\"#60a5fa\"/><text x=\"140.4\" y=\"213.5\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"600\">A</text><text x=\"225.6\" y=\"159.8\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"600\">B</text><text x=\"254.7\" y=\"119.8\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"600\">C</text><text x=\"24\" y=\"322\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"400\">A to B: actual growth, idle resources used</text><text x=\"24\" y=\"342\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"400\">B to C: potential growth, the frontier shifts out</text></svg>"
+     },
+     {
+      "label": "AD, spare capacity",
+      "svg": "<svg width=\"400\" height=\"364\" viewBox=\"0 0 400 364\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">AD rises with spare capacity</text><line x1=\"60\" y1=\"58\" x2=\"60\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"270\" x2=\"380\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"24\" y=\"46\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Price level</text><text x=\"380\" y=\"308\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Real output</text><path d=\"M 64 210 L 66 210 L 68 210 L 70 210 L 72 210 L 74 210 L 76 210 L 78 210 L 80 210 L 82 210 L 84 210 L 86 210 L 88 210 L 90 210 L 92 210 L 94 210 L 96 210 L 98 210 L 100 210 L 102 210 L 104 210 L 106 210 L 108 210 L 110 210 L 112 210 L 114 210 L 116 210 L 118 210 L 120 210 L 122 210 L 124 210 L 126 210 L 128 210 L 130 210 L 132 210 L 134 210 L 136 210 L 138 210 L 140 210 L 142 210 L 144 210 L 146 210 L 148 210 L 150 210 L 152 210 L 154 210 L 156 210 L 158 210 L 160 210 L 162 210 L 164 210 L 166 210 L 168 210 L 170 210 L 172 210 L 174 210 L 176 210 L 178 210 L 180 210 L 182 210 L 184 210 L 186 210 L 188 210 L 190 210 L 192 210 L 194 210 L 196 210 L 198 210 L 200 210 L 202 210 L 204 210 L 206 210 L 208 210 L 210 210 L 212 209.8 L 214 209.6 L 216 209.4 L 218 209.2 L 220 209 L 222 208.8 L 224 208.6 L 226 208.4 L 228 208.1 L 230 207.9 L 232 207.6 L 234 207.3 L 236 207 L 238 206.7 L 240 206.4 L 242 206.1 L 244 205.8 L 246 205.4 L 248 205 L 250 204.6 L 252 204.2 L 254 203.8 L 256 203.3 L 258 202.9 L 260 202.3 L 262 201.8 L 264 201.2 L 266 200.6 L 268 200 L 270 199.3 L 272 198.5 L 274 197.8 L 276 196.9 L 278 196 L 280 195 L 282 193.9 L 284 192.8 L 286 191.5 L 288 190.1 L 290 188.6 L 292 186.9 L 294 185 L 296 182.9 L 298 180.5 L 300 177.9 L 302 174.8 L 304 171.3 L 306 167.1 L 308 162.3 L 310 156.4 L 312 149.3 L 314 140.4 L 316 128.9 L 318 113.6 L 320 92.1 L 322 60 L 322 60\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><text x=\"328\" y=\"70\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">LRAS</text><path d=\"M 78 86 L 166 262\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/><path d=\"M 133 86 L 221 262\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"84\" y=\"84\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"400\">AD₁</text><text x=\"139\" y=\"84\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"400\">AD₂</text><line x1=\"140\" y1=\"210\" x2=\"140\" y2=\"270\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"60\" y1=\"210\" x2=\"140\" y2=\"210\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"140\" cy=\"210\" r=\"4\" fill=\"#e8ecf5\"/><line x1=\"195\" y1=\"210\" x2=\"195\" y2=\"270\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"60\" y1=\"210\" x2=\"195\" y2=\"210\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"195\" cy=\"210\" r=\"4\" fill=\"#f59e0b\"/><text x=\"138\" y=\"288\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Y₁</text><text x=\"197\" y=\"288\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Y₂</text><text x=\"54\" y=\"214\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">P</text><text x=\"24\" y=\"330\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Output rises from Y₁ to Y₂; the price level does not</text><text x=\"24\" y=\"350\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Keynesian LRAS: flat, then rising, then vertical</text></svg>"
+     },
+     {
+      "label": "AD, near capacity",
+      "svg": "<svg width=\"400\" height=\"364\" viewBox=\"0 0 400 364\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">AD rises near full capacity</text><line x1=\"60\" y1=\"58\" x2=\"60\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"270\" x2=\"380\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"24\" y=\"46\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Price level</text><text x=\"380\" y=\"308\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Real output</text><path d=\"M 64 210 L 66 210 L 68 210 L 70 210 L 72 210 L 74 210 L 76 210 L 78 210 L 80 210 L 82 210 L 84 210 L 86 210 L 88 210 L 90 210 L 92 210 L 94 210 L 96 210 L 98 210 L 100 210 L 102 210 L 104 210 L 106 210 L 108 210 L 110 210 L 112 210 L 114 210 L 116 210 L 118 210 L 120 210 L 122 210 L 124 210 L 126 210 L 128 210 L 130 210 L 132 210 L 134 210 L 136 210 L 138 210 L 140 210 L 142 210 L 144 210 L 146 210 L 148 210 L 150 210 L 152 210 L 154 210 L 156 210 L 158 210 L 160 210 L 162 210 L 164 210 L 166 210 L 168 210 L 170 210 L 172 210 L 174 210 L 176 210 L 178 210 L 180 210 L 182 210 L 184 210 L 186 210 L 188 210 L 190 210 L 192 210 L 194 210 L 196 210 L 198 210 L 200 210 L 202 210 L 204 210 L 206 210 L 208 210 L 210 210 L 212 209.8 L 214 209.6 L 216 209.4 L 218 209.2 L 220 209 L 222 208.8 L 224 208.6 L 226 208.4 L 228 208.1 L 230 207.9 L 232 207.6 L 234 207.3 L 236 207 L 238 206.7 L 240 206.4 L 242 206.1 L 244 205.8 L 246 205.4 L 248 205 L 250 204.6 L 252 204.2 L 254 203.8 L 256 203.3 L 258 202.9 L 260 202.3 L 262 201.8 L 264 201.2 L 266 200.6 L 268 200 L 270 199.3 L 272 198.5 L 274 197.8 L 276 196.9 L 278 196 L 280 195 L 282 193.9 L 284 192.8 L 286 191.5 L 288 190.1 L 290 188.6 L 292 186.9 L 294 185 L 296 182.9 L 298 180.5 L 300 177.9 L 302 174.8 L 304 171.3 L 306 167.1 L 308 162.3 L 310 156.4 L 312 149.3 L 314 140.4 L 316 128.9 L 318 113.6 L 320 92.1 L 322 60 L 322 60\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><text x=\"328\" y=\"70\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">LRAS</text><path d=\"M 241.6 86 L 329.6 262\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/><path d=\"M 296.6 86 L 384.6 262\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"235.6\" y=\"90\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"end\" font-weight=\"400\">AD₁</text><text x=\"290.6\" y=\"90\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"end\" font-weight=\"400\">AD₂</text><line x1=\"292\" y1=\"186.9\" x2=\"292\" y2=\"270\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"60\" y1=\"186.9\" x2=\"292\" y2=\"186.9\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"292\" cy=\"186.9\" r=\"4\" fill=\"#e8ecf5\"/><line x1=\"316.5\" y1=\"125.8\" x2=\"316.5\" y2=\"270\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"60\" y1=\"125.8\" x2=\"316.5\" y2=\"125.8\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"316.5\" cy=\"125.8\" r=\"4\" fill=\"#f59e0b\"/><text x=\"290\" y=\"288\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Y₁</text><text x=\"318.5\" y=\"288\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Y₂</text><text x=\"54\" y=\"190.9\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">P₁</text><text x=\"54\" y=\"129.8\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">P₂</text><text x=\"24\" y=\"330\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Output rises by less; the price level rises</text><text x=\"24\" y=\"350\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Keynesian LRAS: flat, then rising, then vertical</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "economic-growth:diagram:0d0b3448",
+    "title": "Potential Growth: Long-Run AS Shifts Right",
+    "description": "IAL 2.3.5 · 1d, 1e: a cause of potential growth raises full-capacity output, so the Keynesian long-run AS curve shifts right — output rises and the price level falls.",
+    "checklist": [
+     "The long-run AS curve shifted right, labelled LRAS₁ to LRAS₂, with AD unchanged",
+     "Both equilibria marked, with real output higher at the second",
+     "The price level LOWER at the second equilibrium, not higher",
+     "The cause of the shift named: investment, FDI, innovation, labour force, competition or productivity"
+    ],
+    "scenarios": [
+     {
+      "label": "Capacity rises",
+      "svg": "<svg width=\"400\" height=\"364\" viewBox=\"0 0 400 364\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><defs><marker id=\"bl\" viewBox=\"0 0 10 10\" refX=\"9\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#60a5fa\"/></marker></defs><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Capacity rises: LRAS shifts right</text><line x1=\"60\" y1=\"58\" x2=\"60\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"270\" x2=\"380\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"24\" y=\"46\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Price level</text><text x=\"380\" y=\"308\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Real output</text><path d=\"M 64 210 L 66 210 L 68 210 L 70 210 L 72 210 L 74 210 L 76 210 L 78 210 L 80 210 L 82 210 L 84 210 L 86 210 L 88 210 L 90 210 L 92 210 L 94 210 L 96 210 L 98 210 L 100 210 L 102 210 L 104 210 L 106 210 L 108 210 L 110 210 L 112 210 L 114 210 L 116 210 L 118 210 L 120 210 L 122 210 L 124 210 L 126 210 L 128 210 L 130 210 L 132 210 L 134 210 L 136 210 L 138 210 L 140 210 L 142 210 L 144 210 L 146 210 L 148 210 L 150 210 L 152 210 L 154 210 L 156 210 L 158 210 L 160 210 L 162 209.8 L 164 209.7 L 166 209.5 L 168 209.4 L 170 209.2 L 172 209 L 174 208.8 L 176 208.6 L 178 208.4 L 180 208.2 L 182 208 L 184 207.8 L 186 207.5 L 188 207.3 L 190 207 L 192 206.8 L 194 206.5 L 196 206.2 L 198 205.9 L 200 205.6 L 202 205.3 L 204 205 L 206 204.6 L 208 204.2 L 210 203.9 L 212 203.4 L 214 203 L 216 202.6 L 218 202.1 L 220 201.6 L 222 201 L 224 200.5 L 226 199.9 L 228 199.2 L 230 198.5 L 232 197.8 L 234 197 L 236 196.2 L 238 195.2 L 240 194.3 L 242 193.2 L 244 192 L 246 190.8 L 248 189.4 L 250 187.9 L 252 186.2 L 254 184.3 L 256 182.2 L 258 179.9 L 260 177.2 L 262 174.2 L 264 170.7 L 266 166.6 L 268 161.7 L 270 155.9 L 272 148.8 L 274 139.9 L 276 128.5 L 278 113.3 L 280 92 L 282 60 L 282 60\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><path d=\"M 64 210 L 66 210 L 68 210 L 70 210 L 72 210 L 74 210 L 76 210 L 78 210 L 80 210 L 82 210 L 84 210 L 86 210 L 88 210 L 90 210 L 92 210 L 94 210 L 96 210 L 98 210 L 100 210 L 102 210 L 104 210 L 106 210 L 108 210 L 110 210 L 112 210 L 114 210 L 116 210 L 118 210 L 120 210 L 122 210 L 124 210 L 126 210 L 128 210 L 130 210 L 132 210 L 134 210 L 136 210 L 138 210 L 140 210 L 142 210 L 144 210 L 146 210 L 148 210 L 150 210 L 152 210 L 154 210 L 156 210 L 158 210 L 160 210 L 162 210 L 164 210 L 166 210 L 168 210 L 170 210 L 172 210 L 174 210 L 176 210 L 178 210 L 180 210 L 182 210 L 184 210 L 186 210 L 188 210 L 190 210 L 192 210 L 194 210 L 196 210 L 198 210 L 200 210 L 202 210 L 204 210 L 206 210 L 208 210 L 210 210 L 212 210 L 214 210 L 216 210 L 218 210 L 220 210 L 222 209.8 L 224 209.7 L 226 209.5 L 228 209.4 L 230 209.2 L 232 209 L 234 208.8 L 236 208.6 L 238 208.4 L 240 208.2 L 242 208 L 244 207.8 L 246 207.5 L 248 207.3 L 250 207 L 252 206.8 L 254 206.5 L 256 206.2 L 258 205.9 L 260 205.6 L 262 205.3 L 264 205 L 266 204.6 L 268 204.2 L 270 203.9 L 272 203.4 L 274 203 L 276 202.6 L 278 202.1 L 280 201.6 L 282 201 L 284 200.5 L 286 199.9 L 288 199.2 L 290 198.5 L 292 197.8 L 294 197 L 296 196.2 L 298 195.2 L 300 194.3 L 302 193.2 L 304 192 L 306 190.8 L 308 189.4 L 310 187.9 L 312 186.2 L 314 184.3 L 316 182.2 L 318 179.9 L 320 177.2 L 322 174.2 L 324 170.7 L 326 166.6 L 328 161.7 L 330 155.9 L 332 148.8 L 334 139.9 L 336 128.5 L 338 113.3 L 340 92 L 342 60 L 342 60\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"2.5\"/><text x=\"276\" y=\"60\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"end\" font-weight=\"400\">LRAS₁</text><text x=\"348\" y=\"70\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"400\">LRAS₂</text><line x1=\"286\" y1=\"104\" x2=\"334\" y2=\"104\" stroke=\"#60a5fa\" stroke-width=\"2\" marker-end=\"url(#bl)\"/><path d=\"M 240.6 86 L 328.6 262\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/><text x=\"234.6\" y=\"90\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"end\" font-weight=\"400\">AD</text><line x1=\"272\" y1=\"148.8\" x2=\"272\" y2=\"270\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"60\" y1=\"148.8\" x2=\"272\" y2=\"148.8\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"272\" cy=\"148.8\" r=\"4\" fill=\"#e8ecf5\"/><line x1=\"295.7\" y1=\"196.3\" x2=\"295.7\" y2=\"270\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"60\" y1=\"196.3\" x2=\"295.7\" y2=\"196.3\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><circle cx=\"295.7\" cy=\"196.3\" r=\"4\" fill=\"#60a5fa\"/><text x=\"270\" y=\"288\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Y₁</text><text x=\"297.7\" y=\"288\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Y₂</text><text x=\"54\" y=\"152.8\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">P₁</text><text x=\"54\" y=\"200.3\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">P₂</text><text x=\"24\" y=\"330\" font-size=\"12\" fill=\"#e8ecf5\" text-anchor=\"start\" font-weight=\"400\">Output rises from Y₁ to Y₂ and the price level falls</text><text x=\"24\" y=\"350\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Causes: investment, innovation, labour, competition</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "economic-growth:diagram:caa798a1",
+    "title": "The Opportunity Cost of Growth",
+    "description": "IAL 2.3.5 · 3a: producing more capital goods today means fewer consumer goods today, and a frontier further out tomorrow — current against future living standards.",
+    "checklist": [
+     "Capital goods on one axis and consumer goods on the other, with a concave frontier",
+     "Two points ON the frontier: A with more consumer goods, B with more capital goods",
+     "The consumer goods given up between A and B marked as the opportunity cost",
+     "The future frontier drawn further out from B than from A"
+    ],
+    "scenarios": [
+     {
+      "label": "Today",
+      "svg": "<svg width=\"400\" height=\"356\" viewBox=\"0 0 400 356\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Today: consumer or capital goods?</text><line x1=\"60\" y1=\"58\" x2=\"60\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"270\" x2=\"380\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"24\" y=\"46\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Capital goods</text><text x=\"380\" y=\"300\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Consumer goods</text><text x=\"52\" y=\"286\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">0</text><path d=\"M 280 270 L 279.8 263.3 L 279.3 256.7 L 278.5 250 L 277.3 243.4 L 275.8 236.8 L 273.9 230.3 L 271.7 223.9 L 269.2 217.5 L 266.4 211.2 L 263.3 204.9 L 259.8 198.8 L 256 192.8 L 251.9 186.9 L 247.6 181.2 L 242.9 175.6 L 238 170.1 L 232.8 164.8 L 227.3 159.6 L 221.6 154.6 L 215.6 149.8 L 209.3 145.2 L 202.9 140.7 L 196.2 136.5 L 189.3 132.5 L 182.2 128.7 L 174.9 125.1 L 167.5 121.7 L 159.9 118.5 L 152.1 115.6 L 144.2 112.9 L 136.1 110.5 L 128 108.3 L 119.7 106.4 L 111.4 104.7 L 102.9 103.3 L 94.4 102.1 L 85.9 101.2 L 77.3 100.5 L 68.6 100.1 L 60 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><circle cx=\"264\" cy=\"206.3\" r=\"4\" fill=\"#f59e0b\"/><circle cx=\"176.6\" cy=\"125.8\" r=\"4\" fill=\"#34d399\"/><text x=\"254\" y=\"210.3\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"end\" font-weight=\"600\">A</text><text x=\"166.6\" y=\"129.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"end\" font-weight=\"600\">B</text><text x=\"284\" y=\"258\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Today</text><line x1=\"264\" y1=\"206.3\" x2=\"264\" y2=\"270\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"176.6\" y1=\"125.8\" x2=\"176.6\" y2=\"270\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/><line x1=\"176.6\" y1=\"260\" x2=\"264\" y2=\"260\" stroke=\"#f87171\" stroke-width=\"3\"/><text x=\"24\" y=\"322\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"400\">A to B: more capital goods now, and the</text><text x=\"24\" y=\"342\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"start\" font-weight=\"400\">consumer goods given up (red) are the cost</text></svg>"
+     },
+     {
+      "label": "Ten years on",
+      "svg": "<svg width=\"400\" height=\"376\" viewBox=\"0 0 400 376\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Ten years on: which frontier?</text><line x1=\"60\" y1=\"58\" x2=\"60\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"270\" x2=\"380\" y2=\"270\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"24\" y=\"46\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">Capital goods</text><text x=\"380\" y=\"300\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Consumer goods</text><text x=\"52\" y=\"286\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">0</text><path d=\"M 280 270 L 279.8 263.3 L 279.3 256.7 L 278.5 250 L 277.3 243.4 L 275.8 236.8 L 273.9 230.3 L 271.7 223.9 L 269.2 217.5 L 266.4 211.2 L 263.3 204.9 L 259.8 198.8 L 256 192.8 L 251.9 186.9 L 247.6 181.2 L 242.9 175.6 L 238 170.1 L 232.8 164.8 L 227.3 159.6 L 221.6 154.6 L 215.6 149.8 L 209.3 145.2 L 202.9 140.7 L 196.2 136.5 L 189.3 132.5 L 182.2 128.7 L 174.9 125.1 L 167.5 121.7 L 159.9 118.5 L 152.1 115.6 L 144.2 112.9 L 136.1 110.5 L 128 108.3 L 119.7 106.4 L 111.4 104.7 L 102.9 103.3 L 94.4 102.1 L 85.9 101.2 L 77.3 100.5 L 68.6 100.1 L 60 100\" fill=\"none\" stroke=\"#94a3b8\" stroke-width=\"2.5\"/><circle cx=\"264\" cy=\"206.3\" r=\"4\" fill=\"#f59e0b\"/><circle cx=\"176.6\" cy=\"125.8\" r=\"4\" fill=\"#34d399\"/><text x=\"254\" y=\"210.3\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"end\" font-weight=\"600\">A</text><text x=\"166.6\" y=\"129.8\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"end\" font-weight=\"600\">B</text><path d=\"M 297.6 270 L 297.4 262.8 L 296.9 255.6 L 296 248.4 L 294.7 241.3 L 293 234.2 L 291 227.1 L 288.7 220.2 L 286 213.3 L 282.9 206.5 L 279.5 199.7 L 275.8 193.1 L 271.7 186.6 L 267.3 180.3 L 262.6 174.1 L 257.6 168 L 252.2 162.1 L 246.6 156.3 L 240.7 150.8 L 234.5 145.4 L 228 140.2 L 221.3 135.2 L 214.3 130.4 L 207.1 125.8 L 199.7 121.5 L 192 117.3 L 184.1 113.5 L 176.1 109.8 L 167.9 106.4 L 159.5 103.3 L 150.9 100.4 L 142.2 97.7 L 133.4 95.4 L 124.5 93.3 L 115.5 91.5 L 106.4 89.9 L 97.2 88.7 L 87.9 87.7 L 78.6 87 L 69.3 86.5 L 60 86.4\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><path d=\"M 328.4 270 L 328.2 261.9 L 327.6 253.7 L 326.5 245.6 L 325.1 237.6 L 323.2 229.5 L 321 221.6 L 318.3 213.7 L 315.3 205.9 L 311.8 198.2 L 308 190.6 L 303.7 183.2 L 299.1 175.8 L 294.2 168.7 L 288.8 161.6 L 283.2 154.8 L 277.1 148.1 L 270.8 141.6 L 264.1 135.3 L 257.1 129.2 L 249.8 123.3 L 242.2 117.7 L 234.3 112.3 L 226.2 107.1 L 217.8 102.2 L 209.1 97.6 L 200.2 93.2 L 191.1 89 L 181.9 85.2 L 172.4 81.7 L 162.7 78.4 L 152.9 75.4 L 142.9 72.8 L 132.9 70.4 L 122.7 68.3 L 112.4 66.6 L 102 65.2 L 91.5 64 L 81.1 63.2 L 70.5 62.8 L 60 62.6\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><text x=\"24\" y=\"322\" font-size=\"12\" fill=\"#94a3b8\" text-anchor=\"start\" font-weight=\"400\">Grey: today's frontier</text><text x=\"24\" y=\"342\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"400\">Amber: ten years on, after choosing A</text><text x=\"24\" y=\"362\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"400\">Green: ten years on, after choosing B</text></svg>"
+     }
+    ]
+   },
+   {
+    "id": "economic-growth:diagram:4696fc39",
+    "title": "Output Gaps: Actual Output and the Trend",
+    "description": "IAL 2.3.5 · 4a-4d: potential output growing at its trend rate, actual output around it, negative and positive output gaps, and why the gap depends on an estimate.",
+    "checklist": [
+     "Potential output drawn as a steady trend line and actual output around it",
+     "A negative gap where actual output is BELOW potential, a positive gap where it is ABOVE",
+     "The gap read as a share of potential output, with its sign",
+     "The same actual output giving different gaps under different estimates of the trend"
+    ],
+    "scenarios": [
+     {
+      "label": "The gap",
+      "svg": "<svg width=\"400\" height=\"364\" viewBox=\"0 0 400 364\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Actual output around its trend</text><line x1=\"60\" y1=\"64\" x2=\"60\" y2=\"262\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"262\" x2=\"380\" y2=\"262\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"24\" y=\"50\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">$bn, real</text><text x=\"54\" y=\"238.9\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">480</text><text x=\"54\" y=\"184.6\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">520</text><text x=\"54\" y=\"130.3\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">560</text><text x=\"76\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">1</text><text x=\"112\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">2</text><text x=\"148\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">3</text><text x=\"184\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">4</text><text x=\"220\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">5</text><text x=\"256\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">6</text><text x=\"292\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">7</text><text x=\"328\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">8</text><text x=\"364\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">9</text><text x=\"380\" y=\"300\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Year</text><path d=\"M 76 240.4 L 112 230.9 L 148 221.3 L 184 197.7 L 220 173.4 L 220 173.4 L 184 190.8 L 148 207.7 L 112 224.3 L 76 240.4 Z\" fill=\"#f87171\" fill-opacity=\"0.18\" stroke=\"none\"/><path d=\"M 220 173.4 L 256 148.2 L 292 122.3 L 328 110.9 L 364 99.4 L 364 99.4 L 328 118.5 L 292 137.3 L 256 155.5 L 220 173.4 Z\" fill=\"#34d399\" fill-opacity=\"0.18\" stroke=\"none\"/><path d=\"M 76 240.4 L 112 224.3 L 148 207.7 L 184 190.8 L 220 173.4 L 256 155.5 L 292 137.3 L 328 118.5 L 364 99.4\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"2.5\" stroke-dasharray=\"6 4\"/><path d=\"M 76 240.4 L 112 230.9 L 148 221.3 L 184 197.7 L 220 173.4 L 256 148.2 L 292 122.3 L 328 110.9 L 364 99.4\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/><text x=\"148\" y=\"247.3\" font-size=\"12\" fill=\"#f87171\" text-anchor=\"middle\" font-weight=\"600\">−2%</text><text x=\"292\" y=\"106.3\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"middle\" font-weight=\"600\">+2%</text><text x=\"24\" y=\"322\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"400\">Blue dashed: potential output, trend 2.5% a year</text><text x=\"24\" y=\"342\" font-size=\"12\" fill=\"#f59e0b\" text-anchor=\"start\" font-weight=\"400\">Amber: actual output. Red gap negative, green positive</text></svg>"
+     },
+     {
+      "label": "Three estimates",
+      "svg": "<svg width=\"400\" height=\"384\" viewBox=\"0 0 400 384\" xmlns=\"http://www.w3.org/2000/svg\" style=\"font-family:'DM Sans',system-ui,sans-serif;background:transparent\"><text x=\"200\" y=\"24\" font-size=\"15\" fill=\"#e8ecf5\" text-anchor=\"middle\" font-weight=\"600\">Same output, three estimates of capacity</text><line x1=\"60\" y1=\"64\" x2=\"60\" y2=\"262\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"262\" x2=\"380\" y2=\"262\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><text x=\"24\" y=\"50\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"start\" font-weight=\"400\">$bn, real</text><text x=\"54\" y=\"238.9\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">480</text><text x=\"54\" y=\"184.6\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">520</text><text x=\"54\" y=\"130.3\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">560</text><text x=\"76\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">1</text><text x=\"112\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">2</text><text x=\"148\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">3</text><text x=\"184\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">4</text><text x=\"220\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">5</text><text x=\"256\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">6</text><text x=\"292\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">7</text><text x=\"328\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">8</text><text x=\"364\" y=\"280\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"middle\" font-weight=\"400\">9</text><text x=\"380\" y=\"300\" font-size=\"12\" fill=\"#7a8299\" text-anchor=\"end\" font-weight=\"400\">Year</text><path d=\"M 148 207.7 L 184 194.1 L 220 180.3 L 256 166.2 L 292 151.8 L 328 137.1 L 364 122.1\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><path d=\"M 148 207.7 L 184 190.8 L 220 173.4 L 256 155.5 L 292 137.3 L 328 118.5 L 364 99.4\" fill=\"none\" stroke=\"#60a5fa\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><path d=\"M 148 207.7 L 184 187.4 L 220 166.4 L 256 144.8 L 292 122.5 L 328 99.6 L 364 76\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><path d=\"M 76 240.4 L 112 230.9 L 148 221.3 L 184 197.7 L 220 173.4 L 256 148.2 L 292 122.3 L 328 110.9 L 364 99.4\" fill=\"none\" stroke=\"#f59e0b\" stroke-width=\"2.5\"/><line x1=\"220\" y1=\"72\" x2=\"220\" y2=\"262\" stroke=\"#475569\" stroke-width=\"1\" stroke-dasharray=\"2 3\"/><circle cx=\"220\" cy=\"173.4\" r=\"4\" fill=\"#f59e0b\"/><text x=\"24\" y=\"322\" font-size=\"12\" fill=\"#a78bfa\" text-anchor=\"start\" font-weight=\"400\">Trend 2%: Year 5 gap +1%</text><text x=\"24\" y=\"342\" font-size=\"12\" fill=\"#60a5fa\" text-anchor=\"start\" font-weight=\"400\">Trend 2.5%: Year 5 gap 0%</text><text x=\"24\" y=\"362\" font-size=\"12\" fill=\"#34d399\" text-anchor=\"start\" font-weight=\"400\">Trend 3%: Year 5 gap −1%</text></svg>"
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   {
+    "id": "economic-growth:mistake:10cc701e",
+    "title": "Calling a movement along the PPF growth",
+    "looks_like": "\"Actual growth is shown by a movement along the production possibility frontier.\"",
+    "why": "A movement along the frontier happens at full capacity: more of one good means less of the other, so total output cannot rise. It shows reallocation and its opportunity cost.",
+    "instead": "Show actual growth from spare capacity as a move from a point inside the frontier towards it, and potential growth as an outward shift."
+   },
+   {
+    "id": "economic-growth:mistake:2b5e1437",
+    "title": "Treating any rise in AD as growth",
+    "looks_like": "\"An increase in aggregate demand always increases real output.\"",
+    "why": "Extra demand becomes extra output only while there is spare capacity. Near full capacity much of it raises the price level, and at full capacity all of it does.",
+    "instead": "Say where the economy is standing: with spare capacity, AD-led growth raises output; close to capacity, it mainly raises prices."
+   },
+   {
+    "id": "economic-growth:mistake:481c606f",
+    "title": "Assuming more workers means higher living standards",
+    "looks_like": "\"Net migration raises the labour force, so living standards rise.\"",
+    "why": "A larger labour force raises total output. Output per head rises only if the extra workers are at least as productive, with enough capital each.",
+    "instead": "Separate total output from output per head, and link living standards to productivity."
+   },
+   {
+    "id": "economic-growth:mistake:74246c89",
+    "title": "Reading a trade deficit during growth as failure",
+    "looks_like": "\"The trade balance has gone into deficit, so the economy is doing badly.\"",
+    "why": "In rapid growth, imports rise BECAUSE incomes and investment are rising. The deficit is a possible cost to be financed, not proof of weakness.",
+    "instead": "Ask what the imports are and whether the deficit can be financed and will persist."
+   },
+   {
+    "id": "economic-growth:mistake:5ff09423",
+    "title": "Saying growth causes inflation",
+    "looks_like": "\"Economic growth leads to inflation.\"",
+    "why": "Growth that comes from rising capacity can lower inflation. It is demand growing faster than capacity that raises the price level.",
+    "instead": "Tie inflation to capacity: growth above the trend rate uses up spare capacity, so further increases in AD raise prices."
+   },
+   {
+    "id": "economic-growth:mistake:4b902b10",
+    "title": "Reading a negative output gap as shrinking output",
+    "looks_like": "\"A negative output gap means the economy is shrinking.\"",
+    "why": "The gap is the LEVEL of output against capacity. It widens whenever output grows more slowly than capacity, even if output is still rising.",
+    "instead": "Compare the growth rate with the trend rate to see which way the gap is moving, and state the gap with its sign."
+   },
+   {
+    "id": "economic-growth:mistake:ee4e86dd",
+    "title": "Treating a positive output gap as success",
+    "looks_like": "\"A positive output gap is good because output and employment are high.\"",
+    "why": "Output above potential cannot be sustained. It brings labour shortages, inflation and rising imports, and usually ends with policy slowing the economy.",
+    "instead": "Describe a positive gap as overheating: a short-run gain with costs that arrive later."
+   },
+   {
+    "id": "economic-growth:mistake:b57129ec",
+    "title": "Treating rising inequality as the poor getting poorer",
+    "looks_like": "\"Growth increased inequality, so the poorest are worse off.\"",
+    "why": "Inequality is the gap between incomes. The poorest can be better off than before while their share of total income falls.",
+    "instead": "Distinguish what happened to each group's income from what happened to the gap between them."
+   }
+  ],
+  "extras": {
+   "chains": [
+    {
+     "title": "Export-led growth, from a foreign order to higher capacity",
+     "steps": [
+      "Foreign buyers order more of Loriana's electronics. Exports are an injection, so aggregate demand rises — $10bn of new demand before any multiplier effect.",
+      "With spare capacity, firms meet the orders by producing more, so real output rises: actual growth.",
+      "Longer production runs let firms benefit from economies of scale, which cuts average cost and makes the exports more competitive still.",
+      "The foreign currency earned pays for imported machinery the economy cannot make itself.",
+      "The new machinery raises what each worker can produce, so capacity rises too: potential growth."
+     ],
+     "result": "Trade drove both kinds of growth — demand first, capacity after. The same chain runs in reverse when the economies buying the exports slow down, which is the risk built into the strategy."
+    },
+    {
+     "title": "Rapid growth and the balance of trade",
+     "steps": [
+      "Real incomes in the economy rise quickly as growth runs above its trend.",
+      "Households and firms spend more of their extra income on goods from abroad.",
+      "Import spending grows faster than export earnings, which depend on other economies' incomes.",
+      "The trade balance moves from surplus into deficit: Loriana's $20bn surplus in Year 3 became a $8bn deficit by Year 7."
+     ],
+     "result": "A balance of trade deficit is a possible cost of growth, not proof of failure. It matters when it persists and has to be financed by borrowing from abroad."
+    },
+    {
+     "title": "Growth above trend, from a negative gap to a positive one",
+     "steps": [
+      "In Year 3 output is $490bn against a capacity of $500bn: a negative gap of −2%, with idle workers and machines.",
+      "From Year 4 AD rises faster than capacity, and output grows 3.5% a year against a trend of 2.5%.",
+      "Spare capacity is used up without much rise in prices, and by Year 5 the gap has closed.",
+      "Growth stays above trend, and by Year 7 output is $562.9bn against $551.9bn: a positive gap of +2%.",
+      "Firms compete for scarce workers, wages and input costs rise, and inflation rises with them."
+     ],
+     "result": "The same growth rate was harmless while there was slack and inflationary once there was none. What decides it is the level of output against capacity, which is what the output gap measures."
+    },
+    {
+     "title": "Foreign direct investment and potential growth",
+     "steps": [
+      "A foreign firm builds a new plant. The construction spending is investment, part of aggregate demand now.",
+      "The plant opens, adding to the stock of capital and bringing production methods local firms did not have.",
+      "Local suppliers and workers learn the new methods, so productivity rises beyond the plant itself.",
+      "The economy can produce more with the same resources: long-run aggregate supply shifts right."
+     ],
+     "result": "FDI raised actual growth while the plant was being built and potential growth once it was working. Buying existing shares or buildings would have done neither."
+    }
+   ],
+   "evaluation": [
+    {
+     "title": "It depends on where the economy is standing",
+     "content": "The same rise in aggregate demand does very different things with spare capacity and at full capacity. With a negative output gap it is mostly extra output and jobs; with a positive gap it is mostly inflation and imports. Any judgement on demand-led growth should say how much slack there is — and since that is an estimate, how confident anyone can be about it."
+    },
+    {
+     "title": "The source of growth decides its costs",
+     "content": "Growth driven by rising capacity — investment, innovation, productivity — raises output while easing inflation and can reduce the damage per unit of output. Growth driven by demand beyond capacity brings inflation, trade deficits and a later slowdown. Asking where growth comes from is usually the strongest evaluation of whether its costs outweigh its benefits."
+    },
+    {
+     "title": "Now or later",
+     "content": "Faster growth in future usually costs consumption today: resources moved into capital goods are not available for consumer goods. How much present consumption to give up is a judgement about current against future living standards, and different households and governments reasonably make it differently."
+    },
+    {
+     "title": "Possible, not certain",
+     "content": "Every benefit and every cost in this topic is a POSSIBLE one. Growth need not reduce unemployment if it is below trend, need not raise public services if revenue is spent badly, need not widen inequality if it creates jobs for lower-paid workers, and need not damage the environment if it changes how goods are produced. Naming the condition is what turns a list into an argument."
+    }
+   ]
+  }
+ }
+}
